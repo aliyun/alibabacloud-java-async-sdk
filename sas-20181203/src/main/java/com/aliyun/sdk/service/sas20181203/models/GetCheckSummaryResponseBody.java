@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetCheckSummaryResponseBody</p>
  */
 public class GetCheckSummaryResponseBody extends TeaModel {
-    @NameInMap("OverallItemStatistic")
+    @com.aliyun.core.annotation.NameInMap("OverallItemStatistic")
     private OverallItemStatistic overallItemStatistic;
 
-    @NameInMap("OverallStatistic")
+    @com.aliyun.core.annotation.NameInMap("OverallStatistic")
     private OverallStatistic overallStatistic;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Summarys")
+    @com.aliyun.core.annotation.NameInMap("Summarys")
     private java.util.List < Summarys> summarys;
 
     private GetCheckSummaryResponseBody(Builder builder) {
@@ -74,7 +73,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
         private java.util.List < Summarys> summarys; 
 
         /**
-         * The statistics of the check items.
+         * The statistics about the number of check items.
          */
         public Builder overallItemStatistic(OverallItemStatistic overallItemStatistic) {
             this.overallItemStatistic = overallItemStatistic;
@@ -112,10 +111,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
     } 
 
     public static class OverallItemStatistic extends TeaModel {
-        @NameInMap("ReleaseCount")
+        @com.aliyun.core.annotation.NameInMap("ReleaseCount")
         private Integer releaseCount;
 
-        @NameInMap("ResultCount")
+        @com.aliyun.core.annotation.NameInMap("ResultCount")
         private Integer resultCount;
 
         private OverallItemStatistic(Builder builder) {
@@ -173,40 +172,40 @@ public class GetCheckSummaryResponseBody extends TeaModel {
 
     }
     public static class OverallStatistic extends TeaModel {
-        @NameInMap("NotCheckCount")
+        @com.aliyun.core.annotation.NameInMap("NotCheckCount")
         private Integer notCheckCount;
 
-        @NameInMap("NotCheckHighCount")
+        @com.aliyun.core.annotation.NameInMap("NotCheckHighCount")
         private Integer notCheckHighCount;
 
-        @NameInMap("NotCheckLowCount")
+        @com.aliyun.core.annotation.NameInMap("NotCheckLowCount")
         private Integer notCheckLowCount;
 
-        @NameInMap("NotCheckMediumCount")
+        @com.aliyun.core.annotation.NameInMap("NotCheckMediumCount")
         private Integer notCheckMediumCount;
 
-        @NameInMap("NotPassCount")
+        @com.aliyun.core.annotation.NameInMap("NotPassCount")
         private Integer notPassCount;
 
-        @NameInMap("NotPassHighCount")
+        @com.aliyun.core.annotation.NameInMap("NotPassHighCount")
         private Integer notPassHighCount;
 
-        @NameInMap("NotPassLowCount")
+        @com.aliyun.core.annotation.NameInMap("NotPassLowCount")
         private Integer notPassLowCount;
 
-        @NameInMap("NotPassMediumCount")
+        @com.aliyun.core.annotation.NameInMap("NotPassMediumCount")
         private Integer notPassMediumCount;
 
-        @NameInMap("PassCount")
+        @com.aliyun.core.annotation.NameInMap("PassCount")
         private Integer passCount;
 
-        @NameInMap("PassHighCount")
+        @com.aliyun.core.annotation.NameInMap("PassHighCount")
         private Integer passHighCount;
 
-        @NameInMap("PassLowCount")
+        @com.aliyun.core.annotation.NameInMap("PassLowCount")
         private Integer passLowCount;
 
-        @NameInMap("PassMediumCount")
+        @com.aliyun.core.annotation.NameInMap("PassMediumCount")
         private Integer passMediumCount;
 
         private OverallStatistic(Builder builder) {
@@ -434,40 +433,40 @@ public class GetCheckSummaryResponseBody extends TeaModel {
 
     }
     public static class StandardStatistic extends TeaModel {
-        @NameInMap("NotCheckCount")
+        @com.aliyun.core.annotation.NameInMap("NotCheckCount")
         private Integer notCheckCount;
 
-        @NameInMap("NotCheckHighCount")
+        @com.aliyun.core.annotation.NameInMap("NotCheckHighCount")
         private Integer notCheckHighCount;
 
-        @NameInMap("NotCheckLowCount")
+        @com.aliyun.core.annotation.NameInMap("NotCheckLowCount")
         private Integer notCheckLowCount;
 
-        @NameInMap("NotCheckMediumCount")
+        @com.aliyun.core.annotation.NameInMap("NotCheckMediumCount")
         private Integer notCheckMediumCount;
 
-        @NameInMap("NotPassCount")
+        @com.aliyun.core.annotation.NameInMap("NotPassCount")
         private Integer notPassCount;
 
-        @NameInMap("NotPassHighCount")
+        @com.aliyun.core.annotation.NameInMap("NotPassHighCount")
         private Integer notPassHighCount;
 
-        @NameInMap("NotPassLowCount")
+        @com.aliyun.core.annotation.NameInMap("NotPassLowCount")
         private Integer notPassLowCount;
 
-        @NameInMap("NotPassMediumCount")
+        @com.aliyun.core.annotation.NameInMap("NotPassMediumCount")
         private Integer notPassMediumCount;
 
-        @NameInMap("PassCount")
+        @com.aliyun.core.annotation.NameInMap("PassCount")
         private Integer passCount;
 
-        @NameInMap("PassHighCount")
+        @com.aliyun.core.annotation.NameInMap("PassHighCount")
         private Integer passHighCount;
 
-        @NameInMap("PassLowCount")
+        @com.aliyun.core.annotation.NameInMap("PassLowCount")
         private Integer passLowCount;
 
-        @NameInMap("PassMediumCount")
+        @com.aliyun.core.annotation.NameInMap("PassMediumCount")
         private Integer passMediumCount;
 
         private StandardStatistic(Builder builder) {
@@ -695,28 +694,28 @@ public class GetCheckSummaryResponseBody extends TeaModel {
 
     }
     public static class Standards extends TeaModel {
-        @NameInMap("FailCount")
+        @com.aliyun.core.annotation.NameInMap("FailCount")
         private Integer failCount;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("PassCount")
+        @com.aliyun.core.annotation.NameInMap("PassCount")
         private Integer passCount;
 
-        @NameInMap("RiskLevelHighCount")
+        @com.aliyun.core.annotation.NameInMap("RiskLevelHighCount")
         private Integer riskLevelHighCount;
 
-        @NameInMap("RiskLevelLowCount")
+        @com.aliyun.core.annotation.NameInMap("RiskLevelLowCount")
         private Integer riskLevelLowCount;
 
-        @NameInMap("RiskLevelMediumCount")
+        @com.aliyun.core.annotation.NameInMap("RiskLevelMediumCount")
         private Integer riskLevelMediumCount;
 
-        @NameInMap("ShowName")
+        @com.aliyun.core.annotation.NameInMap("ShowName")
         private String showName;
 
-        @NameInMap("StandardStatistic")
+        @com.aliyun.core.annotation.NameInMap("StandardStatistic")
         private StandardStatistic standardStatistic;
 
         private Standards(Builder builder) {
@@ -876,40 +875,40 @@ public class GetCheckSummaryResponseBody extends TeaModel {
 
     }
     public static class TypeStatistic extends TeaModel {
-        @NameInMap("NotCheckCount")
+        @com.aliyun.core.annotation.NameInMap("NotCheckCount")
         private Integer notCheckCount;
 
-        @NameInMap("NotCheckHighCount")
+        @com.aliyun.core.annotation.NameInMap("NotCheckHighCount")
         private Integer notCheckHighCount;
 
-        @NameInMap("NotCheckLowCount")
+        @com.aliyun.core.annotation.NameInMap("NotCheckLowCount")
         private Integer notCheckLowCount;
 
-        @NameInMap("NotCheckMediumCount")
+        @com.aliyun.core.annotation.NameInMap("NotCheckMediumCount")
         private Integer notCheckMediumCount;
 
-        @NameInMap("NotPassCount")
+        @com.aliyun.core.annotation.NameInMap("NotPassCount")
         private Integer notPassCount;
 
-        @NameInMap("NotPassHighCount")
+        @com.aliyun.core.annotation.NameInMap("NotPassHighCount")
         private Integer notPassHighCount;
 
-        @NameInMap("NotPassLowCount")
+        @com.aliyun.core.annotation.NameInMap("NotPassLowCount")
         private Integer notPassLowCount;
 
-        @NameInMap("NotPassMediumCount")
+        @com.aliyun.core.annotation.NameInMap("NotPassMediumCount")
         private Integer notPassMediumCount;
 
-        @NameInMap("PassCount")
+        @com.aliyun.core.annotation.NameInMap("PassCount")
         private Integer passCount;
 
-        @NameInMap("PassHighCount")
+        @com.aliyun.core.annotation.NameInMap("PassHighCount")
         private Integer passHighCount;
 
-        @NameInMap("PassLowCount")
+        @com.aliyun.core.annotation.NameInMap("PassLowCount")
         private Integer passLowCount;
 
-        @NameInMap("PassMediumCount")
+        @com.aliyun.core.annotation.NameInMap("PassMediumCount")
         private Integer passMediumCount;
 
         private TypeStatistic(Builder builder) {
@@ -1098,7 +1097,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of check items that passed the check.
+             * The number of check items that pass the check.
              */
             public Builder passCount(Integer passCount) {
                 this.passCount = passCount;
@@ -1137,19 +1136,19 @@ public class GetCheckSummaryResponseBody extends TeaModel {
 
     }
     public static class Summarys extends TeaModel {
-        @NameInMap("FailCount")
+        @com.aliyun.core.annotation.NameInMap("FailCount")
         private Integer failCount;
 
-        @NameInMap("PassCount")
+        @com.aliyun.core.annotation.NameInMap("PassCount")
         private Long passCount;
 
-        @NameInMap("Standards")
+        @com.aliyun.core.annotation.NameInMap("Standards")
         private java.util.List < Standards> standards;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("TypeStatistic")
+        @com.aliyun.core.annotation.NameInMap("TypeStatistic")
         private TypeStatistic typeStatistic;
 
         private Summarys(Builder builder) {
@@ -1238,9 +1237,9 @@ public class GetCheckSummaryResponseBody extends TeaModel {
              * The type of the check item. Valid values:
              * <p>
              * 
-             * *   **COMPLIANCE**: compliance
-             * *   **RISK**: security risk
-             * *   **IDENTITY_PERMISSION**: identity and permission
+             * *   **COMPLIANCE**
+             * *   **RISK**
+             * *   **IDENTITY_PERMISSION**
              */
             public Builder type(String type) {
                 this.type = type;

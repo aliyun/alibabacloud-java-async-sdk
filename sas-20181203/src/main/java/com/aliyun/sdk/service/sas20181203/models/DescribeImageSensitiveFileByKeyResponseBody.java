@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImageSensitiveFileByKeyResponseBody</p>
  */
 public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SensitiveFileList")
+    @com.aliyun.core.annotation.NameInMap("SensitiveFileList")
     private java.util.List < SensitiveFileList> sensitiveFileList;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeImageSensitiveFileByKeyResponseBody(Builder builder) {
@@ -176,19 +175,19 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
     } 
 
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("LastRowKey")
+        @com.aliyun.core.annotation.NameInMap("LastRowKey")
         private String lastRowKey;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -297,37 +296,37 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
 
     }
     public static class SensitiveFileList extends TeaModel {
-        @NameInMap("Advice")
+        @com.aliyun.core.annotation.NameInMap("Advice")
         private String advice;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("FilePath")
+        @com.aliyun.core.annotation.NameInMap("FilePath")
         private String filePath;
 
-        @NameInMap("FirstScanTime")
+        @com.aliyun.core.annotation.NameInMap("FirstScanTime")
         private Long firstScanTime;
 
-        @NameInMap("LastScanTime")
+        @com.aliyun.core.annotation.NameInMap("LastScanTime")
         private Long lastScanTime;
 
-        @NameInMap("LayerDigest")
+        @com.aliyun.core.annotation.NameInMap("LayerDigest")
         private String layerDigest;
 
-        @NameInMap("Md5")
+        @com.aliyun.core.annotation.NameInMap("Md5")
         private String md5;
 
-        @NameInMap("Promt")
+        @com.aliyun.core.annotation.NameInMap("Promt")
         private String promt;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
 
-        @NameInMap("SensitiveFileKey")
+        @com.aliyun.core.annotation.NameInMap("SensitiveFileKey")
         private String sensitiveFileKey;
 
-        @NameInMap("SensitiveFileName")
+        @com.aliyun.core.annotation.NameInMap("SensitiveFileName")
         private String sensitiveFileName;
 
         private SensitiveFileList(Builder builder) {

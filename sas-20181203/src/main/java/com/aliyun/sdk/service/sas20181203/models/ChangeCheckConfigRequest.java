@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,56 +11,56 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ChangeCheckConfigRequest</p>
  */
 public class ChangeCheckConfigRequest extends Request {
-    @Query
-    @NameInMap("AddedCheck")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddedCheck")
     private java.util.List < AddedCheck> addedCheck;
 
-    @Query
-    @NameInMap("ConfigRequirementIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigRequirementIds")
     private ConfigRequirementIds configRequirementIds;
 
-    @Query
-    @NameInMap("ConfigStandardIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigStandardIds")
     private ConfigStandardIds configStandardIds;
 
-    @Query
-    @NameInMap("Configure")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Configure")
     private String configure;
 
-    @Query
-    @NameInMap("CycleDays")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CycleDays")
     private java.util.List < Integer > cycleDays;
 
-    @Query
-    @NameInMap("EnableAddCheck")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableAddCheck")
     private Boolean enableAddCheck;
 
-    @Query
-    @NameInMap("EnableAutoCheck")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableAutoCheck")
     private Boolean enableAutoCheck;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Integer endTime;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("RemovedCheck")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RemovedCheck")
     private java.util.List < RemovedCheck> removedCheck;
 
-    @Query
-    @NameInMap("StandardIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StandardIds")
     private java.util.List < Long > standardIds;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Integer startTime;
 
-    @Query
-    @NameInMap("Vendors")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Vendors")
     private java.util.List < String > vendors;
 
     private ChangeCheckConfigRequest(Builder builder) {
@@ -378,10 +377,10 @@ public class ChangeCheckConfigRequest extends Request {
     } 
 
     public static class AddedCheck extends TeaModel {
-        @NameInMap("CheckId")
+        @com.aliyun.core.annotation.NameInMap("CheckId")
         private Long checkId;
 
-        @NameInMap("SectionId")
+        @com.aliyun.core.annotation.NameInMap("SectionId")
         private Long sectionId;
 
         private AddedCheck(Builder builder) {
@@ -442,10 +441,10 @@ public class ChangeCheckConfigRequest extends Request {
 
     }
     public static class ConfigRequirementIds extends TeaModel {
-        @NameInMap("AddIds")
+        @com.aliyun.core.annotation.NameInMap("AddIds")
         private java.util.List < Long > addIds;
 
-        @NameInMap("RemoveIds")
+        @com.aliyun.core.annotation.NameInMap("RemoveIds")
         private java.util.List < Long > removeIds;
 
         private ConfigRequirementIds(Builder builder) {
@@ -503,10 +502,10 @@ public class ChangeCheckConfigRequest extends Request {
 
     }
     public static class ConfigStandardIds extends TeaModel {
-        @NameInMap("AddIds")
+        @com.aliyun.core.annotation.NameInMap("AddIds")
         private java.util.List < Long > addIds;
 
-        @NameInMap("RemoveIds")
+        @com.aliyun.core.annotation.NameInMap("RemoveIds")
         private java.util.List < Long > removeIds;
 
         private ConfigStandardIds(Builder builder) {
@@ -564,10 +563,10 @@ public class ChangeCheckConfigRequest extends Request {
 
     }
     public static class RemovedCheck extends TeaModel {
-        @NameInMap("CheckId")
+        @com.aliyun.core.annotation.NameInMap("CheckId")
         private Long checkId;
 
-        @NameInMap("SectionId")
+        @com.aliyun.core.annotation.NameInMap("SectionId")
         private Long sectionId;
 
         private RemovedCheck(Builder builder) {

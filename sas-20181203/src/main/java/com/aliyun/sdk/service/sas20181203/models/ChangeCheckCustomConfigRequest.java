@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ChangeCheckCustomConfigRequest</p>
  */
 public class ChangeCheckCustomConfigRequest extends Request {
-    @Query
-    @NameInMap("CheckId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckId")
     private Long checkId;
 
-    @Query
-    @NameInMap("CustomConfigs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomConfigs")
     private java.util.List < CustomConfigs> customConfigs;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepairConfigs")
+    private java.util.List < RepairConfigs> repairConfigs;
 
     private ChangeCheckCustomConfigRequest(Builder builder) {
         super(builder);
         this.checkId = builder.checkId;
         this.customConfigs = builder.customConfigs;
         this.regionId = builder.regionId;
+        this.repairConfigs = builder.repairConfigs;
     }
 
     public static Builder builder() {
@@ -65,10 +69,18 @@ public class ChangeCheckCustomConfigRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return repairConfigs
+     */
+    public java.util.List < RepairConfigs> getRepairConfigs() {
+        return this.repairConfigs;
+    }
+
     public static final class Builder extends Request.Builder<ChangeCheckCustomConfigRequest, Builder> {
         private Long checkId; 
         private java.util.List < CustomConfigs> customConfigs; 
         private String regionId; 
+        private java.util.List < RepairConfigs> repairConfigs; 
 
         private Builder() {
             super();
@@ -79,6 +91,7 @@ public class ChangeCheckCustomConfigRequest extends Request {
             this.checkId = request.checkId;
             this.customConfigs = request.customConfigs;
             this.regionId = request.regionId;
+            this.repairConfigs = request.repairConfigs;
         } 
 
         /**
@@ -115,6 +128,15 @@ public class ChangeCheckCustomConfigRequest extends Request {
             return this;
         }
 
+        /**
+         * RepairConfigs.
+         */
+        public Builder repairConfigs(java.util.List < RepairConfigs> repairConfigs) {
+            this.putQueryParameter("RepairConfigs", repairConfigs);
+            this.repairConfigs = repairConfigs;
+            return this;
+        }
+
         @Override
         public ChangeCheckCustomConfigRequest build() {
             return new ChangeCheckCustomConfigRequest(this);
@@ -123,13 +145,13 @@ public class ChangeCheckCustomConfigRequest extends Request {
     } 
 
     public static class CustomConfigs extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Operation")
+        @com.aliyun.core.annotation.NameInMap("Operation")
         private String operation;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private CustomConfigs(Builder builder) {
@@ -198,6 +220,107 @@ public class ChangeCheckCustomConfigRequest extends Request {
 
             public CustomConfigs build() {
                 return new CustomConfigs(this);
+            } 
+
+        } 
+
+    }
+    public static class RepairConfigs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FlowId")
+        private String flowId;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Operation")
+        private String operation;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private RepairConfigs(Builder builder) {
+            this.flowId = builder.flowId;
+            this.name = builder.name;
+            this.operation = builder.operation;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RepairConfigs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return flowId
+         */
+        public String getFlowId() {
+            return this.flowId;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return operation
+         */
+        public String getOperation() {
+            return this.operation;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String flowId; 
+            private String name; 
+            private String operation; 
+            private String value; 
+
+            /**
+             * FlowId.
+             */
+            public Builder flowId(String flowId) {
+                this.flowId = flowId;
+                return this;
+            }
+
+            /**
+             * The name of the custom configuration item. The name of a custom configuration item is unique in a check item.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * The operation that you want to perform on the custom configuration item. This parameter is required only if you want to delete the custom configuration item. To delete the custom configuration item, set the value to DELETE.
+             */
+            public Builder operation(String operation) {
+                this.operation = operation;
+                return this;
+            }
+
+            /**
+             * The value of the custom configuration item. The value is a string.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public RepairConfigs build() {
+                return new RepairConfigs(this);
             } 
 
         } 

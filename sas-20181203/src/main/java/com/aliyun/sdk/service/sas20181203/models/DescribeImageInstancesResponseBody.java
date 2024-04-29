@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImageInstancesResponseBody</p>
  */
 public class DescribeImageInstancesResponseBody extends TeaModel {
-    @NameInMap("ImageInstanceList")
+    @com.aliyun.core.annotation.NameInMap("ImageInstanceList")
     private java.util.List < ImageInstanceList> imageInstanceList;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeImageInstancesResponseBody(Builder builder) {
@@ -92,85 +91,85 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
     } 
 
     public static class ImageInstanceList extends TeaModel {
-        @NameInMap("AlarmCount")
+        @com.aliyun.core.annotation.NameInMap("AlarmCount")
         private Integer alarmCount;
 
-        @NameInMap("AlarmStatus")
+        @com.aliyun.core.annotation.NameInMap("AlarmStatus")
         private String alarmStatus;
 
-        @NameInMap("Deployed")
+        @com.aliyun.core.annotation.NameInMap("Deployed")
         private Integer deployed;
 
-        @NameInMap("Digest")
+        @com.aliyun.core.annotation.NameInMap("Digest")
         private String digest;
 
-        @NameInMap("Endpoints")
+        @com.aliyun.core.annotation.NameInMap("Endpoints")
         private String endpoints;
 
-        @NameInMap("HcCount")
+        @com.aliyun.core.annotation.NameInMap("HcCount")
         private Integer hcCount;
 
-        @NameInMap("HcStatus")
+        @com.aliyun.core.annotation.NameInMap("HcStatus")
         private String hcStatus;
 
-        @NameInMap("ImageCreate")
+        @com.aliyun.core.annotation.NameInMap("ImageCreate")
         private String imageCreate;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("ImageSize")
+        @com.aliyun.core.annotation.NameInMap("ImageSize")
         private String imageSize;
 
-        @NameInMap("ImageUpdate")
+        @com.aliyun.core.annotation.NameInMap("ImageUpdate")
         private String imageUpdate;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RegistryType")
+        @com.aliyun.core.annotation.NameInMap("RegistryType")
         private String registryType;
 
-        @NameInMap("RepoId")
+        @com.aliyun.core.annotation.NameInMap("RepoId")
         private String repoId;
 
-        @NameInMap("RepoName")
+        @com.aliyun.core.annotation.NameInMap("RepoName")
         private String repoName;
 
-        @NameInMap("RepoNamespace")
+        @com.aliyun.core.annotation.NameInMap("RepoNamespace")
         private String repoNamespace;
 
-        @NameInMap("RepoType")
+        @com.aliyun.core.annotation.NameInMap("RepoType")
         private String repoType;
 
-        @NameInMap("RiskStatus")
+        @com.aliyun.core.annotation.NameInMap("RiskStatus")
         private String riskStatus;
 
-        @NameInMap("ScaProgress")
+        @com.aliyun.core.annotation.NameInMap("ScaProgress")
         private Integer scaProgress;
 
-        @NameInMap("ScaResult")
+        @com.aliyun.core.annotation.NameInMap("ScaResult")
         private String scaResult;
 
-        @NameInMap("ScaStatus")
+        @com.aliyun.core.annotation.NameInMap("ScaStatus")
         private String scaStatus;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
-        @NameInMap("VulCount")
+        @com.aliyun.core.annotation.NameInMap("VulCount")
         private Integer vulCount;
 
-        @NameInMap("VulStatus")
+        @com.aliyun.core.annotation.NameInMap("VulStatus")
         private String vulStatus;
 
         private ImageInstanceList(Builder builder) {
@@ -707,16 +706,16 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {

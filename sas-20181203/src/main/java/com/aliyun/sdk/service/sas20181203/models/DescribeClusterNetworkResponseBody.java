@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeClusterNetworkResponseBody</p>
  */
 public class DescribeClusterNetworkResponseBody extends TeaModel {
-    @NameInMap("ClusterNetwork")
+    @com.aliyun.core.annotation.NameInMap("ClusterNetwork")
     private ClusterNetwork clusterNetwork;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeClusterNetworkResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
     } 
 
     public static class Edge extends TeaModel {
-        @NameInMap("DstNodeId")
+        @com.aliyun.core.annotation.NameInMap("DstNodeId")
         private String dstNodeId;
 
-        @NameInMap("DstNodeType")
+        @com.aliyun.core.annotation.NameInMap("DstNodeType")
         private String dstNodeType;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("SrcNodeId")
+        @com.aliyun.core.annotation.NameInMap("SrcNodeId")
         private String srcNodeId;
 
-        @NameInMap("SrcNodeType")
+        @com.aliyun.core.annotation.NameInMap("SrcNodeType")
         private String srcNodeType;
 
         private Edge(Builder builder) {
@@ -220,25 +219,25 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
 
     }
     public static class Node extends TeaModel {
-        @NameInMap("CnnfSwitch")
+        @com.aliyun.core.annotation.NameInMap("CnnfSwitch")
         private Integer cnnfSwitch;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("InterceptionType")
+        @com.aliyun.core.annotation.NameInMap("InterceptionType")
         private Integer interceptionType;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NetTopoSwitch")
+        @com.aliyun.core.annotation.NameInMap("NetTopoSwitch")
         private String netTopoSwitch;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Node(Builder builder) {
@@ -404,10 +403,10 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
 
     }
     public static class ClusterNetwork extends TeaModel {
-        @NameInMap("Edge")
+        @com.aliyun.core.annotation.NameInMap("Edge")
         private java.util.List < Edge> edge;
 
-        @NameInMap("Node")
+        @com.aliyun.core.annotation.NameInMap("Node")
         private java.util.List < Node> node;
 
         private ClusterNetwork(Builder builder) {

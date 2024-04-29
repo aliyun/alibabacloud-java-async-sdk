@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>OperateApplicationRequest</p>
  */
 public class OperateApplicationRequest extends Request {
-    @Query
-    @NameInMap("ContainerWebDefenseApplicationDTOS")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerWebDefenseApplicationDTOS")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < ContainerWebDefenseApplicationDTOS> containerWebDefenseApplicationDTOS;
 
-    @Query
-    @NameInMap("RuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long ruleId;
 
     private OperateApplicationRequest(Builder builder) {
@@ -95,19 +94,19 @@ public class OperateApplicationRequest extends Request {
     } 
 
     public static class ContainerWebDefenseApplicationDTOS extends TeaModel {
-        @NameInMap("ClusterId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String clusterId;
 
-        @NameInMap("Flag")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Flag")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String flag;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Tag")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String tag;
 
         private ContainerWebDefenseApplicationDTOS(Builder builder) {

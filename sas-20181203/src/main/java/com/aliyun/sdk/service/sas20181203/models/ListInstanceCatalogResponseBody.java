@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstanceCatalogResponseBody</p>
  */
 public class ListInstanceCatalogResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Vendors")
+    @com.aliyun.core.annotation.NameInMap("Vendors")
     private java.util.List < Vendors> vendors;
 
     private ListInstanceCatalogResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
     } 
 
     public static class InstanceSubTypes extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private InstanceSubTypes(Builder builder) {
@@ -113,10 +112,10 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
 
     }
     public static class InstanceTypes extends TeaModel {
-        @NameInMap("InstanceSubTypes")
+        @com.aliyun.core.annotation.NameInMap("InstanceSubTypes")
         private java.util.List < InstanceSubTypes> instanceSubTypes;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private InstanceTypes(Builder builder) {
@@ -174,10 +173,10 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
 
     }
     public static class Vendors extends TeaModel {
-        @NameInMap("InstanceTypes")
+        @com.aliyun.core.annotation.NameInMap("InstanceTypes")
         private java.util.List < InstanceTypes> instanceTypes;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Vendors(Builder builder) {

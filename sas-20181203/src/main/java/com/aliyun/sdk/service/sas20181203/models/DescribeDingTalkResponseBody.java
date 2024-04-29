@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDingTalkResponseBody</p>
  */
 public class DescribeDingTalkResponseBody extends TeaModel {
-    @NameInMap("ActionList")
+    @com.aliyun.core.annotation.NameInMap("ActionList")
     private java.util.List < ActionList> actionList;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDingTalkResponseBody(Builder builder) {
@@ -92,37 +91,37 @@ public class DescribeDingTalkResponseBody extends TeaModel {
     } 
 
     public static class ActionList extends TeaModel {
-        @NameInMap("ActionName")
+        @com.aliyun.core.annotation.NameInMap("ActionName")
         private String actionName;
 
-        @NameInMap("AliUid")
+        @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
 
-        @NameInMap("ConfigList")
+        @com.aliyun.core.annotation.NameInMap("ConfigList")
         private String configList;
 
-        @NameInMap("DingTalkLang")
+        @com.aliyun.core.annotation.NameInMap("DingTalkLang")
         private String dingTalkLang;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
-        @NameInMap("GroupIdList")
+        @com.aliyun.core.annotation.NameInMap("GroupIdList")
         private String groupIdList;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
-        @NameInMap("IntervalTime")
+        @com.aliyun.core.annotation.NameInMap("IntervalTime")
         private Integer intervalTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private ActionList(Builder builder) {
@@ -341,13 +340,13 @@ public class DescribeDingTalkResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {

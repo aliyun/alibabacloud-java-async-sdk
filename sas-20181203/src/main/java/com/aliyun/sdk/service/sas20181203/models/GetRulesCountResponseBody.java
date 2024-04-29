@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetRulesCountResponseBody</p>
  */
 public class GetRulesCountResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalSystemClientRuleCount")
+    @com.aliyun.core.annotation.NameInMap("TotalSystemClientRuleCount")
     private Long totalSystemClientRuleCount;
 
-    @NameInMap("TotalUserDefineRuleCount")
+    @com.aliyun.core.annotation.NameInMap("TotalUserDefineRuleCount")
     private Long totalUserDefineRuleCount;
 
     private GetRulesCountResponseBody(Builder builder) {

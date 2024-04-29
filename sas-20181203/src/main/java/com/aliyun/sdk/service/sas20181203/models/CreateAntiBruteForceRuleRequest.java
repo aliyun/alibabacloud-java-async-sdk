@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,41 +11,41 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAntiBruteForceRuleRequest</p>
  */
 public class CreateAntiBruteForceRuleRequest extends Request {
-    @Query
-    @NameInMap("DefaultRule")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefaultRule")
     private Boolean defaultRule;
 
-    @Query
-    @NameInMap("FailCount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FailCount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer failCount;
 
-    @Query
-    @NameInMap("ForbiddenTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForbiddenTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer forbiddenTime;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SourceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceIp")
     private String sourceIp;
 
-    @Query
-    @NameInMap("Span")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Span")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer span;
 
-    @Query
-    @NameInMap("UuidList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UuidList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > uuidList;
 
     private CreateAntiBruteForceRuleRequest(Builder builder) {

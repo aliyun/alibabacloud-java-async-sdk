@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetFileDetectResultResponseBody</p>
  */
 public class GetFileDetectResultResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultList")
+    @com.aliyun.core.annotation.NameInMap("ResultList")
     private java.util.List < ResultList> resultList;
 
     private GetFileDetectResultResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class GetFileDetectResultResponseBody extends TeaModel {
     } 
 
     public static class ResultList extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Compress")
+        @com.aliyun.core.annotation.NameInMap("Compress")
         private Boolean compress;
 
-        @NameInMap("Ext")
+        @com.aliyun.core.annotation.NameInMap("Ext")
         private String ext;
 
-        @NameInMap("HashKey")
+        @com.aliyun.core.annotation.NameInMap("HashKey")
         private String hashKey;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private Integer result;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private Integer score;
 
-        @NameInMap("VirusType")
+        @com.aliyun.core.annotation.NameInMap("VirusType")
         private String virusType;
 
         private ResultList(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BindAuthToMachineResponseBody</p>
  */
 public class BindAuthToMachineResponseBody extends TeaModel {
-    @NameInMap("BindCount")
+    @com.aliyun.core.annotation.NameInMap("BindCount")
     private Integer bindCount;
 
-    @NameInMap("InsufficientCoreCount")
+    @com.aliyun.core.annotation.NameInMap("InsufficientCoreCount")
     private Integer insufficientCoreCount;
 
-    @NameInMap("InsufficientEcsCount")
+    @com.aliyun.core.annotation.NameInMap("InsufficientEcsCount")
     private Integer insufficientEcsCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultCode")
+    @com.aliyun.core.annotation.NameInMap("ResultCode")
     private Integer resultCode;
 
-    @NameInMap("UnBindCount")
+    @com.aliyun.core.annotation.NameInMap("UnBindCount")
     private Integer unBindCount;
 
     private BindAuthToMachineResponseBody(Builder builder) {

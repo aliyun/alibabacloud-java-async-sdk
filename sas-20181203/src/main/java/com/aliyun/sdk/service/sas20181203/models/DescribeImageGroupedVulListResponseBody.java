@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImageGroupedVulListResponseBody</p>
  */
 public class DescribeImageGroupedVulListResponseBody extends TeaModel {
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("GroupedVulItems")
+    @com.aliyun.core.annotation.NameInMap("GroupedVulItems")
     private java.util.List < GroupedVulItems> groupedVulItems;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeImageGroupedVulListResponseBody(Builder builder) {
@@ -132,37 +131,37 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
     } 
 
     public static class GroupedVulItems extends TeaModel {
-        @NameInMap("AliasName")
+        @com.aliyun.core.annotation.NameInMap("AliasName")
         private String aliasName;
 
-        @NameInMap("AsapCount")
+        @com.aliyun.core.annotation.NameInMap("AsapCount")
         private Integer asapCount;
 
-        @NameInMap("CanFix")
+        @com.aliyun.core.annotation.NameInMap("CanFix")
         private String canFix;
 
-        @NameInMap("GmtLast")
+        @com.aliyun.core.annotation.NameInMap("GmtLast")
         private Long gmtLast;
 
-        @NameInMap("LastScanTime")
+        @com.aliyun.core.annotation.NameInMap("LastScanTime")
         private Long lastScanTime;
 
-        @NameInMap("LaterCount")
+        @com.aliyun.core.annotation.NameInMap("LaterCount")
         private Integer laterCount;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NntfCount")
+        @com.aliyun.core.annotation.NameInMap("NntfCount")
         private Integer nntfCount;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private String tags;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private GroupedVulItems(Builder builder) {

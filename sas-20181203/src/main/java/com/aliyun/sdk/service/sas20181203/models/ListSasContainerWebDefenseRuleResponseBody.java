@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSasContainerWebDefenseRuleResponseBody</p>
  */
 public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
-    @NameInMap("ContainerWebDefenseRuleList")
+    @com.aliyun.core.annotation.NameInMap("ContainerWebDefenseRuleList")
     private java.util.List < ContainerWebDefenseRuleList> containerWebDefenseRuleList;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListSasContainerWebDefenseRuleResponseBody(Builder builder) {
@@ -92,34 +91,34 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
     } 
 
     public static class PathConfDTOList extends TeaModel {
-        @NameInMap("BackupPath")
+        @com.aliyun.core.annotation.NameInMap("BackupPath")
         private String backupPath;
 
-        @NameInMap("DefenseMode")
+        @com.aliyun.core.annotation.NameInMap("DefenseMode")
         private String defenseMode;
 
-        @NameInMap("DefensePath")
+        @com.aliyun.core.annotation.NameInMap("DefensePath")
         private String defensePath;
 
-        @NameInMap("ExcludeFile")
+        @com.aliyun.core.annotation.NameInMap("ExcludeFile")
         private String excludeFile;
 
-        @NameInMap("ExcludeFilePath")
+        @com.aliyun.core.annotation.NameInMap("ExcludeFilePath")
         private String excludeFilePath;
 
-        @NameInMap("ExcludeFileType")
+        @com.aliyun.core.annotation.NameInMap("ExcludeFileType")
         private String excludeFileType;
 
-        @NameInMap("GuardType")
+        @com.aliyun.core.annotation.NameInMap("GuardType")
         private Integer guardType;
 
-        @NameInMap("IncludeFile")
+        @com.aliyun.core.annotation.NameInMap("IncludeFile")
         private String includeFile;
 
-        @NameInMap("IncludeFileType")
+        @com.aliyun.core.annotation.NameInMap("IncludeFileType")
         private String includeFileType;
 
-        @NameInMap("ProcessPathList")
+        @com.aliyun.core.annotation.NameInMap("ProcessPathList")
         private java.util.List < String > processPathList;
 
         private PathConfDTOList(Builder builder) {
@@ -321,28 +320,28 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
 
     }
     public static class ContainerWebDefenseRuleList extends TeaModel {
-        @NameInMap("AliUid")
+        @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
 
-        @NameInMap("ApptotalCount")
+        @com.aliyun.core.annotation.NameInMap("ApptotalCount")
         private Integer apptotalCount;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("PathConfDTOList")
+        @com.aliyun.core.annotation.NameInMap("PathConfDTOList")
         private java.util.List < PathConfDTOList> pathConfDTOList;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("RuleStatus")
+        @com.aliyun.core.annotation.NameInMap("RuleStatus")
         private Integer ruleStatus;
 
         private ContainerWebDefenseRuleList(Builder builder) {
@@ -506,16 +505,16 @@ public class ListSasContainerWebDefenseRuleResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {

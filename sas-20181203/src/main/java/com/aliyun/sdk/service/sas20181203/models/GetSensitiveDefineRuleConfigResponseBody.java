@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSensitiveDefineRuleConfigResponseBody</p>
  */
 public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetSensitiveDefineRuleConfigResponseBody(Builder builder) {
@@ -136,13 +135,13 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
     } 
 
     public static class RuleList extends TeaModel {
-        @NameInMap("RuleKey")
+        @com.aliyun.core.annotation.NameInMap("RuleKey")
         private String ruleKey;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("Selected")
+        @com.aliyun.core.annotation.NameInMap("Selected")
         private Boolean selected;
 
         private RuleList(Builder builder) {
@@ -221,13 +220,13 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
 
     }
     public static class RuleTree extends TeaModel {
-        @NameInMap("ClassKey")
+        @com.aliyun.core.annotation.NameInMap("ClassKey")
         private String classKey;
 
-        @NameInMap("ClassName")
+        @com.aliyun.core.annotation.NameInMap("ClassName")
         private String className;
 
-        @NameInMap("RuleList")
+        @com.aliyun.core.annotation.NameInMap("RuleList")
         private java.util.List < RuleList> ruleList;
 
         private RuleTree(Builder builder) {
@@ -302,16 +301,16 @@ public class GetSensitiveDefineRuleConfigResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("RuleCount")
+        @com.aliyun.core.annotation.NameInMap("RuleCount")
         private Integer ruleCount;
 
-        @NameInMap("RuleTree")
+        @com.aliyun.core.annotation.NameInMap("RuleTree")
         private java.util.List < RuleTree> ruleTree;
 
-        @NameInMap("SelectedCount")
+        @com.aliyun.core.annotation.NameInMap("SelectedCount")
         private Integer selectedCount;
 
         private Data(Builder builder) {

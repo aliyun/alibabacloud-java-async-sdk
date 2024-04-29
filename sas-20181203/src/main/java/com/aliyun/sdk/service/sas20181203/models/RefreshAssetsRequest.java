@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RefreshAssetsRequest</p>
  */
 public class RefreshAssetsRequest extends Request {
-    @Query
-    @NameInMap("AssetType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssetType")
     private String assetType;
 
-    @Query
-    @NameInMap("CloudAssetSubType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CloudAssetSubType")
     private Integer cloudAssetSubType;
 
-    @Query
-    @NameInMap("CloudAssetType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CloudAssetType")
     private Integer cloudAssetType;
 
-    @Query
-    @NameInMap("Vendor")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Vendor")
     private Integer vendor;
 
     private RefreshAssetsRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,82 +11,82 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTotalStatisticsResponseBody</p>
  */
 public class DescribeTotalStatisticsResponseBody extends TeaModel {
-    @NameInMap("Account")
+    @com.aliyun.core.annotation.NameInMap("Account")
     private Integer account;
 
-    @NameInMap("Health")
+    @com.aliyun.core.annotation.NameInMap("Health")
     private Integer health;
 
-    @NameInMap("HealthTotal")
+    @com.aliyun.core.annotation.NameInMap("HealthTotal")
     private Integer healthTotal;
 
-    @NameInMap("HealthdealedTotal")
+    @com.aliyun.core.annotation.NameInMap("HealthdealedTotal")
     private Integer healthdealedTotal;
 
-    @NameInMap("HealthhighTotal")
+    @com.aliyun.core.annotation.NameInMap("HealthhighTotal")
     private Integer healthhighTotal;
 
-    @NameInMap("HealthlowTotal")
+    @com.aliyun.core.annotation.NameInMap("HealthlowTotal")
     private Integer healthlowTotal;
 
-    @NameInMap("HealthmediumTotal")
+    @com.aliyun.core.annotation.NameInMap("HealthmediumTotal")
     private Integer healthmediumTotal;
 
-    @NameInMap("HealthseriousTotal")
+    @com.aliyun.core.annotation.NameInMap("HealthseriousTotal")
     private Integer healthseriousTotal;
 
-    @NameInMap("Newsuspicious")
+    @com.aliyun.core.annotation.NameInMap("Newsuspicious")
     private Integer newsuspicious;
 
-    @NameInMap("Online")
+    @com.aliyun.core.annotation.NameInMap("Online")
     private Boolean online;
 
-    @NameInMap("Patch")
+    @com.aliyun.core.annotation.NameInMap("Patch")
     private Integer patch;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Suspicious")
+    @com.aliyun.core.annotation.NameInMap("Suspicious")
     private Integer suspicious;
 
-    @NameInMap("SuspiciousTotal")
+    @com.aliyun.core.annotation.NameInMap("SuspiciousTotal")
     private Integer suspiciousTotal;
 
-    @NameInMap("SuspiciousdealedTotal")
+    @com.aliyun.core.annotation.NameInMap("SuspiciousdealedTotal")
     private Integer suspiciousdealedTotal;
 
-    @NameInMap("SuspicioushighTotal")
+    @com.aliyun.core.annotation.NameInMap("SuspicioushighTotal")
     private Integer suspicioushighTotal;
 
-    @NameInMap("SuspiciouslowTotal")
+    @com.aliyun.core.annotation.NameInMap("SuspiciouslowTotal")
     private Integer suspiciouslowTotal;
 
-    @NameInMap("SuspiciousmediumTotal")
+    @com.aliyun.core.annotation.NameInMap("SuspiciousmediumTotal")
     private Integer suspiciousmediumTotal;
 
-    @NameInMap("SuspiciousseriousTotal")
+    @com.aliyun.core.annotation.NameInMap("SuspiciousseriousTotal")
     private Integer suspiciousseriousTotal;
 
-    @NameInMap("Trojan")
+    @com.aliyun.core.annotation.NameInMap("Trojan")
     private Integer trojan;
 
-    @NameInMap("Vul")
+    @com.aliyun.core.annotation.NameInMap("Vul")
     private Integer vul;
 
-    @NameInMap("VulAsapSum")
+    @com.aliyun.core.annotation.NameInMap("VulAsapSum")
     private Integer vulAsapSum;
 
-    @NameInMap("VulDealedTotal")
+    @com.aliyun.core.annotation.NameInMap("VulDealedTotal")
     private Integer vulDealedTotal;
 
-    @NameInMap("VulLaterSum")
+    @com.aliyun.core.annotation.NameInMap("VulLaterSum")
     private Integer vulLaterSum;
 
-    @NameInMap("VulNntfSum")
+    @com.aliyun.core.annotation.NameInMap("VulNntfSum")
     private Integer vulNntfSum;
 
-    @NameInMap("VulTotal")
+    @com.aliyun.core.annotation.NameInMap("VulTotal")
     private Integer vulTotal;
 
     private DescribeTotalStatisticsResponseBody(Builder builder) {

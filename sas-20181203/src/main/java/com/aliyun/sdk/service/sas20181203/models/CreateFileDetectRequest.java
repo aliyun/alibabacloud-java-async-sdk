@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,38 +11,38 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateFileDetectRequest</p>
  */
 public class CreateFileDetectRequest extends Request {
-    @Query
-    @NameInMap("Decompress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Decompress")
     private Boolean decompress;
 
-    @Query
-    @NameInMap("DecompressMaxFileCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DecompressMaxFileCount")
     private Integer decompressMaxFileCount;
 
-    @Query
-    @NameInMap("DecompressMaxLayer")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DecompressMaxLayer")
     private Integer decompressMaxLayer;
 
-    @Query
-    @NameInMap("DownloadUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DownloadUrl")
     private String downloadUrl;
 
-    @Query
-    @NameInMap("HashKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HashKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hashKey;
 
-    @Query
-    @NameInMap("OssKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssKey")
     private String ossKey;
 
-    @Query
-    @NameInMap("SourceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceIp")
     private String sourceIp;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer type;
 
     private CreateFileDetectRequest(Builder builder) {

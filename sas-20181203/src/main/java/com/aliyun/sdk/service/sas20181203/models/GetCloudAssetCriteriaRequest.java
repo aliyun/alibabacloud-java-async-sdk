@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetCloudAssetCriteriaRequest</p>
  */
 public class GetCloudAssetCriteriaRequest extends Request {
-    @Query
-    @NameInMap("CloudAssetTypes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CloudAssetTypes")
     private java.util.List < CloudAssetTypes> cloudAssetTypes;
 
-    @Query
-    @NameInMap("Value")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Value")
     private String value;
 
     private GetCloudAssetCriteriaRequest(Builder builder) {
@@ -93,10 +92,10 @@ public class GetCloudAssetCriteriaRequest extends Request {
     } 
 
     public static class CloudAssetTypes extends TeaModel {
-        @NameInMap("AssetSubType")
+        @com.aliyun.core.annotation.NameInMap("AssetSubType")
         private Integer assetSubType;
 
-        @NameInMap("AssetType")
+        @com.aliyun.core.annotation.NameInMap("AssetType")
         private Integer assetType;
 
         private CloudAssetTypes(Builder builder) {

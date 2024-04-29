@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeWebLockStatusResponseBody</p>
  */
 public class DescribeWebLockStatusResponseBody extends TeaModel {
-    @NameInMap("AuthCount")
+    @com.aliyun.core.annotation.NameInMap("AuthCount")
     private Integer authCount;
 
-    @NameInMap("BindCount")
+    @com.aliyun.core.annotation.NameInMap("BindCount")
     private Integer bindCount;
 
-    @NameInMap("BlockCount")
+    @com.aliyun.core.annotation.NameInMap("BlockCount")
     private Integer blockCount;
 
-    @NameInMap("DirCount")
+    @com.aliyun.core.annotation.NameInMap("DirCount")
     private Integer dirCount;
 
-    @NameInMap("ExpireTime")
+    @com.aliyun.core.annotation.NameInMap("ExpireTime")
     private Long expireTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("WhiteCount")
+    @com.aliyun.core.annotation.NameInMap("WhiteCount")
     private Integer whiteCount;
 
     private DescribeWebLockStatusResponseBody(Builder builder) {

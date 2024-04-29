@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddSasContainerWebDefenseRuleRequest</p>
  */
 public class AddSasContainerWebDefenseRuleRequest extends Request {
-    @Query
-    @NameInMap("PathConfDTOList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PathConfDTOList")
     private java.util.List < PathConfDTOList> pathConfDTOList;
 
-    @Query
-    @NameInMap("RuleName")
-    @Validation(maxLength = 50, minLength = 3)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleName")
+    @com.aliyun.core.annotation.Validation(maxLength = 50, minLength = 3)
     private String ruleName;
 
     private AddSasContainerWebDefenseRuleRequest(Builder builder) {
@@ -94,37 +93,37 @@ public class AddSasContainerWebDefenseRuleRequest extends Request {
     } 
 
     public static class PathConfDTOList extends TeaModel {
-        @NameInMap("BackupPath")
+        @com.aliyun.core.annotation.NameInMap("BackupPath")
         private String backupPath;
 
-        @NameInMap("DefenseMode")
+        @com.aliyun.core.annotation.NameInMap("DefenseMode")
         private String defenseMode;
 
-        @NameInMap("DefensePath")
-        @Validation(required = true, maxLength = 500)
+        @com.aliyun.core.annotation.NameInMap("DefensePath")
+        @com.aliyun.core.annotation.Validation(required = true, maxLength = 500)
         private String defensePath;
 
-        @NameInMap("ExcludeFile")
+        @com.aliyun.core.annotation.NameInMap("ExcludeFile")
         private String excludeFile;
 
-        @NameInMap("ExcludeFilePath")
+        @com.aliyun.core.annotation.NameInMap("ExcludeFilePath")
         private String excludeFilePath;
 
-        @NameInMap("ExcludeFileType")
+        @com.aliyun.core.annotation.NameInMap("ExcludeFileType")
         private String excludeFileType;
 
-        @NameInMap("GuardType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("GuardType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer guardType;
 
-        @NameInMap("IncludeFile")
+        @com.aliyun.core.annotation.NameInMap("IncludeFile")
         private String includeFile;
 
-        @NameInMap("IncludeFileType")
+        @com.aliyun.core.annotation.NameInMap("IncludeFileType")
         private String includeFileType;
 
-        @NameInMap("ProcessPathList")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ProcessPathList")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List < String > processPathList;
 
         private PathConfDTOList(Builder builder) {

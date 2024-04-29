@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateFileDetectUploadUrlResponseBody</p>
  */
 public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UploadUrlList")
+    @com.aliyun.core.annotation.NameInMap("UploadUrlList")
     private java.util.List < UploadUrlList> uploadUrlList;
 
     private CreateFileDetectUploadUrlResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
     } 
 
     public static class Context extends TeaModel {
-        @NameInMap("AccessId")
+        @com.aliyun.core.annotation.NameInMap("AccessId")
         private String accessId;
 
-        @NameInMap("OssKey")
+        @com.aliyun.core.annotation.NameInMap("OssKey")
         private String ossKey;
 
-        @NameInMap("Policy")
+        @com.aliyun.core.annotation.NameInMap("Policy")
         private String policy;
 
-        @NameInMap("Signature")
+        @com.aliyun.core.annotation.NameInMap("Signature")
         private String signature;
 
         private Context(Builder builder) {
@@ -173,28 +172,28 @@ public class CreateFileDetectUploadUrlResponseBody extends TeaModel {
 
     }
     public static class UploadUrlList extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Context")
+        @com.aliyun.core.annotation.NameInMap("Context")
         private Context context;
 
-        @NameInMap("Expire")
+        @com.aliyun.core.annotation.NameInMap("Expire")
         private String expire;
 
-        @NameInMap("FileExist")
+        @com.aliyun.core.annotation.NameInMap("FileExist")
         private Boolean fileExist;
 
-        @NameInMap("HashKey")
+        @com.aliyun.core.annotation.NameInMap("HashKey")
         private String hashKey;
 
-        @NameInMap("InternalUrl")
+        @com.aliyun.core.annotation.NameInMap("InternalUrl")
         private String internalUrl;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("PublicUrl")
+        @com.aliyun.core.annotation.NameInMap("PublicUrl")
         private String publicUrl;
 
         private UploadUrlList(Builder builder) {

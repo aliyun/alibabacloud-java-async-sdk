@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAccesskeyLeakListResponseBody</p>
  */
 public class DescribeAccesskeyLeakListResponseBody extends TeaModel {
-    @NameInMap("AccessKeyLeakList")
+    @com.aliyun.core.annotation.NameInMap("AccessKeyLeakList")
     private java.util.List < AccessKeyLeakList> accessKeyLeakList;
 
-    @NameInMap("AkLeakCount")
+    @com.aliyun.core.annotation.NameInMap("AkLeakCount")
     private Integer akLeakCount;
 
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("GmtLast")
+    @com.aliyun.core.annotation.NameInMap("GmtLast")
     private Long gmtLast;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeAccesskeyLeakListResponseBody(Builder builder) {
@@ -172,37 +171,37 @@ public class DescribeAccesskeyLeakListResponseBody extends TeaModel {
     } 
 
     public static class AccessKeyLeakList extends TeaModel {
-        @NameInMap("AccesskeyId")
+        @com.aliyun.core.annotation.NameInMap("AccesskeyId")
         private String accesskeyId;
 
-        @NameInMap("AliUserName")
+        @com.aliyun.core.annotation.NameInMap("AliUserName")
         private String aliUserName;
 
-        @NameInMap("Asset")
+        @com.aliyun.core.annotation.NameInMap("Asset")
         private String asset;
 
-        @NameInMap("DealTime")
+        @com.aliyun.core.annotation.NameInMap("DealTime")
         private String dealTime;
 
-        @NameInMap("DealType")
+        @com.aliyun.core.annotation.NameInMap("DealType")
         private String dealType;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
-        @NameInMap("UserType")
+        @com.aliyun.core.annotation.NameInMap("UserType")
         private String userType;
 
         private AccessKeyLeakList(Builder builder) {

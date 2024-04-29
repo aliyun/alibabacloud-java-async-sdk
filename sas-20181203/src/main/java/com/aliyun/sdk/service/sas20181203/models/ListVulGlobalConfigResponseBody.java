@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListVulGlobalConfigResponseBody</p>
  */
 public class ListVulGlobalConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VulGlobalConfigList")
+    @com.aliyun.core.annotation.NameInMap("VulGlobalConfigList")
     private java.util.List < VulGlobalConfigList> vulGlobalConfigList;
 
     private ListVulGlobalConfigResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class ListVulGlobalConfigResponseBody extends TeaModel {
     } 
 
     public static class VulGlobalConfigList extends TeaModel {
-        @NameInMap("ConfigKey")
+        @com.aliyun.core.annotation.NameInMap("ConfigKey")
         private String configKey;
 
-        @NameInMap("ConfigValue")
+        @com.aliyun.core.annotation.NameInMap("ConfigValue")
         private String configValue;
 
         private VulGlobalConfigList(Builder builder) {

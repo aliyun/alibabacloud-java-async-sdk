@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>VerifyCheckInstanceResultResponseBody</p>
  */
 public class VerifyCheckInstanceResultResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private VerifyCheckInstanceResultResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class VerifyCheckInstanceResultResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("FailInstances")
+        @com.aliyun.core.annotation.NameInMap("FailInstances")
         private java.util.List < String > failInstances;
 
-        @NameInMap("OperateCode")
+        @com.aliyun.core.annotation.NameInMap("OperateCode")
         private String operateCode;
 
         private Data(Builder builder) {

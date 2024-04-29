@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainDetailResponseBody</p>
  */
 public class DescribeDomainDetailResponseBody extends TeaModel {
-    @NameInMap("AlarmCount")
+    @com.aliyun.core.annotation.NameInMap("AlarmCount")
     private Integer alarmCount;
 
-    @NameInMap("Domain")
+    @com.aliyun.core.annotation.NameInMap("Domain")
     private String domain;
 
-    @NameInMap("DomainDetailItems")
+    @com.aliyun.core.annotation.NameInMap("DomainDetailItems")
     private java.util.List < DomainDetailItems> domainDetailItems;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RootDomain")
+    @com.aliyun.core.annotation.NameInMap("RootDomain")
     private String rootDomain;
 
-    @NameInMap("VulCount")
+    @com.aliyun.core.annotation.NameInMap("VulCount")
     private Integer vulCount;
 
     private DescribeDomainDetailResponseBody(Builder builder) {
@@ -152,22 +151,22 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
     } 
 
     public static class DomainDetailItems extends TeaModel {
-        @NameInMap("AssetType")
+        @com.aliyun.core.annotation.NameInMap("AssetType")
         private String assetType;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IntranetIp")
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private DomainDetailItems(Builder builder) {

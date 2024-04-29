@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeQuaraFileDownloadInfoResponseBody</p>
  */
 public class DescribeQuaraFileDownloadInfoResponseBody extends TeaModel {
-    @NameInMap("DownloadUrl")
+    @com.aliyun.core.annotation.NameInMap("DownloadUrl")
     private String downloadUrl;
 
-    @NameInMap("Md5")
+    @com.aliyun.core.annotation.NameInMap("Md5")
     private String md5;
 
-    @NameInMap("Path")
+    @com.aliyun.core.annotation.NameInMap("Path")
     private String path;
 
-    @NameInMap("QuaraFileId")
+    @com.aliyun.core.annotation.NameInMap("QuaraFileId")
     private Integer quaraFileId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private String tag;
 
-    @NameInMap("Uuid")
+    @com.aliyun.core.annotation.NameInMap("Uuid")
     private String uuid;
 
     private DescribeQuaraFileDownloadInfoResponseBody(Builder builder) {

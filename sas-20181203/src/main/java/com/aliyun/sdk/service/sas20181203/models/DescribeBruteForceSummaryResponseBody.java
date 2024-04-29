@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBruteForceSummaryResponseBody</p>
  */
 public class DescribeBruteForceSummaryResponseBody extends TeaModel {
-    @NameInMap("BruteForceSummary")
+    @com.aliyun.core.annotation.NameInMap("BruteForceSummary")
     private BruteForceSummary bruteForceSummary;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeBruteForceSummaryResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class DescribeBruteForceSummaryResponseBody extends TeaModel {
     } 
 
     public static class BruteForceSummary extends TeaModel {
-        @NameInMap("AllStrategyCount")
+        @com.aliyun.core.annotation.NameInMap("AllStrategyCount")
         private Integer allStrategyCount;
 
-        @NameInMap("AntiBruteForceRuleCount")
+        @com.aliyun.core.annotation.NameInMap("AntiBruteForceRuleCount")
         private String antiBruteForceRuleCount;
 
-        @NameInMap("CustomEffectiveCount")
+        @com.aliyun.core.annotation.NameInMap("CustomEffectiveCount")
         private String customEffectiveCount;
 
-        @NameInMap("CustomRecordCount")
+        @com.aliyun.core.annotation.NameInMap("CustomRecordCount")
         private String customRecordCount;
 
-        @NameInMap("EffectiveCount")
+        @com.aliyun.core.annotation.NameInMap("EffectiveCount")
         private Integer effectiveCount;
 
-        @NameInMap("SystemEffectiveCount")
+        @com.aliyun.core.annotation.NameInMap("SystemEffectiveCount")
         private String systemEffectiveCount;
 
-        @NameInMap("SystemRecordCount")
+        @com.aliyun.core.annotation.NameInMap("SystemRecordCount")
         private String systemRecordCount;
 
         private BruteForceSummary(Builder builder) {

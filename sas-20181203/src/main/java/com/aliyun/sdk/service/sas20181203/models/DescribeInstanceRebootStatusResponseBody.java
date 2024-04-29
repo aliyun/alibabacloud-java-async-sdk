@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceRebootStatusResponseBody</p>
  */
 public class DescribeInstanceRebootStatusResponseBody extends TeaModel {
-    @NameInMap("RebootStatuses")
+    @com.aliyun.core.annotation.NameInMap("RebootStatuses")
     private java.util.List < RebootStatuses> rebootStatuses;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeInstanceRebootStatusResponseBody(Builder builder) {
@@ -92,16 +91,16 @@ public class DescribeInstanceRebootStatusResponseBody extends TeaModel {
     } 
 
     public static class RebootStatuses extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Msg")
+        @com.aliyun.core.annotation.NameInMap("Msg")
         private String msg;
 
-        @NameInMap("RebootStatus")
+        @com.aliyun.core.annotation.NameInMap("RebootStatus")
         private Integer rebootStatus;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private RebootStatuses(Builder builder) {

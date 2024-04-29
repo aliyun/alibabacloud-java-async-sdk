@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListHoneypotAttackerPortraitResponseBody</p>
  */
 public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("List")
+    @com.aliyun.core.annotation.NameInMap("List")
     private java.util.List < List> list;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListHoneypotAttackerPortraitResponseBody(Builder builder) {
@@ -176,13 +175,13 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
     } 
 
     public static class Network extends TeaModel {
-        @NameInMap("ExternalIp")
+        @com.aliyun.core.annotation.NameInMap("ExternalIp")
         private java.util.List < String > externalIp;
 
-        @NameInMap("InternalIp")
+        @com.aliyun.core.annotation.NameInMap("InternalIp")
         private java.util.List < String > internalIp;
 
-        @NameInMap("RealIp")
+        @com.aliyun.core.annotation.NameInMap("RealIp")
         private java.util.List < String > realIp;
 
         private Network(Builder builder) {
@@ -257,25 +256,25 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
 
     }
     public static class List extends TeaModel {
-        @NameInMap("AttackCount")
+        @com.aliyun.core.annotation.NameInMap("AttackCount")
         private Integer attackCount;
 
-        @NameInMap("Browser")
+        @com.aliyun.core.annotation.NameInMap("Browser")
         private java.util.List < String > browser;
 
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private java.util.List < String > host;
 
-        @NameInMap("LastTime")
+        @com.aliyun.core.annotation.NameInMap("LastTime")
         private Long lastTime;
 
-        @NameInMap("Network")
+        @com.aliyun.core.annotation.NameInMap("Network")
         private Network network;
 
-        @NameInMap("PortraitId")
+        @com.aliyun.core.annotation.NameInMap("PortraitId")
         private String portraitId;
 
-        @NameInMap("Social")
+        @com.aliyun.core.annotation.NameInMap("Social")
         private java.util.List < String > social;
 
         private List(Builder builder) {
@@ -418,16 +417,16 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {

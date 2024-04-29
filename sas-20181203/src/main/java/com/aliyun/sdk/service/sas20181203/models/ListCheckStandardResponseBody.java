@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCheckStandardResponseBody</p>
  */
 public class ListCheckStandardResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Standards")
+    @com.aliyun.core.annotation.NameInMap("Standards")
     private java.util.List < Standards> standards;
 
     private ListCheckStandardResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class ListCheckStandardResponseBody extends TeaModel {
     } 
 
     public static class Requirements extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("RiskCheckCount")
+        @com.aliyun.core.annotation.NameInMap("RiskCheckCount")
         private Long riskCheckCount;
 
-        @NameInMap("ShowName")
+        @com.aliyun.core.annotation.NameInMap("ShowName")
         private String showName;
 
         private Requirements(Builder builder) {
@@ -153,16 +152,16 @@ public class ListCheckStandardResponseBody extends TeaModel {
 
     }
     public static class Standards extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Requirements")
+        @com.aliyun.core.annotation.NameInMap("Requirements")
         private java.util.List < Requirements> requirements;
 
-        @NameInMap("ShowName")
+        @com.aliyun.core.annotation.NameInMap("ShowName")
         private String showName;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Standards(Builder builder) {

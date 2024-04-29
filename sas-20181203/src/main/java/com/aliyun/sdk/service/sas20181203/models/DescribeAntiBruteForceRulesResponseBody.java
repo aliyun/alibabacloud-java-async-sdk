@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAntiBruteForceRulesResponseBody</p>
  */
 public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Rules")
+    @com.aliyun.core.annotation.NameInMap("Rules")
     private java.util.List < Rules> rules;
 
     private DescribeAntiBruteForceRulesResponseBody(Builder builder) {
@@ -92,16 +91,16 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
     } 
 
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -193,34 +192,34 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
 
     }
     public static class Rules extends TeaModel {
-        @NameInMap("CreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
-        @NameInMap("DefaultRule")
+        @com.aliyun.core.annotation.NameInMap("DefaultRule")
         private Boolean defaultRule;
 
-        @NameInMap("EnableSmartRule")
+        @com.aliyun.core.annotation.NameInMap("EnableSmartRule")
         private Boolean enableSmartRule;
 
-        @NameInMap("FailCount")
+        @com.aliyun.core.annotation.NameInMap("FailCount")
         private Integer failCount;
 
-        @NameInMap("ForbiddenTime")
+        @com.aliyun.core.annotation.NameInMap("ForbiddenTime")
         private Integer forbiddenTime;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("MachineCount")
+        @com.aliyun.core.annotation.NameInMap("MachineCount")
         private Integer machineCount;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Span")
+        @com.aliyun.core.annotation.NameInMap("Span")
         private Integer span;
 
-        @NameInMap("UuidList")
+        @com.aliyun.core.annotation.NameInMap("UuidList")
         private java.util.List < String > uuidList;
 
         private Rules(Builder builder) {

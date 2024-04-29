@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLogShipperStatusResponseBody</p>
  */
 public class DescribeLogShipperStatusResponseBody extends TeaModel {
-    @NameInMap("LogShipperStatus")
+    @com.aliyun.core.annotation.NameInMap("LogShipperStatus")
     private LogShipperStatus logShipperStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeLogShipperStatusResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
     } 
 
     public static class LogShipperStatus extends TeaModel {
-        @NameInMap("AuthStatus")
+        @com.aliyun.core.annotation.NameInMap("AuthStatus")
         private String authStatus;
 
-        @NameInMap("BuyStatus")
+        @com.aliyun.core.annotation.NameInMap("BuyStatus")
         private String buyStatus;
 
-        @NameInMap("OpenStatus")
+        @com.aliyun.core.annotation.NameInMap("OpenStatus")
         private String openStatus;
 
-        @NameInMap("PostPaidOpenStatus")
+        @com.aliyun.core.annotation.NameInMap("PostPaidOpenStatus")
         private String postPaidOpenStatus;
 
-        @NameInMap("PostPaidSupportStatus")
+        @com.aliyun.core.annotation.NameInMap("PostPaidSupportStatus")
         private String postPaidSupportStatus;
 
-        @NameInMap("SlsProjectStatus")
+        @com.aliyun.core.annotation.NameInMap("SlsProjectStatus")
         private String slsProjectStatus;
 
-        @NameInMap("SlsServiceStatus")
+        @com.aliyun.core.annotation.NameInMap("SlsServiceStatus")
         private String slsServiceStatus;
 
         private LogShipperStatus(Builder builder) {

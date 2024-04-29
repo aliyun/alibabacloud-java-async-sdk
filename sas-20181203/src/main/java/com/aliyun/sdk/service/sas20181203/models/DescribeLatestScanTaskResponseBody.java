@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLatestScanTaskResponseBody</p>
  */
 public class DescribeLatestScanTaskResponseBody extends TeaModel {
-    @NameInMap("LastCheckTime")
+    @com.aliyun.core.annotation.NameInMap("LastCheckTime")
     private Long lastCheckTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RiskNum")
+    @com.aliyun.core.annotation.NameInMap("RiskNum")
     private Integer riskNum;
 
-    @NameInMap("TargetInfo")
+    @com.aliyun.core.annotation.NameInMap("TargetInfo")
     private String targetInfo;
 
-    @NameInMap("Uuids")
+    @com.aliyun.core.annotation.NameInMap("Uuids")
     private java.util.List < String > uuids;
 
     private DescribeLatestScanTaskResponseBody(Builder builder) {

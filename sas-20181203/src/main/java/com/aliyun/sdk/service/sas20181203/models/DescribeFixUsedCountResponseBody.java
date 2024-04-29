@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeFixUsedCountResponseBody</p>
  */
 public class DescribeFixUsedCountResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UsedCount")
+    @com.aliyun.core.annotation.NameInMap("UsedCount")
     private Integer usedCount;
 
-    @NameInMap("UsedCountCn")
+    @com.aliyun.core.annotation.NameInMap("UsedCountCn")
     private Integer usedCountCn;
 
-    @NameInMap("UsedCountSg")
+    @com.aliyun.core.annotation.NameInMap("UsedCountSg")
     private Integer usedCountSg;
 
     private DescribeFixUsedCountResponseBody(Builder builder) {

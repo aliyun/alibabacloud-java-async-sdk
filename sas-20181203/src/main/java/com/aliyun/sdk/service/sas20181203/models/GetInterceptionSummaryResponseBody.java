@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInterceptionSummaryResponseBody</p>
  */
 public class GetInterceptionSummaryResponseBody extends TeaModel {
-    @NameInMap("InterceptionSummary")
+    @com.aliyun.core.annotation.NameInMap("InterceptionSummary")
     private InterceptionSummary interceptionSummary;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetInterceptionSummaryResponseBody(Builder builder) {
@@ -72,34 +71,34 @@ public class GetInterceptionSummaryResponseBody extends TeaModel {
     } 
 
     public static class InterceptionSummary extends TeaModel {
-        @NameInMap("CloseClusterCount")
+        @com.aliyun.core.annotation.NameInMap("CloseClusterCount")
         private Integer closeClusterCount;
 
-        @NameInMap("CloseRuleCount")
+        @com.aliyun.core.annotation.NameInMap("CloseRuleCount")
         private Integer closeRuleCount;
 
-        @NameInMap("ClusterCount")
+        @com.aliyun.core.annotation.NameInMap("ClusterCount")
         private Integer clusterCount;
 
-        @NameInMap("InterceptionCountInDays")
+        @com.aliyun.core.annotation.NameInMap("InterceptionCountInDays")
         private Integer interceptionCountInDays;
 
-        @NameInMap("OpenClusterCount")
+        @com.aliyun.core.annotation.NameInMap("OpenClusterCount")
         private Integer openClusterCount;
 
-        @NameInMap("OpenRuleCount")
+        @com.aliyun.core.annotation.NameInMap("OpenRuleCount")
         private Integer openRuleCount;
 
-        @NameInMap("RiskCount180Day")
+        @com.aliyun.core.annotation.NameInMap("RiskCount180Day")
         private Long riskCount180Day;
 
-        @NameInMap("RiskCount30Day")
+        @com.aliyun.core.annotation.NameInMap("RiskCount30Day")
         private Long riskCount30Day;
 
-        @NameInMap("RiskCountToday")
+        @com.aliyun.core.annotation.NameInMap("RiskCountToday")
         private Long riskCountToday;
 
-        @NameInMap("RuleCount")
+        @com.aliyun.core.annotation.NameInMap("RuleCount")
         private Integer ruleCount;
 
         private InterceptionSummary(Builder builder) {

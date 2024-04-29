@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeStrategyResponseBody</p>
  */
 public class DescribeStrategyResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Strategies")
+    @com.aliyun.core.annotation.NameInMap("Strategies")
     private java.util.List < Strategies> strategies;
 
     private DescribeStrategyResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeStrategyResponseBody extends TeaModel {
     } 
 
     public static class ConfigTargets extends TeaModel {
-        @NameInMap("Flag")
+        @com.aliyun.core.annotation.NameInMap("Flag")
         private String flag;
 
-        @NameInMap("Target")
+        @com.aliyun.core.annotation.NameInMap("Target")
         private String target;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
         private ConfigTargets(Builder builder) {
@@ -161,46 +160,46 @@ public class DescribeStrategyResponseBody extends TeaModel {
 
     }
     public static class Strategies extends TeaModel {
-        @NameInMap("ConfigTargets")
+        @com.aliyun.core.annotation.NameInMap("ConfigTargets")
         private java.util.List < ConfigTargets> configTargets;
 
-        @NameInMap("CustomType")
+        @com.aliyun.core.annotation.NameInMap("CustomType")
         private String customType;
 
-        @NameInMap("CycleDays")
+        @com.aliyun.core.annotation.NameInMap("CycleDays")
         private Integer cycleDays;
 
-        @NameInMap("CycleStartTime")
+        @com.aliyun.core.annotation.NameInMap("CycleStartTime")
         private Integer cycleStartTime;
 
-        @NameInMap("EcsCount")
+        @com.aliyun.core.annotation.NameInMap("EcsCount")
         private Integer ecsCount;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("ExecStatus")
+        @com.aliyun.core.annotation.NameInMap("ExecStatus")
         private Integer execStatus;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PassRate")
+        @com.aliyun.core.annotation.NameInMap("PassRate")
         private Integer passRate;
 
-        @NameInMap("ProcessRate")
+        @com.aliyun.core.annotation.NameInMap("ProcessRate")
         private Integer processRate;
 
-        @NameInMap("RiskCount")
+        @com.aliyun.core.annotation.NameInMap("RiskCount")
         private Integer riskCount;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
         private Strategies(Builder builder) {

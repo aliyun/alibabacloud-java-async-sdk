@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetFileDetectReportResponseBody</p>
  */
 public class GetFileDetectReportResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetFileDetectReportResponseBody(Builder builder) {
@@ -136,31 +135,31 @@ public class GetFileDetectReportResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("Basic")
+        @com.aliyun.core.annotation.NameInMap("Basic")
         private String basic;
 
-        @NameInMap("FileHash")
+        @com.aliyun.core.annotation.NameInMap("FileHash")
         private String fileHash;
 
-        @NameInMap("Filename")
+        @com.aliyun.core.annotation.NameInMap("Filename")
         private String filename;
 
-        @NameInMap("HasData")
+        @com.aliyun.core.annotation.NameInMap("HasData")
         private Boolean hasData;
 
-        @NameInMap("Intelligences")
+        @com.aliyun.core.annotation.NameInMap("Intelligences")
         private String intelligences;
 
-        @NameInMap("Sandbox")
+        @com.aliyun.core.annotation.NameInMap("Sandbox")
         private String sandbox;
 
-        @NameInMap("ShowTab")
+        @com.aliyun.core.annotation.NameInMap("ShowTab")
         private Boolean showTab;
 
-        @NameInMap("ThreatLevel")
+        @com.aliyun.core.annotation.NameInMap("ThreatLevel")
         private Long threatLevel;
 
-        @NameInMap("ThreatTypes")
+        @com.aliyun.core.annotation.NameInMap("ThreatTypes")
         private String threatTypes;
 
         private Data(Builder builder) {

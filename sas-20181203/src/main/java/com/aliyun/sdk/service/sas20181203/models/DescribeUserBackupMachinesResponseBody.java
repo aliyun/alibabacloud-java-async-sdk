@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUserBackupMachinesResponseBody</p>
  */
 public class DescribeUserBackupMachinesResponseBody extends TeaModel {
-    @NameInMap("Machines")
+    @com.aliyun.core.annotation.NameInMap("Machines")
     private java.util.List < Machines> machines;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeUserBackupMachinesResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeUserBackupMachinesResponseBody extends TeaModel {
     } 
 
     public static class Machines extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("PolicyName")
+        @com.aliyun.core.annotation.NameInMap("PolicyName")
         private String policyName;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private Machines(Builder builder) {

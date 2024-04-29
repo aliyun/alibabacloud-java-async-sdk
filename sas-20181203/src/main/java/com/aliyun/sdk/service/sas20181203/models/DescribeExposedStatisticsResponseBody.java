@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeExposedStatisticsResponseBody</p>
  */
 public class DescribeExposedStatisticsResponseBody extends TeaModel {
-    @NameInMap("ExposedAsapVulCount")
+    @com.aliyun.core.annotation.NameInMap("ExposedAsapVulCount")
     private Integer exposedAsapVulCount;
 
-    @NameInMap("ExposedComponentCount")
+    @com.aliyun.core.annotation.NameInMap("ExposedComponentCount")
     private Integer exposedComponentCount;
 
-    @NameInMap("ExposedInstanceCount")
+    @com.aliyun.core.annotation.NameInMap("ExposedInstanceCount")
     private Integer exposedInstanceCount;
 
-    @NameInMap("ExposedIpCount")
+    @com.aliyun.core.annotation.NameInMap("ExposedIpCount")
     private Integer exposedIpCount;
 
-    @NameInMap("ExposedLaterVulCount")
+    @com.aliyun.core.annotation.NameInMap("ExposedLaterVulCount")
     private Integer exposedLaterVulCount;
 
-    @NameInMap("ExposedNntfVulCount")
+    @com.aliyun.core.annotation.NameInMap("ExposedNntfVulCount")
     private Integer exposedNntfVulCount;
 
-    @NameInMap("ExposedPortCount")
+    @com.aliyun.core.annotation.NameInMap("ExposedPortCount")
     private Integer exposedPortCount;
 
-    @NameInMap("ExposedWeekPasswordMachineCount")
+    @com.aliyun.core.annotation.NameInMap("ExposedWeekPasswordMachineCount")
     private Integer exposedWeekPasswordMachineCount;
 
-    @NameInMap("GatewayAssetCount")
+    @com.aliyun.core.annotation.NameInMap("GatewayAssetCount")
     private Integer gatewayAssetCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeExposedStatisticsResponseBody(Builder builder) {

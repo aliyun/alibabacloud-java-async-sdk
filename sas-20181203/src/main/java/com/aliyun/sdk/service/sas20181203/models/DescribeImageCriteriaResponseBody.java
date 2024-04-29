@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImageCriteriaResponseBody</p>
  */
 public class DescribeImageCriteriaResponseBody extends TeaModel {
-    @NameInMap("CriteriaList")
+    @com.aliyun.core.annotation.NameInMap("CriteriaList")
     private java.util.List < CriteriaList> criteriaList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeImageCriteriaResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeImageCriteriaResponseBody extends TeaModel {
     } 
 
     public static class CriteriaList extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Values")
+        @com.aliyun.core.annotation.NameInMap("Values")
         private String values;
 
         private CriteriaList(Builder builder) {

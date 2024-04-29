@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeGroupedContainerInstancesResponseBody</p>
  */
 public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
-    @NameInMap("GroupedContainerInstanceList")
+    @com.aliyun.core.annotation.NameInMap("GroupedContainerInstanceList")
     private java.util.List < GroupedContainerInstanceList> groupedContainerInstanceList;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeGroupedContainerInstancesResponseBody(Builder builder) {
@@ -92,85 +91,85 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
     } 
 
     public static class GroupedContainerInstanceList extends TeaModel {
-        @NameInMap("AlarmCount")
+        @com.aliyun.core.annotation.NameInMap("AlarmCount")
         private Integer alarmCount;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("ClusterType")
+        @com.aliyun.core.annotation.NameInMap("ClusterType")
         private String clusterType;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("CusterState")
+        @com.aliyun.core.annotation.NameInMap("CusterState")
         private String custerState;
 
-        @NameInMap("HcCount")
+        @com.aliyun.core.annotation.NameInMap("HcCount")
         private Integer hcCount;
 
-        @NameInMap("HostIp")
+        @com.aliyun.core.annotation.NameInMap("HostIp")
         private String hostIp;
 
-        @NameInMap("Image")
+        @com.aliyun.core.annotation.NameInMap("Image")
         private String image;
 
-        @NameInMap("ImageDigest")
+        @com.aliyun.core.annotation.NameInMap("ImageDigest")
         private String imageDigest;
 
-        @NameInMap("ImageRepoName")
+        @com.aliyun.core.annotation.NameInMap("ImageRepoName")
         private String imageRepoName;
 
-        @NameInMap("ImageRepoNamespace")
+        @com.aliyun.core.annotation.NameInMap("ImageRepoNamespace")
         private String imageRepoNamespace;
 
-        @NameInMap("ImageRepoTag")
+        @com.aliyun.core.annotation.NameInMap("ImageRepoTag")
         private String imageRepoTag;
 
-        @NameInMap("ImageUuid")
+        @com.aliyun.core.annotation.NameInMap("ImageUuid")
         private String imageUuid;
 
-        @NameInMap("InstanceCount")
+        @com.aliyun.core.annotation.NameInMap("InstanceCount")
         private Integer instanceCount;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("Pod")
+        @com.aliyun.core.annotation.NameInMap("Pod")
         private String pod;
 
-        @NameInMap("PodIp")
+        @com.aliyun.core.annotation.NameInMap("PodIp")
         private String podIp;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RiskInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("RiskInstanceCount")
         private Integer riskInstanceCount;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
 
-        @NameInMap("RiskStatus")
+        @com.aliyun.core.annotation.NameInMap("RiskStatus")
         private String riskStatus;
 
-        @NameInMap("SyncOpen")
+        @com.aliyun.core.annotation.NameInMap("SyncOpen")
         private Integer syncOpen;
 
-        @NameInMap("SyncStatus")
+        @com.aliyun.core.annotation.NameInMap("SyncStatus")
         private Integer syncStatus;
 
-        @NameInMap("VulCount")
+        @com.aliyun.core.annotation.NameInMap("VulCount")
         private Integer vulCount;
 
         private GroupedContainerInstanceList(Builder builder) {
@@ -682,16 +681,16 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {

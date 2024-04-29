@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRisksResponseBody</p>
  */
 public class DescribeRisksResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Risks")
+    @com.aliyun.core.annotation.NameInMap("Risks")
     private java.util.List < Risks> risks;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeRisksResponseBody(Builder builder) {
@@ -92,25 +91,25 @@ public class DescribeRisksResponseBody extends TeaModel {
     } 
 
     public static class Risks extends TeaModel {
-        @NameInMap("RiskDetail")
+        @com.aliyun.core.annotation.NameInMap("RiskDetail")
         private String riskDetail;
 
-        @NameInMap("RiskId")
+        @com.aliyun.core.annotation.NameInMap("RiskId")
         private Long riskId;
 
-        @NameInMap("RiskName")
+        @com.aliyun.core.annotation.NameInMap("RiskName")
         private String riskName;
 
-        @NameInMap("RiskType")
+        @com.aliyun.core.annotation.NameInMap("RiskType")
         private String riskType;
 
-        @NameInMap("SubRiskType")
+        @com.aliyun.core.annotation.NameInMap("SubRiskType")
         private String subRiskType;
 
-        @NameInMap("SubTypeAlias")
+        @com.aliyun.core.annotation.NameInMap("SubTypeAlias")
         private String subTypeAlias;
 
-        @NameInMap("TypeAlias")
+        @com.aliyun.core.annotation.NameInMap("TypeAlias")
         private String typeAlias;
 
         private Risks(Builder builder) {

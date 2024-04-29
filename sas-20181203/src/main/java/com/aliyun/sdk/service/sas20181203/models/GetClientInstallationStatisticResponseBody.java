@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetClientInstallationStatisticResponseBody</p>
  */
 public class GetClientInstallationStatisticResponseBody extends TeaModel {
-    @NameInMap("ClientInstallRatio")
+    @com.aliyun.core.annotation.NameInMap("ClientInstallRatio")
     private ClientInstallRatio clientInstallRatio;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetClientInstallationStatisticResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class GetClientInstallationStatisticResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("AssetTotalCount")
+        @com.aliyun.core.annotation.NameInMap("AssetTotalCount")
         private Integer assetTotalCount;
 
-        @NameInMap("CalculateTime")
+        @com.aliyun.core.annotation.NameInMap("CalculateTime")
         private Long calculateTime;
 
-        @NameInMap("InstallRatio")
+        @com.aliyun.core.annotation.NameInMap("InstallRatio")
         private Double installRatio;
 
-        @NameInMap("InstalledAssetCount")
+        @com.aliyun.core.annotation.NameInMap("InstalledAssetCount")
         private Integer installedAssetCount;
 
         private Items(Builder builder) {
@@ -173,10 +172,10 @@ public class GetClientInstallationStatisticResponseBody extends TeaModel {
 
     }
     public static class CurrentItems extends TeaModel {
-        @NameInMap("Items")
+        @com.aliyun.core.annotation.NameInMap("Items")
         private java.util.List < Items> items;
 
-        @NameInMap("Vendor")
+        @com.aliyun.core.annotation.NameInMap("Vendor")
         private Long vendor;
 
         private CurrentItems(Builder builder) {
@@ -241,16 +240,16 @@ public class GetClientInstallationStatisticResponseBody extends TeaModel {
 
     }
     public static class HistoryItemsItems extends TeaModel {
-        @NameInMap("AssetTotalCount")
+        @com.aliyun.core.annotation.NameInMap("AssetTotalCount")
         private Integer assetTotalCount;
 
-        @NameInMap("CalculateTime")
+        @com.aliyun.core.annotation.NameInMap("CalculateTime")
         private Long calculateTime;
 
-        @NameInMap("InstallRatio")
+        @com.aliyun.core.annotation.NameInMap("InstallRatio")
         private Double installRatio;
 
-        @NameInMap("InstalledAssetCount")
+        @com.aliyun.core.annotation.NameInMap("InstalledAssetCount")
         private Integer installedAssetCount;
 
         private HistoryItemsItems(Builder builder) {
@@ -342,10 +341,10 @@ public class GetClientInstallationStatisticResponseBody extends TeaModel {
 
     }
     public static class HistoryItems extends TeaModel {
-        @NameInMap("Items")
+        @com.aliyun.core.annotation.NameInMap("Items")
         private java.util.List < HistoryItemsItems> items;
 
-        @NameInMap("Vendor")
+        @com.aliyun.core.annotation.NameInMap("Vendor")
         private Long vendor;
 
         private HistoryItems(Builder builder) {
@@ -410,13 +409,13 @@ public class GetClientInstallationStatisticResponseBody extends TeaModel {
 
     }
     public static class ClientInstallRatio extends TeaModel {
-        @NameInMap("CurrentItems")
+        @com.aliyun.core.annotation.NameInMap("CurrentItems")
         private java.util.List < CurrentItems> currentItems;
 
-        @NameInMap("Dates")
+        @com.aliyun.core.annotation.NameInMap("Dates")
         private java.util.List < Long > dates;
 
-        @NameInMap("HistoryItems")
+        @com.aliyun.core.annotation.NameInMap("HistoryItems")
         private java.util.List < HistoryItems> historyItems;
 
         private ClientInstallRatio(Builder builder) {

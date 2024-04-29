@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImageStatisticsResponseBody</p>
  */
 public class DescribeImageStatisticsResponseBody extends TeaModel {
-    @NameInMap("InstanceCount")
+    @com.aliyun.core.annotation.NameInMap("InstanceCount")
     private Integer instanceCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RiskInstanceCount")
+    @com.aliyun.core.annotation.NameInMap("RiskInstanceCount")
     private Integer riskInstanceCount;
 
     private DescribeImageStatisticsResponseBody(Builder builder) {

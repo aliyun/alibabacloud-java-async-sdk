@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyClientConfSetupRequest</p>
  */
 public class ModifyClientConfSetupRequest extends Request {
-    @Query
-    @NameInMap("StrategyConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyConfig")
     private String strategyConfig;
 
-    @Query
-    @NameInMap("StrategyTag")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyTag")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String strategyTag;
 
-    @Query
-    @NameInMap("StrategyTagValue")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyTagValue")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String strategyTagValue;
 
     private ModifyClientConfSetupRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeExposedCheckWarningResponseBody</p>
  */
 public class DescribeExposedCheckWarningResponseBody extends TeaModel {
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("WarningList")
+    @com.aliyun.core.annotation.NameInMap("WarningList")
     private java.util.List < WarningList> warningList;
 
     private DescribeExposedCheckWarningResponseBody(Builder builder) {
@@ -92,19 +91,19 @@ public class DescribeExposedCheckWarningResponseBody extends TeaModel {
     } 
 
     public static class WarningList extends TeaModel {
-        @NameInMap("RiskId")
+        @com.aliyun.core.annotation.NameInMap("RiskId")
         private Long riskId;
 
-        @NameInMap("RiskName")
+        @com.aliyun.core.annotation.NameInMap("RiskName")
         private String riskName;
 
-        @NameInMap("SubTypeAlias")
+        @com.aliyun.core.annotation.NameInMap("SubTypeAlias")
         private String subTypeAlias;
 
-        @NameInMap("TypeAlias")
+        @com.aliyun.core.annotation.NameInMap("TypeAlias")
         private String typeAlias;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private WarningList(Builder builder) {

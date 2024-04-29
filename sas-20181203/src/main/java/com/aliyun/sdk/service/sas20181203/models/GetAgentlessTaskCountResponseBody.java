@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAgentlessTaskCountResponseBody</p>
  */
 public class GetAgentlessTaskCountResponseBody extends TeaModel {
-    @NameInMap("BaselineCheckCount")
+    @com.aliyun.core.annotation.NameInMap("BaselineCheckCount")
     private Integer baselineCheckCount;
 
-    @NameInMap("CveVulCount")
+    @com.aliyun.core.annotation.NameInMap("CveVulCount")
     private Integer cveVulCount;
 
-    @NameInMap("LastTaskTime")
+    @com.aliyun.core.annotation.NameInMap("LastTaskTime")
     private Long lastTaskTime;
 
-    @NameInMap("MaliciousFile")
+    @com.aliyun.core.annotation.NameInMap("MaliciousFile")
     private Integer maliciousFile;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RiskMachine")
+    @com.aliyun.core.annotation.NameInMap("RiskMachine")
     private Integer riskMachine;
 
-    @NameInMap("ScaVulCount")
+    @com.aliyun.core.annotation.NameInMap("ScaVulCount")
     private Integer scaVulCount;
 
-    @NameInMap("ScanMachine")
+    @com.aliyun.core.annotation.NameInMap("ScanMachine")
     private Integer scanMachine;
 
-    @NameInMap("SysVulCount")
+    @com.aliyun.core.annotation.NameInMap("SysVulCount")
     private String sysVulCount;
 
-    @NameInMap("Vulnerability")
+    @com.aliyun.core.annotation.NameInMap("Vulnerability")
     private Integer vulnerability;
 
     private GetAgentlessTaskCountResponseBody(Builder builder) {

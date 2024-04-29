@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAttachRecordsResponseBody</p>
  */
 public class DescribeAttachRecordsResponseBody extends TeaModel {
-    @NameInMap("AccessList")
+    @com.aliyun.core.annotation.NameInMap("AccessList")
     private java.util.List < AccessList> accessList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAttachRecordsResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribeAttachRecordsResponseBody extends TeaModel {
     } 
 
     public static class AccessList extends TeaModel {
-        @NameInMap("AttachState")
+        @com.aliyun.core.annotation.NameInMap("AttachState")
         private Long attachState;
 
-        @NameInMap("AttachSwitch")
+        @com.aliyun.core.annotation.NameInMap("AttachSwitch")
         private String attachSwitch;
 
-        @NameInMap("EcsUUID")
+        @com.aliyun.core.annotation.NameInMap("EcsUUID")
         private String ecsUUID;
 
-        @NameInMap("InstallMsg")
+        @com.aliyun.core.annotation.NameInMap("InstallMsg")
         private String installMsg;
 
-        @NameInMap("InstallState")
+        @com.aliyun.core.annotation.NameInMap("InstallState")
         private Long installState;
 
         private AccessList(Builder builder) {

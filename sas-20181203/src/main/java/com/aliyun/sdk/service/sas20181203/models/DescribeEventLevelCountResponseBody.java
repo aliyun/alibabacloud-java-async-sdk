@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEventLevelCountResponseBody</p>
  */
 public class DescribeEventLevelCountResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("EventLevels")
+    @com.aliyun.core.annotation.NameInMap("EventLevels")
     private EventLevels eventLevels;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeEventLevelCountResponseBody(Builder builder) {
@@ -136,13 +135,13 @@ public class DescribeEventLevelCountResponseBody extends TeaModel {
     } 
 
     public static class EventLevels extends TeaModel {
-        @NameInMap("Remind")
+        @com.aliyun.core.annotation.NameInMap("Remind")
         private Integer remind;
 
-        @NameInMap("Serious")
+        @com.aliyun.core.annotation.NameInMap("Serious")
         private Integer serious;
 
-        @NameInMap("Suspicious")
+        @com.aliyun.core.annotation.NameInMap("Suspicious")
         private Integer suspicious;
 
         private EventLevels(Builder builder) {

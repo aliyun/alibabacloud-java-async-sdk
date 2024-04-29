@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVpcHoneyPotListResponseBody</p>
  */
 public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VpcHoneyPotDTOList")
+    @com.aliyun.core.annotation.NameInMap("VpcHoneyPotDTOList")
     private java.util.List < VpcHoneyPotDTOList> vpcHoneyPotDTOList;
 
     private DescribeVpcHoneyPotListResponseBody(Builder builder) {
@@ -92,16 +91,16 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
     } 
 
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -193,13 +192,13 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
 
     }
     public static class VpcSwitchIdList extends TeaModel {
-        @NameInMap("VpcSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VpcSwitchId")
         private String vpcSwitchId;
 
-        @NameInMap("VpcSwitchName")
+        @com.aliyun.core.annotation.NameInMap("VpcSwitchName")
         private String vpcSwitchName;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private VpcSwitchIdList(Builder builder) {
@@ -274,40 +273,40 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
 
     }
     public static class VpcHoneyPotDTOList extends TeaModel {
-        @NameInMap("CidrBlock")
+        @com.aliyun.core.annotation.NameInMap("CidrBlock")
         private String cidrBlock;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("HoneyPotEcsInstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("HoneyPotEcsInstanceStatus")
         private String honeyPotEcsInstanceStatus;
 
-        @NameInMap("HoneyPotEniInstanceId")
+        @com.aliyun.core.annotation.NameInMap("HoneyPotEniInstanceId")
         private String honeyPotEniInstanceId;
 
-        @NameInMap("HoneyPotExistence")
+        @com.aliyun.core.annotation.NameInMap("HoneyPotExistence")
         private Boolean honeyPotExistence;
 
-        @NameInMap("HoneyPotInstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("HoneyPotInstanceStatus")
         private String honeyPotInstanceStatus;
 
-        @NameInMap("HoneyPotVpcSwitchId")
+        @com.aliyun.core.annotation.NameInMap("HoneyPotVpcSwitchId")
         private String honeyPotVpcSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcName")
+        @com.aliyun.core.annotation.NameInMap("VpcName")
         private String vpcName;
 
-        @NameInMap("VpcRegionId")
+        @com.aliyun.core.annotation.NameInMap("VpcRegionId")
         private String vpcRegionId;
 
-        @NameInMap("VpcStatus")
+        @com.aliyun.core.annotation.NameInMap("VpcStatus")
         private String vpcStatus;
 
-        @NameInMap("VpcSwitchIdList")
+        @com.aliyun.core.annotation.NameInMap("VpcSwitchIdList")
         private java.util.List < VpcSwitchIdList> vpcSwitchIdList;
 
         private VpcHoneyPotDTOList(Builder builder) {

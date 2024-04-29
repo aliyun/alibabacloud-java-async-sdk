@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVulDetailsResponseBody</p>
  */
 public class DescribeVulDetailsResponseBody extends TeaModel {
-    @NameInMap("Cves")
+    @com.aliyun.core.annotation.NameInMap("Cves")
     private java.util.List < Cves> cves;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeVulDetailsResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
     } 
 
     public static class Classifys extends TeaModel {
-        @NameInMap("Classify")
+        @com.aliyun.core.annotation.NameInMap("Classify")
         private String classify;
 
-        @NameInMap("DemoVideoUrl")
+        @com.aliyun.core.annotation.NameInMap("DemoVideoUrl")
         private String demoVideoUrl;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
         private Classifys(Builder builder) {
@@ -153,82 +152,82 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
 
     }
     public static class Cves extends TeaModel {
-        @NameInMap("Classify")
+        @com.aliyun.core.annotation.NameInMap("Classify")
         private String classify;
 
-        @NameInMap("Classifys")
+        @com.aliyun.core.annotation.NameInMap("Classifys")
         private java.util.List < Classifys> classifys;
 
-        @NameInMap("CnvdId")
+        @com.aliyun.core.annotation.NameInMap("CnvdId")
         private String cnvdId;
 
-        @NameInMap("Complexity")
+        @com.aliyun.core.annotation.NameInMap("Complexity")
         private String complexity;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("CveId")
+        @com.aliyun.core.annotation.NameInMap("CveId")
         private String cveId;
 
-        @NameInMap("CveLink")
+        @com.aliyun.core.annotation.NameInMap("CveLink")
         private String cveLink;
 
-        @NameInMap("CvssScore")
+        @com.aliyun.core.annotation.NameInMap("CvssScore")
         private String cvssScore;
 
-        @NameInMap("CvssVector")
+        @com.aliyun.core.annotation.NameInMap("CvssVector")
         private String cvssVector;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IntranetIp")
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("OtherId")
+        @com.aliyun.core.annotation.NameInMap("OtherId")
         private String otherId;
 
-        @NameInMap("Poc")
+        @com.aliyun.core.annotation.NameInMap("Poc")
         private String poc;
 
-        @NameInMap("PocCreateTime")
+        @com.aliyun.core.annotation.NameInMap("PocCreateTime")
         private Long pocCreateTime;
 
-        @NameInMap("PocDisclosureTime")
+        @com.aliyun.core.annotation.NameInMap("PocDisclosureTime")
         private Long pocDisclosureTime;
 
-        @NameInMap("Product")
+        @com.aliyun.core.annotation.NameInMap("Product")
         private String product;
 
-        @NameInMap("Reference")
+        @com.aliyun.core.annotation.NameInMap("Reference")
         private String reference;
 
-        @NameInMap("ReleaseTime")
+        @com.aliyun.core.annotation.NameInMap("ReleaseTime")
         private Long releaseTime;
 
-        @NameInMap("Solution")
+        @com.aliyun.core.annotation.NameInMap("Solution")
         private String solution;
 
-        @NameInMap("Summary")
+        @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
 
-        @NameInMap("TargetId")
+        @com.aliyun.core.annotation.NameInMap("TargetId")
         private String targetId;
 
-        @NameInMap("TargetName")
+        @com.aliyun.core.annotation.NameInMap("TargetName")
         private String targetName;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("Vendor")
+        @com.aliyun.core.annotation.NameInMap("Vendor")
         private String vendor;
 
-        @NameInMap("VulLevel")
+        @com.aliyun.core.annotation.NameInMap("VulLevel")
         private String vulLevel;
 
         private Cves(Builder builder) {

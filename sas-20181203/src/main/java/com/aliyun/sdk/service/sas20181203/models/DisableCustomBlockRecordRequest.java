@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DisableCustomBlockRecordRequest</p>
  */
 public class DisableCustomBlockRecordRequest extends Request {
-    @Query
-    @NameInMap("BlockIp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BlockIp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String blockIp;
 
-    @Query
-    @NameInMap("Bound")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bound")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bound;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private DisableCustomBlockRecordRequest(Builder builder) {

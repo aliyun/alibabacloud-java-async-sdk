@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InstallCloudMonitorRequest</p>
  */
 public class InstallCloudMonitorRequest extends Request {
-    @Query
-    @NameInMap("AgentAccessKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentAccessKey")
     private String agentAccessKey;
 
-    @Query
-    @NameInMap("AgentSecretKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentSecretKey")
     private String agentSecretKey;
 
-    @Query
-    @NameInMap("ArgusVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArgusVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String argusVersion;
 
-    @Query
-    @NameInMap("InstanceIdList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIdList")
     private java.util.List < String > instanceIdList;
 
-    @Query
-    @NameInMap("UuidList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UuidList")
     private java.util.List < String > uuidList;
 
     private InstallCloudMonitorRequest(Builder builder) {

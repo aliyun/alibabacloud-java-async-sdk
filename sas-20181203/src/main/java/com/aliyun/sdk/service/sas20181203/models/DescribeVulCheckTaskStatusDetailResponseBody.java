@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVulCheckTaskStatusDetailResponseBody</p>
  */
 public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskStatuses")
+    @com.aliyun.core.annotation.NameInMap("TaskStatuses")
     private java.util.List < TaskStatuses> taskStatuses;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeVulCheckTaskStatusDetailResponseBody(Builder builder) {
@@ -92,13 +91,13 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
     } 
 
     public static class TaskStatusList extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private TaskStatusList(Builder builder) {
@@ -186,10 +185,10 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
 
     }
     public static class TaskStatuses extends TeaModel {
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TaskStatusList")
+        @com.aliyun.core.annotation.NameInMap("TaskStatusList")
         private java.util.List < TaskStatusList> taskStatusList;
 
         private TaskStatuses(Builder builder) {

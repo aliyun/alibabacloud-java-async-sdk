@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,70 +11,70 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAccessKeyLeakDetailResponseBody</p>
  */
 public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
-    @NameInMap("AccesskeyId")
+    @com.aliyun.core.annotation.NameInMap("AccesskeyId")
     private String accesskeyId;
 
-    @NameInMap("Asset")
+    @com.aliyun.core.annotation.NameInMap("Asset")
     private String asset;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("DealTime")
+    @com.aliyun.core.annotation.NameInMap("DealTime")
     private String dealTime;
 
-    @NameInMap("DealType")
+    @com.aliyun.core.annotation.NameInMap("DealType")
     private String dealType;
 
-    @NameInMap("GithubFileName")
+    @com.aliyun.core.annotation.NameInMap("GithubFileName")
     private String githubFileName;
 
-    @NameInMap("GithubFileType")
+    @com.aliyun.core.annotation.NameInMap("GithubFileType")
     private String githubFileType;
 
-    @NameInMap("GithubFileUpdateTime")
+    @com.aliyun.core.annotation.NameInMap("GithubFileUpdateTime")
     private String githubFileUpdateTime;
 
-    @NameInMap("GithubFileUrl")
+    @com.aliyun.core.annotation.NameInMap("GithubFileUrl")
     private String githubFileUrl;
 
-    @NameInMap("GithubRepoName")
+    @com.aliyun.core.annotation.NameInMap("GithubRepoName")
     private String githubRepoName;
 
-    @NameInMap("GithubRepoUrl")
+    @com.aliyun.core.annotation.NameInMap("GithubRepoUrl")
     private String githubRepoUrl;
 
-    @NameInMap("GithubUser")
+    @com.aliyun.core.annotation.NameInMap("GithubUser")
     private String githubUser;
 
-    @NameInMap("GithubUserPicUrl")
+    @com.aliyun.core.annotation.NameInMap("GithubUserPicUrl")
     private String githubUserPicUrl;
 
-    @NameInMap("GmtCreate")
+    @com.aliyun.core.annotation.NameInMap("GmtCreate")
     private String gmtCreate;
 
-    @NameInMap("GmtModified")
+    @com.aliyun.core.annotation.NameInMap("GmtModified")
     private String gmtModified;
 
-    @NameInMap("Remark")
+    @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Source")
+    @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
 
-    @NameInMap("TokenValid")
+    @com.aliyun.core.annotation.NameInMap("TokenValid")
     private Integer tokenValid;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @NameInMap("WhitelistStatus")
+    @com.aliyun.core.annotation.NameInMap("WhitelistStatus")
     private String whitelistStatus;
 
-    @NameInMap("WhitelistTime")
+    @com.aliyun.core.annotation.NameInMap("WhitelistTime")
     private Long whitelistTime;
 
     private DescribeAccessKeyLeakDetailResponseBody(Builder builder) {

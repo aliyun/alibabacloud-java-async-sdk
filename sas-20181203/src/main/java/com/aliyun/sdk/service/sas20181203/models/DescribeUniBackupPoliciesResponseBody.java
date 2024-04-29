@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUniBackupPoliciesResponseBody</p>
  */
 public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UniBackupPolicies")
+    @com.aliyun.core.annotation.NameInMap("UniBackupPolicies")
     private java.util.List < UniBackupPolicies> uniBackupPolicies;
 
     private DescribeUniBackupPoliciesResponseBody(Builder builder) {
@@ -92,16 +91,16 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
     } 
 
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -193,55 +192,55 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
 
     }
     public static class UniBackupPolicies extends TeaModel {
-        @NameInMap("AgentErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("AgentErrorMessage")
         private String agentErrorMessage;
 
-        @NameInMap("AgentStatus")
+        @com.aliyun.core.annotation.NameInMap("AgentStatus")
         private String agentStatus;
 
-        @NameInMap("DatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
-        @NameInMap("DatabaseType")
+        @com.aliyun.core.annotation.NameInMap("DatabaseType")
         private String databaseType;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("InstanceStatus")
         private String instanceStatus;
 
-        @NameInMap("InstanceUuid")
+        @com.aliyun.core.annotation.NameInMap("InstanceUuid")
         private String instanceUuid;
 
-        @NameInMap("LatestBackResult")
+        @com.aliyun.core.annotation.NameInMap("LatestBackResult")
         private String latestBackResult;
 
-        @NameInMap("LatestBackupTime")
+        @com.aliyun.core.annotation.NameInMap("LatestBackupTime")
         private String latestBackupTime;
 
-        @NameInMap("PlanStatus")
+        @com.aliyun.core.annotation.NameInMap("PlanStatus")
         private String planStatus;
 
-        @NameInMap("PolicyId")
+        @com.aliyun.core.annotation.NameInMap("PolicyId")
         private Long policyId;
 
-        @NameInMap("PolicyName")
+        @com.aliyun.core.annotation.NameInMap("PolicyName")
         private String policyName;
 
-        @NameInMap("PolicyStatus")
+        @com.aliyun.core.annotation.NameInMap("PolicyStatus")
         private String policyStatus;
 
-        @NameInMap("UniRegionId")
+        @com.aliyun.core.annotation.NameInMap("UniRegionId")
         private String uniRegionId;
 
         private UniBackupPolicies(Builder builder) {

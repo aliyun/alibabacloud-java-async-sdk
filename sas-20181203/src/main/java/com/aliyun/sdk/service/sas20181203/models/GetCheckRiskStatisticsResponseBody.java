@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetCheckRiskStatisticsResponseBody</p>
  */
 public class GetCheckRiskStatisticsResponseBody extends TeaModel {
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetCheckRiskStatisticsResponseBody(Builder builder) {
@@ -92,25 +91,25 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
     } 
 
     public static class SubStatistics extends TeaModel {
-        @NameInMap("Alias")
+        @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
 
-        @NameInMap("HighWarningCount")
+        @com.aliyun.core.annotation.NameInMap("HighWarningCount")
         private Integer highWarningCount;
 
-        @NameInMap("LowWarningCount")
+        @com.aliyun.core.annotation.NameInMap("LowWarningCount")
         private Integer lowWarningCount;
 
-        @NameInMap("MediumWarningCount")
+        @com.aliyun.core.annotation.NameInMap("MediumWarningCount")
         private Integer mediumWarningCount;
 
-        @NameInMap("PassCount")
+        @com.aliyun.core.annotation.NameInMap("PassCount")
         private Integer passCount;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
-        @NameInMap("TypeName")
+        @com.aliyun.core.annotation.NameInMap("TypeName")
         private String typeName;
 
         private SubStatistics(Builder builder) {
@@ -253,25 +252,25 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("HighWarningCount")
+        @com.aliyun.core.annotation.NameInMap("HighWarningCount")
         private Integer highWarningCount;
 
-        @NameInMap("LowWarningCount")
+        @com.aliyun.core.annotation.NameInMap("LowWarningCount")
         private Integer lowWarningCount;
 
-        @NameInMap("MediumWarningCount")
+        @com.aliyun.core.annotation.NameInMap("MediumWarningCount")
         private Integer mediumWarningCount;
 
-        @NameInMap("PassCount")
+        @com.aliyun.core.annotation.NameInMap("PassCount")
         private Integer passCount;
 
-        @NameInMap("SceneName")
+        @com.aliyun.core.annotation.NameInMap("SceneName")
         private String sceneName;
 
-        @NameInMap("SubStatistics")
+        @com.aliyun.core.annotation.NameInMap("SubStatistics")
         private java.util.List < SubStatistics> subStatistics;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetObjectScanEventResponseBody</p>
  */
 public class GetObjectScanEventResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetObjectScanEventResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class GetObjectScanEventResponseBody extends TeaModel {
     } 
 
     public static class Details extends TeaModel {
-        @NameInMap("InfoType")
+        @com.aliyun.core.annotation.NameInMap("InfoType")
         private String infoType;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NameDisplay")
+        @com.aliyun.core.annotation.NameInMap("NameDisplay")
         private String nameDisplay;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        @NameInMap("ValueDisplay")
+        @com.aliyun.core.annotation.NameInMap("ValueDisplay")
         private String valueDisplay;
 
         private Details(Builder builder) {
@@ -213,16 +212,16 @@ public class GetObjectScanEventResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Details")
+        @com.aliyun.core.annotation.NameInMap("Details")
         private java.util.List < Details> details;
 
-        @NameInMap("EventName")
+        @com.aliyun.core.annotation.NameInMap("EventName")
         private String eventName;
 
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("Md5")
+        @com.aliyun.core.annotation.NameInMap("Md5")
         private String md5;
 
         private Data(Builder builder) {

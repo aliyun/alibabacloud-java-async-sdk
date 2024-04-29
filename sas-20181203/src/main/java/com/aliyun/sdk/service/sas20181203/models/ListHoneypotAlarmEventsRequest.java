@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListHoneypotAlarmEventsRequest</p>
  */
 public class ListHoneypotAlarmEventsRequest extends Request {
-    @Body
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Body
-    @NameInMap("Dealed")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Dealed")
     private String dealed;
 
-    @Body
-    @NameInMap("DstIp")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DstIp")
     private String dstIp;
 
-    @Body
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Body
-    @NameInMap("RiskLevelList")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RiskLevelList")
     private java.util.List < String > riskLevelList;
 
-    @Body
-    @NameInMap("SrcIp")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SrcIp")
     private String srcIp;
 
     private ListHoneypotAlarmEventsRequest(Builder builder) {

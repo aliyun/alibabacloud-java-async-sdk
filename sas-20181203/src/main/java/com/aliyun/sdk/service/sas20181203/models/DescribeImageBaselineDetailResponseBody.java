@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImageBaselineDetailResponseBody</p>
  */
 public class DescribeImageBaselineDetailResponseBody extends TeaModel {
-    @NameInMap("BaselineDetail")
+    @com.aliyun.core.annotation.NameInMap("BaselineDetail")
     private BaselineDetail baselineDetail;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeImageBaselineDetailResponseBody(Builder builder) {
@@ -72,31 +71,31 @@ public class DescribeImageBaselineDetailResponseBody extends TeaModel {
     } 
 
     public static class BaselineDetail extends TeaModel {
-        @NameInMap("Advice")
+        @com.aliyun.core.annotation.NameInMap("Advice")
         private String advice;
 
-        @NameInMap("BaselineClassAlias")
+        @com.aliyun.core.annotation.NameInMap("BaselineClassAlias")
         private String baselineClassAlias;
 
-        @NameInMap("BaselineItemAlias")
+        @com.aliyun.core.annotation.NameInMap("BaselineItemAlias")
         private String baselineItemAlias;
 
-        @NameInMap("BaselineItemKey")
+        @com.aliyun.core.annotation.NameInMap("BaselineItemKey")
         private String baselineItemKey;
 
-        @NameInMap("BaselineNameAlias")
+        @com.aliyun.core.annotation.NameInMap("BaselineNameAlias")
         private String baselineNameAlias;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("Prompt")
+        @com.aliyun.core.annotation.NameInMap("Prompt")
         private String prompt;
 
-        @NameInMap("ResultId")
+        @com.aliyun.core.annotation.NameInMap("ResultId")
         private String resultId;
 
         private BaselineDetail(Builder builder) {

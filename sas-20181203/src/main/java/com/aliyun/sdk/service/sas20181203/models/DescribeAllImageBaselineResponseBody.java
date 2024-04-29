@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAllImageBaselineResponseBody</p>
  */
 public class DescribeAllImageBaselineResponseBody extends TeaModel {
-    @NameInMap("ImageBaselines")
+    @com.aliyun.core.annotation.NameInMap("ImageBaselines")
     private ImageBaselines imageBaselines;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAllImageBaselineResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
     } 
 
     public static class BaselineItemList extends TeaModel {
-        @NameInMap("Alias")
+        @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
 
-        @NameInMap("ClassKey")
+        @com.aliyun.core.annotation.NameInMap("ClassKey")
         private String classKey;
 
-        @NameInMap("ItemKey")
+        @com.aliyun.core.annotation.NameInMap("ItemKey")
         private String itemKey;
 
-        @NameInMap("NameKey")
+        @com.aliyun.core.annotation.NameInMap("NameKey")
         private String nameKey;
 
         private BaselineItemList(Builder builder) {
@@ -173,16 +172,16 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
 
     }
     public static class BaselineNameList extends TeaModel {
-        @NameInMap("Alias")
+        @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
 
-        @NameInMap("BaselineItemList")
+        @com.aliyun.core.annotation.NameInMap("BaselineItemList")
         private java.util.List < BaselineItemList> baselineItemList;
 
-        @NameInMap("ClassKey")
+        @com.aliyun.core.annotation.NameInMap("ClassKey")
         private String classKey;
 
-        @NameInMap("NameKey")
+        @com.aliyun.core.annotation.NameInMap("NameKey")
         private String nameKey;
 
         private BaselineNameList(Builder builder) {
@@ -274,13 +273,13 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
 
     }
     public static class BaselineClassList extends TeaModel {
-        @NameInMap("Alias")
+        @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
 
-        @NameInMap("BaselineNameList")
+        @com.aliyun.core.annotation.NameInMap("BaselineNameList")
         private java.util.List < BaselineNameList> baselineNameList;
 
-        @NameInMap("ClassKey")
+        @com.aliyun.core.annotation.NameInMap("ClassKey")
         private String classKey;
 
         private BaselineClassList(Builder builder) {
@@ -355,7 +354,7 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
 
     }
     public static class ImageBaselines extends TeaModel {
-        @NameInMap("BaselineClassList")
+        @com.aliyun.core.annotation.NameInMap("BaselineClassList")
         private java.util.List < BaselineClassList> baselineClassList;
 
         private ImageBaselines(Builder builder) {

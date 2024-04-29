@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetCommonSwitchConfigResponseBody</p>
  */
 public class GetCommonSwitchConfigResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetCommonSwitchConfigResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class GetCommonSwitchConfigResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("TargetDefault")
+        @com.aliyun.core.annotation.NameInMap("TargetDefault")
         private String targetDefault;
 
-        @NameInMap("TargetSyncStatus")
+        @com.aliyun.core.annotation.NameInMap("TargetSyncStatus")
         private String targetSyncStatus;
 
         private Data(Builder builder) {

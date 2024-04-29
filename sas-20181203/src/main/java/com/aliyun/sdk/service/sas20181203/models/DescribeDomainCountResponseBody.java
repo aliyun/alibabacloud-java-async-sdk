@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainCountResponseBody</p>
  */
 public class DescribeDomainCountResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RootDomainsCount")
+    @com.aliyun.core.annotation.NameInMap("RootDomainsCount")
     private Integer rootDomainsCount;
 
-    @NameInMap("SubDomainsCount")
+    @com.aliyun.core.annotation.NameInMap("SubDomainsCount")
     private Integer subDomainsCount;
 
-    @NameInMap("TotalDomainsCount")
+    @com.aliyun.core.annotation.NameInMap("TotalDomainsCount")
     private Integer totalDomainsCount;
 
     private DescribeDomainCountResponseBody(Builder builder) {

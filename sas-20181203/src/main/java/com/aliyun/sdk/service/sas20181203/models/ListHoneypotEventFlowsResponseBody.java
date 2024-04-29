@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListHoneypotEventFlowsResponseBody</p>
  */
 public class ListHoneypotEventFlowsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HoneypotEventFlows")
+    @com.aliyun.core.annotation.NameInMap("HoneypotEventFlows")
     private java.util.List < HoneypotEventFlows> honeypotEventFlows;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListHoneypotEventFlowsResponseBody(Builder builder) {
@@ -176,70 +175,70 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
     } 
 
     public static class HoneypotEventFlows extends TeaModel {
-        @NameInMap("AgentId")
+        @com.aliyun.core.annotation.NameInMap("AgentId")
         private String agentId;
 
-        @NameInMap("AgentName")
+        @com.aliyun.core.annotation.NameInMap("AgentName")
         private String agentName;
 
-        @NameInMap("DockerId")
+        @com.aliyun.core.annotation.NameInMap("DockerId")
         private String dockerId;
 
-        @NameInMap("DstIp")
+        @com.aliyun.core.annotation.NameInMap("DstIp")
         private String dstIp;
 
-        @NameInMap("DstPort")
+        @com.aliyun.core.annotation.NameInMap("DstPort")
         private Integer dstPort;
 
-        @NameInMap("EventConnection")
+        @com.aliyun.core.annotation.NameInMap("EventConnection")
         private String eventConnection;
 
-        @NameInMap("Extra")
+        @com.aliyun.core.annotation.NameInMap("Extra")
         private String extra;
 
-        @NameInMap("Extra1")
+        @com.aliyun.core.annotation.NameInMap("Extra1")
         private String extra1;
 
-        @NameInMap("FileOssUrl")
+        @com.aliyun.core.annotation.NameInMap("FileOssUrl")
         private String fileOssUrl;
 
-        @NameInMap("FirstTime")
+        @com.aliyun.core.annotation.NameInMap("FirstTime")
         private Long firstTime;
 
-        @NameInMap("HoneypotEventId")
+        @com.aliyun.core.annotation.NameInMap("HoneypotEventId")
         private String honeypotEventId;
 
-        @NameInMap("HoneypotId")
+        @com.aliyun.core.annotation.NameInMap("HoneypotId")
         private String honeypotId;
 
-        @NameInMap("HoneypotName")
+        @com.aliyun.core.annotation.NameInMap("HoneypotName")
         private String honeypotName;
 
-        @NameInMap("LastTime")
+        @com.aliyun.core.annotation.NameInMap("LastTime")
         private Long lastTime;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
 
-        @NameInMap("SecurityEventId")
+        @com.aliyun.core.annotation.NameInMap("SecurityEventId")
         private Long securityEventId;
 
-        @NameInMap("SrcIp")
+        @com.aliyun.core.annotation.NameInMap("SrcIp")
         private String srcIp;
 
-        @NameInMap("SrcMac")
+        @com.aliyun.core.annotation.NameInMap("SrcMac")
         private String srcMac;
 
-        @NameInMap("SrcPort")
+        @com.aliyun.core.annotation.NameInMap("SrcPort")
         private Integer srcPort;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("TypeId")
+        @com.aliyun.core.annotation.NameInMap("TypeId")
         private String typeId;
 
-        @NameInMap("Uid")
+        @com.aliyun.core.annotation.NameInMap("Uid")
         private String uid;
 
         private HoneypotEventFlows(Builder builder) {
@@ -647,16 +646,16 @@ public class ListHoneypotEventFlowsResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {

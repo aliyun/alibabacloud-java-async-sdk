@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCheckItemWarningSummaryResponseBody</p>
  */
 public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
-    @NameInMap("List")
+    @com.aliyun.core.annotation.NameInMap("List")
     private java.util.List < List> list;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListCheckItemWarningSummaryResponseBody(Builder builder) {
@@ -92,43 +91,43 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
     } 
 
     public static class List extends TeaModel {
-        @NameInMap("Advice")
+        @com.aliyun.core.annotation.NameInMap("Advice")
         private String advice;
 
-        @NameInMap("AffiliatedRiskTypes")
+        @com.aliyun.core.annotation.NameInMap("AffiliatedRiskTypes")
         private java.util.List < String > affiliatedRiskTypes;
 
-        @NameInMap("AffiliatedRisks")
+        @com.aliyun.core.annotation.NameInMap("AffiliatedRisks")
         private java.util.List < String > affiliatedRisks;
 
-        @NameInMap("Alias")
+        @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
 
-        @NameInMap("CheckId")
+        @com.aliyun.core.annotation.NameInMap("CheckId")
         private Long checkId;
 
-        @NameInMap("CheckItem")
+        @com.aliyun.core.annotation.NameInMap("CheckItem")
         private String checkItem;
 
-        @NameInMap("CheckLevel")
+        @com.aliyun.core.annotation.NameInMap("CheckLevel")
         private String checkLevel;
 
-        @NameInMap("CheckType")
+        @com.aliyun.core.annotation.NameInMap("CheckType")
         private String checkType;
 
-        @NameInMap("ContainerCheckItem")
+        @com.aliyun.core.annotation.NameInMap("ContainerCheckItem")
         private Boolean containerCheckItem;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("RiskType")
+        @com.aliyun.core.annotation.NameInMap("RiskType")
         private String riskType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("WarningMachineCount")
+        @com.aliyun.core.annotation.NameInMap("WarningMachineCount")
         private Integer warningMachineCount;
 
         private List(Builder builder) {
@@ -386,16 +385,16 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {

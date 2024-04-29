@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ChangeSecurityScoreRuleRequest</p>
  */
 public class ChangeSecurityScoreRuleRequest extends Request {
-    @Query
-    @NameInMap("ResetSecurityScoreRule")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResetSecurityScoreRule")
     private Boolean resetSecurityScoreRule;
 
-    @Query
-    @NameInMap("SecurityScoreRuleList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityScoreRuleList")
     private java.util.List < SecurityScoreRuleList> securityScoreRuleList;
 
     private ChangeSecurityScoreRuleRequest(Builder builder) {
@@ -97,14 +96,14 @@ public class ChangeSecurityScoreRuleRequest extends Request {
     } 
 
     public static class SecurityScoreItemList extends TeaModel {
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private Integer score;
 
-        @NameInMap("ScoreThreshold")
-        @Validation(maximum = 100)
+        @com.aliyun.core.annotation.NameInMap("ScoreThreshold")
+        @com.aliyun.core.annotation.Validation(maximum = 100)
         private Integer scoreThreshold;
 
-        @NameInMap("SubRuleType")
+        @com.aliyun.core.annotation.NameInMap("SubRuleType")
         private String subRuleType;
 
         private SecurityScoreItemList(Builder builder) {
@@ -222,14 +221,14 @@ public class ChangeSecurityScoreRuleRequest extends Request {
 
     }
     public static class SecurityScoreRuleList extends TeaModel {
-        @NameInMap("RuleType")
+        @com.aliyun.core.annotation.NameInMap("RuleType")
         private String ruleType;
 
-        @NameInMap("Score")
-        @Validation(maximum = 100)
+        @com.aliyun.core.annotation.NameInMap("Score")
+        @com.aliyun.core.annotation.Validation(maximum = 100)
         private Integer score;
 
-        @NameInMap("SecurityScoreItemList")
+        @com.aliyun.core.annotation.NameInMap("SecurityScoreItemList")
         private java.util.List < SecurityScoreItemList> securityScoreItemList;
 
         private SecurityScoreRuleList(Builder builder) {

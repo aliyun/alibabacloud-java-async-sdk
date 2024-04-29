@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeNsasSuspEventTypeResponseBody</p>
  */
 public class DescribeNsasSuspEventTypeResponseBody extends TeaModel {
-    @NameInMap("EventTypes")
+    @com.aliyun.core.annotation.NameInMap("EventTypes")
     private java.util.List < EventTypes> eventTypes;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeNsasSuspEventTypeResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeNsasSuspEventTypeResponseBody extends TeaModel {
     } 
 
     public static class EventTypes extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("SuspEventCount")
+        @com.aliyun.core.annotation.NameInMap("SuspEventCount")
         private Integer suspEventCount;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private EventTypes(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCheckWarningDetailResponseBody</p>
  */
 public class DescribeCheckWarningDetailResponseBody extends TeaModel {
-    @NameInMap("Advice")
+    @com.aliyun.core.annotation.NameInMap("Advice")
     private String advice;
 
-    @NameInMap("CheckDetailAssetInfo")
+    @com.aliyun.core.annotation.NameInMap("CheckDetailAssetInfo")
     private java.util.List < java.util.Map<String, String>> checkDetailAssetInfo;
 
-    @NameInMap("CheckDetailColumns")
+    @com.aliyun.core.annotation.NameInMap("CheckDetailColumns")
     private java.util.List < CheckDetailColumns> checkDetailColumns;
 
-    @NameInMap("CheckId")
+    @com.aliyun.core.annotation.NameInMap("CheckId")
     private Long checkId;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("Item")
+    @com.aliyun.core.annotation.NameInMap("Item")
     private String item;
 
-    @NameInMap("Level")
+    @com.aliyun.core.annotation.NameInMap("Level")
     private String level;
 
-    @NameInMap("Prompt")
+    @com.aliyun.core.annotation.NameInMap("Prompt")
     private String prompt;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private DescribeCheckWarningDetailResponseBody(Builder builder) {
@@ -246,13 +245,13 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
     } 
 
     public static class Grids extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("ShowName")
+        @com.aliyun.core.annotation.NameInMap("ShowName")
         private String showName;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Grids(Builder builder) {
@@ -330,16 +329,16 @@ public class DescribeCheckWarningDetailResponseBody extends TeaModel {
 
     }
     public static class CheckDetailColumns extends TeaModel {
-        @NameInMap("Grids")
+        @com.aliyun.core.annotation.NameInMap("Grids")
         private java.util.List < Grids> grids;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("ShowName")
+        @com.aliyun.core.annotation.NameInMap("ShowName")
         private String showName;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private CheckDetailColumns(Builder builder) {

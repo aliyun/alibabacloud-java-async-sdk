@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSasContainerWebDefenseRuleApplicationResponseBody</p>
  */
 public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaModel {
-    @NameInMap("ContainerWebDefenseAppList")
+    @com.aliyun.core.annotation.NameInMap("ContainerWebDefenseAppList")
     private java.util.List < ContainerWebDefenseAppList> containerWebDefenseAppList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetSasContainerWebDefenseRuleApplicationResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class GetSasContainerWebDefenseRuleApplicationResponseBody extends TeaMod
     } 
 
     public static class ContainerWebDefenseAppList extends TeaModel {
-        @NameInMap("AliUid")
+        @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
         private ContainerWebDefenseAppList(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUniBackupPolicyDetailResponseBody</p>
  */
 public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UniBackupPolicyDTO")
+    @com.aliyun.core.annotation.NameInMap("UniBackupPolicyDTO")
     private UniBackupPolicyDTO uniBackupPolicyDTO;
 
     private DescribeUniBackupPolicyDetailResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
     } 
 
     public static class FullPlan extends TeaModel {
-        @NameInMap("Days")
+        @com.aliyun.core.annotation.NameInMap("Days")
         private java.util.List < String > days;
 
-        @NameInMap("Interval")
+        @com.aliyun.core.annotation.NameInMap("Interval")
         private Integer interval;
 
-        @NameInMap("PlanType")
+        @com.aliyun.core.annotation.NameInMap("PlanType")
         private String planType;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private FullPlan(Builder builder) {
@@ -178,16 +177,16 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
 
     }
     public static class IncPlan extends TeaModel {
-        @NameInMap("Days")
+        @com.aliyun.core.annotation.NameInMap("Days")
         private java.util.List < String > days;
 
-        @NameInMap("Interval")
+        @com.aliyun.core.annotation.NameInMap("Interval")
         private Integer interval;
 
-        @NameInMap("PlanType")
+        @com.aliyun.core.annotation.NameInMap("PlanType")
         private String planType;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private IncPlan(Builder builder) {
@@ -284,40 +283,40 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
 
     }
     public static class UniBackupPolicyDTO extends TeaModel {
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("AgentStatus")
+        @com.aliyun.core.annotation.NameInMap("AgentStatus")
         private String agentStatus;
 
-        @NameInMap("DatabaseType")
+        @com.aliyun.core.annotation.NameInMap("DatabaseType")
         private String databaseType;
 
-        @NameInMap("FullPlan")
+        @com.aliyun.core.annotation.NameInMap("FullPlan")
         private FullPlan fullPlan;
 
-        @NameInMap("IncPlan")
+        @com.aliyun.core.annotation.NameInMap("IncPlan")
         private IncPlan incPlan;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("PolicyId")
+        @com.aliyun.core.annotation.NameInMap("PolicyId")
         private Long policyId;
 
-        @NameInMap("PolicyName")
+        @com.aliyun.core.annotation.NameInMap("PolicyName")
         private String policyName;
 
-        @NameInMap("PolicyStatus")
+        @com.aliyun.core.annotation.NameInMap("PolicyStatus")
         private String policyStatus;
 
-        @NameInMap("Retention")
+        @com.aliyun.core.annotation.NameInMap("Retention")
         private Integer retention;
 
-        @NameInMap("SpeedLimiter")
+        @com.aliyun.core.annotation.NameInMap("SpeedLimiter")
         private Long speedLimiter;
 
         private UniBackupPolicyDTO(Builder builder) {

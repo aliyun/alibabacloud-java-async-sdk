@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeFieldStatisticsResponseBody</p>
  */
 public class DescribeFieldStatisticsResponseBody extends TeaModel {
-    @NameInMap("GroupedFields")
+    @com.aliyun.core.annotation.NameInMap("GroupedFields")
     private GroupedFields groupedFields;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeFieldStatisticsResponseBody(Builder builder) {
@@ -72,79 +71,79 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
     } 
 
     public static class GroupedFields extends TeaModel {
-        @NameInMap("AliYunInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("AliYunInstanceCount")
         private Integer aliYunInstanceCount;
 
-        @NameInMap("AwsInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("AwsInstanceCount")
         private Integer awsInstanceCount;
 
-        @NameInMap("AzureInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("AzureInstanceCount")
         private Integer azureInstanceCount;
 
-        @NameInMap("ExposedInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("ExposedInstanceCount")
         private Integer exposedInstanceCount;
 
-        @NameInMap("GeneralAssetCount")
+        @com.aliyun.core.annotation.NameInMap("GeneralAssetCount")
         private Integer generalAssetCount;
 
-        @NameInMap("GroupCount")
+        @com.aliyun.core.annotation.NameInMap("GroupCount")
         private Integer groupCount;
 
-        @NameInMap("HuaweiInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("HuaweiInstanceCount")
         private Integer huaweiInstanceCount;
 
-        @NameInMap("IdcInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("IdcInstanceCount")
         private Integer idcInstanceCount;
 
-        @NameInMap("ImportantAssetCount")
+        @com.aliyun.core.annotation.NameInMap("ImportantAssetCount")
         private Integer importantAssetCount;
 
-        @NameInMap("InstanceCount")
+        @com.aliyun.core.annotation.NameInMap("InstanceCount")
         private Integer instanceCount;
 
-        @NameInMap("InstanceSyncTaskCount")
+        @com.aliyun.core.annotation.NameInMap("InstanceSyncTaskCount")
         private Integer instanceSyncTaskCount;
 
-        @NameInMap("NewInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("NewInstanceCount")
         private Integer newInstanceCount;
 
-        @NameInMap("NoRiskInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("NoRiskInstanceCount")
         private Integer noRiskInstanceCount;
 
-        @NameInMap("NotRunningStatusCount")
+        @com.aliyun.core.annotation.NameInMap("NotRunningStatusCount")
         private Integer notRunningStatusCount;
 
-        @NameInMap("OfflineInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("OfflineInstanceCount")
         private Integer offlineInstanceCount;
 
-        @NameInMap("OutMachineInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("OutMachineInstanceCount")
         private Integer outMachineInstanceCount;
 
-        @NameInMap("PauseInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("PauseInstanceCount")
         private Integer pauseInstanceCount;
 
-        @NameInMap("RegionCount")
+        @com.aliyun.core.annotation.NameInMap("RegionCount")
         private Integer regionCount;
 
-        @NameInMap("RiskInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("RiskInstanceCount")
         private Integer riskInstanceCount;
 
-        @NameInMap("TencentInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("TencentInstanceCount")
         private Integer tencentInstanceCount;
 
-        @NameInMap("TestAssetCount")
+        @com.aliyun.core.annotation.NameInMap("TestAssetCount")
         private Integer testAssetCount;
 
-        @NameInMap("TripartiteInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("TripartiteInstanceCount")
         private Integer tripartiteInstanceCount;
 
-        @NameInMap("UnKnowStatusInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("UnKnowStatusInstanceCount")
         private Integer unKnowStatusInstanceCount;
 
-        @NameInMap("UnprotectedInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("UnprotectedInstanceCount")
         private Integer unprotectedInstanceCount;
 
-        @NameInMap("VpcCount")
+        @com.aliyun.core.annotation.NameInMap("VpcCount")
         private Integer vpcCount;
 
         private GroupedFields(Builder builder) {

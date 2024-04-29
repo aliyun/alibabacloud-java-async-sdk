@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAffectedAssetsRequest</p>
  */
 public class DescribeAffectedAssetsRequest extends Request {
-    @Query
-    @NameInMap("Current")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Current")
     private String current;
 
-    @Query
-    @NameInMap("Levels")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Levels")
     private String levels;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
     private DescribeAffectedAssetsRequest(Builder builder) {

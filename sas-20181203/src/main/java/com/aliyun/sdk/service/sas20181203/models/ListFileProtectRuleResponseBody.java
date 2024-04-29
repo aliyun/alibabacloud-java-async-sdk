@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListFileProtectRuleResponseBody</p>
  */
 public class ListFileProtectRuleResponseBody extends TeaModel {
-    @NameInMap("FileProtectList")
+    @com.aliyun.core.annotation.NameInMap("FileProtectList")
     private java.util.List < FileProtectList> fileProtectList;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListFileProtectRuleResponseBody(Builder builder) {
@@ -92,40 +91,40 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
     } 
 
     public static class FileProtectList extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("AlertLevel")
+        @com.aliyun.core.annotation.NameInMap("AlertLevel")
         private String alertLevel;
 
-        @NameInMap("EffectInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("EffectInstanceCount")
         private Long effectInstanceCount;
 
-        @NameInMap("FileOps")
+        @com.aliyun.core.annotation.NameInMap("FileOps")
         private java.util.List < String > fileOps;
 
-        @NameInMap("FilePaths")
+        @com.aliyun.core.annotation.NameInMap("FilePaths")
         private java.util.List < String > filePaths;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("ProcPaths")
+        @com.aliyun.core.annotation.NameInMap("ProcPaths")
         private java.util.List < String > procPaths;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("SwitchId")
+        @com.aliyun.core.annotation.NameInMap("SwitchId")
         private String switchId;
 
         private FileProtectList(Builder builder) {
@@ -367,13 +366,13 @@ public class ListFileProtectRuleResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {

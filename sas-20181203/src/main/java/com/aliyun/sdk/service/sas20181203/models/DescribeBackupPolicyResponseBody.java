@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBackupPolicyResponseBody</p>
  */
 public class DescribeBackupPolicyResponseBody extends TeaModel {
-    @NameInMap("BackupPolicyDetail")
+    @com.aliyun.core.annotation.NameInMap("BackupPolicyDetail")
     private BackupPolicyDetail backupPolicyDetail;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeBackupPolicyResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     } 
 
     public static class BackupPolicyDetail extends TeaModel {
-        @NameInMap("ClientStatus")
+        @com.aliyun.core.annotation.NameInMap("ClientStatus")
         private String clientStatus;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Policy")
+        @com.aliyun.core.annotation.NameInMap("Policy")
         private String policy;
 
-        @NameInMap("PolicyVersion")
+        @com.aliyun.core.annotation.NameInMap("PolicyVersion")
         private String policyVersion;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UuidList")
+        @com.aliyun.core.annotation.NameInMap("UuidList")
         private java.util.List < String > uuidList;
 
         private BackupPolicyDetail(Builder builder) {

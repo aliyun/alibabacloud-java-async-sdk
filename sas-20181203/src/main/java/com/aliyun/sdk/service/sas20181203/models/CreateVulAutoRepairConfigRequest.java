@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateVulAutoRepairConfigRequest</p>
  */
 public class CreateVulAutoRepairConfigRequest extends Request {
-    @Query
-    @NameInMap("Reason")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Reason")
     private String reason;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
-    @Query
-    @NameInMap("VulAutoRepairConfigList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VulAutoRepairConfigList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < VulAutoRepairConfigList> vulAutoRepairConfigList;
 
     private CreateVulAutoRepairConfigRequest(Builder builder) {
@@ -118,12 +117,12 @@ public class CreateVulAutoRepairConfigRequest extends Request {
     } 
 
     public static class VulAutoRepairConfigList extends TeaModel {
-        @NameInMap("AliasName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("AliasName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String aliasName;
 
-        @NameInMap("Name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
         private VulAutoRepairConfigList(Builder builder) {

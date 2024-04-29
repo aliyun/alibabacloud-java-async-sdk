@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImageRequest</p>
  */
 public class DescribeImageRequest extends Request {
-    @Query
-    @NameInMap("ImageInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String imageInstanceId;
 
-    @Query
-    @NameInMap("ImageRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String imageRegionId;
 
-    @Query
-    @NameInMap("ImageRepoId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageRepoId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String imageRepoId;
 
-    @Query
-    @NameInMap("ImageTag")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageTag")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String imageTag;
 
     private DescribeImageRequest(Builder builder) {

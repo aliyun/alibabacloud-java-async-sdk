@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,8 +11,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BatchUpdateMaliciousFileWhitelistConfigRequest</p>
  */
 public class BatchUpdateMaliciousFileWhitelistConfigRequest extends Request {
-    @Query
-    @NameInMap("ConfigList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigList")
     private java.util.List < ConfigList> configList;
 
     private BatchUpdateMaliciousFileWhitelistConfigRequest(Builder builder) {
@@ -70,28 +69,28 @@ public class BatchUpdateMaliciousFileWhitelistConfigRequest extends Request {
     } 
 
     public static class ConfigList extends TeaModel {
-        @NameInMap("ConfigId")
+        @com.aliyun.core.annotation.NameInMap("ConfigId")
         private Long configId;
 
-        @NameInMap("EventName")
+        @com.aliyun.core.annotation.NameInMap("EventName")
         private String eventName;
 
-        @NameInMap("Field")
+        @com.aliyun.core.annotation.NameInMap("Field")
         private String field;
 
-        @NameInMap("FieldValue")
+        @com.aliyun.core.annotation.NameInMap("FieldValue")
         private String fieldValue;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
-        @NameInMap("TargetValue")
+        @com.aliyun.core.annotation.NameInMap("TargetValue")
         private String targetValue;
 
         private ConfigList(Builder builder) {

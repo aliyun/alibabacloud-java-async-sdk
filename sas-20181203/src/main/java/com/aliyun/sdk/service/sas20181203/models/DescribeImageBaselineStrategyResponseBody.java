@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImageBaselineStrategyResponseBody</p>
  */
 public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Strategy")
+    @com.aliyun.core.annotation.NameInMap("Strategy")
     private Strategy strategy;
 
     private DescribeImageBaselineStrategyResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
     } 
 
     public static class BaselineItemList extends TeaModel {
-        @NameInMap("ClassKey")
+        @com.aliyun.core.annotation.NameInMap("ClassKey")
         private String classKey;
 
-        @NameInMap("ItemKey")
+        @com.aliyun.core.annotation.NameInMap("ItemKey")
         private String itemKey;
 
-        @NameInMap("NameKey")
+        @com.aliyun.core.annotation.NameInMap("NameKey")
         private String nameKey;
 
         private BaselineItemList(Builder builder) {
@@ -153,25 +152,25 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
 
     }
     public static class Strategy extends TeaModel {
-        @NameInMap("BaselineItem")
+        @com.aliyun.core.annotation.NameInMap("BaselineItem")
         private String baselineItem;
 
-        @NameInMap("BaselineItemList")
+        @com.aliyun.core.annotation.NameInMap("BaselineItemList")
         private java.util.List < BaselineItemList> baselineItemList;
 
-        @NameInMap("SelectedItemCount")
+        @com.aliyun.core.annotation.NameInMap("SelectedItemCount")
         private Integer selectedItemCount;
 
-        @NameInMap("StrategyId")
+        @com.aliyun.core.annotation.NameInMap("StrategyId")
         private Long strategyId;
 
-        @NameInMap("StrategyName")
+        @com.aliyun.core.annotation.NameInMap("StrategyName")
         private String strategyName;
 
-        @NameInMap("TotalItemCount")
+        @com.aliyun.core.annotation.NameInMap("TotalItemCount")
         private Integer totalItemCount;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Strategy(Builder builder) {

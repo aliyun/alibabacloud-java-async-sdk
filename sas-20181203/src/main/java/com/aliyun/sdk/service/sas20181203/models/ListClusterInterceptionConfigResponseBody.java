@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListClusterInterceptionConfigResponseBody</p>
  */
 public class ListClusterInterceptionConfigResponseBody extends TeaModel {
-    @NameInMap("ClusterConfigList")
+    @com.aliyun.core.annotation.NameInMap("ClusterConfigList")
     private java.util.List < ClusterConfigList> clusterConfigList;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListClusterInterceptionConfigResponseBody(Builder builder) {
@@ -92,28 +91,28 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
     } 
 
     public static class ClusterConfigList extends TeaModel {
-        @NameInMap("ClusterCNNFStatus")
+        @com.aliyun.core.annotation.NameInMap("ClusterCNNFStatus")
         private Integer clusterCNNFStatus;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("ClusterType")
+        @com.aliyun.core.annotation.NameInMap("ClusterType")
         private String clusterType;
 
-        @NameInMap("InterceptionSwitch")
+        @com.aliyun.core.annotation.NameInMap("InterceptionSwitch")
         private Integer interceptionSwitch;
 
-        @NameInMap("OpenRuleCount")
+        @com.aliyun.core.annotation.NameInMap("OpenRuleCount")
         private Long openRuleCount;
 
-        @NameInMap("SupportCNNF")
+        @com.aliyun.core.annotation.NameInMap("SupportCNNF")
         private Boolean supportCNNF;
 
-        @NameInMap("TotalRuleCount")
+        @com.aliyun.core.annotation.NameInMap("TotalRuleCount")
         private Long totalRuleCount;
 
         private ClusterConfigList(Builder builder) {
@@ -290,16 +289,16 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrrentPage")
         private Integer currrentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {

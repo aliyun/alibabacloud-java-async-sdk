@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetHoneypotNodeResponseBody</p>
  */
 public class GetHoneypotNodeResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HoneypotNode")
+    @com.aliyun.core.annotation.NameInMap("HoneypotNode")
     private HoneypotNode honeypotNode;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetHoneypotNodeResponseBody(Builder builder) {
@@ -156,43 +155,43 @@ public class GetHoneypotNodeResponseBody extends TeaModel {
     } 
 
     public static class HoneypotNode extends TeaModel {
-        @NameInMap("AllowHoneypotAccessInternet")
+        @com.aliyun.core.annotation.NameInMap("AllowHoneypotAccessInternet")
         private Boolean allowHoneypotAccessInternet;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("EcsInstanceId")
+        @com.aliyun.core.annotation.NameInMap("EcsInstanceId")
         private String ecsInstanceId;
 
-        @NameInMap("HoneypotTotalCount")
+        @com.aliyun.core.annotation.NameInMap("HoneypotTotalCount")
         private Integer honeypotTotalCount;
 
-        @NameInMap("HoneypotUsedCount")
+        @com.aliyun.core.annotation.NameInMap("HoneypotUsedCount")
         private Integer honeypotUsedCount;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("NodeIp")
+        @com.aliyun.core.annotation.NameInMap("NodeIp")
         private String nodeIp;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("ProbeTotalCount")
+        @com.aliyun.core.annotation.NameInMap("ProbeTotalCount")
         private Integer probeTotalCount;
 
-        @NameInMap("ProbeUsedCount")
+        @com.aliyun.core.annotation.NameInMap("ProbeUsedCount")
         private Integer probeUsedCount;
 
-        @NameInMap("SecurityGroupProbeIpList")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupProbeIpList")
         private java.util.List < String > securityGroupProbeIpList;
 
-        @NameInMap("TotalStatus")
+        @com.aliyun.core.annotation.NameInMap("TotalStatus")
         private Integer totalStatus;
 
-        @NameInMap("UpgradeAvailable")
+        @com.aliyun.core.annotation.NameInMap("UpgradeAvailable")
         private Boolean upgradeAvailable;
 
         private HoneypotNode(Builder builder) {

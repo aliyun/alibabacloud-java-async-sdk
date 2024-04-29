@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePropertyScaDetailResponseBody</p>
  */
 public class DescribePropertyScaDetailResponseBody extends TeaModel {
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("Propertys")
+    @com.aliyun.core.annotation.NameInMap("Propertys")
     private java.util.List < Propertys> propertys;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePropertyScaDetailResponseBody(Builder builder) {
@@ -92,16 +91,16 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
     } 
 
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -193,91 +192,91 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
 
     }
     public static class Propertys extends TeaModel {
-        @NameInMap("BizType")
+        @com.aliyun.core.annotation.NameInMap("BizType")
         private String bizType;
 
-        @NameInMap("BizTypeDispaly")
+        @com.aliyun.core.annotation.NameInMap("BizTypeDispaly")
         private String bizTypeDispaly;
 
-        @NameInMap("Cmdline")
+        @com.aliyun.core.annotation.NameInMap("Cmdline")
         private String cmdline;
 
-        @NameInMap("ConfigPath")
+        @com.aliyun.core.annotation.NameInMap("ConfigPath")
         private String configPath;
 
-        @NameInMap("ContainerName")
+        @com.aliyun.core.annotation.NameInMap("ContainerName")
         private String containerName;
 
-        @NameInMap("CreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
-        @NameInMap("ImageName")
+        @com.aliyun.core.annotation.NameInMap("ImageName")
         private String imageName;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IntranetIp")
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("ListenIp")
+        @com.aliyun.core.annotation.NameInMap("ListenIp")
         private String listenIp;
 
-        @NameInMap("ListenProtocol")
+        @com.aliyun.core.annotation.NameInMap("ListenProtocol")
         private String listenProtocol;
 
-        @NameInMap("ListenStatus")
+        @com.aliyun.core.annotation.NameInMap("ListenStatus")
         private String listenStatus;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("Pid")
+        @com.aliyun.core.annotation.NameInMap("Pid")
         private String pid;
 
-        @NameInMap("PodName")
+        @com.aliyun.core.annotation.NameInMap("PodName")
         private String podName;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("Ppid")
+        @com.aliyun.core.annotation.NameInMap("Ppid")
         private String ppid;
 
-        @NameInMap("ProcessStarted")
+        @com.aliyun.core.annotation.NameInMap("ProcessStarted")
         private Long processStarted;
 
-        @NameInMap("ProcessUser")
+        @com.aliyun.core.annotation.NameInMap("ProcessUser")
         private String processUser;
 
-        @NameInMap("Proof")
+        @com.aliyun.core.annotation.NameInMap("Proof")
         private String proof;
 
-        @NameInMap("RuntimeEnvVersion")
+        @com.aliyun.core.annotation.NameInMap("RuntimeEnvVersion")
         private String runtimeEnvVersion;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
-        @NameInMap("WebPath")
+        @com.aliyun.core.annotation.NameInMap("WebPath")
         private String webPath;
 
         private Propertys(Builder builder) {

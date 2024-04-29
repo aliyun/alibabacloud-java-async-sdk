@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>OperateWebLockFileEventsRequest</p>
  */
 public class OperateWebLockFileEventsRequest extends Request {
-    @Query
-    @NameInMap("DealAll")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DealAll")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer dealAll;
 
-    @Query
-    @NameInMap("EventIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Long > eventIds;
 
-    @Query
-    @NameInMap("OperationCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String operationCode;
 
     private OperateWebLockFileEventsRequest(Builder builder) {

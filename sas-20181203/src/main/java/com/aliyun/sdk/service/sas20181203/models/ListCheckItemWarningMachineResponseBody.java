@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCheckItemWarningMachineResponseBody</p>
  */
 public class ListCheckItemWarningMachineResponseBody extends TeaModel {
-    @NameInMap("List")
+    @com.aliyun.core.annotation.NameInMap("List")
     private java.util.List < List> list;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListCheckItemWarningMachineResponseBody(Builder builder) {
@@ -92,10 +91,10 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
     } 
 
     public static class FixList extends TeaModel {
-        @NameInMap("RiskId")
+        @com.aliyun.core.annotation.NameInMap("RiskId")
         private Long riskId;
 
-        @NameInMap("RiskName")
+        @com.aliyun.core.annotation.NameInMap("RiskName")
         private String riskName;
 
         private FixList(Builder builder) {
@@ -153,10 +152,10 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
 
     }
     public static class WarningRiskList extends TeaModel {
-        @NameInMap("RiskId")
+        @com.aliyun.core.annotation.NameInMap("RiskId")
         private Long riskId;
 
-        @NameInMap("RiskName")
+        @com.aliyun.core.annotation.NameInMap("RiskName")
         private String riskName;
 
         private WarningRiskList(Builder builder) {
@@ -214,67 +213,67 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
 
     }
     public static class List extends TeaModel {
-        @NameInMap("AuthVersion")
+        @com.aliyun.core.annotation.NameInMap("AuthVersion")
         private Integer authVersion;
 
-        @NameInMap("Bind")
+        @com.aliyun.core.annotation.NameInMap("Bind")
         private Boolean bind;
 
-        @NameInMap("ContainerId")
+        @com.aliyun.core.annotation.NameInMap("ContainerId")
         private String containerId;
 
-        @NameInMap("ContainerName")
+        @com.aliyun.core.annotation.NameInMap("ContainerName")
         private String containerName;
 
-        @NameInMap("FixList")
+        @com.aliyun.core.annotation.NameInMap("FixList")
         private java.util.List < FixList> fixList;
 
-        @NameInMap("FixStatus")
+        @com.aliyun.core.annotation.NameInMap("FixStatus")
         private Integer fixStatus;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IntranetIp")
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("LastHandleTime")
+        @com.aliyun.core.annotation.NameInMap("LastHandleTime")
         private Long lastHandleTime;
 
-        @NameInMap("LastScanTime")
+        @com.aliyun.core.annotation.NameInMap("LastScanTime")
         private Long lastScanTime;
 
-        @NameInMap("PortOpen")
+        @com.aliyun.core.annotation.NameInMap("PortOpen")
         private Boolean portOpen;
 
-        @NameInMap("Prompt")
+        @com.aliyun.core.annotation.NameInMap("Prompt")
         private String prompt;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("TargetId")
+        @com.aliyun.core.annotation.NameInMap("TargetId")
         private String targetId;
 
-        @NameInMap("TargetName")
+        @com.aliyun.core.annotation.NameInMap("TargetName")
         private String targetName;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
-        @NameInMap("WarningRiskList")
+        @com.aliyun.core.annotation.NameInMap("WarningRiskList")
         private java.util.List < WarningRiskList> warningRiskList;
 
         private List(Builder builder) {
@@ -685,16 +684,16 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {

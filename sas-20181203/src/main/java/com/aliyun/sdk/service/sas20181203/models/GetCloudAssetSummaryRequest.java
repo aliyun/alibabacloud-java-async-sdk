@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,8 +11,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetCloudAssetSummaryRequest</p>
  */
 public class GetCloudAssetSummaryRequest extends Request {
-    @Query
-    @NameInMap("Vendors")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Vendors")
     private java.util.List < Integer > vendors;
 
     private GetCloudAssetSummaryRequest(Builder builder) {

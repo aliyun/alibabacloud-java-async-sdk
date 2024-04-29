@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCycleTaskListResponseBody</p>
  */
 public class DescribeCycleTaskListResponseBody extends TeaModel {
-    @NameInMap("CycleScheduleResponseList")
+    @com.aliyun.core.annotation.NameInMap("CycleScheduleResponseList")
     private java.util.List < CycleScheduleResponseList> cycleScheduleResponseList;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCycleTaskListResponseBody(Builder builder) {
@@ -92,40 +91,40 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
     } 
 
     public static class CycleScheduleResponseList extends TeaModel {
-        @NameInMap("ConfigId")
+        @com.aliyun.core.annotation.NameInMap("ConfigId")
         private String configId;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Integer enable;
 
-        @NameInMap("FirstDateStr")
+        @com.aliyun.core.annotation.NameInMap("FirstDateStr")
         private Long firstDateStr;
 
-        @NameInMap("IntervalPeriod")
+        @com.aliyun.core.annotation.NameInMap("IntervalPeriod")
         private Integer intervalPeriod;
 
-        @NameInMap("LastTaskId")
+        @com.aliyun.core.annotation.NameInMap("LastTaskId")
         private String lastTaskId;
 
-        @NameInMap("NextStartTimeStr")
+        @com.aliyun.core.annotation.NameInMap("NextStartTimeStr")
         private Long nextStartTimeStr;
 
-        @NameInMap("Param")
+        @com.aliyun.core.annotation.NameInMap("Param")
         private String param;
 
-        @NameInMap("PeriodUnit")
+        @com.aliyun.core.annotation.NameInMap("PeriodUnit")
         private String periodUnit;
 
-        @NameInMap("TargetEndTime")
+        @com.aliyun.core.annotation.NameInMap("TargetEndTime")
         private Integer targetEndTime;
 
-        @NameInMap("TargetStartTime")
+        @com.aliyun.core.annotation.NameInMap("TargetStartTime")
         private Integer targetStartTime;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
         private CycleScheduleResponseList(Builder builder) {
@@ -361,16 +360,16 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {

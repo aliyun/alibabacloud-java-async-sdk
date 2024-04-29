@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAssetDetailByUuidResponseBody</p>
  */
 public class GetAssetDetailByUuidResponseBody extends TeaModel {
-    @NameInMap("AssetDetail")
+    @com.aliyun.core.annotation.NameInMap("AssetDetail")
     private AssetDetail assetDetail;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetAssetDetailByUuidResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
     } 
 
     public static class DiskInfoList extends TeaModel {
-        @NameInMap("DiskName")
+        @com.aliyun.core.annotation.NameInMap("DiskName")
         private String diskName;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Long totalSize;
 
-        @NameInMap("TotalSizeByte")
+        @com.aliyun.core.annotation.NameInMap("TotalSizeByte")
         private Long totalSizeByte;
 
-        @NameInMap("UseSize")
+        @com.aliyun.core.annotation.NameInMap("UseSize")
         private Long useSize;
 
-        @NameInMap("UseSizeByte")
+        @com.aliyun.core.annotation.NameInMap("UseSizeByte")
         private Long useSizeByte;
 
         private DiskInfoList(Builder builder) {
@@ -193,103 +192,103 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
 
     }
     public static class AssetDetail extends TeaModel {
-        @NameInMap("AssetType")
+        @com.aliyun.core.annotation.NameInMap("AssetType")
         private String assetType;
 
-        @NameInMap("AuthModifyTime")
+        @com.aliyun.core.annotation.NameInMap("AuthModifyTime")
         private Long authModifyTime;
 
-        @NameInMap("AuthVersion")
+        @com.aliyun.core.annotation.NameInMap("AuthVersion")
         private Integer authVersion;
 
-        @NameInMap("Bind")
+        @com.aliyun.core.annotation.NameInMap("Bind")
         private Boolean bind;
 
-        @NameInMap("ClientStatus")
+        @com.aliyun.core.annotation.NameInMap("ClientStatus")
         private String clientStatus;
 
-        @NameInMap("ClientVersion")
+        @com.aliyun.core.annotation.NameInMap("ClientVersion")
         private String clientVersion;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
-        @NameInMap("CpuInfo")
+        @com.aliyun.core.annotation.NameInMap("CpuInfo")
         private String cpuInfo;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("DiskInfoList")
+        @com.aliyun.core.annotation.NameInMap("DiskInfoList")
         private java.util.List < DiskInfoList> diskInfoList;
 
-        @NameInMap("Flag")
+        @com.aliyun.core.annotation.NameInMap("Flag")
         private Integer flag;
 
-        @NameInMap("GroupTrace")
+        @com.aliyun.core.annotation.NameInMap("GroupTrace")
         private String groupTrace;
 
-        @NameInMap("HostName")
+        @com.aliyun.core.annotation.NameInMap("HostName")
         private String hostName;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IntranetIp")
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("IpList")
+        @com.aliyun.core.annotation.NameInMap("IpList")
         private java.util.List < String > ipList;
 
-        @NameInMap("Kernel")
+        @com.aliyun.core.annotation.NameInMap("Kernel")
         private String kernel;
 
-        @NameInMap("MacList")
+        @com.aliyun.core.annotation.NameInMap("MacList")
         private java.util.List < String > macList;
 
-        @NameInMap("Mem")
+        @com.aliyun.core.annotation.NameInMap("Mem")
         private Integer mem;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Long memory;
 
-        @NameInMap("Os")
+        @com.aliyun.core.annotation.NameInMap("Os")
         private String os;
 
-        @NameInMap("OsDetail")
+        @com.aliyun.core.annotation.NameInMap("OsDetail")
         private String osDetail;
 
-        @NameInMap("OsName")
+        @com.aliyun.core.annotation.NameInMap("OsName")
         private String osName;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RegionName")
+        @com.aliyun.core.annotation.NameInMap("RegionName")
         private String regionName;
 
-        @NameInMap("SysInfo")
+        @com.aliyun.core.annotation.NameInMap("SysInfo")
         private String sysInfo;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
-        @NameInMap("VpcInstanceId")
+        @com.aliyun.core.annotation.NameInMap("VpcInstanceId")
         private String vpcInstanceId;
 
         private AssetDetail(Builder builder) {

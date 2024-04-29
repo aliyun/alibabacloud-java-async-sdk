@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLogMetaResponseBody</p>
  */
 public class DescribeLogMetaResponseBody extends TeaModel {
-    @NameInMap("LogMetaList")
+    @com.aliyun.core.annotation.NameInMap("LogMetaList")
     private java.util.List < LogMetaList> logMetaList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeLogMetaResponseBody(Builder builder) {
@@ -92,37 +91,37 @@ public class DescribeLogMetaResponseBody extends TeaModel {
     } 
 
     public static class LogMetaList extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("HotTtl")
+        @com.aliyun.core.annotation.NameInMap("HotTtl")
         private Integer hotTtl;
 
-        @NameInMap("LogDesc")
+        @com.aliyun.core.annotation.NameInMap("LogDesc")
         private String logDesc;
 
-        @NameInMap("LogStore")
+        @com.aliyun.core.annotation.NameInMap("LogStore")
         private String logStore;
 
-        @NameInMap("Project")
+        @com.aliyun.core.annotation.NameInMap("Project")
         private String project;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
-        @NameInMap("Ttl")
+        @com.aliyun.core.annotation.NameInMap("Ttl")
         private Integer ttl;
 
-        @NameInMap("UserLogStore")
+        @com.aliyun.core.annotation.NameInMap("UserLogStore")
         private String userLogStore;
 
-        @NameInMap("UserProject")
+        @com.aliyun.core.annotation.NameInMap("UserProject")
         private String userProject;
 
-        @NameInMap("UserRegion")
+        @com.aliyun.core.annotation.NameInMap("UserRegion")
         private String userRegion;
 
         private LogMetaList(Builder builder) {

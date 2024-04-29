@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCheckWarningSummaryResponseBody</p>
  */
 public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("WarningSummarys")
+    @com.aliyun.core.annotation.NameInMap("WarningSummarys")
     private java.util.List < WarningSummarys> warningSummarys;
 
     private DescribeCheckWarningSummaryResponseBody(Builder builder) {
@@ -152,46 +151,46 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
     } 
 
     public static class WarningSummarys extends TeaModel {
-        @NameInMap("CheckCount")
+        @com.aliyun.core.annotation.NameInMap("CheckCount")
         private Integer checkCount;
 
-        @NameInMap("CheckExploit")
+        @com.aliyun.core.annotation.NameInMap("CheckExploit")
         private Boolean checkExploit;
 
-        @NameInMap("ContainerRisk")
+        @com.aliyun.core.annotation.NameInMap("ContainerRisk")
         private Boolean containerRisk;
 
-        @NameInMap("DatabaseRisk")
+        @com.aliyun.core.annotation.NameInMap("DatabaseRisk")
         private Boolean databaseRisk;
 
-        @NameInMap("HighWarningCount")
+        @com.aliyun.core.annotation.NameInMap("HighWarningCount")
         private Integer highWarningCount;
 
-        @NameInMap("LastFoundTime")
+        @com.aliyun.core.annotation.NameInMap("LastFoundTime")
         private String lastFoundTime;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("LowWarningCount")
+        @com.aliyun.core.annotation.NameInMap("LowWarningCount")
         private Integer lowWarningCount;
 
-        @NameInMap("MediumWarningCount")
+        @com.aliyun.core.annotation.NameInMap("MediumWarningCount")
         private Integer mediumWarningCount;
 
-        @NameInMap("RiskId")
+        @com.aliyun.core.annotation.NameInMap("RiskId")
         private Long riskId;
 
-        @NameInMap("RiskName")
+        @com.aliyun.core.annotation.NameInMap("RiskName")
         private String riskName;
 
-        @NameInMap("SubTypeAlias")
+        @com.aliyun.core.annotation.NameInMap("SubTypeAlias")
         private String subTypeAlias;
 
-        @NameInMap("TypeAlias")
+        @com.aliyun.core.annotation.NameInMap("TypeAlias")
         private String typeAlias;
 
-        @NameInMap("WarningMachineCount")
+        @com.aliyun.core.annotation.NameInMap("WarningMachineCount")
         private Integer warningMachineCount;
 
         private WarningSummarys(Builder builder) {

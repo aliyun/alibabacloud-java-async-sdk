@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeWebLockBindListResponseBody</p>
  */
 public class DescribeWebLockBindListResponseBody extends TeaModel {
-    @NameInMap("BindList")
+    @com.aliyun.core.annotation.NameInMap("BindList")
     private java.util.List < BindList> bindList;
 
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeWebLockBindListResponseBody(Builder builder) {
@@ -132,43 +131,43 @@ public class DescribeWebLockBindListResponseBody extends TeaModel {
     } 
 
     public static class BindList extends TeaModel {
-        @NameInMap("AuditCount")
+        @com.aliyun.core.annotation.NameInMap("AuditCount")
         private String auditCount;
 
-        @NameInMap("BlockCount")
+        @com.aliyun.core.annotation.NameInMap("BlockCount")
         private String blockCount;
 
-        @NameInMap("DirCount")
+        @com.aliyun.core.annotation.NameInMap("DirCount")
         private String dirCount;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IntranetIp")
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("Os")
+        @com.aliyun.core.annotation.NameInMap("Os")
         private String os;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private Integer percent;
 
-        @NameInMap("ServiceCode")
+        @com.aliyun.core.annotation.NameInMap("ServiceCode")
         private String serviceCode;
 
-        @NameInMap("ServiceDetail")
+        @com.aliyun.core.annotation.NameInMap("ServiceDetail")
         private String serviceDetail;
 
-        @NameInMap("ServiceStatus")
+        @com.aliyun.core.annotation.NameInMap("ServiceStatus")
         private String serviceStatus;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private BindList(Builder builder) {

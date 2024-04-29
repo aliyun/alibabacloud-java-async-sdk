@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListObjectScanEventResponseBody</p>
  */
 public class ListObjectScanEventResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListObjectScanEventResponseBody(Builder builder) {
@@ -92,19 +91,19 @@ public class ListObjectScanEventResponseBody extends TeaModel {
     } 
 
     public static class Details extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NameDisplay")
+        @com.aliyun.core.annotation.NameInMap("NameDisplay")
         private String nameDisplay;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        @NameInMap("ValueDisplay")
+        @com.aliyun.core.annotation.NameInMap("ValueDisplay")
         private String valueDisplay;
 
         private Details(Builder builder) {
@@ -213,49 +212,49 @@ public class ListObjectScanEventResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("BucketName")
+        @com.aliyun.core.annotation.NameInMap("BucketName")
         private String bucketName;
 
-        @NameInMap("Details")
+        @com.aliyun.core.annotation.NameInMap("Details")
         private java.util.List < Details> details;
 
-        @NameInMap("DisplaySandboxResult")
+        @com.aliyun.core.annotation.NameInMap("DisplaySandboxResult")
         private String displaySandboxResult;
 
-        @NameInMap("EventId")
+        @com.aliyun.core.annotation.NameInMap("EventId")
         private Long eventId;
 
-        @NameInMap("EventName")
+        @com.aliyun.core.annotation.NameInMap("EventName")
         private String eventName;
 
-        @NameInMap("FilePath")
+        @com.aliyun.core.annotation.NameInMap("FilePath")
         private String filePath;
 
-        @NameInMap("FirstTime")
+        @com.aliyun.core.annotation.NameInMap("FirstTime")
         private Long firstTime;
 
-        @NameInMap("HasSubEvent")
+        @com.aliyun.core.annotation.NameInMap("HasSubEvent")
         private Boolean hasSubEvent;
 
-        @NameInMap("LastTime")
+        @com.aliyun.core.annotation.NameInMap("LastTime")
         private Long lastTime;
 
-        @NameInMap("Md5")
+        @com.aliyun.core.annotation.NameInMap("Md5")
         private String md5;
 
-        @NameInMap("OssKey")
+        @com.aliyun.core.annotation.NameInMap("OssKey")
         private String ossKey;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
 
-        @NameInMap("Sha1")
+        @com.aliyun.core.annotation.NameInMap("Sha1")
         private String sha1;
 
-        @NameInMap("Sha256")
+        @com.aliyun.core.annotation.NameInMap("Sha256")
         private String sha256;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
         private Data(Builder builder) {
@@ -547,13 +546,13 @@ public class ListObjectScanEventResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {

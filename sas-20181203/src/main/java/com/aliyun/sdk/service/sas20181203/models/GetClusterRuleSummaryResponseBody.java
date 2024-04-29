@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetClusterRuleSummaryResponseBody</p>
  */
 public class GetClusterRuleSummaryResponseBody extends TeaModel {
-    @NameInMap("ClusterRuleSummary")
+    @com.aliyun.core.annotation.NameInMap("ClusterRuleSummary")
     private ClusterRuleSummary clusterRuleSummary;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetClusterRuleSummaryResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class GetClusterRuleSummaryResponseBody extends TeaModel {
     } 
 
     public static class ClusterRuleSummary extends TeaModel {
-        @NameInMap("CloseRuleCount")
+        @com.aliyun.core.annotation.NameInMap("CloseRuleCount")
         private Integer closeRuleCount;
 
-        @NameInMap("InterceptionCount7Day")
+        @com.aliyun.core.annotation.NameInMap("InterceptionCount7Day")
         private Long interceptionCount7Day;
 
-        @NameInMap("InterceptionSwitch")
+        @com.aliyun.core.annotation.NameInMap("InterceptionSwitch")
         private Integer interceptionSwitch;
 
-        @NameInMap("InterceptionType")
+        @com.aliyun.core.annotation.NameInMap("InterceptionType")
         private Integer interceptionType;
 
-        @NameInMap("OpenRuleCount")
+        @com.aliyun.core.annotation.NameInMap("OpenRuleCount")
         private Integer openRuleCount;
 
-        @NameInMap("RuleCount")
+        @com.aliyun.core.annotation.NameInMap("RuleCount")
         private Integer ruleCount;
 
-        @NameInMap("SuggestRuleCount")
+        @com.aliyun.core.annotation.NameInMap("SuggestRuleCount")
         private Integer suggestRuleCount;
 
         private ClusterRuleSummary(Builder builder) {

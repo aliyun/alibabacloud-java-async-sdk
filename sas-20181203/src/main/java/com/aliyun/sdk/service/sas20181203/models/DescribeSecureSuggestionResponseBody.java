@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSecureSuggestionResponseBody</p>
  */
 public class DescribeSecureSuggestionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Suggestions")
+    @com.aliyun.core.annotation.NameInMap("Suggestions")
     private java.util.List < Suggestions> suggestions;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeSecureSuggestionResponseBody(Builder builder) {
@@ -92,13 +91,13 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
     } 
 
     public static class Detail extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("SubType")
+        @com.aliyun.core.annotation.NameInMap("SubType")
         private String subType;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private Detail(Builder builder) {
@@ -213,13 +212,13 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
 
     }
     public static class Suggestions extends TeaModel {
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private java.util.List < Detail> detail;
 
-        @NameInMap("Points")
+        @com.aliyun.core.annotation.NameInMap("Points")
         private Integer points;
 
-        @NameInMap("SuggestType")
+        @com.aliyun.core.annotation.NameInMap("SuggestType")
         private String suggestType;
 
         private Suggestions(Builder builder) {

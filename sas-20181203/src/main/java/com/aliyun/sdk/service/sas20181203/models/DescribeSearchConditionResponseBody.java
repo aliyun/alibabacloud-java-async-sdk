@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSearchConditionResponseBody</p>
  */
 public class DescribeSearchConditionResponseBody extends TeaModel {
-    @NameInMap("ConditionList")
+    @com.aliyun.core.annotation.NameInMap("ConditionList")
     private java.util.List < ConditionList> conditionList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeSearchConditionResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribeSearchConditionResponseBody extends TeaModel {
     } 
 
     public static class ConditionList extends TeaModel {
-        @NameInMap("ConditionType")
+        @com.aliyun.core.annotation.NameInMap("ConditionType")
         private String conditionType;
 
-        @NameInMap("FilterConditions")
+        @com.aliyun.core.annotation.NameInMap("FilterConditions")
         private String filterConditions;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NameKey")
+        @com.aliyun.core.annotation.NameInMap("NameKey")
         private String nameKey;
 
         private ConditionList(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImageFixCycleConfigResponseBody</p>
  */
 public class DescribeImageFixCycleConfigResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeImageFixCycleConfigResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribeImageFixCycleConfigResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("ImageFixCycle")
+        @com.aliyun.core.annotation.NameInMap("ImageFixCycle")
         private Integer imageFixCycle;
 
-        @NameInMap("ImageFixSwitch")
+        @com.aliyun.core.annotation.NameInMap("ImageFixSwitch")
         private String imageFixSwitch;
 
-        @NameInMap("ImageFixTarget")
+        @com.aliyun.core.annotation.NameInMap("ImageFixTarget")
         private String imageFixTarget;
 
-        @NameInMap("ImageTimeRange")
+        @com.aliyun.core.annotation.NameInMap("ImageTimeRange")
         private Integer imageTimeRange;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInterceptionHistoryResponseBody</p>
  */
 public class ListInterceptionHistoryResponseBody extends TeaModel {
-    @NameInMap("InterceptionHistoryList")
+    @com.aliyun.core.annotation.NameInMap("InterceptionHistoryList")
     private java.util.List < InterceptionHistoryList> interceptionHistoryList;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListInterceptionHistoryResponseBody(Builder builder) {
@@ -92,88 +91,88 @@ public class ListInterceptionHistoryResponseBody extends TeaModel {
     } 
 
     public static class InterceptionHistoryList extends TeaModel {
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("DstAppName")
+        @com.aliyun.core.annotation.NameInMap("DstAppName")
         private String dstAppName;
 
-        @NameInMap("DstNamespace")
+        @com.aliyun.core.annotation.NameInMap("DstNamespace")
         private String dstNamespace;
 
-        @NameInMap("DstPort")
+        @com.aliyun.core.annotation.NameInMap("DstPort")
         private Long dstPort;
 
-        @NameInMap("DstRuleTargetName")
+        @com.aliyun.core.annotation.NameInMap("DstRuleTargetName")
         private String dstRuleTargetName;
 
-        @NameInMap("FirstTime")
+        @com.aliyun.core.annotation.NameInMap("FirstTime")
         private Long firstTime;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("InterceptionName")
+        @com.aliyun.core.annotation.NameInMap("InterceptionName")
         private Long interceptionName;
 
-        @NameInMap("InterceptionType")
+        @com.aliyun.core.annotation.NameInMap("InterceptionType")
         private Integer interceptionType;
 
-        @NameInMap("LastTime")
+        @com.aliyun.core.annotation.NameInMap("LastTime")
         private Long lastTime;
 
-        @NameInMap("RealDstAppName")
+        @com.aliyun.core.annotation.NameInMap("RealDstAppName")
         private String realDstAppName;
 
-        @NameInMap("RealDstImageName")
+        @com.aliyun.core.annotation.NameInMap("RealDstImageName")
         private String realDstImageName;
 
-        @NameInMap("RealDstNamespace")
+        @com.aliyun.core.annotation.NameInMap("RealDstNamespace")
         private String realDstNamespace;
 
-        @NameInMap("RealDstPodName")
+        @com.aliyun.core.annotation.NameInMap("RealDstPodName")
         private String realDstPodName;
 
-        @NameInMap("RealInterceptionType")
+        @com.aliyun.core.annotation.NameInMap("RealInterceptionType")
         private Integer realInterceptionType;
 
-        @NameInMap("RealSrcAppName")
+        @com.aliyun.core.annotation.NameInMap("RealSrcAppName")
         private String realSrcAppName;
 
-        @NameInMap("RealSrcImageName")
+        @com.aliyun.core.annotation.NameInMap("RealSrcImageName")
         private String realSrcImageName;
 
-        @NameInMap("RealSrcNamespace")
+        @com.aliyun.core.annotation.NameInMap("RealSrcNamespace")
         private String realSrcNamespace;
 
-        @NameInMap("RealSrcPodName")
+        @com.aliyun.core.annotation.NameInMap("RealSrcPodName")
         private String realSrcPodName;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private Long riskLevel;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("SrcAppName")
+        @com.aliyun.core.annotation.NameInMap("SrcAppName")
         private String srcAppName;
 
-        @NameInMap("SrcNamespace")
+        @com.aliyun.core.annotation.NameInMap("SrcNamespace")
         private String srcNamespace;
 
-        @NameInMap("SrcRuleTargetName")
+        @com.aliyun.core.annotation.NameInMap("SrcRuleTargetName")
         private String srcRuleTargetName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Long status;
 
-        @NameInMap("TryCount")
+        @com.aliyun.core.annotation.NameInMap("TryCount")
         private Integer tryCount;
 
         private InterceptionHistoryList(Builder builder) {
@@ -698,16 +697,16 @@ public class ListInterceptionHistoryResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {

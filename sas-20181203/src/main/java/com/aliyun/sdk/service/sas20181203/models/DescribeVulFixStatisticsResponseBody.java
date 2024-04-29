@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVulFixStatisticsResponseBody</p>
  */
 public class DescribeVulFixStatisticsResponseBody extends TeaModel {
-    @NameInMap("FixStat")
+    @com.aliyun.core.annotation.NameInMap("FixStat")
     private java.util.List < FixStat> fixStat;
 
-    @NameInMap("FixTotal")
+    @com.aliyun.core.annotation.NameInMap("FixTotal")
     private FixTotal fixTotal;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeVulFixStatisticsResponseBody(Builder builder) {
@@ -92,19 +91,19 @@ public class DescribeVulFixStatisticsResponseBody extends TeaModel {
     } 
 
     public static class FixStat extends TeaModel {
-        @NameInMap("FixedTodayNum")
+        @com.aliyun.core.annotation.NameInMap("FixedTodayNum")
         private Integer fixedTodayNum;
 
-        @NameInMap("FixedTotalNum")
+        @com.aliyun.core.annotation.NameInMap("FixedTotalNum")
         private Integer fixedTotalNum;
 
-        @NameInMap("FixingNum")
+        @com.aliyun.core.annotation.NameInMap("FixingNum")
         private Integer fixingNum;
 
-        @NameInMap("NeedFixNum")
+        @com.aliyun.core.annotation.NameInMap("NeedFixNum")
         private Integer needFixNum;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private FixStat(Builder builder) {
@@ -220,16 +219,16 @@ public class DescribeVulFixStatisticsResponseBody extends TeaModel {
 
     }
     public static class FixTotal extends TeaModel {
-        @NameInMap("FixedTodayNum")
+        @com.aliyun.core.annotation.NameInMap("FixedTodayNum")
         private Integer fixedTodayNum;
 
-        @NameInMap("FixedTotalNum")
+        @com.aliyun.core.annotation.NameInMap("FixedTotalNum")
         private Integer fixedTotalNum;
 
-        @NameInMap("FixingNum")
+        @com.aliyun.core.annotation.NameInMap("FixingNum")
         private Integer fixingNum;
 
-        @NameInMap("NeedFixNum")
+        @com.aliyun.core.annotation.NameInMap("NeedFixNum")
         private Integer needFixNum;
 
         private FixTotal(Builder builder) {

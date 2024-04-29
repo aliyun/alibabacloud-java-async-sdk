@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyContainerDefenseRuleSwitchRequest</p>
  */
 public class ModifyContainerDefenseRuleSwitchRequest extends Request {
-    @Query
-    @NameInMap("RuleIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleIds")
     private java.util.List < Long > ruleIds;
 
-    @Query
-    @NameInMap("RuleSwitch")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleSwitch")
     private Integer ruleSwitch;
 
     private ModifyContainerDefenseRuleSwitchRequest(Builder builder) {

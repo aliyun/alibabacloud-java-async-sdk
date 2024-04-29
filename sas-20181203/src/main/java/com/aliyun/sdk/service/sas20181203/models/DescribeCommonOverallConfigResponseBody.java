@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCommonOverallConfigResponseBody</p>
  */
 public class DescribeCommonOverallConfigResponseBody extends TeaModel {
-    @NameInMap("OverallConfig")
+    @com.aliyun.core.annotation.NameInMap("OverallConfig")
     private OverallConfig overallConfig;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCommonOverallConfigResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeCommonOverallConfigResponseBody extends TeaModel {
     } 
 
     public static class OverallConfig extends TeaModel {
-        @NameInMap("Config")
+        @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private OverallConfig(Builder builder) {

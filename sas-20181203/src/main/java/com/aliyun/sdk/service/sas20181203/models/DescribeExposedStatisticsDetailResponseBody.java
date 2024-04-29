@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeExposedStatisticsDetailResponseBody</p>
  */
 public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StatisticsDetails")
+    @com.aliyun.core.annotation.NameInMap("StatisticsDetails")
     private java.util.List < StatisticsDetails> statisticsDetails;
 
     private DescribeExposedStatisticsDetailResponseBody(Builder builder) {
@@ -92,16 +91,16 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
     } 
 
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -193,28 +192,28 @@ public class DescribeExposedStatisticsDetailResponseBody extends TeaModel {
 
     }
     public static class StatisticsDetails extends TeaModel {
-        @NameInMap("ExposedCount")
+        @com.aliyun.core.annotation.NameInMap("ExposedCount")
         private Integer exposedCount;
 
-        @NameInMap("ExposureComponent")
+        @com.aliyun.core.annotation.NameInMap("ExposureComponent")
         private String exposureComponent;
 
-        @NameInMap("ExposureIp")
+        @com.aliyun.core.annotation.NameInMap("ExposureIp")
         private String exposureIp;
 
-        @NameInMap("ExposurePort")
+        @com.aliyun.core.annotation.NameInMap("ExposurePort")
         private String exposurePort;
 
-        @NameInMap("ExposureType")
+        @com.aliyun.core.annotation.NameInMap("ExposureType")
         private String exposureType;
 
-        @NameInMap("ExposureTypeId")
+        @com.aliyun.core.annotation.NameInMap("ExposureTypeId")
         private String exposureTypeId;
 
-        @NameInMap("ExposureTypeInstanceName")
+        @com.aliyun.core.annotation.NameInMap("ExposureTypeInstanceName")
         private String exposureTypeInstanceName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private StatisticsDetails(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBackupClientsResponseBody</p>
  */
 public class DescribeBackupClientsResponseBody extends TeaModel {
-    @NameInMap("Clients")
+    @com.aliyun.core.annotation.NameInMap("Clients")
     private java.util.List < Clients> clients;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeBackupClientsResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribeBackupClientsResponseBody extends TeaModel {
     } 
 
     public static class Clients extends TeaModel {
-        @NameInMap("ClientId")
+        @com.aliyun.core.annotation.NameInMap("ClientId")
         private String clientId;
 
-        @NameInMap("ClientStatus")
+        @com.aliyun.core.annotation.NameInMap("ClientStatus")
         private String clientStatus;
 
-        @NameInMap("ClientVersion")
+        @com.aliyun.core.annotation.NameInMap("ClientVersion")
         private String clientVersion;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private Clients(Builder builder) {

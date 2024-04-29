@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSwitchRegionDetailResponseBody</p>
  */
 public class GetSwitchRegionDetailResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetSwitchRegionDetailResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
     } 
 
     public static class RegionStatus extends TeaModel {
-        @NameInMap("EcsCount")
+        @com.aliyun.core.annotation.NameInMap("EcsCount")
         private Integer ecsCount;
 
-        @NameInMap("GmtPlanSwitchTime")
+        @com.aliyun.core.annotation.NameInMap("GmtPlanSwitchTime")
         private Long gmtPlanSwitchTime;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private RegionStatus(Builder builder) {
@@ -177,19 +176,19 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("GmtIsAgreeModified")
+        @com.aliyun.core.annotation.NameInMap("GmtIsAgreeModified")
         private Long gmtIsAgreeModified;
 
-        @NameInMap("GmtNoticed")
+        @com.aliyun.core.annotation.NameInMap("GmtNoticed")
         private Long gmtNoticed;
 
-        @NameInMap("IsAgree")
+        @com.aliyun.core.annotation.NameInMap("IsAgree")
         private String isAgree;
 
-        @NameInMap("IsNoticed")
+        @com.aliyun.core.annotation.NameInMap("IsNoticed")
         private String isNoticed;
 
-        @NameInMap("RegionStatus")
+        @com.aliyun.core.annotation.NameInMap("RegionStatus")
         private java.util.List < RegionStatus> regionStatus;
 
         private Data(Builder builder) {

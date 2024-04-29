@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetOnceTaskResultInfoResponseBody</p>
  */
 public class GetOnceTaskResultInfoResponseBody extends TeaModel {
-    @NameInMap("CollectTime")
+    @com.aliyun.core.annotation.NameInMap("CollectTime")
     private Long collectTime;
 
-    @NameInMap("FinishCount")
+    @com.aliyun.core.annotation.NameInMap("FinishCount")
     private Integer finishCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private Long taskId;
 
-    @NameInMap("TaskInfo")
+    @com.aliyun.core.annotation.NameInMap("TaskInfo")
     private TaskInfo taskInfo;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private GetOnceTaskResultInfoResponseBody(Builder builder) {
@@ -152,7 +151,7 @@ public class GetOnceTaskResultInfoResponseBody extends TeaModel {
     } 
 
     public static class TaskInfo extends TeaModel {
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private TaskInfo(Builder builder) {

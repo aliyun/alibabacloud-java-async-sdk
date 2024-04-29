@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeGroupedMaliciousFilesResponseBody</p>
  */
 public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
-    @NameInMap("GroupedMaliciousFileResponse")
+    @com.aliyun.core.annotation.NameInMap("GroupedMaliciousFileResponse")
     private java.util.List < GroupedMaliciousFileResponse> groupedMaliciousFileResponse;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeGroupedMaliciousFilesResponseBody(Builder builder) {
@@ -92,28 +91,28 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
     } 
 
     public static class GroupedMaliciousFileResponse extends TeaModel {
-        @NameInMap("FirstScanTimestamp")
+        @com.aliyun.core.annotation.NameInMap("FirstScanTimestamp")
         private Long firstScanTimestamp;
 
-        @NameInMap("ImageCount")
+        @com.aliyun.core.annotation.NameInMap("ImageCount")
         private Long imageCount;
 
-        @NameInMap("LatestScanTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LatestScanTimestamp")
         private Long latestScanTimestamp;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("MaliciousKey")
+        @com.aliyun.core.annotation.NameInMap("MaliciousKey")
         private String maliciousKey;
 
-        @NameInMap("MaliciousMd5")
+        @com.aliyun.core.annotation.NameInMap("MaliciousMd5")
         private String maliciousMd5;
 
-        @NameInMap("MaliciousName")
+        @com.aliyun.core.annotation.NameInMap("MaliciousName")
         private String maliciousName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private GroupedMaliciousFileResponse(Builder builder) {
@@ -284,16 +283,16 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {

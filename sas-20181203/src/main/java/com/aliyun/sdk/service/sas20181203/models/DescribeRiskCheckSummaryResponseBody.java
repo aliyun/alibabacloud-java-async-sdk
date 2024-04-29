@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRiskCheckSummaryResponseBody</p>
  */
 public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RiskCheckSummary")
+    @com.aliyun.core.annotation.NameInMap("RiskCheckSummary")
     private RiskCheckSummary riskCheckSummary;
 
     private DescribeRiskCheckSummaryResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
     } 
 
     public static class CountByStatus extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private CountByStatus(Builder builder) {
@@ -137,22 +136,22 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
 
     }
     public static class Groups extends TeaModel {
-        @NameInMap("CountByStatus")
+        @com.aliyun.core.annotation.NameInMap("CountByStatus")
         private java.util.List < CountByStatus> countByStatus;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("RemainingTime")
+        @com.aliyun.core.annotation.NameInMap("RemainingTime")
         private Integer remainingTime;
 
-        @NameInMap("Sort")
+        @com.aliyun.core.annotation.NameInMap("Sort")
         private Integer sort;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private Groups(Builder builder) {
@@ -284,10 +283,10 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
 
     }
     public static class RiskLevelCount extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
         private RiskLevelCount(Builder builder) {
@@ -350,34 +349,34 @@ public class DescribeRiskCheckSummaryResponseBody extends TeaModel {
 
     }
     public static class RiskCheckSummary extends TeaModel {
-        @NameInMap("AffectedAssetCount")
+        @com.aliyun.core.annotation.NameInMap("AffectedAssetCount")
         private Integer affectedAssetCount;
 
-        @NameInMap("DisabledRiskCount")
+        @com.aliyun.core.annotation.NameInMap("DisabledRiskCount")
         private Integer disabledRiskCount;
 
-        @NameInMap("EnabledRiskCount")
+        @com.aliyun.core.annotation.NameInMap("EnabledRiskCount")
         private Integer enabledRiskCount;
 
-        @NameInMap("Groups")
+        @com.aliyun.core.annotation.NameInMap("Groups")
         private java.util.List < Groups> groups;
 
-        @NameInMap("ItemCount")
+        @com.aliyun.core.annotation.NameInMap("ItemCount")
         private Integer itemCount;
 
-        @NameInMap("PreviousCount")
+        @com.aliyun.core.annotation.NameInMap("PreviousCount")
         private Integer previousCount;
 
-        @NameInMap("PreviousTime")
+        @com.aliyun.core.annotation.NameInMap("PreviousTime")
         private Long previousTime;
 
-        @NameInMap("RiskCount")
+        @com.aliyun.core.annotation.NameInMap("RiskCount")
         private Integer riskCount;
 
-        @NameInMap("RiskLevelCount")
+        @com.aliyun.core.annotation.NameInMap("RiskLevelCount")
         private java.util.List < RiskLevelCount> riskLevelCount;
 
-        @NameInMap("RiskRate")
+        @com.aliyun.core.annotation.NameInMap("RiskRate")
         private Float riskRate;
 
         private RiskCheckSummary(Builder builder) {

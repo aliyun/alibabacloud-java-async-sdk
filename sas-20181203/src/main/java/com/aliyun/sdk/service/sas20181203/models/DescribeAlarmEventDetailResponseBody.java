@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAlarmEventDetailResponseBody</p>
  */
 public class DescribeAlarmEventDetailResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAlarmEventDetailResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
     } 
 
     public static class Value extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Value(Builder builder) {
@@ -157,10 +156,10 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
 
     }
     public static class CauseDetails extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private java.util.List < Value> value;
 
         private CauseDetails(Builder builder) {
@@ -218,85 +217,85 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AlarmEventAliasName")
+        @com.aliyun.core.annotation.NameInMap("AlarmEventAliasName")
         private String alarmEventAliasName;
 
-        @NameInMap("AlarmEventDesc")
+        @com.aliyun.core.annotation.NameInMap("AlarmEventDesc")
         private String alarmEventDesc;
 
-        @NameInMap("AlarmUniqueInfo")
+        @com.aliyun.core.annotation.NameInMap("AlarmUniqueInfo")
         private String alarmUniqueInfo;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("CanBeDealOnLine")
+        @com.aliyun.core.annotation.NameInMap("CanBeDealOnLine")
         private Boolean canBeDealOnLine;
 
-        @NameInMap("CanCancelFault")
+        @com.aliyun.core.annotation.NameInMap("CanCancelFault")
         private Boolean canCancelFault;
 
-        @NameInMap("CauseDetails")
+        @com.aliyun.core.annotation.NameInMap("CauseDetails")
         private java.util.List < CauseDetails> causeDetails;
 
-        @NameInMap("ContainHwMode")
+        @com.aliyun.core.annotation.NameInMap("ContainHwMode")
         private Boolean containHwMode;
 
-        @NameInMap("ContainerId")
+        @com.aliyun.core.annotation.NameInMap("ContainerId")
         private String containerId;
 
-        @NameInMap("ContainerImageId")
+        @com.aliyun.core.annotation.NameInMap("ContainerImageId")
         private String containerImageId;
 
-        @NameInMap("ContainerImageName")
+        @com.aliyun.core.annotation.NameInMap("ContainerImageName")
         private String containerImageName;
 
-        @NameInMap("DataSource")
+        @com.aliyun.core.annotation.NameInMap("DataSource")
         private String dataSource;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IntranetIp")
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("K8sClusterId")
+        @com.aliyun.core.annotation.NameInMap("K8sClusterId")
         private String k8sClusterId;
 
-        @NameInMap("K8sClusterName")
+        @com.aliyun.core.annotation.NameInMap("K8sClusterName")
         private String k8sClusterName;
 
-        @NameInMap("K8sNamespace")
+        @com.aliyun.core.annotation.NameInMap("K8sNamespace")
         private String k8sNamespace;
 
-        @NameInMap("K8sNodeId")
+        @com.aliyun.core.annotation.NameInMap("K8sNodeId")
         private String k8sNodeId;
 
-        @NameInMap("K8sNodeName")
+        @com.aliyun.core.annotation.NameInMap("K8sNodeName")
         private String k8sNodeName;
 
-        @NameInMap("K8sPodName")
+        @com.aliyun.core.annotation.NameInMap("K8sPodName")
         private String k8sPodName;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("Solution")
+        @com.aliyun.core.annotation.NameInMap("Solution")
         private String solution;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private Data(Builder builder) {

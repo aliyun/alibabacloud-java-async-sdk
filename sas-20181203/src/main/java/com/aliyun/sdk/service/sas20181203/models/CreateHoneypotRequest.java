@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateHoneypotRequest</p>
  */
 public class CreateHoneypotRequest extends Request {
-    @Query
-    @NameInMap("HoneypotImageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HoneypotImageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String honeypotImageId;
 
-    @Query
-    @NameInMap("HoneypotImageName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HoneypotImageName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String honeypotImageName;
 
-    @Query
-    @NameInMap("HoneypotName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HoneypotName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String honeypotName;
 
-    @Query
-    @NameInMap("Meta")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Meta")
     private String meta;
 
-    @Query
-    @NameInMap("NodeId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodeId;
 
     private CreateHoneypotRequest(Builder builder) {

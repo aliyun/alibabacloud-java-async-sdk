@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSimilarSecurityEventsResponseBody</p>
  */
 public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecurityEventsResponse")
+    @com.aliyun.core.annotation.NameInMap("SecurityEventsResponse")
     private java.util.List < SecurityEventsResponse> securityEventsResponse;
 
     private DescribeSimilarSecurityEventsResponseBody(Builder builder) {
@@ -92,16 +91,16 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
     } 
 
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -193,22 +192,22 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
 
     }
     public static class SecurityEventsResponse extends TeaModel {
-        @NameInMap("EventName")
+        @com.aliyun.core.annotation.NameInMap("EventName")
         private String eventName;
 
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
 
-        @NameInMap("LastTime")
+        @com.aliyun.core.annotation.NameInMap("LastTime")
         private Long lastTime;
 
-        @NameInMap("OccurrenceTime")
+        @com.aliyun.core.annotation.NameInMap("OccurrenceTime")
         private Long occurrenceTime;
 
-        @NameInMap("SecurityEventId")
+        @com.aliyun.core.annotation.NameInMap("SecurityEventId")
         private Long securityEventId;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private SecurityEventsResponse(Builder builder) {

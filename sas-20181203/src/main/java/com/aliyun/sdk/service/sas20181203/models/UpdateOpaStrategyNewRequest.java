@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,60 +11,60 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateOpaStrategyNewRequest</p>
  */
 public class UpdateOpaStrategyNewRequest extends Request {
-    @Query
-    @NameInMap("AlarmDetail")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlarmDetail")
     private AlarmDetail alarmDetail;
 
-    @Query
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Query
-    @NameInMap("ClusterName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterName")
     private String clusterName;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("ImageName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageName")
     private java.util.List < String > imageName;
 
-    @Query
-    @NameInMap("Label")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Label")
     private java.util.List < String > label;
 
-    @Query
-    @NameInMap("MaliciousImage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaliciousImage")
     private Boolean maliciousImage;
 
-    @Query
-    @NameInMap("RuleAction")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleAction")
     private Integer ruleAction;
 
-    @Query
-    @NameInMap("Scopes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scopes")
     private java.util.List < Scopes> scopes;
 
-    @Query
-    @NameInMap("StrategyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyId")
     private Long strategyId;
 
-    @Query
-    @NameInMap("StrategyName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyName")
     private String strategyName;
 
-    @Query
-    @NameInMap("StrategyTemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyTemplateId")
     private Long strategyTemplateId;
 
-    @Query
-    @NameInMap("UnScanedImage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UnScanedImage")
     private Boolean unScanedImage;
 
-    @Query
-    @NameInMap("WhiteList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WhiteList")
     private java.util.List < String > whiteList;
 
     private UpdateOpaStrategyNewRequest(Builder builder) {
@@ -395,10 +394,10 @@ public class UpdateOpaStrategyNewRequest extends Request {
     } 
 
     public static class Item extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Item(Builder builder) {
@@ -462,10 +461,10 @@ public class UpdateOpaStrategyNewRequest extends Request {
 
     }
     public static class Baseline extends TeaModel {
-        @NameInMap("Item")
+        @com.aliyun.core.annotation.NameInMap("Item")
         private java.util.List < Item> item;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private java.util.List < String > riskLevel;
 
         private Baseline(Builder builder) {
@@ -523,10 +522,10 @@ public class UpdateOpaStrategyNewRequest extends Request {
 
     }
     public static class BuildRiskItem extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private BuildRiskItem(Builder builder) {
@@ -590,10 +589,10 @@ public class UpdateOpaStrategyNewRequest extends Request {
 
     }
     public static class BuildRisk extends TeaModel {
-        @NameInMap("Item")
+        @com.aliyun.core.annotation.NameInMap("Item")
         private java.util.List < BuildRiskItem> item;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private java.util.List < String > riskLevel;
 
         private BuildRisk(Builder builder) {
@@ -651,10 +650,10 @@ public class UpdateOpaStrategyNewRequest extends Request {
 
     }
     public static class MaliciousFileItem extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private MaliciousFileItem(Builder builder) {
@@ -718,10 +717,10 @@ public class UpdateOpaStrategyNewRequest extends Request {
 
     }
     public static class MaliciousFile extends TeaModel {
-        @NameInMap("Item")
+        @com.aliyun.core.annotation.NameInMap("Item")
         private java.util.List < MaliciousFileItem> item;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private java.util.List < String > riskLevel;
 
         private MaliciousFile(Builder builder) {
@@ -779,10 +778,10 @@ public class UpdateOpaStrategyNewRequest extends Request {
 
     }
     public static class SensitiveFileItem extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private SensitiveFileItem(Builder builder) {
@@ -846,10 +845,10 @@ public class UpdateOpaStrategyNewRequest extends Request {
 
     }
     public static class SensitiveFile extends TeaModel {
-        @NameInMap("Item")
+        @com.aliyun.core.annotation.NameInMap("Item")
         private java.util.List < SensitiveFileItem> item;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private java.util.List < String > riskLevel;
 
         private SensitiveFile(Builder builder) {
@@ -907,10 +906,10 @@ public class UpdateOpaStrategyNewRequest extends Request {
 
     }
     public static class VulItem extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private VulItem(Builder builder) {
@@ -974,10 +973,10 @@ public class UpdateOpaStrategyNewRequest extends Request {
 
     }
     public static class RiskClass extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private RiskClass(Builder builder) {
@@ -1043,13 +1042,13 @@ public class UpdateOpaStrategyNewRequest extends Request {
 
     }
     public static class Vul extends TeaModel {
-        @NameInMap("Item")
+        @com.aliyun.core.annotation.NameInMap("Item")
         private java.util.List < VulItem> item;
 
-        @NameInMap("RiskClass")
+        @com.aliyun.core.annotation.NameInMap("RiskClass")
         private java.util.List < RiskClass> riskClass;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private java.util.List < String > riskLevel;
 
         private Vul(Builder builder) {
@@ -1124,19 +1123,19 @@ public class UpdateOpaStrategyNewRequest extends Request {
 
     }
     public static class AlarmDetail extends TeaModel {
-        @NameInMap("Baseline")
+        @com.aliyun.core.annotation.NameInMap("Baseline")
         private Baseline baseline;
 
-        @NameInMap("BuildRisk")
+        @com.aliyun.core.annotation.NameInMap("BuildRisk")
         private BuildRisk buildRisk;
 
-        @NameInMap("MaliciousFile")
+        @com.aliyun.core.annotation.NameInMap("MaliciousFile")
         private MaliciousFile maliciousFile;
 
-        @NameInMap("SensitiveFile")
+        @com.aliyun.core.annotation.NameInMap("SensitiveFile")
         private SensitiveFile sensitiveFile;
 
-        @NameInMap("Vul")
+        @com.aliyun.core.annotation.NameInMap("Vul")
         private Vul vul;
 
         private AlarmDetail(Builder builder) {
@@ -1245,16 +1244,16 @@ public class UpdateOpaStrategyNewRequest extends Request {
 
     }
     public static class Scopes extends TeaModel {
-        @NameInMap("AckPolicyInstanceId")
+        @com.aliyun.core.annotation.NameInMap("AckPolicyInstanceId")
         private String ackPolicyInstanceId;
 
-        @NameInMap("AllNamespace")
+        @com.aliyun.core.annotation.NameInMap("AllNamespace")
         private Integer allNamespace;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("NamespaceList")
+        @com.aliyun.core.annotation.NameInMap("NamespaceList")
         private java.util.List < String > namespaceList;
 
         private Scopes(Builder builder) {

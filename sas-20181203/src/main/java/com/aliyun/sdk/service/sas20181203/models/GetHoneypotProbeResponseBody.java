@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetHoneypotProbeResponseBody</p>
  */
 public class GetHoneypotProbeResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetHoneypotProbeResponseBody(Builder builder) {
@@ -156,13 +155,13 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
     } 
 
     public static class ControlNode extends TeaModel {
-        @NameInMap("EcsInstanceId")
+        @com.aliyun.core.annotation.NameInMap("EcsInstanceId")
         private String ecsInstanceId;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
         private ControlNode(Builder builder) {
@@ -237,19 +236,19 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
 
     }
     public static class HoneyPotProbeScanPort extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Ports")
+        @com.aliyun.core.annotation.NameInMap("Ports")
         private String ports;
 
-        @NameInMap("ProbeId")
+        @com.aliyun.core.annotation.NameInMap("ProbeId")
         private String probeId;
 
-        @NameInMap("ServiceIpList")
+        @com.aliyun.core.annotation.NameInMap("ServiceIpList")
         private java.util.List < String > serviceIpList;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private HoneyPotProbeScanPort(Builder builder) {
@@ -362,34 +361,34 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
 
     }
     public static class BindPortList extends TeaModel {
-        @NameInMap("BindPort")
+        @com.aliyun.core.annotation.NameInMap("BindPort")
         private Boolean bindPort;
 
-        @NameInMap("EndPort")
+        @com.aliyun.core.annotation.NameInMap("EndPort")
         private Integer endPort;
 
-        @NameInMap("Err")
+        @com.aliyun.core.annotation.NameInMap("Err")
         private String err;
 
-        @NameInMap("Fixed")
+        @com.aliyun.core.annotation.NameInMap("Fixed")
         private Boolean fixed;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Msg")
+        @com.aliyun.core.annotation.NameInMap("Msg")
         private String msg;
 
-        @NameInMap("Proto")
+        @com.aliyun.core.annotation.NameInMap("Proto")
         private String proto;
 
-        @NameInMap("StartPort")
+        @com.aliyun.core.annotation.NameInMap("StartPort")
         private Integer startPort;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("TargetPort")
+        @com.aliyun.core.annotation.NameInMap("TargetPort")
         private Integer targetPort;
 
         private BindPortList(Builder builder) {
@@ -587,19 +586,19 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
 
     }
     public static class HoneypotProbeBindList extends TeaModel {
-        @NameInMap("BindId")
+        @com.aliyun.core.annotation.NameInMap("BindId")
         private String bindId;
 
-        @NameInMap("BindPortList")
+        @com.aliyun.core.annotation.NameInMap("BindPortList")
         private java.util.List < BindPortList> bindPortList;
 
-        @NameInMap("HoneypotId")
+        @com.aliyun.core.annotation.NameInMap("HoneypotId")
         private String honeypotId;
 
-        @NameInMap("ServiceIpList")
+        @com.aliyun.core.annotation.NameInMap("ServiceIpList")
         private java.util.List < String > serviceIpList;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private HoneypotProbeBindList(Builder builder) {
@@ -712,67 +711,67 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Arp")
+        @com.aliyun.core.annotation.NameInMap("Arp")
         private Boolean arp;
 
-        @NameInMap("CanListenIpList")
+        @com.aliyun.core.annotation.NameInMap("CanListenIpList")
         private java.util.List < String > canListenIpList;
 
-        @NameInMap("CidrList")
+        @com.aliyun.core.annotation.NameInMap("CidrList")
         private java.util.List < String > cidrList;
 
-        @NameInMap("ControlNode")
+        @com.aliyun.core.annotation.NameInMap("ControlNode")
         private ControlNode controlNode;
 
-        @NameInMap("CpuLoad")
+        @com.aliyun.core.annotation.NameInMap("CpuLoad")
         private Double cpuLoad;
 
-        @NameInMap("DeployTime")
+        @com.aliyun.core.annotation.NameInMap("DeployTime")
         private Long deployTime;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("HoneyPotProbeScanPort")
+        @com.aliyun.core.annotation.NameInMap("HoneyPotProbeScanPort")
         private HoneyPotProbeScanPort honeyPotProbeScanPort;
 
-        @NameInMap("HoneypotProbeBindList")
+        @com.aliyun.core.annotation.NameInMap("HoneypotProbeBindList")
         private java.util.List < HoneypotProbeBindList> honeypotProbeBindList;
 
-        @NameInMap("HostIp")
+        @com.aliyun.core.annotation.NameInMap("HostIp")
         private String hostIp;
 
-        @NameInMap("ListenIpList")
+        @com.aliyun.core.annotation.NameInMap("ListenIpList")
         private java.util.List < String > listenIpList;
 
-        @NameInMap("MemoryLoad")
+        @com.aliyun.core.annotation.NameInMap("MemoryLoad")
         private Double memoryLoad;
 
-        @NameInMap("OsType")
+        @com.aliyun.core.annotation.NameInMap("OsType")
         private String osType;
 
-        @NameInMap("Ping")
+        @com.aliyun.core.annotation.NameInMap("Ping")
         private Boolean ping;
 
-        @NameInMap("ProbeId")
+        @com.aliyun.core.annotation.NameInMap("ProbeId")
         private String probeId;
 
-        @NameInMap("ProbeType")
+        @com.aliyun.core.annotation.NameInMap("ProbeType")
         private String probeType;
 
-        @NameInMap("ProbeVersion")
+        @com.aliyun.core.annotation.NameInMap("ProbeVersion")
         private String probeVersion;
 
-        @NameInMap("ProxyIp")
+        @com.aliyun.core.annotation.NameInMap("ProxyIp")
         private String proxyIp;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private Data(Builder builder) {

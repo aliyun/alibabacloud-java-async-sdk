@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLogstoreStorageResponseBody</p>
  */
 public class DescribeLogstoreStorageResponseBody extends TeaModel {
-    @NameInMap("Logstore")
+    @com.aliyun.core.annotation.NameInMap("Logstore")
     private String logstore;
 
-    @NameInMap("Preserve")
+    @com.aliyun.core.annotation.NameInMap("Preserve")
     private Long preserve;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Ttl")
+    @com.aliyun.core.annotation.NameInMap("Ttl")
     private Integer ttl;
 
-    @NameInMap("Used")
+    @com.aliyun.core.annotation.NameInMap("Used")
     private Long used;
 
-    @NameInMap("UserProject")
+    @com.aliyun.core.annotation.NameInMap("UserProject")
     private String userProject;
 
     private DescribeLogstoreStorageResponseBody(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetImageScanNumInPeriodResponseBody</p>
  */
 public class GetImageScanNumInPeriodResponseBody extends TeaModel {
-    @NameInMap("ImageScanData")
+    @com.aliyun.core.annotation.NameInMap("ImageScanData")
     private ImageScanData imageScanData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetImageScanNumInPeriodResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class GetImageScanNumInPeriodResponseBody extends TeaModel {
     } 
 
     public static class ImageScanData extends TeaModel {
-        @NameInMap("ImageScanCount")
+        @com.aliyun.core.annotation.NameInMap("ImageScanCount")
         private Integer imageScanCount;
 
         private ImageScanData(Builder builder) {

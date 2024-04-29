@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceStatisticsResponseBody</p>
  */
 public class DescribeInstanceStatisticsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceStatisticsResponseBody(Builder builder) {
@@ -72,64 +71,64 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("Account")
+        @com.aliyun.core.annotation.NameInMap("Account")
         private Integer account;
 
-        @NameInMap("AgentlessAll")
+        @com.aliyun.core.annotation.NameInMap("AgentlessAll")
         private Integer agentlessAll;
 
-        @NameInMap("AgentlessBaseline")
+        @com.aliyun.core.annotation.NameInMap("AgentlessBaseline")
         private Integer agentlessBaseline;
 
-        @NameInMap("AgentlessMalicious")
+        @com.aliyun.core.annotation.NameInMap("AgentlessMalicious")
         private Integer agentlessMalicious;
 
-        @NameInMap("AgentlessVulCve")
+        @com.aliyun.core.annotation.NameInMap("AgentlessVulCve")
         private Integer agentlessVulCve;
 
-        @NameInMap("AgentlessVulSca")
+        @com.aliyun.core.annotation.NameInMap("AgentlessVulSca")
         private Integer agentlessVulSca;
 
-        @NameInMap("AgentlessVulSys")
+        @com.aliyun.core.annotation.NameInMap("AgentlessVulSys")
         private Integer agentlessVulSys;
 
-        @NameInMap("AppNum")
+        @com.aliyun.core.annotation.NameInMap("AppNum")
         private Integer appNum;
 
-        @NameInMap("CmsNum")
+        @com.aliyun.core.annotation.NameInMap("CmsNum")
         private Integer cmsNum;
 
-        @NameInMap("CspmNum")
+        @com.aliyun.core.annotation.NameInMap("CspmNum")
         private Integer cspmNum;
 
-        @NameInMap("CveNum")
+        @com.aliyun.core.annotation.NameInMap("CveNum")
         private Integer cveNum;
 
-        @NameInMap("EmgNum")
+        @com.aliyun.core.annotation.NameInMap("EmgNum")
         private Integer emgNum;
 
-        @NameInMap("Health")
+        @com.aliyun.core.annotation.NameInMap("Health")
         private Integer health;
 
-        @NameInMap("ScaNum")
+        @com.aliyun.core.annotation.NameInMap("ScaNum")
         private Integer scaNum;
 
-        @NameInMap("Suspicious")
+        @com.aliyun.core.annotation.NameInMap("Suspicious")
         private Integer suspicious;
 
-        @NameInMap("SysNum")
+        @com.aliyun.core.annotation.NameInMap("SysNum")
         private Integer sysNum;
 
-        @NameInMap("Trojan")
+        @com.aliyun.core.annotation.NameInMap("Trojan")
         private Integer trojan;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
-        @NameInMap("Vul")
+        @com.aliyun.core.annotation.NameInMap("Vul")
         private Integer vul;
 
-        @NameInMap("WeakPWNum")
+        @com.aliyun.core.annotation.NameInMap("WeakPWNum")
         private Integer weakPWNum;
 
         private Data(Builder builder) {

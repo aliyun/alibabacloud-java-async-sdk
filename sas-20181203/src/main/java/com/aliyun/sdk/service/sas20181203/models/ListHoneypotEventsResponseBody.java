@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListHoneypotEventsResponseBody</p>
  */
 public class ListHoneypotEventsResponseBody extends TeaModel {
-    @NameInMap("HoneypotEvents")
+    @com.aliyun.core.annotation.NameInMap("HoneypotEvents")
     private java.util.List < HoneypotEvents> honeypotEvents;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListHoneypotEventsResponseBody(Builder builder) {
@@ -92,16 +91,16 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
     } 
 
     public static class MergeFieldList extends TeaModel {
-        @NameInMap("FieldExtInfo")
+        @com.aliyun.core.annotation.NameInMap("FieldExtInfo")
         private String fieldExtInfo;
 
-        @NameInMap("FieldKey")
+        @com.aliyun.core.annotation.NameInMap("FieldKey")
         private String fieldKey;
 
-        @NameInMap("FieldType")
+        @com.aliyun.core.annotation.NameInMap("FieldType")
         private String fieldType;
 
-        @NameInMap("FieldValue")
+        @com.aliyun.core.annotation.NameInMap("FieldValue")
         private String fieldValue;
 
         private MergeFieldList(Builder builder) {
@@ -193,43 +192,43 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
 
     }
     public static class HoneypotEvents extends TeaModel {
-        @NameInMap("AgentId")
+        @com.aliyun.core.annotation.NameInMap("AgentId")
         private String agentId;
 
-        @NameInMap("AgentName")
+        @com.aliyun.core.annotation.NameInMap("AgentName")
         private String agentName;
 
-        @NameInMap("AlarmEventId")
+        @com.aliyun.core.annotation.NameInMap("AlarmEventId")
         private Long alarmEventId;
 
-        @NameInMap("DstIp")
+        @com.aliyun.core.annotation.NameInMap("DstIp")
         private String dstIp;
 
-        @NameInMap("FirstTime")
+        @com.aliyun.core.annotation.NameInMap("FirstTime")
         private Long firstTime;
 
-        @NameInMap("HoneypotName")
+        @com.aliyun.core.annotation.NameInMap("HoneypotName")
         private String honeypotName;
 
-        @NameInMap("LastTime")
+        @com.aliyun.core.annotation.NameInMap("LastTime")
         private Long lastTime;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("MergeFieldList")
+        @com.aliyun.core.annotation.NameInMap("MergeFieldList")
         private java.util.List < MergeFieldList> mergeFieldList;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
 
-        @NameInMap("SecurityEventId")
+        @com.aliyun.core.annotation.NameInMap("SecurityEventId")
         private Long securityEventId;
 
-        @NameInMap("SrcIp")
+        @com.aliyun.core.annotation.NameInMap("SrcIp")
         private String srcIp;
 
         private HoneypotEvents(Builder builder) {
@@ -483,22 +482,22 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("LastRowKey")
+        @com.aliyun.core.annotation.NameInMap("LastRowKey")
         private String lastRowKey;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {

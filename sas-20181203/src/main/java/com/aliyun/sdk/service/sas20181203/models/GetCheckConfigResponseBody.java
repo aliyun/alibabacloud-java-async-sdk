@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetCheckConfigResponseBody</p>
  */
 public class GetCheckConfigResponseBody extends TeaModel {
-    @NameInMap("CycleDays")
+    @com.aliyun.core.annotation.NameInMap("CycleDays")
     private java.util.List < Integer > cycleDays;
 
-    @NameInMap("EnableAddCheck")
+    @com.aliyun.core.annotation.NameInMap("EnableAddCheck")
     private Boolean enableAddCheck;
 
-    @NameInMap("EnableAutoCheck")
+    @com.aliyun.core.annotation.NameInMap("EnableAutoCheck")
     private Boolean enableAutoCheck;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Integer endTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SelectedChecks")
+    @com.aliyun.core.annotation.NameInMap("SelectedChecks")
     private java.util.List < SelectedChecks> selectedChecks;
 
-    @NameInMap("Standards")
+    @com.aliyun.core.annotation.NameInMap("Standards")
     private java.util.List < Standards> standards;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Integer startTime;
 
     private GetCheckConfigResponseBody(Builder builder) {
@@ -206,10 +205,10 @@ public class GetCheckConfigResponseBody extends TeaModel {
     } 
 
     public static class SelectedChecks extends TeaModel {
-        @NameInMap("CheckId")
+        @com.aliyun.core.annotation.NameInMap("CheckId")
         private Long checkId;
 
-        @NameInMap("SectionId")
+        @com.aliyun.core.annotation.NameInMap("SectionId")
         private Long sectionId;
 
         private SelectedChecks(Builder builder) {
@@ -267,16 +266,16 @@ public class GetCheckConfigResponseBody extends TeaModel {
 
     }
     public static class Standards extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("ShowName")
+        @com.aliyun.core.annotation.NameInMap("ShowName")
         private String showName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Standards(Builder builder) {

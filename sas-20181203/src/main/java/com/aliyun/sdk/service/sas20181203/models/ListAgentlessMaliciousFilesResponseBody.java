@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAgentlessMaliciousFilesResponseBody</p>
  */
 public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
-    @NameInMap("List")
+    @com.aliyun.core.annotation.NameInMap("List")
     private java.util.List < List> list;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListAgentlessMaliciousFilesResponseBody(Builder builder) {
@@ -92,16 +91,16 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
     } 
 
     public static class Details extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NameKey")
+        @com.aliyun.core.annotation.NameInMap("NameKey")
         private String nameKey;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Details(Builder builder) {
@@ -193,13 +192,13 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
 
     }
     public static class Notes extends TeaModel {
-        @NameInMap("Note")
+        @com.aliyun.core.annotation.NameInMap("Note")
         private String note;
 
-        @NameInMap("NoteId")
+        @com.aliyun.core.annotation.NameInMap("NoteId")
         private String noteId;
 
-        @NameInMap("NoteTime")
+        @com.aliyun.core.annotation.NameInMap("NoteTime")
         private String noteTime;
 
         private Notes(Builder builder) {
@@ -274,70 +273,70 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
 
     }
     public static class List extends TeaModel {
-        @NameInMap("Details")
+        @com.aliyun.core.annotation.NameInMap("Details")
         private java.util.List < Details> details;
 
-        @NameInMap("DownloadUrl")
+        @com.aliyun.core.annotation.NameInMap("DownloadUrl")
         private String downloadUrl;
 
-        @NameInMap("FilePath")
+        @com.aliyun.core.annotation.NameInMap("FilePath")
         private Long filePath;
 
-        @NameInMap("FirstScanTimestamp")
+        @com.aliyun.core.annotation.NameInMap("FirstScanTimestamp")
         private Long firstScanTimestamp;
 
-        @NameInMap("HighLight")
+        @com.aliyun.core.annotation.NameInMap("HighLight")
         private String highLight;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IntranetIp")
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("LatestScanTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LatestScanTimestamp")
         private Long latestScanTimestamp;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("MaliciousMd5")
+        @com.aliyun.core.annotation.NameInMap("MaliciousMd5")
         private String maliciousMd5;
 
-        @NameInMap("MaliciousName")
+        @com.aliyun.core.annotation.NameInMap("MaliciousName")
         private String maliciousName;
 
-        @NameInMap("MaliciousType")
+        @com.aliyun.core.annotation.NameInMap("MaliciousType")
         private String maliciousType;
 
-        @NameInMap("Notes")
+        @com.aliyun.core.annotation.NameInMap("Notes")
         private java.util.List < Notes> notes;
 
-        @NameInMap("OperateResult")
+        @com.aliyun.core.annotation.NameInMap("OperateResult")
         private String operateResult;
 
-        @NameInMap("OperateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("OperateTimestamp")
         private String operateTimestamp;
 
-        @NameInMap("Partition")
+        @com.aliyun.core.annotation.NameInMap("Partition")
         private String partition;
 
-        @NameInMap("TargetId")
+        @com.aliyun.core.annotation.NameInMap("TargetId")
         private String targetId;
 
-        @NameInMap("TargetName")
+        @com.aliyun.core.annotation.NameInMap("TargetName")
         private String targetName;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private List(Builder builder) {
@@ -743,16 +742,16 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {

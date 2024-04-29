@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddAssetSelectionCriteriaRequest</p>
  */
 public class AddAssetSelectionCriteriaRequest extends Request {
-    @Query
-    @NameInMap("Criteria")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Criteria")
     private String criteria;
 
-    @Query
-    @NameInMap("CriteriaOperation")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CriteriaOperation")
     private String criteriaOperation;
 
-    @Query
-    @NameInMap("SelectionKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SelectionKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String selectionKey;
 
-    @Query
-    @NameInMap("TargetOperationList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetOperationList")
     private java.util.List < TargetOperationList> targetOperationList;
 
     private AddAssetSelectionCriteriaRequest(Builder builder) {
@@ -147,10 +146,10 @@ public class AddAssetSelectionCriteriaRequest extends Request {
     } 
 
     public static class TargetOperationList extends TeaModel {
-        @NameInMap("Operation")
+        @com.aliyun.core.annotation.NameInMap("Operation")
         private String operation;
 
-        @NameInMap("Target")
+        @com.aliyun.core.annotation.NameInMap("Target")
         private String target;
 
         private TargetOperationList(Builder builder) {

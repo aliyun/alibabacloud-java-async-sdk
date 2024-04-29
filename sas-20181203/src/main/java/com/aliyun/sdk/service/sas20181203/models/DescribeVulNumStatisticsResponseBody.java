@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,43 +11,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVulNumStatisticsResponseBody</p>
  */
 public class DescribeVulNumStatisticsResponseBody extends TeaModel {
-    @NameInMap("AppCnt")
+    @com.aliyun.core.annotation.NameInMap("AppCnt")
     private Integer appCnt;
 
-    @NameInMap("AppNum")
+    @com.aliyun.core.annotation.NameInMap("AppNum")
     private Integer appNum;
 
-    @NameInMap("CmsDealedTotalNum")
+    @com.aliyun.core.annotation.NameInMap("CmsDealedTotalNum")
     private Integer cmsDealedTotalNum;
 
-    @NameInMap("CmsNum")
+    @com.aliyun.core.annotation.NameInMap("CmsNum")
     private Integer cmsNum;
 
-    @NameInMap("CveNum")
+    @com.aliyun.core.annotation.NameInMap("CveNum")
     private Integer cveNum;
 
-    @NameInMap("EmgNum")
+    @com.aliyun.core.annotation.NameInMap("EmgNum")
     private Integer emgNum;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ScaNum")
+    @com.aliyun.core.annotation.NameInMap("ScaNum")
     private Integer scaNum;
 
-    @NameInMap("SysNum")
+    @com.aliyun.core.annotation.NameInMap("SysNum")
     private Integer sysNum;
 
-    @NameInMap("VulAsapSum")
+    @com.aliyun.core.annotation.NameInMap("VulAsapSum")
     private Integer vulAsapSum;
 
-    @NameInMap("VulDealedTotalNum")
+    @com.aliyun.core.annotation.NameInMap("VulDealedTotalNum")
     private Integer vulDealedTotalNum;
 
-    @NameInMap("VulLaterSum")
+    @com.aliyun.core.annotation.NameInMap("VulLaterSum")
     private Integer vulLaterSum;
 
-    @NameInMap("VulNntfSum")
+    @com.aliyun.core.annotation.NameInMap("VulNntfSum")
     private Integer vulNntfSum;
 
     private DescribeVulNumStatisticsResponseBody(Builder builder) {

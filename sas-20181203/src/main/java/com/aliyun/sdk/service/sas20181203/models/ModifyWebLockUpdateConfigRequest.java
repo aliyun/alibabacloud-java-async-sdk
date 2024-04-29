@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,61 +11,61 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyWebLockUpdateConfigRequest</p>
  */
 public class ModifyWebLockUpdateConfigRequest extends Request {
-    @Query
-    @NameInMap("DefenceMode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefenceMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String defenceMode;
 
-    @Query
-    @NameInMap("Dir")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Dir")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dir;
 
-    @Query
-    @NameInMap("ExclusiveDir")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExclusiveDir")
     private String exclusiveDir;
 
-    @Query
-    @NameInMap("ExclusiveFile")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExclusiveFile")
     private String exclusiveFile;
 
-    @Query
-    @NameInMap("ExclusiveFileType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExclusiveFileType")
     private String exclusiveFileType;
 
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer id;
 
-    @Query
-    @NameInMap("InclusiveFile")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InclusiveFile")
     private String inclusiveFile;
 
-    @Query
-    @NameInMap("InclusiveFileType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InclusiveFileType")
     private String inclusiveFileType;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("LocalBackupDir")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LocalBackupDir")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String localBackupDir;
 
-    @Query
-    @NameInMap("Mode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mode")
     private String mode;
 
-    @Query
-    @NameInMap("SourceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceIp")
     private String sourceIp;
 
-    @Query
-    @NameInMap("Uuid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String uuid;
 
     private ModifyWebLockUpdateConfigRequest(Builder builder) {

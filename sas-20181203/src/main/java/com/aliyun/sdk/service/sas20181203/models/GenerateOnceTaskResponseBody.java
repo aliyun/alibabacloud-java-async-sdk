@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GenerateOnceTaskResponseBody</p>
  */
 public class GenerateOnceTaskResponseBody extends TeaModel {
-    @NameInMap("CanCreate")
+    @com.aliyun.core.annotation.NameInMap("CanCreate")
     private Boolean canCreate;
 
-    @NameInMap("CollectTime")
+    @com.aliyun.core.annotation.NameInMap("CollectTime")
     private Long collectTime;
 
-    @NameInMap("FinishCount")
+    @com.aliyun.core.annotation.NameInMap("FinishCount")
     private Integer finishCount;
 
-    @NameInMap("LastTask")
+    @com.aliyun.core.annotation.NameInMap("LastTask")
     private String lastTask;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private GenerateOnceTaskResponseBody(Builder builder) {

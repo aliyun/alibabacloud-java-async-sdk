@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImageEventOperationConditionResponseBody</p>
  */
 public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeImageEventOperationConditionResponseBody(Builder builder) {
@@ -136,13 +135,13 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
     } 
 
     public static class Conditions extends TeaModel {
-        @NameInMap("ConditionKey")
+        @com.aliyun.core.annotation.NameInMap("ConditionKey")
         private String conditionKey;
 
-        @NameInMap("ConditionName")
+        @com.aliyun.core.annotation.NameInMap("ConditionName")
         private String conditionName;
 
-        @NameInMap("SupportedMisType")
+        @com.aliyun.core.annotation.NameInMap("SupportedMisType")
         private java.util.List < String > supportedMisType;
 
         private Conditions(Builder builder) {
@@ -221,13 +220,13 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
 
     }
     public static class Operations extends TeaModel {
-        @NameInMap("Conditions")
+        @com.aliyun.core.annotation.NameInMap("Conditions")
         private java.util.List < Conditions> conditions;
 
-        @NameInMap("OperationCode")
+        @com.aliyun.core.annotation.NameInMap("OperationCode")
         private String operationCode;
 
-        @NameInMap("OperationName")
+        @com.aliyun.core.annotation.NameInMap("OperationName")
         private String operationName;
 
         private Operations(Builder builder) {
@@ -305,13 +304,13 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
 
-        @NameInMap("Operations")
+        @com.aliyun.core.annotation.NameInMap("Operations")
         private java.util.List < Operations> operations;
 
-        @NameInMap("Scenarios")
+        @com.aliyun.core.annotation.NameInMap("Scenarios")
         private java.util.List < String > scenarios;
 
         private Data(Builder builder) {

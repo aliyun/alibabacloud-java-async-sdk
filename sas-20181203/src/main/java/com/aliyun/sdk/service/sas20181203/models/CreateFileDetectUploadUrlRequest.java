@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateFileDetectUploadUrlRequest</p>
  */
 public class CreateFileDetectUploadUrlRequest extends Request {
-    @Query
-    @NameInMap("HashKeyContextList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HashKeyContextList")
     private java.util.List < HashKeyContextList> hashKeyContextList;
 
-    @Query
-    @NameInMap("HashKeyList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HashKeyList")
     private java.util.List < String > hashKeyList;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer type;
 
     private CreateFileDetectUploadUrlRequest(Builder builder) {
@@ -131,10 +130,10 @@ public class CreateFileDetectUploadUrlRequest extends Request {
     } 
 
     public static class HashKeyContextList extends TeaModel {
-        @NameInMap("FileSize")
+        @com.aliyun.core.annotation.NameInMap("FileSize")
         private Integer fileSize;
 
-        @NameInMap("HashKey")
+        @com.aliyun.core.annotation.NameInMap("HashKey")
         private String hashKey;
 
         private HashKeyContextList(Builder builder) {

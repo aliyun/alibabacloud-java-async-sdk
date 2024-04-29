@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTraceInfoNodeResponseBody</p>
  */
 public class DescribeTraceInfoNodeResponseBody extends TeaModel {
-    @NameInMap("Node")
+    @com.aliyun.core.annotation.NameInMap("Node")
     private Node node;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeTraceInfoNodeResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeTraceInfoNodeResponseBody extends TeaModel {
     } 
 
     public static class PropertyList extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private PropertyList(Builder builder) {
@@ -133,13 +132,13 @@ public class DescribeTraceInfoNodeResponseBody extends TeaModel {
 
     }
     public static class Node extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PropertyList")
+        @com.aliyun.core.annotation.NameInMap("PropertyList")
         private java.util.List < PropertyList> propertyList;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Node(Builder builder) {

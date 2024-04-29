@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PublicPreCheckImageScanTaskResponseBody</p>
  */
 public class PublicPreCheckImageScanTaskResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private PublicPreCheckImageScanTaskResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class PublicPreCheckImageScanTaskResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("NeedAuthCount")
+        @com.aliyun.core.annotation.NameInMap("NeedAuthCount")
         private Integer needAuthCount;
 
-        @NameInMap("ScanImageCount")
+        @com.aliyun.core.annotation.NameInMap("ScanImageCount")
         private Integer scanImageCount;
 
         private Data(Builder builder) {

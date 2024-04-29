@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSecurityEventOperationsResponseBody</p>
  */
 public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecurityEventOperationsResponse")
+    @com.aliyun.core.annotation.NameInMap("SecurityEventOperationsResponse")
     private java.util.List < SecurityEventOperationsResponse> securityEventOperationsResponse;
 
     private DescribeSecurityEventOperationsResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
     } 
 
     public static class MarkField extends TeaModel {
-        @NameInMap("FiledAliasName")
+        @com.aliyun.core.annotation.NameInMap("FiledAliasName")
         private String filedAliasName;
 
-        @NameInMap("FiledName")
+        @com.aliyun.core.annotation.NameInMap("FiledName")
         private String filedName;
 
-        @NameInMap("MarkMisType")
+        @com.aliyun.core.annotation.NameInMap("MarkMisType")
         private String markMisType;
 
-        @NameInMap("MarkMisValue")
+        @com.aliyun.core.annotation.NameInMap("MarkMisValue")
         private String markMisValue;
 
-        @NameInMap("SupportedMisType")
+        @com.aliyun.core.annotation.NameInMap("SupportedMisType")
         private java.util.List < String > supportedMisType;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private MarkField(Builder builder) {
@@ -220,16 +219,16 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
 
     }
     public static class MarkFieldsSource extends TeaModel {
-        @NameInMap("FiledAliasName")
+        @com.aliyun.core.annotation.NameInMap("FiledAliasName")
         private String filedAliasName;
 
-        @NameInMap("FiledName")
+        @com.aliyun.core.annotation.NameInMap("FiledName")
         private String filedName;
 
-        @NameInMap("MarkMisValue")
+        @com.aliyun.core.annotation.NameInMap("MarkMisValue")
         private String markMisValue;
 
-        @NameInMap("SupportedMisType")
+        @com.aliyun.core.annotation.NameInMap("SupportedMisType")
         private java.util.List < String > supportedMisType;
 
         private MarkFieldsSource(Builder builder) {
@@ -321,19 +320,19 @@ public class DescribeSecurityEventOperationsResponseBody extends TeaModel {
 
     }
     public static class SecurityEventOperationsResponse extends TeaModel {
-        @NameInMap("MarkField")
+        @com.aliyun.core.annotation.NameInMap("MarkField")
         private java.util.List < MarkField> markField;
 
-        @NameInMap("MarkFieldsSource")
+        @com.aliyun.core.annotation.NameInMap("MarkFieldsSource")
         private java.util.List < MarkFieldsSource> markFieldsSource;
 
-        @NameInMap("OperationCode")
+        @com.aliyun.core.annotation.NameInMap("OperationCode")
         private String operationCode;
 
-        @NameInMap("OperationParams")
+        @com.aliyun.core.annotation.NameInMap("OperationParams")
         private String operationParams;
 
-        @NameInMap("UserCanOperate")
+        @com.aliyun.core.annotation.NameInMap("UserCanOperate")
         private Boolean userCanOperate;
 
         private SecurityEventOperationsResponse(Builder builder) {

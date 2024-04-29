@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCloudProductFieldStatisticsResponseBody</p>
  */
 public class DescribeCloudProductFieldStatisticsResponseBody extends TeaModel {
-    @NameInMap("GroupedFields")
+    @com.aliyun.core.annotation.NameInMap("GroupedFields")
     private GroupedFields groupedFields;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCloudProductFieldStatisticsResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeCloudProductFieldStatisticsResponseBody extends TeaModel {
     } 
 
     public static class GroupedFields extends TeaModel {
-        @NameInMap("CategoryCount")
+        @com.aliyun.core.annotation.NameInMap("CategoryCount")
         private String categoryCount;
 
-        @NameInMap("InstanceCount")
+        @com.aliyun.core.annotation.NameInMap("InstanceCount")
         private Integer instanceCount;
 
-        @NameInMap("RiskInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("RiskInstanceCount")
         private Integer riskInstanceCount;
 
         private GroupedFields(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAppNetworkResponseBody</p>
  */
 public class GetAppNetworkResponseBody extends TeaModel {
-    @NameInMap("AppNetwork")
+    @com.aliyun.core.annotation.NameInMap("AppNetwork")
     private AppNetwork appNetwork;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetAppNetworkResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class GetAppNetworkResponseBody extends TeaModel {
     } 
 
     public static class Edge extends TeaModel {
-        @NameInMap("DstNodeId")
+        @com.aliyun.core.annotation.NameInMap("DstNodeId")
         private String dstNodeId;
 
-        @NameInMap("DstNodeType")
+        @com.aliyun.core.annotation.NameInMap("DstNodeType")
         private String dstNodeType;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("SrcNodeId")
+        @com.aliyun.core.annotation.NameInMap("SrcNodeId")
         private String srcNodeId;
 
-        @NameInMap("SrcNodeType")
+        @com.aliyun.core.annotation.NameInMap("SrcNodeType")
         private String srcNodeType;
 
         private Edge(Builder builder) {
@@ -221,10 +220,10 @@ public class GetAppNetworkResponseBody extends TeaModel {
 
     }
     public static class Namespace extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Namespace(Builder builder) {
@@ -282,22 +281,22 @@ public class GetAppNetworkResponseBody extends TeaModel {
 
     }
     public static class Node extends TeaModel {
-        @NameInMap("ContainerIds")
+        @com.aliyun.core.annotation.NameInMap("ContainerIds")
         private java.util.List < String > containerIds;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NamespaceId")
+        @com.aliyun.core.annotation.NameInMap("NamespaceId")
         private String namespaceId;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Node(Builder builder) {
@@ -434,13 +433,13 @@ public class GetAppNetworkResponseBody extends TeaModel {
 
     }
     public static class AppNetwork extends TeaModel {
-        @NameInMap("Edge")
+        @com.aliyun.core.annotation.NameInMap("Edge")
         private java.util.List < Edge> edge;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private java.util.List < Namespace> namespace;
 
-        @NameInMap("Node")
+        @com.aliyun.core.annotation.NameInMap("Node")
         private java.util.List < Node> node;
 
         private AppNetwork(Builder builder) {

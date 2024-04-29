@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,26 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAccesskeyLeakListRequest</p>
  */
 public class DescribeAccesskeyLeakListRequest extends Request {
-    @Query
-    @NameInMap("CurrentPage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer currentPage;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Query")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Query")
     private String query;
 
-    @Query
-    @NameInMap("StartTs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTs")
     private Long startTs;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeAccesskeyLeakListRequest(Builder builder) {
@@ -39,6 +42,7 @@ public class DescribeAccesskeyLeakListRequest extends Request {
         this.currentPage = builder.currentPage;
         this.pageSize = builder.pageSize;
         this.query = builder.query;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.startTs = builder.startTs;
         this.status = builder.status;
     }
@@ -78,6 +82,13 @@ public class DescribeAccesskeyLeakListRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return startTs
      */
     public Long getStartTs() {
@@ -95,6 +106,7 @@ public class DescribeAccesskeyLeakListRequest extends Request {
         private Integer currentPage; 
         private Integer pageSize; 
         private String query; 
+        private Long resourceDirectoryAccountId; 
         private Long startTs; 
         private String status; 
 
@@ -107,6 +119,7 @@ public class DescribeAccesskeyLeakListRequest extends Request {
             this.currentPage = request.currentPage;
             this.pageSize = request.pageSize;
             this.query = request.query;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.startTs = request.startTs;
             this.status = request.status;
         } 
@@ -139,6 +152,15 @@ public class DescribeAccesskeyLeakListRequest extends Request {
         public Builder query(String query) {
             this.putQueryParameter("Query", query);
             this.query = query;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

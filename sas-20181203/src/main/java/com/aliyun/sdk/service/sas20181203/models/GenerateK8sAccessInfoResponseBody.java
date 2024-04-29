@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GenerateK8sAccessInfoResponseBody</p>
  */
 public class GenerateK8sAccessInfoResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GenerateK8sAccessInfoResponseBody(Builder builder) {
@@ -72,31 +71,31 @@ public class GenerateK8sAccessInfoResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AliUid")
+        @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
 
-        @NameInMap("AuditLogStore")
+        @com.aliyun.core.annotation.NameInMap("AuditLogStore")
         private String auditLogStore;
 
-        @NameInMap("AuditProject")
+        @com.aliyun.core.annotation.NameInMap("AuditProject")
         private String auditProject;
 
-        @NameInMap("AuditRegionId")
+        @com.aliyun.core.annotation.NameInMap("AuditRegionId")
         private String auditRegionId;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("ExpireDate")
+        @com.aliyun.core.annotation.NameInMap("ExpireDate")
         private Long expireDate;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("InstallKey")
+        @com.aliyun.core.annotation.NameInMap("InstallKey")
         private String installKey;
 
         private Data(Builder builder) {

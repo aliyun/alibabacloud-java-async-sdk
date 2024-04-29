@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCloudCenterInstancesResponseBody</p>
  */
 public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
-    @NameInMap("Instances")
+    @com.aliyun.core.annotation.NameInMap("Instances")
     private java.util.List < Instances> instances;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeCloudCenterInstancesResponseBody(Builder builder) {
@@ -116,145 +115,145 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
     } 
 
     public static class Instances extends TeaModel {
-        @NameInMap("AlarmStatus")
+        @com.aliyun.core.annotation.NameInMap("AlarmStatus")
         private String alarmStatus;
 
-        @NameInMap("AssetType")
+        @com.aliyun.core.annotation.NameInMap("AssetType")
         private String assetType;
 
-        @NameInMap("AuthModifyTime")
+        @com.aliyun.core.annotation.NameInMap("AuthModifyTime")
         private Long authModifyTime;
 
-        @NameInMap("AuthVersion")
+        @com.aliyun.core.annotation.NameInMap("AuthVersion")
         private Integer authVersion;
 
-        @NameInMap("AuthVersionName")
+        @com.aliyun.core.annotation.NameInMap("AuthVersionName")
         private String authVersionName;
 
-        @NameInMap("Bind")
+        @com.aliyun.core.annotation.NameInMap("Bind")
         private Boolean bind;
 
-        @NameInMap("ClientStatus")
+        @com.aliyun.core.annotation.NameInMap("ClientStatus")
         private String clientStatus;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("Cores")
+        @com.aliyun.core.annotation.NameInMap("Cores")
         private Integer cores;
 
-        @NameInMap("CpuInfo")
+        @com.aliyun.core.annotation.NameInMap("CpuInfo")
         private String cpuInfo;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private Long createdTime;
 
-        @NameInMap("ExposedStatus")
+        @com.aliyun.core.annotation.NameInMap("ExposedStatus")
         private Integer exposedStatus;
 
-        @NameInMap("Flag")
+        @com.aliyun.core.annotation.NameInMap("Flag")
         private Integer flag;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private Long groupId;
 
-        @NameInMap("GroupTrace")
+        @com.aliyun.core.annotation.NameInMap("GroupTrace")
         private String groupTrace;
 
-        @NameInMap("HcStatus")
+        @com.aliyun.core.annotation.NameInMap("HcStatus")
         private String hcStatus;
 
-        @NameInMap("HealthCheckCount")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckCount")
         private Integer healthCheckCount;
 
-        @NameInMap("Importance")
+        @com.aliyun.core.annotation.NameInMap("Importance")
         private Integer importance;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IntranetIp")
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("IpListString")
+        @com.aliyun.core.annotation.NameInMap("IpListString")
         private String ipListString;
 
-        @NameInMap("Kernel")
+        @com.aliyun.core.annotation.NameInMap("Kernel")
         private String kernel;
 
-        @NameInMap("LastLoginTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LastLoginTimestamp")
         private Long lastLoginTimestamp;
 
-        @NameInMap("MacListString")
+        @com.aliyun.core.annotation.NameInMap("MacListString")
         private String macListString;
 
-        @NameInMap("Mem")
+        @com.aliyun.core.annotation.NameInMap("Mem")
         private Integer mem;
 
-        @NameInMap("Os")
+        @com.aliyun.core.annotation.NameInMap("Os")
         private String os;
 
-        @NameInMap("OsName")
+        @com.aliyun.core.annotation.NameInMap("OsName")
         private String osName;
 
-        @NameInMap("PodCount")
+        @com.aliyun.core.annotation.NameInMap("PodCount")
         private Integer podCount;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RegionName")
+        @com.aliyun.core.annotation.NameInMap("RegionName")
         private String regionName;
 
-        @NameInMap("RiskCount")
+        @com.aliyun.core.annotation.NameInMap("RiskCount")
         private String riskCount;
 
-        @NameInMap("RiskStatus")
+        @com.aliyun.core.annotation.NameInMap("RiskStatus")
         private String riskStatus;
 
-        @NameInMap("SafeEventCount")
+        @com.aliyun.core.annotation.NameInMap("SafeEventCount")
         private Integer safeEventCount;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
-        @NameInMap("TagId")
+        @com.aliyun.core.annotation.NameInMap("TagId")
         private String tagId;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
-        @NameInMap("Vendor")
+        @com.aliyun.core.annotation.NameInMap("Vendor")
         private Integer vendor;
 
-        @NameInMap("VendorName")
+        @com.aliyun.core.annotation.NameInMap("VendorName")
         private String vendorName;
 
-        @NameInMap("VpcInstanceId")
+        @com.aliyun.core.annotation.NameInMap("VpcInstanceId")
         private String vpcInstanceId;
 
-        @NameInMap("VulCount")
+        @com.aliyun.core.annotation.NameInMap("VulCount")
         private Integer vulCount;
 
-        @NameInMap("VulStatus")
+        @com.aliyun.core.annotation.NameInMap("VulStatus")
         private String vulStatus;
 
         private Instances(Builder builder) {
@@ -1199,19 +1198,19 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {

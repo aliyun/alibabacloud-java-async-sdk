@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCustomBlockRecordsResponseBody</p>
  */
 public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RecordList")
+    @com.aliyun.core.annotation.NameInMap("RecordList")
     private java.util.List < RecordList> recordList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCustomBlockRecordsResponseBody(Builder builder) {
@@ -92,16 +91,16 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
     } 
 
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -193,10 +192,10 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
 
     }
     public static class TargetList extends TeaModel {
-        @NameInMap("Target")
+        @com.aliyun.core.annotation.NameInMap("Target")
         private String target;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
         private TargetList(Builder builder) {
@@ -257,31 +256,31 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
 
     }
     public static class RecordList extends TeaModel {
-        @NameInMap("BlockExpireDate")
+        @com.aliyun.core.annotation.NameInMap("BlockExpireDate")
         private Long blockExpireDate;
 
-        @NameInMap("BlockIp")
+        @com.aliyun.core.annotation.NameInMap("BlockIp")
         private String blockIp;
 
-        @NameInMap("Bound")
+        @com.aliyun.core.annotation.NameInMap("Bound")
         private String bound;
 
-        @NameInMap("EnableCount")
+        @com.aliyun.core.annotation.NameInMap("EnableCount")
         private Integer enableCount;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("ServerCount")
+        @com.aliyun.core.annotation.NameInMap("ServerCount")
         private Integer serverCount;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("TargetList")
+        @com.aliyun.core.annotation.NameInMap("TargetList")
         private java.util.List < TargetList> targetList;
 
         private RecordList(Builder builder) {

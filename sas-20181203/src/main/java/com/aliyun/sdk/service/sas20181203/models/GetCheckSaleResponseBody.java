@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetCheckSaleResponseBody</p>
  */
 public class GetCheckSaleResponseBody extends TeaModel {
-    @NameInMap("CheckSale")
+    @com.aliyun.core.annotation.NameInMap("CheckSale")
     private CheckSale checkSale;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetCheckSaleResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class GetCheckSaleResponseBody extends TeaModel {
     } 
 
     public static class CheckSale extends TeaModel {
-        @NameInMap("ConsumeCount")
+        @com.aliyun.core.annotation.NameInMap("ConsumeCount")
         private Long consumeCount;
 
-        @NameInMap("LoyalUser")
+        @com.aliyun.core.annotation.NameInMap("LoyalUser")
         private Boolean loyalUser;
 
-        @NameInMap("PurchaseCount")
+        @com.aliyun.core.annotation.NameInMap("PurchaseCount")
         private Long purchaseCount;
 
-        @NameInMap("SaleUserType")
+        @com.aliyun.core.annotation.NameInMap("SaleUserType")
         private Integer saleUserType;
 
         private CheckSale(Builder builder) {

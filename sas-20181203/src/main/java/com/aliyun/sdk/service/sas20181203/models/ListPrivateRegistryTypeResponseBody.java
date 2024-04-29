@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPrivateRegistryTypeResponseBody</p>
  */
 public class ListPrivateRegistryTypeResponseBody extends TeaModel {
-    @NameInMap("RegistryTypeInfos")
+    @com.aliyun.core.annotation.NameInMap("RegistryTypeInfos")
     private java.util.List < RegistryTypeInfos> registryTypeInfos;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListPrivateRegistryTypeResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class ListPrivateRegistryTypeResponseBody extends TeaModel {
     } 
 
     public static class RegistryTypeInfos extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("RegistryType")
+        @com.aliyun.core.annotation.NameInMap("RegistryType")
         private String registryType;
 
         private RegistryTypeInfos(Builder builder) {

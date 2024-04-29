@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,51 +11,51 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateHoneypotProbeRequest</p>
  */
 public class CreateHoneypotProbeRequest extends Request {
-    @Query
-    @NameInMap("Arp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Arp")
     private Boolean arp;
 
-    @Query
-    @NameInMap("BusinessGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessGroupId")
     private String businessGroupId;
 
-    @Query
-    @NameInMap("ControlNodeId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ControlNodeId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String controlNodeId;
 
-    @Query
-    @NameInMap("DisplayName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String displayName;
 
-    @Query
-    @NameInMap("HoneypotBindList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HoneypotBindList")
     private java.util.List < HoneypotBindList> honeypotBindList;
 
-    @Query
-    @NameInMap("Ping")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ping")
     private Boolean ping;
 
-    @Query
-    @NameInMap("ProbeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProbeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String probeType;
 
-    @Query
-    @NameInMap("ProbeVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProbeVersion")
     private String probeVersion;
 
-    @Query
-    @NameInMap("ProxyIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProxyIp")
     private String proxyIp;
 
-    @Query
-    @NameInMap("Uuid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuid")
     private String uuid;
 
-    @Query
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     private CreateHoneypotProbeRequest(Builder builder) {
@@ -324,19 +323,19 @@ public class CreateHoneypotProbeRequest extends Request {
     } 
 
     public static class BindPortList extends TeaModel {
-        @NameInMap("BindPort")
+        @com.aliyun.core.annotation.NameInMap("BindPort")
         private Boolean bindPort;
 
-        @NameInMap("EndPort")
+        @com.aliyun.core.annotation.NameInMap("EndPort")
         private Integer endPort;
 
-        @NameInMap("Fixed")
+        @com.aliyun.core.annotation.NameInMap("Fixed")
         private Boolean fixed;
 
-        @NameInMap("StartPort")
+        @com.aliyun.core.annotation.NameInMap("StartPort")
         private Integer startPort;
 
-        @NameInMap("TargetPort")
+        @com.aliyun.core.annotation.NameInMap("TargetPort")
         private Integer targetPort;
 
         private BindPortList(Builder builder) {
@@ -456,10 +455,10 @@ public class CreateHoneypotProbeRequest extends Request {
 
     }
     public static class HoneypotBindList extends TeaModel {
-        @NameInMap("BindPortList")
+        @com.aliyun.core.annotation.NameInMap("BindPortList")
         private java.util.List < BindPortList> bindPortList;
 
-        @NameInMap("HoneypotId")
+        @com.aliyun.core.annotation.NameInMap("HoneypotId")
         private String honeypotId;
 
         private HoneypotBindList(Builder builder) {

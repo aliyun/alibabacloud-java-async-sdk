@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCommonTargetResultListResponseBody</p>
  */
 public class DescribeCommonTargetResultListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TargetConfig")
+    @com.aliyun.core.annotation.NameInMap("TargetConfig")
     private TargetConfig targetConfig;
 
     private DescribeCommonTargetResultListResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class DescribeCommonTargetResultListResponseBody extends TeaModel {
     } 
 
     public static class TargetConfig extends TeaModel {
-        @NameInMap("Flag")
+        @com.aliyun.core.annotation.NameInMap("Flag")
         private String flag;
 
-        @NameInMap("TargetDefault")
+        @com.aliyun.core.annotation.NameInMap("TargetDefault")
         private String targetDefault;
 
-        @NameInMap("TargetList")
+        @com.aliyun.core.annotation.NameInMap("TargetList")
         private java.util.List < String > targetList;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private String totalCount;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private TargetConfig(Builder builder) {

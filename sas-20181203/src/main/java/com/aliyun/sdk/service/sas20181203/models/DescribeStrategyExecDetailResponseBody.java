@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeStrategyExecDetailResponseBody</p>
  */
 public class DescribeStrategyExecDetailResponseBody extends TeaModel {
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("FailCount")
+    @com.aliyun.core.annotation.NameInMap("FailCount")
     private Integer failCount;
 
-    @NameInMap("FailedEcsList")
+    @com.aliyun.core.annotation.NameInMap("FailedEcsList")
     private java.util.List < FailedEcsList> failedEcsList;
 
-    @NameInMap("InProcessCount")
+    @com.aliyun.core.annotation.NameInMap("InProcessCount")
     private Integer inProcessCount;
 
-    @NameInMap("Percent")
+    @com.aliyun.core.annotation.NameInMap("Percent")
     private String percent;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Source")
+    @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("SuccessCount")
+    @com.aliyun.core.annotation.NameInMap("SuccessCount")
     private Integer successCount;
 
     private DescribeStrategyExecDetailResponseBody(Builder builder) {
@@ -212,19 +211,19 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
     } 
 
     public static class FailedEcsList extends TeaModel {
-        @NameInMap("IP")
+        @com.aliyun.core.annotation.NameInMap("IP")
         private String ip;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IntranetIp")
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
         private FailedEcsList(Builder builder) {

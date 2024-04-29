@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeContainerStatisticsResponseBody</p>
  */
 public class DescribeContainerStatisticsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeContainerStatisticsResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class DescribeContainerStatisticsResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("RemindAlarmCount")
+        @com.aliyun.core.annotation.NameInMap("RemindAlarmCount")
         private Integer remindAlarmCount;
 
-        @NameInMap("SeriousAlarmCount")
+        @com.aliyun.core.annotation.NameInMap("SeriousAlarmCount")
         private Integer seriousAlarmCount;
 
-        @NameInMap("SuspiciousAlarmCount")
+        @com.aliyun.core.annotation.NameInMap("SuspiciousAlarmCount")
         private Integer suspiciousAlarmCount;
 
-        @NameInMap("TotalAlarmCount")
+        @com.aliyun.core.annotation.NameInMap("TotalAlarmCount")
         private Integer totalAlarmCount;
 
-        @NameInMap("TotalNode")
+        @com.aliyun.core.annotation.NameInMap("TotalNode")
         private Integer totalNode;
 
-        @NameInMap("hasRiskNode")
+        @com.aliyun.core.annotation.NameInMap("hasRiskNode")
         private Integer hasRiskNode;
 
         private Data(Builder builder) {

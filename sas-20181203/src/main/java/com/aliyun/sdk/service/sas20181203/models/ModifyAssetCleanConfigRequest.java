@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,8 +11,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyAssetCleanConfigRequest</p>
  */
 public class ModifyAssetCleanConfigRequest extends Request {
-    @Query
-    @NameInMap("AssetCleanConfigs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssetCleanConfigs")
     private java.util.List < AssetCleanConfigs> assetCleanConfigs;
 
     private ModifyAssetCleanConfigRequest(Builder builder) {
@@ -70,13 +69,13 @@ public class ModifyAssetCleanConfigRequest extends Request {
     } 
 
     public static class AssetCleanConfigs extends TeaModel {
-        @NameInMap("CleanDays")
+        @com.aliyun.core.annotation.NameInMap("CleanDays")
         private Integer cleanDays;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
         private AssetCleanConfigs(Builder builder) {

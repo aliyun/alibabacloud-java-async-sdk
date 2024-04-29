@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImageFixTaskResponseBody</p>
  */
 public class DescribeImageFixTaskResponseBody extends TeaModel {
-    @NameInMap("BuildTasks")
+    @com.aliyun.core.annotation.NameInMap("BuildTasks")
     private java.util.List < BuildTasks> buildTasks;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeImageFixTaskResponseBody(Builder builder) {
@@ -92,43 +91,43 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
     } 
 
     public static class BuildTasks extends TeaModel {
-        @NameInMap("BuildTaskId")
+        @com.aliyun.core.annotation.NameInMap("BuildTaskId")
         private String buildTaskId;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("FixTime")
+        @com.aliyun.core.annotation.NameInMap("FixTime")
         private String fixTime;
 
-        @NameInMap("NewTag")
+        @com.aliyun.core.annotation.NameInMap("NewTag")
         private String newTag;
 
-        @NameInMap("NewUuid")
+        @com.aliyun.core.annotation.NameInMap("NewUuid")
         private String newUuid;
 
-        @NameInMap("OldTag")
+        @com.aliyun.core.annotation.NameInMap("OldTag")
         private String oldTag;
 
-        @NameInMap("OldUuid")
+        @com.aliyun.core.annotation.NameInMap("OldUuid")
         private String oldUuid;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RepoName")
+        @com.aliyun.core.annotation.NameInMap("RepoName")
         private String repoName;
 
-        @NameInMap("RepoNamespace")
+        @com.aliyun.core.annotation.NameInMap("RepoNamespace")
         private String repoNamespace;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
-        @NameInMap("VulAlias")
+        @com.aliyun.core.annotation.NameInMap("VulAlias")
         private String vulAlias;
 
         private BuildTasks(Builder builder) {
@@ -378,16 +377,16 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {

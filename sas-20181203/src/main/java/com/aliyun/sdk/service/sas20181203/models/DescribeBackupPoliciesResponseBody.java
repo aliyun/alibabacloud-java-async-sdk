@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBackupPoliciesResponseBody</p>
  */
 public class DescribeBackupPoliciesResponseBody extends TeaModel {
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("Policies")
+    @com.aliyun.core.annotation.NameInMap("Policies")
     private java.util.List < Policies> policies;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeBackupPoliciesResponseBody(Builder builder) {
@@ -92,16 +91,16 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
     } 
 
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -193,55 +192,55 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
 
     }
     public static class Policies extends TeaModel {
-        @NameInMap("ClientErrorCount")
+        @com.aliyun.core.annotation.NameInMap("ClientErrorCount")
         private Integer clientErrorCount;
 
-        @NameInMap("ClientErrorUuidList")
+        @com.aliyun.core.annotation.NameInMap("ClientErrorUuidList")
         private java.util.List < String > clientErrorUuidList;
 
-        @NameInMap("ClientStatus")
+        @com.aliyun.core.annotation.NameInMap("ClientStatus")
         private String clientStatus;
 
-        @NameInMap("HealthClientCount")
+        @com.aliyun.core.annotation.NameInMap("HealthClientCount")
         private Integer healthClientCount;
 
-        @NameInMap("HealthClientUuidList")
+        @com.aliyun.core.annotation.NameInMap("HealthClientUuidList")
         private java.util.List < String > healthClientUuidList;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Policy")
+        @com.aliyun.core.annotation.NameInMap("Policy")
         private String policy;
 
-        @NameInMap("PolicyRegionId")
+        @com.aliyun.core.annotation.NameInMap("PolicyRegionId")
         private String policyRegionId;
 
-        @NameInMap("PolicyVersion")
+        @com.aliyun.core.annotation.NameInMap("PolicyVersion")
         private String policyVersion;
 
-        @NameInMap("RemarkedUuidList")
+        @com.aliyun.core.annotation.NameInMap("RemarkedUuidList")
         private java.util.List < String > remarkedUuidList;
 
-        @NameInMap("ServerType")
+        @com.aliyun.core.annotation.NameInMap("ServerType")
         private String serverType;
 
-        @NameInMap("ServiceErrorCount")
+        @com.aliyun.core.annotation.NameInMap("ServiceErrorCount")
         private Integer serviceErrorCount;
 
-        @NameInMap("ServiceErrorUuidList")
+        @com.aliyun.core.annotation.NameInMap("ServiceErrorUuidList")
         private java.util.List < String > serviceErrorUuidList;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UpgradeStatus")
+        @com.aliyun.core.annotation.NameInMap("UpgradeStatus")
         private String upgradeStatus;
 
-        @NameInMap("UuidList")
+        @com.aliyun.core.annotation.NameInMap("UuidList")
         private java.util.List < String > uuidList;
 
         private Policies(Builder builder) {

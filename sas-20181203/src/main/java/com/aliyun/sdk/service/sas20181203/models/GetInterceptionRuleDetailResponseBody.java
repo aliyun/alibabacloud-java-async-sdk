@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInterceptionRuleDetailResponseBody</p>
  */
 public class GetInterceptionRuleDetailResponseBody extends TeaModel {
-    @NameInMap("InterceptionRuleDetail")
+    @com.aliyun.core.annotation.NameInMap("InterceptionRuleDetail")
     private InterceptionRuleDetail interceptionRuleDetail;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetInterceptionRuleDetailResponseBody(Builder builder) {
@@ -72,31 +71,31 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
     } 
 
     public static class DstTarget extends TeaModel {
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("ImageList")
+        @com.aliyun.core.annotation.NameInMap("ImageList")
         private java.util.List < String > imageList;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("Ports")
+        @com.aliyun.core.annotation.NameInMap("Ports")
         private java.util.List < String > ports;
 
-        @NameInMap("RuleType")
+        @com.aliyun.core.annotation.NameInMap("RuleType")
         private String ruleType;
 
-        @NameInMap("TagList")
+        @com.aliyun.core.annotation.NameInMap("TagList")
         private java.util.List < String > tagList;
 
-        @NameInMap("TargetId")
+        @com.aliyun.core.annotation.NameInMap("TargetId")
         private Integer targetId;
 
-        @NameInMap("TargetName")
+        @com.aliyun.core.annotation.NameInMap("TargetName")
         private String targetName;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
         private DstTarget(Builder builder) {
@@ -273,28 +272,28 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
 
     }
     public static class SrcTarget extends TeaModel {
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("ImageList")
+        @com.aliyun.core.annotation.NameInMap("ImageList")
         private java.util.List < String > imageList;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("RuleType")
+        @com.aliyun.core.annotation.NameInMap("RuleType")
         private String ruleType;
 
-        @NameInMap("TagList")
+        @com.aliyun.core.annotation.NameInMap("TagList")
         private java.util.List < String > tagList;
 
-        @NameInMap("TargetId")
+        @com.aliyun.core.annotation.NameInMap("TargetId")
         private Integer targetId;
 
-        @NameInMap("TargetName")
+        @com.aliyun.core.annotation.NameInMap("TargetName")
         private String targetName;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
         private SrcTarget(Builder builder) {
@@ -454,28 +453,28 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
 
     }
     public static class InterceptionRuleDetail extends TeaModel {
-        @NameInMap("DstTarget")
+        @com.aliyun.core.annotation.NameInMap("DstTarget")
         private DstTarget dstTarget;
 
-        @NameInMap("InterceptType")
+        @com.aliyun.core.annotation.NameInMap("InterceptType")
         private Long interceptType;
 
-        @NameInMap("OrderIndex")
+        @com.aliyun.core.annotation.NameInMap("OrderIndex")
         private Long orderIndex;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("RuleSwitch")
+        @com.aliyun.core.annotation.NameInMap("RuleSwitch")
         private Integer ruleSwitch;
 
-        @NameInMap("RuleType")
+        @com.aliyun.core.annotation.NameInMap("RuleType")
         private String ruleType;
 
-        @NameInMap("SrcTarget")
+        @com.aliyun.core.annotation.NameInMap("SrcTarget")
         private SrcTarget srcTarget;
 
         private InterceptionRuleDetail(Builder builder) {

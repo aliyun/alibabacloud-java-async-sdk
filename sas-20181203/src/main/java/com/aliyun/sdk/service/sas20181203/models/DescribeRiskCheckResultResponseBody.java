@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRiskCheckResultResponseBody</p>
  */
 public class DescribeRiskCheckResultResponseBody extends TeaModel {
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("List")
+    @com.aliyun.core.annotation.NameInMap("List")
     private java.util.List < List> list;
 
-    @NameInMap("PageCount")
+    @com.aliyun.core.annotation.NameInMap("PageCount")
     private Integer pageCount;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeRiskCheckResultResponseBody(Builder builder) {
@@ -172,10 +171,10 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
     } 
 
     public static class RiskItemResources extends TeaModel {
-        @NameInMap("ContentResource")
+        @com.aliyun.core.annotation.NameInMap("ContentResource")
         private java.util.Map < String, ? > contentResource;
 
-        @NameInMap("ResourceName")
+        @com.aliyun.core.annotation.NameInMap("ResourceName")
         private String resourceName;
 
         private RiskItemResources(Builder builder) {
@@ -239,46 +238,46 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
 
     }
     public static class List extends TeaModel {
-        @NameInMap("AffectedCount")
+        @com.aliyun.core.annotation.NameInMap("AffectedCount")
         private Integer affectedCount;
 
-        @NameInMap("CheckTime")
+        @com.aliyun.core.annotation.NameInMap("CheckTime")
         private Long checkTime;
 
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private Long itemId;
 
-        @NameInMap("RemainingTime")
+        @com.aliyun.core.annotation.NameInMap("RemainingTime")
         private Integer remainingTime;
 
-        @NameInMap("RepairStatus")
+        @com.aliyun.core.annotation.NameInMap("RepairStatus")
         private String repairStatus;
 
-        @NameInMap("RiskAssertType")
+        @com.aliyun.core.annotation.NameInMap("RiskAssertType")
         private String riskAssertType;
 
-        @NameInMap("RiskItemResources")
+        @com.aliyun.core.annotation.NameInMap("RiskItemResources")
         private java.util.List < RiskItemResources> riskItemResources;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
 
-        @NameInMap("Sort")
+        @com.aliyun.core.annotation.NameInMap("Sort")
         private Integer sort;
 
-        @NameInMap("StartStatus")
+        @com.aliyun.core.annotation.NameInMap("StartStatus")
         private String startStatus;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private Long taskId;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private List(Builder builder) {

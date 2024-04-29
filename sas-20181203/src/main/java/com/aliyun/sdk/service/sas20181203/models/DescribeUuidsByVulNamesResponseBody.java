@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUuidsByVulNamesResponseBody</p>
  */
 public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
-    @NameInMap("MachineInfoStatistics")
+    @com.aliyun.core.annotation.NameInMap("MachineInfoStatistics")
     private java.util.List < MachineInfoStatistics> machineInfoStatistics;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VulCount")
+    @com.aliyun.core.annotation.NameInMap("VulCount")
     private Integer vulCount;
 
     private DescribeUuidsByVulNamesResponseBody(Builder builder) {
@@ -92,22 +91,22 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
     } 
 
     public static class MachineInfoStatistics extends TeaModel {
-        @NameInMap("MachineInstanceId")
+        @com.aliyun.core.annotation.NameInMap("MachineInstanceId")
         private String machineInstanceId;
 
-        @NameInMap("MachineIp")
+        @com.aliyun.core.annotation.NameInMap("MachineIp")
         private String machineIp;
 
-        @NameInMap("MachineName")
+        @com.aliyun.core.annotation.NameInMap("MachineName")
         private String machineName;
 
-        @NameInMap("Os")
+        @com.aliyun.core.annotation.NameInMap("Os")
         private String os;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private MachineInfoStatistics(Builder builder) {

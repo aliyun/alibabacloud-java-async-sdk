@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,48 +11,48 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GenerateK8sAccessInfoRequest</p>
  */
 public class GenerateK8sAccessInfoRequest extends Request {
-    @Query
-    @NameInMap("AliyunYundunGatewayApiName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AliyunYundunGatewayApiName")
     private String aliyunYundunGatewayApiName;
 
-    @Query
-    @NameInMap("AliyunYundunGatewayPopName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AliyunYundunGatewayPopName")
     private String aliyunYundunGatewayPopName;
 
-    @Query
-    @NameInMap("AliyunYundunGatewayProjectName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AliyunYundunGatewayProjectName")
     private String aliyunYundunGatewayProjectName;
 
-    @Query
-    @NameInMap("AuditLogStore")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuditLogStore")
     private String auditLogStore;
 
-    @Query
-    @NameInMap("AuditProject")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuditProject")
     private String auditProject;
 
-    @Query
-    @NameInMap("AuditRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuditRegionId")
     private String auditRegionId;
 
-    @Query
-    @NameInMap("ClusterName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterName;
 
-    @Query
-    @NameInMap("ExpireDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExpireDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long expireDate;
 
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long groupId;
 
-    @Query
-    @NameInMap("Vendor")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Vendor")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vendor;
 
     private GenerateK8sAccessInfoRequest(Builder builder) {

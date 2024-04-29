@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetBackupStorageCountResponseBody</p>
  */
 public class GetBackupStorageCountResponseBody extends TeaModel {
-    @NameInMap("BackupStorageCount")
+    @com.aliyun.core.annotation.NameInMap("BackupStorageCount")
     private BackupStorageCount backupStorageCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetBackupStorageCountResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class GetBackupStorageCountResponseBody extends TeaModel {
     } 
 
     public static class BackupStorageCount extends TeaModel {
-        @NameInMap("BuyStorageByte")
+        @com.aliyun.core.annotation.NameInMap("BuyStorageByte")
         private Long buyStorageByte;
 
-        @NameInMap("EcsUsageStorageByte")
+        @com.aliyun.core.annotation.NameInMap("EcsUsageStorageByte")
         private Long ecsUsageStorageByte;
 
-        @NameInMap("Overflow")
+        @com.aliyun.core.annotation.NameInMap("Overflow")
         private Integer overflow;
 
-        @NameInMap("UniUsageStorageByte")
+        @com.aliyun.core.annotation.NameInMap("UniUsageStorageByte")
         private Long uniUsageStorageByte;
 
-        @NameInMap("UsageStorageByte")
+        @com.aliyun.core.annotation.NameInMap("UsageStorageByte")
         private Long usageStorageByte;
 
         private BackupStorageCount(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeGroupStructResponseBody</p>
  */
 public class DescribeGroupStructResponseBody extends TeaModel {
-    @NameInMap("GroupFather")
+    @com.aliyun.core.annotation.NameInMap("GroupFather")
     private Integer groupFather;
 
-    @NameInMap("GroupFlag")
+    @com.aliyun.core.annotation.NameInMap("GroupFlag")
     private Integer groupFlag;
 
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private Long groupId;
 
-    @NameInMap("GroupIndex")
+    @com.aliyun.core.annotation.NameInMap("GroupIndex")
     private Integer groupIndex;
 
-    @NameInMap("GroupLevel")
+    @com.aliyun.core.annotation.NameInMap("GroupLevel")
     private Integer groupLevel;
 
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
-    @NameInMap("Groups")
+    @com.aliyun.core.annotation.NameInMap("Groups")
     private java.util.List < String > groups;
 
-    @NameInMap("MachineNum")
+    @com.aliyun.core.annotation.NameInMap("MachineNum")
     private Integer machineNum;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeGroupStructResponseBody(Builder builder) {

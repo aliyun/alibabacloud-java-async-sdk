@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetOpaPluginStatusResponseBody</p>
  */
 public class GetOpaPluginStatusResponseBody extends TeaModel {
-    @NameInMap("InstallStatus")
+    @com.aliyun.core.annotation.NameInMap("InstallStatus")
     private java.util.List < InstallStatus> installStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetOpaPluginStatusResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class GetOpaPluginStatusResponseBody extends TeaModel {
     } 
 
     public static class InstallStatus extends TeaModel {
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("InstallStatus")
+        @com.aliyun.core.annotation.NameInMap("InstallStatus")
         private Boolean installStatus;
 
         private InstallStatus(Builder builder) {

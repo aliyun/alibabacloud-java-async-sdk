@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeExposedInstanceListResponseBody</p>
  */
 public class DescribeExposedInstanceListResponseBody extends TeaModel {
-    @NameInMap("ExposedInstances")
+    @com.aliyun.core.annotation.NameInMap("ExposedInstances")
     private java.util.List < ExposedInstances> exposedInstances;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeExposedInstanceListResponseBody(Builder builder) {
@@ -92,58 +91,58 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
     } 
 
     public static class ExposedInstances extends TeaModel {
-        @NameInMap("AsapVulCount")
+        @com.aliyun.core.annotation.NameInMap("AsapVulCount")
         private Integer asapVulCount;
 
-        @NameInMap("ExploitHealthCount")
+        @com.aliyun.core.annotation.NameInMap("ExploitHealthCount")
         private Integer exploitHealthCount;
 
-        @NameInMap("ExposureComponent")
+        @com.aliyun.core.annotation.NameInMap("ExposureComponent")
         private String exposureComponent;
 
-        @NameInMap("ExposureIp")
+        @com.aliyun.core.annotation.NameInMap("ExposureIp")
         private String exposureIp;
 
-        @NameInMap("ExposurePort")
+        @com.aliyun.core.annotation.NameInMap("ExposurePort")
         private String exposurePort;
 
-        @NameInMap("ExposureType")
+        @com.aliyun.core.annotation.NameInMap("ExposureType")
         private String exposureType;
 
-        @NameInMap("ExposureTypeId")
+        @com.aliyun.core.annotation.NameInMap("ExposureTypeId")
         private String exposureTypeId;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private Long groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IntranetIp")
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("LaterVulCount")
+        @com.aliyun.core.annotation.NameInMap("LaterVulCount")
         private Integer laterVulCount;
 
-        @NameInMap("NntfVulCount")
+        @com.aliyun.core.annotation.NameInMap("NntfVulCount")
         private Integer nntfVulCount;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("TotalVulCount")
+        @com.aliyun.core.annotation.NameInMap("TotalVulCount")
         private Integer totalVulCount;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private ExposedInstances(Builder builder) {
@@ -488,16 +487,16 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {

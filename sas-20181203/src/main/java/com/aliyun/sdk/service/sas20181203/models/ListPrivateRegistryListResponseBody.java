@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPrivateRegistryListResponseBody</p>
  */
 public class ListPrivateRegistryListResponseBody extends TeaModel {
-    @NameInMap("ImageRegistryInfos")
+    @com.aliyun.core.annotation.NameInMap("ImageRegistryInfos")
     private java.util.List < ImageRegistryInfos> imageRegistryInfos;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListPrivateRegistryListResponseBody(Builder builder) {
@@ -72,58 +71,58 @@ public class ListPrivateRegistryListResponseBody extends TeaModel {
     } 
 
     public static class ImageRegistryInfos extends TeaModel {
-        @NameInMap("AliUid")
+        @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("JenkinsEnv")
+        @com.aliyun.core.annotation.NameInMap("JenkinsEnv")
         private String jenkinsEnv;
 
-        @NameInMap("NetType")
+        @com.aliyun.core.annotation.NameInMap("NetType")
         private Long netType;
 
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
 
-        @NameInMap("PersistenceDay")
+        @com.aliyun.core.annotation.NameInMap("PersistenceDay")
         private Long persistenceDay;
 
-        @NameInMap("ProtocolType")
+        @com.aliyun.core.annotation.NameInMap("ProtocolType")
         private Long protocolType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RegistryHostIp")
+        @com.aliyun.core.annotation.NameInMap("RegistryHostIp")
         private String registryHostIp;
 
-        @NameInMap("RegistryName")
+        @com.aliyun.core.annotation.NameInMap("RegistryName")
         private String registryName;
 
-        @NameInMap("RegistryType")
+        @com.aliyun.core.annotation.NameInMap("RegistryType")
         private String registryType;
 
-        @NameInMap("RegistryVersion")
+        @com.aliyun.core.annotation.NameInMap("RegistryVersion")
         private String registryVersion;
 
-        @NameInMap("Token")
+        @com.aliyun.core.annotation.NameInMap("Token")
         private String token;
 
-        @NameInMap("TransPerHour")
+        @com.aliyun.core.annotation.NameInMap("TransPerHour")
         private Integer transPerHour;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("WhiteList")
+        @com.aliyun.core.annotation.NameInMap("WhiteList")
         private String whiteList;
 
         private ImageRegistryInfos(Builder builder) {

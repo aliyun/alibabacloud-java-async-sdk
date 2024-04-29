@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCheckInstanceResultResponseBody</p>
  */
 public class ListCheckInstanceResultResponseBody extends TeaModel {
-    @NameInMap("BasicData")
+    @com.aliyun.core.annotation.NameInMap("BasicData")
     private java.util.List < BasicData> basicData;
 
-    @NameInMap("Checks")
+    @com.aliyun.core.annotation.NameInMap("Checks")
     private java.util.List < java.util.Map<String, ?>> checks;
 
-    @NameInMap("Columns")
+    @com.aliyun.core.annotation.NameInMap("Columns")
     private java.util.List < Columns> columns;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListCheckInstanceResultResponseBody(Builder builder) {
@@ -131,28 +130,194 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
 
     } 
 
+    public static class Config extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("ShowName")
+        private String showName;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Config(Builder builder) {
+            this.name = builder.name;
+            this.showName = builder.showName;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Config create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return showName
+         */
+        public String getShowName() {
+            return this.showName;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String showName; 
+            private String value; 
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * ShowName.
+             */
+            public Builder showName(String showName) {
+                this.showName = showName;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Config build() {
+                return new Config(this);
+            } 
+
+        } 
+
+    }
+    public static class InstanceInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Config")
+        private java.util.List < Config> config;
+
+        @com.aliyun.core.annotation.NameInMap("FirstUpdateTime")
+        private Long firstUpdateTime;
+
+        @com.aliyun.core.annotation.NameInMap("LastUpdateTime")
+        private Long lastUpdateTime;
+
+        private InstanceInfo(Builder builder) {
+            this.config = builder.config;
+            this.firstUpdateTime = builder.firstUpdateTime;
+            this.lastUpdateTime = builder.lastUpdateTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InstanceInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return config
+         */
+        public java.util.List < Config> getConfig() {
+            return this.config;
+        }
+
+        /**
+         * @return firstUpdateTime
+         */
+        public Long getFirstUpdateTime() {
+            return this.firstUpdateTime;
+        }
+
+        /**
+         * @return lastUpdateTime
+         */
+        public Long getLastUpdateTime() {
+            return this.lastUpdateTime;
+        }
+
+        public static final class Builder {
+            private java.util.List < Config> config; 
+            private Long firstUpdateTime; 
+            private Long lastUpdateTime; 
+
+            /**
+             * Config.
+             */
+            public Builder config(java.util.List < Config> config) {
+                this.config = config;
+                return this;
+            }
+
+            /**
+             * FirstUpdateTime.
+             */
+            public Builder firstUpdateTime(Long firstUpdateTime) {
+                this.firstUpdateTime = firstUpdateTime;
+                return this;
+            }
+
+            /**
+             * LastUpdateTime.
+             */
+            public Builder lastUpdateTime(Long lastUpdateTime) {
+                this.lastUpdateTime = lastUpdateTime;
+                return this;
+            }
+
+            public InstanceInfo build() {
+                return new InstanceInfo(this);
+            } 
+
+        } 
+
+    }
     public static class BasicData extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceInfo")
+        private InstanceInfo instanceInfo;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusMessage")
+        @com.aliyun.core.annotation.NameInMap("StatusMessage")
         private String statusMessage;
 
         private BasicData(Builder builder) {
             this.id = builder.id;
             this.instanceId = builder.instanceId;
+            this.instanceInfo = builder.instanceInfo;
             this.instanceName = builder.instanceName;
             this.regionId = builder.regionId;
             this.status = builder.status;
@@ -179,6 +344,13 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
          */
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        /**
+         * @return instanceInfo
+         */
+        public InstanceInfo getInstanceInfo() {
+            return this.instanceInfo;
         }
 
         /**
@@ -212,6 +384,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         public static final class Builder {
             private Long id; 
             private String instanceId; 
+            private InstanceInfo instanceInfo; 
             private String instanceName; 
             private String regionId; 
             private String status; 
@@ -230,6 +403,14 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * InstanceInfo.
+             */
+            public Builder instanceInfo(InstanceInfo instanceInfo) {
+                this.instanceInfo = instanceInfo;
                 return this;
             }
 
@@ -280,13 +461,13 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
 
     }
     public static class Grids extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("ShowName")
+        @com.aliyun.core.annotation.NameInMap("ShowName")
         private String showName;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Grids(Builder builder) {
@@ -365,22 +546,22 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
 
     }
     public static class Columns extends TeaModel {
-        @NameInMap("Grids")
+        @com.aliyun.core.annotation.NameInMap("Grids")
         private java.util.List < Grids> grids;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Search")
+        @com.aliyun.core.annotation.NameInMap("Search")
         private Boolean search;
 
-        @NameInMap("SearchKey")
+        @com.aliyun.core.annotation.NameInMap("SearchKey")
         private String searchKey;
 
-        @NameInMap("ShowName")
+        @com.aliyun.core.annotation.NameInMap("ShowName")
         private String showName;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Columns(Builder builder) {
@@ -514,16 +695,16 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private String count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {

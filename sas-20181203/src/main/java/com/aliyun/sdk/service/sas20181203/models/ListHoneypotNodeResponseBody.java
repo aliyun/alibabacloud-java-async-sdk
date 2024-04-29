@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListHoneypotNodeResponseBody</p>
  */
 public class ListHoneypotNodeResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HoneypotNodeList")
+    @com.aliyun.core.annotation.NameInMap("HoneypotNodeList")
     private java.util.List < HoneypotNodeList> honeypotNodeList;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListHoneypotNodeResponseBody(Builder builder) {
@@ -176,46 +175,46 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
     } 
 
     public static class HoneypotNodeList extends TeaModel {
-        @NameInMap("AllowHoneypotAccessInternet")
+        @com.aliyun.core.annotation.NameInMap("AllowHoneypotAccessInternet")
         private Boolean allowHoneypotAccessInternet;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DefaultNode")
+        @com.aliyun.core.annotation.NameInMap("DefaultNode")
         private Boolean defaultNode;
 
-        @NameInMap("EcsInstanceId")
+        @com.aliyun.core.annotation.NameInMap("EcsInstanceId")
         private String ecsInstanceId;
 
-        @NameInMap("HoneypotTotalCount")
+        @com.aliyun.core.annotation.NameInMap("HoneypotTotalCount")
         private Integer honeypotTotalCount;
 
-        @NameInMap("HoneypotUsedCount")
+        @com.aliyun.core.annotation.NameInMap("HoneypotUsedCount")
         private Integer honeypotUsedCount;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("NodeIp")
+        @com.aliyun.core.annotation.NameInMap("NodeIp")
         private String nodeIp;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("ProbeTotalCount")
+        @com.aliyun.core.annotation.NameInMap("ProbeTotalCount")
         private Integer probeTotalCount;
 
-        @NameInMap("ProbeUsedCount")
+        @com.aliyun.core.annotation.NameInMap("ProbeUsedCount")
         private Integer probeUsedCount;
 
-        @NameInMap("SecurityGroupProbeIpList")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupProbeIpList")
         private java.util.List < String > securityGroupProbeIpList;
 
-        @NameInMap("TotalStatus")
+        @com.aliyun.core.annotation.NameInMap("TotalStatus")
         private Integer totalStatus;
 
-        @NameInMap("UpgradeAvailable")
+        @com.aliyun.core.annotation.NameInMap("UpgradeAvailable")
         private Boolean upgradeAvailable;
 
         private HoneypotNodeList(Builder builder) {
@@ -493,16 +492,16 @@ public class ListHoneypotNodeResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {

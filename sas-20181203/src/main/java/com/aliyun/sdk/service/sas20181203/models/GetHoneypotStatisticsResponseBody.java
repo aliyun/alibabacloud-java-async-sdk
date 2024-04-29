@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetHoneypotStatisticsResponseBody</p>
  */
 public class GetHoneypotStatisticsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetHoneypotStatisticsResponseBody(Builder builder) {
@@ -156,25 +155,25 @@ public class GetHoneypotStatisticsResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("TotalHoneypotCount")
+        @com.aliyun.core.annotation.NameInMap("TotalHoneypotCount")
         private Integer totalHoneypotCount;
 
-        @NameInMap("TotalNodeStatus")
+        @com.aliyun.core.annotation.NameInMap("TotalNodeStatus")
         private Integer totalNodeStatus;
 
-        @NameInMap("TotalProbeCount")
+        @com.aliyun.core.annotation.NameInMap("TotalProbeCount")
         private Integer totalProbeCount;
 
-        @NameInMap("UsedHoneypotCount")
+        @com.aliyun.core.annotation.NameInMap("UsedHoneypotCount")
         private Integer usedHoneypotCount;
 
-        @NameInMap("UsedHostProbeCount")
+        @com.aliyun.core.annotation.NameInMap("UsedHostProbeCount")
         private Integer usedHostProbeCount;
 
-        @NameInMap("UsedProbeCount")
+        @com.aliyun.core.annotation.NameInMap("UsedProbeCount")
         private Integer usedProbeCount;
 
-        @NameInMap("UsedVpcProbeCount")
+        @com.aliyun.core.annotation.NameInMap("UsedVpcProbeCount")
         private Integer usedVpcProbeCount;
 
         private Data(Builder builder) {

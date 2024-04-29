@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUniRecoverableListResponseBody</p>
  */
 public class DescribeUniRecoverableListResponseBody extends TeaModel {
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("Database")
+    @com.aliyun.core.annotation.NameInMap("Database")
     private String database;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RecoverableInfoList")
+    @com.aliyun.core.annotation.NameInMap("RecoverableInfoList")
     private java.util.List < RecoverableInfoList> recoverableInfoList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeUniRecoverableListResponseBody(Builder builder) {
@@ -172,19 +171,19 @@ public class DescribeUniRecoverableListResponseBody extends TeaModel {
     } 
 
     public static class RecoverableInfoList extends TeaModel {
-        @NameInMap("FirstTime")
+        @com.aliyun.core.annotation.NameInMap("FirstTime")
         private Long firstTime;
 
-        @NameInMap("LastTime")
+        @com.aliyun.core.annotation.NameInMap("LastTime")
         private Long lastTime;
 
-        @NameInMap("ResetScn")
+        @com.aliyun.core.annotation.NameInMap("ResetScn")
         private String resetScn;
 
-        @NameInMap("ResetTime")
+        @com.aliyun.core.annotation.NameInMap("ResetTime")
         private Long resetTime;
 
-        @NameInMap("RestoreInfo")
+        @com.aliyun.core.annotation.NameInMap("RestoreInfo")
         private String restoreInfo;
 
         private RecoverableInfoList(Builder builder) {

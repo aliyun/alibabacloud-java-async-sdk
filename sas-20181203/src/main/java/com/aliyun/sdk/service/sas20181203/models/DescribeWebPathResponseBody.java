@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeWebPathResponseBody</p>
  */
 public class DescribeWebPathResponseBody extends TeaModel {
-    @NameInMap("ConfigList")
+    @com.aliyun.core.annotation.NameInMap("ConfigList")
     private java.util.List < ConfigList> configList;
 
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeWebPathResponseBody(Builder builder) {
@@ -152,10 +151,10 @@ public class DescribeWebPathResponseBody extends TeaModel {
     } 
 
     public static class TargetList extends TeaModel {
-        @NameInMap("Target")
+        @com.aliyun.core.annotation.NameInMap("Target")
         private String target;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
         private TargetList(Builder builder) {
@@ -216,13 +215,13 @@ public class DescribeWebPathResponseBody extends TeaModel {
 
     }
     public static class ConfigList extends TeaModel {
-        @NameInMap("TargetList")
+        @com.aliyun.core.annotation.NameInMap("TargetList")
         private java.util.List < TargetList> targetList;
 
-        @NameInMap("WebPath")
+        @com.aliyun.core.annotation.NameInMap("WebPath")
         private String webPath;
 
-        @NameInMap("WebPathType")
+        @com.aliyun.core.annotation.NameInMap("WebPathType")
         private String webPathType;
 
         private ConfigList(Builder builder) {

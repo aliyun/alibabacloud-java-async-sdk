@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,124 +11,124 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVersionConfigResponseBody</p>
  */
 public class DescribeVersionConfigResponseBody extends TeaModel {
-    @NameInMap("AgentlessCapacity")
+    @com.aliyun.core.annotation.NameInMap("AgentlessCapacity")
     private Long agentlessCapacity;
 
-    @NameInMap("AllowPartialBuy")
+    @com.aliyun.core.annotation.NameInMap("AllowPartialBuy")
     private Integer allowPartialBuy;
 
-    @NameInMap("AntiRansomwareService")
+    @com.aliyun.core.annotation.NameInMap("AntiRansomwareService")
     private Integer antiRansomwareService;
 
-    @NameInMap("AppWhiteList")
+    @com.aliyun.core.annotation.NameInMap("AppWhiteList")
     private Integer appWhiteList;
 
-    @NameInMap("AppWhiteListAuthCount")
+    @com.aliyun.core.annotation.NameInMap("AppWhiteListAuthCount")
     private Long appWhiteListAuthCount;
 
-    @NameInMap("AssetLevel")
+    @com.aliyun.core.annotation.NameInMap("AssetLevel")
     private Integer assetLevel;
 
-    @NameInMap("CspmCapacity")
+    @com.aliyun.core.annotation.NameInMap("CspmCapacity")
     private Long cspmCapacity;
 
-    @NameInMap("HighestVersion")
+    @com.aliyun.core.annotation.NameInMap("HighestVersion")
     private Integer highestVersion;
 
-    @NameInMap("HoneypotCapacity")
+    @com.aliyun.core.annotation.NameInMap("HoneypotCapacity")
     private Long honeypotCapacity;
 
-    @NameInMap("ImageScanCapacity")
+    @com.aliyun.core.annotation.NameInMap("ImageScanCapacity")
     private Long imageScanCapacity;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("IsNewContainerVersion")
+    @com.aliyun.core.annotation.NameInMap("IsNewContainerVersion")
     private Boolean isNewContainerVersion;
 
-    @NameInMap("IsNewMultiVersion")
+    @com.aliyun.core.annotation.NameInMap("IsNewMultiVersion")
     private Boolean isNewMultiVersion;
 
-    @NameInMap("IsOverBalance")
+    @com.aliyun.core.annotation.NameInMap("IsOverBalance")
     private Boolean isOverBalance;
 
-    @NameInMap("IsPostpay")
+    @com.aliyun.core.annotation.NameInMap("IsPostpay")
     private Boolean isPostpay;
 
-    @NameInMap("IsTrialVersion")
+    @com.aliyun.core.annotation.NameInMap("IsTrialVersion")
     private Integer isTrialVersion;
 
-    @NameInMap("LastTrailEndTime")
+    @com.aliyun.core.annotation.NameInMap("LastTrailEndTime")
     private Long lastTrailEndTime;
 
-    @NameInMap("MVAuthCount")
+    @com.aliyun.core.annotation.NameInMap("MVAuthCount")
     private Integer MVAuthCount;
 
-    @NameInMap("MVUnusedAuthCount")
+    @com.aliyun.core.annotation.NameInMap("MVUnusedAuthCount")
     private Integer MVUnusedAuthCount;
 
-    @NameInMap("NewThreatAnalysis")
+    @com.aliyun.core.annotation.NameInMap("NewThreatAnalysis")
     private Integer newThreatAnalysis;
 
-    @NameInMap("OpenTime")
+    @com.aliyun.core.annotation.NameInMap("OpenTime")
     private Long openTime;
 
-    @NameInMap("PostPayInstanceId")
+    @com.aliyun.core.annotation.NameInMap("PostPayInstanceId")
     private String postPayInstanceId;
 
-    @NameInMap("PostPayModuleSwitch")
+    @com.aliyun.core.annotation.NameInMap("PostPayModuleSwitch")
     private String postPayModuleSwitch;
 
-    @NameInMap("PostPayOpenTime")
+    @com.aliyun.core.annotation.NameInMap("PostPayOpenTime")
     private Long postPayOpenTime;
 
-    @NameInMap("PostPayStatus")
+    @com.aliyun.core.annotation.NameInMap("PostPayStatus")
     private Integer postPayStatus;
 
-    @NameInMap("RaspCapacity")
+    @com.aliyun.core.annotation.NameInMap("RaspCapacity")
     private Long raspCapacity;
 
-    @NameInMap("ReleaseTime")
+    @com.aliyun.core.annotation.NameInMap("ReleaseTime")
     private Long releaseTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SasLog")
+    @com.aliyun.core.annotation.NameInMap("SasLog")
     private Integer sasLog;
 
-    @NameInMap("SasScreen")
+    @com.aliyun.core.annotation.NameInMap("SasScreen")
     private Integer sasScreen;
 
-    @NameInMap("SdkCapacity")
+    @com.aliyun.core.annotation.NameInMap("SdkCapacity")
     private Long sdkCapacity;
 
-    @NameInMap("SlsCapacity")
+    @com.aliyun.core.annotation.NameInMap("SlsCapacity")
     private Long slsCapacity;
 
-    @NameInMap("ThreatAnalysisCapacity")
+    @com.aliyun.core.annotation.NameInMap("ThreatAnalysisCapacity")
     private Long threatAnalysisCapacity;
 
-    @NameInMap("ThreatAnalysisFlow")
+    @com.aliyun.core.annotation.NameInMap("ThreatAnalysisFlow")
     private Integer threatAnalysisFlow;
 
-    @NameInMap("UserDefinedAlarms")
+    @com.aliyun.core.annotation.NameInMap("UserDefinedAlarms")
     private Integer userDefinedAlarms;
 
-    @NameInMap("Version")
+    @com.aliyun.core.annotation.NameInMap("Version")
     private Integer version;
 
-    @NameInMap("VmCores")
+    @com.aliyun.core.annotation.NameInMap("VmCores")
     private Integer vmCores;
 
-    @NameInMap("VulFixCapacity")
+    @com.aliyun.core.annotation.NameInMap("VulFixCapacity")
     private Long vulFixCapacity;
 
-    @NameInMap("WebLock")
+    @com.aliyun.core.annotation.NameInMap("WebLock")
     private Integer webLock;
 
-    @NameInMap("WebLockAuthCount")
+    @com.aliyun.core.annotation.NameInMap("WebLockAuthCount")
     private Long webLockAuthCount;
 
     private DescribeVersionConfigResponseBody(Builder builder) {

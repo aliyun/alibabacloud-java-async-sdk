@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetLastOnceTaskInfoResponseBody</p>
  */
 public class GetLastOnceTaskInfoResponseBody extends TeaModel {
-    @NameInMap("CollectTime")
+    @com.aliyun.core.annotation.NameInMap("CollectTime")
     private Long collectTime;
 
-    @NameInMap("FinishCount")
+    @com.aliyun.core.annotation.NameInMap("FinishCount")
     private Integer finishCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private Long taskId;
 
-    @NameInMap("TaskInfo")
+    @com.aliyun.core.annotation.NameInMap("TaskInfo")
     private TaskInfo taskInfo;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private GetLastOnceTaskInfoResponseBody(Builder builder) {
@@ -152,13 +151,13 @@ public class GetLastOnceTaskInfoResponseBody extends TeaModel {
     } 
 
     public static class TaskInfo extends TeaModel {
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private Integer progress;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private String result;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private TaskInfo(Builder builder) {

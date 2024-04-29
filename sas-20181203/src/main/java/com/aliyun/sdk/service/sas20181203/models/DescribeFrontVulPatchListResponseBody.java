@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeFrontVulPatchListResponseBody</p>
  */
 public class DescribeFrontVulPatchListResponseBody extends TeaModel {
-    @NameInMap("FrontPatchList")
+    @com.aliyun.core.annotation.NameInMap("FrontPatchList")
     private java.util.List < FrontPatchList> frontPatchList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeFrontVulPatchListResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
     } 
 
     public static class PatchList extends TeaModel {
-        @NameInMap("AliasName")
+        @com.aliyun.core.annotation.NameInMap("AliasName")
         private String aliasName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private PatchList(Builder builder) {
@@ -133,10 +132,10 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
 
     }
     public static class FrontPatchList extends TeaModel {
-        @NameInMap("PatchList")
+        @com.aliyun.core.annotation.NameInMap("PatchList")
         private java.util.List < PatchList> patchList;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private FrontPatchList(Builder builder) {

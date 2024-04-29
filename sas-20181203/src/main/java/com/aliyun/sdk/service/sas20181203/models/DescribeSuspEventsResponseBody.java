@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSuspEventsResponseBody</p>
  */
 public class DescribeSuspEventsResponseBody extends TeaModel {
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SuspEvents")
+    @com.aliyun.core.annotation.NameInMap("SuspEvents")
     private java.util.List < SuspEvents> suspEvents;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeSuspEventsResponseBody(Builder builder) {
@@ -152,16 +151,16 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
     } 
 
     public static class Details extends TeaModel {
-        @NameInMap("NameDisplay")
+        @com.aliyun.core.annotation.NameInMap("NameDisplay")
         private String nameDisplay;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        @NameInMap("ValueDisplay")
+        @com.aliyun.core.annotation.NameInMap("ValueDisplay")
         private String valueDisplay;
 
         private Details(Builder builder) {
@@ -253,13 +252,13 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
 
     }
     public static class EventNotes extends TeaModel {
-        @NameInMap("Note")
+        @com.aliyun.core.annotation.NameInMap("Note")
         private String note;
 
-        @NameInMap("NoteId")
+        @com.aliyun.core.annotation.NameInMap("NoteId")
         private Long noteId;
 
-        @NameInMap("NoteTime")
+        @com.aliyun.core.annotation.NameInMap("NoteTime")
         private String noteTime;
 
         private EventNotes(Builder builder) {
@@ -334,10 +333,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
 
     }
     public static class TacticItems extends TeaModel {
-        @NameInMap("TacticDisplayName")
+        @com.aliyun.core.annotation.NameInMap("TacticDisplayName")
         private String tacticDisplayName;
 
-        @NameInMap("TacticId")
+        @com.aliyun.core.annotation.NameInMap("TacticId")
         private String tacticId;
 
         private TacticItems(Builder builder) {
@@ -395,163 +394,163 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
 
     }
     public static class SuspEvents extends TeaModel {
-        @NameInMap("Advanced")
+        @com.aliyun.core.annotation.NameInMap("Advanced")
         private Boolean advanced;
 
-        @NameInMap("AlarmEventName")
+        @com.aliyun.core.annotation.NameInMap("AlarmEventName")
         private String alarmEventName;
 
-        @NameInMap("AlarmEventNameDisplay")
+        @com.aliyun.core.annotation.NameInMap("AlarmEventNameDisplay")
         private String alarmEventNameDisplay;
 
-        @NameInMap("AlarmEventType")
+        @com.aliyun.core.annotation.NameInMap("AlarmEventType")
         private String alarmEventType;
 
-        @NameInMap("AlarmEventTypeDisplay")
+        @com.aliyun.core.annotation.NameInMap("AlarmEventTypeDisplay")
         private String alarmEventTypeDisplay;
 
-        @NameInMap("AlarmUniqueInfo")
+        @com.aliyun.core.annotation.NameInMap("AlarmUniqueInfo")
         private String alarmUniqueInfo;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("AutoBreaking")
+        @com.aliyun.core.annotation.NameInMap("AutoBreaking")
         private Boolean autoBreaking;
 
-        @NameInMap("CanBeDealOnLine")
+        @com.aliyun.core.annotation.NameInMap("CanBeDealOnLine")
         private Boolean canBeDealOnLine;
 
-        @NameInMap("CanCancelFault")
+        @com.aliyun.core.annotation.NameInMap("CanCancelFault")
         private Boolean canCancelFault;
 
-        @NameInMap("ContainHwMode")
+        @com.aliyun.core.annotation.NameInMap("ContainHwMode")
         private Boolean containHwMode;
 
-        @NameInMap("ContainerId")
+        @com.aliyun.core.annotation.NameInMap("ContainerId")
         private String containerId;
 
-        @NameInMap("ContainerImageId")
+        @com.aliyun.core.annotation.NameInMap("ContainerImageId")
         private String containerImageId;
 
-        @NameInMap("ContainerImageName")
+        @com.aliyun.core.annotation.NameInMap("ContainerImageName")
         private String containerImageName;
 
-        @NameInMap("DataSource")
+        @com.aliyun.core.annotation.NameInMap("DataSource")
         private String dataSource;
 
-        @NameInMap("Desc")
+        @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
 
-        @NameInMap("Details")
+        @com.aliyun.core.annotation.NameInMap("Details")
         private java.util.List < Details> details;
 
-        @NameInMap("DisplaySandboxResult")
+        @com.aliyun.core.annotation.NameInMap("DisplaySandboxResult")
         private Boolean displaySandboxResult;
 
-        @NameInMap("EventNotes")
+        @com.aliyun.core.annotation.NameInMap("EventNotes")
         private java.util.List < EventNotes> eventNotes;
 
-        @NameInMap("EventStatus")
+        @com.aliyun.core.annotation.NameInMap("EventStatus")
         private Integer eventStatus;
 
-        @NameInMap("EventSubType")
+        @com.aliyun.core.annotation.NameInMap("EventSubType")
         private String eventSubType;
 
-        @NameInMap("HasTraceInfo")
+        @com.aliyun.core.annotation.NameInMap("HasTraceInfo")
         private Boolean hasTraceInfo;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("ImageUuid")
+        @com.aliyun.core.annotation.NameInMap("ImageUuid")
         private String imageUuid;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IntranetIp")
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("K8sClusterId")
+        @com.aliyun.core.annotation.NameInMap("K8sClusterId")
         private String k8sClusterId;
 
-        @NameInMap("K8sClusterName")
+        @com.aliyun.core.annotation.NameInMap("K8sClusterName")
         private String k8sClusterName;
 
-        @NameInMap("K8sNamespace")
+        @com.aliyun.core.annotation.NameInMap("K8sNamespace")
         private String k8sNamespace;
 
-        @NameInMap("K8sNodeId")
+        @com.aliyun.core.annotation.NameInMap("K8sNodeId")
         private String k8sNodeId;
 
-        @NameInMap("K8sNodeName")
+        @com.aliyun.core.annotation.NameInMap("K8sNodeName")
         private String k8sNodeName;
 
-        @NameInMap("K8sPodName")
+        @com.aliyun.core.annotation.NameInMap("K8sPodName")
         private String k8sPodName;
 
-        @NameInMap("LargeModel")
+        @com.aliyun.core.annotation.NameInMap("LargeModel")
         private Boolean largeModel;
 
-        @NameInMap("LastTime")
+        @com.aliyun.core.annotation.NameInMap("LastTime")
         private String lastTime;
 
-        @NameInMap("LastTimeStamp")
+        @com.aliyun.core.annotation.NameInMap("LastTimeStamp")
         private Long lastTimeStamp;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("MaliciousRuleStatus")
+        @com.aliyun.core.annotation.NameInMap("MaliciousRuleStatus")
         private String maliciousRuleStatus;
 
-        @NameInMap("MarkMisRules")
+        @com.aliyun.core.annotation.NameInMap("MarkMisRules")
         private String markMisRules;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OccurrenceTime")
+        @com.aliyun.core.annotation.NameInMap("OccurrenceTime")
         private String occurrenceTime;
 
-        @NameInMap("OccurrenceTimeStamp")
+        @com.aliyun.core.annotation.NameInMap("OccurrenceTimeStamp")
         private Long occurrenceTimeStamp;
 
-        @NameInMap("OperateErrorCode")
+        @com.aliyun.core.annotation.NameInMap("OperateErrorCode")
         private String operateErrorCode;
 
-        @NameInMap("OperateMsg")
+        @com.aliyun.core.annotation.NameInMap("OperateMsg")
         private String operateMsg;
 
-        @NameInMap("OperateTime")
+        @com.aliyun.core.annotation.NameInMap("OperateTime")
         private Long operateTime;
 
-        @NameInMap("SaleVersion")
+        @com.aliyun.core.annotation.NameInMap("SaleVersion")
         private String saleVersion;
 
-        @NameInMap("SecurityEventIds")
+        @com.aliyun.core.annotation.NameInMap("SecurityEventIds")
         private String securityEventIds;
 
-        @NameInMap("Stages")
+        @com.aliyun.core.annotation.NameInMap("Stages")
         private String stages;
 
-        @NameInMap("TacticItems")
+        @com.aliyun.core.annotation.NameInMap("TacticItems")
         private java.util.List < TacticItems> tacticItems;
 
-        @NameInMap("UniqueInfo")
+        @com.aliyun.core.annotation.NameInMap("UniqueInfo")
         private String uniqueInfo;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
-        @NameInMap("clusterId")
+        @com.aliyun.core.annotation.NameInMap("clusterId")
         private String clusterId;
 
         private SuspEvents(Builder builder) {

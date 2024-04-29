@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstallCodesResponseBody</p>
  */
 public class DescribeInstallCodesResponseBody extends TeaModel {
-    @NameInMap("InstallCodes")
+    @com.aliyun.core.annotation.NameInMap("InstallCodes")
     private java.util.List < InstallCodes> installCodes;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstallCodesResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
     } 
 
     public static class InstallCodes extends TeaModel {
-        @NameInMap("CaptchaCode")
+        @com.aliyun.core.annotation.NameInMap("CaptchaCode")
         private String captchaCode;
 
-        @NameInMap("ExpiredDate")
+        @com.aliyun.core.annotation.NameInMap("ExpiredDate")
         private Long expiredDate;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private Long groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("OnlyImage")
+        @com.aliyun.core.annotation.NameInMap("OnlyImage")
         private Boolean onlyImage;
 
-        @NameInMap("Os")
+        @com.aliyun.core.annotation.NameInMap("Os")
         private String os;
 
-        @NameInMap("ProxyCluster")
+        @com.aliyun.core.annotation.NameInMap("ProxyCluster")
         private String proxyCluster;
 
-        @NameInMap("VendorName")
+        @com.aliyun.core.annotation.NameInMap("VendorName")
         private String vendorName;
 
         private InstallCodes(Builder builder) {

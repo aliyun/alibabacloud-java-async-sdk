@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteUniBackupPolicyRequest</p>
  */
 public class DeleteUniBackupPolicyRequest extends Request {
-    @Query
-    @NameInMap("PolicyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyId")
     private Long policyId;
 
-    @Query
-    @NameInMap("PolicyIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyIds")
     private String policyIds;
 
     private DeleteUniBackupPolicyRequest(Builder builder) {

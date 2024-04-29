@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetOssScanConfigResponseBody</p>
  */
 public class GetOssScanConfigResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetOssScanConfigResponseBody(Builder builder) {
@@ -72,49 +71,49 @@ public class GetOssScanConfigResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AllKeyPrefix")
+        @com.aliyun.core.annotation.NameInMap("AllKeyPrefix")
         private Boolean allKeyPrefix;
 
-        @NameInMap("BucketCount")
+        @com.aliyun.core.annotation.NameInMap("BucketCount")
         private Integer bucketCount;
 
-        @NameInMap("BucketName")
+        @com.aliyun.core.annotation.NameInMap("BucketName")
         private String bucketName;
 
-        @NameInMap("BucketNameList")
+        @com.aliyun.core.annotation.NameInMap("BucketNameList")
         private java.util.List < String > bucketNameList;
 
-        @NameInMap("DecompressMaxFileCount")
+        @com.aliyun.core.annotation.NameInMap("DecompressMaxFileCount")
         private Integer decompressMaxFileCount;
 
-        @NameInMap("DecompressMaxLayer")
+        @com.aliyun.core.annotation.NameInMap("DecompressMaxLayer")
         private Integer decompressMaxLayer;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Integer enable;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("KeyPrefixList")
+        @com.aliyun.core.annotation.NameInMap("KeyPrefixList")
         private java.util.List < String > keyPrefixList;
 
-        @NameInMap("KeySuffixList")
+        @com.aliyun.core.annotation.NameInMap("KeySuffixList")
         private java.util.List < String > keySuffixList;
 
-        @NameInMap("LastUpdateTime")
+        @com.aliyun.core.annotation.NameInMap("LastUpdateTime")
         private Long lastUpdateTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ScanDayList")
+        @com.aliyun.core.annotation.NameInMap("ScanDayList")
         private java.util.List < Integer > scanDayList;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private Data(Builder builder) {

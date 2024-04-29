@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListOssScanConfigResponseBody</p>
  */
 public class ListOssScanConfigResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListOssScanConfigResponseBody(Builder builder) {
@@ -92,46 +91,46 @@ public class ListOssScanConfigResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AllKeyPrefix")
+        @com.aliyun.core.annotation.NameInMap("AllKeyPrefix")
         private Boolean allKeyPrefix;
 
-        @NameInMap("BucketCount")
+        @com.aliyun.core.annotation.NameInMap("BucketCount")
         private Integer bucketCount;
 
-        @NameInMap("BucketNameList")
+        @com.aliyun.core.annotation.NameInMap("BucketNameList")
         private java.util.List < String > bucketNameList;
 
-        @NameInMap("DecompressMaxFileCount")
+        @com.aliyun.core.annotation.NameInMap("DecompressMaxFileCount")
         private Integer decompressMaxFileCount;
 
-        @NameInMap("DecompressMaxLayer")
+        @com.aliyun.core.annotation.NameInMap("DecompressMaxLayer")
         private Integer decompressMaxLayer;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Integer enable;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("KeyPrefixList")
+        @com.aliyun.core.annotation.NameInMap("KeyPrefixList")
         private java.util.List < String > keyPrefixList;
 
-        @NameInMap("KeySuffixList")
+        @com.aliyun.core.annotation.NameInMap("KeySuffixList")
         private java.util.List < String > keySuffixList;
 
-        @NameInMap("LastUpdateTime")
+        @com.aliyun.core.annotation.NameInMap("LastUpdateTime")
         private Long lastUpdateTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ScanDayList")
+        @com.aliyun.core.annotation.NameInMap("ScanDayList")
         private java.util.List < Integer > scanDayList;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private Data(Builder builder) {
@@ -397,13 +396,13 @@ public class ListOssScanConfigResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {

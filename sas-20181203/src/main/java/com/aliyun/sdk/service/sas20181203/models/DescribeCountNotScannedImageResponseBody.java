@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCountNotScannedImageResponseBody</p>
  */
 public class DescribeCountNotScannedImageResponseBody extends TeaModel {
-    @NameInMap("NotScannedCnt")
+    @com.aliyun.core.annotation.NameInMap("NotScannedCnt")
     private Integer notScannedCnt;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCountNotScannedImageResponseBody(Builder builder) {

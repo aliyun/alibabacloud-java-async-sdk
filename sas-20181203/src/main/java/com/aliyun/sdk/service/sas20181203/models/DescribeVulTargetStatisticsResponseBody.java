@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVulTargetStatisticsResponseBody</p>
  */
 public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TargetStats")
+    @com.aliyun.core.annotation.NameInMap("TargetStats")
     private java.util.List < TargetStats> targetStats;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeVulTargetStatisticsResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
     } 
 
     public static class Targets extends TeaModel {
-        @NameInMap("Flag")
+        @com.aliyun.core.annotation.NameInMap("Flag")
         private String flag;
 
-        @NameInMap("Target")
+        @com.aliyun.core.annotation.NameInMap("Target")
         private String target;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
         private Targets(Builder builder) {
@@ -221,16 +220,16 @@ public class DescribeVulTargetStatisticsResponseBody extends TeaModel {
 
     }
     public static class TargetStats extends TeaModel {
-        @NameInMap("Targets")
+        @com.aliyun.core.annotation.NameInMap("Targets")
         private java.util.List < Targets> targets;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
-        @NameInMap("UuidCount")
+        @com.aliyun.core.annotation.NameInMap("UuidCount")
         private Integer uuidCount;
 
-        @NameInMap("VulType")
+        @com.aliyun.core.annotation.NameInMap("VulType")
         private String vulType;
 
         private TargetStats(Builder builder) {

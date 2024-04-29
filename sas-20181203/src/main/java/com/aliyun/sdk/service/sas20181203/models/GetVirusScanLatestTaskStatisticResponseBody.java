@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetVirusScanLatestTaskStatisticResponseBody</p>
  */
 public class GetVirusScanLatestTaskStatisticResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetVirusScanLatestTaskStatisticResponseBody(Builder builder) {
@@ -72,46 +71,46 @@ public class GetVirusScanLatestTaskStatisticResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("CompleteMachine")
+        @com.aliyun.core.annotation.NameInMap("CompleteMachine")
         private Integer completeMachine;
 
-        @NameInMap("MachineName")
+        @com.aliyun.core.annotation.NameInMap("MachineName")
         private String machineName;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
 
-        @NameInMap("SafeMachine")
+        @com.aliyun.core.annotation.NameInMap("SafeMachine")
         private Integer safeMachine;
 
-        @NameInMap("ScanMachine")
+        @com.aliyun.core.annotation.NameInMap("ScanMachine")
         private Integer scanMachine;
 
-        @NameInMap("ScanPath")
+        @com.aliyun.core.annotation.NameInMap("ScanPath")
         private java.util.List < String > scanPath;
 
-        @NameInMap("ScanTime")
+        @com.aliyun.core.annotation.NameInMap("ScanTime")
         private Long scanTime;
 
-        @NameInMap("ScanType")
+        @com.aliyun.core.annotation.NameInMap("ScanType")
         private String scanType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("SuspiciousCount")
+        @com.aliyun.core.annotation.NameInMap("SuspiciousCount")
         private Integer suspiciousCount;
 
-        @NameInMap("SuspiciousMachine")
+        @com.aliyun.core.annotation.NameInMap("SuspiciousMachine")
         private Integer suspiciousMachine;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("UnCompleteMachine")
+        @com.aliyun.core.annotation.NameInMap("UnCompleteMachine")
         private Integer unCompleteMachine;
 
         private Data(Builder builder) {

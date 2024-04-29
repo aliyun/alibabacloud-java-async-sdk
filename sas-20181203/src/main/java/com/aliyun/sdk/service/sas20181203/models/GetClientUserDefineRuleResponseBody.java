@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetClientUserDefineRuleResponseBody</p>
  */
 public class GetClientUserDefineRuleResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UserDefineRuleDetail")
+    @com.aliyun.core.annotation.NameInMap("UserDefineRuleDetail")
     private UserDefineRuleDetail userDefineRuleDetail;
 
     private GetClientUserDefineRuleResponseBody(Builder builder) {
@@ -72,64 +71,64 @@ public class GetClientUserDefineRuleResponseBody extends TeaModel {
     } 
 
     public static class UserDefineRuleDetail extends TeaModel {
-        @NameInMap("ActionType")
+        @com.aliyun.core.annotation.NameInMap("ActionType")
         private String actionType;
 
-        @NameInMap("Cmdline")
+        @com.aliyun.core.annotation.NameInMap("Cmdline")
         private String cmdline;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("FilePath")
+        @com.aliyun.core.annotation.NameInMap("FilePath")
         private String filePath;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
-        @NameInMap("IP")
+        @com.aliyun.core.annotation.NameInMap("IP")
         private String ip;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Md5List")
+        @com.aliyun.core.annotation.NameInMap("Md5List")
         private String md5List;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NewFilePath")
+        @com.aliyun.core.annotation.NameInMap("NewFilePath")
         private String newFilePath;
 
-        @NameInMap("ParentCmdline")
+        @com.aliyun.core.annotation.NameInMap("ParentCmdline")
         private String parentCmdline;
 
-        @NameInMap("ParentProcPath")
+        @com.aliyun.core.annotation.NameInMap("ParentProcPath")
         private String parentProcPath;
 
-        @NameInMap("Platform")
+        @com.aliyun.core.annotation.NameInMap("Platform")
         private String platform;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("PortStr")
+        @com.aliyun.core.annotation.NameInMap("PortStr")
         private String portStr;
 
-        @NameInMap("ProcPath")
+        @com.aliyun.core.annotation.NameInMap("ProcPath")
         private String procPath;
 
-        @NameInMap("RegistryContent")
+        @com.aliyun.core.annotation.NameInMap("RegistryContent")
         private String registryContent;
 
-        @NameInMap("RegistryKey")
+        @com.aliyun.core.annotation.NameInMap("RegistryKey")
         private String registryKey;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
         private UserDefineRuleDetail(Builder builder) {

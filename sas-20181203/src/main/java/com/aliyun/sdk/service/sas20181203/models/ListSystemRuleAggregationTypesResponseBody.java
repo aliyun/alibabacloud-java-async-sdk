@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSystemRuleAggregationTypesResponseBody</p>
  */
 public class ListSystemRuleAggregationTypesResponseBody extends TeaModel {
-    @NameInMap("AggregationTypeList")
+    @com.aliyun.core.annotation.NameInMap("AggregationTypeList")
     private java.util.List < AggregationTypeList> aggregationTypeList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListSystemRuleAggregationTypesResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class ListSystemRuleAggregationTypesResponseBody extends TeaModel {
     } 
 
     public static class AggregationTypeList extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private AggregationTypeList(Builder builder) {

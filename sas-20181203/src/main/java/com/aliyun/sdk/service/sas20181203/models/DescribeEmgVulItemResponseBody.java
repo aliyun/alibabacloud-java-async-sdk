@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEmgVulItemResponseBody</p>
  */
 public class DescribeEmgVulItemResponseBody extends TeaModel {
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("GroupedVulItems")
+    @com.aliyun.core.annotation.NameInMap("GroupedVulItems")
     private java.util.List < GroupedVulItems> groupedVulItems;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeEmgVulItemResponseBody(Builder builder) {
@@ -132,34 +131,34 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
     } 
 
     public static class GroupedVulItems extends TeaModel {
-        @NameInMap("AliasName")
+        @com.aliyun.core.annotation.NameInMap("AliasName")
         private String aliasName;
 
-        @NameInMap("CheckType")
+        @com.aliyun.core.annotation.NameInMap("CheckType")
         private Integer checkType;
 
-        @NameInMap("GmtLastCheck")
+        @com.aliyun.core.annotation.NameInMap("GmtLastCheck")
         private Long gmtLastCheck;
 
-        @NameInMap("GmtPublish")
+        @com.aliyun.core.annotation.NameInMap("GmtPublish")
         private Long gmtPublish;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PendingCount")
+        @com.aliyun.core.annotation.NameInMap("PendingCount")
         private Integer pendingCount;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private Integer progress;
 
-        @NameInMap("RaspDefend")
+        @com.aliyun.core.annotation.NameInMap("RaspDefend")
         private Integer raspDefend;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private GroupedVulItems(Builder builder) {

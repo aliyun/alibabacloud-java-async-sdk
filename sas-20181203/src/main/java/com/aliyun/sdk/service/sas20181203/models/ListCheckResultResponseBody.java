@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCheckResultResponseBody</p>
  */
 public class ListCheckResultResponseBody extends TeaModel {
-    @NameInMap("Checks")
+    @com.aliyun.core.annotation.NameInMap("Checks")
     private java.util.List < Checks> checks;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListCheckResultResponseBody(Builder builder) {
@@ -92,22 +91,22 @@ public class ListCheckResultResponseBody extends TeaModel {
     } 
 
     public static class CheckPolicies extends TeaModel {
-        @NameInMap("RequirementId")
+        @com.aliyun.core.annotation.NameInMap("RequirementId")
         private Long requirementId;
 
-        @NameInMap("RequirementShowName")
+        @com.aliyun.core.annotation.NameInMap("RequirementShowName")
         private String requirementShowName;
 
-        @NameInMap("SectionId")
+        @com.aliyun.core.annotation.NameInMap("SectionId")
         private Long sectionId;
 
-        @NameInMap("SectionShowName")
+        @com.aliyun.core.annotation.NameInMap("SectionShowName")
         private String sectionShowName;
 
-        @NameInMap("StandardId")
+        @com.aliyun.core.annotation.NameInMap("StandardId")
         private Long standardId;
 
-        @NameInMap("StandardShowName")
+        @com.aliyun.core.annotation.NameInMap("StandardShowName")
         private String standardShowName;
 
         private CheckPolicies(Builder builder) {
@@ -233,43 +232,43 @@ public class ListCheckResultResponseBody extends TeaModel {
 
     }
     public static class Checks extends TeaModel {
-        @NameInMap("CheckId")
+        @com.aliyun.core.annotation.NameInMap("CheckId")
         private Long checkId;
 
-        @NameInMap("CheckPolicies")
+        @com.aliyun.core.annotation.NameInMap("CheckPolicies")
         private java.util.List < CheckPolicies> checkPolicies;
 
-        @NameInMap("CheckShowName")
+        @com.aliyun.core.annotation.NameInMap("CheckShowName")
         private String checkShowName;
 
-        @NameInMap("InstanceSubType")
+        @com.aliyun.core.annotation.NameInMap("InstanceSubType")
         private String instanceSubType;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("LastCheckTime")
+        @com.aliyun.core.annotation.NameInMap("LastCheckTime")
         private Long lastCheckTime;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusMessage")
+        @com.aliyun.core.annotation.NameInMap("StatusMessage")
         private String statusMessage;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TrialPermission")
+        @com.aliyun.core.annotation.NameInMap("TrialPermission")
         private Boolean trialPermission;
 
-        @NameInMap("Vendor")
+        @com.aliyun.core.annotation.NameInMap("Vendor")
         private String vendor;
 
-        @NameInMap("VendorShowName")
+        @com.aliyun.core.annotation.NameInMap("VendorShowName")
         private String vendorShowName;
 
         private Checks(Builder builder) {
@@ -577,16 +576,16 @@ public class ListCheckResultResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {

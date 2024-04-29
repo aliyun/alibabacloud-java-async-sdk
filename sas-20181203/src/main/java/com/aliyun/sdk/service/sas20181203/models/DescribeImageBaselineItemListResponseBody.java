@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImageBaselineItemListResponseBody</p>
  */
 public class DescribeImageBaselineItemListResponseBody extends TeaModel {
-    @NameInMap("BaselineItemInfos")
+    @com.aliyun.core.annotation.NameInMap("BaselineItemInfos")
     private java.util.List < BaselineItemInfos> baselineItemInfos;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeImageBaselineItemListResponseBody(Builder builder) {
@@ -92,28 +91,28 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
     } 
 
     public static class BaselineItemInfos extends TeaModel {
-        @NameInMap("BaselineClassAlias")
+        @com.aliyun.core.annotation.NameInMap("BaselineClassAlias")
         private String baselineClassAlias;
 
-        @NameInMap("BaselineClassKey")
+        @com.aliyun.core.annotation.NameInMap("BaselineClassKey")
         private String baselineClassKey;
 
-        @NameInMap("BaselineItemAlias")
+        @com.aliyun.core.annotation.NameInMap("BaselineItemAlias")
         private String baselineItemAlias;
 
-        @NameInMap("BaselineItemKey")
+        @com.aliyun.core.annotation.NameInMap("BaselineItemKey")
         private String baselineItemKey;
 
-        @NameInMap("BaselineNameAlias")
+        @com.aliyun.core.annotation.NameInMap("BaselineNameAlias")
         private String baselineNameAlias;
 
-        @NameInMap("BaselineNameKey")
+        @com.aliyun.core.annotation.NameInMap("BaselineNameKey")
         private String baselineNameKey;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("WhiteList")
+        @com.aliyun.core.annotation.NameInMap("WhiteList")
         private Integer whiteList;
 
         private BaselineItemInfos(Builder builder) {
@@ -283,16 +282,16 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {

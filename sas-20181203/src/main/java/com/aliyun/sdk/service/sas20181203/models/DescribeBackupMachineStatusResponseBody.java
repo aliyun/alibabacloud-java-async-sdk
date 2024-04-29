@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBackupMachineStatusResponseBody</p>
  */
 public class DescribeBackupMachineStatusResponseBody extends TeaModel {
-    @NameInMap("BackupMachineStatus")
+    @com.aliyun.core.annotation.NameInMap("BackupMachineStatus")
     private BackupMachineStatus backupMachineStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeBackupMachineStatusResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
     } 
 
     public static class ErrorList extends TeaModel {
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorStatus")
+        @com.aliyun.core.annotation.NameInMap("ErrorStatus")
         private String errorStatus;
 
         private ErrorList(Builder builder) {
@@ -133,40 +132,40 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
 
     }
     public static class BackupMachineStatus extends TeaModel {
-        @NameInMap("ClientId")
+        @com.aliyun.core.annotation.NameInMap("ClientId")
         private String clientId;
 
-        @NameInMap("ClientStatus")
+        @com.aliyun.core.annotation.NameInMap("ClientStatus")
         private String clientStatus;
 
-        @NameInMap("ClientVersion")
+        @com.aliyun.core.annotation.NameInMap("ClientVersion")
         private String clientVersion;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorList")
+        @com.aliyun.core.annotation.NameInMap("ErrorList")
         private java.util.List < ErrorList> errorList;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SavedBackupCount")
+        @com.aliyun.core.annotation.NameInMap("SavedBackupCount")
         private Integer savedBackupCount;
 
-        @NameInMap("ServiceStatus")
+        @com.aliyun.core.annotation.NameInMap("ServiceStatus")
         private String serviceStatus;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
-        @NameInMap("VaultId")
+        @com.aliyun.core.annotation.NameInMap("VaultId")
         private String vaultId;
 
         private BackupMachineStatus(Builder builder) {

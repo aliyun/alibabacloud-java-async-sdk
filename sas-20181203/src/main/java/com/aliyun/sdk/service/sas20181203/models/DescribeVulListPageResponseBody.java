@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVulListPageResponseBody</p>
  */
 public class DescribeVulListPageResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeVulListPageResponseBody(Builder builder) {
@@ -92,28 +91,28 @@ public class DescribeVulListPageResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("CveId")
+        @com.aliyun.core.annotation.NameInMap("CveId")
         private String cveId;
 
-        @NameInMap("ExtAegis")
+        @com.aliyun.core.annotation.NameInMap("ExtAegis")
         private String extAegis;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("IsAegis")
+        @com.aliyun.core.annotation.NameInMap("IsAegis")
         private Integer isAegis;
 
-        @NameInMap("IsSas")
+        @com.aliyun.core.annotation.NameInMap("IsSas")
         private Integer isSas;
 
-        @NameInMap("OtherId")
+        @com.aliyun.core.annotation.NameInMap("OtherId")
         private String otherId;
 
-        @NameInMap("ReleaseTime")
+        @com.aliyun.core.annotation.NameInMap("ReleaseTime")
         private Long releaseTime;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private Data(Builder builder) {

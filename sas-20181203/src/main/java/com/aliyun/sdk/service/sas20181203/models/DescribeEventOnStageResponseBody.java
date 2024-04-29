@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEventOnStageResponseBody</p>
  */
 public class DescribeEventOnStageResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecurityEventStageResponse")
+    @com.aliyun.core.annotation.NameInMap("SecurityEventStageResponse")
     private SecurityEventStageResponse securityEventStageResponse;
 
     private DescribeEventOnStageResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class DescribeEventOnStageResponseBody extends TeaModel {
     } 
 
     public static class SecurityEventStageResponse extends TeaModel {
-        @NameInMap("SecurityEventOnStag")
+        @com.aliyun.core.annotation.NameInMap("SecurityEventOnStag")
         private java.util.Map < String, ? > securityEventOnStag;
 
         private SecurityEventStageResponse(Builder builder) {

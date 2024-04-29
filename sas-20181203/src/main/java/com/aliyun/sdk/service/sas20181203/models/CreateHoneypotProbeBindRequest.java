@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateHoneypotProbeBindRequest</p>
  */
 public class CreateHoneypotProbeBindRequest extends Request {
-    @Query
-    @NameInMap("BindPortList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BindPortList")
     private java.util.List < BindPortList> bindPortList;
 
-    @Query
-    @NameInMap("HoneypotId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HoneypotId")
     private String honeypotId;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("ProbeId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProbeId")
     private String probeId;
 
-    @Query
-    @NameInMap("ServiceIpList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceIpList")
     private java.util.List < String > serviceIpList;
 
     private CreateHoneypotProbeBindRequest(Builder builder) {
@@ -172,22 +171,22 @@ public class CreateHoneypotProbeBindRequest extends Request {
     } 
 
     public static class BindPortList extends TeaModel {
-        @NameInMap("BindPort")
+        @com.aliyun.core.annotation.NameInMap("BindPort")
         private Boolean bindPort;
 
-        @NameInMap("EndPort")
+        @com.aliyun.core.annotation.NameInMap("EndPort")
         private Integer endPort;
 
-        @NameInMap("Fixed")
+        @com.aliyun.core.annotation.NameInMap("Fixed")
         private Boolean fixed;
 
-        @NameInMap("Proto")
+        @com.aliyun.core.annotation.NameInMap("Proto")
         private String proto;
 
-        @NameInMap("StartPort")
+        @com.aliyun.core.annotation.NameInMap("StartPort")
         private Integer startPort;
 
-        @NameInMap("TargetPort")
+        @com.aliyun.core.annotation.NameInMap("TargetPort")
         private Integer targetPort;
 
         private BindPortList(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListClusterPluginInfoResponseBody</p>
  */
 public class ListClusterPluginInfoResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListClusterPluginInfoResponseBody(Builder builder) {
@@ -72,40 +71,40 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
     } 
 
     public static class NodePluginInfoList extends TeaModel {
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
 
-        @NameInMap("Installed")
+        @com.aliyun.core.annotation.NameInMap("Installed")
         private Boolean installed;
 
-        @NameInMap("MachineInternetIp")
+        @com.aliyun.core.annotation.NameInMap("MachineInternetIp")
         private String machineInternetIp;
 
-        @NameInMap("MachineIntranetIp")
+        @com.aliyun.core.annotation.NameInMap("MachineIntranetIp")
         private String machineIntranetIp;
 
-        @NameInMap("MachineName")
+        @com.aliyun.core.annotation.NameInMap("MachineName")
         private String machineName;
 
-        @NameInMap("MachineType")
+        @com.aliyun.core.annotation.NameInMap("MachineType")
         private Long machineType;
 
-        @NameInMap("Online")
+        @com.aliyun.core.annotation.NameInMap("Online")
         private Boolean online;
 
-        @NameInMap("PluginName")
+        @com.aliyun.core.annotation.NameInMap("PluginName")
         private String pluginName;
 
-        @NameInMap("PluginVersion")
+        @com.aliyun.core.annotation.NameInMap("PluginVersion")
         private String pluginVersion;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
         private NodePluginInfoList(Builder builder) {
@@ -347,16 +346,16 @@ public class ListClusterPluginInfoResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("ClusterStatus")
+        @com.aliyun.core.annotation.NameInMap("ClusterStatus")
         private String clusterStatus;
 
-        @NameInMap("NodePluginInfoList")
+        @com.aliyun.core.annotation.NameInMap("NodePluginInfoList")
         private java.util.List < NodePluginInfoList> nodePluginInfoList;
 
         private Data(Builder builder) {

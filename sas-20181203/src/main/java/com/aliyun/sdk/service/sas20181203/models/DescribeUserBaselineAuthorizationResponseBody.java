@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUserBaselineAuthorizationResponseBody</p>
  */
 public class DescribeUserBaselineAuthorizationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UserBaselineAuthorization")
+    @com.aliyun.core.annotation.NameInMap("UserBaselineAuthorization")
     private UserBaselineAuthorization userBaselineAuthorization;
 
     private DescribeUserBaselineAuthorizationResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class DescribeUserBaselineAuthorizationResponseBody extends TeaModel {
     } 
 
     public static class UserBaselineAuthorization extends TeaModel {
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private UserBaselineAuthorization(Builder builder) {

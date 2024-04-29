@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImageRepoListResponseBody</p>
  */
 public class DescribeImageRepoListResponseBody extends TeaModel {
-    @NameInMap("AddTargetCount")
+    @com.aliyun.core.annotation.NameInMap("AddTargetCount")
     private Integer addTargetCount;
 
-    @NameInMap("AllTargetCount")
+    @com.aliyun.core.annotation.NameInMap("AllTargetCount")
     private Integer allTargetCount;
 
-    @NameInMap("DelTargetCount")
+    @com.aliyun.core.annotation.NameInMap("DelTargetCount")
     private Integer delTargetCount;
 
-    @NameInMap("ImageRepoList")
+    @com.aliyun.core.annotation.NameInMap("ImageRepoList")
     private java.util.List < ImageRepoList> imageRepoList;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeImageRepoListResponseBody(Builder builder) {
@@ -152,13 +151,13 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
     } 
 
     public static class ImageRepoList extends TeaModel {
-        @NameInMap("Flag")
+        @com.aliyun.core.annotation.NameInMap("Flag")
         private String flag;
 
-        @NameInMap("RepoName")
+        @com.aliyun.core.annotation.NameInMap("RepoName")
         private String repoName;
 
-        @NameInMap("RepoNamespace")
+        @com.aliyun.core.annotation.NameInMap("RepoNamespace")
         private String repoNamespace;
 
         private ImageRepoList(Builder builder) {
@@ -237,16 +236,16 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {

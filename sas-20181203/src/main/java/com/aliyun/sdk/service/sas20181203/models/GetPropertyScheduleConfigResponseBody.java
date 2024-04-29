@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPropertyScheduleConfigResponseBody</p>
  */
 public class GetPropertyScheduleConfigResponseBody extends TeaModel {
-    @NameInMap("PropertyScheduleConfig")
+    @com.aliyun.core.annotation.NameInMap("PropertyScheduleConfig")
     private PropertyScheduleConfig propertyScheduleConfig;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetPropertyScheduleConfigResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class GetPropertyScheduleConfigResponseBody extends TeaModel {
     } 
 
     public static class PropertyScheduleConfig extends TeaModel {
-        @NameInMap("NextScheduleTime")
+        @com.aliyun.core.annotation.NameInMap("NextScheduleTime")
         private Long nextScheduleTime;
 
-        @NameInMap("ScheduleTime")
+        @com.aliyun.core.annotation.NameInMap("ScheduleTime")
         private String scheduleTime;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private PropertyScheduleConfig(Builder builder) {

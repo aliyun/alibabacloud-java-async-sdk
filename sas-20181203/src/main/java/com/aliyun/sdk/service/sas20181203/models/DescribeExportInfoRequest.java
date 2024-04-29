@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeExportInfoRequest</p>
  */
 public class DescribeExportInfoRequest extends Request {
-    @Query
-    @NameInMap("ExportId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExportId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long exportId;
 
     private DescribeExportInfoRequest(Builder builder) {

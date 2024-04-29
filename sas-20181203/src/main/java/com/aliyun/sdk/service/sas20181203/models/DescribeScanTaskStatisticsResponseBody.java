@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeScanTaskStatisticsResponseBody</p>
  */
 public class DescribeScanTaskStatisticsResponseBody extends TeaModel {
-    @NameInMap("DealedRiskNum")
+    @com.aliyun.core.annotation.NameInMap("DealedRiskNum")
     private Integer dealedRiskNum;
 
-    @NameInMap("PersonalTaskNum")
+    @com.aliyun.core.annotation.NameInMap("PersonalTaskNum")
     private Long personalTaskNum;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalTaskNum")
+    @com.aliyun.core.annotation.NameInMap("TotalTaskNum")
     private Long totalTaskNum;
 
-    @NameInMap("UserNum")
+    @com.aliyun.core.annotation.NameInMap("UserNum")
     private Long userNum;
 
     private DescribeScanTaskStatisticsResponseBody(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVulListResponseBody</p>
  */
 public class DescribeVulListResponseBody extends TeaModel {
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("VulRecords")
+    @com.aliyun.core.annotation.NameInMap("VulRecords")
     private java.util.List < VulRecords> vulRecords;
 
     private DescribeVulListResponseBody(Builder builder) {
@@ -152,25 +151,25 @@ public class DescribeVulListResponseBody extends TeaModel {
     } 
 
     public static class Necessity extends TeaModel {
-        @NameInMap("Assets_factor")
+        @com.aliyun.core.annotation.NameInMap("Assets_factor")
         private String assetsFactor;
 
-        @NameInMap("Cvss_factor")
+        @com.aliyun.core.annotation.NameInMap("Cvss_factor")
         private String cvssFactor;
 
-        @NameInMap("Enviroment_factor")
+        @com.aliyun.core.annotation.NameInMap("Enviroment_factor")
         private String enviromentFactor;
 
-        @NameInMap("Is_calc")
+        @com.aliyun.core.annotation.NameInMap("Is_calc")
         private String isCalc;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Time_factor")
+        @com.aliyun.core.annotation.NameInMap("Time_factor")
         private String timeFactor;
 
-        @NameInMap("Total_score")
+        @com.aliyun.core.annotation.NameInMap("Total_score")
         private String totalScore;
 
         private Necessity(Builder builder) {
@@ -334,37 +333,37 @@ public class DescribeVulListResponseBody extends TeaModel {
 
     }
     public static class RpmEntityList extends TeaModel {
-        @NameInMap("ContainerName")
+        @com.aliyun.core.annotation.NameInMap("ContainerName")
         private String containerName;
 
-        @NameInMap("ExtendField")
+        @com.aliyun.core.annotation.NameInMap("ExtendField")
         private String extendField;
 
-        @NameInMap("FullVersion")
+        @com.aliyun.core.annotation.NameInMap("FullVersion")
         private String fullVersion;
 
-        @NameInMap("ImageName")
+        @com.aliyun.core.annotation.NameInMap("ImageName")
         private String imageName;
 
-        @NameInMap("MatchDetail")
+        @com.aliyun.core.annotation.NameInMap("MatchDetail")
         private String matchDetail;
 
-        @NameInMap("MatchList")
+        @com.aliyun.core.annotation.NameInMap("MatchList")
         private java.util.List < String > matchList;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("Pid")
+        @com.aliyun.core.annotation.NameInMap("Pid")
         private String pid;
 
-        @NameInMap("UpdateCmd")
+        @com.aliyun.core.annotation.NameInMap("UpdateCmd")
         private String updateCmd;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private RpmEntityList(Builder builder) {
@@ -575,49 +574,49 @@ public class DescribeVulListResponseBody extends TeaModel {
 
     }
     public static class ExtendContentJson extends TeaModel {
-        @NameInMap("AbsolutePath")
+        @com.aliyun.core.annotation.NameInMap("AbsolutePath")
         private String absolutePath;
 
-        @NameInMap("AliasName")
+        @com.aliyun.core.annotation.NameInMap("AliasName")
         private String aliasName;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EmgProof")
+        @com.aliyun.core.annotation.NameInMap("EmgProof")
         private String emgProof;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("LastTs")
+        @com.aliyun.core.annotation.NameInMap("LastTs")
         private Long lastTs;
 
-        @NameInMap("Necessity")
+        @com.aliyun.core.annotation.NameInMap("Necessity")
         private Necessity necessity;
 
-        @NameInMap("Os")
+        @com.aliyun.core.annotation.NameInMap("Os")
         private String os;
 
-        @NameInMap("OsRelease")
+        @com.aliyun.core.annotation.NameInMap("OsRelease")
         private String osRelease;
 
-        @NameInMap("PrimaryId")
+        @com.aliyun.core.annotation.NameInMap("PrimaryId")
         private Long primaryId;
 
-        @NameInMap("RpmEntityList")
+        @com.aliyun.core.annotation.NameInMap("RpmEntityList")
         private java.util.List < RpmEntityList> rpmEntityList;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
-        @NameInMap("Target")
+        @com.aliyun.core.annotation.NameInMap("Target")
         private String target;
 
-        @NameInMap("cveList")
+        @com.aliyun.core.annotation.NameInMap("cveList")
         private java.util.List < String > cveList;
 
         private ExtendContentJson(Builder builder) {
@@ -911,106 +910,106 @@ public class DescribeVulListResponseBody extends TeaModel {
 
     }
     public static class VulRecords extends TeaModel {
-        @NameInMap("AliasName")
+        @com.aliyun.core.annotation.NameInMap("AliasName")
         private String aliasName;
 
-        @NameInMap("AuthVersion")
+        @com.aliyun.core.annotation.NameInMap("AuthVersion")
         private String authVersion;
 
-        @NameInMap("Bind")
+        @com.aliyun.core.annotation.NameInMap("Bind")
         private Boolean bind;
 
-        @NameInMap("ExtendContentJson")
+        @com.aliyun.core.annotation.NameInMap("ExtendContentJson")
         private ExtendContentJson extendContentJson;
 
-        @NameInMap("FirstTs")
+        @com.aliyun.core.annotation.NameInMap("FirstTs")
         private Long firstTs;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private Integer groupId;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IntranetIp")
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("K8sClusterId")
+        @com.aliyun.core.annotation.NameInMap("K8sClusterId")
         private String k8sClusterId;
 
-        @NameInMap("K8sNamespace")
+        @com.aliyun.core.annotation.NameInMap("K8sNamespace")
         private String k8sNamespace;
 
-        @NameInMap("K8sNodeId")
+        @com.aliyun.core.annotation.NameInMap("K8sNodeId")
         private String k8sNodeId;
 
-        @NameInMap("K8sNodeName")
+        @com.aliyun.core.annotation.NameInMap("K8sNodeName")
         private String k8sNodeName;
 
-        @NameInMap("K8sPodName")
+        @com.aliyun.core.annotation.NameInMap("K8sPodName")
         private String k8sPodName;
 
-        @NameInMap("LastTs")
+        @com.aliyun.core.annotation.NameInMap("LastTs")
         private Long lastTs;
 
-        @NameInMap("ModifyTs")
+        @com.aliyun.core.annotation.NameInMap("ModifyTs")
         private Long modifyTs;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Necessity")
+        @com.aliyun.core.annotation.NameInMap("Necessity")
         private String necessity;
 
-        @NameInMap("Online")
+        @com.aliyun.core.annotation.NameInMap("Online")
         private Boolean online;
 
-        @NameInMap("OsName")
+        @com.aliyun.core.annotation.NameInMap("OsName")
         private String osName;
 
-        @NameInMap("OsVersion")
+        @com.aliyun.core.annotation.NameInMap("OsVersion")
         private String osVersion;
 
-        @NameInMap("PrimaryId")
+        @com.aliyun.core.annotation.NameInMap("PrimaryId")
         private Long primaryId;
 
-        @NameInMap("RaspDefend")
+        @com.aliyun.core.annotation.NameInMap("RaspDefend")
         private Integer raspDefend;
 
-        @NameInMap("RaspStatus")
+        @com.aliyun.core.annotation.NameInMap("RaspStatus")
         private Integer raspStatus;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Related")
+        @com.aliyun.core.annotation.NameInMap("Related")
         private String related;
 
-        @NameInMap("RepairTs")
+        @com.aliyun.core.annotation.NameInMap("RepairTs")
         private Long repairTs;
 
-        @NameInMap("ResultCode")
+        @com.aliyun.core.annotation.NameInMap("ResultCode")
         private String resultCode;
 
-        @NameInMap("ResultMessage")
+        @com.aliyun.core.annotation.NameInMap("ResultMessage")
         private String resultMessage;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private VulRecords(Builder builder) {

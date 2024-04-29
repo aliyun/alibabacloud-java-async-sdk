@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,41 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBruteForceRecordsRequest</p>
  */
 public class DescribeBruteForceRecordsRequest extends Request {
-    @Query
-    @NameInMap("BlockIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BlockIp")
     private String blockIp;
 
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    private String instanceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Remark")
+    private String remark;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
     private DescribeBruteForceRecordsRequest(Builder builder) {
         super(builder);
         this.blockIp = builder.blockIp;
         this.currentPage = builder.currentPage;
+        this.instanceId = builder.instanceId;
         this.pageSize = builder.pageSize;
+        this.remark = builder.remark;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.status = builder.status;
     }
@@ -69,10 +78,24 @@ public class DescribeBruteForceRecordsRequest extends Request {
     }
 
     /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
      * @return pageSize
      */
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    /**
+     * @return remark
+     */
+    public String getRemark() {
+        return this.remark;
     }
 
     /**
@@ -92,7 +115,9 @@ public class DescribeBruteForceRecordsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeBruteForceRecordsRequest, Builder> {
         private String blockIp; 
         private Integer currentPage; 
+        private String instanceId; 
         private Integer pageSize; 
+        private String remark; 
         private Long resourceOwnerId; 
         private Integer status; 
 
@@ -104,7 +129,9 @@ public class DescribeBruteForceRecordsRequest extends Request {
             super(request);
             this.blockIp = request.blockIp;
             this.currentPage = request.currentPage;
+            this.instanceId = request.instanceId;
             this.pageSize = request.pageSize;
+            this.remark = request.remark;
             this.resourceOwnerId = request.resourceOwnerId;
             this.status = request.status;
         } 
@@ -128,11 +155,29 @@ public class DescribeBruteForceRecordsRequest extends Request {
         }
 
         /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
          * The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page. We recommend that you do not leave this parameter empty.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * Remark.
+         */
+        public Builder remark(String remark) {
+            this.putQueryParameter("Remark", remark);
+            this.remark = remark;
             return this;
         }
 

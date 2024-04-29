@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetUserLangResponseBody</p>
  */
 public class GetUserLangResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SasUserLang")
+    @com.aliyun.core.annotation.NameInMap("SasUserLang")
     private SasUserLang sasUserLang;
 
     private GetUserLangResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class GetUserLangResponseBody extends TeaModel {
     } 
 
     public static class SasUserLang extends TeaModel {
-        @NameInMap("Lang")
+        @com.aliyun.core.annotation.NameInMap("Lang")
         private String lang;
 
         private SasUserLang(Builder builder) {

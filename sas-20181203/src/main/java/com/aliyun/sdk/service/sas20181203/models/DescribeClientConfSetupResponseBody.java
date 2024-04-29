@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeClientConfSetupResponseBody</p>
  */
 public class DescribeClientConfSetupResponseBody extends TeaModel {
-    @NameInMap("ClientConf")
+    @com.aliyun.core.annotation.NameInMap("ClientConf")
     private ClientConf clientConf;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeClientConfSetupResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeClientConfSetupResponseBody extends TeaModel {
     } 
 
     public static class ClientConf extends TeaModel {
-        @NameInMap("Config")
+        @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
 
-        @NameInMap("StrategyTag")
+        @com.aliyun.core.annotation.NameInMap("StrategyTag")
         private String strategyTag;
 
-        @NameInMap("StrategyTagValue")
+        @com.aliyun.core.annotation.NameInMap("StrategyTagValue")
         private String strategyTagValue;
 
         private ClientConf(Builder builder) {

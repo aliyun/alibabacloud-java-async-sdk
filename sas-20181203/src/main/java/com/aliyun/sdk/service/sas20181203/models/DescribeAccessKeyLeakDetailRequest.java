@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAccessKeyLeakDetailRequest</p>
  */
 public class DescribeAccessKeyLeakDetailRequest extends Request {
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long id;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
 
     private DescribeAccessKeyLeakDetailRequest(Builder builder) {
         super(builder);
         this.id = builder.id;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
     }
 
     public static Builder builder() {
@@ -42,8 +46,16 @@ public class DescribeAccessKeyLeakDetailRequest extends Request {
         return this.id;
     }
 
+    /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeAccessKeyLeakDetailRequest, Builder> {
         private Long id; 
+        private Long resourceDirectoryAccountId; 
 
         private Builder() {
             super();
@@ -52,6 +64,7 @@ public class DescribeAccessKeyLeakDetailRequest extends Request {
         private Builder(DescribeAccessKeyLeakDetailRequest request) {
             super(request);
             this.id = request.id;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
         } 
 
         /**
@@ -60,6 +73,15 @@ public class DescribeAccessKeyLeakDetailRequest extends Request {
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
             this.id = id;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

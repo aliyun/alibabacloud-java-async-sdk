@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRuleTargetAllResponseBody</p>
  */
 public class ListRuleTargetAllResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RuleTargetList")
+    @com.aliyun.core.annotation.NameInMap("RuleTargetList")
     private java.util.List < RuleTargetList> ruleTargetList;
 
     private ListRuleTargetAllResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class ListRuleTargetAllResponseBody extends TeaModel {
     } 
 
     public static class RuleTargetList extends TeaModel {
-        @NameInMap("TargetId")
+        @com.aliyun.core.annotation.NameInMap("TargetId")
         private Long targetId;
 
-        @NameInMap("TargetName")
+        @com.aliyun.core.annotation.NameInMap("TargetName")
         private String targetName;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
         private RuleTargetList(Builder builder) {

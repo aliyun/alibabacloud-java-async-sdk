@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyCreateVulWhitelistResponseBody</p>
  */
 public class ModifyCreateVulWhitelistResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VulWhitelistList")
+    @com.aliyun.core.annotation.NameInMap("VulWhitelistList")
     private java.util.List < VulWhitelistList> vulWhitelistList;
 
     private ModifyCreateVulWhitelistResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class ModifyCreateVulWhitelistResponseBody extends TeaModel {
     } 
 
     public static class VulWhitelistList extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
         private VulWhitelistList(Builder builder) {

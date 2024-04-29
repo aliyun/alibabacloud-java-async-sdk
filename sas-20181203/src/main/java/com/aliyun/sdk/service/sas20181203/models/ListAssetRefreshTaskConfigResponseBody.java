@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAssetRefreshTaskConfigResponseBody</p>
  */
 public class ListAssetRefreshTaskConfigResponseBody extends TeaModel {
-    @NameInMap("AssetRefreshConfig")
+    @com.aliyun.core.annotation.NameInMap("AssetRefreshConfig")
     private java.util.List < AssetRefreshConfig> assetRefreshConfig;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListAssetRefreshTaskConfigResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class ListAssetRefreshTaskConfigResponseBody extends TeaModel {
     } 
 
     public static class AssetRefreshConfig extends TeaModel {
-        @NameInMap("RefreshConfigType")
+        @com.aliyun.core.annotation.NameInMap("RefreshConfigType")
         private Integer refreshConfigType;
 
-        @NameInMap("SchedulePeriod")
+        @com.aliyun.core.annotation.NameInMap("SchedulePeriod")
         private Integer schedulePeriod;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Vendor")
+        @com.aliyun.core.annotation.NameInMap("Vendor")
         private Integer vendor;
 
         private AssetRefreshConfig(Builder builder) {

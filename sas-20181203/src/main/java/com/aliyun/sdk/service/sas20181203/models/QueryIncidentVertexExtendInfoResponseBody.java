@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryIncidentVertexExtendInfoResponseBody</p>
  */
 public class QueryIncidentVertexExtendInfoResponseBody extends TeaModel {
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private String count;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("VertexExtendInfo")
+    @com.aliyun.core.annotation.NameInMap("VertexExtendInfo")
     private java.util.List < VertexExtendInfo> vertexExtendInfo;
 
     private QueryIncidentVertexExtendInfoResponseBody(Builder builder) {
@@ -116,10 +115,10 @@ public class QueryIncidentVertexExtendInfoResponseBody extends TeaModel {
     } 
 
     public static class DisplayInfo extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private DisplayInfo(Builder builder) {
@@ -177,13 +176,13 @@ public class QueryIncidentVertexExtendInfoResponseBody extends TeaModel {
 
     }
     public static class NeighborList extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("HasMore")
+        @com.aliyun.core.annotation.NameInMap("HasMore")
         private Boolean hasMore;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private NeighborList(Builder builder) {
@@ -269,76 +268,76 @@ public class QueryIncidentVertexExtendInfoResponseBody extends TeaModel {
 
     }
     public static class Property extends TeaModel {
-        @NameInMap("AlertDesc")
+        @com.aliyun.core.annotation.NameInMap("AlertDesc")
         private String alertDesc;
 
-        @NameInMap("AlertDetail")
+        @com.aliyun.core.annotation.NameInMap("AlertDetail")
         private String alertDetail;
 
-        @NameInMap("AlertLevel")
+        @com.aliyun.core.annotation.NameInMap("AlertLevel")
         private String alertLevel;
 
-        @NameInMap("AlertName")
+        @com.aliyun.core.annotation.NameInMap("AlertName")
         private String alertName;
 
-        @NameInMap("AlertNameCode")
+        @com.aliyun.core.annotation.NameInMap("AlertNameCode")
         private String alertNameCode;
 
-        @NameInMap("AlertNameEn")
+        @com.aliyun.core.annotation.NameInMap("AlertNameEn")
         private String alertNameEn;
 
-        @NameInMap("AlertSrcProd")
+        @com.aliyun.core.annotation.NameInMap("AlertSrcProd")
         private String alertSrcProd;
 
-        @NameInMap("AlertSrcProdModule")
+        @com.aliyun.core.annotation.NameInMap("AlertSrcProdModule")
         private String alertSrcProdModule;
 
-        @NameInMap("AlertTitle")
+        @com.aliyun.core.annotation.NameInMap("AlertTitle")
         private String alertTitle;
 
-        @NameInMap("AlertType")
+        @com.aliyun.core.annotation.NameInMap("AlertType")
         private String alertType;
 
-        @NameInMap("AlertTypeCode")
+        @com.aliyun.core.annotation.NameInMap("AlertTypeCode")
         private String alertTypeCode;
 
-        @NameInMap("AlertTypeEn")
+        @com.aliyun.core.annotation.NameInMap("AlertTypeEn")
         private String alertTypeEn;
 
-        @NameInMap("AlertUuid")
+        @com.aliyun.core.annotation.NameInMap("AlertUuid")
         private String alertUuid;
 
-        @NameInMap("AssetList")
+        @com.aliyun.core.annotation.NameInMap("AssetList")
         private String assetList;
 
-        @NameInMap("AttCk")
+        @com.aliyun.core.annotation.NameInMap("AttCk")
         private String attCk;
 
-        @NameInMap("CloudCode")
+        @com.aliyun.core.annotation.NameInMap("CloudCode")
         private String cloudCode;
 
-        @NameInMap("EntityList")
+        @com.aliyun.core.annotation.NameInMap("EntityList")
         private String entityList;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("LogTime")
+        @com.aliyun.core.annotation.NameInMap("LogTime")
         private String logTime;
 
-        @NameInMap("LogUuid")
+        @com.aliyun.core.annotation.NameInMap("LogUuid")
         private String logUuid;
 
-        @NameInMap("MainUserId")
+        @com.aliyun.core.annotation.NameInMap("MainUserId")
         private String mainUserId;
 
-        @NameInMap("OccurTime")
+        @com.aliyun.core.annotation.NameInMap("OccurTime")
         private String occurTime;
 
-        @NameInMap("SubUserId")
+        @com.aliyun.core.annotation.NameInMap("SubUserId")
         private String subUserId;
 
         private Property(Builder builder) {
@@ -775,43 +774,43 @@ public class QueryIncidentVertexExtendInfoResponseBody extends TeaModel {
 
     }
     public static class VertexExtendInfo extends TeaModel {
-        @NameInMap("Aliuid")
+        @com.aliyun.core.annotation.NameInMap("Aliuid")
         private String aliuid;
 
-        @NameInMap("DisplayInfo")
+        @com.aliyun.core.annotation.NameInMap("DisplayInfo")
         private java.util.List < DisplayInfo> displayInfo;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Lang")
+        @com.aliyun.core.annotation.NameInMap("Lang")
         private String lang;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NeighborList")
+        @com.aliyun.core.annotation.NameInMap("NeighborList")
         private java.util.List < NeighborList> neighborList;
 
-        @NameInMap("Properties")
+        @com.aliyun.core.annotation.NameInMap("Properties")
         private String properties;
 
-        @NameInMap("Property")
+        @com.aliyun.core.annotation.NameInMap("Property")
         private Property property;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private VertexExtendInfo(Builder builder) {

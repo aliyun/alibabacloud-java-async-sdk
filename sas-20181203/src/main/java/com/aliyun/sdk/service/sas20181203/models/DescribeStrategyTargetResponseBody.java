@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeStrategyTargetResponseBody</p>
  */
 public class DescribeStrategyTargetResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StrategyTargets")
+    @com.aliyun.core.annotation.NameInMap("StrategyTargets")
     private java.util.List < StrategyTargets> strategyTargets;
 
     private DescribeStrategyTargetResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribeStrategyTargetResponseBody extends TeaModel {
     } 
 
     public static class StrategyTargets extends TeaModel {
-        @NameInMap("BindUuidCount")
+        @com.aliyun.core.annotation.NameInMap("BindUuidCount")
         private Integer bindUuidCount;
 
-        @NameInMap("Flag")
+        @com.aliyun.core.annotation.NameInMap("Flag")
         private String flag;
 
-        @NameInMap("Target")
+        @com.aliyun.core.annotation.NameInMap("Target")
         private String target;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
         private StrategyTargets(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAssetSummaryResponseBody</p>
  */
 public class DescribeAssetSummaryResponseBody extends TeaModel {
-    @NameInMap("AssetsSummary")
+    @com.aliyun.core.annotation.NameInMap("AssetsSummary")
     private AssetsSummary assetsSummary;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAssetSummaryResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeAssetSummaryResponseBody extends TeaModel {
     } 
 
     public static class AssetsSummary extends TeaModel {
-        @NameInMap("TotalAssetAllRegion")
+        @com.aliyun.core.annotation.NameInMap("TotalAssetAllRegion")
         private Integer totalAssetAllRegion;
 
-        @NameInMap("TotalCoreAllRegion")
+        @com.aliyun.core.annotation.NameInMap("TotalCoreAllRegion")
         private Integer totalCoreAllRegion;
 
-        @NameInMap("TotalCoreNum")
+        @com.aliyun.core.annotation.NameInMap("TotalCoreNum")
         private Integer totalCoreNum;
 
         private AssetsSummary(Builder builder) {

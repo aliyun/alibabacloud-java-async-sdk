@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateOrUpdateDingTalkRequest</p>
  */
 public class CreateOrUpdateDingTalkRequest extends Request {
-    @Query
-    @NameInMap("ConfigList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigList")
     private String configList;
 
-    @Query
-    @NameInMap("DingTalkLang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DingTalkLang")
     private String dingTalkLang;
 
-    @Query
-    @NameInMap("GroupIdList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupIdList")
     private String groupIdList;
 
-    @Query
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @Query
-    @NameInMap("IntervalTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntervalTime")
     private Long intervalTime;
 
-    @Query
-    @NameInMap("RuleActionName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleActionName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleActionName;
 
-    @Query
-    @NameInMap("SendUrl")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SendUrl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sendUrl;
 
     private CreateOrUpdateDingTalkRequest(Builder builder) {

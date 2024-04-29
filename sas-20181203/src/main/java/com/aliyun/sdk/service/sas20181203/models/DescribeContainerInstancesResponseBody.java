@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeContainerInstancesResponseBody</p>
  */
 public class DescribeContainerInstancesResponseBody extends TeaModel {
-    @NameInMap("ContainerInstanceList")
+    @com.aliyun.core.annotation.NameInMap("ContainerInstanceList")
     private java.util.List < ContainerInstanceList> containerInstanceList;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeContainerInstancesResponseBody(Builder builder) {
@@ -92,97 +91,97 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
     } 
 
     public static class ContainerInstanceList extends TeaModel {
-        @NameInMap("AlarmCount")
+        @com.aliyun.core.annotation.NameInMap("AlarmCount")
         private Integer alarmCount;
 
-        @NameInMap("AlarmStatus")
+        @com.aliyun.core.annotation.NameInMap("AlarmStatus")
         private String alarmStatus;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("ContainerId")
+        @com.aliyun.core.annotation.NameInMap("ContainerId")
         private String containerId;
 
-        @NameInMap("CreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
-        @NameInMap("Exposed")
+        @com.aliyun.core.annotation.NameInMap("Exposed")
         private Integer exposed;
 
-        @NameInMap("ExposedDetail")
+        @com.aliyun.core.annotation.NameInMap("ExposedDetail")
         private String exposedDetail;
 
-        @NameInMap("HcCount")
+        @com.aliyun.core.annotation.NameInMap("HcCount")
         private Integer hcCount;
 
-        @NameInMap("HcStatus")
+        @com.aliyun.core.annotation.NameInMap("HcStatus")
         private String hcStatus;
 
-        @NameInMap("HostIp")
+        @com.aliyun.core.annotation.NameInMap("HostIp")
         private String hostIp;
 
-        @NameInMap("Image")
+        @com.aliyun.core.annotation.NameInMap("Image")
         private String image;
 
-        @NameInMap("ImageDigest")
+        @com.aliyun.core.annotation.NameInMap("ImageDigest")
         private String imageDigest;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("ImageRepoName")
+        @com.aliyun.core.annotation.NameInMap("ImageRepoName")
         private String imageRepoName;
 
-        @NameInMap("ImageRepoNamespace")
+        @com.aliyun.core.annotation.NameInMap("ImageRepoNamespace")
         private String imageRepoNamespace;
 
-        @NameInMap("ImageRepoTag")
+        @com.aliyun.core.annotation.NameInMap("ImageRepoTag")
         private String imageRepoTag;
 
-        @NameInMap("ImageUuid")
+        @com.aliyun.core.annotation.NameInMap("ImageUuid")
         private String imageUuid;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("NodeInfo")
+        @com.aliyun.core.annotation.NameInMap("NodeInfo")
         private String nodeInfo;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("Pod")
+        @com.aliyun.core.annotation.NameInMap("Pod")
         private String pod;
 
-        @NameInMap("PodIp")
+        @com.aliyun.core.annotation.NameInMap("PodIp")
         private String podIp;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RiskCount")
+        @com.aliyun.core.annotation.NameInMap("RiskCount")
         private String riskCount;
 
-        @NameInMap("RiskStatus")
+        @com.aliyun.core.annotation.NameInMap("RiskStatus")
         private String riskStatus;
 
-        @NameInMap("UpdateMark")
+        @com.aliyun.core.annotation.NameInMap("UpdateMark")
         private String updateMark;
 
-        @NameInMap("VulCount")
+        @com.aliyun.core.annotation.NameInMap("VulCount")
         private Integer vulCount;
 
-        @NameInMap("VulStatus")
+        @com.aliyun.core.annotation.NameInMap("VulStatus")
         private String vulStatus;
 
         private ContainerInstanceList(Builder builder) {
@@ -753,16 +752,16 @@ public class DescribeContainerInstancesResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {

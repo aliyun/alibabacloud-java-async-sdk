@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyContainerDefenseRuleRequest</p>
  */
 public class ModifyContainerDefenseRuleRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("RuleAction")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleAction")
     private Integer ruleAction;
 
-    @Query
-    @NameInMap("RuleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
     private Long ruleId;
 
-    @Query
-    @NameInMap("RuleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleName")
     private String ruleName;
 
-    @Query
-    @NameInMap("RuleSwitch")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleSwitch")
     private Integer ruleSwitch;
 
-    @Query
-    @NameInMap("RuleType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleType")
     private Integer ruleType;
 
-    @Query
-    @NameInMap("Scope")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scope")
     private java.util.List < Scope> scope;
 
-    @Query
-    @NameInMap("Whitelist")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Whitelist")
     private Whitelist whitelist;
 
     private ModifyContainerDefenseRuleRequest(Builder builder) {
@@ -247,13 +246,13 @@ public class ModifyContainerDefenseRuleRequest extends Request {
     } 
 
     public static class Scope extends TeaModel {
-        @NameInMap("AllNamespace")
+        @com.aliyun.core.annotation.NameInMap("AllNamespace")
         private Integer allNamespace;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("Namespaces")
+        @com.aliyun.core.annotation.NameInMap("Namespaces")
         private java.util.List < String > namespaces;
 
         private Scope(Builder builder) {
@@ -335,13 +334,13 @@ public class ModifyContainerDefenseRuleRequest extends Request {
 
     }
     public static class Whitelist extends TeaModel {
-        @NameInMap("Hash")
+        @com.aliyun.core.annotation.NameInMap("Hash")
         private java.util.List < String > hash;
 
-        @NameInMap("Image")
+        @com.aliyun.core.annotation.NameInMap("Image")
         private java.util.List < String > image;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private java.util.List < String > path;
 
         private Whitelist(Builder builder) {

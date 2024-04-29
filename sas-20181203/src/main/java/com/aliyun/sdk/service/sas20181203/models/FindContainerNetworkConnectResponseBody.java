@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>FindContainerNetworkConnectResponseBody</p>
  */
 public class FindContainerNetworkConnectResponseBody extends TeaModel {
-    @NameInMap("Connects")
+    @com.aliyun.core.annotation.NameInMap("Connects")
     private java.util.List < Connects> connects;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private FindContainerNetworkConnectResponseBody(Builder builder) {
@@ -92,7 +91,7 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
     } 
 
     public static class DstContainer extends TeaModel {
-        @NameInMap("ContainerId")
+        @com.aliyun.core.annotation.NameInMap("ContainerId")
         private String containerId;
 
         private DstContainer(Builder builder) {
@@ -133,7 +132,7 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
 
     }
     public static class SrcContainer extends TeaModel {
-        @NameInMap("ContainerId")
+        @com.aliyun.core.annotation.NameInMap("ContainerId")
         private String containerId;
 
         private SrcContainer(Builder builder) {
@@ -174,31 +173,31 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
 
     }
     public static class Connects extends TeaModel {
-        @NameInMap("DstContainer")
+        @com.aliyun.core.annotation.NameInMap("DstContainer")
         private DstContainer dstContainer;
 
-        @NameInMap("DstIp")
+        @com.aliyun.core.annotation.NameInMap("DstIp")
         private String dstIp;
 
-        @NameInMap("DstPort")
+        @com.aliyun.core.annotation.NameInMap("DstPort")
         private String dstPort;
 
-        @NameInMap("FirstTime")
+        @com.aliyun.core.annotation.NameInMap("FirstTime")
         private Long firstTime;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("LastTime")
+        @com.aliyun.core.annotation.NameInMap("LastTime")
         private Long lastTime;
 
-        @NameInMap("SrcContainer")
+        @com.aliyun.core.annotation.NameInMap("SrcContainer")
         private SrcContainer srcContainer;
 
-        @NameInMap("SrcIp")
+        @com.aliyun.core.annotation.NameInMap("SrcIp")
         private String srcIp;
 
-        @NameInMap("SrcPort")
+        @com.aliyun.core.annotation.NameInMap("SrcPort")
         private String srcPort;
 
         private Connects(Builder builder) {
@@ -381,16 +380,16 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Long currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Long pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private PageInfo(Builder builder) {

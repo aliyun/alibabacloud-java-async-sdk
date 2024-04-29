@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVulConfigResponseBody</p>
  */
 public class DescribeVulConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TargetConfigs")
+    @com.aliyun.core.annotation.NameInMap("TargetConfigs")
     private java.util.List < TargetConfigs> targetConfigs;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeVulConfigResponseBody(Builder builder) {
@@ -92,13 +91,13 @@ public class DescribeVulConfigResponseBody extends TeaModel {
     } 
 
     public static class TargetConfigs extends TeaModel {
-        @NameInMap("Config")
+        @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
 
-        @NameInMap("OverAllConfig")
+        @com.aliyun.core.annotation.NameInMap("OverAllConfig")
         private String overAllConfig;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private TargetConfigs(Builder builder) {

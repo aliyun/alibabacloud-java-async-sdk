@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListOssBucketScanInfoResponseBody</p>
  */
 public class ListOssBucketScanInfoResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListOssBucketScanInfoResponseBody(Builder builder) {
@@ -92,52 +91,52 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("BucketName")
+        @com.aliyun.core.annotation.NameInMap("BucketName")
         private String bucketName;
 
-        @NameInMap("ConfigStatus")
+        @com.aliyun.core.annotation.NameInMap("ConfigStatus")
         private Integer configStatus;
 
-        @NameInMap("DecompressStatus")
+        @com.aliyun.core.annotation.NameInMap("DecompressStatus")
         private Integer decompressStatus;
 
-        @NameInMap("HighRisk")
+        @com.aliyun.core.annotation.NameInMap("HighRisk")
         private Long highRisk;
 
-        @NameInMap("LastScanEndTime")
+        @com.aliyun.core.annotation.NameInMap("LastScanEndTime")
         private Long lastScanEndTime;
 
-        @NameInMap("LastScanTime")
+        @com.aliyun.core.annotation.NameInMap("LastScanTime")
         private Long lastScanTime;
 
-        @NameInMap("LowRisk")
+        @com.aliyun.core.annotation.NameInMap("LowRisk")
         private Long lowRisk;
 
-        @NameInMap("MediumRisk")
+        @com.aliyun.core.annotation.NameInMap("MediumRisk")
         private Long mediumRisk;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ScanObject")
+        @com.aliyun.core.annotation.NameInMap("ScanObject")
         private Long scanObject;
 
-        @NameInMap("Scanned")
+        @com.aliyun.core.annotation.NameInMap("Scanned")
         private Boolean scanned;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("StorageClass")
+        @com.aliyun.core.annotation.NameInMap("StorageClass")
         private String storageClass;
 
-        @NameInMap("Support")
+        @com.aliyun.core.annotation.NameInMap("Support")
         private Boolean support;
 
-        @NameInMap("TotalObject")
+        @com.aliyun.core.annotation.NameInMap("TotalObject")
         private Long totalObject;
 
         private Data(Builder builder) {
@@ -458,13 +457,13 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstanceRiskNumResponseBody</p>
  */
 public class ListInstanceRiskNumResponseBody extends TeaModel {
-    @NameInMap("InstanceRiskNum")
+    @com.aliyun.core.annotation.NameInMap("InstanceRiskNum")
     private java.util.List < InstanceRiskNum> instanceRiskNum;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListInstanceRiskNumResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
     } 
 
     public static class InstanceItem extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private InstanceItem(Builder builder) {
@@ -133,25 +132,25 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
 
     }
     public static class RiskNumEntity extends TeaModel {
-        @NameInMap("SuspiciousHighCount")
+        @com.aliyun.core.annotation.NameInMap("SuspiciousHighCount")
         private Integer suspiciousHighCount;
 
-        @NameInMap("SuspiciousLowCount")
+        @com.aliyun.core.annotation.NameInMap("SuspiciousLowCount")
         private Integer suspiciousLowCount;
 
-        @NameInMap("SuspiciousMediumCount")
+        @com.aliyun.core.annotation.NameInMap("SuspiciousMediumCount")
         private Integer suspiciousMediumCount;
 
-        @NameInMap("VulHighCount")
+        @com.aliyun.core.annotation.NameInMap("VulHighCount")
         private Integer vulHighCount;
 
-        @NameInMap("VulLowCount")
+        @com.aliyun.core.annotation.NameInMap("VulLowCount")
         private Integer vulLowCount;
 
-        @NameInMap("VulMediumCount")
+        @com.aliyun.core.annotation.NameInMap("VulMediumCount")
         private Integer vulMediumCount;
 
-        @NameInMap("WeakPassWordCount")
+        @com.aliyun.core.annotation.NameInMap("WeakPassWordCount")
         private Integer weakPassWordCount;
 
         private RiskNumEntity(Builder builder) {
@@ -294,10 +293,10 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
 
     }
     public static class InstanceRiskNum extends TeaModel {
-        @NameInMap("InstanceItem")
+        @com.aliyun.core.annotation.NameInMap("InstanceItem")
         private InstanceItem instanceItem;
 
-        @NameInMap("RiskNumEntity")
+        @com.aliyun.core.annotation.NameInMap("RiskNumEntity")
         private RiskNumEntity riskNumEntity;
 
         private InstanceRiskNum(Builder builder) {

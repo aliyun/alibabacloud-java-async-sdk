@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetClientInstallationStatisticRequest</p>
  */
 public class GetClientInstallationStatisticRequest extends Request {
-    @Query
-    @NameInMap("TimeEnd")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeEnd")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long timeEnd;
 
-    @Query
-    @NameInMap("TimeStart")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeStart")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long timeStart;
 
     private GetClientInstallationStatisticRequest(Builder builder) {

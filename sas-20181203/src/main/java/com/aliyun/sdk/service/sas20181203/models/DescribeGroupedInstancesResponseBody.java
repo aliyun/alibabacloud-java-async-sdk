@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeGroupedInstancesResponseBody</p>
  */
 public class DescribeGroupedInstancesResponseBody extends TeaModel {
-    @NameInMap("Instances")
+    @com.aliyun.core.annotation.NameInMap("Instances")
     private java.util.List < Instances> instances;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeGroupedInstancesResponseBody(Builder builder) {
@@ -92,28 +91,28 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
     } 
 
     public static class Instances extends TeaModel {
-        @NameInMap("AsapVulInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("AsapVulInstanceCount")
         private Long asapVulInstanceCount;
 
-        @NameInMap("AuthVersionCheckCount")
+        @com.aliyun.core.annotation.NameInMap("AuthVersionCheckCount")
         private Integer authVersionCheckCount;
 
-        @NameInMap("FieldAliasName")
+        @com.aliyun.core.annotation.NameInMap("FieldAliasName")
         private String fieldAliasName;
 
-        @NameInMap("GroupFlag")
+        @com.aliyun.core.annotation.NameInMap("GroupFlag")
         private Integer groupFlag;
 
-        @NameInMap("InstanceCount")
+        @com.aliyun.core.annotation.NameInMap("InstanceCount")
         private String instanceCount;
 
-        @NameInMap("Os")
+        @com.aliyun.core.annotation.NameInMap("Os")
         private String os;
 
-        @NameInMap("RiskInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("RiskInstanceCount")
         private String riskInstanceCount;
 
-        @NameInMap("UnProtectedInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("UnProtectedInstanceCount")
         private String unProtectedInstanceCount;
 
         private Instances(Builder builder) {
@@ -286,16 +285,16 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {

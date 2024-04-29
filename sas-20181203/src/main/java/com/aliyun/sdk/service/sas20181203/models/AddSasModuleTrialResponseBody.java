@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddSasModuleTrialResponseBody</p>
  */
 public class AddSasModuleTrialResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AddSasModuleTrialResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class AddSasModuleTrialResponseBody extends TeaModel {
     } 
 
     public static class TrialRecordList extends TeaModel {
-        @NameInMap("AuthLimit")
+        @com.aliyun.core.annotation.NameInMap("AuthLimit")
         private Long authLimit;
 
-        @NameInMap("AuthLimitList")
+        @com.aliyun.core.annotation.NameInMap("AuthLimitList")
         private String authLimitList;
 
-        @NameInMap("GmtEnd")
+        @com.aliyun.core.annotation.NameInMap("GmtEnd")
         private Long gmtEnd;
 
-        @NameInMap("GmtStart")
+        @com.aliyun.core.annotation.NameInMap("GmtStart")
         private Long gmtStart;
 
-        @NameInMap("ModuleCode")
+        @com.aliyun.core.annotation.NameInMap("ModuleCode")
         private String moduleCode;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private TrialRecordList(Builder builder) {
@@ -221,7 +220,7 @@ public class AddSasModuleTrialResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("TrialRecordList")
+        @com.aliyun.core.annotation.NameInMap("TrialRecordList")
         private java.util.List < TrialRecordList> trialRecordList;
 
         private Data(Builder builder) {

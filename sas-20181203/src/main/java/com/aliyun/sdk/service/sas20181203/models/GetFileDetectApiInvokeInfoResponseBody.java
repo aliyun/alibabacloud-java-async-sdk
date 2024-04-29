@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetFileDetectApiInvokeInfoResponseBody</p>
  */
 public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetFileDetectApiInvokeInfoResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AuthCount")
+        @com.aliyun.core.annotation.NameInMap("AuthCount")
         private Long authCount;
 
-        @NameInMap("Expire")
+        @com.aliyun.core.annotation.NameInMap("Expire")
         private Long expire;
 
-        @NameInMap("FlowRate")
+        @com.aliyun.core.annotation.NameInMap("FlowRate")
         private Integer flowRate;
 
-        @NameInMap("RemainAuthCount")
+        @com.aliyun.core.annotation.NameInMap("RemainAuthCount")
         private Long remainAuthCount;
 
-        @NameInMap("SaleVersion")
+        @com.aliyun.core.annotation.NameInMap("SaleVersion")
         private Integer saleVersion;
 
-        @NameInMap("TimeUnit")
+        @com.aliyun.core.annotation.NameInMap("TimeUnit")
         private String timeUnit;
 
         private Data(Builder builder) {

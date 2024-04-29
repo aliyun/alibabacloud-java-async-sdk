@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLoginSwitchConfigsResponseBody</p>
  */
 public class DescribeLoginSwitchConfigsResponseBody extends TeaModel {
-    @NameInMap("ConfigList")
+    @com.aliyun.core.annotation.NameInMap("ConfigList")
     private java.util.List < ConfigList> configList;
 
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeLoginSwitchConfigsResponseBody(Builder builder) {
@@ -92,10 +91,10 @@ public class DescribeLoginSwitchConfigsResponseBody extends TeaModel {
     } 
 
     public static class ConfigList extends TeaModel {
-        @NameInMap("Item")
+        @com.aliyun.core.annotation.NameInMap("Item")
         private String item;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private ConfigList(Builder builder) {

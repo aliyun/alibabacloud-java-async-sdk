@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,38 +11,38 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateOssBucketScanTaskRequest</p>
  */
 public class CreateOssBucketScanTaskRequest extends Request {
-    @Query
-    @NameInMap("AllKeyPrefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllKeyPrefix")
     private Boolean allKeyPrefix;
 
-    @Query
-    @NameInMap("BucketNameList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BucketNameList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > bucketNameList;
 
-    @Query
-    @NameInMap("DecompressMaxFileCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DecompressMaxFileCount")
     private Integer decompressMaxFileCount;
 
-    @Query
-    @NameInMap("DecompressMaxLayer")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DecompressMaxLayer")
     private Integer decompressMaxLayer;
 
-    @Query
-    @NameInMap("ExcludeKeySuffixList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExcludeKeySuffixList")
     private java.util.List < String > excludeKeySuffixList;
 
-    @Query
-    @NameInMap("KeyPrefixList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyPrefixList")
     private java.util.List < String > keyPrefixList;
 
-    @Query
-    @NameInMap("KeySuffixList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeySuffixList")
     private java.util.List < String > keySuffixList;
 
-    @Query
-    @NameInMap("ScanMode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScanMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer scanMode;
 
     private CreateOssBucketScanTaskRequest(Builder builder) {

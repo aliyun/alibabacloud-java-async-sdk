@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ChangeCheckCustomConfigResponseBody</p>
  */
 public class ChangeCheckCustomConfigResponseBody extends TeaModel {
-    @NameInMap("IllegalCustomConfigs")
+    @com.aliyun.core.annotation.NameInMap("IllegalCustomConfigs")
     private java.util.List < IllegalCustomConfigs> illegalCustomConfigs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("IllegalRepairConfigs")
+    private java.util.List < IllegalRepairConfigs> illegalRepairConfigs;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ChangeCheckCustomConfigResponseBody(Builder builder) {
         this.illegalCustomConfigs = builder.illegalCustomConfigs;
+        this.illegalRepairConfigs = builder.illegalRepairConfigs;
         this.requestId = builder.requestId;
     }
 
@@ -39,6 +42,13 @@ public class ChangeCheckCustomConfigResponseBody extends TeaModel {
     }
 
     /**
+     * @return illegalRepairConfigs
+     */
+    public java.util.List < IllegalRepairConfigs> getIllegalRepairConfigs() {
+        return this.illegalRepairConfigs;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -47,6 +57,7 @@ public class ChangeCheckCustomConfigResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List < IllegalCustomConfigs> illegalCustomConfigs; 
+        private java.util.List < IllegalRepairConfigs> illegalRepairConfigs; 
         private String requestId; 
 
         /**
@@ -54,6 +65,14 @@ public class ChangeCheckCustomConfigResponseBody extends TeaModel {
          */
         public Builder illegalCustomConfigs(java.util.List < IllegalCustomConfigs> illegalCustomConfigs) {
             this.illegalCustomConfigs = illegalCustomConfigs;
+            return this;
+        }
+
+        /**
+         * IllegalRepairConfigs.
+         */
+        public Builder illegalRepairConfigs(java.util.List < IllegalRepairConfigs> illegalRepairConfigs) {
+            this.illegalRepairConfigs = illegalRepairConfigs;
             return this;
         }
 
@@ -72,7 +91,7 @@ public class ChangeCheckCustomConfigResponseBody extends TeaModel {
     } 
 
     public static class IllegalCustomConfigs extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private IllegalCustomConfigs(Builder builder) {
@@ -107,6 +126,47 @@ public class ChangeCheckCustomConfigResponseBody extends TeaModel {
 
             public IllegalCustomConfigs build() {
                 return new IllegalCustomConfigs(this);
+            } 
+
+        } 
+
+    }
+    public static class IllegalRepairConfigs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        private IllegalRepairConfigs(Builder builder) {
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static IllegalRepairConfigs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String name; 
+
+            /**
+             * The name of the custom configuration item. The name of a custom configuration item is unique in a check item.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public IllegalRepairConfigs build() {
+                return new IllegalRepairConfigs(this);
             } 
 
         } 

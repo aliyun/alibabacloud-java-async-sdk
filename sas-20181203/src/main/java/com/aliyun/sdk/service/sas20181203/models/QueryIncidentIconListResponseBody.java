@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryIncidentIconListResponseBody</p>
  */
 public class QueryIncidentIconListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("InfoList")
+    @com.aliyun.core.annotation.NameInMap("InfoList")
     private InfoList infoList;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TimeCost")
+    @com.aliyun.core.annotation.NameInMap("TimeCost")
     private Long timeCost;
 
     private QueryIncidentIconListResponseBody(Builder builder) {
@@ -180,37 +179,37 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
     } 
 
     public static class EntityTypeList extends TeaModel {
-        @NameInMap("DisplayColor")
+        @com.aliyun.core.annotation.NameInMap("DisplayColor")
         private String displayColor;
 
-        @NameInMap("DisplayIcon")
+        @com.aliyun.core.annotation.NameInMap("DisplayIcon")
         private String displayIcon;
 
-        @NameInMap("DisplayOrder")
+        @com.aliyun.core.annotation.NameInMap("DisplayOrder")
         private String displayOrder;
 
-        @NameInMap("DisplayTemplate")
+        @com.aliyun.core.annotation.NameInMap("DisplayTemplate")
         private String displayTemplate;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("IsVirtualNode")
+        @com.aliyun.core.annotation.NameInMap("IsVirtualNode")
         private String isVirtualNode;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("TraceSuccessFlag")
+        @com.aliyun.core.annotation.NameInMap("TraceSuccessFlag")
         private String traceSuccessFlag;
 
         private EntityTypeList(Builder builder) {
@@ -425,34 +424,34 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
 
     }
     public static class RelationTypeList extends TeaModel {
-        @NameInMap("Directed")
+        @com.aliyun.core.annotation.NameInMap("Directed")
         private String directed;
 
-        @NameInMap("DisplayColor")
+        @com.aliyun.core.annotation.NameInMap("DisplayColor")
         private String displayColor;
 
-        @NameInMap("DisplayIcon")
+        @com.aliyun.core.annotation.NameInMap("DisplayIcon")
         private String displayIcon;
 
-        @NameInMap("DisplayTemplate")
+        @com.aliyun.core.annotation.NameInMap("DisplayTemplate")
         private String displayTemplate;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("ShowType")
+        @com.aliyun.core.annotation.NameInMap("ShowType")
         private String showType;
 
         private RelationTypeList(Builder builder) {
@@ -650,10 +649,10 @@ public class QueryIncidentIconListResponseBody extends TeaModel {
 
     }
     public static class InfoList extends TeaModel {
-        @NameInMap("EntityTypeList")
+        @com.aliyun.core.annotation.NameInMap("EntityTypeList")
         private java.util.List < EntityTypeList> entityTypeList;
 
-        @NameInMap("RelationTypeList")
+        @com.aliyun.core.annotation.NameInMap("RelationTypeList")
         private java.util.List < RelationTypeList> relationTypeList;
 
         private InfoList(Builder builder) {

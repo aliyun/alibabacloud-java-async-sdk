@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSecurityCheckScheduleConfigResponseBody</p>
  */
 public class DescribeSecurityCheckScheduleConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RiskCheckJobConfig")
+    @com.aliyun.core.annotation.NameInMap("RiskCheckJobConfig")
     private RiskCheckJobConfig riskCheckJobConfig;
 
     private DescribeSecurityCheckScheduleConfigResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeSecurityCheckScheduleConfigResponseBody extends TeaModel {
     } 
 
     public static class RiskCheckJobConfig extends TeaModel {
-        @NameInMap("DaysOfWeek")
+        @com.aliyun.core.annotation.NameInMap("DaysOfWeek")
         private String daysOfWeek;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Integer endTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Integer startTime;
 
         private RiskCheckJobConfig(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyClusterCnnfStatusUserConfirmRequest</p>
  */
 public class ModifyClusterCnnfStatusUserConfirmRequest extends Request {
-    @Query
-    @NameInMap("ClusterIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterIds")
     private java.util.List < String > clusterIds;
 
-    @Query
-    @NameInMap("UserConfirm")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserConfirm")
     private Boolean userConfirm;
 
     private ModifyClusterCnnfStatusUserConfirmRequest(Builder builder) {

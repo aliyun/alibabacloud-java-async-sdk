@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAgentlessScanTaskRequest</p>
  */
 public class CreateAgentlessScanTaskRequest extends Request {
-    @Query
-    @NameInMap("AutoDeleteDays")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoDeleteDays")
     private Integer autoDeleteDays;
 
-    @Query
-    @NameInMap("ReleaseAfterScan")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReleaseAfterScan")
     private Boolean releaseAfterScan;
 
-    @Query
-    @NameInMap("ScanDataDisk")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScanDataDisk")
     private Boolean scanDataDisk;
 
-    @Query
-    @NameInMap("TargetType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetType")
     private Integer targetType;
 
-    @Query
-    @NameInMap("UuidList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UuidList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > uuidList;
 
     private CreateAgentlessScanTaskRequest(Builder builder) {

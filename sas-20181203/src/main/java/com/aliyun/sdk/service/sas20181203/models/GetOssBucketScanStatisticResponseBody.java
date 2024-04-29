@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetOssBucketScanStatisticResponseBody</p>
  */
 public class GetOssBucketScanStatisticResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetOssBucketScanStatisticResponseBody(Builder builder) {
@@ -72,34 +71,34 @@ public class GetOssBucketScanStatisticResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private Long expireTime;
 
-        @NameInMap("HighRisk")
+        @com.aliyun.core.annotation.NameInMap("HighRisk")
         private Long highRisk;
 
-        @NameInMap("LowRisk")
+        @com.aliyun.core.annotation.NameInMap("LowRisk")
         private Long lowRisk;
 
-        @NameInMap("MediumRisk")
+        @com.aliyun.core.annotation.NameInMap("MediumRisk")
         private Long mediumRisk;
 
-        @NameInMap("NoScanBucket")
+        @com.aliyun.core.annotation.NameInMap("NoScanBucket")
         private Integer noScanBucket;
 
-        @NameInMap("RemainAuth")
+        @com.aliyun.core.annotation.NameInMap("RemainAuth")
         private Integer remainAuth;
 
-        @NameInMap("RiskBucket")
+        @com.aliyun.core.annotation.NameInMap("RiskBucket")
         private Integer riskBucket;
 
-        @NameInMap("ScanObject")
+        @com.aliyun.core.annotation.NameInMap("ScanObject")
         private Long scanObject;
 
-        @NameInMap("TotalBucket")
+        @com.aliyun.core.annotation.NameInMap("TotalBucket")
         private Integer totalBucket;
 
-        @NameInMap("TotalObject")
+        @com.aliyun.core.annotation.NameInMap("TotalObject")
         private Long totalObject;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,58 +11,58 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSuspEventDetailResponseBody</p>
  */
 public class DescribeSuspEventDetailResponseBody extends TeaModel {
-    @NameInMap("CanBeDealOnLine")
+    @com.aliyun.core.annotation.NameInMap("CanBeDealOnLine")
     private Boolean canBeDealOnLine;
 
-    @NameInMap("DataSource")
+    @com.aliyun.core.annotation.NameInMap("DataSource")
     private String dataSource;
 
-    @NameInMap("Details")
+    @com.aliyun.core.annotation.NameInMap("Details")
     private java.util.List < Details> details;
 
-    @NameInMap("EventDesc")
+    @com.aliyun.core.annotation.NameInMap("EventDesc")
     private String eventDesc;
 
-    @NameInMap("EventName")
+    @com.aliyun.core.annotation.NameInMap("EventName")
     private String eventName;
 
-    @NameInMap("EventStatus")
+    @com.aliyun.core.annotation.NameInMap("EventStatus")
     private String eventStatus;
 
-    @NameInMap("EventTypeDesc")
+    @com.aliyun.core.annotation.NameInMap("EventTypeDesc")
     private String eventTypeDesc;
 
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Integer id;
 
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @NameInMap("InternetIp")
+    @com.aliyun.core.annotation.NameInMap("InternetIp")
     private String internetIp;
 
-    @NameInMap("IntranetIp")
+    @com.aliyun.core.annotation.NameInMap("IntranetIp")
     private String intranetIp;
 
-    @NameInMap("LastTime")
+    @com.aliyun.core.annotation.NameInMap("LastTime")
     private String lastTime;
 
-    @NameInMap("Level")
+    @com.aliyun.core.annotation.NameInMap("Level")
     private String level;
 
-    @NameInMap("OperateErrorCode")
+    @com.aliyun.core.annotation.NameInMap("OperateErrorCode")
     private String operateErrorCode;
 
-    @NameInMap("OperateMsg")
+    @com.aliyun.core.annotation.NameInMap("OperateMsg")
     private String operateMsg;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SaleVersion")
+    @com.aliyun.core.annotation.NameInMap("SaleVersion")
     private String saleVersion;
 
-    @NameInMap("Uuid")
+    @com.aliyun.core.annotation.NameInMap("Uuid")
     private String uuid;
 
     private DescribeSuspEventDetailResponseBody(Builder builder) {
@@ -415,13 +414,13 @@ public class DescribeSuspEventDetailResponseBody extends TeaModel {
     } 
 
     public static class Details extends TeaModel {
-        @NameInMap("NameDisplay")
+        @com.aliyun.core.annotation.NameInMap("NameDisplay")
         private String nameDisplay;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Details(Builder builder) {

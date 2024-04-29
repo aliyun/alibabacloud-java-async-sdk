@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetVirusScanConfigResponseBody</p>
  */
 public class GetVirusScanConfigResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetVirusScanConfigResponseBody(Builder builder) {
@@ -72,34 +71,34 @@ public class GetVirusScanConfigResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("ConfigId")
+        @com.aliyun.core.annotation.NameInMap("ConfigId")
         private String configId;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Integer enable;
 
-        @NameInMap("IntervalPeriod")
+        @com.aliyun.core.annotation.NameInMap("IntervalPeriod")
         private Integer intervalPeriod;
 
-        @NameInMap("PeriodUnit")
+        @com.aliyun.core.annotation.NameInMap("PeriodUnit")
         private String periodUnit;
 
-        @NameInMap("ScanPath")
+        @com.aliyun.core.annotation.NameInMap("ScanPath")
         private java.util.List < String > scanPath;
 
-        @NameInMap("ScanType")
+        @com.aliyun.core.annotation.NameInMap("ScanType")
         private String scanType;
 
-        @NameInMap("SelectionKey")
+        @com.aliyun.core.annotation.NameInMap("SelectionKey")
         private String selectionKey;
 
-        @NameInMap("TargetEndTime")
+        @com.aliyun.core.annotation.NameInMap("TargetEndTime")
         private Integer targetEndTime;
 
-        @NameInMap("TargetStartTime")
+        @com.aliyun.core.annotation.NameInMap("TargetStartTime")
         private Integer targetStartTime;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
         private Data(Builder builder) {

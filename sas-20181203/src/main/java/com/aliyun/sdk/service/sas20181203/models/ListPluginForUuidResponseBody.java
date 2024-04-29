@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPluginForUuidResponseBody</p>
  */
 public class ListPluginForUuidResponseBody extends TeaModel {
-    @NameInMap("AegisUuidTargetPluginConfigList")
+    @com.aliyun.core.annotation.NameInMap("AegisUuidTargetPluginConfigList")
     private java.util.List < AegisUuidTargetPluginConfigList> aegisUuidTargetPluginConfigList;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListPluginForUuidResponseBody(Builder builder) {
@@ -112,16 +111,16 @@ public class ListPluginForUuidResponseBody extends TeaModel {
     } 
 
     public static class AegisSuspiciousConfigList extends TeaModel {
-        @NameInMap("Config")
+        @com.aliyun.core.annotation.NameInMap("Config")
         private Boolean config;
 
-        @NameInMap("Msg")
+        @com.aliyun.core.annotation.NameInMap("Msg")
         private String msg;
 
-        @NameInMap("OverallConfig")
+        @com.aliyun.core.annotation.NameInMap("OverallConfig")
         private Boolean overallConfig;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private AegisSuspiciousConfigList(Builder builder) {
@@ -232,22 +231,22 @@ public class ListPluginForUuidResponseBody extends TeaModel {
 
     }
     public static class AegisUuidTargetPluginConfigList extends TeaModel {
-        @NameInMap("AegisSuspiciousConfigList")
+        @com.aliyun.core.annotation.NameInMap("AegisSuspiciousConfigList")
         private java.util.List < AegisSuspiciousConfigList> aegisSuspiciousConfigList;
 
-        @NameInMap("PluginInstallCode")
+        @com.aliyun.core.annotation.NameInMap("PluginInstallCode")
         private String pluginInstallCode;
 
-        @NameInMap("PluginName")
+        @com.aliyun.core.annotation.NameInMap("PluginName")
         private String pluginName;
 
-        @NameInMap("PluginOnlineInstalled")
+        @com.aliyun.core.annotation.NameInMap("PluginOnlineInstalled")
         private Boolean pluginOnlineInstalled;
 
-        @NameInMap("PluginOnlineStatus")
+        @com.aliyun.core.annotation.NameInMap("PluginOnlineStatus")
         private Boolean pluginOnlineStatus;
 
-        @NameInMap("PluginVersion")
+        @com.aliyun.core.annotation.NameInMap("PluginVersion")
         private String pluginVersion;
 
         private AegisUuidTargetPluginConfigList(Builder builder) {

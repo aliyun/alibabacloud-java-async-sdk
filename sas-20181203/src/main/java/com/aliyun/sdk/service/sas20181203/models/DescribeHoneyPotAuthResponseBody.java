@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHoneyPotAuthResponseBody</p>
  */
 public class DescribeHoneyPotAuthResponseBody extends TeaModel {
-    @NameInMap("HoneyPotAuthCount")
+    @com.aliyun.core.annotation.NameInMap("HoneyPotAuthCount")
     private Long honeyPotAuthCount;
 
-    @NameInMap("HoneyPotCount")
+    @com.aliyun.core.annotation.NameInMap("HoneyPotCount")
     private Integer honeyPotCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeHoneyPotAuthResponseBody(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceRebootStatusRequest</p>
  */
 public class DescribeInstanceRebootStatusRequest extends Request {
-    @Query
-    @NameInMap("Uuids")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuids")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String uuids;
 
     private DescribeInstanceRebootStatusRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryIncidentVertexExtendInfoRequest</p>
  */
 public class QueryIncidentVertexExtendInfoRequest extends Request {
-    @Body
-    @NameInMap("Offset")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Offset")
     private Long offset;
 
-    @Body
-    @NameInMap("RelationType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RelationType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String relationType;
 
-    @Body
-    @NameInMap("Size")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Size")
     private Integer size;
 
-    @Body
-    @NameInMap("VertexId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VertexId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vertexId;
 
-    @Body
-    @NameInMap("VertexLabel")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VertexLabel")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vertexLabel;
 
     private QueryIncidentVertexExtendInfoRequest(Builder builder) {

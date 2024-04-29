@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRiskCheckItemResultResponseBody</p>
  */
 public class DescribeRiskCheckItemResultResponseBody extends TeaModel {
-    @NameInMap("PageContentResource")
+    @com.aliyun.core.annotation.NameInMap("PageContentResource")
     private PageContentResource pageContentResource;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeRiskCheckItemResultResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class DescribeRiskCheckItemResultResponseBody extends TeaModel {
     } 
 
     public static class PageContentResource extends TeaModel {
-        @NameInMap("ContentResource")
+        @com.aliyun.core.annotation.NameInMap("ContentResource")
         private java.util.Map < String, ? > contentResource;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageCount")
+        @com.aliyun.core.annotation.NameInMap("PageCount")
         private Integer pageCount;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageContentResource(Builder builder) {

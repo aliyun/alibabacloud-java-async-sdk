@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetStrategyTemplateDetailResponseBody</p>
  */
 public class GetStrategyTemplateDetailResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetStrategyTemplateDetailResponseBody(Builder builder) {
@@ -136,10 +135,10 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
     } 
 
     public static class Item extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Item(Builder builder) {
@@ -197,10 +196,10 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
 
     }
     public static class Baseline extends TeaModel {
-        @NameInMap("Item")
+        @com.aliyun.core.annotation.NameInMap("Item")
         private java.util.List < Item> item;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private java.util.List < String > riskLevel;
 
         private Baseline(Builder builder) {
@@ -263,10 +262,10 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
 
     }
     public static class MaliciousFileItem extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private MaliciousFileItem(Builder builder) {
@@ -324,10 +323,10 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
 
     }
     public static class MaliciousFile extends TeaModel {
-        @NameInMap("Item")
+        @com.aliyun.core.annotation.NameInMap("Item")
         private java.util.List < MaliciousFileItem> item;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private java.util.List < String > riskLevel;
 
         private MaliciousFile(Builder builder) {
@@ -385,10 +384,10 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
 
     }
     public static class VulItem extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private VulItem(Builder builder) {
@@ -446,10 +445,10 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
 
     }
     public static class Vul extends TeaModel {
-        @NameInMap("Item")
+        @com.aliyun.core.annotation.NameInMap("Item")
         private java.util.List < VulItem> item;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private java.util.List < String > riskLevel;
 
         private Vul(Builder builder) {
@@ -507,13 +506,13 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
 
     }
     public static class AlarmDetail extends TeaModel {
-        @NameInMap("Baseline")
+        @com.aliyun.core.annotation.NameInMap("Baseline")
         private Baseline baseline;
 
-        @NameInMap("MaliciousFile")
+        @com.aliyun.core.annotation.NameInMap("MaliciousFile")
         private MaliciousFile maliciousFile;
 
-        @NameInMap("Vul")
+        @com.aliyun.core.annotation.NameInMap("Vul")
         private Vul vul;
 
         private AlarmDetail(Builder builder) {
@@ -588,46 +587,46 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AlarmDetail")
+        @com.aliyun.core.annotation.NameInMap("AlarmDetail")
         private AlarmDetail alarmDetail;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ImageName")
+        @com.aliyun.core.annotation.NameInMap("ImageName")
         private java.util.List < String > imageName;
 
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private java.util.List < String > label;
 
-        @NameInMap("MaliciousImage")
+        @com.aliyun.core.annotation.NameInMap("MaliciousImage")
         private Boolean maliciousImage;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private java.util.List < String > namespace;
 
-        @NameInMap("RuleAction")
+        @com.aliyun.core.annotation.NameInMap("RuleAction")
         private Integer ruleAction;
 
-        @NameInMap("StrategyId")
+        @com.aliyun.core.annotation.NameInMap("StrategyId")
         private Long strategyId;
 
-        @NameInMap("StrategyName")
+        @com.aliyun.core.annotation.NameInMap("StrategyName")
         private String strategyName;
 
-        @NameInMap("StrategyTemplateId")
+        @com.aliyun.core.annotation.NameInMap("StrategyTemplateId")
         private Long strategyTemplateId;
 
-        @NameInMap("UnScanedImage")
+        @com.aliyun.core.annotation.NameInMap("UnScanedImage")
         private Boolean unScanedImage;
 
-        @NameInMap("WhiteList")
+        @com.aliyun.core.annotation.NameInMap("WhiteList")
         private java.util.List < String > whiteList;
 
         private Data(Builder builder) {

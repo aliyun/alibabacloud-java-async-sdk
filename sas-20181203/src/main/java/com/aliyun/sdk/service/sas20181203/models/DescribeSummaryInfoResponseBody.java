@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSummaryInfoResponseBody</p>
  */
 public class DescribeSummaryInfoResponseBody extends TeaModel {
-    @NameInMap("AegisClientOfflineCount")
+    @com.aliyun.core.annotation.NameInMap("AegisClientOfflineCount")
     private Integer aegisClientOfflineCount;
 
-    @NameInMap("AegisClientOnlineCount")
+    @com.aliyun.core.annotation.NameInMap("AegisClientOnlineCount")
     private Integer aegisClientOnlineCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecurityScore")
+    @com.aliyun.core.annotation.NameInMap("SecurityScore")
     private Integer securityScore;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeSummaryInfoResponseBody(Builder builder) {

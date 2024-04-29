@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StartPreCheckDatabaseRequest</p>
  */
 public class StartPreCheckDatabaseRequest extends Request {
-    @Query
-    @NameInMap("DatabaseType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabaseType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String databaseType;
 
-    @Query
-    @NameInMap("InstanceUuid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceUuid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceUuid;
 
-    @Query
-    @NameInMap("UniRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UniRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String uniRegionId;
 
     private StartPreCheckDatabaseRequest(Builder builder) {

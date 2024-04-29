@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetCloudAssetDetailRequest</p>
  */
 public class GetCloudAssetDetailRequest extends Request {
-    @Query
-    @NameInMap("AssetSubType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssetSubType")
     private Integer assetSubType;
 
-    @Query
-    @NameInMap("AssetType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssetType")
     private Integer assetType;
 
-    @Query
-    @NameInMap("CloudAssetInstances")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CloudAssetInstances")
     private java.util.List < CloudAssetInstances> cloudAssetInstances;
 
-    @Query
-    @NameInMap("Vendor")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Vendor")
     private Integer vendor;
 
     private GetCloudAssetDetailRequest(Builder builder) {
@@ -173,10 +172,10 @@ public class GetCloudAssetDetailRequest extends Request {
     } 
 
     public static class CloudAssetInstances extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private CloudAssetInstances(Builder builder) {

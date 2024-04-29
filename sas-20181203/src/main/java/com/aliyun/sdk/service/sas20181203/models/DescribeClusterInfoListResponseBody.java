@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeClusterInfoListResponseBody</p>
  */
 public class DescribeClusterInfoListResponseBody extends TeaModel {
-    @NameInMap("ClusterList")
+    @com.aliyun.core.annotation.NameInMap("ClusterList")
     private java.util.List < ClusterList> clusterList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeClusterInfoListResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class DescribeClusterInfoListResponseBody extends TeaModel {
     } 
 
     public static class ClusterList extends TeaModel {
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("ClusterType")
+        @com.aliyun.core.annotation.NameInMap("ClusterType")
         private String clusterType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("TargetResult")
+        @com.aliyun.core.annotation.NameInMap("TargetResult")
         private Boolean targetResult;
 
         private ClusterList(Builder builder) {

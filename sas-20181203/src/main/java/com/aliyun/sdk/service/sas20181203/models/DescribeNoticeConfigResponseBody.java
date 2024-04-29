@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeNoticeConfigResponseBody</p>
  */
 public class DescribeNoticeConfigResponseBody extends TeaModel {
-    @NameInMap("NoticeConfigList")
+    @com.aliyun.core.annotation.NameInMap("NoticeConfigList")
     private java.util.List < NoticeConfigList> noticeConfigList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeNoticeConfigResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribeNoticeConfigResponseBody extends TeaModel {
     } 
 
     public static class NoticeConfigList extends TeaModel {
-        @NameInMap("AliUid")
+        @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("Project")
+        @com.aliyun.core.annotation.NameInMap("Project")
         private String project;
 
-        @NameInMap("Route")
+        @com.aliyun.core.annotation.NameInMap("Route")
         private Integer route;
 
-        @NameInMap("TimeLimit")
+        @com.aliyun.core.annotation.NameInMap("TimeLimit")
         private Integer timeLimit;
 
         private NoticeConfigList(Builder builder) {

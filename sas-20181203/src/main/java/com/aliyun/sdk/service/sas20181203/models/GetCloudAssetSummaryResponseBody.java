@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetCloudAssetSummaryResponseBody</p>
  */
 public class GetCloudAssetSummaryResponseBody extends TeaModel {
-    @NameInMap("GroupedFields")
+    @com.aliyun.core.annotation.NameInMap("GroupedFields")
     private GroupedFields groupedFields;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetCloudAssetSummaryResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
     } 
 
     public static class CloudAssetSummaryMetas extends TeaModel {
-        @NameInMap("AssetSubType")
+        @com.aliyun.core.annotation.NameInMap("AssetSubType")
         private Integer assetSubType;
 
-        @NameInMap("AssetType")
+        @com.aliyun.core.annotation.NameInMap("AssetType")
         private Integer assetType;
 
-        @NameInMap("InstanceCount")
+        @com.aliyun.core.annotation.NameInMap("InstanceCount")
         private Integer instanceCount;
 
-        @NameInMap("InstanceRiskCount")
+        @com.aliyun.core.annotation.NameInMap("InstanceRiskCount")
         private Integer instanceRiskCount;
 
-        @NameInMap("Vendor")
+        @com.aliyun.core.annotation.NameInMap("Vendor")
         private Integer vendor;
 
         private CloudAssetSummaryMetas(Builder builder) {
@@ -227,13 +226,13 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
 
     }
     public static class GroupedFields extends TeaModel {
-        @NameInMap("CloudAssetSummaryMetas")
+        @com.aliyun.core.annotation.NameInMap("CloudAssetSummaryMetas")
         private java.util.List < CloudAssetSummaryMetas> cloudAssetSummaryMetas;
 
-        @NameInMap("InstanceCountTotal")
+        @com.aliyun.core.annotation.NameInMap("InstanceCountTotal")
         private Integer instanceCountTotal;
 
-        @NameInMap("InstanceRiskCountTotal")
+        @com.aliyun.core.annotation.NameInMap("InstanceRiskCountTotal")
         private Integer instanceRiskCountTotal;
 
         private GroupedFields(Builder builder) {

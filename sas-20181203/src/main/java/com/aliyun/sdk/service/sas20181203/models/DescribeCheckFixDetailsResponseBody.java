@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCheckFixDetailsResponseBody</p>
  */
 public class DescribeCheckFixDetailsResponseBody extends TeaModel {
-    @NameInMap("CheckFixDetails")
+    @com.aliyun.core.annotation.NameInMap("CheckFixDetails")
     private java.util.List < CheckFixDetails> checkFixDetails;
 
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCheckFixDetailsResponseBody(Builder builder) {
@@ -92,31 +91,31 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
     } 
 
     public static class ParamList extends TeaModel {
-        @NameInMap("EnumValue")
+        @com.aliyun.core.annotation.NameInMap("EnumValue")
         private String enumValue;
 
-        @NameInMap("MaxValue")
+        @com.aliyun.core.annotation.NameInMap("MaxValue")
         private Integer maxValue;
 
-        @NameInMap("MinValue")
+        @com.aliyun.core.annotation.NameInMap("MinValue")
         private Integer minValue;
 
-        @NameInMap("ParamDefaultValue")
+        @com.aliyun.core.annotation.NameInMap("ParamDefaultValue")
         private String paramDefaultValue;
 
-        @NameInMap("ParamDesc")
+        @com.aliyun.core.annotation.NameInMap("ParamDesc")
         private String paramDesc;
 
-        @NameInMap("ParamName")
+        @com.aliyun.core.annotation.NameInMap("ParamName")
         private String paramName;
 
-        @NameInMap("ParamType")
+        @com.aliyun.core.annotation.NameInMap("ParamType")
         private Integer paramType;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private ParamList(Builder builder) {
@@ -297,28 +296,28 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
 
     }
     public static class Rules extends TeaModel {
-        @NameInMap("CheckId")
+        @com.aliyun.core.annotation.NameInMap("CheckId")
         private Long checkId;
 
-        @NameInMap("DefaultValue")
+        @com.aliyun.core.annotation.NameInMap("DefaultValue")
         private Integer defaultValue;
 
-        @NameInMap("Optional")
+        @com.aliyun.core.annotation.NameInMap("Optional")
         private Integer optional;
 
-        @NameInMap("ParamList")
+        @com.aliyun.core.annotation.NameInMap("ParamList")
         private java.util.List < ParamList> paramList;
 
-        @NameInMap("RuleDesc")
+        @com.aliyun.core.annotation.NameInMap("RuleDesc")
         private String ruleDesc;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Integer value;
 
-        @NameInMap("VarName")
+        @com.aliyun.core.annotation.NameInMap("VarName")
         private String varName;
 
         private Rules(Builder builder) {
@@ -482,16 +481,16 @@ public class DescribeCheckFixDetailsResponseBody extends TeaModel {
 
     }
     public static class CheckFixDetails extends TeaModel {
-        @NameInMap("CheckDesc")
+        @com.aliyun.core.annotation.NameInMap("CheckDesc")
         private String checkDesc;
 
-        @NameInMap("CheckId")
+        @com.aliyun.core.annotation.NameInMap("CheckId")
         private Long checkId;
 
-        @NameInMap("CheckItem")
+        @com.aliyun.core.annotation.NameInMap("CheckItem")
         private String checkItem;
 
-        @NameInMap("Rules")
+        @com.aliyun.core.annotation.NameInMap("Rules")
         private java.util.List < Rules> rules;
 
         private CheckFixDetails(Builder builder) {

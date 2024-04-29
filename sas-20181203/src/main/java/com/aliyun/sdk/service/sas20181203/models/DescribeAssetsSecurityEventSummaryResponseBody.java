@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAssetsSecurityEventSummaryResponseBody</p>
  */
 public class DescribeAssetsSecurityEventSummaryResponseBody extends TeaModel {
-    @NameInMap("Assets")
+    @com.aliyun.core.annotation.NameInMap("Assets")
     private java.util.List < Assets> assets;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAssetsSecurityEventSummaryResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeAssetsSecurityEventSummaryResponseBody extends TeaModel {
     } 
 
     public static class Assets extends TeaModel {
-        @NameInMap("AssetType")
+        @com.aliyun.core.annotation.NameInMap("AssetType")
         private String assetType;
 
-        @NameInMap("RiskCount")
+        @com.aliyun.core.annotation.NameInMap("RiskCount")
         private Long riskCount;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private Assets(Builder builder) {

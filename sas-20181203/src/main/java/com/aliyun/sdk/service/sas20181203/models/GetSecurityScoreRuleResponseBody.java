@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSecurityScoreRuleResponseBody</p>
  */
 public class GetSecurityScoreRuleResponseBody extends TeaModel {
-    @NameInMap("EnableStatus")
+    @com.aliyun.core.annotation.NameInMap("EnableStatus")
     private Boolean enableStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecurityScoreRuleList")
+    @com.aliyun.core.annotation.NameInMap("SecurityScoreRuleList")
     private java.util.List < SecurityScoreRuleList> securityScoreRuleList;
 
     private GetSecurityScoreRuleResponseBody(Builder builder) {
@@ -96,16 +95,16 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
     } 
 
     public static class SecurityScoreItemList extends TeaModel {
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private Integer score;
 
-        @NameInMap("ScoreThreshold")
+        @com.aliyun.core.annotation.NameInMap("ScoreThreshold")
         private Integer scoreThreshold;
 
-        @NameInMap("SubRuleType")
+        @com.aliyun.core.annotation.NameInMap("SubRuleType")
         private String subRuleType;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private SecurityScoreItemList(Builder builder) {
@@ -240,16 +239,16 @@ public class GetSecurityScoreRuleResponseBody extends TeaModel {
 
     }
     public static class SecurityScoreRuleList extends TeaModel {
-        @NameInMap("RuleType")
+        @com.aliyun.core.annotation.NameInMap("RuleType")
         private String ruleType;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private Integer score;
 
-        @NameInMap("SecurityScoreItemList")
+        @com.aliyun.core.annotation.NameInMap("SecurityScoreItemList")
         private java.util.List < SecurityScoreItemList> securityScoreItemList;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private SecurityScoreRuleList(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListHoneypotAlarmEventsResponseBody</p>
  */
 public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
-    @NameInMap("HoneypotAlarmEvents")
+    @com.aliyun.core.annotation.NameInMap("HoneypotAlarmEvents")
     private java.util.List < HoneypotAlarmEvents> honeypotAlarmEvents;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListHoneypotAlarmEventsResponseBody(Builder builder) {
@@ -92,16 +91,16 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
     } 
 
     public static class MergeFieldList extends TeaModel {
-        @NameInMap("FieldExtInfo")
+        @com.aliyun.core.annotation.NameInMap("FieldExtInfo")
         private String fieldExtInfo;
 
-        @NameInMap("FieldKey")
+        @com.aliyun.core.annotation.NameInMap("FieldKey")
         private String fieldKey;
 
-        @NameInMap("FieldType")
+        @com.aliyun.core.annotation.NameInMap("FieldType")
         private String fieldType;
 
-        @NameInMap("FieldValue")
+        @com.aliyun.core.annotation.NameInMap("FieldValue")
         private String fieldValue;
 
         private MergeFieldList(Builder builder) {
@@ -193,34 +192,34 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
 
     }
     public static class HoneypotAlarmEvents extends TeaModel {
-        @NameInMap("AlarmEventId")
+        @com.aliyun.core.annotation.NameInMap("AlarmEventId")
         private Long alarmEventId;
 
-        @NameInMap("AlarmEventName")
+        @com.aliyun.core.annotation.NameInMap("AlarmEventName")
         private String alarmEventName;
 
-        @NameInMap("AlarmEventType")
+        @com.aliyun.core.annotation.NameInMap("AlarmEventType")
         private String alarmEventType;
 
-        @NameInMap("AlarmUniqueInfo")
+        @com.aliyun.core.annotation.NameInMap("AlarmUniqueInfo")
         private String alarmUniqueInfo;
 
-        @NameInMap("EventCount")
+        @com.aliyun.core.annotation.NameInMap("EventCount")
         private Integer eventCount;
 
-        @NameInMap("FirstTime")
+        @com.aliyun.core.annotation.NameInMap("FirstTime")
         private Long firstTime;
 
-        @NameInMap("LastTime")
+        @com.aliyun.core.annotation.NameInMap("LastTime")
         private Long lastTime;
 
-        @NameInMap("MergeFieldList")
+        @com.aliyun.core.annotation.NameInMap("MergeFieldList")
         private java.util.List < MergeFieldList> mergeFieldList;
 
-        @NameInMap("OperateStatus")
+        @com.aliyun.core.annotation.NameInMap("OperateStatus")
         private Integer operateStatus;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
 
         private HoneypotAlarmEvents(Builder builder) {
@@ -424,16 +423,16 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {

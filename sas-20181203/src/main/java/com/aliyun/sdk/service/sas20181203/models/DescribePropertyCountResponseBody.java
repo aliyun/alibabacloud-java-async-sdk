@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePropertyCountResponseBody</p>
  */
 public class DescribePropertyCountResponseBody extends TeaModel {
-    @NameInMap("Autorun")
+    @com.aliyun.core.annotation.NameInMap("Autorun")
     private Integer autorun;
 
-    @NameInMap("Cron")
+    @com.aliyun.core.annotation.NameInMap("Cron")
     private Integer cron;
 
-    @NameInMap("Database")
+    @com.aliyun.core.annotation.NameInMap("Database")
     private Integer database;
 
-    @NameInMap("Lkm")
+    @com.aliyun.core.annotation.NameInMap("Lkm")
     private Integer lkm;
 
-    @NameInMap("Port")
+    @com.aliyun.core.annotation.NameInMap("Port")
     private Integer port;
 
-    @NameInMap("Process")
+    @com.aliyun.core.annotation.NameInMap("Process")
     private Integer process;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Sca")
+    @com.aliyun.core.annotation.NameInMap("Sca")
     private Integer sca;
 
-    @NameInMap("Software")
+    @com.aliyun.core.annotation.NameInMap("Software")
     private Integer software;
 
-    @NameInMap("User")
+    @com.aliyun.core.annotation.NameInMap("User")
     private Integer user;
 
-    @NameInMap("Web")
+    @com.aliyun.core.annotation.NameInMap("Web")
     private Integer web;
 
-    @NameInMap("Webserver")
+    @com.aliyun.core.annotation.NameInMap("Webserver")
     private Integer webserver;
 
     private DescribePropertyCountResponseBody(Builder builder) {

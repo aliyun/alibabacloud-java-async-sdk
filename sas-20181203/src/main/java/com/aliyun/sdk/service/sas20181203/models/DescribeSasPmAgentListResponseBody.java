@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSasPmAgentListResponseBody</p>
  */
 public class DescribeSasPmAgentListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SasPmAgentList")
+    @com.aliyun.core.annotation.NameInMap("SasPmAgentList")
     private java.util.List < SasPmAgentList> sasPmAgentList;
 
     private DescribeSasPmAgentListResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class DescribeSasPmAgentListResponseBody extends TeaModel {
     } 
 
     public static class SasPmAgentList extends TeaModel {
-        @NameInMap("AliyunAssistId")
+        @com.aliyun.core.annotation.NameInMap("AliyunAssistId")
         private String aliyunAssistId;
 
-        @NameInMap("AliyunMonitorId")
+        @com.aliyun.core.annotation.NameInMap("AliyunMonitorId")
         private String aliyunMonitorId;
 
-        @NameInMap("AssistInstallResult")
+        @com.aliyun.core.annotation.NameInMap("AssistInstallResult")
         private Integer assistInstallResult;
 
-        @NameInMap("AssistInstallStatus")
+        @com.aliyun.core.annotation.NameInMap("AssistInstallStatus")
         private Integer assistInstallStatus;
 
-        @NameInMap("MonitorInstallResult")
+        @com.aliyun.core.annotation.NameInMap("MonitorInstallResult")
         private Integer monitorInstallResult;
 
-        @NameInMap("MonitorInstallStatus")
+        @com.aliyun.core.annotation.NameInMap("MonitorInstallStatus")
         private Integer monitorInstallStatus;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private SasPmAgentList(Builder builder) {

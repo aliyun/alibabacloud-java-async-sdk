@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeExposedInstanceDetailResponseBody</p>
  */
 public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
-    @NameInMap("ExposedChains")
+    @com.aliyun.core.annotation.NameInMap("ExposedChains")
     private java.util.List < ExposedChains> exposedChains;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeExposedInstanceDetailResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
     } 
 
     public static class AllVulList extends TeaModel {
-        @NameInMap("AliasName")
+        @com.aliyun.core.annotation.NameInMap("AliasName")
         private String aliasName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Necessity")
+        @com.aliyun.core.annotation.NameInMap("Necessity")
         private String necessity;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private AllVulList(Builder builder) {
@@ -208,19 +207,19 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
 
     }
     public static class RealVulList extends TeaModel {
-        @NameInMap("AliasName")
+        @com.aliyun.core.annotation.NameInMap("AliasName")
         private String aliasName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Necessity")
+        @com.aliyun.core.annotation.NameInMap("Necessity")
         private String necessity;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private RealVulList(Builder builder) {
@@ -344,46 +343,46 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
 
     }
     public static class ExposedChains extends TeaModel {
-        @NameInMap("AllVulList")
+        @com.aliyun.core.annotation.NameInMap("AllVulList")
         private java.util.List < AllVulList> allVulList;
 
-        @NameInMap("ExposureComponent")
+        @com.aliyun.core.annotation.NameInMap("ExposureComponent")
         private String exposureComponent;
 
-        @NameInMap("ExposureIp")
+        @com.aliyun.core.annotation.NameInMap("ExposureIp")
         private String exposureIp;
 
-        @NameInMap("ExposurePort")
+        @com.aliyun.core.annotation.NameInMap("ExposurePort")
         private String exposurePort;
 
-        @NameInMap("ExposureType")
+        @com.aliyun.core.annotation.NameInMap("ExposureType")
         private String exposureType;
 
-        @NameInMap("ExposureTypeId")
+        @com.aliyun.core.annotation.NameInMap("ExposureTypeId")
         private String exposureTypeId;
 
-        @NameInMap("GroupNo")
+        @com.aliyun.core.annotation.NameInMap("GroupNo")
         private String groupNo;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IntranetIp")
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("RealVulList")
+        @com.aliyun.core.annotation.NameInMap("RealVulList")
         private java.util.List < RealVulList> realVulList;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private ExposedChains(Builder builder) {

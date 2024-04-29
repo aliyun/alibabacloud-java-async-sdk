@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAgentInstallStatusResponseBody</p>
  */
 public class DescribeAgentInstallStatusResponseBody extends TeaModel {
-    @NameInMap("AegisClientInvokeStatusResponseList")
+    @com.aliyun.core.annotation.NameInMap("AegisClientInvokeStatusResponseList")
     private java.util.List < AegisClientInvokeStatusResponseList> aegisClientInvokeStatusResponseList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAgentInstallStatusResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribeAgentInstallStatusResponseBody extends TeaModel {
     } 
 
     public static class AegisClientInvokeStatusResponseList extends TeaModel {
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("ResuleCode")
+        @com.aliyun.core.annotation.NameInMap("ResuleCode")
         private String resuleCode;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private Integer result;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private AegisClientInvokeStatusResponseList(Builder builder) {

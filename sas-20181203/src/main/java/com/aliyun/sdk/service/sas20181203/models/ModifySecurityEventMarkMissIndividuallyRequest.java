@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifySecurityEventMarkMissIndividuallyRequest</p>
  */
 public class ModifySecurityEventMarkMissIndividuallyRequest extends Request {
-    @Body
-    @NameInMap("DeleteMarkMissParam")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeleteMarkMissParam")
     private String deleteMarkMissParam;
 
-    @Body
-    @NameInMap("From")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("From")
     private String from;
 
-    @Body
-    @NameInMap("InsertMarkMissParam")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InsertMarkMissParam")
     private String insertMarkMissParam;
 
-    @Body
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("SourceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceIp")
     private String sourceIp;
 
     private ModifySecurityEventMarkMissIndividuallyRequest(Builder builder) {

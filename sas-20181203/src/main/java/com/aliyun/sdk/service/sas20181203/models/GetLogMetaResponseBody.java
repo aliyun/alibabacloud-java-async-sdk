@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetLogMetaResponseBody</p>
  */
 public class GetLogMetaResponseBody extends TeaModel {
-    @NameInMap("LogMeta")
+    @com.aliyun.core.annotation.NameInMap("LogMeta")
     private LogMeta logMeta;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetLogMetaResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class GetLogMetaResponseBody extends TeaModel {
     } 
 
     public static class LogMeta extends TeaModel {
-        @NameInMap("LogStore")
+        @com.aliyun.core.annotation.NameInMap("LogStore")
         private String logStore;
 
-        @NameInMap("Project")
+        @com.aliyun.core.annotation.NameInMap("Project")
         private String project;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private LogMeta(Builder builder) {

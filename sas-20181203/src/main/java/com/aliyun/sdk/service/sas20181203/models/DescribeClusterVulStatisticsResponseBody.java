@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeClusterVulStatisticsResponseBody</p>
  */
 public class DescribeClusterVulStatisticsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VulStat")
+    @com.aliyun.core.annotation.NameInMap("VulStat")
     private VulStat vulStat;
 
     private DescribeClusterVulStatisticsResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeClusterVulStatisticsResponseBody extends TeaModel {
     } 
 
     public static class VulStat extends TeaModel {
-        @NameInMap("AsapCount")
+        @com.aliyun.core.annotation.NameInMap("AsapCount")
         private String asapCount;
 
-        @NameInMap("LaterCount")
+        @com.aliyun.core.annotation.NameInMap("LaterCount")
         private String laterCount;
 
-        @NameInMap("NntfCount")
+        @com.aliyun.core.annotation.NameInMap("NntfCount")
         private String nntfCount;
 
         private VulStat(Builder builder) {

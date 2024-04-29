@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePropertyUsageNewestResponseBody</p>
  */
 public class DescribePropertyUsageNewestResponseBody extends TeaModel {
-    @NameInMap("ItemCount")
+    @com.aliyun.core.annotation.NameInMap("ItemCount")
     private Integer itemCount;
 
-    @NameInMap("NewestStatisticItems")
+    @com.aliyun.core.annotation.NameInMap("NewestStatisticItems")
     private java.util.List < NewestStatisticItems> newestStatisticItems;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private DescribePropertyUsageNewestResponseBody(Builder builder) {
@@ -112,10 +111,10 @@ public class DescribePropertyUsageNewestResponseBody extends TeaModel {
     } 
 
     public static class NewestStatisticItems extends TeaModel {
-        @NameInMap("Create")
+        @com.aliyun.core.annotation.NameInMap("Create")
         private Long create;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private NewestStatisticItems(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyPushAllTaskResponseBody</p>
  */
 public class ModifyPushAllTaskResponseBody extends TeaModel {
-    @NameInMap("PushTaskRsp")
+    @com.aliyun.core.annotation.NameInMap("PushTaskRsp")
     private PushTaskRsp pushTaskRsp;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyPushAllTaskResponseBody(Builder builder) {
@@ -72,34 +71,34 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
     } 
 
     public static class PushTaskResultList extends TeaModel {
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private Long groupId;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Online")
+        @com.aliyun.core.annotation.NameInMap("Online")
         private Boolean online;
 
-        @NameInMap("OsVersion")
+        @com.aliyun.core.annotation.NameInMap("OsVersion")
         private String osVersion;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private PushTaskResultList(Builder builder) {
@@ -303,7 +302,7 @@ public class ModifyPushAllTaskResponseBody extends TeaModel {
 
     }
     public static class PushTaskRsp extends TeaModel {
-        @NameInMap("PushTaskResultList")
+        @com.aliyun.core.annotation.NameInMap("PushTaskResultList")
         private java.util.List < PushTaskResultList> pushTaskResultList;
 
         private PushTaskRsp(Builder builder) {

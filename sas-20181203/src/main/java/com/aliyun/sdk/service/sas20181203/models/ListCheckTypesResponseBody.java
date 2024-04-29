@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCheckTypesResponseBody</p>
  */
 public class ListCheckTypesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListCheckTypesResponseBody(Builder builder) {
@@ -176,16 +175,16 @@ public class ListCheckTypesResponseBody extends TeaModel {
     } 
 
     public static class CheckDetails extends TeaModel {
-        @NameInMap("AffiliatedRiskTypes")
+        @com.aliyun.core.annotation.NameInMap("AffiliatedRiskTypes")
         private java.util.List < String > affiliatedRiskTypes;
 
-        @NameInMap("AffiliatedRisks")
+        @com.aliyun.core.annotation.NameInMap("AffiliatedRisks")
         private java.util.List < String > affiliatedRisks;
 
-        @NameInMap("CheckId")
+        @com.aliyun.core.annotation.NameInMap("CheckId")
         private Long checkId;
 
-        @NameInMap("CheckItem")
+        @com.aliyun.core.annotation.NameInMap("CheckItem")
         private String checkItem;
 
         private CheckDetails(Builder builder) {
@@ -277,13 +276,13 @@ public class ListCheckTypesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("CheckDetails")
+        @com.aliyun.core.annotation.NameInMap("CheckDetails")
         private java.util.List < CheckDetails> checkDetails;
 
-        @NameInMap("CheckType")
+        @com.aliyun.core.annotation.NameInMap("CheckType")
         private String checkType;
 
-        @NameInMap("CheckTypeDisName")
+        @com.aliyun.core.annotation.NameInMap("CheckTypeDisName")
         private String checkTypeDisName;
 
         private Data(Builder builder) {

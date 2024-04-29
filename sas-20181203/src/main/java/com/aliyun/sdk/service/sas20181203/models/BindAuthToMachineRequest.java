@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,44 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BindAuthToMachineRequest</p>
  */
 public class BindAuthToMachineRequest extends Request {
-    @Query
-    @NameInMap("AuthVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthVersion")
     private Integer authVersion;
 
-    @Query
-    @NameInMap("AutoBind")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoBind")
     private Integer autoBind;
 
-    @Query
-    @NameInMap("Bind")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bind")
     private java.util.List < String > bind;
 
-    @Query
-    @NameInMap("BindAll")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BindAll")
     private Boolean bindAll;
 
-    @Query
-    @NameInMap("Criteria")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Criteria")
     private String criteria;
 
-    @Query
-    @NameInMap("IsPreBind")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsPreBind")
     private Integer isPreBind;
 
-    @Query
-    @NameInMap("LogicalExp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogicalExp")
     private String logicalExp;
 
-    @Query
-    @NameInMap("NtmVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NtmVersion")
     private String ntmVersion;
 
-    @Query
-    @NameInMap("PreBindOrderId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreBindOrderId")
     private Long preBindOrderId;
 
-    @Query
-    @NameInMap("UnBind")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UnBind")
     private java.util.List < String > unBind;
 
     private BindAuthToMachineRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSecurityStatInfoResponseBody</p>
  */
 public class DescribeSecurityStatInfoResponseBody extends TeaModel {
-    @NameInMap("AttackEvent")
+    @com.aliyun.core.annotation.NameInMap("AttackEvent")
     private AttackEvent attackEvent;
 
-    @NameInMap("HealthCheck")
+    @com.aliyun.core.annotation.NameInMap("HealthCheck")
     private HealthCheck healthCheck;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecurityEvent")
+    @com.aliyun.core.annotation.NameInMap("SecurityEvent")
     private SecurityEvent securityEvent;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Vulnerability")
+    @com.aliyun.core.annotation.NameInMap("Vulnerability")
     private Vulnerability vulnerability;
 
     private DescribeSecurityStatInfoResponseBody(Builder builder) {
@@ -156,13 +155,13 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
     } 
 
     public static class AttackEvent extends TeaModel {
-        @NameInMap("DateArray")
+        @com.aliyun.core.annotation.NameInMap("DateArray")
         private java.util.List < String > dateArray;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
-        @NameInMap("ValueArray")
+        @com.aliyun.core.annotation.NameInMap("ValueArray")
         private java.util.List < String > valueArray;
 
         private AttackEvent(Builder builder) {
@@ -237,37 +236,37 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
 
     }
     public static class HealthCheck extends TeaModel {
-        @NameInMap("DateArray")
+        @com.aliyun.core.annotation.NameInMap("DateArray")
         private java.util.List < String > dateArray;
 
-        @NameInMap("HighCount")
+        @com.aliyun.core.annotation.NameInMap("HighCount")
         private Integer highCount;
 
-        @NameInMap("HighList")
+        @com.aliyun.core.annotation.NameInMap("HighList")
         private java.util.List < String > highList;
 
-        @NameInMap("LevelsOn")
+        @com.aliyun.core.annotation.NameInMap("LevelsOn")
         private java.util.List < String > levelsOn;
 
-        @NameInMap("LowCount")
+        @com.aliyun.core.annotation.NameInMap("LowCount")
         private Integer lowCount;
 
-        @NameInMap("LowList")
+        @com.aliyun.core.annotation.NameInMap("LowList")
         private java.util.List < String > lowList;
 
-        @NameInMap("MediumCount")
+        @com.aliyun.core.annotation.NameInMap("MediumCount")
         private Integer mediumCount;
 
-        @NameInMap("MediumList")
+        @com.aliyun.core.annotation.NameInMap("MediumList")
         private java.util.List < String > mediumList;
 
-        @NameInMap("TimeArray")
+        @com.aliyun.core.annotation.NameInMap("TimeArray")
         private java.util.List < String > timeArray;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
-        @NameInMap("ValueArray")
+        @com.aliyun.core.annotation.NameInMap("ValueArray")
         private java.util.List < String > valueArray;
 
         private HealthCheck(Builder builder) {
@@ -478,37 +477,37 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
 
     }
     public static class SecurityEvent extends TeaModel {
-        @NameInMap("DateArray")
+        @com.aliyun.core.annotation.NameInMap("DateArray")
         private java.util.List < String > dateArray;
 
-        @NameInMap("LevelsOn")
+        @com.aliyun.core.annotation.NameInMap("LevelsOn")
         private java.util.List < String > levelsOn;
 
-        @NameInMap("RemindCount")
+        @com.aliyun.core.annotation.NameInMap("RemindCount")
         private Integer remindCount;
 
-        @NameInMap("RemindList")
+        @com.aliyun.core.annotation.NameInMap("RemindList")
         private java.util.List < String > remindList;
 
-        @NameInMap("SeriousCount")
+        @com.aliyun.core.annotation.NameInMap("SeriousCount")
         private Integer seriousCount;
 
-        @NameInMap("SeriousList")
+        @com.aliyun.core.annotation.NameInMap("SeriousList")
         private java.util.List < String > seriousList;
 
-        @NameInMap("SuspiciousCount")
+        @com.aliyun.core.annotation.NameInMap("SuspiciousCount")
         private Integer suspiciousCount;
 
-        @NameInMap("SuspiciousList")
+        @com.aliyun.core.annotation.NameInMap("SuspiciousList")
         private java.util.List < String > suspiciousList;
 
-        @NameInMap("TimeArray")
+        @com.aliyun.core.annotation.NameInMap("TimeArray")
         private java.util.List < String > timeArray;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
-        @NameInMap("ValueArray")
+        @com.aliyun.core.annotation.NameInMap("ValueArray")
         private java.util.List < String > valueArray;
 
         private SecurityEvent(Builder builder) {
@@ -719,37 +718,37 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
 
     }
     public static class Vulnerability extends TeaModel {
-        @NameInMap("AsapCount")
+        @com.aliyun.core.annotation.NameInMap("AsapCount")
         private Integer asapCount;
 
-        @NameInMap("AsapList")
+        @com.aliyun.core.annotation.NameInMap("AsapList")
         private java.util.List < String > asapList;
 
-        @NameInMap("DateArray")
+        @com.aliyun.core.annotation.NameInMap("DateArray")
         private java.util.List < String > dateArray;
 
-        @NameInMap("LaterCount")
+        @com.aliyun.core.annotation.NameInMap("LaterCount")
         private Integer laterCount;
 
-        @NameInMap("LaterList")
+        @com.aliyun.core.annotation.NameInMap("LaterList")
         private java.util.List < String > laterList;
 
-        @NameInMap("LevelsOn")
+        @com.aliyun.core.annotation.NameInMap("LevelsOn")
         private java.util.List < String > levelsOn;
 
-        @NameInMap("NntfCount")
+        @com.aliyun.core.annotation.NameInMap("NntfCount")
         private Integer nntfCount;
 
-        @NameInMap("NntfList")
+        @com.aliyun.core.annotation.NameInMap("NntfList")
         private java.util.List < String > nntfList;
 
-        @NameInMap("TimeArray")
+        @com.aliyun.core.annotation.NameInMap("TimeArray")
         private java.util.List < String > timeArray;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
-        @NameInMap("ValueArray")
+        @com.aliyun.core.annotation.NameInMap("ValueArray")
         private java.util.List < String > valueArray;
 
         private Vulnerability(Builder builder) {

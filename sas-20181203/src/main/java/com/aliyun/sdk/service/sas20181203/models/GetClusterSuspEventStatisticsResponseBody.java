@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetClusterSuspEventStatisticsResponseBody</p>
  */
 public class GetClusterSuspEventStatisticsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SuspStatistics")
+    @com.aliyun.core.annotation.NameInMap("SuspStatistics")
     private SuspStatistics suspStatistics;
 
     private GetClusterSuspEventStatisticsResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class GetClusterSuspEventStatisticsResponseBody extends TeaModel {
     } 
 
     public static class SuspStatistics extends TeaModel {
-        @NameInMap("Remind")
+        @com.aliyun.core.annotation.NameInMap("Remind")
         private Integer remind;
 
-        @NameInMap("Serious")
+        @com.aliyun.core.annotation.NameInMap("Serious")
         private Integer serious;
 
-        @NameInMap("Suspicious")
+        @com.aliyun.core.annotation.NameInMap("Suspicious")
         private Integer suspicious;
 
         private SuspStatistics(Builder builder) {

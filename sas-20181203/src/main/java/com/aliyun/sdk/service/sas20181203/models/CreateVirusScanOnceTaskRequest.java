@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateVirusScanOnceTaskRequest</p>
  */
 public class CreateVirusScanOnceTaskRequest extends Request {
-    @Query
-    @NameInMap("ScanPath")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScanPath")
     private java.util.List < String > scanPath;
 
-    @Query
-    @NameInMap("ScanType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScanType")
     private String scanType;
 
-    @Query
-    @NameInMap("SelectionKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SelectionKey")
     private String selectionKey;
 
     private CreateVirusScanOnceTaskRequest(Builder builder) {

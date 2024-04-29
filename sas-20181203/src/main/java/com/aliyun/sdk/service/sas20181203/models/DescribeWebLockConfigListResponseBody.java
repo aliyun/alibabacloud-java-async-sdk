@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeWebLockConfigListResponseBody</p>
  */
 public class DescribeWebLockConfigListResponseBody extends TeaModel {
-    @NameInMap("ConfigList")
+    @com.aliyun.core.annotation.NameInMap("ConfigList")
     private java.util.List < ConfigList> configList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeWebLockConfigListResponseBody(Builder builder) {
@@ -92,37 +91,37 @@ public class DescribeWebLockConfigListResponseBody extends TeaModel {
     } 
 
     public static class ConfigList extends TeaModel {
-        @NameInMap("DefenceMode")
+        @com.aliyun.core.annotation.NameInMap("DefenceMode")
         private String defenceMode;
 
-        @NameInMap("Dir")
+        @com.aliyun.core.annotation.NameInMap("Dir")
         private String dir;
 
-        @NameInMap("ExclusiveDir")
+        @com.aliyun.core.annotation.NameInMap("ExclusiveDir")
         private String exclusiveDir;
 
-        @NameInMap("ExclusiveFile")
+        @com.aliyun.core.annotation.NameInMap("ExclusiveFile")
         private String exclusiveFile;
 
-        @NameInMap("ExclusiveFileType")
+        @com.aliyun.core.annotation.NameInMap("ExclusiveFileType")
         private String exclusiveFileType;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("InclusiveFile")
+        @com.aliyun.core.annotation.NameInMap("InclusiveFile")
         private String inclusiveFile;
 
-        @NameInMap("InclusiveFileType")
+        @com.aliyun.core.annotation.NameInMap("InclusiveFileType")
         private String inclusiveFileType;
 
-        @NameInMap("LocalBackupDir")
+        @com.aliyun.core.annotation.NameInMap("LocalBackupDir")
         private String localBackupDir;
 
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private ConfigList(Builder builder) {

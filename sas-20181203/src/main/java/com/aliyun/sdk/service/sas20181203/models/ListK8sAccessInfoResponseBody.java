@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListK8sAccessInfoResponseBody</p>
  */
 public class ListK8sAccessInfoResponseBody extends TeaModel {
-    @NameInMap("K8sAccessInfos")
+    @com.aliyun.core.annotation.NameInMap("K8sAccessInfos")
     private java.util.List < K8sAccessInfos> k8sAccessInfos;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListK8sAccessInfoResponseBody(Builder builder) {
@@ -72,40 +71,40 @@ public class ListK8sAccessInfoResponseBody extends TeaModel {
     } 
 
     public static class K8sAccessInfos extends TeaModel {
-        @NameInMap("AliUid")
+        @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
 
-        @NameInMap("AuditLogStore")
+        @com.aliyun.core.annotation.NameInMap("AuditLogStore")
         private String auditLogStore;
 
-        @NameInMap("AuditProject")
+        @com.aliyun.core.annotation.NameInMap("AuditProject")
         private String auditProject;
 
-        @NameInMap("AuditRegionId")
+        @com.aliyun.core.annotation.NameInMap("AuditRegionId")
         private String auditRegionId;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("ExpireDate")
+        @com.aliyun.core.annotation.NameInMap("ExpireDate")
         private Long expireDate;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("InstallKey")
+        @com.aliyun.core.annotation.NameInMap("InstallKey")
         private String installKey;
 
-        @NameInMap("Vendor")
+        @com.aliyun.core.annotation.NameInMap("Vendor")
         private String vendor;
 
         private K8sAccessInfos(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyNoticeConfigRequest</p>
  */
 public class ModifyNoticeConfigRequest extends Request {
-    @Query
-    @NameInMap("Project")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Project")
     private String project;
 
-    @Query
-    @NameInMap("Route")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Route")
     private Integer route;
 
-    @Query
-    @NameInMap("SourceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceIp")
     private String sourceIp;
 
-    @Query
-    @NameInMap("TimeLimit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeLimit")
     private Integer timeLimit;
 
     private ModifyNoticeConfigRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRiskTypeResponseBody</p>
  */
 public class DescribeRiskTypeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RiskTypes")
+    @com.aliyun.core.annotation.NameInMap("RiskTypes")
     private java.util.List < RiskTypes> riskTypes;
 
     private DescribeRiskTypeResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
     } 
 
     public static class ParamList extends TeaModel {
-        @NameInMap("EnumValue")
+        @com.aliyun.core.annotation.NameInMap("EnumValue")
         private String enumValue;
 
-        @NameInMap("MaxValue")
+        @com.aliyun.core.annotation.NameInMap("MaxValue")
         private Integer maxValue;
 
-        @NameInMap("MinValue")
+        @com.aliyun.core.annotation.NameInMap("MinValue")
         private Integer minValue;
 
-        @NameInMap("ParamDefaultValue")
+        @com.aliyun.core.annotation.NameInMap("ParamDefaultValue")
         private String paramDefaultValue;
 
-        @NameInMap("ParamDesc")
+        @com.aliyun.core.annotation.NameInMap("ParamDesc")
         private String paramDesc;
 
-        @NameInMap("ParamName")
+        @com.aliyun.core.annotation.NameInMap("ParamName")
         private String paramName;
 
-        @NameInMap("ParamType")
+        @com.aliyun.core.annotation.NameInMap("ParamType")
         private Integer paramType;
 
         private ParamList(Builder builder) {
@@ -237,16 +236,16 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
 
     }
     public static class Rules extends TeaModel {
-        @NameInMap("Optional")
+        @com.aliyun.core.annotation.NameInMap("Optional")
         private Integer optional;
 
-        @NameInMap("ParamList")
+        @com.aliyun.core.annotation.NameInMap("ParamList")
         private java.util.List < ParamList> paramList;
 
-        @NameInMap("RuleDesc")
+        @com.aliyun.core.annotation.NameInMap("RuleDesc")
         private String ruleDesc;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
         private Rules(Builder builder) {
@@ -342,16 +341,16 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
 
     }
     public static class CheckDetails extends TeaModel {
-        @NameInMap("CheckDesc")
+        @com.aliyun.core.annotation.NameInMap("CheckDesc")
         private String checkDesc;
 
-        @NameInMap("CheckId")
+        @com.aliyun.core.annotation.NameInMap("CheckId")
         private Long checkId;
 
-        @NameInMap("CheckItem")
+        @com.aliyun.core.annotation.NameInMap("CheckItem")
         private String checkItem;
 
-        @NameInMap("Rules")
+        @com.aliyun.core.annotation.NameInMap("Rules")
         private java.util.List < Rules> rules;
 
         private CheckDetails(Builder builder) {
@@ -443,19 +442,19 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
 
     }
     public static class SubTypes extends TeaModel {
-        @NameInMap("Alias")
+        @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
 
-        @NameInMap("AuthFlag")
+        @com.aliyun.core.annotation.NameInMap("AuthFlag")
         private Boolean authFlag;
 
-        @NameInMap("CheckDetails")
+        @com.aliyun.core.annotation.NameInMap("CheckDetails")
         private java.util.List < CheckDetails> checkDetails;
 
-        @NameInMap("SupportedOs")
+        @com.aliyun.core.annotation.NameInMap("SupportedOs")
         private String supportedOs;
 
-        @NameInMap("TypeName")
+        @com.aliyun.core.annotation.NameInMap("TypeName")
         private String typeName;
 
         private SubTypes(Builder builder) {
@@ -572,16 +571,16 @@ public class DescribeRiskTypeResponseBody extends TeaModel {
 
     }
     public static class RiskTypes extends TeaModel {
-        @NameInMap("Alias")
+        @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
 
-        @NameInMap("AuthFlag")
+        @com.aliyun.core.annotation.NameInMap("AuthFlag")
         private Boolean authFlag;
 
-        @NameInMap("SubTypes")
+        @com.aliyun.core.annotation.NameInMap("SubTypes")
         private java.util.List < SubTypes> subTypes;
 
-        @NameInMap("TypeName")
+        @com.aliyun.core.annotation.NameInMap("TypeName")
         private String typeName;
 
         private RiskTypes(Builder builder) {

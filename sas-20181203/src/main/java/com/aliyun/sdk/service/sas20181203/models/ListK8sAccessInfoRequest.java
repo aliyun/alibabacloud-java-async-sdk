@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListK8sAccessInfoRequest</p>
  */
 public class ListK8sAccessInfoRequest extends Request {
-    @Query
-    @NameInMap("AliyunYundunGatewayApiName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AliyunYundunGatewayApiName")
     private String aliyunYundunGatewayApiName;
 
-    @Query
-    @NameInMap("AliyunYundunGatewayPopName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AliyunYundunGatewayPopName")
     private String aliyunYundunGatewayPopName;
 
-    @Query
-    @NameInMap("AliyunYundunGatewayProjectName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AliyunYundunGatewayProjectName")
     private String aliyunYundunGatewayProjectName;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
     private ListK8sAccessInfoRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryIncidentVertexNodesResponseBody</p>
  */
 public class QueryIncidentVertexNodesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("VertexNodes")
+    @com.aliyun.core.annotation.NameInMap("VertexNodes")
     private VertexNodes vertexNodes;
 
     private QueryIncidentVertexNodesResponseBody(Builder builder) {
@@ -96,55 +95,55 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
     } 
 
     public static class EdgeList extends TeaModel {
-        @NameInMap("Aliuid")
+        @com.aliyun.core.annotation.NameInMap("Aliuid")
         private String aliuid;
 
-        @NameInMap("EndId")
+        @com.aliyun.core.annotation.NameInMap("EndId")
         private String endId;
 
-        @NameInMap("EndType")
+        @com.aliyun.core.annotation.NameInMap("EndType")
         private String endType;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Origin")
+        @com.aliyun.core.annotation.NameInMap("Origin")
         private String origin;
 
-        @NameInMap("Properties")
+        @com.aliyun.core.annotation.NameInMap("Properties")
         private String properties;
 
-        @NameInMap("Property")
+        @com.aliyun.core.annotation.NameInMap("Property")
         private java.util.Map < String, ? > property;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("ShowType")
+        @com.aliyun.core.annotation.NameInMap("ShowType")
         private String showType;
 
-        @NameInMap("StartId")
+        @com.aliyun.core.annotation.NameInMap("StartId")
         private String startId;
 
-        @NameInMap("StartType")
+        @com.aliyun.core.annotation.NameInMap("StartType")
         private String startType;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("TypeName")
+        @com.aliyun.core.annotation.NameInMap("TypeName")
         private String typeName;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private EdgeList(Builder builder) {
@@ -471,43 +470,43 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
 
     }
     public static class EntityTypeList extends TeaModel {
-        @NameInMap("CurrentVersionId")
+        @com.aliyun.core.annotation.NameInMap("CurrentVersionId")
         private String currentVersionId;
 
-        @NameInMap("DisplayColor")
+        @com.aliyun.core.annotation.NameInMap("DisplayColor")
         private String displayColor;
 
-        @NameInMap("DisplayIcon")
+        @com.aliyun.core.annotation.NameInMap("DisplayIcon")
         private String displayIcon;
 
-        @NameInMap("DisplayOrder")
+        @com.aliyun.core.annotation.NameInMap("DisplayOrder")
         private Integer displayOrder;
 
-        @NameInMap("DisplayTemplate")
+        @com.aliyun.core.annotation.NameInMap("DisplayTemplate")
         private String displayTemplate;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("IsVirtualNode")
+        @com.aliyun.core.annotation.NameInMap("IsVirtualNode")
         private Integer isVirtualNode;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("SyncId")
+        @com.aliyun.core.annotation.NameInMap("SyncId")
         private Integer syncId;
 
-        @NameInMap("TraceSuccessFlag")
+        @com.aliyun.core.annotation.NameInMap("TraceSuccessFlag")
         private Integer traceSuccessFlag;
 
         private EntityTypeList(Builder builder) {
@@ -756,40 +755,40 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
 
     }
     public static class RelationTypeList extends TeaModel {
-        @NameInMap("CurrentVersionId")
+        @com.aliyun.core.annotation.NameInMap("CurrentVersionId")
         private String currentVersionId;
 
-        @NameInMap("DIsplayIcon")
+        @com.aliyun.core.annotation.NameInMap("DIsplayIcon")
         private String dIsplayIcon;
 
-        @NameInMap("Directed")
+        @com.aliyun.core.annotation.NameInMap("Directed")
         private Integer directed;
 
-        @NameInMap("DisplayColor")
+        @com.aliyun.core.annotation.NameInMap("DisplayColor")
         private String displayColor;
 
-        @NameInMap("DisplayTemplate")
+        @com.aliyun.core.annotation.NameInMap("DisplayTemplate")
         private String displayTemplate;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("ShowType")
+        @com.aliyun.core.annotation.NameInMap("ShowType")
         private String showType;
 
-        @NameInMap("SyncId")
+        @com.aliyun.core.annotation.NameInMap("SyncId")
         private Integer syncId;
 
         private RelationTypeList(Builder builder) {
@@ -1021,10 +1020,10 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
 
     }
     public static class DisplayInfo extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private DisplayInfo(Builder builder) {
@@ -1082,13 +1081,13 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
 
     }
     public static class NeighborList extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("HasMore")
+        @com.aliyun.core.annotation.NameInMap("HasMore")
         private Boolean hasMore;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private NeighborList(Builder builder) {
@@ -1174,46 +1173,46 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
 
     }
     public static class VertexList extends TeaModel {
-        @NameInMap("Aliuid")
+        @com.aliyun.core.annotation.NameInMap("Aliuid")
         private String aliuid;
 
-        @NameInMap("DisplayInfo")
+        @com.aliyun.core.annotation.NameInMap("DisplayInfo")
         private java.util.List < DisplayInfo> displayInfo;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Lang")
+        @com.aliyun.core.annotation.NameInMap("Lang")
         private String lang;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NeighborList")
+        @com.aliyun.core.annotation.NameInMap("NeighborList")
         private java.util.List < NeighborList> neighborList;
 
-        @NameInMap("Properties")
+        @com.aliyun.core.annotation.NameInMap("Properties")
         private String properties;
 
-        @NameInMap("Property")
+        @com.aliyun.core.annotation.NameInMap("Property")
         private java.util.Map < String, ? > property;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private VertexList(Builder builder) {
@@ -1486,19 +1485,19 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
 
     }
     public static class VertexNodes extends TeaModel {
-        @NameInMap("EdgeList")
+        @com.aliyun.core.annotation.NameInMap("EdgeList")
         private java.util.List < EdgeList> edgeList;
 
-        @NameInMap("EntityTypeList")
+        @com.aliyun.core.annotation.NameInMap("EntityTypeList")
         private java.util.List < EntityTypeList> entityTypeList;
 
-        @NameInMap("Lang")
+        @com.aliyun.core.annotation.NameInMap("Lang")
         private String lang;
 
-        @NameInMap("RelationTypeList")
+        @com.aliyun.core.annotation.NameInMap("RelationTypeList")
         private java.util.List < RelationTypeList> relationTypeList;
 
-        @NameInMap("VertexList")
+        @com.aliyun.core.annotation.NameInMap("VertexList")
         private java.util.List < VertexList> vertexList;
 
         private VertexNodes(Builder builder) {

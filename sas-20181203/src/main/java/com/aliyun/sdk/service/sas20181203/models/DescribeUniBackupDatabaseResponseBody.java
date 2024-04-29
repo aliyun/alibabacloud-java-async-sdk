@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUniBackupDatabaseResponseBody</p>
  */
 public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
-    @NameInMap("DatabaseList")
+    @com.aliyun.core.annotation.NameInMap("DatabaseList")
     private java.util.List < DatabaseList> databaseList;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeUniBackupDatabaseResponseBody(Builder builder) {
@@ -92,34 +91,34 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
     } 
 
     public static class DatabaseList extends TeaModel {
-        @NameInMap("AgentStatus")
+        @com.aliyun.core.annotation.NameInMap("AgentStatus")
         private String agentStatus;
 
-        @NameInMap("CreatedByProduct")
+        @com.aliyun.core.annotation.NameInMap("CreatedByProduct")
         private String createdByProduct;
 
-        @NameInMap("DatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
-        @NameInMap("DatabaseType")
+        @com.aliyun.core.annotation.NameInMap("DatabaseType")
         private String databaseType;
 
-        @NameInMap("DatabaseVersion")
+        @com.aliyun.core.annotation.NameInMap("DatabaseVersion")
         private String databaseVersion;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InstanceUuid")
+        @com.aliyun.core.annotation.NameInMap("InstanceUuid")
         private String instanceUuid;
 
-        @NameInMap("PolicyId")
+        @com.aliyun.core.annotation.NameInMap("PolicyId")
         private Long policyId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private DatabaseList(Builder builder) {
@@ -332,16 +331,16 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {

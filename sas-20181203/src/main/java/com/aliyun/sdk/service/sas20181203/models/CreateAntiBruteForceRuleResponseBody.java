@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAntiBruteForceRuleResponseBody</p>
  */
 public class CreateAntiBruteForceRuleResponseBody extends TeaModel {
-    @NameInMap("CreateAntiBruteForceRule")
+    @com.aliyun.core.annotation.NameInMap("CreateAntiBruteForceRule")
     private CreateAntiBruteForceRule createAntiBruteForceRule;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateAntiBruteForceRuleResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class CreateAntiBruteForceRuleResponseBody extends TeaModel {
     } 
 
     public static class CreateAntiBruteForceRule extends TeaModel {
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
         private CreateAntiBruteForceRule(Builder builder) {

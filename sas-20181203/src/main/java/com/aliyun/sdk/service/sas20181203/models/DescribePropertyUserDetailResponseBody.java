@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePropertyUserDetailResponseBody</p>
  */
 public class DescribePropertyUserDetailResponseBody extends TeaModel {
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("Propertys")
+    @com.aliyun.core.annotation.NameInMap("Propertys")
     private java.util.List < Propertys> propertys;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePropertyUserDetailResponseBody(Builder builder) {
@@ -92,16 +91,16 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
     } 
 
     public static class PageInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {
@@ -193,70 +192,70 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
 
     }
     public static class Propertys extends TeaModel {
-        @NameInMap("AccountsExpirationDate")
+        @com.aliyun.core.annotation.NameInMap("AccountsExpirationDate")
         private String accountsExpirationDate;
 
-        @NameInMap("CreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
-        @NameInMap("GroupNames")
+        @com.aliyun.core.annotation.NameInMap("GroupNames")
         private java.util.List < String > groupNames;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IntranetIp")
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("IsCouldLogin")
+        @com.aliyun.core.annotation.NameInMap("IsCouldLogin")
         private Integer isCouldLogin;
 
-        @NameInMap("IsPasswdExpired")
+        @com.aliyun.core.annotation.NameInMap("IsPasswdExpired")
         private Integer isPasswdExpired;
 
-        @NameInMap("IsPasswdLocked")
+        @com.aliyun.core.annotation.NameInMap("IsPasswdLocked")
         private Integer isPasswdLocked;
 
-        @NameInMap("IsRoot")
+        @com.aliyun.core.annotation.NameInMap("IsRoot")
         private String isRoot;
 
-        @NameInMap("IsSudoer")
+        @com.aliyun.core.annotation.NameInMap("IsSudoer")
         private Integer isSudoer;
 
-        @NameInMap("IsUserExpired")
+        @com.aliyun.core.annotation.NameInMap("IsUserExpired")
         private Integer isUserExpired;
 
-        @NameInMap("LastLoginIp")
+        @com.aliyun.core.annotation.NameInMap("LastLoginIp")
         private String lastLoginIp;
 
-        @NameInMap("LastLoginTime")
+        @com.aliyun.core.annotation.NameInMap("LastLoginTime")
         private String lastLoginTime;
 
-        @NameInMap("LastLoginTimeDt")
+        @com.aliyun.core.annotation.NameInMap("LastLoginTimeDt")
         private Long lastLoginTimeDt;
 
-        @NameInMap("LastLoginTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LastLoginTimestamp")
         private Long lastLoginTimestamp;
 
-        @NameInMap("PasswordExpirationDate")
+        @com.aliyun.core.annotation.NameInMap("PasswordExpirationDate")
         private String passwordExpirationDate;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private String user;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private Propertys(Builder builder) {

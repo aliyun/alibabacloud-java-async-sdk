@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sas20181203.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCheckEcsWarningsResponseBody</p>
  */
 public class DescribeCheckEcsWarningsResponseBody extends TeaModel {
-    @NameInMap("CanTry")
+    @com.aliyun.core.annotation.NameInMap("CanTry")
     private String canTry;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SasVersion")
+    @com.aliyun.core.annotation.NameInMap("SasVersion")
     private String sasVersion;
 
-    @NameInMap("WeakPasswordCount")
+    @com.aliyun.core.annotation.NameInMap("WeakPasswordCount")
     private String weakPasswordCount;
 
     private DescribeCheckEcsWarningsResponseBody(Builder builder) {
