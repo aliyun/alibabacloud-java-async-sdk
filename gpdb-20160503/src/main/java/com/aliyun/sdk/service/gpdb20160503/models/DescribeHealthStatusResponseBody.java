@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHealthStatusResponseBody</p>
  */
 public class DescribeHealthStatusResponseBody extends TeaModel {
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Status status;
 
     private DescribeHealthStatusResponseBody(Builder builder) {
@@ -95,10 +94,10 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
     } 
 
     public static class AdbgpSegmentDiskUsagePercentMax extends TeaModel {
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private AdbgpSegmentDiskUsagePercentMax(Builder builder) {
@@ -164,10 +163,10 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
 
     }
     public static class AdbpgConnectionStatus extends TeaModel {
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private AdbpgConnectionStatus(Builder builder) {
@@ -235,10 +234,10 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
 
     }
     public static class AdbpgDiskStatus extends TeaModel {
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private AdbpgDiskStatus(Builder builder) {
@@ -306,10 +305,10 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
 
     }
     public static class AdbpgDiskUsagePercent extends TeaModel {
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private AdbpgDiskUsagePercent(Builder builder) {
@@ -377,7 +376,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
 
     }
     public static class AdbpgInstanceColdDataGb extends TeaModel {
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private AdbpgInstanceColdDataGb(Builder builder) {
@@ -421,7 +420,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
 
     }
     public static class AdbpgInstanceHotDataGb extends TeaModel {
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private AdbpgInstanceHotDataGb(Builder builder) {
@@ -465,7 +464,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
 
     }
     public static class AdbpgInstanceTotalDataGb extends TeaModel {
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private AdbpgInstanceTotalDataGb(Builder builder) {
@@ -509,10 +508,10 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
 
     }
     public static class AdbpgMasterDiskUsagePercentMax extends TeaModel {
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private AdbpgMasterDiskUsagePercentMax(Builder builder) {
@@ -578,10 +577,10 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
 
     }
     public static class AdbpgMasterStatus extends TeaModel {
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private AdbpgMasterStatus(Builder builder) {
@@ -644,10 +643,10 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
 
     }
     public static class AdbpgSegmentStatus extends TeaModel {
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private AdbpgSegmentStatus(Builder builder) {
@@ -710,10 +709,10 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
 
     }
     public static class AdbpgStatus extends TeaModel {
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private AdbpgStatus(Builder builder) {
@@ -779,10 +778,10 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
 
     }
     public static class NodeMasterConnectionStatus extends TeaModel {
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private NodeMasterConnectionStatus(Builder builder) {
@@ -850,10 +849,10 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
 
     }
     public static class NodeMasterStatus extends TeaModel {
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private NodeMasterStatus(Builder builder) {
@@ -919,10 +918,10 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
 
     }
     public static class NodeSegmentConnectionStatus extends TeaModel {
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private NodeSegmentConnectionStatus(Builder builder) {
@@ -990,10 +989,10 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
 
     }
     public static class NodeSegmentDiskStatus extends TeaModel {
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private NodeSegmentDiskStatus(Builder builder) {
@@ -1061,49 +1060,49 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
 
     }
     public static class Status extends TeaModel {
-        @NameInMap("adbgp_segment_disk_usage_percent_max")
+        @com.aliyun.core.annotation.NameInMap("adbgp_segment_disk_usage_percent_max")
         private AdbgpSegmentDiskUsagePercentMax adbgpSegmentDiskUsagePercentMax;
 
-        @NameInMap("adbpg_connection_status")
+        @com.aliyun.core.annotation.NameInMap("adbpg_connection_status")
         private AdbpgConnectionStatus adbpgConnectionStatus;
 
-        @NameInMap("adbpg_disk_status")
+        @com.aliyun.core.annotation.NameInMap("adbpg_disk_status")
         private AdbpgDiskStatus adbpgDiskStatus;
 
-        @NameInMap("adbpg_disk_usage_percent")
+        @com.aliyun.core.annotation.NameInMap("adbpg_disk_usage_percent")
         private AdbpgDiskUsagePercent adbpgDiskUsagePercent;
 
-        @NameInMap("adbpg_instance_cold_data_gb")
+        @com.aliyun.core.annotation.NameInMap("adbpg_instance_cold_data_gb")
         private AdbpgInstanceColdDataGb adbpgInstanceColdDataGb;
 
-        @NameInMap("adbpg_instance_hot_data_gb")
+        @com.aliyun.core.annotation.NameInMap("adbpg_instance_hot_data_gb")
         private AdbpgInstanceHotDataGb adbpgInstanceHotDataGb;
 
-        @NameInMap("adbpg_instance_total_data_gb")
+        @com.aliyun.core.annotation.NameInMap("adbpg_instance_total_data_gb")
         private AdbpgInstanceTotalDataGb adbpgInstanceTotalDataGb;
 
-        @NameInMap("adbpg_master_disk_usage_percent_max")
+        @com.aliyun.core.annotation.NameInMap("adbpg_master_disk_usage_percent_max")
         private AdbpgMasterDiskUsagePercentMax adbpgMasterDiskUsagePercentMax;
 
-        @NameInMap("adbpg_master_status")
+        @com.aliyun.core.annotation.NameInMap("adbpg_master_status")
         private AdbpgMasterStatus adbpgMasterStatus;
 
-        @NameInMap("adbpg_segment_status")
+        @com.aliyun.core.annotation.NameInMap("adbpg_segment_status")
         private AdbpgSegmentStatus adbpgSegmentStatus;
 
-        @NameInMap("adbpg_status")
+        @com.aliyun.core.annotation.NameInMap("adbpg_status")
         private AdbpgStatus adbpgStatus;
 
-        @NameInMap("node_master_connection_status")
+        @com.aliyun.core.annotation.NameInMap("node_master_connection_status")
         private NodeMasterConnectionStatus nodeMasterConnectionStatus;
 
-        @NameInMap("node_master_status")
+        @com.aliyun.core.annotation.NameInMap("node_master_status")
         private NodeMasterStatus nodeMasterStatus;
 
-        @NameInMap("node_segment_connection_status")
+        @com.aliyun.core.annotation.NameInMap("node_segment_connection_status")
         private NodeSegmentConnectionStatus nodeSegmentConnectionStatus;
 
-        @NameInMap("node_segment_disk_status")
+        @com.aliyun.core.annotation.NameInMap("node_segment_disk_status")
         private NodeSegmentDiskStatus nodeSegmentDiskStatus;
 
         private Status(Builder builder) {

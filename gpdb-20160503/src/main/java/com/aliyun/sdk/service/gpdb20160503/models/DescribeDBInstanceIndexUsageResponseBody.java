@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBInstanceIndexUsageResponseBody</p>
  */
 public class DescribeDBInstanceIndexUsageResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDBInstanceIndexUsageResponseBody(Builder builder) {
@@ -112,34 +111,34 @@ public class DescribeDBInstanceIndexUsageResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("DatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
-        @NameInMap("IndexDef")
+        @com.aliyun.core.annotation.NameInMap("IndexDef")
         private String indexDef;
 
-        @NameInMap("IndexName")
+        @com.aliyun.core.annotation.NameInMap("IndexName")
         private String indexName;
 
-        @NameInMap("IndexScanTimes")
+        @com.aliyun.core.annotation.NameInMap("IndexScanTimes")
         private Integer indexScanTimes;
 
-        @NameInMap("IndexSize")
+        @com.aliyun.core.annotation.NameInMap("IndexSize")
         private String indexSize;
 
-        @NameInMap("IsPartitionTable")
+        @com.aliyun.core.annotation.NameInMap("IsPartitionTable")
         private Boolean isPartitionTable;
 
-        @NameInMap("ParentTableName")
+        @com.aliyun.core.annotation.NameInMap("ParentTableName")
         private String parentTableName;
 
-        @NameInMap("SchemaName")
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
         private String schemaName;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
-        @NameInMap("TimeLastUpdated")
+        @com.aliyun.core.annotation.NameInMap("TimeLastUpdated")
         private String timeLastUpdated;
 
         private Items(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,43 +11,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDocumentResponseBody</p>
  */
 public class DescribeDocumentResponseBody extends TeaModel {
-    @NameInMap("DocsCount")
+    @com.aliyun.core.annotation.NameInMap("DocsCount")
     private Integer docsCount;
 
-    @NameInMap("DocumentLoader")
+    @com.aliyun.core.annotation.NameInMap("DocumentLoader")
     private String documentLoader;
 
-    @NameInMap("FileExt")
+    @com.aliyun.core.annotation.NameInMap("FileExt")
     private String fileExt;
 
-    @NameInMap("FileMd5")
+    @com.aliyun.core.annotation.NameInMap("FileMd5")
     private String fileMd5;
 
-    @NameInMap("FileMtime")
+    @com.aliyun.core.annotation.NameInMap("FileMtime")
     private String fileMtime;
 
-    @NameInMap("FileName")
+    @com.aliyun.core.annotation.NameInMap("FileName")
     private String fileName;
 
-    @NameInMap("FileSize")
+    @com.aliyun.core.annotation.NameInMap("FileSize")
     private Long fileSize;
 
-    @NameInMap("FileVersion")
+    @com.aliyun.core.annotation.NameInMap("FileVersion")
     private Integer fileVersion;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Source")
+    @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("TextSplitter")
+    @com.aliyun.core.annotation.NameInMap("TextSplitter")
     private String textSplitter;
 
     private DescribeDocumentResponseBody(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeIMVInfosResponseBody</p>
  */
 public class DescribeIMVInfosResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("ImvInfos")
+    @com.aliyun.core.annotation.NameInMap("ImvInfos")
     private java.util.List < ImvInfos> imvInfos;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeIMVInfosResponseBody(Builder builder) {
@@ -92,13 +91,13 @@ public class DescribeIMVInfosResponseBody extends TeaModel {
     } 
 
     public static class ImvInfos extends TeaModel {
-        @NameInMap("Base")
+        @com.aliyun.core.annotation.NameInMap("Base")
         private String base;
 
-        @NameInMap("DetailInfo")
+        @com.aliyun.core.annotation.NameInMap("DetailInfo")
         private String detailInfo;
 
-        @NameInMap("MV")
+        @com.aliyun.core.annotation.NameInMap("MV")
         private String mv;
 
         private ImvInfos(Builder builder) {

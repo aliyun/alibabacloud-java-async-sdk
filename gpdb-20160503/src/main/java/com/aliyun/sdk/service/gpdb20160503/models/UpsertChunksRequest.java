@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpsertChunksRequest</p>
  */
 public class UpsertChunksRequest extends Request {
-    @Query
-    @NameInMap("Collection")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Collection")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String collection;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("FileName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileName")
     private String fileName;
 
-    @Query
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Query
-    @NameInMap("NamespacePassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespacePassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespacePassword;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Body
-    @NameInMap("TextChunks")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TextChunks")
     private java.util.List < TextChunks> textChunks;
 
     private UpsertChunksRequest(Builder builder) {
@@ -236,11 +235,11 @@ public class UpsertChunksRequest extends Request {
     } 
 
     public static class TextChunks extends TeaModel {
-        @NameInMap("Content")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Content")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String content;
 
-        @NameInMap("Metadata")
+        @com.aliyun.core.annotation.NameInMap("Metadata")
         private java.util.Map < String, ? > metadata;
 
         private TextChunks(Builder builder) {

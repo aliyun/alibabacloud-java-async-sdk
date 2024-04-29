@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyBackupPolicyRequest</p>
  */
 public class ModifyBackupPolicyRequest extends Request {
-    @Query
-    @NameInMap("BackupRetentionPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupRetentionPeriod")
     private Integer backupRetentionPeriod;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("EnableRecoveryPoint")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableRecoveryPoint")
     private Boolean enableRecoveryPoint;
 
-    @Query
-    @NameInMap("PreferredBackupPeriod")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreferredBackupPeriod")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String preferredBackupPeriod;
 
-    @Query
-    @NameInMap("PreferredBackupTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreferredBackupTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String preferredBackupTime;
 
-    @Query
-    @NameInMap("RecoveryPointPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecoveryPointPeriod")
     private String recoveryPointPeriod;
 
     private ModifyBackupPolicyRequest(Builder builder) {

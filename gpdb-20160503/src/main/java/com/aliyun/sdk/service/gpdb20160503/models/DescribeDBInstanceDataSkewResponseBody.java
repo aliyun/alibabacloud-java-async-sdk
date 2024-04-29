@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBInstanceDataSkewResponseBody</p>
  */
 public class DescribeDBInstanceDataSkewResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDBInstanceDataSkewResponseBody(Builder builder) {
@@ -112,31 +111,31 @@ public class DescribeDBInstanceDataSkewResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("DatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
-        @NameInMap("DistributeKey")
+        @com.aliyun.core.annotation.NameInMap("DistributeKey")
         private String distributeKey;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("SchemaName")
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
         private String schemaName;
 
-        @NameInMap("Sequence")
+        @com.aliyun.core.annotation.NameInMap("Sequence")
         private Integer sequence;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
-        @NameInMap("TableSize")
+        @com.aliyun.core.annotation.NameInMap("TableSize")
         private String tableSize;
 
-        @NameInMap("TableSkew")
+        @com.aliyun.core.annotation.NameInMap("TableSkew")
         private String tableSkew;
 
-        @NameInMap("TimeLastUpdated")
+        @com.aliyun.core.annotation.NameInMap("TimeLastUpdated")
         private String timeLastUpdated;
 
         private Items(Builder builder) {

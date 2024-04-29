@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeParametersResponseBody</p>
  */
 public class DescribeParametersResponseBody extends TeaModel {
-    @NameInMap("Parameters")
+    @com.aliyun.core.annotation.NameInMap("Parameters")
     private java.util.List < Parameters> parameters;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeParametersResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class DescribeParametersResponseBody extends TeaModel {
     } 
 
     public static class Parameters extends TeaModel {
-        @NameInMap("CurrentValue")
+        @com.aliyun.core.annotation.NameInMap("CurrentValue")
         private String currentValue;
 
-        @NameInMap("ForceRestartInstance")
+        @com.aliyun.core.annotation.NameInMap("ForceRestartInstance")
         private String forceRestartInstance;
 
-        @NameInMap("IsChangeableConfig")
+        @com.aliyun.core.annotation.NameInMap("IsChangeableConfig")
         private String isChangeableConfig;
 
-        @NameInMap("OptionalRange")
+        @com.aliyun.core.annotation.NameInMap("OptionalRange")
         private String optionalRange;
 
-        @NameInMap("ParameterDescription")
+        @com.aliyun.core.annotation.NameInMap("ParameterDescription")
         private String parameterDescription;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
-        @NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
         private String parameterValue;
 
         private Parameters(Builder builder) {

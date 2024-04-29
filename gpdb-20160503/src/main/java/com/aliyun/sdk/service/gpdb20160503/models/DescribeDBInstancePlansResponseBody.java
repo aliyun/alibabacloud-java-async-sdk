@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBInstancePlansResponseBody</p>
  */
 public class DescribeDBInstancePlansResponseBody extends TeaModel {
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeDBInstancePlansResponseBody(Builder builder) {
@@ -178,34 +177,34 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
     } 
 
     public static class PlanList extends TeaModel {
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("PlanConfig")
+        @com.aliyun.core.annotation.NameInMap("PlanConfig")
         private String planConfig;
 
-        @NameInMap("PlanDesc")
+        @com.aliyun.core.annotation.NameInMap("PlanDesc")
         private String planDesc;
 
-        @NameInMap("PlanEndDate")
+        @com.aliyun.core.annotation.NameInMap("PlanEndDate")
         private String planEndDate;
 
-        @NameInMap("PlanId")
+        @com.aliyun.core.annotation.NameInMap("PlanId")
         private String planId;
 
-        @NameInMap("PlanName")
+        @com.aliyun.core.annotation.NameInMap("PlanName")
         private String planName;
 
-        @NameInMap("PlanScheduleType")
+        @com.aliyun.core.annotation.NameInMap("PlanScheduleType")
         private String planScheduleType;
 
-        @NameInMap("PlanStartDate")
+        @com.aliyun.core.annotation.NameInMap("PlanStartDate")
         private String planStartDate;
 
-        @NameInMap("PlanStatus")
+        @com.aliyun.core.annotation.NameInMap("PlanStatus")
         private String planStatus;
 
-        @NameInMap("PlanType")
+        @com.aliyun.core.annotation.NameInMap("PlanType")
         private String planType;
 
         private PlanList(Builder builder) {
@@ -419,7 +418,7 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("PlanList")
+        @com.aliyun.core.annotation.NameInMap("PlanList")
         private java.util.List < PlanList> planList;
 
         private Items(Builder builder) {

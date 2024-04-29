@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,65 +11,77 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryCollectionDataRequest</p>
  */
 public class QueryCollectionDataRequest extends Request {
-    @Query
-    @NameInMap("Collection")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Collection")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String collection;
 
-    @Query
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Content")
     private String content;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("Filter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
     private String filter;
 
-    @Query
-    @NameInMap("HybridSearch")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HybridSearch")
     private String hybridSearch;
 
-    @Query
-    @NameInMap("HybridSearchArgs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HybridSearchArgs")
     private java.util.Map < String, java.util.Map<String, ?>> hybridSearchArgs;
 
-    @Query
-    @NameInMap("IncludeValues")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeMetadataFields")
+    private String includeMetadataFields;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeValues")
     private Boolean includeValues;
 
-    @Query
-    @NameInMap("Metrics")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Metrics")
     private String metrics;
 
-    @Query
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Query
-    @NameInMap("NamespacePassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespacePassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespacePassword;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Offset")
+    private Integer offset;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderBy")
+    private String orderBy;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("TopK")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TopK")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long topK;
 
-    @Query
-    @NameInMap("Vector")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Vector")
     private java.util.List < Double > vector;
 
     private QueryCollectionDataRequest(Builder builder) {
@@ -81,10 +92,13 @@ public class QueryCollectionDataRequest extends Request {
         this.filter = builder.filter;
         this.hybridSearch = builder.hybridSearch;
         this.hybridSearchArgs = builder.hybridSearchArgs;
+        this.includeMetadataFields = builder.includeMetadataFields;
         this.includeValues = builder.includeValues;
         this.metrics = builder.metrics;
         this.namespace = builder.namespace;
         this.namespacePassword = builder.namespacePassword;
+        this.offset = builder.offset;
+        this.orderBy = builder.orderBy;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.topK = builder.topK;
@@ -147,6 +161,13 @@ public class QueryCollectionDataRequest extends Request {
     }
 
     /**
+     * @return includeMetadataFields
+     */
+    public String getIncludeMetadataFields() {
+        return this.includeMetadataFields;
+    }
+
+    /**
      * @return includeValues
      */
     public Boolean getIncludeValues() {
@@ -172,6 +193,20 @@ public class QueryCollectionDataRequest extends Request {
      */
     public String getNamespacePassword() {
         return this.namespacePassword;
+    }
+
+    /**
+     * @return offset
+     */
+    public Integer getOffset() {
+        return this.offset;
+    }
+
+    /**
+     * @return orderBy
+     */
+    public String getOrderBy() {
+        return this.orderBy;
     }
 
     /**
@@ -209,10 +244,13 @@ public class QueryCollectionDataRequest extends Request {
         private String filter; 
         private String hybridSearch; 
         private java.util.Map < String, java.util.Map<String, ?>> hybridSearchArgs; 
+        private String includeMetadataFields; 
         private Boolean includeValues; 
         private String metrics; 
         private String namespace; 
         private String namespacePassword; 
+        private Integer offset; 
+        private String orderBy; 
         private Long ownerId; 
         private String regionId; 
         private Long topK; 
@@ -230,10 +268,13 @@ public class QueryCollectionDataRequest extends Request {
             this.filter = request.filter;
             this.hybridSearch = request.hybridSearch;
             this.hybridSearchArgs = request.hybridSearchArgs;
+            this.includeMetadataFields = request.includeMetadataFields;
             this.includeValues = request.includeValues;
             this.metrics = request.metrics;
             this.namespace = request.namespace;
             this.namespacePassword = request.namespacePassword;
+            this.offset = request.offset;
+            this.orderBy = request.orderBy;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.topK = request.topK;
@@ -296,6 +337,15 @@ public class QueryCollectionDataRequest extends Request {
         }
 
         /**
+         * IncludeMetadataFields.
+         */
+        public Builder includeMetadataFields(String includeMetadataFields) {
+            this.putQueryParameter("IncludeMetadataFields", includeMetadataFields);
+            this.includeMetadataFields = includeMetadataFields;
+            return this;
+        }
+
+        /**
          * IncludeValues.
          */
         public Builder includeValues(Boolean includeValues) {
@@ -328,6 +378,24 @@ public class QueryCollectionDataRequest extends Request {
         public Builder namespacePassword(String namespacePassword) {
             this.putQueryParameter("NamespacePassword", namespacePassword);
             this.namespacePassword = namespacePassword;
+            return this;
+        }
+
+        /**
+         * Offset.
+         */
+        public Builder offset(Integer offset) {
+            this.putQueryParameter("Offset", offset);
+            this.offset = offset;
+            return this;
+        }
+
+        /**
+         * OrderBy.
+         */
+        public Builder orderBy(String orderBy) {
+            this.putQueryParameter("OrderBy", orderBy);
+            this.orderBy = orderBy;
             return this;
         }
 

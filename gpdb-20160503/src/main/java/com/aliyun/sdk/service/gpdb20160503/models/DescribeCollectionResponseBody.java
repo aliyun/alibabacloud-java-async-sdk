@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCollectionResponseBody</p>
  */
 public class DescribeCollectionResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("Dimension")
+    @com.aliyun.core.annotation.NameInMap("Dimension")
     private Integer dimension;
 
-    @NameInMap("FullTextRetrievalFields")
+    @com.aliyun.core.annotation.NameInMap("FullTextRetrievalFields")
     private String fullTextRetrievalFields;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Metadata")
+    @com.aliyun.core.annotation.NameInMap("Metadata")
     private java.util.Map < String, String > metadata;
 
-    @NameInMap("Metrics")
+    @com.aliyun.core.annotation.NameInMap("Metrics")
     private String metrics;
 
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @NameInMap("Parser")
+    @com.aliyun.core.annotation.NameInMap("Parser")
     private String parser;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeCollectionResponseBody(Builder builder) {

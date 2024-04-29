@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeWaitingSQLRecordsResponseBody</p>
  */
 public class DescribeWaitingSQLRecordsResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeWaitingSQLRecordsResponseBody(Builder builder) {
@@ -112,28 +111,28 @@ public class DescribeWaitingSQLRecordsResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("Database")
+        @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
 
-        @NameInMap("PID")
+        @com.aliyun.core.annotation.NameInMap("PID")
         private String PID;
 
-        @NameInMap("SQLStmt")
+        @com.aliyun.core.annotation.NameInMap("SQLStmt")
         private String SQLStmt;
 
-        @NameInMap("SessionID")
+        @com.aliyun.core.annotation.NameInMap("SessionID")
         private String sessionID;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private String user;
 
-        @NameInMap("WaitingTime")
+        @com.aliyun.core.annotation.NameInMap("WaitingTime")
         private Long waitingTime;
 
         private Items(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRdsVpcsResponseBody</p>
  */
 public class DescribeRdsVpcsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Vpcs")
+    @com.aliyun.core.annotation.NameInMap("Vpcs")
     private Vpcs vpcs;
 
     private DescribeRdsVpcsResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
     } 
 
     public static class VSwitchs extends TeaModel {
-        @NameInMap("CidrBlock")
+        @com.aliyun.core.annotation.NameInMap("CidrBlock")
         private String cidrBlock;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("IsDefault")
+        @com.aliyun.core.annotation.NameInMap("IsDefault")
         private Boolean isDefault;
 
-        @NameInMap("IzNo")
+        @com.aliyun.core.annotation.NameInMap("IzNo")
         private String izNo;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VSwitchName")
+        @com.aliyun.core.annotation.NameInMap("VSwitchName")
         private String vSwitchName;
 
         private VSwitchs(Builder builder) {
@@ -257,37 +256,37 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
 
     }
     public static class Vpc extends TeaModel {
-        @NameInMap("AliUid")
+        @com.aliyun.core.annotation.NameInMap("AliUid")
         private String aliUid;
 
-        @NameInMap("Bid")
+        @com.aliyun.core.annotation.NameInMap("Bid")
         private String bid;
 
-        @NameInMap("CidrBlock")
+        @com.aliyun.core.annotation.NameInMap("CidrBlock")
         private String cidrBlock;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("IsDefault")
+        @com.aliyun.core.annotation.NameInMap("IsDefault")
         private Boolean isDefault;
 
-        @NameInMap("RegionNo")
+        @com.aliyun.core.annotation.NameInMap("RegionNo")
         private String regionNo;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("VSwitchs")
+        @com.aliyun.core.annotation.NameInMap("VSwitchs")
         private java.util.List < VSwitchs> vSwitchs;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcName")
+        @com.aliyun.core.annotation.NameInMap("VpcName")
         private String vpcName;
 
         private Vpc(Builder builder) {
@@ -502,7 +501,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
 
     }
     public static class Vpcs extends TeaModel {
-        @NameInMap("Vpc")
+        @com.aliyun.core.annotation.NameInMap("Vpc")
         private java.util.List < Vpc> vpc;
 
         private Vpcs(Builder builder) {

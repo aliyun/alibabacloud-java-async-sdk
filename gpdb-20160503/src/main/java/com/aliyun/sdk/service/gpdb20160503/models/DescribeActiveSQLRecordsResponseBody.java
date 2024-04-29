@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeActiveSQLRecordsResponseBody</p>
  */
 public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("Queries")
+    @com.aliyun.core.annotation.NameInMap("Queries")
     private java.util.List < Queries> queries;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeActiveSQLRecordsResponseBody(Builder builder) {
@@ -92,37 +91,37 @@ public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
     } 
 
     public static class Queries extends TeaModel {
-        @NameInMap("ClientAddr")
+        @com.aliyun.core.annotation.NameInMap("ClientAddr")
         private String clientAddr;
 
-        @NameInMap("Database")
+        @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
 
-        @NameInMap("PID")
+        @com.aliyun.core.annotation.NameInMap("PID")
         private String PID;
 
-        @NameInMap("Query")
+        @com.aliyun.core.annotation.NameInMap("Query")
         private String query;
 
-        @NameInMap("QueryDuration")
+        @com.aliyun.core.annotation.NameInMap("QueryDuration")
         private String queryDuration;
 
-        @NameInMap("QueryStart")
+        @com.aliyun.core.annotation.NameInMap("QueryStart")
         private String queryStart;
 
-        @NameInMap("SessionID")
+        @com.aliyun.core.annotation.NameInMap("SessionID")
         private String sessionID;
 
-        @NameInMap("SqlTruncated")
+        @com.aliyun.core.annotation.NameInMap("SqlTruncated")
         private String sqlTruncated;
 
-        @NameInMap("SqlTruncatedThreshold")
+        @com.aliyun.core.annotation.NameInMap("SqlTruncatedThreshold")
         private String sqlTruncatedThreshold;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private String user;
 
         private Queries(Builder builder) {

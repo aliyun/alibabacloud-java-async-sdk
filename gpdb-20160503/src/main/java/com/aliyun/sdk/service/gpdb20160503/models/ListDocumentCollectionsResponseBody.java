@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDocumentCollectionsResponseBody</p>
  */
 public class ListDocumentCollectionsResponseBody extends TeaModel {
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private ListDocumentCollectionsResponseBody(Builder builder) {
@@ -132,25 +131,25 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
     } 
 
     public static class CollectionList extends TeaModel {
-        @NameInMap("CollectionName")
+        @com.aliyun.core.annotation.NameInMap("CollectionName")
         private String collectionName;
 
-        @NameInMap("Dimension")
+        @com.aliyun.core.annotation.NameInMap("Dimension")
         private Integer dimension;
 
-        @NameInMap("EmbeddingModel")
+        @com.aliyun.core.annotation.NameInMap("EmbeddingModel")
         private String embeddingModel;
 
-        @NameInMap("FullTextRetrievalFields")
+        @com.aliyun.core.annotation.NameInMap("FullTextRetrievalFields")
         private String fullTextRetrievalFields;
 
-        @NameInMap("Metadata")
+        @com.aliyun.core.annotation.NameInMap("Metadata")
         private String metadata;
 
-        @NameInMap("Metrics")
+        @com.aliyun.core.annotation.NameInMap("Metrics")
         private String metrics;
 
-        @NameInMap("Parser")
+        @com.aliyun.core.annotation.NameInMap("Parser")
         private String parser;
 
         private CollectionList(Builder builder) {
@@ -293,7 +292,7 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("CollectionList")
+        @com.aliyun.core.annotation.NameInMap("CollectionList")
         private java.util.List < CollectionList> collectionList;
 
         private Items(Builder builder) {

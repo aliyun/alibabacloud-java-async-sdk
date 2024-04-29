@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLogBackupsResponseBody</p>
  */
 public class DescribeLogBackupsResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("TotalLogSize")
+    @com.aliyun.core.annotation.NameInMap("TotalLogSize")
     private Long totalLogSize;
 
     private DescribeLogBackupsResponseBody(Builder builder) {
@@ -152,22 +151,22 @@ public class DescribeLogBackupsResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("BackupId")
+        @com.aliyun.core.annotation.NameInMap("BackupId")
         private String backupId;
 
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("LogFileName")
+        @com.aliyun.core.annotation.NameInMap("LogFileName")
         private String logFileName;
 
-        @NameInMap("LogFileSize")
+        @com.aliyun.core.annotation.NameInMap("LogFileSize")
         private Long logFileSize;
 
-        @NameInMap("LogTime")
+        @com.aliyun.core.annotation.NameInMap("LogTime")
         private String logTime;
 
-        @NameInMap("SegmentName")
+        @com.aliyun.core.annotation.NameInMap("SegmentName")
         private String segmentName;
 
         private Items(Builder builder) {

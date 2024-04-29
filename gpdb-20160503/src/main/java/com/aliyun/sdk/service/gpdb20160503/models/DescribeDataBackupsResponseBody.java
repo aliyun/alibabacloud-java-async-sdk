@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDataBackupsResponseBody</p>
  */
 public class DescribeDataBackupsResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalBackupSize")
+    @com.aliyun.core.annotation.NameInMap("TotalBackupSize")
     private Long totalBackupSize;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDataBackupsResponseBody(Builder builder) {
@@ -152,43 +151,43 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("BackupEndTime")
+        @com.aliyun.core.annotation.NameInMap("BackupEndTime")
         private String backupEndTime;
 
-        @NameInMap("BackupEndTimeLocal")
+        @com.aliyun.core.annotation.NameInMap("BackupEndTimeLocal")
         private String backupEndTimeLocal;
 
-        @NameInMap("BackupMethod")
+        @com.aliyun.core.annotation.NameInMap("BackupMethod")
         private String backupMethod;
 
-        @NameInMap("BackupMode")
+        @com.aliyun.core.annotation.NameInMap("BackupMode")
         private String backupMode;
 
-        @NameInMap("BackupSetId")
+        @com.aliyun.core.annotation.NameInMap("BackupSetId")
         private String backupSetId;
 
-        @NameInMap("BackupSize")
+        @com.aliyun.core.annotation.NameInMap("BackupSize")
         private Long backupSize;
 
-        @NameInMap("BackupStartTime")
+        @com.aliyun.core.annotation.NameInMap("BackupStartTime")
         private String backupStartTime;
 
-        @NameInMap("BackupStartTimeLocal")
+        @com.aliyun.core.annotation.NameInMap("BackupStartTimeLocal")
         private String backupStartTimeLocal;
 
-        @NameInMap("BackupStatus")
+        @com.aliyun.core.annotation.NameInMap("BackupStatus")
         private String backupStatus;
 
-        @NameInMap("BaksetName")
+        @com.aliyun.core.annotation.NameInMap("BaksetName")
         private String baksetName;
 
-        @NameInMap("ConsistentTime")
+        @com.aliyun.core.annotation.NameInMap("ConsistentTime")
         private Long consistentTime;
 
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("DataType")
+        @com.aliyun.core.annotation.NameInMap("DataType")
         private String dataType;
 
         private Items(Builder builder) {

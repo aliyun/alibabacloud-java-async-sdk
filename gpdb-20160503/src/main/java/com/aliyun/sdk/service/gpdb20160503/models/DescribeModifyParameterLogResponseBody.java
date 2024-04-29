@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeModifyParameterLogResponseBody</p>
  */
 public class DescribeModifyParameterLogResponseBody extends TeaModel {
-    @NameInMap("Changelogs")
+    @com.aliyun.core.annotation.NameInMap("Changelogs")
     private java.util.List < Changelogs> changelogs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeModifyParameterLogResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
     } 
 
     public static class Changelogs extends TeaModel {
-        @NameInMap("EffectTime")
+        @com.aliyun.core.annotation.NameInMap("EffectTime")
         private String effectTime;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
-        @NameInMap("ParameterValid")
+        @com.aliyun.core.annotation.NameInMap("ParameterValid")
         private String parameterValid;
 
-        @NameInMap("ParameterValueAfter")
+        @com.aliyun.core.annotation.NameInMap("ParameterValueAfter")
         private String parameterValueAfter;
 
-        @NameInMap("ParameterValueBefore")
+        @com.aliyun.core.annotation.NameInMap("ParameterValueBefore")
         private String parameterValueBefore;
 
         private Changelogs(Builder builder) {

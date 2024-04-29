@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryCollectionDataResponseBody</p>
  */
 public class QueryCollectionDataResponseBody extends TeaModel {
-    @NameInMap("Matches")
+    @com.aliyun.core.annotation.NameInMap("Matches")
     private Matches matches;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
+
+    @com.aliyun.core.annotation.NameInMap("Total")
+    private Integer total;
 
     private QueryCollectionDataResponseBody(Builder builder) {
         this.matches = builder.matches;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.status = builder.status;
+        this.total = builder.total;
     }
 
     public static Builder builder() {
@@ -67,11 +70,19 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         return this.status;
     }
 
+    /**
+     * @return total
+     */
+    public Integer getTotal() {
+        return this.total;
+    }
+
     public static final class Builder {
         private Matches matches; 
         private String message; 
         private String requestId; 
         private String status; 
+        private Integer total; 
 
         /**
          * Matches.
@@ -105,6 +116,14 @@ public class QueryCollectionDataResponseBody extends TeaModel {
             return this;
         }
 
+        /**
+         * Total.
+         */
+        public Builder total(Integer total) {
+            this.total = total;
+            return this;
+        }
+
         public QueryCollectionDataResponseBody build() {
             return new QueryCollectionDataResponseBody(this);
         } 
@@ -112,7 +131,7 @@ public class QueryCollectionDataResponseBody extends TeaModel {
     } 
 
     public static class Values extends TeaModel {
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private java.util.List < Double > value;
 
         private Values(Builder builder) {
@@ -153,16 +172,16 @@ public class QueryCollectionDataResponseBody extends TeaModel {
 
     }
     public static class Match extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Metadata")
+        @com.aliyun.core.annotation.NameInMap("Metadata")
         private java.util.Map < String, String > metadata;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private Double score;
 
-        @NameInMap("Values")
+        @com.aliyun.core.annotation.NameInMap("Values")
         private Values values;
 
         private Match(Builder builder) {
@@ -254,7 +273,7 @@ public class QueryCollectionDataResponseBody extends TeaModel {
 
     }
     public static class Matches extends TeaModel {
-        @NameInMap("match")
+        @com.aliyun.core.annotation.NameInMap("match")
         private java.util.List < Match> match;
 
         private Matches(Builder builder) {

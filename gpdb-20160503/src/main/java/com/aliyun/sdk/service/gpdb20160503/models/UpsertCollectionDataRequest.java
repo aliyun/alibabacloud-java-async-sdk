@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpsertCollectionDataRequest</p>
  */
 public class UpsertCollectionDataRequest extends Request {
-    @Query
-    @NameInMap("Collection")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Collection")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String collection;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Query
-    @NameInMap("NamespacePassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespacePassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespacePassword;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Body
-    @NameInMap("Rows")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Rows")
     private java.util.List < Rows> rows;
 
     private UpsertCollectionDataRequest(Builder builder) {
@@ -219,14 +218,14 @@ public class UpsertCollectionDataRequest extends Request {
     } 
 
     public static class Rows extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Metadata")
+        @com.aliyun.core.annotation.NameInMap("Metadata")
         private java.util.Map < String, String > metadata;
 
-        @NameInMap("Vector")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Vector")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List < Double > vector;
 
         private Rows(Builder builder) {

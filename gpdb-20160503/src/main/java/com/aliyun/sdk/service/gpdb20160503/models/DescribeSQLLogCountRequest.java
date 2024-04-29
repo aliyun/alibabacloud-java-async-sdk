@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,59 +11,59 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSQLLogCountRequest</p>
  */
 public class DescribeSQLLogCountRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("Database")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Database")
     private String database;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("ExecuteCost")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExecuteCost")
     private String executeCost;
 
-    @Query
-    @NameInMap("ExecuteState")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExecuteState")
     private String executeState;
 
-    @Query
-    @NameInMap("MaxExecuteCost")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxExecuteCost")
     private String maxExecuteCost;
 
-    @Query
-    @NameInMap("MinExecuteCost")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinExecuteCost")
     private String minExecuteCost;
 
-    @Query
-    @NameInMap("OperationClass")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationClass")
     private String operationClass;
 
-    @Query
-    @NameInMap("OperationType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationType")
     private String operationType;
 
-    @Query
-    @NameInMap("QueryKeywords")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryKeywords")
     private String queryKeywords;
 
-    @Query
-    @NameInMap("SourceIP")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceIP")
     private String sourceIP;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
-    @Query
-    @NameInMap("User")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("User")
     private String user;
 
     private DescribeSQLLogCountRequest(Builder builder) {

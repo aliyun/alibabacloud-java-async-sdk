@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBInstanceDiagnosisSummaryResponseBody</p>
  */
 public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("MasterStatusInfo")
+    @com.aliyun.core.annotation.NameInMap("MasterStatusInfo")
     private MasterStatusInfo masterStatusInfo;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SegmentStatusInfo")
+    @com.aliyun.core.annotation.NameInMap("SegmentStatusInfo")
     private SegmentStatusInfo segmentStatusInfo;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private DescribeDBInstanceDiagnosisSummaryResponseBody(Builder builder) {
@@ -152,37 +151,37 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("Hostname")
+        @com.aliyun.core.annotation.NameInMap("Hostname")
         private String hostname;
 
-        @NameInMap("NodeAddress")
+        @com.aliyun.core.annotation.NameInMap("NodeAddress")
         private String nodeAddress;
 
-        @NameInMap("NodeCID")
+        @com.aliyun.core.annotation.NameInMap("NodeCID")
         private String nodeCID;
 
-        @NameInMap("NodeID")
+        @com.aliyun.core.annotation.NameInMap("NodeID")
         private String nodeID;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("NodePort")
+        @com.aliyun.core.annotation.NameInMap("NodePort")
         private String nodePort;
 
-        @NameInMap("NodePreferredRole")
+        @com.aliyun.core.annotation.NameInMap("NodePreferredRole")
         private String nodePreferredRole;
 
-        @NameInMap("NodeReplicationMode")
+        @com.aliyun.core.annotation.NameInMap("NodeReplicationMode")
         private String nodeReplicationMode;
 
-        @NameInMap("NodeRole")
+        @com.aliyun.core.annotation.NameInMap("NodeRole")
         private String nodeRole;
 
-        @NameInMap("NodeStatus")
+        @com.aliyun.core.annotation.NameInMap("NodeStatus")
         private String nodeStatus;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
         private Items(Builder builder) {
@@ -417,22 +416,22 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
 
     }
     public static class MasterStatusInfo extends TeaModel {
-        @NameInMap("ExceptionNodeNum")
+        @com.aliyun.core.annotation.NameInMap("ExceptionNodeNum")
         private Integer exceptionNodeNum;
 
-        @NameInMap("NormalNodeNum")
+        @com.aliyun.core.annotation.NameInMap("NormalNodeNum")
         private Integer normalNodeNum;
 
-        @NameInMap("NotPreferredNodeNum")
+        @com.aliyun.core.annotation.NameInMap("NotPreferredNodeNum")
         private Integer notPreferredNodeNum;
 
-        @NameInMap("NotSyncingNodeNum")
+        @com.aliyun.core.annotation.NameInMap("NotSyncingNodeNum")
         private Integer notSyncingNodeNum;
 
-        @NameInMap("PreferredNodeNum")
+        @com.aliyun.core.annotation.NameInMap("PreferredNodeNum")
         private Integer preferredNodeNum;
 
-        @NameInMap("SyncedNodeNum")
+        @com.aliyun.core.annotation.NameInMap("SyncedNodeNum")
         private Integer syncedNodeNum;
 
         private MasterStatusInfo(Builder builder) {
@@ -558,22 +557,22 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
 
     }
     public static class SegmentStatusInfo extends TeaModel {
-        @NameInMap("ExceptionNodeNum")
+        @com.aliyun.core.annotation.NameInMap("ExceptionNodeNum")
         private Integer exceptionNodeNum;
 
-        @NameInMap("NormalNodeNum")
+        @com.aliyun.core.annotation.NameInMap("NormalNodeNum")
         private Integer normalNodeNum;
 
-        @NameInMap("NotPreferredNodeNum")
+        @com.aliyun.core.annotation.NameInMap("NotPreferredNodeNum")
         private Integer notPreferredNodeNum;
 
-        @NameInMap("NotSyncingNodeNum")
+        @com.aliyun.core.annotation.NameInMap("NotSyncingNodeNum")
         private Integer notSyncingNodeNum;
 
-        @NameInMap("PreferredNodeNum")
+        @com.aliyun.core.annotation.NameInMap("PreferredNodeNum")
         private Integer preferredNodeNum;
 
-        @NameInMap("SyncedNodeNum")
+        @com.aliyun.core.annotation.NameInMap("SyncedNodeNum")
         private Integer syncedNodeNum;
 
         private SegmentStatusInfo(Builder builder) {

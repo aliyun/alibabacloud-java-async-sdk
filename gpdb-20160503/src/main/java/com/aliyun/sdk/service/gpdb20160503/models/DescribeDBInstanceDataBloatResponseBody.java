@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBInstanceDataBloatResponseBody</p>
  */
 public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDBInstanceDataBloatResponseBody(Builder builder) {
@@ -112,40 +111,40 @@ public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("BloatCeoff")
+        @com.aliyun.core.annotation.NameInMap("BloatCeoff")
         private String bloatCeoff;
 
-        @NameInMap("BloatSize")
+        @com.aliyun.core.annotation.NameInMap("BloatSize")
         private String bloatSize;
 
-        @NameInMap("DatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
-        @NameInMap("ExpectTableSize")
+        @com.aliyun.core.annotation.NameInMap("ExpectTableSize")
         private String expectTableSize;
 
-        @NameInMap("RealTableSize")
+        @com.aliyun.core.annotation.NameInMap("RealTableSize")
         private String realTableSize;
 
-        @NameInMap("SchemaName")
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
         private String schemaName;
 
-        @NameInMap("Sequence")
+        @com.aliyun.core.annotation.NameInMap("Sequence")
         private Integer sequence;
 
-        @NameInMap("StorageType")
+        @com.aliyun.core.annotation.NameInMap("StorageType")
         private String storageType;
 
-        @NameInMap("SuggestedAction")
+        @com.aliyun.core.annotation.NameInMap("SuggestedAction")
         private String suggestedAction;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
-        @NameInMap("TimeLastUpdated")
+        @com.aliyun.core.annotation.NameInMap("TimeLastUpdated")
         private String timeLastUpdated;
 
-        @NameInMap("TimeLastVacuumed")
+        @com.aliyun.core.annotation.NameInMap("TimeLastVacuumed")
         private String timeLastVacuumed;
 
         private Items(Builder builder) {

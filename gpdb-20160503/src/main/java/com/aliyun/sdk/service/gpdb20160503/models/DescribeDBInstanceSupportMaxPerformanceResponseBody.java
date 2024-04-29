@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBInstanceSupportMaxPerformanceResponseBody</p>
  */
 public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("Performances")
+    @com.aliyun.core.annotation.NameInMap("Performances")
     private Performances performances;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBInstanceSupportMaxPerformanceResponseBody(Builder builder) {
@@ -92,16 +91,16 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
     } 
 
     public static class Performance extends TeaModel {
-        @NameInMap("Bottleneck")
+        @com.aliyun.core.annotation.NameInMap("Bottleneck")
         private String bottleneck;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Performance(Builder builder) {
@@ -193,7 +192,7 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
 
     }
     public static class Performances extends TeaModel {
-        @NameInMap("Performance")
+        @com.aliyun.core.annotation.NameInMap("Performance")
         private java.util.List < Performance> performance;
 
         private Performances(Builder builder) {

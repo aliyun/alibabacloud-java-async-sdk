@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,45 +11,45 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDBInstancePlanRequest</p>
  */
 public class CreateDBInstancePlanRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PlanConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlanConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String planConfig;
 
-    @Query
-    @NameInMap("PlanDesc")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlanDesc")
     private String planDesc;
 
-    @Query
-    @NameInMap("PlanEndDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlanEndDate")
     private String planEndDate;
 
-    @Query
-    @NameInMap("PlanName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlanName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String planName;
 
-    @Query
-    @NameInMap("PlanScheduleType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlanScheduleType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String planScheduleType;
 
-    @Query
-    @NameInMap("PlanStartDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlanStartDate")
     private String planStartDate;
 
-    @Query
-    @NameInMap("PlanType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlanType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String planType;
 
     private CreateDBInstancePlanRequest(Builder builder) {

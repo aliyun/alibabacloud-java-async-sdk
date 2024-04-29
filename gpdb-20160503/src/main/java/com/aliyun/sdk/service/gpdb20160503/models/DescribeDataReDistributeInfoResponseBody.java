@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDataReDistributeInfoResponseBody</p>
  */
 public class DescribeDataReDistributeInfoResponseBody extends TeaModel {
-    @NameInMap("DataReDistributeInfo")
+    @com.aliyun.core.annotation.NameInMap("DataReDistributeInfo")
     private DataReDistributeInfo dataReDistributeInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDataReDistributeInfoResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class DescribeDataReDistributeInfoResponseBody extends TeaModel {
     } 
 
     public static class DataReDistributeInfo extends TeaModel {
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private Long progress;
 
-        @NameInMap("RemainTime")
+        @com.aliyun.core.annotation.NameInMap("RemainTime")
         private String remainTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private DataReDistributeInfo(Builder builder) {

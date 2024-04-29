@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDocumentsResponseBody</p>
  */
 public class ListDocumentsResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private ListDocumentsResponseBody(Builder builder) {
@@ -112,10 +111,10 @@ public class ListDocumentsResponseBody extends TeaModel {
     } 
 
     public static class DocumentList extends TeaModel {
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
         private DocumentList(Builder builder) {
@@ -173,7 +172,7 @@ public class ListDocumentsResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("DocumentList")
+        @com.aliyun.core.annotation.NameInMap("DocumentList")
         private java.util.List < DocumentList> documentList;
 
         private Items(Builder builder) {

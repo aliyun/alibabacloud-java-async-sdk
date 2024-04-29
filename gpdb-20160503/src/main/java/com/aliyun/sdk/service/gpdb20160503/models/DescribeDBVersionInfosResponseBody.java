@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBVersionInfosResponseBody</p>
  */
 public class DescribeDBVersionInfosResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VersionDetails")
+    @com.aliyun.core.annotation.NameInMap("VersionDetails")
     private VersionDetails versionDetails;
 
     private DescribeDBVersionInfosResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeDBVersionInfosResponseBody extends TeaModel {
     } 
 
     public static class VersionDetails extends TeaModel {
-        @NameInMap("Serverless")
+        @com.aliyun.core.annotation.NameInMap("Serverless")
         private Object serverless;
 
-        @NameInMap("StorageElastic")
+        @com.aliyun.core.annotation.NameInMap("StorageElastic")
         private Object storageElastic;
 
         private VersionDetails(Builder builder) {

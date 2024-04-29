@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBInstanceSSLResponseBody</p>
  */
 public class DescribeDBInstanceSSLResponseBody extends TeaModel {
-    @NameInMap("CertCommonName")
+    @com.aliyun.core.annotation.NameInMap("CertCommonName")
     private String certCommonName;
 
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("DBInstanceName")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceName")
     private String DBInstanceName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SSLEnabled")
+    @com.aliyun.core.annotation.NameInMap("SSLEnabled")
     private Boolean SSLEnabled;
 
-    @NameInMap("SSLExpiredTime")
+    @com.aliyun.core.annotation.NameInMap("SSLExpiredTime")
     private String SSLExpiredTime;
 
     private DescribeDBInstanceSSLResponseBody(Builder builder) {

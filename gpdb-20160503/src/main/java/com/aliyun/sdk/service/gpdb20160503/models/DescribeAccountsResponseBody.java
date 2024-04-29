@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAccountsResponseBody</p>
  */
 public class DescribeAccountsResponseBody extends TeaModel {
-    @NameInMap("Accounts")
+    @com.aliyun.core.annotation.NameInMap("Accounts")
     private Accounts accounts;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAccountsResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribeAccountsResponseBody extends TeaModel {
     } 
 
     public static class DBInstanceAccount extends TeaModel {
-        @NameInMap("AccountDescription")
+        @com.aliyun.core.annotation.NameInMap("AccountDescription")
         private String accountDescription;
 
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("AccountStatus")
+        @com.aliyun.core.annotation.NameInMap("AccountStatus")
         private String accountStatus;
 
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
         private DBInstanceAccount(Builder builder) {
@@ -178,7 +177,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
 
     }
     public static class Accounts extends TeaModel {
-        @NameInMap("DBInstanceAccount")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceAccount")
         private java.util.List < DBInstanceAccount> DBInstanceAccount;
 
         private Accounts(Builder builder) {

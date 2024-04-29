@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDiagnosisMonitorPerformanceResponseBody</p>
  */
 public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
-    @NameInMap("Performances")
+    @com.aliyun.core.annotation.NameInMap("Performances")
     private java.util.List < Performances> performances;
 
-    @NameInMap("PerformancesThreshold")
+    @com.aliyun.core.annotation.NameInMap("PerformancesThreshold")
     private Integer performancesThreshold;
 
-    @NameInMap("PerformancesTruncated")
+    @com.aliyun.core.annotation.NameInMap("PerformancesTruncated")
     private Boolean performancesTruncated;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDiagnosisMonitorPerformanceResponseBody(Builder builder) {
@@ -116,22 +115,22 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
     } 
 
     public static class Performances extends TeaModel {
-        @NameInMap("Cost")
+        @com.aliyun.core.annotation.NameInMap("Cost")
         private Integer cost;
 
-        @NameInMap("Database")
+        @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
 
-        @NameInMap("QueryID")
+        @com.aliyun.core.annotation.NameInMap("QueryID")
         private String queryID;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private String user;
 
         private Performances(Builder builder) {

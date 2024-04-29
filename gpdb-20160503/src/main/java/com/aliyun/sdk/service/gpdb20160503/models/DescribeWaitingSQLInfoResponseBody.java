@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeWaitingSQLInfoResponseBody</p>
  */
 public class DescribeWaitingSQLInfoResponseBody extends TeaModel {
-    @NameInMap("Database")
+    @com.aliyun.core.annotation.NameInMap("Database")
     private String database;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeWaitingSQLInfoResponseBody(Builder builder) {
@@ -92,34 +91,34 @@ public class DescribeWaitingSQLInfoResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("Application")
+        @com.aliyun.core.annotation.NameInMap("Application")
         private String application;
 
-        @NameInMap("BlockedByApplication")
+        @com.aliyun.core.annotation.NameInMap("BlockedByApplication")
         private String blockedByApplication;
 
-        @NameInMap("BlockedByPID")
+        @com.aliyun.core.annotation.NameInMap("BlockedByPID")
         private String blockedByPID;
 
-        @NameInMap("BlockedBySQLStmt")
+        @com.aliyun.core.annotation.NameInMap("BlockedBySQLStmt")
         private String blockedBySQLStmt;
 
-        @NameInMap("BlockedByUser")
+        @com.aliyun.core.annotation.NameInMap("BlockedByUser")
         private String blockedByUser;
 
-        @NameInMap("GrantLocks")
+        @com.aliyun.core.annotation.NameInMap("GrantLocks")
         private String grantLocks;
 
-        @NameInMap("NotGrantLocks")
+        @com.aliyun.core.annotation.NameInMap("NotGrantLocks")
         private String notGrantLocks;
 
-        @NameInMap("PID")
+        @com.aliyun.core.annotation.NameInMap("PID")
         private String PID;
 
-        @NameInMap("SQLStmt")
+        @com.aliyun.core.annotation.NameInMap("SQLStmt")
         private String SQLStmt;
 
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private String user;
 
         private Items(Builder builder) {

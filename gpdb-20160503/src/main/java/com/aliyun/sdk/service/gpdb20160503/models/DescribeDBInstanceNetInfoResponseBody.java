@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBInstanceNetInfoResponseBody</p>
  */
 public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
-    @NameInMap("DBInstanceNetInfos")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceNetInfos")
     private DBInstanceNetInfos DBInstanceNetInfos;
 
-    @NameInMap("InstanceNetworkType")
+    @com.aliyun.core.annotation.NameInMap("InstanceNetworkType")
     private String instanceNetworkType;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBInstanceNetInfoResponseBody(Builder builder) {
@@ -96,28 +95,28 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
     } 
 
     public static class DBInstanceNetInfo extends TeaModel {
-        @NameInMap("AddressType")
+        @com.aliyun.core.annotation.NameInMap("AddressType")
         private String addressType;
 
-        @NameInMap("ConnectionString")
+        @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
 
-        @NameInMap("IPAddress")
+        @com.aliyun.core.annotation.NameInMap("IPAddress")
         private String IPAddress;
 
-        @NameInMap("IPType")
+        @com.aliyun.core.annotation.NameInMap("IPType")
         private String IPType;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("VPCId")
+        @com.aliyun.core.annotation.NameInMap("VPCId")
         private String VPCId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcInstanceId")
+        @com.aliyun.core.annotation.NameInMap("VpcInstanceId")
         private String vpcInstanceId;
 
         private DBInstanceNetInfo(Builder builder) {
@@ -281,7 +280,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
 
     }
     public static class DBInstanceNetInfos extends TeaModel {
-        @NameInMap("DBInstanceNetInfo")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceNetInfo")
         private java.util.List < DBInstanceNetInfo> DBInstanceNetInfo;
 
         private DBInstanceNetInfos(Builder builder) {

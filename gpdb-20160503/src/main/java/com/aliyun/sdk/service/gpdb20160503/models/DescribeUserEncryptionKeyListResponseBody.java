@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUserEncryptionKeyListResponseBody</p>
  */
 public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
-    @NameInMap("KmsKeys")
+    @com.aliyun.core.annotation.NameInMap("KmsKeys")
     private java.util.List < KmsKeys> kmsKeys;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeUserEncryptionKeyListResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
     } 
 
     public static class KmsKeys extends TeaModel {
-        @NameInMap("KeyId")
+        @com.aliyun.core.annotation.NameInMap("KeyId")
         private String keyId;
 
         private KmsKeys(Builder builder) {

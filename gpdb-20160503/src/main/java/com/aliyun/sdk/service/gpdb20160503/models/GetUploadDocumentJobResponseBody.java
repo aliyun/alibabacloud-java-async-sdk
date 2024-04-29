@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetUploadDocumentJobResponseBody</p>
  */
 public class GetUploadDocumentJobResponseBody extends TeaModel {
-    @NameInMap("ChunkResult")
+    @com.aliyun.core.annotation.NameInMap("ChunkResult")
     private ChunkResult chunkResult;
 
-    @NameInMap("Job")
+    @com.aliyun.core.annotation.NameInMap("Job")
     private Job job;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("Usage")
+    @com.aliyun.core.annotation.NameInMap("Usage")
     private Usage usage;
 
     private GetUploadDocumentJobResponseBody(Builder builder) {
@@ -152,10 +151,10 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
     } 
 
     public static class ChunkResult extends TeaModel {
-        @NameInMap("ChunkFileUrl")
+        @com.aliyun.core.annotation.NameInMap("ChunkFileUrl")
         private String chunkFileUrl;
 
-        @NameInMap("PlainChunkFileUrl")
+        @com.aliyun.core.annotation.NameInMap("PlainChunkFileUrl")
         private String plainChunkFileUrl;
 
         private ChunkResult(Builder builder) {
@@ -213,25 +212,25 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
 
     }
     public static class Job extends TeaModel {
-        @NameInMap("Completed")
+        @com.aliyun.core.annotation.NameInMap("Completed")
         private Boolean completed;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Error")
+        @com.aliyun.core.annotation.NameInMap("Error")
         private String error;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private Integer progress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private Job(Builder builder) {
@@ -374,10 +373,10 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
 
     }
     public static class Usage extends TeaModel {
-        @NameInMap("EmbeddingEntries")
+        @com.aliyun.core.annotation.NameInMap("EmbeddingEntries")
         private Integer embeddingEntries;
 
-        @NameInMap("EmbeddingTokens")
+        @com.aliyun.core.annotation.NameInMap("EmbeddingTokens")
         private Integer embeddingTokens;
 
         private Usage(Builder builder) {

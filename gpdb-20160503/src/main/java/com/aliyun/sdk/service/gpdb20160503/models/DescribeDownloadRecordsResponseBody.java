@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDownloadRecordsResponseBody</p>
  */
 public class DescribeDownloadRecordsResponseBody extends TeaModel {
-    @NameInMap("Records")
+    @com.aliyun.core.annotation.NameInMap("Records")
     private java.util.List < Records> records;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDownloadRecordsResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
     } 
 
     public static class Records extends TeaModel {
-        @NameInMap("DownloadId")
+        @com.aliyun.core.annotation.NameInMap("DownloadId")
         private Long downloadId;
 
-        @NameInMap("DownloadUrl")
+        @com.aliyun.core.annotation.NameInMap("DownloadUrl")
         private String downloadUrl;
 
-        @NameInMap("ExceptionMsg")
+        @com.aliyun.core.annotation.NameInMap("ExceptionMsg")
         private String exceptionMsg;
 
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Records(Builder builder) {

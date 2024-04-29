@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,71 +11,71 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCollectionRequest</p>
  */
 public class CreateCollectionRequest extends Request {
-    @Query
-    @NameInMap("Collection")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Collection")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String collection;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("Dimension")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Dimension")
     private Long dimension;
 
-    @Query
-    @NameInMap("ExternalStorage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExternalStorage")
     private Integer externalStorage;
 
-    @Query
-    @NameInMap("FullTextRetrievalFields")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FullTextRetrievalFields")
     private String fullTextRetrievalFields;
 
-    @Query
-    @NameInMap("HnswM")
-    @Validation(maximum = 1000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HnswM")
+    @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 1)
     private Integer hnswM;
 
-    @Query
-    @NameInMap("ManagerAccount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ManagerAccount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String managerAccount;
 
-    @Query
-    @NameInMap("ManagerAccountPassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ManagerAccountPassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String managerAccountPassword;
 
-    @Query
-    @NameInMap("Metadata")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Metadata")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String metadata;
 
-    @Query
-    @NameInMap("Metrics")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Metrics")
     private String metrics;
 
-    @Query
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Parser")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Parser")
     private String parser;
 
-    @Query
-    @NameInMap("PqEnable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PqEnable")
     private Integer pqEnable;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private CreateCollectionRequest(Builder builder) {

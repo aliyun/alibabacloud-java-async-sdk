@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBInstanceIPArrayListResponseBody</p>
  */
 public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBInstanceIPArrayListResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
     } 
 
     public static class DBInstanceIPArray extends TeaModel {
-        @NameInMap("DBInstanceIPArrayAttribute")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceIPArrayAttribute")
         private String DBInstanceIPArrayAttribute;
 
-        @NameInMap("DBInstanceIPArrayName")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceIPArrayName")
         private String DBInstanceIPArrayName;
 
-        @NameInMap("SecurityIPList")
+        @com.aliyun.core.annotation.NameInMap("SecurityIPList")
         private String securityIPList;
 
         private DBInstanceIPArray(Builder builder) {
@@ -158,7 +157,7 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("DBInstanceIPArray")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceIPArray")
         private java.util.List < DBInstanceIPArray> DBInstanceIPArray;
 
         private Items(Builder builder) {

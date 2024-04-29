@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,43 +11,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDiagnosisSQLInfoResponseBody</p>
  */
 public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
-    @NameInMap("Database")
+    @com.aliyun.core.annotation.NameInMap("Database")
     private String database;
 
-    @NameInMap("Duration")
+    @com.aliyun.core.annotation.NameInMap("Duration")
     private Integer duration;
 
-    @NameInMap("MaxOutputRows")
+    @com.aliyun.core.annotation.NameInMap("MaxOutputRows")
     private String maxOutputRows;
 
-    @NameInMap("QueryID")
+    @com.aliyun.core.annotation.NameInMap("QueryID")
     private String queryID;
 
-    @NameInMap("QueryPlan")
+    @com.aliyun.core.annotation.NameInMap("QueryPlan")
     private String queryPlan;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SQLStmt")
+    @com.aliyun.core.annotation.NameInMap("SQLStmt")
     private String SQLStmt;
 
-    @NameInMap("SessionID")
+    @com.aliyun.core.annotation.NameInMap("SessionID")
     private String sessionID;
 
-    @NameInMap("SortedMetrics")
+    @com.aliyun.core.annotation.NameInMap("SortedMetrics")
     private String sortedMetrics;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("TextPlan")
+    @com.aliyun.core.annotation.NameInMap("TextPlan")
     private String textPlan;
 
-    @NameInMap("User")
+    @com.aliyun.core.annotation.NameInMap("User")
     private String user;
 
     private DescribeDiagnosisSQLInfoResponseBody(Builder builder) {

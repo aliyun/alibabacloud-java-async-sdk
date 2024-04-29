@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gpdb20160503.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSQLLogsResponseBody</p>
  */
 public class DescribeSQLLogsResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeSQLLogsResponseBody(Builder builder) {
@@ -112,46 +111,46 @@ public class DescribeSQLLogsResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("DBName")
+        @com.aliyun.core.annotation.NameInMap("DBName")
         private String DBName;
 
-        @NameInMap("DBRole")
+        @com.aliyun.core.annotation.NameInMap("DBRole")
         private String DBRole;
 
-        @NameInMap("ExecuteCost")
+        @com.aliyun.core.annotation.NameInMap("ExecuteCost")
         private Float executeCost;
 
-        @NameInMap("ExecuteState")
+        @com.aliyun.core.annotation.NameInMap("ExecuteState")
         private String executeState;
 
-        @NameInMap("OperationClass")
+        @com.aliyun.core.annotation.NameInMap("OperationClass")
         private String operationClass;
 
-        @NameInMap("OperationExecuteTime")
+        @com.aliyun.core.annotation.NameInMap("OperationExecuteTime")
         private String operationExecuteTime;
 
-        @NameInMap("OperationType")
+        @com.aliyun.core.annotation.NameInMap("OperationType")
         private String operationType;
 
-        @NameInMap("ReturnRowCounts")
+        @com.aliyun.core.annotation.NameInMap("ReturnRowCounts")
         private Long returnRowCounts;
 
-        @NameInMap("SQLPlan")
+        @com.aliyun.core.annotation.NameInMap("SQLPlan")
         private String SQLPlan;
 
-        @NameInMap("SQLText")
+        @com.aliyun.core.annotation.NameInMap("SQLText")
         private String SQLText;
 
-        @NameInMap("ScanRowCounts")
+        @com.aliyun.core.annotation.NameInMap("ScanRowCounts")
         private Long scanRowCounts;
 
-        @NameInMap("SourceIP")
+        @com.aliyun.core.annotation.NameInMap("SourceIP")
         private String sourceIP;
 
-        @NameInMap("SourcePort")
+        @com.aliyun.core.annotation.NameInMap("SourcePort")
         private Integer sourcePort;
 
         private Items(Builder builder) {
