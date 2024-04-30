@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyInstanceCrossBackupPolicyResponseBody</p>
  */
 public class ModifyInstanceCrossBackupPolicyResponseBody extends TeaModel {
-    @NameInMap("BackupEnabled")
+    @com.aliyun.core.annotation.NameInMap("BackupEnabled")
     private String backupEnabled;
 
-    @NameInMap("CrossBackupRegion")
+    @com.aliyun.core.annotation.NameInMap("CrossBackupRegion")
     private String crossBackupRegion;
 
-    @NameInMap("CrossBackupType")
+    @com.aliyun.core.annotation.NameInMap("CrossBackupType")
     private String crossBackupType;
 
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("LogBackupEnabled")
+    @com.aliyun.core.annotation.NameInMap("LogBackupEnabled")
     private String logBackupEnabled;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RetentType")
+    @com.aliyun.core.annotation.NameInMap("RetentType")
     private Integer retentType;
 
-    @NameInMap("Retention")
+    @com.aliyun.core.annotation.NameInMap("Retention")
     private Integer retention;
 
     private ModifyInstanceCrossBackupPolicyResponseBody(Builder builder) {

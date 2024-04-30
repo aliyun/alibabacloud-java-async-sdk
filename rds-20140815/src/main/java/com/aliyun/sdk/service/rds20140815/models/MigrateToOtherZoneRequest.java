@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,74 +11,74 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>MigrateToOtherZoneRequest</p>
  */
 public class MigrateToOtherZoneRequest extends Request {
-    @Query
-    @NameInMap("Category")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Category")
     private String category;
 
-    @Query
-    @NameInMap("DBInstanceClass")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceClass")
     private String DBInstanceClass;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("DBInstanceStorage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceStorage")
     private Long DBInstanceStorage;
 
-    @Query
-    @NameInMap("EffectiveTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveTime")
     private String effectiveTime;
 
-    @Query
-    @NameInMap("IoAccelerationEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IoAccelerationEnabled")
     private String ioAccelerationEnabled;
 
-    @Query
-    @NameInMap("IsModifySpec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsModifySpec")
     private String isModifySpec;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SwitchTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SwitchTime")
     private String switchTime;
 
-    @Query
-    @NameInMap("VPCId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VPCId")
     private String VPCId;
 
-    @Query
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @Query
-    @NameInMap("ZoneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String zoneId;
 
-    @Query
-    @NameInMap("ZoneIdSlave1")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneIdSlave1")
     private String zoneIdSlave1;
 
-    @Query
-    @NameInMap("ZoneIdSlave2")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneIdSlave2")
     private String zoneIdSlave2;
 
     private MigrateToOtherZoneRequest(Builder builder) {

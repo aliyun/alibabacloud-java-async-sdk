@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePGHbaConfigResponseBody</p>
  */
 public class DescribePGHbaConfigResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("DefaultHbaItems")
+    @com.aliyun.core.annotation.NameInMap("DefaultHbaItems")
     private DefaultHbaItems defaultHbaItems;
 
-    @NameInMap("HbaModifyTime")
+    @com.aliyun.core.annotation.NameInMap("HbaModifyTime")
     private String hbaModifyTime;
 
-    @NameInMap("LastModifyStatus")
+    @com.aliyun.core.annotation.NameInMap("LastModifyStatus")
     private String lastModifyStatus;
 
-    @NameInMap("ModifyStatusReason")
+    @com.aliyun.core.annotation.NameInMap("ModifyStatusReason")
     private String modifyStatusReason;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RunningHbaItems")
+    @com.aliyun.core.annotation.NameInMap("RunningHbaItems")
     private RunningHbaItems runningHbaItems;
 
     private DescribePGHbaConfigResponseBody(Builder builder) {
@@ -177,28 +176,28 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
     } 
 
     public static class HbaItem extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("Database")
+        @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
 
-        @NameInMap("Mask")
+        @com.aliyun.core.annotation.NameInMap("Mask")
         private String mask;
 
-        @NameInMap("Method")
+        @com.aliyun.core.annotation.NameInMap("Method")
         private String method;
 
-        @NameInMap("Option")
+        @com.aliyun.core.annotation.NameInMap("Option")
         private String option;
 
-        @NameInMap("PriorityId")
+        @com.aliyun.core.annotation.NameInMap("PriorityId")
         private Integer priorityId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private String user;
 
         private HbaItem(Builder builder) {
@@ -358,7 +357,7 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
 
     }
     public static class DefaultHbaItems extends TeaModel {
-        @NameInMap("HbaItem")
+        @com.aliyun.core.annotation.NameInMap("HbaItem")
         private java.util.List < HbaItem> hbaItem;
 
         private DefaultHbaItems(Builder builder) {
@@ -399,28 +398,28 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
 
     }
     public static class RunningHbaItemsHbaItem extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("Database")
+        @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
 
-        @NameInMap("Mask")
+        @com.aliyun.core.annotation.NameInMap("Mask")
         private String mask;
 
-        @NameInMap("Method")
+        @com.aliyun.core.annotation.NameInMap("Method")
         private String method;
 
-        @NameInMap("Option")
+        @com.aliyun.core.annotation.NameInMap("Option")
         private String option;
 
-        @NameInMap("PriorityId")
+        @com.aliyun.core.annotation.NameInMap("PriorityId")
         private Integer priorityId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private String user;
 
         private RunningHbaItemsHbaItem(Builder builder) {
@@ -585,7 +584,7 @@ public class DescribePGHbaConfigResponseBody extends TeaModel {
 
     }
     public static class RunningHbaItems extends TeaModel {
-        @NameInMap("HbaItem")
+        @com.aliyun.core.annotation.NameInMap("HbaItem")
         private java.util.List < RunningHbaItemsHbaItem> hbaItem;
 
         private RunningHbaItems(Builder builder) {

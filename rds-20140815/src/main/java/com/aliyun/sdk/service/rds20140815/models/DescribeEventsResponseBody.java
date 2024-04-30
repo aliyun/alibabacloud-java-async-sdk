@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEventsResponseBody</p>
  */
 public class DescribeEventsResponseBody extends TeaModel {
-    @NameInMap("EventItems")
+    @com.aliyun.core.annotation.NameInMap("EventItems")
     private EventItems eventItems;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeEventsResponseBody(Builder builder) {
@@ -132,40 +131,40 @@ public class DescribeEventsResponseBody extends TeaModel {
     } 
 
     public static class EventItemsEventItems extends TeaModel {
-        @NameInMap("CallerUid")
+        @com.aliyun.core.annotation.NameInMap("CallerUid")
         private Long callerUid;
 
-        @NameInMap("EventId")
+        @com.aliyun.core.annotation.NameInMap("EventId")
         private Integer eventId;
 
-        @NameInMap("EventName")
+        @com.aliyun.core.annotation.NameInMap("EventName")
         private String eventName;
 
-        @NameInMap("EventPayload")
+        @com.aliyun.core.annotation.NameInMap("EventPayload")
         private String eventPayload;
 
-        @NameInMap("EventReason")
+        @com.aliyun.core.annotation.NameInMap("EventReason")
         private String eventReason;
 
-        @NameInMap("EventRecordTime")
+        @com.aliyun.core.annotation.NameInMap("EventRecordTime")
         private String eventRecordTime;
 
-        @NameInMap("EventTime")
+        @com.aliyun.core.annotation.NameInMap("EventTime")
         private String eventTime;
 
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
 
-        @NameInMap("EventUserType")
+        @com.aliyun.core.annotation.NameInMap("EventUserType")
         private String eventUserType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceName")
+        @com.aliyun.core.annotation.NameInMap("ResourceName")
         private String resourceName;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
         private EventItemsEventItems(Builder builder) {
@@ -393,7 +392,7 @@ public class DescribeEventsResponseBody extends TeaModel {
 
     }
     public static class EventItems extends TeaModel {
-        @NameInMap("EventItems")
+        @com.aliyun.core.annotation.NameInMap("EventItems")
         private java.util.List < EventItemsEventItems> eventItems;
 
         private EventItems(Builder builder) {

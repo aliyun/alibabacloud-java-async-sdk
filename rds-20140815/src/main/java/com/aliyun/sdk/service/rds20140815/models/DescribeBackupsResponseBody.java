@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBackupsResponseBody</p>
  */
 public class DescribeBackupsResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private String pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalEcsSnapshotSize")
+    @com.aliyun.core.annotation.NameInMap("TotalEcsSnapshotSize")
     private Long totalEcsSnapshotSize;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private String totalRecordCount;
 
     private DescribeBackupsResponseBody(Builder builder) {
@@ -152,13 +151,13 @@ public class DescribeBackupsResponseBody extends TeaModel {
     } 
 
     public static class BackupDownloadLinkByDB extends TeaModel {
-        @NameInMap("DataBase")
+        @com.aliyun.core.annotation.NameInMap("DataBase")
         private String dataBase;
 
-        @NameInMap("DownloadLink")
+        @com.aliyun.core.annotation.NameInMap("DownloadLink")
         private String downloadLink;
 
-        @NameInMap("IntranetDownloadLink")
+        @com.aliyun.core.annotation.NameInMap("IntranetDownloadLink")
         private String intranetDownloadLink;
 
         private BackupDownloadLinkByDB(Builder builder) {
@@ -233,7 +232,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
 
     }
     public static class BackupBackupDownloadLinkByDB extends TeaModel {
-        @NameInMap("BackupDownloadLinkByDB")
+        @com.aliyun.core.annotation.NameInMap("BackupDownloadLinkByDB")
         private java.util.List < BackupDownloadLinkByDB> backupDownloadLinkByDB;
 
         private BackupBackupDownloadLinkByDB(Builder builder) {
@@ -274,73 +273,73 @@ public class DescribeBackupsResponseBody extends TeaModel {
 
     }
     public static class Backup extends TeaModel {
-        @NameInMap("BackupDownloadLinkByDB")
+        @com.aliyun.core.annotation.NameInMap("BackupDownloadLinkByDB")
         private BackupBackupDownloadLinkByDB backupDownloadLinkByDB;
 
-        @NameInMap("BackupDownloadURL")
+        @com.aliyun.core.annotation.NameInMap("BackupDownloadURL")
         private String backupDownloadURL;
 
-        @NameInMap("BackupEndTime")
+        @com.aliyun.core.annotation.NameInMap("BackupEndTime")
         private String backupEndTime;
 
-        @NameInMap("BackupId")
+        @com.aliyun.core.annotation.NameInMap("BackupId")
         private String backupId;
 
-        @NameInMap("BackupInitiator")
+        @com.aliyun.core.annotation.NameInMap("BackupInitiator")
         private String backupInitiator;
 
-        @NameInMap("BackupIntranetDownloadURL")
+        @com.aliyun.core.annotation.NameInMap("BackupIntranetDownloadURL")
         private String backupIntranetDownloadURL;
 
-        @NameInMap("BackupMethod")
+        @com.aliyun.core.annotation.NameInMap("BackupMethod")
         private String backupMethod;
 
-        @NameInMap("BackupMode")
+        @com.aliyun.core.annotation.NameInMap("BackupMode")
         private String backupMode;
 
-        @NameInMap("BackupSize")
+        @com.aliyun.core.annotation.NameInMap("BackupSize")
         private Long backupSize;
 
-        @NameInMap("BackupStartTime")
+        @com.aliyun.core.annotation.NameInMap("BackupStartTime")
         private String backupStartTime;
 
-        @NameInMap("BackupStatus")
+        @com.aliyun.core.annotation.NameInMap("BackupStatus")
         private String backupStatus;
 
-        @NameInMap("BackupType")
+        @com.aliyun.core.annotation.NameInMap("BackupType")
         private String backupType;
 
-        @NameInMap("Checksum")
+        @com.aliyun.core.annotation.NameInMap("Checksum")
         private String checksum;
 
-        @NameInMap("ConsistentTime")
+        @com.aliyun.core.annotation.NameInMap("ConsistentTime")
         private Long consistentTime;
 
-        @NameInMap("CopyOnlyBackup")
+        @com.aliyun.core.annotation.NameInMap("CopyOnlyBackup")
         private String copyOnlyBackup;
 
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("Encryption")
+        @com.aliyun.core.annotation.NameInMap("Encryption")
         private String encryption;
 
-        @NameInMap("HostInstanceID")
+        @com.aliyun.core.annotation.NameInMap("HostInstanceID")
         private String hostInstanceID;
 
-        @NameInMap("IsAvail")
+        @com.aliyun.core.annotation.NameInMap("IsAvail")
         private Integer isAvail;
 
-        @NameInMap("MetaStatus")
+        @com.aliyun.core.annotation.NameInMap("MetaStatus")
         private String metaStatus;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("StorageClass")
+        @com.aliyun.core.annotation.NameInMap("StorageClass")
         private String storageClass;
 
-        @NameInMap("StoreStatus")
+        @com.aliyun.core.annotation.NameInMap("StoreStatus")
         private String storeStatus;
 
         private Backup(Builder builder) {
@@ -806,7 +805,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("Backup")
+        @com.aliyun.core.annotation.NameInMap("Backup")
         private java.util.List < Backup> backup;
 
         private Items(Builder builder) {

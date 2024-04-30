@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,133 +11,133 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDdrInstanceRequest</p>
  */
 public class CreateDdrInstanceRequest extends Request {
-    @Query
-    @NameInMap("BackupSetId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupSetId")
     private String backupSetId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("ConnectionMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectionMode")
     private String connectionMode;
 
-    @Query
-    @NameInMap("DBInstanceClass")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceClass")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceClass;
 
-    @Query
-    @NameInMap("DBInstanceDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceDescription")
     private String DBInstanceDescription;
 
-    @Query
-    @NameInMap("DBInstanceNetType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceNetType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceNetType;
 
-    @Query
-    @NameInMap("DBInstanceStorage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceStorage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer DBInstanceStorage;
 
-    @Query
-    @NameInMap("DBInstanceStorageType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceStorageType")
     private String DBInstanceStorageType;
 
-    @Query
-    @NameInMap("Engine")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String engine;
 
-    @Query
-    @NameInMap("EngineVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String engineVersion;
 
-    @Query
-    @NameInMap("InstanceNetworkType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceNetworkType")
     private String instanceNetworkType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PayType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PayType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String payType;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private String period;
 
-    @Query
-    @NameInMap("PrivateIpAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
     private String privateIpAddress;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RestoreTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreTime")
     private String restoreTime;
 
-    @Query
-    @NameInMap("RestoreType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String restoreType;
 
-    @Query
-    @NameInMap("SecurityIPList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityIPList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String securityIPList;
 
-    @Query
-    @NameInMap("SourceDBInstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceDBInstanceName")
     private String sourceDBInstanceName;
 
-    @Query
-    @NameInMap("SourceRegion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceRegion")
     private String sourceRegion;
 
-    @Query
-    @NameInMap("SystemDBCharset")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SystemDBCharset")
     private String systemDBCharset;
 
-    @Query
-    @NameInMap("UsedTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UsedTime")
     private String usedTime;
 
-    @Query
-    @NameInMap("VPCId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VPCId")
     private String VPCId;
 
-    @Query
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private CreateDdrInstanceRequest(Builder builder) {

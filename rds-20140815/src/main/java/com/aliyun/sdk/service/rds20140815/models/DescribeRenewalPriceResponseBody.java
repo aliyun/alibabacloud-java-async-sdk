@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRenewalPriceResponseBody</p>
  */
 public class DescribeRenewalPriceResponseBody extends TeaModel {
-    @NameInMap("PriceInfo")
+    @com.aliyun.core.annotation.NameInMap("PriceInfo")
     private PriceInfo priceInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Rules")
+    @com.aliyun.core.annotation.NameInMap("Rules")
     private Rules rules;
 
     private DescribeRenewalPriceResponseBody(Builder builder) {
@@ -92,13 +91,13 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     } 
 
     public static class ActivityInfo extends TeaModel {
-        @NameInMap("CheckErrMsg")
+        @com.aliyun.core.annotation.NameInMap("CheckErrMsg")
         private String checkErrMsg;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private String success;
 
         private ActivityInfo(Builder builder) {
@@ -173,16 +172,16 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
 
     }
     public static class Coupon extends TeaModel {
-        @NameInMap("CouponNo")
+        @com.aliyun.core.annotation.NameInMap("CouponNo")
         private String couponNo;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("IsSelected")
+        @com.aliyun.core.annotation.NameInMap("IsSelected")
         private String isSelected;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Coupon(Builder builder) {
@@ -274,7 +273,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
 
     }
     public static class Coupons extends TeaModel {
-        @NameInMap("Coupon")
+        @com.aliyun.core.annotation.NameInMap("Coupon")
         private java.util.List < Coupon> coupon;
 
         private Coupons(Builder builder) {
@@ -315,7 +314,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
 
     }
     public static class RuleIds extends TeaModel {
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private java.util.List < String > ruleId;
 
         private RuleIds(Builder builder) {
@@ -356,25 +355,25 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
 
     }
     public static class PriceInfo extends TeaModel {
-        @NameInMap("ActivityInfo")
+        @com.aliyun.core.annotation.NameInMap("ActivityInfo")
         private ActivityInfo activityInfo;
 
-        @NameInMap("Coupons")
+        @com.aliyun.core.annotation.NameInMap("Coupons")
         private Coupons coupons;
 
-        @NameInMap("Currency")
+        @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
-        @NameInMap("DiscountPrice")
+        @com.aliyun.core.annotation.NameInMap("DiscountPrice")
         private Float discountPrice;
 
-        @NameInMap("OriginalPrice")
+        @com.aliyun.core.annotation.NameInMap("OriginalPrice")
         private Float originalPrice;
 
-        @NameInMap("RuleIds")
+        @com.aliyun.core.annotation.NameInMap("RuleIds")
         private RuleIds ruleIds;
 
-        @NameInMap("TradePrice")
+        @com.aliyun.core.annotation.NameInMap("TradePrice")
         private Float tradePrice;
 
         private PriceInfo(Builder builder) {
@@ -517,13 +516,13 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
 
     }
     public static class Rule extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
         private Rule(Builder builder) {
@@ -598,7 +597,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
 
     }
     public static class Rules extends TeaModel {
-        @NameInMap("Rule")
+        @com.aliyun.core.annotation.NameInMap("Rule")
         private java.util.List < Rule> rule;
 
         private Rules(Builder builder) {

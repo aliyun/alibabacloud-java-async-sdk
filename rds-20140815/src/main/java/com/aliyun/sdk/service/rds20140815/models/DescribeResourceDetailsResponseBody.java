@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,46 +11,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeResourceDetailsResponseBody</p>
  */
 public class DescribeResourceDetailsResponseBody extends TeaModel {
-    @NameInMap("BackupDataSize")
+    @com.aliyun.core.annotation.NameInMap("BackupDataSize")
     private Long backupDataSize;
 
-    @NameInMap("BackupLogSize")
+    @com.aliyun.core.annotation.NameInMap("BackupLogSize")
     private Long backupLogSize;
 
-    @NameInMap("BackupSize")
+    @com.aliyun.core.annotation.NameInMap("BackupSize")
     private Long backupSize;
 
-    @NameInMap("DbInstanceStorage")
+    @com.aliyun.core.annotation.NameInMap("DbInstanceStorage")
     private Long dbInstanceStorage;
 
-    @NameInMap("DbProxyInstanceName")
+    @com.aliyun.core.annotation.NameInMap("DbProxyInstanceName")
     private String dbProxyInstanceName;
 
-    @NameInMap("DiskUsed")
+    @com.aliyun.core.annotation.NameInMap("DiskUsed")
     private Long diskUsed;
 
-    @NameInMap("InstanceStorageType")
+    @com.aliyun.core.annotation.NameInMap("InstanceStorageType")
     private String instanceStorageType;
 
-    @NameInMap("RdsEcsSecurityGroupRel")
+    @com.aliyun.core.annotation.NameInMap("RdsEcsSecurityGroupRel")
     private java.util.List < RdsEcsSecurityGroupRel> rdsEcsSecurityGroupRel;
 
-    @NameInMap("Region")
+    @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("SecurityIPList")
+    @com.aliyun.core.annotation.NameInMap("SecurityIPList")
     private String securityIPList;
 
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     private DescribeResourceDetailsResponseBody(Builder builder) {
@@ -321,7 +320,7 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
     } 
 
     public static class RdsEcsSecurityGroupRel extends TeaModel {
-        @NameInMap("SecurityGroupName")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupName")
         private String securityGroupName;
 
         private RdsEcsSecurityGroupRel(Builder builder) {

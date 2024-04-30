@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceAutoRenewalAttributeResponseBody</p>
  */
 public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeInstanceAutoRenewalAttributeResponseBody(Builder builder) {
@@ -132,19 +131,19 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
     } 
 
     public static class Item extends TeaModel {
-        @NameInMap("AutoRenew")
+        @com.aliyun.core.annotation.NameInMap("AutoRenew")
         private String autoRenew;
 
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Integer duration;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Item(Builder builder) {
@@ -253,7 +252,7 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("Item")
+        @com.aliyun.core.annotation.NameInMap("Item")
         private java.util.List < Item> item;
 
         private Items(Builder builder) {

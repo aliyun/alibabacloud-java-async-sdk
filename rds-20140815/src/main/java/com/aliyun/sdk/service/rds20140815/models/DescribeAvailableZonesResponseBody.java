@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAvailableZonesResponseBody</p>
  */
 public class DescribeAvailableZonesResponseBody extends TeaModel {
-    @NameInMap("AvailableZones")
+    @com.aliyun.core.annotation.NameInMap("AvailableZones")
     private java.util.List < AvailableZones> availableZones;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAvailableZonesResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
     } 
 
     public static class SupportedStorageTypes extends TeaModel {
-        @NameInMap("StorageType")
+        @com.aliyun.core.annotation.NameInMap("StorageType")
         private String storageType;
 
         private SupportedStorageTypes(Builder builder) {
@@ -113,10 +112,10 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
 
     }
     public static class SupportedCategorys extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("SupportedStorageTypes")
+        @com.aliyun.core.annotation.NameInMap("SupportedStorageTypes")
         private java.util.List < SupportedStorageTypes> supportedStorageTypes;
 
         private SupportedCategorys(Builder builder) {
@@ -174,10 +173,10 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
 
     }
     public static class SupportedEngineVersions extends TeaModel {
-        @NameInMap("SupportedCategorys")
+        @com.aliyun.core.annotation.NameInMap("SupportedCategorys")
         private java.util.List < SupportedCategorys> supportedCategorys;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private SupportedEngineVersions(Builder builder) {
@@ -235,10 +234,10 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
 
     }
     public static class SupportedEngines extends TeaModel {
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("SupportedEngineVersions")
+        @com.aliyun.core.annotation.NameInMap("SupportedEngineVersions")
         private java.util.List < SupportedEngineVersions> supportedEngineVersions;
 
         private SupportedEngines(Builder builder) {
@@ -296,13 +295,13 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
 
     }
     public static class AvailableZones extends TeaModel {
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SupportedEngines")
+        @com.aliyun.core.annotation.NameInMap("SupportedEngines")
         private java.util.List < SupportedEngines> supportedEngines;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private AvailableZones(Builder builder) {

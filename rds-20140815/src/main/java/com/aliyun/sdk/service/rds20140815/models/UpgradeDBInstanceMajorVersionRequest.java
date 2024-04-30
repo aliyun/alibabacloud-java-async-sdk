@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,85 +11,85 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpgradeDBInstanceMajorVersionRequest</p>
  */
 public class UpgradeDBInstanceMajorVersionRequest extends Request {
-    @Query
-    @NameInMap("CollectStatMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CollectStatMode")
     private String collectStatMode;
 
-    @Query
-    @NameInMap("DBInstanceClass")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceClass")
     private String DBInstanceClass;
 
-    @Query
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("DBInstanceStorage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceStorage")
     private Integer DBInstanceStorage;
 
-    @Query
-    @NameInMap("DBInstanceStorageType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceStorageType")
     private String DBInstanceStorageType;
 
-    @Query
-    @NameInMap("InstanceNetworkType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceNetworkType")
     private String instanceNetworkType;
 
-    @Query
-    @NameInMap("PayType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PayType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String payType;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private String period;
 
-    @Query
-    @NameInMap("PrivateIpAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
     private String privateIpAddress;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SwitchOver")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SwitchOver")
     private String switchOver;
 
-    @Query
-    @NameInMap("SwitchTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SwitchTime")
     private String switchTime;
 
-    @Query
-    @NameInMap("SwitchTimeMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SwitchTimeMode")
     private String switchTimeMode;
 
-    @Query
-    @NameInMap("TargetMajorVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetMajorVersion")
     private String targetMajorVersion;
 
-    @Query
-    @NameInMap("UsedTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UsedTime")
     private String usedTime;
 
-    @Query
-    @NameInMap("VPCId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VPCId")
     private String VPCId;
 
-    @Query
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
-    @Query
-    @NameInMap("ZoneIdSlave1")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneIdSlave1")
     private String zoneIdSlave1;
 
-    @Query
-    @NameInMap("ZoneIdSlave2")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneIdSlave2")
     private String zoneIdSlave2;
 
     private UpgradeDBInstanceMajorVersionRequest(Builder builder) {

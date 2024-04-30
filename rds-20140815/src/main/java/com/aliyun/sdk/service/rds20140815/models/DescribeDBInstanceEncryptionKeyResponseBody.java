@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBInstanceEncryptionKeyResponseBody</p>
  */
 public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
-    @NameInMap("Creator")
+    @com.aliyun.core.annotation.NameInMap("Creator")
     private String creator;
 
-    @NameInMap("DeleteDate")
+    @com.aliyun.core.annotation.NameInMap("DeleteDate")
     private String deleteDate;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("EncryptionKey")
+    @com.aliyun.core.annotation.NameInMap("EncryptionKey")
     private String encryptionKey;
 
-    @NameInMap("EncryptionKeyList")
+    @com.aliyun.core.annotation.NameInMap("EncryptionKeyList")
     private java.util.List < EncryptionKeyList> encryptionKeyList;
 
-    @NameInMap("EncryptionKeyStatus")
+    @com.aliyun.core.annotation.NameInMap("EncryptionKeyStatus")
     private String encryptionKeyStatus;
 
-    @NameInMap("KeyUsage")
+    @com.aliyun.core.annotation.NameInMap("KeyUsage")
     private String keyUsage;
 
-    @NameInMap("MaterialExpireTime")
+    @com.aliyun.core.annotation.NameInMap("MaterialExpireTime")
     private String materialExpireTime;
 
-    @NameInMap("Origin")
+    @com.aliyun.core.annotation.NameInMap("Origin")
     private String origin;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBInstanceEncryptionKeyResponseBody(Builder builder) {
@@ -236,37 +235,37 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
     } 
 
     public static class EncryptionKeyList extends TeaModel {
-        @NameInMap("AliasName")
+        @com.aliyun.core.annotation.NameInMap("AliasName")
         private String aliasName;
 
-        @NameInMap("Creator")
+        @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
 
-        @NameInMap("DeleteDate")
+        @com.aliyun.core.annotation.NameInMap("DeleteDate")
         private String deleteDate;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EncryptionKey")
+        @com.aliyun.core.annotation.NameInMap("EncryptionKey")
         private String encryptionKey;
 
-        @NameInMap("EncryptionKeyStatus")
+        @com.aliyun.core.annotation.NameInMap("EncryptionKeyStatus")
         private String encryptionKeyStatus;
 
-        @NameInMap("KeyType")
+        @com.aliyun.core.annotation.NameInMap("KeyType")
         private String keyType;
 
-        @NameInMap("KeyUsage")
+        @com.aliyun.core.annotation.NameInMap("KeyUsage")
         private String keyUsage;
 
-        @NameInMap("MaterialExpireTime")
+        @com.aliyun.core.annotation.NameInMap("MaterialExpireTime")
         private String materialExpireTime;
 
-        @NameInMap("Origin")
+        @com.aliyun.core.annotation.NameInMap("Origin")
         private String origin;
 
-        @NameInMap("UsedBy")
+        @com.aliyun.core.annotation.NameInMap("UsedBy")
         private String usedBy;
 
         private EncryptionKeyList(Builder builder) {

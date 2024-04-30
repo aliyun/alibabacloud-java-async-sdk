@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SwitchDBInstanceVpcRequest</p>
  */
 public class SwitchDBInstanceVpcRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("PrivateIpAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
     private String privateIpAddress;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("VPCId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VPCId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String VPCId;
 
-    @Query
-    @NameInMap("VSwitchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
 
     private SwitchDBInstanceVpcRequest(Builder builder) {

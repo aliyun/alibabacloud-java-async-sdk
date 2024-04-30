@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCrossRegionLogBackupFilesResponseBody</p>
  */
 public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeCrossRegionLogBackupFilesResponseBody(Builder builder) {
@@ -215,34 +214,34 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
     } 
 
     public static class Item extends TeaModel {
-        @NameInMap("CrossBackupRegion")
+        @com.aliyun.core.annotation.NameInMap("CrossBackupRegion")
         private String crossBackupRegion;
 
-        @NameInMap("CrossDownloadLink")
+        @com.aliyun.core.annotation.NameInMap("CrossDownloadLink")
         private String crossDownloadLink;
 
-        @NameInMap("CrossIntranetDownloadLink")
+        @com.aliyun.core.annotation.NameInMap("CrossIntranetDownloadLink")
         private String crossIntranetDownloadLink;
 
-        @NameInMap("CrossLogBackupId")
+        @com.aliyun.core.annotation.NameInMap("CrossLogBackupId")
         private Integer crossLogBackupId;
 
-        @NameInMap("CrossLogBackupSize")
+        @com.aliyun.core.annotation.NameInMap("CrossLogBackupSize")
         private Long crossLogBackupSize;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Integer instanceId;
 
-        @NameInMap("LinkExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("LinkExpiredTime")
         private String linkExpiredTime;
 
-        @NameInMap("LogBeginTime")
+        @com.aliyun.core.annotation.NameInMap("LogBeginTime")
         private String logBeginTime;
 
-        @NameInMap("LogEndTime")
+        @com.aliyun.core.annotation.NameInMap("LogEndTime")
         private String logEndTime;
 
-        @NameInMap("LogFileName")
+        @com.aliyun.core.annotation.NameInMap("LogFileName")
         private String logFileName;
 
         private Item(Builder builder) {
@@ -436,7 +435,7 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("Item")
+        @com.aliyun.core.annotation.NameInMap("Item")
         private java.util.List < Item> item;
 
         private Items(Builder builder) {

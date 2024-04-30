@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeModifyParameterLogResponseBody</p>
  */
 public class DescribeModifyParameterLogResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @NameInMap("EngineVersion")
+    @com.aliyun.core.annotation.NameInMap("EngineVersion")
     private String engineVersion;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeModifyParameterLogResponseBody(Builder builder) {
@@ -192,19 +191,19 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
     } 
 
     public static class ParameterChangeLog extends TeaModel {
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("NewParameterValue")
+        @com.aliyun.core.annotation.NameInMap("NewParameterValue")
         private String newParameterValue;
 
-        @NameInMap("OldParameterValue")
+        @com.aliyun.core.annotation.NameInMap("OldParameterValue")
         private String oldParameterValue;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ParameterChangeLog(Builder builder) {
@@ -317,7 +316,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("ParameterChangeLog")
+        @com.aliyun.core.annotation.NameInMap("ParameterChangeLog")
         private java.util.List < ParameterChangeLog> parameterChangeLog;
 
         private Items(Builder builder) {

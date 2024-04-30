@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSecretsResponseBody</p>
  */
 public class DescribeSecretsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Secrets")
+    @com.aliyun.core.annotation.NameInMap("Secrets")
     private java.util.List < Secrets> secrets;
 
     private DescribeSecretsResponseBody(Builder builder) {
@@ -112,22 +111,22 @@ public class DescribeSecretsResponseBody extends TeaModel {
     } 
 
     public static class Secrets extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SecretArn")
+        @com.aliyun.core.annotation.NameInMap("SecretArn")
         private String secretArn;
 
-        @NameInMap("SecretName")
+        @com.aliyun.core.annotation.NameInMap("SecretName")
         private String secretName;
 
-        @NameInMap("Username")
+        @com.aliyun.core.annotation.NameInMap("Username")
         private String username;
 
         private Secrets(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,69 +11,69 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RecoveryDBInstanceRequest</p>
  */
 public class RecoveryDBInstanceRequest extends Request {
-    @Query
-    @NameInMap("BackupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupId")
     private String backupId;
 
-    @Query
-    @NameInMap("DBInstanceClass")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceClass")
     private String DBInstanceClass;
 
-    @Query
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("DBInstanceStorage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceStorage")
     private Integer DBInstanceStorage;
 
-    @Query
-    @NameInMap("DBInstanceStorageType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceStorageType")
     private String DBInstanceStorageType;
 
-    @Query
-    @NameInMap("DbNames")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbNames")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbNames;
 
-    @Query
-    @NameInMap("InstanceNetworkType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceNetworkType")
     private String instanceNetworkType;
 
-    @Query
-    @NameInMap("PayType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private String period;
 
-    @Query
-    @NameInMap("PrivateIpAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
     private String privateIpAddress;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RestoreTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreTime")
     private String restoreTime;
 
-    @Query
-    @NameInMap("TargetDBInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetDBInstanceId")
     private String targetDBInstanceId;
 
-    @Query
-    @NameInMap("UsedTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UsedTime")
     private String usedTime;
 
-    @Query
-    @NameInMap("VPCId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VPCId")
     private String VPCId;
 
-    @Query
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
     private RecoveryDBInstanceRequest(Builder builder) {

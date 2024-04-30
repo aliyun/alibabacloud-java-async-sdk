@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTagsResponseBody</p>
  */
 public class DescribeTagsResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeTagsResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class DescribeTagsResponseBody extends TeaModel {
     } 
 
     public static class DBInstanceIds extends TeaModel {
-        @NameInMap("DBInstanceIds")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceIds")
         private java.util.List < String > DBInstanceIds;
 
         private DBInstanceIds(Builder builder) {
@@ -113,13 +112,13 @@ public class DescribeTagsResponseBody extends TeaModel {
 
     }
     public static class TagInfos extends TeaModel {
-        @NameInMap("DBInstanceIds")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceIds")
         private DBInstanceIds DBInstanceIds;
 
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private TagInfos(Builder builder) {
@@ -194,7 +193,7 @@ public class DescribeTagsResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("TagInfos")
+        @com.aliyun.core.annotation.NameInMap("TagInfos")
         private java.util.List < TagInfos> tagInfos;
 
         private Items(Builder builder) {

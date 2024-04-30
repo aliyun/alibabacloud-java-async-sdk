@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,67 +11,67 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBInstanceSSLResponseBody</p>
  */
 public class DescribeDBInstanceSSLResponseBody extends TeaModel {
-    @NameInMap("ACL")
+    @com.aliyun.core.annotation.NameInMap("ACL")
     private String ACL;
 
-    @NameInMap("CAType")
+    @com.aliyun.core.annotation.NameInMap("CAType")
     private String CAType;
 
-    @NameInMap("ClientCACert")
+    @com.aliyun.core.annotation.NameInMap("ClientCACert")
     private String clientCACert;
 
-    @NameInMap("ClientCACertExpireTime")
+    @com.aliyun.core.annotation.NameInMap("ClientCACertExpireTime")
     private String clientCACertExpireTime;
 
-    @NameInMap("ClientCertRevocationList")
+    @com.aliyun.core.annotation.NameInMap("ClientCertRevocationList")
     private String clientCertRevocationList;
 
-    @NameInMap("ConnectionString")
+    @com.aliyun.core.annotation.NameInMap("ConnectionString")
     private String connectionString;
 
-    @NameInMap("ForceEncryption")
+    @com.aliyun.core.annotation.NameInMap("ForceEncryption")
     private String forceEncryption;
 
-    @NameInMap("LastModifyStatus")
+    @com.aliyun.core.annotation.NameInMap("LastModifyStatus")
     private String lastModifyStatus;
 
-    @NameInMap("ModifyStatusReason")
+    @com.aliyun.core.annotation.NameInMap("ModifyStatusReason")
     private String modifyStatusReason;
 
-    @NameInMap("ReplicationACL")
+    @com.aliyun.core.annotation.NameInMap("ReplicationACL")
     private String replicationACL;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RequireUpdate")
+    @com.aliyun.core.annotation.NameInMap("RequireUpdate")
     private String requireUpdate;
 
-    @NameInMap("RequireUpdateItem")
+    @com.aliyun.core.annotation.NameInMap("RequireUpdateItem")
     private String requireUpdateItem;
 
-    @NameInMap("RequireUpdateReason")
+    @com.aliyun.core.annotation.NameInMap("RequireUpdateReason")
     private String requireUpdateReason;
 
-    @NameInMap("SSLCreateTime")
+    @com.aliyun.core.annotation.NameInMap("SSLCreateTime")
     private String SSLCreateTime;
 
-    @NameInMap("SSLEnabled")
+    @com.aliyun.core.annotation.NameInMap("SSLEnabled")
     private String SSLEnabled;
 
-    @NameInMap("SSLExpireTime")
+    @com.aliyun.core.annotation.NameInMap("SSLExpireTime")
     private String SSLExpireTime;
 
-    @NameInMap("ServerCAUrl")
+    @com.aliyun.core.annotation.NameInMap("ServerCAUrl")
     private String serverCAUrl;
 
-    @NameInMap("ServerCert")
+    @com.aliyun.core.annotation.NameInMap("ServerCert")
     private String serverCert;
 
-    @NameInMap("ServerKey")
+    @com.aliyun.core.annotation.NameInMap("ServerKey")
     private String serverKey;
 
-    @NameInMap("TlsVersion")
+    @com.aliyun.core.annotation.NameInMap("TlsVersion")
     private String tlsVersion;
 
     private DescribeDBInstanceSSLResponseBody(Builder builder) {

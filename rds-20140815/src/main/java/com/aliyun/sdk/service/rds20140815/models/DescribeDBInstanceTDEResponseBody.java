@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBInstanceTDEResponseBody</p>
  */
 public class DescribeDBInstanceTDEResponseBody extends TeaModel {
-    @NameInMap("Databases")
+    @com.aliyun.core.annotation.NameInMap("Databases")
     private Databases databases;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TDEMode")
+    @com.aliyun.core.annotation.NameInMap("TDEMode")
     private String TDEMode;
 
-    @NameInMap("TDEStatus")
+    @com.aliyun.core.annotation.NameInMap("TDEStatus")
     private String TDEStatus;
 
     private DescribeDBInstanceTDEResponseBody(Builder builder) {
@@ -124,10 +123,10 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
     } 
 
     public static class Database extends TeaModel {
-        @NameInMap("DBName")
+        @com.aliyun.core.annotation.NameInMap("DBName")
         private String DBName;
 
-        @NameInMap("TDEStatus")
+        @com.aliyun.core.annotation.NameInMap("TDEStatus")
         private String TDEStatus;
 
         private Database(Builder builder) {
@@ -189,7 +188,7 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
 
     }
     public static class Databases extends TeaModel {
-        @NameInMap("Database")
+        @com.aliyun.core.annotation.NameInMap("Database")
         private java.util.List < Database> database;
 
         private Databases(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBInstanceHAConfigResponseBody</p>
  */
 public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("HAMode")
+    @com.aliyun.core.annotation.NameInMap("HAMode")
     private String HAMode;
 
-    @NameInMap("HostInstanceInfos")
+    @com.aliyun.core.annotation.NameInMap("HostInstanceInfos")
     private HostInstanceInfos hostInstanceInfos;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SyncMode")
+    @com.aliyun.core.annotation.NameInMap("SyncMode")
     private String syncMode;
 
     private DescribeDBInstanceHAConfigResponseBody(Builder builder) {
@@ -145,25 +144,25 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
     } 
 
     public static class NodeInfo extends TeaModel {
-        @NameInMap("DataSyncTime")
+        @com.aliyun.core.annotation.NameInMap("DataSyncTime")
         private String dataSyncTime;
 
-        @NameInMap("LogSyncTime")
+        @com.aliyun.core.annotation.NameInMap("LogSyncTime")
         private String logSyncTime;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SyncStatus")
+        @com.aliyun.core.annotation.NameInMap("SyncStatus")
         private String syncStatus;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private NodeInfo(Builder builder) {
@@ -316,7 +315,7 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
 
     }
     public static class HostInstanceInfos extends TeaModel {
-        @NameInMap("NodeInfo")
+        @com.aliyun.core.annotation.NameInMap("NodeInfo")
         private java.util.List < NodeInfo> nodeInfo;
 
         private HostInstanceInfos(Builder builder) {

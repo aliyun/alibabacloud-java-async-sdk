@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,66 +11,66 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CheckCreateDdrDBInstanceRequest</p>
  */
 public class CheckCreateDdrDBInstanceRequest extends Request {
-    @Query
-    @NameInMap("BackupSetId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupSetId")
     private String backupSetId;
 
-    @Query
-    @NameInMap("DBInstanceClass")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceClass")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceClass;
 
-    @Query
-    @NameInMap("DBInstanceStorage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceStorage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer DBInstanceStorage;
 
-    @Query
-    @NameInMap("Engine")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String engine;
 
-    @Query
-    @NameInMap("EngineVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String engineVersion;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RestoreTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreTime")
     private String restoreTime;
 
-    @Query
-    @NameInMap("RestoreType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String restoreType;
 
-    @Query
-    @NameInMap("SourceDBInstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceDBInstanceName")
     private String sourceDBInstanceName;
 
-    @Query
-    @NameInMap("SourceRegion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceRegion")
     private String sourceRegion;
 
     private CheckCreateDdrDBInstanceRequest(Builder builder) {

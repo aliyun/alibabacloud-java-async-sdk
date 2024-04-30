@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeClassDetailsResponseBody</p>
  */
 public class DescribeClassDetailsResponseBody extends TeaModel {
-    @NameInMap("Category")
+    @com.aliyun.core.annotation.NameInMap("Category")
     private String category;
 
-    @NameInMap("ClassCode")
+    @com.aliyun.core.annotation.NameInMap("ClassCode")
     private String classCode;
 
-    @NameInMap("ClassGroup")
+    @com.aliyun.core.annotation.NameInMap("ClassGroup")
     private String classGroup;
 
-    @NameInMap("Cpu")
+    @com.aliyun.core.annotation.NameInMap("Cpu")
     private String cpu;
 
-    @NameInMap("DBInstanceStorageType")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceStorageType")
     private String DBInstanceStorageType;
 
-    @NameInMap("InstructionSetArch")
+    @com.aliyun.core.annotation.NameInMap("InstructionSetArch")
     private String instructionSetArch;
 
-    @NameInMap("MaxConnections")
+    @com.aliyun.core.annotation.NameInMap("MaxConnections")
     private String maxConnections;
 
-    @NameInMap("MaxIOMBPS")
+    @com.aliyun.core.annotation.NameInMap("MaxIOMBPS")
     private String maxIOMBPS;
 
-    @NameInMap("MaxIOPS")
+    @com.aliyun.core.annotation.NameInMap("MaxIOPS")
     private String maxIOPS;
 
-    @NameInMap("MemoryClass")
+    @com.aliyun.core.annotation.NameInMap("MemoryClass")
     private String memoryClass;
 
-    @NameInMap("ReferencePrice")
+    @com.aliyun.core.annotation.NameInMap("ReferencePrice")
     private String referencePrice;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeClassDetailsResponseBody(Builder builder) {

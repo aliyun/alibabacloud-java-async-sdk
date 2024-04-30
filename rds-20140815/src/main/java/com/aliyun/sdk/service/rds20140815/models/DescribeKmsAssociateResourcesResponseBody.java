@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeKmsAssociateResourcesResponseBody</p>
  */
 public class DescribeKmsAssociateResourcesResponseBody extends TeaModel {
-    @NameInMap("AssociateDBInstances")
+    @com.aliyun.core.annotation.NameInMap("AssociateDBInstances")
     private java.util.List < AssociateDBInstances> associateDBInstances;
 
-    @NameInMap("AssociateStatus")
+    @com.aliyun.core.annotation.NameInMap("AssociateStatus")
     private Boolean associateStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeKmsAssociateResourcesResponseBody(Builder builder) {
@@ -96,16 +95,16 @@ public class DescribeKmsAssociateResourcesResponseBody extends TeaModel {
     } 
 
     public static class AssociateDBInstances extends TeaModel {
-        @NameInMap("DBInstanceName")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceName")
         private String DBInstanceName;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("KeyUsedBy")
+        @com.aliyun.core.annotation.NameInMap("KeyUsedBy")
         private String keyUsedBy;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private AssociateDBInstances(Builder builder) {

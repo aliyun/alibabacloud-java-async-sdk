@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,48 +11,48 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDBProxyEndpointAddressRequest</p>
  */
 public class CreateDBProxyEndpointAddressRequest extends Request {
-    @Query
-    @NameInMap("ConnectionStringPrefix")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectionStringPrefix")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String connectionStringPrefix;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("DBProxyConnectStringNetType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBProxyConnectStringNetType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBProxyConnectStringNetType;
 
-    @Query
-    @NameInMap("DBProxyEndpointId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBProxyEndpointId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBProxyEndpointId;
 
-    @Query
-    @NameInMap("DBProxyEngineType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBProxyEngineType")
     private String DBProxyEngineType;
 
-    @Query
-    @NameInMap("DBProxyNewConnectStringPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBProxyNewConnectStringPort")
     private String DBProxyNewConnectStringPort;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("VPCId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VPCId")
     private String VPCId;
 
-    @Query
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
     private CreateDBProxyEndpointAddressRequest(Builder builder) {

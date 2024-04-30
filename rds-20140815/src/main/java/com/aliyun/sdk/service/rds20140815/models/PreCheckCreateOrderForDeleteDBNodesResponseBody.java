@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PreCheckCreateOrderForDeleteDBNodesResponseBody</p>
  */
 public class PreCheckCreateOrderForDeleteDBNodesResponseBody extends TeaModel {
-    @NameInMap("Failures")
+    @com.aliyun.core.annotation.NameInMap("Failures")
     private Failures failures;
 
-    @NameInMap("PreCheckResult")
+    @com.aliyun.core.annotation.NameInMap("PreCheckResult")
     private Boolean preCheckResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private PreCheckCreateOrderForDeleteDBNodesResponseBody(Builder builder) {
@@ -92,10 +91,10 @@ public class PreCheckCreateOrderForDeleteDBNodesResponseBody extends TeaModel {
     } 
 
     public static class FailuresFailures extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
         private FailuresFailures(Builder builder) {
@@ -160,7 +159,7 @@ public class PreCheckCreateOrderForDeleteDBNodesResponseBody extends TeaModel {
 
     }
     public static class Failures extends TeaModel {
-        @NameInMap("Failures")
+        @com.aliyun.core.annotation.NameInMap("Failures")
         private java.util.List < FailuresFailures> failures;
 
         private Failures(Builder builder) {

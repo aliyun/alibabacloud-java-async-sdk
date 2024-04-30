@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescibeImportsFromDatabaseResponseBody</p>
  */
 public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescibeImportsFromDatabaseResponseBody(Builder builder) {
@@ -132,19 +131,19 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
     } 
 
     public static class ImportResultFromDB extends TeaModel {
-        @NameInMap("ImportDataStatus")
+        @com.aliyun.core.annotation.NameInMap("ImportDataStatus")
         private String importDataStatus;
 
-        @NameInMap("ImportDataStatusDescription")
+        @com.aliyun.core.annotation.NameInMap("ImportDataStatusDescription")
         private String importDataStatusDescription;
 
-        @NameInMap("ImportDataType")
+        @com.aliyun.core.annotation.NameInMap("ImportDataType")
         private String importDataType;
 
-        @NameInMap("ImportId")
+        @com.aliyun.core.annotation.NameInMap("ImportId")
         private Integer importId;
 
-        @NameInMap("IncrementalImportingTime")
+        @com.aliyun.core.annotation.NameInMap("IncrementalImportingTime")
         private String incrementalImportingTime;
 
         private ImportResultFromDB(Builder builder) {
@@ -269,7 +268,7 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("ImportResultFromDB")
+        @com.aliyun.core.annotation.NameInMap("ImportResultFromDB")
         private java.util.List < ImportResultFromDB> importResultFromDB;
 
         private Items(Builder builder) {

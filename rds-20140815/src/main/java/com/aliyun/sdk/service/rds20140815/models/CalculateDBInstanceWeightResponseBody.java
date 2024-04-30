@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CalculateDBInstanceWeightResponseBody</p>
  */
 public class CalculateDBInstanceWeightResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CalculateDBInstanceWeightResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class CalculateDBInstanceWeightResponseBody extends TeaModel {
     } 
 
     public static class DBInstanceWeight extends TeaModel {
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("DBInstanceType")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceType")
         private String DBInstanceType;
 
-        @NameInMap("ReadonlyInstanceSQLDelayedTime")
+        @com.aliyun.core.annotation.NameInMap("ReadonlyInstanceSQLDelayedTime")
         private String readonlyInstanceSQLDelayedTime;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private String weight;
 
         private DBInstanceWeight(Builder builder) {
@@ -177,7 +176,7 @@ public class CalculateDBInstanceWeightResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("DBInstanceWeight")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceWeight")
         private java.util.List < DBInstanceWeight> DBInstanceWeight;
 
         private Items(Builder builder) {

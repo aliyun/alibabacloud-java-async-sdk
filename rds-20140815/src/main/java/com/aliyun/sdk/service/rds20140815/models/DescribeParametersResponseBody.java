@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeParametersResponseBody</p>
  */
 public class DescribeParametersResponseBody extends TeaModel {
-    @NameInMap("ConfigParameters")
+    @com.aliyun.core.annotation.NameInMap("ConfigParameters")
     private ConfigParameters configParameters;
 
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @NameInMap("EngineVersion")
+    @com.aliyun.core.annotation.NameInMap("EngineVersion")
     private String engineVersion;
 
-    @NameInMap("ParamGroupInfo")
+    @com.aliyun.core.annotation.NameInMap("ParamGroupInfo")
     private ParamGroupInfo paramGroupInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RunningParameters")
+    @com.aliyun.core.annotation.NameInMap("RunningParameters")
     private RunningParameters runningParameters;
 
     private DescribeParametersResponseBody(Builder builder) {
@@ -155,13 +154,13 @@ public class DescribeParametersResponseBody extends TeaModel {
     } 
 
     public static class DBInstanceParameter extends TeaModel {
-        @NameInMap("ParameterDescription")
+        @com.aliyun.core.annotation.NameInMap("ParameterDescription")
         private String parameterDescription;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
-        @NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
         private String parameterValue;
 
         private DBInstanceParameter(Builder builder) {
@@ -236,7 +235,7 @@ public class DescribeParametersResponseBody extends TeaModel {
 
     }
     public static class ConfigParameters extends TeaModel {
-        @NameInMap("DBInstanceParameter")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceParameter")
         private java.util.List < DBInstanceParameter> DBInstanceParameter;
 
         private ConfigParameters(Builder builder) {
@@ -277,16 +276,16 @@ public class DescribeParametersResponseBody extends TeaModel {
 
     }
     public static class ParamGroupInfo extends TeaModel {
-        @NameInMap("ParamGroupId")
+        @com.aliyun.core.annotation.NameInMap("ParamGroupId")
         private String paramGroupId;
 
-        @NameInMap("ParameterGroupDesc")
+        @com.aliyun.core.annotation.NameInMap("ParameterGroupDesc")
         private String parameterGroupDesc;
 
-        @NameInMap("ParameterGroupName")
+        @com.aliyun.core.annotation.NameInMap("ParameterGroupName")
         private String parameterGroupName;
 
-        @NameInMap("ParameterGroupType")
+        @com.aliyun.core.annotation.NameInMap("ParameterGroupType")
         private String parameterGroupType;
 
         private ParamGroupInfo(Builder builder) {
@@ -378,13 +377,13 @@ public class DescribeParametersResponseBody extends TeaModel {
 
     }
     public static class RunningParametersDBInstanceParameter extends TeaModel {
-        @NameInMap("ParameterDescription")
+        @com.aliyun.core.annotation.NameInMap("ParameterDescription")
         private String parameterDescription;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
-        @NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
         private String parameterValue;
 
         private RunningParametersDBInstanceParameter(Builder builder) {
@@ -459,7 +458,7 @@ public class DescribeParametersResponseBody extends TeaModel {
 
     }
     public static class RunningParameters extends TeaModel {
-        @NameInMap("DBInstanceParameter")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceParameter")
         private java.util.List < RunningParametersDBInstanceParameter> DBInstanceParameter;
 
         private RunningParameters(Builder builder) {

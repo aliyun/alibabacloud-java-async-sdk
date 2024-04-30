@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,59 +11,59 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDBInstanceEndpointRequest</p>
  */
 public class CreateDBInstanceEndpointRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("ConnectionStringPrefix")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectionStringPrefix")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String connectionStringPrefix;
 
-    @Query
-    @NameInMap("DBInstanceEndpointDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceEndpointDescription")
     private String DBInstanceEndpointDescription;
 
-    @Query
-    @NameInMap("DBInstanceEndpointType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceEndpointType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceEndpointType;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("NodeItems")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeItems")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < NodeItems> nodeItems;
 
-    @Query
-    @NameInMap("Port")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Port")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String port;
 
-    @Query
-    @NameInMap("PrivateIpAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
     private String privateIpAddress;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("VSwitchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
 
-    @Query
-    @NameInMap("VpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
     private CreateDBInstanceEndpointRequest(Builder builder) {
@@ -344,15 +343,15 @@ public class CreateDBInstanceEndpointRequest extends Request {
     } 
 
     public static class NodeItems extends TeaModel {
-        @NameInMap("DBInstanceId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String DBInstanceId;
 
-        @NameInMap("NodeId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("NodeId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String nodeId;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Long weight;
 
         private NodeItems(Builder builder) {

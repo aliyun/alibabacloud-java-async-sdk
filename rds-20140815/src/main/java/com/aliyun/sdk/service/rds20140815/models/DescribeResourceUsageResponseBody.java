@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,49 +11,49 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeResourceUsageResponseBody</p>
  */
 public class DescribeResourceUsageResponseBody extends TeaModel {
-    @NameInMap("ArchiveBackupSize")
+    @com.aliyun.core.annotation.NameInMap("ArchiveBackupSize")
     private Long archiveBackupSize;
 
-    @NameInMap("BackupDataSize")
+    @com.aliyun.core.annotation.NameInMap("BackupDataSize")
     private Long backupDataSize;
 
-    @NameInMap("BackupLogSize")
+    @com.aliyun.core.annotation.NameInMap("BackupLogSize")
     private Long backupLogSize;
 
-    @NameInMap("BackupOssDataSize")
+    @com.aliyun.core.annotation.NameInMap("BackupOssDataSize")
     private Long backupOssDataSize;
 
-    @NameInMap("BackupOssLogSize")
+    @com.aliyun.core.annotation.NameInMap("BackupOssLogSize")
     private Long backupOssLogSize;
 
-    @NameInMap("BackupSize")
+    @com.aliyun.core.annotation.NameInMap("BackupSize")
     private Long backupSize;
 
-    @NameInMap("ColdBackupSize")
+    @com.aliyun.core.annotation.NameInMap("ColdBackupSize")
     private Long coldBackupSize;
 
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("DataSize")
+    @com.aliyun.core.annotation.NameInMap("DataSize")
     private Long dataSize;
 
-    @NameInMap("DiskUsed")
+    @com.aliyun.core.annotation.NameInMap("DiskUsed")
     private Long diskUsed;
 
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @NameInMap("LogSize")
+    @com.aliyun.core.annotation.NameInMap("LogSize")
     private Long logSize;
 
-    @NameInMap("PaidBackupSize")
+    @com.aliyun.core.annotation.NameInMap("PaidBackupSize")
     private Long paidBackupSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SQLSize")
+    @com.aliyun.core.annotation.NameInMap("SQLSize")
     private Long SQLSize;
 
     private DescribeResourceUsageResponseBody(Builder builder) {

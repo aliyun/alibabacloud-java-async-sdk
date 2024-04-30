@@ -423,6 +423,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateGadInstanceMemberResponse> createGadInstanceMember(CreateGadInstanceMemberRequest request);
 
+    CompletableFuture<CreateMaskingRulesResponse> createMaskingRules(CreateMaskingRulesRequest request);
+
     /**
       * ### [](#)Supported database engine
       * SQL Server
@@ -658,6 +660,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DeleteGadInstanceResponse> deleteGadInstance(DeleteGadInstanceRequest request);
 
+    CompletableFuture<DeleteMaskingRulesResponse> deleteMaskingRules(DeleteMaskingRulesRequest request);
+
     /**
       * ### [](#)Supported database engines
       * *   MySQL
@@ -714,6 +718,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<DescribeADInfoResponse> describeADInfo(DescribeADInfoRequest request);
+
+    CompletableFuture<DescribeAccountMaskingPrivilegeResponse> describeAccountMaskingPrivilege(DescribeAccountMaskingPrivilegeRequest request);
 
     /**
       * ### [](#)Supported database engines
@@ -1424,6 +1430,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeMarketingActivityResponse> describeMarketingActivity(DescribeMarketingActivityRequest request);
 
+    CompletableFuture<DescribeMaskingRulesResponse> describeMaskingRules(DescribeMaskingRulesRequest request);
+
     /**
       * ### [](#)Supported database engines
       * MySQL
@@ -1577,8 +1585,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeRegionInfosResponse> describeRegionInfos(DescribeRegionInfosRequest request);
 
     /**
-      * Before you call the [CreateDBInstance](~~26228~~) operation to create an RDS instance, you can call the DescribeRegions operation to query the available regions and zones.
-      * >  If a zone supports the multi-zone deployment method, the value of the ZoneId parameter for the zone contains an MAZ part. Examples: cn-hangzhou-MAZ6(b,f) and cn-hangzhou-MAZ5(b,e,f).
+      * ### [](#)Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
       *
      */
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
@@ -1970,6 +1981,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<ModifyAccountDescriptionResponse> modifyAccountDescription(ModifyAccountDescriptionRequest request);
+
+    CompletableFuture<ModifyAccountMaskingPrivilegeResponse> modifyAccountMaskingPrivilege(ModifyAccountMaskingPrivilegeRequest request);
 
     /**
       * ### [](#)Supported database engines
@@ -2415,6 +2428,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<ModifyInstanceCrossBackupPolicyResponse> modifyInstanceCrossBackupPolicy(ModifyInstanceCrossBackupPolicyRequest request);
+
+    CompletableFuture<ModifyMaskingRulesResponse> modifyMaskingRules(ModifyMaskingRulesRequest request);
 
     /**
       * ### [](#)Supported database engines

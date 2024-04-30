@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMarketingActivityResponseBody</p>
  */
 public class DescribeMarketingActivityResponseBody extends TeaModel {
-    @NameInMap("AliUid")
+    @com.aliyun.core.annotation.NameInMap("AliUid")
     private Long aliUid;
 
-    @NameInMap("Bid")
+    @com.aliyun.core.annotation.NameInMap("Bid")
     private String bid;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String requestId;
 
     private DescribeMarketingActivityResponseBody(Builder builder) {
@@ -135,85 +134,85 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("ClassCode")
+        @com.aliyun.core.annotation.NameInMap("ClassCode")
         private String classCode;
 
-        @NameInMap("ClassGroup")
+        @com.aliyun.core.annotation.NameInMap("ClassGroup")
         private String classGroup;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private String cpu;
 
-        @NameInMap("DiskSize")
+        @com.aliyun.core.annotation.NameInMap("DiskSize")
         private Integer diskSize;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("EngineVersion")
+        @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private String engineVersion;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("MaxConnections")
+        @com.aliyun.core.annotation.NameInMap("MaxConnections")
         private Integer maxConnections;
 
-        @NameInMap("MaxIombps")
+        @com.aliyun.core.annotation.NameInMap("MaxIombps")
         private Integer maxIombps;
 
-        @NameInMap("MaxIops")
+        @com.aliyun.core.annotation.NameInMap("MaxIops")
         private Integer maxIops;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Long memory;
 
-        @NameInMap("StorageType")
+        @com.aliyun.core.annotation.NameInMap("StorageType")
         private String storageType;
 
-        @NameInMap("UpgradeCategory")
+        @com.aliyun.core.annotation.NameInMap("UpgradeCategory")
         private String upgradeCategory;
 
-        @NameInMap("UpgradeClassCode")
+        @com.aliyun.core.annotation.NameInMap("UpgradeClassCode")
         private String upgradeClassCode;
 
-        @NameInMap("UpgradeClassGroup")
+        @com.aliyun.core.annotation.NameInMap("UpgradeClassGroup")
         private String upgradeClassGroup;
 
-        @NameInMap("UpgradeCpu")
+        @com.aliyun.core.annotation.NameInMap("UpgradeCpu")
         private String upgradeCpu;
 
-        @NameInMap("UpgradeDescContent")
+        @com.aliyun.core.annotation.NameInMap("UpgradeDescContent")
         private String upgradeDescContent;
 
-        @NameInMap("UpgradeDiskSize")
+        @com.aliyun.core.annotation.NameInMap("UpgradeDiskSize")
         private Integer upgradeDiskSize;
 
-        @NameInMap("UpgradeMaxConnections")
+        @com.aliyun.core.annotation.NameInMap("UpgradeMaxConnections")
         private Integer upgradeMaxConnections;
 
-        @NameInMap("UpgradeMaxIombps")
+        @com.aliyun.core.annotation.NameInMap("UpgradeMaxIombps")
         private Integer upgradeMaxIombps;
 
-        @NameInMap("UpgradeMaxIops")
+        @com.aliyun.core.annotation.NameInMap("UpgradeMaxIops")
         private Integer upgradeMaxIops;
 
-        @NameInMap("UpgradeMemory")
+        @com.aliyun.core.annotation.NameInMap("UpgradeMemory")
         private Long upgradeMemory;
 
-        @NameInMap("UpgradeReferencePrice")
+        @com.aliyun.core.annotation.NameInMap("UpgradeReferencePrice")
         private String upgradeReferencePrice;
 
-        @NameInMap("UpgradeStorageType")
+        @com.aliyun.core.annotation.NameInMap("UpgradeStorageType")
         private String upgradeStorageType;
 
         private Items(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDBInstanceNetworkTypeResponseBody</p>
  */
 public class ModifyDBInstanceNetworkTypeResponseBody extends TeaModel {
-    @NameInMap("ConnectionString")
+    @com.aliyun.core.annotation.NameInMap("ConnectionString")
     private String connectionString;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
     private ModifyDBInstanceNetworkTypeResponseBody(Builder builder) {

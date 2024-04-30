@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUserBackupFilesResponseBody</p>
  */
 public class ListUserBackupFilesResponseBody extends TeaModel {
-    @NameInMap("Records")
+    @com.aliyun.core.annotation.NameInMap("Records")
     private java.util.List < Records> records;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListUserBackupFilesResponseBody(Builder builder) {
@@ -72,61 +71,61 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
     } 
 
     public static class Records extends TeaModel {
-        @NameInMap("BackupId")
+        @com.aliyun.core.annotation.NameInMap("BackupId")
         private String backupId;
 
-        @NameInMap("BinlogInfo")
+        @com.aliyun.core.annotation.NameInMap("BinlogInfo")
         private String binlogInfo;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("EngineVersion")
+        @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private String engineVersion;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("ModificationTime")
+        @com.aliyun.core.annotation.NameInMap("ModificationTime")
         private String modificationTime;
 
-        @NameInMap("OssBucket")
+        @com.aliyun.core.annotation.NameInMap("OssBucket")
         private String ossBucket;
 
-        @NameInMap("OssFileMetaData")
+        @com.aliyun.core.annotation.NameInMap("OssFileMetaData")
         private String ossFileMetaData;
 
-        @NameInMap("OssFileName")
+        @com.aliyun.core.annotation.NameInMap("OssFileName")
         private String ossFileName;
 
-        @NameInMap("OssFilePath")
+        @com.aliyun.core.annotation.NameInMap("OssFilePath")
         private String ossFilePath;
 
-        @NameInMap("OssFileSize")
+        @com.aliyun.core.annotation.NameInMap("OssFileSize")
         private Long ossFileSize;
 
-        @NameInMap("OssUrl")
+        @com.aliyun.core.annotation.NameInMap("OssUrl")
         private String ossUrl;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("RestoreSize")
+        @com.aliyun.core.annotation.NameInMap("RestoreSize")
         private String restoreSize;
 
-        @NameInMap("Retention")
+        @com.aliyun.core.annotation.NameInMap("Retention")
         private Integer retention;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Records(Builder builder) {

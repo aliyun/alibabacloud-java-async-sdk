@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCrossRegionBackupsResponseBody</p>
  */
 public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeCrossRegionBackupsResponseBody(Builder builder) {
@@ -195,7 +194,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
     } 
 
     public static class RestoreRegions extends TeaModel {
-        @NameInMap("RestoreRegion")
+        @com.aliyun.core.annotation.NameInMap("RestoreRegion")
         private java.util.List < String > restoreRegion;
 
         private RestoreRegions(Builder builder) {
@@ -236,61 +235,61 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
 
     }
     public static class Item extends TeaModel {
-        @NameInMap("BackupEndTime")
+        @com.aliyun.core.annotation.NameInMap("BackupEndTime")
         private String backupEndTime;
 
-        @NameInMap("BackupMethod")
+        @com.aliyun.core.annotation.NameInMap("BackupMethod")
         private String backupMethod;
 
-        @NameInMap("BackupSetScale")
+        @com.aliyun.core.annotation.NameInMap("BackupSetScale")
         private Integer backupSetScale;
 
-        @NameInMap("BackupSetStatus")
+        @com.aliyun.core.annotation.NameInMap("BackupSetStatus")
         private Integer backupSetStatus;
 
-        @NameInMap("BackupStartTime")
+        @com.aliyun.core.annotation.NameInMap("BackupStartTime")
         private String backupStartTime;
 
-        @NameInMap("BackupType")
+        @com.aliyun.core.annotation.NameInMap("BackupType")
         private String backupType;
 
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("ConsistentTime")
+        @com.aliyun.core.annotation.NameInMap("ConsistentTime")
         private String consistentTime;
 
-        @NameInMap("CrossBackupDownloadLink")
+        @com.aliyun.core.annotation.NameInMap("CrossBackupDownloadLink")
         private String crossBackupDownloadLink;
 
-        @NameInMap("CrossBackupId")
+        @com.aliyun.core.annotation.NameInMap("CrossBackupId")
         private Integer crossBackupId;
 
-        @NameInMap("CrossBackupRegion")
+        @com.aliyun.core.annotation.NameInMap("CrossBackupRegion")
         private String crossBackupRegion;
 
-        @NameInMap("CrossBackupSetFile")
+        @com.aliyun.core.annotation.NameInMap("CrossBackupSetFile")
         private String crossBackupSetFile;
 
-        @NameInMap("CrossBackupSetLocation")
+        @com.aliyun.core.annotation.NameInMap("CrossBackupSetLocation")
         private String crossBackupSetLocation;
 
-        @NameInMap("CrossBackupSetSize")
+        @com.aliyun.core.annotation.NameInMap("CrossBackupSetSize")
         private Long crossBackupSetSize;
 
-        @NameInMap("DBInstanceStorageType")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceStorageType")
         private String DBInstanceStorageType;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("EngineVersion")
+        @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private String engineVersion;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Integer instanceId;
 
-        @NameInMap("RestoreRegions")
+        @com.aliyun.core.annotation.NameInMap("RestoreRegions")
         private RestoreRegions restoreRegions;
 
         private Item(Builder builder) {
@@ -663,7 +662,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("Item")
+        @com.aliyun.core.annotation.NameInMap("Item")
         private java.util.List < Item> item;
 
         private Items(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAvailableMetricsResponseBody</p>
  */
 public class DescribeAvailableMetricsResponseBody extends TeaModel {
-    @NameInMap("DBInstanceName")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceName")
     private String DBInstanceName;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeAvailableMetricsResponseBody(Builder builder) {
@@ -112,31 +111,31 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Dimension")
+        @com.aliyun.core.annotation.NameInMap("Dimension")
         private String dimension;
 
-        @NameInMap("GroupKey")
+        @com.aliyun.core.annotation.NameInMap("GroupKey")
         private String groupKey;
 
-        @NameInMap("GroupKeyType")
+        @com.aliyun.core.annotation.NameInMap("GroupKeyType")
         private String groupKeyType;
 
-        @NameInMap("Method")
+        @com.aliyun.core.annotation.NameInMap("Method")
         private String method;
 
-        @NameInMap("MetricsKey")
+        @com.aliyun.core.annotation.NameInMap("MetricsKey")
         private String metricsKey;
 
-        @NameInMap("MetricsKeyAlias")
+        @com.aliyun.core.annotation.NameInMap("MetricsKeyAlias")
         private String metricsKeyAlias;
 
-        @NameInMap("SortRule")
+        @com.aliyun.core.annotation.NameInMap("SortRule")
         private Integer sortRule;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
         private Items(Builder builder) {

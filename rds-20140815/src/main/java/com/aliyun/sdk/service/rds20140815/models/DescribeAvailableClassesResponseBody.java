@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAvailableClassesResponseBody</p>
  */
 public class DescribeAvailableClassesResponseBody extends TeaModel {
-    @NameInMap("DBInstanceClasses")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceClasses")
     private java.util.List < DBInstanceClasses> DBInstanceClasses;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAvailableClassesResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeAvailableClassesResponseBody extends TeaModel {
     } 
 
     public static class DBInstanceStorageRange extends TeaModel {
-        @NameInMap("MaxValue")
+        @com.aliyun.core.annotation.NameInMap("MaxValue")
         private Integer maxValue;
 
-        @NameInMap("MinValue")
+        @com.aliyun.core.annotation.NameInMap("MinValue")
         private Integer minValue;
 
-        @NameInMap("Step")
+        @com.aliyun.core.annotation.NameInMap("Step")
         private Integer step;
 
         private DBInstanceStorageRange(Builder builder) {
@@ -153,10 +152,10 @@ public class DescribeAvailableClassesResponseBody extends TeaModel {
 
     }
     public static class DBInstanceClasses extends TeaModel {
-        @NameInMap("DBInstanceClass")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceClass")
         private String DBInstanceClass;
 
-        @NameInMap("DBInstanceStorageRange")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceStorageRange")
         private DBInstanceStorageRange DBInstanceStorageRange;
 
         private DBInstanceClasses(Builder builder) {

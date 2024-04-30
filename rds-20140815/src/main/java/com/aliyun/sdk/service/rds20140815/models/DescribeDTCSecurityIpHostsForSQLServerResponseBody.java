@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDTCSecurityIpHostsForSQLServerResponseBody</p>
  */
 public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("IpHostPairNum")
+    @com.aliyun.core.annotation.NameInMap("IpHostPairNum")
     private String ipHostPairNum;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDTCSecurityIpHostsForSQLServerResponseBody(Builder builder) {
@@ -112,10 +111,10 @@ public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel
     } 
 
     public static class WhiteListGroups extends TeaModel {
-        @NameInMap("SecurityIpHosts")
+        @com.aliyun.core.annotation.NameInMap("SecurityIpHosts")
         private String securityIpHosts;
 
-        @NameInMap("WhitelistGroupName")
+        @com.aliyun.core.annotation.NameInMap("WhitelistGroupName")
         private String whitelistGroupName;
 
         private WhiteListGroups(Builder builder) {
@@ -173,7 +172,7 @@ public class DescribeDTCSecurityIpHostsForSQLServerResponseBody extends TeaModel
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("WhiteListGroups")
+        @com.aliyun.core.annotation.NameInMap("WhiteListGroups")
         private java.util.List < WhiteListGroups> whiteListGroups;
 
         private Items(Builder builder) {

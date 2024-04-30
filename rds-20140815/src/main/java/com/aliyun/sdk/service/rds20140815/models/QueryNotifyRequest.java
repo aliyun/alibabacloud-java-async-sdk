@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryNotifyRequest</p>
  */
 public class QueryNotifyRequest extends Request {
-    @Body
-    @NameInMap("From")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("From")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String from;
 
-    @Body
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Body
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Body
-    @NameInMap("To")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("To")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String to;
 
-    @Body
-    @NameInMap("WithConfirmed")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WithConfirmed")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean withConfirmed;
 
     private QueryNotifyRequest(Builder builder) {

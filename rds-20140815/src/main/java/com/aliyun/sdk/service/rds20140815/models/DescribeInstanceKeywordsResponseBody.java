@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceKeywordsResponseBody</p>
  */
 public class DescribeInstanceKeywordsResponseBody extends TeaModel {
-    @NameInMap("Key")
+    @com.aliyun.core.annotation.NameInMap("Key")
     private String key;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Words")
+    @com.aliyun.core.annotation.NameInMap("Words")
     private Words words;
 
     private DescribeInstanceKeywordsResponseBody(Builder builder) {
@@ -92,7 +91,7 @@ public class DescribeInstanceKeywordsResponseBody extends TeaModel {
     } 
 
     public static class Words extends TeaModel {
-        @NameInMap("word")
+        @com.aliyun.core.annotation.NameInMap("word")
         private java.util.List < String > word;
 
         private Words(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSlowLogRecordsResponseBody</p>
  */
 public class DescribeSlowLogRecordsResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeSlowLogRecordsResponseBody(Builder builder) {
@@ -172,61 +171,61 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     } 
 
     public static class SQLSlowRecord extends TeaModel {
-        @NameInMap("ApplicationName")
+        @com.aliyun.core.annotation.NameInMap("ApplicationName")
         private String applicationName;
 
-        @NameInMap("ClientHostName")
+        @com.aliyun.core.annotation.NameInMap("ClientHostName")
         private String clientHostName;
 
-        @NameInMap("CpuTime")
+        @com.aliyun.core.annotation.NameInMap("CpuTime")
         private Long cpuTime;
 
-        @NameInMap("DBName")
+        @com.aliyun.core.annotation.NameInMap("DBName")
         private String DBName;
 
-        @NameInMap("ExecutionStartTime")
+        @com.aliyun.core.annotation.NameInMap("ExecutionStartTime")
         private String executionStartTime;
 
-        @NameInMap("HostAddress")
+        @com.aliyun.core.annotation.NameInMap("HostAddress")
         private String hostAddress;
 
-        @NameInMap("LastRowsAffectedCount")
+        @com.aliyun.core.annotation.NameInMap("LastRowsAffectedCount")
         private Long lastRowsAffectedCount;
 
-        @NameInMap("LockTimes")
+        @com.aliyun.core.annotation.NameInMap("LockTimes")
         private Long lockTimes;
 
-        @NameInMap("LogicalIORead")
+        @com.aliyun.core.annotation.NameInMap("LogicalIORead")
         private Long logicalIORead;
 
-        @NameInMap("ParseRowCounts")
+        @com.aliyun.core.annotation.NameInMap("ParseRowCounts")
         private Long parseRowCounts;
 
-        @NameInMap("PhysicalIORead")
+        @com.aliyun.core.annotation.NameInMap("PhysicalIORead")
         private Long physicalIORead;
 
-        @NameInMap("QueryTimeMS")
+        @com.aliyun.core.annotation.NameInMap("QueryTimeMS")
         private Long queryTimeMS;
 
-        @NameInMap("QueryTimes")
+        @com.aliyun.core.annotation.NameInMap("QueryTimes")
         private Long queryTimes;
 
-        @NameInMap("ReturnRowCounts")
+        @com.aliyun.core.annotation.NameInMap("ReturnRowCounts")
         private Long returnRowCounts;
 
-        @NameInMap("RowsAffectedCount")
+        @com.aliyun.core.annotation.NameInMap("RowsAffectedCount")
         private Long rowsAffectedCount;
 
-        @NameInMap("SQLHash")
+        @com.aliyun.core.annotation.NameInMap("SQLHash")
         private String SQLHash;
 
-        @NameInMap("SQLText")
+        @com.aliyun.core.annotation.NameInMap("SQLText")
         private String SQLText;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
-        @NameInMap("WriteIOCount")
+        @com.aliyun.core.annotation.NameInMap("WriteIOCount")
         private Long writeIOCount;
 
         private SQLSlowRecord(Builder builder) {
@@ -600,7 +599,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("SQLSlowRecord")
+        @com.aliyun.core.annotation.NameInMap("SQLSlowRecord")
         private java.util.List < SQLSlowRecord> SQLSlowRecord;
 
         private Items(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCloudMigrationPrecheckResultResponseBody</p>
  */
 public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalSize")
+    @com.aliyun.core.annotation.NameInMap("TotalSize")
     private Integer totalSize;
 
     private DescribeCloudMigrationPrecheckResultResponseBody(Builder builder) {
@@ -132,40 +131,40 @@ public class DescribeCloudMigrationPrecheckResultResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private String detail;
 
-        @NameInMap("GmtCreated")
+        @com.aliyun.core.annotation.NameInMap("GmtCreated")
         private String gmtCreated;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("SourceAccount")
+        @com.aliyun.core.annotation.NameInMap("SourceAccount")
         private String sourceAccount;
 
-        @NameInMap("SourceCategory")
+        @com.aliyun.core.annotation.NameInMap("SourceCategory")
         private String sourceCategory;
 
-        @NameInMap("SourceIpAddress")
+        @com.aliyun.core.annotation.NameInMap("SourceIpAddress")
         private String sourceIpAddress;
 
-        @NameInMap("SourcePassword")
+        @com.aliyun.core.annotation.NameInMap("SourcePassword")
         private String sourcePassword;
 
-        @NameInMap("SourcePort")
+        @com.aliyun.core.annotation.NameInMap("SourcePort")
         private Long sourcePort;
 
-        @NameInMap("TargetEip")
+        @com.aliyun.core.annotation.NameInMap("TargetEip")
         private String targetEip;
 
-        @NameInMap("TargetInstanceName")
+        @com.aliyun.core.annotation.NameInMap("TargetInstanceName")
         private String targetInstanceName;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private Long taskId;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
         private Items(Builder builder) {

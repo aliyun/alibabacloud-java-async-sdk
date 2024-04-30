@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,88 +11,88 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBackupPolicyResponseBody</p>
  */
 public class DescribeBackupPolicyResponseBody extends TeaModel {
-    @NameInMap("ArchiveBackupKeepCount")
+    @com.aliyun.core.annotation.NameInMap("ArchiveBackupKeepCount")
     private String archiveBackupKeepCount;
 
-    @NameInMap("ArchiveBackupKeepPolicy")
+    @com.aliyun.core.annotation.NameInMap("ArchiveBackupKeepPolicy")
     private String archiveBackupKeepPolicy;
 
-    @NameInMap("ArchiveBackupRetentionPeriod")
+    @com.aliyun.core.annotation.NameInMap("ArchiveBackupRetentionPeriod")
     private String archiveBackupRetentionPeriod;
 
-    @NameInMap("BackupInterval")
+    @com.aliyun.core.annotation.NameInMap("BackupInterval")
     private String backupInterval;
 
-    @NameInMap("BackupLog")
+    @com.aliyun.core.annotation.NameInMap("BackupLog")
     private String backupLog;
 
-    @NameInMap("BackupMethod")
+    @com.aliyun.core.annotation.NameInMap("BackupMethod")
     private String backupMethod;
 
-    @NameInMap("BackupPriority")
+    @com.aliyun.core.annotation.NameInMap("BackupPriority")
     private Integer backupPriority;
 
-    @NameInMap("BackupRetentionPeriod")
+    @com.aliyun.core.annotation.NameInMap("BackupRetentionPeriod")
     private Integer backupRetentionPeriod;
 
-    @NameInMap("Category")
+    @com.aliyun.core.annotation.NameInMap("Category")
     private String category;
 
-    @NameInMap("CompressType")
+    @com.aliyun.core.annotation.NameInMap("CompressType")
     private String compressType;
 
-    @NameInMap("EnableBackupLog")
+    @com.aliyun.core.annotation.NameInMap("EnableBackupLog")
     private String enableBackupLog;
 
-    @NameInMap("EnableIncrementDataBackup")
+    @com.aliyun.core.annotation.NameInMap("EnableIncrementDataBackup")
     private Boolean enableIncrementDataBackup;
 
-    @NameInMap("EnablePitrProtection")
+    @com.aliyun.core.annotation.NameInMap("EnablePitrProtection")
     private Boolean enablePitrProtection;
 
-    @NameInMap("HighSpaceUsageProtection")
+    @com.aliyun.core.annotation.NameInMap("HighSpaceUsageProtection")
     private String highSpaceUsageProtection;
 
-    @NameInMap("LocalLogRetentionHours")
+    @com.aliyun.core.annotation.NameInMap("LocalLogRetentionHours")
     private Integer localLogRetentionHours;
 
-    @NameInMap("LocalLogRetentionSpace")
+    @com.aliyun.core.annotation.NameInMap("LocalLogRetentionSpace")
     private String localLogRetentionSpace;
 
-    @NameInMap("LogBackupFrequency")
+    @com.aliyun.core.annotation.NameInMap("LogBackupFrequency")
     private String logBackupFrequency;
 
-    @NameInMap("LogBackupLocalRetentionNumber")
+    @com.aliyun.core.annotation.NameInMap("LogBackupLocalRetentionNumber")
     private Integer logBackupLocalRetentionNumber;
 
-    @NameInMap("LogBackupRetentionPeriod")
+    @com.aliyun.core.annotation.NameInMap("LogBackupRetentionPeriod")
     private Integer logBackupRetentionPeriod;
 
-    @NameInMap("PitrRetentionPeriod")
+    @com.aliyun.core.annotation.NameInMap("PitrRetentionPeriod")
     private Integer pitrRetentionPeriod;
 
-    @NameInMap("PreferredBackupPeriod")
+    @com.aliyun.core.annotation.NameInMap("PreferredBackupPeriod")
     private String preferredBackupPeriod;
 
-    @NameInMap("PreferredBackupTime")
+    @com.aliyun.core.annotation.NameInMap("PreferredBackupTime")
     private String preferredBackupTime;
 
-    @NameInMap("PreferredNextBackupTime")
+    @com.aliyun.core.annotation.NameInMap("PreferredNextBackupTime")
     private String preferredNextBackupTime;
 
-    @NameInMap("ReleasedKeepPolicy")
+    @com.aliyun.core.annotation.NameInMap("ReleasedKeepPolicy")
     private String releasedKeepPolicy;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SupportModifyBackupPriority")
+    @com.aliyun.core.annotation.NameInMap("SupportModifyBackupPriority")
     private Boolean supportModifyBackupPriority;
 
-    @NameInMap("SupportReleasedKeep")
+    @com.aliyun.core.annotation.NameInMap("SupportReleasedKeep")
     private Integer supportReleasedKeep;
 
-    @NameInMap("SupportVolumeShadowCopy")
+    @com.aliyun.core.annotation.NameInMap("SupportVolumeShadowCopy")
     private Integer supportVolumeShadowCopy;
 
     private DescribeBackupPolicyResponseBody(Builder builder) {

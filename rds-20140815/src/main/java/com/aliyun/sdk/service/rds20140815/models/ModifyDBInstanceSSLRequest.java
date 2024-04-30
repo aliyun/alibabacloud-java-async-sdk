@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,86 +11,86 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDBInstanceSSLRequest</p>
  */
 public class ModifyDBInstanceSSLRequest extends Request {
-    @Query
-    @NameInMap("ACL")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ACL")
     private String ACL;
 
-    @Query
-    @NameInMap("CAType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CAType")
     private String CAType;
 
-    @Query
-    @NameInMap("Certificate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Certificate")
     private String certificate;
 
-    @Query
-    @NameInMap("ClientCACert")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientCACert")
     private String clientCACert;
 
-    @Query
-    @NameInMap("ClientCAEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientCAEnabled")
     private Integer clientCAEnabled;
 
-    @Query
-    @NameInMap("ClientCertRevocationList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientCertRevocationList")
     private String clientCertRevocationList;
 
-    @Query
-    @NameInMap("ClientCrlEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientCrlEnabled")
     private Integer clientCrlEnabled;
 
-    @Query
-    @NameInMap("ConnectionString")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectionString")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String connectionString;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("ForceEncryption")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForceEncryption")
     private String forceEncryption;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PassWord")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PassWord")
     private String passWord;
 
-    @Query
-    @NameInMap("ReplicationACL")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReplicationACL")
     private String replicationACL;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SSLEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SSLEnabled")
     private Integer SSLEnabled;
 
-    @Query
-    @NameInMap("ServerCert")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerCert")
     private String serverCert;
 
-    @Query
-    @NameInMap("ServerKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerKey")
     private String serverKey;
 
-    @Query
-    @NameInMap("TlsVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TlsVersion")
     private String tlsVersion;
 
     private ModifyDBInstanceSSLRequest(Builder builder) {

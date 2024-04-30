@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDbProxyInstanceSslResponseBody</p>
  */
 public class GetDbProxyInstanceSslResponseBody extends TeaModel {
-    @NameInMap("DbProxyCertListItems")
+    @com.aliyun.core.annotation.NameInMap("DbProxyCertListItems")
     private DbProxyCertListItems dbProxyCertListItems;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetDbProxyInstanceSslResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
     } 
 
     public static class DbProxyCertListItemsDbProxyCertListItems extends TeaModel {
-        @NameInMap("CertCommonName")
+        @com.aliyun.core.annotation.NameInMap("CertCommonName")
         private String certCommonName;
 
-        @NameInMap("DbInstanceName")
+        @com.aliyun.core.annotation.NameInMap("DbInstanceName")
         private String dbInstanceName;
 
-        @NameInMap("EndpointName")
+        @com.aliyun.core.annotation.NameInMap("EndpointName")
         private String endpointName;
 
-        @NameInMap("EndpointType")
+        @com.aliyun.core.annotation.NameInMap("EndpointType")
         private String endpointType;
 
-        @NameInMap("SslExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("SslExpiredTime")
         private String sslExpiredTime;
 
         private DbProxyCertListItemsDbProxyCertListItems(Builder builder) {
@@ -193,7 +192,7 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
 
     }
     public static class DbProxyCertListItems extends TeaModel {
-        @NameInMap("DbProxyCertListItems")
+        @com.aliyun.core.annotation.NameInMap("DbProxyCertListItems")
         private java.util.List < DbProxyCertListItemsDbProxyCertListItems> dbProxyCertListItems;
 
         private DbProxyCertListItems(Builder builder) {

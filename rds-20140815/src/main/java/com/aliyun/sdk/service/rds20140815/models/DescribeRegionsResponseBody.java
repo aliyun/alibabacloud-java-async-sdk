@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRegionsResponseBody</p>
  */
 public class DescribeRegionsResponseBody extends TeaModel {
-    @NameInMap("Regions")
+    @com.aliyun.core.annotation.NameInMap("Regions")
     private Regions regions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeRegionsResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the available regions and zones.
+         * The available regions and zones.
          */
         public Builder regions(Regions regions) {
             this.regions = regions;
@@ -58,7 +57,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,19 +71,19 @@ public class DescribeRegionsResponseBody extends TeaModel {
     } 
 
     public static class RDSRegion extends TeaModel {
-        @NameInMap("LocalName")
+        @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
 
-        @NameInMap("RegionEndpoint")
+        @com.aliyun.core.annotation.NameInMap("RegionEndpoint")
         private String regionEndpoint;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
-        @NameInMap("ZoneName")
+        @com.aliyun.core.annotation.NameInMap("ZoneName")
         private String zoneName;
 
         private RDSRegion(Builder builder) {
@@ -146,10 +145,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private String zoneName; 
 
             /**
-             * The name of the region. The return value of the LocalName parameter is in the language that is specified by the **AcceptLanguage** parameter. For example, if the value of the RegionId parameter in the response is cn-hangzhou, the following values are returned for the LocalName parameter:
+             * The region name. The return value of this parameter is in the language that is specified by the **AcceptLanguage** parameter. For example, if the value of the RegionId parameter in the response is cn-hangzhou, the following values are returned for the LocalName parameter:
              * <p>
              * 
-             * *   If the value of the **AcceptLanguage** parameter is **zh-CN**, the value China (Hangzhou)  is returned for the LocalName parameter.
+             * *   If the value of the **AcceptLanguage** parameter is **zh-CN**, the value  1（）is returned for the LocalName parameter.
              * *   If the value of the **AcceptLanguage** parameter is **en-US**, the value China (Hangzhou) is returned for the LocalName parameter.
              */
             public Builder localName(String localName) {
@@ -158,7 +157,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint that is used to connect to Alibaba Cloud services in the region. For more information, see [Request structure](~~26223~~).
+             * The endpoint that is used to connect to Alibaba Cloud services in the region. For more information, see [Endpoints](~~610370~~).
              */
             public Builder regionEndpoint(String regionEndpoint) {
                 this.regionEndpoint = regionEndpoint;
@@ -166,7 +165,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -174,7 +173,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone.
+             * The zone ID.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -182,11 +181,11 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the zone. The return value of the ZoneName parameter is in the language that is specified by the **AcceptLanguage** parameter. For example, if the value of the RegionId parameter in the response is cn-hangzhou-h, the following values are returned for the LocalName parameter:
+             * The zone name. The return value of this parameter is in the language that is specified by the **AcceptLanguage** parameter. For example, if the value of the ZoneId parameter in the response is cn-hangzhou-h, the following values are returned for the ZoneName parameter:
              * <p>
              * 
-             * *   If the value of the **AcceptLanguage** parameter is **zh-CN**, the value Hangzhou Zone H is returned for the LocalName parameter.
-             * *   If the value of the **AcceptLanguage** parameter is **en-US**, the value Hangzhou Zone H is returned for the LocalName parameter.
+             * *   If the value of the **AcceptLanguage** parameter is **zh-CN**, the value   H is returned for the ZoneName parameter.
+             * *   If the value of the **AcceptLanguage** parameter is **en-US**, the value Hangzhou Zone H is returned for the ZoneName parameter.
              */
             public Builder zoneName(String zoneName) {
                 this.zoneName = zoneName;
@@ -201,7 +200,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     }
     public static class Regions extends TeaModel {
-        @NameInMap("RDSRegion")
+        @com.aliyun.core.annotation.NameInMap("RDSRegion")
         private java.util.List < RDSRegion> RDSRegion;
 
         private Regions(Builder builder) {

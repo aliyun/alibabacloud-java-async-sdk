@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMigrateTaskByIdResponseBody</p>
  */
 public class DescribeMigrateTaskByIdResponseBody extends TeaModel {
-    @NameInMap("BackupMode")
+    @com.aliyun.core.annotation.NameInMap("BackupMode")
     private String backupMode;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("DBInstanceName")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceName")
     private String DBInstanceName;
 
-    @NameInMap("DBName")
+    @com.aliyun.core.annotation.NameInMap("DBName")
     private String DBName;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("IsDBReplaced")
+    @com.aliyun.core.annotation.NameInMap("IsDBReplaced")
     private String isDBReplaced;
 
-    @NameInMap("MigrateTaskId")
+    @com.aliyun.core.annotation.NameInMap("MigrateTaskId")
     private String migrateTaskId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeMigrateTaskByIdResponseBody(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateTempDBInstanceRequest</p>
  */
 public class CreateTempDBInstanceRequest extends Request {
-    @Query
-    @NameInMap("BackupId")
-    private Integer backupId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupId")
+    private Long backupId;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RestoreTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreTime")
     private String restoreTime;
 
     private CreateTempDBInstanceRequest(Builder builder) {
@@ -73,7 +72,7 @@ public class CreateTempDBInstanceRequest extends Request {
     /**
      * @return backupId
      */
-    public Integer getBackupId() {
+    public Long getBackupId() {
         return this.backupId;
     }
 
@@ -127,7 +126,7 @@ public class CreateTempDBInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateTempDBInstanceRequest, Builder> {
-        private Integer backupId; 
+        private Long backupId; 
         private String DBInstanceId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -158,7 +157,7 @@ public class CreateTempDBInstanceRequest extends Request {
          * 
          * >  You must specify at least one of the **BackupId** or **RestoreTime** parameters.
          */
-        public Builder backupId(Integer backupId) {
+        public Builder backupId(Long backupId) {
             this.putQueryParameter("BackupId", backupId);
             this.backupId = backupId;
             return this;

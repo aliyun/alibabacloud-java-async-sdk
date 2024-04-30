@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,52 +11,52 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceCrossBackupPolicyResponseBody</p>
  */
 public class DescribeInstanceCrossBackupPolicyResponseBody extends TeaModel {
-    @NameInMap("BackupEnabled")
+    @com.aliyun.core.annotation.NameInMap("BackupEnabled")
     private String backupEnabled;
 
-    @NameInMap("BackupEnabledTime")
+    @com.aliyun.core.annotation.NameInMap("BackupEnabledTime")
     private String backupEnabledTime;
 
-    @NameInMap("CrossBackupRegion")
+    @com.aliyun.core.annotation.NameInMap("CrossBackupRegion")
     private String crossBackupRegion;
 
-    @NameInMap("CrossBackupType")
+    @com.aliyun.core.annotation.NameInMap("CrossBackupType")
     private String crossBackupType;
 
-    @NameInMap("DBInstanceDescription")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceDescription")
     private String DBInstanceDescription;
 
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("DBInstanceStatus")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceStatus")
     private String DBInstanceStatus;
 
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @NameInMap("EngineVersion")
+    @com.aliyun.core.annotation.NameInMap("EngineVersion")
     private String engineVersion;
 
-    @NameInMap("LockMode")
+    @com.aliyun.core.annotation.NameInMap("LockMode")
     private String lockMode;
 
-    @NameInMap("LogBackupEnabled")
+    @com.aliyun.core.annotation.NameInMap("LogBackupEnabled")
     private String logBackupEnabled;
 
-    @NameInMap("LogBackupEnabledTime")
+    @com.aliyun.core.annotation.NameInMap("LogBackupEnabledTime")
     private String logBackupEnabledTime;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RetentType")
+    @com.aliyun.core.annotation.NameInMap("RetentType")
     private Integer retentType;
 
-    @NameInMap("Retention")
+    @com.aliyun.core.annotation.NameInMap("Retention")
     private Integer retention;
 
     private DescribeInstanceCrossBackupPolicyResponseBody(Builder builder) {

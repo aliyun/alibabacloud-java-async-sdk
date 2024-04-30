@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CopyDatabaseResponseBody</p>
  */
 public class CopyDatabaseResponseBody extends TeaModel {
-    @NameInMap("DBName")
+    @com.aliyun.core.annotation.NameInMap("DBName")
     private String DBName;
 
-    @NameInMap("DBStatus")
+    @com.aliyun.core.annotation.NameInMap("DBStatus")
     private String DBStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
     private CopyDatabaseResponseBody(Builder builder) {

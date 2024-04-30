@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSQLLogReportListResponseBody</p>
  */
 public class DescribeSQLLogReportListResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeSQLLogReportListResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
     } 
 
     public static class LatencyTopNItem extends TeaModel {
-        @NameInMap("AvgLatency")
+        @com.aliyun.core.annotation.NameInMap("AvgLatency")
         private Long avgLatency;
 
-        @NameInMap("SQLExecuteTimes")
+        @com.aliyun.core.annotation.NameInMap("SQLExecuteTimes")
         private Long SQLExecuteTimes;
 
-        @NameInMap("SQLText")
+        @com.aliyun.core.annotation.NameInMap("SQLText")
         private String SQLText;
 
         private LatencyTopNItem(Builder builder) {
@@ -216,7 +215,7 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
 
     }
     public static class LatencyTopNItems extends TeaModel {
-        @NameInMap("LatencyTopNItem")
+        @com.aliyun.core.annotation.NameInMap("LatencyTopNItem")
         private java.util.List < LatencyTopNItem> latencyTopNItem;
 
         private LatencyTopNItems(Builder builder) {
@@ -257,10 +256,10 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
 
     }
     public static class QPSTopNItem extends TeaModel {
-        @NameInMap("SQLExecuteTimes")
+        @com.aliyun.core.annotation.NameInMap("SQLExecuteTimes")
         private Long SQLExecuteTimes;
 
-        @NameInMap("SQLText")
+        @com.aliyun.core.annotation.NameInMap("SQLText")
         private String SQLText;
 
         private QPSTopNItem(Builder builder) {
@@ -321,7 +320,7 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
 
     }
     public static class QPSTopNItems extends TeaModel {
-        @NameInMap("QPSTopNItem")
+        @com.aliyun.core.annotation.NameInMap("QPSTopNItem")
         private java.util.List < QPSTopNItem> QPSTopNItem;
 
         private QPSTopNItems(Builder builder) {
@@ -362,13 +361,13 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
 
     }
     public static class Item extends TeaModel {
-        @NameInMap("LatencyTopNItems")
+        @com.aliyun.core.annotation.NameInMap("LatencyTopNItems")
         private LatencyTopNItems latencyTopNItems;
 
-        @NameInMap("QPSTopNItems")
+        @com.aliyun.core.annotation.NameInMap("QPSTopNItems")
         private QPSTopNItems QPSTopNItems;
 
-        @NameInMap("ReportTime")
+        @com.aliyun.core.annotation.NameInMap("ReportTime")
         private String reportTime;
 
         private Item(Builder builder) {
@@ -443,7 +442,7 @@ public class DescribeSQLLogReportListResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("Item")
+        @com.aliyun.core.annotation.NameInMap("Item")
         private java.util.List < Item> item;
 
         private Items(Builder builder) {

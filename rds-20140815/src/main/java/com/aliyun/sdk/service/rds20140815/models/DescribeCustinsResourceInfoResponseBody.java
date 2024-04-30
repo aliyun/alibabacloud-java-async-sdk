@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCustinsResourceInfoResponseBody</p>
  */
 public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCustinsResourceInfoResponseBody(Builder builder) {
@@ -72,73 +71,73 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("CpuAdjustDeadline")
+        @com.aliyun.core.annotation.NameInMap("CpuAdjustDeadline")
         private String cpuAdjustDeadline;
 
-        @NameInMap("CpuAdjustableMaxRatio")
+        @com.aliyun.core.annotation.NameInMap("CpuAdjustableMaxRatio")
         private String cpuAdjustableMaxRatio;
 
-        @NameInMap("CpuAdjustableMaxValue")
+        @com.aliyun.core.annotation.NameInMap("CpuAdjustableMaxValue")
         private String cpuAdjustableMaxValue;
 
-        @NameInMap("CpuIncreaseRatio")
+        @com.aliyun.core.annotation.NameInMap("CpuIncreaseRatio")
         private String cpuIncreaseRatio;
 
-        @NameInMap("CpuIncreaseRatioValue")
+        @com.aliyun.core.annotation.NameInMap("CpuIncreaseRatioValue")
         private String cpuIncreaseRatioValue;
 
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("IopsAdjustableMaxValue")
+        @com.aliyun.core.annotation.NameInMap("IopsAdjustableMaxValue")
         private String iopsAdjustableMaxValue;
 
-        @NameInMap("MaxConnAdjustDeadline")
+        @com.aliyun.core.annotation.NameInMap("MaxConnAdjustDeadline")
         private String maxConnAdjustDeadline;
 
-        @NameInMap("MaxConnAdjustableMaxValue")
+        @com.aliyun.core.annotation.NameInMap("MaxConnAdjustableMaxValue")
         private String maxConnAdjustableMaxValue;
 
-        @NameInMap("MaxConnIncreaseRatio")
+        @com.aliyun.core.annotation.NameInMap("MaxConnIncreaseRatio")
         private String maxConnIncreaseRatio;
 
-        @NameInMap("MaxConnIncreaseRatioValue")
+        @com.aliyun.core.annotation.NameInMap("MaxConnIncreaseRatioValue")
         private String maxConnIncreaseRatioValue;
 
-        @NameInMap("MaxIopsAdjustDeadline")
+        @com.aliyun.core.annotation.NameInMap("MaxIopsAdjustDeadline")
         private String maxIopsAdjustDeadline;
 
-        @NameInMap("MaxIopsIncreaseRatio")
+        @com.aliyun.core.annotation.NameInMap("MaxIopsIncreaseRatio")
         private String maxIopsIncreaseRatio;
 
-        @NameInMap("MaxIopsIncreaseRatioValue")
+        @com.aliyun.core.annotation.NameInMap("MaxIopsIncreaseRatioValue")
         private String maxIopsIncreaseRatioValue;
 
-        @NameInMap("MemAdjustableMaxRatio")
+        @com.aliyun.core.annotation.NameInMap("MemAdjustableMaxRatio")
         private String memAdjustableMaxRatio;
 
-        @NameInMap("MemAdjustableMaxValue")
+        @com.aliyun.core.annotation.NameInMap("MemAdjustableMaxValue")
         private String memAdjustableMaxValue;
 
-        @NameInMap("MemoryAdjustDeadline")
+        @com.aliyun.core.annotation.NameInMap("MemoryAdjustDeadline")
         private String memoryAdjustDeadline;
 
-        @NameInMap("MemoryIncreaseRatio")
+        @com.aliyun.core.annotation.NameInMap("MemoryIncreaseRatio")
         private String memoryIncreaseRatio;
 
-        @NameInMap("MemoryIncreaseRatioValue")
+        @com.aliyun.core.annotation.NameInMap("MemoryIncreaseRatioValue")
         private String memoryIncreaseRatioValue;
 
-        @NameInMap("OriginCpu")
+        @com.aliyun.core.annotation.NameInMap("OriginCpu")
         private String originCpu;
 
-        @NameInMap("OriginMaxConn")
+        @com.aliyun.core.annotation.NameInMap("OriginMaxConn")
         private String originMaxConn;
 
-        @NameInMap("OriginMaxIops")
+        @com.aliyun.core.annotation.NameInMap("OriginMaxIops")
         private String originMaxIops;
 
-        @NameInMap("OriginMemory")
+        @com.aliyun.core.annotation.NameInMap("OriginMemory")
         private String originMemory;
 
         private Data(Builder builder) {

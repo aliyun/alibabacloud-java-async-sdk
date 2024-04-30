@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,46 +11,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateGADInstanceRequest</p>
  */
 public class CreateGADInstanceRequest extends Request {
-    @Query
-    @NameInMap("CentralDBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CentralDBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String centralDBInstanceId;
 
-    @Query
-    @NameInMap("CentralRdsDtsAdminAccount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CentralRdsDtsAdminAccount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String centralRdsDtsAdminAccount;
 
-    @Query
-    @NameInMap("CentralRdsDtsAdminPassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CentralRdsDtsAdminPassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String centralRdsDtsAdminPassword;
 
-    @Query
-    @NameInMap("CentralRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CentralRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String centralRegionId;
 
-    @Query
-    @NameInMap("DBList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBList;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("UnitNode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UnitNode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < UnitNode> unitNode;
 
     private CreateGADInstanceRequest(Builder builder) {
@@ -271,10 +270,10 @@ public class CreateGADInstanceRequest extends Request {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -332,55 +331,55 @@ public class CreateGADInstanceRequest extends Request {
 
     }
     public static class UnitNode extends TeaModel {
-        @NameInMap("DBInstanceDescription")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceDescription")
         private String DBInstanceDescription;
 
-        @NameInMap("DBInstanceStorage")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceStorage")
         private Long DBInstanceStorage;
 
-        @NameInMap("DBInstanceStorageType")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceStorageType")
         private String DBInstanceStorageType;
 
-        @NameInMap("DbInstanceClass")
+        @com.aliyun.core.annotation.NameInMap("DbInstanceClass")
         private String dbInstanceClass;
 
-        @NameInMap("DtsConflict")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DtsConflict")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String dtsConflict;
 
-        @NameInMap("DtsInstanceClass")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DtsInstanceClass")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String dtsInstanceClass;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("EngineVersion")
+        @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private String engineVersion;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("RegionID")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("RegionID")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String regionID;
 
-        @NameInMap("SecurityIPList")
+        @com.aliyun.core.annotation.NameInMap("SecurityIPList")
         private String securityIPList;
 
-        @NameInMap("VSwitchID")
+        @com.aliyun.core.annotation.NameInMap("VSwitchID")
         private String vSwitchID;
 
-        @NameInMap("VpcID")
+        @com.aliyun.core.annotation.NameInMap("VpcID")
         private String vpcID;
 
-        @NameInMap("ZoneID")
+        @com.aliyun.core.annotation.NameInMap("ZoneID")
         private String zoneID;
 
-        @NameInMap("ZoneIDSlave1")
+        @com.aliyun.core.annotation.NameInMap("ZoneIDSlave1")
         private String zoneIDSlave1;
 
-        @NameInMap("ZoneIDSlave2")
+        @com.aliyun.core.annotation.NameInMap("ZoneIDSlave2")
         private String zoneIDSlave2;
 
         private UnitNode(Builder builder) {

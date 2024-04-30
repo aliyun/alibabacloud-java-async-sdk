@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,98 +11,98 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePriceRequest</p>
  */
 public class DescribePriceRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("CommodityCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommodityCode")
     private String commodityCode;
 
-    @Query
-    @NameInMap("DBInstanceClass")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceClass")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceClass;
 
-    @Query
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("DBInstanceStorage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceStorage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer DBInstanceStorage;
 
-    @Query
-    @NameInMap("DBInstanceStorageType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceStorageType")
     private String DBInstanceStorageType;
 
-    @Query
-    @NameInMap("DBNode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBNode")
     private java.util.List < DBNode> DBNode;
 
-    @Query
-    @NameInMap("Engine")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String engine;
 
-    @Query
-    @NameInMap("EngineVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String engineVersion;
 
-    @Query
-    @NameInMap("InstanceUsedType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceUsedType")
     private Integer instanceUsedType;
 
-    @Query
-    @NameInMap("OrderType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderType")
     private String orderType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PayType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
 
-    @Query
-    @NameInMap("Quantity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Quantity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer quantity;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ServerlessConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerlessConfig")
     private ServerlessConfig serverlessConfig;
 
-    @Query
-    @NameInMap("TimeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeType")
     private String timeType;
 
-    @Query
-    @NameInMap("UsedTime")
-    @Validation(maximum = 999, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UsedTime")
+    @com.aliyun.core.annotation.Validation(maximum = 999, minimum = 1)
     private Integer usedTime;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private DescribePriceRequest(Builder builder) {
@@ -630,10 +629,10 @@ public class DescribePriceRequest extends Request {
     } 
 
     public static class DBNode extends TeaModel {
-        @NameInMap("ClassCode")
+        @com.aliyun.core.annotation.NameInMap("ClassCode")
         private String classCode;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private DBNode(Builder builder) {
@@ -691,10 +690,10 @@ public class DescribePriceRequest extends Request {
 
     }
     public static class ServerlessConfig extends TeaModel {
-        @NameInMap("MaxCapacity")
+        @com.aliyun.core.annotation.NameInMap("MaxCapacity")
         private Double maxCapacity;
 
-        @NameInMap("MinCapacity")
+        @com.aliyun.core.annotation.NameInMap("MinCapacity")
         private Double minCapacity;
 
         private ServerlessConfig(Builder builder) {

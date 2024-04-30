@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeQuickSaleConfigRequest</p>
  */
 public class DescribeQuickSaleConfigRequest extends Request {
-    @Query
-    @NameInMap("Commodity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Commodity")
     private String commodity;
 
-    @Query
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private DescribeQuickSaleConfigRequest(Builder builder) {

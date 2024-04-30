@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteBackupFileResponseBody</p>
  */
 public class DeleteBackupFileResponseBody extends TeaModel {
-    @NameInMap("DeletedBaksetIds")
+    @com.aliyun.core.annotation.NameInMap("DeletedBaksetIds")
     private DeletedBaksetIds deletedBaksetIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteBackupFileResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class DeleteBackupFileResponseBody extends TeaModel {
     } 
 
     public static class DeletedBaksetIds extends TeaModel {
-        @NameInMap("DeletedBaksetIds")
+        @com.aliyun.core.annotation.NameInMap("DeletedBaksetIds")
         private java.util.List < Integer > deletedBaksetIds;
 
         private DeletedBaksetIds(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBInstanceNetInfoResponseBody</p>
  */
 public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
-    @NameInMap("DBInstanceNetInfos")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceNetInfos")
     private DBInstanceNetInfos DBInstanceNetInfos;
 
-    @NameInMap("InstanceNetworkType")
+    @com.aliyun.core.annotation.NameInMap("InstanceNetworkType")
     private String instanceNetworkType;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecurityIPMode")
+    @com.aliyun.core.annotation.NameInMap("SecurityIPMode")
     private String securityIPMode;
 
     private DescribeDBInstanceNetInfoResponseBody(Builder builder) {
@@ -120,19 +119,19 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
     } 
 
     public static class DBInstanceWeight extends TeaModel {
-        @NameInMap("Availability")
+        @com.aliyun.core.annotation.NameInMap("Availability")
         private String availability;
 
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("DBInstanceType")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceType")
         private String DBInstanceType;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private String weight;
 
         private DBInstanceWeight(Builder builder) {
@@ -249,7 +248,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
 
     }
     public static class DBInstanceWeights extends TeaModel {
-        @NameInMap("DBInstanceWeight")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceWeight")
         private java.util.List < DBInstanceWeight> DBInstanceWeight;
 
         private DBInstanceWeights(Builder builder) {
@@ -290,10 +289,10 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
 
     }
     public static class SecurityIPGroup extends TeaModel {
-        @NameInMap("SecurityIPGroupName")
+        @com.aliyun.core.annotation.NameInMap("SecurityIPGroupName")
         private String securityIPGroupName;
 
-        @NameInMap("SecurityIPs")
+        @com.aliyun.core.annotation.NameInMap("SecurityIPs")
         private String securityIPs;
 
         private SecurityIPGroup(Builder builder) {
@@ -351,7 +350,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
 
     }
     public static class SecurityIPGroups extends TeaModel {
-        @NameInMap("securityIPGroup")
+        @com.aliyun.core.annotation.NameInMap("securityIPGroup")
         private java.util.List < SecurityIPGroup> securityIPGroup;
 
         private SecurityIPGroups(Builder builder) {
@@ -392,49 +391,49 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
 
     }
     public static class DBInstanceNetInfo extends TeaModel {
-        @NameInMap("BabelfishPort")
+        @com.aliyun.core.annotation.NameInMap("BabelfishPort")
         private String babelfishPort;
 
-        @NameInMap("ConnectionString")
+        @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
 
-        @NameInMap("ConnectionStringType")
+        @com.aliyun.core.annotation.NameInMap("ConnectionStringType")
         private String connectionStringType;
 
-        @NameInMap("DBInstanceWeights")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceWeights")
         private DBInstanceWeights DBInstanceWeights;
 
-        @NameInMap("DistributionType")
+        @com.aliyun.core.annotation.NameInMap("DistributionType")
         private String distributionType;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("IPAddress")
+        @com.aliyun.core.annotation.NameInMap("IPAddress")
         private String IPAddress;
 
-        @NameInMap("IPType")
+        @com.aliyun.core.annotation.NameInMap("IPType")
         private String IPType;
 
-        @NameInMap("MaxDelayTime")
+        @com.aliyun.core.annotation.NameInMap("MaxDelayTime")
         private String maxDelayTime;
 
-        @NameInMap("PGBouncerPort")
+        @com.aliyun.core.annotation.NameInMap("PGBouncerPort")
         private String PGBouncerPort;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("SecurityIPGroups")
+        @com.aliyun.core.annotation.NameInMap("SecurityIPGroups")
         private SecurityIPGroups securityIPGroups;
 
-        @NameInMap("Upgradeable")
+        @com.aliyun.core.annotation.NameInMap("Upgradeable")
         private String upgradeable;
 
-        @NameInMap("VPCId")
+        @com.aliyun.core.annotation.NameInMap("VPCId")
         private String VPCId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
         private DBInstanceNetInfo(Builder builder) {
@@ -750,7 +749,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
 
     }
     public static class DBInstanceNetInfos extends TeaModel {
-        @NameInMap("DBInstanceNetInfo")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceNetInfo")
         private java.util.List < DBInstanceNetInfo> DBInstanceNetInfo;
 
         private DBInstanceNetInfos(Builder builder) {

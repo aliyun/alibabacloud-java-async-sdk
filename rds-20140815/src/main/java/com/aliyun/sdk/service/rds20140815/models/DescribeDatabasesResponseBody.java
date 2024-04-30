@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDatabasesResponseBody</p>
  */
 public class DescribeDatabasesResponseBody extends TeaModel {
-    @NameInMap("Databases")
+    @com.aliyun.core.annotation.NameInMap("Databases")
     private Databases databases;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDatabasesResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeDatabasesResponseBody extends TeaModel {
     } 
 
     public static class AccountPrivilegeInfo extends TeaModel {
-        @NameInMap("Account")
+        @com.aliyun.core.annotation.NameInMap("Account")
         private String account;
 
-        @NameInMap("AccountPrivilege")
+        @com.aliyun.core.annotation.NameInMap("AccountPrivilege")
         private String accountPrivilege;
 
-        @NameInMap("AccountPrivilegeDetail")
+        @com.aliyun.core.annotation.NameInMap("AccountPrivilegeDetail")
         private String accountPrivilegeDetail;
 
         private AccountPrivilegeInfo(Builder builder) {
@@ -159,7 +158,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
 
     }
     public static class Accounts extends TeaModel {
-        @NameInMap("AccountPrivilegeInfo")
+        @com.aliyun.core.annotation.NameInMap("AccountPrivilegeInfo")
         private java.util.List < AccountPrivilegeInfo> accountPrivilegeInfo;
 
         private Accounts(Builder builder) {
@@ -200,7 +199,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
 
     }
     public static class AdvancedInfo extends TeaModel {
-        @NameInMap("AdvancedDbProperty")
+        @com.aliyun.core.annotation.NameInMap("AdvancedDbProperty")
         private java.util.List < java.util.Map<String, ?>> advancedDbProperty;
 
         private AdvancedInfo(Builder builder) {
@@ -241,7 +240,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
 
     }
     public static class BasicInfo extends TeaModel {
-        @NameInMap("BasicDbProperty")
+        @com.aliyun.core.annotation.NameInMap("BasicDbProperty")
         private java.util.List < java.util.Map<String, ?>> basicDbProperty;
 
         private BasicInfo(Builder builder) {
@@ -282,7 +281,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
 
     }
     public static class RuntimeInfo extends TeaModel {
-        @NameInMap("RuntimeDbProperty")
+        @com.aliyun.core.annotation.NameInMap("RuntimeDbProperty")
         private java.util.List < java.util.Map<String, ?>> runtimeDbProperty;
 
         private RuntimeInfo(Builder builder) {
@@ -323,58 +322,58 @@ public class DescribeDatabasesResponseBody extends TeaModel {
 
     }
     public static class Database extends TeaModel {
-        @NameInMap("Accounts")
+        @com.aliyun.core.annotation.NameInMap("Accounts")
         private Accounts accounts;
 
-        @NameInMap("AdvancedInfo")
+        @com.aliyun.core.annotation.NameInMap("AdvancedInfo")
         private AdvancedInfo advancedInfo;
 
-        @NameInMap("BasicInfo")
+        @com.aliyun.core.annotation.NameInMap("BasicInfo")
         private BasicInfo basicInfo;
 
-        @NameInMap("CharacterSetName")
+        @com.aliyun.core.annotation.NameInMap("CharacterSetName")
         private String characterSetName;
 
-        @NameInMap("Collate")
+        @com.aliyun.core.annotation.NameInMap("Collate")
         private String collate;
 
-        @NameInMap("ConnLimit")
+        @com.aliyun.core.annotation.NameInMap("ConnLimit")
         private String connLimit;
 
-        @NameInMap("Ctype")
+        @com.aliyun.core.annotation.NameInMap("Ctype")
         private String ctype;
 
-        @NameInMap("DBDescription")
+        @com.aliyun.core.annotation.NameInMap("DBDescription")
         private String DBDescription;
 
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("DBName")
+        @com.aliyun.core.annotation.NameInMap("DBName")
         private String DBName;
 
-        @NameInMap("DBStatus")
+        @com.aliyun.core.annotation.NameInMap("DBStatus")
         private String DBStatus;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("RuntimeInfo")
+        @com.aliyun.core.annotation.NameInMap("RuntimeInfo")
         private RuntimeInfo runtimeInfo;
 
-        @NameInMap("Tablespace")
+        @com.aliyun.core.annotation.NameInMap("Tablespace")
         private String tablespace;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Database(Builder builder) {
@@ -733,7 +732,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
 
     }
     public static class Databases extends TeaModel {
-        @NameInMap("Database")
+        @com.aliyun.core.annotation.NameInMap("Database")
         private java.util.List < Database> database;
 
         private Databases(Builder builder) {

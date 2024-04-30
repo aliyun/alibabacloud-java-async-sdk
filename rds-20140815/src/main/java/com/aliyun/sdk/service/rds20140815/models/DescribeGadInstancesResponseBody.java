@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeGadInstancesResponseBody</p>
  */
 public class DescribeGadInstancesResponseBody extends TeaModel {
-    @NameInMap("GadInstances")
+    @com.aliyun.core.annotation.NameInMap("GadInstances")
     private java.util.List < GadInstances> gadInstances;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeGadInstancesResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
     } 
 
     public static class GadInstanceMembers extends TeaModel {
-        @NameInMap("DBInstanceID")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceID")
         private String DBInstanceID;
 
-        @NameInMap("DtsInstance")
+        @com.aliyun.core.annotation.NameInMap("DtsInstance")
         private String dtsInstance;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("EngineVersion")
+        @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private String engineVersion;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private GadInstanceMembers(Builder builder) {
@@ -267,25 +266,25 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
 
     }
     public static class GadInstances extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GadInstanceMembers")
+        @com.aliyun.core.annotation.NameInMap("GadInstanceMembers")
         private java.util.List < GadInstanceMembers> gadInstanceMembers;
 
-        @NameInMap("GadInstanceName")
+        @com.aliyun.core.annotation.NameInMap("GadInstanceName")
         private String gadInstanceName;
 
-        @NameInMap("ModificationTime")
+        @com.aliyun.core.annotation.NameInMap("ModificationTime")
         private String modificationTime;
 
-        @NameInMap("Service")
+        @com.aliyun.core.annotation.NameInMap("Service")
         private String service;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private GadInstances(Builder builder) {

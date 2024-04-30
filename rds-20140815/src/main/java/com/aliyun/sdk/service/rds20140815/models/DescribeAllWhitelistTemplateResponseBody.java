@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAllWhitelistTemplateResponseBody</p>
  */
 public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeAllWhitelistTemplateResponseBody(Builder builder) {
@@ -168,19 +167,19 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
     } 
 
     public static class Templates extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
-        @NameInMap("Ips")
+        @com.aliyun.core.annotation.NameInMap("Ips")
         private String ips;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private Integer templateId;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private Integer userId;
 
         private Templates(Builder builder) {
@@ -289,25 +288,25 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("CurrPageNumbers")
+        @com.aliyun.core.annotation.NameInMap("CurrPageNumbers")
         private Integer currPageNumbers;
 
-        @NameInMap("HasNext")
+        @com.aliyun.core.annotation.NameInMap("HasNext")
         private Boolean hasNext;
 
-        @NameInMap("HasPrev")
+        @com.aliyun.core.annotation.NameInMap("HasPrev")
         private Boolean hasPrev;
 
-        @NameInMap("MaxRecordsPerPage")
+        @com.aliyun.core.annotation.NameInMap("MaxRecordsPerPage")
         private Integer maxRecordsPerPage;
 
-        @NameInMap("Templates")
+        @com.aliyun.core.annotation.NameInMap("Templates")
         private java.util.List < Templates> templates;
 
-        @NameInMap("TotalPageNumbers")
+        @com.aliyun.core.annotation.NameInMap("TotalPageNumbers")
         private Integer totalPageNumbers;
 
-        @NameInMap("TotalRecords")
+        @com.aliyun.core.annotation.NameInMap("TotalRecords")
         private Integer totalRecords;
 
         private Data(Builder builder) {

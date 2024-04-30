@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyCollationTimeZoneResponseBody</p>
  */
 public class ModifyCollationTimeZoneResponseBody extends TeaModel {
-    @NameInMap("Collation")
+    @com.aliyun.core.annotation.NameInMap("Collation")
     private String collation;
 
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
-    @NameInMap("Timezone")
+    @com.aliyun.core.annotation.NameInMap("Timezone")
     private String timezone;
 
     private ModifyCollationTimeZoneResponseBody(Builder builder) {

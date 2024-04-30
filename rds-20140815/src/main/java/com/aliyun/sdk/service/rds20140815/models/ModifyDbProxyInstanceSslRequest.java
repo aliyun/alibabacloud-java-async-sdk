@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDbProxyInstanceSslRequest</p>
  */
 public class ModifyDbProxyInstanceSslRequest extends Request {
-    @Query
-    @NameInMap("DBProxyEngineType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBProxyEngineType")
     private String DBProxyEngineType;
 
-    @Query
-    @NameInMap("DbInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbInstanceId;
 
-    @Query
-    @NameInMap("DbProxyConnectString")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbProxyConnectString")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbProxyConnectString;
 
-    @Query
-    @NameInMap("DbProxyEndpointId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbProxyEndpointId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbProxyEndpointId;
 
-    @Query
-    @NameInMap("DbProxySslEnabled")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbProxySslEnabled")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbProxySslEnabled;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private ModifyDbProxyInstanceSslRequest(Builder builder) {

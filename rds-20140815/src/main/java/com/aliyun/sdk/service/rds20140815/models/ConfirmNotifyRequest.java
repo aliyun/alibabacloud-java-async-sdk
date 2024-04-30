@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ConfirmNotifyRequest</p>
  */
 public class ConfirmNotifyRequest extends Request {
-    @Body
-    @NameInMap("Confirmor")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Confirmor")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long confirmor;
 
-    @Body
-    @NameInMap("NotifyIdList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NotifyIdList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Long > notifyIdList;
 
     private ConfirmNotifyRequest(Builder builder) {

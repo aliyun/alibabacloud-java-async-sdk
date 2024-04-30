@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCurrentModifyOrderResponseBody</p>
  */
 public class DescribeCurrentModifyOrderResponseBody extends TeaModel {
-    @NameInMap("ModifyOrder")
+    @com.aliyun.core.annotation.NameInMap("ModifyOrder")
     private java.util.List < ModifyOrder> modifyOrder;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCurrentModifyOrderResponseBody(Builder builder) {
@@ -72,31 +71,31 @@ public class DescribeCurrentModifyOrderResponseBody extends TeaModel {
     } 
 
     public static class ModifyOrder extends TeaModel {
-        @NameInMap("ClassGroup")
+        @com.aliyun.core.annotation.NameInMap("ClassGroup")
         private String classGroup;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private String cpu;
 
-        @NameInMap("DbInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DbInstanceId")
         private String dbInstanceId;
 
-        @NameInMap("EffectiveTime")
+        @com.aliyun.core.annotation.NameInMap("EffectiveTime")
         private String effectiveTime;
 
-        @NameInMap("Mark")
+        @com.aliyun.core.annotation.NameInMap("Mark")
         private String mark;
 
-        @NameInMap("MemoryClass")
+        @com.aliyun.core.annotation.NameInMap("MemoryClass")
         private String memoryClass;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Storage")
+        @com.aliyun.core.annotation.NameInMap("Storage")
         private String storage;
 
-        @NameInMap("TargetDBInstanceClass")
+        @com.aliyun.core.annotation.NameInMap("TargetDBInstanceClass")
         private String targetDBInstanceClass;
 
         private ModifyOrder(Builder builder) {

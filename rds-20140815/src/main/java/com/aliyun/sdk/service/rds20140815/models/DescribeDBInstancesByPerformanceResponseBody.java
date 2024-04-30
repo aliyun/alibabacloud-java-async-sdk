@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBInstancesByPerformanceResponseBody</p>
  */
 public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeDBInstancesByPerformanceResponseBody(Builder builder) {
@@ -132,22 +131,22 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
     } 
 
     public static class DBInstancePerformance extends TeaModel {
-        @NameInMap("CPUUsage")
+        @com.aliyun.core.annotation.NameInMap("CPUUsage")
         private String CPUUsage;
 
-        @NameInMap("DBInstanceDescription")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceDescription")
         private String DBInstanceDescription;
 
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("DiskUsage")
+        @com.aliyun.core.annotation.NameInMap("DiskUsage")
         private String diskUsage;
 
-        @NameInMap("IOPSUsage")
+        @com.aliyun.core.annotation.NameInMap("IOPSUsage")
         private String IOPSUsage;
 
-        @NameInMap("SessionUsage")
+        @com.aliyun.core.annotation.NameInMap("SessionUsage")
         private String sessionUsage;
 
         private DBInstancePerformance(Builder builder) {
@@ -273,7 +272,7 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("DBInstancePerformance")
+        @com.aliyun.core.annotation.NameInMap("DBInstancePerformance")
         private java.util.List < DBInstancePerformance> DBInstancePerformance;
 
         private Items(Builder builder) {

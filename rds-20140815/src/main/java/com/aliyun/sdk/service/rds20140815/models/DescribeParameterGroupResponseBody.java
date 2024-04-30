@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeParameterGroupResponseBody</p>
  */
 public class DescribeParameterGroupResponseBody extends TeaModel {
-    @NameInMap("ParamGroup")
+    @com.aliyun.core.annotation.NameInMap("ParamGroup")
     private ParamGroup paramGroup;
 
-    @NameInMap("RelatedCustinsInfo")
+    @com.aliyun.core.annotation.NameInMap("RelatedCustinsInfo")
     private RelatedCustinsInfo relatedCustinsInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeParameterGroupResponseBody(Builder builder) {
@@ -95,10 +94,10 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
     } 
 
     public static class ParameterDetail extends TeaModel {
-        @NameInMap("ParamName")
+        @com.aliyun.core.annotation.NameInMap("ParamName")
         private String paramName;
 
-        @NameInMap("ParamValue")
+        @com.aliyun.core.annotation.NameInMap("ParamValue")
         private String paramValue;
 
         private ParameterDetail(Builder builder) {
@@ -156,7 +155,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
 
     }
     public static class ParamDetail extends TeaModel {
-        @NameInMap("ParameterDetail")
+        @com.aliyun.core.annotation.NameInMap("ParameterDetail")
         private java.util.List < ParameterDetail> parameterDetail;
 
         private ParamDetail(Builder builder) {
@@ -197,37 +196,37 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
 
     }
     public static class ParameterGroup extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("EngineVersion")
+        @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private String engineVersion;
 
-        @NameInMap("ForceRestart")
+        @com.aliyun.core.annotation.NameInMap("ForceRestart")
         private Integer forceRestart;
 
-        @NameInMap("ParamCounts")
+        @com.aliyun.core.annotation.NameInMap("ParamCounts")
         private Integer paramCounts;
 
-        @NameInMap("ParamDetail")
+        @com.aliyun.core.annotation.NameInMap("ParamDetail")
         private ParamDetail paramDetail;
 
-        @NameInMap("ParameterGroupDesc")
+        @com.aliyun.core.annotation.NameInMap("ParameterGroupDesc")
         private String parameterGroupDesc;
 
-        @NameInMap("ParameterGroupId")
+        @com.aliyun.core.annotation.NameInMap("ParameterGroupId")
         private String parameterGroupId;
 
-        @NameInMap("ParameterGroupName")
+        @com.aliyun.core.annotation.NameInMap("ParameterGroupName")
         private String parameterGroupName;
 
-        @NameInMap("ParameterGroupType")
+        @com.aliyun.core.annotation.NameInMap("ParameterGroupType")
         private Integer parameterGroupType;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private ParameterGroup(Builder builder) {
@@ -447,7 +446,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
 
     }
     public static class ParamGroup extends TeaModel {
-        @NameInMap("ParameterGroup")
+        @com.aliyun.core.annotation.NameInMap("ParameterGroup")
         private java.util.List < ParameterGroup> parameterGroup;
 
         private ParamGroup(Builder builder) {
@@ -488,10 +487,10 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
 
     }
     public static class RelatedCustinsInfoRelatedCustinsInfo extends TeaModel {
-        @NameInMap("AppliedTime")
+        @com.aliyun.core.annotation.NameInMap("AppliedTime")
         private String appliedTime;
 
-        @NameInMap("DBInstanceName")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceName")
         private String DBInstanceName;
 
         private RelatedCustinsInfoRelatedCustinsInfo(Builder builder) {
@@ -549,7 +548,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
 
     }
     public static class RelatedCustinsInfo extends TeaModel {
-        @NameInMap("RelatedCustinsInfo")
+        @com.aliyun.core.annotation.NameInMap("RelatedCustinsInfo")
         private java.util.List < RelatedCustinsInfoRelatedCustinsInfo> relatedCustinsInfo;
 
         private RelatedCustinsInfo(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSQLLogFilesResponseBody</p>
  */
 public class DescribeSQLLogFilesResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeSQLLogFilesResponseBody(Builder builder) {
@@ -132,22 +131,22 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
     } 
 
     public static class LogFile extends TeaModel {
-        @NameInMap("FileID")
+        @com.aliyun.core.annotation.NameInMap("FileID")
         private String fileID;
 
-        @NameInMap("LogDownloadURL")
+        @com.aliyun.core.annotation.NameInMap("LogDownloadURL")
         private String logDownloadURL;
 
-        @NameInMap("LogEndTime")
+        @com.aliyun.core.annotation.NameInMap("LogEndTime")
         private String logEndTime;
 
-        @NameInMap("LogSize")
+        @com.aliyun.core.annotation.NameInMap("LogSize")
         private String logSize;
 
-        @NameInMap("LogStartTime")
+        @com.aliyun.core.annotation.NameInMap("LogStartTime")
         private String logStartTime;
 
-        @NameInMap("LogStatus")
+        @com.aliyun.core.annotation.NameInMap("LogStatus")
         private String logStatus;
 
         private LogFile(Builder builder) {
@@ -278,7 +277,7 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("LogFile")
+        @com.aliyun.core.annotation.NameInMap("LogFile")
         private java.util.List < LogFile> logFile;
 
         private Items(Builder builder) {

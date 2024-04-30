@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSlotsResponseBody</p>
  */
 public class DescribeSlotsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Slots")
+    @com.aliyun.core.annotation.NameInMap("Slots")
     private java.util.List < Slots> slots;
 
     private DescribeSlotsResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class DescribeSlotsResponseBody extends TeaModel {
     } 
 
     public static class Slots extends TeaModel {
-        @NameInMap("Database")
+        @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
 
-        @NameInMap("Plugin")
+        @com.aliyun.core.annotation.NameInMap("Plugin")
         private String plugin;
 
-        @NameInMap("SlotName")
+        @com.aliyun.core.annotation.NameInMap("SlotName")
         private String slotName;
 
-        @NameInMap("SlotStatus")
+        @com.aliyun.core.annotation.NameInMap("SlotStatus")
         private String slotStatus;
 
-        @NameInMap("SlotType")
+        @com.aliyun.core.annotation.NameInMap("SlotType")
         private String slotType;
 
-        @NameInMap("SubReplayLag")
+        @com.aliyun.core.annotation.NameInMap("SubReplayLag")
         private String subReplayLag;
 
-        @NameInMap("Temporary")
+        @com.aliyun.core.annotation.NameInMap("Temporary")
         private String temporary;
 
-        @NameInMap("WalDelay")
+        @com.aliyun.core.annotation.NameInMap("WalDelay")
         private String walDelay;
 
         private Slots(Builder builder) {

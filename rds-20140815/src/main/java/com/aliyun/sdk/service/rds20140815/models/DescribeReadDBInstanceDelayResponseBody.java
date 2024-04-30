@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeReadDBInstanceDelayResponseBody</p>
  */
 public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("DelayTime")
+    @com.aliyun.core.annotation.NameInMap("DelayTime")
     private Integer delayTime;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("ReadDBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("ReadDBInstanceId")
     private String readDBInstanceId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeReadDBInstanceDelayResponseBody(Builder builder) {
@@ -132,7 +131,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
     } 
 
     public static class ReadDBInstanceNames extends TeaModel {
-        @NameInMap("ReadDBInstanceName")
+        @com.aliyun.core.annotation.NameInMap("ReadDBInstanceName")
         private java.util.List < String > readDBInstanceName;
 
         private ReadDBInstanceNames(Builder builder) {
@@ -173,7 +172,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
 
     }
     public static class ReadDelayTimes extends TeaModel {
-        @NameInMap("ReadDelayTime")
+        @com.aliyun.core.annotation.NameInMap("ReadDelayTime")
         private java.util.List < String > readDelayTime;
 
         private ReadDelayTimes(Builder builder) {
@@ -214,28 +213,28 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
 
     }
     public static class ReadonlyInstanceDelay extends TeaModel {
-        @NameInMap("FlushLag")
+        @com.aliyun.core.annotation.NameInMap("FlushLag")
         private String flushLag;
 
-        @NameInMap("FlushLatency")
+        @com.aliyun.core.annotation.NameInMap("FlushLatency")
         private String flushLatency;
 
-        @NameInMap("ReadDBInstanceName")
+        @com.aliyun.core.annotation.NameInMap("ReadDBInstanceName")
         private String readDBInstanceName;
 
-        @NameInMap("ReplayLag")
+        @com.aliyun.core.annotation.NameInMap("ReplayLag")
         private String replayLag;
 
-        @NameInMap("ReplayLatency")
+        @com.aliyun.core.annotation.NameInMap("ReplayLatency")
         private String replayLatency;
 
-        @NameInMap("SendLatency")
+        @com.aliyun.core.annotation.NameInMap("SendLatency")
         private String sendLatency;
 
-        @NameInMap("WriteLag")
+        @com.aliyun.core.annotation.NameInMap("WriteLag")
         private String writeLag;
 
-        @NameInMap("WriteLatency")
+        @com.aliyun.core.annotation.NameInMap("WriteLatency")
         private String writeLatency;
 
         private ReadonlyInstanceDelay(Builder builder) {
@@ -395,7 +394,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
 
     }
     public static class ItemsReadonlyInstanceDelay extends TeaModel {
-        @NameInMap("ReadonlyInstanceDelay")
+        @com.aliyun.core.annotation.NameInMap("ReadonlyInstanceDelay")
         private java.util.List < ReadonlyInstanceDelay> readonlyInstanceDelay;
 
         private ItemsReadonlyInstanceDelay(Builder builder) {
@@ -436,16 +435,16 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
 
     }
     public static class ItemsItems extends TeaModel {
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("ReadDBInstanceNames")
+        @com.aliyun.core.annotation.NameInMap("ReadDBInstanceNames")
         private ReadDBInstanceNames readDBInstanceNames;
 
-        @NameInMap("ReadDelayTimes")
+        @com.aliyun.core.annotation.NameInMap("ReadDelayTimes")
         private ReadDelayTimes readDelayTimes;
 
-        @NameInMap("ReadonlyInstanceDelay")
+        @com.aliyun.core.annotation.NameInMap("ReadonlyInstanceDelay")
         private ItemsReadonlyInstanceDelay readonlyInstanceDelay;
 
         private ItemsItems(Builder builder) {
@@ -540,7 +539,7 @@ public class DescribeReadDBInstanceDelayResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("Items")
+        @com.aliyun.core.annotation.NameInMap("Items")
         private java.util.List < ItemsItems> items;
 
         private Items(Builder builder) {

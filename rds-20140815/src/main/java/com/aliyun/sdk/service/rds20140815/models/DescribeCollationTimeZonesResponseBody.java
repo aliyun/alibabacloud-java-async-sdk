@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCollationTimeZonesResponseBody</p>
  */
 public class DescribeCollationTimeZonesResponseBody extends TeaModel {
-    @NameInMap("CollationTimeZones")
+    @com.aliyun.core.annotation.NameInMap("CollationTimeZones")
     private CollationTimeZones collationTimeZones;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCollationTimeZonesResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeCollationTimeZonesResponseBody extends TeaModel {
     } 
 
     public static class CollationTimeZone extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("StandardTimeOffset")
+        @com.aliyun.core.annotation.NameInMap("StandardTimeOffset")
         private String standardTimeOffset;
 
-        @NameInMap("TimeZone")
+        @com.aliyun.core.annotation.NameInMap("TimeZone")
         private String timeZone;
 
         private CollationTimeZone(Builder builder) {
@@ -153,7 +152,7 @@ public class DescribeCollationTimeZonesResponseBody extends TeaModel {
 
     }
     public static class CollationTimeZones extends TeaModel {
-        @NameInMap("CollationTimeZone")
+        @com.aliyun.core.annotation.NameInMap("CollationTimeZone")
         private java.util.List < CollationTimeZone> collationTimeZone;
 
         private CollationTimeZones(Builder builder) {

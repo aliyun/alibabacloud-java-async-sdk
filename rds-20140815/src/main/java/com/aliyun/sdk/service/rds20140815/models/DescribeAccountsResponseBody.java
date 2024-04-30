@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAccountsResponseBody</p>
  */
 public class DescribeAccountsResponseBody extends TeaModel {
-    @NameInMap("Accounts")
+    @com.aliyun.core.annotation.NameInMap("Accounts")
     private Accounts accounts;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SystemAdminAccountFirstActivationTime")
+    @com.aliyun.core.annotation.NameInMap("SystemAdminAccountFirstActivationTime")
     private String systemAdminAccountFirstActivationTime;
 
-    @NameInMap("SystemAdminAccountStatus")
+    @com.aliyun.core.annotation.NameInMap("SystemAdminAccountStatus")
     private String systemAdminAccountStatus;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeAccountsResponseBody(Builder builder) {
@@ -161,13 +160,13 @@ public class DescribeAccountsResponseBody extends TeaModel {
     } 
 
     public static class DatabasePrivilege extends TeaModel {
-        @NameInMap("AccountPrivilege")
+        @com.aliyun.core.annotation.NameInMap("AccountPrivilege")
         private String accountPrivilege;
 
-        @NameInMap("AccountPrivilegeDetail")
+        @com.aliyun.core.annotation.NameInMap("AccountPrivilegeDetail")
         private String accountPrivilegeDetail;
 
-        @NameInMap("DBName")
+        @com.aliyun.core.annotation.NameInMap("DBName")
         private String DBName;
 
         private DatabasePrivilege(Builder builder) {
@@ -249,7 +248,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
 
     }
     public static class DatabasePrivileges extends TeaModel {
-        @NameInMap("DatabasePrivilege")
+        @com.aliyun.core.annotation.NameInMap("DatabasePrivilege")
         private java.util.List < DatabasePrivilege> databasePrivilege;
 
         private DatabasePrivileges(Builder builder) {
@@ -290,40 +289,40 @@ public class DescribeAccountsResponseBody extends TeaModel {
 
     }
     public static class DBInstanceAccount extends TeaModel {
-        @NameInMap("AccountDescription")
+        @com.aliyun.core.annotation.NameInMap("AccountDescription")
         private String accountDescription;
 
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("AccountStatus")
+        @com.aliyun.core.annotation.NameInMap("AccountStatus")
         private String accountStatus;
 
-        @NameInMap("AccountType")
+        @com.aliyun.core.annotation.NameInMap("AccountType")
         private String accountType;
 
-        @NameInMap("BypassRLS")
+        @com.aliyun.core.annotation.NameInMap("BypassRLS")
         private String bypassRLS;
 
-        @NameInMap("CreateDB")
+        @com.aliyun.core.annotation.NameInMap("CreateDB")
         private String createDB;
 
-        @NameInMap("CreateRole")
+        @com.aliyun.core.annotation.NameInMap("CreateRole")
         private String createRole;
 
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("DatabasePrivileges")
+        @com.aliyun.core.annotation.NameInMap("DatabasePrivileges")
         private DatabasePrivileges databasePrivileges;
 
-        @NameInMap("PrivExceeded")
+        @com.aliyun.core.annotation.NameInMap("PrivExceeded")
         private String privExceeded;
 
-        @NameInMap("Replication")
+        @com.aliyun.core.annotation.NameInMap("Replication")
         private String replication;
 
-        @NameInMap("ValidUntil")
+        @com.aliyun.core.annotation.NameInMap("ValidUntil")
         private String validUntil;
 
         private DBInstanceAccount(Builder builder) {
@@ -595,7 +594,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
 
     }
     public static class Accounts extends TeaModel {
-        @NameInMap("DBInstanceAccount")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceAccount")
         private java.util.List < DBInstanceAccount> DBInstanceAccount;
 
         private Accounts(Builder builder) {

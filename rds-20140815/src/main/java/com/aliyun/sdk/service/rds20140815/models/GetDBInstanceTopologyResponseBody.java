@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDBInstanceTopologyResponseBody</p>
  */
 public class GetDBInstanceTopologyResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetDBInstanceTopologyResponseBody(Builder builder) {
@@ -112,16 +111,16 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
     } 
 
     public static class Connections extends TeaModel {
-        @NameInMap("ConnectionString")
+        @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
 
-        @NameInMap("DBInstanceName")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceName")
         private String DBInstanceName;
 
-        @NameInMap("NetType")
+        @com.aliyun.core.annotation.NameInMap("NetType")
         private String netType;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Connections(Builder builder) {
@@ -217,22 +216,22 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
 
     }
     public static class Nodes extends TeaModel {
-        @NameInMap("DBInstanceName")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceName")
         private String DBInstanceName;
 
-        @NameInMap("DedicatedHostGroupId")
+        @com.aliyun.core.annotation.NameInMap("DedicatedHostGroupId")
         private String dedicatedHostGroupId;
 
-        @NameInMap("DedicatedHostId")
+        @com.aliyun.core.annotation.NameInMap("DedicatedHostId")
         private String dedicatedHostId;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Nodes(Builder builder) {
@@ -371,13 +370,13 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Connections")
+        @com.aliyun.core.annotation.NameInMap("Connections")
         private java.util.List < Connections> connections;
 
-        @NameInMap("DBInstanceName")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceName")
         private String DBInstanceName;
 
-        @NameInMap("Nodes")
+        @com.aliyun.core.annotation.NameInMap("Nodes")
         private java.util.List < Nodes> nodes;
 
         private Data(Builder builder) {

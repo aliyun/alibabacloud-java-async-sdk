@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifySecurityGroupConfigurationResponseBody</p>
  */
 public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
-    @NameInMap("DBInstanceName")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceName")
     private String DBInstanceName;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifySecurityGroupConfigurationResponseBody(Builder builder) {
@@ -92,13 +91,13 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
     } 
 
     public static class EcsSecurityGroupRelation extends TeaModel {
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
         private EcsSecurityGroupRelation(Builder builder) {
@@ -177,7 +176,7 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("EcsSecurityGroupRelation")
+        @com.aliyun.core.annotation.NameInMap("EcsSecurityGroupRelation")
         private java.util.List < EcsSecurityGroupRelation> ecsSecurityGroupRelation;
 
         private Items(Builder builder) {

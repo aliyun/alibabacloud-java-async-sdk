@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMigrateTasksResponseBody</p>
  */
 public class DescribeMigrateTasksResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeMigrateTasksResponseBody(Builder builder) {
@@ -152,28 +151,28 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
     } 
 
     public static class MigrateTask extends TeaModel {
-        @NameInMap("BackupMode")
+        @com.aliyun.core.annotation.NameInMap("BackupMode")
         private String backupMode;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DBName")
+        @com.aliyun.core.annotation.NameInMap("DBName")
         private String DBName;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("IsDBReplaced")
+        @com.aliyun.core.annotation.NameInMap("IsDBReplaced")
         private String isDBReplaced;
 
-        @NameInMap("MigrateTaskId")
+        @com.aliyun.core.annotation.NameInMap("MigrateTaskId")
         private String migrateTaskId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private MigrateTask(Builder builder) {
@@ -344,7 +343,7 @@ public class DescribeMigrateTasksResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("MigrateTask")
+        @com.aliyun.core.annotation.NameInMap("MigrateTask")
         private java.util.List < MigrateTask> migrateTask;
 
         private Items(Builder builder) {

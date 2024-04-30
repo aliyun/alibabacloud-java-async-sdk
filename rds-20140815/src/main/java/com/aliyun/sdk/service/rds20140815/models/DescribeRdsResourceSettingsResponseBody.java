@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRdsResourceSettingsResponseBody</p>
  */
 public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
-    @NameInMap("RdsInstanceResourceSettings")
+    @com.aliyun.core.annotation.NameInMap("RdsInstanceResourceSettings")
     private RdsInstanceResourceSettings rdsInstanceResourceSettings;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeRdsResourceSettingsResponseBody(Builder builder) {
@@ -72,31 +71,31 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
     } 
 
     public static class RdsInstanceResourceSetting extends TeaModel {
-        @NameInMap("EndDate")
+        @com.aliyun.core.annotation.NameInMap("EndDate")
         private String endDate;
 
-        @NameInMap("IsTop")
+        @com.aliyun.core.annotation.NameInMap("IsTop")
         private String isTop;
 
-        @NameInMap("NoticeBarContent")
+        @com.aliyun.core.annotation.NameInMap("NoticeBarContent")
         private String noticeBarContent;
 
-        @NameInMap("PoppedUpButtonText")
+        @com.aliyun.core.annotation.NameInMap("PoppedUpButtonText")
         private String poppedUpButtonText;
 
-        @NameInMap("PoppedUpButtonType")
+        @com.aliyun.core.annotation.NameInMap("PoppedUpButtonType")
         private String poppedUpButtonType;
 
-        @NameInMap("PoppedUpButtonUrl")
+        @com.aliyun.core.annotation.NameInMap("PoppedUpButtonUrl")
         private String poppedUpButtonUrl;
 
-        @NameInMap("PoppedUpContent")
+        @com.aliyun.core.annotation.NameInMap("PoppedUpContent")
         private String poppedUpContent;
 
-        @NameInMap("ResourceNiche")
+        @com.aliyun.core.annotation.NameInMap("ResourceNiche")
         private String resourceNiche;
 
-        @NameInMap("StartDate")
+        @com.aliyun.core.annotation.NameInMap("StartDate")
         private String startDate;
 
         private RdsInstanceResourceSetting(Builder builder) {
@@ -273,7 +272,7 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
 
     }
     public static class RdsInstanceResourceSettings extends TeaModel {
-        @NameInMap("RdsInstanceResourceSetting")
+        @com.aliyun.core.annotation.NameInMap("RdsInstanceResourceSetting")
         private java.util.List < RdsInstanceResourceSetting> rdsInstanceResourceSetting;
 
         private RdsInstanceResourceSettings(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,113 +11,113 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyBackupPolicyRequest</p>
  */
 public class ModifyBackupPolicyRequest extends Request {
-    @Query
-    @NameInMap("ArchiveBackupKeepCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArchiveBackupKeepCount")
     private Integer archiveBackupKeepCount;
 
-    @Query
-    @NameInMap("ArchiveBackupKeepPolicy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArchiveBackupKeepPolicy")
     private String archiveBackupKeepPolicy;
 
-    @Query
-    @NameInMap("ArchiveBackupRetentionPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArchiveBackupRetentionPeriod")
     private String archiveBackupRetentionPeriod;
 
-    @Query
-    @NameInMap("BackupInterval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupInterval")
     private String backupInterval;
 
-    @Query
-    @NameInMap("BackupLog")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupLog")
     private String backupLog;
 
-    @Query
-    @NameInMap("BackupMethod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupMethod")
     private String backupMethod;
 
-    @Query
-    @NameInMap("BackupPolicyMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupPolicyMode")
     private String backupPolicyMode;
 
-    @Query
-    @NameInMap("BackupPriority")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupPriority")
     private Integer backupPriority;
 
-    @Query
-    @NameInMap("BackupRetentionPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupRetentionPeriod")
     private String backupRetentionPeriod;
 
-    @Query
-    @NameInMap("Category")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Category")
     private String category;
 
-    @Query
-    @NameInMap("CompressType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CompressType")
     private String compressType;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("EnableBackupLog")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableBackupLog")
     private String enableBackupLog;
 
-    @Query
-    @NameInMap("EnableIncrementDataBackup")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableIncrementDataBackup")
     private Boolean enableIncrementDataBackup;
 
-    @Query
-    @NameInMap("HighSpaceUsageProtection")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HighSpaceUsageProtection")
     private String highSpaceUsageProtection;
 
-    @Query
-    @NameInMap("LocalLogRetentionHours")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LocalLogRetentionHours")
     private String localLogRetentionHours;
 
-    @Query
-    @NameInMap("LocalLogRetentionSpace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LocalLogRetentionSpace")
     private String localLogRetentionSpace;
 
-    @Query
-    @NameInMap("LogBackupFrequency")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogBackupFrequency")
     private String logBackupFrequency;
 
-    @Query
-    @NameInMap("LogBackupLocalRetentionNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogBackupLocalRetentionNumber")
     private Integer logBackupLocalRetentionNumber;
 
-    @Query
-    @NameInMap("LogBackupRetentionPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogBackupRetentionPeriod")
     private String logBackupRetentionPeriod;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PreferredBackupPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreferredBackupPeriod")
     private String preferredBackupPeriod;
 
-    @Query
-    @NameInMap("PreferredBackupTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreferredBackupTime")
     private String preferredBackupTime;
 
-    @Query
-    @NameInMap("ReleasedKeepPolicy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReleasedKeepPolicy")
     private String releasedKeepPolicy;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyBackupPolicyRequest(Builder builder) {

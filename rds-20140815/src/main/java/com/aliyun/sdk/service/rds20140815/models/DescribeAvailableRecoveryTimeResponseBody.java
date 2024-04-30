@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAvailableRecoveryTimeResponseBody</p>
  */
 public class DescribeAvailableRecoveryTimeResponseBody extends TeaModel {
-    @NameInMap("CrossBackupId")
+    @com.aliyun.core.annotation.NameInMap("CrossBackupId")
     private Integer crossBackupId;
 
-    @NameInMap("RecoveryBeginTime")
+    @com.aliyun.core.annotation.NameInMap("RecoveryBeginTime")
     private String recoveryBeginTime;
 
-    @NameInMap("RecoveryEndTime")
+    @com.aliyun.core.annotation.NameInMap("RecoveryEndTime")
     private String recoveryEndTime;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAvailableRecoveryTimeResponseBody(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHistoryEventsResponseBody</p>
  */
 public class DescribeHistoryEventsResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeHistoryEventsResponseBody(Builder builder) {
@@ -132,85 +131,85 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("CmsProduct")
+        @com.aliyun.core.annotation.NameInMap("CmsProduct")
         private String cmsProduct;
 
-        @NameInMap("DbType")
+        @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;
 
-        @NameInMap("DetailImpact")
+        @com.aliyun.core.annotation.NameInMap("DetailImpact")
         private String detailImpact;
 
-        @NameInMap("DetailReason")
+        @com.aliyun.core.annotation.NameInMap("DetailReason")
         private String detailReason;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("EventCategory")
+        @com.aliyun.core.annotation.NameInMap("EventCategory")
         private String eventCategory;
 
-        @NameInMap("EventCode")
+        @com.aliyun.core.annotation.NameInMap("EventCode")
         private String eventCode;
 
-        @NameInMap("EventDetail")
+        @com.aliyun.core.annotation.NameInMap("EventDetail")
         private String eventDetail;
 
-        @NameInMap("EventId")
+        @com.aliyun.core.annotation.NameInMap("EventId")
         private String eventId;
 
-        @NameInMap("EventImpact")
+        @com.aliyun.core.annotation.NameInMap("EventImpact")
         private String eventImpact;
 
-        @NameInMap("EventLevel")
+        @com.aliyun.core.annotation.NameInMap("EventLevel")
         private String eventLevel;
 
-        @NameInMap("EventReason")
+        @com.aliyun.core.annotation.NameInMap("EventReason")
         private String eventReason;
 
-        @NameInMap("EventStatus")
+        @com.aliyun.core.annotation.NameInMap("EventStatus")
         private String eventStatus;
 
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
 
-        @NameInMap("GmtCreated")
+        @com.aliyun.core.annotation.NameInMap("GmtCreated")
         private String gmtCreated;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("HandleStatus")
+        @com.aliyun.core.annotation.NameInMap("HandleStatus")
         private String handleStatus;
 
-        @NameInMap("HasLifeCycle")
+        @com.aliyun.core.annotation.NameInMap("HasLifeCycle")
         private Integer hasLifeCycle;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("IsClosed")
+        @com.aliyun.core.annotation.NameInMap("IsClosed")
         private Integer isClosed;
 
-        @NameInMap("Product")
+        @com.aliyun.core.annotation.NameInMap("Product")
         private String product;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("SourceType")
+        @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Uid")
+        @com.aliyun.core.annotation.NameInMap("Uid")
         private String uid;
 
         private Data(Builder builder) {
@@ -702,28 +701,28 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private Data data;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("Specversion")
+        @com.aliyun.core.annotation.NameInMap("Specversion")
         private String specversion;
 
-        @NameInMap("Subject")
+        @com.aliyun.core.annotation.NameInMap("Subject")
         private String subject;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Items(Builder builder) {

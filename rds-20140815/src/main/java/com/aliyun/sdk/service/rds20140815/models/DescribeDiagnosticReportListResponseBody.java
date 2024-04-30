@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDiagnosticReportListResponseBody</p>
  */
 public class DescribeDiagnosticReportListResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("ReportList")
+    @com.aliyun.core.annotation.NameInMap("ReportList")
     private java.util.List < ReportList> reportList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDiagnosticReportListResponseBody(Builder builder) {
@@ -92,19 +91,19 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
     } 
 
     public static class ReportList extends TeaModel {
-        @NameInMap("DiagnosticTime")
+        @com.aliyun.core.annotation.NameInMap("DiagnosticTime")
         private String diagnosticTime;
 
-        @NameInMap("DownloadURL")
+        @com.aliyun.core.annotation.NameInMap("DownloadURL")
         private String downloadURL;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private Integer score;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private ReportList(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDedicatedHostsResponseBody</p>
  */
 public class DescribeDedicatedHostsResponseBody extends TeaModel {
-    @NameInMap("DedicatedHostGroupId")
+    @com.aliyun.core.annotation.NameInMap("DedicatedHostGroupId")
     private String dedicatedHostGroupId;
 
-    @NameInMap("DedicatedHosts")
+    @com.aliyun.core.annotation.NameInMap("DedicatedHosts")
     private DedicatedHosts dedicatedHosts;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDedicatedHostsResponseBody(Builder builder) {
@@ -92,88 +91,88 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
     } 
 
     public static class DedicatedHostsDedicatedHosts extends TeaModel {
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("AllocationStatus")
+        @com.aliyun.core.annotation.NameInMap("AllocationStatus")
         private String allocationStatus;
 
-        @NameInMap("BastionInstanceId")
+        @com.aliyun.core.annotation.NameInMap("BastionInstanceId")
         private String bastionInstanceId;
 
-        @NameInMap("CPUAllocationRatio")
+        @com.aliyun.core.annotation.NameInMap("CPUAllocationRatio")
         private String CPUAllocationRatio;
 
-        @NameInMap("CpuUsed")
+        @com.aliyun.core.annotation.NameInMap("CpuUsed")
         private String cpuUsed;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("DedicatedHostGroupId")
+        @com.aliyun.core.annotation.NameInMap("DedicatedHostGroupId")
         private String dedicatedHostGroupId;
 
-        @NameInMap("DedicatedHostId")
+        @com.aliyun.core.annotation.NameInMap("DedicatedHostId")
         private String dedicatedHostId;
 
-        @NameInMap("DiskAllocationRatio")
+        @com.aliyun.core.annotation.NameInMap("DiskAllocationRatio")
         private String diskAllocationRatio;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("HostCPU")
+        @com.aliyun.core.annotation.NameInMap("HostCPU")
         private String hostCPU;
 
-        @NameInMap("HostClass")
+        @com.aliyun.core.annotation.NameInMap("HostClass")
         private String hostClass;
 
-        @NameInMap("HostMem")
+        @com.aliyun.core.annotation.NameInMap("HostMem")
         private String hostMem;
 
-        @NameInMap("HostName")
+        @com.aliyun.core.annotation.NameInMap("HostName")
         private String hostName;
 
-        @NameInMap("HostStatus")
+        @com.aliyun.core.annotation.NameInMap("HostStatus")
         private String hostStatus;
 
-        @NameInMap("HostStorage")
+        @com.aliyun.core.annotation.NameInMap("HostStorage")
         private String hostStorage;
 
-        @NameInMap("HostType")
+        @com.aliyun.core.annotation.NameInMap("HostType")
         private String hostType;
 
-        @NameInMap("IPAddress")
+        @com.aliyun.core.annotation.NameInMap("IPAddress")
         private String IPAddress;
 
-        @NameInMap("ImageCategory")
+        @com.aliyun.core.annotation.NameInMap("ImageCategory")
         private String imageCategory;
 
-        @NameInMap("InstanceNumber")
+        @com.aliyun.core.annotation.NameInMap("InstanceNumber")
         private String instanceNumber;
 
-        @NameInMap("MemAllocationRatio")
+        @com.aliyun.core.annotation.NameInMap("MemAllocationRatio")
         private String memAllocationRatio;
 
-        @NameInMap("MemoryUsed")
+        @com.aliyun.core.annotation.NameInMap("MemoryUsed")
         private String memoryUsed;
 
-        @NameInMap("OpenPermission")
+        @com.aliyun.core.annotation.NameInMap("OpenPermission")
         private String openPermission;
 
-        @NameInMap("StorageUsed")
+        @com.aliyun.core.annotation.NameInMap("StorageUsed")
         private String storageUsed;
 
-        @NameInMap("VPCId")
+        @com.aliyun.core.annotation.NameInMap("VPCId")
         private String VPCId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private DedicatedHostsDedicatedHosts(Builder builder) {
@@ -700,7 +699,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     }
     public static class DedicatedHosts extends TeaModel {
-        @NameInMap("DedicatedHosts")
+        @com.aliyun.core.annotation.NameInMap("DedicatedHosts")
         private java.util.List < DedicatedHostsDedicatedHosts> dedicatedHosts;
 
         private DedicatedHosts(Builder builder) {

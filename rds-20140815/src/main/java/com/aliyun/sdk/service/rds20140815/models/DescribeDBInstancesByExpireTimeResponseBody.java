@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBInstancesByExpireTimeResponseBody</p>
  */
 public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeDBInstancesByExpireTimeResponseBody(Builder builder) {
@@ -135,22 +134,22 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
     } 
 
     public static class DBInstanceExpireTime extends TeaModel {
-        @NameInMap("DBInstanceDescription")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceDescription")
         private String DBInstanceDescription;
 
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("DBInstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceStatus")
         private String DBInstanceStatus;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("LockMode")
+        @com.aliyun.core.annotation.NameInMap("LockMode")
         private String lockMode;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
         private DBInstanceExpireTime(Builder builder) {
@@ -291,7 +290,7 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("DBInstanceExpireTime")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceExpireTime")
         private java.util.List < DBInstanceExpireTime> DBInstanceExpireTime;
 
         private Items(Builder builder) {

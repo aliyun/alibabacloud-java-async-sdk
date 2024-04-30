@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHistoryTasksResponseBody</p>
  */
 public class DescribeHistoryTasksResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeHistoryTasksResponseBody(Builder builder) {
@@ -132,64 +131,64 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("ActionInfo")
+        @com.aliyun.core.annotation.NameInMap("ActionInfo")
         private String actionInfo;
 
-        @NameInMap("CallerSource")
+        @com.aliyun.core.annotation.NameInMap("CallerSource")
         private String callerSource;
 
-        @NameInMap("CallerUid")
+        @com.aliyun.core.annotation.NameInMap("CallerUid")
         private String callerUid;
 
-        @NameInMap("CurrentStepName")
+        @com.aliyun.core.annotation.NameInMap("CurrentStepName")
         private String currentStepName;
 
-        @NameInMap("DbType")
+        @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("Product")
+        @com.aliyun.core.annotation.NameInMap("Product")
         private String product;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private Float progress;
 
-        @NameInMap("ReasonCode")
+        @com.aliyun.core.annotation.NameInMap("ReasonCode")
         private String reasonCode;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RemainTime")
+        @com.aliyun.core.annotation.NameInMap("RemainTime")
         private Integer remainTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskDetail")
+        @com.aliyun.core.annotation.NameInMap("TaskDetail")
         private String taskDetail;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
-        @NameInMap("Uid")
+        @com.aliyun.core.annotation.NameInMap("Uid")
         private String uid;
 
         private Items(Builder builder) {

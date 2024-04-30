@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePostgresExtensionsResponseBody</p>
  */
 public class DescribePostgresExtensionsResponseBody extends TeaModel {
-    @NameInMap("InstalledExtensions")
+    @com.aliyun.core.annotation.NameInMap("InstalledExtensions")
     private java.util.List < InstalledExtensions> installedExtensions;
 
-    @NameInMap("Overview")
+    @com.aliyun.core.annotation.NameInMap("Overview")
     private java.util.Map < String, ? > overview;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UninstalledExtensions")
+    @com.aliyun.core.annotation.NameInMap("UninstalledExtensions")
     private java.util.List < UninstalledExtensions> uninstalledExtensions;
 
     private DescribePostgresExtensionsResponseBody(Builder builder) {
@@ -112,28 +111,28 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
     } 
 
     public static class InstalledExtensions extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("DefaultVersion")
+        @com.aliyun.core.annotation.NameInMap("DefaultVersion")
         private String defaultVersion;
 
-        @NameInMap("InstalledVersion")
+        @com.aliyun.core.annotation.NameInMap("InstalledVersion")
         private String installedVersion;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private String priority;
 
-        @NameInMap("Requires")
+        @com.aliyun.core.annotation.NameInMap("Requires")
         private String requires;
 
         private InstalledExtensions(Builder builder) {
@@ -310,28 +309,28 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
 
     }
     public static class UninstalledExtensions extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("DefaultVersion")
+        @com.aliyun.core.annotation.NameInMap("DefaultVersion")
         private String defaultVersion;
 
-        @NameInMap("InstalledVersion")
+        @com.aliyun.core.annotation.NameInMap("InstalledVersion")
         private String installedVersion;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private String priority;
 
-        @NameInMap("Requires")
+        @com.aliyun.core.annotation.NameInMap("Requires")
         private String requires;
 
         private UninstalledExtensions(Builder builder) {

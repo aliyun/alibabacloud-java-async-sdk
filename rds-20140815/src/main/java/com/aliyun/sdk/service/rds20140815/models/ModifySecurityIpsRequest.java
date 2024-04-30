@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,42 +11,42 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifySecurityIpsRequest</p>
  */
 public class ModifySecurityIpsRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceIPArrayAttribute")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceIPArrayAttribute")
     private String DBInstanceIPArrayAttribute;
 
-    @Query
-    @NameInMap("DBInstanceIPArrayName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceIPArrayName")
     private String DBInstanceIPArrayName;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("FreshWhiteListReadins")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FreshWhiteListReadins")
     private String freshWhiteListReadins;
 
-    @Query
-    @NameInMap("ModifyMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModifyMode")
     private String modifyMode;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityIPType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityIPType")
     private String securityIPType;
 
-    @Query
-    @NameInMap("SecurityIps")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityIps")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String securityIps;
 
-    @Query
-    @NameInMap("WhitelistNetworkType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WhitelistNetworkType")
     private String whitelistNetworkType;
 
     private ModifySecurityIpsRequest(Builder builder) {
@@ -273,8 +272,11 @@ public class ModifySecurityIpsRequest extends Request {
          * 
          * Default value: **MIX**.
          * 
-         * > *   In standard whitelist mode, IP addresses and CIDR blocks are added only to the default IP address whitelist. In enhanced whitelist mode, IP addresses and CIDR blocks are added to the IP address whitelists of the classic network type and the VPC network type.
-         * > *   If your RDS instance runs PostgreSQL and uses cloud disks, set this parameter to MIX. If you set it to another value, the system automatically changes the value to MIX.
+         * > 
+         * 
+         * *   In standard whitelist mode, IP addresses and CIDR blocks are added only to the default IP address whitelist. In enhanced whitelist mode, IP addresses and CIDR blocks are added to the IP address whitelists of the classic network type and the VPC network type.
+         * 
+         * *   If your RDS instance runs PostgreSQL and uses cloud disks, set this parameter to MIX. If you set it to another value, the system automatically changes the value to MIX.
          */
         public Builder whitelistNetworkType(String whitelistNetworkType) {
             this.putQueryParameter("WhitelistNetworkType", whitelistNetworkType);

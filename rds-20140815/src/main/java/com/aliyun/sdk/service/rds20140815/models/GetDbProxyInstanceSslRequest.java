@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDbProxyInstanceSslRequest</p>
  */
 public class GetDbProxyInstanceSslRequest extends Request {
-    @Query
-    @NameInMap("DBProxyEngineType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBProxyEngineType")
     private String DBProxyEngineType;
 
-    @Query
-    @NameInMap("DbInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbInstanceId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private GetDbProxyInstanceSslRequest(Builder builder) {

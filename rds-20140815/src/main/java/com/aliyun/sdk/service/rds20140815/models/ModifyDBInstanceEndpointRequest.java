@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDBInstanceEndpointRequest</p>
  */
 public class ModifyDBInstanceEndpointRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DBInstanceEndpointDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceEndpointDescription")
     private String DBInstanceEndpointDescription;
 
-    @Query
-    @NameInMap("DBInstanceEndpointId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceEndpointId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceEndpointId;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("NodeItems")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeItems")
     private java.util.List < NodeItems> nodeItems;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyDBInstanceEndpointRequest(Builder builder) {
@@ -191,13 +190,13 @@ public class ModifyDBInstanceEndpointRequest extends Request {
     } 
 
     public static class NodeItems extends TeaModel {
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Long weight;
 
         private NodeItems(Builder builder) {

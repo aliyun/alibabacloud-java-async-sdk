@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyTaskInfoResponseBody</p>
  */
 public class ModifyTaskInfoResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorTaskId")
+    @com.aliyun.core.annotation.NameInMap("ErrorTaskId")
     private String errorTaskId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SuccessCount")
+    @com.aliyun.core.annotation.NameInMap("SuccessCount")
     private String successCount;
 
     private ModifyTaskInfoResponseBody(Builder builder) {

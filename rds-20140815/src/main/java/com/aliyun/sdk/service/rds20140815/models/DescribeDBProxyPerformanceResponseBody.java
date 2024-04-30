@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBProxyPerformanceResponseBody</p>
  */
 public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("DBProxyEngineType")
+    @com.aliyun.core.annotation.NameInMap("DBProxyEngineType")
     private String DBProxyEngineType;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("PerformanceKeys")
+    @com.aliyun.core.annotation.NameInMap("PerformanceKeys")
     private PerformanceKeys performanceKeys;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeDBProxyPerformanceResponseBody(Builder builder) {
@@ -152,10 +151,10 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
     } 
 
     public static class PerformanceValue extends TeaModel {
-        @NameInMap("Date")
+        @com.aliyun.core.annotation.NameInMap("Date")
         private String date;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private PerformanceValue(Builder builder) {
@@ -213,7 +212,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
 
     }
     public static class Values extends TeaModel {
-        @NameInMap("PerformanceValue")
+        @com.aliyun.core.annotation.NameInMap("PerformanceValue")
         private java.util.List < PerformanceValue> performanceValue;
 
         private Values(Builder builder) {
@@ -254,13 +253,13 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
 
     }
     public static class PerformanceKey extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("ValueFormat")
+        @com.aliyun.core.annotation.NameInMap("ValueFormat")
         private String valueFormat;
 
-        @NameInMap("Values")
+        @com.aliyun.core.annotation.NameInMap("Values")
         private Values values;
 
         private PerformanceKey(Builder builder) {
@@ -335,7 +334,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
 
     }
     public static class PerformanceKeys extends TeaModel {
-        @NameInMap("PerformanceKey")
+        @com.aliyun.core.annotation.NameInMap("PerformanceKey")
         private java.util.List < PerformanceKey> performanceKey;
 
         private PerformanceKeys(Builder builder) {

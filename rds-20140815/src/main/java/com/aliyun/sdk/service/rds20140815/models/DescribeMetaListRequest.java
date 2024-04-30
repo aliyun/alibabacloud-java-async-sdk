@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,57 +11,57 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMetaListRequest</p>
  */
 public class DescribeMetaListRequest extends Request {
-    @Query
-    @NameInMap("BackupSetID")
-    private Integer backupSetID;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupSetID")
+    private Long backupSetID;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("GetDbName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GetDbName")
     private String getDbName;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageIndex")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageIndex")
     private Integer pageIndex;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Pattern")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Pattern")
     private String pattern;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RestoreTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreTime")
     private String restoreTime;
 
-    @Query
-    @NameInMap("RestoreType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreType")
     private String restoreType;
 
     private DescribeMetaListRequest(Builder builder) {
@@ -98,7 +97,7 @@ public class DescribeMetaListRequest extends Request {
     /**
      * @return backupSetID
      */
-    public Integer getBackupSetID() {
+    public Long getBackupSetID() {
         return this.backupSetID;
     }
 
@@ -187,7 +186,7 @@ public class DescribeMetaListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeMetaListRequest, Builder> {
-        private Integer backupSetID; 
+        private Long backupSetID; 
         private String clientToken; 
         private String DBInstanceId; 
         private String getDbName; 
@@ -228,7 +227,7 @@ public class DescribeMetaListRequest extends Request {
          * 
          * >  This parameter must be specified when the **RestoreType** parameter is set to **BackupSetID**.
          */
-        public Builder backupSetID(Integer backupSetID) {
+        public Builder backupSetID(Long backupSetID) {
             this.putQueryParameter("BackupSetID", backupSetID);
             this.backupSetID = backupSetID;
             return this;

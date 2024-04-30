@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeOssDownloadsResponseBody</p>
  */
 public class DescribeOssDownloadsResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("MigrateTaskId")
+    @com.aliyun.core.annotation.NameInMap("MigrateTaskId")
     private String migrateTaskId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeOssDownloadsResponseBody(Builder builder) {
@@ -112,28 +111,28 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
     } 
 
     public static class OssDownload extends TeaModel {
-        @NameInMap("BackupMode")
+        @com.aliyun.core.annotation.NameInMap("BackupMode")
         private String backupMode;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("FileSize")
+        @com.aliyun.core.annotation.NameInMap("FileSize")
         private String fileSize;
 
-        @NameInMap("IsAvailable")
+        @com.aliyun.core.annotation.NameInMap("IsAvailable")
         private String isAvailable;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private OssDownload(Builder builder) {
@@ -312,7 +311,7 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("OssDownload")
+        @com.aliyun.core.annotation.NameInMap("OssDownload")
         private java.util.List < OssDownload> ossDownload;
 
         private Items(Builder builder) {

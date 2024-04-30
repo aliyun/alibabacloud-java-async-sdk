@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateMigrateTaskResponseBody</p>
  */
 public class CreateMigrateTaskResponseBody extends TeaModel {
-    @NameInMap("BackupMode")
+    @com.aliyun.core.annotation.NameInMap("BackupMode")
     private String backupMode;
 
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("DBName")
+    @com.aliyun.core.annotation.NameInMap("DBName")
     private String DBName;
 
-    @NameInMap("MigrateTaskId")
+    @com.aliyun.core.annotation.NameInMap("MigrateTaskId")
     private String migrateTaskId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
     private CreateMigrateTaskResponseBody(Builder builder) {

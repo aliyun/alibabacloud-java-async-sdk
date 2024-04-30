@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDBInstanceMetricsRequest</p>
  */
 public class ModifyDBInstanceMetricsRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceName;
 
-    @Query
-    @NameInMap("MetricsConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricsConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String metricsConfig;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Scope")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scope")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scope;
 
     private ModifyDBInstanceMetricsRequest(Builder builder) {

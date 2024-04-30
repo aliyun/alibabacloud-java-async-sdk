@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUpgradeMajorVersionPrecheckTaskResponseBody</p>
  */
 public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeUpgradeMajorVersionPrecheckTaskResponseBody(Builder builder) {
@@ -132,25 +131,25 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("CheckTime")
+        @com.aliyun.core.annotation.NameInMap("CheckTime")
         private String checkTime;
 
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private String detail;
 
-        @NameInMap("EffectiveTime")
+        @com.aliyun.core.annotation.NameInMap("EffectiveTime")
         private String effectiveTime;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private String result;
 
-        @NameInMap("SourceMajorVersion")
+        @com.aliyun.core.annotation.NameInMap("SourceMajorVersion")
         private String sourceMajorVersion;
 
-        @NameInMap("TargetMajorVersion")
+        @com.aliyun.core.annotation.NameInMap("TargetMajorVersion")
         private String targetMajorVersion;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private Integer taskId;
 
         private Items(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,56 +11,56 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ImportUserBackupFileRequest</p>
  */
 public class ImportUserBackupFileRequest extends Request {
-    @Query
-    @NameInMap("BackupFile")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupFile")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String backupFile;
 
-    @Query
-    @NameInMap("BucketRegion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BucketRegion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bucketRegion;
 
-    @Query
-    @NameInMap("Comment")
-    @Validation(maxLength = 256, minLength = 2)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comment")
+    @com.aliyun.core.annotation.Validation(maxLength = 256, minLength = 2)
     private String comment;
 
-    @Query
-    @NameInMap("EngineVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineVersion")
     private String engineVersion;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RestoreSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreSize")
     private Integer restoreSize;
 
-    @Query
-    @NameInMap("Retention")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Retention")
     private Integer retention;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private ImportUserBackupFileRequest(Builder builder) {

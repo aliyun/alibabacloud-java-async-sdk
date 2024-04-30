@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSlowLogsResponseBody</p>
  */
 public class DescribeSlowLogsResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeSlowLogsResponseBody(Builder builder) {
@@ -212,145 +211,145 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
     } 
 
     public static class SQLSlowLog extends TeaModel {
-        @NameInMap("AvgExecutionTime")
+        @com.aliyun.core.annotation.NameInMap("AvgExecutionTime")
         private Long avgExecutionTime;
 
-        @NameInMap("AvgIOWriteCounts")
+        @com.aliyun.core.annotation.NameInMap("AvgIOWriteCounts")
         private Long avgIOWriteCounts;
 
-        @NameInMap("AvgLastRowsAffectedCounts")
+        @com.aliyun.core.annotation.NameInMap("AvgLastRowsAffectedCounts")
         private Long avgLastRowsAffectedCounts;
 
-        @NameInMap("AvgLogicalReadCounts")
+        @com.aliyun.core.annotation.NameInMap("AvgLogicalReadCounts")
         private Long avgLogicalReadCounts;
 
-        @NameInMap("AvgPhysicalReadCounts")
+        @com.aliyun.core.annotation.NameInMap("AvgPhysicalReadCounts")
         private Long avgPhysicalReadCounts;
 
-        @NameInMap("AvgRowsAffectedCounts")
+        @com.aliyun.core.annotation.NameInMap("AvgRowsAffectedCounts")
         private Long avgRowsAffectedCounts;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DBName")
+        @com.aliyun.core.annotation.NameInMap("DBName")
         private String DBName;
 
-        @NameInMap("MaxExecutionTime")
+        @com.aliyun.core.annotation.NameInMap("MaxExecutionTime")
         private Long maxExecutionTime;
 
-        @NameInMap("MaxExecutionTimeMS")
+        @com.aliyun.core.annotation.NameInMap("MaxExecutionTimeMS")
         private Long maxExecutionTimeMS;
 
-        @NameInMap("MaxIOWriteCounts")
+        @com.aliyun.core.annotation.NameInMap("MaxIOWriteCounts")
         private Long maxIOWriteCounts;
 
-        @NameInMap("MaxLastRowsAffectedCounts")
+        @com.aliyun.core.annotation.NameInMap("MaxLastRowsAffectedCounts")
         private Long maxLastRowsAffectedCounts;
 
-        @NameInMap("MaxLockTime")
+        @com.aliyun.core.annotation.NameInMap("MaxLockTime")
         private Long maxLockTime;
 
-        @NameInMap("MaxLockTimeMS")
+        @com.aliyun.core.annotation.NameInMap("MaxLockTimeMS")
         private Long maxLockTimeMS;
 
-        @NameInMap("MaxLogicalReadCounts")
+        @com.aliyun.core.annotation.NameInMap("MaxLogicalReadCounts")
         private Long maxLogicalReadCounts;
 
-        @NameInMap("MaxPhysicalReadCounts")
+        @com.aliyun.core.annotation.NameInMap("MaxPhysicalReadCounts")
         private Long maxPhysicalReadCounts;
 
-        @NameInMap("MaxRowsAffectedCounts")
+        @com.aliyun.core.annotation.NameInMap("MaxRowsAffectedCounts")
         private Long maxRowsAffectedCounts;
 
-        @NameInMap("MinIOWriteCounts")
+        @com.aliyun.core.annotation.NameInMap("MinIOWriteCounts")
         private Long minIOWriteCounts;
 
-        @NameInMap("MinLastRowsAffectedCounts")
+        @com.aliyun.core.annotation.NameInMap("MinLastRowsAffectedCounts")
         private Long minLastRowsAffectedCounts;
 
-        @NameInMap("MinLogicalReadCounts")
+        @com.aliyun.core.annotation.NameInMap("MinLogicalReadCounts")
         private Long minLogicalReadCounts;
 
-        @NameInMap("MinPhysicalReadCounts")
+        @com.aliyun.core.annotation.NameInMap("MinPhysicalReadCounts")
         private Long minPhysicalReadCounts;
 
-        @NameInMap("MinRowsAffectedCounts")
+        @com.aliyun.core.annotation.NameInMap("MinRowsAffectedCounts")
         private Long minRowsAffectedCounts;
 
-        @NameInMap("MySQLTotalExecutionCounts")
+        @com.aliyun.core.annotation.NameInMap("MySQLTotalExecutionCounts")
         private Long mySQLTotalExecutionCounts;
 
-        @NameInMap("MySQLTotalExecutionTimes")
+        @com.aliyun.core.annotation.NameInMap("MySQLTotalExecutionTimes")
         private Long mySQLTotalExecutionTimes;
 
-        @NameInMap("ParseMaxRowCount")
+        @com.aliyun.core.annotation.NameInMap("ParseMaxRowCount")
         private Long parseMaxRowCount;
 
-        @NameInMap("ParseTotalRowCounts")
+        @com.aliyun.core.annotation.NameInMap("ParseTotalRowCounts")
         private Long parseTotalRowCounts;
 
-        @NameInMap("ReportTime")
+        @com.aliyun.core.annotation.NameInMap("ReportTime")
         private String reportTime;
 
-        @NameInMap("ReturnMaxRowCount")
+        @com.aliyun.core.annotation.NameInMap("ReturnMaxRowCount")
         private Long returnMaxRowCount;
 
-        @NameInMap("ReturnTotalRowCounts")
+        @com.aliyun.core.annotation.NameInMap("ReturnTotalRowCounts")
         private Long returnTotalRowCounts;
 
-        @NameInMap("SQLHASH")
+        @com.aliyun.core.annotation.NameInMap("SQLHASH")
         private String SQLHASH;
 
-        @NameInMap("SQLIdStr")
+        @com.aliyun.core.annotation.NameInMap("SQLIdStr")
         private String SQLIdStr;
 
-        @NameInMap("SQLServerAvgCpuTime")
+        @com.aliyun.core.annotation.NameInMap("SQLServerAvgCpuTime")
         private Long SQLServerAvgCpuTime;
 
-        @NameInMap("SQLServerAvgExecutionTime")
+        @com.aliyun.core.annotation.NameInMap("SQLServerAvgExecutionTime")
         private Long SQLServerAvgExecutionTime;
 
-        @NameInMap("SQLServerMaxCpuTime")
+        @com.aliyun.core.annotation.NameInMap("SQLServerMaxCpuTime")
         private Long SQLServerMaxCpuTime;
 
-        @NameInMap("SQLServerMinCpuTime")
+        @com.aliyun.core.annotation.NameInMap("SQLServerMinCpuTime")
         private Long SQLServerMinCpuTime;
 
-        @NameInMap("SQLServerMinExecutionTime")
+        @com.aliyun.core.annotation.NameInMap("SQLServerMinExecutionTime")
         private Long SQLServerMinExecutionTime;
 
-        @NameInMap("SQLServerTotalCpuTime")
+        @com.aliyun.core.annotation.NameInMap("SQLServerTotalCpuTime")
         private Long SQLServerTotalCpuTime;
 
-        @NameInMap("SQLServerTotalExecutionCounts")
+        @com.aliyun.core.annotation.NameInMap("SQLServerTotalExecutionCounts")
         private Long SQLServerTotalExecutionCounts;
 
-        @NameInMap("SQLServerTotalExecutionTimes")
+        @com.aliyun.core.annotation.NameInMap("SQLServerTotalExecutionTimes")
         private Long SQLServerTotalExecutionTimes;
 
-        @NameInMap("SQLText")
+        @com.aliyun.core.annotation.NameInMap("SQLText")
         private String SQLText;
 
-        @NameInMap("SlowLogId")
+        @com.aliyun.core.annotation.NameInMap("SlowLogId")
         private Long slowLogId;
 
-        @NameInMap("TotalIOWriteCounts")
+        @com.aliyun.core.annotation.NameInMap("TotalIOWriteCounts")
         private Long totalIOWriteCounts;
 
-        @NameInMap("TotalLastRowsAffectedCounts")
+        @com.aliyun.core.annotation.NameInMap("TotalLastRowsAffectedCounts")
         private Long totalLastRowsAffectedCounts;
 
-        @NameInMap("TotalLockTimes")
+        @com.aliyun.core.annotation.NameInMap("TotalLockTimes")
         private Long totalLockTimes;
 
-        @NameInMap("TotalLogicalReadCounts")
+        @com.aliyun.core.annotation.NameInMap("TotalLogicalReadCounts")
         private Long totalLogicalReadCounts;
 
-        @NameInMap("TotalPhysicalReadCounts")
+        @com.aliyun.core.annotation.NameInMap("TotalPhysicalReadCounts")
         private Long totalPhysicalReadCounts;
 
-        @NameInMap("TotalRowsAffectedCounts")
+        @com.aliyun.core.annotation.NameInMap("TotalRowsAffectedCounts")
         private Long totalRowsAffectedCounts;
 
         private SQLSlowLog(Builder builder) {
@@ -1247,7 +1246,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("SQLSlowLog")
+        @com.aliyun.core.annotation.NameInMap("SQLSlowLog")
         private java.util.List < SQLSlowLog> SQLSlowLog;
 
         private Items(Builder builder) {

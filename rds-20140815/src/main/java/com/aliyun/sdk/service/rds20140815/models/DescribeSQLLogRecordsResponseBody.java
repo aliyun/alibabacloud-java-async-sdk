@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSQLLogRecordsResponseBody</p>
  */
 public class DescribeSQLLogRecordsResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Long totalRecordCount;
 
     private DescribeSQLLogRecordsResponseBody(Builder builder) {
@@ -132,28 +131,28 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
     } 
 
     public static class SQLRecord extends TeaModel {
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("DBName")
+        @com.aliyun.core.annotation.NameInMap("DBName")
         private String DBName;
 
-        @NameInMap("ExecuteTime")
+        @com.aliyun.core.annotation.NameInMap("ExecuteTime")
         private String executeTime;
 
-        @NameInMap("HostAddress")
+        @com.aliyun.core.annotation.NameInMap("HostAddress")
         private String hostAddress;
 
-        @NameInMap("ReturnRowCounts")
+        @com.aliyun.core.annotation.NameInMap("ReturnRowCounts")
         private Long returnRowCounts;
 
-        @NameInMap("SQLText")
+        @com.aliyun.core.annotation.NameInMap("SQLText")
         private String SQLText;
 
-        @NameInMap("ThreadID")
+        @com.aliyun.core.annotation.NameInMap("ThreadID")
         private String threadID;
 
-        @NameInMap("TotalExecutionTimes")
+        @com.aliyun.core.annotation.NameInMap("TotalExecutionTimes")
         private Long totalExecutionTimes;
 
         private SQLRecord(Builder builder) {
@@ -313,7 +312,7 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("SQLRecord")
+        @com.aliyun.core.annotation.NameInMap("SQLRecord")
         private java.util.List < SQLRecord> SQLRecord;
 
         private Items(Builder builder) {

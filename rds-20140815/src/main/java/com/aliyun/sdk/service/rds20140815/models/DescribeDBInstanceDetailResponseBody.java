@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBInstanceDetailResponseBody</p>
  */
 public class DescribeDBInstanceDetailResponseBody extends TeaModel {
-    @NameInMap("ActivationState")
+    @com.aliyun.core.annotation.NameInMap("ActivationState")
     private String activationState;
 
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("LicenseType")
+    @com.aliyun.core.annotation.NameInMap("LicenseType")
     private String licenseType;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBInstanceDetailResponseBody(Builder builder) {

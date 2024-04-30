@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHADiagnoseConfigResponseBody</p>
  */
 public class DescribeHADiagnoseConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TcpConnectionType")
+    @com.aliyun.core.annotation.NameInMap("TcpConnectionType")
     private String tcpConnectionType;
 
     private DescribeHADiagnoseConfigResponseBody(Builder builder) {

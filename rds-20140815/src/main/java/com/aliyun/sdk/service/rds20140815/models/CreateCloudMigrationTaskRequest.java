@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,42 +11,42 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCloudMigrationTaskRequest</p>
  */
 public class CreateCloudMigrationTaskRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceName;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SourceAccount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceAccount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceAccount;
 
-    @Query
-    @NameInMap("SourceCategory")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceCategory")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceCategory;
 
-    @Query
-    @NameInMap("SourceIpAddress")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceIpAddress")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceIpAddress;
 
-    @Query
-    @NameInMap("SourcePassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourcePassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourcePassword;
 
-    @Query
-    @NameInMap("SourcePort")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourcePort")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long sourcePort;
 
-    @Query
-    @NameInMap("TaskName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskName")
     private String taskName;
 
     private CreateCloudMigrationTaskRequest(Builder builder) {

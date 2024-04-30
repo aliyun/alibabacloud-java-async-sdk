@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,39 +11,39 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyPGHbaConfigRequest</p>
  */
 public class ModifyPGHbaConfigRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("HbaItem")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HbaItem")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < HbaItem> hbaItem;
 
-    @Query
-    @NameInMap("OpsType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpsType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String opsType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyPGHbaConfigRequest(Builder builder) {
@@ -240,34 +239,34 @@ public class ModifyPGHbaConfigRequest extends Request {
     } 
 
     public static class HbaItem extends TeaModel {
-        @NameInMap("Address")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Address")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String address;
 
-        @NameInMap("Database")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Database")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String database;
 
-        @NameInMap("Mask")
+        @com.aliyun.core.annotation.NameInMap("Mask")
         private String mask;
 
-        @NameInMap("Method")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Method")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String method;
 
-        @NameInMap("Option")
+        @com.aliyun.core.annotation.NameInMap("Option")
         private String option;
 
-        @NameInMap("PriorityId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("PriorityId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer priorityId;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
-        @NameInMap("User")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("User")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String user;
 
         private HbaItem(Builder builder) {

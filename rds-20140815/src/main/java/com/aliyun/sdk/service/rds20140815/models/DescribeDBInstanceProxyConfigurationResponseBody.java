@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBInstanceProxyConfigurationResponseBody</p>
  */
 public class DescribeDBInstanceProxyConfigurationResponseBody extends TeaModel {
-    @NameInMap("AttacksProtectionConfiguration")
+    @com.aliyun.core.annotation.NameInMap("AttacksProtectionConfiguration")
     private String attacksProtectionConfiguration;
 
-    @NameInMap("PersistentConnectionsConfiguration")
+    @com.aliyun.core.annotation.NameInMap("PersistentConnectionsConfiguration")
     private String persistentConnectionsConfiguration;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TransparentSwitchConfiguration")
+    @com.aliyun.core.annotation.NameInMap("TransparentSwitchConfiguration")
     private String transparentSwitchConfiguration;
 
     private DescribeDBInstanceProxyConfigurationResponseBody(Builder builder) {

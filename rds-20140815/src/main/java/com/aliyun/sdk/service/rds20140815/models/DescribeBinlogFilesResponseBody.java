@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBinlogFilesResponseBody</p>
  */
 public class DescribeBinlogFilesResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalFileSize")
+    @com.aliyun.core.annotation.NameInMap("TotalFileSize")
     private Long totalFileSize;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeBinlogFilesResponseBody(Builder builder) {
@@ -152,34 +151,34 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
     } 
 
     public static class BinLogFile extends TeaModel {
-        @NameInMap("Checksum")
+        @com.aliyun.core.annotation.NameInMap("Checksum")
         private String checksum;
 
-        @NameInMap("DownloadLink")
+        @com.aliyun.core.annotation.NameInMap("DownloadLink")
         private String downloadLink;
 
-        @NameInMap("FileSize")
+        @com.aliyun.core.annotation.NameInMap("FileSize")
         private Long fileSize;
 
-        @NameInMap("HostInstanceID")
+        @com.aliyun.core.annotation.NameInMap("HostInstanceID")
         private String hostInstanceID;
 
-        @NameInMap("IntranetDownloadLink")
+        @com.aliyun.core.annotation.NameInMap("IntranetDownloadLink")
         private String intranetDownloadLink;
 
-        @NameInMap("LinkExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("LinkExpiredTime")
         private String linkExpiredTime;
 
-        @NameInMap("LogBeginTime")
+        @com.aliyun.core.annotation.NameInMap("LogBeginTime")
         private String logBeginTime;
 
-        @NameInMap("LogEndTime")
+        @com.aliyun.core.annotation.NameInMap("LogEndTime")
         private String logEndTime;
 
-        @NameInMap("LogFileName")
+        @com.aliyun.core.annotation.NameInMap("LogFileName")
         private String logFileName;
 
-        @NameInMap("RemoteStatus")
+        @com.aliyun.core.annotation.NameInMap("RemoteStatus")
         private String remoteStatus;
 
         private BinLogFile(Builder builder) {
@@ -394,7 +393,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("BinLogFile")
+        @com.aliyun.core.annotation.NameInMap("BinLogFile")
         private java.util.List < BinLogFile> binLogFile;
 
         private Items(Builder builder) {

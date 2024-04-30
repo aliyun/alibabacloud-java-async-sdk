@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUpgradeMajorVersionTasksResponseBody</p>
  */
 public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeUpgradeMajorVersionTasksResponseBody(Builder builder) {
@@ -132,40 +131,40 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("CollectStatMode")
+        @com.aliyun.core.annotation.NameInMap("CollectStatMode")
         private String collectStatMode;
 
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private String detail;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private String result;
 
-        @NameInMap("SourceInsName")
+        @com.aliyun.core.annotation.NameInMap("SourceInsName")
         private String sourceInsName;
 
-        @NameInMap("SourceMajorVersion")
+        @com.aliyun.core.annotation.NameInMap("SourceMajorVersion")
         private String sourceMajorVersion;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("SwitchTime")
+        @com.aliyun.core.annotation.NameInMap("SwitchTime")
         private String switchTime;
 
-        @NameInMap("TargetInsName")
+        @com.aliyun.core.annotation.NameInMap("TargetInsName")
         private String targetInsName;
 
-        @NameInMap("TargetMajorVersion")
+        @com.aliyun.core.annotation.NameInMap("TargetMajorVersion")
         private String targetMajorVersion;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private Integer taskId;
 
-        @NameInMap("UpgradeMode")
+        @com.aliyun.core.annotation.NameInMap("UpgradeMode")
         private String upgradeMode;
 
         private Items(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,65 +11,65 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDBProxyEndpointRequest</p>
  */
 public class ModifyDBProxyEndpointRequest extends Request {
-    @Query
-    @NameInMap("ConfigDBProxyFeatures")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigDBProxyFeatures")
     private String configDBProxyFeatures;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("DBProxyEndpointId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBProxyEndpointId")
     private String DBProxyEndpointId;
 
-    @Query
-    @NameInMap("DBProxyEngineType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBProxyEngineType")
     private String DBProxyEngineType;
 
-    @Query
-    @NameInMap("DbEndpointAliases")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbEndpointAliases")
     private String dbEndpointAliases;
 
-    @Query
-    @NameInMap("DbEndpointOperator")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbEndpointOperator")
     private String dbEndpointOperator;
 
-    @Query
-    @NameInMap("DbEndpointReadWriteMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbEndpointReadWriteMode")
     private String dbEndpointReadWriteMode;
 
-    @Query
-    @NameInMap("DbEndpointType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbEndpointType")
     private String dbEndpointType;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ReadOnlyInstanceDistributionType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReadOnlyInstanceDistributionType")
     private String readOnlyInstanceDistributionType;
 
-    @Query
-    @NameInMap("ReadOnlyInstanceMaxDelayTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReadOnlyInstanceMaxDelayTime")
     private String readOnlyInstanceMaxDelayTime;
 
-    @Query
-    @NameInMap("ReadOnlyInstanceWeight")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReadOnlyInstanceWeight")
     private String readOnlyInstanceWeight;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyDBProxyEndpointRequest(Builder builder) {

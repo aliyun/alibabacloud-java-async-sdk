@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyCustinsResourceRequest</p>
  */
 public class ModifyCustinsResourceRequest extends Request {
-    @Query
-    @NameInMap("AdjustDeadline")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdjustDeadline")
     private String adjustDeadline;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("IncreaseRatio")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncreaseRatio")
     private String increaseRatio;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
-    @Query
-    @NameInMap("RestoreOriginalSpecification")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreOriginalSpecification")
     private String restoreOriginalSpecification;
 
-    @Query
-    @NameInMap("TargetValue")
-    @Validation(maximum = 999999)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetValue")
+    @com.aliyun.core.annotation.Validation(maximum = 999999)
     private Integer targetValue;
 
     private ModifyCustinsResourceRequest(Builder builder) {

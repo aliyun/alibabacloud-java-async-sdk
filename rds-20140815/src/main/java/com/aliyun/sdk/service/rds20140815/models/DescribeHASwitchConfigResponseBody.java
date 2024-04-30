@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHASwitchConfigResponseBody</p>
  */
 public class DescribeHASwitchConfigResponseBody extends TeaModel {
-    @NameInMap("HAConfig")
+    @com.aliyun.core.annotation.NameInMap("HAConfig")
     private String HAConfig;
 
-    @NameInMap("ManualHATime")
+    @com.aliyun.core.annotation.NameInMap("ManualHATime")
     private String manualHATime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeHASwitchConfigResponseBody(Builder builder) {

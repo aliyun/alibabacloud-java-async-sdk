@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePriceResponseBody</p>
  */
 public class DescribePriceResponseBody extends TeaModel {
-    @NameInMap("OrderParams")
+    @com.aliyun.core.annotation.NameInMap("OrderParams")
     private String orderParams;
 
-    @NameInMap("PriceInfo")
+    @com.aliyun.core.annotation.NameInMap("PriceInfo")
     private PriceInfo priceInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Rules")
+    @com.aliyun.core.annotation.NameInMap("Rules")
     private Rules rules;
 
-    @NameInMap("ServerlessPrice")
+    @com.aliyun.core.annotation.NameInMap("ServerlessPrice")
     private ServerlessPrice serverlessPrice;
 
-    @NameInMap("ShowDiscount")
+    @com.aliyun.core.annotation.NameInMap("ShowDiscount")
     private Boolean showDiscount;
 
-    @NameInMap("TradeMaxRCUAmount")
+    @com.aliyun.core.annotation.NameInMap("TradeMaxRCUAmount")
     private Float tradeMaxRCUAmount;
 
-    @NameInMap("TradeMinRCUAmount")
+    @com.aliyun.core.annotation.NameInMap("TradeMinRCUAmount")
     private Float tradeMinRCUAmount;
 
     private DescribePriceResponseBody(Builder builder) {
@@ -192,13 +191,13 @@ public class DescribePriceResponseBody extends TeaModel {
     } 
 
     public static class ActivityInfo extends TeaModel {
-        @NameInMap("CheckErrMsg")
+        @com.aliyun.core.annotation.NameInMap("CheckErrMsg")
         private String checkErrMsg;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private String success;
 
         private ActivityInfo(Builder builder) {
@@ -273,16 +272,16 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
     public static class Coupon extends TeaModel {
-        @NameInMap("CouponNo")
+        @com.aliyun.core.annotation.NameInMap("CouponNo")
         private String couponNo;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("IsSelected")
+        @com.aliyun.core.annotation.NameInMap("IsSelected")
         private String isSelected;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Coupon(Builder builder) {
@@ -374,7 +373,7 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
     public static class Coupons extends TeaModel {
-        @NameInMap("Coupon")
+        @com.aliyun.core.annotation.NameInMap("Coupon")
         private java.util.List < Coupon> coupon;
 
         private Coupons(Builder builder) {
@@ -415,7 +414,7 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
     public static class RuleIds extends TeaModel {
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private java.util.List < String > ruleId;
 
         private RuleIds(Builder builder) {
@@ -456,34 +455,34 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
     public static class PriceInfo extends TeaModel {
-        @NameInMap("ActivityInfo")
+        @com.aliyun.core.annotation.NameInMap("ActivityInfo")
         private ActivityInfo activityInfo;
 
-        @NameInMap("Coupons")
+        @com.aliyun.core.annotation.NameInMap("Coupons")
         private Coupons coupons;
 
-        @NameInMap("Currency")
+        @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
-        @NameInMap("DiscountPrice")
+        @com.aliyun.core.annotation.NameInMap("DiscountPrice")
         private Float discountPrice;
 
-        @NameInMap("OrderLines")
+        @com.aliyun.core.annotation.NameInMap("OrderLines")
         private String orderLines;
 
-        @NameInMap("OriginalPrice")
+        @com.aliyun.core.annotation.NameInMap("OriginalPrice")
         private Float originalPrice;
 
-        @NameInMap("RuleIds")
+        @com.aliyun.core.annotation.NameInMap("RuleIds")
         private RuleIds ruleIds;
 
-        @NameInMap("TradeMaxRCUAmount")
+        @com.aliyun.core.annotation.NameInMap("TradeMaxRCUAmount")
         private Float tradeMaxRCUAmount;
 
-        @NameInMap("TradeMinRCUAmount")
+        @com.aliyun.core.annotation.NameInMap("TradeMinRCUAmount")
         private Float tradeMinRCUAmount;
 
-        @NameInMap("TradePrice")
+        @com.aliyun.core.annotation.NameInMap("TradePrice")
         private Float tradePrice;
 
         private PriceInfo(Builder builder) {
@@ -677,13 +676,13 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
     public static class Rule extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
         private Rule(Builder builder) {
@@ -758,7 +757,7 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
     public static class Rules extends TeaModel {
-        @NameInMap("Rule")
+        @com.aliyun.core.annotation.NameInMap("Rule")
         private java.util.List < Rule> rule;
 
         private Rules(Builder builder) {
@@ -799,34 +798,34 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
     public static class ServerlessPrice extends TeaModel {
-        @NameInMap("RCUDiscountMaxAmount")
+        @com.aliyun.core.annotation.NameInMap("RCUDiscountMaxAmount")
         private Float RCUDiscountMaxAmount;
 
-        @NameInMap("RCUDiscountMinAmount")
+        @com.aliyun.core.annotation.NameInMap("RCUDiscountMinAmount")
         private Float RCUDiscountMinAmount;
 
-        @NameInMap("RCUOriginalMaxAmount")
+        @com.aliyun.core.annotation.NameInMap("RCUOriginalMaxAmount")
         private Float RCUOriginalMaxAmount;
 
-        @NameInMap("RCUOriginalMinAmount")
+        @com.aliyun.core.annotation.NameInMap("RCUOriginalMinAmount")
         private Float RCUOriginalMinAmount;
 
-        @NameInMap("StorageOriginalAmount")
+        @com.aliyun.core.annotation.NameInMap("StorageOriginalAmount")
         private Float storageOriginalAmount;
 
-        @NameInMap("TotalOriginalMaxAmount")
+        @com.aliyun.core.annotation.NameInMap("TotalOriginalMaxAmount")
         private Float totalOriginalMaxAmount;
 
-        @NameInMap("TotalOriginalMinAmount")
+        @com.aliyun.core.annotation.NameInMap("TotalOriginalMinAmount")
         private Float totalOriginalMinAmount;
 
-        @NameInMap("TradeMaxRCUAmount")
+        @com.aliyun.core.annotation.NameInMap("TradeMaxRCUAmount")
         private Float tradeMaxRCUAmount;
 
-        @NameInMap("TradeMinRCUAmount")
+        @com.aliyun.core.annotation.NameInMap("TradeMinRCUAmount")
         private Float tradeMinRCUAmount;
 
-        @NameInMap("storageDiscountAmount")
+        @com.aliyun.core.annotation.NameInMap("storageDiscountAmount")
         private Float storageDiscountAmount;
 
         private ServerlessPrice(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBInstanceEndpointsResponseBody</p>
  */
 public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBInstanceEndpointsResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
     } 
 
     public static class AddressItem extends TeaModel {
-        @NameInMap("ConnectionString")
+        @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
 
-        @NameInMap("IpAddress")
+        @com.aliyun.core.annotation.NameInMap("IpAddress")
         private String ipAddress;
 
-        @NameInMap("IpType")
+        @com.aliyun.core.annotation.NameInMap("IpType")
         private String ipType;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private AddressItem(Builder builder) {
@@ -217,7 +216,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
 
     }
     public static class AddressItems extends TeaModel {
-        @NameInMap("AddressItem")
+        @com.aliyun.core.annotation.NameInMap("AddressItem")
         private java.util.List < AddressItem> addressItem;
 
         private AddressItems(Builder builder) {
@@ -258,13 +257,13 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
 
     }
     public static class NodeItem extends TeaModel {
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private NodeItem(Builder builder) {
@@ -342,7 +341,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
 
     }
     public static class NodeItems extends TeaModel {
-        @NameInMap("NodeItem")
+        @com.aliyun.core.annotation.NameInMap("NodeItem")
         private java.util.List < NodeItem> nodeItem;
 
         private NodeItems(Builder builder) {
@@ -383,19 +382,19 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
 
     }
     public static class DBInstanceEndpoint extends TeaModel {
-        @NameInMap("AddressItems")
+        @com.aliyun.core.annotation.NameInMap("AddressItems")
         private AddressItems addressItems;
 
-        @NameInMap("EndpointDescription")
+        @com.aliyun.core.annotation.NameInMap("EndpointDescription")
         private String endpointDescription;
 
-        @NameInMap("EndpointId")
+        @com.aliyun.core.annotation.NameInMap("EndpointId")
         private String endpointId;
 
-        @NameInMap("EndpointType")
+        @com.aliyun.core.annotation.NameInMap("EndpointType")
         private String endpointType;
 
-        @NameInMap("NodeItems")
+        @com.aliyun.core.annotation.NameInMap("NodeItems")
         private NodeItems nodeItems;
 
         private DBInstanceEndpoint(Builder builder) {
@@ -508,7 +507,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
 
     }
     public static class DBInstanceEndpoints extends TeaModel {
-        @NameInMap("DBInstanceEndpoint")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceEndpoint")
         private java.util.List < DBInstanceEndpoint> DBInstanceEndpoint;
 
         private DBInstanceEndpoints(Builder builder) {
@@ -549,13 +548,13 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("DBInstanceEndpoints")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceEndpoints")
         private DBInstanceEndpoints DBInstanceEndpoints;
 
-        @NameInMap("DBInstanceName")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceName")
         private String DBInstanceName;
 
-        @NameInMap("IpVersion")
+        @com.aliyun.core.annotation.NameInMap("IpVersion")
         private String ipVersion;
 
         private Data(Builder builder) {

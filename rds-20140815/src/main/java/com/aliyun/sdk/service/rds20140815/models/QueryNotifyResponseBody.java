@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryNotifyResponseBody</p>
  */
 public class QueryNotifyResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryNotifyResponseBody(Builder builder) {
@@ -72,40 +71,40 @@ public class QueryNotifyResponseBody extends TeaModel {
     } 
 
     public static class NotifyItemList extends TeaModel {
-        @NameInMap("AliUid")
+        @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
 
-        @NameInMap("ConfirmFlag")
+        @com.aliyun.core.annotation.NameInMap("ConfirmFlag")
         private Boolean confirmFlag;
 
-        @NameInMap("Confirmor")
+        @com.aliyun.core.annotation.NameInMap("Confirmor")
         private Long confirmor;
 
-        @NameInMap("GmtCreated")
+        @com.aliyun.core.annotation.NameInMap("GmtCreated")
         private String gmtCreated;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("IdempotentCount")
+        @com.aliyun.core.annotation.NameInMap("IdempotentCount")
         private String idempotentCount;
 
-        @NameInMap("IdempotentId")
+        @com.aliyun.core.annotation.NameInMap("IdempotentId")
         private String idempotentId;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("NotifyElement")
+        @com.aliyun.core.annotation.NameInMap("NotifyElement")
         private String notifyElement;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private NotifyItemList(Builder builder) {
@@ -368,16 +367,16 @@ public class QueryNotifyResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("NotifyItemList")
+        @com.aliyun.core.annotation.NameInMap("NotifyItemList")
         private java.util.List < NotifyItemList> notifyItemList;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalRecordCount")
+        @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
         private Integer totalRecordCount;
 
         private Data(Builder builder) {

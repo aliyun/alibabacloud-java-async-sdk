@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBInstancesForCloneResponseBody</p>
  */
 public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeDBInstancesForCloneResponseBody(Builder builder) {
@@ -132,7 +131,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
     } 
 
     public static class ReadOnlyDBInstanceId extends TeaModel {
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
         private ReadOnlyDBInstanceId(Builder builder) {
@@ -173,7 +172,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
 
     }
     public static class ReadOnlyDBInstanceIds extends TeaModel {
-        @NameInMap("ReadOnlyDBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("ReadOnlyDBInstanceId")
         private java.util.List < ReadOnlyDBInstanceId> readOnlyDBInstanceId;
 
         private ReadOnlyDBInstanceIds(Builder builder) {
@@ -214,97 +213,97 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
 
     }
     public static class DBInstance extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("ConnectionMode")
+        @com.aliyun.core.annotation.NameInMap("ConnectionMode")
         private String connectionMode;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DBInstanceClass")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceClass")
         private String DBInstanceClass;
 
-        @NameInMap("DBInstanceDescription")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceDescription")
         private String DBInstanceDescription;
 
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("DBInstanceNetType")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceNetType")
         private String DBInstanceNetType;
 
-        @NameInMap("DBInstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceStatus")
         private String DBInstanceStatus;
 
-        @NameInMap("DBInstanceStorageType")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceStorageType")
         private String DBInstanceStorageType;
 
-        @NameInMap("DBInstanceType")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceType")
         private String DBInstanceType;
 
-        @NameInMap("DestroyTime")
+        @com.aliyun.core.annotation.NameInMap("DestroyTime")
         private String destroyTime;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("EngineVersion")
+        @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private String engineVersion;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("GuardDBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("GuardDBInstanceId")
         private String guardDBInstanceId;
 
-        @NameInMap("InsId")
+        @com.aliyun.core.annotation.NameInMap("InsId")
         private Integer insId;
 
-        @NameInMap("InstanceNetworkType")
+        @com.aliyun.core.annotation.NameInMap("InstanceNetworkType")
         private String instanceNetworkType;
 
-        @NameInMap("LockMode")
+        @com.aliyun.core.annotation.NameInMap("LockMode")
         private String lockMode;
 
-        @NameInMap("LockReason")
+        @com.aliyun.core.annotation.NameInMap("LockReason")
         private String lockReason;
 
-        @NameInMap("MasterInstanceId")
+        @com.aliyun.core.annotation.NameInMap("MasterInstanceId")
         private String masterInstanceId;
 
-        @NameInMap("MutriORsignle")
+        @com.aliyun.core.annotation.NameInMap("MutriORsignle")
         private Boolean mutriORsignle;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("ReadOnlyDBInstanceIds")
+        @com.aliyun.core.annotation.NameInMap("ReadOnlyDBInstanceIds")
         private ReadOnlyDBInstanceIds readOnlyDBInstanceIds;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ReplicateId")
+        @com.aliyun.core.annotation.NameInMap("ReplicateId")
         private String replicateId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("TempDBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("TempDBInstanceId")
         private String tempDBInstanceId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcCloudInstanceId")
+        @com.aliyun.core.annotation.NameInMap("VpcCloudInstanceId")
         private String vpcCloudInstanceId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private DBInstance(Builder builder) {
@@ -908,7 +907,7 @@ public class DescribeDBInstancesForCloneResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("DBInstance")
+        @com.aliyun.core.annotation.NameInMap("DBInstance")
         private java.util.List < DBInstance> DBInstance;
 
         private Items(Builder builder) {

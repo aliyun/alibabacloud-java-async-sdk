@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyBackupPolicyResponseBody</p>
  */
 public class ModifyBackupPolicyResponseBody extends TeaModel {
-    @NameInMap("CompressType")
+    @com.aliyun.core.annotation.NameInMap("CompressType")
     private String compressType;
 
-    @NameInMap("DBInstanceID")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceID")
     private String DBInstanceID;
 
-    @NameInMap("EnableBackupLog")
+    @com.aliyun.core.annotation.NameInMap("EnableBackupLog")
     private String enableBackupLog;
 
-    @NameInMap("HighSpaceUsageProtection")
+    @com.aliyun.core.annotation.NameInMap("HighSpaceUsageProtection")
     private String highSpaceUsageProtection;
 
-    @NameInMap("LocalLogRetentionHours")
+    @com.aliyun.core.annotation.NameInMap("LocalLogRetentionHours")
     private Integer localLogRetentionHours;
 
-    @NameInMap("LocalLogRetentionSpace")
+    @com.aliyun.core.annotation.NameInMap("LocalLogRetentionSpace")
     private String localLogRetentionSpace;
 
-    @NameInMap("LogBackupLocalRetentionNumber")
+    @com.aliyun.core.annotation.NameInMap("LogBackupLocalRetentionNumber")
     private Integer logBackupLocalRetentionNumber;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyBackupPolicyResponseBody(Builder builder) {

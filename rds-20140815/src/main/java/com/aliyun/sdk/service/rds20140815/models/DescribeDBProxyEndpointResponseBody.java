@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,43 +11,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBProxyEndpointResponseBody</p>
  */
 public class DescribeDBProxyEndpointResponseBody extends TeaModel {
-    @NameInMap("DBProxyConnectString")
+    @com.aliyun.core.annotation.NameInMap("DBProxyConnectString")
     private String DBProxyConnectString;
 
-    @NameInMap("DBProxyConnectStringNetType")
+    @com.aliyun.core.annotation.NameInMap("DBProxyConnectStringNetType")
     private String DBProxyConnectStringNetType;
 
-    @NameInMap("DBProxyConnectStringPort")
+    @com.aliyun.core.annotation.NameInMap("DBProxyConnectStringPort")
     private String DBProxyConnectStringPort;
 
-    @NameInMap("DBProxyEndpointId")
+    @com.aliyun.core.annotation.NameInMap("DBProxyEndpointId")
     private String DBProxyEndpointId;
 
-    @NameInMap("DBProxyEngineType")
+    @com.aliyun.core.annotation.NameInMap("DBProxyEngineType")
     private String DBProxyEngineType;
 
-    @NameInMap("DBProxyFeatures")
+    @com.aliyun.core.annotation.NameInMap("DBProxyFeatures")
     private String DBProxyFeatures;
 
-    @NameInMap("DbProxyEndpointAliases")
+    @com.aliyun.core.annotation.NameInMap("DbProxyEndpointAliases")
     private String dbProxyEndpointAliases;
 
-    @NameInMap("DbProxyEndpointReadWriteMode")
+    @com.aliyun.core.annotation.NameInMap("DbProxyEndpointReadWriteMode")
     private String dbProxyEndpointReadWriteMode;
 
-    @NameInMap("EndpointConnectItems")
+    @com.aliyun.core.annotation.NameInMap("EndpointConnectItems")
     private EndpointConnectItems endpointConnectItems;
 
-    @NameInMap("ReadOnlyInstanceDistributionType")
+    @com.aliyun.core.annotation.NameInMap("ReadOnlyInstanceDistributionType")
     private String readOnlyInstanceDistributionType;
 
-    @NameInMap("ReadOnlyInstanceMaxDelayTime")
+    @com.aliyun.core.annotation.NameInMap("ReadOnlyInstanceMaxDelayTime")
     private String readOnlyInstanceMaxDelayTime;
 
-    @NameInMap("ReadOnlyInstanceWeight")
+    @com.aliyun.core.annotation.NameInMap("ReadOnlyInstanceWeight")
     private String readOnlyInstanceWeight;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBProxyEndpointResponseBody(Builder builder) {
@@ -319,13 +318,13 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
     } 
 
     public static class EndpointConnectItemsEndpointConnectItems extends TeaModel {
-        @NameInMap("DbProxyEndpointConnectString")
+        @com.aliyun.core.annotation.NameInMap("DbProxyEndpointConnectString")
         private String dbProxyEndpointConnectString;
 
-        @NameInMap("DbProxyEndpointNetType")
+        @com.aliyun.core.annotation.NameInMap("DbProxyEndpointNetType")
         private String dbProxyEndpointNetType;
 
-        @NameInMap("DbProxyEndpointPort")
+        @com.aliyun.core.annotation.NameInMap("DbProxyEndpointPort")
         private String dbProxyEndpointPort;
 
         private EndpointConnectItemsEndpointConnectItems(Builder builder) {
@@ -405,7 +404,7 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
 
     }
     public static class EndpointConnectItems extends TeaModel {
-        @NameInMap("EndpointConnectItems")
+        @com.aliyun.core.annotation.NameInMap("EndpointConnectItems")
         private java.util.List < EndpointConnectItemsEndpointConnectItems> endpointConnectItems;
 
         private EndpointConnectItems(Builder builder) {

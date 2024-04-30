@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBMiniEngineVersionsResponseBody</p>
  */
 public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("MaxRecordsPerPage")
+    @com.aliyun.core.annotation.NameInMap("MaxRecordsPerPage")
     private Integer maxRecordsPerPage;
 
-    @NameInMap("MinorVersionItems")
+    @com.aliyun.core.annotation.NameInMap("MinorVersionItems")
     private java.util.List < MinorVersionItems> minorVersionItems;
 
-    @NameInMap("PageNumbers")
+    @com.aliyun.core.annotation.NameInMap("PageNumbers")
     private Integer pageNumbers;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDBMiniEngineVersionsResponseBody(Builder builder) {
@@ -152,40 +151,40 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
     } 
 
     public static class MinorVersionItems extends TeaModel {
-        @NameInMap("CommunityMinorVersion")
+        @com.aliyun.core.annotation.NameInMap("CommunityMinorVersion")
         private String communityMinorVersion;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("EngineVersion")
+        @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private String engineVersion;
 
-        @NameInMap("ExpireDate")
+        @com.aliyun.core.annotation.NameInMap("ExpireDate")
         private String expireDate;
 
-        @NameInMap("ExpireStatus")
+        @com.aliyun.core.annotation.NameInMap("ExpireStatus")
         private String expireStatus;
 
-        @NameInMap("IsHotfixVersion")
+        @com.aliyun.core.annotation.NameInMap("IsHotfixVersion")
         private Boolean isHotfixVersion;
 
-        @NameInMap("MinorVersion")
+        @com.aliyun.core.annotation.NameInMap("MinorVersion")
         private String minorVersion;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
-        @NameInMap("ReleaseNote")
+        @com.aliyun.core.annotation.NameInMap("ReleaseNote")
         private String releaseNote;
 
-        @NameInMap("ReleaseType")
+        @com.aliyun.core.annotation.NameInMap("ReleaseType")
         private String releaseType;
 
-        @NameInMap("StatusDesc")
+        @com.aliyun.core.annotation.NameInMap("StatusDesc")
         private String statusDesc;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
         private MinorVersionItems(Builder builder) {

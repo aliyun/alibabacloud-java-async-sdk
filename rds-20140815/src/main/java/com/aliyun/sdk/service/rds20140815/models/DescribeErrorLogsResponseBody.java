@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rds20140815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeErrorLogsResponseBody</p>
  */
 public class DescribeErrorLogsResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeErrorLogsResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
     } 
 
     public static class ErrorLog extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ErrorInfo")
+        @com.aliyun.core.annotation.NameInMap("ErrorInfo")
         private String errorInfo;
 
         private ErrorLog(Builder builder) {
@@ -193,7 +192,7 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("ErrorLog")
+        @com.aliyun.core.annotation.NameInMap("ErrorLog")
         private java.util.List < ErrorLog> errorLog;
 
         private Items(Builder builder) {
