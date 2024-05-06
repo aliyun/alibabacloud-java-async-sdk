@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200407.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetCertWarehouseQuotaResponseBody</p>
  */
 public class GetCertWarehouseQuotaResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalQuota")
+    @com.aliyun.core.annotation.NameInMap("TotalQuota")
     private Long totalQuota;
 
-    @NameInMap("UseCount")
+    @com.aliyun.core.annotation.NameInMap("UseCount")
     private Long useCount;
 
     private GetCertWarehouseQuotaResponseBody(Builder builder) {

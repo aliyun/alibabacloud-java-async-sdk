@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200407.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCsrResponseBody</p>
  */
 public class CreateCsrResponseBody extends TeaModel {
-    @NameInMap("Csr")
+    @com.aliyun.core.annotation.NameInMap("Csr")
     private String csr;
 
-    @NameInMap("CsrId")
+    @com.aliyun.core.annotation.NameInMap("CsrId")
     private Long csrId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateCsrResponseBody(Builder builder) {

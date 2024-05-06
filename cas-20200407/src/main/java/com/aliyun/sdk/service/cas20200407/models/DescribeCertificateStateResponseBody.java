@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200407.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCertificateStateResponseBody</p>
  */
 public class DescribeCertificateStateResponseBody extends TeaModel {
-    @NameInMap("Certificate")
+    @com.aliyun.core.annotation.NameInMap("Certificate")
     private String certificate;
 
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private String content;
 
-    @NameInMap("Domain")
+    @com.aliyun.core.annotation.NameInMap("Domain")
     private String domain;
 
-    @NameInMap("PrivateKey")
+    @com.aliyun.core.annotation.NameInMap("PrivateKey")
     private String privateKey;
 
-    @NameInMap("RecordDomain")
+    @com.aliyun.core.annotation.NameInMap("RecordDomain")
     private String recordDomain;
 
-    @NameInMap("RecordType")
+    @com.aliyun.core.annotation.NameInMap("RecordType")
     private String recordType;
 
-    @NameInMap("RecordValue")
+    @com.aliyun.core.annotation.NameInMap("RecordValue")
     private String recordValue;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @NameInMap("Uri")
+    @com.aliyun.core.annotation.NameInMap("Uri")
     private String uri;
 
-    @NameInMap("ValidateType")
+    @com.aliyun.core.annotation.NameInMap("ValidateType")
     private String validateType;
 
     private DescribeCertificateStateResponseBody(Builder builder) {

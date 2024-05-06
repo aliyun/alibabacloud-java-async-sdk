@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200407.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,76 +11,76 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetUserCertificateDetailResponseBody</p>
  */
 public class GetUserCertificateDetailResponseBody extends TeaModel {
-    @NameInMap("Algorithm")
+    @com.aliyun.core.annotation.NameInMap("Algorithm")
     private String algorithm;
 
-    @NameInMap("BuyInAliyun")
+    @com.aliyun.core.annotation.NameInMap("BuyInAliyun")
     private Boolean buyInAliyun;
 
-    @NameInMap("Cert")
+    @com.aliyun.core.annotation.NameInMap("Cert")
     private String cert;
 
-    @NameInMap("City")
+    @com.aliyun.core.annotation.NameInMap("City")
     private String city;
 
-    @NameInMap("Common")
+    @com.aliyun.core.annotation.NameInMap("Common")
     private String common;
 
-    @NameInMap("Country")
+    @com.aliyun.core.annotation.NameInMap("Country")
     private String country;
 
-    @NameInMap("EncryptCert")
+    @com.aliyun.core.annotation.NameInMap("EncryptCert")
     private String encryptCert;
 
-    @NameInMap("EncryptPrivateKey")
+    @com.aliyun.core.annotation.NameInMap("EncryptPrivateKey")
     private String encryptPrivateKey;
 
-    @NameInMap("EndDate")
+    @com.aliyun.core.annotation.NameInMap("EndDate")
     private String endDate;
 
-    @NameInMap("Expired")
+    @com.aliyun.core.annotation.NameInMap("Expired")
     private Boolean expired;
 
-    @NameInMap("Fingerprint")
+    @com.aliyun.core.annotation.NameInMap("Fingerprint")
     private String fingerprint;
 
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @NameInMap("Issuer")
+    @com.aliyun.core.annotation.NameInMap("Issuer")
     private String issuer;
 
-    @NameInMap("Key")
+    @com.aliyun.core.annotation.NameInMap("Key")
     private String key;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private Long orderId;
 
-    @NameInMap("OrgName")
+    @com.aliyun.core.annotation.NameInMap("OrgName")
     private String orgName;
 
-    @NameInMap("Province")
+    @com.aliyun.core.annotation.NameInMap("Province")
     private String province;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("Sans")
+    @com.aliyun.core.annotation.NameInMap("Sans")
     private String sans;
 
-    @NameInMap("SignCert")
+    @com.aliyun.core.annotation.NameInMap("SignCert")
     private String signCert;
 
-    @NameInMap("SignPrivateKey")
+    @com.aliyun.core.annotation.NameInMap("SignPrivateKey")
     private String signPrivateKey;
 
-    @NameInMap("StartDate")
+    @com.aliyun.core.annotation.NameInMap("StartDate")
     private String startDate;
 
     private GetUserCertificateDetailResponseBody(Builder builder) {

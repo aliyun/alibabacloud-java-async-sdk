@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200407.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UploadPCACertResponseBody</p>
  */
 public class UploadPCACertResponseBody extends TeaModel {
-    @NameInMap("Identifier")
+    @com.aliyun.core.annotation.NameInMap("Identifier")
     private String identifier;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UploadPCACertResponseBody(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200407.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePackageStateResponseBody</p>
  */
 public class DescribePackageStateResponseBody extends TeaModel {
-    @NameInMap("IssuedCount")
+    @com.aliyun.core.annotation.NameInMap("IssuedCount")
     private Long issuedCount;
 
-    @NameInMap("ProductCode")
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
-    @NameInMap("UsedCount")
+    @com.aliyun.core.annotation.NameInMap("UsedCount")
     private Long usedCount;
 
     private DescribePackageStateResponseBody(Builder builder) {

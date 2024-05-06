@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200407.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDeploymentJobResourceResponseBody</p>
  */
 public class ListDeploymentJobResourceResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListDeploymentJobResourceResponseBody(Builder builder) {
@@ -72,70 +71,70 @@ public class ListDeploymentJobResourceResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("CertEndTime")
+        @com.aliyun.core.annotation.NameInMap("CertEndTime")
         private String certEndTime;
 
-        @NameInMap("CertId")
+        @com.aliyun.core.annotation.NameInMap("CertId")
         private Long certId;
 
-        @NameInMap("CertName")
+        @com.aliyun.core.annotation.NameInMap("CertName")
         private String certName;
 
-        @NameInMap("CertStartTime")
+        @com.aliyun.core.annotation.NameInMap("CertStartTime")
         private String certStartTime;
 
-        @NameInMap("CloudAccessId")
+        @com.aliyun.core.annotation.NameInMap("CloudAccessId")
         private String cloudAccessId;
 
-        @NameInMap("CloudName")
+        @com.aliyun.core.annotation.NameInMap("CloudName")
         private String cloudName;
 
-        @NameInMap("CloudProduct")
+        @com.aliyun.core.annotation.NameInMap("CloudProduct")
         private String cloudProduct;
 
-        @NameInMap("CloudRegion")
+        @com.aliyun.core.annotation.NameInMap("CloudRegion")
         private String cloudRegion;
 
-        @NameInMap("DefaultResource")
+        @com.aliyun.core.annotation.NameInMap("DefaultResource")
         private Integer defaultResource;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("EnableHttps")
+        @com.aliyun.core.annotation.NameInMap("EnableHttps")
         private Integer enableHttps;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("ListenerId")
+        @com.aliyun.core.annotation.NameInMap("ListenerId")
         private String listenerId;
 
-        @NameInMap("ListenerPort")
+        @com.aliyun.core.annotation.NameInMap("ListenerPort")
         private String listenerPort;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UseSsl")
+        @com.aliyun.core.annotation.NameInMap("UseSsl")
         private Integer useSsl;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
 
         private Data(Builder builder) {

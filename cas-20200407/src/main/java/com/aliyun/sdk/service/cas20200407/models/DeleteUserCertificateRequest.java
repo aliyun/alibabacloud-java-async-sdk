@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200407.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteUserCertificateRequest</p>
  */
 public class DeleteUserCertificateRequest extends Request {
-    @Query
-    @NameInMap("CertId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long certId;
 
     private DeleteUserCertificateRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200407.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCertWarehouseResponseBody</p>
  */
 public class ListCertWarehouseResponseBody extends TeaModel {
-    @NameInMap("CertWarehouseList")
+    @com.aliyun.core.annotation.NameInMap("CertWarehouseList")
     private java.util.List < CertWarehouseList> certWarehouseList;
 
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Long currentPage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ShowSize")
+    @com.aliyun.core.annotation.NameInMap("ShowSize")
     private Long showSize;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListCertWarehouseResponseBody(Builder builder) {
@@ -132,28 +131,28 @@ public class ListCertWarehouseResponseBody extends TeaModel {
     } 
 
     public static class CertWarehouseList extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("IsExpired")
+        @com.aliyun.core.annotation.NameInMap("IsExpired")
         private Boolean isExpired;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PcaInstanceId")
+        @com.aliyun.core.annotation.NameInMap("PcaInstanceId")
         private String pcaInstanceId;
 
-        @NameInMap("Qps")
+        @com.aliyun.core.annotation.NameInMap("Qps")
         private Long qps;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("WhId")
+        @com.aliyun.core.annotation.NameInMap("WhId")
         private Long whId;
 
         private CertWarehouseList(Builder builder) {

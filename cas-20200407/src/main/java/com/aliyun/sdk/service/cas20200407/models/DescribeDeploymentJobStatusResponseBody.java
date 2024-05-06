@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200407.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,46 +11,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDeploymentJobStatusResponseBody</p>
  */
 public class DescribeDeploymentJobStatusResponseBody extends TeaModel {
-    @NameInMap("BuyCount")
+    @com.aliyun.core.annotation.NameInMap("BuyCount")
     private Integer buyCount;
 
-    @NameInMap("CertCount")
+    @com.aliyun.core.annotation.NameInMap("CertCount")
     private Integer certCount;
 
-    @NameInMap("CostCount")
+    @com.aliyun.core.annotation.NameInMap("CostCount")
     private Integer costCount;
 
-    @NameInMap("FailedCount")
+    @com.aliyun.core.annotation.NameInMap("FailedCount")
     private Integer failedCount;
 
-    @NameInMap("MatchWorkerCount")
+    @com.aliyun.core.annotation.NameInMap("MatchWorkerCount")
     private Integer matchWorkerCount;
 
-    @NameInMap("ProductWorkerCount")
+    @com.aliyun.core.annotation.NameInMap("ProductWorkerCount")
     private java.util.List < ProductWorkerCount> productWorkerCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceCount")
+    @com.aliyun.core.annotation.NameInMap("ResourceCount")
     private Integer resourceCount;
 
-    @NameInMap("RollbackCount")
+    @com.aliyun.core.annotation.NameInMap("RollbackCount")
     private Integer rollbackCount;
 
-    @NameInMap("RollbackFailedCount")
+    @com.aliyun.core.annotation.NameInMap("RollbackFailedCount")
     private Integer rollbackFailedCount;
 
-    @NameInMap("RollbackSuccessCount")
+    @com.aliyun.core.annotation.NameInMap("RollbackSuccessCount")
     private Integer rollbackSuccessCount;
 
-    @NameInMap("SuccessCount")
+    @com.aliyun.core.annotation.NameInMap("SuccessCount")
     private Integer successCount;
 
-    @NameInMap("UseCount")
+    @com.aliyun.core.annotation.NameInMap("UseCount")
     private Integer useCount;
 
-    @NameInMap("WorkerCount")
+    @com.aliyun.core.annotation.NameInMap("WorkerCount")
     private Integer workerCount;
 
     private DescribeDeploymentJobStatusResponseBody(Builder builder) {
@@ -312,10 +311,10 @@ public class DescribeDeploymentJobStatusResponseBody extends TeaModel {
     } 
 
     public static class ProductWorkerCount extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("ProductName")
+        @com.aliyun.core.annotation.NameInMap("ProductName")
         private String productName;
 
         private ProductWorkerCount(Builder builder) {

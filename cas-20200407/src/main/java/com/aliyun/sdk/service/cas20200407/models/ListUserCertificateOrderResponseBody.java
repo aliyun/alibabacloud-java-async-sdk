@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200407.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUserCertificateOrderResponseBody</p>
  */
 public class ListUserCertificateOrderResponseBody extends TeaModel {
-    @NameInMap("CertificateOrderList")
+    @com.aliyun.core.annotation.NameInMap("CertificateOrderList")
     private java.util.List < CertificateOrderList> certificateOrderList;
 
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Long currentPage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ShowSize")
+    @com.aliyun.core.annotation.NameInMap("ShowSize")
     private Long showSize;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListUserCertificateOrderResponseBody(Builder builder) {
@@ -132,112 +131,112 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
     } 
 
     public static class CertificateOrderList extends TeaModel {
-        @NameInMap("Algorithm")
+        @com.aliyun.core.annotation.NameInMap("Algorithm")
         private String algorithm;
 
-        @NameInMap("AliyunOrderId")
+        @com.aliyun.core.annotation.NameInMap("AliyunOrderId")
         private Long aliyunOrderId;
 
-        @NameInMap("BuyDate")
+        @com.aliyun.core.annotation.NameInMap("BuyDate")
         private Long buyDate;
 
-        @NameInMap("CertEndTime")
+        @com.aliyun.core.annotation.NameInMap("CertEndTime")
         private Long certEndTime;
 
-        @NameInMap("CertStartTime")
+        @com.aliyun.core.annotation.NameInMap("CertStartTime")
         private Long certStartTime;
 
-        @NameInMap("CertType")
+        @com.aliyun.core.annotation.NameInMap("CertType")
         private String certType;
 
-        @NameInMap("CertificateId")
+        @com.aliyun.core.annotation.NameInMap("CertificateId")
         private Long certificateId;
 
-        @NameInMap("City")
+        @com.aliyun.core.annotation.NameInMap("City")
         private String city;
 
-        @NameInMap("CommonName")
+        @com.aliyun.core.annotation.NameInMap("CommonName")
         private String commonName;
 
-        @NameInMap("Country")
+        @com.aliyun.core.annotation.NameInMap("Country")
         private String country;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("DomainCount")
+        @com.aliyun.core.annotation.NameInMap("DomainCount")
         private Long domainCount;
 
-        @NameInMap("DomainType")
+        @com.aliyun.core.annotation.NameInMap("DomainType")
         private String domainType;
 
-        @NameInMap("EndDate")
+        @com.aliyun.core.annotation.NameInMap("EndDate")
         private String endDate;
 
-        @NameInMap("Expired")
+        @com.aliyun.core.annotation.NameInMap("Expired")
         private Boolean expired;
 
-        @NameInMap("Fingerprint")
+        @com.aliyun.core.annotation.NameInMap("Fingerprint")
         private String fingerprint;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Issuer")
+        @com.aliyun.core.annotation.NameInMap("Issuer")
         private String issuer;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OrderId")
+        @com.aliyun.core.annotation.NameInMap("OrderId")
         private Long orderId;
 
-        @NameInMap("OrgName")
+        @com.aliyun.core.annotation.NameInMap("OrgName")
         private String orgName;
 
-        @NameInMap("PartnerOrderId")
+        @com.aliyun.core.annotation.NameInMap("PartnerOrderId")
         private String partnerOrderId;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("ProductName")
+        @com.aliyun.core.annotation.NameInMap("ProductName")
         private String productName;
 
-        @NameInMap("Province")
+        @com.aliyun.core.annotation.NameInMap("Province")
         private String province;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("RootBrand")
+        @com.aliyun.core.annotation.NameInMap("RootBrand")
         private String rootBrand;
 
-        @NameInMap("Sans")
+        @com.aliyun.core.annotation.NameInMap("Sans")
         private String sans;
 
-        @NameInMap("SerialNo")
+        @com.aliyun.core.annotation.NameInMap("SerialNo")
         private String serialNo;
 
-        @NameInMap("Sha2")
+        @com.aliyun.core.annotation.NameInMap("Sha2")
         private String sha2;
 
-        @NameInMap("SourceType")
+        @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
 
-        @NameInMap("StartDate")
+        @com.aliyun.core.annotation.NameInMap("StartDate")
         private String startDate;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TrusteeStatus")
+        @com.aliyun.core.annotation.NameInMap("TrusteeStatus")
         private String trusteeStatus;
 
-        @NameInMap("Upload")
+        @com.aliyun.core.annotation.NameInMap("Upload")
         private Boolean upload;
 
-        @NameInMap("WildDomainCount")
+        @com.aliyun.core.annotation.NameInMap("WildDomainCount")
         private Long wildDomainCount;
 
         private CertificateOrderList(Builder builder) {

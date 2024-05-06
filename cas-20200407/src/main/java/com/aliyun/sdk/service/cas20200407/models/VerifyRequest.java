@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200407.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>VerifyRequest</p>
  */
 public class VerifyRequest extends Request {
-    @Query
-    @NameInMap("CertIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String certIdentifier;
 
-    @Query
-    @NameInMap("Message")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Message")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String message;
 
-    @Query
-    @NameInMap("MessageType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MessageType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String messageType;
 
-    @Query
-    @NameInMap("SignatureValue")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SignatureValue")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String signatureValue;
 
-    @Query
-    @NameInMap("SigningAlgorithm")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SigningAlgorithm")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String signingAlgorithm;
 
     private VerifyRequest(Builder builder) {

@@ -97,6 +97,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeCertificateStateResponse> describeCertificateState(DescribeCertificateStateRequest request);
 
+    CompletableFuture<DescribeCloudResourceStatusResponse> describeCloudResourceStatus(DescribeCloudResourceStatusRequest request);
+
+    CompletableFuture<DescribeDeploymentJobResponse> describeDeploymentJob(DescribeDeploymentJobRequest request);
+
     CompletableFuture<DescribeDeploymentJobStatusResponse> describeDeploymentJobStatus(DescribeDeploymentJobStatusRequest request);
 
     CompletableFuture<DescribePackageStateResponse> describePackageState(DescribePackageStateRequest request);
@@ -121,7 +125,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListCertWarehouseResponse> listCertWarehouse(ListCertWarehouseRequest request);
 
+    CompletableFuture<ListCloudAccessResponse> listCloudAccess(ListCloudAccessRequest request);
+
     CompletableFuture<ListCloudResourcesResponse> listCloudResources(ListCloudResourcesRequest request);
+
+    CompletableFuture<ListContactResponse> listContact(ListContactRequest request);
 
     CompletableFuture<ListCsrResponse> listCsr(ListCsrRequest request);
 
@@ -138,6 +146,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<ListUserCertificateOrderResponse> listUserCertificateOrder(ListUserCertificateOrderRequest request);
+
+    CompletableFuture<ListWorkerResourceResponse> listWorkerResource(ListWorkerResourceRequest request);
 
     /**
       * You can call this operation to submit a renewal application for a certificate only when the order of the certificate is in the expiring state. After the renewal is complete, a new certificate order whose status is pending application is generated. You must submit a certificate application for the new certificate order and install the new certificate after the new certificate is issued.

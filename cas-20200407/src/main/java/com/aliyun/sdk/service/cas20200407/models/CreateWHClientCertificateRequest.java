@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200407.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,73 +11,73 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateWHClientCertificateRequest</p>
  */
 public class CreateWHClientCertificateRequest extends Request {
-    @Query
-    @NameInMap("AfterTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AfterTime")
     private Long afterTime;
 
-    @Query
-    @NameInMap("Algorithm")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Algorithm")
     private String algorithm;
 
-    @Query
-    @NameInMap("BeforeTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BeforeTime")
     private Long beforeTime;
 
-    @Query
-    @NameInMap("CommonName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommonName")
     private String commonName;
 
-    @Query
-    @NameInMap("Country")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Country")
     private String country;
 
-    @Query
-    @NameInMap("Csr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Csr")
     private String csr;
 
-    @Query
-    @NameInMap("Days")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Days")
     private Long days;
 
-    @Query
-    @NameInMap("Immediately")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Immediately")
     private Long immediately;
 
-    @Query
-    @NameInMap("Locality")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Locality")
     private String locality;
 
-    @Query
-    @NameInMap("Months")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Months")
     private Long months;
 
-    @Query
-    @NameInMap("Organization")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Organization")
     private String organization;
 
-    @Query
-    @NameInMap("OrganizationUnit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrganizationUnit")
     private String organizationUnit;
 
-    @Query
-    @NameInMap("ParentIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String parentIdentifier;
 
-    @Query
-    @NameInMap("SanType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SanType")
     private Long sanType;
 
-    @Query
-    @NameInMap("SanValue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SanValue")
     private String sanValue;
 
-    @Query
-    @NameInMap("State")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
-    @Query
-    @NameInMap("Years")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Years")
     private Long years;
 
     private CreateWHClientCertificateRequest(Builder builder) {
