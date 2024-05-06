@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListIpsecServerLogsRequest</p>
  */
 public class ListIpsecServerLogsRequest extends Request {
-    @Query
-    @NameInMap("From")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("From")
     private Integer from;
 
-    @Query
-    @NameInMap("IpsecServerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpsecServerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ipsecServerId;
 
-    @Query
-    @NameInMap("MinutePeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinutePeriod")
     private Integer minutePeriod;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("To")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("To")
     private Integer to;
 
     private ListIpsecServerLogsRequest(Builder builder) {

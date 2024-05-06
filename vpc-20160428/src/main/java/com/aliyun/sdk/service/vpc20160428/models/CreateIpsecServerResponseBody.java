@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateIpsecServerResponseBody</p>
  */
 public class CreateIpsecServerResponseBody extends TeaModel {
-    @NameInMap("CreationTime")
+    @com.aliyun.core.annotation.NameInMap("CreationTime")
     private String creationTime;
 
-    @NameInMap("IpsecServerId")
+    @com.aliyun.core.annotation.NameInMap("IpsecServerId")
     private String ipsecServerId;
 
-    @NameInMap("IpsecServerName")
+    @com.aliyun.core.annotation.NameInMap("IpsecServerName")
     private String ipsecServerName;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VpnGatewayId")
+    @com.aliyun.core.annotation.NameInMap("VpnGatewayId")
     private String vpnGatewayId;
 
     private CreateIpsecServerResponseBody(Builder builder) {

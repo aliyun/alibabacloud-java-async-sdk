@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,61 +11,61 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateVpcPrefixListRequest</p>
  */
 public class CreateVpcPrefixListRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("IpVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpVersion")
     private String ipVersion;
 
-    @Query
-    @NameInMap("MaxEntries")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxEntries")
     private Integer maxEntries;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PrefixListDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrefixListDescription")
     private String prefixListDescription;
 
-    @Query
-    @NameInMap("PrefixListEntries")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrefixListEntries")
     private java.util.List < PrefixListEntries> prefixListEntries;
 
-    @Query
-    @NameInMap("PrefixListName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrefixListName")
     private String prefixListName;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
     private CreateVpcPrefixListRequest(Builder builder) {
@@ -392,10 +391,10 @@ public class CreateVpcPrefixListRequest extends Request {
     } 
 
     public static class PrefixListEntries extends TeaModel {
-        @NameInMap("Cidr")
+        @com.aliyun.core.annotation.NameInMap("Cidr")
         private String cidr;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
         private PrefixListEntries(Builder builder) {
@@ -456,10 +455,10 @@ public class CreateVpcPrefixListRequest extends Request {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

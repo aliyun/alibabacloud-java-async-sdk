@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetVpcRouteEntrySummaryResponseBody</p>
  */
 public class GetVpcRouteEntrySummaryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RouteEntrySummarys")
+    @com.aliyun.core.annotation.NameInMap("RouteEntrySummarys")
     private java.util.List < RouteEntrySummarys> routeEntrySummarys;
 
     private GetVpcRouteEntrySummaryResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class GetVpcRouteEntrySummaryResponseBody extends TeaModel {
     } 
 
     public static class EntrySummarys extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("RouteEntryType")
+        @com.aliyun.core.annotation.NameInMap("RouteEntryType")
         private String routeEntryType;
 
         private EntrySummarys(Builder builder) {
@@ -140,10 +139,10 @@ public class GetVpcRouteEntrySummaryResponseBody extends TeaModel {
 
     }
     public static class RouteEntrySummarys extends TeaModel {
-        @NameInMap("EntrySummarys")
+        @com.aliyun.core.annotation.NameInMap("EntrySummarys")
         private java.util.List < EntrySummarys> entrySummarys;
 
-        @NameInMap("RouteTableId")
+        @com.aliyun.core.annotation.NameInMap("RouteTableId")
         private String routeTableId;
 
         private RouteEntrySummarys(Builder builder) {

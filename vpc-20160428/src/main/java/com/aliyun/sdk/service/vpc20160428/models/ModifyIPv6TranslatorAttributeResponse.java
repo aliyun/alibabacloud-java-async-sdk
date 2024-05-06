@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyIPv6TranslatorAttributeResponse</p>
  */
 public class ModifyIPv6TranslatorAttributeResponse extends Response {
-    @NameInMap("headers")
+    @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
-    @NameInMap("statusCode")
+    @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    @NameInMap("body")
+    @com.aliyun.core.annotation.NameInMap("body")
     private ModifyIPv6TranslatorAttributeResponseBody body;
 
     private ModifyIPv6TranslatorAttributeResponse(BuilderImpl builder) {

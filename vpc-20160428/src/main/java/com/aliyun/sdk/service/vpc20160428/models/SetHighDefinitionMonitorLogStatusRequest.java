@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,49 +11,49 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetHighDefinitionMonitorLogStatusRequest</p>
  */
 public class SetHighDefinitionMonitorLogStatusRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
-    @Query
-    @NameInMap("LogProject")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogProject")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String logProject;
 
-    @Query
-    @NameInMap("LogStore")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogStore")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String logStore;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String status;
 
     private SetHighDefinitionMonitorLogStatusRequest(Builder builder) {

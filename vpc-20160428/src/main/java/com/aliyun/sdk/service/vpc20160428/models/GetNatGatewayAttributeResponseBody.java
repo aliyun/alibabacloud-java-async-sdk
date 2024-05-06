@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,73 +11,73 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetNatGatewayAttributeResponseBody</p>
  */
 public class GetNatGatewayAttributeResponseBody extends TeaModel {
-    @NameInMap("BillingConfig")
+    @com.aliyun.core.annotation.NameInMap("BillingConfig")
     private BillingConfig billingConfig;
 
-    @NameInMap("BusinessStatus")
+    @com.aliyun.core.annotation.NameInMap("BusinessStatus")
     private String businessStatus;
 
-    @NameInMap("CreationTime")
+    @com.aliyun.core.annotation.NameInMap("CreationTime")
     private String creationTime;
 
-    @NameInMap("DeletionProtectionInfo")
+    @com.aliyun.core.annotation.NameInMap("DeletionProtectionInfo")
     private DeletionProtectionInfo deletionProtectionInfo;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("EcsMetricEnabled")
+    @com.aliyun.core.annotation.NameInMap("EcsMetricEnabled")
     private Boolean ecsMetricEnabled;
 
-    @NameInMap("ExpiredTime")
+    @com.aliyun.core.annotation.NameInMap("ExpiredTime")
     private String expiredTime;
 
-    @NameInMap("ForwardTable")
+    @com.aliyun.core.annotation.NameInMap("ForwardTable")
     private ForwardTable forwardTable;
 
-    @NameInMap("FullNatTable")
+    @com.aliyun.core.annotation.NameInMap("FullNatTable")
     private FullNatTable fullNatTable;
 
-    @NameInMap("IpList")
+    @com.aliyun.core.annotation.NameInMap("IpList")
     private java.util.List < IpList> ipList;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("NatGatewayId")
+    @com.aliyun.core.annotation.NameInMap("NatGatewayId")
     private String natGatewayId;
 
-    @NameInMap("NatType")
+    @com.aliyun.core.annotation.NameInMap("NatType")
     private String natType;
 
-    @NameInMap("NetworkType")
+    @com.aliyun.core.annotation.NameInMap("NetworkType")
     private String networkType;
 
-    @NameInMap("PrivateInfo")
+    @com.aliyun.core.annotation.NameInMap("PrivateInfo")
     private PrivateInfo privateInfo;
 
-    @NameInMap("PrivateLinkEnabled")
+    @com.aliyun.core.annotation.NameInMap("PrivateLinkEnabled")
     private Boolean privateLinkEnabled;
 
-    @NameInMap("PrivateLinkMode")
+    @com.aliyun.core.annotation.NameInMap("PrivateLinkMode")
     private String privateLinkMode;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("SnatTable")
+    @com.aliyun.core.annotation.NameInMap("SnatTable")
     private SnatTable snatTable;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     private GetNatGatewayAttributeResponseBody(Builder builder) {
@@ -519,16 +518,16 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     } 
 
     public static class BillingConfig extends TeaModel {
-        @NameInMap("AutoPay")
+        @com.aliyun.core.annotation.NameInMap("AutoPay")
         private String autoPay;
 
-        @NameInMap("InstanceChargeType")
+        @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
         private String instanceChargeType;
 
-        @NameInMap("InternetChargeType")
+        @com.aliyun.core.annotation.NameInMap("InternetChargeType")
         private String internetChargeType;
 
-        @NameInMap("Spec")
+        @com.aliyun.core.annotation.NameInMap("Spec")
         private String spec;
 
         private BillingConfig(Builder builder) {
@@ -639,7 +638,7 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
 
     }
     public static class DeletionProtectionInfo extends TeaModel {
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
         private DeletionProtectionInfo(Builder builder) {
@@ -684,10 +683,10 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
 
     }
     public static class ForwardTable extends TeaModel {
-        @NameInMap("ForwardEntryCount")
+        @com.aliyun.core.annotation.NameInMap("ForwardEntryCount")
         private Integer forwardEntryCount;
 
-        @NameInMap("ForwardTableId")
+        @com.aliyun.core.annotation.NameInMap("ForwardTableId")
         private String forwardTableId;
 
         private ForwardTable(Builder builder) {
@@ -745,10 +744,10 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
 
     }
     public static class FullNatTable extends TeaModel {
-        @NameInMap("FullNatEntryCount")
+        @com.aliyun.core.annotation.NameInMap("FullNatEntryCount")
         private Long fullNatEntryCount;
 
-        @NameInMap("FullNatTableId")
+        @com.aliyun.core.annotation.NameInMap("FullNatTableId")
         private String fullNatTableId;
 
         private FullNatTable(Builder builder) {
@@ -806,13 +805,13 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
 
     }
     public static class IpList extends TeaModel {
-        @NameInMap("AllocationId")
+        @com.aliyun.core.annotation.NameInMap("AllocationId")
         private String allocationId;
 
-        @NameInMap("IpAddress")
+        @com.aliyun.core.annotation.NameInMap("IpAddress")
         private String ipAddress;
 
-        @NameInMap("UsingStatus")
+        @com.aliyun.core.annotation.NameInMap("UsingStatus")
         private String usingStatus;
 
         private IpList(Builder builder) {
@@ -892,19 +891,19 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
 
     }
     public static class PrivateInfo extends TeaModel {
-        @NameInMap("EniInstanceId")
+        @com.aliyun.core.annotation.NameInMap("EniInstanceId")
         private String eniInstanceId;
 
-        @NameInMap("IzNo")
+        @com.aliyun.core.annotation.NameInMap("IzNo")
         private String izNo;
 
-        @NameInMap("MaxBandwidth")
+        @com.aliyun.core.annotation.NameInMap("MaxBandwidth")
         private Integer maxBandwidth;
 
-        @NameInMap("PrivateIpAddress")
+        @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
         private String privateIpAddress;
 
-        @NameInMap("VswitchId")
+        @com.aliyun.core.annotation.NameInMap("VswitchId")
         private String vswitchId;
 
         private PrivateInfo(Builder builder) {
@@ -1013,10 +1012,10 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
 
     }
     public static class SnatTable extends TeaModel {
-        @NameInMap("SnatEntryCount")
+        @com.aliyun.core.annotation.NameInMap("SnatEntryCount")
         private Integer snatEntryCount;
 
-        @NameInMap("SnatTableId")
+        @com.aliyun.core.annotation.NameInMap("SnatTableId")
         private String snatTableId;
 
         private SnatTable(Builder builder) {

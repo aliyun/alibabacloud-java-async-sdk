@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteRouteEntriesRequest</p>
  */
 public class DeleteRouteEntriesRequest extends Request {
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RouteEntries")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteEntries")
     private java.util.List < RouteEntries> routeEntries;
 
     private DeleteRouteEntriesRequest(Builder builder) {
@@ -188,17 +187,17 @@ public class DeleteRouteEntriesRequest extends Request {
     } 
 
     public static class RouteEntries extends TeaModel {
-        @NameInMap("DstCidrBlock")
+        @com.aliyun.core.annotation.NameInMap("DstCidrBlock")
         private String dstCidrBlock;
 
-        @NameInMap("NextHop")
+        @com.aliyun.core.annotation.NameInMap("NextHop")
         private String nextHop;
 
-        @NameInMap("RouteEntryId")
+        @com.aliyun.core.annotation.NameInMap("RouteEntryId")
         private String routeEntryId;
 
-        @NameInMap("RouteTableId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("RouteTableId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String routeTableId;
 
         private RouteEntries(Builder builder) {

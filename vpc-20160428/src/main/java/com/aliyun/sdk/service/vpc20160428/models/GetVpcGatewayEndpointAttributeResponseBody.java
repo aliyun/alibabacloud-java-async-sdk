@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetVpcGatewayEndpointAttributeResponseBody</p>
  */
 public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
-    @NameInMap("CreationTime")
+    @com.aliyun.core.annotation.NameInMap("CreationTime")
     private String creationTime;
 
-    @NameInMap("EndpointDescription")
+    @com.aliyun.core.annotation.NameInMap("EndpointDescription")
     private String endpointDescription;
 
-    @NameInMap("EndpointId")
+    @com.aliyun.core.annotation.NameInMap("EndpointId")
     private String endpointId;
 
-    @NameInMap("EndpointName")
+    @com.aliyun.core.annotation.NameInMap("EndpointName")
     private String endpointName;
 
-    @NameInMap("EndpointStatus")
+    @com.aliyun.core.annotation.NameInMap("EndpointStatus")
     private String endpointStatus;
 
-    @NameInMap("PolicyDocument")
+    @com.aliyun.core.annotation.NameInMap("PolicyDocument")
     private String policyDocument;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("RouteTables")
+    @com.aliyun.core.annotation.NameInMap("RouteTables")
     private java.util.List < String > routeTables;
 
-    @NameInMap("ServiceName")
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
 
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List < Tags> tags;
 
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     private GetVpcGatewayEndpointAttributeResponseBody(Builder builder) {
@@ -280,10 +279,10 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {

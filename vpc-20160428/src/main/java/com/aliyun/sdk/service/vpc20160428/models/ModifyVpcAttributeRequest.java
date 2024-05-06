@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,53 +11,53 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyVpcAttributeRequest</p>
  */
 public class ModifyVpcAttributeRequest extends Request {
-    @Query
-    @NameInMap("CidrBlock")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CidrBlock")
     private String cidrBlock;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("EnableIPv6")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableIPv6")
     private Boolean enableIPv6;
 
-    @Query
-    @NameInMap("Ipv6CidrBlock")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6CidrBlock")
     private String ipv6CidrBlock;
 
-    @Query
-    @NameInMap("Ipv6Isp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6Isp")
     private String ipv6Isp;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("VpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
-    @Query
-    @NameInMap("VpcName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcName")
     private String vpcName;
 
     private ModifyVpcAttributeRequest(Builder builder) {

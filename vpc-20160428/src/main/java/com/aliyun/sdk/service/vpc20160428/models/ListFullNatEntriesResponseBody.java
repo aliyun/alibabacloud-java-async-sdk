@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListFullNatEntriesResponseBody</p>
  */
 public class ListFullNatEntriesResponseBody extends TeaModel {
-    @NameInMap("FullNatEntries")
+    @com.aliyun.core.annotation.NameInMap("FullNatEntries")
     private java.util.List < FullNatEntries> fullNatEntries;
 
-    @NameInMap("FullNatTableId")
+    @com.aliyun.core.annotation.NameInMap("FullNatTableId")
     private String fullNatTableId;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Long maxResults;
 
-    @NameInMap("NatGatewayId")
+    @com.aliyun.core.annotation.NameInMap("NatGatewayId")
     private String natGatewayId;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListFullNatEntriesResponseBody(Builder builder) {
@@ -176,43 +175,43 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
     } 
 
     public static class FullNatEntries extends TeaModel {
-        @NameInMap("AccessIp")
+        @com.aliyun.core.annotation.NameInMap("AccessIp")
         private String accessIp;
 
-        @NameInMap("AccessPort")
+        @com.aliyun.core.annotation.NameInMap("AccessPort")
         private String accessPort;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("FullNatEntryDescription")
+        @com.aliyun.core.annotation.NameInMap("FullNatEntryDescription")
         private String fullNatEntryDescription;
 
-        @NameInMap("FullNatEntryId")
+        @com.aliyun.core.annotation.NameInMap("FullNatEntryId")
         private String fullNatEntryId;
 
-        @NameInMap("FullNatEntryName")
+        @com.aliyun.core.annotation.NameInMap("FullNatEntryName")
         private String fullNatEntryName;
 
-        @NameInMap("FullNatEntryStatus")
+        @com.aliyun.core.annotation.NameInMap("FullNatEntryStatus")
         private String fullNatEntryStatus;
 
-        @NameInMap("FullNatTableId")
+        @com.aliyun.core.annotation.NameInMap("FullNatTableId")
         private String fullNatTableId;
 
-        @NameInMap("IpProtocol")
+        @com.aliyun.core.annotation.NameInMap("IpProtocol")
         private String ipProtocol;
 
-        @NameInMap("NatIp")
+        @com.aliyun.core.annotation.NameInMap("NatIp")
         private String natIp;
 
-        @NameInMap("NatIpPort")
+        @com.aliyun.core.annotation.NameInMap("NatIpPort")
         private String natIpPort;
 
-        @NameInMap("NetworkInterfaceId")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
         private String networkInterfaceId;
 
-        @NameInMap("NetworkInterfaceType")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceType")
         private String networkInterfaceType;
 
         private FullNatEntries(Builder builder) {

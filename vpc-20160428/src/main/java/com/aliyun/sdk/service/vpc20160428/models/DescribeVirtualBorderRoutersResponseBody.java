@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVirtualBorderRoutersResponseBody</p>
  */
 public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("VirtualBorderRouterSet")
+    @com.aliyun.core.annotation.NameInMap("VirtualBorderRouterSet")
     private VirtualBorderRouterSet virtualBorderRouterSet;
 
     private DescribeVirtualBorderRoutersResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
     } 
 
     public static class AssociatedCen extends TeaModel {
-        @NameInMap("CenId")
+        @com.aliyun.core.annotation.NameInMap("CenId")
         private String cenId;
 
-        @NameInMap("CenOwnerId")
+        @com.aliyun.core.annotation.NameInMap("CenOwnerId")
         private Long cenOwnerId;
 
-        @NameInMap("CenStatus")
+        @com.aliyun.core.annotation.NameInMap("CenStatus")
         private String cenStatus;
 
         private AssociatedCen(Builder builder) {
@@ -220,7 +219,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
 
     }
     public static class AssociatedCens extends TeaModel {
-        @NameInMap("AssociatedCen")
+        @com.aliyun.core.annotation.NameInMap("AssociatedCen")
         private java.util.List < AssociatedCen> associatedCen;
 
         private AssociatedCens(Builder builder) {
@@ -261,49 +260,49 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
 
     }
     public static class AssociatedPhysicalConnection extends TeaModel {
-        @NameInMap("CircuitCode")
+        @com.aliyun.core.annotation.NameInMap("CircuitCode")
         private String circuitCode;
 
-        @NameInMap("EnableIpv6")
+        @com.aliyun.core.annotation.NameInMap("EnableIpv6")
         private Boolean enableIpv6;
 
-        @NameInMap("LocalGatewayIp")
+        @com.aliyun.core.annotation.NameInMap("LocalGatewayIp")
         private String localGatewayIp;
 
-        @NameInMap("LocalIpv6GatewayIp")
+        @com.aliyun.core.annotation.NameInMap("LocalIpv6GatewayIp")
         private String localIpv6GatewayIp;
 
-        @NameInMap("PeerGatewayIp")
+        @com.aliyun.core.annotation.NameInMap("PeerGatewayIp")
         private String peerGatewayIp;
 
-        @NameInMap("PeerIpv6GatewayIp")
+        @com.aliyun.core.annotation.NameInMap("PeerIpv6GatewayIp")
         private String peerIpv6GatewayIp;
 
-        @NameInMap("PeeringIpv6SubnetMask")
+        @com.aliyun.core.annotation.NameInMap("PeeringIpv6SubnetMask")
         private String peeringIpv6SubnetMask;
 
-        @NameInMap("PeeringSubnetMask")
+        @com.aliyun.core.annotation.NameInMap("PeeringSubnetMask")
         private String peeringSubnetMask;
 
-        @NameInMap("PhysicalConnectionBusinessStatus")
+        @com.aliyun.core.annotation.NameInMap("PhysicalConnectionBusinessStatus")
         private String physicalConnectionBusinessStatus;
 
-        @NameInMap("PhysicalConnectionId")
+        @com.aliyun.core.annotation.NameInMap("PhysicalConnectionId")
         private String physicalConnectionId;
 
-        @NameInMap("PhysicalConnectionOwnerUid")
+        @com.aliyun.core.annotation.NameInMap("PhysicalConnectionOwnerUid")
         private String physicalConnectionOwnerUid;
 
-        @NameInMap("PhysicalConnectionStatus")
+        @com.aliyun.core.annotation.NameInMap("PhysicalConnectionStatus")
         private String physicalConnectionStatus;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("VlanId")
+        @com.aliyun.core.annotation.NameInMap("VlanId")
         private String vlanId;
 
-        @NameInMap("VlanInterfaceId")
+        @com.aliyun.core.annotation.NameInMap("VlanInterfaceId")
         private String vlanInterfaceId;
 
         private AssociatedPhysicalConnection(Builder builder) {
@@ -616,7 +615,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
 
     }
     public static class AssociatedPhysicalConnections extends TeaModel {
-        @NameInMap("AssociatedPhysicalConnection")
+        @com.aliyun.core.annotation.NameInMap("AssociatedPhysicalConnection")
         private java.util.List < AssociatedPhysicalConnection> associatedPhysicalConnection;
 
         private AssociatedPhysicalConnections(Builder builder) {
@@ -657,10 +656,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -718,7 +717,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
 
     }
     public static class VirtualBorderRouterTypeTags extends TeaModel {
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
         private VirtualBorderRouterTypeTags(Builder builder) {
@@ -759,127 +758,127 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
 
     }
     public static class VirtualBorderRouterType extends TeaModel {
-        @NameInMap("AccessPointId")
+        @com.aliyun.core.annotation.NameInMap("AccessPointId")
         private String accessPointId;
 
-        @NameInMap("ActivationTime")
+        @com.aliyun.core.annotation.NameInMap("ActivationTime")
         private String activationTime;
 
-        @NameInMap("AssociatedCens")
+        @com.aliyun.core.annotation.NameInMap("AssociatedCens")
         private AssociatedCens associatedCens;
 
-        @NameInMap("AssociatedPhysicalConnections")
+        @com.aliyun.core.annotation.NameInMap("AssociatedPhysicalConnections")
         private AssociatedPhysicalConnections associatedPhysicalConnections;
 
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Integer bandwidth;
 
-        @NameInMap("CircuitCode")
+        @com.aliyun.core.annotation.NameInMap("CircuitCode")
         private String circuitCode;
 
-        @NameInMap("CloudBoxInstanceId")
+        @com.aliyun.core.annotation.NameInMap("CloudBoxInstanceId")
         private String cloudBoxInstanceId;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DetectMultiplier")
+        @com.aliyun.core.annotation.NameInMap("DetectMultiplier")
         private Long detectMultiplier;
 
-        @NameInMap("EccId")
+        @com.aliyun.core.annotation.NameInMap("EccId")
         private String eccId;
 
-        @NameInMap("EcrAttatchStatus")
+        @com.aliyun.core.annotation.NameInMap("EcrAttatchStatus")
         private String ecrAttatchStatus;
 
-        @NameInMap("EcrId")
+        @com.aliyun.core.annotation.NameInMap("EcrId")
         private String ecrId;
 
-        @NameInMap("EcrOwnerId")
+        @com.aliyun.core.annotation.NameInMap("EcrOwnerId")
         private String ecrOwnerId;
 
-        @NameInMap("EnableIpv6")
+        @com.aliyun.core.annotation.NameInMap("EnableIpv6")
         private Boolean enableIpv6;
 
-        @NameInMap("LocalGatewayIp")
+        @com.aliyun.core.annotation.NameInMap("LocalGatewayIp")
         private String localGatewayIp;
 
-        @NameInMap("LocalIpv6GatewayIp")
+        @com.aliyun.core.annotation.NameInMap("LocalIpv6GatewayIp")
         private String localIpv6GatewayIp;
 
-        @NameInMap("MinRxInterval")
+        @com.aliyun.core.annotation.NameInMap("MinRxInterval")
         private Long minRxInterval;
 
-        @NameInMap("MinTxInterval")
+        @com.aliyun.core.annotation.NameInMap("MinTxInterval")
         private Long minTxInterval;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PConnVbrChargeType")
+        @com.aliyun.core.annotation.NameInMap("PConnVbrChargeType")
         private String pConnVbrChargeType;
 
-        @NameInMap("PConnVbrExpireTime")
+        @com.aliyun.core.annotation.NameInMap("PConnVbrExpireTime")
         private String pConnVbrExpireTime;
 
-        @NameInMap("PeerGatewayIp")
+        @com.aliyun.core.annotation.NameInMap("PeerGatewayIp")
         private String peerGatewayIp;
 
-        @NameInMap("PeerIpv6GatewayIp")
+        @com.aliyun.core.annotation.NameInMap("PeerIpv6GatewayIp")
         private String peerIpv6GatewayIp;
 
-        @NameInMap("PeeringIpv6SubnetMask")
+        @com.aliyun.core.annotation.NameInMap("PeeringIpv6SubnetMask")
         private String peeringIpv6SubnetMask;
 
-        @NameInMap("PeeringSubnetMask")
+        @com.aliyun.core.annotation.NameInMap("PeeringSubnetMask")
         private String peeringSubnetMask;
 
-        @NameInMap("PhysicalConnectionBusinessStatus")
+        @com.aliyun.core.annotation.NameInMap("PhysicalConnectionBusinessStatus")
         private String physicalConnectionBusinessStatus;
 
-        @NameInMap("PhysicalConnectionId")
+        @com.aliyun.core.annotation.NameInMap("PhysicalConnectionId")
         private String physicalConnectionId;
 
-        @NameInMap("PhysicalConnectionOwnerUid")
+        @com.aliyun.core.annotation.NameInMap("PhysicalConnectionOwnerUid")
         private String physicalConnectionOwnerUid;
 
-        @NameInMap("PhysicalConnectionStatus")
+        @com.aliyun.core.annotation.NameInMap("PhysicalConnectionStatus")
         private String physicalConnectionStatus;
 
-        @NameInMap("RecoveryTime")
+        @com.aliyun.core.annotation.NameInMap("RecoveryTime")
         private String recoveryTime;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("RouteTableId")
+        @com.aliyun.core.annotation.NameInMap("RouteTableId")
         private String routeTableId;
 
-        @NameInMap("SitelinkEnable")
+        @com.aliyun.core.annotation.NameInMap("SitelinkEnable")
         private Boolean sitelinkEnable;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private VirtualBorderRouterTypeTags tags;
 
-        @NameInMap("TerminationTime")
+        @com.aliyun.core.annotation.NameInMap("TerminationTime")
         private String terminationTime;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("VbrId")
+        @com.aliyun.core.annotation.NameInMap("VbrId")
         private String vbrId;
 
-        @NameInMap("VlanId")
+        @com.aliyun.core.annotation.NameInMap("VlanId")
         private Integer vlanId;
 
-        @NameInMap("VlanInterfaceId")
+        @com.aliyun.core.annotation.NameInMap("VlanInterfaceId")
         private String vlanInterfaceId;
 
         private VirtualBorderRouterType(Builder builder) {
@@ -1637,7 +1636,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
 
     }
     public static class VirtualBorderRouterSet extends TeaModel {
-        @NameInMap("VirtualBorderRouterType")
+        @com.aliyun.core.annotation.NameInMap("VirtualBorderRouterType")
         private java.util.List < VirtualBorderRouterType> virtualBorderRouterType;
 
         private VirtualBorderRouterSet(Builder builder) {

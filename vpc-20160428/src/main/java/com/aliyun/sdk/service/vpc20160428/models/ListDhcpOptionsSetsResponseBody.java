@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDhcpOptionsSetsResponseBody</p>
  */
 public class ListDhcpOptionsSetsResponseBody extends TeaModel {
-    @NameInMap("DhcpOptionsSets")
+    @com.aliyun.core.annotation.NameInMap("DhcpOptionsSets")
     private java.util.List < DhcpOptionsSets> dhcpOptionsSets;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private ListDhcpOptionsSetsResponseBody(Builder builder) {
@@ -116,16 +115,16 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
     } 
 
     public static class DhcpOptions extends TeaModel {
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("DomainNameServers")
+        @com.aliyun.core.annotation.NameInMap("DomainNameServers")
         private String domainNameServers;
 
-        @NameInMap("Ipv6LeaseTime")
+        @com.aliyun.core.annotation.NameInMap("Ipv6LeaseTime")
         private String ipv6LeaseTime;
 
-        @NameInMap("LeaseTime")
+        @com.aliyun.core.annotation.NameInMap("LeaseTime")
         private String leaseTime;
 
         private DhcpOptions(Builder builder) {
@@ -225,10 +224,10 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -286,31 +285,31 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
 
     }
     public static class DhcpOptionsSets extends TeaModel {
-        @NameInMap("AssociateVpcCount")
+        @com.aliyun.core.annotation.NameInMap("AssociateVpcCount")
         private Integer associateVpcCount;
 
-        @NameInMap("DhcpOptions")
+        @com.aliyun.core.annotation.NameInMap("DhcpOptions")
         private DhcpOptions dhcpOptions;
 
-        @NameInMap("DhcpOptionsSetDescription")
+        @com.aliyun.core.annotation.NameInMap("DhcpOptionsSetDescription")
         private String dhcpOptionsSetDescription;
 
-        @NameInMap("DhcpOptionsSetId")
+        @com.aliyun.core.annotation.NameInMap("DhcpOptionsSetId")
         private String dhcpOptionsSetId;
 
-        @NameInMap("DhcpOptionsSetName")
+        @com.aliyun.core.annotation.NameInMap("DhcpOptionsSetName")
         private String dhcpOptionsSetName;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private Long ownerId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
         private DhcpOptionsSets(Builder builder) {

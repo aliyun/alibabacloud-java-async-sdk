@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSslVpnClientCertsResponseBody</p>
  */
 public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SslVpnClientCertKeys")
+    @com.aliyun.core.annotation.NameInMap("SslVpnClientCertKeys")
     private SslVpnClientCertKeys sslVpnClientCertKeys;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeSslVpnClientCertsResponseBody(Builder builder) {
@@ -132,28 +131,28 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
     } 
 
     public static class SslVpnClientCertKey extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SslVpnClientCertId")
+        @com.aliyun.core.annotation.NameInMap("SslVpnClientCertId")
         private String sslVpnClientCertId;
 
-        @NameInMap("SslVpnServerId")
+        @com.aliyun.core.annotation.NameInMap("SslVpnServerId")
         private String sslVpnServerId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private SslVpnClientCertKey(Builder builder) {
@@ -327,7 +326,7 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
 
     }
     public static class SslVpnClientCertKeys extends TeaModel {
-        @NameInMap("SslVpnClientCertKey")
+        @com.aliyun.core.annotation.NameInMap("SslVpnClientCertKey")
         private java.util.List < SslVpnClientCertKey> sslVpnClientCertKey;
 
         private SslVpnClientCertKeys(Builder builder) {

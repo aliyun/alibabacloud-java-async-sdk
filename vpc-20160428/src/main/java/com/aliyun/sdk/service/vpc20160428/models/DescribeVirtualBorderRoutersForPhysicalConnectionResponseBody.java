@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody</p>
  */
 public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("VirtualBorderRouterForPhysicalConnectionSet")
+    @com.aliyun.core.annotation.NameInMap("VirtualBorderRouterForPhysicalConnectionSet")
     private VirtualBorderRouterForPhysicalConnectionSet virtualBorderRouterForPhysicalConnectionSet;
 
     private DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody(Builder builder) {
@@ -132,73 +131,73 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
     } 
 
     public static class VirtualBorderRouterForPhysicalConnectionType extends TeaModel {
-        @NameInMap("ActivationTime")
+        @com.aliyun.core.annotation.NameInMap("ActivationTime")
         private String activationTime;
 
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private String bandwidth;
 
-        @NameInMap("BandwidthStatus")
+        @com.aliyun.core.annotation.NameInMap("BandwidthStatus")
         private String bandwidthStatus;
 
-        @NameInMap("CircuitCode")
+        @com.aliyun.core.annotation.NameInMap("CircuitCode")
         private String circuitCode;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("EccId")
+        @com.aliyun.core.annotation.NameInMap("EccId")
         private String eccId;
 
-        @NameInMap("EnableIpv6")
+        @com.aliyun.core.annotation.NameInMap("EnableIpv6")
         private Boolean enableIpv6;
 
-        @NameInMap("LocalGatewayIp")
+        @com.aliyun.core.annotation.NameInMap("LocalGatewayIp")
         private String localGatewayIp;
 
-        @NameInMap("LocalIpv6GatewayIp")
+        @com.aliyun.core.annotation.NameInMap("LocalIpv6GatewayIp")
         private String localIpv6GatewayIp;
 
-        @NameInMap("PConnVbrBussinessStatus")
+        @com.aliyun.core.annotation.NameInMap("PConnVbrBussinessStatus")
         private String pConnVbrBussinessStatus;
 
-        @NameInMap("PConnVbrChargeType")
+        @com.aliyun.core.annotation.NameInMap("PConnVbrChargeType")
         private String pConnVbrChargeType;
 
-        @NameInMap("PConnVbrExpireTime")
+        @com.aliyun.core.annotation.NameInMap("PConnVbrExpireTime")
         private String pConnVbrExpireTime;
 
-        @NameInMap("PeerGatewayIp")
+        @com.aliyun.core.annotation.NameInMap("PeerGatewayIp")
         private String peerGatewayIp;
 
-        @NameInMap("PeerIpv6GatewayIp")
+        @com.aliyun.core.annotation.NameInMap("PeerIpv6GatewayIp")
         private String peerIpv6GatewayIp;
 
-        @NameInMap("PeeringIpv6SubnetMask")
+        @com.aliyun.core.annotation.NameInMap("PeeringIpv6SubnetMask")
         private String peeringIpv6SubnetMask;
 
-        @NameInMap("PeeringSubnetMask")
+        @com.aliyun.core.annotation.NameInMap("PeeringSubnetMask")
         private String peeringSubnetMask;
 
-        @NameInMap("RecoveryTime")
+        @com.aliyun.core.annotation.NameInMap("RecoveryTime")
         private String recoveryTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TerminationTime")
+        @com.aliyun.core.annotation.NameInMap("TerminationTime")
         private String terminationTime;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("VbrId")
+        @com.aliyun.core.annotation.NameInMap("VbrId")
         private String vbrId;
 
-        @NameInMap("VbrOwnerUid")
+        @com.aliyun.core.annotation.NameInMap("VbrOwnerUid")
         private Long vbrOwnerUid;
 
-        @NameInMap("VlanId")
+        @com.aliyun.core.annotation.NameInMap("VlanId")
         private Integer vlanId;
 
         private VirtualBorderRouterForPhysicalConnectionType(Builder builder) {
@@ -649,7 +648,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
 
     }
     public static class VirtualBorderRouterForPhysicalConnectionSet extends TeaModel {
-        @NameInMap("VirtualBorderRouterForPhysicalConnectionType")
+        @com.aliyun.core.annotation.NameInMap("VirtualBorderRouterForPhysicalConnectionType")
         private java.util.List < VirtualBorderRouterForPhysicalConnectionType> virtualBorderRouterForPhysicalConnectionType;
 
         private VirtualBorderRouterForPhysicalConnectionSet(Builder builder) {

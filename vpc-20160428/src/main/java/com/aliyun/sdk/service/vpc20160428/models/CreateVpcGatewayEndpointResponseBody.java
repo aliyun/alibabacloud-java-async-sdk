@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateVpcGatewayEndpointResponseBody</p>
  */
 public class CreateVpcGatewayEndpointResponseBody extends TeaModel {
-    @NameInMap("CreationTime")
+    @com.aliyun.core.annotation.NameInMap("CreationTime")
     private String creationTime;
 
-    @NameInMap("EndpointId")
+    @com.aliyun.core.annotation.NameInMap("EndpointId")
     private String endpointId;
 
-    @NameInMap("EndpointName")
+    @com.aliyun.core.annotation.NameInMap("EndpointName")
     private String endpointName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("ServiceName")
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
 
     private CreateVpcGatewayEndpointResponseBody(Builder builder) {

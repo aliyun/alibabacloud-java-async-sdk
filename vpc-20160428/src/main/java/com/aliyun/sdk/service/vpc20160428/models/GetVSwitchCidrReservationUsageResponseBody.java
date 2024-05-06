@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetVSwitchCidrReservationUsageResponseBody</p>
  */
 public class GetVSwitchCidrReservationUsageResponseBody extends TeaModel {
-    @NameInMap("CidrReservationUsages")
+    @com.aliyun.core.annotation.NameInMap("CidrReservationUsages")
     private java.util.List < CidrReservationUsages> cidrReservationUsages;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Long maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private GetVSwitchCidrReservationUsageResponseBody(Builder builder) {
@@ -136,22 +135,22 @@ public class GetVSwitchCidrReservationUsageResponseBody extends TeaModel {
     } 
 
     public static class CidrReservationUsages extends TeaModel {
-        @NameInMap("IpPrefixCidr")
+        @com.aliyun.core.annotation.NameInMap("IpPrefixCidr")
         private String ipPrefixCidr;
 
-        @NameInMap("IpPrefixId")
+        @com.aliyun.core.annotation.NameInMap("IpPrefixId")
         private String ipPrefixId;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("VSwitchCidrReservationId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchCidrReservationId")
         private String vSwitchCidrReservationId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
         private CidrReservationUsages(Builder builder) {

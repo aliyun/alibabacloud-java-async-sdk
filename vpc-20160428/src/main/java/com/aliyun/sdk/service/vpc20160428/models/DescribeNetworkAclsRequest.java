@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,61 +11,61 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeNetworkAclsRequest</p>
  */
 public class DescribeNetworkAclsRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("NetworkAclId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkAclId")
     private String networkAclId;
 
-    @Query
-    @NameInMap("NetworkAclName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkAclName")
     private String networkAclName;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
-    @Query
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List < Tags> tags;
 
-    @Query
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     private DescribeNetworkAclsRequest(Builder builder) {
@@ -384,10 +383,10 @@ public class DescribeNetworkAclsRequest extends Request {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {

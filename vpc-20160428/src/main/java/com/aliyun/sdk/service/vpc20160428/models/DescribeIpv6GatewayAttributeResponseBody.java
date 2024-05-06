@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,46 +11,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeIpv6GatewayAttributeResponseBody</p>
  */
 public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
-    @NameInMap("BusinessStatus")
+    @com.aliyun.core.annotation.NameInMap("BusinessStatus")
     private String businessStatus;
 
-    @NameInMap("CreationTime")
+    @com.aliyun.core.annotation.NameInMap("CreationTime")
     private String creationTime;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("ExpiredTime")
+    @com.aliyun.core.annotation.NameInMap("ExpiredTime")
     private String expiredTime;
 
-    @NameInMap("GatewayRouteTableId")
+    @com.aliyun.core.annotation.NameInMap("GatewayRouteTableId")
     private String gatewayRouteTableId;
 
-    @NameInMap("InstanceChargeType")
+    @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
     private String instanceChargeType;
 
-    @NameInMap("Ipv6GatewayId")
+    @com.aliyun.core.annotation.NameInMap("Ipv6GatewayId")
     private String ipv6GatewayId;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private Tags tags;
 
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     private DescribeIpv6GatewayAttributeResponseBody(Builder builder) {
@@ -324,10 +323,10 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -391,7 +390,7 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {

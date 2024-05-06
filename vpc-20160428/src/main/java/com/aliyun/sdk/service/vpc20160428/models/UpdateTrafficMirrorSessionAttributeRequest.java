@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,74 +11,74 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateTrafficMirrorSessionAttributeRequest</p>
  */
 public class UpdateTrafficMirrorSessionAttributeRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("Enabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Enabled")
     private Boolean enabled;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PacketLength")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PacketLength")
     private Integer packetLength;
 
-    @Query
-    @NameInMap("Priority")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Priority")
     private Integer priority;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TrafficMirrorFilterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficMirrorFilterId")
     private String trafficMirrorFilterId;
 
-    @Query
-    @NameInMap("TrafficMirrorSessionDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficMirrorSessionDescription")
     private String trafficMirrorSessionDescription;
 
-    @Query
-    @NameInMap("TrafficMirrorSessionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficMirrorSessionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String trafficMirrorSessionId;
 
-    @Query
-    @NameInMap("TrafficMirrorSessionName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficMirrorSessionName")
     private String trafficMirrorSessionName;
 
-    @Query
-    @NameInMap("TrafficMirrorTargetId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficMirrorTargetId")
     private String trafficMirrorTargetId;
 
-    @Query
-    @NameInMap("TrafficMirrorTargetType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficMirrorTargetType")
     private String trafficMirrorTargetType;
 
-    @Query
-    @NameInMap("VirtualNetworkId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VirtualNetworkId")
     private Integer virtualNetworkId;
 
     private UpdateTrafficMirrorSessionAttributeRequest(Builder builder) {

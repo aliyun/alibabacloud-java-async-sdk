@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,41 +11,41 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AllocateVpcIpv6CidrRequest</p>
  */
 public class AllocateVpcIpv6CidrRequest extends Request {
-    @Query
-    @NameInMap("AddressPoolType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddressPoolType")
     private String addressPoolType;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Ipv6CidrBlock")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6CidrBlock")
     private String ipv6CidrBlock;
 
-    @Query
-    @NameInMap("Ipv6Isp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6Isp")
     private String ipv6Isp;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private AllocateVpcIpv6CidrRequest(Builder builder) {

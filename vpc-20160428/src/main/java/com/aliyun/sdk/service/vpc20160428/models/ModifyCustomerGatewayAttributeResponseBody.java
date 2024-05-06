@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyCustomerGatewayAttributeResponseBody</p>
  */
 public class ModifyCustomerGatewayAttributeResponseBody extends TeaModel {
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private Long createTime;
 
-    @NameInMap("CustomerGatewayId")
+    @com.aliyun.core.annotation.NameInMap("CustomerGatewayId")
     private String customerGatewayId;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("IpAddress")
+    @com.aliyun.core.annotation.NameInMap("IpAddress")
     private String ipAddress;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private ModifyCustomerGatewayAttributeResponseBody(Builder builder) {

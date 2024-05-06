@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,54 +11,54 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListVSwitchCidrReservationsRequest</p>
  */
 public class ListVSwitchCidrReservationsRequest extends Request {
-    @Query
-    @NameInMap("IpVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpVersion")
     private String ipVersion;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Long maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List < Tags> tags;
 
-    @Query
-    @NameInMap("VSwitchCidrReservationIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchCidrReservationIds")
     private java.util.List < String > vSwitchCidrReservationIds;
 
-    @Query
-    @NameInMap("VSwitchCidrReservationType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchCidrReservationType")
     private String vSwitchCidrReservationType;
 
-    @Query
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
     private ListVSwitchCidrReservationsRequest(Builder builder) {
@@ -339,10 +338,10 @@ public class ListVSwitchCidrReservationsRequest extends Request {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {

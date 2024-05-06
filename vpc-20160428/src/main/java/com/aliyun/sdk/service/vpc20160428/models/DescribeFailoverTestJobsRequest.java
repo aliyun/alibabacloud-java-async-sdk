@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeFailoverTestJobsRequest</p>
  */
 public class DescribeFailoverTestJobsRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Filter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
     private java.util.List < Filter> filter;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
     private DescribeFailoverTestJobsRequest(Builder builder) {
@@ -231,10 +230,10 @@ public class DescribeFailoverTestJobsRequest extends Request {
     } 
 
     public static class Filter extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private java.util.List < String > value;
 
         private Filter(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVpnGatewaysResponseBody</p>
  */
 public class DescribeVpnGatewaysResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("VpnGateways")
+    @com.aliyun.core.annotation.NameInMap("VpnGateways")
     private VpnGateways vpnGateways;
 
     private DescribeVpnGatewaysResponseBody(Builder builder) {
@@ -131,26 +130,67 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
 
     } 
 
+    public static class EniInstanceIds extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EniInstanceId")
+        private java.util.List < String > eniInstanceId;
+
+        private EniInstanceIds(Builder builder) {
+            this.eniInstanceId = builder.eniInstanceId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EniInstanceIds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return eniInstanceId
+         */
+        public java.util.List < String > getEniInstanceId() {
+            return this.eniInstanceId;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > eniInstanceId; 
+
+            /**
+             * EniInstanceId.
+             */
+            public Builder eniInstanceId(java.util.List < String > eniInstanceId) {
+                this.eniInstanceId = eniInstanceId;
+                return this;
+            }
+
+            public EniInstanceIds build() {
+                return new EniInstanceIds(this);
+            } 
+
+        } 
+
+    }
     public static class ReservationData extends TeaModel {
-        @NameInMap("ReservationEndTime")
+        @com.aliyun.core.annotation.NameInMap("ReservationEndTime")
         private String reservationEndTime;
 
-        @NameInMap("ReservationIpsec")
+        @com.aliyun.core.annotation.NameInMap("ReservationIpsec")
         private String reservationIpsec;
 
-        @NameInMap("ReservationMaxConnections")
+        @com.aliyun.core.annotation.NameInMap("ReservationMaxConnections")
         private Integer reservationMaxConnections;
 
-        @NameInMap("ReservationOrderType")
+        @com.aliyun.core.annotation.NameInMap("ReservationOrderType")
         private String reservationOrderType;
 
-        @NameInMap("ReservationSpec")
+        @com.aliyun.core.annotation.NameInMap("ReservationSpec")
         private String reservationSpec;
 
-        @NameInMap("ReservationSsl")
+        @com.aliyun.core.annotation.NameInMap("ReservationSsl")
         private String reservationSsl;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ReservationData(Builder builder) {
@@ -313,10 +353,10 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -374,7 +414,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -415,82 +455,85 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
 
     }
     public static class VpnGateway extends TeaModel {
-        @NameInMap("AutoPropagate")
+        @com.aliyun.core.annotation.NameInMap("AutoPropagate")
         private Boolean autoPropagate;
 
-        @NameInMap("BusinessStatus")
+        @com.aliyun.core.annotation.NameInMap("BusinessStatus")
         private String businessStatus;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DisasterRecoveryInternetIp")
+        @com.aliyun.core.annotation.NameInMap("DisasterRecoveryInternetIp")
         private String disasterRecoveryInternetIp;
 
-        @NameInMap("DisasterRecoveryVSwitchId")
+        @com.aliyun.core.annotation.NameInMap("DisasterRecoveryVSwitchId")
         private String disasterRecoveryVSwitchId;
 
-        @NameInMap("EnableBgp")
+        @com.aliyun.core.annotation.NameInMap("EnableBgp")
         private Boolean enableBgp;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("EniInstanceIds")
+        private EniInstanceIds eniInstanceIds;
+
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IpsecVpn")
+        @com.aliyun.core.annotation.NameInMap("IpsecVpn")
         private String ipsecVpn;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("ReservationData")
+        @com.aliyun.core.annotation.NameInMap("ReservationData")
         private ReservationData reservationData;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Spec")
+        @com.aliyun.core.annotation.NameInMap("Spec")
         private String spec;
 
-        @NameInMap("SslMaxConnections")
+        @com.aliyun.core.annotation.NameInMap("SslMaxConnections")
         private Long sslMaxConnections;
 
-        @NameInMap("SslVpn")
+        @com.aliyun.core.annotation.NameInMap("SslVpn")
         private String sslVpn;
 
-        @NameInMap("SslVpnInternetIp")
+        @com.aliyun.core.annotation.NameInMap("SslVpnInternetIp")
         private String sslVpnInternetIp;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpnGatewayId")
+        @com.aliyun.core.annotation.NameInMap("VpnGatewayId")
         private String vpnGatewayId;
 
-        @NameInMap("VpnType")
+        @com.aliyun.core.annotation.NameInMap("VpnType")
         private String vpnType;
 
         private VpnGateway(Builder builder) {
@@ -503,6 +546,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             this.disasterRecoveryVSwitchId = builder.disasterRecoveryVSwitchId;
             this.enableBgp = builder.enableBgp;
             this.endTime = builder.endTime;
+            this.eniInstanceIds = builder.eniInstanceIds;
             this.internetIp = builder.internetIp;
             this.ipsecVpn = builder.ipsecVpn;
             this.name = builder.name;
@@ -591,6 +635,13 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
          */
         public Long getEndTime() {
             return this.endTime;
+        }
+
+        /**
+         * @return eniInstanceIds
+         */
+        public EniInstanceIds getEniInstanceIds() {
+            return this.eniInstanceIds;
         }
 
         /**
@@ -722,6 +773,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             private String disasterRecoveryVSwitchId; 
             private Boolean enableBgp; 
             private Long endTime; 
+            private EniInstanceIds eniInstanceIds; 
             private String internetIp; 
             private String ipsecVpn; 
             private String name; 
@@ -836,6 +888,14 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * EniInstanceIds.
+             */
+            public Builder eniInstanceIds(EniInstanceIds eniInstanceIds) {
+                this.eniInstanceIds = eniInstanceIds;
                 return this;
             }
 
@@ -1044,7 +1104,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
 
     }
     public static class VpnGateways extends TeaModel {
-        @NameInMap("VpnGateway")
+        @com.aliyun.core.annotation.NameInMap("VpnGateway")
         private java.util.List < VpnGateway> vpnGateway;
 
         private VpnGateways(Builder builder) {

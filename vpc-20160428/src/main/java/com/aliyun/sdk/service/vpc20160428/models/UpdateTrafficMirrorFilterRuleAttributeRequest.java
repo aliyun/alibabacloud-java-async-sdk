@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,66 +11,66 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateTrafficMirrorFilterRuleAttributeRequest</p>
  */
 public class UpdateTrafficMirrorFilterRuleAttributeRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DestinationCidrBlock")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
     private String destinationCidrBlock;
 
-    @Query
-    @NameInMap("DestinationPortRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationPortRange")
     private String destinationPortRange;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Priority")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Priority")
     private Integer priority;
 
-    @Query
-    @NameInMap("Protocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Protocol")
     private String protocol;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RuleAction")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleAction")
     private String ruleAction;
 
-    @Query
-    @NameInMap("SourceCidrBlock")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceCidrBlock")
     private String sourceCidrBlock;
 
-    @Query
-    @NameInMap("SourcePortRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourcePortRange")
     private String sourcePortRange;
 
-    @Query
-    @NameInMap("TrafficMirrorFilterRuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficMirrorFilterRuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String trafficMirrorFilterRuleId;
 
     private UpdateTrafficMirrorFilterRuleAttributeRequest(Builder builder) {

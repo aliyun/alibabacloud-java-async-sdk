@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DiagnoseVpnConnectionsResponseBody</p>
  */
 public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("VpnConnections")
+    @com.aliyun.core.annotation.NameInMap("VpnConnections")
     private java.util.List < VpnConnections> vpnConnections;
 
     private DiagnoseVpnConnectionsResponseBody(Builder builder) {
@@ -132,31 +131,31 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
     } 
 
     public static class VpnConnections extends TeaModel {
-        @NameInMap("FailedReason")
+        @com.aliyun.core.annotation.NameInMap("FailedReason")
         private String failedReason;
 
-        @NameInMap("FailedReasonCode")
+        @com.aliyun.core.annotation.NameInMap("FailedReasonCode")
         private String failedReasonCode;
 
-        @NameInMap("FailedTime")
+        @com.aliyun.core.annotation.NameInMap("FailedTime")
         private Long failedTime;
 
-        @NameInMap("MismatchLocalParam")
+        @com.aliyun.core.annotation.NameInMap("MismatchLocalParam")
         private String mismatchLocalParam;
 
-        @NameInMap("MismatchRemoteParam")
+        @com.aliyun.core.annotation.NameInMap("MismatchRemoteParam")
         private String mismatchRemoteParam;
 
-        @NameInMap("Severity")
+        @com.aliyun.core.annotation.NameInMap("Severity")
         private String severity;
 
-        @NameInMap("SourceLog")
+        @com.aliyun.core.annotation.NameInMap("SourceLog")
         private String sourceLog;
 
-        @NameInMap("TunnelId")
+        @com.aliyun.core.annotation.NameInMap("TunnelId")
         private String tunnelId;
 
-        @NameInMap("VpnConnectionId")
+        @com.aliyun.core.annotation.NameInMap("VpnConnectionId")
         private String vpnConnectionId;
 
         private VpnConnections(Builder builder) {

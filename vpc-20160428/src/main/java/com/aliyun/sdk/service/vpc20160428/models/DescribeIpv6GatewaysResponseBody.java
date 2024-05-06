@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeIpv6GatewaysResponseBody</p>
  */
 public class DescribeIpv6GatewaysResponseBody extends TeaModel {
-    @NameInMap("Ipv6Gateways")
+    @com.aliyun.core.annotation.NameInMap("Ipv6Gateways")
     private Ipv6Gateways ipv6Gateways;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeIpv6GatewaysResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -193,7 +192,7 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -234,40 +233,40 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
 
     }
     public static class Ipv6Gateway extends TeaModel {
-        @NameInMap("BusinessStatus")
+        @com.aliyun.core.annotation.NameInMap("BusinessStatus")
         private String businessStatus;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("InstanceChargeType")
+        @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
         private String instanceChargeType;
 
-        @NameInMap("Ipv6GatewayId")
+        @com.aliyun.core.annotation.NameInMap("Ipv6GatewayId")
         private String ipv6GatewayId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private Ipv6Gateway(Builder builder) {
@@ -507,7 +506,7 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
 
     }
     public static class Ipv6Gateways extends TeaModel {
-        @NameInMap("Ipv6Gateway")
+        @com.aliyun.core.annotation.NameInMap("Ipv6Gateway")
         private java.util.List < Ipv6Gateway> ipv6Gateway;
 
         private Ipv6Gateways(Builder builder) {

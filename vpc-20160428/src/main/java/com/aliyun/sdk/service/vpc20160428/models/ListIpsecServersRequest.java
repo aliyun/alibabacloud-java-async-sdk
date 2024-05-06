@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListIpsecServersRequest</p>
  */
 public class ListIpsecServersRequest extends Request {
-    @Query
-    @NameInMap("IpsecServerId")
-    @Validation(maxLength = 128)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpsecServerId")
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
     private java.util.List < String > ipsecServerId;
 
-    @Query
-    @NameInMap("IpsecServerName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpsecServerName")
     private String ipsecServerName;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("VpnGatewayId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpnGatewayId")
     private String vpnGatewayId;
 
     private ListIpsecServersRequest(Builder builder) {

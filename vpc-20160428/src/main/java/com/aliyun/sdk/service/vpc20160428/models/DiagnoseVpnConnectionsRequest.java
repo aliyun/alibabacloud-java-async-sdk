@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DiagnoseVpnConnectionsRequest</p>
  */
 public class DiagnoseVpnConnectionsRequest extends Request {
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TunnelIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TunnelIds")
     private java.util.List < String > tunnelIds;
 
-    @Query
-    @NameInMap("VpnConnectionIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpnConnectionIds")
     private java.util.List < String > vpnConnectionIds;
 
-    @Query
-    @NameInMap("VpnGatewayId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpnGatewayId")
     private String vpnGatewayId;
 
     private DiagnoseVpnConnectionsRequest(Builder builder) {

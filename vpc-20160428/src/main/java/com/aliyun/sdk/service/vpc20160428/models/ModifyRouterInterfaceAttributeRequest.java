@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,70 +11,70 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyRouterInterfaceAttributeRequest</p>
  */
 public class ModifyRouterInterfaceAttributeRequest extends Request {
-    @Query
-    @NameInMap("DeleteHealthCheckIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeleteHealthCheckIp")
     private Boolean deleteHealthCheckIp;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("HcRate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HcRate")
     private Integer hcRate;
 
-    @Query
-    @NameInMap("HcThreshold")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HcThreshold")
     private Integer hcThreshold;
 
-    @Query
-    @NameInMap("HealthCheckSourceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckSourceIp")
     private String healthCheckSourceIp;
 
-    @Query
-    @NameInMap("HealthCheckTargetIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckTargetIp")
     private String healthCheckTargetIp;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OppositeInterfaceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OppositeInterfaceId")
     private String oppositeInterfaceId;
 
-    @Query
-    @NameInMap("OppositeInterfaceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OppositeInterfaceOwnerId")
     private Long oppositeInterfaceOwnerId;
 
-    @Query
-    @NameInMap("OppositeRouterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OppositeRouterId")
     private String oppositeRouterId;
 
-    @Query
-    @NameInMap("OppositeRouterType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OppositeRouterType")
     private String oppositeRouterType;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RouterInterfaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouterInterfaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String routerInterfaceId;
 
     private ModifyRouterInterfaceAttributeRequest(Builder builder) {

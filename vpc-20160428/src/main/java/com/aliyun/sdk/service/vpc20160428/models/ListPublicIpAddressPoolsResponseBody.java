@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPublicIpAddressPoolsResponseBody</p>
  */
 public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("PublicIpAddressPoolList")
+    @com.aliyun.core.annotation.NameInMap("PublicIpAddressPoolList")
     private java.util.List < PublicIpAddressPoolList> publicIpAddressPoolList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListPublicIpAddressPoolsResponseBody(Builder builder) {
@@ -116,10 +115,10 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -177,58 +176,58 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
 
     }
     public static class PublicIpAddressPoolList extends TeaModel {
-        @NameInMap("BizType")
+        @com.aliyun.core.annotation.NameInMap("BizType")
         private String bizType;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("IpAddressRemaining")
+        @com.aliyun.core.annotation.NameInMap("IpAddressRemaining")
         private Boolean ipAddressRemaining;
 
-        @NameInMap("Isp")
+        @com.aliyun.core.annotation.NameInMap("Isp")
         private String isp;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private Long ownerId;
 
-        @NameInMap("PublicIpAddressPoolId")
+        @com.aliyun.core.annotation.NameInMap("PublicIpAddressPoolId")
         private String publicIpAddressPoolId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SecurityProtectionTypes")
+        @com.aliyun.core.annotation.NameInMap("SecurityProtectionTypes")
         private java.util.List < String > securityProtectionTypes;
 
-        @NameInMap("ShareType")
+        @com.aliyun.core.annotation.NameInMap("ShareType")
         private String shareType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("TotalIpNum")
+        @com.aliyun.core.annotation.NameInMap("TotalIpNum")
         private Integer totalIpNum;
 
-        @NameInMap("UsedIpNum")
+        @com.aliyun.core.annotation.NameInMap("UsedIpNum")
         private Integer usedIpNum;
 
-        @NameInMap("UserType")
+        @com.aliyun.core.annotation.NameInMap("UserType")
         private Boolean userType;
 
-        @NameInMap("Zones")
+        @com.aliyun.core.annotation.NameInMap("Zones")
         private java.util.List < String > zones;
 
         private PublicIpAddressPoolList(Builder builder) {

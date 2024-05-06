@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeExpressConnectTrafficQosResponseBody</p>
  */
 public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private String count;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("QosList")
+    @com.aliyun.core.annotation.NameInMap("QosList")
     private java.util.List < QosList> qosList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeExpressConnectTrafficQosResponseBody(Builder builder) {
@@ -152,16 +151,16 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
     } 
 
     public static class AssociatedInstanceList extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceProgressing")
+        @com.aliyun.core.annotation.NameInMap("InstanceProgressing")
         private Integer instanceProgressing;
 
-        @NameInMap("InstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("InstanceStatus")
         private String instanceStatus;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
         private AssociatedInstanceList(Builder builder) {
@@ -253,25 +252,25 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
 
     }
     public static class QueueList extends TeaModel {
-        @NameInMap("BandwidthPercent")
+        @com.aliyun.core.annotation.NameInMap("BandwidthPercent")
         private String bandwidthPercent;
 
-        @NameInMap("QosId")
+        @com.aliyun.core.annotation.NameInMap("QosId")
         private String qosId;
 
-        @NameInMap("QueueDescription")
+        @com.aliyun.core.annotation.NameInMap("QueueDescription")
         private String queueDescription;
 
-        @NameInMap("QueueId")
+        @com.aliyun.core.annotation.NameInMap("QueueId")
         private String queueId;
 
-        @NameInMap("QueueName")
+        @com.aliyun.core.annotation.NameInMap("QueueName")
         private String queueName;
 
-        @NameInMap("QueueType")
+        @com.aliyun.core.annotation.NameInMap("QueueType")
         private String queueType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private QueueList(Builder builder) {
@@ -414,25 +413,25 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
 
     }
     public static class QosList extends TeaModel {
-        @NameInMap("AssociatedInstanceList")
+        @com.aliyun.core.annotation.NameInMap("AssociatedInstanceList")
         private java.util.List < AssociatedInstanceList> associatedInstanceList;
 
-        @NameInMap("Progressing")
+        @com.aliyun.core.annotation.NameInMap("Progressing")
         private Integer progressing;
 
-        @NameInMap("QosDescription")
+        @com.aliyun.core.annotation.NameInMap("QosDescription")
         private String qosDescription;
 
-        @NameInMap("QosId")
+        @com.aliyun.core.annotation.NameInMap("QosId")
         private String qosId;
 
-        @NameInMap("QosName")
+        @com.aliyun.core.annotation.NameInMap("QosName")
         private String qosName;
 
-        @NameInMap("QueueList")
+        @com.aliyun.core.annotation.NameInMap("QueueList")
         private java.util.List < QueueList> queueList;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private QosList(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateIPv6TranslatorEntryResponseBody</p>
  */
 public class CreateIPv6TranslatorEntryResponseBody extends TeaModel {
-    @NameInMap("Ipv6TranslatorEntryId")
+    @com.aliyun.core.annotation.NameInMap("Ipv6TranslatorEntryId")
     private String ipv6TranslatorEntryId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateIPv6TranslatorEntryResponseBody(Builder builder) {

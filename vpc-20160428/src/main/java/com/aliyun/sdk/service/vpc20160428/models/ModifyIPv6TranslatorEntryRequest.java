@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,70 +11,70 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyIPv6TranslatorEntryRequest</p>
  */
 public class ModifyIPv6TranslatorEntryRequest extends Request {
-    @Query
-    @NameInMap("AclId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclId")
     private String aclId;
 
-    @Query
-    @NameInMap("AclStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclStatus")
     private String aclStatus;
 
-    @Query
-    @NameInMap("AclType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclType")
     private String aclType;
 
-    @Query
-    @NameInMap("AllocateIpv6Port")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllocateIpv6Port")
     private Integer allocateIpv6Port;
 
-    @Query
-    @NameInMap("BackendIpv4Addr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackendIpv4Addr")
     private String backendIpv4Addr;
 
-    @Query
-    @NameInMap("BackendIpv4Port")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackendIpv4Port")
     private Integer backendIpv4Port;
 
-    @Query
-    @NameInMap("EntryBandwidth")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EntryBandwidth")
     private Integer entryBandwidth;
 
-    @Query
-    @NameInMap("EntryDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EntryDescription")
     private String entryDescription;
 
-    @Query
-    @NameInMap("EntryName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EntryName")
     private String entryName;
 
-    @Query
-    @NameInMap("Ipv6TranslatorEntryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6TranslatorEntryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ipv6TranslatorEntryId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TransProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransProtocol")
     private String transProtocol;
 
     private ModifyIPv6TranslatorEntryRequest(Builder builder) {

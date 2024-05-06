@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeGlobalAccelerationInstancesResponseBody</p>
  */
 public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
-    @NameInMap("GlobalAccelerationInstances")
+    @com.aliyun.core.annotation.NameInMap("GlobalAccelerationInstances")
     private GlobalAccelerationInstances globalAccelerationInstances;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeGlobalAccelerationInstancesResponseBody(Builder builder) {
@@ -132,16 +131,16 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
     } 
 
     public static class BackendServer extends TeaModel {
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ServerId")
+        @com.aliyun.core.annotation.NameInMap("ServerId")
         private String serverId;
 
-        @NameInMap("ServerIpAddress")
+        @com.aliyun.core.annotation.NameInMap("ServerIpAddress")
         private String serverIpAddress;
 
-        @NameInMap("ServerType")
+        @com.aliyun.core.annotation.NameInMap("ServerType")
         private String serverType;
 
         private BackendServer(Builder builder) {
@@ -237,7 +236,7 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
 
     }
     public static class BackendServers extends TeaModel {
-        @NameInMap("BackendServer")
+        @com.aliyun.core.annotation.NameInMap("BackendServer")
         private java.util.List < BackendServer> backendServer;
 
         private BackendServers(Builder builder) {
@@ -278,10 +277,10 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
 
     }
     public static class PublicIpAddress extends TeaModel {
-        @NameInMap("AllocationId")
+        @com.aliyun.core.annotation.NameInMap("AllocationId")
         private String allocationId;
 
-        @NameInMap("IpAddress")
+        @com.aliyun.core.annotation.NameInMap("IpAddress")
         private String ipAddress;
 
         private PublicIpAddress(Builder builder) {
@@ -339,7 +338,7 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
 
     }
     public static class PublicIpAddresses extends TeaModel {
-        @NameInMap("PublicIpAddress")
+        @com.aliyun.core.annotation.NameInMap("PublicIpAddress")
         private java.util.List < PublicIpAddress> publicIpAddress;
 
         private PublicIpAddresses(Builder builder) {
@@ -380,52 +379,52 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
 
     }
     public static class GlobalAccelerationInstance extends TeaModel {
-        @NameInMap("AccelerationLocation")
+        @com.aliyun.core.annotation.NameInMap("AccelerationLocation")
         private String accelerationLocation;
 
-        @NameInMap("BackendServers")
+        @com.aliyun.core.annotation.NameInMap("BackendServers")
         private BackendServers backendServers;
 
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private String bandwidth;
 
-        @NameInMap("BandwidthType")
+        @com.aliyun.core.annotation.NameInMap("BandwidthType")
         private String bandwidthType;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("GlobalAccelerationInstanceId")
+        @com.aliyun.core.annotation.NameInMap("GlobalAccelerationInstanceId")
         private String globalAccelerationInstanceId;
 
-        @NameInMap("InternetChargeType")
+        @com.aliyun.core.annotation.NameInMap("InternetChargeType")
         private String internetChargeType;
 
-        @NameInMap("IpAddress")
+        @com.aliyun.core.annotation.NameInMap("IpAddress")
         private String ipAddress;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PublicIpAddresses")
+        @com.aliyun.core.annotation.NameInMap("PublicIpAddresses")
         private PublicIpAddresses publicIpAddresses;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ServiceLocation")
+        @com.aliyun.core.annotation.NameInMap("ServiceLocation")
         private String serviceLocation;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private GlobalAccelerationInstance(Builder builder) {
@@ -731,7 +730,7 @@ public class DescribeGlobalAccelerationInstancesResponseBody extends TeaModel {
 
     }
     public static class GlobalAccelerationInstances extends TeaModel {
-        @NameInMap("GlobalAccelerationInstance")
+        @com.aliyun.core.annotation.NameInMap("GlobalAccelerationInstance")
         private java.util.List < GlobalAccelerationInstance> globalAccelerationInstance;
 
         private GlobalAccelerationInstances(Builder builder) {

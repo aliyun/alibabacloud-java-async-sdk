@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,46 +11,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateTrafficMirrorFilterRulesRequest</p>
  */
 public class CreateTrafficMirrorFilterRulesRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("EgressRules")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EgressRules")
     private java.util.List < EgressRules> egressRules;
 
-    @Query
-    @NameInMap("IngressRules")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IngressRules")
     private java.util.List < IngressRules> ingressRules;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TrafficMirrorFilterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficMirrorFilterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String trafficMirrorFilterId;
 
     private CreateTrafficMirrorFilterRulesRequest(Builder builder) {
@@ -291,25 +290,25 @@ public class CreateTrafficMirrorFilterRulesRequest extends Request {
     } 
 
     public static class EgressRules extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("DestinationCidrBlock")
+        @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
         private String destinationCidrBlock;
 
-        @NameInMap("DestinationPortRange")
+        @com.aliyun.core.annotation.NameInMap("DestinationPortRange")
         private String destinationPortRange;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("SourceCidrBlock")
+        @com.aliyun.core.annotation.NameInMap("SourceCidrBlock")
         private String sourceCidrBlock;
 
-        @NameInMap("SourcePortRange")
+        @com.aliyun.core.annotation.NameInMap("SourcePortRange")
         private String sourcePortRange;
 
         private EgressRules(Builder builder) {
@@ -468,25 +467,25 @@ public class CreateTrafficMirrorFilterRulesRequest extends Request {
 
     }
     public static class IngressRules extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("DestinationCidrBlock")
+        @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
         private String destinationCidrBlock;
 
-        @NameInMap("DestinationPortRange")
+        @com.aliyun.core.annotation.NameInMap("DestinationPortRange")
         private String destinationPortRange;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("SourceCidrBlock")
+        @com.aliyun.core.annotation.NameInMap("SourceCidrBlock")
         private String sourceCidrBlock;
 
-        @NameInMap("SourcePortRange")
+        @com.aliyun.core.annotation.NameInMap("SourcePortRange")
         private String sourcePortRange;
 
         private IngressRules(Builder builder) {

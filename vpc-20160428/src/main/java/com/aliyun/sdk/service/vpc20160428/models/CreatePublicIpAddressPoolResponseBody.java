@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreatePublicIpAddressPoolResponseBody</p>
  */
 public class CreatePublicIpAddressPoolResponseBody extends TeaModel {
-    @NameInMap("PublicIpAddressPoolId")
+    @com.aliyun.core.annotation.NameInMap("PublicIpAddressPoolId")
     private String publicIpAddressPoolId;
 
-    @NameInMap("PulbicIpAddressPoolId")
+    @com.aliyun.core.annotation.NameInMap("PulbicIpAddressPoolId")
     @Deprecated
     private String pulbicIpAddressPoolId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private CreatePublicIpAddressPoolResponseBody(Builder builder) {

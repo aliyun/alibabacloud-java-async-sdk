@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,74 +11,74 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTrafficMirrorSessionsRequest</p>
  */
 public class ListTrafficMirrorSessionsRequest extends Request {
-    @Query
-    @NameInMap("Enabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Enabled")
     private Boolean enabled;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Priority")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Priority")
     private Integer priority;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List < Tags> tags;
 
-    @Query
-    @NameInMap("TrafficMirrorFilterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficMirrorFilterId")
     private String trafficMirrorFilterId;
 
-    @Query
-    @NameInMap("TrafficMirrorSessionIds")
-    @Validation(maxLength = 128)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficMirrorSessionIds")
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
     private java.util.List < String > trafficMirrorSessionIds;
 
-    @Query
-    @NameInMap("TrafficMirrorSessionName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficMirrorSessionName")
     private String trafficMirrorSessionName;
 
-    @Query
-    @NameInMap("TrafficMirrorSourceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficMirrorSourceId")
     private String trafficMirrorSourceId;
 
-    @Query
-    @NameInMap("TrafficMirrorTargetId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficMirrorTargetId")
     private String trafficMirrorTargetId;
 
-    @Query
-    @NameInMap("VirtualNetworkId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VirtualNetworkId")
     private Integer virtualNetworkId;
 
     private ListTrafficMirrorSessionsRequest(Builder builder) {
@@ -454,10 +453,10 @@ public class ListTrafficMirrorSessionsRequest extends Request {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {

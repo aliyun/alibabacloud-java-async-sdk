@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateHaVipResponseBody</p>
  */
 public class CreateHaVipResponseBody extends TeaModel {
-    @NameInMap("HaVipId")
+    @com.aliyun.core.annotation.NameInMap("HaVipId")
     private String haVipId;
 
-    @NameInMap("IpAddress")
+    @com.aliyun.core.annotation.NameInMap("IpAddress")
     private String ipAddress;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateHaVipResponseBody(Builder builder) {

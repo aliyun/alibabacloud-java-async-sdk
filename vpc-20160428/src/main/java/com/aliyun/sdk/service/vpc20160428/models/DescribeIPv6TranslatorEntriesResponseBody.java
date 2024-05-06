@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeIPv6TranslatorEntriesResponseBody</p>
  */
 public class DescribeIPv6TranslatorEntriesResponseBody extends TeaModel {
-    @NameInMap("Ipv6TranslatorEntries")
+    @com.aliyun.core.annotation.NameInMap("Ipv6TranslatorEntries")
     private Ipv6TranslatorEntries ipv6TranslatorEntries;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeIPv6TranslatorEntriesResponseBody(Builder builder) {
@@ -132,49 +131,49 @@ public class DescribeIPv6TranslatorEntriesResponseBody extends TeaModel {
     } 
 
     public static class Ipv6TranslatorEntry extends TeaModel {
-        @NameInMap("AclId")
+        @com.aliyun.core.annotation.NameInMap("AclId")
         private String aclId;
 
-        @NameInMap("AclStatus")
+        @com.aliyun.core.annotation.NameInMap("AclStatus")
         private String aclStatus;
 
-        @NameInMap("AclType")
+        @com.aliyun.core.annotation.NameInMap("AclType")
         private String aclType;
 
-        @NameInMap("AllocateIpv6Addr")
+        @com.aliyun.core.annotation.NameInMap("AllocateIpv6Addr")
         private String allocateIpv6Addr;
 
-        @NameInMap("AllocateIpv6Port")
+        @com.aliyun.core.annotation.NameInMap("AllocateIpv6Port")
         private Integer allocateIpv6Port;
 
-        @NameInMap("BackendIpv4Addr")
+        @com.aliyun.core.annotation.NameInMap("BackendIpv4Addr")
         private String backendIpv4Addr;
 
-        @NameInMap("BackendIpv4Port")
+        @com.aliyun.core.annotation.NameInMap("BackendIpv4Port")
         private String backendIpv4Port;
 
-        @NameInMap("EntryBandwidth")
+        @com.aliyun.core.annotation.NameInMap("EntryBandwidth")
         private String entryBandwidth;
 
-        @NameInMap("EntryDescription")
+        @com.aliyun.core.annotation.NameInMap("EntryDescription")
         private String entryDescription;
 
-        @NameInMap("EntryName")
+        @com.aliyun.core.annotation.NameInMap("EntryName")
         private String entryName;
 
-        @NameInMap("EntryStatus")
+        @com.aliyun.core.annotation.NameInMap("EntryStatus")
         private String entryStatus;
 
-        @NameInMap("Ipv6TranslatorEntryId")
+        @com.aliyun.core.annotation.NameInMap("Ipv6TranslatorEntryId")
         private String ipv6TranslatorEntryId;
 
-        @NameInMap("Ipv6TranslatorId")
+        @com.aliyun.core.annotation.NameInMap("Ipv6TranslatorId")
         private String ipv6TranslatorId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("TransProtocol")
+        @com.aliyun.core.annotation.NameInMap("TransProtocol")
         private String transProtocol;
 
         private Ipv6TranslatorEntry(Builder builder) {
@@ -457,7 +456,7 @@ public class DescribeIPv6TranslatorEntriesResponseBody extends TeaModel {
 
     }
     public static class Ipv6TranslatorEntries extends TeaModel {
-        @NameInMap("Ipv6TranslatorEntry")
+        @com.aliyun.core.annotation.NameInMap("Ipv6TranslatorEntry")
         private java.util.List < Ipv6TranslatorEntry> ipv6TranslatorEntry;
 
         private Ipv6TranslatorEntries(Builder builder) {

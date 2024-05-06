@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DissociateVpnGatewayWithCertificateRequest</p>
  */
 public class DissociateVpnGatewayWithCertificateRequest extends Request {
-    @Query
-    @NameInMap("CertificateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertificateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String certificateId;
 
-    @Query
-    @NameInMap("CertificateType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertificateType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String certificateType;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("VpnGatewayId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpnGatewayId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpnGatewayId;
 
     private DissociateVpnGatewayWithCertificateRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateTrafficMirrorSessionResponseBody</p>
  */
 public class CreateTrafficMirrorSessionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("TrafficMirrorSessionId")
+    @com.aliyun.core.annotation.NameInMap("TrafficMirrorSessionId")
     private String trafficMirrorSessionId;
 
     private CreateTrafficMirrorSessionResponseBody(Builder builder) {

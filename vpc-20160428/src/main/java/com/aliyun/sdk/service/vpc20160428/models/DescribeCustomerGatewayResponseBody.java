@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCustomerGatewayResponseBody</p>
  */
 public class DescribeCustomerGatewayResponseBody extends TeaModel {
-    @NameInMap("Asn")
+    @com.aliyun.core.annotation.NameInMap("Asn")
     private Long asn;
 
-    @NameInMap("AuthKey")
+    @com.aliyun.core.annotation.NameInMap("AuthKey")
     private String authKey;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private Long createTime;
 
-    @NameInMap("CustomerGatewayId")
+    @com.aliyun.core.annotation.NameInMap("CustomerGatewayId")
     private String customerGatewayId;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("IpAddress")
+    @com.aliyun.core.annotation.NameInMap("IpAddress")
     private String ipAddress;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private Tags tags;
 
     private DescribeCustomerGatewayResponseBody(Builder builder) {
@@ -238,10 +237,10 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -299,7 +298,7 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {

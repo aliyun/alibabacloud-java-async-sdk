@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,83 +11,83 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreatePhysicalConnectionRequest</p>
  */
 public class CreatePhysicalConnectionRequest extends Request {
-    @Query
-    @NameInMap("AccessPointId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessPointId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accessPointId;
 
-    @Query
-    @NameInMap("CircuitCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CircuitCode")
     private String circuitCode;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DeviceAdvancedCapacity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceAdvancedCapacity")
     private java.util.List < String > deviceAdvancedCapacity;
 
-    @Query
-    @NameInMap("LineOperator")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LineOperator")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String lineOperator;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PeerLocation")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeerLocation")
     private String peerLocation;
 
-    @Query
-    @NameInMap("PortType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PortType")
     private String portType;
 
-    @Query
-    @NameInMap("RedundantPhysicalConnectionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RedundantPhysicalConnectionId")
     private String redundantPhysicalConnectionId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @Query
-    @NameInMap("bandwidth")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("bandwidth")
     private Integer bandwidth;
 
     private CreatePhysicalConnectionRequest(Builder builder) {
@@ -523,10 +522,10 @@ public class CreatePhysicalConnectionRequest extends Request {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateNetworkAclResponseBody</p>
  */
 public class CreateNetworkAclResponseBody extends TeaModel {
-    @NameInMap("NetworkAclAttribute")
+    @com.aliyun.core.annotation.NameInMap("NetworkAclAttribute")
     private NetworkAclAttribute networkAclAttribute;
 
-    @NameInMap("NetworkAclId")
+    @com.aliyun.core.annotation.NameInMap("NetworkAclId")
     private String networkAclId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateNetworkAclResponseBody(Builder builder) {
@@ -92,25 +91,25 @@ public class CreateNetworkAclResponseBody extends TeaModel {
     } 
 
     public static class EgressAclEntry extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DestinationCidrIp")
+        @com.aliyun.core.annotation.NameInMap("DestinationCidrIp")
         private String destinationCidrIp;
 
-        @NameInMap("NetworkAclEntryId")
+        @com.aliyun.core.annotation.NameInMap("NetworkAclEntryId")
         private String networkAclEntryId;
 
-        @NameInMap("NetworkAclEntryName")
+        @com.aliyun.core.annotation.NameInMap("NetworkAclEntryName")
         private String networkAclEntryName;
 
-        @NameInMap("Policy")
+        @com.aliyun.core.annotation.NameInMap("Policy")
         private String policy;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
         private EgressAclEntry(Builder builder) {
@@ -268,7 +267,7 @@ public class CreateNetworkAclResponseBody extends TeaModel {
 
     }
     public static class EgressAclEntries extends TeaModel {
-        @NameInMap("EgressAclEntry")
+        @com.aliyun.core.annotation.NameInMap("EgressAclEntry")
         private java.util.List < EgressAclEntry> egressAclEntry;
 
         private EgressAclEntries(Builder builder) {
@@ -309,25 +308,25 @@ public class CreateNetworkAclResponseBody extends TeaModel {
 
     }
     public static class IngressAclEntry extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("NetworkAclEntryId")
+        @com.aliyun.core.annotation.NameInMap("NetworkAclEntryId")
         private String networkAclEntryId;
 
-        @NameInMap("NetworkAclEntryName")
+        @com.aliyun.core.annotation.NameInMap("NetworkAclEntryName")
         private String networkAclEntryName;
 
-        @NameInMap("Policy")
+        @com.aliyun.core.annotation.NameInMap("Policy")
         private String policy;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("SourceCidrIp")
+        @com.aliyun.core.annotation.NameInMap("SourceCidrIp")
         private String sourceCidrIp;
 
         private IngressAclEntry(Builder builder) {
@@ -485,7 +484,7 @@ public class CreateNetworkAclResponseBody extends TeaModel {
 
     }
     public static class IngressAclEntries extends TeaModel {
-        @NameInMap("IngressAclEntry")
+        @com.aliyun.core.annotation.NameInMap("IngressAclEntry")
         private java.util.List < IngressAclEntry> ingressAclEntry;
 
         private IngressAclEntries(Builder builder) {
@@ -526,13 +525,13 @@ public class CreateNetworkAclResponseBody extends TeaModel {
 
     }
     public static class Resource extends TeaModel {
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Resource(Builder builder) {
@@ -612,7 +611,7 @@ public class CreateNetworkAclResponseBody extends TeaModel {
 
     }
     public static class Resources extends TeaModel {
-        @NameInMap("Resource")
+        @com.aliyun.core.annotation.NameInMap("Resource")
         private java.util.List < Resource> resource;
 
         private Resources(Builder builder) {
@@ -653,34 +652,34 @@ public class CreateNetworkAclResponseBody extends TeaModel {
 
     }
     public static class NetworkAclAttribute extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EgressAclEntries")
+        @com.aliyun.core.annotation.NameInMap("EgressAclEntries")
         private EgressAclEntries egressAclEntries;
 
-        @NameInMap("IngressAclEntries")
+        @com.aliyun.core.annotation.NameInMap("IngressAclEntries")
         private IngressAclEntries ingressAclEntries;
 
-        @NameInMap("NetworkAclId")
+        @com.aliyun.core.annotation.NameInMap("NetworkAclId")
         private String networkAclId;
 
-        @NameInMap("NetworkAclName")
+        @com.aliyun.core.annotation.NameInMap("NetworkAclName")
         private String networkAclName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Resources")
+        @com.aliyun.core.annotation.NameInMap("Resources")
         private Resources resources;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private NetworkAclAttribute(Builder builder) {

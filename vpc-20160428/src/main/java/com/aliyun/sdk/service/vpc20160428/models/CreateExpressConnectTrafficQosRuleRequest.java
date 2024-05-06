@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,85 +11,85 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateExpressConnectTrafficQosRuleRequest</p>
  */
 public class CreateExpressConnectTrafficQosRuleRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DstCidr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DstCidr")
     private String dstCidr;
 
-    @Query
-    @NameInMap("DstIPv6Cidr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DstIPv6Cidr")
     private String dstIPv6Cidr;
 
-    @Query
-    @NameInMap("DstPortRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DstPortRange")
     private String dstPortRange;
 
-    @Query
-    @NameInMap("MatchDscp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MatchDscp")
     private Integer matchDscp;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Priority")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Priority")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer priority;
 
-    @Query
-    @NameInMap("Protocol")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Protocol")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String protocol;
 
-    @Query
-    @NameInMap("QosId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QosId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String qosId;
 
-    @Query
-    @NameInMap("QueueId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueueId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String queueId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("RemarkingDscp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RemarkingDscp")
     private Integer remarkingDscp;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("RuleDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleDescription")
     private String ruleDescription;
 
-    @Query
-    @NameInMap("RuleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleName")
     private String ruleName;
 
-    @Query
-    @NameInMap("SrcCidr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcCidr")
     private String srcCidr;
 
-    @Query
-    @NameInMap("SrcIPv6Cidr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcIPv6Cidr")
     private String srcIPv6Cidr;
 
-    @Query
-    @NameInMap("SrcPortRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcPortRange")
     private String srcPortRange;
 
     private CreateExpressConnectTrafficQosRuleRequest(Builder builder) {

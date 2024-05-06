@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListVSwitchCidrReservationsResponseBody</p>
  */
 public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Long maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
-    @NameInMap("VSwitchCidrReservations")
+    @com.aliyun.core.annotation.NameInMap("VSwitchCidrReservations")
     private java.util.List < VSwitchCidrReservations> vSwitchCidrReservations;
 
     private ListVSwitchCidrReservationsResponseBody(Builder builder) {
@@ -136,10 +135,10 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -197,43 +196,43 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
 
     }
     public static class VSwitchCidrReservations extends TeaModel {
-        @NameInMap("AssignedCidrCount")
+        @com.aliyun.core.annotation.NameInMap("AssignedCidrCount")
         private Integer assignedCidrCount;
 
-        @NameInMap("AvailableCidrCount")
+        @com.aliyun.core.annotation.NameInMap("AvailableCidrCount")
         private Integer availableCidrCount;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("IpVersion")
+        @com.aliyun.core.annotation.NameInMap("IpVersion")
         private String ipVersion;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("VSwitchCidrReservationCidr")
+        @com.aliyun.core.annotation.NameInMap("VSwitchCidrReservationCidr")
         private String vSwitchCidrReservationCidr;
 
-        @NameInMap("VSwitchCidrReservationDescription")
+        @com.aliyun.core.annotation.NameInMap("VSwitchCidrReservationDescription")
         private String vSwitchCidrReservationDescription;
 
-        @NameInMap("VSwitchCidrReservationId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchCidrReservationId")
         private String vSwitchCidrReservationId;
 
-        @NameInMap("VSwitchCidrReservationName")
+        @com.aliyun.core.annotation.NameInMap("VSwitchCidrReservationName")
         private String vSwitchCidrReservationName;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private VSwitchCidrReservations(Builder builder) {

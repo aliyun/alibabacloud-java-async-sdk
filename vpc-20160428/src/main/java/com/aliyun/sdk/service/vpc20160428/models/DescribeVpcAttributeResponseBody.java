@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,85 +11,85 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVpcAttributeResponseBody</p>
  */
 public class DescribeVpcAttributeResponseBody extends TeaModel {
-    @NameInMap("AssociatedCens")
+    @com.aliyun.core.annotation.NameInMap("AssociatedCens")
     private AssociatedCens associatedCens;
 
-    @NameInMap("AssociatedPropagationSources")
+    @com.aliyun.core.annotation.NameInMap("AssociatedPropagationSources")
     private AssociatedPropagationSources associatedPropagationSources;
 
-    @NameInMap("CidrBlock")
+    @com.aliyun.core.annotation.NameInMap("CidrBlock")
     private String cidrBlock;
 
-    @NameInMap("ClassicLinkEnabled")
+    @com.aliyun.core.annotation.NameInMap("ClassicLinkEnabled")
     private Boolean classicLinkEnabled;
 
-    @NameInMap("CloudResources")
+    @com.aliyun.core.annotation.NameInMap("CloudResources")
     private CloudResources cloudResources;
 
-    @NameInMap("CreationTime")
+    @com.aliyun.core.annotation.NameInMap("CreationTime")
     private String creationTime;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("DhcpOptionsSetId")
+    @com.aliyun.core.annotation.NameInMap("DhcpOptionsSetId")
     private String dhcpOptionsSetId;
 
-    @NameInMap("DhcpOptionsSetStatus")
+    @com.aliyun.core.annotation.NameInMap("DhcpOptionsSetStatus")
     private String dhcpOptionsSetStatus;
 
-    @NameInMap("EnabledIpv6")
+    @com.aliyun.core.annotation.NameInMap("EnabledIpv6")
     private Boolean enabledIpv6;
 
-    @NameInMap("Ipv4GatewayId")
+    @com.aliyun.core.annotation.NameInMap("Ipv4GatewayId")
     private String ipv4GatewayId;
 
-    @NameInMap("Ipv6CidrBlock")
+    @com.aliyun.core.annotation.NameInMap("Ipv6CidrBlock")
     private String ipv6CidrBlock;
 
-    @NameInMap("Ipv6CidrBlocks")
+    @com.aliyun.core.annotation.NameInMap("Ipv6CidrBlocks")
     private Ipv6CidrBlocks ipv6CidrBlocks;
 
-    @NameInMap("IsDefault")
+    @com.aliyun.core.annotation.NameInMap("IsDefault")
     private Boolean isDefault;
 
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("SecondaryCidrBlocks")
+    @com.aliyun.core.annotation.NameInMap("SecondaryCidrBlocks")
     private SecondaryCidrBlocks secondaryCidrBlocks;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("SupportIpv4Gateway")
+    @com.aliyun.core.annotation.NameInMap("SupportIpv4Gateway")
     private Boolean supportIpv4Gateway;
 
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private Tags tags;
 
-    @NameInMap("UserCidrs")
+    @com.aliyun.core.annotation.NameInMap("UserCidrs")
     private UserCidrs userCidrs;
 
-    @NameInMap("VRouterId")
+    @com.aliyun.core.annotation.NameInMap("VRouterId")
     private String vRouterId;
 
-    @NameInMap("VSwitchIds")
+    @com.aliyun.core.annotation.NameInMap("VSwitchIds")
     private VSwitchIds vSwitchIds;
 
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
-    @NameInMap("VpcName")
+    @com.aliyun.core.annotation.NameInMap("VpcName")
     private String vpcName;
 
     private DescribeVpcAttributeResponseBody(Builder builder) {
@@ -435,7 +434,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * 是否开启IPv6。
+         * Indicates whether the VPC enables IPv6 .
+         * <p>
+         * - true
+         * - false
          */
         public Builder enabledIpv6(Boolean enabledIpv6) {
             this.enabledIpv6 = enabledIpv6;
@@ -597,13 +599,13 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     } 
 
     public static class AssociatedCen extends TeaModel {
-        @NameInMap("CenId")
+        @com.aliyun.core.annotation.NameInMap("CenId")
         private String cenId;
 
-        @NameInMap("CenOwnerId")
+        @com.aliyun.core.annotation.NameInMap("CenOwnerId")
         private Long cenOwnerId;
 
-        @NameInMap("CenStatus")
+        @com.aliyun.core.annotation.NameInMap("CenStatus")
         private String cenStatus;
 
         private AssociatedCen(Builder builder) {
@@ -681,7 +683,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
 
     }
     public static class AssociatedCens extends TeaModel {
-        @NameInMap("AssociatedCen")
+        @com.aliyun.core.annotation.NameInMap("AssociatedCen")
         private java.util.List < AssociatedCen> associatedCen;
 
         private AssociatedCens(Builder builder) {
@@ -722,19 +724,19 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
 
     }
     public static class AssociatedPropagationSourcesAssociatedPropagationSources extends TeaModel {
-        @NameInMap("RoutePropagated")
+        @com.aliyun.core.annotation.NameInMap("RoutePropagated")
         private Boolean routePropagated;
 
-        @NameInMap("SourceInstanceId")
+        @com.aliyun.core.annotation.NameInMap("SourceInstanceId")
         private String sourceInstanceId;
 
-        @NameInMap("SourceOwnerId")
+        @com.aliyun.core.annotation.NameInMap("SourceOwnerId")
         private Long sourceOwnerId;
 
-        @NameInMap("SourceType")
+        @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private AssociatedPropagationSourcesAssociatedPropagationSources(Builder builder) {
@@ -854,7 +856,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
 
     }
     public static class AssociatedPropagationSources extends TeaModel {
-        @NameInMap("AssociatedPropagationSources")
+        @com.aliyun.core.annotation.NameInMap("AssociatedPropagationSources")
         private java.util.List < AssociatedPropagationSourcesAssociatedPropagationSources> associatedPropagationSources;
 
         private AssociatedPropagationSources(Builder builder) {
@@ -895,10 +897,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
 
     }
     public static class CloudResourceSetType extends TeaModel {
-        @NameInMap("ResourceCount")
+        @com.aliyun.core.annotation.NameInMap("ResourceCount")
         private Integer resourceCount;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
         private CloudResourceSetType(Builder builder) {
@@ -961,7 +963,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
 
     }
     public static class CloudResources extends TeaModel {
-        @NameInMap("CloudResourceSetType")
+        @com.aliyun.core.annotation.NameInMap("CloudResourceSetType")
         private java.util.List < CloudResourceSetType> cloudResourceSetType;
 
         private CloudResources(Builder builder) {
@@ -1002,10 +1004,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
 
     }
     public static class Ipv6CidrBlock extends TeaModel {
-        @NameInMap("Ipv6CidrBlock")
+        @com.aliyun.core.annotation.NameInMap("Ipv6CidrBlock")
         private String ipv6CidrBlock;
 
-        @NameInMap("Ipv6Isp")
+        @com.aliyun.core.annotation.NameInMap("Ipv6Isp")
         private String ipv6Isp;
 
         private Ipv6CidrBlock(Builder builder) {
@@ -1071,7 +1073,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
 
     }
     public static class Ipv6CidrBlocks extends TeaModel {
-        @NameInMap("Ipv6CidrBlock")
+        @com.aliyun.core.annotation.NameInMap("Ipv6CidrBlock")
         private java.util.List < Ipv6CidrBlock> ipv6CidrBlock;
 
         private Ipv6CidrBlocks(Builder builder) {
@@ -1112,7 +1114,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
 
     }
     public static class SecondaryCidrBlocks extends TeaModel {
-        @NameInMap("SecondaryCidrBlock")
+        @com.aliyun.core.annotation.NameInMap("SecondaryCidrBlock")
         private java.util.List < String > secondaryCidrBlock;
 
         private SecondaryCidrBlocks(Builder builder) {
@@ -1153,10 +1155,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -1214,7 +1216,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -1255,7 +1257,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
 
     }
     public static class UserCidrs extends TeaModel {
-        @NameInMap("UserCidr")
+        @com.aliyun.core.annotation.NameInMap("UserCidr")
         private java.util.List < String > userCidr;
 
         private UserCidrs(Builder builder) {
@@ -1296,7 +1298,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
 
     }
     public static class VSwitchIds extends TeaModel {
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private java.util.List < String > vSwitchId;
 
         private VSwitchIds(Builder builder) {

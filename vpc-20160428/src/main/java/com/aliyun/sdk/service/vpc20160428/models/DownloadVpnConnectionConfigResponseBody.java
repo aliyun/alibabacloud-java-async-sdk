@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DownloadVpnConnectionConfigResponseBody</p>
  */
 public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VpnConnectionConfig")
+    @com.aliyun.core.annotation.NameInMap("VpnConnectionConfig")
     private VpnConnectionConfig vpnConnectionConfig;
 
     private DownloadVpnConnectionConfigResponseBody(Builder builder) {
@@ -72,31 +71,31 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
     } 
 
     public static class IkeConfig extends TeaModel {
-        @NameInMap("IkeAuthAlg")
+        @com.aliyun.core.annotation.NameInMap("IkeAuthAlg")
         private String ikeAuthAlg;
 
-        @NameInMap("IkeEncAlg")
+        @com.aliyun.core.annotation.NameInMap("IkeEncAlg")
         private String ikeEncAlg;
 
-        @NameInMap("IkeLifetime")
+        @com.aliyun.core.annotation.NameInMap("IkeLifetime")
         private Long ikeLifetime;
 
-        @NameInMap("IkeMode")
+        @com.aliyun.core.annotation.NameInMap("IkeMode")
         private String ikeMode;
 
-        @NameInMap("IkePfs")
+        @com.aliyun.core.annotation.NameInMap("IkePfs")
         private String ikePfs;
 
-        @NameInMap("IkeVersion")
+        @com.aliyun.core.annotation.NameInMap("IkeVersion")
         private String ikeVersion;
 
-        @NameInMap("LocalId")
+        @com.aliyun.core.annotation.NameInMap("LocalId")
         private String localId;
 
-        @NameInMap("Psk")
+        @com.aliyun.core.annotation.NameInMap("Psk")
         private String psk;
 
-        @NameInMap("RemoteId")
+        @com.aliyun.core.annotation.NameInMap("RemoteId")
         private String remoteId;
 
         private IkeConfig(Builder builder) {
@@ -277,16 +276,16 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
 
     }
     public static class IpsecConfig extends TeaModel {
-        @NameInMap("IpsecAuthAlg")
+        @com.aliyun.core.annotation.NameInMap("IpsecAuthAlg")
         private String ipsecAuthAlg;
 
-        @NameInMap("IpsecEncAlg")
+        @com.aliyun.core.annotation.NameInMap("IpsecEncAlg")
         private String ipsecEncAlg;
 
-        @NameInMap("IpsecLifetime")
+        @com.aliyun.core.annotation.NameInMap("IpsecLifetime")
         private Long ipsecLifetime;
 
-        @NameInMap("IpsecPfs")
+        @com.aliyun.core.annotation.NameInMap("IpsecPfs")
         private String ipsecPfs;
 
         private IpsecConfig(Builder builder) {
@@ -378,31 +377,31 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
 
     }
     public static class TunnelConfigIkeConfig extends TeaModel {
-        @NameInMap("IkeAuthAlg")
+        @com.aliyun.core.annotation.NameInMap("IkeAuthAlg")
         private String ikeAuthAlg;
 
-        @NameInMap("IkeEncAlg")
+        @com.aliyun.core.annotation.NameInMap("IkeEncAlg")
         private String ikeEncAlg;
 
-        @NameInMap("IkeLifetime")
+        @com.aliyun.core.annotation.NameInMap("IkeLifetime")
         private Long ikeLifetime;
 
-        @NameInMap("IkeMode")
+        @com.aliyun.core.annotation.NameInMap("IkeMode")
         private String ikeMode;
 
-        @NameInMap("IkePfs")
+        @com.aliyun.core.annotation.NameInMap("IkePfs")
         private String ikePfs;
 
-        @NameInMap("IkeVersion")
+        @com.aliyun.core.annotation.NameInMap("IkeVersion")
         private String ikeVersion;
 
-        @NameInMap("LocalId")
+        @com.aliyun.core.annotation.NameInMap("LocalId")
         private String localId;
 
-        @NameInMap("Psk")
+        @com.aliyun.core.annotation.NameInMap("Psk")
         private String psk;
 
-        @NameInMap("RemoteId")
+        @com.aliyun.core.annotation.NameInMap("RemoteId")
         private String remoteId;
 
         private TunnelConfigIkeConfig(Builder builder) {
@@ -583,16 +582,16 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
 
     }
     public static class TunnelConfigIpsecConfig extends TeaModel {
-        @NameInMap("IpsecAuthAlg")
+        @com.aliyun.core.annotation.NameInMap("IpsecAuthAlg")
         private String ipsecAuthAlg;
 
-        @NameInMap("IpsecEncAlg")
+        @com.aliyun.core.annotation.NameInMap("IpsecEncAlg")
         private String ipsecEncAlg;
 
-        @NameInMap("IpsecLifetime")
+        @com.aliyun.core.annotation.NameInMap("IpsecLifetime")
         private Long ipsecLifetime;
 
-        @NameInMap("IpsecPfs")
+        @com.aliyun.core.annotation.NameInMap("IpsecPfs")
         private String ipsecPfs;
 
         private TunnelConfigIpsecConfig(Builder builder) {
@@ -684,19 +683,19 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
 
     }
     public static class TunnelConfig extends TeaModel {
-        @NameInMap("IkeConfig")
+        @com.aliyun.core.annotation.NameInMap("IkeConfig")
         private TunnelConfigIkeConfig ikeConfig;
 
-        @NameInMap("IpsecConfig")
+        @com.aliyun.core.annotation.NameInMap("IpsecConfig")
         private TunnelConfigIpsecConfig ipsecConfig;
 
-        @NameInMap("Local")
+        @com.aliyun.core.annotation.NameInMap("Local")
         private String local;
 
-        @NameInMap("Remote")
+        @com.aliyun.core.annotation.NameInMap("Remote")
         private String remote;
 
-        @NameInMap("TunnelId")
+        @com.aliyun.core.annotation.NameInMap("TunnelId")
         private String tunnelId;
 
         private TunnelConfig(Builder builder) {
@@ -805,7 +804,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
 
     }
     public static class TunnelsConfig extends TeaModel {
-        @NameInMap("TunnelConfig")
+        @com.aliyun.core.annotation.NameInMap("TunnelConfig")
         private java.util.List < TunnelConfig> tunnelConfig;
 
         private TunnelsConfig(Builder builder) {
@@ -846,25 +845,25 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
 
     }
     public static class VpnConnectionConfig extends TeaModel {
-        @NameInMap("IkeConfig")
+        @com.aliyun.core.annotation.NameInMap("IkeConfig")
         private IkeConfig ikeConfig;
 
-        @NameInMap("IpsecConfig")
+        @com.aliyun.core.annotation.NameInMap("IpsecConfig")
         private IpsecConfig ipsecConfig;
 
-        @NameInMap("Local")
+        @com.aliyun.core.annotation.NameInMap("Local")
         private String local;
 
-        @NameInMap("LocalSubnet")
+        @com.aliyun.core.annotation.NameInMap("LocalSubnet")
         private String localSubnet;
 
-        @NameInMap("Remote")
+        @com.aliyun.core.annotation.NameInMap("Remote")
         private String remote;
 
-        @NameInMap("RemoteSubnet")
+        @com.aliyun.core.annotation.NameInMap("RemoteSubnet")
         private String remoteSubnet;
 
-        @NameInMap("TunnelsConfig")
+        @com.aliyun.core.annotation.NameInMap("TunnelsConfig")
         private TunnelsConfig tunnelsConfig;
 
         private VpnConnectionConfig(Builder builder) {

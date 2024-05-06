@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AllocateIpv6InternetBandwidthResponseBody</p>
  */
 public class AllocateIpv6InternetBandwidthResponseBody extends TeaModel {
-    @NameInMap("InternetBandwidthId")
+    @com.aliyun.core.annotation.NameInMap("InternetBandwidthId")
     private String internetBandwidthId;
 
-    @NameInMap("Ipv6AddressId")
+    @com.aliyun.core.annotation.NameInMap("Ipv6AddressId")
     private String ipv6AddressId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AllocateIpv6InternetBandwidthResponseBody(Builder builder) {

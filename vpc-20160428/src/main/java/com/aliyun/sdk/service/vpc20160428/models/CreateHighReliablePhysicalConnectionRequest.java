@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,63 +11,63 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateHighReliablePhysicalConnectionRequest</p>
  */
 public class CreateHighReliablePhysicalConnectionRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("ApList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < ApList> apList;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DeviceAdvancedCapacity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceAdvancedCapacity")
     private java.util.List < String > deviceAdvancedCapacity;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private String dryRun;
 
-    @Query
-    @NameInMap("HighReliableType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HighReliableType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String highReliableType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PortType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PortType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String portType;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
     private CreateHighReliablePhysicalConnectionRequest(Builder builder) {
@@ -372,37 +371,37 @@ public class CreateHighReliablePhysicalConnectionRequest extends Request {
     } 
 
     public static class ApList extends TeaModel {
-        @NameInMap("AccessPointId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("AccessPointId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String accessPointId;
 
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Long bandwidth;
 
-        @NameInMap("CircuitCode")
+        @com.aliyun.core.annotation.NameInMap("CircuitCode")
         private String circuitCode;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("LineOperator")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("LineOperator")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String lineOperator;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PeerLocation")
+        @com.aliyun.core.annotation.NameInMap("PeerLocation")
         private String peerLocation;
 
-        @NameInMap("PortNum")
+        @com.aliyun.core.annotation.NameInMap("PortNum")
         private Integer portNum;
 
-        @NameInMap("RegionId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("RegionId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String regionId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private ApList(Builder builder) {
@@ -596,10 +595,10 @@ public class CreateHighReliablePhysicalConnectionRequest extends Request {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

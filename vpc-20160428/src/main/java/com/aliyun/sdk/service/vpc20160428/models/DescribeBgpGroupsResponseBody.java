@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBgpGroupsResponseBody</p>
  */
 public class DescribeBgpGroupsResponseBody extends TeaModel {
-    @NameInMap("BgpGroups")
+    @com.aliyun.core.annotation.NameInMap("BgpGroups")
     private BgpGroups bgpGroups;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeBgpGroupsResponseBody(Builder builder) {
@@ -132,46 +131,46 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
     } 
 
     public static class BgpGroup extends TeaModel {
-        @NameInMap("AuthKey")
+        @com.aliyun.core.annotation.NameInMap("AuthKey")
         private String authKey;
 
-        @NameInMap("BgpGroupId")
+        @com.aliyun.core.annotation.NameInMap("BgpGroupId")
         private String bgpGroupId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Hold")
+        @com.aliyun.core.annotation.NameInMap("Hold")
         private String hold;
 
-        @NameInMap("IpVersion")
+        @com.aliyun.core.annotation.NameInMap("IpVersion")
         private String ipVersion;
 
-        @NameInMap("IsFake")
+        @com.aliyun.core.annotation.NameInMap("IsFake")
         private String isFake;
 
-        @NameInMap("Keepalive")
+        @com.aliyun.core.annotation.NameInMap("Keepalive")
         private String keepalive;
 
-        @NameInMap("LocalAsn")
+        @com.aliyun.core.annotation.NameInMap("LocalAsn")
         private String localAsn;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PeerAsn")
+        @com.aliyun.core.annotation.NameInMap("PeerAsn")
         private String peerAsn;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RouteLimit")
+        @com.aliyun.core.annotation.NameInMap("RouteLimit")
         private String routeLimit;
 
-        @NameInMap("RouterId")
+        @com.aliyun.core.annotation.NameInMap("RouterId")
         private String routerId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private BgpGroup(Builder builder) {
@@ -444,7 +443,7 @@ public class DescribeBgpGroupsResponseBody extends TeaModel {
 
     }
     public static class BgpGroups extends TeaModel {
-        @NameInMap("BgpGroup")
+        @com.aliyun.core.annotation.NameInMap("BgpGroup")
         private java.util.List < BgpGroup> bgpGroup;
 
         private BgpGroups(Builder builder) {

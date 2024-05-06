@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRouteTableListResponseBody</p>
  */
 public class DescribeRouteTableListResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RouterTableList")
+    @com.aliyun.core.annotation.NameInMap("RouterTableList")
     private RouterTableList routerTableList;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeRouteTableListResponseBody(Builder builder) {
@@ -136,7 +135,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
     } 
 
     public static class GatewayIds extends TeaModel {
-        @NameInMap("GatewayIds")
+        @com.aliyun.core.annotation.NameInMap("GatewayIds")
         private java.util.List < String > gatewayIds;
 
         private GatewayIds(Builder builder) {
@@ -177,10 +176,10 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -244,7 +243,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -285,7 +284,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
 
     }
     public static class VSwitchIds extends TeaModel {
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private java.util.List < String > vSwitchId;
 
         private VSwitchIds(Builder builder) {
@@ -326,52 +325,52 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
 
     }
     public static class RouterTableListType extends TeaModel {
-        @NameInMap("AssociateType")
+        @com.aliyun.core.annotation.NameInMap("AssociateType")
         private String associateType;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GatewayIds")
+        @com.aliyun.core.annotation.NameInMap("GatewayIds")
         private GatewayIds gatewayIds;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private Long ownerId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("RoutePropagationEnable")
+        @com.aliyun.core.annotation.NameInMap("RoutePropagationEnable")
         private Boolean routePropagationEnable;
 
-        @NameInMap("RouteTableId")
+        @com.aliyun.core.annotation.NameInMap("RouteTableId")
         private String routeTableId;
 
-        @NameInMap("RouteTableName")
+        @com.aliyun.core.annotation.NameInMap("RouteTableName")
         private String routeTableName;
 
-        @NameInMap("RouteTableType")
+        @com.aliyun.core.annotation.NameInMap("RouteTableType")
         private String routeTableType;
 
-        @NameInMap("RouterId")
+        @com.aliyun.core.annotation.NameInMap("RouterId")
         private String routerId;
 
-        @NameInMap("RouterType")
+        @com.aliyun.core.annotation.NameInMap("RouterType")
         private String routerType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("VSwitchIds")
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
         private VSwitchIds vSwitchIds;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private RouterTableListType(Builder builder) {
@@ -676,7 +675,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
 
     }
     public static class RouterTableList extends TeaModel {
-        @NameInMap("RouterTableListType")
+        @com.aliyun.core.annotation.NameInMap("RouterTableListType")
         private java.util.List < RouterTableListType> routerTableListType;
 
         private RouterTableList(Builder builder) {

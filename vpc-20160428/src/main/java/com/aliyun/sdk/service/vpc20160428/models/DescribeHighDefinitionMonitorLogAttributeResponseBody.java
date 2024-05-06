@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHighDefinitionMonitorLogAttributeResponseBody</p>
  */
 public class DescribeHighDefinitionMonitorLogAttributeResponseBody extends TeaModel {
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
-    @NameInMap("LogProject")
+    @com.aliyun.core.annotation.NameInMap("LogProject")
     private String logProject;
 
-    @NameInMap("LogStore")
+    @com.aliyun.core.annotation.NameInMap("LogStore")
     private String logStore;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private DescribeHighDefinitionMonitorLogAttributeResponseBody(Builder builder) {

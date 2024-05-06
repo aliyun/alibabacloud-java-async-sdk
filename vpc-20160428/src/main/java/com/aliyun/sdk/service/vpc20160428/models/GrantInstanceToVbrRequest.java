@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GrantInstanceToVbrRequest</p>
  */
 public class GrantInstanceToVbrRequest extends Request {
-    @Query
-    @NameInMap("GrantType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GrantType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String grantType;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("VbrInstanceIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VbrInstanceIds")
     private java.util.List < String > vbrInstanceIds;
 
-    @Query
-    @NameInMap("VbrOwnerUid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VbrOwnerUid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long vbrOwnerUid;
 
-    @Query
-    @NameInMap("VbrRegionNo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VbrRegionNo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vbrRegionNo;
 
     private GrantInstanceToVbrRequest(Builder builder) {

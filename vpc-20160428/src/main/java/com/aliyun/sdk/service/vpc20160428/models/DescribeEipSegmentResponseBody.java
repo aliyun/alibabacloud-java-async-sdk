@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEipSegmentResponseBody</p>
  */
 public class DescribeEipSegmentResponseBody extends TeaModel {
-    @NameInMap("EipSegments")
+    @com.aliyun.core.annotation.NameInMap("EipSegments")
     private EipSegments eipSegments;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeEipSegmentResponseBody(Builder builder) {
@@ -132,31 +131,31 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
     } 
 
     public static class EipSegment extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Descritpion")
+        @com.aliyun.core.annotation.NameInMap("Descritpion")
         private String descritpion;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("IpCount")
+        @com.aliyun.core.annotation.NameInMap("IpCount")
         private String ipCount;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Segment")
+        @com.aliyun.core.annotation.NameInMap("Segment")
         private String segment;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Zone")
+        @com.aliyun.core.annotation.NameInMap("Zone")
         private String zone;
 
         private EipSegment(Builder builder) {
@@ -338,7 +337,7 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
 
     }
     public static class EipSegments extends TeaModel {
-        @NameInMap("EipSegment")
+        @com.aliyun.core.annotation.NameInMap("EipSegment")
         private java.util.List < EipSegment> eipSegment;
 
         private EipSegments(Builder builder) {

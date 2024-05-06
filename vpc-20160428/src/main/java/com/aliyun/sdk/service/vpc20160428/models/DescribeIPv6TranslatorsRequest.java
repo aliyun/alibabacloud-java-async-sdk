@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,65 +11,65 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeIPv6TranslatorsRequest</p>
  */
 public class DescribeIPv6TranslatorsRequest extends Request {
-    @Query
-    @NameInMap("AllocateIpv4Addr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllocateIpv4Addr")
     private String allocateIpv4Addr;
 
-    @Query
-    @NameInMap("AllocateIpv6Addr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllocateIpv6Addr")
     private String allocateIpv6Addr;
 
-    @Query
-    @NameInMap("BusinessStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessStatus")
     private String businessStatus;
 
-    @Query
-    @NameInMap("Ipv6TranslatorId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6TranslatorId")
     private String ipv6TranslatorId;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("PayType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Spec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Spec")
     private String spec;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeIPv6TranslatorsRequest(Builder builder) {

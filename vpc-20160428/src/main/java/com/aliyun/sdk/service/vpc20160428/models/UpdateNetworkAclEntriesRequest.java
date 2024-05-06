@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,54 +11,54 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateNetworkAclEntriesRequest</p>
  */
 public class UpdateNetworkAclEntriesRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("EgressAclEntries")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EgressAclEntries")
     private java.util.List < EgressAclEntries> egressAclEntries;
 
-    @Query
-    @NameInMap("IngressAclEntries")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IngressAclEntries")
     private java.util.List < IngressAclEntries> ingressAclEntries;
 
-    @Query
-    @NameInMap("NetworkAclId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkAclId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String networkAclId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("UpdateEgressAclEntries")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UpdateEgressAclEntries")
     private Boolean updateEgressAclEntries;
 
-    @Query
-    @NameInMap("UpdateIngressAclEntries")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UpdateIngressAclEntries")
     private Boolean updateIngressAclEntries;
 
     private UpdateNetworkAclEntriesRequest(Builder builder) {
@@ -349,31 +348,31 @@ public class UpdateNetworkAclEntriesRequest extends Request {
     } 
 
     public static class EgressAclEntries extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DestinationCidrIp")
+        @com.aliyun.core.annotation.NameInMap("DestinationCidrIp")
         private String destinationCidrIp;
 
-        @NameInMap("EntryType")
+        @com.aliyun.core.annotation.NameInMap("EntryType")
         private String entryType;
 
-        @NameInMap("IpVersion")
+        @com.aliyun.core.annotation.NameInMap("IpVersion")
         private String ipVersion;
 
-        @NameInMap("NetworkAclEntryId")
+        @com.aliyun.core.annotation.NameInMap("NetworkAclEntryId")
         private String networkAclEntryId;
 
-        @NameInMap("NetworkAclEntryName")
+        @com.aliyun.core.annotation.NameInMap("NetworkAclEntryName")
         private String networkAclEntryName;
 
-        @NameInMap("Policy")
+        @com.aliyun.core.annotation.NameInMap("Policy")
         private String policy;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
         private EgressAclEntries(Builder builder) {
@@ -578,31 +577,31 @@ public class UpdateNetworkAclEntriesRequest extends Request {
 
     }
     public static class IngressAclEntries extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EntryType")
+        @com.aliyun.core.annotation.NameInMap("EntryType")
         private String entryType;
 
-        @NameInMap("IpVersion")
+        @com.aliyun.core.annotation.NameInMap("IpVersion")
         private String ipVersion;
 
-        @NameInMap("NetworkAclEntryId")
+        @com.aliyun.core.annotation.NameInMap("NetworkAclEntryId")
         private String networkAclEntryId;
 
-        @NameInMap("NetworkAclEntryName")
+        @com.aliyun.core.annotation.NameInMap("NetworkAclEntryName")
         private String networkAclEntryName;
 
-        @NameInMap("Policy")
+        @com.aliyun.core.annotation.NameInMap("Policy")
         private String policy;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("SourceCidrIp")
+        @com.aliyun.core.annotation.NameInMap("SourceCidrIp")
         private String sourceCidrIp;
 
         private IngressAclEntries(Builder builder) {

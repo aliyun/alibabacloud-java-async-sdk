@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateTrafficMirrorFilterRulesResponseBody</p>
  */
 public class CreateTrafficMirrorFilterRulesResponseBody extends TeaModel {
-    @NameInMap("EgressRules")
+    @com.aliyun.core.annotation.NameInMap("EgressRules")
     private java.util.List < EgressRules> egressRules;
 
-    @NameInMap("IngressRules")
+    @com.aliyun.core.annotation.NameInMap("IngressRules")
     private java.util.List < IngressRules> ingressRules;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateTrafficMirrorFilterRulesResponseBody(Builder builder) {
@@ -92,7 +91,7 @@ public class CreateTrafficMirrorFilterRulesResponseBody extends TeaModel {
     } 
 
     public static class EgressRules extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
         private EgressRules(Builder builder) {
@@ -133,7 +132,7 @@ public class CreateTrafficMirrorFilterRulesResponseBody extends TeaModel {
 
     }
     public static class IngressRules extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
         private IngressRules(Builder builder) {

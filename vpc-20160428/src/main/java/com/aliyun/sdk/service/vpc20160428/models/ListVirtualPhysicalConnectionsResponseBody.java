@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListVirtualPhysicalConnectionsResponseBody</p>
  */
 public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("VirtualPhysicalConnections")
+    @com.aliyun.core.annotation.NameInMap("VirtualPhysicalConnections")
     private java.util.List < VirtualPhysicalConnections> virtualPhysicalConnections;
 
     private ListVirtualPhysicalConnectionsResponseBody(Builder builder) {
@@ -136,10 +135,10 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -203,97 +202,97 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
 
     }
     public static class VirtualPhysicalConnections extends TeaModel {
-        @NameInMap("AccessPointId")
+        @com.aliyun.core.annotation.NameInMap("AccessPointId")
         private String accessPointId;
 
-        @NameInMap("AdLocation")
+        @com.aliyun.core.annotation.NameInMap("AdLocation")
         private String adLocation;
 
-        @NameInMap("AliUid")
+        @com.aliyun.core.annotation.NameInMap("AliUid")
         private String aliUid;
 
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Long bandwidth;
 
-        @NameInMap("BusinessStatus")
+        @com.aliyun.core.annotation.NameInMap("BusinessStatus")
         private String businessStatus;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("CircuitCode")
+        @com.aliyun.core.annotation.NameInMap("CircuitCode")
         private String circuitCode;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EnabledTime")
+        @com.aliyun.core.annotation.NameInMap("EnabledTime")
         private String enabledTime;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("ExpectSpec")
+        @com.aliyun.core.annotation.NameInMap("ExpectSpec")
         private String expectSpec;
 
-        @NameInMap("LineOperator")
+        @com.aliyun.core.annotation.NameInMap("LineOperator")
         private String lineOperator;
 
-        @NameInMap("LoaStatus")
+        @com.aliyun.core.annotation.NameInMap("LoaStatus")
         private String loaStatus;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OrderMode")
+        @com.aliyun.core.annotation.NameInMap("OrderMode")
         private String orderMode;
 
-        @NameInMap("ParentPhysicalConnectionAliUid")
+        @com.aliyun.core.annotation.NameInMap("ParentPhysicalConnectionAliUid")
         private String parentPhysicalConnectionAliUid;
 
-        @NameInMap("ParentPhysicalConnectionId")
+        @com.aliyun.core.annotation.NameInMap("ParentPhysicalConnectionId")
         private String parentPhysicalConnectionId;
 
-        @NameInMap("PeerLocation")
+        @com.aliyun.core.annotation.NameInMap("PeerLocation")
         private String peerLocation;
 
-        @NameInMap("PhysicalConnectionId")
+        @com.aliyun.core.annotation.NameInMap("PhysicalConnectionId")
         private String physicalConnectionId;
 
-        @NameInMap("PortNumber")
+        @com.aliyun.core.annotation.NameInMap("PortNumber")
         private String portNumber;
 
-        @NameInMap("PortType")
+        @com.aliyun.core.annotation.NameInMap("PortType")
         private String portType;
 
-        @NameInMap("ProductType")
+        @com.aliyun.core.annotation.NameInMap("ProductType")
         private String productType;
 
-        @NameInMap("RedundantPhysicalConnectionId")
+        @com.aliyun.core.annotation.NameInMap("RedundantPhysicalConnectionId")
         private String redundantPhysicalConnectionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Spec")
+        @com.aliyun.core.annotation.NameInMap("Spec")
         private String spec;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("VirtualPhysicalConnectionStatus")
+        @com.aliyun.core.annotation.NameInMap("VirtualPhysicalConnectionStatus")
         private String virtualPhysicalConnectionStatus;
 
-        @NameInMap("VlanId")
+        @com.aliyun.core.annotation.NameInMap("VlanId")
         private String vlanId;
 
         private VirtualPhysicalConnections(Builder builder) {

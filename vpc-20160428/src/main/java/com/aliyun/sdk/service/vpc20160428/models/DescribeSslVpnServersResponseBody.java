@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSslVpnServersResponseBody</p>
  */
 public class DescribeSslVpnServersResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SslVpnServers")
+    @com.aliyun.core.annotation.NameInMap("SslVpnServers")
     private SslVpnServers sslVpnServers;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeSslVpnServersResponseBody(Builder builder) {
@@ -132,58 +131,58 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
     } 
 
     public static class SslVpnServer extends TeaModel {
-        @NameInMap("Cipher")
+        @com.aliyun.core.annotation.NameInMap("Cipher")
         private String cipher;
 
-        @NameInMap("ClientIpPool")
+        @com.aliyun.core.annotation.NameInMap("ClientIpPool")
         private String clientIpPool;
 
-        @NameInMap("Compress")
+        @com.aliyun.core.annotation.NameInMap("Compress")
         private Boolean compress;
 
-        @NameInMap("Connections")
+        @com.aliyun.core.annotation.NameInMap("Connections")
         private Integer connections;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("EnableMultiFactorAuth")
+        @com.aliyun.core.annotation.NameInMap("EnableMultiFactorAuth")
         private Boolean enableMultiFactorAuth;
 
-        @NameInMap("IDaaSInstanceId")
+        @com.aliyun.core.annotation.NameInMap("IDaaSInstanceId")
         private String iDaaSInstanceId;
 
-        @NameInMap("IDaaSRegionId")
+        @com.aliyun.core.annotation.NameInMap("IDaaSRegionId")
         private String iDaaSRegionId;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("LocalSubnet")
+        @com.aliyun.core.annotation.NameInMap("LocalSubnet")
         private String localSubnet;
 
-        @NameInMap("MaxConnections")
+        @com.aliyun.core.annotation.NameInMap("MaxConnections")
         private Integer maxConnections;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Proto")
+        @com.aliyun.core.annotation.NameInMap("Proto")
         private String proto;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SslVpnServerId")
+        @com.aliyun.core.annotation.NameInMap("SslVpnServerId")
         private String sslVpnServerId;
 
-        @NameInMap("VpnGatewayId")
+        @com.aliyun.core.annotation.NameInMap("VpnGatewayId")
         private String vpnGatewayId;
 
         private SslVpnServer(Builder builder) {
@@ -524,7 +523,7 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
 
     }
     public static class SslVpnServers extends TeaModel {
-        @NameInMap("SslVpnServer")
+        @com.aliyun.core.annotation.NameInMap("SslVpnServer")
         private java.util.List < SslVpnServer> sslVpnServer;
 
         private SslVpnServers(Builder builder) {

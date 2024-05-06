@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVpnSslServerLogsResponseBody</p>
  */
 public class DescribeVpnSslServerLogsResponseBody extends TeaModel {
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("IsCompleted")
+    @com.aliyun.core.annotation.NameInMap("IsCompleted")
     private Boolean isCompleted;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeVpnSslServerLogsResponseBody(Builder builder) {
@@ -159,7 +158,7 @@ public class DescribeVpnSslServerLogsResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("Logs")
+        @com.aliyun.core.annotation.NameInMap("Logs")
         private java.util.List < String > logs;
 
         private Data(Builder builder) {

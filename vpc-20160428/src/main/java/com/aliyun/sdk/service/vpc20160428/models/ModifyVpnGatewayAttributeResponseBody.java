@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,61 +11,61 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyVpnGatewayAttributeResponseBody</p>
  */
 public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
-    @NameInMap("AutoPropagate")
+    @com.aliyun.core.annotation.NameInMap("AutoPropagate")
     private Boolean autoPropagate;
 
-    @NameInMap("BusinessStatus")
+    @com.aliyun.core.annotation.NameInMap("BusinessStatus")
     private String businessStatus;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private Long createTime;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("DisasterRecoveryInternetIp")
+    @com.aliyun.core.annotation.NameInMap("DisasterRecoveryInternetIp")
     private String disasterRecoveryInternetIp;
 
-    @NameInMap("DisasterRecoveryVSwitchId")
+    @com.aliyun.core.annotation.NameInMap("DisasterRecoveryVSwitchId")
     private String disasterRecoveryVSwitchId;
 
-    @NameInMap("EnableBgp")
+    @com.aliyun.core.annotation.NameInMap("EnableBgp")
     private Boolean enableBgp;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @NameInMap("InternetIp")
+    @com.aliyun.core.annotation.NameInMap("InternetIp")
     private String internetIp;
 
-    @NameInMap("IntranetIp")
+    @com.aliyun.core.annotation.NameInMap("IntranetIp")
     private String intranetIp;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("Spec")
+    @com.aliyun.core.annotation.NameInMap("Spec")
     private String spec;
 
-    @NameInMap("SslVpnInternetIp")
+    @com.aliyun.core.annotation.NameInMap("SslVpnInternetIp")
     private String sslVpnInternetIp;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
-    @NameInMap("VpnGatewayId")
+    @com.aliyun.core.annotation.NameInMap("VpnGatewayId")
     private String vpnGatewayId;
 
     private ModifyVpnGatewayAttributeResponseBody(Builder builder) {

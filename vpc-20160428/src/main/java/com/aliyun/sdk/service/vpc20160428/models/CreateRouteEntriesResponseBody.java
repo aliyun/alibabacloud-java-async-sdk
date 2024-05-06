@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateRouteEntriesResponseBody</p>
  */
 public class CreateRouteEntriesResponseBody extends TeaModel {
-    @NameInMap("FailedCount")
+    @com.aliyun.core.annotation.NameInMap("FailedCount")
     private Integer failedCount;
 
-    @NameInMap("FailedRouteEntries")
+    @com.aliyun.core.annotation.NameInMap("FailedRouteEntries")
     private java.util.List < FailedRouteEntries> failedRouteEntries;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RouteEntryIds")
+    @com.aliyun.core.annotation.NameInMap("RouteEntryIds")
     private java.util.List < String > routeEntryIds;
 
-    @NameInMap("SuccessCount")
+    @com.aliyun.core.annotation.NameInMap("SuccessCount")
     private Integer successCount;
 
     private CreateRouteEntriesResponseBody(Builder builder) {
@@ -132,16 +131,16 @@ public class CreateRouteEntriesResponseBody extends TeaModel {
     } 
 
     public static class FailedRouteEntries extends TeaModel {
-        @NameInMap("DstCidrBlock")
+        @com.aliyun.core.annotation.NameInMap("DstCidrBlock")
         private String dstCidrBlock;
 
-        @NameInMap("FailedCode")
+        @com.aliyun.core.annotation.NameInMap("FailedCode")
         private String failedCode;
 
-        @NameInMap("FailedMessage")
+        @com.aliyun.core.annotation.NameInMap("FailedMessage")
         private String failedMessage;
 
-        @NameInMap("NextHop")
+        @com.aliyun.core.annotation.NameInMap("NextHop")
         private String nextHop;
 
         private FailedRouteEntries(Builder builder) {

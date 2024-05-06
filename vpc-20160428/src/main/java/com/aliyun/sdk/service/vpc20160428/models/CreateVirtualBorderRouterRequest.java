@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,95 +11,95 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateVirtualBorderRouterRequest</p>
  */
 public class CreateVirtualBorderRouterRequest extends Request {
-    @Query
-    @NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
     private Long bandwidth;
 
-    @Query
-    @NameInMap("CircuitCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CircuitCode")
     private String circuitCode;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("EnableIpv6")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableIpv6")
     private Boolean enableIpv6;
 
-    @Query
-    @NameInMap("LocalGatewayIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LocalGatewayIp")
     private String localGatewayIp;
 
-    @Query
-    @NameInMap("LocalIpv6GatewayIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LocalIpv6GatewayIp")
     private String localIpv6GatewayIp;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PeerGatewayIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeerGatewayIp")
     private String peerGatewayIp;
 
-    @Query
-    @NameInMap("PeerIpv6GatewayIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeerIpv6GatewayIp")
     private String peerIpv6GatewayIp;
 
-    @Query
-    @NameInMap("PeeringIpv6SubnetMask")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeeringIpv6SubnetMask")
     private String peeringIpv6SubnetMask;
 
-    @Query
-    @NameInMap("PeeringSubnetMask")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeeringSubnetMask")
     private String peeringSubnetMask;
 
-    @Query
-    @NameInMap("PhysicalConnectionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhysicalConnectionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String physicalConnectionId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List < Tags> tags;
 
-    @Query
-    @NameInMap("VbrOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VbrOwnerId")
     private Long vbrOwnerId;
 
-    @Query
-    @NameInMap("VlanId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VlanId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer vlanId;
 
     private CreateVirtualBorderRouterRequest(Builder builder) {
@@ -611,10 +610,10 @@ public class CreateVirtualBorderRouterRequest extends Request {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {

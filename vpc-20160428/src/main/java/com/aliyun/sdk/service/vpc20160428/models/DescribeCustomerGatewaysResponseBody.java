@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCustomerGatewaysResponseBody</p>
  */
 public class DescribeCustomerGatewaysResponseBody extends TeaModel {
-    @NameInMap("CustomerGateways")
+    @com.aliyun.core.annotation.NameInMap("CustomerGateways")
     private CustomerGateways customerGateways;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeCustomerGatewaysResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -193,7 +192,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -234,31 +233,31 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
 
     }
     public static class CustomerGateway extends TeaModel {
-        @NameInMap("Asn")
+        @com.aliyun.core.annotation.NameInMap("Asn")
         private Long asn;
 
-        @NameInMap("AuthKey")
+        @com.aliyun.core.annotation.NameInMap("AuthKey")
         private String authKey;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("CustomerGatewayId")
+        @com.aliyun.core.annotation.NameInMap("CustomerGatewayId")
         private String customerGatewayId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("IpAddress")
+        @com.aliyun.core.annotation.NameInMap("IpAddress")
         private String ipAddress;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
         private CustomerGateway(Builder builder) {
@@ -441,7 +440,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
 
     }
     public static class CustomerGateways extends TeaModel {
-        @NameInMap("CustomerGateway")
+        @com.aliyun.core.annotation.NameInMap("CustomerGateway")
         private java.util.List < CustomerGateway> customerGateway;
 
         private CustomerGateways(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,43 +11,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSslVpnClientCertResponseBody</p>
  */
 public class DescribeSslVpnClientCertResponseBody extends TeaModel {
-    @NameInMap("CaCert")
+    @com.aliyun.core.annotation.NameInMap("CaCert")
     private String caCert;
 
-    @NameInMap("ClientCert")
+    @com.aliyun.core.annotation.NameInMap("ClientCert")
     private String clientCert;
 
-    @NameInMap("ClientConfig")
+    @com.aliyun.core.annotation.NameInMap("ClientConfig")
     private String clientConfig;
 
-    @NameInMap("ClientKey")
+    @com.aliyun.core.annotation.NameInMap("ClientKey")
     private String clientKey;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private Long createTime;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("SslVpnClientCertId")
+    @com.aliyun.core.annotation.NameInMap("SslVpnClientCertId")
     private String sslVpnClientCertId;
 
-    @NameInMap("SslVpnServerId")
+    @com.aliyun.core.annotation.NameInMap("SslVpnServerId")
     private String sslVpnServerId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeSslVpnClientCertResponseBody(Builder builder) {

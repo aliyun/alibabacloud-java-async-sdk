@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateHighReliablePhysicalConnectionResponseBody</p>
  */
 public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
-    @NameInMap("ErrorInfoList")
+    @com.aliyun.core.annotation.NameInMap("ErrorInfoList")
     private ErrorInfoList errorInfoList;
 
-    @NameInMap("PhysicalConnectionList")
+    @com.aliyun.core.annotation.NameInMap("PhysicalConnectionList")
     private PhysicalConnectionList physicalConnectionList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateHighReliablePhysicalConnectionResponseBody(Builder builder) {
@@ -92,13 +91,13 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
     } 
 
     public static class ErrorInfoListErrorInfoList extends TeaModel {
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
         private ErrorInfoListErrorInfoList(Builder builder) {
@@ -173,7 +172,7 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
 
     }
     public static class ErrorInfoList extends TeaModel {
-        @NameInMap("errorInfoList")
+        @com.aliyun.core.annotation.NameInMap("errorInfoList")
         private java.util.List < ErrorInfoListErrorInfoList> errorInfoList;
 
         private ErrorInfoList(Builder builder) {
@@ -214,10 +213,10 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
 
     }
     public static class PhysicalConnectionListPhysicalConnectionList extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("RegionNo")
+        @com.aliyun.core.annotation.NameInMap("RegionNo")
         private String regionNo;
 
         private PhysicalConnectionListPhysicalConnectionList(Builder builder) {
@@ -275,7 +274,7 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
 
     }
     public static class PhysicalConnectionList extends TeaModel {
-        @NameInMap("physicalConnectionList")
+        @com.aliyun.core.annotation.NameInMap("physicalConnectionList")
         private java.util.List < PhysicalConnectionListPhysicalConnectionList> physicalConnectionList;
 
         private PhysicalConnectionList(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,73 +11,77 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateVpcRequest</p>
  */
 public class CreateVpcRequest extends Request {
-    @Query
-    @NameInMap("CidrBlock")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CidrBlock")
     private String cidrBlock;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("EnableIpv6")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableIpv6")
     private Boolean enableIpv6;
 
-    @Query
-    @NameInMap("Ipv4IpamPoolId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv4CidrMask")
+    private Integer ipv4CidrMask;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv4IpamPoolId")
     private String ipv4IpamPoolId;
 
-    @Query
-    @NameInMap("Ipv6CidrBlock")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6CidrBlock")
     private String ipv6CidrBlock;
 
-    @Query
-    @NameInMap("Ipv6Isp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6Isp")
     private String ipv6Isp;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("UserCidr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserCidr")
     private String userCidr;
 
-    @Query
-    @NameInMap("VpcName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcName")
     private String vpcName;
 
     private CreateVpcRequest(Builder builder) {
@@ -88,6 +91,7 @@ public class CreateVpcRequest extends Request {
         this.description = builder.description;
         this.dryRun = builder.dryRun;
         this.enableIpv6 = builder.enableIpv6;
+        this.ipv4CidrMask = builder.ipv4CidrMask;
         this.ipv4IpamPoolId = builder.ipv4IpamPoolId;
         this.ipv6CidrBlock = builder.ipv6CidrBlock;
         this.ipv6Isp = builder.ipv6Isp;
@@ -148,6 +152,13 @@ public class CreateVpcRequest extends Request {
      */
     public Boolean getEnableIpv6() {
         return this.enableIpv6;
+    }
+
+    /**
+     * @return ipv4CidrMask
+     */
+    public Integer getIpv4CidrMask() {
+        return this.ipv4CidrMask;
     }
 
     /**
@@ -240,6 +251,7 @@ public class CreateVpcRequest extends Request {
         private String description; 
         private Boolean dryRun; 
         private Boolean enableIpv6; 
+        private Integer ipv4CidrMask; 
         private String ipv4IpamPoolId; 
         private String ipv6CidrBlock; 
         private String ipv6Isp; 
@@ -264,6 +276,7 @@ public class CreateVpcRequest extends Request {
             this.description = request.description;
             this.dryRun = request.dryRun;
             this.enableIpv6 = request.enableIpv6;
+            this.ipv4CidrMask = request.ipv4CidrMask;
             this.ipv4IpamPoolId = request.ipv4IpamPoolId;
             this.ipv6CidrBlock = request.ipv6CidrBlock;
             this.ipv6Isp = request.ipv6Isp;
@@ -340,6 +353,15 @@ public class CreateVpcRequest extends Request {
         public Builder enableIpv6(Boolean enableIpv6) {
             this.putQueryParameter("EnableIpv6", enableIpv6);
             this.enableIpv6 = enableIpv6;
+            return this;
+        }
+
+        /**
+         * Ipv4CidrMask.
+         */
+        public Builder ipv4CidrMask(Integer ipv4CidrMask) {
+            this.putQueryParameter("Ipv4CidrMask", ipv4CidrMask);
+            this.ipv4CidrMask = ipv4CidrMask;
             return this;
         }
 
@@ -479,10 +501,10 @@ public class CreateVpcRequest extends Request {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

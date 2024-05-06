@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEcGrantRelationResponseBody</p>
  */
 public class DescribeEcGrantRelationResponseBody extends TeaModel {
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("EcGrantRelations")
+    @com.aliyun.core.annotation.NameInMap("EcGrantRelations")
     private java.util.List < EcGrantRelations> ecGrantRelations;
 
-    @NameInMap("Page")
+    @com.aliyun.core.annotation.NameInMap("Page")
     private Integer page;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeEcGrantRelationResponseBody(Builder builder) {
@@ -152,37 +151,37 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
     } 
 
     public static class EcGrantRelations extends TeaModel {
-        @NameInMap("AliUid")
+        @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GrantType")
+        @com.aliyun.core.annotation.NameInMap("GrantType")
         private String grantType;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InstanceRouterId")
+        @com.aliyun.core.annotation.NameInMap("InstanceRouterId")
         private String instanceRouterId;
 
-        @NameInMap("RegionNo")
+        @com.aliyun.core.annotation.NameInMap("RegionNo")
         private String regionNo;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("VbrInstanceId")
+        @com.aliyun.core.annotation.NameInMap("VbrInstanceId")
         private String vbrInstanceId;
 
-        @NameInMap("VbrOwnerUid")
+        @com.aliyun.core.annotation.NameInMap("VbrOwnerUid")
         private Long vbrOwnerUid;
 
-        @NameInMap("VbrRegionNo")
+        @com.aliyun.core.annotation.NameInMap("VbrRegionNo")
         private String vbrRegionNo;
 
         private EcGrantRelations(Builder builder) {

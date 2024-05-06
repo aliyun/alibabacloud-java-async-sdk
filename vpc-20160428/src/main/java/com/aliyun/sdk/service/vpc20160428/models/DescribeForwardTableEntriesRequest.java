@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,70 +11,70 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeForwardTableEntriesRequest</p>
  */
 public class DescribeForwardTableEntriesRequest extends Request {
-    @Query
-    @NameInMap("ExternalIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExternalIp")
     private String externalIp;
 
-    @Query
-    @NameInMap("ExternalPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExternalPort")
     private String externalPort;
 
-    @Query
-    @NameInMap("ForwardEntryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForwardEntryId")
     private String forwardEntryId;
 
-    @Query
-    @NameInMap("ForwardEntryName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForwardEntryName")
     private String forwardEntryName;
 
-    @Query
-    @NameInMap("ForwardTableId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForwardTableId")
     private String forwardTableId;
 
-    @Query
-    @NameInMap("InternalIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternalIp")
     private String internalIp;
 
-    @Query
-    @NameInMap("InternalPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternalPort")
     private String internalPort;
 
-    @Query
-    @NameInMap("IpProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpProtocol")
     private String ipProtocol;
 
-    @Query
-    @NameInMap("NatGatewayId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NatGatewayId")
     private String natGatewayId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private DescribeForwardTableEntriesRequest(Builder builder) {

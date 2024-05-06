@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,46 +11,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVirtualBorderRoutersRequest</p>
  */
 public class DescribeVirtualBorderRoutersRequest extends Request {
-    @Query
-    @NameInMap("Filter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
     private java.util.List < Filter> filter;
 
-    @Query
-    @NameInMap("IncludeCrossAccountVbr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeCrossAccountVbr")
     private Boolean includeCrossAccountVbr;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List < Tags> tags;
 
     private DescribeVirtualBorderRoutersRequest(Builder builder) {
@@ -286,10 +285,10 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
     } 
 
     public static class Filter extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private java.util.List < String > value;
 
         private Filter(Builder builder) {
@@ -356,10 +355,10 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {

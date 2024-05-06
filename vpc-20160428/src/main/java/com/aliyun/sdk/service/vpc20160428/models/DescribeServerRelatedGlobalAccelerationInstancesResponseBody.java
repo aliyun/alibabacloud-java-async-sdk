@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeServerRelatedGlobalAccelerationInstancesResponseBody</p>
  */
 public class DescribeServerRelatedGlobalAccelerationInstancesResponseBody extends TeaModel {
-    @NameInMap("GlobalAccelerationInstances")
+    @com.aliyun.core.annotation.NameInMap("GlobalAccelerationInstances")
     private GlobalAccelerationInstances globalAccelerationInstances;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeServerRelatedGlobalAccelerationInstancesResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribeServerRelatedGlobalAccelerationInstancesResponseBody extend
     } 
 
     public static class GlobalAccelerationInstance extends TeaModel {
-        @NameInMap("GlobalAccelerationInstanceId")
+        @com.aliyun.core.annotation.NameInMap("GlobalAccelerationInstanceId")
         private String globalAccelerationInstanceId;
 
-        @NameInMap("IpAddress")
+        @com.aliyun.core.annotation.NameInMap("IpAddress")
         private String ipAddress;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ServerIpAddress")
+        @com.aliyun.core.annotation.NameInMap("ServerIpAddress")
         private String serverIpAddress;
 
         private GlobalAccelerationInstance(Builder builder) {
@@ -173,7 +172,7 @@ public class DescribeServerRelatedGlobalAccelerationInstancesResponseBody extend
 
     }
     public static class GlobalAccelerationInstances extends TeaModel {
-        @NameInMap("GlobalAccelerationInstance")
+        @com.aliyun.core.annotation.NameInMap("GlobalAccelerationInstance")
         private java.util.List < GlobalAccelerationInstance> globalAccelerationInstance;
 
         private GlobalAccelerationInstances(Builder builder) {

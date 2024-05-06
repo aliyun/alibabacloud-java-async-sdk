@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListGeographicSubRegionsResponseBody</p>
  */
 public class ListGeographicSubRegionsResponseBody extends TeaModel {
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Long count;
 
-    @NameInMap("GeographicSubRegions")
+    @com.aliyun.core.annotation.NameInMap("GeographicSubRegions")
     private java.util.List < String > geographicSubRegions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListGeographicSubRegionsResponseBody(Builder builder) {

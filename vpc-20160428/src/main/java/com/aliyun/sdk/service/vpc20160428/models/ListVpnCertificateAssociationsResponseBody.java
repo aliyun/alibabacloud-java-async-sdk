@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListVpnCertificateAssociationsResponseBody</p>
  */
 public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("VpnCertificateRelations")
+    @com.aliyun.core.annotation.NameInMap("VpnCertificateRelations")
     private java.util.List < VpnCertificateRelations> vpnCertificateRelations;
 
     private ListVpnCertificateAssociationsResponseBody(Builder builder) {
@@ -136,19 +135,19 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
     } 
 
     public static class VpnCertificateRelations extends TeaModel {
-        @NameInMap("AssociationTime")
+        @com.aliyun.core.annotation.NameInMap("AssociationTime")
         private String associationTime;
 
-        @NameInMap("CertificateId")
+        @com.aliyun.core.annotation.NameInMap("CertificateId")
         private String certificateId;
 
-        @NameInMap("CertificateType")
+        @com.aliyun.core.annotation.NameInMap("CertificateType")
         private String certificateType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("VpnGatewayId")
+        @com.aliyun.core.annotation.NameInMap("VpnGatewayId")
         private String vpnGatewayId;
 
         private VpnCertificateRelations(Builder builder) {

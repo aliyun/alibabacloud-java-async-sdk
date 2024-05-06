@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,87 +11,87 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateVpnGatewayRequest</p>
  */
 public class CreateVpnGatewayRequest extends Request {
-    @Query
-    @NameInMap("AutoPay")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
     private Boolean autoPay;
 
-    @Query
-    @NameInMap("Bandwidth")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer bandwidth;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DisasterRecoveryVSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisasterRecoveryVSwitchId")
     private String disasterRecoveryVSwitchId;
 
-    @Query
-    @NameInMap("EnableIpsec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableIpsec")
     private Boolean enableIpsec;
 
-    @Query
-    @NameInMap("EnableSsl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableSsl")
     private Boolean enableSsl;
 
-    @Query
-    @NameInMap("InstanceChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
     private String instanceChargeType;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("NetworkType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkType")
     private String networkType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SslConnections")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SslConnections")
     private Integer sslConnections;
 
-    @Query
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @Query
-    @NameInMap("VpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
-    @Query
-    @NameInMap("VpnType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpnType")
     private String vpnType;
 
     private CreateVpnGatewayRequest(Builder builder) {

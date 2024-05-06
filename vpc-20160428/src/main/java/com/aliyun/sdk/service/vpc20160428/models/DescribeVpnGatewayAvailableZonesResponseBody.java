@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVpnGatewayAvailableZonesResponseBody</p>
  */
 public class DescribeVpnGatewayAvailableZonesResponseBody extends TeaModel {
-    @NameInMap("AvailableZoneIdList")
+    @com.aliyun.core.annotation.NameInMap("AvailableZoneIdList")
     private java.util.List < AvailableZoneIdList> availableZoneIdList;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeVpnGatewayAvailableZonesResponseBody(Builder builder) {
@@ -92,10 +91,10 @@ public class DescribeVpnGatewayAvailableZonesResponseBody extends TeaModel {
     } 
 
     public static class AvailableZoneIdList extends TeaModel {
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
-        @NameInMap("ZoneName")
+        @com.aliyun.core.annotation.NameInMap("ZoneName")
         private String zoneName;
 
         private AvailableZoneIdList(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,75 +11,75 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRouteEntryListRequest</p>
  */
 public class DescribeRouteEntryListRequest extends Request {
-    @Query
-    @NameInMap("DestCidrBlockList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestCidrBlockList")
     private java.util.List < String > destCidrBlockList;
 
-    @Query
-    @NameInMap("DestinationCidrBlock")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
     private String destinationCidrBlock;
 
-    @Query
-    @NameInMap("IpVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpVersion")
     private String ipVersion;
 
-    @Query
-    @NameInMap("MaxResult")
-    @Validation(maximum = 500)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResult")
+    @com.aliyun.core.annotation.Validation(maximum = 500)
     private Integer maxResult;
 
-    @Query
-    @NameInMap("NextHopId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextHopId")
     private String nextHopId;
 
-    @Query
-    @NameInMap("NextHopType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextHopType")
     private String nextHopType;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RouteEntryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteEntryId")
     private String routeEntryId;
 
-    @Query
-    @NameInMap("RouteEntryName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteEntryName")
     private String routeEntryName;
 
-    @Query
-    @NameInMap("RouteEntryType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteEntryType")
     private String routeEntryType;
 
-    @Query
-    @NameInMap("RouteTableId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteTableId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String routeTableId;
 
-    @Query
-    @NameInMap("ServiceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceType")
     private String serviceType;
 
     private DescribeRouteEntryListRequest(Builder builder) {

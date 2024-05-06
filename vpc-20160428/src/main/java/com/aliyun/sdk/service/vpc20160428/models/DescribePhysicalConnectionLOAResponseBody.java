@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePhysicalConnectionLOAResponseBody</p>
  */
 public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
-    @NameInMap("PhysicalConnectionLOAType")
+    @com.aliyun.core.annotation.NameInMap("PhysicalConnectionLOAType")
     private PhysicalConnectionLOAType physicalConnectionLOAType;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePhysicalConnectionLOAResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
     } 
 
     public static class PMInfo extends TeaModel {
-        @NameInMap("PMCertificateNo")
+        @com.aliyun.core.annotation.NameInMap("PMCertificateNo")
         private String PMCertificateNo;
 
-        @NameInMap("PMCertificateType")
+        @com.aliyun.core.annotation.NameInMap("PMCertificateType")
         private String PMCertificateType;
 
-        @NameInMap("PMContactInfo")
+        @com.aliyun.core.annotation.NameInMap("PMContactInfo")
         private String PMContactInfo;
 
-        @NameInMap("PMGender")
+        @com.aliyun.core.annotation.NameInMap("PMGender")
         private String PMGender;
 
-        @NameInMap("PMName")
+        @com.aliyun.core.annotation.NameInMap("PMName")
         private String PMName;
 
         private PMInfo(Builder builder) {
@@ -202,7 +201,7 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
 
     }
     public static class PhysicalConnectionLOATypePMInfo extends TeaModel {
-        @NameInMap("PMInfo")
+        @com.aliyun.core.annotation.NameInMap("PMInfo")
         private java.util.List < PMInfo> PMInfo;
 
         private PhysicalConnectionLOATypePMInfo(Builder builder) {
@@ -243,43 +242,43 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
 
     }
     public static class PhysicalConnectionLOAType extends TeaModel {
-        @NameInMap("CompanyLocalizedName")
+        @com.aliyun.core.annotation.NameInMap("CompanyLocalizedName")
         private String companyLocalizedName;
 
-        @NameInMap("CompanyName")
+        @com.aliyun.core.annotation.NameInMap("CompanyName")
         private String companyName;
 
-        @NameInMap("ConstructionTime")
+        @com.aliyun.core.annotation.NameInMap("ConstructionTime")
         private String constructionTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("LineCode")
+        @com.aliyun.core.annotation.NameInMap("LineCode")
         private String lineCode;
 
-        @NameInMap("LineLabel")
+        @com.aliyun.core.annotation.NameInMap("LineLabel")
         private String lineLabel;
 
-        @NameInMap("LineSPContactInfo")
+        @com.aliyun.core.annotation.NameInMap("LineSPContactInfo")
         private String lineSPContactInfo;
 
-        @NameInMap("LineServiceProvider")
+        @com.aliyun.core.annotation.NameInMap("LineServiceProvider")
         private String lineServiceProvider;
 
-        @NameInMap("LineType")
+        @com.aliyun.core.annotation.NameInMap("LineType")
         private String lineType;
 
-        @NameInMap("LoaUrl")
+        @com.aliyun.core.annotation.NameInMap("LoaUrl")
         private String loaUrl;
 
-        @NameInMap("PMInfo")
+        @com.aliyun.core.annotation.NameInMap("PMInfo")
         private PhysicalConnectionLOATypePMInfo PMInfo;
 
-        @NameInMap("SI")
+        @com.aliyun.core.annotation.NameInMap("SI")
         private String si;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private PhysicalConnectionLOAType(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,44 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteRouteEntryRequest</p>
  */
 public class DeleteRouteEntryRequest extends Request {
-    @Query
-    @NameInMap("DestinationCidrBlock")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
     private String destinationCidrBlock;
 
-    @Query
-    @NameInMap("NextHopId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextHopId")
     private String nextHopId;
 
-    @Query
-    @NameInMap("NextHopList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextHopList")
     private java.util.List < NextHopList> nextHopList;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RouteEntryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteEntryId")
     private String routeEntryId;
 
-    @Query
-    @NameInMap("RouteTableId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteTableId")
     private String routeTableId;
 
     private DeleteRouteEntryRequest(Builder builder) {
@@ -284,10 +283,10 @@ public class DeleteRouteEntryRequest extends Request {
     } 
 
     public static class NextHopList extends TeaModel {
-        @NameInMap("NextHopId")
+        @com.aliyun.core.annotation.NameInMap("NextHopId")
         private String nextHopId;
 
-        @NameInMap("NextHopType")
+        @com.aliyun.core.annotation.NameInMap("NextHopType")
         private String nextHopType;
 
         private NextHopList(Builder builder) {

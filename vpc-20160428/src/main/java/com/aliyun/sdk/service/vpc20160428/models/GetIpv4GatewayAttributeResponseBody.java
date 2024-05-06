@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetIpv4GatewayAttributeResponseBody</p>
  */
 public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("Enabled")
+    @com.aliyun.core.annotation.NameInMap("Enabled")
     private Boolean enabled;
 
-    @NameInMap("Ipv4GatewayDescription")
+    @com.aliyun.core.annotation.NameInMap("Ipv4GatewayDescription")
     private String ipv4GatewayDescription;
 
-    @NameInMap("Ipv4GatewayId")
+    @com.aliyun.core.annotation.NameInMap("Ipv4GatewayId")
     private String ipv4GatewayId;
 
-    @NameInMap("Ipv4GatewayName")
+    @com.aliyun.core.annotation.NameInMap("Ipv4GatewayName")
     private String ipv4GatewayName;
 
-    @NameInMap("Ipv4GatewayRouteTableId")
+    @com.aliyun.core.annotation.NameInMap("Ipv4GatewayRouteTableId")
     private String ipv4GatewayRouteTableId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List < Tags> tags;
 
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     private GetIpv4GatewayAttributeResponseBody(Builder builder) {
@@ -264,10 +263,10 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {

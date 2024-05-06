@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,86 +11,86 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyVpnAttachmentAttributeRequest</p>
  */
 public class ModifyVpnAttachmentAttributeRequest extends Request {
-    @Query
-    @NameInMap("AutoConfigRoute")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoConfigRoute")
     private Boolean autoConfigRoute;
 
-    @Query
-    @NameInMap("BgpConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BgpConfig")
     private String bgpConfig;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("CustomerGatewayId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomerGatewayId")
     private String customerGatewayId;
 
-    @Query
-    @NameInMap("EffectImmediately")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectImmediately")
     private Boolean effectImmediately;
 
-    @Query
-    @NameInMap("EnableDpd")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableDpd")
     private Boolean enableDpd;
 
-    @Query
-    @NameInMap("EnableNatTraversal")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableNatTraversal")
     private Boolean enableNatTraversal;
 
-    @Query
-    @NameInMap("HealthCheckConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckConfig")
     private String healthCheckConfig;
 
-    @Query
-    @NameInMap("IkeConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IkeConfig")
     private String ikeConfig;
 
-    @Query
-    @NameInMap("IpsecConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpsecConfig")
     private String ipsecConfig;
 
-    @Query
-    @NameInMap("LocalSubnet")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LocalSubnet")
     private String localSubnet;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("NetworkType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkType")
     private String networkType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("RemoteCaCert")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RemoteCaCert")
     private String remoteCaCert;
 
-    @Query
-    @NameInMap("RemoteSubnet")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RemoteSubnet")
     private String remoteSubnet;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("VpnConnectionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpnConnectionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpnConnectionId;
 
     private ModifyVpnAttachmentAttributeRequest(Builder builder) {

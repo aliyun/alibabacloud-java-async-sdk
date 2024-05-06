@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListBusinessAccessPointsResponseBody</p>
  */
 public class ListBusinessAccessPointsResponseBody extends TeaModel {
-    @NameInMap("BusinessAccessPoints")
+    @com.aliyun.core.annotation.NameInMap("BusinessAccessPoints")
     private java.util.List < BusinessAccessPoints> businessAccessPoints;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListBusinessAccessPointsResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
     } 
 
     public static class BusinessAccessPoints extends TeaModel {
-        @NameInMap("AccessPointId")
+        @com.aliyun.core.annotation.NameInMap("AccessPointId")
         private String accessPointId;
 
-        @NameInMap("AccessPointName")
+        @com.aliyun.core.annotation.NameInMap("AccessPointName")
         private String accessPointName;
 
-        @NameInMap("CloudBoxInstanceIds")
+        @com.aliyun.core.annotation.NameInMap("CloudBoxInstanceIds")
         private String cloudBoxInstanceIds;
 
-        @NameInMap("Latitude")
+        @com.aliyun.core.annotation.NameInMap("Latitude")
         private Double latitude;
 
-        @NameInMap("Longitude")
+        @com.aliyun.core.annotation.NameInMap("Longitude")
         private Double longitude;
 
-        @NameInMap("SupportLineOperator")
+        @com.aliyun.core.annotation.NameInMap("SupportLineOperator")
         private String supportLineOperator;
 
-        @NameInMap("SupportPortTypes")
+        @com.aliyun.core.annotation.NameInMap("SupportPortTypes")
         private String supportPortTypes;
 
         private BusinessAccessPoints(Builder builder) {

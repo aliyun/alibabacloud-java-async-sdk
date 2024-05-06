@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVpnAttachmentsResponseBody</p>
  */
 public class DescribeVpnAttachmentsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("VpnAttachments")
+    @com.aliyun.core.annotation.NameInMap("VpnAttachments")
     private java.util.List < VpnAttachments> vpnAttachments;
 
     private DescribeVpnAttachmentsResponseBody(Builder builder) {
@@ -132,25 +131,25 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
     } 
 
     public static class VpnAttachments extends TeaModel {
-        @NameInMap("AttachType")
+        @com.aliyun.core.annotation.NameInMap("AttachType")
         private String attachType;
 
-        @NameInMap("CrossAccountAuthorized")
+        @com.aliyun.core.annotation.NameInMap("CrossAccountAuthorized")
         private Boolean crossAccountAuthorized;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("TransitRouterId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterId")
         private String transitRouterId;
 
-        @NameInMap("TransitRouterName")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterName")
         private String transitRouterName;
 
         private VpnAttachments(Builder builder) {

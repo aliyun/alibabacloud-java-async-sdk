@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBgpNetworksResponseBody</p>
  */
 public class DescribeBgpNetworksResponseBody extends TeaModel {
-    @NameInMap("BgpNetworks")
+    @com.aliyun.core.annotation.NameInMap("BgpNetworks")
     private BgpNetworks bgpNetworks;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeBgpNetworksResponseBody(Builder builder) {
@@ -132,16 +131,16 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
     } 
 
     public static class BgpNetwork extends TeaModel {
-        @NameInMap("DstCidrBlock")
+        @com.aliyun.core.annotation.NameInMap("DstCidrBlock")
         private String dstCidrBlock;
 
-        @NameInMap("RouterId")
+        @com.aliyun.core.annotation.NameInMap("RouterId")
         private String routerId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private BgpNetwork(Builder builder) {
@@ -233,7 +232,7 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
 
     }
     public static class BgpNetworks extends TeaModel {
-        @NameInMap("BgpNetwork")
+        @com.aliyun.core.annotation.NameInMap("BgpNetwork")
         private java.util.List < BgpNetwork> bgpNetwork;
 
         private BgpNetworks(Builder builder) {

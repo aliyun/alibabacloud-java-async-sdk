@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,100 +11,100 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateVpnConnectionRequest</p>
  */
 public class CreateVpnConnectionRequest extends Request {
-    @Query
-    @NameInMap("AutoConfigRoute")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoConfigRoute")
     private Boolean autoConfigRoute;
 
-    @Query
-    @NameInMap("BgpConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BgpConfig")
     private String bgpConfig;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("CustomerGatewayId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomerGatewayId")
     private String customerGatewayId;
 
-    @Query
-    @NameInMap("EffectImmediately")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectImmediately")
     private Boolean effectImmediately;
 
-    @Query
-    @NameInMap("EnableDpd")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableDpd")
     private Boolean enableDpd;
 
-    @Query
-    @NameInMap("EnableNatTraversal")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableNatTraversal")
     private Boolean enableNatTraversal;
 
-    @Query
-    @NameInMap("EnableTunnelsBgp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableTunnelsBgp")
     private Boolean enableTunnelsBgp;
 
-    @Query
-    @NameInMap("HealthCheckConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckConfig")
     private String healthCheckConfig;
 
-    @Query
-    @NameInMap("IkeConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IkeConfig")
     private String ikeConfig;
 
-    @Query
-    @NameInMap("IpsecConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpsecConfig")
     private String ipsecConfig;
 
-    @Query
-    @NameInMap("LocalSubnet")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LocalSubnet")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String localSubnet;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("RemoteCaCertificate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RemoteCaCertificate")
     private String remoteCaCertificate;
 
-    @Query
-    @NameInMap("RemoteSubnet")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RemoteSubnet")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String remoteSubnet;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List < Tags> tags;
 
-    @Body
-    @NameInMap("TunnelOptionsSpecification")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TunnelOptionsSpecification")
     private java.util.List < TunnelOptionsSpecification> tunnelOptionsSpecification;
 
-    @Query
-    @NameInMap("VpnGatewayId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpnGatewayId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpnGatewayId;
 
     private CreateVpnConnectionRequest(Builder builder) {
@@ -721,10 +720,10 @@ public class CreateVpnConnectionRequest extends Request {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -792,13 +791,13 @@ public class CreateVpnConnectionRequest extends Request {
 
     }
     public static class TunnelBgpConfig extends TeaModel {
-        @NameInMap("LocalAsn")
+        @com.aliyun.core.annotation.NameInMap("LocalAsn")
         private Long localAsn;
 
-        @NameInMap("LocalBgpIp")
+        @com.aliyun.core.annotation.NameInMap("LocalBgpIp")
         private String localBgpIp;
 
-        @NameInMap("TunnelCidr")
+        @com.aliyun.core.annotation.NameInMap("TunnelCidr")
         private String tunnelCidr;
 
         private TunnelBgpConfig(Builder builder) {
@@ -881,31 +880,31 @@ public class CreateVpnConnectionRequest extends Request {
 
     }
     public static class TunnelIkeConfig extends TeaModel {
-        @NameInMap("IkeAuthAlg")
+        @com.aliyun.core.annotation.NameInMap("IkeAuthAlg")
         private String ikeAuthAlg;
 
-        @NameInMap("IkeEncAlg")
+        @com.aliyun.core.annotation.NameInMap("IkeEncAlg")
         private String ikeEncAlg;
 
-        @NameInMap("IkeLifetime")
+        @com.aliyun.core.annotation.NameInMap("IkeLifetime")
         private Long ikeLifetime;
 
-        @NameInMap("IkeMode")
+        @com.aliyun.core.annotation.NameInMap("IkeMode")
         private String ikeMode;
 
-        @NameInMap("IkePfs")
+        @com.aliyun.core.annotation.NameInMap("IkePfs")
         private String ikePfs;
 
-        @NameInMap("IkeVersion")
+        @com.aliyun.core.annotation.NameInMap("IkeVersion")
         private String ikeVersion;
 
-        @NameInMap("LocalId")
+        @com.aliyun.core.annotation.NameInMap("LocalId")
         private String localId;
 
-        @NameInMap("Psk")
+        @com.aliyun.core.annotation.NameInMap("Psk")
         private String psk;
 
-        @NameInMap("RemoteId")
+        @com.aliyun.core.annotation.NameInMap("RemoteId")
         private String remoteId;
 
         private TunnelIkeConfig(Builder builder) {
@@ -1112,16 +1111,16 @@ public class CreateVpnConnectionRequest extends Request {
 
     }
     public static class TunnelIpsecConfig extends TeaModel {
-        @NameInMap("IpsecAuthAlg")
+        @com.aliyun.core.annotation.NameInMap("IpsecAuthAlg")
         private String ipsecAuthAlg;
 
-        @NameInMap("IpsecEncAlg")
+        @com.aliyun.core.annotation.NameInMap("IpsecEncAlg")
         private String ipsecEncAlg;
 
-        @NameInMap("IpsecLifetime")
+        @com.aliyun.core.annotation.NameInMap("IpsecLifetime")
         private Long ipsecLifetime;
 
-        @NameInMap("IpsecPfs")
+        @com.aliyun.core.annotation.NameInMap("IpsecPfs")
         private String ipsecPfs;
 
         private TunnelIpsecConfig(Builder builder) {
@@ -1225,28 +1224,28 @@ public class CreateVpnConnectionRequest extends Request {
 
     }
     public static class TunnelOptionsSpecification extends TeaModel {
-        @NameInMap("CustomerGatewayId")
+        @com.aliyun.core.annotation.NameInMap("CustomerGatewayId")
         private String customerGatewayId;
 
-        @NameInMap("EnableDpd")
+        @com.aliyun.core.annotation.NameInMap("EnableDpd")
         private Boolean enableDpd;
 
-        @NameInMap("EnableNatTraversal")
+        @com.aliyun.core.annotation.NameInMap("EnableNatTraversal")
         private Boolean enableNatTraversal;
 
-        @NameInMap("RemoteCaCertificate")
+        @com.aliyun.core.annotation.NameInMap("RemoteCaCertificate")
         private String remoteCaCertificate;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("TunnelBgpConfig")
+        @com.aliyun.core.annotation.NameInMap("TunnelBgpConfig")
         private TunnelBgpConfig tunnelBgpConfig;
 
-        @NameInMap("TunnelIkeConfig")
+        @com.aliyun.core.annotation.NameInMap("TunnelIkeConfig")
         private TunnelIkeConfig tunnelIkeConfig;
 
-        @NameInMap("TunnelIpsecConfig")
+        @com.aliyun.core.annotation.NameInMap("TunnelIpsecConfig")
         private TunnelIpsecConfig tunnelIpsecConfig;
 
         private TunnelOptionsSpecification(Builder builder) {

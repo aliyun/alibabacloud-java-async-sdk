@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRouteEntryListResponseBody</p>
  */
 public class DescribeRouteEntryListResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RouteEntrys")
+    @com.aliyun.core.annotation.NameInMap("RouteEntrys")
     private RouteEntrys routeEntrys;
 
     private DescribeRouteEntryListResponseBody(Builder builder) {
@@ -96,13 +95,13 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
     } 
 
     public static class NextHopRelatedInfo extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private NextHopRelatedInfo(Builder builder) {
@@ -182,22 +181,22 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
 
     }
     public static class NextHop extends TeaModel {
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Integer enabled;
 
-        @NameInMap("NextHopId")
+        @com.aliyun.core.annotation.NameInMap("NextHopId")
         private String nextHopId;
 
-        @NameInMap("NextHopRegionId")
+        @com.aliyun.core.annotation.NameInMap("NextHopRegionId")
         private String nextHopRegionId;
 
-        @NameInMap("NextHopRelatedInfo")
+        @com.aliyun.core.annotation.NameInMap("NextHopRelatedInfo")
         private NextHopRelatedInfo nextHopRelatedInfo;
 
-        @NameInMap("NextHopType")
+        @com.aliyun.core.annotation.NameInMap("NextHopType")
         private String nextHopType;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private NextHop(Builder builder) {
@@ -349,7 +348,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
 
     }
     public static class NextHops extends TeaModel {
-        @NameInMap("NextHop")
+        @com.aliyun.core.annotation.NameInMap("NextHop")
         private java.util.List < NextHop> nextHop;
 
         private NextHops(Builder builder) {
@@ -390,40 +389,40 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
 
     }
     public static class RouteEntry extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DestinationCidrBlock")
+        @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
         private String destinationCidrBlock;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("IpVersion")
+        @com.aliyun.core.annotation.NameInMap("IpVersion")
         private String ipVersion;
 
-        @NameInMap("NextHops")
+        @com.aliyun.core.annotation.NameInMap("NextHops")
         private NextHops nextHops;
 
-        @NameInMap("Origin")
+        @com.aliyun.core.annotation.NameInMap("Origin")
         private String origin;
 
-        @NameInMap("RouteEntryId")
+        @com.aliyun.core.annotation.NameInMap("RouteEntryId")
         private String routeEntryId;
 
-        @NameInMap("RouteEntryName")
+        @com.aliyun.core.annotation.NameInMap("RouteEntryName")
         private String routeEntryName;
 
-        @NameInMap("RouteTableId")
+        @com.aliyun.core.annotation.NameInMap("RouteTableId")
         private String routeTableId;
 
-        @NameInMap("ServiceType")
+        @com.aliyun.core.annotation.NameInMap("ServiceType")
         private String serviceType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private RouteEntry(Builder builder) {
@@ -674,7 +673,7 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
 
     }
     public static class RouteEntrys extends TeaModel {
-        @NameInMap("RouteEntry")
+        @com.aliyun.core.annotation.NameInMap("RouteEntry")
         private java.util.List < RouteEntry> routeEntry;
 
         private RouteEntrys(Builder builder) {

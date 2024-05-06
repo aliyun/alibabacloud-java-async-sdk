@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,57 +11,57 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateIpsecServerRequest</p>
  */
 public class CreateIpsecServerRequest extends Request {
-    @Query
-    @NameInMap("ClientIpPool")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientIpPool")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientIpPool;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private String dryRun;
 
-    @Query
-    @NameInMap("EffectImmediately")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectImmediately")
     private Boolean effectImmediately;
 
-    @Query
-    @NameInMap("IkeConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IkeConfig")
     private String ikeConfig;
 
-    @Query
-    @NameInMap("IpSecServerName")
-    @Validation(maxLength = 100)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpSecServerName")
+    @com.aliyun.core.annotation.Validation(maxLength = 100)
     private String ipSecServerName;
 
-    @Query
-    @NameInMap("IpsecConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpsecConfig")
     private String ipsecConfig;
 
-    @Query
-    @NameInMap("LocalSubnet")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LocalSubnet")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String localSubnet;
 
-    @Query
-    @NameInMap("Psk")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Psk")
     private String psk;
 
-    @Query
-    @NameInMap("PskEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PskEnabled")
     private Boolean pskEnabled;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("VpnGatewayId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpnGatewayId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpnGatewayId;
 
     private CreateIpsecServerRequest(Builder builder) {

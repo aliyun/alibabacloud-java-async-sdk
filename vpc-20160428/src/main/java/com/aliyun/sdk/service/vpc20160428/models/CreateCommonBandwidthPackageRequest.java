@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,67 +11,67 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCommonBandwidthPackageRequest</p>
  */
 public class CreateCommonBandwidthPackageRequest extends Request {
-    @Query
-    @NameInMap("Bandwidth")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer bandwidth;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("ISP")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ISP")
     private String ISP;
 
-    @Query
-    @NameInMap("InternetChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetChargeType")
     private String internetChargeType;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Ratio")
-    @Validation(maximum = 100)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ratio")
+    @com.aliyun.core.annotation.Validation(maximum = 100)
     private Integer ratio;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityProtectionTypes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityProtectionTypes")
     private java.util.List < String > securityProtectionTypes;
 
-    @Query
-    @NameInMap("Zone")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Zone")
     private String zone;
 
     private CreateCommonBandwidthPackageRequest(Builder builder) {

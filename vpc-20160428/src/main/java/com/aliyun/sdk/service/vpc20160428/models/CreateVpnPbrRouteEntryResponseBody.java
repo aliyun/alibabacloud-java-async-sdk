@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateVpnPbrRouteEntryResponseBody</p>
  */
 public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private Long createTime;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("NextHop")
+    @com.aliyun.core.annotation.NameInMap("NextHop")
     private String nextHop;
 
-    @NameInMap("OverlayMode")
+    @com.aliyun.core.annotation.NameInMap("OverlayMode")
     private String overlayMode;
 
-    @NameInMap("Priority")
+    @com.aliyun.core.annotation.NameInMap("Priority")
     private Integer priority;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RouteDest")
+    @com.aliyun.core.annotation.NameInMap("RouteDest")
     private String routeDest;
 
-    @NameInMap("RouteSource")
+    @com.aliyun.core.annotation.NameInMap("RouteSource")
     private String routeSource;
 
-    @NameInMap("State")
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
-    @NameInMap("VpnInstanceId")
+    @com.aliyun.core.annotation.NameInMap("VpnInstanceId")
     private String vpnInstanceId;
 
-    @NameInMap("Weight")
+    @com.aliyun.core.annotation.NameInMap("Weight")
     private Integer weight;
 
     private CreateVpnPbrRouteEntryResponseBody(Builder builder) {

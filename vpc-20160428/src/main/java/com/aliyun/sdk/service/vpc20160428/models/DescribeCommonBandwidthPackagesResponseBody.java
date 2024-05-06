@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCommonBandwidthPackagesResponseBody</p>
  */
 public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
-    @NameInMap("CommonBandwidthPackages")
+    @com.aliyun.core.annotation.NameInMap("CommonBandwidthPackages")
     private CommonBandwidthPackages commonBandwidthPackages;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeCommonBandwidthPackagesResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
     } 
 
     public static class PublicIpAddresse extends TeaModel {
-        @NameInMap("AllocationId")
+        @com.aliyun.core.annotation.NameInMap("AllocationId")
         private String allocationId;
 
-        @NameInMap("BandwidthPackageIpRelationStatus")
+        @com.aliyun.core.annotation.NameInMap("BandwidthPackageIpRelationStatus")
         private String bandwidthPackageIpRelationStatus;
 
-        @NameInMap("IpAddress")
+        @com.aliyun.core.annotation.NameInMap("IpAddress")
         private String ipAddress;
 
         private PublicIpAddresse(Builder builder) {
@@ -217,7 +216,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
 
     }
     public static class PublicIpAddresses extends TeaModel {
-        @NameInMap("PublicIpAddresse")
+        @com.aliyun.core.annotation.NameInMap("PublicIpAddresse")
         private java.util.List < PublicIpAddresse> publicIpAddresse;
 
         private PublicIpAddresses(Builder builder) {
@@ -258,7 +257,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
 
     }
     public static class SecurityProtectionTypes extends TeaModel {
-        @NameInMap("SecurityProtectionType")
+        @com.aliyun.core.annotation.NameInMap("SecurityProtectionType")
         private java.util.List < String > securityProtectionType;
 
         private SecurityProtectionTypes(Builder builder) {
@@ -299,10 +298,10 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -360,7 +359,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -401,82 +400,82 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
 
     }
     public static class CommonBandwidthPackage extends TeaModel {
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private String bandwidth;
 
-        @NameInMap("BandwidthPackageId")
+        @com.aliyun.core.annotation.NameInMap("BandwidthPackageId")
         private String bandwidthPackageId;
 
-        @NameInMap("BizType")
+        @com.aliyun.core.annotation.NameInMap("BizType")
         private String bizType;
 
-        @NameInMap("BusinessStatus")
+        @com.aliyun.core.annotation.NameInMap("BusinessStatus")
         private String businessStatus;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DeletionProtection")
+        @com.aliyun.core.annotation.NameInMap("DeletionProtection")
         private Boolean deletionProtection;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("HasReservationData")
+        @com.aliyun.core.annotation.NameInMap("HasReservationData")
         private String hasReservationData;
 
-        @NameInMap("ISP")
+        @com.aliyun.core.annotation.NameInMap("ISP")
         private String ISP;
 
-        @NameInMap("InstanceChargeType")
+        @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
         private String instanceChargeType;
 
-        @NameInMap("InternetChargeType")
+        @com.aliyun.core.annotation.NameInMap("InternetChargeType")
         private String internetChargeType;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PublicIpAddresses")
+        @com.aliyun.core.annotation.NameInMap("PublicIpAddresses")
         private PublicIpAddresses publicIpAddresses;
 
-        @NameInMap("Ratio")
+        @com.aliyun.core.annotation.NameInMap("Ratio")
         private Integer ratio;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ReservationActiveTime")
+        @com.aliyun.core.annotation.NameInMap("ReservationActiveTime")
         private String reservationActiveTime;
 
-        @NameInMap("ReservationBandwidth")
+        @com.aliyun.core.annotation.NameInMap("ReservationBandwidth")
         private String reservationBandwidth;
 
-        @NameInMap("ReservationInternetChargeType")
+        @com.aliyun.core.annotation.NameInMap("ReservationInternetChargeType")
         private String reservationInternetChargeType;
 
-        @NameInMap("ReservationOrderType")
+        @com.aliyun.core.annotation.NameInMap("ReservationOrderType")
         private String reservationOrderType;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SecurityProtectionTypes")
+        @com.aliyun.core.annotation.NameInMap("SecurityProtectionTypes")
         private SecurityProtectionTypes securityProtectionTypes;
 
-        @NameInMap("ServiceManaged")
+        @com.aliyun.core.annotation.NameInMap("ServiceManaged")
         private Integer serviceManaged;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("Zone")
+        @com.aliyun.core.annotation.NameInMap("Zone")
         private String zone;
 
         private CommonBandwidthPackage(Builder builder) {
@@ -1003,7 +1002,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
 
     }
     public static class CommonBandwidthPackages extends TeaModel {
-        @NameInMap("CommonBandwidthPackage")
+        @com.aliyun.core.annotation.NameInMap("CommonBandwidthPackage")
         private java.util.List < CommonBandwidthPackage> commonBandwidthPackage;
 
         private CommonBandwidthPackages(Builder builder) {

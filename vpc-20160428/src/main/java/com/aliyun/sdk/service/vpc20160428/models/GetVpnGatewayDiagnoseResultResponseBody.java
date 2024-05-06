@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetVpnGatewayDiagnoseResultResponseBody</p>
  */
 public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
-    @NameInMap("BeginTime")
+    @com.aliyun.core.annotation.NameInMap("BeginTime")
     private String beginTime;
 
-    @NameInMap("DiagnoseId")
+    @com.aliyun.core.annotation.NameInMap("DiagnoseId")
     private String diagnoseId;
 
-    @NameInMap("DiagnoseResult")
+    @com.aliyun.core.annotation.NameInMap("DiagnoseResult")
     private java.util.List < DiagnoseResult> diagnoseResult;
 
-    @NameInMap("FinishTime")
+    @com.aliyun.core.annotation.NameInMap("FinishTime")
     private String finishTime;
 
-    @NameInMap("FinishedCount")
+    @com.aliyun.core.annotation.NameInMap("FinishedCount")
     private Integer finishedCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceInstanceId")
+    @com.aliyun.core.annotation.NameInMap("ResourceInstanceId")
     private String resourceInstanceId;
 
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("VpnGatewayId")
+    @com.aliyun.core.annotation.NameInMap("VpnGatewayId")
     private String vpnGatewayId;
 
     private GetVpnGatewayDiagnoseResultResponseBody(Builder builder) {
@@ -241,13 +240,13 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
     } 
 
     public static class DiagnoseResult extends TeaModel {
-        @NameInMap("DiagnoseName")
+        @com.aliyun.core.annotation.NameInMap("DiagnoseName")
         private String diagnoseName;
 
-        @NameInMap("DiagnoseResultDescription")
+        @com.aliyun.core.annotation.NameInMap("DiagnoseResultDescription")
         private String diagnoseResultDescription;
 
-        @NameInMap("DiagnoseResultLevel")
+        @com.aliyun.core.annotation.NameInMap("DiagnoseResultLevel")
         private String diagnoseResultLevel;
 
         private DiagnoseResult(Builder builder) {

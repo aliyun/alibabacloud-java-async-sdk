@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPublicIpAddressPoolCidrBlocksResponseBody</p>
  */
 public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("PublicIpPoolCidrBlockList")
+    @com.aliyun.core.annotation.NameInMap("PublicIpPoolCidrBlockList")
     private java.util.List < PublicIpPoolCidrBlockList> publicIpPoolCidrBlockList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListPublicIpAddressPoolCidrBlocksResponseBody(Builder builder) {
@@ -116,22 +115,22 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
     } 
 
     public static class PublicIpPoolCidrBlockList extends TeaModel {
-        @NameInMap("CidrBlock")
+        @com.aliyun.core.annotation.NameInMap("CidrBlock")
         private String cidrBlock;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("PublicIpAddressPoolId")
+        @com.aliyun.core.annotation.NameInMap("PublicIpAddressPoolId")
         private String publicIpAddressPoolId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TotalIpNum")
+        @com.aliyun.core.annotation.NameInMap("TotalIpNum")
         private Integer totalIpNum;
 
-        @NameInMap("UsedIpNum")
+        @com.aliyun.core.annotation.NameInMap("UsedIpNum")
         private Integer usedIpNum;
 
         private PublicIpPoolCidrBlockList(Builder builder) {

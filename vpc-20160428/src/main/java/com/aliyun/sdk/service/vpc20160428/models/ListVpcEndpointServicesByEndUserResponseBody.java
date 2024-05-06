@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListVpcEndpointServicesByEndUserResponseBody</p>
  */
 public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Long maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Services")
+    @com.aliyun.core.annotation.NameInMap("Services")
     private java.util.List < Services> services;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private ListVpcEndpointServicesByEndUserResponseBody(Builder builder) {
@@ -136,19 +135,19 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
     } 
 
     public static class Services extends TeaModel {
-        @NameInMap("DefaultPolicyDocument")
+        @com.aliyun.core.annotation.NameInMap("DefaultPolicyDocument")
         private String defaultPolicyDocument;
 
-        @NameInMap("ServiceDomain")
+        @com.aliyun.core.annotation.NameInMap("ServiceDomain")
         private String serviceDomain;
 
-        @NameInMap("ServiceId")
+        @com.aliyun.core.annotation.NameInMap("ServiceId")
         private String serviceId;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
-        @NameInMap("SupportPolicy")
+        @com.aliyun.core.annotation.NameInMap("SupportPolicy")
         private Boolean supportPolicy;
 
         private Services(Builder builder) {

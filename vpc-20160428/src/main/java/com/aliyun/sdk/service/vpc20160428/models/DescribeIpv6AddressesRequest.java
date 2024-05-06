@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,86 +11,86 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeIpv6AddressesRequest</p>
  */
 public class DescribeIpv6AddressesRequest extends Request {
-    @Query
-    @NameInMap("AssociatedInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssociatedInstanceId")
     private String associatedInstanceId;
 
-    @Query
-    @NameInMap("AssociatedInstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssociatedInstanceType")
     private String associatedInstanceType;
 
-    @Query
-    @NameInMap("IncludeReservationData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeReservationData")
     private Boolean includeReservationData;
 
-    @Query
-    @NameInMap("Ipv6Address")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6Address")
     private String ipv6Address;
 
-    @Query
-    @NameInMap("Ipv6AddressId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6AddressId")
     private String ipv6AddressId;
 
-    @Query
-    @NameInMap("Ipv6InternetBandwidthId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6InternetBandwidthId")
     private String ipv6InternetBandwidthId;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("NetworkType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkType")
     private String networkType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ServiceManaged")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceManaged")
     private Boolean serviceManaged;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @Query
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     private DescribeIpv6AddressesRequest(Builder builder) {
@@ -530,10 +529,10 @@ public class DescribeIpv6AddressesRequest extends Request {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

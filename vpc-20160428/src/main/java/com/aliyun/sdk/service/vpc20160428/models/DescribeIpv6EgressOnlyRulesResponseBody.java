@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeIpv6EgressOnlyRulesResponseBody</p>
  */
 public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
-    @NameInMap("Ipv6EgressOnlyRules")
+    @com.aliyun.core.annotation.NameInMap("Ipv6EgressOnlyRules")
     private Ipv6EgressOnlyRules ipv6EgressOnlyRules;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeIpv6EgressOnlyRulesResponseBody(Builder builder) {
@@ -132,22 +131,22 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
     } 
 
     public static class Ipv6EgressOnlyRule extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("Ipv6EgressOnlyRuleId")
+        @com.aliyun.core.annotation.NameInMap("Ipv6EgressOnlyRuleId")
         private String ipv6EgressOnlyRuleId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Ipv6EgressOnlyRule(Builder builder) {
@@ -273,7 +272,7 @@ public class DescribeIpv6EgressOnlyRulesResponseBody extends TeaModel {
 
     }
     public static class Ipv6EgressOnlyRules extends TeaModel {
-        @NameInMap("Ipv6EgressOnlyRule")
+        @com.aliyun.core.annotation.NameInMap("Ipv6EgressOnlyRule")
         private java.util.List < Ipv6EgressOnlyRule> ipv6EgressOnlyRule;
 
         private Ipv6EgressOnlyRules(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Describe95TrafficResponseBody</p>
  */
 public class Describe95TrafficResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Traffic95Summary")
+    @com.aliyun.core.annotation.NameInMap("Traffic95Summary")
     private Traffic95Summary traffic95Summary;
 
     private Describe95TrafficResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class Describe95TrafficResponseBody extends TeaModel {
     } 
 
     public static class Traffic95Detail extends TeaModel {
-        @NameInMap("BillBandwidth")
+        @com.aliyun.core.annotation.NameInMap("BillBandwidth")
         private String billBandwidth;
 
-        @NameInMap("InBandwidth")
+        @com.aliyun.core.annotation.NameInMap("InBandwidth")
         private String inBandwidth;
 
-        @NameInMap("OutBandwidth")
+        @com.aliyun.core.annotation.NameInMap("OutBandwidth")
         private String outBandwidth;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
         private Traffic95Detail(Builder builder) {
@@ -173,7 +172,7 @@ public class Describe95TrafficResponseBody extends TeaModel {
 
     }
     public static class Traffic95DetailList extends TeaModel {
-        @NameInMap("Traffic95Detail")
+        @com.aliyun.core.annotation.NameInMap("Traffic95Detail")
         private java.util.List < Traffic95Detail> traffic95Detail;
 
         private Traffic95DetailList(Builder builder) {
@@ -214,22 +213,22 @@ public class Describe95TrafficResponseBody extends TeaModel {
 
     }
     public static class Traffic95Summary extends TeaModel {
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Long bandwidth;
 
-        @NameInMap("FifthPeakBandwidth")
+        @com.aliyun.core.annotation.NameInMap("FifthPeakBandwidth")
         private String fifthPeakBandwidth;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InternetChargeType")
+        @com.aliyun.core.annotation.NameInMap("InternetChargeType")
         private String internetChargeType;
 
-        @NameInMap("MinimumConsumeBandwidth")
+        @com.aliyun.core.annotation.NameInMap("MinimumConsumeBandwidth")
         private String minimumConsumeBandwidth;
 
-        @NameInMap("Traffic95DetailList")
+        @com.aliyun.core.annotation.NameInMap("Traffic95DetailList")
         private Traffic95DetailList traffic95DetailList;
 
         private Traffic95Summary(Builder builder) {

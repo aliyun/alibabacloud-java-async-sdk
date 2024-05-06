@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,75 +11,75 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyFullNatEntryAttributeRequest</p>
  */
 public class ModifyFullNatEntryAttributeRequest extends Request {
-    @Query
-    @NameInMap("AccessIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessIp")
     private String accessIp;
 
-    @Query
-    @NameInMap("AccessPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessPort")
     private String accessPort;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("FullNatEntryDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FullNatEntryDescription")
     private String fullNatEntryDescription;
 
-    @Query
-    @NameInMap("FullNatEntryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FullNatEntryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fullNatEntryId;
 
-    @Query
-    @NameInMap("FullNatEntryName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FullNatEntryName")
     private String fullNatEntryName;
 
-    @Query
-    @NameInMap("FullNatTableId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FullNatTableId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fullNatTableId;
 
-    @Query
-    @NameInMap("IpProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpProtocol")
     private String ipProtocol;
 
-    @Query
-    @NameInMap("NatIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NatIp")
     private String natIp;
 
-    @Query
-    @NameInMap("NatIpPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NatIpPort")
     private String natIpPort;
 
-    @Query
-    @NameInMap("NetworkInterfaceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
     private String networkInterfaceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyFullNatEntryAttributeRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetVpcPrefixListAssociationsResponseBody</p>
  */
 public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Long count;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("PrefixListAssociation")
+    @com.aliyun.core.annotation.NameInMap("PrefixListAssociation")
     private java.util.List < PrefixListAssociation> prefixListAssociation;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private GetVpcPrefixListAssociationsResponseBody(Builder builder) {
@@ -136,28 +135,28 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
     } 
 
     public static class PrefixListAssociation extends TeaModel {
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
-        @NameInMap("PrefixListId")
+        @com.aliyun.core.annotation.NameInMap("PrefixListId")
         private String prefixListId;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("ResourceUid")
+        @com.aliyun.core.annotation.NameInMap("ResourceUid")
         private String resourceUid;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private PrefixListAssociation(Builder builder) {

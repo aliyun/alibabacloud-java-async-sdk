@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,52 +11,57 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifySnatEntryRequest</p>
  */
 public class ModifySnatEntryRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EipAffinity")
+    private Integer eipAffinity;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SnatEntryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnatEntryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String snatEntryId;
 
-    @Query
-    @NameInMap("SnatEntryName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnatEntryName")
     private String snatEntryName;
 
-    @Query
-    @NameInMap("SnatIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnatIp")
     private String snatIp;
 
-    @Query
-    @NameInMap("SnatTableId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnatTableId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String snatTableId;
 
     private ModifySnatEntryRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.eipAffinity = builder.eipAffinity;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -87,6 +91,13 @@ public class ModifySnatEntryRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return eipAffinity
+     */
+    public Integer getEipAffinity() {
+        return this.eipAffinity;
     }
 
     /**
@@ -154,6 +165,7 @@ public class ModifySnatEntryRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifySnatEntryRequest, Builder> {
         private String clientToken; 
+        private Integer eipAffinity; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -171,6 +183,7 @@ public class ModifySnatEntryRequest extends Request {
         private Builder(ModifySnatEntryRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.eipAffinity = request.eipAffinity;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -193,6 +206,15 @@ public class ModifySnatEntryRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * EipAffinity.
+         */
+        public Builder eipAffinity(Integer eipAffinity) {
+            this.putQueryParameter("EipAffinity", eipAffinity);
+            this.eipAffinity = eipAffinity;
             return this;
         }
 

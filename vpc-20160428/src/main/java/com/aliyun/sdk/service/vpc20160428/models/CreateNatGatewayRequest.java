@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,95 +11,95 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateNatGatewayRequest</p>
  */
 public class CreateNatGatewayRequest extends Request {
-    @Query
-    @NameInMap("AutoPay")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
     private Boolean autoPay;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Duration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Duration")
     private String duration;
 
-    @Query
-    @NameInMap("EipBindMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EipBindMode")
     private String eipBindMode;
 
-    @Query
-    @NameInMap("IcmpReplyEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IcmpReplyEnabled")
     private Boolean icmpReplyEnabled;
 
-    @Query
-    @NameInMap("InstanceChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
     private String instanceChargeType;
 
-    @Query
-    @NameInMap("InternetChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetChargeType")
     private String internetChargeType;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("NatType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NatType")
     private String natType;
 
-    @Query
-    @NameInMap("NetworkType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkType")
     private String networkType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PricingCycle")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PricingCycle")
     private String pricingCycle;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityProtectionEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityProtectionEnabled")
     @Deprecated
     private Boolean securityProtectionEnabled;
 
-    @Query
-    @NameInMap("Spec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Spec")
     private String spec;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @Query
-    @NameInMap("VpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
     private CreateNatGatewayRequest(Builder builder) {
@@ -605,10 +604,10 @@ public class CreateNatGatewayRequest extends Request {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetVpcPrefixListEntriesResponseBody</p>
  */
 public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Long count;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("PrefixListEntry")
+    @com.aliyun.core.annotation.NameInMap("PrefixListEntry")
     private java.util.List < PrefixListEntry> prefixListEntry;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private GetVpcPrefixListEntriesResponseBody(Builder builder) {
@@ -136,16 +135,16 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
     } 
 
     public static class PrefixListEntry extends TeaModel {
-        @NameInMap("Cidr")
+        @com.aliyun.core.annotation.NameInMap("Cidr")
         private String cidr;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("PrefixListId")
+        @com.aliyun.core.annotation.NameInMap("PrefixListId")
         private String prefixListId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private PrefixListEntry(Builder builder) {

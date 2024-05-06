@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateNatGatewayResponseBody</p>
  */
 public class CreateNatGatewayResponseBody extends TeaModel {
-    @NameInMap("ForwardTableIds")
+    @com.aliyun.core.annotation.NameInMap("ForwardTableIds")
     private ForwardTableIds forwardTableIds;
 
-    @NameInMap("FullNatTableIds")
+    @com.aliyun.core.annotation.NameInMap("FullNatTableIds")
     private FullNatTableIds fullNatTableIds;
 
-    @NameInMap("NatGatewayId")
+    @com.aliyun.core.annotation.NameInMap("NatGatewayId")
     private String natGatewayId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SnatTableIds")
+    @com.aliyun.core.annotation.NameInMap("SnatTableIds")
     private SnatTableIds snatTableIds;
 
     private CreateNatGatewayResponseBody(Builder builder) {
@@ -132,7 +131,7 @@ public class CreateNatGatewayResponseBody extends TeaModel {
     } 
 
     public static class ForwardTableIds extends TeaModel {
-        @NameInMap("ForwardTableId")
+        @com.aliyun.core.annotation.NameInMap("ForwardTableId")
         private java.util.List < String > forwardTableId;
 
         private ForwardTableIds(Builder builder) {
@@ -173,7 +172,7 @@ public class CreateNatGatewayResponseBody extends TeaModel {
 
     }
     public static class FullNatTableIds extends TeaModel {
-        @NameInMap("FullNatTableId")
+        @com.aliyun.core.annotation.NameInMap("FullNatTableId")
         private java.util.List < String > fullNatTableId;
 
         private FullNatTableIds(Builder builder) {
@@ -214,7 +213,7 @@ public class CreateNatGatewayResponseBody extends TeaModel {
 
     }
     public static class SnatTableIds extends TeaModel {
-        @NameInMap("SnatTableId")
+        @com.aliyun.core.annotation.NameInMap("SnatTableId")
         private java.util.List < String > snatTableId;
 
         private SnatTableIds(Builder builder) {

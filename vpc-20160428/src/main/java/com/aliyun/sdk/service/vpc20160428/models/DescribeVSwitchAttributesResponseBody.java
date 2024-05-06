@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,61 +11,61 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVSwitchAttributesResponseBody</p>
  */
 public class DescribeVSwitchAttributesResponseBody extends TeaModel {
-    @NameInMap("AvailableIpAddressCount")
+    @com.aliyun.core.annotation.NameInMap("AvailableIpAddressCount")
     private Long availableIpAddressCount;
 
-    @NameInMap("CidrBlock")
+    @com.aliyun.core.annotation.NameInMap("CidrBlock")
     private String cidrBlock;
 
-    @NameInMap("CreationTime")
+    @com.aliyun.core.annotation.NameInMap("CreationTime")
     private String creationTime;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("EnabledIpv6")
+    @com.aliyun.core.annotation.NameInMap("EnabledIpv6")
     private Boolean enabledIpv6;
 
-    @NameInMap("Ipv6CidrBlock")
+    @com.aliyun.core.annotation.NameInMap("Ipv6CidrBlock")
     private String ipv6CidrBlock;
 
-    @NameInMap("IsDefault")
+    @com.aliyun.core.annotation.NameInMap("IsDefault")
     private Boolean isDefault;
 
-    @NameInMap("NetworkAclId")
+    @com.aliyun.core.annotation.NameInMap("NetworkAclId")
     private String networkAclId;
 
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("RouteTable")
+    @com.aliyun.core.annotation.NameInMap("RouteTable")
     private RouteTable routeTable;
 
-    @NameInMap("ShareType")
+    @com.aliyun.core.annotation.NameInMap("ShareType")
     private String shareType;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private Tags tags;
 
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @NameInMap("VSwitchName")
+    @com.aliyun.core.annotation.NameInMap("VSwitchName")
     private String vSwitchName;
 
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private DescribeVSwitchAttributesResponseBody(Builder builder) {
@@ -429,10 +428,10 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     } 
 
     public static class RouteTable extends TeaModel {
-        @NameInMap("RouteTableId")
+        @com.aliyun.core.annotation.NameInMap("RouteTableId")
         private String routeTableId;
 
-        @NameInMap("RouteTableType")
+        @com.aliyun.core.annotation.NameInMap("RouteTableType")
         private String routeTableType;
 
         private RouteTable(Builder builder) {
@@ -494,10 +493,10 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -555,7 +554,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {

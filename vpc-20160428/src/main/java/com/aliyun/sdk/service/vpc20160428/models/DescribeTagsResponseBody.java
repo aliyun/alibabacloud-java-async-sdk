@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTagsResponseBody</p>
  */
 public class DescribeTagsResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TagResources")
+    @com.aliyun.core.annotation.NameInMap("TagResources")
     private TagResources tagResources;
 
     private DescribeTagsResponseBody(Builder builder) {
@@ -96,10 +95,10 @@ public class DescribeTagsResponseBody extends TeaModel {
     } 
 
     public static class TagResource extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private TagResource(Builder builder) {
@@ -157,7 +156,7 @@ public class DescribeTagsResponseBody extends TeaModel {
 
     }
     public static class TagResources extends TeaModel {
-        @NameInMap("TagResource")
+        @com.aliyun.core.annotation.NameInMap("TagResource")
         private java.util.List < TagResource> tagResource;
 
         private TagResources(Builder builder) {

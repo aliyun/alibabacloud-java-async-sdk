@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AttachVbrToVpconnRequest</p>
  */
 public class AttachVbrToVpconnRequest extends Request {
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Token")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Token")
     private String token;
 
-    @Query
-    @NameInMap("VbrId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VbrId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vbrId;
 
-    @Query
-    @NameInMap("VpconnId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpconnId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpconnId;
 
     private AttachVbrToVpconnRequest(Builder builder) {

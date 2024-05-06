@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,50 +11,54 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AssociateVpcCidrBlockRequest</p>
  */
 public class AssociateVpcCidrBlockRequest extends Request {
-    @Query
-    @NameInMap("IPv6CidrBlock")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IPv6CidrBlock")
     private String iPv6CidrBlock;
 
-    @Query
-    @NameInMap("IpVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpVersion")
     private String ipVersion;
 
-    @Query
-    @NameInMap("IpamPoolId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpamPoolId")
     private String ipamPoolId;
 
-    @Query
-    @NameInMap("Ipv6Isp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6Isp")
     private String ipv6Isp;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecondaryCidrBlock")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecondaryCidrBlock")
     private String secondaryCidrBlock;
 
-    @Query
-    @NameInMap("VpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecondaryCidrMask")
+    private Integer secondaryCidrMask;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
     private AssociateVpcCidrBlockRequest(Builder builder) {
@@ -70,6 +73,7 @@ public class AssociateVpcCidrBlockRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.secondaryCidrBlock = builder.secondaryCidrBlock;
+        this.secondaryCidrMask = builder.secondaryCidrMask;
         this.vpcId = builder.vpcId;
     }
 
@@ -157,6 +161,13 @@ public class AssociateVpcCidrBlockRequest extends Request {
     }
 
     /**
+     * @return secondaryCidrMask
+     */
+    public Integer getSecondaryCidrMask() {
+        return this.secondaryCidrMask;
+    }
+
+    /**
      * @return vpcId
      */
     public String getVpcId() {
@@ -174,6 +185,7 @@ public class AssociateVpcCidrBlockRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String secondaryCidrBlock; 
+        private Integer secondaryCidrMask; 
         private String vpcId; 
 
         private Builder() {
@@ -192,6 +204,7 @@ public class AssociateVpcCidrBlockRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.secondaryCidrBlock = request.secondaryCidrBlock;
+            this.secondaryCidrMask = request.secondaryCidrMask;
             this.vpcId = request.vpcId;
         } 
 
@@ -311,6 +324,15 @@ public class AssociateVpcCidrBlockRequest extends Request {
         public Builder secondaryCidrBlock(String secondaryCidrBlock) {
             this.putQueryParameter("SecondaryCidrBlock", secondaryCidrBlock);
             this.secondaryCidrBlock = secondaryCidrBlock;
+            return this;
+        }
+
+        /**
+         * SecondaryCidrMask.
+         */
+        public Builder secondaryCidrMask(Integer secondaryCidrMask) {
+            this.putQueryParameter("SecondaryCidrMask", secondaryCidrMask);
+            this.secondaryCidrMask = secondaryCidrMask;
             return this;
         }
 

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTrafficMirrorSessionsResponseBody</p>
  */
 public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
-    @NameInMap("TrafficMirrorSessions")
+    @com.aliyun.core.annotation.NameInMap("TrafficMirrorSessions")
     private java.util.List < TrafficMirrorSessions> trafficMirrorSessions;
 
     private ListTrafficMirrorSessionsResponseBody(Builder builder) {
@@ -116,10 +115,10 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -177,52 +176,52 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
 
     }
     public static class TrafficMirrorSessions extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("PacketLength")
+        @com.aliyun.core.annotation.NameInMap("PacketLength")
         private Integer packetLength;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("TrafficMirrorFilterId")
+        @com.aliyun.core.annotation.NameInMap("TrafficMirrorFilterId")
         private String trafficMirrorFilterId;
 
-        @NameInMap("TrafficMirrorSessionBusinessStatus")
+        @com.aliyun.core.annotation.NameInMap("TrafficMirrorSessionBusinessStatus")
         private String trafficMirrorSessionBusinessStatus;
 
-        @NameInMap("TrafficMirrorSessionDescription")
+        @com.aliyun.core.annotation.NameInMap("TrafficMirrorSessionDescription")
         private String trafficMirrorSessionDescription;
 
-        @NameInMap("TrafficMirrorSessionId")
+        @com.aliyun.core.annotation.NameInMap("TrafficMirrorSessionId")
         private String trafficMirrorSessionId;
 
-        @NameInMap("TrafficMirrorSessionName")
+        @com.aliyun.core.annotation.NameInMap("TrafficMirrorSessionName")
         private String trafficMirrorSessionName;
 
-        @NameInMap("TrafficMirrorSessionStatus")
+        @com.aliyun.core.annotation.NameInMap("TrafficMirrorSessionStatus")
         private String trafficMirrorSessionStatus;
 
-        @NameInMap("TrafficMirrorSourceIds")
+        @com.aliyun.core.annotation.NameInMap("TrafficMirrorSourceIds")
         private java.util.List < String > trafficMirrorSourceIds;
 
-        @NameInMap("TrafficMirrorTargetId")
+        @com.aliyun.core.annotation.NameInMap("TrafficMirrorTargetId")
         private String trafficMirrorTargetId;
 
-        @NameInMap("TrafficMirrorTargetType")
+        @com.aliyun.core.annotation.NameInMap("TrafficMirrorTargetType")
         private String trafficMirrorTargetType;
 
-        @NameInMap("VirtualNetworkId")
+        @com.aliyun.core.annotation.NameInMap("VirtualNetworkId")
         private Integer virtualNetworkId;
 
         private TrafficMirrorSessions(Builder builder) {

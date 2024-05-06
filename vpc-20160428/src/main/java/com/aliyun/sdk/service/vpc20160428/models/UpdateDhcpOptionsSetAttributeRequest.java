@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,62 +11,62 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateDhcpOptionsSetAttributeRequest</p>
  */
 public class UpdateDhcpOptionsSetAttributeRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DhcpOptionsSetDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DhcpOptionsSetDescription")
     private String dhcpOptionsSetDescription;
 
-    @Query
-    @NameInMap("DhcpOptionsSetId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DhcpOptionsSetId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dhcpOptionsSetId;
 
-    @Query
-    @NameInMap("DhcpOptionsSetName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DhcpOptionsSetName")
     private String dhcpOptionsSetName;
 
-    @Query
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @Query
-    @NameInMap("DomainNameServers")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainNameServers")
     private String domainNameServers;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("Ipv6LeaseTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6LeaseTime")
     private String ipv6LeaseTime;
 
-    @Query
-    @NameInMap("LeaseTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LeaseTime")
     private String leaseTime;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private UpdateDhcpOptionsSetAttributeRequest(Builder builder) {

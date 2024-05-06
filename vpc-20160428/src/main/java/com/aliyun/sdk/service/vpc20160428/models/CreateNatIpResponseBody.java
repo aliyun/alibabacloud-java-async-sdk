@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateNatIpResponseBody</p>
  */
 public class CreateNatIpResponseBody extends TeaModel {
-    @NameInMap("NatIp")
+    @com.aliyun.core.annotation.NameInMap("NatIp")
     private String natIp;
 
-    @NameInMap("NatIpId")
+    @com.aliyun.core.annotation.NameInMap("NatIpId")
     private String natIpId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateNatIpResponseBody(Builder builder) {

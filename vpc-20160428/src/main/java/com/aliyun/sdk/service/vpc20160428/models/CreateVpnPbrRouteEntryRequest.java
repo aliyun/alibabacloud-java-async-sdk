@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,71 +11,71 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateVpnPbrRouteEntryRequest</p>
  */
 public class CreateVpnPbrRouteEntryRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("NextHop")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextHop")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nextHop;
 
-    @Query
-    @NameInMap("OverlayMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OverlayMode")
     private String overlayMode;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Priority")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Priority")
     private Integer priority;
 
-    @Query
-    @NameInMap("PublishVpc")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PublishVpc")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean publishVpc;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RouteDest")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteDest")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String routeDest;
 
-    @Query
-    @NameInMap("RouteSource")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteSource")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String routeSource;
 
-    @Query
-    @NameInMap("VpnGatewayId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpnGatewayId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpnGatewayId;
 
-    @Query
-    @NameInMap("Weight")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Weight")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer weight;
 
     private CreateVpnPbrRouteEntryRequest(Builder builder) {

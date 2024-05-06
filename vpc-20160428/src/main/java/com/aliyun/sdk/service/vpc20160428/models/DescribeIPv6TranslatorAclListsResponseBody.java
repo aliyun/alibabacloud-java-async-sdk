@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeIPv6TranslatorAclListsResponseBody</p>
  */
 public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
-    @NameInMap("Ipv6TranslatorAcls")
+    @com.aliyun.core.annotation.NameInMap("Ipv6TranslatorAcls")
     private Ipv6TranslatorAcls ipv6TranslatorAcls;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeIPv6TranslatorAclListsResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
     } 
 
     public static class IPv6TranslatorAcl extends TeaModel {
-        @NameInMap("AclId")
+        @com.aliyun.core.annotation.NameInMap("AclId")
         private String aclId;
 
-        @NameInMap("AclName")
+        @com.aliyun.core.annotation.NameInMap("AclName")
         private String aclName;
 
         private IPv6TranslatorAcl(Builder builder) {
@@ -193,7 +192,7 @@ public class DescribeIPv6TranslatorAclListsResponseBody extends TeaModel {
 
     }
     public static class Ipv6TranslatorAcls extends TeaModel {
-        @NameInMap("IPv6TranslatorAcl")
+        @com.aliyun.core.annotation.NameInMap("IPv6TranslatorAcl")
         private java.util.List < IPv6TranslatorAcl> iPv6TranslatorAcl;
 
         private Ipv6TranslatorAcls(Builder builder) {

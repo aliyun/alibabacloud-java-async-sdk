@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,58 +11,58 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateVirtualPhysicalConnectionRequest</p>
  */
 public class CreateVirtualPhysicalConnectionRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OrderMode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String orderMode;
 
-    @Query
-    @NameInMap("PhysicalConnectionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhysicalConnectionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String physicalConnectionId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("Spec")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Spec")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String spec;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("Token")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Token")
     private String token;
 
-    @Query
-    @NameInMap("VlanId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VlanId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long vlanId;
 
-    @Query
-    @NameInMap("VpconnAliUid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpconnAliUid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long vpconnAliUid;
 
     private CreateVirtualPhysicalConnectionRequest(Builder builder) {
@@ -362,10 +361,10 @@ public class CreateVirtualPhysicalConnectionRequest extends Request {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

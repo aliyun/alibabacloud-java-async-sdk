@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,26 +11,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEcGrantRelationRequest</p>
  */
 public class DescribeEcGrantRelationRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("InstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceType;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("VbrRegionNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VbrRegionNo")
     private String vbrRegionNo;
 
     private DescribeEcGrantRelationRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListIpsecServersResponseBody</p>
  */
 public class ListIpsecServersResponseBody extends TeaModel {
-    @NameInMap("IpsecServers")
+    @com.aliyun.core.annotation.NameInMap("IpsecServers")
     private java.util.List < IpsecServers> ipsecServers;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListIpsecServersResponseBody(Builder builder) {
@@ -136,28 +135,28 @@ public class ListIpsecServersResponseBody extends TeaModel {
     } 
 
     public static class IkeConfig extends TeaModel {
-        @NameInMap("IkeAuthAlg")
+        @com.aliyun.core.annotation.NameInMap("IkeAuthAlg")
         private String ikeAuthAlg;
 
-        @NameInMap("IkeEncAlg")
+        @com.aliyun.core.annotation.NameInMap("IkeEncAlg")
         private String ikeEncAlg;
 
-        @NameInMap("IkeLifetime")
+        @com.aliyun.core.annotation.NameInMap("IkeLifetime")
         private Long ikeLifetime;
 
-        @NameInMap("IkeMode")
+        @com.aliyun.core.annotation.NameInMap("IkeMode")
         private String ikeMode;
 
-        @NameInMap("IkePfs")
+        @com.aliyun.core.annotation.NameInMap("IkePfs")
         private String ikePfs;
 
-        @NameInMap("IkeVersion")
+        @com.aliyun.core.annotation.NameInMap("IkeVersion")
         private String ikeVersion;
 
-        @NameInMap("LocalId")
+        @com.aliyun.core.annotation.NameInMap("LocalId")
         private String localId;
 
-        @NameInMap("RemoteId")
+        @com.aliyun.core.annotation.NameInMap("RemoteId")
         private String remoteId;
 
         private IkeConfig(Builder builder) {
@@ -320,16 +319,16 @@ public class ListIpsecServersResponseBody extends TeaModel {
 
     }
     public static class IpsecConfig extends TeaModel {
-        @NameInMap("IpsecAuthAlg")
+        @com.aliyun.core.annotation.NameInMap("IpsecAuthAlg")
         private String ipsecAuthAlg;
 
-        @NameInMap("IpsecEncAlg")
+        @com.aliyun.core.annotation.NameInMap("IpsecEncAlg")
         private String ipsecEncAlg;
 
-        @NameInMap("IpsecLifetime")
+        @com.aliyun.core.annotation.NameInMap("IpsecLifetime")
         private Long ipsecLifetime;
 
-        @NameInMap("IpsecPfs")
+        @com.aliyun.core.annotation.NameInMap("IpsecPfs")
         private String ipsecPfs;
 
         private IpsecConfig(Builder builder) {
@@ -421,58 +420,58 @@ public class ListIpsecServersResponseBody extends TeaModel {
 
     }
     public static class IpsecServers extends TeaModel {
-        @NameInMap("ClientIpPool")
+        @com.aliyun.core.annotation.NameInMap("ClientIpPool")
         private String clientIpPool;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("EffectImmediately")
+        @com.aliyun.core.annotation.NameInMap("EffectImmediately")
         private Boolean effectImmediately;
 
-        @NameInMap("IDaaSInstanceId")
+        @com.aliyun.core.annotation.NameInMap("IDaaSInstanceId")
         private String iDaaSInstanceId;
 
-        @NameInMap("IkeConfig")
+        @com.aliyun.core.annotation.NameInMap("IkeConfig")
         private IkeConfig ikeConfig;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IpsecConfig")
+        @com.aliyun.core.annotation.NameInMap("IpsecConfig")
         private IpsecConfig ipsecConfig;
 
-        @NameInMap("IpsecServerId")
+        @com.aliyun.core.annotation.NameInMap("IpsecServerId")
         private String ipsecServerId;
 
-        @NameInMap("IpsecServerName")
+        @com.aliyun.core.annotation.NameInMap("IpsecServerName")
         private String ipsecServerName;
 
-        @NameInMap("LocalSubnet")
+        @com.aliyun.core.annotation.NameInMap("LocalSubnet")
         private String localSubnet;
 
-        @NameInMap("MaxConnections")
+        @com.aliyun.core.annotation.NameInMap("MaxConnections")
         private Integer maxConnections;
 
-        @NameInMap("MultiFactorAuthEnabled")
+        @com.aliyun.core.annotation.NameInMap("MultiFactorAuthEnabled")
         private Boolean multiFactorAuthEnabled;
 
-        @NameInMap("OnlineClientCount")
+        @com.aliyun.core.annotation.NameInMap("OnlineClientCount")
         private Integer onlineClientCount;
 
-        @NameInMap("Psk")
+        @com.aliyun.core.annotation.NameInMap("Psk")
         private String psk;
 
-        @NameInMap("PskEnabled")
+        @com.aliyun.core.annotation.NameInMap("PskEnabled")
         private Boolean pskEnabled;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("VpnGatewayId")
+        @com.aliyun.core.annotation.NameInMap("VpnGatewayId")
         private String vpnGatewayId;
 
         private IpsecServers(Builder builder) {

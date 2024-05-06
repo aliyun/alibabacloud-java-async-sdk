@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,76 +11,76 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSslVpnServerRequest</p>
  */
 public class CreateSslVpnServerRequest extends Request {
-    @Query
-    @NameInMap("Cipher")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Cipher")
     private String cipher;
 
-    @Query
-    @NameInMap("ClientIpPool")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientIpPool")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientIpPool;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Compress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Compress")
     private Boolean compress;
 
-    @Query
-    @NameInMap("EnableMultiFactorAuth")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableMultiFactorAuth")
     private Boolean enableMultiFactorAuth;
 
-    @Query
-    @NameInMap("IDaaSInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IDaaSInstanceId")
     private String iDaaSInstanceId;
 
-    @Query
-    @NameInMap("IDaaSRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IDaaSRegionId")
     private String iDaaSRegionId;
 
-    @Query
-    @NameInMap("LocalSubnet")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LocalSubnet")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String localSubnet;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Port")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Port")
     private Integer port;
 
-    @Query
-    @NameInMap("Proto")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Proto")
     private String proto;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("VpnGatewayId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpnGatewayId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpnGatewayId;
 
     private CreateSslVpnServerRequest(Builder builder) {

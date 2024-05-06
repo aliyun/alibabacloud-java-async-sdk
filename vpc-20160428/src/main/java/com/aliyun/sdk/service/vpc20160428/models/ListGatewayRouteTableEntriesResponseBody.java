@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListGatewayRouteTableEntriesResponseBody</p>
  */
 public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
-    @NameInMap("GatewayRouteEntryModels")
+    @com.aliyun.core.annotation.NameInMap("GatewayRouteEntryModels")
     private java.util.List < GatewayRouteEntryModels> gatewayRouteEntryModels;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private ListGatewayRouteTableEntriesResponseBody(Builder builder) {
@@ -116,16 +115,16 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
     } 
 
     public static class NextHops extends TeaModel {
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private String enabled;
 
-        @NameInMap("NextHopId")
+        @com.aliyun.core.annotation.NameInMap("NextHopId")
         private String nextHopId;
 
-        @NameInMap("NextHopType")
+        @com.aliyun.core.annotation.NameInMap("NextHopType")
         private String nextHopType;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private String weight;
 
         private NextHops(Builder builder) {
@@ -231,25 +230,25 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
 
     }
     public static class GatewayRouteEntryModels extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DestinationCidrBlock")
+        @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
         private String destinationCidrBlock;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NextHopId")
+        @com.aliyun.core.annotation.NameInMap("NextHopId")
         private String nextHopId;
 
-        @NameInMap("NextHopType")
+        @com.aliyun.core.annotation.NameInMap("NextHopType")
         private String nextHopType;
 
-        @NameInMap("NextHops")
+        @com.aliyun.core.annotation.NameInMap("NextHops")
         private java.util.List < NextHops> nextHops;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private GatewayRouteEntryModels(Builder builder) {

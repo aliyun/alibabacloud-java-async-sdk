@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSslVpnClientsResponseBody</p>
  */
 public class DescribeSslVpnClientsResponseBody extends TeaModel {
-    @NameInMap("ClientInfoList")
+    @com.aliyun.core.annotation.NameInMap("ClientInfoList")
     private java.util.List < ClientInfoList> clientInfoList;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("VpnGatewayId")
+    @com.aliyun.core.annotation.NameInMap("VpnGatewayId")
     private String vpnGatewayId;
 
     private DescribeSslVpnClientsResponseBody(Builder builder) {
@@ -172,28 +171,28 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
     } 
 
     public static class ClientInfoList extends TeaModel {
-        @NameInMap("CommonName")
+        @com.aliyun.core.annotation.NameInMap("CommonName")
         private String commonName;
 
-        @NameInMap("ConnectedTime")
+        @com.aliyun.core.annotation.NameInMap("ConnectedTime")
         private Long connectedTime;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("PrivateIp")
+        @com.aliyun.core.annotation.NameInMap("PrivateIp")
         private String privateIp;
 
-        @NameInMap("ReceiveBytes")
+        @com.aliyun.core.annotation.NameInMap("ReceiveBytes")
         private Long receiveBytes;
 
-        @NameInMap("SendBytes")
+        @com.aliyun.core.annotation.NameInMap("SendBytes")
         private Long sendBytes;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ClientInfoList(Builder builder) {

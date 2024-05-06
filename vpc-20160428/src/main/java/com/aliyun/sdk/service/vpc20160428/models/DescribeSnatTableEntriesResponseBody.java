@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSnatTableEntriesResponseBody</p>
  */
 public class DescribeSnatTableEntriesResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SnatTableEntries")
+    @com.aliyun.core.annotation.NameInMap("SnatTableEntries")
     private SnatTableEntries snatTableEntries;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeSnatTableEntriesResponseBody(Builder builder) {
@@ -132,31 +131,35 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
     } 
 
     public static class SnatTableEntry extends TeaModel {
-        @NameInMap("NatGatewayId")
+        @com.aliyun.core.annotation.NameInMap("EipAffinity")
+        private String eipAffinity;
+
+        @com.aliyun.core.annotation.NameInMap("NatGatewayId")
         private String natGatewayId;
 
-        @NameInMap("SnatEntryId")
+        @com.aliyun.core.annotation.NameInMap("SnatEntryId")
         private String snatEntryId;
 
-        @NameInMap("SnatEntryName")
+        @com.aliyun.core.annotation.NameInMap("SnatEntryName")
         private String snatEntryName;
 
-        @NameInMap("SnatIp")
+        @com.aliyun.core.annotation.NameInMap("SnatIp")
         private String snatIp;
 
-        @NameInMap("SnatTableId")
+        @com.aliyun.core.annotation.NameInMap("SnatTableId")
         private String snatTableId;
 
-        @NameInMap("SourceCIDR")
+        @com.aliyun.core.annotation.NameInMap("SourceCIDR")
         private String sourceCIDR;
 
-        @NameInMap("SourceVSwitchId")
+        @com.aliyun.core.annotation.NameInMap("SourceVSwitchId")
         private String sourceVSwitchId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private SnatTableEntry(Builder builder) {
+            this.eipAffinity = builder.eipAffinity;
             this.natGatewayId = builder.natGatewayId;
             this.snatEntryId = builder.snatEntryId;
             this.snatEntryName = builder.snatEntryName;
@@ -173,6 +176,13 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
 
         public static SnatTableEntry create() {
             return builder().build();
+        }
+
+        /**
+         * @return eipAffinity
+         */
+        public String getEipAffinity() {
+            return this.eipAffinity;
         }
 
         /**
@@ -232,6 +242,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String eipAffinity; 
             private String natGatewayId; 
             private String snatEntryId; 
             private String snatEntryName; 
@@ -240,6 +251,14 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             private String sourceCIDR; 
             private String sourceVSwitchId; 
             private String status; 
+
+            /**
+             * EipAffinity.
+             */
+            public Builder eipAffinity(String eipAffinity) {
+                this.eipAffinity = eipAffinity;
+                return this;
+            }
 
             /**
              * The ID of the NAT gateway to which the SNAT entry belongs.
@@ -322,7 +341,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
 
     }
     public static class SnatTableEntries extends TeaModel {
-        @NameInMap("SnatTableEntry")
+        @com.aliyun.core.annotation.NameInMap("SnatTableEntry")
         private java.util.List < SnatTableEntry> snatTableEntry;
 
         private SnatTableEntries(Builder builder) {

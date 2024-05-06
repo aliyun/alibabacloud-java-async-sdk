@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTrafficMirrorFiltersResponseBody</p>
  */
 public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
-    @NameInMap("TrafficMirrorFilters")
+    @com.aliyun.core.annotation.NameInMap("TrafficMirrorFilters")
     private java.util.List < TrafficMirrorFilters> trafficMirrorFilters;
 
     private ListTrafficMirrorFiltersResponseBody(Builder builder) {
@@ -156,37 +155,37 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
     } 
 
     public static class EgressRules extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("DestinationCidrBlock")
+        @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
         private String destinationCidrBlock;
 
-        @NameInMap("DestinationPortRange")
+        @com.aliyun.core.annotation.NameInMap("DestinationPortRange")
         private String destinationPortRange;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("SourceCidrBlock")
+        @com.aliyun.core.annotation.NameInMap("SourceCidrBlock")
         private String sourceCidrBlock;
 
-        @NameInMap("SourcePortRange")
+        @com.aliyun.core.annotation.NameInMap("SourcePortRange")
         private String sourcePortRange;
 
-        @NameInMap("TrafficDirection")
+        @com.aliyun.core.annotation.NameInMap("TrafficDirection")
         private String trafficDirection;
 
-        @NameInMap("TrafficMirrorFilterId")
+        @com.aliyun.core.annotation.NameInMap("TrafficMirrorFilterId")
         private String trafficMirrorFilterId;
 
-        @NameInMap("TrafficMirrorFilterRuleId")
+        @com.aliyun.core.annotation.NameInMap("TrafficMirrorFilterRuleId")
         private String trafficMirrorFilterRuleId;
 
-        @NameInMap("TrafficMirrorFilterRuleStatus")
+        @com.aliyun.core.annotation.NameInMap("TrafficMirrorFilterRuleStatus")
         private String trafficMirrorFilterRuleStatus;
 
         private EgressRules(Builder builder) {
@@ -417,37 +416,37 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
 
     }
     public static class IngressRules extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("DestinationCidrBlock")
+        @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
         private String destinationCidrBlock;
 
-        @NameInMap("DestinationPortRange")
+        @com.aliyun.core.annotation.NameInMap("DestinationPortRange")
         private String destinationPortRange;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("SourceCidrBlock")
+        @com.aliyun.core.annotation.NameInMap("SourceCidrBlock")
         private String sourceCidrBlock;
 
-        @NameInMap("SourcePortRange")
+        @com.aliyun.core.annotation.NameInMap("SourcePortRange")
         private String sourcePortRange;
 
-        @NameInMap("TrafficDirection")
+        @com.aliyun.core.annotation.NameInMap("TrafficDirection")
         private String trafficDirection;
 
-        @NameInMap("TrafficMirrorFilterId")
+        @com.aliyun.core.annotation.NameInMap("TrafficMirrorFilterId")
         private String trafficMirrorFilterId;
 
-        @NameInMap("TrafficMirrorFilterRuleId")
+        @com.aliyun.core.annotation.NameInMap("TrafficMirrorFilterRuleId")
         private String trafficMirrorFilterRuleId;
 
-        @NameInMap("TrafficMirrorFilterRuleStatus")
+        @com.aliyun.core.annotation.NameInMap("TrafficMirrorFilterRuleStatus")
         private String trafficMirrorFilterRuleStatus;
 
         private IngressRules(Builder builder) {
@@ -678,10 +677,10 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -739,31 +738,31 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
 
     }
     public static class TrafficMirrorFilters extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("EgressRules")
+        @com.aliyun.core.annotation.NameInMap("EgressRules")
         private java.util.List < EgressRules> egressRules;
 
-        @NameInMap("IngressRules")
+        @com.aliyun.core.annotation.NameInMap("IngressRules")
         private java.util.List < IngressRules> ingressRules;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("TrafficMirrorFilterDescription")
+        @com.aliyun.core.annotation.NameInMap("TrafficMirrorFilterDescription")
         private String trafficMirrorFilterDescription;
 
-        @NameInMap("TrafficMirrorFilterId")
+        @com.aliyun.core.annotation.NameInMap("TrafficMirrorFilterId")
         private String trafficMirrorFilterId;
 
-        @NameInMap("TrafficMirrorFilterName")
+        @com.aliyun.core.annotation.NameInMap("TrafficMirrorFilterName")
         private String trafficMirrorFilterName;
 
-        @NameInMap("TrafficMirrorFilterStatus")
+        @com.aliyun.core.annotation.NameInMap("TrafficMirrorFilterStatus")
         private String trafficMirrorFilterStatus;
 
         private TrafficMirrorFilters(Builder builder) {

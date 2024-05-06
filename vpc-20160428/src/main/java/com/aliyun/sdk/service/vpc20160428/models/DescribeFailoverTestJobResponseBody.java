@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeFailoverTestJobResponseBody</p>
  */
 public class DescribeFailoverTestJobResponseBody extends TeaModel {
-    @NameInMap("FailoverTestJobModel")
+    @com.aliyun.core.annotation.NameInMap("FailoverTestJobModel")
     private FailoverTestJobModel failoverTestJobModel;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeFailoverTestJobResponseBody(Builder builder) {
@@ -72,34 +71,34 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
     } 
 
     public static class FailoverTestJobModel extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("JobDuration")
+        @com.aliyun.core.annotation.NameInMap("JobDuration")
         private String jobDuration;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("JobType")
+        @com.aliyun.core.annotation.NameInMap("JobType")
         private String jobType;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private java.util.List < String > resourceId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StopTime")
+        @com.aliyun.core.annotation.NameInMap("StopTime")
         private String stopTime;
 
         private FailoverTestJobModel(Builder builder) {

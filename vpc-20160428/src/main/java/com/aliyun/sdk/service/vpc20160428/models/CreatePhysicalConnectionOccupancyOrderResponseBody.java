@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreatePhysicalConnectionOccupancyOrderResponseBody</p>
  */
 public class CreatePhysicalConnectionOccupancyOrderResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreatePhysicalConnectionOccupancyOrderResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class CreatePhysicalConnectionOccupancyOrderResponseBody extends TeaModel
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("OrderId")
+        @com.aliyun.core.annotation.NameInMap("OrderId")
         private String orderId;
 
         private Data(Builder builder) {

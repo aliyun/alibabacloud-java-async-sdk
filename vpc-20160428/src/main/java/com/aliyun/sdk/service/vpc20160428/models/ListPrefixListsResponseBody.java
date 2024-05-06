@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPrefixListsResponseBody</p>
  */
 public class ListPrefixListsResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Long maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("PrefixLists")
+    @com.aliyun.core.annotation.NameInMap("PrefixLists")
     private java.util.List < PrefixLists> prefixLists;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListPrefixListsResponseBody(Builder builder) {
@@ -136,10 +135,10 @@ public class ListPrefixListsResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -197,49 +196,49 @@ public class ListPrefixListsResponseBody extends TeaModel {
 
     }
     public static class PrefixLists extends TeaModel {
-        @NameInMap("CidrBlocks")
+        @com.aliyun.core.annotation.NameInMap("CidrBlocks")
         private java.util.List < String > cidrBlocks;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("IpVersion")
+        @com.aliyun.core.annotation.NameInMap("IpVersion")
         private String ipVersion;
 
-        @NameInMap("MaxEntries")
+        @com.aliyun.core.annotation.NameInMap("MaxEntries")
         private Integer maxEntries;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
-        @NameInMap("PrefixListDescription")
+        @com.aliyun.core.annotation.NameInMap("PrefixListDescription")
         private String prefixListDescription;
 
-        @NameInMap("PrefixListId")
+        @com.aliyun.core.annotation.NameInMap("PrefixListId")
         private String prefixListId;
 
-        @NameInMap("PrefixListName")
+        @com.aliyun.core.annotation.NameInMap("PrefixListName")
         private String prefixListName;
 
-        @NameInMap("PrefixListStatus")
+        @com.aliyun.core.annotation.NameInMap("PrefixListStatus")
         private String prefixListStatus;
 
-        @NameInMap("PrefixListType")
+        @com.aliyun.core.annotation.NameInMap("PrefixListType")
         private String prefixListType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ShareType")
+        @com.aliyun.core.annotation.NameInMap("ShareType")
         private String shareType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
         private PrefixLists(Builder builder) {

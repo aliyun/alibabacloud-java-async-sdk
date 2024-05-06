@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListIpv4GatewaysResponseBody</p>
  */
 public class ListIpv4GatewaysResponseBody extends TeaModel {
-    @NameInMap("Ipv4GatewayModels")
+    @com.aliyun.core.annotation.NameInMap("Ipv4GatewayModels")
     private java.util.List < Ipv4GatewayModels> ipv4GatewayModels;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private ListIpv4GatewaysResponseBody(Builder builder) {
@@ -116,10 +115,10 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -177,34 +176,34 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
 
     }
     public static class Ipv4GatewayModels extends TeaModel {
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("Ipv4GatewayDescription")
+        @com.aliyun.core.annotation.NameInMap("Ipv4GatewayDescription")
         private String ipv4GatewayDescription;
 
-        @NameInMap("Ipv4GatewayId")
+        @com.aliyun.core.annotation.NameInMap("Ipv4GatewayId")
         private String ipv4GatewayId;
 
-        @NameInMap("Ipv4GatewayName")
+        @com.aliyun.core.annotation.NameInMap("Ipv4GatewayName")
         private String ipv4GatewayName;
 
-        @NameInMap("Ipv4GatewayRouteTableId")
+        @com.aliyun.core.annotation.NameInMap("Ipv4GatewayRouteTableId")
         private String ipv4GatewayRouteTableId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private Ipv4GatewayModels(Builder builder) {

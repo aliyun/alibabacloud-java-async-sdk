@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,55 +11,55 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSnatEntryRequest</p>
  */
 public class CreateSnatEntryRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("EipAffinity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EipAffinity")
     private Integer eipAffinity;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SnatEntryName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnatEntryName")
     private String snatEntryName;
 
-    @Query
-    @NameInMap("SnatIp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnatIp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String snatIp;
 
-    @Query
-    @NameInMap("SnatTableId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnatTableId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String snatTableId;
 
-    @Query
-    @NameInMap("SourceCIDR")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceCIDR")
     private String sourceCIDR;
 
-    @Query
-    @NameInMap("SourceVSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceVSwitchId")
     private String sourceVSwitchId;
 
     private CreateSnatEntryRequest(Builder builder) {

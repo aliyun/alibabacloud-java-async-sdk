@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AllocateIpv6AddressResponseBody</p>
  */
 public class AllocateIpv6AddressResponseBody extends TeaModel {
-    @NameInMap("Ipv6Address")
+    @com.aliyun.core.annotation.NameInMap("Ipv6Address")
     private String ipv6Address;
 
-    @NameInMap("Ipv6AddressId")
+    @com.aliyun.core.annotation.NameInMap("Ipv6AddressId")
     private String ipv6AddressId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private AllocateIpv6AddressResponseBody(Builder builder) {

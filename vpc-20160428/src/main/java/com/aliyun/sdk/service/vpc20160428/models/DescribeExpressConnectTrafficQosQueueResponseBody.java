@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeExpressConnectTrafficQosQueueResponseBody</p>
  */
 public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel {
-    @NameInMap("QueueList")
+    @com.aliyun.core.annotation.NameInMap("QueueList")
     private java.util.List < QueueList> queueList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeExpressConnectTrafficQosQueueResponseBody(Builder builder) {
@@ -72,52 +71,52 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
     } 
 
     public static class RuleList extends TeaModel {
-        @NameInMap("DstCidr")
+        @com.aliyun.core.annotation.NameInMap("DstCidr")
         private String dstCidr;
 
-        @NameInMap("DstIPv6Cidr")
+        @com.aliyun.core.annotation.NameInMap("DstIPv6Cidr")
         private String dstIPv6Cidr;
 
-        @NameInMap("DstPortRange")
+        @com.aliyun.core.annotation.NameInMap("DstPortRange")
         private String dstPortRange;
 
-        @NameInMap("MatchDscp")
+        @com.aliyun.core.annotation.NameInMap("MatchDscp")
         private Integer matchDscp;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("QosId")
+        @com.aliyun.core.annotation.NameInMap("QosId")
         private String qosId;
 
-        @NameInMap("QueueId")
+        @com.aliyun.core.annotation.NameInMap("QueueId")
         private String queueId;
 
-        @NameInMap("RemarkingDscp")
+        @com.aliyun.core.annotation.NameInMap("RemarkingDscp")
         private Integer remarkingDscp;
 
-        @NameInMap("RuleDescription")
+        @com.aliyun.core.annotation.NameInMap("RuleDescription")
         private String ruleDescription;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("SrcCidr")
+        @com.aliyun.core.annotation.NameInMap("SrcCidr")
         private String srcCidr;
 
-        @NameInMap("SrcIPv6Cidr")
+        @com.aliyun.core.annotation.NameInMap("SrcIPv6Cidr")
         private String srcIPv6Cidr;
 
-        @NameInMap("SrcPortRange")
+        @com.aliyun.core.annotation.NameInMap("SrcPortRange")
         private String srcPortRange;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private RuleList(Builder builder) {
@@ -413,28 +412,28 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
 
     }
     public static class QueueList extends TeaModel {
-        @NameInMap("BandwidthPercent")
+        @com.aliyun.core.annotation.NameInMap("BandwidthPercent")
         private String bandwidthPercent;
 
-        @NameInMap("QosId")
+        @com.aliyun.core.annotation.NameInMap("QosId")
         private String qosId;
 
-        @NameInMap("QueueDescription")
+        @com.aliyun.core.annotation.NameInMap("QueueDescription")
         private String queueDescription;
 
-        @NameInMap("QueueId")
+        @com.aliyun.core.annotation.NameInMap("QueueId")
         private String queueId;
 
-        @NameInMap("QueueName")
+        @com.aliyun.core.annotation.NameInMap("QueueName")
         private String queueName;
 
-        @NameInMap("QueueType")
+        @com.aliyun.core.annotation.NameInMap("QueueType")
         private String queueType;
 
-        @NameInMap("RuleList")
+        @com.aliyun.core.annotation.NameInMap("RuleList")
         private java.util.List < RuleList> ruleList;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private QueueList(Builder builder) {

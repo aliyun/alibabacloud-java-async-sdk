@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeIPv6TranslatorsResponseBody</p>
  */
 public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
-    @NameInMap("Ipv6Translators")
+    @com.aliyun.core.annotation.NameInMap("Ipv6Translators")
     private Ipv6Translators ipv6Translators;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeIPv6TranslatorsResponseBody(Builder builder) {
@@ -132,7 +131,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
     } 
 
     public static class Ipv6TranslatorEntryIds extends TeaModel {
-        @NameInMap("Ipv6TranslatorEntryId")
+        @com.aliyun.core.annotation.NameInMap("Ipv6TranslatorEntryId")
         private java.util.List < String > ipv6TranslatorEntryId;
 
         private Ipv6TranslatorEntryIds(Builder builder) {
@@ -173,49 +172,49 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
 
     }
     public static class Ipv6Translator extends TeaModel {
-        @NameInMap("AllocateIpv4Addr")
+        @com.aliyun.core.annotation.NameInMap("AllocateIpv4Addr")
         private String allocateIpv4Addr;
 
-        @NameInMap("AllocateIpv6Addr")
+        @com.aliyun.core.annotation.NameInMap("AllocateIpv6Addr")
         private String allocateIpv6Addr;
 
-        @NameInMap("AvailableBandwidth")
+        @com.aliyun.core.annotation.NameInMap("AvailableBandwidth")
         private String availableBandwidth;
 
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Integer bandwidth;
 
-        @NameInMap("BusinessStatus")
+        @com.aliyun.core.annotation.NameInMap("BusinessStatus")
         private String businessStatus;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("Ipv6TranslatorEntryIds")
+        @com.aliyun.core.annotation.NameInMap("Ipv6TranslatorEntryIds")
         private Ipv6TranslatorEntryIds ipv6TranslatorEntryIds;
 
-        @NameInMap("Ipv6TranslatorId")
+        @com.aliyun.core.annotation.NameInMap("Ipv6TranslatorId")
         private String ipv6TranslatorId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Spec")
+        @com.aliyun.core.annotation.NameInMap("Spec")
         private String spec;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Ipv6Translator(Builder builder) {
@@ -502,7 +501,7 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
 
     }
     public static class Ipv6Translators extends TeaModel {
-        @NameInMap("Ipv6Translator")
+        @com.aliyun.core.annotation.NameInMap("Ipv6Translator")
         private java.util.List < Ipv6Translator> ipv6Translator;
 
         private Ipv6Translators(Builder builder) {

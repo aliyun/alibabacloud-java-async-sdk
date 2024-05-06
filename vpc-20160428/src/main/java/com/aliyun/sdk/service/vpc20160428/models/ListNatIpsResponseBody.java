@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListNatIpsResponseBody</p>
  */
 public class ListNatIpsResponseBody extends TeaModel {
-    @NameInMap("NatIps")
+    @com.aliyun.core.annotation.NameInMap("NatIps")
     private java.util.List < NatIps> natIps;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private ListNatIpsResponseBody(Builder builder) {
@@ -116,28 +115,28 @@ public class ListNatIpsResponseBody extends TeaModel {
     } 
 
     public static class NatIps extends TeaModel {
-        @NameInMap("IsDefault")
+        @com.aliyun.core.annotation.NameInMap("IsDefault")
         private Boolean isDefault;
 
-        @NameInMap("NatGatewayId")
+        @com.aliyun.core.annotation.NameInMap("NatGatewayId")
         private String natGatewayId;
 
-        @NameInMap("NatIp")
+        @com.aliyun.core.annotation.NameInMap("NatIp")
         private String natIp;
 
-        @NameInMap("NatIpCidr")
+        @com.aliyun.core.annotation.NameInMap("NatIpCidr")
         private String natIpCidr;
 
-        @NameInMap("NatIpDescription")
+        @com.aliyun.core.annotation.NameInMap("NatIpDescription")
         private String natIpDescription;
 
-        @NameInMap("NatIpId")
+        @com.aliyun.core.annotation.NameInMap("NatIpId")
         private String natIpId;
 
-        @NameInMap("NatIpName")
+        @com.aliyun.core.annotation.NameInMap("NatIpName")
         private String natIpName;
 
-        @NameInMap("NatIpStatus")
+        @com.aliyun.core.annotation.NameInMap("NatIpStatus")
         private String natIpStatus;
 
         private NatIps(Builder builder) {

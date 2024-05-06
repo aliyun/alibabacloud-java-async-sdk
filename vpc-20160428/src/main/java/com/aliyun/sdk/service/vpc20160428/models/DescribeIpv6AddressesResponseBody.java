@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeIpv6AddressesResponseBody</p>
  */
 public class DescribeIpv6AddressesResponseBody extends TeaModel {
-    @NameInMap("Ipv6Addresses")
+    @com.aliyun.core.annotation.NameInMap("Ipv6Addresses")
     private Ipv6Addresses ipv6Addresses;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeIpv6AddressesResponseBody(Builder builder) {
@@ -132,34 +131,34 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
     } 
 
     public static class Ipv6InternetBandwidth extends TeaModel {
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Integer bandwidth;
 
-        @NameInMap("BusinessStatus")
+        @com.aliyun.core.annotation.NameInMap("BusinessStatus")
         private String businessStatus;
 
-        @NameInMap("HasReservationData")
+        @com.aliyun.core.annotation.NameInMap("HasReservationData")
         private Boolean hasReservationData;
 
-        @NameInMap("InstanceChargeType")
+        @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
         private String instanceChargeType;
 
-        @NameInMap("InternetChargeType")
+        @com.aliyun.core.annotation.NameInMap("InternetChargeType")
         private String internetChargeType;
 
-        @NameInMap("Ipv6InternetBandwidthId")
+        @com.aliyun.core.annotation.NameInMap("Ipv6InternetBandwidthId")
         private String ipv6InternetBandwidthId;
 
-        @NameInMap("ReservationActiveTime")
+        @com.aliyun.core.annotation.NameInMap("ReservationActiveTime")
         private String reservationActiveTime;
 
-        @NameInMap("ReservationBandwidth")
+        @com.aliyun.core.annotation.NameInMap("ReservationBandwidth")
         private Long reservationBandwidth;
 
-        @NameInMap("ReservationInternetChargeType")
+        @com.aliyun.core.annotation.NameInMap("ReservationInternetChargeType")
         private String reservationInternetChargeType;
 
-        @NameInMap("ReservationOrderType")
+        @com.aliyun.core.annotation.NameInMap("ReservationOrderType")
         private String reservationOrderType;
 
         private Ipv6InternetBandwidth(Builder builder) {
@@ -373,10 +372,10 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -442,7 +441,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -483,58 +482,58 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
 
     }
     public static class Ipv6Address extends TeaModel {
-        @NameInMap("AllocationTime")
+        @com.aliyun.core.annotation.NameInMap("AllocationTime")
         private String allocationTime;
 
-        @NameInMap("AssociatedInstanceId")
+        @com.aliyun.core.annotation.NameInMap("AssociatedInstanceId")
         private String associatedInstanceId;
 
-        @NameInMap("AssociatedInstanceType")
+        @com.aliyun.core.annotation.NameInMap("AssociatedInstanceType")
         private String associatedInstanceType;
 
-        @NameInMap("Ipv6Address")
+        @com.aliyun.core.annotation.NameInMap("Ipv6Address")
         private String ipv6Address;
 
-        @NameInMap("Ipv6AddressDescription")
+        @com.aliyun.core.annotation.NameInMap("Ipv6AddressDescription")
         private String ipv6AddressDescription;
 
-        @NameInMap("Ipv6AddressId")
+        @com.aliyun.core.annotation.NameInMap("Ipv6AddressId")
         private String ipv6AddressId;
 
-        @NameInMap("Ipv6AddressName")
+        @com.aliyun.core.annotation.NameInMap("Ipv6AddressName")
         private String ipv6AddressName;
 
-        @NameInMap("Ipv6GatewayId")
+        @com.aliyun.core.annotation.NameInMap("Ipv6GatewayId")
         private String ipv6GatewayId;
 
-        @NameInMap("Ipv6InternetBandwidth")
+        @com.aliyun.core.annotation.NameInMap("Ipv6InternetBandwidth")
         private Ipv6InternetBandwidth ipv6InternetBandwidth;
 
-        @NameInMap("Ipv6Isp")
+        @com.aliyun.core.annotation.NameInMap("Ipv6Isp")
         private String ipv6Isp;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("RealBandwidth")
+        @com.aliyun.core.annotation.NameInMap("RealBandwidth")
         private Integer realBandwidth;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ServiceManaged")
+        @com.aliyun.core.annotation.NameInMap("ServiceManaged")
         private Integer serviceManaged;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private Ipv6Address(Builder builder) {
@@ -882,7 +881,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
 
     }
     public static class Ipv6Addresses extends TeaModel {
-        @NameInMap("Ipv6Address")
+        @com.aliyun.core.annotation.NameInMap("Ipv6Address")
         private java.util.List < Ipv6Address> ipv6Address;
 
         private Ipv6Addresses(Builder builder) {

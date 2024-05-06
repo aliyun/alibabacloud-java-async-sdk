@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBgpPeersResponseBody</p>
  */
 public class DescribeBgpPeersResponseBody extends TeaModel {
-    @NameInMap("BgpPeers")
+    @com.aliyun.core.annotation.NameInMap("BgpPeers")
     private BgpPeers bgpPeers;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeBgpPeersResponseBody(Builder builder) {
@@ -132,70 +131,70 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
     } 
 
     public static class BgpPeer extends TeaModel {
-        @NameInMap("AdvertisedRouteCount")
+        @com.aliyun.core.annotation.NameInMap("AdvertisedRouteCount")
         private Integer advertisedRouteCount;
 
-        @NameInMap("AuthKey")
+        @com.aliyun.core.annotation.NameInMap("AuthKey")
         private String authKey;
 
-        @NameInMap("BfdMultiHop")
+        @com.aliyun.core.annotation.NameInMap("BfdMultiHop")
         private Integer bfdMultiHop;
 
-        @NameInMap("BgpGroupId")
+        @com.aliyun.core.annotation.NameInMap("BgpGroupId")
         private String bgpGroupId;
 
-        @NameInMap("BgpPeerId")
+        @com.aliyun.core.annotation.NameInMap("BgpPeerId")
         private String bgpPeerId;
 
-        @NameInMap("BgpStatus")
+        @com.aliyun.core.annotation.NameInMap("BgpStatus")
         private String bgpStatus;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EnableBfd")
+        @com.aliyun.core.annotation.NameInMap("EnableBfd")
         private Boolean enableBfd;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Hold")
+        @com.aliyun.core.annotation.NameInMap("Hold")
         private String hold;
 
-        @NameInMap("IpVersion")
+        @com.aliyun.core.annotation.NameInMap("IpVersion")
         private String ipVersion;
 
-        @NameInMap("IsFake")
+        @com.aliyun.core.annotation.NameInMap("IsFake")
         private Boolean isFake;
 
-        @NameInMap("Keepalive")
+        @com.aliyun.core.annotation.NameInMap("Keepalive")
         private String keepalive;
 
-        @NameInMap("LocalAsn")
+        @com.aliyun.core.annotation.NameInMap("LocalAsn")
         private String localAsn;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PeerAsn")
+        @com.aliyun.core.annotation.NameInMap("PeerAsn")
         private String peerAsn;
 
-        @NameInMap("PeerIpAddress")
+        @com.aliyun.core.annotation.NameInMap("PeerIpAddress")
         private String peerIpAddress;
 
-        @NameInMap("ReceivedRouteCount")
+        @com.aliyun.core.annotation.NameInMap("ReceivedRouteCount")
         private Integer receivedRouteCount;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RouteLimit")
+        @com.aliyun.core.annotation.NameInMap("RouteLimit")
         private String routeLimit;
 
-        @NameInMap("RouterId")
+        @com.aliyun.core.annotation.NameInMap("RouterId")
         private String routerId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private BgpPeer(Builder builder) {
@@ -615,7 +614,7 @@ public class DescribeBgpPeersResponseBody extends TeaModel {
 
     }
     public static class BgpPeers extends TeaModel {
-        @NameInMap("BgpPeer")
+        @com.aliyun.core.annotation.NameInMap("BgpPeer")
         private java.util.List < BgpPeer> bgpPeer;
 
         private BgpPeers(Builder builder) {

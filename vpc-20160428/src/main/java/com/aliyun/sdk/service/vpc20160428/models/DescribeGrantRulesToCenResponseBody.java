@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeGrantRulesToCenResponseBody</p>
  */
 public class DescribeGrantRulesToCenResponseBody extends TeaModel {
-    @NameInMap("CenGrantRules")
+    @com.aliyun.core.annotation.NameInMap("CenGrantRules")
     private CenGrantRules cenGrantRules;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeGrantRulesToCenResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
     } 
 
     public static class CbnGrantRule extends TeaModel {
-        @NameInMap("CenInstanceId")
+        @com.aliyun.core.annotation.NameInMap("CenInstanceId")
         private String cenInstanceId;
 
-        @NameInMap("CenOwnerId")
+        @com.aliyun.core.annotation.NameInMap("CenOwnerId")
         private Long cenOwnerId;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
         private CbnGrantRule(Builder builder) {
@@ -213,7 +212,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
 
     }
     public static class CenGrantRules extends TeaModel {
-        @NameInMap("CbnGrantRule")
+        @com.aliyun.core.annotation.NameInMap("CbnGrantRule")
         private java.util.List < CbnGrantRule> cbnGrantRule;
 
         private CenGrantRules(Builder builder) {

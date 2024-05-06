@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vpc20160428.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVpnRouteEntriesResponseBody</p>
  */
 public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("VpnRouteEntries")
+    @com.aliyun.core.annotation.NameInMap("VpnRouteEntries")
     private VpnRouteEntries vpnRouteEntries;
 
     private DescribeVpnRouteEntriesResponseBody(Builder builder) {
@@ -132,37 +131,37 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
     } 
 
     public static class VpnRouteEntry extends TeaModel {
-        @NameInMap("AsPath")
+        @com.aliyun.core.annotation.NameInMap("AsPath")
         private String asPath;
 
-        @NameInMap("Community")
+        @com.aliyun.core.annotation.NameInMap("Community")
         private String community;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("NextHop")
+        @com.aliyun.core.annotation.NameInMap("NextHop")
         private String nextHop;
 
-        @NameInMap("NextHopTunnelId")
+        @com.aliyun.core.annotation.NameInMap("NextHopTunnelId")
         private String nextHopTunnelId;
 
-        @NameInMap("RouteDest")
+        @com.aliyun.core.annotation.NameInMap("RouteDest")
         private String routeDest;
 
-        @NameInMap("RouteEntryType")
+        @com.aliyun.core.annotation.NameInMap("RouteEntryType")
         private String routeEntryType;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("VpnInstanceId")
+        @com.aliyun.core.annotation.NameInMap("VpnInstanceId")
         private String vpnInstanceId;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private VpnRouteEntry(Builder builder) {
@@ -389,7 +388,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
 
     }
     public static class VpnRouteEntries extends TeaModel {
-        @NameInMap("VpnRouteEntry")
+        @com.aliyun.core.annotation.NameInMap("VpnRouteEntry")
         private java.util.List < VpnRouteEntry> vpnRouteEntry;
 
         private VpnRouteEntries(Builder builder) {
