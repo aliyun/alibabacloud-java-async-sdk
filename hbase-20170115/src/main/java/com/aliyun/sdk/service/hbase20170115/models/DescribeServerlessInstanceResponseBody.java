@@ -1,0 +1,533 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.hbase20170115.models;
+
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DescribeServerlessInstanceResponseBody} extends {@link TeaModel}
+ *
+ * <p>DescribeServerlessInstanceResponseBody</p>
+ */
+public class DescribeServerlessInstanceResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
+    private String autoRenew;
+
+    @com.aliyun.core.annotation.NameInMap("ClusterType")
+    private String clusterType;
+
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
+    private String createTime;
+
+    @com.aliyun.core.annotation.NameInMap("CuSize")
+    private String cuSize;
+
+    @com.aliyun.core.annotation.NameInMap("DiskSize")
+    private String diskSize;
+
+    @com.aliyun.core.annotation.NameInMap("ExpireTime")
+    private String expireTime;
+
+    @com.aliyun.core.annotation.NameInMap("HaType")
+    private String haType;
+
+    @com.aliyun.core.annotation.NameInMap("HasUser")
+    private String hasUser;
+
+    @com.aliyun.core.annotation.NameInMap("InnerEndpoint")
+    private String innerEndpoint;
+
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    private String instanceId;
+
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
+    private String instanceName;
+
+    @com.aliyun.core.annotation.NameInMap("IsDeletionProtection")
+    private String isDeletionProtection;
+
+    @com.aliyun.core.annotation.NameInMap("LockMode")
+    private String lockMode;
+
+    @com.aliyun.core.annotation.NameInMap("MainVersion")
+    private String mainVersion;
+
+    @com.aliyun.core.annotation.NameInMap("OuterEndpoint")
+    private String outerEndpoint;
+
+    @com.aliyun.core.annotation.NameInMap("PayType")
+    private String payType;
+
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("ReserverMaxQpsNum")
+    private String reserverMaxQpsNum;
+
+    @com.aliyun.core.annotation.NameInMap("ReserverMinQpsNum")
+    private String reserverMinQpsNum;
+
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private String status;
+
+    @com.aliyun.core.annotation.NameInMap("UpdateStatus")
+    private String updateStatus;
+
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    private String vSwitchId;
+
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    private String vpcId;
+
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
+    private String zoneId;
+
+    private DescribeServerlessInstanceResponseBody(Builder builder) {
+        this.autoRenew = builder.autoRenew;
+        this.clusterType = builder.clusterType;
+        this.createTime = builder.createTime;
+        this.cuSize = builder.cuSize;
+        this.diskSize = builder.diskSize;
+        this.expireTime = builder.expireTime;
+        this.haType = builder.haType;
+        this.hasUser = builder.hasUser;
+        this.innerEndpoint = builder.innerEndpoint;
+        this.instanceId = builder.instanceId;
+        this.instanceName = builder.instanceName;
+        this.isDeletionProtection = builder.isDeletionProtection;
+        this.lockMode = builder.lockMode;
+        this.mainVersion = builder.mainVersion;
+        this.outerEndpoint = builder.outerEndpoint;
+        this.payType = builder.payType;
+        this.regionId = builder.regionId;
+        this.requestId = builder.requestId;
+        this.reserverMaxQpsNum = builder.reserverMaxQpsNum;
+        this.reserverMinQpsNum = builder.reserverMinQpsNum;
+        this.status = builder.status;
+        this.updateStatus = builder.updateStatus;
+        this.vSwitchId = builder.vSwitchId;
+        this.vpcId = builder.vpcId;
+        this.zoneId = builder.zoneId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DescribeServerlessInstanceResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return autoRenew
+     */
+    public String getAutoRenew() {
+        return this.autoRenew;
+    }
+
+    /**
+     * @return clusterType
+     */
+    public String getClusterType() {
+        return this.clusterType;
+    }
+
+    /**
+     * @return createTime
+     */
+    public String getCreateTime() {
+        return this.createTime;
+    }
+
+    /**
+     * @return cuSize
+     */
+    public String getCuSize() {
+        return this.cuSize;
+    }
+
+    /**
+     * @return diskSize
+     */
+    public String getDiskSize() {
+        return this.diskSize;
+    }
+
+    /**
+     * @return expireTime
+     */
+    public String getExpireTime() {
+        return this.expireTime;
+    }
+
+    /**
+     * @return haType
+     */
+    public String getHaType() {
+        return this.haType;
+    }
+
+    /**
+     * @return hasUser
+     */
+    public String getHasUser() {
+        return this.hasUser;
+    }
+
+    /**
+     * @return innerEndpoint
+     */
+    public String getInnerEndpoint() {
+        return this.innerEndpoint;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
+     * @return instanceName
+     */
+    public String getInstanceName() {
+        return this.instanceName;
+    }
+
+    /**
+     * @return isDeletionProtection
+     */
+    public String getIsDeletionProtection() {
+        return this.isDeletionProtection;
+    }
+
+    /**
+     * @return lockMode
+     */
+    public String getLockMode() {
+        return this.lockMode;
+    }
+
+    /**
+     * @return mainVersion
+     */
+    public String getMainVersion() {
+        return this.mainVersion;
+    }
+
+    /**
+     * @return outerEndpoint
+     */
+    public String getOuterEndpoint() {
+        return this.outerEndpoint;
+    }
+
+    /**
+     * @return payType
+     */
+    public String getPayType() {
+        return this.payType;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return reserverMaxQpsNum
+     */
+    public String getReserverMaxQpsNum() {
+        return this.reserverMaxQpsNum;
+    }
+
+    /**
+     * @return reserverMinQpsNum
+     */
+    public String getReserverMinQpsNum() {
+        return this.reserverMinQpsNum;
+    }
+
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
+     * @return updateStatus
+     */
+    public String getUpdateStatus() {
+        return this.updateStatus;
+    }
+
+    /**
+     * @return vSwitchId
+     */
+    public String getVSwitchId() {
+        return this.vSwitchId;
+    }
+
+    /**
+     * @return vpcId
+     */
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
+    /**
+     * @return zoneId
+     */
+    public String getZoneId() {
+        return this.zoneId;
+    }
+
+    public static final class Builder {
+        private String autoRenew; 
+        private String clusterType; 
+        private String createTime; 
+        private String cuSize; 
+        private String diskSize; 
+        private String expireTime; 
+        private String haType; 
+        private String hasUser; 
+        private String innerEndpoint; 
+        private String instanceId; 
+        private String instanceName; 
+        private String isDeletionProtection; 
+        private String lockMode; 
+        private String mainVersion; 
+        private String outerEndpoint; 
+        private String payType; 
+        private String regionId; 
+        private String requestId; 
+        private String reserverMaxQpsNum; 
+        private String reserverMinQpsNum; 
+        private String status; 
+        private String updateStatus; 
+        private String vSwitchId; 
+        private String vpcId; 
+        private String zoneId; 
+
+        /**
+         * AutoRenew.
+         */
+        public Builder autoRenew(String autoRenew) {
+            this.autoRenew = autoRenew;
+            return this;
+        }
+
+        /**
+         * ClusterType.
+         */
+        public Builder clusterType(String clusterType) {
+            this.clusterType = clusterType;
+            return this;
+        }
+
+        /**
+         * CreateTime.
+         */
+        public Builder createTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+
+        /**
+         * CuSize.
+         */
+        public Builder cuSize(String cuSize) {
+            this.cuSize = cuSize;
+            return this;
+        }
+
+        /**
+         * DiskSize.
+         */
+        public Builder diskSize(String diskSize) {
+            this.diskSize = diskSize;
+            return this;
+        }
+
+        /**
+         * ExpireTime.
+         */
+        public Builder expireTime(String expireTime) {
+            this.expireTime = expireTime;
+            return this;
+        }
+
+        /**
+         * HaType.
+         */
+        public Builder haType(String haType) {
+            this.haType = haType;
+            return this;
+        }
+
+        /**
+         * HasUser.
+         */
+        public Builder hasUser(String hasUser) {
+            this.hasUser = hasUser;
+            return this;
+        }
+
+        /**
+         * InnerEndpoint.
+         */
+        public Builder innerEndpoint(String innerEndpoint) {
+            this.innerEndpoint = innerEndpoint;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * InstanceName.
+         */
+        public Builder instanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+
+        /**
+         * IsDeletionProtection.
+         */
+        public Builder isDeletionProtection(String isDeletionProtection) {
+            this.isDeletionProtection = isDeletionProtection;
+            return this;
+        }
+
+        /**
+         * LockMode.
+         */
+        public Builder lockMode(String lockMode) {
+            this.lockMode = lockMode;
+            return this;
+        }
+
+        /**
+         * MainVersion.
+         */
+        public Builder mainVersion(String mainVersion) {
+            this.mainVersion = mainVersion;
+            return this;
+        }
+
+        /**
+         * OuterEndpoint.
+         */
+        public Builder outerEndpoint(String outerEndpoint) {
+            this.outerEndpoint = outerEndpoint;
+            return this;
+        }
+
+        /**
+         * PayType.
+         */
+        public Builder payType(String payType) {
+            this.payType = payType;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ReserverMaxQpsNum.
+         */
+        public Builder reserverMaxQpsNum(String reserverMaxQpsNum) {
+            this.reserverMaxQpsNum = reserverMaxQpsNum;
+            return this;
+        }
+
+        /**
+         * ReserverMinQpsNum.
+         */
+        public Builder reserverMinQpsNum(String reserverMinQpsNum) {
+            this.reserverMinQpsNum = reserverMinQpsNum;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(String status) {
+            this.status = status;
+            return this;
+        }
+
+        /**
+         * UpdateStatus.
+         */
+        public Builder updateStatus(String updateStatus) {
+            this.updateStatus = updateStatus;
+            return this;
+        }
+
+        /**
+         * VSwitchId.
+         */
+        public Builder vSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+
+        /**
+         * VpcId.
+         */
+        public Builder vpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+
+        /**
+         * ZoneId.
+         */
+        public Builder zoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+
+        public DescribeServerlessInstanceResponseBody build() {
+            return new DescribeServerlessInstanceResponseBody(this);
+        } 
+
+    } 
+
+}
