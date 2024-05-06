@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeClusterBackupListResponseBody</p>
  */
 public class DescribeClusterBackupListResponseBody extends TeaModel {
-    @NameInMap("ClusterBackups")
+    @com.aliyun.core.annotation.NameInMap("ClusterBackups")
     private java.util.List < ClusterBackups> clusterBackups;
 
-    @NameInMap("FreeSize")
+    @com.aliyun.core.annotation.NameInMap("FreeSize")
     private Long freeSize;
 
-    @NameInMap("FullStorageSize")
+    @com.aliyun.core.annotation.NameInMap("FullStorageSize")
     private Long fullStorageSize;
 
-    @NameInMap("LogStorageSize")
+    @com.aliyun.core.annotation.NameInMap("LogStorageSize")
     private Long logStorageSize;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeClusterBackupListResponseBody(Builder builder) {
@@ -160,7 +159,10 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return per page. Valid values: 1 to 100.
+         * <p>
+         * Default value: 30.
+         * >If you specify this parameter, PageSize and PageNumber are unavailable.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -168,7 +170,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -176,7 +178,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The maximum number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -184,7 +186,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -198,7 +200,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
     } 
 
     public static class ExtraInfo extends TeaModel {
-        @NameInMap("CustinsDbVersion")
+        @com.aliyun.core.annotation.NameInMap("CustinsDbVersion")
         private String custinsDbVersion;
 
         private ExtraInfo(Builder builder) {
@@ -239,40 +241,40 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
 
     }
     public static class Backups extends TeaModel {
-        @NameInMap("BackupDownloadURL")
+        @com.aliyun.core.annotation.NameInMap("BackupDownloadURL")
         private String backupDownloadURL;
 
-        @NameInMap("BackupEndTime")
+        @com.aliyun.core.annotation.NameInMap("BackupEndTime")
         private String backupEndTime;
 
-        @NameInMap("BackupId")
+        @com.aliyun.core.annotation.NameInMap("BackupId")
         private String backupId;
 
-        @NameInMap("BackupIntranetDownloadURL")
+        @com.aliyun.core.annotation.NameInMap("BackupIntranetDownloadURL")
         private String backupIntranetDownloadURL;
 
-        @NameInMap("BackupName")
+        @com.aliyun.core.annotation.NameInMap("BackupName")
         private String backupName;
 
-        @NameInMap("BackupSize")
+        @com.aliyun.core.annotation.NameInMap("BackupSize")
         private String backupSize;
 
-        @NameInMap("BackupStartTime")
+        @com.aliyun.core.annotation.NameInMap("BackupStartTime")
         private String backupStartTime;
 
-        @NameInMap("BackupStatus")
+        @com.aliyun.core.annotation.NameInMap("BackupStatus")
         private String backupStatus;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("ExtraInfo")
+        @com.aliyun.core.annotation.NameInMap("ExtraInfo")
         private ExtraInfo extraInfo;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("IsAvail")
+        @com.aliyun.core.annotation.NameInMap("IsAvail")
         private String isAvail;
 
         private Backups(Builder builder) {
@@ -511,34 +513,34 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
 
     }
     public static class ClusterBackups extends TeaModel {
-        @NameInMap("Backups")
+        @com.aliyun.core.annotation.NameInMap("Backups")
         private java.util.List < Backups> backups;
 
-        @NameInMap("ClusterBackupEndTime")
+        @com.aliyun.core.annotation.NameInMap("ClusterBackupEndTime")
         private String clusterBackupEndTime;
 
-        @NameInMap("ClusterBackupId")
+        @com.aliyun.core.annotation.NameInMap("ClusterBackupId")
         private String clusterBackupId;
 
-        @NameInMap("ClusterBackupMode")
+        @com.aliyun.core.annotation.NameInMap("ClusterBackupMode")
         private String clusterBackupMode;
 
-        @NameInMap("ClusterBackupSize")
+        @com.aliyun.core.annotation.NameInMap("ClusterBackupSize")
         private String clusterBackupSize;
 
-        @NameInMap("ClusterBackupStartTime")
+        @com.aliyun.core.annotation.NameInMap("ClusterBackupStartTime")
         private String clusterBackupStartTime;
 
-        @NameInMap("ClusterBackupStatus")
+        @com.aliyun.core.annotation.NameInMap("ClusterBackupStatus")
         private String clusterBackupStatus;
 
-        @NameInMap("IsAvail")
+        @com.aliyun.core.annotation.NameInMap("IsAvail")
         private Integer isAvail;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("ShardClassMemory")
+        @com.aliyun.core.annotation.NameInMap("ShardClassMemory")
         private Integer shardClassMemory;
 
         private ClusterBackups(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLogicInstanceTopologyResponseBody</p>
  */
 public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("RedisProxyList")
+    @com.aliyun.core.annotation.NameInMap("RedisProxyList")
     private RedisProxyList redisProxyList;
 
-    @NameInMap("RedisShardList")
+    @com.aliyun.core.annotation.NameInMap("RedisShardList")
     private RedisShardList redisShardList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeLogicInstanceTopologyResponseBody(Builder builder) {
@@ -112,19 +111,19 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
     } 
 
     public static class NodeInfo extends TeaModel {
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private String bandwidth;
 
-        @NameInMap("Capacity")
+        @com.aliyun.core.annotation.NameInMap("Capacity")
         private String capacity;
 
-        @NameInMap("Connection")
+        @com.aliyun.core.annotation.NameInMap("Connection")
         private String connection;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
         private NodeInfo(Builder builder) {
@@ -237,7 +236,7 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
 
     }
     public static class RedisProxyList extends TeaModel {
-        @NameInMap("NodeInfo")
+        @com.aliyun.core.annotation.NameInMap("NodeInfo")
         private java.util.List < NodeInfo> nodeInfo;
 
         private RedisProxyList(Builder builder) {
@@ -278,22 +277,22 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
 
     }
     public static class RedisShardListNodeInfo extends TeaModel {
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private String bandwidth;
 
-        @NameInMap("Capacity")
+        @com.aliyun.core.annotation.NameInMap("Capacity")
         private String capacity;
 
-        @NameInMap("Connection")
+        @com.aliyun.core.annotation.NameInMap("Connection")
         private String connection;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
-        @NameInMap("SubInstanceType")
+        @com.aliyun.core.annotation.NameInMap("SubInstanceType")
         private String subInstanceType;
 
         private RedisShardListNodeInfo(Builder builder) {
@@ -427,7 +426,7 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
 
     }
     public static class RedisShardList extends TeaModel {
-        @NameInMap("NodeInfo")
+        @com.aliyun.core.annotation.NameInMap("NodeInfo")
         private java.util.List < RedisShardListNodeInfo> nodeInfo;
 
         private RedisShardList(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>LockDBInstanceWriteResponseBody</p>
  */
 public class LockDBInstanceWriteResponseBody extends TeaModel {
-    @NameInMap("DBInstanceName")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceName")
     private String DBInstanceName;
 
-    @NameInMap("LockReason")
+    @com.aliyun.core.annotation.NameInMap("LockReason")
     private String lockReason;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private Long taskId;
 
     private LockDBInstanceWriteResponseBody(Builder builder) {

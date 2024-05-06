@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,96 +11,96 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyInstanceSpecRequest</p>
  */
 public class ModifyInstanceSpecRequest extends Request {
-    @Query
-    @NameInMap("AutoPay")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
     private Boolean autoPay;
 
-    @Query
-    @NameInMap("BusinessInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessInfo")
     private String businessInfo;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("CouponNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CouponNo")
     private String couponNo;
 
-    @Query
-    @NameInMap("EffectiveTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveTime")
     private String effectiveTime;
 
-    @Query
-    @NameInMap("ForceTrans")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForceTrans")
     private Boolean forceTrans;
 
-    @Query
-    @NameInMap("ForceUpgrade")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForceUpgrade")
     private Boolean forceUpgrade;
 
-    @Query
-    @NameInMap("InstanceClass")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceClass")
     private String instanceClass;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("MajorVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MajorVersion")
     private String majorVersion;
 
-    @Query
-    @NameInMap("NodeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeType")
     private String nodeType;
 
-    @Query
-    @NameInMap("OrderType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderType")
     private String orderType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ReadOnlyCount")
-    @Validation(maximum = 9)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReadOnlyCount")
+    @com.aliyun.core.annotation.Validation(maximum = 9)
     private Integer readOnlyCount;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("ShardCount")
-    @Validation(maximum = 4092, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShardCount")
+    @com.aliyun.core.annotation.Validation(maximum = 4092, minimum = 1)
     private Integer shardCount;
 
-    @Query
-    @NameInMap("SlaveReadOnlyCount")
-    @Validation(maximum = 9)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SlaveReadOnlyCount")
+    @com.aliyun.core.annotation.Validation(maximum = 9)
     private Integer slaveReadOnlyCount;
 
-    @Query
-    @NameInMap("SourceBiz")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceBiz")
     private String sourceBiz;
 
     private ModifyInstanceSpecRequest(Builder builder) {
@@ -504,7 +503,7 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * The number of read replicas. Valid values: 0 to 5. This parameter applies only to the following scenarios:
+         * The number of read replicas in the primary zone. Valid values: 0 to 5. This parameter applies only to the following scenarios:
          * <p>
          * 
          * *   If the instance is a standard instance that uses cloud disks, you can set this parameter to a value greater than 0 to enable the read/write splitting architecture.
@@ -562,7 +561,7 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * SlaveReadOnlyCount.
+         * The number of read replicas in the secondary zone. This parameter is used to create a read/write splitting instance that is deployed in multiple zones. Valid values: 1 to 9. The sum of the SlaveReadOnlyCount and ReadOnlyCount values cannot be greater than 9.
          */
         public Builder slaveReadOnlyCount(Integer slaveReadOnlyCount) {
             this.putQueryParameter("SlaveReadOnlyCount", slaveReadOnlyCount);

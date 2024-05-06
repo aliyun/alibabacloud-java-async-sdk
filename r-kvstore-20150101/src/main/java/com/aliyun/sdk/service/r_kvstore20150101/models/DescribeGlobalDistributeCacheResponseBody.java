@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeGlobalDistributeCacheResponseBody</p>
  */
 public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
-    @NameInMap("GlobalDistributeCaches")
+    @com.aliyun.core.annotation.NameInMap("GlobalDistributeCaches")
     private java.util.List < GlobalDistributeCaches> globalDistributeCaches;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeGlobalDistributeCacheResponseBody(Builder builder) {
@@ -132,19 +131,19 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
     } 
 
     public static class SubInstances extends TeaModel {
-        @NameInMap("GlobalInstanceId")
+        @com.aliyun.core.annotation.NameInMap("GlobalInstanceId")
         private String globalInstanceId;
 
-        @NameInMap("InstanceClass")
+        @com.aliyun.core.annotation.NameInMap("InstanceClass")
         private String instanceClass;
 
-        @NameInMap("InstanceID")
+        @com.aliyun.core.annotation.NameInMap("InstanceID")
         private String instanceID;
 
-        @NameInMap("InstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("InstanceStatus")
         private String instanceStatus;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private SubInstances(Builder builder) {
@@ -277,13 +276,13 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
 
     }
     public static class GlobalDistributeCaches extends TeaModel {
-        @NameInMap("GlobalInstanceId")
+        @com.aliyun.core.annotation.NameInMap("GlobalInstanceId")
         private String globalInstanceId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SubInstances")
+        @com.aliyun.core.annotation.NameInMap("SubInstances")
         private java.util.List < SubInstances> subInstances;
 
         private GlobalDistributeCaches(Builder builder) {

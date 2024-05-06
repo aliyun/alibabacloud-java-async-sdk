@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePriceResponseBody</p>
  */
 public class DescribePriceResponseBody extends TeaModel {
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.NameInMap("Order")
     private Order order;
 
-    @NameInMap("OrderParams")
+    @com.aliyun.core.annotation.NameInMap("OrderParams")
     private String orderParams;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Rules")
+    @com.aliyun.core.annotation.NameInMap("Rules")
     private Rules rules;
 
-    @NameInMap("SubOrders")
+    @com.aliyun.core.annotation.NameInMap("SubOrders")
     private SubOrders subOrders;
 
     private DescribePriceResponseBody(Builder builder) {
@@ -132,16 +131,16 @@ public class DescribePriceResponseBody extends TeaModel {
     } 
 
     public static class Coupon extends TeaModel {
-        @NameInMap("CouponNo")
+        @com.aliyun.core.annotation.NameInMap("CouponNo")
         private String couponNo;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("IsSelected")
+        @com.aliyun.core.annotation.NameInMap("IsSelected")
         private String isSelected;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Coupon(Builder builder) {
@@ -233,7 +232,7 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
     public static class Coupons extends TeaModel {
-        @NameInMap("Coupon")
+        @com.aliyun.core.annotation.NameInMap("Coupon")
         private java.util.List < Coupon> coupon;
 
         private Coupons(Builder builder) {
@@ -274,7 +273,7 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
     public static class OptionIds extends TeaModel {
-        @NameInMap("OptionId")
+        @com.aliyun.core.annotation.NameInMap("OptionId")
         private java.util.List < Long > optionId;
 
         private OptionIds(Builder builder) {
@@ -315,25 +314,25 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
     public static class ContractActivity extends TeaModel {
-        @NameInMap("ActivityId")
+        @com.aliyun.core.annotation.NameInMap("ActivityId")
         private Long activityId;
 
-        @NameInMap("ActivityName")
+        @com.aliyun.core.annotation.NameInMap("ActivityName")
         private String activityName;
 
-        @NameInMap("FinalFee")
+        @com.aliyun.core.annotation.NameInMap("FinalFee")
         private Double finalFee;
 
-        @NameInMap("FinalPromFee")
+        @com.aliyun.core.annotation.NameInMap("FinalPromFee")
         private Double finalPromFee;
 
-        @NameInMap("OptionCode")
+        @com.aliyun.core.annotation.NameInMap("OptionCode")
         private String optionCode;
 
-        @NameInMap("OptionIds")
+        @com.aliyun.core.annotation.NameInMap("OptionIds")
         private OptionIds optionIds;
 
-        @NameInMap("ProdFee")
+        @com.aliyun.core.annotation.NameInMap("ProdFee")
         private Double prodFee;
 
         private ContractActivity(Builder builder) {
@@ -476,34 +475,34 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
     public static class DepreciateInfo extends TeaModel {
-        @NameInMap("CheapRate")
+        @com.aliyun.core.annotation.NameInMap("CheapRate")
         private Long cheapRate;
 
-        @NameInMap("CheapStandAmount")
+        @com.aliyun.core.annotation.NameInMap("CheapStandAmount")
         private Long cheapStandAmount;
 
-        @NameInMap("ContractActivity")
+        @com.aliyun.core.annotation.NameInMap("ContractActivity")
         private ContractActivity contractActivity;
 
-        @NameInMap("Differential")
+        @com.aliyun.core.annotation.NameInMap("Differential")
         private Long differential;
 
-        @NameInMap("DifferentialName")
+        @com.aliyun.core.annotation.NameInMap("DifferentialName")
         private String differentialName;
 
-        @NameInMap("IsContractActivity")
+        @com.aliyun.core.annotation.NameInMap("IsContractActivity")
         private Boolean isContractActivity;
 
-        @NameInMap("IsShow")
+        @com.aliyun.core.annotation.NameInMap("IsShow")
         private Boolean isShow;
 
-        @NameInMap("ListPrice")
+        @com.aliyun.core.annotation.NameInMap("ListPrice")
         private Long listPrice;
 
-        @NameInMap("MonthPrice")
+        @com.aliyun.core.annotation.NameInMap("MonthPrice")
         private Long monthPrice;
 
-        @NameInMap("OriginalStandAmount")
+        @com.aliyun.core.annotation.NameInMap("OriginalStandAmount")
         private Long originalStandAmount;
 
         private DepreciateInfo(Builder builder) {
@@ -697,7 +696,7 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
     public static class RuleIds extends TeaModel {
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private java.util.List < String > ruleId;
 
         private RuleIds(Builder builder) {
@@ -738,46 +737,46 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
     public static class Order extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Coupons")
+        @com.aliyun.core.annotation.NameInMap("Coupons")
         private Coupons coupons;
 
-        @NameInMap("Currency")
+        @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
-        @NameInMap("DepreciateInfo")
+        @com.aliyun.core.annotation.NameInMap("DepreciateInfo")
         private DepreciateInfo depreciateInfo;
 
-        @NameInMap("DiscountAmount")
+        @com.aliyun.core.annotation.NameInMap("DiscountAmount")
         private String discountAmount;
 
-        @NameInMap("HandlingFeeAmount")
+        @com.aliyun.core.annotation.NameInMap("HandlingFeeAmount")
         private String handlingFeeAmount;
 
-        @NameInMap("IsContractActivity")
+        @com.aliyun.core.annotation.NameInMap("IsContractActivity")
         private Boolean isContractActivity;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("OriginalAmount")
+        @com.aliyun.core.annotation.NameInMap("OriginalAmount")
         private String originalAmount;
 
-        @NameInMap("RuleIds")
+        @com.aliyun.core.annotation.NameInMap("RuleIds")
         private RuleIds ruleIds;
 
-        @NameInMap("ShowDiscountInfo")
+        @com.aliyun.core.annotation.NameInMap("ShowDiscountInfo")
         private Boolean showDiscountInfo;
 
-        @NameInMap("StandDiscountPrice")
+        @com.aliyun.core.annotation.NameInMap("StandDiscountPrice")
         private Long standDiscountPrice;
 
-        @NameInMap("StandPrice")
+        @com.aliyun.core.annotation.NameInMap("StandPrice")
         private Long standPrice;
 
-        @NameInMap("TradeAmount")
+        @com.aliyun.core.annotation.NameInMap("TradeAmount")
         private String tradeAmount;
 
         private Order(Builder builder) {
@@ -1039,13 +1038,13 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
     public static class Rule extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RuleDescId")
+        @com.aliyun.core.annotation.NameInMap("RuleDescId")
         private Long ruleDescId;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private Rule(Builder builder) {
@@ -1120,7 +1119,7 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
     public static class Rules extends TeaModel {
-        @NameInMap("Rule")
+        @com.aliyun.core.annotation.NameInMap("Rule")
         private java.util.List < Rule> rule;
 
         private Rules(Builder builder) {
@@ -1161,7 +1160,7 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
     public static class ContractActivityOptionIds extends TeaModel {
-        @NameInMap("OptionId")
+        @com.aliyun.core.annotation.NameInMap("OptionId")
         private java.util.List < Long > optionId;
 
         private ContractActivityOptionIds(Builder builder) {
@@ -1202,25 +1201,25 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
     public static class DepreciateInfoContractActivity extends TeaModel {
-        @NameInMap("ActivityId")
+        @com.aliyun.core.annotation.NameInMap("ActivityId")
         private Long activityId;
 
-        @NameInMap("ActivityName")
+        @com.aliyun.core.annotation.NameInMap("ActivityName")
         private String activityName;
 
-        @NameInMap("FinalFee")
+        @com.aliyun.core.annotation.NameInMap("FinalFee")
         private Double finalFee;
 
-        @NameInMap("FinalPromFee")
+        @com.aliyun.core.annotation.NameInMap("FinalPromFee")
         private Double finalPromFee;
 
-        @NameInMap("OptionCode")
+        @com.aliyun.core.annotation.NameInMap("OptionCode")
         private String optionCode;
 
-        @NameInMap("OptionIds")
+        @com.aliyun.core.annotation.NameInMap("OptionIds")
         private ContractActivityOptionIds optionIds;
 
-        @NameInMap("ProdFee")
+        @com.aliyun.core.annotation.NameInMap("ProdFee")
         private Double prodFee;
 
         private DepreciateInfoContractActivity(Builder builder) {
@@ -1363,34 +1362,34 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
     public static class SubOrderDepreciateInfo extends TeaModel {
-        @NameInMap("CheapRate")
+        @com.aliyun.core.annotation.NameInMap("CheapRate")
         private Long cheapRate;
 
-        @NameInMap("CheapStandAmount")
+        @com.aliyun.core.annotation.NameInMap("CheapStandAmount")
         private Long cheapStandAmount;
 
-        @NameInMap("ContractActivity")
+        @com.aliyun.core.annotation.NameInMap("ContractActivity")
         private DepreciateInfoContractActivity contractActivity;
 
-        @NameInMap("Differential")
+        @com.aliyun.core.annotation.NameInMap("Differential")
         private Long differential;
 
-        @NameInMap("DifferentialName")
+        @com.aliyun.core.annotation.NameInMap("DifferentialName")
         private String differentialName;
 
-        @NameInMap("IsContractActivity")
+        @com.aliyun.core.annotation.NameInMap("IsContractActivity")
         private Boolean isContractActivity;
 
-        @NameInMap("ListPrice")
+        @com.aliyun.core.annotation.NameInMap("ListPrice")
         private Long listPrice;
 
-        @NameInMap("MonthPrice")
+        @com.aliyun.core.annotation.NameInMap("MonthPrice")
         private Long monthPrice;
 
-        @NameInMap("OriginalStandAmount")
+        @com.aliyun.core.annotation.NameInMap("OriginalStandAmount")
         private Long originalStandAmount;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private SubOrderDepreciateInfo(Builder builder) {
@@ -1583,17 +1582,238 @@ public class DescribePriceResponseBody extends TeaModel {
         } 
 
     }
+    public static class ModuleInstanceDepreciateInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CheapRate")
+        private Double cheapRate;
+
+        @com.aliyun.core.annotation.NameInMap("CheapStandAmount")
+        private Double cheapStandAmount;
+
+        @com.aliyun.core.annotation.NameInMap("Differential")
+        private Double differential;
+
+        @com.aliyun.core.annotation.NameInMap("DifferentialName")
+        private String differentialName;
+
+        @com.aliyun.core.annotation.NameInMap("IsContractActivity")
+        private Boolean isContractActivity;
+
+        @com.aliyun.core.annotation.NameInMap("IsShow")
+        private Boolean isShow;
+
+        @com.aliyun.core.annotation.NameInMap("ListPrice")
+        private Double listPrice;
+
+        @com.aliyun.core.annotation.NameInMap("MonthPrice")
+        private Double monthPrice;
+
+        @com.aliyun.core.annotation.NameInMap("OriginalStandAmount")
+        private Double originalStandAmount;
+
+        @com.aliyun.core.annotation.NameInMap("StartTime")
+        private String startTime;
+
+        private ModuleInstanceDepreciateInfo(Builder builder) {
+            this.cheapRate = builder.cheapRate;
+            this.cheapStandAmount = builder.cheapStandAmount;
+            this.differential = builder.differential;
+            this.differentialName = builder.differentialName;
+            this.isContractActivity = builder.isContractActivity;
+            this.isShow = builder.isShow;
+            this.listPrice = builder.listPrice;
+            this.monthPrice = builder.monthPrice;
+            this.originalStandAmount = builder.originalStandAmount;
+            this.startTime = builder.startTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ModuleInstanceDepreciateInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cheapRate
+         */
+        public Double getCheapRate() {
+            return this.cheapRate;
+        }
+
+        /**
+         * @return cheapStandAmount
+         */
+        public Double getCheapStandAmount() {
+            return this.cheapStandAmount;
+        }
+
+        /**
+         * @return differential
+         */
+        public Double getDifferential() {
+            return this.differential;
+        }
+
+        /**
+         * @return differentialName
+         */
+        public String getDifferentialName() {
+            return this.differentialName;
+        }
+
+        /**
+         * @return isContractActivity
+         */
+        public Boolean getIsContractActivity() {
+            return this.isContractActivity;
+        }
+
+        /**
+         * @return isShow
+         */
+        public Boolean getIsShow() {
+            return this.isShow;
+        }
+
+        /**
+         * @return listPrice
+         */
+        public Double getListPrice() {
+            return this.listPrice;
+        }
+
+        /**
+         * @return monthPrice
+         */
+        public Double getMonthPrice() {
+            return this.monthPrice;
+        }
+
+        /**
+         * @return originalStandAmount
+         */
+        public Double getOriginalStandAmount() {
+            return this.originalStandAmount;
+        }
+
+        /**
+         * @return startTime
+         */
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public static final class Builder {
+            private Double cheapRate; 
+            private Double cheapStandAmount; 
+            private Double differential; 
+            private String differentialName; 
+            private Boolean isContractActivity; 
+            private Boolean isShow; 
+            private Double listPrice; 
+            private Double monthPrice; 
+            private Double originalStandAmount; 
+            private String startTime; 
+
+            /**
+             * CheapRate.
+             */
+            public Builder cheapRate(Double cheapRate) {
+                this.cheapRate = cheapRate;
+                return this;
+            }
+
+            /**
+             * CheapStandAmount.
+             */
+            public Builder cheapStandAmount(Double cheapStandAmount) {
+                this.cheapStandAmount = cheapStandAmount;
+                return this;
+            }
+
+            /**
+             * Differential.
+             */
+            public Builder differential(Double differential) {
+                this.differential = differential;
+                return this;
+            }
+
+            /**
+             * DifferentialName.
+             */
+            public Builder differentialName(String differentialName) {
+                this.differentialName = differentialName;
+                return this;
+            }
+
+            /**
+             * IsContractActivity.
+             */
+            public Builder isContractActivity(Boolean isContractActivity) {
+                this.isContractActivity = isContractActivity;
+                return this;
+            }
+
+            /**
+             * IsShow.
+             */
+            public Builder isShow(Boolean isShow) {
+                this.isShow = isShow;
+                return this;
+            }
+
+            /**
+             * ListPrice.
+             */
+            public Builder listPrice(Double listPrice) {
+                this.listPrice = listPrice;
+                return this;
+            }
+
+            /**
+             * MonthPrice.
+             */
+            public Builder monthPrice(Double monthPrice) {
+                this.monthPrice = monthPrice;
+                return this;
+            }
+
+            /**
+             * OriginalStandAmount.
+             */
+            public Builder originalStandAmount(Double originalStandAmount) {
+                this.originalStandAmount = originalStandAmount;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            public ModuleInstanceDepreciateInfo build() {
+                return new ModuleInstanceDepreciateInfo(this);
+            } 
+
+        } 
+
+    }
     public static class ModuleAttr extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Long type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private ModuleAttr(Builder builder) {
@@ -1685,7 +1905,7 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
     public static class ModuleAttrs extends TeaModel {
-        @NameInMap("moduleAttr")
+        @com.aliyun.core.annotation.NameInMap("moduleAttr")
         private java.util.List < ModuleAttr> moduleAttr;
 
         private ModuleAttrs(Builder builder) {
@@ -1726,41 +1946,45 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
     public static class ModuleInstance extends TeaModel {
-        @NameInMap("ContractActivity")
+        @com.aliyun.core.annotation.NameInMap("ContractActivity")
         private Boolean contractActivity;
 
-        @NameInMap("DiscountFee")
+        @com.aliyun.core.annotation.NameInMap("DepreciateInfo")
+        private ModuleInstanceDepreciateInfo depreciateInfo;
+
+        @com.aliyun.core.annotation.NameInMap("DiscountFee")
         private Double discountFee;
 
-        @NameInMap("ModuleAttrs")
+        @com.aliyun.core.annotation.NameInMap("ModuleAttrs")
         private ModuleAttrs moduleAttrs;
 
-        @NameInMap("ModuleCode")
+        @com.aliyun.core.annotation.NameInMap("ModuleCode")
         private String moduleCode;
 
-        @NameInMap("ModuleId")
+        @com.aliyun.core.annotation.NameInMap("ModuleId")
         private String moduleId;
 
-        @NameInMap("ModuleName")
+        @com.aliyun.core.annotation.NameInMap("ModuleName")
         private String moduleName;
 
-        @NameInMap("NeedOrderPay")
+        @com.aliyun.core.annotation.NameInMap("NeedOrderPay")
         private Boolean needOrderPay;
 
-        @NameInMap("PayFee")
+        @com.aliyun.core.annotation.NameInMap("PayFee")
         private Double payFee;
 
-        @NameInMap("PricingModule")
+        @com.aliyun.core.annotation.NameInMap("PricingModule")
         private Boolean pricingModule;
 
-        @NameInMap("StandPrice")
+        @com.aliyun.core.annotation.NameInMap("StandPrice")
         private Double standPrice;
 
-        @NameInMap("TotalProductFee")
+        @com.aliyun.core.annotation.NameInMap("TotalProductFee")
         private Double totalProductFee;
 
         private ModuleInstance(Builder builder) {
             this.contractActivity = builder.contractActivity;
+            this.depreciateInfo = builder.depreciateInfo;
             this.discountFee = builder.discountFee;
             this.moduleAttrs = builder.moduleAttrs;
             this.moduleCode = builder.moduleCode;
@@ -1786,6 +2010,13 @@ public class DescribePriceResponseBody extends TeaModel {
          */
         public Boolean getContractActivity() {
             return this.contractActivity;
+        }
+
+        /**
+         * @return depreciateInfo
+         */
+        public ModuleInstanceDepreciateInfo getDepreciateInfo() {
+            return this.depreciateInfo;
         }
 
         /**
@@ -1860,6 +2091,7 @@ public class DescribePriceResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean contractActivity; 
+            private ModuleInstanceDepreciateInfo depreciateInfo; 
             private Double discountFee; 
             private ModuleAttrs moduleAttrs; 
             private String moduleCode; 
@@ -1876,6 +2108,14 @@ public class DescribePriceResponseBody extends TeaModel {
              */
             public Builder contractActivity(Boolean contractActivity) {
                 this.contractActivity = contractActivity;
+                return this;
+            }
+
+            /**
+             * DepreciateInfo.
+             */
+            public Builder depreciateInfo(ModuleInstanceDepreciateInfo depreciateInfo) {
+                this.depreciateInfo = depreciateInfo;
                 return this;
             }
 
@@ -1967,7 +2207,7 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
     public static class SubOrderModuleInstance extends TeaModel {
-        @NameInMap("ModuleInstance")
+        @com.aliyun.core.annotation.NameInMap("ModuleInstance")
         private java.util.List < ModuleInstance> moduleInstance;
 
         private SubOrderModuleInstance(Builder builder) {
@@ -2008,34 +2248,34 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
     public static class OptionalPromotion extends TeaModel {
-        @NameInMap("ActivityExtInfo")
+        @com.aliyun.core.annotation.NameInMap("ActivityExtInfo")
         private java.util.Map < String, ? > activityExtInfo;
 
-        @NameInMap("CanPromFee")
+        @com.aliyun.core.annotation.NameInMap("CanPromFee")
         private String canPromFee;
 
-        @NameInMap("CouponNo")
+        @com.aliyun.core.annotation.NameInMap("CouponNo")
         private String couponNo;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OptionCode")
+        @com.aliyun.core.annotation.NameInMap("OptionCode")
         private String optionCode;
 
-        @NameInMap("PromotionName")
+        @com.aliyun.core.annotation.NameInMap("PromotionName")
         private String promotionName;
 
-        @NameInMap("PromotionOptionNo")
+        @com.aliyun.core.annotation.NameInMap("PromotionOptionNo")
         private String promotionOptionNo;
 
-        @NameInMap("Selected")
+        @com.aliyun.core.annotation.NameInMap("Selected")
         private Boolean selected;
 
-        @NameInMap("Show")
+        @com.aliyun.core.annotation.NameInMap("Show")
         private Boolean show;
 
         private OptionalPromotion(Builder builder) {
@@ -2229,7 +2469,7 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
     public static class OptionalPromotions extends TeaModel {
-        @NameInMap("OptionalPromotion")
+        @com.aliyun.core.annotation.NameInMap("OptionalPromotion")
         private java.util.List < OptionalPromotion> optionalPromotion;
 
         private OptionalPromotions(Builder builder) {
@@ -2270,28 +2510,28 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
     public static class PromDetail extends TeaModel {
-        @NameInMap("ActivityExtInfo")
+        @com.aliyun.core.annotation.NameInMap("ActivityExtInfo")
         private java.util.Map < String, ? > activityExtInfo;
 
-        @NameInMap("DerivedPromType")
+        @com.aliyun.core.annotation.NameInMap("DerivedPromType")
         private String derivedPromType;
 
-        @NameInMap("FinalPromFee")
+        @com.aliyun.core.annotation.NameInMap("FinalPromFee")
         private Double finalPromFee;
 
-        @NameInMap("OptionCode")
+        @com.aliyun.core.annotation.NameInMap("OptionCode")
         private String optionCode;
 
-        @NameInMap("PromType")
+        @com.aliyun.core.annotation.NameInMap("PromType")
         private String promType;
 
-        @NameInMap("PromotionCode")
+        @com.aliyun.core.annotation.NameInMap("PromotionCode")
         private String promotionCode;
 
-        @NameInMap("PromotionId")
+        @com.aliyun.core.annotation.NameInMap("PromotionId")
         private Long promotionId;
 
-        @NameInMap("PromotionName")
+        @com.aliyun.core.annotation.NameInMap("PromotionName")
         private String promotionName;
 
         private PromDetail(Builder builder) {
@@ -2451,7 +2691,7 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
     public static class PromDetailList extends TeaModel {
-        @NameInMap("PromDetail")
+        @com.aliyun.core.annotation.NameInMap("PromDetail")
         private java.util.List < PromDetail> promDetail;
 
         private PromDetailList(Builder builder) {
@@ -2492,7 +2732,7 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
     public static class SubOrderRuleIds extends TeaModel {
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private java.util.List < String > ruleId;
 
         private SubOrderRuleIds(Builder builder) {
@@ -2533,43 +2773,43 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
     public static class SubOrder extends TeaModel {
-        @NameInMap("ContractActivity")
+        @com.aliyun.core.annotation.NameInMap("ContractActivity")
         private Boolean contractActivity;
 
-        @NameInMap("DepreciateInfo")
+        @com.aliyun.core.annotation.NameInMap("DepreciateInfo")
         private SubOrderDepreciateInfo depreciateInfo;
 
-        @NameInMap("DiscountAmount")
+        @com.aliyun.core.annotation.NameInMap("DiscountAmount")
         private String discountAmount;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("IsContractActivity")
+        @com.aliyun.core.annotation.NameInMap("IsContractActivity")
         private Boolean isContractActivity;
 
-        @NameInMap("ModuleInstance")
+        @com.aliyun.core.annotation.NameInMap("ModuleInstance")
         private SubOrderModuleInstance moduleInstance;
 
-        @NameInMap("OptionalPromotions")
+        @com.aliyun.core.annotation.NameInMap("OptionalPromotions")
         private OptionalPromotions optionalPromotions;
 
-        @NameInMap("OriginalAmount")
+        @com.aliyun.core.annotation.NameInMap("OriginalAmount")
         private String originalAmount;
 
-        @NameInMap("PromDetailList")
+        @com.aliyun.core.annotation.NameInMap("PromDetailList")
         private PromDetailList promDetailList;
 
-        @NameInMap("RuleIds")
+        @com.aliyun.core.annotation.NameInMap("RuleIds")
         private SubOrderRuleIds ruleIds;
 
-        @NameInMap("StandDiscountPrice")
+        @com.aliyun.core.annotation.NameInMap("StandDiscountPrice")
         private Long standDiscountPrice;
 
-        @NameInMap("StandPrice")
+        @com.aliyun.core.annotation.NameInMap("StandPrice")
         private Long standPrice;
 
-        @NameInMap("TradeAmount")
+        @com.aliyun.core.annotation.NameInMap("TradeAmount")
         private String tradeAmount;
 
         private SubOrder(Builder builder) {
@@ -2814,7 +3054,7 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
     public static class SubOrders extends TeaModel {
-        @NameInMap("SubOrder")
+        @com.aliyun.core.annotation.NameInMap("SubOrder")
         private java.util.List < SubOrder> subOrder;
 
         private SubOrders(Builder builder) {

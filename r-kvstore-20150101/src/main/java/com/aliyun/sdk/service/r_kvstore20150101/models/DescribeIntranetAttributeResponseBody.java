@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeIntranetAttributeResponseBody</p>
  */
 public class DescribeIntranetAttributeResponseBody extends TeaModel {
-    @NameInMap("AutoRenewal")
+    @com.aliyun.core.annotation.NameInMap("AutoRenewal")
     private Boolean autoRenewal;
 
-    @NameInMap("BandwidthExpireTime")
+    @com.aliyun.core.annotation.NameInMap("BandwidthExpireTime")
     private String bandwidthExpireTime;
 
-    @NameInMap("BandwidthPrePaid")
+    @com.aliyun.core.annotation.NameInMap("BandwidthPrePaid")
     private String bandwidthPrePaid;
 
-    @NameInMap("ExpireTime")
+    @com.aliyun.core.annotation.NameInMap("ExpireTime")
     private String expireTime;
 
-    @NameInMap("HasPrePaidBandWidthOrderRunning")
+    @com.aliyun.core.annotation.NameInMap("HasPrePaidBandWidthOrderRunning")
     private Boolean hasPrePaidBandWidthOrderRunning;
 
-    @NameInMap("IntranetBandwidth")
+    @com.aliyun.core.annotation.NameInMap("IntranetBandwidth")
     private Integer intranetBandwidth;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeIntranetAttributeResponseBody(Builder builder) {

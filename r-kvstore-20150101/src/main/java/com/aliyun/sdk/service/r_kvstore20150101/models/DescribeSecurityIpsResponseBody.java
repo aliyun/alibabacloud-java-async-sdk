@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSecurityIpsResponseBody</p>
  */
 public class DescribeSecurityIpsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecurityIpGroups")
+    @com.aliyun.core.annotation.NameInMap("SecurityIpGroups")
     private SecurityIpGroups securityIpGroups;
 
     private DescribeSecurityIpsResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
     } 
 
     public static class SecurityIpGroup extends TeaModel {
-        @NameInMap("SecurityIpGroupAttribute")
+        @com.aliyun.core.annotation.NameInMap("SecurityIpGroupAttribute")
         private String securityIpGroupAttribute;
 
-        @NameInMap("SecurityIpGroupName")
+        @com.aliyun.core.annotation.NameInMap("SecurityIpGroupName")
         private String securityIpGroupName;
 
-        @NameInMap("SecurityIpList")
+        @com.aliyun.core.annotation.NameInMap("SecurityIpList")
         private String securityIpList;
 
         private SecurityIpGroup(Builder builder) {
@@ -156,7 +155,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
 
     }
     public static class SecurityIpGroups extends TeaModel {
-        @NameInMap("SecurityIpGroup")
+        @com.aliyun.core.annotation.NameInMap("SecurityIpGroup")
         private java.util.List < SecurityIpGroup> securityIpGroup;
 
         private SecurityIpGroups(Builder builder) {

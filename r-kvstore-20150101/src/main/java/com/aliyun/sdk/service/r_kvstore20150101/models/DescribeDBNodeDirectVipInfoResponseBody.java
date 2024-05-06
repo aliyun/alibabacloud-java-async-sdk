@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBNodeDirectVipInfoResponseBody</p>
  */
 public class DescribeDBNodeDirectVipInfoResponseBody extends TeaModel {
-    @NameInMap("DirectVipInfo")
+    @com.aliyun.core.annotation.NameInMap("DirectVipInfo")
     private DirectVipInfo directVipInfo;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBNodeDirectVipInfoResponseBody(Builder builder) {
@@ -62,7 +61,7 @@ public class DescribeDBNodeDirectVipInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The VIPs of shards in the cluster instance.
+         * The virtual IP addresses (VIPs) of shards in an ApsaraDB for Redis cluster instance.
          */
         public Builder directVipInfo(DirectVipInfo directVipInfo) {
             this.directVipInfo = directVipInfo;
@@ -92,16 +91,16 @@ public class DescribeDBNodeDirectVipInfoResponseBody extends TeaModel {
     } 
 
     public static class VipInfo extends TeaModel {
-        @NameInMap("NetType")
+        @com.aliyun.core.annotation.NameInMap("NetType")
         private String netType;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("Vip")
+        @com.aliyun.core.annotation.NameInMap("Vip")
         private String vip;
 
         private VipInfo(Builder builder) {
@@ -196,7 +195,7 @@ public class DescribeDBNodeDirectVipInfoResponseBody extends TeaModel {
 
     }
     public static class DirectVipInfo extends TeaModel {
-        @NameInMap("VipInfo")
+        @com.aliyun.core.annotation.NameInMap("VipInfo")
         private java.util.List < VipInfo> vipInfo;
 
         private DirectVipInfo(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeZonesResponseBody</p>
  */
 public class DescribeZonesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Zones")
+    @com.aliyun.core.annotation.NameInMap("Zones")
     private Zones zones;
 
     private DescribeZonesResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class DescribeZonesResponseBody extends TeaModel {
     } 
 
     public static class KVStoreZone extends TeaModel {
-        @NameInMap("Disabled")
+        @com.aliyun.core.annotation.NameInMap("Disabled")
         private Boolean disabled;
 
-        @NameInMap("IsRds")
+        @com.aliyun.core.annotation.NameInMap("IsRds")
         private Boolean isRds;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SwitchNetwork")
+        @com.aliyun.core.annotation.NameInMap("SwitchNetwork")
         private Boolean switchNetwork;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
-        @NameInMap("ZoneName")
+        @com.aliyun.core.annotation.NameInMap("ZoneName")
         private String zoneName;
 
         private KVStoreZone(Builder builder) {
@@ -221,7 +220,7 @@ public class DescribeZonesResponseBody extends TeaModel {
 
     }
     public static class Zones extends TeaModel {
-        @NameInMap("KVStoreZone")
+        @com.aliyun.core.annotation.NameInMap("KVStoreZone")
         private java.util.List < KVStoreZone> KVStoreZone;
 
         private Zones(Builder builder) {

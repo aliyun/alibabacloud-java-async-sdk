@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDedicatedClusterInstanceListResponseBody</p>
  */
 public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
-    @NameInMap("Instances")
+    @com.aliyun.core.annotation.NameInMap("Instances")
     private java.util.List < Instances> instances;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDedicatedClusterInstanceListResponseBody(Builder builder) {
@@ -102,7 +101,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -118,7 +117,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -132,28 +131,28 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
     } 
 
     public static class InstanceNodeList extends TeaModel {
-        @NameInMap("DedicatedHostName")
+        @com.aliyun.core.annotation.NameInMap("DedicatedHostName")
         private String dedicatedHostName;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Integer nodeId;
 
-        @NameInMap("NodeIp")
+        @com.aliyun.core.annotation.NameInMap("NodeIp")
         private String nodeIp;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private InstanceNodeList(Builder builder) {
@@ -258,7 +257,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * The node ID.
              */
             public Builder nodeId(Integer nodeId) {
                 this.nodeId = nodeId;
@@ -322,76 +321,76 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
 
     }
     public static class Instances extends TeaModel {
-        @NameInMap("BandWidth")
+        @com.aliyun.core.annotation.NameInMap("BandWidth")
         private Long bandWidth;
 
-        @NameInMap("CharacterType")
+        @com.aliyun.core.annotation.NameInMap("CharacterType")
         private String characterType;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("ConnectionDomain")
+        @com.aliyun.core.annotation.NameInMap("ConnectionDomain")
         private String connectionDomain;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CurrentBandWidth")
+        @com.aliyun.core.annotation.NameInMap("CurrentBandWidth")
         private Long currentBandWidth;
 
-        @NameInMap("CustomId")
+        @com.aliyun.core.annotation.NameInMap("CustomId")
         private String customId;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("EngineVersion")
+        @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private String engineVersion;
 
-        @NameInMap("InstanceClass")
+        @com.aliyun.core.annotation.NameInMap("InstanceClass")
         private String instanceClass;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InstanceNodeList")
+        @com.aliyun.core.annotation.NameInMap("InstanceNodeList")
         private java.util.List < InstanceNodeList> instanceNodeList;
 
-        @NameInMap("InstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("InstanceStatus")
         private String instanceStatus;
 
-        @NameInMap("MaintainEndTime")
+        @com.aliyun.core.annotation.NameInMap("MaintainEndTime")
         private String maintainEndTime;
 
-        @NameInMap("MaintainStartTime")
+        @com.aliyun.core.annotation.NameInMap("MaintainStartTime")
         private String maintainStartTime;
 
-        @NameInMap("ProxyCount")
+        @com.aliyun.core.annotation.NameInMap("ProxyCount")
         private Integer proxyCount;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ShardCount")
+        @com.aliyun.core.annotation.NameInMap("ShardCount")
         private Integer shardCount;
 
-        @NameInMap("StorageType")
+        @com.aliyun.core.annotation.NameInMap("StorageType")
         private String storageType;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VswitchId")
+        @com.aliyun.core.annotation.NameInMap("VswitchId")
         private String vswitchId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Instances(Builder builder) {
@@ -644,7 +643,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the dedicated cluster.
+             * The ID of the dedicated cluster to which the instance belongs.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -676,7 +675,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The current bandwidth of the instance, which consists of the default bandwidth and the additional bandwidth. Unit: Mbit/s.
+             * The current bandwidth of the instance, which is the sum of the default bandwidth and any extra bandwidth that is purchased. Unit: Mbit/s.
              */
             public Builder currentBandWidth(Long currentBandWidth) {
                 this.currentBandWidth = currentBandWidth;
@@ -684,7 +683,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The custom ID that is used for instance internal maintenance.
+             * An internal parameter used for the maintenance and management of instances.
              */
             public Builder customId(String customId) {
                 this.customId = customId;
@@ -692,7 +691,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine of the instance. The return value is **Redis**.
+             * The database engine. The return value is **redis**.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -708,7 +707,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the instance.
+             * The instance type.
              */
             public Builder instanceClass(String instanceClass) {
                 this.instanceClass = instanceClass;
@@ -724,7 +723,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * The instance name.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -732,7 +731,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the nodes.
+             * The nodes.
              */
             public Builder instanceNodeList(java.util.List < InstanceNodeList> instanceNodeList) {
                 this.instanceNodeList = instanceNodeList;
@@ -750,13 +749,13 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
              * *   **Flushing**: The instance is being released.
              * *   **Released**: The instance is released.
              * *   **Transforming**: The billing method of the instance is being changed.
-             * *   **Unavailable**: The instance is suspended.
+             * *   **Unavailable**: The instance is unavailable.
              * *   **Error**: The instance failed to be created.
              * *   **Migrating**: The instance is being migrated.
              * *   **BackupRecovering**: The instance is being restored from a backup.
              * *   **MinorVersionUpgrading**: The minor version of the instance is being updated.
              * *   **NetworkModifying**: The network type of the instance is being changed.
-             * *   **SSLModifying**: The SSL certificate of the instance is being changed.
+             * *   **SSLModifying**: The SSL configurations of the instance are being changed.
              * *   **MajorVersionUpgrading**: The major version of the instance is being upgraded. The instance remains accessible during the upgrade.
              */
             public Builder instanceStatus(String instanceStatus) {
@@ -784,8 +783,11 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
              * The number of proxy nodes.
              * <p>
              * 
-             * > *   If the return value is **0**, the proxy mode is disabled. If the return value is an integer that is greater than **0**, the proxy mode is enabled. This integer indicates the number of proxy nodes in the instance. For example, a value of **1** indicates that the instance has one proxy node.
-             * > *   This parameter is returned only when the instance is a [cluster instance](~~52228~~).
+             * > 
+             * 
+             * *   If the return value is **0**, the proxy mode is disabled for the instance. If the return value is an integer greater than **0**, such as **1**, the proxy mode is enabled for the instance.
+             * 
+             * *   This parameter is returned only when the instance is a cluster instance. For more information about cluster instances, see [Cluster master-replica instances](~~52228~~).
              */
             public Builder proxyCount(Integer proxyCount) {
                 this.proxyCount = proxyCount;
@@ -793,7 +795,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the instance.
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -804,7 +806,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
              * The number of shards.
              * <p>
              * 
-             * > This parameter is returned only when the ApsaraDB for Redis instance is a [cluster instance](~~52228~~).
+             * >  This parameter is returned only when the instance is a cluster instance. For more information about cluster instances, see [Cluster master-replica instances](~~52228~~).
              */
             public Builder shardCount(Integer shardCount) {
                 this.shardCount = shardCount;
@@ -820,7 +822,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * The VPC ID.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -828,7 +830,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * The vSwitch ID.
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -836,7 +838,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID of the instance.
+             * The zone ID.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

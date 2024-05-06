@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBackupTasksResponseBody</p>
  */
 public class DescribeBackupTasksResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private AccessDeniedDetail accessDeniedDetail;
 
-    @NameInMap("BackupJobs")
+    @com.aliyun.core.annotation.NameInMap("BackupJobs")
     private java.util.List < BackupJobs> backupJobs;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeBackupTasksResponseBody(Builder builder) {
@@ -120,25 +119,25 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
     } 
 
     public static class AccessDeniedDetail extends TeaModel {
-        @NameInMap("AuthAction")
+        @com.aliyun.core.annotation.NameInMap("AuthAction")
         private String authAction;
 
-        @NameInMap("AuthPrincipalDisplayName")
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalDisplayName")
         private String authPrincipalDisplayName;
 
-        @NameInMap("AuthPrincipalOwnerId")
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalOwnerId")
         private String authPrincipalOwnerId;
 
-        @NameInMap("AuthPrincipalType")
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalType")
         private String authPrincipalType;
 
-        @NameInMap("EncodedDiagnosticMessage")
+        @com.aliyun.core.annotation.NameInMap("EncodedDiagnosticMessage")
         private String encodedDiagnosticMessage;
 
-        @NameInMap("NoPermissionType")
+        @com.aliyun.core.annotation.NameInMap("NoPermissionType")
         private String noPermissionType;
 
-        @NameInMap("PolicyType")
+        @com.aliyun.core.annotation.NameInMap("PolicyType")
         private String policyType;
 
         private AccessDeniedDetail(Builder builder) {
@@ -281,25 +280,25 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
 
     }
     public static class BackupJobs extends TeaModel {
-        @NameInMap("BackupJobID")
+        @com.aliyun.core.annotation.NameInMap("BackupJobID")
         private Long backupJobID;
 
-        @NameInMap("BackupProgressStatus")
+        @com.aliyun.core.annotation.NameInMap("BackupProgressStatus")
         private String backupProgressStatus;
 
-        @NameInMap("JobMode")
+        @com.aliyun.core.annotation.NameInMap("JobMode")
         private String jobMode;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("Process")
+        @com.aliyun.core.annotation.NameInMap("Process")
         private String process;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("TaskAction")
+        @com.aliyun.core.annotation.NameInMap("TaskAction")
         private String taskAction;
 
         private BackupJobs(Builder builder) {

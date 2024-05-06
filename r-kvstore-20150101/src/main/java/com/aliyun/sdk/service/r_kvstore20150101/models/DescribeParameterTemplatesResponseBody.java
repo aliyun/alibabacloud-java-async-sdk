@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeParameterTemplatesResponseBody</p>
  */
 public class DescribeParameterTemplatesResponseBody extends TeaModel {
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @NameInMap("EngineVersion")
+    @com.aliyun.core.annotation.NameInMap("EngineVersion")
     private String engineVersion;
 
-    @NameInMap("ParameterCount")
+    @com.aliyun.core.annotation.NameInMap("ParameterCount")
     private String parameterCount;
 
-    @NameInMap("Parameters")
+    @com.aliyun.core.annotation.NameInMap("Parameters")
     private Parameters parameters;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeParameterTemplatesResponseBody(Builder builder) {
@@ -132,22 +131,22 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
     } 
 
     public static class TemplateRecord extends TeaModel {
-        @NameInMap("CheckingCode")
+        @com.aliyun.core.annotation.NameInMap("CheckingCode")
         private String checkingCode;
 
-        @NameInMap("ForceModify")
+        @com.aliyun.core.annotation.NameInMap("ForceModify")
         private Boolean forceModify;
 
-        @NameInMap("ForceRestart")
+        @com.aliyun.core.annotation.NameInMap("ForceRestart")
         private Boolean forceRestart;
 
-        @NameInMap("ParameterDescription")
+        @com.aliyun.core.annotation.NameInMap("ParameterDescription")
         private String parameterDescription;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
-        @NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
         private String parameterValue;
 
         private TemplateRecord(Builder builder) {
@@ -281,7 +280,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
 
     }
     public static class Parameters extends TeaModel {
-        @NameInMap("TemplateRecord")
+        @com.aliyun.core.annotation.NameInMap("TemplateRecord")
         private java.util.List < TemplateRecord> templateRecord;
 
         private Parameters(Builder builder) {

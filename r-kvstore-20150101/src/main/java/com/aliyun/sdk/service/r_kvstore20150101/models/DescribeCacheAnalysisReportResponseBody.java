@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCacheAnalysisReportResponseBody</p>
  */
 public class DescribeCacheAnalysisReportResponseBody extends TeaModel {
-    @NameInMap("BigKeys")
+    @com.aliyun.core.annotation.NameInMap("BigKeys")
     private java.util.List < java.util.Map<String, ?>> bigKeys;
 
-    @NameInMap("HotKeys")
+    @com.aliyun.core.annotation.NameInMap("HotKeys")
     private java.util.List < java.util.Map<String, ?>> hotKeys;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeCacheAnalysisReportResponseBody(Builder builder) {

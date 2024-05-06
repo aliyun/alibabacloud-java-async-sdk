@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,52 +11,55 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEngineVersionResponseBody</p>
  */
 public class DescribeEngineVersionResponseBody extends TeaModel {
-    @NameInMap("DBLatestMinorVersion")
+    @com.aliyun.core.annotation.NameInMap("DBLatestMinorVersion")
     private DBLatestMinorVersion DBLatestMinorVersion;
 
-    @NameInMap("DBVersionRelease")
+    @com.aliyun.core.annotation.NameInMap("DBVersionRelease")
     private String DBVersionRelease;
 
-    @NameInMap("EnableUpgradeMajorVersion")
+    @com.aliyun.core.annotation.NameInMap("EnableUpgradeMajorVersion")
     private Boolean enableUpgradeMajorVersion;
 
-    @NameInMap("EnableUpgradeMinorVersion")
+    @com.aliyun.core.annotation.NameInMap("EnableUpgradeMinorVersion")
     private Boolean enableUpgradeMinorVersion;
 
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @NameInMap("IsAutoUpgradeOpen")
+    @com.aliyun.core.annotation.NameInMap("IsAutoUpgradeOpen")
     private String isAutoUpgradeOpen;
 
-    @NameInMap("IsLatestVersion")
+    @com.aliyun.core.annotation.NameInMap("IsLatestVersion")
     private Boolean isLatestVersion;
 
-    @NameInMap("IsNewSSLMode")
+    @com.aliyun.core.annotation.NameInMap("IsNewSSLMode")
     private String isNewSSLMode;
 
-    @NameInMap("IsRedisCompatibleVersion")
+    @com.aliyun.core.annotation.NameInMap("IsOpenNGLB")
+    private String isOpenNGLB;
+
+    @com.aliyun.core.annotation.NameInMap("IsRedisCompatibleVersion")
     private String isRedisCompatibleVersion;
 
-    @NameInMap("IsSSLEnable")
+    @com.aliyun.core.annotation.NameInMap("IsSSLEnable")
     private String isSSLEnable;
 
-    @NameInMap("MajorVersion")
+    @com.aliyun.core.annotation.NameInMap("MajorVersion")
     private String majorVersion;
 
-    @NameInMap("MinorVersion")
+    @com.aliyun.core.annotation.NameInMap("MinorVersion")
     private String minorVersion;
 
-    @NameInMap("ProxyLatestMinorVersion")
+    @com.aliyun.core.annotation.NameInMap("ProxyLatestMinorVersion")
     private ProxyLatestMinorVersion proxyLatestMinorVersion;
 
-    @NameInMap("ProxyMinorVersion")
+    @com.aliyun.core.annotation.NameInMap("ProxyMinorVersion")
     private String proxyMinorVersion;
 
-    @NameInMap("ProxyVersionRelease")
+    @com.aliyun.core.annotation.NameInMap("ProxyVersionRelease")
     private String proxyVersionRelease;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeEngineVersionResponseBody(Builder builder) {
@@ -69,6 +71,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         this.isAutoUpgradeOpen = builder.isAutoUpgradeOpen;
         this.isLatestVersion = builder.isLatestVersion;
         this.isNewSSLMode = builder.isNewSSLMode;
+        this.isOpenNGLB = builder.isOpenNGLB;
         this.isRedisCompatibleVersion = builder.isRedisCompatibleVersion;
         this.isSSLEnable = builder.isSSLEnable;
         this.majorVersion = builder.majorVersion;
@@ -144,6 +147,13 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
     }
 
     /**
+     * @return isOpenNGLB
+     */
+    public String getIsOpenNGLB() {
+        return this.isOpenNGLB;
+    }
+
+    /**
      * @return isRedisCompatibleVersion
      */
     public String getIsRedisCompatibleVersion() {
@@ -208,6 +218,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         private String isAutoUpgradeOpen; 
         private Boolean isLatestVersion; 
         private String isNewSSLMode; 
+        private String isOpenNGLB; 
         private String isRedisCompatibleVersion; 
         private String isSSLEnable; 
         private String majorVersion; 
@@ -298,6 +309,14 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
+         * IsOpenNGLB.
+         */
+        public Builder isOpenNGLB(String isOpenNGLB) {
+            this.isOpenNGLB = isOpenNGLB;
+            return this;
+        }
+
+        /**
          * Indicates whether the instance supports the new SSL encryption feature.
          */
         public Builder isRedisCompatibleVersion(String isRedisCompatibleVersion) {
@@ -374,19 +393,19 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
     } 
 
     public static class ReleaseInfoList extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("ReleaseNote")
+        @com.aliyun.core.annotation.NameInMap("ReleaseNote")
         private String releaseNote;
 
-        @NameInMap("ReleaseNoteEn")
+        @com.aliyun.core.annotation.NameInMap("ReleaseNoteEn")
         private String releaseNoteEn;
 
-        @NameInMap("ReleaseVersion")
+        @com.aliyun.core.annotation.NameInMap("ReleaseVersion")
         private String releaseVersion;
 
         private ReleaseInfoList(Builder builder) {
@@ -495,7 +514,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
 
     }
     public static class ReleaseInfo extends TeaModel {
-        @NameInMap("ReleaseInfoList")
+        @com.aliyun.core.annotation.NameInMap("ReleaseInfoList")
         private java.util.List < ReleaseInfoList> releaseInfoList;
 
         private ReleaseInfo(Builder builder) {
@@ -536,10 +555,10 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
 
     }
     public static class VersionRelease extends TeaModel {
-        @NameInMap("ReleaseInfo")
+        @com.aliyun.core.annotation.NameInMap("ReleaseInfo")
         private ReleaseInfo releaseInfo;
 
-        @NameInMap("VersionChangesLevel")
+        @com.aliyun.core.annotation.NameInMap("VersionChangesLevel")
         private String versionChangesLevel;
 
         private VersionRelease(Builder builder) {
@@ -601,13 +620,13 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
 
     }
     public static class DBLatestMinorVersion extends TeaModel {
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("MinorVersion")
+        @com.aliyun.core.annotation.NameInMap("MinorVersion")
         private String minorVersion;
 
-        @NameInMap("VersionRelease")
+        @com.aliyun.core.annotation.NameInMap("VersionRelease")
         private VersionRelease versionRelease;
 
         private DBLatestMinorVersion(Builder builder) {
@@ -686,19 +705,19 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
 
     }
     public static class ReleaseInfoReleaseInfoList extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("ReleaseNote")
+        @com.aliyun.core.annotation.NameInMap("ReleaseNote")
         private String releaseNote;
 
-        @NameInMap("ReleaseNoteEn")
+        @com.aliyun.core.annotation.NameInMap("ReleaseNoteEn")
         private String releaseNoteEn;
 
-        @NameInMap("ReleaseVersion")
+        @com.aliyun.core.annotation.NameInMap("ReleaseVersion")
         private String releaseVersion;
 
         private ReleaseInfoReleaseInfoList(Builder builder) {
@@ -811,7 +830,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
 
     }
     public static class VersionReleaseReleaseInfo extends TeaModel {
-        @NameInMap("ReleaseInfoList")
+        @com.aliyun.core.annotation.NameInMap("ReleaseInfoList")
         private java.util.List < ReleaseInfoReleaseInfoList> releaseInfoList;
 
         private VersionReleaseReleaseInfo(Builder builder) {
@@ -852,10 +871,10 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
 
     }
     public static class ProxyLatestMinorVersionVersionRelease extends TeaModel {
-        @NameInMap("ReleaseInfo")
+        @com.aliyun.core.annotation.NameInMap("ReleaseInfo")
         private VersionReleaseReleaseInfo releaseInfo;
 
-        @NameInMap("VersionChangesLevel")
+        @com.aliyun.core.annotation.NameInMap("VersionChangesLevel")
         private String versionChangesLevel;
 
         private ProxyLatestMinorVersionVersionRelease(Builder builder) {
@@ -917,13 +936,13 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
 
     }
     public static class ProxyLatestMinorVersion extends TeaModel {
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("MinorVersion")
+        @com.aliyun.core.annotation.NameInMap("MinorVersion")
         private String minorVersion;
 
-        @NameInMap("VersionRelease")
+        @com.aliyun.core.annotation.NameInMap("VersionRelease")
         private ProxyLatestMinorVersionVersionRelease versionRelease;
 
         private ProxyLatestMinorVersion(Builder builder) {

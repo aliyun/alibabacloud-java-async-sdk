@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyInstanceNetExpireTimeResponseBody</p>
  */
 public class ModifyInstanceNetExpireTimeResponseBody extends TeaModel {
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("NetInfoItems")
+    @com.aliyun.core.annotation.NameInMap("NetInfoItems")
     private NetInfoItems netInfoItems;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyInstanceNetExpireTimeResponseBody(Builder builder) {
@@ -92,19 +91,19 @@ public class ModifyInstanceNetExpireTimeResponseBody extends TeaModel {
     } 
 
     public static class NetInfoItem extends TeaModel {
-        @NameInMap("ConnectionString")
+        @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
 
-        @NameInMap("DBInstanceNetType")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceNetType")
         private String DBInstanceNetType;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("IPAddress")
+        @com.aliyun.core.annotation.NameInMap("IPAddress")
         private String IPAddress;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
         private NetInfoItem(Builder builder) {
@@ -213,7 +212,7 @@ public class ModifyInstanceNetExpireTimeResponseBody extends TeaModel {
 
     }
     public static class NetInfoItems extends TeaModel {
-        @NameInMap("NetInfoItem")
+        @com.aliyun.core.annotation.NameInMap("NetInfoItem")
         private java.util.List < NetInfoItem> netInfoItem;
 
         private NetInfoItems(Builder builder) {

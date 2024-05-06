@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMonitorItemsResponseBody</p>
  */
 public class DescribeMonitorItemsResponseBody extends TeaModel {
-    @NameInMap("MonitorItems")
+    @com.aliyun.core.annotation.NameInMap("MonitorItems")
     private MonitorItems monitorItems;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeMonitorItemsResponseBody(Builder builder) {
@@ -76,10 +75,10 @@ public class DescribeMonitorItemsResponseBody extends TeaModel {
     } 
 
     public static class KVStoreMonitorItem extends TeaModel {
-        @NameInMap("MonitorKey")
+        @com.aliyun.core.annotation.NameInMap("MonitorKey")
         private String monitorKey;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
         private KVStoreMonitorItem(Builder builder) {
@@ -137,7 +136,7 @@ public class DescribeMonitorItemsResponseBody extends TeaModel {
 
     }
     public static class MonitorItems extends TeaModel {
-        @NameInMap("KVStoreMonitorItem")
+        @com.aliyun.core.annotation.NameInMap("KVStoreMonitorItem")
         private java.util.List < KVStoreMonitorItem> KVStoreMonitorItem;
 
         private MonitorItems(Builder builder) {

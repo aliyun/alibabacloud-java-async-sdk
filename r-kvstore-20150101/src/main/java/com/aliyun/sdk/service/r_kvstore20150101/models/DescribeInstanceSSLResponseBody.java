@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceSSLResponseBody</p>
  */
 public class DescribeInstanceSSLResponseBody extends TeaModel {
-    @NameInMap("CertCommonName")
+    @com.aliyun.core.annotation.NameInMap("CertCommonName")
     private String certCommonName;
 
-    @NameInMap("CertDownloadURL")
+    @com.aliyun.core.annotation.NameInMap("CertDownloadURL")
     private String certDownloadURL;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SSLEnabled")
+    @com.aliyun.core.annotation.NameInMap("SSLEnabled")
     private String SSLEnabled;
 
-    @NameInMap("SSLExpiredTime")
+    @com.aliyun.core.annotation.NameInMap("SSLExpiredTime")
     private String SSLExpiredTime;
 
     private DescribeInstanceSSLResponseBody(Builder builder) {

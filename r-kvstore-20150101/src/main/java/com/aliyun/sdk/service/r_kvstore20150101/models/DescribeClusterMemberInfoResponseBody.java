@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeClusterMemberInfoResponseBody</p>
  */
 public class DescribeClusterMemberInfoResponseBody extends TeaModel {
-    @NameInMap("ClusterChildren")
+    @com.aliyun.core.annotation.NameInMap("ClusterChildren")
     private java.util.List < ClusterChildren> clusterChildren;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeClusterMemberInfoResponseBody(Builder builder) {
@@ -72,49 +71,49 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
     } 
 
     public static class ClusterChildren extends TeaModel {
-        @NameInMap("BandWidth")
+        @com.aliyun.core.annotation.NameInMap("BandWidth")
         private Long bandWidth;
 
-        @NameInMap("BinlogRetentionDays")
+        @com.aliyun.core.annotation.NameInMap("BinlogRetentionDays")
         private Integer binlogRetentionDays;
 
-        @NameInMap("BizType")
+        @com.aliyun.core.annotation.NameInMap("BizType")
         private String bizType;
 
-        @NameInMap("Capacity")
+        @com.aliyun.core.annotation.NameInMap("Capacity")
         private Long capacity;
 
-        @NameInMap("ClassCode")
+        @com.aliyun.core.annotation.NameInMap("ClassCode")
         private String classCode;
 
-        @NameInMap("Connections")
+        @com.aliyun.core.annotation.NameInMap("Connections")
         private Long connections;
 
-        @NameInMap("CurrentBandWidth")
+        @com.aliyun.core.annotation.NameInMap("CurrentBandWidth")
         private Long currentBandWidth;
 
-        @NameInMap("DiskSizeMB")
+        @com.aliyun.core.annotation.NameInMap("DiskSizeMB")
         private Integer diskSizeMB;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ReplicaSize")
+        @com.aliyun.core.annotation.NameInMap("ReplicaSize")
         private Integer replicaSize;
 
-        @NameInMap("ResourceGroupName")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupName")
         private String resourceGroupName;
 
-        @NameInMap("Service")
+        @com.aliyun.core.annotation.NameInMap("Service")
         private String service;
 
-        @NameInMap("ServiceVersion")
+        @com.aliyun.core.annotation.NameInMap("ServiceVersion")
         private String serviceVersion;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private ClusterChildren(Builder builder) {

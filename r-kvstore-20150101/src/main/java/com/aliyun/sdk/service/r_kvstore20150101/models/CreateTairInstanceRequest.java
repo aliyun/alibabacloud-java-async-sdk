@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,177 +11,181 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateTairInstanceRequest</p>
  */
 public class CreateTairInstanceRequest extends Request {
-    @Query
-    @NameInMap("AutoPay")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
     private Boolean autoPay;
 
-    @Query
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private String autoRenew;
 
-    @Query
-    @NameInMap("AutoRenewPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenewPeriod")
     private String autoRenewPeriod;
 
-    @Query
-    @NameInMap("AutoUseCoupon")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoUseCoupon")
     private String autoUseCoupon;
 
-    @Query
-    @NameInMap("BackupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupId")
     private String backupId;
 
-    @Query
-    @NameInMap("BusinessInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessInfo")
     private String businessInfo;
 
-    @Query
-    @NameInMap("ChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("ClusterBackupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterBackupId")
     private String clusterBackupId;
 
-    @Query
-    @NameInMap("CouponNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CouponNo")
     private String couponNo;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("EngineVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineVersion")
     private String engineVersion;
 
-    @Query
-    @NameInMap("GlobalInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GlobalInstanceId")
     private String globalInstanceId;
 
-    @Query
-    @NameInMap("GlobalSecurityGroupIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GlobalSecurityGroupIds")
     private String globalSecurityGroupIds;
 
-    @Query
-    @NameInMap("InstanceClass")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceClass")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceClass;
 
-    @Query
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @Query
-    @NameInMap("InstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ParamGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParamGroupId")
     private String paramGroupId;
 
-    @Query
-    @NameInMap("Password")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Password")
     private String password;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
-    @Query
-    @NameInMap("Port")
-    @Validation(maximum = 65535, minimum = 1024)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Port")
+    @com.aliyun.core.annotation.Validation(maximum = 65535, minimum = 1024)
     private Integer port;
 
-    @Query
-    @NameInMap("PrivateIpAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
     private String privateIpAddress;
 
-    @Query
-    @NameInMap("ReadOnlyCount")
-    @Validation(maximum = 5, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReadOnlyCount")
+    @com.aliyun.core.annotation.Validation(maximum = 5, minimum = 1)
     private Integer readOnlyCount;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
-    @Validation(maximum = 4096, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Validation(maximum = 4096, minimum = 1)
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecondaryZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreTime")
+    private String restoreTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecondaryZoneId")
     private String secondaryZoneId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("ShardCount")
-    @Validation(maximum = 64, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShardCount")
+    @com.aliyun.core.annotation.Validation(maximum = 64, minimum = 1)
     private Integer shardCount;
 
-    @Query
-    @NameInMap("ShardType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShardType")
     private String shardType;
 
-    @Query
-    @NameInMap("SlaveReadOnlyCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SlaveReadOnlyCount")
     private Integer slaveReadOnlyCount;
 
-    @Query
-    @NameInMap("SrcDBInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcDBInstanceId")
     private String srcDBInstanceId;
 
-    @Query
-    @NameInMap("Storage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Storage")
     private Integer storage;
 
-    @Query
-    @NameInMap("StorageType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageType")
     private String storageType;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("VSwitchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
 
-    @Query
-    @NameInMap("VpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private CreateTairInstanceRequest(Builder builder) {
@@ -216,6 +219,7 @@ public class CreateTairInstanceRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.restoreTime = builder.restoreTime;
         this.secondaryZoneId = builder.secondaryZoneId;
         this.securityToken = builder.securityToken;
         this.shardCount = builder.shardCount;
@@ -447,6 +451,13 @@ public class CreateTairInstanceRequest extends Request {
     }
 
     /**
+     * @return restoreTime
+     */
+    public String getRestoreTime() {
+        return this.restoreTime;
+    }
+
+    /**
      * @return secondaryZoneId
      */
     public String getSecondaryZoneId() {
@@ -560,6 +571,7 @@ public class CreateTairInstanceRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String restoreTime; 
         private String secondaryZoneId; 
         private String securityToken; 
         private Integer shardCount; 
@@ -608,6 +620,7 @@ public class CreateTairInstanceRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.restoreTime = request.restoreTime;
             this.secondaryZoneId = request.secondaryZoneId;
             this.securityToken = request.securityToken;
             this.shardCount = request.shardCount;
@@ -670,10 +683,10 @@ public class CreateTairInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the backup set of the source instance. You can call the [DescribeBackups](~~61081~~) operation to query the ID of the backup set.
+         * The ID of the backup set of the source instance. If you want to create an instance based on a backup set of a specified instance, you can specify this parameter after you specify the **SrcDBInstanceId** parameter. Then, the system creates an instance based on the backup set that is specified by this parameter. You can call the [DescribeBackups](~~61081~~) operation to query the IDs of backup sets.
          * <p>
          * 
-         * > If you want to create an instance based on the backup set of an existing instance, you must specify this parameter after you specify the **SrcDBInstanceId** parameter. The system creates an instance based on the backup set that is specified by this parameter.
+         * >  If you want to create an instance based on a backup set of a specified instance, you must specify this parameter after you use the **SrcDBInstanceId** parameter to specify the ID of the source instance. Then, the system creates an instance based on the backup set that is specified by this parameter.
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -713,7 +726,14 @@ public class CreateTairInstanceRequest extends Request {
         }
 
         /**
-         * The backup set ID.
+         * This parameter is supported for specific new cluster instances. You can query the backup set ID by using the [DescribeClusterBackupList](~~2679158~~) operation.
+         * <p>
+         * 
+         * *   If this parameter is supported, you can specify the backup set ID. In this case, you do not need to specify the **BackupId** parameter.
+         * 
+         * <!---->
+         * 
+         * *   If this parameter is not supported, set the BackupId parameter to the IDs of backup sets in all shards of the source instance, separated by commas (,). Example: "11101,11102".
          */
         public Builder clusterBackupId(String clusterBackupId) {
             this.putQueryParameter("ClusterBackupId", clusterBackupId);
@@ -942,6 +962,15 @@ public class CreateTairInstanceRequest extends Request {
         }
 
         /**
+         * RestoreTime.
+         */
+        public Builder restoreTime(String restoreTime) {
+            this.putQueryParameter("RestoreTime", restoreTime);
+            this.restoreTime = restoreTime;
+            return this;
+        }
+
+        /**
          * The ID of the secondary zone. You can call the [DescribeRegions](~~61012~~) operation to query the ID of the secondary zone.
          * <p>
          * 
@@ -991,7 +1020,10 @@ public class CreateTairInstanceRequest extends Request {
         }
 
         /**
-         * SlaveReadOnlyCount.
+         * The number of read replicas in the secondary zone. This parameter is used to create a read/write splitting instance that is deployed across multiple zones.
+         * <p>
+         * 
+         * > To create a read/write splitting instance that is deployed across multiple zones, you must specify both SlaveReadOnlyCount and SecondaryZoneId.
          */
         public Builder slaveReadOnlyCount(Integer slaveReadOnlyCount) {
             this.putQueryParameter("SlaveReadOnlyCount", slaveReadOnlyCount);
@@ -1082,10 +1114,10 @@ public class CreateTairInstanceRequest extends Request {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

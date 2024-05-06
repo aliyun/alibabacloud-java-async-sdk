@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,71 +11,71 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateInstanceResponseBody</p>
  */
 public class CreateInstanceResponseBody extends TeaModel {
-    @NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
     private Long bandwidth;
 
-    @NameInMap("Capacity")
+    @com.aliyun.core.annotation.NameInMap("Capacity")
     private Long capacity;
 
-    @NameInMap("ChargeType")
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
 
-    @NameInMap("Config")
+    @com.aliyun.core.annotation.NameInMap("Config")
     private String config;
 
-    @NameInMap("ConnectionDomain")
+    @com.aliyun.core.annotation.NameInMap("ConnectionDomain")
     private String connectionDomain;
 
-    @NameInMap("Connections")
+    @com.aliyun.core.annotation.NameInMap("Connections")
     private Long connections;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @NameInMap("InstanceStatus")
+    @com.aliyun.core.annotation.NameInMap("InstanceStatus")
     private String instanceStatus;
 
-    @NameInMap("NetworkType")
+    @com.aliyun.core.annotation.NameInMap("NetworkType")
     private String networkType;
 
-    @NameInMap("NodeType")
+    @com.aliyun.core.annotation.NameInMap("NodeType")
     private String nodeType;
 
-    @NameInMap("OrderId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("OrderId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long orderId;
 
-    @NameInMap("Port")
+    @com.aliyun.core.annotation.NameInMap("Port")
     private Integer port;
 
-    @NameInMap("PrivateIpAddr")
+    @com.aliyun.core.annotation.NameInMap("PrivateIpAddr")
     private String privateIpAddr;
 
-    @NameInMap("QPS")
+    @com.aliyun.core.annotation.NameInMap("QPS")
     private Long QPS;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UserName")
+    @com.aliyun.core.annotation.NameInMap("UserName")
     private String userName;
 
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private CreateInstanceResponseBody(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBackupPolicyResponseBody</p>
  */
 public class DescribeBackupPolicyResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private AccessDeniedDetail accessDeniedDetail;
 
-    @NameInMap("BackupRetentionPeriod")
+    @com.aliyun.core.annotation.NameInMap("BackupRetentionPeriod")
     private String backupRetentionPeriod;
 
-    @NameInMap("DbsInstance")
+    @com.aliyun.core.annotation.NameInMap("DbsInstance")
     private String dbsInstance;
 
-    @NameInMap("EnableBackupLog")
+    @com.aliyun.core.annotation.NameInMap("EnableBackupLog")
     private Integer enableBackupLog;
 
-    @NameInMap("PreferredBackupPeriod")
+    @com.aliyun.core.annotation.NameInMap("PreferredBackupPeriod")
     private String preferredBackupPeriod;
 
-    @NameInMap("PreferredBackupTime")
+    @com.aliyun.core.annotation.NameInMap("PreferredBackupTime")
     private String preferredBackupTime;
 
-    @NameInMap("PreferredNextBackupTime")
+    @com.aliyun.core.annotation.NameInMap("PreferredNextBackupTime")
     private String preferredNextBackupTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeBackupPolicyResponseBody(Builder builder) {
@@ -205,25 +204,25 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     } 
 
     public static class AccessDeniedDetail extends TeaModel {
-        @NameInMap("AuthAction")
+        @com.aliyun.core.annotation.NameInMap("AuthAction")
         private String authAction;
 
-        @NameInMap("AuthPrincipalDisplayName")
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalDisplayName")
         private String authPrincipalDisplayName;
 
-        @NameInMap("AuthPrincipalOwnerId")
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalOwnerId")
         private String authPrincipalOwnerId;
 
-        @NameInMap("AuthPrincipalType")
+        @com.aliyun.core.annotation.NameInMap("AuthPrincipalType")
         private String authPrincipalType;
 
-        @NameInMap("EncodedDiagnosticMessage")
+        @com.aliyun.core.annotation.NameInMap("EncodedDiagnosticMessage")
         private String encodedDiagnosticMessage;
 
-        @NameInMap("NoPermissionType")
+        @com.aliyun.core.annotation.NameInMap("NoPermissionType")
         private String noPermissionType;
 
-        @NameInMap("PolicyType")
+        @com.aliyun.core.annotation.NameInMap("PolicyType")
         private String policyType;
 
         private AccessDeniedDetail(Builder builder) {

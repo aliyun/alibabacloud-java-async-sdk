@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBInstanceNetInfoResponseBody</p>
  */
 public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
-    @NameInMap("InstanceNetworkType")
+    @com.aliyun.core.annotation.NameInMap("InstanceNetworkType")
     private String instanceNetworkType;
 
-    @NameInMap("NetInfoItems")
+    @com.aliyun.core.annotation.NameInMap("NetInfoItems")
     private NetInfoItems netInfoItems;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBInstanceNetInfoResponseBody(Builder builder) {
@@ -96,40 +95,40 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
     } 
 
     public static class InstanceNetInfo extends TeaModel {
-        @NameInMap("ConnectionString")
+        @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
 
-        @NameInMap("DBInstanceNetType")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceNetType")
         private String DBInstanceNetType;
 
-        @NameInMap("DirectConnection")
+        @com.aliyun.core.annotation.NameInMap("DirectConnection")
         private Integer directConnection;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("IPAddress")
+        @com.aliyun.core.annotation.NameInMap("IPAddress")
         private String IPAddress;
 
-        @NameInMap("IPType")
+        @com.aliyun.core.annotation.NameInMap("IPType")
         private String IPType;
 
-        @NameInMap("IsSlaveProxy")
+        @com.aliyun.core.annotation.NameInMap("IsSlaveProxy")
         private Integer isSlaveProxy;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("Upgradeable")
+        @com.aliyun.core.annotation.NameInMap("Upgradeable")
         private String upgradeable;
 
-        @NameInMap("VPCId")
+        @com.aliyun.core.annotation.NameInMap("VPCId")
         private String VPCId;
 
-        @NameInMap("VPCInstanceId")
+        @com.aliyun.core.annotation.NameInMap("VPCInstanceId")
         private String VPCInstanceId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
         private InstanceNetInfo(Builder builder) {
@@ -374,7 +373,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
 
     }
     public static class NetInfoItems extends TeaModel {
-        @NameInMap("InstanceNetInfo")
+        @com.aliyun.core.annotation.NameInMap("InstanceNetInfo")
         private java.util.List < InstanceNetInfo> instanceNetInfo;
 
         private NetInfoItems(Builder builder) {

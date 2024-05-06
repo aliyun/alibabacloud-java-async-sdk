@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCacheAnalysisReportListResponseBody</p>
  */
 public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
-    @NameInMap("DailyTasks")
+    @com.aliyun.core.annotation.NameInMap("DailyTasks")
     private DailyTasks dailyTasks;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCacheAnalysisReportListResponseBody(Builder builder) {
@@ -92,16 +91,16 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
     } 
 
     public static class Task extends TeaModel {
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
         private Task(Builder builder) {
@@ -197,7 +196,7 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
 
     }
     public static class Tasks extends TeaModel {
-        @NameInMap("Task")
+        @com.aliyun.core.annotation.NameInMap("Task")
         private java.util.List < Task> task;
 
         private Tasks(Builder builder) {
@@ -238,10 +237,10 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
 
     }
     public static class DailyTask extends TeaModel {
-        @NameInMap("Date")
+        @com.aliyun.core.annotation.NameInMap("Date")
         private String date;
 
-        @NameInMap("Tasks")
+        @com.aliyun.core.annotation.NameInMap("Tasks")
         private Tasks tasks;
 
         private DailyTask(Builder builder) {
@@ -299,7 +298,7 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
 
     }
     public static class DailyTasks extends TeaModel {
-        @NameInMap("DailyTask")
+        @com.aliyun.core.annotation.NameInMap("DailyTask")
         private java.util.List < DailyTask> dailyTask;
 
         private DailyTasks(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAuditRecordsResponseBody</p>
  */
 public class DescribeAuditRecordsResponseBody extends TeaModel {
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeAuditRecordsResponseBody(Builder builder) {
@@ -192,31 +191,31 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
     } 
 
     public static class SQL extends TeaModel {
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("DatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
-        @NameInMap("ExecuteTime")
+        @com.aliyun.core.annotation.NameInMap("ExecuteTime")
         private String executeTime;
 
-        @NameInMap("HostAddress")
+        @com.aliyun.core.annotation.NameInMap("HostAddress")
         private String hostAddress;
 
-        @NameInMap("IPAddress")
+        @com.aliyun.core.annotation.NameInMap("IPAddress")
         private String IPAddress;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("SQLText")
+        @com.aliyun.core.annotation.NameInMap("SQLText")
         private String SQLText;
 
-        @NameInMap("SQLType")
+        @com.aliyun.core.annotation.NameInMap("SQLType")
         private String SQLType;
 
-        @NameInMap("TotalExecutionTimes")
+        @com.aliyun.core.annotation.NameInMap("TotalExecutionTimes")
         private String totalExecutionTimes;
 
         private SQL(Builder builder) {
@@ -396,7 +395,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("SQL")
+        @com.aliyun.core.annotation.NameInMap("SQL")
         private java.util.List < SQL> SQL;
 
         private Items(Builder builder) {

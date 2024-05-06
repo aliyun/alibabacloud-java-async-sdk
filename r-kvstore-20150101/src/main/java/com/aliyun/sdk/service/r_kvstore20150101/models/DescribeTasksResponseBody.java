@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTasksResponseBody</p>
  */
 public class DescribeTasksResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeTasksResponseBody(Builder builder) {
@@ -132,34 +131,34 @@ public class DescribeTasksResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("BeginTime")
+        @com.aliyun.core.annotation.NameInMap("BeginTime")
         private String beginTime;
 
-        @NameInMap("CurrentStepName")
+        @com.aliyun.core.annotation.NameInMap("CurrentStepName")
         private String currentStepName;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private Float progress;
 
-        @NameInMap("Remain")
+        @com.aliyun.core.annotation.NameInMap("Remain")
         private Integer remain;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StepProgressInfo")
+        @com.aliyun.core.annotation.NameInMap("StepProgressInfo")
         private String stepProgressInfo;
 
-        @NameInMap("StepsInfo")
+        @com.aliyun.core.annotation.NameInMap("StepsInfo")
         private String stepsInfo;
 
-        @NameInMap("TaskAction")
+        @com.aliyun.core.annotation.NameInMap("TaskAction")
         private String taskAction;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
         private Items(Builder builder) {

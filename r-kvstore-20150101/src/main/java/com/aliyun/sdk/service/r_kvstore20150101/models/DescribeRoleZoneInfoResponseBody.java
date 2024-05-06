@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.r_kvstore20150101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRoleZoneInfoResponseBody</p>
  */
 public class DescribeRoleZoneInfoResponseBody extends TeaModel {
-    @NameInMap("Node")
+    @com.aliyun.core.annotation.NameInMap("Node")
     private Node node;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeRoleZoneInfoResponseBody(Builder builder) {
@@ -132,40 +131,40 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
     } 
 
     public static class NodeInfo extends TeaModel {
-        @NameInMap("CurrentBandWidth")
+        @com.aliyun.core.annotation.NameInMap("CurrentBandWidth")
         private Long currentBandWidth;
 
-        @NameInMap("CurrentMinorVersion")
+        @com.aliyun.core.annotation.NameInMap("CurrentMinorVersion")
         private String currentMinorVersion;
 
-        @NameInMap("CustinsId")
+        @com.aliyun.core.annotation.NameInMap("CustinsId")
         private String custinsId;
 
-        @NameInMap("DefaultBandWidth")
+        @com.aliyun.core.annotation.NameInMap("DefaultBandWidth")
         private Long defaultBandWidth;
 
-        @NameInMap("InsName")
+        @com.aliyun.core.annotation.NameInMap("InsName")
         private String insName;
 
-        @NameInMap("InsType")
+        @com.aliyun.core.annotation.NameInMap("InsType")
         private Integer insType;
 
-        @NameInMap("IsLatestVersion")
+        @com.aliyun.core.annotation.NameInMap("IsLatestVersion")
         private Integer isLatestVersion;
 
-        @NameInMap("IsOpenBandWidthService")
+        @com.aliyun.core.annotation.NameInMap("IsOpenBandWidthService")
         private Boolean isOpenBandWidthService;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private NodeInfo(Builder builder) {
@@ -419,7 +418,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
 
     }
     public static class Node extends TeaModel {
-        @NameInMap("NodeInfo")
+        @com.aliyun.core.annotation.NameInMap("NodeInfo")
         private java.util.List < NodeInfo> nodeInfo;
 
         private Node(Builder builder) {
