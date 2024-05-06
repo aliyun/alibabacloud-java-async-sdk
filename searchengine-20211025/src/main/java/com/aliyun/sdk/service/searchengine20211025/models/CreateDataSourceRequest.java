@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDataSourceRequest</p>
  */
 public class CreateDataSourceRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("autoBuildIndex")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("autoBuildIndex")
     private Boolean autoBuildIndex;
 
-    @Body
-    @NameInMap("config")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("config")
     private Config config;
 
-    @Body
-    @NameInMap("domain")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("domain")
     private String domain;
 
-    @Body
-    @NameInMap("name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @Body
-    @NameInMap("saroConfig")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("saroConfig")
     private SaroConfig saroConfig;
 
-    @Body
-    @NameInMap("type")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
-    @Query
-    @NameInMap("dryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dryRun")
     private Boolean dryRun;
 
     private CreateDataSourceRequest(Builder builder) {
@@ -232,34 +231,34 @@ public class CreateDataSourceRequest extends Request {
     } 
 
     public static class Config extends TeaModel {
-        @NameInMap("accessKey")
+        @com.aliyun.core.annotation.NameInMap("accessKey")
         private String accessKey;
 
-        @NameInMap("accessSecret")
+        @com.aliyun.core.annotation.NameInMap("accessSecret")
         private String accessSecret;
 
-        @NameInMap("bucket")
+        @com.aliyun.core.annotation.NameInMap("bucket")
         private String bucket;
 
-        @NameInMap("endpoint")
+        @com.aliyun.core.annotation.NameInMap("endpoint")
         private String endpoint;
 
-        @NameInMap("namespace")
+        @com.aliyun.core.annotation.NameInMap("namespace")
         private String namespace;
 
-        @NameInMap("ossPath")
+        @com.aliyun.core.annotation.NameInMap("ossPath")
         private String ossPath;
 
-        @NameInMap("partition")
+        @com.aliyun.core.annotation.NameInMap("partition")
         private String partition;
 
-        @NameInMap("path")
+        @com.aliyun.core.annotation.NameInMap("path")
         private String path;
 
-        @NameInMap("project")
+        @com.aliyun.core.annotation.NameInMap("project")
         private String project;
 
-        @NameInMap("table")
+        @com.aliyun.core.annotation.NameInMap("table")
         private String table;
 
         private Config(Builder builder) {
@@ -453,10 +452,10 @@ public class CreateDataSourceRequest extends Request {
 
     }
     public static class SaroConfig extends TeaModel {
-        @NameInMap("namespace")
+        @com.aliyun.core.annotation.NameInMap("namespace")
         private String namespace;
 
-        @NameInMap("tableName")
+        @com.aliyun.core.annotation.NameInMap("tableName")
         private String tableName;
 
         private SaroConfig(Builder builder) {

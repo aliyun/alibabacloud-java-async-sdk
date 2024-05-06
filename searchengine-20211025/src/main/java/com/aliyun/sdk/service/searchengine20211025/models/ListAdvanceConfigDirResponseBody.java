@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAdvanceConfigDirResponseBody</p>
  */
 public class ListAdvanceConfigDirResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < Result> result;
 
     private ListAdvanceConfigDirResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class ListAdvanceConfigDirResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("fullPathName")
+        @com.aliyun.core.annotation.NameInMap("fullPathName")
         private String fullPathName;
 
-        @NameInMap("isDir")
+        @com.aliyun.core.annotation.NameInMap("isDir")
         private Boolean isDir;
 
-        @NameInMap("isTemplate")
+        @com.aliyun.core.annotation.NameInMap("isTemplate")
         private Boolean isTemplate;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private Result(Builder builder) {

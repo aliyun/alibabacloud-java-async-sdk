@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstancesRequest</p>
  */
 public class ListInstancesRequest extends Request {
-    @Query
-    @NameInMap("description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @Query
-    @NameInMap("edition")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("edition")
     private String edition;
 
-    @Query
-    @NameInMap("instanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("instanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("pageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("resourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("tags")
     private java.util.List < Tags> tags;
 
     private ListInstancesRequest(Builder builder) {
@@ -209,10 +208,10 @@ public class ListInstancesRequest extends Request {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("key")
+        @com.aliyun.core.annotation.NameInMap("key")
         private String key;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private Tags(Builder builder) {

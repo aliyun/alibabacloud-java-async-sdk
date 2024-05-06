@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ErrorResponse</p>
  */
 public class ErrorResponse extends Response {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private ErrorResponse(BuilderImpl builder) {

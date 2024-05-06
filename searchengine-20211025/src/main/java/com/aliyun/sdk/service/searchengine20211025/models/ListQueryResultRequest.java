@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListQueryResultRequest</p>
  */
 public class ListQueryResultRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("query")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("query")
     private String query;
 
-    @Query
-    @NameInMap("sql")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("sql")
     private String sql;
 
     private ListQueryResultRequest(Builder builder) {

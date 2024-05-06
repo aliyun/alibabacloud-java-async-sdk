@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListClusterTasksResponseBody</p>
  */
 public class ListClusterTasksResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < Result> result;
 
     private ListClusterTasksResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class ListClusterTasksResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("msg")
+        @com.aliyun.core.annotation.NameInMap("msg")
         private String msg;
 
-        @NameInMap("tagLevel")
+        @com.aliyun.core.annotation.NameInMap("tagLevel")
         private String tagLevel;
 
         private Tags(Builder builder) {
@@ -133,16 +132,16 @@ public class ListClusterTasksResponseBody extends TeaModel {
 
     }
     public static class TaskNodes extends TeaModel {
-        @NameInMap("finishDate")
+        @com.aliyun.core.annotation.NameInMap("finishDate")
         private String finishDate;
 
-        @NameInMap("index")
+        @com.aliyun.core.annotation.NameInMap("index")
         private Long index;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
         private TaskNodes(Builder builder) {
@@ -234,37 +233,37 @@ public class ListClusterTasksResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("extraAttribute")
+        @com.aliyun.core.annotation.NameInMap("extraAttribute")
         private String extraAttribute;
 
-        @NameInMap("field3")
+        @com.aliyun.core.annotation.NameInMap("field3")
         private String field3;
 
-        @NameInMap("fsmId")
+        @com.aliyun.core.annotation.NameInMap("fsmId")
         private String fsmId;
 
-        @NameInMap("groupType")
+        @com.aliyun.core.annotation.NameInMap("groupType")
         private String groupType;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("tags")
+        @com.aliyun.core.annotation.NameInMap("tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("taskNodes")
+        @com.aliyun.core.annotation.NameInMap("taskNodes")
         private java.util.List < TaskNodes> taskNodes;
 
-        @NameInMap("time")
+        @com.aliyun.core.annotation.NameInMap("time")
         private String time;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("user")
+        @com.aliyun.core.annotation.NameInMap("user")
         private String user;
 
         private Result(Builder builder) {

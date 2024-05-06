@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,41 +11,41 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateIndexRequest</p>
  */
 public class CreateIndexRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("content")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("content")
     private String content;
 
-    @Body
-    @NameInMap("dataSource")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dataSource")
     private String dataSource;
 
-    @Body
-    @NameInMap("dataSourceInfo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dataSourceInfo")
     private DataSourceInfo dataSourceInfo;
 
-    @Body
-    @NameInMap("domain")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("domain")
     private String domain;
 
-    @Body
-    @NameInMap("extend")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("extend")
     private java.util.Map < String, ? > extend;
 
-    @Body
-    @NameInMap("name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @Body
-    @NameInMap("partition")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("partition")
     private Integer partition;
 
-    @Query
-    @NameInMap("dryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dryRun")
     private Boolean dryRun;
 
     private CreateIndexRequest(Builder builder) {
@@ -185,7 +184,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * The data source type. Valid values: odps, mns, flink, and streaming. This parameter can be ignored.
+         * Optional. The data source, which can be MaxCompute, Message Service (MNS), Realtime Compute for Apache Flink, or StreamCompute.
          */
         public Builder dataSource(String dataSource) {
             this.putBodyParameter("dataSource", dataSource);
@@ -194,7 +193,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * 数据源相关信息 （向量检索版新版本必填）
+         * The information about the data source, which is required for the new version of OpenSearch Vector Search Edition.
          */
         public Builder dataSourceInfo(DataSourceInfo dataSourceInfo) {
             this.putBodyParameter("dataSourceInfo", dataSourceInfo);
@@ -203,7 +202,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * The data center where the data source is deployed.
+         * The data center in which the data source resides.
          */
         public Builder domain(String domain) {
             this.putBodyParameter("domain", domain);
@@ -212,10 +211,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * 字段配置的扩展的内容
-         * <p>
-         * key: 向量字段(vector)、
-         * 需embeding字段(embeding)
+         * The extended configurations of the field. Keys such as vector and embedding are included. Vector indicates the vector field. Embedding indicates the field that requires embedding.
          */
         public Builder extend(java.util.Map < String, ? > extend) {
             this.putBodyParameter("extend", extend);
@@ -242,7 +238,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * 是否dryRun创建（仅校验数据源是否合法）。取值：-true 是 -false 否
+         * dryRun.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);
@@ -258,34 +254,34 @@ public class CreateIndexRequest extends Request {
     } 
 
     public static class Config extends TeaModel {
-        @NameInMap("accessKey")
+        @com.aliyun.core.annotation.NameInMap("accessKey")
         private String accessKey;
 
-        @NameInMap("accessSecret")
+        @com.aliyun.core.annotation.NameInMap("accessSecret")
         private String accessSecret;
 
-        @NameInMap("bucket")
+        @com.aliyun.core.annotation.NameInMap("bucket")
         private String bucket;
 
-        @NameInMap("endpoint")
+        @com.aliyun.core.annotation.NameInMap("endpoint")
         private String endpoint;
 
-        @NameInMap("namespace")
+        @com.aliyun.core.annotation.NameInMap("namespace")
         private String namespace;
 
-        @NameInMap("ossPath")
+        @com.aliyun.core.annotation.NameInMap("ossPath")
         private String ossPath;
 
-        @NameInMap("partition")
+        @com.aliyun.core.annotation.NameInMap("partition")
         private String partition;
 
-        @NameInMap("path")
+        @com.aliyun.core.annotation.NameInMap("path")
         private String path;
 
-        @NameInMap("project")
+        @com.aliyun.core.annotation.NameInMap("project")
         private String project;
 
-        @NameInMap("table")
+        @com.aliyun.core.annotation.NameInMap("table")
         private String table;
 
         private Config(Builder builder) {
@@ -392,7 +388,7 @@ public class CreateIndexRequest extends Request {
             private String table; 
 
             /**
-             * odps数据源ak
+             * The AccessKey ID of the MaxCompute data source.
              */
             public Builder accessKey(String accessKey) {
                 this.accessKey = accessKey;
@@ -400,7 +396,7 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * odps数据源ak secret
+             * The AccessKey secret of the MaxCompute data source.
              */
             public Builder accessSecret(String accessSecret) {
                 this.accessSecret = accessSecret;
@@ -408,7 +404,7 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * bucket.
+             * oss bucket
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -416,7 +412,7 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * odps数据源的endpoint, oss数据源的endpoint
+             * The endpoint of the MaxCompute or Object Storage Service (OSS) data source.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -440,7 +436,7 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * 数据源为odps时必填
+             * The data partition. This parameter is required if type is set to odps.
              */
             public Builder partition(String partition) {
                 this.partition = partition;
@@ -456,7 +452,7 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * odps数据源项目名称
+             * The name of the MaxCompute project that is used as the data source.
              */
             public Builder project(String project) {
                 this.project = project;
@@ -464,7 +460,7 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * 表名称
+             * The name of the table.
              */
             public Builder table(String table) {
                 this.table = table;
@@ -479,10 +475,10 @@ public class CreateIndexRequest extends Request {
 
     }
     public static class SaroConfig extends TeaModel {
-        @NameInMap("namespace")
+        @com.aliyun.core.annotation.NameInMap("namespace")
         private String namespace;
 
-        @NameInMap("tableName")
+        @com.aliyun.core.annotation.NameInMap("tableName")
         private String tableName;
 
         private SaroConfig(Builder builder) {
@@ -540,28 +536,28 @@ public class CreateIndexRequest extends Request {
 
     }
     public static class DataSourceInfo extends TeaModel {
-        @NameInMap("autoBuildIndex")
+        @com.aliyun.core.annotation.NameInMap("autoBuildIndex")
         private Boolean autoBuildIndex;
 
-        @NameInMap("config")
+        @com.aliyun.core.annotation.NameInMap("config")
         private Config config;
 
-        @NameInMap("dataTimeSec")
+        @com.aliyun.core.annotation.NameInMap("dataTimeSec")
         private Integer dataTimeSec;
 
-        @NameInMap("domain")
+        @com.aliyun.core.annotation.NameInMap("domain")
         private String domain;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("processPartitionCount")
+        @com.aliyun.core.annotation.NameInMap("processPartitionCount")
         private Integer processPartitionCount;
 
-        @NameInMap("saroConfig")
+        @com.aliyun.core.annotation.NameInMap("saroConfig")
         private SaroConfig saroConfig;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private DataSourceInfo(Builder builder) {
@@ -650,7 +646,7 @@ public class CreateIndexRequest extends Request {
             private String type; 
 
             /**
-             * 是否开启自动全量
+             * Specifies whether to enable the automatic full indexing feature.
              */
             public Builder autoBuildIndex(Boolean autoBuildIndex) {
                 this.autoBuildIndex = autoBuildIndex;
@@ -658,7 +654,7 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * odps相关
+             * The information about the MaxCompute data source.
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -690,7 +686,7 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * 数据更新资源数
+             * The number of resources used for data update.
              */
             public Builder processPartitionCount(Integer processPartitionCount) {
                 this.processPartitionCount = processPartitionCount;
@@ -706,12 +702,7 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * 数据源类型
-             * <p>
-             * odps
-             * swift
-             * saro
-             * oss
+             * The type of the data source. Valid values: odps, swift, saro, and oss.
              */
             public Builder type(String type) {
                 this.type = type;

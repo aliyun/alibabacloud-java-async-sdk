@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>VariablesValue</p>
  */
 public class VariablesValue extends TeaModel {
-    @NameInMap("disableModify")
+    @com.aliyun.core.annotation.NameInMap("disableModify")
     private Boolean disableModify;
 
-    @NameInMap("isModify")
+    @com.aliyun.core.annotation.NameInMap("isModify")
     private Boolean isModify;
 
-    @NameInMap("value")
+    @com.aliyun.core.annotation.NameInMap("value")
     private String value;
 
-    @NameInMap("description")
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @NameInMap("templateValue")
+    @com.aliyun.core.annotation.NameInMap("templateValue")
     private String templateValue;
 
-    @NameInMap("type")
+    @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
-    @NameInMap("funcValue")
+    @com.aliyun.core.annotation.NameInMap("funcValue")
     private FuncValue funcValue;
 
     private VariablesValue(Builder builder) {
@@ -176,10 +175,10 @@ public class VariablesValue extends TeaModel {
     } 
 
     public static class FuncValue extends TeaModel {
-        @NameInMap("funcClassName")
+        @com.aliyun.core.annotation.NameInMap("funcClassName")
         private String funcClassName;
 
-        @NameInMap("template")
+        @com.aliyun.core.annotation.NameInMap("template")
         private String template;
 
         private FuncValue(Builder builder) {

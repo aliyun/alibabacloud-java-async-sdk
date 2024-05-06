@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAdvanceConfigsRequest</p>
  */
 public class ListAdvanceConfigsRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("dataSourceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dataSourceName")
     private String dataSourceName;
 
-    @Query
-    @NameInMap("indexName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("indexName")
     private String indexName;
 
-    @Query
-    @NameInMap("type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
     private ListAdvanceConfigsRequest(Builder builder) {

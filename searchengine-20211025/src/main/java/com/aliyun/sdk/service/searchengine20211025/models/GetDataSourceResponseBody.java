@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDataSourceResponseBody</p>
  */
 public class GetDataSourceResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
     private GetDataSourceResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class GetDataSourceResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("domain")
+        @com.aliyun.core.annotation.NameInMap("domain")
         private String domain;
 
-        @NameInMap("indexes")
+        @com.aliyun.core.annotation.NameInMap("indexes")
         private java.util.List < String > indexes;
 
-        @NameInMap("lastFulTime")
+        @com.aliyun.core.annotation.NameInMap("lastFulTime")
         private Long lastFulTime;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Result(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstanceSpecsResponseBody</p>
  */
 public class ListInstanceSpecsResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < Result> result;
 
     private ListInstanceSpecsResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("cpu")
+        @com.aliyun.core.annotation.NameInMap("cpu")
         private Integer cpu;
 
-        @NameInMap("maxDisk")
+        @com.aliyun.core.annotation.NameInMap("maxDisk")
         private Integer maxDisk;
 
-        @NameInMap("mem")
+        @com.aliyun.core.annotation.NameInMap("mem")
         private Integer mem;
 
-        @NameInMap("minDisk")
+        @com.aliyun.core.annotation.NameInMap("minDisk")
         private Integer minDisk;
 
         private Result(Builder builder) {

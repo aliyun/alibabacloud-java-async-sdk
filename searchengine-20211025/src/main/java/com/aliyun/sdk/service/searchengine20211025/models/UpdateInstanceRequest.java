@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateInstanceRequest</p>
  */
 public class UpdateInstanceRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
     private String instanceId;
 
-    @Body
-    @NameInMap("components")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("components")
     private java.util.List < Components> components;
 
-    @Body
-    @NameInMap("description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @Body
-    @NameInMap("orderType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("orderType")
     private String orderType;
 
     private UpdateInstanceRequest(Builder builder) {
@@ -139,10 +138,10 @@ public class UpdateInstanceRequest extends Request {
     } 
 
     public static class Components extends TeaModel {
-        @NameInMap("code")
+        @com.aliyun.core.annotation.NameInMap("code")
         private String code;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private Components(Builder builder) {
@@ -185,7 +184,7 @@ public class UpdateInstanceRequest extends Request {
             }
 
             /**
-             * The value of the specification.
+             * value.
              */
             public Builder value(String value) {
                 this.value = value;

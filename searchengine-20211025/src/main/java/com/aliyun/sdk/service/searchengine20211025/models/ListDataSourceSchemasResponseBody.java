@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDataSourceSchemasResponseBody</p>
  */
 public class ListDataSourceSchemasResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < Result> result;
 
     private ListDataSourceSchemasResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class ListDataSourceSchemasResponseBody extends TeaModel {
     } 
 
     public static class PrimaryKey extends TeaModel {
-        @NameInMap("hasPrimaryKeyAttribute")
+        @com.aliyun.core.annotation.NameInMap("hasPrimaryKeyAttribute")
         private Boolean hasPrimaryKeyAttribute;
 
-        @NameInMap("isPrimaryKey")
+        @com.aliyun.core.annotation.NameInMap("isPrimaryKey")
         private Boolean isPrimaryKey;
 
-        @NameInMap("isPrimaryKeySorted")
+        @com.aliyun.core.annotation.NameInMap("isPrimaryKeySorted")
         private Boolean isPrimaryKeySorted;
 
         private PrimaryKey(Builder builder) {
@@ -153,25 +152,25 @@ public class ListDataSourceSchemasResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("addIndex")
+        @com.aliyun.core.annotation.NameInMap("addIndex")
         private Boolean addIndex;
 
-        @NameInMap("attribute")
+        @com.aliyun.core.annotation.NameInMap("attribute")
         private Boolean attribute;
 
-        @NameInMap("custom")
+        @com.aliyun.core.annotation.NameInMap("custom")
         private Boolean custom;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("primaryKey")
+        @com.aliyun.core.annotation.NameInMap("primaryKey")
         private PrimaryKey primaryKey;
 
-        @NameInMap("summary")
+        @com.aliyun.core.annotation.NameInMap("summary")
         private Boolean summary;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Result(Builder builder) {

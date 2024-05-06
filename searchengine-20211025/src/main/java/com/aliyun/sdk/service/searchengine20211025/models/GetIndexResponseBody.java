@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetIndexResponseBody</p>
  */
 public class GetIndexResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
     private GetIndexResponseBody(Builder builder) {
@@ -72,34 +71,34 @@ public class GetIndexResponseBody extends TeaModel {
     } 
 
     public static class Config extends TeaModel {
-        @NameInMap("accessKey")
+        @com.aliyun.core.annotation.NameInMap("accessKey")
         private String accessKey;
 
-        @NameInMap("accessSecret")
+        @com.aliyun.core.annotation.NameInMap("accessSecret")
         private String accessSecret;
 
-        @NameInMap("bucket")
+        @com.aliyun.core.annotation.NameInMap("bucket")
         private String bucket;
 
-        @NameInMap("endpoint")
+        @com.aliyun.core.annotation.NameInMap("endpoint")
         private String endpoint;
 
-        @NameInMap("namespace")
+        @com.aliyun.core.annotation.NameInMap("namespace")
         private String namespace;
 
-        @NameInMap("ossPath")
+        @com.aliyun.core.annotation.NameInMap("ossPath")
         private String ossPath;
 
-        @NameInMap("partition")
+        @com.aliyun.core.annotation.NameInMap("partition")
         private String partition;
 
-        @NameInMap("path")
+        @com.aliyun.core.annotation.NameInMap("path")
         private String path;
 
-        @NameInMap("project")
+        @com.aliyun.core.annotation.NameInMap("project")
         private String project;
 
-        @NameInMap("table")
+        @com.aliyun.core.annotation.NameInMap("table")
         private String table;
 
         private Config(Builder builder) {
@@ -293,10 +292,10 @@ public class GetIndexResponseBody extends TeaModel {
 
     }
     public static class SaroConfig extends TeaModel {
-        @NameInMap("namespace")
+        @com.aliyun.core.annotation.NameInMap("namespace")
         private String namespace;
 
-        @NameInMap("tableName")
+        @com.aliyun.core.annotation.NameInMap("tableName")
         private String tableName;
 
         private SaroConfig(Builder builder) {
@@ -354,25 +353,25 @@ public class GetIndexResponseBody extends TeaModel {
 
     }
     public static class DataSourceInfo extends TeaModel {
-        @NameInMap("autoBuildIndex")
+        @com.aliyun.core.annotation.NameInMap("autoBuildIndex")
         private Boolean autoBuildIndex;
 
-        @NameInMap("config")
+        @com.aliyun.core.annotation.NameInMap("config")
         private Config config;
 
-        @NameInMap("domain")
+        @com.aliyun.core.annotation.NameInMap("domain")
         private String domain;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("processPartitionCount")
+        @com.aliyun.core.annotation.NameInMap("processPartitionCount")
         private Integer processPartitionCount;
 
-        @NameInMap("saroConfig")
+        @com.aliyun.core.annotation.NameInMap("saroConfig")
         private SaroConfig saroConfig;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private DataSourceInfo(Builder builder) {
@@ -515,16 +514,16 @@ public class GetIndexResponseBody extends TeaModel {
 
     }
     public static class Files extends TeaModel {
-        @NameInMap("fullPathName")
+        @com.aliyun.core.annotation.NameInMap("fullPathName")
         private String fullPathName;
 
-        @NameInMap("isDir")
+        @com.aliyun.core.annotation.NameInMap("isDir")
         private Boolean isDir;
 
-        @NameInMap("isTemplate")
+        @com.aliyun.core.annotation.NameInMap("isTemplate")
         private Boolean isTemplate;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private Files(Builder builder) {
@@ -616,22 +615,22 @@ public class GetIndexResponseBody extends TeaModel {
 
     }
     public static class Versions extends TeaModel {
-        @NameInMap("desc")
+        @com.aliyun.core.annotation.NameInMap("desc")
         private String desc;
 
-        @NameInMap("files")
+        @com.aliyun.core.annotation.NameInMap("files")
         private java.util.List < Files> files;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("updateTime")
+        @com.aliyun.core.annotation.NameInMap("updateTime")
         private Long updateTime;
 
-        @NameInMap("versionId")
+        @com.aliyun.core.annotation.NameInMap("versionId")
         private Integer versionId;
 
         private Versions(Builder builder) {
@@ -757,43 +756,43 @@ public class GetIndexResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("content")
+        @com.aliyun.core.annotation.NameInMap("content")
         private String content;
 
-        @NameInMap("dataSource")
+        @com.aliyun.core.annotation.NameInMap("dataSource")
         private String dataSource;
 
-        @NameInMap("dataSourceInfo")
+        @com.aliyun.core.annotation.NameInMap("dataSourceInfo")
         private DataSourceInfo dataSourceInfo;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("domain")
+        @com.aliyun.core.annotation.NameInMap("domain")
         private String domain;
 
-        @NameInMap("fullUpdateTime")
+        @com.aliyun.core.annotation.NameInMap("fullUpdateTime")
         private String fullUpdateTime;
 
-        @NameInMap("fullVersion")
+        @com.aliyun.core.annotation.NameInMap("fullVersion")
         private Long fullVersion;
 
-        @NameInMap("incUpdateTime")
+        @com.aliyun.core.annotation.NameInMap("incUpdateTime")
         private String incUpdateTime;
 
-        @NameInMap("indexSize")
+        @com.aliyun.core.annotation.NameInMap("indexSize")
         private Long indexSize;
 
-        @NameInMap("indexStatus")
+        @com.aliyun.core.annotation.NameInMap("indexStatus")
         private String indexStatus;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("partition")
+        @com.aliyun.core.annotation.NameInMap("partition")
         private Integer partition;
 
-        @NameInMap("versions")
+        @com.aliyun.core.annotation.NameInMap("versions")
         private java.util.List < Versions> versions;
 
         private Result(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetClusterResponseBody</p>
  */
 public class GetClusterResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
     private GetClusterResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class GetClusterResponseBody extends TeaModel {
     } 
 
     public static class DataNode extends TeaModel {
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("number")
+        @com.aliyun.core.annotation.NameInMap("number")
         private Integer number;
 
-        @NameInMap("partition")
+        @com.aliyun.core.annotation.NameInMap("partition")
         private Integer partition;
 
         private DataNode(Builder builder) {
@@ -153,13 +152,13 @@ public class GetClusterResponseBody extends TeaModel {
 
     }
     public static class QueryNode extends TeaModel {
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("number")
+        @com.aliyun.core.annotation.NameInMap("number")
         private Integer number;
 
-        @NameInMap("partition")
+        @com.aliyun.core.annotation.NameInMap("partition")
         private Integer partition;
 
         private QueryNode(Builder builder) {
@@ -234,34 +233,34 @@ public class GetClusterResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("configUpdateTime")
+        @com.aliyun.core.annotation.NameInMap("configUpdateTime")
         private String configUpdateTime;
 
-        @NameInMap("currentAdvanceConfigVersion")
+        @com.aliyun.core.annotation.NameInMap("currentAdvanceConfigVersion")
         private String currentAdvanceConfigVersion;
 
-        @NameInMap("currentOnlineConfigVersion")
+        @com.aliyun.core.annotation.NameInMap("currentOnlineConfigVersion")
         private String currentOnlineConfigVersion;
 
-        @NameInMap("dataNode")
+        @com.aliyun.core.annotation.NameInMap("dataNode")
         private DataNode dataNode;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("latestAdvanceConfigVersion")
+        @com.aliyun.core.annotation.NameInMap("latestAdvanceConfigVersion")
         private String latestAdvanceConfigVersion;
 
-        @NameInMap("latestOnlineConfigVersion")
+        @com.aliyun.core.annotation.NameInMap("latestOnlineConfigVersion")
         private String latestOnlineConfigVersion;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("queryNode")
+        @com.aliyun.core.annotation.NameInMap("queryNode")
         private QueryNode queryNode;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
         private Result(Builder builder) {

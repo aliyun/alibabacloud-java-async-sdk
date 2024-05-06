@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateClusterRequest</p>
  */
 public class CreateClusterRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("autoLoad")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("autoLoad")
     private Boolean autoLoad;
 
-    @Body
-    @NameInMap("dataNode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dataNode")
     private DataNode dataNode;
 
-    @Body
-    @NameInMap("description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @Body
-    @NameInMap("name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @Body
-    @NameInMap("queryNode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("queryNode")
     private QueryNode queryNode;
 
     private CreateClusterRequest(Builder builder) {
@@ -186,7 +185,7 @@ public class CreateClusterRequest extends Request {
     } 
 
     public static class DataNode extends TeaModel {
-        @NameInMap("number")
+        @com.aliyun.core.annotation.NameInMap("number")
         private Integer number;
 
         private DataNode(Builder builder) {
@@ -227,7 +226,7 @@ public class CreateClusterRequest extends Request {
 
     }
     public static class QueryNode extends TeaModel {
-        @NameInMap("number")
+        @com.aliyun.core.annotation.NameInMap("number")
         private Integer number;
 
         private QueryNode(Builder builder) {

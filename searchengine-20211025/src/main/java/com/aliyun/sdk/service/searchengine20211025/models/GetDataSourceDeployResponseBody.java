@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDataSourceDeployResponseBody</p>
  */
 public class GetDataSourceDeployResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
     private GetDataSourceDeployResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
     } 
 
     public static class Hdfs extends TeaModel {
-        @NameInMap("path")
+        @com.aliyun.core.annotation.NameInMap("path")
         private String path;
 
         private Hdfs(Builder builder) {
@@ -113,7 +112,7 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
 
     }
     public static class Odps extends TeaModel {
-        @NameInMap("partitions")
+        @com.aliyun.core.annotation.NameInMap("partitions")
         private java.util.Map < String, String > partitions;
 
         private Odps(Builder builder) {
@@ -154,7 +153,7 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
 
     }
     public static class Oss extends TeaModel {
-        @NameInMap("path")
+        @com.aliyun.core.annotation.NameInMap("path")
         private String path;
 
         private Oss(Builder builder) {
@@ -195,10 +194,10 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
 
     }
     public static class Saro extends TeaModel {
-        @NameInMap("path")
+        @com.aliyun.core.annotation.NameInMap("path")
         private String path;
 
-        @NameInMap("version")
+        @com.aliyun.core.annotation.NameInMap("version")
         private String version;
 
         private Saro(Builder builder) {
@@ -256,16 +255,16 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
 
     }
     public static class Extend extends TeaModel {
-        @NameInMap("hdfs")
+        @com.aliyun.core.annotation.NameInMap("hdfs")
         private Hdfs hdfs;
 
-        @NameInMap("odps")
+        @com.aliyun.core.annotation.NameInMap("odps")
         private Odps odps;
 
-        @NameInMap("oss")
+        @com.aliyun.core.annotation.NameInMap("oss")
         private Oss oss;
 
-        @NameInMap("saro")
+        @com.aliyun.core.annotation.NameInMap("saro")
         private Saro saro;
 
         private Extend(Builder builder) {
@@ -357,10 +356,10 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
 
     }
     public static class Processor extends TeaModel {
-        @NameInMap("args")
+        @com.aliyun.core.annotation.NameInMap("args")
         private String args;
 
-        @NameInMap("resource")
+        @com.aliyun.core.annotation.NameInMap("resource")
         private String resource;
 
         private Processor(Builder builder) {
@@ -418,34 +417,34 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
 
     }
     public static class Storage extends TeaModel {
-        @NameInMap("accessKey")
+        @com.aliyun.core.annotation.NameInMap("accessKey")
         private String accessKey;
 
-        @NameInMap("accessSecret")
+        @com.aliyun.core.annotation.NameInMap("accessSecret")
         private String accessSecret;
 
-        @NameInMap("bucket")
+        @com.aliyun.core.annotation.NameInMap("bucket")
         private String bucket;
 
-        @NameInMap("endpoint")
+        @com.aliyun.core.annotation.NameInMap("endpoint")
         private String endpoint;
 
-        @NameInMap("namespace")
+        @com.aliyun.core.annotation.NameInMap("namespace")
         private String namespace;
 
-        @NameInMap("ossPath")
+        @com.aliyun.core.annotation.NameInMap("ossPath")
         private String ossPath;
 
-        @NameInMap("partition")
+        @com.aliyun.core.annotation.NameInMap("partition")
         private String partition;
 
-        @NameInMap("path")
+        @com.aliyun.core.annotation.NameInMap("path")
         private String path;
 
-        @NameInMap("project")
+        @com.aliyun.core.annotation.NameInMap("project")
         private String project;
 
-        @NameInMap("table")
+        @com.aliyun.core.annotation.NameInMap("table")
         private String table;
 
         private Storage(Builder builder) {
@@ -639,10 +638,10 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
 
     }
     public static class Swift extends TeaModel {
-        @NameInMap("topic")
+        @com.aliyun.core.annotation.NameInMap("topic")
         private String topic;
 
-        @NameInMap("zk")
+        @com.aliyun.core.annotation.NameInMap("zk")
         private String zk;
 
         private Swift(Builder builder) {
@@ -700,19 +699,19 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("autoBuildIndex")
+        @com.aliyun.core.annotation.NameInMap("autoBuildIndex")
         private Boolean autoBuildIndex;
 
-        @NameInMap("extend")
+        @com.aliyun.core.annotation.NameInMap("extend")
         private Extend extend;
 
-        @NameInMap("processor")
+        @com.aliyun.core.annotation.NameInMap("processor")
         private Processor processor;
 
-        @NameInMap("storage")
+        @com.aliyun.core.annotation.NameInMap("storage")
         private Storage storage;
 
-        @NameInMap("swift")
+        @com.aliyun.core.annotation.NameInMap("swift")
         private Swift swift;
 
         private Result(Builder builder) {

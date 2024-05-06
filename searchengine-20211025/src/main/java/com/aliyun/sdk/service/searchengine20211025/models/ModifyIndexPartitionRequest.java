@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyIndexPartitionRequest</p>
  */
 public class ModifyIndexPartitionRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("dataSourceName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dataSourceName")
     private String dataSourceName;
 
-    @Body
-    @NameInMap("domainName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("domainName")
     private String domainName;
 
-    @Body
-    @NameInMap("generation")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("generation")
     private Long generation;
 
-    @Body
-    @NameInMap("indexInfos")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("indexInfos")
     private java.util.List < IndexInfos> indexInfos;
 
     private ModifyIndexPartitionRequest(Builder builder) {
@@ -163,13 +162,13 @@ public class ModifyIndexPartitionRequest extends Request {
     } 
 
     public static class IndexInfos extends TeaModel {
-        @NameInMap("indexName")
+        @com.aliyun.core.annotation.NameInMap("indexName")
         private String indexName;
 
-        @NameInMap("parallelNum")
+        @com.aliyun.core.annotation.NameInMap("parallelNum")
         private Integer parallelNum;
 
-        @NameInMap("partitionCount")
+        @com.aliyun.core.annotation.NameInMap("partitionCount")
         private Integer partitionCount;
 
         private IndexInfos(Builder builder) {

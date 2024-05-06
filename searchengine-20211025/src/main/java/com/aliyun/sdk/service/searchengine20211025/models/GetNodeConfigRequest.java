@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetNodeConfigRequest</p>
  */
 public class GetNodeConfigRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("clusterName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("clusterName")
     private String clusterName;
 
-    @Query
-    @NameInMap("name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @Query
-    @NameInMap("type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
     private GetNodeConfigRequest(Builder builder) {

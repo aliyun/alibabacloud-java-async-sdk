@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateInstanceResponseBody</p>
  */
 public class CreateInstanceResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
     private CreateInstanceResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class CreateInstanceResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
         private Result(Builder builder) {

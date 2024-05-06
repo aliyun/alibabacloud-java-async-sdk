@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,51 +11,51 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyNodeConfigRequest</p>
  */
 public class ModifyNodeConfigRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("active")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("active")
     private Boolean active;
 
-    @Body
-    @NameInMap("dataDuplicateNumber")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dataDuplicateNumber")
     private Integer dataDuplicateNumber;
 
-    @Body
-    @NameInMap("dataFragmentNumber")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dataFragmentNumber")
     private Integer dataFragmentNumber;
 
-    @Body
-    @NameInMap("flowRatio")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("flowRatio")
     private Integer flowRatio;
 
-    @Body
-    @NameInMap("minServicePercent")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("minServicePercent")
     private Integer minServicePercent;
 
-    @Body
-    @NameInMap("published")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("published")
     private Boolean published;
 
-    @Query
-    @NameInMap("clusterName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("clusterName")
     private String clusterName;
 
-    @Query
-    @NameInMap("dataSourceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dataSourceName")
     private String dataSourceName;
 
-    @Query
-    @NameInMap("name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private ModifyNodeConfigRequest(Builder builder) {

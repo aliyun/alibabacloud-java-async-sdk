@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetIndexVersionResponseBody</p>
  */
 public class GetIndexVersionResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
     private GetIndexVersionResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class GetIndexVersionResponseBody extends TeaModel {
     } 
 
     public static class IndexVersions extends TeaModel {
-        @NameInMap("buildDeployId")
+        @com.aliyun.core.annotation.NameInMap("buildDeployId")
         private String buildDeployId;
 
-        @NameInMap("currentVersion")
+        @com.aliyun.core.annotation.NameInMap("currentVersion")
         private Long currentVersion;
 
-        @NameInMap("indexName")
+        @com.aliyun.core.annotation.NameInMap("indexName")
         private String indexName;
 
-        @NameInMap("versions")
+        @com.aliyun.core.annotation.NameInMap("versions")
         private java.util.List < Long > versions;
 
         private IndexVersions(Builder builder) {
@@ -173,10 +172,10 @@ public class GetIndexVersionResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("cluster")
+        @com.aliyun.core.annotation.NameInMap("cluster")
         private String cluster;
 
-        @NameInMap("indexVersions")
+        @com.aliyun.core.annotation.NameInMap("indexVersions")
         private java.util.List < IndexVersions> indexVersions;
 
         private Result(Builder builder) {

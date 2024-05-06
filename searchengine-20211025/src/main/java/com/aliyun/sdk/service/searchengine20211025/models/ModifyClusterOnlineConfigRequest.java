@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyClusterOnlineConfigRequest</p>
  */
 public class ModifyClusterOnlineConfigRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("clusters")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("clusters")
     private java.util.List < String > clusters;
 
-    @Body
-    @NameInMap("config")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("config")
     private java.util.Map < String, Integer > config;
 
     private ModifyClusterOnlineConfigRequest(Builder builder) {

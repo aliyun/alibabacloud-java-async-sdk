@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAdvanceConfigsResponseBody</p>
  */
 public class ListAdvanceConfigsResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < Result> result;
 
     private ListAdvanceConfigsResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
     } 
 
     public static class Files extends TeaModel {
-        @NameInMap("fullPathName")
+        @com.aliyun.core.annotation.NameInMap("fullPathName")
         private String fullPathName;
 
-        @NameInMap("isDir")
+        @com.aliyun.core.annotation.NameInMap("isDir")
         private Boolean isDir;
 
-        @NameInMap("isTemplate")
+        @com.aliyun.core.annotation.NameInMap("isTemplate")
         private Boolean isTemplate;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private Files(Builder builder) {
@@ -173,25 +172,25 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("content")
+        @com.aliyun.core.annotation.NameInMap("content")
         private String content;
 
-        @NameInMap("contentType")
+        @com.aliyun.core.annotation.NameInMap("contentType")
         private String contentType;
 
-        @NameInMap("desc")
+        @com.aliyun.core.annotation.NameInMap("desc")
         private String desc;
 
-        @NameInMap("files")
+        @com.aliyun.core.annotation.NameInMap("files")
         private java.util.List < Files> files;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("updateTime")
+        @com.aliyun.core.annotation.NameInMap("updateTime")
         private Long updateTime;
 
         private Result(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstancesResponseBody</p>
  */
 public class ListInstancesResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < Result> result;
 
-    @NameInMap("totalCount")
+    @com.aliyun.core.annotation.NameInMap("totalCount")
     private Integer totalCount;
 
     private ListInstancesResponseBody(Builder builder) {
@@ -92,13 +91,13 @@ public class ListInstancesResponseBody extends TeaModel {
     } 
 
     public static class Network extends TeaModel {
-        @NameInMap("endpoint")
+        @com.aliyun.core.annotation.NameInMap("endpoint")
         private String endpoint;
 
-        @NameInMap("vSwitchId")
+        @com.aliyun.core.annotation.NameInMap("vSwitchId")
         private String vSwitchId;
 
-        @NameInMap("vpcId")
+        @com.aliyun.core.annotation.NameInMap("vpcId")
         private String vpcId;
 
         private Network(Builder builder) {
@@ -173,10 +172,10 @@ public class ListInstancesResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("key")
+        @com.aliyun.core.annotation.NameInMap("key")
         private String key;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private Tags(Builder builder) {
@@ -234,43 +233,43 @@ public class ListInstancesResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("chargeType")
+        @com.aliyun.core.annotation.NameInMap("chargeType")
         private String chargeType;
 
-        @NameInMap("commodityCode")
+        @com.aliyun.core.annotation.NameInMap("commodityCode")
         private String commodityCode;
 
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("expiredTime")
+        @com.aliyun.core.annotation.NameInMap("expiredTime")
         private String expiredTime;
 
-        @NameInMap("inDebt")
+        @com.aliyun.core.annotation.NameInMap("inDebt")
         private Boolean inDebt;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
-        @NameInMap("lockMode")
+        @com.aliyun.core.annotation.NameInMap("lockMode")
         private String lockMode;
 
-        @NameInMap("network")
+        @com.aliyun.core.annotation.NameInMap("network")
         private Network network;
 
-        @NameInMap("resourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("resourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("tags")
+        @com.aliyun.core.annotation.NameInMap("tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("updateTime")
+        @com.aliyun.core.annotation.NameInMap("updateTime")
         private String updateTime;
 
         private Result(Builder builder) {

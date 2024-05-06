@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RecoverIndexRequest</p>
  */
 public class RecoverIndexRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("buildDeployId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("buildDeployId")
     private Integer buildDeployId;
 
-    @Body
-    @NameInMap("dataSourceName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dataSourceName")
     private String dataSourceName;
 
-    @Body
-    @NameInMap("generation")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("generation")
     private String generation;
 
-    @Body
-    @NameInMap("indexName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("indexName")
     private String indexName;
 
     private RecoverIndexRequest(Builder builder) {

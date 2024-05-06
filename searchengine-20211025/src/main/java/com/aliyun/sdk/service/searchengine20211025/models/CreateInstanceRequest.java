@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateInstanceRequest</p>
  */
 public class CreateInstanceRequest extends Request {
-    @Body
-    @NameInMap("chargeType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("chargeType")
     private String chargeType;
 
-    @Body
-    @NameInMap("components")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("components")
     private java.util.List < Components> components;
 
-    @Body
-    @NameInMap("order")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("order")
     private Order order;
 
     private CreateInstanceRequest(Builder builder) {
@@ -116,10 +115,10 @@ public class CreateInstanceRequest extends Request {
     } 
 
     public static class Components extends TeaModel {
-        @NameInMap("code")
+        @com.aliyun.core.annotation.NameInMap("code")
         private String code;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private Components(Builder builder) {
@@ -177,13 +176,13 @@ public class CreateInstanceRequest extends Request {
 
     }
     public static class Order extends TeaModel {
-        @NameInMap("autoRenew")
+        @com.aliyun.core.annotation.NameInMap("autoRenew")
         private Boolean autoRenew;
 
-        @NameInMap("duration")
+        @com.aliyun.core.annotation.NameInMap("duration")
         private Long duration;
 
-        @NameInMap("pricingCycle")
+        @com.aliyun.core.annotation.NameInMap("pricingCycle")
         private String pricingCycle;
 
         private Order(Builder builder) {

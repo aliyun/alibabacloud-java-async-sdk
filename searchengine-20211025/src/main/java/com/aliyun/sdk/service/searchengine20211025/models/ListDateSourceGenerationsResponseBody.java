@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDateSourceGenerationsResponseBody</p>
  */
 public class ListDateSourceGenerationsResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < Result> result;
 
     private ListDateSourceGenerationsResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("buildDeployId")
+        @com.aliyun.core.annotation.NameInMap("buildDeployId")
         private Integer buildDeployId;
 
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private Long createTime;
 
-        @NameInMap("dataDumpRoot")
+        @com.aliyun.core.annotation.NameInMap("dataDumpRoot")
         private String dataDumpRoot;
 
-        @NameInMap("generation")
+        @com.aliyun.core.annotation.NameInMap("generation")
         private Long generation;
 
-        @NameInMap("partition")
+        @com.aliyun.core.annotation.NameInMap("partition")
         private java.util.Map < String, Integer > partition;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("timestamp")
+        @com.aliyun.core.annotation.NameInMap("timestamp")
         private Long timestamp;
 
         private Result(Builder builder) {

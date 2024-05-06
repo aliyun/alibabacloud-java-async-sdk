@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetClusterRunTimeInfoResponseBody</p>
  */
 public class GetClusterRunTimeInfoResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < Result> result;
 
     private GetClusterRunTimeInfoResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
     } 
 
     public static class ConfigStatusList extends TeaModel {
-        @NameInMap("configUpdateTime")
+        @com.aliyun.core.annotation.NameInMap("configUpdateTime")
         private String configUpdateTime;
 
-        @NameInMap("donePercent")
+        @com.aliyun.core.annotation.NameInMap("donePercent")
         private Integer donePercent;
 
-        @NameInMap("doneSize")
+        @com.aliyun.core.annotation.NameInMap("doneSize")
         private Integer doneSize;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("totalSize")
+        @com.aliyun.core.annotation.NameInMap("totalSize")
         private Integer totalSize;
 
         private ConfigStatusList(Builder builder) {
@@ -193,10 +192,10 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
 
     }
     public static class AdvanceConfigInfo extends TeaModel {
-        @NameInMap("configMetaName")
+        @com.aliyun.core.annotation.NameInMap("configMetaName")
         private String configMetaName;
 
-        @NameInMap("version")
+        @com.aliyun.core.annotation.NameInMap("version")
         private Long version;
 
         private AdvanceConfigInfo(Builder builder) {
@@ -254,10 +253,10 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
 
     }
     public static class IndexConfigInfo extends TeaModel {
-        @NameInMap("configMetaName")
+        @com.aliyun.core.annotation.NameInMap("configMetaName")
         private String configMetaName;
 
-        @NameInMap("version")
+        @com.aliyun.core.annotation.NameInMap("version")
         private Long version;
 
         private IndexConfigInfo(Builder builder) {
@@ -315,52 +314,52 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
 
     }
     public static class DataStatusList extends TeaModel {
-        @NameInMap("advanceConfigInfo")
+        @com.aliyun.core.annotation.NameInMap("advanceConfigInfo")
         private AdvanceConfigInfo advanceConfigInfo;
 
-        @NameInMap("deployFailedWorker")
+        @com.aliyun.core.annotation.NameInMap("deployFailedWorker")
         private java.util.List < String > deployFailedWorker;
 
-        @NameInMap("docSize")
+        @com.aliyun.core.annotation.NameInMap("docSize")
         private Integer docSize;
 
-        @NameInMap("donePercent")
+        @com.aliyun.core.annotation.NameInMap("donePercent")
         private Integer donePercent;
 
-        @NameInMap("doneSize")
+        @com.aliyun.core.annotation.NameInMap("doneSize")
         private Integer doneSize;
 
-        @NameInMap("errorMsg")
+        @com.aliyun.core.annotation.NameInMap("errorMsg")
         private String errorMsg;
 
-        @NameInMap("fullUpdateTime")
+        @com.aliyun.core.annotation.NameInMap("fullUpdateTime")
         private String fullUpdateTime;
 
-        @NameInMap("fullVersion")
+        @com.aliyun.core.annotation.NameInMap("fullVersion")
         private Long fullVersion;
 
-        @NameInMap("incUpdateTime")
+        @com.aliyun.core.annotation.NameInMap("incUpdateTime")
         private String incUpdateTime;
 
-        @NameInMap("incVersion")
+        @com.aliyun.core.annotation.NameInMap("incVersion")
         private Long incVersion;
 
-        @NameInMap("indexConfigInfo")
+        @com.aliyun.core.annotation.NameInMap("indexConfigInfo")
         private IndexConfigInfo indexConfigInfo;
 
-        @NameInMap("indexSize")
+        @com.aliyun.core.annotation.NameInMap("indexSize")
         private Long indexSize;
 
-        @NameInMap("lackDiskWorker")
+        @com.aliyun.core.annotation.NameInMap("lackDiskWorker")
         private java.util.List < String > lackDiskWorker;
 
-        @NameInMap("lackMemWorker")
+        @com.aliyun.core.annotation.NameInMap("lackMemWorker")
         private java.util.List < String > lackMemWorker;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("totalSize")
+        @com.aliyun.core.annotation.NameInMap("totalSize")
         private Integer totalSize;
 
         private DataStatusList(Builder builder) {
@@ -656,16 +655,16 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
 
     }
     public static class ServiceStatus extends TeaModel {
-        @NameInMap("donePercent")
+        @com.aliyun.core.annotation.NameInMap("donePercent")
         private Integer donePercent;
 
-        @NameInMap("doneSize")
+        @com.aliyun.core.annotation.NameInMap("doneSize")
         private Integer doneSize;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("totalSize")
+        @com.aliyun.core.annotation.NameInMap("totalSize")
         private Integer totalSize;
 
         private ServiceStatus(Builder builder) {
@@ -757,13 +756,13 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
 
     }
     public static class DataNodes extends TeaModel {
-        @NameInMap("configStatusList")
+        @com.aliyun.core.annotation.NameInMap("configStatusList")
         private java.util.List < ConfigStatusList> configStatusList;
 
-        @NameInMap("dataStatusList")
+        @com.aliyun.core.annotation.NameInMap("dataStatusList")
         private java.util.List < DataStatusList> dataStatusList;
 
-        @NameInMap("serviceStatus")
+        @com.aliyun.core.annotation.NameInMap("serviceStatus")
         private ServiceStatus serviceStatus;
 
         private DataNodes(Builder builder) {
@@ -838,19 +837,19 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
 
     }
     public static class QueryNodeConfigStatusList extends TeaModel {
-        @NameInMap("configUpdateTime")
+        @com.aliyun.core.annotation.NameInMap("configUpdateTime")
         private String configUpdateTime;
 
-        @NameInMap("donePercent")
+        @com.aliyun.core.annotation.NameInMap("donePercent")
         private Integer donePercent;
 
-        @NameInMap("doneSize")
+        @com.aliyun.core.annotation.NameInMap("doneSize")
         private Integer doneSize;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("totalSize")
+        @com.aliyun.core.annotation.NameInMap("totalSize")
         private Integer totalSize;
 
         private QueryNodeConfigStatusList(Builder builder) {
@@ -959,16 +958,16 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
 
     }
     public static class QueryNodeServiceStatus extends TeaModel {
-        @NameInMap("donePercent")
+        @com.aliyun.core.annotation.NameInMap("donePercent")
         private Integer donePercent;
 
-        @NameInMap("doneSize")
+        @com.aliyun.core.annotation.NameInMap("doneSize")
         private Integer doneSize;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("totalSize")
+        @com.aliyun.core.annotation.NameInMap("totalSize")
         private Integer totalSize;
 
         private QueryNodeServiceStatus(Builder builder) {
@@ -1060,10 +1059,10 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
 
     }
     public static class QueryNode extends TeaModel {
-        @NameInMap("configStatusList")
+        @com.aliyun.core.annotation.NameInMap("configStatusList")
         private java.util.List < QueryNodeConfigStatusList> configStatusList;
 
-        @NameInMap("serviceStatus")
+        @com.aliyun.core.annotation.NameInMap("serviceStatus")
         private QueryNodeServiceStatus serviceStatus;
 
         private QueryNode(Builder builder) {
@@ -1121,13 +1120,13 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("clusterName")
+        @com.aliyun.core.annotation.NameInMap("clusterName")
         private String clusterName;
 
-        @NameInMap("dataNodes")
+        @com.aliyun.core.annotation.NameInMap("dataNodes")
         private java.util.List < DataNodes> dataNodes;
 
-        @NameInMap("queryNode")
+        @com.aliyun.core.annotation.NameInMap("queryNode")
         private QueryNode queryNode;
 
         private Result(Builder builder) {

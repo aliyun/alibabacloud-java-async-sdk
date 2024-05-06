@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDeployGraphResponseBody</p>
  */
 public class GetDeployGraphResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
     private GetDeployGraphResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class GetDeployGraphResponseBody extends TeaModel {
     } 
 
     public static class IndexMetas extends TeaModel {
-        @NameInMap("domainName")
+        @com.aliyun.core.annotation.NameInMap("domainName")
         private String domainName;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("tableDeployId")
+        @com.aliyun.core.annotation.NameInMap("tableDeployId")
         private Long tableDeployId;
 
-        @NameInMap("tableName")
+        @com.aliyun.core.annotation.NameInMap("tableName")
         private String tableName;
 
-        @NameInMap("tag")
+        @com.aliyun.core.annotation.NameInMap("tag")
         private String tag;
 
-        @NameInMap("zoneName")
+        @com.aliyun.core.annotation.NameInMap("zoneName")
         private String zoneName;
 
         private IndexMetas(Builder builder) {
@@ -213,16 +212,16 @@ public class GetDeployGraphResponseBody extends TeaModel {
 
     }
     public static class OnlineMaster extends TeaModel {
-        @NameInMap("domainName")
+        @com.aliyun.core.annotation.NameInMap("domainName")
         private String domainName;
 
-        @NameInMap("hippoId")
+        @com.aliyun.core.annotation.NameInMap("hippoId")
         private String hippoId;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private OnlineMaster(Builder builder) {
@@ -314,22 +313,22 @@ public class GetDeployGraphResponseBody extends TeaModel {
 
     }
     public static class TableMetas extends TeaModel {
-        @NameInMap("buildDeployId")
+        @com.aliyun.core.annotation.NameInMap("buildDeployId")
         private Long buildDeployId;
 
-        @NameInMap("domainName")
+        @com.aliyun.core.annotation.NameInMap("domainName")
         private String domainName;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("tableDeployId")
+        @com.aliyun.core.annotation.NameInMap("tableDeployId")
         private Long tableDeployId;
 
-        @NameInMap("tag")
+        @com.aliyun.core.annotation.NameInMap("tag")
         private String tag;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private TableMetas(Builder builder) {
@@ -455,19 +454,19 @@ public class GetDeployGraphResponseBody extends TeaModel {
 
     }
     public static class ZoneMetas extends TeaModel {
-        @NameInMap("domainInfo")
+        @com.aliyun.core.annotation.NameInMap("domainInfo")
         private String domainInfo;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("suezAdminName")
+        @com.aliyun.core.annotation.NameInMap("suezAdminName")
         private String suezAdminName;
 
-        @NameInMap("tag")
+        @com.aliyun.core.annotation.NameInMap("tag")
         private String tag;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private ZoneMetas(Builder builder) {
@@ -576,22 +575,22 @@ public class GetDeployGraphResponseBody extends TeaModel {
 
     }
     public static class Graph extends TeaModel {
-        @NameInMap("indexMetas")
+        @com.aliyun.core.annotation.NameInMap("indexMetas")
         private java.util.List < IndexMetas> indexMetas;
 
-        @NameInMap("onlineMaster")
+        @com.aliyun.core.annotation.NameInMap("onlineMaster")
         private java.util.List < OnlineMaster> onlineMaster;
 
-        @NameInMap("tableIndexRelation")
+        @com.aliyun.core.annotation.NameInMap("tableIndexRelation")
         private java.util.Map < String, java.util.List<String>> tableIndexRelation;
 
-        @NameInMap("tableMetas")
+        @com.aliyun.core.annotation.NameInMap("tableMetas")
         private java.util.List < TableMetas> tableMetas;
 
-        @NameInMap("zoneIndexRelation")
+        @com.aliyun.core.annotation.NameInMap("zoneIndexRelation")
         private java.util.Map < String, java.util.List<String>> zoneIndexRelation;
 
-        @NameInMap("zoneMetas")
+        @com.aliyun.core.annotation.NameInMap("zoneMetas")
         private java.util.List < ZoneMetas> zoneMetas;
 
         private Graph(Builder builder) {
@@ -717,7 +716,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("graph")
+        @com.aliyun.core.annotation.NameInMap("graph")
         private Graph graph;
 
         private Result(Builder builder) {

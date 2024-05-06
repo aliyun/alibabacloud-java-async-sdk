@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetNodeConfigResponseBody</p>
  */
 public class GetNodeConfigResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
     private GetNodeConfigResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class GetNodeConfigResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("active")
+        @com.aliyun.core.annotation.NameInMap("active")
         private Boolean active;
 
-        @NameInMap("dataDuplicateNumber")
+        @com.aliyun.core.annotation.NameInMap("dataDuplicateNumber")
         private Integer dataDuplicateNumber;
 
-        @NameInMap("dataFragmentNumber")
+        @com.aliyun.core.annotation.NameInMap("dataFragmentNumber")
         private Integer dataFragmentNumber;
 
-        @NameInMap("flowRatio")
+        @com.aliyun.core.annotation.NameInMap("flowRatio")
         private Integer flowRatio;
 
-        @NameInMap("minServicePercent")
+        @com.aliyun.core.annotation.NameInMap("minServicePercent")
         private Integer minServicePercent;
 
-        @NameInMap("published")
+        @com.aliyun.core.annotation.NameInMap("published")
         private Boolean published;
 
         private Result(Builder builder) {

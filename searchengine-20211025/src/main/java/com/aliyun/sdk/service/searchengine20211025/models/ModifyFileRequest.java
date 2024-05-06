@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyFileRequest</p>
  */
 public class ModifyFileRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("indexName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("indexName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String indexName;
 
-    @Path
-    @NameInMap("versionName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("versionName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String versionName;
 
-    @Body
-    @NameInMap("content")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("content")
     private String content;
 
-    @Body
-    @NameInMap("partition")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("partition")
     private Integer partition;
 
-    @Query
-    @NameInMap("fileName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("fileName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileName;
 
     private ModifyFileRequest(Builder builder) {

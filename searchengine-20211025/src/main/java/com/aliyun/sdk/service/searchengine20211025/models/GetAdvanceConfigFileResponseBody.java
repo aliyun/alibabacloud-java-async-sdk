@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.searchengine20211025.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAdvanceConfigFileResponseBody</p>
  */
 public class GetAdvanceConfigFileResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
     private GetAdvanceConfigFileResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class GetAdvanceConfigFileResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("content")
+        @com.aliyun.core.annotation.NameInMap("content")
         private String content;
 
         private Result(Builder builder) {
