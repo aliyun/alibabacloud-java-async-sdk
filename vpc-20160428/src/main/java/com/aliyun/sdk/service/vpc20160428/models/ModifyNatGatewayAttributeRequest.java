@@ -20,8 +20,16 @@ public class ModifyNatGatewayAttributeRequest extends Request {
     private String eipBindMode;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableSessionLog")
+    private Boolean enableSessionLog;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IcmpReplyEnabled")
     private Boolean icmpReplyEnabled;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogDelivery")
+    private LogDelivery logDelivery;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -57,7 +65,9 @@ public class ModifyNatGatewayAttributeRequest extends Request {
         super(builder);
         this.description = builder.description;
         this.eipBindMode = builder.eipBindMode;
+        this.enableSessionLog = builder.enableSessionLog;
         this.icmpReplyEnabled = builder.icmpReplyEnabled;
+        this.logDelivery = builder.logDelivery;
         this.name = builder.name;
         this.natGatewayId = builder.natGatewayId;
         this.ownerAccount = builder.ownerAccount;
@@ -95,10 +105,24 @@ public class ModifyNatGatewayAttributeRequest extends Request {
     }
 
     /**
+     * @return enableSessionLog
+     */
+    public Boolean getEnableSessionLog() {
+        return this.enableSessionLog;
+    }
+
+    /**
      * @return icmpReplyEnabled
      */
     public Boolean getIcmpReplyEnabled() {
         return this.icmpReplyEnabled;
+    }
+
+    /**
+     * @return logDelivery
+     */
+    public LogDelivery getLogDelivery() {
+        return this.logDelivery;
     }
 
     /**
@@ -153,7 +177,9 @@ public class ModifyNatGatewayAttributeRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyNatGatewayAttributeRequest, Builder> {
         private String description; 
         private String eipBindMode; 
+        private Boolean enableSessionLog; 
         private Boolean icmpReplyEnabled; 
+        private LogDelivery logDelivery; 
         private String name; 
         private String natGatewayId; 
         private String ownerAccount; 
@@ -170,7 +196,9 @@ public class ModifyNatGatewayAttributeRequest extends Request {
             super(request);
             this.description = request.description;
             this.eipBindMode = request.eipBindMode;
+            this.enableSessionLog = request.enableSessionLog;
             this.icmpReplyEnabled = request.icmpReplyEnabled;
+            this.logDelivery = request.logDelivery;
             this.name = request.name;
             this.natGatewayId = request.natGatewayId;
             this.ownerAccount = request.ownerAccount;
@@ -212,6 +240,15 @@ public class ModifyNatGatewayAttributeRequest extends Request {
         }
 
         /**
+         * EnableSessionLog.
+         */
+        public Builder enableSessionLog(Boolean enableSessionLog) {
+            this.putQueryParameter("EnableSessionLog", enableSessionLog);
+            this.enableSessionLog = enableSessionLog;
+            return this;
+        }
+
+        /**
          * Specifies whether to enable the Internet Control Message Protocol (ICMP) non-retrieval feature. Valid values:
          * <p>
          * 
@@ -221,6 +258,16 @@ public class ModifyNatGatewayAttributeRequest extends Request {
         public Builder icmpReplyEnabled(Boolean icmpReplyEnabled) {
             this.putQueryParameter("IcmpReplyEnabled", icmpReplyEnabled);
             this.icmpReplyEnabled = icmpReplyEnabled;
+            return this;
+        }
+
+        /**
+         * LogDelivery.
+         */
+        public Builder logDelivery(LogDelivery logDelivery) {
+            String logDeliveryShrink = shrink(logDelivery, "LogDelivery", "json");
+            this.putQueryParameter("LogDelivery", logDeliveryShrink);
+            this.logDelivery = logDelivery;
             return this;
         }
 
@@ -300,4 +347,65 @@ public class ModifyNatGatewayAttributeRequest extends Request {
 
     } 
 
+    public static class LogDelivery extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("LogDeliveryType")
+        private String logDeliveryType;
+
+        @com.aliyun.core.annotation.NameInMap("LogDestination")
+        private String logDestination;
+
+        private LogDelivery(Builder builder) {
+            this.logDeliveryType = builder.logDeliveryType;
+            this.logDestination = builder.logDestination;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LogDelivery create() {
+            return builder().build();
+        }
+
+        /**
+         * @return logDeliveryType
+         */
+        public String getLogDeliveryType() {
+            return this.logDeliveryType;
+        }
+
+        /**
+         * @return logDestination
+         */
+        public String getLogDestination() {
+            return this.logDestination;
+        }
+
+        public static final class Builder {
+            private String logDeliveryType; 
+            private String logDestination; 
+
+            /**
+             * LogDeliveryType.
+             */
+            public Builder logDeliveryType(String logDeliveryType) {
+                this.logDeliveryType = logDeliveryType;
+                return this;
+            }
+
+            /**
+             * LogDestination.
+             */
+            public Builder logDestination(String logDestination) {
+                this.logDestination = logDestination;
+                return this;
+            }
+
+            public LogDelivery build() {
+                return new LogDelivery(this);
+            } 
+
+        } 
+
+    }
 }

@@ -392,7 +392,11 @@ public class ListPublicIpAddressPoolsRequest extends Request {
         }
 
         /**
-         * SecurityProtectionEnabled.
+         * Specifies whether to enable Anti-DDoS Pro/Premium. Valid values:
+         * <p>
+         * 
+         * *   **false**
+         * *   **true**
          */
         public Builder securityProtectionEnabled(Boolean securityProtectionEnabled) {
             this.putQueryParameter("SecurityProtectionEnabled", securityProtectionEnabled);

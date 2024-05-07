@@ -734,6 +734,9 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EipBindMode")
         private String eipBindMode;
 
+        @com.aliyun.core.annotation.NameInMap("EnableSessionLog")
+        private String enableSessionLog;
+
         @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
@@ -808,6 +811,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             this.description = builder.description;
             this.ecsMetricEnabled = builder.ecsMetricEnabled;
             this.eipBindMode = builder.eipBindMode;
+            this.enableSessionLog = builder.enableSessionLog;
             this.expiredTime = builder.expiredTime;
             this.forwardTableIds = builder.forwardTableIds;
             this.fullNatTableIds = builder.fullNatTableIds;
@@ -887,6 +891,13 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
          */
         public String getEipBindMode() {
             return this.eipBindMode;
+        }
+
+        /**
+         * @return enableSessionLog
+         */
+        public String getEnableSessionLog() {
+            return this.enableSessionLog;
         }
 
         /**
@@ -1051,6 +1062,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             private String description; 
             private Boolean ecsMetricEnabled; 
             private String eipBindMode; 
+            private String enableSessionLog; 
             private String expiredTime; 
             private ForwardTableIds forwardTableIds; 
             private FullNatTableIds fullNatTableIds; 
@@ -1149,6 +1161,14 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
              */
             public Builder eipBindMode(String eipBindMode) {
                 this.eipBindMode = eipBindMode;
+                return this;
+            }
+
+            /**
+             * EnableSessionLog.
+             */
+            public Builder enableSessionLog(String enableSessionLog) {
+                this.enableSessionLog = enableSessionLog;
                 return this;
             }
 

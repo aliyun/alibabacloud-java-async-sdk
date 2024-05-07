@@ -29,6 +29,9 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EcsMetricEnabled")
     private Boolean ecsMetricEnabled;
 
+    @com.aliyun.core.annotation.NameInMap("EnableSessionLog")
+    private Boolean enableSessionLog;
+
     @com.aliyun.core.annotation.NameInMap("ExpiredTime")
     private String expiredTime;
 
@@ -40,6 +43,9 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("IpList")
     private java.util.List < IpList> ipList;
+
+    @com.aliyun.core.annotation.NameInMap("LogDelivery")
+    private LogDelivery logDelivery;
 
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
@@ -87,10 +93,12 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
         this.deletionProtectionInfo = builder.deletionProtectionInfo;
         this.description = builder.description;
         this.ecsMetricEnabled = builder.ecsMetricEnabled;
+        this.enableSessionLog = builder.enableSessionLog;
         this.expiredTime = builder.expiredTime;
         this.forwardTable = builder.forwardTable;
         this.fullNatTable = builder.fullNatTable;
         this.ipList = builder.ipList;
+        this.logDelivery = builder.logDelivery;
         this.name = builder.name;
         this.natGatewayId = builder.natGatewayId;
         this.natType = builder.natType;
@@ -157,6 +165,13 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return enableSessionLog
+     */
+    public Boolean getEnableSessionLog() {
+        return this.enableSessionLog;
+    }
+
+    /**
      * @return expiredTime
      */
     public String getExpiredTime() {
@@ -182,6 +197,13 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
      */
     public java.util.List < IpList> getIpList() {
         return this.ipList;
+    }
+
+    /**
+     * @return logDelivery
+     */
+    public LogDelivery getLogDelivery() {
+        return this.logDelivery;
     }
 
     /**
@@ -282,10 +304,12 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
         private DeletionProtectionInfo deletionProtectionInfo; 
         private String description; 
         private Boolean ecsMetricEnabled; 
+        private Boolean enableSessionLog; 
         private String expiredTime; 
         private ForwardTable forwardTable; 
         private FullNatTable fullNatTable; 
         private java.util.List < IpList> ipList; 
+        private LogDelivery logDelivery; 
         private String name; 
         private String natGatewayId; 
         private String natType; 
@@ -357,6 +381,14 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * EnableSessionLog.
+         */
+        public Builder enableSessionLog(Boolean enableSessionLog) {
+            this.enableSessionLog = enableSessionLog;
+            return this;
+        }
+
+        /**
          * The time when the NAT gateway expires.
          */
         public Builder expiredTime(String expiredTime) {
@@ -385,6 +417,14 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
          */
         public Builder ipList(java.util.List < IpList> ipList) {
             this.ipList = ipList;
+            return this;
+        }
+
+        /**
+         * LogDelivery.
+         */
+        public Builder logDelivery(LogDelivery logDelivery) {
+            this.logDelivery = logDelivery;
             return this;
         }
 
@@ -885,6 +925,107 @@ public class GetNatGatewayAttributeResponseBody extends TeaModel {
 
             public IpList build() {
                 return new IpList(this);
+            } 
+
+        } 
+
+    }
+    public static class LogDelivery extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DeliverLogsErrorMessage")
+        private String deliverLogsErrorMessage;
+
+        @com.aliyun.core.annotation.NameInMap("DeliveryStatus")
+        private String deliveryStatus;
+
+        @com.aliyun.core.annotation.NameInMap("LogDeliveryType")
+        private String logDeliveryType;
+
+        @com.aliyun.core.annotation.NameInMap("LogDestination")
+        private String logDestination;
+
+        private LogDelivery(Builder builder) {
+            this.deliverLogsErrorMessage = builder.deliverLogsErrorMessage;
+            this.deliveryStatus = builder.deliveryStatus;
+            this.logDeliveryType = builder.logDeliveryType;
+            this.logDestination = builder.logDestination;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LogDelivery create() {
+            return builder().build();
+        }
+
+        /**
+         * @return deliverLogsErrorMessage
+         */
+        public String getDeliverLogsErrorMessage() {
+            return this.deliverLogsErrorMessage;
+        }
+
+        /**
+         * @return deliveryStatus
+         */
+        public String getDeliveryStatus() {
+            return this.deliveryStatus;
+        }
+
+        /**
+         * @return logDeliveryType
+         */
+        public String getLogDeliveryType() {
+            return this.logDeliveryType;
+        }
+
+        /**
+         * @return logDestination
+         */
+        public String getLogDestination() {
+            return this.logDestination;
+        }
+
+        public static final class Builder {
+            private String deliverLogsErrorMessage; 
+            private String deliveryStatus; 
+            private String logDeliveryType; 
+            private String logDestination; 
+
+            /**
+             * DeliverLogsErrorMessage.
+             */
+            public Builder deliverLogsErrorMessage(String deliverLogsErrorMessage) {
+                this.deliverLogsErrorMessage = deliverLogsErrorMessage;
+                return this;
+            }
+
+            /**
+             * DeliveryStatus.
+             */
+            public Builder deliveryStatus(String deliveryStatus) {
+                this.deliveryStatus = deliveryStatus;
+                return this;
+            }
+
+            /**
+             * LogDeliveryType.
+             */
+            public Builder logDeliveryType(String logDeliveryType) {
+                this.logDeliveryType = logDeliveryType;
+                return this;
+            }
+
+            /**
+             * LogDestination.
+             */
+            public Builder logDestination(String logDestination) {
+                this.logDestination = logDestination;
+                return this;
+            }
+
+            public LogDelivery build() {
+                return new LogDelivery(this);
             } 
 
         } 
