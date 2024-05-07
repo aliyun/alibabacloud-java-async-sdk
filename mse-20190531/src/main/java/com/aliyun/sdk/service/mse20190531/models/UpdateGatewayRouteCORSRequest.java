@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateGatewayRouteCORSRequest</p>
  */
 public class UpdateGatewayRouteCORSRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("CorsJSON")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CorsJSON")
     private CorsJSON corsJSON;
 
-    @Query
-    @NameInMap("GatewayId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayId")
     private Long gatewayId;
 
-    @Query
-    @NameInMap("GatewayUniqueId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
-    @Query
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
     private UpdateGatewayRouteCORSRequest(Builder builder) {
@@ -168,28 +167,28 @@ public class UpdateGatewayRouteCORSRequest extends Request {
     } 
 
     public static class CorsJSON extends TeaModel {
-        @NameInMap("AllowCredentials")
+        @com.aliyun.core.annotation.NameInMap("AllowCredentials")
         private Boolean allowCredentials;
 
-        @NameInMap("AllowHeaders")
+        @com.aliyun.core.annotation.NameInMap("AllowHeaders")
         private String allowHeaders;
 
-        @NameInMap("AllowMethods")
+        @com.aliyun.core.annotation.NameInMap("AllowMethods")
         private String allowMethods;
 
-        @NameInMap("AllowOrigins")
+        @com.aliyun.core.annotation.NameInMap("AllowOrigins")
         private String allowOrigins;
 
-        @NameInMap("ExposeHeaders")
+        @com.aliyun.core.annotation.NameInMap("ExposeHeaders")
         private String exposeHeaders;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TimeUnit")
+        @com.aliyun.core.annotation.NameInMap("TimeUnit")
         private String timeUnit;
 
-        @NameInMap("UnitNum")
+        @com.aliyun.core.annotation.NameInMap("UnitNum")
         private Long unitNum;
 
         private CorsJSON(Builder builder) {

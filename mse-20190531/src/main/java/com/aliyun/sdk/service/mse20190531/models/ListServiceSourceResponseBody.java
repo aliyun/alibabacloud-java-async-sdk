@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListServiceSourceResponseBody</p>
  */
 public class ListServiceSourceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListServiceSourceResponseBody(Builder builder) {
@@ -156,16 +155,16 @@ public class ListServiceSourceResponseBody extends TeaModel {
     } 
 
     public static class IngressOptions extends TeaModel {
-        @NameInMap("EnableIngress")
+        @com.aliyun.core.annotation.NameInMap("EnableIngress")
         private Boolean enableIngress;
 
-        @NameInMap("EnableStatus")
+        @com.aliyun.core.annotation.NameInMap("EnableStatus")
         private Boolean enableStatus;
 
-        @NameInMap("IngressClass")
+        @com.aliyun.core.annotation.NameInMap("IngressClass")
         private String ingressClass;
 
-        @NameInMap("WatchNamespace")
+        @com.aliyun.core.annotation.NameInMap("WatchNamespace")
         private String watchNamespace;
 
         private IngressOptions(Builder builder) {
@@ -257,46 +256,46 @@ public class ListServiceSourceResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("BindingWithGateway")
+        @com.aliyun.core.annotation.NameInMap("BindingWithGateway")
         private Integer bindingWithGateway;
 
-        @NameInMap("GatewayId")
+        @com.aliyun.core.annotation.NameInMap("GatewayId")
         private Long gatewayId;
 
-        @NameInMap("GatewayUniqueId")
+        @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
         private String gatewayUniqueId;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("GroupList")
+        @com.aliyun.core.annotation.NameInMap("GroupList")
         private java.util.List < String > groupList;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("IngressOptions")
+        @com.aliyun.core.annotation.NameInMap("IngressOptions")
         private IngressOptions ingressOptions;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PathList")
+        @com.aliyun.core.annotation.NameInMap("PathList")
         private java.util.List < String > pathList;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("SourceUniqueId")
+        @com.aliyun.core.annotation.NameInMap("SourceUniqueId")
         private String sourceUniqueId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Data(Builder builder) {

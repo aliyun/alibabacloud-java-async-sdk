@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GatewayDomain</p>
  */
 public class GatewayDomain extends TeaModel {
-    @NameInMap("CertIdentifier")
+    @com.aliyun.core.annotation.NameInMap("CertIdentifier")
     private String certIdentifier;
 
-    @NameInMap("GatewayId")
+    @com.aliyun.core.annotation.NameInMap("GatewayId")
     private Long gatewayId;
 
-    @NameInMap("GatewayName")
+    @com.aliyun.core.annotation.NameInMap("GatewayName")
     private String gatewayName;
 
-    @NameInMap("GatewayUniqueId")
+    @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
-    @NameInMap("GmtCreate")
+    @com.aliyun.core.annotation.NameInMap("GmtCreate")
     private String gmtCreate;
 
-    @NameInMap("GmtModified")
+    @com.aliyun.core.annotation.NameInMap("GmtModified")
     private String gmtModified;
 
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @NameInMap("MustHttps")
+    @com.aliyun.core.annotation.NameInMap("MustHttps")
     private String mustHttps;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("Protocol")
+    @com.aliyun.core.annotation.NameInMap("Protocol")
     private String protocol;
 
     private GatewayDomain(Builder builder) {

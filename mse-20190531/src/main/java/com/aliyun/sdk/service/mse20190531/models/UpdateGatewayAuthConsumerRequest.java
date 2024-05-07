@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,54 +11,54 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateGatewayAuthConsumerRequest</p>
  */
 public class UpdateGatewayAuthConsumerRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("EncodeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncodeType")
     private String encodeType;
 
-    @Query
-    @NameInMap("GatewayUniqueId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String gatewayUniqueId;
 
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long id;
 
-    @Query
-    @NameInMap("Jwks")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Jwks")
     private String jwks;
 
-    @Query
-    @NameInMap("KeyName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyName")
     private String keyName;
 
-    @Query
-    @NameInMap("KeyValue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyValue")
     private String keyValue;
 
-    @Query
-    @NameInMap("TokenName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TokenName")
     private String tokenName;
 
-    @Query
-    @NameInMap("TokenPass")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TokenPass")
     private Boolean tokenPass;
 
-    @Query
-    @NameInMap("TokenPosition")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TokenPosition")
     private String tokenPosition;
 
-    @Query
-    @NameInMap("TokenPrefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TokenPrefix")
     private String tokenPrefix;
 
     private UpdateGatewayAuthConsumerRequest(Builder builder) {

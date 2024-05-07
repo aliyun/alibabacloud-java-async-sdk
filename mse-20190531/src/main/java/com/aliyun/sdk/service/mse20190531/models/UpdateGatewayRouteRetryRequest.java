@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateGatewayRouteRetryRequest</p>
  */
 public class UpdateGatewayRouteRetryRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("GatewayId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayId")
     private Long gatewayId;
 
-    @Query
-    @NameInMap("GatewayUniqueId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
-    @Query
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @Query
-    @NameInMap("RetryJSON")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RetryJSON")
     private RetryJSON retryJSON;
 
     private UpdateGatewayRouteRetryRequest(Builder builder) {
@@ -167,16 +166,16 @@ public class UpdateGatewayRouteRetryRequest extends Request {
     } 
 
     public static class RetryJSON extends TeaModel {
-        @NameInMap("Attempts")
+        @com.aliyun.core.annotation.NameInMap("Attempts")
         private Integer attempts;
 
-        @NameInMap("HttpCodes")
+        @com.aliyun.core.annotation.NameInMap("HttpCodes")
         private java.util.List < String > httpCodes;
 
-        @NameInMap("RetryOn")
+        @com.aliyun.core.annotation.NameInMap("RetryOn")
         private java.util.List < String > retryOn;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private RetryJSON(Builder builder) {

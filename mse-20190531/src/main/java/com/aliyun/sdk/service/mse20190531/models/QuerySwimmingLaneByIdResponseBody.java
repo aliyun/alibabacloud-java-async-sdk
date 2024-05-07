@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QuerySwimmingLaneByIdResponseBody</p>
  */
 public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QuerySwimmingLaneByIdResponseBody(Builder builder) {
@@ -136,34 +135,34 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
     } 
 
     public static class RestItems extends TeaModel {
-        @NameInMap("cond")
+        @com.aliyun.core.annotation.NameInMap("cond")
         private String cond;
 
-        @NameInMap("datum")
+        @com.aliyun.core.annotation.NameInMap("datum")
         private String datum;
 
-        @NameInMap("divisor")
+        @com.aliyun.core.annotation.NameInMap("divisor")
         private Integer divisor;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("nameList")
+        @com.aliyun.core.annotation.NameInMap("nameList")
         private java.util.List < String > nameList;
 
-        @NameInMap("operator")
+        @com.aliyun.core.annotation.NameInMap("operator")
         private String operator;
 
-        @NameInMap("rate")
+        @com.aliyun.core.annotation.NameInMap("rate")
         private Integer rate;
 
-        @NameInMap("remainder")
+        @com.aliyun.core.annotation.NameInMap("remainder")
         private Integer remainder;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private RestItems(Builder builder) {
@@ -357,16 +356,16 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
 
     }
     public static class EntryRules extends TeaModel {
-        @NameInMap("condition")
+        @com.aliyun.core.annotation.NameInMap("condition")
         private String condition;
 
-        @NameInMap("path")
+        @com.aliyun.core.annotation.NameInMap("path")
         private String path;
 
-        @NameInMap("paths")
+        @com.aliyun.core.annotation.NameInMap("paths")
         private java.util.List < String > paths;
 
-        @NameInMap("restItems")
+        @com.aliyun.core.annotation.NameInMap("restItems")
         private java.util.List < RestItems> restItems;
 
         private EntryRules(Builder builder) {
@@ -458,43 +457,43 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("enable")
+        @com.aliyun.core.annotation.NameInMap("enable")
         private Boolean enable;
 
-        @NameInMap("enableRules")
+        @com.aliyun.core.annotation.NameInMap("enableRules")
         private Boolean enableRules;
 
-        @NameInMap("entryRule")
+        @com.aliyun.core.annotation.NameInMap("entryRule")
         private String entryRule;
 
-        @NameInMap("entryRules")
+        @com.aliyun.core.annotation.NameInMap("entryRules")
         private java.util.List < EntryRules> entryRules;
 
-        @NameInMap("gatewaySwimmingLaneRouteJson")
+        @com.aliyun.core.annotation.NameInMap("gatewaySwimmingLaneRouteJson")
         private String gatewaySwimmingLaneRouteJson;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private String gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private String gmtModified;
 
-        @NameInMap("groupId")
+        @com.aliyun.core.annotation.NameInMap("groupId")
         private Long groupId;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("regionId")
+        @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("tag")
+        @com.aliyun.core.annotation.NameInMap("tag")
         private String tag;
 
         private Data(Builder builder) {

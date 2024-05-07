@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListMigrationTaskResponseBody</p>
  */
 public class ListMigrationTaskResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("HttpCode")
+    @com.aliyun.core.annotation.NameInMap("HttpCode")
     private String httpCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListMigrationTaskResponseBody(Builder builder) {
@@ -216,40 +215,40 @@ public class ListMigrationTaskResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("ClusterType")
+        @com.aliyun.core.annotation.NameInMap("ClusterType")
         private String clusterType;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("OriginInstanceAddress")
+        @com.aliyun.core.annotation.NameInMap("OriginInstanceAddress")
         private String originInstanceAddress;
 
-        @NameInMap("OriginInstanceName")
+        @com.aliyun.core.annotation.NameInMap("OriginInstanceName")
         private String originInstanceName;
 
-        @NameInMap("OriginInstanceNamespace")
+        @com.aliyun.core.annotation.NameInMap("OriginInstanceNamespace")
         private String originInstanceNamespace;
 
-        @NameInMap("ProjectDesc")
+        @com.aliyun.core.annotation.NameInMap("ProjectDesc")
         private String projectDesc;
 
-        @NameInMap("TargetClusterName")
+        @com.aliyun.core.annotation.NameInMap("TargetClusterName")
         private String targetClusterName;
 
-        @NameInMap("TargetClusterUrl")
+        @com.aliyun.core.annotation.NameInMap("TargetClusterUrl")
         private String targetClusterUrl;
 
-        @NameInMap("TargetInstanceId")
+        @com.aliyun.core.annotation.NameInMap("TargetInstanceId")
         private String targetInstanceId;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private Data(Builder builder) {

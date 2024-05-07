@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAnsInstancesResponseBody</p>
  */
 public class ListAnsInstancesResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("HttpCode")
+    @com.aliyun.core.annotation.NameInMap("HttpCode")
     private String httpCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListAnsInstancesResponseBody(Builder builder) {
@@ -216,64 +215,64 @@ public class ListAnsInstancesResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("App")
+        @com.aliyun.core.annotation.NameInMap("App")
         private String app;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("DatumKey")
+        @com.aliyun.core.annotation.NameInMap("DatumKey")
         private String datumKey;
 
-        @NameInMap("DefaultKey")
+        @com.aliyun.core.annotation.NameInMap("DefaultKey")
         private String defaultKey;
 
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("Ephemeral")
+        @com.aliyun.core.annotation.NameInMap("Ephemeral")
         private Boolean ephemeral;
 
-        @NameInMap("FailCount")
+        @com.aliyun.core.annotation.NameInMap("FailCount")
         private Integer failCount;
 
-        @NameInMap("Healthy")
+        @com.aliyun.core.annotation.NameInMap("Healthy")
         private Boolean healthy;
 
-        @NameInMap("InstanceHeartBeatInterval")
+        @com.aliyun.core.annotation.NameInMap("InstanceHeartBeatInterval")
         private Integer instanceHeartBeatInterval;
 
-        @NameInMap("InstanceHeartBeatTimeOut")
+        @com.aliyun.core.annotation.NameInMap("InstanceHeartBeatTimeOut")
         private Integer instanceHeartBeatTimeOut;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("IpDeleteTimeout")
+        @com.aliyun.core.annotation.NameInMap("IpDeleteTimeout")
         private Integer ipDeleteTimeout;
 
-        @NameInMap("LastBeat")
+        @com.aliyun.core.annotation.NameInMap("LastBeat")
         private Long lastBeat;
 
-        @NameInMap("Marked")
+        @com.aliyun.core.annotation.NameInMap("Marked")
         private Boolean marked;
 
-        @NameInMap("Metadata")
+        @com.aliyun.core.annotation.NameInMap("Metadata")
         private java.util.Map < String, ? > metadata;
 
-        @NameInMap("OkCount")
+        @com.aliyun.core.annotation.NameInMap("OkCount")
         private Integer okCount;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private Data(Builder builder) {

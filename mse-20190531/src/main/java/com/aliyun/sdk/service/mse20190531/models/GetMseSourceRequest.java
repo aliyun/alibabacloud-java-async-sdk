@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMseSourceRequest</p>
  */
 public class GetMseSourceRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("GatewayUniqueId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    private String vpcId;
 
     private GetMseSourceRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.gatewayUniqueId = builder.gatewayUniqueId;
         this.type = builder.type;
+        this.vpcId = builder.vpcId;
     }
 
     public static Builder builder() {
@@ -65,10 +69,18 @@ public class GetMseSourceRequest extends Request {
         return this.type;
     }
 
+    /**
+     * @return vpcId
+     */
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
     public static final class Builder extends Request.Builder<GetMseSourceRequest, Builder> {
         private String acceptLanguage; 
         private String gatewayUniqueId; 
         private String type; 
+        private String vpcId; 
 
         private Builder() {
             super();
@@ -79,6 +91,7 @@ public class GetMseSourceRequest extends Request {
             this.acceptLanguage = request.acceptLanguage;
             this.gatewayUniqueId = request.gatewayUniqueId;
             this.type = request.type;
+            this.vpcId = request.vpcId;
         } 
 
         /**
@@ -113,6 +126,15 @@ public class GetMseSourceRequest extends Request {
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
             this.type = type;
+            return this;
+        }
+
+        /**
+         * VpcId.
+         */
+        public Builder vpcId(String vpcId) {
+            this.putQueryParameter("VpcId", vpcId);
+            this.vpcId = vpcId;
             return this;
         }
 

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateCircuitBreakerRuleResponseBody</p>
  */
 public class UpdateCircuitBreakerRuleResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private UpdateCircuitBreakerRuleResponseBody(Builder builder) {
@@ -159,46 +158,46 @@ public class UpdateCircuitBreakerRuleResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
 
-        @NameInMap("HalfOpenBaseAmountPerStep")
+        @com.aliyun.core.annotation.NameInMap("HalfOpenBaseAmountPerStep")
         private Integer halfOpenBaseAmountPerStep;
 
-        @NameInMap("HalfOpenRecoveryStepNum")
+        @com.aliyun.core.annotation.NameInMap("HalfOpenRecoveryStepNum")
         private Integer halfOpenRecoveryStepNum;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("MaxAllowedRtMs")
+        @com.aliyun.core.annotation.NameInMap("MaxAllowedRtMs")
         private Integer maxAllowedRtMs;
 
-        @NameInMap("MinRequestAmount")
+        @com.aliyun.core.annotation.NameInMap("MinRequestAmount")
         private Integer minRequestAmount;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("Resource")
+        @com.aliyun.core.annotation.NameInMap("Resource")
         private String resource;
 
-        @NameInMap("RetryTimeoutMs")
+        @com.aliyun.core.annotation.NameInMap("RetryTimeoutMs")
         private Integer retryTimeoutMs;
 
-        @NameInMap("StatIntervalMs")
+        @com.aliyun.core.annotation.NameInMap("StatIntervalMs")
         private Integer statIntervalMs;
 
-        @NameInMap("Strategy")
+        @com.aliyun.core.annotation.NameInMap("Strategy")
         private Integer strategy;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private Float threshold;
 
         private Data(Builder builder) {

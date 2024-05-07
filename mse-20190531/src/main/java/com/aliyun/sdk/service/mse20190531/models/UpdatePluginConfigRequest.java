@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,46 +11,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdatePluginConfigRequest</p>
  */
 public class UpdatePluginConfigRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("Config")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Config")
     private String config;
 
-    @Query
-    @NameInMap("ConfigLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigLevel")
     private Integer configLevel;
 
-    @Query
-    @NameInMap("Enable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Enable")
     private Boolean enable;
 
-    @Query
-    @NameInMap("GatewayId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayId")
     private Long gatewayId;
 
-    @Query
-    @NameInMap("GatewayUniqueId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String gatewayUniqueId;
 
-    @Query
-    @NameInMap("GmtCreate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GmtCreate")
     private String gmtCreate;
 
-    @Query
-    @NameInMap("GmtModified")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GmtModified")
     private String gmtModified;
 
-    @Query
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @Query
-    @NameInMap("PluginId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PluginId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long pluginId;
 
     private UpdatePluginConfigRequest(Builder builder) {

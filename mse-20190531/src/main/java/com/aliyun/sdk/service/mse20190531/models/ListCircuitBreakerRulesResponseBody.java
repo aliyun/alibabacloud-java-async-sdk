@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCircuitBreakerRulesResponseBody</p>
  */
 public class ListCircuitBreakerRulesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListCircuitBreakerRulesResponseBody(Builder builder) {
@@ -152,55 +151,55 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
 
-        @NameInMap("FallbackObject")
+        @com.aliyun.core.annotation.NameInMap("FallbackObject")
         private String fallbackObject;
 
-        @NameInMap("HalfOpenBaseAmountPerStep")
+        @com.aliyun.core.annotation.NameInMap("HalfOpenBaseAmountPerStep")
         private Integer halfOpenBaseAmountPerStep;
 
-        @NameInMap("HalfOpenRecoveryStepNum")
+        @com.aliyun.core.annotation.NameInMap("HalfOpenRecoveryStepNum")
         private Integer halfOpenRecoveryStepNum;
 
-        @NameInMap("MaxAllowedRtMs")
+        @com.aliyun.core.annotation.NameInMap("MaxAllowedRtMs")
         private Integer maxAllowedRtMs;
 
-        @NameInMap("MinRequestAmount")
+        @com.aliyun.core.annotation.NameInMap("MinRequestAmount")
         private Integer minRequestAmount;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Resource")
+        @com.aliyun.core.annotation.NameInMap("Resource")
         private String resource;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private Integer resourceType;
 
-        @NameInMap("RetryTimeoutMs")
+        @com.aliyun.core.annotation.NameInMap("RetryTimeoutMs")
         private Integer retryTimeoutMs;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
-        @NameInMap("StatIntervalMs")
+        @com.aliyun.core.annotation.NameInMap("StatIntervalMs")
         private Integer statIntervalMs;
 
-        @NameInMap("Strategy")
+        @com.aliyun.core.annotation.NameInMap("Strategy")
         private Integer strategy;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private Float threshold;
 
         private Result(Builder builder) {
@@ -540,16 +539,16 @@ public class ListCircuitBreakerRulesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private java.util.List < Result> result;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Integer totalSize;
 
         private Data(Builder builder) {

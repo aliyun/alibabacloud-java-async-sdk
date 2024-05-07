@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,44 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddMigrationTaskRequest</p>
  */
 public class AddMigrationTaskRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("ClusterType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterType")
     private String clusterType;
 
-    @Query
-    @NameInMap("OriginInstanceAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OriginInstanceAddress")
     private String originInstanceAddress;
 
-    @Query
-    @NameInMap("OriginInstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OriginInstanceName")
     private String originInstanceName;
 
-    @Query
-    @NameInMap("OriginInstanceNamespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OriginInstanceNamespace")
     private String originInstanceNamespace;
 
-    @Query
-    @NameInMap("ProjectDesc")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectDesc")
     private String projectDesc;
 
-    @Query
-    @NameInMap("RequestPars")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestPars")
     private String requestPars;
 
-    @Query
-    @NameInMap("TargetClusterName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetClusterName")
     private String targetClusterName;
 
-    @Query
-    @NameInMap("TargetClusterUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetClusterUrl")
     private String targetClusterUrl;
 
-    @Query
-    @NameInMap("TargetInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetInstanceId")
     private String targetInstanceId;
 
     private AddMigrationTaskRequest(Builder builder) {

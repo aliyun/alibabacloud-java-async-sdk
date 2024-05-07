@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryBusinessLocationsResponseBody</p>
  */
 public class QueryBusinessLocationsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private QueryBusinessLocationsResponseBody(Builder builder) {
@@ -132,43 +131,43 @@ public class QueryBusinessLocationsResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("CnName")
+        @com.aliyun.core.annotation.NameInMap("CnName")
         private String cnName;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DistrictCnName")
+        @com.aliyun.core.annotation.NameInMap("DistrictCnName")
         private String districtCnName;
 
-        @NameInMap("DistrictEnName")
+        @com.aliyun.core.annotation.NameInMap("DistrictEnName")
         private String districtEnName;
 
-        @NameInMap("DistrictId")
+        @com.aliyun.core.annotation.NameInMap("DistrictId")
         private String districtId;
 
-        @NameInMap("DistrictOrdering")
+        @com.aliyun.core.annotation.NameInMap("DistrictOrdering")
         private Integer districtOrdering;
 
-        @NameInMap("DistrictShowName")
+        @com.aliyun.core.annotation.NameInMap("DistrictShowName")
         private String districtShowName;
 
-        @NameInMap("EnDescription")
+        @com.aliyun.core.annotation.NameInMap("EnDescription")
         private String enDescription;
 
-        @NameInMap("EnName")
+        @com.aliyun.core.annotation.NameInMap("EnName")
         private String enName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Ordering")
+        @com.aliyun.core.annotation.NameInMap("Ordering")
         private Integer ordering;
 
-        @NameInMap("ShowName")
+        @com.aliyun.core.annotation.NameInMap("ShowName")
         private String showName;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Data(Builder builder) {

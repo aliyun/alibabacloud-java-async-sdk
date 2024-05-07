@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAuthPolicyResponseBody</p>
  */
 public class ListAuthPolicyResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListAuthPolicyResponseBody(Builder builder) {
@@ -156,22 +155,22 @@ public class ListAuthPolicyResponseBody extends TeaModel {
     } 
 
     public static class Method extends TeaModel {
-        @NameInMap("Group")
+        @com.aliyun.core.annotation.NameInMap("Group")
         private String group;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ParameterTypes")
+        @com.aliyun.core.annotation.NameInMap("ParameterTypes")
         private java.util.List < String > parameterTypes;
 
-        @NameInMap("ReturnType")
+        @com.aliyun.core.annotation.NameInMap("ReturnType")
         private String returnType;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private Method(Builder builder) {
@@ -297,22 +296,22 @@ public class ListAuthPolicyResponseBody extends TeaModel {
 
     }
     public static class AuthRule extends TeaModel {
-        @NameInMap("AppIds")
+        @com.aliyun.core.annotation.NameInMap("AppIds")
         private java.util.List < String > appIds;
 
-        @NameInMap("AuthType")
+        @com.aliyun.core.annotation.NameInMap("AuthType")
         private Integer authType;
 
-        @NameInMap("Black")
+        @com.aliyun.core.annotation.NameInMap("Black")
         private Boolean black;
 
-        @NameInMap("K8sNamespaces")
+        @com.aliyun.core.annotation.NameInMap("K8sNamespaces")
         private java.util.List < String > k8sNamespaces;
 
-        @NameInMap("Method")
+        @com.aliyun.core.annotation.NameInMap("Method")
         private Method method;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
         private AuthRule(Builder builder) {
@@ -442,46 +441,46 @@ public class ListAuthPolicyResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("AuthRule")
+        @com.aliyun.core.annotation.NameInMap("AuthRule")
         private java.util.List < AuthRule> authRule;
 
-        @NameInMap("AuthType")
+        @com.aliyun.core.annotation.NameInMap("AuthType")
         private Integer authType;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
-        @NameInMap("K8sNamespace")
+        @com.aliyun.core.annotation.NameInMap("K8sNamespace")
         private String k8sNamespace;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NamespaceId")
+        @com.aliyun.core.annotation.NameInMap("NamespaceId")
         private String namespaceId;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private Result(Builder builder) {
@@ -756,16 +755,16 @@ public class ListAuthPolicyResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private java.util.List < Result> result;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Integer totalSize;
 
         private Data(Builder builder) {

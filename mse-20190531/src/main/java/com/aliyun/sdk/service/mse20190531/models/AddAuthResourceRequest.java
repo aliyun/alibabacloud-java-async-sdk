@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddAuthResourceRequest</p>
  */
 public class AddAuthResourceRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("AuthId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthId")
     private Long authId;
 
-    @Query
-    @NameInMap("AuthResourceHeaderList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthResourceHeaderList")
     private java.util.List < AuthResourceHeaderList> authResourceHeaderList;
 
-    @Query
-    @NameInMap("DomainId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainId")
     private Long domainId;
 
-    @Query
-    @NameInMap("GatewayUniqueId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
-    @Query
-    @NameInMap("IgnoreCase")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IgnoreCase")
     private Boolean ignoreCase;
 
-    @Query
-    @NameInMap("MatchType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MatchType")
     private String matchType;
 
-    @Query
-    @NameInMap("Path")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Path")
     private String path;
 
     private AddAuthResourceRequest(Builder builder) {
@@ -241,13 +240,13 @@ public class AddAuthResourceRequest extends Request {
     } 
 
     public static class AuthResourceHeaderList extends TeaModel {
-        @NameInMap("HeaderKey")
+        @com.aliyun.core.annotation.NameInMap("HeaderKey")
         private String headerKey;
 
-        @NameInMap("HeaderMethod")
+        @com.aliyun.core.annotation.NameInMap("HeaderMethod")
         private String headerMethod;
 
-        @NameInMap("HeaderValue")
+        @com.aliyun.core.annotation.NameInMap("HeaderValue")
         private String headerValue;
 
         private AuthResourceHeaderList(Builder builder) {

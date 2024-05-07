@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateGatewayFlowRuleResponseBody</p>
  */
 public class UpdateGatewayFlowRuleResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateGatewayFlowRuleResponseBody(Builder builder) {
@@ -72,52 +71,52 @@ public class UpdateGatewayFlowRuleResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("BehaviorType")
+        @com.aliyun.core.annotation.NameInMap("BehaviorType")
         private Integer behaviorType;
 
-        @NameInMap("BodyEncoding")
+        @com.aliyun.core.annotation.NameInMap("BodyEncoding")
         private Integer bodyEncoding;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Integer enable;
 
-        @NameInMap("GatewayId")
+        @com.aliyun.core.annotation.NameInMap("GatewayId")
         private Long gatewayId;
 
-        @NameInMap("GatewayUniqueId")
+        @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
         private String gatewayUniqueId;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("IdList")
+        @com.aliyun.core.annotation.NameInMap("IdList")
         private java.util.List < Long > idList;
 
-        @NameInMap("LimitMode")
+        @com.aliyun.core.annotation.NameInMap("LimitMode")
         private Integer limitMode;
 
-        @NameInMap("ResponseAdditionalHeaders")
+        @com.aliyun.core.annotation.NameInMap("ResponseAdditionalHeaders")
         private String responseAdditionalHeaders;
 
-        @NameInMap("ResponseContentBody")
+        @com.aliyun.core.annotation.NameInMap("ResponseContentBody")
         private String responseContentBody;
 
-        @NameInMap("ResponseRedirectUrl")
+        @com.aliyun.core.annotation.NameInMap("ResponseRedirectUrl")
         private String responseRedirectUrl;
 
-        @NameInMap("ResponseStatusCode")
+        @com.aliyun.core.annotation.NameInMap("ResponseStatusCode")
         private Integer responseStatusCode;
 
-        @NameInMap("RouteId")
+        @com.aliyun.core.annotation.NameInMap("RouteId")
         private Long routeId;
 
-        @NameInMap("RouteName")
+        @com.aliyun.core.annotation.NameInMap("RouteName")
         private String routeName;
 
-        @NameInMap("StatDurationMs")
+        @com.aliyun.core.annotation.NameInMap("StatDurationMs")
         private Integer statDurationMs;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private Integer threshold;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListGatewayRouteRequest</p>
  */
 public class ListGatewayRouteRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("DescSort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DescSort")
     private Boolean descSort;
 
-    @Query
-    @NameInMap("FilterParams")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FilterParams")
     private FilterParams filterParams;
 
-    @Query
-    @NameInMap("OrderItem")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderItem")
     private String orderItem;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
     private ListGatewayRouteRequest(Builder builder) {
@@ -190,33 +189,33 @@ public class ListGatewayRouteRequest extends Request {
     } 
 
     public static class FilterParams extends TeaModel {
-        @NameInMap("DefaultServiceId")
+        @com.aliyun.core.annotation.NameInMap("DefaultServiceId")
         @Deprecated
         private Long defaultServiceId;
 
-        @NameInMap("DomainId")
+        @com.aliyun.core.annotation.NameInMap("DomainId")
         private Long domainId;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("GatewayId")
+        @com.aliyun.core.annotation.NameInMap("GatewayId")
         private Long gatewayId;
 
-        @NameInMap("GatewayUniqueId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String gatewayUniqueId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("RouteOrder")
+        @com.aliyun.core.annotation.NameInMap("RouteOrder")
         private Integer routeOrder;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private FilterParams(Builder builder) {

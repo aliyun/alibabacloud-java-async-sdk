@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListGatewayDomainResponseBody</p>
  */
 public class ListGatewayDomainResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListGatewayDomainResponseBody(Builder builder) {
@@ -156,7 +155,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
     } 
 
     public static class Comment extends TeaModel {
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Comment(Builder builder) {
@@ -197,49 +196,49 @@ public class ListGatewayDomainResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("CertBeforeDate")
+        @com.aliyun.core.annotation.NameInMap("CertBeforeDate")
         private String certBeforeDate;
 
-        @NameInMap("CertIdentifier")
+        @com.aliyun.core.annotation.NameInMap("CertIdentifier")
         private String certIdentifier;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private Comment comment;
 
-        @NameInMap("GatewayId")
+        @com.aliyun.core.annotation.NameInMap("GatewayId")
         private Long gatewayId;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Http2")
+        @com.aliyun.core.annotation.NameInMap("Http2")
         private String http2;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("MustHttps")
+        @com.aliyun.core.annotation.NameInMap("MustHttps")
         private Boolean mustHttps;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("TlsMax")
+        @com.aliyun.core.annotation.NameInMap("TlsMax")
         private String tlsMax;
 
-        @NameInMap("TlsMin")
+        @com.aliyun.core.annotation.NameInMap("TlsMin")
         private String tlsMin;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Data(Builder builder) {

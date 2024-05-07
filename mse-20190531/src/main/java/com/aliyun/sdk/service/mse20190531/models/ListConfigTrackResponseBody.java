@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListConfigTrackResponseBody</p>
  */
 public class ListConfigTrackResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("HttpCode")
+    @com.aliyun.core.annotation.NameInMap("HttpCode")
     private String httpCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
-    @NameInMap("Traces")
+    @com.aliyun.core.annotation.NameInMap("Traces")
     private java.util.List < Traces> traces;
 
     private ListConfigTrackResponseBody(Builder builder) {
@@ -216,43 +215,43 @@ public class ListConfigTrackResponseBody extends TeaModel {
     } 
 
     public static class Traces extends TeaModel {
-        @NameInMap("Client")
+        @com.aliyun.core.annotation.NameInMap("Client")
         private Boolean client;
 
-        @NameInMap("DataId")
+        @com.aliyun.core.annotation.NameInMap("DataId")
         private String dataId;
 
-        @NameInMap("Delay")
+        @com.aliyun.core.annotation.NameInMap("Delay")
         private String delay;
 
-        @NameInMap("Event")
+        @com.aliyun.core.annotation.NameInMap("Event")
         private String event;
 
-        @NameInMap("Group")
+        @com.aliyun.core.annotation.NameInMap("Group")
         private String group;
 
-        @NameInMap("LogDate")
+        @com.aliyun.core.annotation.NameInMap("LogDate")
         private String logDate;
 
-        @NameInMap("Md5")
+        @com.aliyun.core.annotation.NameInMap("Md5")
         private String md5;
 
-        @NameInMap("Push")
+        @com.aliyun.core.annotation.NameInMap("Push")
         private Boolean push;
 
-        @NameInMap("RequestIp")
+        @com.aliyun.core.annotation.NameInMap("RequestIp")
         private String requestIp;
 
-        @NameInMap("ResponseIp")
+        @com.aliyun.core.annotation.NameInMap("ResponseIp")
         private String responseIp;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private String result;
 
-        @NameInMap("Ts")
+        @com.aliyun.core.annotation.NameInMap("Ts")
         private String ts;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Traces(Builder builder) {

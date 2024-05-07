@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateGatewayRouteTimeoutRequest</p>
  */
 public class UpdateGatewayRouteTimeoutRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("GatewayId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayId")
     private Long gatewayId;
 
-    @Query
-    @NameInMap("GatewayUniqueId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
-    @Query
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @Query
-    @NameInMap("TimeoutJSON")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeoutJSON")
     private TimeoutJSON timeoutJSON;
 
     private UpdateGatewayRouteTimeoutRequest(Builder builder) {
@@ -167,13 +166,13 @@ public class UpdateGatewayRouteTimeoutRequest extends Request {
     } 
 
     public static class TimeoutJSON extends TeaModel {
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TimeUnit")
+        @com.aliyun.core.annotation.NameInMap("TimeUnit")
         private String timeUnit;
 
-        @NameInMap("UnitNum")
+        @com.aliyun.core.annotation.NameInMap("UnitNum")
         private Integer unitNum;
 
         private TimeoutJSON(Builder builder) {

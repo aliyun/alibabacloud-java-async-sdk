@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>FetchLosslessRuleListResponseBody</p>
  */
 public class FetchLosslessRuleListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private FetchLosslessRuleListResponseBody(Builder builder) {
@@ -176,37 +175,37 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
     } 
 
     public static class Results extends TeaModel {
-        @NameInMap("Aligned")
+        @com.aliyun.core.annotation.NameInMap("Aligned")
         private Boolean aligned;
 
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("DelayTime")
+        @com.aliyun.core.annotation.NameInMap("DelayTime")
         private Integer delayTime;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
 
-        @NameInMap("FuncType")
+        @com.aliyun.core.annotation.NameInMap("FuncType")
         private Integer funcType;
 
-        @NameInMap("LossLessDetail")
+        @com.aliyun.core.annotation.NameInMap("LossLessDetail")
         private Boolean lossLessDetail;
 
-        @NameInMap("Notice")
+        @com.aliyun.core.annotation.NameInMap("Notice")
         private Boolean notice;
 
-        @NameInMap("Related")
+        @com.aliyun.core.annotation.NameInMap("Related")
         private Boolean related;
 
-        @NameInMap("WarmupTime")
+        @com.aliyun.core.annotation.NameInMap("WarmupTime")
         private Integer warmupTime;
 
         private Results(Builder builder) {
@@ -421,16 +420,16 @@ public class FetchLosslessRuleListResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Results")
+        @com.aliyun.core.annotation.NameInMap("Results")
         private java.util.List < Results> results;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Integer totalSize;
 
         private Data(Builder builder) {

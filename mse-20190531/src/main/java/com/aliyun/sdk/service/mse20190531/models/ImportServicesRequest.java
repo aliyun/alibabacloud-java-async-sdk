@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ImportServicesRequest</p>
  */
 public class ImportServicesRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("FcAlias")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FcAlias")
     private String fcAlias;
 
-    @Query
-    @NameInMap("FcServiceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FcServiceName")
     private String fcServiceName;
 
-    @Query
-    @NameInMap("FcVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FcVersion")
     private String fcVersion;
 
-    @Query
-    @NameInMap("GatewayUniqueId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
-    @Query
-    @NameInMap("ServiceList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceList")
     private java.util.List < ServiceList> serviceList;
 
-    @Query
-    @NameInMap("SourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceType")
     private String sourceType;
 
-    @Query
-    @NameInMap("TlsSetting")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TlsSetting")
     private String tlsSetting;
 
     private ImportServicesRequest(Builder builder) {
@@ -249,22 +248,22 @@ public class ImportServicesRequest extends Request {
     } 
 
     public static class ServiceList extends TeaModel {
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("Ips")
+        @com.aliyun.core.annotation.NameInMap("Ips")
         private java.util.List < String > ips;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("ServicePort")
+        @com.aliyun.core.annotation.NameInMap("ServicePort")
         private Long servicePort;
 
-        @NameInMap("ServiceProtocol")
+        @com.aliyun.core.annotation.NameInMap("ServiceProtocol")
         private String serviceProtocol;
 
         private ServiceList(Builder builder) {

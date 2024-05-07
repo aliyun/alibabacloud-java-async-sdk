@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,96 +11,96 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddGatewayAuthRequest</p>
  */
 public class AddGatewayAuthRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("AuthResourceConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthResourceConfig")
     private String authResourceConfig;
 
-    @Query
-    @NameInMap("AuthResourceList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthResourceList")
     private java.util.List < AuthResourceList> authResourceList;
 
-    @Query
-    @NameInMap("AuthResourceMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthResourceMode")
     private Integer authResourceMode;
 
-    @Query
-    @NameInMap("ClientId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientId")
     private String clientId;
 
-    @Query
-    @NameInMap("ClientSecret")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientSecret")
     private String clientSecret;
 
-    @Query
-    @NameInMap("CookieDomain")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CookieDomain")
     private String cookieDomain;
 
-    @Query
-    @NameInMap("ExternalAuthZJSON")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExternalAuthZJSON")
     private ExternalAuthZJSON externalAuthZJSON;
 
-    @Query
-    @NameInMap("GatewayUniqueId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
-    @Query
-    @NameInMap("IsWhite")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsWhite")
     private Boolean isWhite;
 
-    @Query
-    @NameInMap("Issuer")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Issuer")
     private String issuer;
 
-    @Query
-    @NameInMap("Jwks")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Jwks")
     private String jwks;
 
-    @Query
-    @NameInMap("LoginUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoginUrl")
     private String loginUrl;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("RedirectUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RedirectUrl")
     private String redirectUrl;
 
-    @Query
-    @NameInMap("ScopesList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScopesList")
     private java.util.List < String > scopesList;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Boolean status;
 
-    @Query
-    @NameInMap("Sub")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sub")
     private String sub;
 
-    @Query
-    @NameInMap("TokenName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TokenName")
     private String tokenName;
 
-    @Query
-    @NameInMap("TokenNamePrefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TokenNamePrefix")
     private String tokenNamePrefix;
 
-    @Query
-    @NameInMap("TokenPass")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TokenPass")
     private Boolean tokenPass;
 
-    @Query
-    @NameInMap("TokenPosition")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TokenPosition")
     private String tokenPosition;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private AddGatewayAuthRequest(Builder builder) {
@@ -579,13 +578,13 @@ public class AddGatewayAuthRequest extends Request {
     } 
 
     public static class AuthResourceHeaderList extends TeaModel {
-        @NameInMap("HeaderKey")
+        @com.aliyun.core.annotation.NameInMap("HeaderKey")
         private String headerKey;
 
-        @NameInMap("HeaderMethod")
+        @com.aliyun.core.annotation.NameInMap("HeaderMethod")
         private String headerMethod;
 
-        @NameInMap("HeaderValue")
+        @com.aliyun.core.annotation.NameInMap("HeaderValue")
         private String headerValue;
 
         private AuthResourceHeaderList(Builder builder) {
@@ -660,19 +659,19 @@ public class AddGatewayAuthRequest extends Request {
 
     }
     public static class AuthResourceList extends TeaModel {
-        @NameInMap("AuthResourceHeaderList")
+        @com.aliyun.core.annotation.NameInMap("AuthResourceHeaderList")
         private java.util.List < AuthResourceHeaderList> authResourceHeaderList;
 
-        @NameInMap("DomainId")
+        @com.aliyun.core.annotation.NameInMap("DomainId")
         private Long domainId;
 
-        @NameInMap("IgnoreCase")
+        @com.aliyun.core.annotation.NameInMap("IgnoreCase")
         private Boolean ignoreCase;
 
-        @NameInMap("MatchType")
+        @com.aliyun.core.annotation.NameInMap("MatchType")
         private String matchType;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
         private AuthResourceList(Builder builder) {
@@ -781,31 +780,31 @@ public class AddGatewayAuthRequest extends Request {
 
     }
     public static class ExternalAuthZJSON extends TeaModel {
-        @NameInMap("AllowRequestHeaders")
+        @com.aliyun.core.annotation.NameInMap("AllowRequestHeaders")
         private java.util.List < String > allowRequestHeaders;
 
-        @NameInMap("AllowUpstreamHeaders")
+        @com.aliyun.core.annotation.NameInMap("AllowUpstreamHeaders")
         private java.util.List < String > allowUpstreamHeaders;
 
-        @NameInMap("BodyMaxBytes")
+        @com.aliyun.core.annotation.NameInMap("BodyMaxBytes")
         private Integer bodyMaxBytes;
 
-        @NameInMap("IsRestrict")
+        @com.aliyun.core.annotation.NameInMap("IsRestrict")
         private Boolean isRestrict;
 
-        @NameInMap("PrefixPath")
+        @com.aliyun.core.annotation.NameInMap("PrefixPath")
         private String prefixPath;
 
-        @NameInMap("ServiceId")
+        @com.aliyun.core.annotation.NameInMap("ServiceId")
         private Long serviceId;
 
-        @NameInMap("Timeout")
+        @com.aliyun.core.annotation.NameInMap("Timeout")
         private Integer timeout;
 
-        @NameInMap("TokenKey")
+        @com.aliyun.core.annotation.NameInMap("TokenKey")
         private String tokenKey;
 
-        @NameInMap("WithRequestBody")
+        @com.aliyun.core.annotation.NameInMap("WithRequestBody")
         private Boolean withRequestBody;
 
         private ExternalAuthZJSON(Builder builder) {

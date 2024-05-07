@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,74 +11,74 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCircuitBreakerRuleRequest</p>
  */
 public class CreateCircuitBreakerRuleRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
-    @Query
-    @NameInMap("AppName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
-    @Query
-    @NameInMap("Enable")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Enable")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean enable;
 
-    @Query
-    @NameInMap("HalfOpenBaseAmountPerStep")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HalfOpenBaseAmountPerStep")
     private Integer halfOpenBaseAmountPerStep;
 
-    @Query
-    @NameInMap("HalfOpenRecoveryStepNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HalfOpenRecoveryStepNum")
     private Integer halfOpenRecoveryStepNum;
 
-    @Query
-    @NameInMap("MaxAllowedRtMs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxAllowedRtMs")
     private Integer maxAllowedRtMs;
 
-    @Query
-    @NameInMap("MinRequestAmount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinRequestAmount")
     private Integer minRequestAmount;
 
-    @Query
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Resource")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Resource")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resource;
 
-    @Query
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private Integer resourceType;
 
-    @Query
-    @NameInMap("RetryTimeoutMs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RetryTimeoutMs")
     private Integer retryTimeoutMs;
 
-    @Query
-    @NameInMap("StatIntervalMs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StatIntervalMs")
     private Integer statIntervalMs;
 
-    @Query
-    @NameInMap("Strategy")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Strategy")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer strategy;
 
-    @Query
-    @NameInMap("Threshold")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Threshold")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Float threshold;
 
     private CreateCircuitBreakerRuleRequest(Builder builder) {

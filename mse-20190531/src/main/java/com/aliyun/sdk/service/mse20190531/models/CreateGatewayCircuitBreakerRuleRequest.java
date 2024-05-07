@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,82 +11,82 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateGatewayCircuitBreakerRuleRequest</p>
  */
 public class CreateGatewayCircuitBreakerRuleRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("BehaviorType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BehaviorType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer behaviorType;
 
-    @Query
-    @NameInMap("BodyEncoding")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BodyEncoding")
     private Integer bodyEncoding;
 
-    @Query
-    @NameInMap("Enable")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Enable")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer enable;
 
-    @Query
-    @NameInMap("GatewayId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayId")
     private Long gatewayId;
 
-    @Query
-    @NameInMap("GatewayUniqueId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String gatewayUniqueId;
 
-    @Query
-    @NameInMap("MaxAllowedMs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxAllowedMs")
     private Integer maxAllowedMs;
 
-    @Query
-    @NameInMap("MinRequestAmount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinRequestAmount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer minRequestAmount;
 
-    @Query
-    @NameInMap("RecoveryTimeoutSec")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecoveryTimeoutSec")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer recoveryTimeoutSec;
 
-    @Query
-    @NameInMap("ResponseContentBody")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResponseContentBody")
     private String responseContentBody;
 
-    @Query
-    @NameInMap("ResponseRedirectUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResponseRedirectUrl")
     private String responseRedirectUrl;
 
-    @Query
-    @NameInMap("ResponseStatusCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResponseStatusCode")
     private Integer responseStatusCode;
 
-    @Query
-    @NameInMap("RouteId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long routeId;
 
-    @Query
-    @NameInMap("RouteName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String routeName;
 
-    @Query
-    @NameInMap("StatDurationSec")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StatDurationSec")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer statDurationSec;
 
-    @Query
-    @NameInMap("Strategy")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Strategy")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer strategy;
 
-    @Query
-    @NameInMap("TriggerRatio")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TriggerRatio")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer triggerRatio;
 
     private CreateGatewayCircuitBreakerRuleRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,46 +11,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddGatewaySlbRequest</p>
  */
 public class AddGatewaySlbRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("GatewayUniqueId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String gatewayUniqueId;
 
-    @Query
-    @NameInMap("HttpPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpPort")
     private Integer httpPort;
 
-    @Query
-    @NameInMap("HttpsPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpsPort")
     private Integer httpsPort;
 
-    @Query
-    @NameInMap("HttpsVServerGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpsVServerGroupId")
     private String httpsVServerGroupId;
 
-    @Query
-    @NameInMap("ServiceWeight")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceWeight")
     private Integer serviceWeight;
 
-    @Query
-    @NameInMap("SlbId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SlbId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String slbId;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @Query
-    @NameInMap("VServerGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VServerGroupId")
     private String vServerGroupId;
 
-    @Query
-    @NameInMap("VServiceList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VServiceList")
     private java.util.List < VServiceList> vServiceList;
 
     private AddGatewaySlbRequest(Builder builder) {
@@ -288,16 +287,16 @@ public class AddGatewaySlbRequest extends Request {
     } 
 
     public static class VServiceList extends TeaModel {
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("VServerGroupId")
+        @com.aliyun.core.annotation.NameInMap("VServerGroupId")
         private String vServerGroupId;
 
-        @NameInMap("VServerGroupName")
+        @com.aliyun.core.annotation.NameInMap("VServerGroupName")
         private String vServerGroupName;
 
         private VServiceList(Builder builder) {

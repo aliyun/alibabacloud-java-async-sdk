@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListClustersResponseBody</p>
  */
 public class ListClustersResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("HttpCode")
+    @com.aliyun.core.annotation.NameInMap("HttpCode")
     private String httpCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListClustersResponseBody(Builder builder) {
@@ -216,10 +215,10 @@ public class ListClustersResponseBody extends TeaModel {
     } 
 
     public static class MaintenancePeriod extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private MaintenancePeriod(Builder builder) {
@@ -277,67 +276,67 @@ public class ListClustersResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AppVersion")
+        @com.aliyun.core.annotation.NameInMap("AppVersion")
         private String appVersion;
 
-        @NameInMap("CanUpdate")
+        @com.aliyun.core.annotation.NameInMap("CanUpdate")
         private Boolean canUpdate;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("ClusterAliasName")
+        @com.aliyun.core.annotation.NameInMap("ClusterAliasName")
         private String clusterAliasName;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("ClusterType")
+        @com.aliyun.core.annotation.NameInMap("ClusterType")
         private String clusterType;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("EndDate")
+        @com.aliyun.core.annotation.NameInMap("EndDate")
         private String endDate;
 
-        @NameInMap("InitStatus")
+        @com.aliyun.core.annotation.NameInMap("InitStatus")
         private String initStatus;
 
-        @NameInMap("InstanceCount")
+        @com.aliyun.core.annotation.NameInMap("InstanceCount")
         private Long instanceCount;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InternetAddress")
+        @com.aliyun.core.annotation.NameInMap("InternetAddress")
         private String internetAddress;
 
-        @NameInMap("InternetDomain")
+        @com.aliyun.core.annotation.NameInMap("InternetDomain")
         private String internetDomain;
 
-        @NameInMap("IntranetAddress")
+        @com.aliyun.core.annotation.NameInMap("IntranetAddress")
         private String intranetAddress;
 
-        @NameInMap("IntranetDomain")
+        @com.aliyun.core.annotation.NameInMap("IntranetDomain")
         private String intranetDomain;
 
-        @NameInMap("MaintenancePeriod")
+        @com.aliyun.core.annotation.NameInMap("MaintenancePeriod")
         private MaintenancePeriod maintenancePeriod;
 
-        @NameInMap("MseVersion")
+        @com.aliyun.core.annotation.NameInMap("MseVersion")
         private String mseVersion;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.Map < String, ? > tags;
 
-        @NameInMap("VersionCode")
+        @com.aliyun.core.annotation.NameInMap("VersionCode")
         private String versionCode;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private Data(Builder builder) {

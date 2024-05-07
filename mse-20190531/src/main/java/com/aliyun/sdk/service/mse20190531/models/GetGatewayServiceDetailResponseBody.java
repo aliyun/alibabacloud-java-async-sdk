@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetGatewayServiceDetailResponseBody</p>
  */
 public class GetGatewayServiceDetailResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetGatewayServiceDetailResponseBody(Builder builder) {
@@ -156,10 +155,10 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
     } 
 
     public static class LabelDetails extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Values")
+        @com.aliyun.core.annotation.NameInMap("Values")
         private java.util.List < String > values;
 
         private LabelDetails(Builder builder) {
@@ -217,25 +216,25 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
 
     }
     public static class PortTrafficPolicyList extends TeaModel {
-        @NameInMap("GatewayUniqueId")
+        @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
         private String gatewayUniqueId;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("ServiceId")
+        @com.aliyun.core.annotation.NameInMap("ServiceId")
         private Long serviceId;
 
-        @NameInMap("ServicePort")
+        @com.aliyun.core.annotation.NameInMap("ServicePort")
         private Integer servicePort;
 
-        @NameInMap("TrafficPolicy")
+        @com.aliyun.core.annotation.NameInMap("TrafficPolicy")
         private TrafficPolicy trafficPolicy;
 
         private PortTrafficPolicyList(Builder builder) {
@@ -378,10 +377,10 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
 
     }
     public static class Labels extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Labels(Builder builder) {
@@ -439,10 +438,10 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
 
     }
     public static class ServiceVersion extends TeaModel {
-        @NameInMap("Labels")
+        @com.aliyun.core.annotation.NameInMap("Labels")
         private java.util.List < Labels> labels;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private ServiceVersion(Builder builder) {
@@ -500,13 +499,13 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
 
     }
     public static class VersionDetails extends TeaModel {
-        @NameInMap("EndpointNum")
+        @com.aliyun.core.annotation.NameInMap("EndpointNum")
         private Integer endpointNum;
 
-        @NameInMap("EndpointNumPercent")
+        @com.aliyun.core.annotation.NameInMap("EndpointNumPercent")
         private String endpointNumPercent;
 
-        @NameInMap("ServiceVersion")
+        @com.aliyun.core.annotation.NameInMap("ServiceVersion")
         private ServiceVersion serviceVersion;
 
         private VersionDetails(Builder builder) {
@@ -581,13 +580,13 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
 
     }
     public static class Versions extends TeaModel {
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Versions(Builder builder) {
@@ -662,70 +661,73 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("GatewayId")
+        @com.aliyun.core.annotation.NameInMap("GatewayId")
         private Long gatewayId;
 
-        @NameInMap("GatewayTrafficPolicy")
+        @com.aliyun.core.annotation.NameInMap("GatewayTrafficPolicy")
         private TrafficPolicy gatewayTrafficPolicy;
 
-        @NameInMap("GatewayUniqueId")
+        @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
         private String gatewayUniqueId;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("HealthCheck")
+        @com.aliyun.core.annotation.NameInMap("HealthCheck")
         private String healthCheck;
 
-        @NameInMap("HealthStatus")
+        @com.aliyun.core.annotation.NameInMap("HealthStatus")
         private String healthStatus;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Ips")
+        @com.aliyun.core.annotation.NameInMap("Ips")
         private java.util.List < String > ips;
 
-        @NameInMap("LabelDetails")
+        @com.aliyun.core.annotation.NameInMap("LabelDetails")
         private java.util.List < LabelDetails> labelDetails;
 
-        @NameInMap("MetaInfo")
+        @com.aliyun.core.annotation.NameInMap("MetaInfo")
         private String metaInfo;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("PortTrafficPolicyList")
+        @com.aliyun.core.annotation.NameInMap("PortTrafficPolicyList")
         private java.util.List < PortTrafficPolicyList> portTrafficPolicyList;
 
-        @NameInMap("Ports")
+        @com.aliyun.core.annotation.NameInMap("Ports")
         private java.util.List < Integer > ports;
 
-        @NameInMap("ServiceNameInRegistry")
+        @com.aliyun.core.annotation.NameInMap("ServiceFQDN")
+        private String serviceFQDN;
+
+        @com.aliyun.core.annotation.NameInMap("ServiceNameInRegistry")
         private String serviceNameInRegistry;
 
-        @NameInMap("ServiceProtocol")
+        @com.aliyun.core.annotation.NameInMap("ServiceProtocol")
         private String serviceProtocol;
 
-        @NameInMap("SourceId")
+        @com.aliyun.core.annotation.NameInMap("SourceId")
         private Long sourceId;
 
-        @NameInMap("SourceType")
+        @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
 
-        @NameInMap("VersionDetails")
+        @com.aliyun.core.annotation.NameInMap("VersionDetails")
         private java.util.List < VersionDetails> versionDetails;
 
-        @NameInMap("Versions")
+        @com.aliyun.core.annotation.NameInMap("Versions")
         private java.util.List < Versions> versions;
 
         private Data(Builder builder) {
@@ -745,6 +747,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             this.namespace = builder.namespace;
             this.portTrafficPolicyList = builder.portTrafficPolicyList;
             this.ports = builder.ports;
+            this.serviceFQDN = builder.serviceFQDN;
             this.serviceNameInRegistry = builder.serviceNameInRegistry;
             this.serviceProtocol = builder.serviceProtocol;
             this.sourceId = builder.sourceId;
@@ -874,6 +877,13 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return serviceFQDN
+         */
+        public String getServiceFQDN() {
+            return this.serviceFQDN;
+        }
+
+        /**
          * @return serviceNameInRegistry
          */
         public String getServiceNameInRegistry() {
@@ -932,6 +942,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             private String namespace; 
             private java.util.List < PortTrafficPolicyList> portTrafficPolicyList; 
             private java.util.List < Integer > ports; 
+            private String serviceFQDN; 
             private String serviceNameInRegistry; 
             private String serviceProtocol; 
             private Long sourceId; 
@@ -1064,6 +1075,14 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
              */
             public Builder ports(java.util.List < Integer > ports) {
                 this.ports = ports;
+                return this;
+            }
+
+            /**
+             * ServiceFQDN.
+             */
+            public Builder serviceFQDN(String serviceFQDN) {
+                this.serviceFQDN = serviceFQDN;
                 return this;
             }
 

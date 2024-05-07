@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListClusterHealthCheckTaskResponseBody</p>
  */
 public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("DynamicCode")
+    @com.aliyun.core.annotation.NameInMap("DynamicCode")
     private String dynamicCode;
 
-    @NameInMap("DynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("DynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListClusterHealthCheckTaskResponseBody(Builder builder) {
@@ -223,49 +222,49 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
     } 
 
     public static class RiskList extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
-        @NameInMap("Module")
+        @com.aliyun.core.annotation.NameInMap("Module")
         private String module;
 
-        @NameInMap("Mute")
+        @com.aliyun.core.annotation.NameInMap("Mute")
         private Boolean mute;
 
-        @NameInMap("NoticeFeature")
+        @com.aliyun.core.annotation.NameInMap("NoticeFeature")
         private Boolean noticeFeature;
 
-        @NameInMap("PrimaryUser")
+        @com.aliyun.core.annotation.NameInMap("PrimaryUser")
         private String primaryUser;
 
-        @NameInMap("RiskCode")
+        @com.aliyun.core.annotation.NameInMap("RiskCode")
         private String riskCode;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
 
-        @NameInMap("RiskName")
+        @com.aliyun.core.annotation.NameInMap("RiskName")
         private String riskName;
 
-        @NameInMap("RiskType")
+        @com.aliyun.core.annotation.NameInMap("RiskType")
         private String riskType;
 
-        @NameInMap("Situation")
+        @com.aliyun.core.annotation.NameInMap("Situation")
         private String situation;
 
-        @NameInMap("Suggestion")
+        @com.aliyun.core.annotation.NameInMap("Suggestion")
         private String suggestion;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private Long taskId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
-        @NameInMap("Values")
+        @com.aliyun.core.annotation.NameInMap("Values")
         private String values;
 
         private RiskList(Builder builder) {
@@ -553,58 +552,58 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("AppVersion")
+        @com.aliyun.core.annotation.NameInMap("AppVersion")
         private String appVersion;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("ClusterType")
+        @com.aliyun.core.annotation.NameInMap("ClusterType")
         private String clusterType;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
-        @NameInMap("ImageVersion")
+        @com.aliyun.core.annotation.NameInMap("ImageVersion")
         private String imageVersion;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("PrimaryUser")
+        @com.aliyun.core.annotation.NameInMap("PrimaryUser")
         private String primaryUser;
 
-        @NameInMap("Replica")
+        @com.aliyun.core.annotation.NameInMap("Replica")
         private String replica;
 
-        @NameInMap("RiskList")
+        @com.aliyun.core.annotation.NameInMap("RiskList")
         private java.util.List < RiskList> riskList;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private Integer score;
 
-        @NameInMap("Spec")
+        @com.aliyun.core.annotation.NameInMap("Spec")
         private String spec;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TotalItem")
+        @com.aliyun.core.annotation.NameInMap("TotalItem")
         private Integer totalItem;
 
-        @NameInMap("TotalRisk")
+        @com.aliyun.core.annotation.NameInMap("TotalRisk")
         private Integer totalRisk;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("VersionCode")
+        @com.aliyun.core.annotation.NameInMap("VersionCode")
         private String versionCode;
 
         private Result(Builder builder) {
@@ -934,16 +933,16 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private java.util.List < Result> result;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Integer totalSize;
 
         private Data(Builder builder) {

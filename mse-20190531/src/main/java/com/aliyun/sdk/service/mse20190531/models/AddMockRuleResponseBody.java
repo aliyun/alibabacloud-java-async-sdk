@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddMockRuleResponseBody</p>
  */
 public class AddMockRuleResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private AddMockRuleResponseBody(Builder builder) {
@@ -156,46 +155,46 @@ public class AddMockRuleResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("ConsumerAppId")
+        @com.aliyun.core.annotation.NameInMap("ConsumerAppId")
         private String consumerAppId;
 
-        @NameInMap("ConsumerAppName")
+        @com.aliyun.core.annotation.NameInMap("ConsumerAppName")
         private String consumerAppName;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
 
-        @NameInMap("ExtraJson")
+        @com.aliyun.core.annotation.NameInMap("ExtraJson")
         private String extraJson;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("MockType")
+        @com.aliyun.core.annotation.NameInMap("MockType")
         private Long mockType;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NamespaceId")
+        @com.aliyun.core.annotation.NameInMap("NamespaceId")
         private String namespaceId;
 
-        @NameInMap("ProviderAppId")
+        @com.aliyun.core.annotation.NameInMap("ProviderAppId")
         private String providerAppId;
 
-        @NameInMap("ProviderAppName")
+        @com.aliyun.core.annotation.NameInMap("ProviderAppName")
         private String providerAppName;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("ScMockItemJson")
+        @com.aliyun.core.annotation.NameInMap("ScMockItemJson")
         private String scMockItemJson;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,44 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateServiceSourceRequest</p>
  */
 public class UpdateServiceSourceRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("Address")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Address")
     private String address;
 
-    @Query
-    @NameInMap("GatewayId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayId")
     private Long gatewayId;
 
-    @Query
-    @NameInMap("GatewayUniqueId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
-    @Query
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @Query
-    @NameInMap("IngressOptionsRequest")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IngressOptionsRequest")
     private IngressOptionsRequest ingressOptionsRequest;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("PathList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PathList")
     private java.util.List < String > pathList;
 
-    @Query
-    @NameInMap("Source")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private UpdateServiceSourceRequest(Builder builder) {
@@ -291,16 +290,16 @@ public class UpdateServiceSourceRequest extends Request {
     } 
 
     public static class IngressOptionsRequest extends TeaModel {
-        @NameInMap("EnableIngress")
+        @com.aliyun.core.annotation.NameInMap("EnableIngress")
         private Boolean enableIngress;
 
-        @NameInMap("EnableStatus")
+        @com.aliyun.core.annotation.NameInMap("EnableStatus")
         private Boolean enableStatus;
 
-        @NameInMap("IngressClass")
+        @com.aliyun.core.annotation.NameInMap("IngressClass")
         private String ingressClass;
 
-        @NameInMap("WatchNamespace")
+        @com.aliyun.core.annotation.NameInMap("WatchNamespace")
         private String watchNamespace;
 
         private IngressOptionsRequest(Builder builder) {

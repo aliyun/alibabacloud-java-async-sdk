@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryMonitorResponseBody</p>
  */
 public class QueryMonitorResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryMonitorResponseBody(Builder builder) {
@@ -136,13 +135,13 @@ public class QueryMonitorResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("clusterNamePrefix")
+        @com.aliyun.core.annotation.NameInMap("clusterNamePrefix")
         private String clusterNamePrefix;
 
-        @NameInMap("podName")
+        @com.aliyun.core.annotation.NameInMap("podName")
         private String podName;
 
-        @NameInMap("values")
+        @com.aliyun.core.annotation.NameInMap("values")
         private java.util.List < java.util.Map<String, ?>> values;
 
         private Data(Builder builder) {

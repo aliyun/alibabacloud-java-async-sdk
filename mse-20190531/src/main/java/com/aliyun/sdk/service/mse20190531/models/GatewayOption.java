@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GatewayOption</p>
  */
 public class GatewayOption extends TeaModel {
-    @NameInMap("DisableHttp2Alpn")
+    @com.aliyun.core.annotation.NameInMap("DisableHttp2Alpn")
     private Boolean disableHttp2Alpn;
 
-    @NameInMap("EnableHardwareAcceleration")
+    @com.aliyun.core.annotation.NameInMap("EnableHardwareAcceleration")
     private Boolean enableHardwareAcceleration;
 
-    @NameInMap("EnableWaf")
+    @com.aliyun.core.annotation.NameInMap("EnableWaf")
     private Boolean enableWaf;
 
-    @NameInMap("LogConfigDetails")
+    @com.aliyun.core.annotation.NameInMap("LogConfigDetails")
     private LogConfigDetails logConfigDetails;
 
-    @NameInMap("TraceDetails")
+    @com.aliyun.core.annotation.NameInMap("TraceDetails")
     private TraceDetails traceDetails;
 
     private GatewayOption(Builder builder) {
@@ -132,14 +131,14 @@ public class GatewayOption extends TeaModel {
     } 
 
     public static class LogConfigDetails extends TeaModel {
-        @NameInMap("LogEnabled")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("LogEnabled")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Boolean logEnabled;
 
-        @NameInMap("LogStoreName")
+        @com.aliyun.core.annotation.NameInMap("LogStoreName")
         private String logStoreName;
 
-        @NameInMap("ProjectName")
+        @com.aliyun.core.annotation.NameInMap("ProjectName")
         private String projectName;
 
         private LogConfigDetails(Builder builder) {
@@ -214,20 +213,20 @@ public class GatewayOption extends TeaModel {
 
     }
     public static class TraceDetails extends TeaModel {
-        @NameInMap("Sample")
+        @com.aliyun.core.annotation.NameInMap("Sample")
         private Long sample;
 
-        @NameInMap("ServiceId")
+        @com.aliyun.core.annotation.NameInMap("ServiceId")
         private Long serviceId;
 
-        @NameInMap("ServicePort")
+        @com.aliyun.core.annotation.NameInMap("ServicePort")
         private String servicePort;
 
-        @NameInMap("TraceEnabled")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TraceEnabled")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Boolean traceEnabled;
 
-        @NameInMap("TraceType")
+        @com.aliyun.core.annotation.NameInMap("TraceType")
         private String traceType;
 
         private TraceDetails(Builder builder) {

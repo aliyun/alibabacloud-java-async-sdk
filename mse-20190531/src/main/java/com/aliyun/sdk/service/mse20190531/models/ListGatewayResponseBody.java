@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListGatewayResponseBody</p>
  */
 public class ListGatewayResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListGatewayResponseBody(Builder builder) {
@@ -156,13 +155,13 @@ public class ListGatewayResponseBody extends TeaModel {
     } 
 
     public static class TimePolicyList extends TeaModel {
-        @NameInMap("DesiredReplica")
+        @com.aliyun.core.annotation.NameInMap("DesiredReplica")
         private Integer desiredReplica;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private TimePolicyList(Builder builder) {
@@ -237,16 +236,16 @@ public class ListGatewayResponseBody extends TeaModel {
 
     }
     public static class ElasticPolicy extends TeaModel {
-        @NameInMap("Elastic")
+        @com.aliyun.core.annotation.NameInMap("Elastic")
         private Boolean elastic;
 
-        @NameInMap("ElasticType")
+        @com.aliyun.core.annotation.NameInMap("ElasticType")
         private String elasticType;
 
-        @NameInMap("MaxReplica")
+        @com.aliyun.core.annotation.NameInMap("MaxReplica")
         private Integer maxReplica;
 
-        @NameInMap("TimePolicyList")
+        @com.aliyun.core.annotation.NameInMap("TimePolicyList")
         private java.util.List < TimePolicyList> timePolicyList;
 
         private ElasticPolicy(Builder builder) {
@@ -341,10 +340,10 @@ public class ListGatewayResponseBody extends TeaModel {
 
     }
     public static class InitConfig extends TeaModel {
-        @NameInMap("EnableWaf")
+        @com.aliyun.core.annotation.NameInMap("EnableWaf")
         private Boolean enableWaf;
 
-        @NameInMap("SupportWaf")
+        @com.aliyun.core.annotation.NameInMap("SupportWaf")
         private Boolean supportWaf;
 
         private InitConfig(Builder builder) {
@@ -402,31 +401,31 @@ public class ListGatewayResponseBody extends TeaModel {
 
     }
     public static class InternetSlb extends TeaModel {
-        @NameInMap("GatewaySlbMode")
+        @com.aliyun.core.annotation.NameInMap("GatewaySlbMode")
         private String gatewaySlbMode;
 
-        @NameInMap("GatewaySlbStatus")
+        @com.aliyun.core.annotation.NameInMap("GatewaySlbStatus")
         private String gatewaySlbStatus;
 
-        @NameInMap("InternetNetworkFlow")
+        @com.aliyun.core.annotation.NameInMap("InternetNetworkFlow")
         private String internetNetworkFlow;
 
-        @NameInMap("SlbId")
+        @com.aliyun.core.annotation.NameInMap("SlbId")
         private String slbId;
 
-        @NameInMap("SlbIp")
+        @com.aliyun.core.annotation.NameInMap("SlbIp")
         private String slbIp;
 
-        @NameInMap("SlbPort")
+        @com.aliyun.core.annotation.NameInMap("SlbPort")
         private String slbPort;
 
-        @NameInMap("SlbSpec")
+        @com.aliyun.core.annotation.NameInMap("SlbSpec")
         private String slbSpec;
 
-        @NameInMap("StatusDesc")
+        @com.aliyun.core.annotation.NameInMap("StatusDesc")
         private String statusDesc;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private InternetSlb(Builder builder) {
@@ -603,13 +602,13 @@ public class ListGatewayResponseBody extends TeaModel {
 
     }
     public static class MaintenancePeriod extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("TimeZone")
+        @com.aliyun.core.annotation.NameInMap("TimeZone")
         private String timeZone;
 
         private MaintenancePeriod(Builder builder) {
@@ -684,28 +683,28 @@ public class ListGatewayResponseBody extends TeaModel {
 
     }
     public static class Slb extends TeaModel {
-        @NameInMap("GatewaySlbMode")
+        @com.aliyun.core.annotation.NameInMap("GatewaySlbMode")
         private String gatewaySlbMode;
 
-        @NameInMap("GatewaySlbStatus")
+        @com.aliyun.core.annotation.NameInMap("GatewaySlbStatus")
         private String gatewaySlbStatus;
 
-        @NameInMap("SlbId")
+        @com.aliyun.core.annotation.NameInMap("SlbId")
         private String slbId;
 
-        @NameInMap("SlbIp")
+        @com.aliyun.core.annotation.NameInMap("SlbIp")
         private String slbIp;
 
-        @NameInMap("SlbPort")
+        @com.aliyun.core.annotation.NameInMap("SlbPort")
         private String slbPort;
 
-        @NameInMap("SlbSpec")
+        @com.aliyun.core.annotation.NameInMap("SlbSpec")
         private String slbSpec;
 
-        @NameInMap("StatusDesc")
+        @com.aliyun.core.annotation.NameInMap("StatusDesc")
         private String statusDesc;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Slb(Builder builder) {
@@ -869,127 +868,127 @@ public class ListGatewayResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("AhasOn")
+        @com.aliyun.core.annotation.NameInMap("AhasOn")
         private Boolean ahasOn;
 
-        @NameInMap("AppVersion")
+        @com.aliyun.core.annotation.NameInMap("AppVersion")
         private String appVersion;
 
-        @NameInMap("ArmsOn")
+        @com.aliyun.core.annotation.NameInMap("ArmsOn")
         private Boolean armsOn;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("CurrentVersion")
+        @com.aliyun.core.annotation.NameInMap("CurrentVersion")
         private String currentVersion;
 
-        @NameInMap("Elastic")
+        @com.aliyun.core.annotation.NameInMap("Elastic")
         private Boolean elastic;
 
-        @NameInMap("ElasticInstanceId")
+        @com.aliyun.core.annotation.NameInMap("ElasticInstanceId")
         private String elasticInstanceId;
 
-        @NameInMap("ElasticPolicy")
+        @com.aliyun.core.annotation.NameInMap("ElasticPolicy")
         private ElasticPolicy elasticPolicy;
 
-        @NameInMap("ElasticReplica")
+        @com.aliyun.core.annotation.NameInMap("ElasticReplica")
         private Integer elasticReplica;
 
-        @NameInMap("ElasticType")
+        @com.aliyun.core.annotation.NameInMap("ElasticType")
         private String elasticType;
 
-        @NameInMap("EndDate")
+        @com.aliyun.core.annotation.NameInMap("EndDate")
         private String endDate;
 
-        @NameInMap("GatewayType")
+        @com.aliyun.core.annotation.NameInMap("GatewayType")
         private String gatewayType;
 
-        @NameInMap("GatewayUniqueId")
+        @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
         private String gatewayUniqueId;
 
-        @NameInMap("GatewayVersion")
+        @com.aliyun.core.annotation.NameInMap("GatewayVersion")
         private String gatewayVersion;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("InitConfig")
+        @com.aliyun.core.annotation.NameInMap("InitConfig")
         private InitConfig initConfig;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InternetSlb")
+        @com.aliyun.core.annotation.NameInMap("InternetSlb")
         private java.util.List < InternetSlb> internetSlb;
 
-        @NameInMap("LatestVersion")
+        @com.aliyun.core.annotation.NameInMap("LatestVersion")
         private String latestVersion;
 
-        @NameInMap("MaintenancePeriod")
+        @com.aliyun.core.annotation.NameInMap("MaintenancePeriod")
         private MaintenancePeriod maintenancePeriod;
 
-        @NameInMap("MseTag")
+        @com.aliyun.core.annotation.NameInMap("MseTag")
         private String mseTag;
 
-        @NameInMap("MseVersion")
+        @com.aliyun.core.annotation.NameInMap("MseVersion")
         private String mseVersion;
 
-        @NameInMap("MustUpgrade")
+        @com.aliyun.core.annotation.NameInMap("MustUpgrade")
         private Boolean mustUpgrade;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PrimaryUser")
+        @com.aliyun.core.annotation.NameInMap("PrimaryUser")
         private String primaryUser;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Replica")
+        @com.aliyun.core.annotation.NameInMap("Replica")
         private Integer replica;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("RollBack")
+        @com.aliyun.core.annotation.NameInMap("RollBack")
         private Boolean rollBack;
 
-        @NameInMap("Slb")
+        @com.aliyun.core.annotation.NameInMap("Slb")
         private java.util.List < Slb> slb;
 
-        @NameInMap("Spec")
+        @com.aliyun.core.annotation.NameInMap("Spec")
         private String spec;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("StatusDesc")
+        @com.aliyun.core.annotation.NameInMap("StatusDesc")
         private String statusDesc;
 
-        @NameInMap("SupportWasm")
+        @com.aliyun.core.annotation.NameInMap("SupportWasm")
         private Boolean supportWasm;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
-        @NameInMap("TotalReplica")
+        @com.aliyun.core.annotation.NameInMap("TotalReplica")
         private Integer totalReplica;
 
-        @NameInMap("Upgrade")
+        @com.aliyun.core.annotation.NameInMap("Upgrade")
         private Boolean upgrade;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("Vswitch2")
+        @com.aliyun.core.annotation.NameInMap("Vswitch2")
         private String vswitch2;
 
         private Result(Builder builder) {
@@ -1727,16 +1726,16 @@ public class ListGatewayResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private java.util.List < Result> result;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Long totalSize;
 
         private Data(Builder builder) {

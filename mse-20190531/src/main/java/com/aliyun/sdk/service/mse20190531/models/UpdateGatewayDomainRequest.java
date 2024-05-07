@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateGatewayDomainRequest</p>
  */
 public class UpdateGatewayDomainRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("CertIdentifier")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertIdentifier")
     private String certIdentifier;
 
-    @Query
-    @NameInMap("GatewayUniqueId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
-    @Query
-    @NameInMap("Http2")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Http2")
     private String http2;
 
-    @Query
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @Query
-    @NameInMap("MustHttps")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MustHttps")
     private Boolean mustHttps;
 
-    @Query
-    @NameInMap("Protocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Protocol")
     private String protocol;
 
-    @Query
-    @NameInMap("TlsMax")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TlsMax")
     private String tlsMax;
 
-    @Query
-    @NameInMap("TlsMin")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TlsMin")
     private String tlsMin;
 
     private UpdateGatewayDomainRequest(Builder builder) {

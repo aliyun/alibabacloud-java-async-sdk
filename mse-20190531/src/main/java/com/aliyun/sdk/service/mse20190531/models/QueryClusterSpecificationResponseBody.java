@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryClusterSpecificationResponseBody</p>
  */
 public class QueryClusterSpecificationResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryClusterSpecificationResponseBody(Builder builder) {
@@ -176,13 +175,13 @@ public class QueryClusterSpecificationResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("ClusterSpecificationName")
+        @com.aliyun.core.annotation.NameInMap("ClusterSpecificationName")
         private String clusterSpecificationName;
 
-        @NameInMap("CpuCapacity")
+        @com.aliyun.core.annotation.NameInMap("CpuCapacity")
         private String cpuCapacity;
 
-        @NameInMap("MemoryCapacity")
+        @com.aliyun.core.annotation.NameInMap("MemoryCapacity")
         private String memoryCapacity;
 
         private Data(Builder builder) {

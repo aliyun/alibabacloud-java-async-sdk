@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListGatewayServiceResponseBody</p>
  */
 public class ListGatewayServiceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListGatewayServiceResponseBody(Builder builder) {
@@ -156,13 +155,13 @@ public class ListGatewayServiceResponseBody extends TeaModel {
     } 
 
     public static class HttpCookie extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("Ttl")
+        @com.aliyun.core.annotation.NameInMap("Ttl")
         private String ttl;
 
         private HttpCookie(Builder builder) {
@@ -237,16 +236,16 @@ public class ListGatewayServiceResponseBody extends TeaModel {
 
     }
     public static class ConsistentHashLBConfig extends TeaModel {
-        @NameInMap("ConsistentHashLBType")
+        @com.aliyun.core.annotation.NameInMap("ConsistentHashLBType")
         private String consistentHashLBType;
 
-        @NameInMap("HttpCookie")
+        @com.aliyun.core.annotation.NameInMap("HttpCookie")
         private HttpCookie httpCookie;
 
-        @NameInMap("MinimumRingSize")
+        @com.aliyun.core.annotation.NameInMap("MinimumRingSize")
         private Long minimumRingSize;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
         private ConsistentHashLBConfig(Builder builder) {
@@ -344,13 +343,13 @@ public class ListGatewayServiceResponseBody extends TeaModel {
 
     }
     public static class LoadBalancerSettings extends TeaModel {
-        @NameInMap("ConsistentHashLBConfig")
+        @com.aliyun.core.annotation.NameInMap("ConsistentHashLBConfig")
         private ConsistentHashLBConfig consistentHashLBConfig;
 
-        @NameInMap("LoadbalancerType")
+        @com.aliyun.core.annotation.NameInMap("LoadbalancerType")
         private String loadbalancerType;
 
-        @NameInMap("WarmupDuration")
+        @com.aliyun.core.annotation.NameInMap("WarmupDuration")
         private Integer warmupDuration;
 
         private LoadBalancerSettings(Builder builder) {
@@ -431,22 +430,22 @@ public class ListGatewayServiceResponseBody extends TeaModel {
 
     }
     public static class Tls extends TeaModel {
-        @NameInMap("CaCertContent")
+        @com.aliyun.core.annotation.NameInMap("CaCertContent")
         private String caCertContent;
 
-        @NameInMap("CaCertId")
+        @com.aliyun.core.annotation.NameInMap("CaCertId")
         private String caCertId;
 
-        @NameInMap("CertId")
+        @com.aliyun.core.annotation.NameInMap("CertId")
         private String certId;
 
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
-        @NameInMap("Sni")
+        @com.aliyun.core.annotation.NameInMap("Sni")
         private String sni;
 
-        @NameInMap("SubjectAltNames")
+        @com.aliyun.core.annotation.NameInMap("SubjectAltNames")
         private java.util.List < String > subjectAltNames;
 
         private Tls(Builder builder) {
@@ -578,10 +577,10 @@ public class ListGatewayServiceResponseBody extends TeaModel {
 
     }
     public static class GatewayTrafficPolicy extends TeaModel {
-        @NameInMap("LoadBalancerSettings")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerSettings")
         private LoadBalancerSettings loadBalancerSettings;
 
-        @NameInMap("Tls")
+        @com.aliyun.core.annotation.NameInMap("Tls")
         private Tls tls;
 
         private GatewayTrafficPolicy(Builder builder) {
@@ -639,31 +638,31 @@ public class ListGatewayServiceResponseBody extends TeaModel {
 
     }
     public static class HealthCheckInfo extends TeaModel {
-        @NameInMap("Check")
+        @com.aliyun.core.annotation.NameInMap("Check")
         private Boolean check;
 
-        @NameInMap("ExpectedStatuses")
+        @com.aliyun.core.annotation.NameInMap("ExpectedStatuses")
         private java.util.List < Integer > expectedStatuses;
 
-        @NameInMap("HealthyThreshold")
+        @com.aliyun.core.annotation.NameInMap("HealthyThreshold")
         private Integer healthyThreshold;
 
-        @NameInMap("HttpHost")
+        @com.aliyun.core.annotation.NameInMap("HttpHost")
         private String httpHost;
 
-        @NameInMap("HttpPath")
+        @com.aliyun.core.annotation.NameInMap("HttpPath")
         private String httpPath;
 
-        @NameInMap("Interval")
+        @com.aliyun.core.annotation.NameInMap("Interval")
         private Integer interval;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("Timeout")
+        @com.aliyun.core.annotation.NameInMap("Timeout")
         private Integer timeout;
 
-        @NameInMap("UnhealthyThreshold")
+        @com.aliyun.core.annotation.NameInMap("UnhealthyThreshold")
         private Integer unhealthyThreshold;
 
         private HealthCheckInfo(Builder builder) {
@@ -840,7 +839,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
 
     }
     public static class Versions extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Versions(Builder builder) {
@@ -881,73 +880,76 @@ public class ListGatewayServiceResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("GatewayId")
+        @com.aliyun.core.annotation.NameInMap("GatewayId")
         private Long gatewayId;
 
-        @NameInMap("GatewayTrafficPolicy")
+        @com.aliyun.core.annotation.NameInMap("GatewayTrafficPolicy")
         private GatewayTrafficPolicy gatewayTrafficPolicy;
 
-        @NameInMap("GatewayUniqueId")
+        @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
         private String gatewayUniqueId;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("HealehStatus")
+        @com.aliyun.core.annotation.NameInMap("HealehStatus")
         private String healehStatus;
 
-        @NameInMap("HealthCheck")
+        @com.aliyun.core.annotation.NameInMap("HealthCheck")
         private Boolean healthCheck;
 
-        @NameInMap("HealthCheckInfo")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckInfo")
         private HealthCheckInfo healthCheckInfo;
 
-        @NameInMap("HealthStatus")
+        @com.aliyun.core.annotation.NameInMap("HealthStatus")
         private String healthStatus;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Ips")
+        @com.aliyun.core.annotation.NameInMap("Ips")
         private java.util.List < String > ips;
 
-        @NameInMap("MetaInfo")
+        @com.aliyun.core.annotation.NameInMap("MetaInfo")
         private String metaInfo;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("Ports")
+        @com.aliyun.core.annotation.NameInMap("Ports")
         private java.util.List < Integer > ports;
 
-        @NameInMap("ServiceNameInRegistry")
+        @com.aliyun.core.annotation.NameInMap("ServiceFQDN")
+        private String serviceFQDN;
+
+        @com.aliyun.core.annotation.NameInMap("ServiceNameInRegistry")
         private String serviceNameInRegistry;
 
-        @NameInMap("ServicePort")
+        @com.aliyun.core.annotation.NameInMap("ServicePort")
         private Long servicePort;
 
-        @NameInMap("ServiceProtocol")
+        @com.aliyun.core.annotation.NameInMap("ServiceProtocol")
         private String serviceProtocol;
 
-        @NameInMap("SourceId")
+        @com.aliyun.core.annotation.NameInMap("SourceId")
         private Long sourceId;
 
-        @NameInMap("SourceType")
+        @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
 
-        @NameInMap("UnhealthyEndpoints")
+        @com.aliyun.core.annotation.NameInMap("UnhealthyEndpoints")
         private java.util.List < String > unhealthyEndpoints;
 
-        @NameInMap("Versions")
+        @com.aliyun.core.annotation.NameInMap("Versions")
         private java.util.List < Versions> versions;
 
         private Result(Builder builder) {
@@ -967,6 +969,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             this.name = builder.name;
             this.namespace = builder.namespace;
             this.ports = builder.ports;
+            this.serviceFQDN = builder.serviceFQDN;
             this.serviceNameInRegistry = builder.serviceNameInRegistry;
             this.servicePort = builder.servicePort;
             this.serviceProtocol = builder.serviceProtocol;
@@ -1097,6 +1100,13 @@ public class ListGatewayServiceResponseBody extends TeaModel {
         }
 
         /**
+         * @return serviceFQDN
+         */
+        public String getServiceFQDN() {
+            return this.serviceFQDN;
+        }
+
+        /**
          * @return serviceNameInRegistry
          */
         public String getServiceNameInRegistry() {
@@ -1162,6 +1172,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             private String name; 
             private String namespace; 
             private java.util.List < Integer > ports; 
+            private String serviceFQDN; 
             private String serviceNameInRegistry; 
             private Long servicePort; 
             private String serviceProtocol; 
@@ -1309,6 +1320,14 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
+             * ServiceFQDN.
+             */
+            public Builder serviceFQDN(String serviceFQDN) {
+                this.serviceFQDN = serviceFQDN;
+                return this;
+            }
+
+            /**
              * The name of the service that is registered with the service registry.
              */
             public Builder serviceNameInRegistry(String serviceNameInRegistry) {
@@ -1372,16 +1391,16 @@ public class ListGatewayServiceResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private java.util.List < Result> result;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Long totalSize;
 
         private Data(Builder builder) {

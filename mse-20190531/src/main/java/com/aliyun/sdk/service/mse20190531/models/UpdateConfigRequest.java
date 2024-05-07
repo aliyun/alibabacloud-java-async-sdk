@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,108 +11,108 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateConfigRequest</p>
  */
 public class UpdateConfigRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("AutopurgePurgeInterval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutopurgePurgeInterval")
     private String autopurgePurgeInterval;
 
-    @Query
-    @NameInMap("AutopurgeSnapRetainCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutopurgeSnapRetainCount")
     private String autopurgeSnapRetainCount;
 
-    @Query
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Query
-    @NameInMap("ConfigAuthEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigAuthEnabled")
     private Boolean configAuthEnabled;
 
-    @Query
-    @NameInMap("ConfigSecretEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigSecretEnabled")
     private Boolean configSecretEnabled;
 
-    @Query
-    @NameInMap("ConfigType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigType")
     private String configType;
 
-    @Query
-    @NameInMap("ConsoleUIEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConsoleUIEnabled")
     private Boolean consoleUIEnabled;
 
-    @Query
-    @NameInMap("EurekaSupported")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EurekaSupported")
     private Boolean eurekaSupported;
 
-    @Query
-    @NameInMap("ExtendedTypesEnable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtendedTypesEnable")
     private String extendedTypesEnable;
 
-    @Query
-    @NameInMap("InitLimit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InitLimit")
     private String initLimit;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("JuteMaxbuffer")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JuteMaxbuffer")
     private String juteMaxbuffer;
 
-    @Query
-    @NameInMap("MCPEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MCPEnabled")
     private Boolean MCPEnabled;
 
-    @Query
-    @NameInMap("MaxClientCnxns")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxClientCnxns")
     private String maxClientCnxns;
 
-    @Query
-    @NameInMap("MaxSessionTimeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxSessionTimeout")
     private String maxSessionTimeout;
 
-    @Query
-    @NameInMap("MinSessionTimeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinSessionTimeout")
     private String minSessionTimeout;
 
-    @Query
-    @NameInMap("NamingAuthEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamingAuthEnabled")
     private Boolean namingAuthEnabled;
 
-    @Body
-    @NameInMap("OpenSuperAcl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OpenSuperAcl")
     private String openSuperAcl;
 
-    @Query
-    @NameInMap("PassWord")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PassWord")
     private String passWord;
 
-    @Query
-    @NameInMap("RequestPars")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestPars")
     private String requestPars;
 
-    @Query
-    @NameInMap("SnapshotCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotCount")
     private String snapshotCount;
 
-    @Query
-    @NameInMap("SyncLimit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SyncLimit")
     private String syncLimit;
 
-    @Query
-    @NameInMap("TLSEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TLSEnabled")
     private Boolean TLSEnabled;
 
-    @Query
-    @NameInMap("TickTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TickTime")
     private String tickTime;
 
-    @Query
-    @NameInMap("UserName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserName")
     private String userName;
 
     private UpdateConfigRequest(Builder builder) {

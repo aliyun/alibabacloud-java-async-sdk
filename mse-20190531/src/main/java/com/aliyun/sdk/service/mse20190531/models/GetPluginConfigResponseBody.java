@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPluginConfigResponseBody</p>
  */
 public class GetPluginConfigResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("DynamicCode")
+    @com.aliyun.core.annotation.NameInMap("DynamicCode")
     private String dynamicCode;
 
-    @NameInMap("DynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("DynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetPluginConfigResponseBody(Builder builder) {
@@ -212,31 +211,31 @@ public class GetPluginConfigResponseBody extends TeaModel {
     } 
 
     public static class GatewayConfigList extends TeaModel {
-        @NameInMap("Config")
+        @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
 
-        @NameInMap("ConfigLevel")
+        @com.aliyun.core.annotation.NameInMap("ConfigLevel")
         private Integer configLevel;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
 
-        @NameInMap("GatewayId")
+        @com.aliyun.core.annotation.NameInMap("GatewayId")
         private Long gatewayId;
 
-        @NameInMap("GatewayUniqueId")
+        @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
         private String gatewayUniqueId;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("PluginId")
+        @com.aliyun.core.annotation.NameInMap("PluginId")
         private Long pluginId;
 
         private GatewayConfigList(Builder builder) {
@@ -420,61 +419,61 @@ public class GetPluginConfigResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private Integer category;
 
-        @NameInMap("ConfigCheck")
+        @com.aliyun.core.annotation.NameInMap("ConfigCheck")
         private String configCheck;
 
-        @NameInMap("GatewayConfigList")
+        @com.aliyun.core.annotation.NameInMap("GatewayConfigList")
         private java.util.List < GatewayConfigList> gatewayConfigList;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("ImageName")
+        @com.aliyun.core.annotation.NameInMap("ImageName")
         private String imageName;
 
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private Integer mode;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Phase")
+        @com.aliyun.core.annotation.NameInMap("Phase")
         private Integer phase;
 
-        @NameInMap("PrimaryUser")
+        @com.aliyun.core.annotation.NameInMap("PrimaryUser")
         private String primaryUser;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("PublishState")
+        @com.aliyun.core.annotation.NameInMap("PublishState")
         private Integer publishState;
 
-        @NameInMap("Readme")
+        @com.aliyun.core.annotation.NameInMap("Readme")
         private String readme;
 
-        @NameInMap("ReadmeEn")
+        @com.aliyun.core.annotation.NameInMap("ReadmeEn")
         private String readmeEn;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Summary")
+        @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
-        @NameInMap("VersionJson")
+        @com.aliyun.core.annotation.NameInMap("VersionJson")
         private String versionJson;
 
-        @NameInMap("WasmLang")
+        @com.aliyun.core.annotation.NameInMap("WasmLang")
         private Integer wasmLang;
 
         private Data(Builder builder) {

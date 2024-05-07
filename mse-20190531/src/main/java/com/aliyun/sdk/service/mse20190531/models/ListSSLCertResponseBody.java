@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSSLCertResponseBody</p>
  */
 public class ListSSLCertResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListSSLCertResponseBody(Builder builder) {
@@ -156,34 +155,34 @@ public class ListSSLCertResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AfterDate")
+        @com.aliyun.core.annotation.NameInMap("AfterDate")
         private String afterDate;
 
-        @NameInMap("Algorithm")
+        @com.aliyun.core.annotation.NameInMap("Algorithm")
         private String algorithm;
 
-        @NameInMap("BeforeDate")
+        @com.aliyun.core.annotation.NameInMap("BeforeDate")
         private String beforeDate;
 
-        @NameInMap("CertIdentifier")
+        @com.aliyun.core.annotation.NameInMap("CertIdentifier")
         private String certIdentifier;
 
-        @NameInMap("CertName")
+        @com.aliyun.core.annotation.NameInMap("CertName")
         private String certName;
 
-        @NameInMap("CommonName")
+        @com.aliyun.core.annotation.NameInMap("CommonName")
         private String commonName;
 
-        @NameInMap("GmtAfter")
+        @com.aliyun.core.annotation.NameInMap("GmtAfter")
         private String gmtAfter;
 
-        @NameInMap("GmtBefore")
+        @com.aliyun.core.annotation.NameInMap("GmtBefore")
         private String gmtBefore;
 
-        @NameInMap("Issuer")
+        @com.aliyun.core.annotation.NameInMap("Issuer")
         private String issuer;
 
-        @NameInMap("Sans")
+        @com.aliyun.core.annotation.NameInMap("Sans")
         private String sans;
 
         private Data(Builder builder) {

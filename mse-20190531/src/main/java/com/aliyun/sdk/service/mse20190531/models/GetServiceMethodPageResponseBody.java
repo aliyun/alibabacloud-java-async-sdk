@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetServiceMethodPageResponseBody</p>
  */
 public class GetServiceMethodPageResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetServiceMethodPageResponseBody(Builder builder) {
@@ -112,13 +111,13 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
     } 
 
     public static class ParameterDefinitions extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private ParameterDefinitions(Builder builder) {
@@ -193,34 +192,34 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("MethodController")
+        @com.aliyun.core.annotation.NameInMap("MethodController")
         private String methodController;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NameDetail")
+        @com.aliyun.core.annotation.NameInMap("NameDetail")
         private String nameDetail;
 
-        @NameInMap("ParameterDefinitions")
+        @com.aliyun.core.annotation.NameInMap("ParameterDefinitions")
         private java.util.List < ParameterDefinitions> parameterDefinitions;
 
-        @NameInMap("ParameterDetails")
+        @com.aliyun.core.annotation.NameInMap("ParameterDetails")
         private java.util.List < String > parameterDetails;
 
-        @NameInMap("ParameterTypes")
+        @com.aliyun.core.annotation.NameInMap("ParameterTypes")
         private java.util.List < String > parameterTypes;
 
-        @NameInMap("Paths")
+        @com.aliyun.core.annotation.NameInMap("Paths")
         private java.util.List < String > paths;
 
-        @NameInMap("RequestMethods")
+        @com.aliyun.core.annotation.NameInMap("RequestMethods")
         private java.util.List < String > requestMethods;
 
-        @NameInMap("ReturnDetails")
+        @com.aliyun.core.annotation.NameInMap("ReturnDetails")
         private String returnDetails;
 
-        @NameInMap("ReturnType")
+        @com.aliyun.core.annotation.NameInMap("ReturnType")
         private String returnType;
 
         private Result(Builder builder) {
@@ -414,16 +413,16 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private java.util.List < Result> result;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Integer totalSize;
 
         private Data(Builder builder) {

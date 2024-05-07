@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,69 +11,69 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateGatewayRouteRequest</p>
  */
 public class UpdateGatewayRouteRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DestinationType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationType")
     private String destinationType;
 
-    @Query
-    @NameInMap("DirectResponseJSON")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectResponseJSON")
     private DirectResponseJSON directResponseJSON;
 
-    @Query
-    @NameInMap("DomainIdListJSON")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainIdListJSON")
     private String domainIdListJSON;
 
-    @Query
-    @NameInMap("EnableWaf")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableWaf")
     private Boolean enableWaf;
 
-    @Query
-    @NameInMap("Fallback")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Fallback")
     private Boolean fallback;
 
-    @Query
-    @NameInMap("FallbackServices")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FallbackServices")
     private java.util.List < FallbackServices> fallbackServices;
 
-    @Query
-    @NameInMap("GatewayId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayId")
     private Long gatewayId;
 
-    @Query
-    @NameInMap("GatewayUniqueId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
-    @Query
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     @Deprecated
     private String name;
 
-    @Query
-    @NameInMap("Predicates")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Predicates")
     private Predicates predicates;
 
-    @Query
-    @NameInMap("RedirectJSON")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RedirectJSON")
     private RedirectJSON redirectJSON;
 
-    @Query
-    @NameInMap("RouteOrder")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteOrder")
     private Integer routeOrder;
 
-    @Query
-    @NameInMap("Services")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Services")
     private java.util.List < Services> services;
 
     private UpdateGatewayRouteRequest(Builder builder) {
@@ -425,10 +424,10 @@ public class UpdateGatewayRouteRequest extends Request {
     } 
 
     public static class DirectResponseJSON extends TeaModel {
-        @NameInMap("Body")
+        @com.aliyun.core.annotation.NameInMap("Body")
         private String body;
 
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private Long code;
 
         private DirectResponseJSON(Builder builder) {
@@ -486,31 +485,31 @@ public class UpdateGatewayRouteRequest extends Request {
 
     }
     public static class FallbackServices extends TeaModel {
-        @NameInMap("AgreementType")
+        @com.aliyun.core.annotation.NameInMap("AgreementType")
         private String agreementType;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private Integer percent;
 
-        @NameInMap("ServiceId")
+        @com.aliyun.core.annotation.NameInMap("ServiceId")
         private Long serviceId;
 
-        @NameInMap("ServicePort")
+        @com.aliyun.core.annotation.NameInMap("ServicePort")
         private Integer servicePort;
 
-        @NameInMap("SourceType")
+        @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private FallbackServices(Builder builder) {
@@ -687,13 +686,13 @@ public class UpdateGatewayRouteRequest extends Request {
 
     }
     public static class HeaderPredicates extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private HeaderPredicates(Builder builder) {
@@ -768,13 +767,13 @@ public class UpdateGatewayRouteRequest extends Request {
 
     }
     public static class PathPredicates extends TeaModel {
-        @NameInMap("IgnoreCase")
+        @com.aliyun.core.annotation.NameInMap("IgnoreCase")
         private Boolean ignoreCase;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private PathPredicates(Builder builder) {
@@ -849,13 +848,13 @@ public class UpdateGatewayRouteRequest extends Request {
 
     }
     public static class QueryPredicates extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private QueryPredicates(Builder builder) {
@@ -930,16 +929,16 @@ public class UpdateGatewayRouteRequest extends Request {
 
     }
     public static class Predicates extends TeaModel {
-        @NameInMap("HeaderPredicates")
+        @com.aliyun.core.annotation.NameInMap("HeaderPredicates")
         private java.util.List < HeaderPredicates> headerPredicates;
 
-        @NameInMap("MethodPredicates")
+        @com.aliyun.core.annotation.NameInMap("MethodPredicates")
         private java.util.List < String > methodPredicates;
 
-        @NameInMap("PathPredicates")
+        @com.aliyun.core.annotation.NameInMap("PathPredicates")
         private PathPredicates pathPredicates;
 
-        @NameInMap("QueryPredicates")
+        @com.aliyun.core.annotation.NameInMap("QueryPredicates")
         private java.util.List < QueryPredicates> queryPredicates;
 
         private Predicates(Builder builder) {
@@ -1031,13 +1030,13 @@ public class UpdateGatewayRouteRequest extends Request {
 
     }
     public static class RedirectJSON extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private Integer code;
 
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
         private RedirectJSON(Builder builder) {
@@ -1112,13 +1111,13 @@ public class UpdateGatewayRouteRequest extends Request {
 
     }
     public static class ParamMapsList extends TeaModel {
-        @NameInMap("ExtractKey")
+        @com.aliyun.core.annotation.NameInMap("ExtractKey")
         private String extractKey;
 
-        @NameInMap("ExtractKeySpec")
+        @com.aliyun.core.annotation.NameInMap("ExtractKeySpec")
         private String extractKeySpec;
 
-        @NameInMap("MappingType")
+        @com.aliyun.core.annotation.NameInMap("MappingType")
         private String mappingType;
 
         private ParamMapsList(Builder builder) {
@@ -1204,22 +1203,22 @@ public class UpdateGatewayRouteRequest extends Request {
 
     }
     public static class MothedMapList extends TeaModel {
-        @NameInMap("DubboMothedName")
+        @com.aliyun.core.annotation.NameInMap("DubboMothedName")
         private String dubboMothedName;
 
-        @NameInMap("HttpMothed")
+        @com.aliyun.core.annotation.NameInMap("HttpMothed")
         private String httpMothed;
 
-        @NameInMap("Mothedpath")
+        @com.aliyun.core.annotation.NameInMap("Mothedpath")
         private String mothedpath;
 
-        @NameInMap("ParamMapsList")
+        @com.aliyun.core.annotation.NameInMap("ParamMapsList")
         private java.util.List < ParamMapsList> paramMapsList;
 
-        @NameInMap("PassThroughAllHeaders")
+        @com.aliyun.core.annotation.NameInMap("PassThroughAllHeaders")
         private String passThroughAllHeaders;
 
-        @NameInMap("PassThroughList")
+        @com.aliyun.core.annotation.NameInMap("PassThroughList")
         private java.util.List < String > passThroughList;
 
         private MothedMapList(Builder builder) {
@@ -1367,16 +1366,16 @@ public class UpdateGatewayRouteRequest extends Request {
 
     }
     public static class HttpDubboTranscoder extends TeaModel {
-        @NameInMap("DubboServiceGroup")
+        @com.aliyun.core.annotation.NameInMap("DubboServiceGroup")
         private String dubboServiceGroup;
 
-        @NameInMap("DubboServiceName")
+        @com.aliyun.core.annotation.NameInMap("DubboServiceName")
         private String dubboServiceName;
 
-        @NameInMap("DubboServiceVersion")
+        @com.aliyun.core.annotation.NameInMap("DubboServiceVersion")
         private String dubboServiceVersion;
 
-        @NameInMap("MothedMapList")
+        @com.aliyun.core.annotation.NameInMap("MothedMapList")
         private java.util.List < MothedMapList> mothedMapList;
 
         private HttpDubboTranscoder(Builder builder) {
@@ -1468,34 +1467,34 @@ public class UpdateGatewayRouteRequest extends Request {
 
     }
     public static class Services extends TeaModel {
-        @NameInMap("AgreementType")
+        @com.aliyun.core.annotation.NameInMap("AgreementType")
         private String agreementType;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("HttpDubboTranscoder")
+        @com.aliyun.core.annotation.NameInMap("HttpDubboTranscoder")
         private HttpDubboTranscoder httpDubboTranscoder;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private Integer percent;
 
-        @NameInMap("ServiceId")
+        @com.aliyun.core.annotation.NameInMap("ServiceId")
         private Long serviceId;
 
-        @NameInMap("ServicePort")
+        @com.aliyun.core.annotation.NameInMap("ServicePort")
         private Integer servicePort;
 
-        @NameInMap("SourceType")
+        @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private Services(Builder builder) {

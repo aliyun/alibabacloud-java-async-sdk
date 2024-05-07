@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListNamingTrackResponseBody</p>
  */
 public class ListNamingTrackResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("HttpCode")
+    @com.aliyun.core.annotation.NameInMap("HttpCode")
     private String httpCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
-    @NameInMap("Traces")
+    @com.aliyun.core.annotation.NameInMap("Traces")
     private java.util.List < Traces> traces;
 
     private ListNamingTrackResponseBody(Builder builder) {
@@ -216,31 +215,31 @@ public class ListNamingTrackResponseBody extends TeaModel {
     } 
 
     public static class Traces extends TeaModel {
-        @NameInMap("ClientIp")
+        @com.aliyun.core.annotation.NameInMap("ClientIp")
         private String clientIp;
 
-        @NameInMap("Group")
+        @com.aliyun.core.annotation.NameInMap("Group")
         private String group;
 
-        @NameInMap("InstanceSize")
+        @com.aliyun.core.annotation.NameInMap("InstanceSize")
         private String instanceSize;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("PushTime")
+        @com.aliyun.core.annotation.NameInMap("PushTime")
         private String pushTime;
 
-        @NameInMap("PushTimeAll")
+        @com.aliyun.core.annotation.NameInMap("PushTimeAll")
         private String pushTimeAll;
 
-        @NameInMap("PushTimeNetwork")
+        @com.aliyun.core.annotation.NameInMap("PushTimeNetwork")
         private String pushTimeNetwork;
 
-        @NameInMap("ServerName")
+        @com.aliyun.core.annotation.NameInMap("ServerName")
         private String serverName;
 
-        @NameInMap("SlaTime")
+        @com.aliyun.core.annotation.NameInMap("SlaTime")
         private String slaTime;
 
         private Traces(Builder builder) {

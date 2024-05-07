@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CloneNacosConfigResponseBody</p>
  */
 public class CloneNacosConfigResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("DynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("DynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CloneNacosConfigResponseBody(Builder builder) {
@@ -199,10 +198,10 @@ public class CloneNacosConfigResponseBody extends TeaModel {
     } 
 
     public static class FailData extends TeaModel {
-        @NameInMap("DataId")
+        @com.aliyun.core.annotation.NameInMap("DataId")
         private String dataId;
 
-        @NameInMap("Group")
+        @com.aliyun.core.annotation.NameInMap("Group")
         private String group;
 
         private FailData(Builder builder) {
@@ -260,10 +259,10 @@ public class CloneNacosConfigResponseBody extends TeaModel {
 
     }
     public static class SkipData extends TeaModel {
-        @NameInMap("DataId")
+        @com.aliyun.core.annotation.NameInMap("DataId")
         private String dataId;
 
-        @NameInMap("Group")
+        @com.aliyun.core.annotation.NameInMap("Group")
         private String group;
 
         private SkipData(Builder builder) {
@@ -321,16 +320,16 @@ public class CloneNacosConfigResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("FailData")
+        @com.aliyun.core.annotation.NameInMap("FailData")
         private java.util.List < FailData> failData;
 
-        @NameInMap("SkipCount")
+        @com.aliyun.core.annotation.NameInMap("SkipCount")
         private Integer skipCount;
 
-        @NameInMap("SkipData")
+        @com.aliyun.core.annotation.NameInMap("SkipData")
         private java.util.List < SkipData> skipData;
 
-        @NameInMap("SuccCount")
+        @com.aliyun.core.annotation.NameInMap("SuccCount")
         private Integer succCount;
 
         private Data(Builder builder) {

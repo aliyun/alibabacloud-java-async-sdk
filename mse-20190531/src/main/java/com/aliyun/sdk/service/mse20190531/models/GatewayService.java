@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GatewayService</p>
  */
 public class GatewayService extends TeaModel {
-    @NameInMap("GatewayTrafficPolicy")
+    @com.aliyun.core.annotation.NameInMap("GatewayTrafficPolicy")
     private TrafficPolicy gatewayTrafficPolicy;
 
-    @NameInMap("GatewayUniqueId")
+    @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @NameInMap("MetaInfo")
+    @com.aliyun.core.annotation.NameInMap("MetaInfo")
     private String metaInfo;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @NameInMap("SourceType")
+    @com.aliyun.core.annotation.NameInMap("SourceType")
     private String sourceType;
 
     private GatewayService(Builder builder) {

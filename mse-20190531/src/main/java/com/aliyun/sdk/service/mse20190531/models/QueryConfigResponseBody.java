@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryConfigResponseBody</p>
  */
 public class QueryConfigResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryConfigResponseBody(Builder builder) {
@@ -156,7 +155,7 @@ public class QueryConfigResponseBody extends TeaModel {
     } 
 
     public static class NacosRunningEnv extends TeaModel {
-        @NameInMap("emptyProtect")
+        @com.aliyun.core.annotation.NameInMap("emptyProtect")
         private Boolean emptyProtect;
 
         private NacosRunningEnv(Builder builder) {
@@ -197,97 +196,97 @@ public class QueryConfigResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AutopurgePurgeInterval")
+        @com.aliyun.core.annotation.NameInMap("AutopurgePurgeInterval")
         private String autopurgePurgeInterval;
 
-        @NameInMap("AutopurgeSnapRetainCount")
+        @com.aliyun.core.annotation.NameInMap("AutopurgeSnapRetainCount")
         private String autopurgeSnapRetainCount;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("ConfigAuthEnabled")
+        @com.aliyun.core.annotation.NameInMap("ConfigAuthEnabled")
         private Boolean configAuthEnabled;
 
-        @NameInMap("ConfigAuthSupported")
+        @com.aliyun.core.annotation.NameInMap("ConfigAuthSupported")
         private Boolean configAuthSupported;
 
-        @NameInMap("ConfigContentLimit")
+        @com.aliyun.core.annotation.NameInMap("ConfigContentLimit")
         private Long configContentLimit;
 
-        @NameInMap("ConfigSecretEnabled")
+        @com.aliyun.core.annotation.NameInMap("ConfigSecretEnabled")
         private Boolean configSecretEnabled;
 
-        @NameInMap("ConfigSecretSupported")
+        @com.aliyun.core.annotation.NameInMap("ConfigSecretSupported")
         private Boolean configSecretSupported;
 
-        @NameInMap("ConsoleUIEnabled")
+        @com.aliyun.core.annotation.NameInMap("ConsoleUIEnabled")
         private Boolean consoleUIEnabled;
 
-        @NameInMap("EurekaSupported")
+        @com.aliyun.core.annotation.NameInMap("EurekaSupported")
         private Boolean eurekaSupported;
 
-        @NameInMap("ExtendedTypesEnable")
+        @com.aliyun.core.annotation.NameInMap("ExtendedTypesEnable")
         private Boolean extendedTypesEnable;
 
-        @NameInMap("InitLimit")
+        @com.aliyun.core.annotation.NameInMap("InitLimit")
         private String initLimit;
 
-        @NameInMap("JuteMaxbuffer")
+        @com.aliyun.core.annotation.NameInMap("JuteMaxbuffer")
         private String juteMaxbuffer;
 
-        @NameInMap("JvmFlagsCustom")
+        @com.aliyun.core.annotation.NameInMap("JvmFlagsCustom")
         private String jvmFlagsCustom;
 
-        @NameInMap("MCPEnabled")
+        @com.aliyun.core.annotation.NameInMap("MCPEnabled")
         private Boolean MCPEnabled;
 
-        @NameInMap("MCPSupported")
+        @com.aliyun.core.annotation.NameInMap("MCPSupported")
         private Boolean MCPSupported;
 
-        @NameInMap("MaxClientCnxns")
+        @com.aliyun.core.annotation.NameInMap("MaxClientCnxns")
         private String maxClientCnxns;
 
-        @NameInMap("MaxSessionTimeout")
+        @com.aliyun.core.annotation.NameInMap("MaxSessionTimeout")
         private String maxSessionTimeout;
 
-        @NameInMap("MinSessionTimeout")
+        @com.aliyun.core.annotation.NameInMap("MinSessionTimeout")
         private String minSessionTimeout;
 
-        @NameInMap("NacosRunningEnv")
+        @com.aliyun.core.annotation.NameInMap("NacosRunningEnv")
         private NacosRunningEnv nacosRunningEnv;
 
-        @NameInMap("NamingAuthEnabled")
+        @com.aliyun.core.annotation.NameInMap("NamingAuthEnabled")
         private Boolean namingAuthEnabled;
 
-        @NameInMap("NamingAuthSupported")
+        @com.aliyun.core.annotation.NameInMap("NamingAuthSupported")
         private Boolean namingAuthSupported;
 
-        @NameInMap("NamingCreateServiceSupported")
+        @com.aliyun.core.annotation.NameInMap("NamingCreateServiceSupported")
         private Boolean namingCreateServiceSupported;
 
-        @NameInMap("OpenSuperAcl")
+        @com.aliyun.core.annotation.NameInMap("OpenSuperAcl")
         private Boolean openSuperAcl;
 
-        @NameInMap("PassWord")
+        @com.aliyun.core.annotation.NameInMap("PassWord")
         private String passWord;
 
-        @NameInMap("RestartFlag")
+        @com.aliyun.core.annotation.NameInMap("RestartFlag")
         private Boolean restartFlag;
 
-        @NameInMap("SnapshotCount")
+        @com.aliyun.core.annotation.NameInMap("SnapshotCount")
         private String snapshotCount;
 
-        @NameInMap("SyncLimit")
+        @com.aliyun.core.annotation.NameInMap("SyncLimit")
         private String syncLimit;
 
-        @NameInMap("TLSEnabled")
+        @com.aliyun.core.annotation.NameInMap("TLSEnabled")
         private Boolean TLSEnabled;
 
-        @NameInMap("TickTime")
+        @com.aliyun.core.annotation.NameInMap("TickTime")
         private String tickTime;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private Data(Builder builder) {

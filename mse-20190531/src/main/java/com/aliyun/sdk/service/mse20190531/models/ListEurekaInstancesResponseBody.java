@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListEurekaInstancesResponseBody</p>
  */
 public class ListEurekaInstancesResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("HttpCode")
+    @com.aliyun.core.annotation.NameInMap("HttpCode")
     private String httpCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListEurekaInstancesResponseBody(Builder builder) {
@@ -216,46 +215,46 @@ public class ListEurekaInstancesResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("App")
+        @com.aliyun.core.annotation.NameInMap("App")
         private String app;
 
-        @NameInMap("DurationInSecs")
+        @com.aliyun.core.annotation.NameInMap("DurationInSecs")
         private Integer durationInSecs;
 
-        @NameInMap("HomePageUrl")
+        @com.aliyun.core.annotation.NameInMap("HomePageUrl")
         private String homePageUrl;
 
-        @NameInMap("HostName")
+        @com.aliyun.core.annotation.NameInMap("HostName")
         private String hostName;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("IpAddr")
+        @com.aliyun.core.annotation.NameInMap("IpAddr")
         private String ipAddr;
 
-        @NameInMap("LastDirtyTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LastDirtyTimestamp")
         private Long lastDirtyTimestamp;
 
-        @NameInMap("LastUpdatedTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LastUpdatedTimestamp")
         private Long lastUpdatedTimestamp;
 
-        @NameInMap("Metadata")
+        @com.aliyun.core.annotation.NameInMap("Metadata")
         private java.util.Map < String, ? > metadata;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("RenewalIntervalInSecs")
+        @com.aliyun.core.annotation.NameInMap("RenewalIntervalInSecs")
         private Integer renewalIntervalInSecs;
 
-        @NameInMap("SecurePort")
+        @com.aliyun.core.annotation.NameInMap("SecurePort")
         private Integer securePort;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("VipAddress")
+        @com.aliyun.core.annotation.NameInMap("VipAddress")
         private String vipAddress;
 
         private Data(Builder builder) {

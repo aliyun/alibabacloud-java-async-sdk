@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateEngineNamespaceResponseBody</p>
  */
 public class CreateEngineNamespaceResponseBody extends TeaModel {
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateEngineNamespaceResponseBody(Builder builder) {
@@ -156,25 +155,25 @@ public class CreateEngineNamespaceResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("ConfigCount")
+        @com.aliyun.core.annotation.NameInMap("ConfigCount")
         private Integer configCount;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("NamespaceDesc")
+        @com.aliyun.core.annotation.NameInMap("NamespaceDesc")
         private String namespaceDesc;
 
-        @NameInMap("NamespaceShowName")
+        @com.aliyun.core.annotation.NameInMap("NamespaceShowName")
         private String namespaceShowName;
 
-        @NameInMap("Quota")
+        @com.aliyun.core.annotation.NameInMap("Quota")
         private Integer quota;
 
-        @NameInMap("ServiceCount")
+        @com.aliyun.core.annotation.NameInMap("ServiceCount")
         private Integer serviceCount;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
         private Data(Builder builder) {

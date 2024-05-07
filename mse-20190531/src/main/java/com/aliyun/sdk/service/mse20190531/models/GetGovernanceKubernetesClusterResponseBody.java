@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetGovernanceKubernetesClusterResponseBody</p>
  */
 public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetGovernanceKubernetesClusterResponseBody(Builder builder) {
@@ -116,10 +115,10 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
     } 
 
     public static class Namespaces extends TeaModel {
-        @NameInMap("MseNamespace")
+        @com.aliyun.core.annotation.NameInMap("MseNamespace")
         private String mseNamespace;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Namespaces(Builder builder) {
@@ -177,28 +176,28 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("K8sVersion")
+        @com.aliyun.core.annotation.NameInMap("K8sVersion")
         private String k8sVersion;
 
-        @NameInMap("NamespaceInfos")
+        @com.aliyun.core.annotation.NameInMap("NamespaceInfos")
         private String namespaceInfos;
 
-        @NameInMap("Namespaces")
+        @com.aliyun.core.annotation.NameInMap("Namespaces")
         private java.util.List < Namespaces> namespaces;
 
-        @NameInMap("PilotStartTime")
+        @com.aliyun.core.annotation.NameInMap("PilotStartTime")
         private String pilotStartTime;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListApplicationsWithTagRulesResponseBody</p>
  */
 public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListApplicationsWithTagRulesResponseBody(Builder builder) {
@@ -140,34 +139,34 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
     } 
 
     public static class ArgumentItems extends TeaModel {
-        @NameInMap("cond")
+        @com.aliyun.core.annotation.NameInMap("cond")
         private String cond;
 
-        @NameInMap("datum")
+        @com.aliyun.core.annotation.NameInMap("datum")
         private String datum;
 
-        @NameInMap("divisor")
+        @com.aliyun.core.annotation.NameInMap("divisor")
         private Integer divisor;
 
-        @NameInMap("expr")
+        @com.aliyun.core.annotation.NameInMap("expr")
         private String expr;
 
-        @NameInMap("index")
+        @com.aliyun.core.annotation.NameInMap("index")
         private Integer index;
 
-        @NameInMap("nameList")
+        @com.aliyun.core.annotation.NameInMap("nameList")
         private java.util.List < String > nameList;
 
-        @NameInMap("operator")
+        @com.aliyun.core.annotation.NameInMap("operator")
         private String operator;
 
-        @NameInMap("rate")
+        @com.aliyun.core.annotation.NameInMap("rate")
         private Integer rate;
 
-        @NameInMap("remainder")
+        @com.aliyun.core.annotation.NameInMap("remainder")
         private Integer remainder;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private ArgumentItems(Builder builder) {
@@ -361,34 +360,34 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
 
     }
     public static class Dubbo extends TeaModel {
-        @NameInMap("appId")
+        @com.aliyun.core.annotation.NameInMap("appId")
         private String appId;
 
-        @NameInMap("argumentItems")
+        @com.aliyun.core.annotation.NameInMap("argumentItems")
         private java.util.List < ArgumentItems> argumentItems;
 
-        @NameInMap("condition")
+        @com.aliyun.core.annotation.NameInMap("condition")
         private String condition;
 
-        @NameInMap("group")
+        @com.aliyun.core.annotation.NameInMap("group")
         private String group;
 
-        @NameInMap("methodName")
+        @com.aliyun.core.annotation.NameInMap("methodName")
         private String methodName;
 
-        @NameInMap("paramTypes")
+        @com.aliyun.core.annotation.NameInMap("paramTypes")
         private java.util.List < String > paramTypes;
 
-        @NameInMap("serviceName")
+        @com.aliyun.core.annotation.NameInMap("serviceName")
         private String serviceName;
 
-        @NameInMap("tags")
+        @com.aliyun.core.annotation.NameInMap("tags")
         private java.util.List < String > tags;
 
-        @NameInMap("triggerPolicy")
+        @com.aliyun.core.annotation.NameInMap("triggerPolicy")
         private String triggerPolicy;
 
-        @NameInMap("version")
+        @com.aliyun.core.annotation.NameInMap("version")
         private String version;
 
         private Dubbo(Builder builder) {
@@ -582,34 +581,34 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
 
     }
     public static class RestItems extends TeaModel {
-        @NameInMap("cond")
+        @com.aliyun.core.annotation.NameInMap("cond")
         private String cond;
 
-        @NameInMap("datum")
+        @com.aliyun.core.annotation.NameInMap("datum")
         private String datum;
 
-        @NameInMap("divisor")
+        @com.aliyun.core.annotation.NameInMap("divisor")
         private Integer divisor;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("nameList")
+        @com.aliyun.core.annotation.NameInMap("nameList")
         private java.util.List < String > nameList;
 
-        @NameInMap("operator")
+        @com.aliyun.core.annotation.NameInMap("operator")
         private String operator;
 
-        @NameInMap("rate")
+        @com.aliyun.core.annotation.NameInMap("rate")
         private Integer rate;
 
-        @NameInMap("remainder")
+        @com.aliyun.core.annotation.NameInMap("remainder")
         private Integer remainder;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private RestItems(Builder builder) {
@@ -803,31 +802,31 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
 
     }
     public static class Springcloud extends TeaModel {
-        @NameInMap("appId")
+        @com.aliyun.core.annotation.NameInMap("appId")
         private String appId;
 
-        @NameInMap("condition")
+        @com.aliyun.core.annotation.NameInMap("condition")
         private String condition;
 
-        @NameInMap("enable")
+        @com.aliyun.core.annotation.NameInMap("enable")
         private Boolean enable;
 
-        @NameInMap("path")
+        @com.aliyun.core.annotation.NameInMap("path")
         private String path;
 
-        @NameInMap("paths")
+        @com.aliyun.core.annotation.NameInMap("paths")
         private java.util.List < String > paths;
 
-        @NameInMap("priority")
+        @com.aliyun.core.annotation.NameInMap("priority")
         private Integer priority;
 
-        @NameInMap("restItems")
+        @com.aliyun.core.annotation.NameInMap("restItems")
         private java.util.List < RestItems> restItems;
 
-        @NameInMap("tags")
+        @com.aliyun.core.annotation.NameInMap("tags")
         private java.util.List < String > tags;
 
-        @NameInMap("triggerPolicy")
+        @com.aliyun.core.annotation.NameInMap("triggerPolicy")
         private String triggerPolicy;
 
         private Springcloud(Builder builder) {
@@ -1004,10 +1003,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
 
     }
     public static class Rules extends TeaModel {
-        @NameInMap("dubbo")
+        @com.aliyun.core.annotation.NameInMap("dubbo")
         private java.util.List < Dubbo> dubbo;
 
-        @NameInMap("springcloud")
+        @com.aliyun.core.annotation.NameInMap("springcloud")
         private java.util.List < Springcloud> springcloud;
 
         private Rules(Builder builder) {
@@ -1065,28 +1064,28 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
 
     }
     public static class RouteRules extends TeaModel {
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("InstanceNum")
+        @com.aliyun.core.annotation.NameInMap("InstanceNum")
         private Integer instanceNum;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Rate")
+        @com.aliyun.core.annotation.NameInMap("Rate")
         private Integer rate;
 
-        @NameInMap("Rules")
+        @com.aliyun.core.annotation.NameInMap("Rules")
         private Rules rules;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
         private RouteRules(Builder builder) {
@@ -1250,19 +1249,19 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("RouteRules")
+        @com.aliyun.core.annotation.NameInMap("RouteRules")
         private java.util.List < RouteRules> routeRules;
 
-        @NameInMap("RouteStatus")
+        @com.aliyun.core.annotation.NameInMap("RouteStatus")
         private Long routeStatus;
 
         private Result(Builder builder) {
@@ -1375,16 +1374,16 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private java.util.List < Result> result;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Integer totalSize;
 
         private Data(Builder builder) {

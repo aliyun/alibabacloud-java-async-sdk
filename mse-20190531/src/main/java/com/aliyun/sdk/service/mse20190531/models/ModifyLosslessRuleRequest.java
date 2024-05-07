@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,64 +11,64 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyLosslessRuleRequest</p>
  */
 public class ModifyLosslessRuleRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("Aligned")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Aligned")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean aligned;
 
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("AppName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
     private String appName;
 
-    @Query
-    @NameInMap("DelayTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DelayTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer delayTime;
 
-    @Query
-    @NameInMap("Enable")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Enable")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean enable;
 
-    @Query
-    @NameInMap("FuncType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FuncType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer funcType;
 
-    @Query
-    @NameInMap("LossLessDetail")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LossLessDetail")
     private Boolean lossLessDetail;
 
-    @Query
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Query
-    @NameInMap("Notice")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Notice")
     private Boolean notice;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Related")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Related")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean related;
 
-    @Query
-    @NameInMap("WarmupTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WarmupTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer warmupTime;
 
     private ModifyLosslessRuleRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListZkTrackResponseBody</p>
  */
 public class ListZkTrackResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("HttpCode")
+    @com.aliyun.core.annotation.NameInMap("HttpCode")
     private String httpCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
-    @NameInMap("Traces")
+    @com.aliyun.core.annotation.NameInMap("Traces")
     private java.util.List < Traces> traces;
 
     private ListZkTrackResponseBody(Builder builder) {
@@ -216,46 +215,46 @@ public class ListZkTrackResponseBody extends TeaModel {
     } 
 
     public static class Traces extends TeaModel {
-        @NameInMap("Acl")
+        @com.aliyun.core.annotation.NameInMap("Acl")
         private String acl;
 
-        @NameInMap("DataType")
+        @com.aliyun.core.annotation.NameInMap("DataType")
         private String dataType;
 
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
 
-        @NameInMap("Finished")
+        @com.aliyun.core.annotation.NameInMap("Finished")
         private Boolean finished;
 
-        @NameInMap("LogDate")
+        @com.aliyun.core.annotation.NameInMap("LogDate")
         private String logDate;
 
-        @NameInMap("MultiSize")
+        @com.aliyun.core.annotation.NameInMap("MultiSize")
         private Long multiSize;
 
-        @NameInMap("OpType")
+        @com.aliyun.core.annotation.NameInMap("OpType")
         private String opType;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private String result;
 
-        @NameInMap("SessionId")
+        @com.aliyun.core.annotation.NameInMap("SessionId")
         private String sessionId;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private String timestamp;
 
-        @NameInMap("TraceType")
+        @com.aliyun.core.annotation.NameInMap("TraceType")
         private String traceType;
 
-        @NameInMap("Ttl")
+        @com.aliyun.core.annotation.NameInMap("Ttl")
         private Long ttl;
 
-        @NameInMap("Watch")
+        @com.aliyun.core.annotation.NameInMap("Watch")
         private Boolean watch;
 
         private Traces(Builder builder) {

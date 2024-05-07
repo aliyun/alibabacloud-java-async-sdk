@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListGatewayIsolationRuleResponseBody</p>
  */
 public class ListGatewayIsolationRuleResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListGatewayIsolationRuleResponseBody(Builder builder) {
@@ -72,49 +71,49 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("BehaviorType")
+        @com.aliyun.core.annotation.NameInMap("BehaviorType")
         private Integer behaviorType;
 
-        @NameInMap("BodyEncoding")
+        @com.aliyun.core.annotation.NameInMap("BodyEncoding")
         private Integer bodyEncoding;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Integer enable;
 
-        @NameInMap("GatewayId")
+        @com.aliyun.core.annotation.NameInMap("GatewayId")
         private Long gatewayId;
 
-        @NameInMap("GatewayUniqueId")
+        @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
         private String gatewayUniqueId;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("IdList")
+        @com.aliyun.core.annotation.NameInMap("IdList")
         private java.util.List < Long > idList;
 
-        @NameInMap("LimitMode")
+        @com.aliyun.core.annotation.NameInMap("LimitMode")
         private Integer limitMode;
 
-        @NameInMap("MaxConcurrency")
+        @com.aliyun.core.annotation.NameInMap("MaxConcurrency")
         private Integer maxConcurrency;
 
-        @NameInMap("ResponseAdditionalHeaders")
+        @com.aliyun.core.annotation.NameInMap("ResponseAdditionalHeaders")
         private String responseAdditionalHeaders;
 
-        @NameInMap("ResponseContentBody")
+        @com.aliyun.core.annotation.NameInMap("ResponseContentBody")
         private String responseContentBody;
 
-        @NameInMap("ResponseRedirectUrl")
+        @com.aliyun.core.annotation.NameInMap("ResponseRedirectUrl")
         private String responseRedirectUrl;
 
-        @NameInMap("ResponseStatusCode")
+        @com.aliyun.core.annotation.NameInMap("ResponseStatusCode")
         private Integer responseStatusCode;
 
-        @NameInMap("RouteId")
+        @com.aliyun.core.annotation.NameInMap("RouteId")
         private Long routeId;
 
-        @NameInMap("RouteName")
+        @com.aliyun.core.annotation.NameInMap("RouteName")
         private String routeName;
 
         private Result(Builder builder) {
@@ -393,49 +392,49 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
 
     }
     public static class Results extends TeaModel {
-        @NameInMap("BehaviorType")
+        @com.aliyun.core.annotation.NameInMap("BehaviorType")
         private Integer behaviorType;
 
-        @NameInMap("BodyEncoding")
+        @com.aliyun.core.annotation.NameInMap("BodyEncoding")
         private Integer bodyEncoding;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Integer enable;
 
-        @NameInMap("GatewayId")
+        @com.aliyun.core.annotation.NameInMap("GatewayId")
         private Long gatewayId;
 
-        @NameInMap("GatewayUniqueId")
+        @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
         private String gatewayUniqueId;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("IdList")
+        @com.aliyun.core.annotation.NameInMap("IdList")
         private java.util.List < Long > idList;
 
-        @NameInMap("LimitMode")
+        @com.aliyun.core.annotation.NameInMap("LimitMode")
         private Integer limitMode;
 
-        @NameInMap("MaxConcurrency")
+        @com.aliyun.core.annotation.NameInMap("MaxConcurrency")
         private Integer maxConcurrency;
 
-        @NameInMap("ResponseAdditionalHeaders")
+        @com.aliyun.core.annotation.NameInMap("ResponseAdditionalHeaders")
         private String responseAdditionalHeaders;
 
-        @NameInMap("ResponseContentBody")
+        @com.aliyun.core.annotation.NameInMap("ResponseContentBody")
         private String responseContentBody;
 
-        @NameInMap("ResponseRedirectUrl")
+        @com.aliyun.core.annotation.NameInMap("ResponseRedirectUrl")
         private String responseRedirectUrl;
 
-        @NameInMap("ResponseStatusCode")
+        @com.aliyun.core.annotation.NameInMap("ResponseStatusCode")
         private Integer responseStatusCode;
 
-        @NameInMap("RouteId")
+        @com.aliyun.core.annotation.NameInMap("RouteId")
         private Long routeId;
 
-        @NameInMap("RouteName")
+        @com.aliyun.core.annotation.NameInMap("RouteName")
         private String routeName;
 
         private Results(Builder builder) {
@@ -714,19 +713,19 @@ public class ListGatewayIsolationRuleResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private java.util.List < Result> result;
 
-        @NameInMap("Results")
+        @com.aliyun.core.annotation.NameInMap("Results")
         private java.util.List < Results> results;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Integer totalSize;
 
         private Data(Builder builder) {

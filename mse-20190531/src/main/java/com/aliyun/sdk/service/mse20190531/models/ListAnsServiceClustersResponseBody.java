@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAnsServiceClustersResponseBody</p>
  */
 public class ListAnsServiceClustersResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("HttpCode")
+    @com.aliyun.core.annotation.NameInMap("HttpCode")
     private String httpCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListAnsServiceClustersResponseBody(Builder builder) {
@@ -156,31 +155,31 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
     } 
 
     public static class AppDetail extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("CheckInternal")
+        @com.aliyun.core.annotation.NameInMap("CheckInternal")
         private Integer checkInternal;
 
-        @NameInMap("CheckPath")
+        @com.aliyun.core.annotation.NameInMap("CheckPath")
         private String checkPath;
 
-        @NameInMap("CheckTimeout")
+        @com.aliyun.core.annotation.NameInMap("CheckTimeout")
         private Integer checkTimeout;
 
-        @NameInMap("CheckType")
+        @com.aliyun.core.annotation.NameInMap("CheckType")
         private String checkType;
 
-        @NameInMap("HealthyCheckTimes")
+        @com.aliyun.core.annotation.NameInMap("HealthyCheckTimes")
         private Integer healthyCheckTimes;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("UnhealthyCheckTimes")
+        @com.aliyun.core.annotation.NameInMap("UnhealthyCheckTimes")
         private Integer unhealthyCheckTimes;
 
         private AppDetail(Builder builder) {
@@ -362,25 +361,25 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
 
     }
     public static class Clusters extends TeaModel {
-        @NameInMap("DefaultCheckPort")
+        @com.aliyun.core.annotation.NameInMap("DefaultCheckPort")
         private Integer defaultCheckPort;
 
-        @NameInMap("DefaultPort")
+        @com.aliyun.core.annotation.NameInMap("DefaultPort")
         private Integer defaultPort;
 
-        @NameInMap("HealthCheckerType")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckerType")
         private String healthCheckerType;
 
-        @NameInMap("Metadata")
+        @com.aliyun.core.annotation.NameInMap("Metadata")
         private java.util.Map < String, ? > metadata;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
-        @NameInMap("UseIPPort4Check")
+        @com.aliyun.core.annotation.NameInMap("UseIPPort4Check")
         private Boolean useIPPort4Check;
 
         private Clusters(Builder builder) {
@@ -523,31 +522,31 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AppDetail")
+        @com.aliyun.core.annotation.NameInMap("AppDetail")
         private AppDetail appDetail;
 
-        @NameInMap("Clusters")
+        @com.aliyun.core.annotation.NameInMap("Clusters")
         private java.util.List < Clusters> clusters;
 
-        @NameInMap("Ephemeral")
+        @com.aliyun.core.annotation.NameInMap("Ephemeral")
         private Boolean ephemeral;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("Metadata")
+        @com.aliyun.core.annotation.NameInMap("Metadata")
         private java.util.Map < String, ? > metadata;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ProtectThreshold")
+        @com.aliyun.core.annotation.NameInMap("ProtectThreshold")
         private Float protectThreshold;
 
-        @NameInMap("SelectorType")
+        @com.aliyun.core.annotation.NameInMap("SelectorType")
         private String selectorType;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
         private Data(Builder builder) {

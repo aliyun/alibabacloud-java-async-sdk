@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,44 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddServiceSourceRequest</p>
  */
 public class AddServiceSourceRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("Address")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Address")
     private String address;
 
-    @Query
-    @NameInMap("GatewayUniqueId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
     private String gatewayUniqueId;
 
-    @Query
-    @NameInMap("GroupList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupList")
     private java.util.List < String > groupList;
 
-    @Query
-    @NameInMap("IngressOptionsRequest")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IngressOptionsRequest")
     private IngressOptionsRequest ingressOptionsRequest;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("PathList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PathList")
     private java.util.List < String > pathList;
 
-    @Query
-    @NameInMap("Source")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
 
-    @Query
-    @NameInMap("ToAuthorizeSecurityGroups")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ToAuthorizeSecurityGroups")
     private java.util.List < ToAuthorizeSecurityGroups> toAuthorizeSecurityGroups;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private AddServiceSourceRequest(Builder builder) {
@@ -294,16 +293,16 @@ public class AddServiceSourceRequest extends Request {
     } 
 
     public static class IngressOptionsRequest extends TeaModel {
-        @NameInMap("EnableIngress")
+        @com.aliyun.core.annotation.NameInMap("EnableIngress")
         private Boolean enableIngress;
 
-        @NameInMap("EnableStatus")
+        @com.aliyun.core.annotation.NameInMap("EnableStatus")
         private Boolean enableStatus;
 
-        @NameInMap("IngressClass")
+        @com.aliyun.core.annotation.NameInMap("IngressClass")
         private String ingressClass;
 
-        @NameInMap("WatchNamespace")
+        @com.aliyun.core.annotation.NameInMap("WatchNamespace")
         private String watchNamespace;
 
         private IngressOptionsRequest(Builder builder) {
@@ -400,13 +399,13 @@ public class AddServiceSourceRequest extends Request {
 
     }
     public static class ToAuthorizeSecurityGroups extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("PortRange")
+        @com.aliyun.core.annotation.NameInMap("PortRange")
         private String portRange;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
         private ToAuthorizeSecurityGroups(Builder builder) {

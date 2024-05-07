@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mse20190531.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateOrUpdateSwimmingLaneGroupResponseBody</p>
  */
 public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateOrUpdateSwimmingLaneGroupResponseBody(Builder builder) {
@@ -135,43 +134,43 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AppIds")
+        @com.aliyun.core.annotation.NameInMap("AppIds")
         private String appIds;
 
-        @NameInMap("CanaryModel")
+        @com.aliyun.core.annotation.NameInMap("CanaryModel")
         private Integer canaryModel;
 
-        @NameInMap("DbGrayEnable")
+        @com.aliyun.core.annotation.NameInMap("DbGrayEnable")
         private String dbGrayEnable;
 
-        @NameInMap("EntryApp")
+        @com.aliyun.core.annotation.NameInMap("EntryApp")
         private String entryApp;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("MessageQueueFilterSide")
+        @com.aliyun.core.annotation.NameInMap("MessageQueueFilterSide")
         private String messageQueueFilterSide;
 
-        @NameInMap("MessageQueueGrayEnable")
+        @com.aliyun.core.annotation.NameInMap("MessageQueueGrayEnable")
         private Boolean messageQueueGrayEnable;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("Paths")
+        @com.aliyun.core.annotation.NameInMap("Paths")
         private String paths;
 
-        @NameInMap("RecordCanaryDetail")
+        @com.aliyun.core.annotation.NameInMap("RecordCanaryDetail")
         private Boolean recordCanaryDetail;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private Data(Builder builder) {
