@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListParamsResponseBody</p>
  */
 public class ListParamsResponseBody extends TeaModel {
-    @NameInMap("Params")
+    @com.aliyun.core.annotation.NameInMap("Params")
     private java.util.List < Params> params;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListParamsResponseBody(Builder builder) {
@@ -92,19 +91,19 @@ public class ListParamsResponseBody extends TeaModel {
     } 
 
     public static class Params extends TeaModel {
-        @NameInMap("Environment")
+        @com.aliyun.core.annotation.NameInMap("Environment")
         private String environment;
 
-        @NameInMap("GmtModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
         private String gmtModifiedTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ParamId")
+        @com.aliyun.core.annotation.NameInMap("ParamId")
         private String paramId;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Params(Builder builder) {

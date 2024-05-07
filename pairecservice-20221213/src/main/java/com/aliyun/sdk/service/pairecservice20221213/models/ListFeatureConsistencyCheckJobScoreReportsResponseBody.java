@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListFeatureConsistencyCheckJobScoreReportsResponseBody</p>
  */
 public class ListFeatureConsistencyCheckJobScoreReportsResponseBody extends TeaModel {
-    @NameInMap("DataPath")
+    @com.aliyun.core.annotation.NameInMap("DataPath")
     private String dataPath;
 
-    @NameInMap("OssPath")
+    @com.aliyun.core.annotation.NameInMap("OssPath")
     private String ossPath;
 
-    @NameInMap("ReportsOfScoreDiff")
+    @com.aliyun.core.annotation.NameInMap("ReportsOfScoreDiff")
     private java.util.List < ReportsOfScoreDiff> reportsOfScoreDiff;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListFeatureConsistencyCheckJobScoreReportsResponseBody(Builder builder) {
@@ -112,19 +111,19 @@ public class ListFeatureConsistencyCheckJobScoreReportsResponseBody extends TeaM
     } 
 
     public static class ReportsOfScoreDiff extends TeaModel {
-        @NameInMap("LogItemId")
+        @com.aliyun.core.annotation.NameInMap("LogItemId")
         private String logItemId;
 
-        @NameInMap("LogRequestId")
+        @com.aliyun.core.annotation.NameInMap("LogRequestId")
         private String logRequestId;
 
-        @NameInMap("LogUserId")
+        @com.aliyun.core.annotation.NameInMap("LogUserId")
         private String logUserId;
 
-        @NameInMap("ScoreDiff")
+        @com.aliyun.core.annotation.NameInMap("ScoreDiff")
         private String scoreDiff;
 
-        @NameInMap("ScoreDiffDetail")
+        @com.aliyun.core.annotation.NameInMap("ScoreDiffDetail")
         private String scoreDiffDetail;
 
         private ReportsOfScoreDiff(Builder builder) {

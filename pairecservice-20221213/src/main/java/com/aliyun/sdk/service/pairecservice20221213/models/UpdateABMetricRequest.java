@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,69 +11,69 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateABMetricRequest</p>
  */
 public class UpdateABMetricRequest extends Request {
-    @Path
-    @NameInMap("ABMetricId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ABMetricId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ABMetricId;
 
-    @Body
-    @NameInMap("Definition")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Definition")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String definition;
 
-    @Body
-    @NameInMap("Description")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String description;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("LeftMetricId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LeftMetricId")
     private String leftMetricId;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("Operator")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Operator")
     private String operator;
 
-    @Body
-    @NameInMap("Realtime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Realtime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean realtime;
 
-    @Body
-    @NameInMap("ResultResourceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResultResourceId")
     private String resultResourceId;
 
-    @Body
-    @NameInMap("RightMetricId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RightMetricId")
     private String rightMetricId;
 
-    @Body
-    @NameInMap("SceneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SceneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sceneId;
 
-    @Body
-    @NameInMap("StatisticsCycle")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StatisticsCycle")
     private Integer statisticsCycle;
 
-    @Body
-    @NameInMap("TableMetaId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TableMetaId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tableMetaId;
 
-    @Body
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private UpdateABMetricRequest(Builder builder) {

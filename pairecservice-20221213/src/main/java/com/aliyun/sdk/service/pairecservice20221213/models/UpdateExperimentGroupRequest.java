@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,77 +11,77 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateExperimentGroupRequest</p>
  */
 public class UpdateExperimentGroupRequest extends Request {
-    @Path
-    @NameInMap("ExperimentGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ExperimentGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String experimentGroupId;
 
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("Config")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Config")
     private String config;
 
-    @Body
-    @NameInMap("CrowdId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CrowdId")
     private String crowdId;
 
-    @Body
-    @NameInMap("CrowdTargetType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CrowdTargetType")
     private String crowdTargetType;
 
-    @Body
-    @NameInMap("DebugCrowdId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DebugCrowdId")
     private String debugCrowdId;
 
-    @Body
-    @NameInMap("DebugUsers")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DebugUsers")
     private String debugUsers;
 
-    @Body
-    @NameInMap("Description")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String description;
 
-    @Body
-    @NameInMap("DistributionTimeDuration")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DistributionTimeDuration")
     private Integer distributionTimeDuration;
 
-    @Body
-    @NameInMap("DistributionType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DistributionType")
     private String distributionType;
 
-    @Body
-    @NameInMap("Filter")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Filter")
     private String filter;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("LayerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LayerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String layerId;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("NeedAA")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NeedAA")
     private Boolean needAA;
 
-    @Body
-    @NameInMap("RandomFlow")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RandomFlow")
     private Long randomFlow;
 
-    @Body
-    @NameInMap("ReservcedBuckets")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ReservcedBuckets")
     private String reservcedBuckets;
 
     private UpdateExperimentGroupRequest(Builder builder) {

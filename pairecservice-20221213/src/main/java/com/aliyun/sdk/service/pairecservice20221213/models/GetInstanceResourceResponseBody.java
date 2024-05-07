@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInstanceResourceResponseBody</p>
  */
 public class GetInstanceResourceResponseBody extends TeaModel {
-    @NameInMap("Category")
+    @com.aliyun.core.annotation.NameInMap("Category")
     private String category;
 
-    @NameInMap("Config")
+    @com.aliyun.core.annotation.NameInMap("Config")
     private String config;
 
-    @NameInMap("GmtCreateTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
-    @NameInMap("GmtModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
     private String gmtModifiedTime;
 
-    @NameInMap("Group")
+    @com.aliyun.core.annotation.NameInMap("Group")
     private String group;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @NameInMap("Uri")
+    @com.aliyun.core.annotation.NameInMap("Uri")
     private String uri;
 
     private GetInstanceResourceResponseBody(Builder builder) {

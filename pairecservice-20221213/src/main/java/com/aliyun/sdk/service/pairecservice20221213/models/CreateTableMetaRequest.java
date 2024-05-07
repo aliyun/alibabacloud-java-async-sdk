@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,39 +11,39 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateTableMetaRequest</p>
  */
 public class CreateTableMetaRequest extends Request {
-    @Body
-    @NameInMap("Description")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String description;
 
-    @Body
-    @NameInMap("Fields")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Fields")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Fields> fields;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("Module")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Module")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String module;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("ResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceId;
 
-    @Body
-    @NameInMap("TableName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TableName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tableName;
 
     private CreateTableMetaRequest(Builder builder) {
@@ -215,27 +214,27 @@ public class CreateTableMetaRequest extends Request {
     } 
 
     public static class Fields extends TeaModel {
-        @NameInMap("DataType")
+        @com.aliyun.core.annotation.NameInMap("DataType")
         private String dataType;
 
-        @NameInMap("IsDimensionField")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("IsDimensionField")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Boolean isDimensionField;
 
-        @NameInMap("IsPartitionField")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("IsPartitionField")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String isPartitionField;
 
-        @NameInMap("Meaning")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Meaning")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String meaning;
 
-        @NameInMap("Name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private Fields(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListFeatureConsistencyCheckJobConfigsResponseBody</p>
  */
 public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel {
-    @NameInMap("FeatureConsistencyCheckConfigs")
+    @com.aliyun.core.annotation.NameInMap("FeatureConsistencyCheckConfigs")
     private java.util.List < FeatureConsistencyCheckConfigs> featureConsistencyCheckConfigs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListFeatureConsistencyCheckJobConfigsResponseBody(Builder builder) {
@@ -92,130 +91,130 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
     } 
 
     public static class FeatureConsistencyCheckConfigs extends TeaModel {
-        @NameInMap("CompareFeature")
+        @com.aliyun.core.annotation.NameInMap("CompareFeature")
         private Boolean compareFeature;
 
-        @NameInMap("EasServiceName")
+        @com.aliyun.core.annotation.NameInMap("EasServiceName")
         private String easServiceName;
 
-        @NameInMap("EasyRecPackagePath")
+        @com.aliyun.core.annotation.NameInMap("EasyRecPackagePath")
         private String easyRecPackagePath;
 
-        @NameInMap("EasyRecVersion")
+        @com.aliyun.core.annotation.NameInMap("EasyRecVersion")
         private String easyRecVersion;
 
-        @NameInMap("FeatureConsistencyCheckJobConfigId")
+        @com.aliyun.core.annotation.NameInMap("FeatureConsistencyCheckJobConfigId")
         private String featureConsistencyCheckJobConfigId;
 
-        @NameInMap("FeatureDisplayExclude")
+        @com.aliyun.core.annotation.NameInMap("FeatureDisplayExclude")
         private String featureDisplayExclude;
 
-        @NameInMap("FeatureLandingResourceId")
+        @com.aliyun.core.annotation.NameInMap("FeatureLandingResourceId")
         private String featureLandingResourceId;
 
-        @NameInMap("FeatureLandingResourceUri")
+        @com.aliyun.core.annotation.NameInMap("FeatureLandingResourceUri")
         private String featureLandingResourceUri;
 
-        @NameInMap("FeaturePriority")
+        @com.aliyun.core.annotation.NameInMap("FeaturePriority")
         private String featurePriority;
 
-        @NameInMap("FeatureStoreItemId")
+        @com.aliyun.core.annotation.NameInMap("FeatureStoreItemId")
         private String featureStoreItemId;
 
-        @NameInMap("FeatureStoreModelId")
+        @com.aliyun.core.annotation.NameInMap("FeatureStoreModelId")
         private String featureStoreModelId;
 
-        @NameInMap("FeatureStoreProjectId")
+        @com.aliyun.core.annotation.NameInMap("FeatureStoreProjectId")
         private String featureStoreProjectId;
 
-        @NameInMap("FeatureStoreProjectName")
+        @com.aliyun.core.annotation.NameInMap("FeatureStoreProjectName")
         private String featureStoreProjectName;
 
-        @NameInMap("FeatureStoreSeqFeatureView")
+        @com.aliyun.core.annotation.NameInMap("FeatureStoreSeqFeatureView")
         private String featureStoreSeqFeatureView;
 
-        @NameInMap("FeatureStoreUserId")
+        @com.aliyun.core.annotation.NameInMap("FeatureStoreUserId")
         private String featureStoreUserId;
 
-        @NameInMap("FgJarVersion")
+        @com.aliyun.core.annotation.NameInMap("FgJarVersion")
         private String fgJarVersion;
 
-        @NameInMap("FgJsonFileName")
+        @com.aliyun.core.annotation.NameInMap("FgJsonFileName")
         private String fgJsonFileName;
 
-        @NameInMap("GenerateZip")
+        @com.aliyun.core.annotation.NameInMap("GenerateZip")
         private Boolean generateZip;
 
-        @NameInMap("GmtCreateTime")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
 
-        @NameInMap("GmtModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
         private String gmtModifiedTime;
 
-        @NameInMap("ItemIdField")
+        @com.aliyun.core.annotation.NameInMap("ItemIdField")
         private String itemIdField;
 
-        @NameInMap("ItemTable")
+        @com.aliyun.core.annotation.NameInMap("ItemTable")
         private String itemTable;
 
-        @NameInMap("ItemTablePartitionField")
+        @com.aliyun.core.annotation.NameInMap("ItemTablePartitionField")
         private String itemTablePartitionField;
 
-        @NameInMap("ItemTablePartitionFieldFormat")
+        @com.aliyun.core.annotation.NameInMap("ItemTablePartitionFieldFormat")
         private String itemTablePartitionFieldFormat;
 
-        @NameInMap("LatestJobGmtSamplingEndTime")
+        @com.aliyun.core.annotation.NameInMap("LatestJobGmtSamplingEndTime")
         private String latestJobGmtSamplingEndTime;
 
-        @NameInMap("LatestJobGmtSamplingStartTime")
+        @com.aliyun.core.annotation.NameInMap("LatestJobGmtSamplingStartTime")
         private String latestJobGmtSamplingStartTime;
 
-        @NameInMap("LatestJobId")
+        @com.aliyun.core.annotation.NameInMap("LatestJobId")
         private String latestJobId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OssBucket")
+        @com.aliyun.core.annotation.NameInMap("OssBucket")
         private String ossBucket;
 
-        @NameInMap("OssResourceId")
+        @com.aliyun.core.annotation.NameInMap("OssResourceId")
         private String ossResourceId;
 
-        @NameInMap("SampleRate")
+        @com.aliyun.core.annotation.NameInMap("SampleRate")
         private String sampleRate;
 
-        @NameInMap("SceneId")
+        @com.aliyun.core.annotation.NameInMap("SceneId")
         private String sceneId;
 
-        @NameInMap("SceneName")
+        @com.aliyun.core.annotation.NameInMap("SceneName")
         private String sceneName;
 
-        @NameInMap("ServiceId")
+        @com.aliyun.core.annotation.NameInMap("ServiceId")
         private String serviceId;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UseFeatureStore")
+        @com.aliyun.core.annotation.NameInMap("UseFeatureStore")
         private String useFeatureStore;
 
-        @NameInMap("UserIdField")
+        @com.aliyun.core.annotation.NameInMap("UserIdField")
         private String userIdField;
 
-        @NameInMap("UserTable")
+        @com.aliyun.core.annotation.NameInMap("UserTable")
         private String userTable;
 
-        @NameInMap("UserTablePartitionField")
+        @com.aliyun.core.annotation.NameInMap("UserTablePartitionField")
         private String userTablePartitionField;
 
-        @NameInMap("UserTablePartitionFieldFormat")
+        @com.aliyun.core.annotation.NameInMap("UserTablePartitionFieldFormat")
         private String userTablePartitionFieldFormat;
 
-        @NameInMap("WorkflowName")
+        @com.aliyun.core.annotation.NameInMap("WorkflowName")
         private String workflowName;
 
         private FeatureConsistencyCheckConfigs(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListLayersResponseBody</p>
  */
 public class ListLayersResponseBody extends TeaModel {
-    @NameInMap("Layers")
+    @com.aliyun.core.annotation.NameInMap("Layers")
     private java.util.List < Layers> layers;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListLayersResponseBody(Builder builder) {
@@ -92,25 +91,25 @@ public class ListLayersResponseBody extends TeaModel {
     } 
 
     public static class Layers extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GmtCreateTime")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
 
-        @NameInMap("LaboratoryId")
+        @com.aliyun.core.annotation.NameInMap("LaboratoryId")
         private String laboratoryId;
 
-        @NameInMap("LayerId")
+        @com.aliyun.core.annotation.NameInMap("LayerId")
         private String layerId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ResidualFlow")
+        @com.aliyun.core.annotation.NameInMap("ResidualFlow")
         private Long residualFlow;
 
-        @NameInMap("SceneId")
+        @com.aliyun.core.annotation.NameInMap("SceneId")
         private String sceneId;
 
         private Layers(Builder builder) {

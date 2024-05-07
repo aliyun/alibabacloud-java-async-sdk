@@ -55,11 +55,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateParamResponse> createParam(CreateParamRequest request);
 
+    CompletableFuture<CreateResourceRuleResponse> createResourceRule(CreateResourceRuleRequest request);
+
+    CompletableFuture<CreateResourceRuleItemResponse> createResourceRuleItem(CreateResourceRuleItemRequest request);
+
     CompletableFuture<CreateSceneResponse> createScene(CreateSceneRequest request);
 
     CompletableFuture<CreateSubCrowdResponse> createSubCrowd(CreateSubCrowdRequest request);
 
     CompletableFuture<CreateTableMetaResponse> createTableMeta(CreateTableMetaRequest request);
+
+    CompletableFuture<DebugResourceRuleResponse> debugResourceRule(DebugResourceRuleRequest request);
 
     CompletableFuture<DeleteABMetricResponse> deleteABMetric(DeleteABMetricRequest request);
 
@@ -78,6 +84,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteLayerResponse> deleteLayer(DeleteLayerRequest request);
 
     CompletableFuture<DeleteParamResponse> deleteParam(DeleteParamRequest request);
+
+    CompletableFuture<DeleteResourceRuleResponse> deleteResourceRule(DeleteResourceRuleRequest request);
+
+    CompletableFuture<DeleteResourceRuleItemResponse> deleteResourceRuleItem(DeleteResourceRuleItemRequest request);
 
     CompletableFuture<DeleteSceneResponse> deleteScene(DeleteSceneRequest request);
 
@@ -108,6 +118,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetLaboratoryResponse> getLaboratory(GetLaboratoryRequest request);
 
     CompletableFuture<GetLayerResponse> getLayer(GetLayerRequest request);
+
+    CompletableFuture<GetResourceRuleResponse> getResourceRule(GetResourceRuleRequest request);
 
     CompletableFuture<GetSceneResponse> getScene(GetSceneRequest request);
 
@@ -147,6 +159,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListParamsResponse> listParams(ListParamsRequest request);
 
+    CompletableFuture<ListResourceRulesResponse> listResourceRules(ListResourceRulesRequest request);
+
     CompletableFuture<ListScenesResponse> listScenes(ListScenesRequest request);
 
     CompletableFuture<ListSubCrowdsResponse> listSubCrowds(ListSubCrowdsRequest request);
@@ -166,6 +180,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<OnlineLaboratoryResponse> onlineLaboratory(OnlineLaboratoryRequest request);
 
     CompletableFuture<PushAllExperimentResponse> pushAllExperiment(PushAllExperimentRequest request);
+
+    CompletableFuture<PushResourceRuleResponse> pushResourceRule(PushResourceRuleRequest request);
 
     CompletableFuture<ReportABMetricGroupResponse> reportABMetricGroup(ReportABMetricGroupRequest request);
 
@@ -192,6 +208,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateLayerResponse> updateLayer(UpdateLayerRequest request);
 
     CompletableFuture<UpdateParamResponse> updateParam(UpdateParamRequest request);
+
+    CompletableFuture<UpdateResourceRuleResponse> updateResourceRule(UpdateResourceRuleRequest request);
+
+    CompletableFuture<UpdateResourceRuleItemResponse> updateResourceRuleItem(UpdateResourceRuleItemRequest request);
 
     CompletableFuture<UpdateSceneResponse> updateScene(UpdateSceneRequest request);
 

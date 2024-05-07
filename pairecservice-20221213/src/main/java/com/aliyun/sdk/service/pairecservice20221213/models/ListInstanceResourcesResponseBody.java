@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstanceResourcesResponseBody</p>
  */
 public class ListInstanceResourcesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Resources")
+    @com.aliyun.core.annotation.NameInMap("Resources")
     private java.util.List < Resources> resources;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListInstanceResourcesResponseBody(Builder builder) {
@@ -92,28 +91,28 @@ public class ListInstanceResourcesResponseBody extends TeaModel {
     } 
 
     public static class Resources extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("Config")
+        @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
 
-        @NameInMap("GmtCreateAt")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateAt")
         private String gmtCreateAt;
 
-        @NameInMap("GmtModifiedAt")
+        @com.aliyun.core.annotation.NameInMap("GmtModifiedAt")
         private String gmtModifiedAt;
 
-        @NameInMap("Group")
+        @com.aliyun.core.annotation.NameInMap("Group")
         private String group;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Uri")
+        @com.aliyun.core.annotation.NameInMap("Uri")
         private String uri;
 
         private Resources(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListFeatureConsistencyCheckJobFeatureReportsResponseBody</p>
  */
 public class ListFeatureConsistencyCheckJobFeatureReportsResponseBody extends TeaModel {
-    @NameInMap("DataPath")
+    @com.aliyun.core.annotation.NameInMap("DataPath")
     private String dataPath;
 
-    @NameInMap("OssPath")
+    @com.aliyun.core.annotation.NameInMap("OssPath")
     private String ossPath;
 
-    @NameInMap("ReportsOfFeatureDiff")
+    @com.aliyun.core.annotation.NameInMap("ReportsOfFeatureDiff")
     private java.util.List < ReportsOfFeatureDiff> reportsOfFeatureDiff;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListFeatureConsistencyCheckJobFeatureReportsResponseBody(Builder builder) {
@@ -112,22 +111,22 @@ public class ListFeatureConsistencyCheckJobFeatureReportsResponseBody extends Te
     } 
 
     public static class ReportsOfFeatureDiff extends TeaModel {
-        @NameInMap("FeatureName")
+        @com.aliyun.core.annotation.NameInMap("FeatureName")
         private String featureName;
 
-        @NameInMap("LogItemId")
+        @com.aliyun.core.annotation.NameInMap("LogItemId")
         private String logItemId;
 
-        @NameInMap("LogRequestId")
+        @com.aliyun.core.annotation.NameInMap("LogRequestId")
         private String logRequestId;
 
-        @NameInMap("LogUserId")
+        @com.aliyun.core.annotation.NameInMap("LogUserId")
         private String logUserId;
 
-        @NameInMap("OfflineValue")
+        @com.aliyun.core.annotation.NameInMap("OfflineValue")
         private String offlineValue;
 
-        @NameInMap("OnlineValue")
+        @com.aliyun.core.annotation.NameInMap("OnlineValue")
         private String onlineValue;
 
         private ReportsOfFeatureDiff(Builder builder) {

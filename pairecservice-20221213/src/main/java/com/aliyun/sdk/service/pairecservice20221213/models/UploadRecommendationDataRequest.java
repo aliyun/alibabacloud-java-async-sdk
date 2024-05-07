@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UploadRecommendationDataRequest</p>
  */
 public class UploadRecommendationDataRequest extends Request {
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Content")
     private java.util.List < Content> content;
 
-    @Body
-    @NameInMap("DataType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DataType")
     private String dataType;
 
     private UploadRecommendationDataRequest(Builder builder) {
@@ -116,10 +115,10 @@ public class UploadRecommendationDataRequest extends Request {
     } 
 
     public static class Content extends TeaModel {
-        @NameInMap("Fields")
+        @com.aliyun.core.annotation.NameInMap("Fields")
         private String fields;
 
-        @NameInMap("OperationType")
+        @com.aliyun.core.annotation.NameInMap("OperationType")
         private String operationType;
 
         private Content(Builder builder) {

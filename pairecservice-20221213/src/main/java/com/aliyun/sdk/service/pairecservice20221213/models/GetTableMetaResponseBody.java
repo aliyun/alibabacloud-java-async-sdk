@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,49 +11,49 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTableMetaResponseBody</p>
  */
 public class GetTableMetaResponseBody extends TeaModel {
-    @NameInMap("CanDelete")
+    @com.aliyun.core.annotation.NameInMap("CanDelete")
     private Boolean canDelete;
 
-    @NameInMap("Config")
+    @com.aliyun.core.annotation.NameInMap("Config")
     private String config;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("Fields")
+    @com.aliyun.core.annotation.NameInMap("Fields")
     private java.util.List < Fields> fields;
 
-    @NameInMap("GmtCreateTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
-    @NameInMap("GmtImportedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtImportedTime")
     private String gmtImportedTime;
 
-    @NameInMap("GmtModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
     private String gmtModifiedTime;
 
-    @NameInMap("Module")
+    @com.aliyun.core.annotation.NameInMap("Module")
     private String module;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
-    @NameInMap("TableMetaId")
+    @com.aliyun.core.annotation.NameInMap("TableMetaId")
     private String tableMetaId;
 
-    @NameInMap("TableName")
+    @com.aliyun.core.annotation.NameInMap("TableName")
     private String tableName;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @NameInMap("Url")
+    @com.aliyun.core.annotation.NameInMap("Url")
     private String url;
 
     private GetTableMetaResponseBody(Builder builder) {
@@ -332,16 +331,16 @@ public class GetTableMetaResponseBody extends TeaModel {
     } 
 
     public static class Fields extends TeaModel {
-        @NameInMap("IsDimensionField")
+        @com.aliyun.core.annotation.NameInMap("IsDimensionField")
         private Boolean isDimensionField;
 
-        @NameInMap("Meaning")
+        @com.aliyun.core.annotation.NameInMap("Meaning")
         private String meaning;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Fields(Builder builder) {

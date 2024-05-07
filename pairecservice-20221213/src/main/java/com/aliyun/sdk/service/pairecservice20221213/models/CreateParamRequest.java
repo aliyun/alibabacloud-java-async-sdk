@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateParamRequest</p>
  */
 public class CreateParamRequest extends Request {
-    @Body
-    @NameInMap("Environment")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Environment")
     private String environment;
 
-    @Body
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Body
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Body
-    @NameInMap("SceneId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SceneId")
     private String sceneId;
 
-    @Body
-    @NameInMap("Value")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Value")
     private String value;
 
     private CreateParamRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInstanceResponseBody</p>
  */
 public class GetInstanceResponseBody extends TeaModel {
-    @NameInMap("ChargeType")
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
 
-    @NameInMap("CommodityCode")
+    @com.aliyun.core.annotation.NameInMap("CommodityCode")
     private String commodityCode;
 
-    @NameInMap("Config")
+    @com.aliyun.core.annotation.NameInMap("Config")
     private Config config;
 
-    @NameInMap("ExpiredTime")
+    @com.aliyun.core.annotation.NameInMap("ExpiredTime")
     private String expiredTime;
 
-    @NameInMap("GmtCreateTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
-    @NameInMap("GmtModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
     private String gmtModifiedTime;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private GetInstanceResponseBody(Builder builder) {
@@ -252,13 +251,13 @@ public class GetInstanceResponseBody extends TeaModel {
     } 
 
     public static class DataManagements extends TeaModel {
-        @NameInMap("ComponentCode")
+        @com.aliyun.core.annotation.NameInMap("ComponentCode")
         private String componentCode;
 
-        @NameInMap("Meta")
+        @com.aliyun.core.annotation.NameInMap("Meta")
         private java.util.Map < String, ? > meta;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private DataManagements(Builder builder) {
@@ -333,13 +332,13 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
     public static class Engines extends TeaModel {
-        @NameInMap("ComponentCode")
+        @com.aliyun.core.annotation.NameInMap("ComponentCode")
         private String componentCode;
 
-        @NameInMap("Meta")
+        @com.aliyun.core.annotation.NameInMap("Meta")
         private java.util.Map < String, ? > meta;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Engines(Builder builder) {
@@ -414,13 +413,13 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
     public static class Monitors extends TeaModel {
-        @NameInMap("ComponentCode")
+        @com.aliyun.core.annotation.NameInMap("ComponentCode")
         private String componentCode;
 
-        @NameInMap("Meta")
+        @com.aliyun.core.annotation.NameInMap("Meta")
         private java.util.Map < String, ? > meta;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Monitors(Builder builder) {
@@ -495,13 +494,13 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
     public static class Config extends TeaModel {
-        @NameInMap("DataManagements")
+        @com.aliyun.core.annotation.NameInMap("DataManagements")
         private java.util.List < DataManagements> dataManagements;
 
-        @NameInMap("Engines")
+        @com.aliyun.core.annotation.NameInMap("Engines")
         private java.util.List < Engines> engines;
 
-        @NameInMap("Monitors")
+        @com.aliyun.core.annotation.NameInMap("Monitors")
         private java.util.List < Monitors> monitors;
 
         private Config(Builder builder) {

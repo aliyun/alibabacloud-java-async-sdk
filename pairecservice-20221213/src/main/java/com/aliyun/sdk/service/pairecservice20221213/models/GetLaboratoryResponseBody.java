@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,46 +11,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetLaboratoryResponseBody</p>
  */
 public class GetLaboratoryResponseBody extends TeaModel {
-    @NameInMap("BucketCount")
+    @com.aliyun.core.annotation.NameInMap("BucketCount")
     private Integer bucketCount;
 
-    @NameInMap("BucketType")
+    @com.aliyun.core.annotation.NameInMap("BucketType")
     private String bucketType;
 
-    @NameInMap("Buckets")
+    @com.aliyun.core.annotation.NameInMap("Buckets")
     private String buckets;
 
-    @NameInMap("CrowdId")
+    @com.aliyun.core.annotation.NameInMap("CrowdId")
     private String crowdId;
 
-    @NameInMap("DebugCrowdId")
+    @com.aliyun.core.annotation.NameInMap("DebugCrowdId")
     private String debugCrowdId;
 
-    @NameInMap("DebugUsers")
+    @com.aliyun.core.annotation.NameInMap("DebugUsers")
     private String debugUsers;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("Environment")
+    @com.aliyun.core.annotation.NameInMap("Environment")
     private String environment;
 
-    @NameInMap("Filter")
+    @com.aliyun.core.annotation.NameInMap("Filter")
     private String filter;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SceneId")
+    @com.aliyun.core.annotation.NameInMap("SceneId")
     private String sceneId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private GetLaboratoryResponseBody(Builder builder) {

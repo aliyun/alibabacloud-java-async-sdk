@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,45 +11,45 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateExperimentRequest</p>
  */
 public class CreateExperimentRequest extends Request {
-    @Body
-    @NameInMap("Config")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Config")
     private String config;
 
-    @Body
-    @NameInMap("DebugCrowdId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DebugCrowdId")
     private String debugCrowdId;
 
-    @Body
-    @NameInMap("DebugUsers")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DebugUsers")
     private String debugUsers;
 
-    @Body
-    @NameInMap("Description")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String description;
 
-    @Body
-    @NameInMap("ExperimentGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExperimentGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String experimentGroupId;
 
-    @Body
-    @NameInMap("FlowPercent")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FlowPercent")
     private Integer flowPercent;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private CreateExperimentRequest(Builder builder) {

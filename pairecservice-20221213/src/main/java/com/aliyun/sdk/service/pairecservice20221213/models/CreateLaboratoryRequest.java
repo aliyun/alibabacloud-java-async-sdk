@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,58 +11,58 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateLaboratoryRequest</p>
  */
 public class CreateLaboratoryRequest extends Request {
-    @Body
-    @NameInMap("BucketCount")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BucketCount")
     private Integer bucketCount;
 
-    @Body
-    @NameInMap("BucketType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BucketType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bucketType;
 
-    @Body
-    @NameInMap("Buckets")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Buckets")
     private String buckets;
 
-    @Body
-    @NameInMap("DebugCrowdId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DebugCrowdId")
     private String debugCrowdId;
 
-    @Body
-    @NameInMap("DebugUsers")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DebugUsers")
     private String debugUsers;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("Environment")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Environment")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String environment;
 
-    @Body
-    @NameInMap("Filter")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Filter")
     private String filter;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("SceneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SceneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sceneId;
 
-    @Body
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private CreateLaboratoryRequest(Builder builder) {

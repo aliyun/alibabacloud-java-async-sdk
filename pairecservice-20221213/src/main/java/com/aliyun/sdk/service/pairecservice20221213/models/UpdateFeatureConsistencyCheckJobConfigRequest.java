@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pairecservice20221213.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,158 +11,158 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateFeatureConsistencyCheckJobConfigRequest</p>
  */
 public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
-    @Path
-    @NameInMap("FeatureConsistencyCheckJobConfigId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("FeatureConsistencyCheckJobConfigId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String featureConsistencyCheckJobConfigId;
 
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("CompareFeature")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CompareFeature")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean compareFeature;
 
-    @Body
-    @NameInMap("EasServiceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EasServiceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String easServiceName;
 
-    @Body
-    @NameInMap("EasyRecPackagePath")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EasyRecPackagePath")
     private String easyRecPackagePath;
 
-    @Body
-    @NameInMap("EasyRecVersion")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EasyRecVersion")
     private String easyRecVersion;
 
-    @Body
-    @NameInMap("FeatureDisplayExclude")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FeatureDisplayExclude")
     private String featureDisplayExclude;
 
-    @Body
-    @NameInMap("FeatureLandingResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FeatureLandingResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String featureLandingResourceId;
 
-    @Body
-    @NameInMap("FeaturePriority")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FeaturePriority")
     private String featurePriority;
 
-    @Body
-    @NameInMap("FeatureStoreItemId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FeatureStoreItemId")
     private String featureStoreItemId;
 
-    @Body
-    @NameInMap("FeatureStoreModelId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FeatureStoreModelId")
     private String featureStoreModelId;
 
-    @Body
-    @NameInMap("FeatureStoreProjectId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FeatureStoreProjectId")
     private String featureStoreProjectId;
 
-    @Body
-    @NameInMap("FeatureStoreProjectName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FeatureStoreProjectName")
     private String featureStoreProjectName;
 
-    @Body
-    @NameInMap("FeatureStoreSeqFeatureView")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FeatureStoreSeqFeatureView")
     private String featureStoreSeqFeatureView;
 
-    @Body
-    @NameInMap("FeatureStoreUserId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FeatureStoreUserId")
     private String featureStoreUserId;
 
-    @Body
-    @NameInMap("FgJarVersion")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FgJarVersion")
     private String fgJarVersion;
 
-    @Body
-    @NameInMap("FgJsonFileName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FgJsonFileName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fgJsonFileName;
 
-    @Body
-    @NameInMap("GenerateZip")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GenerateZip")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean generateZip;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("IsUseFeatureStore")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IsUseFeatureStore")
     private Boolean isUseFeatureStore;
 
-    @Body
-    @NameInMap("ItemIdField")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ItemIdField")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String itemIdField;
 
-    @Body
-    @NameInMap("ItemTable")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ItemTable")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String itemTable;
 
-    @Body
-    @NameInMap("ItemTablePartitionField")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ItemTablePartitionField")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String itemTablePartitionField;
 
-    @Body
-    @NameInMap("ItemTablePartitionFieldFormat")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ItemTablePartitionFieldFormat")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String itemTablePartitionFieldFormat;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("OssResourceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OssResourceId")
     private String ossResourceId;
 
-    @Body
-    @NameInMap("SampleRate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SampleRate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Double sampleRate;
 
-    @Body
-    @NameInMap("SceneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SceneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sceneId;
 
-    @Body
-    @NameInMap("ServiceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
     private String serviceId;
 
-    @Body
-    @NameInMap("UserIdField")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserIdField")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userIdField;
 
-    @Body
-    @NameInMap("UserTable")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserTable")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userTable;
 
-    @Body
-    @NameInMap("UserTablePartitionField")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserTablePartitionField")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userTablePartitionField;
 
-    @Body
-    @NameInMap("UserTablePartitionFieldFormat")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserTablePartitionFieldFormat")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userTablePartitionFieldFormat;
 
-    @Body
-    @NameInMap("WorkflowName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkflowName")
     private String workflowName;
 
     private UpdateFeatureConsistencyCheckJobConfigRequest(Builder builder) {
