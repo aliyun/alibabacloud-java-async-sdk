@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RefundOrderResult</p>
  */
 public class RefundOrderResult extends TeaModel {
-    @NameInMap("disputeId")
+    @com.aliyun.core.annotation.NameInMap("disputeId")
     private String disputeId;
 
-    @NameInMap("disputeStatus")
+    @com.aliyun.core.annotation.NameInMap("disputeStatus")
     private Integer disputeStatus;
 
-    @NameInMap("orderLineId")
+    @com.aliyun.core.annotation.NameInMap("orderLineId")
     private String orderLineId;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private RefundOrderResult(Builder builder) {

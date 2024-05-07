@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GeneralBill</p>
  */
 public class GeneralBill extends TeaModel {
-    @NameInMap("billId")
+    @com.aliyun.core.annotation.NameInMap("billId")
     private String billId;
 
-    @NameInMap("billPeriod")
+    @com.aliyun.core.annotation.NameInMap("billPeriod")
     private String billPeriod;
 
-    @NameInMap("downloadUrl")
+    @com.aliyun.core.annotation.NameInMap("downloadUrl")
     private java.util.List < String > downloadUrl;
 
-    @NameInMap("endTime")
+    @com.aliyun.core.annotation.NameInMap("endTime")
     private String endTime;
 
-    @NameInMap("gmtCreate")
+    @com.aliyun.core.annotation.NameInMap("gmtCreate")
     private String gmtCreate;
 
-    @NameInMap("gmtModified")
+    @com.aliyun.core.annotation.NameInMap("gmtModified")
     private String gmtModified;
 
-    @NameInMap("shopId")
+    @com.aliyun.core.annotation.NameInMap("shopId")
     private String shopId;
 
-    @NameInMap("shopName")
+    @com.aliyun.core.annotation.NameInMap("shopName")
     private String shopName;
 
-    @NameInMap("startTime")
+    @com.aliyun.core.annotation.NameInMap("startTime")
     private String startTime;
 
-    @NameInMap("totalAmount")
+    @com.aliyun.core.annotation.NameInMap("totalAmount")
     private Money totalAmount;
 
     private GeneralBill(Builder builder) {

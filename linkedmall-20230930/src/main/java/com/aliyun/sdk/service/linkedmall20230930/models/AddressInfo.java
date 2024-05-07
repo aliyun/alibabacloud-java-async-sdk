@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddressInfo</p>
  */
 public class AddressInfo extends TeaModel {
-    @NameInMap("addressDetail")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("addressDetail")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String addressDetail;
 
-    @NameInMap("addressId")
+    @com.aliyun.core.annotation.NameInMap("addressId")
     private Long addressId;
 
-    @NameInMap("divisionCode")
+    @com.aliyun.core.annotation.NameInMap("divisionCode")
     private String divisionCode;
 
-    @NameInMap("receiver")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("receiver")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String receiver;
 
-    @NameInMap("receiverPhone")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("receiverPhone")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String receiverPhone;
 
-    @NameInMap("townDivisionCode")
+    @com.aliyun.core.annotation.NameInMap("townDivisionCode")
     private String townDivisionCode;
 
     private AddressInfo(Builder builder) {

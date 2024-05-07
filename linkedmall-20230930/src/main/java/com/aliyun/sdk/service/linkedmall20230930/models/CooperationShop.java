@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CooperationShop</p>
  */
 public class CooperationShop extends TeaModel {
-    @NameInMap("cooperationCompanyId")
+    @com.aliyun.core.annotation.NameInMap("cooperationCompanyId")
     private String cooperationCompanyId;
 
-    @NameInMap("cooperationShopId")
+    @com.aliyun.core.annotation.NameInMap("cooperationShopId")
     private String cooperationShopId;
 
-    @NameInMap("shopId")
+    @com.aliyun.core.annotation.NameInMap("shopId")
     private String shopId;
 
     private CooperationShop(Builder builder) {

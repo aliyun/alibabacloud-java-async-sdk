@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CategoryListQuery</p>
  */
 public class CategoryListQuery extends TeaModel {
-    @NameInMap("categoryIds")
+    @com.aliyun.core.annotation.NameInMap("categoryIds")
     private java.util.List < Long > categoryIds;
 
-    @NameInMap("parentCategoryId")
+    @com.aliyun.core.annotation.NameInMap("parentCategoryId")
     private Long parentCategoryId;
 
     private CategoryListQuery(Builder builder) {

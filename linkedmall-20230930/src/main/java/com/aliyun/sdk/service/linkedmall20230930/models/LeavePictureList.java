@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>LeavePictureList</p>
  */
 public class LeavePictureList extends TeaModel {
-    @NameInMap("desc")
+    @com.aliyun.core.annotation.NameInMap("desc")
     private String desc;
 
-    @NameInMap("picture")
+    @com.aliyun.core.annotation.NameInMap("picture")
     private String picture;
 
     private LeavePictureList(Builder builder) {

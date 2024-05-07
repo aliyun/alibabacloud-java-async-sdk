@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,11 +11,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ProductSaleInfoQuery</p>
  */
 public class ProductSaleInfoQuery extends TeaModel {
-    @NameInMap("distributorShopId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("distributorShopId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String distributorShopId;
 
-    @NameInMap("divisionCode")
+    @com.aliyun.core.annotation.NameInMap("divisionCode")
     private String divisionCode;
 
     private ProductSaleInfoQuery(Builder builder) {

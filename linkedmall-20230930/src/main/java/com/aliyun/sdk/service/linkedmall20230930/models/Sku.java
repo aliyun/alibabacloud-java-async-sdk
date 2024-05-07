@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,55 +11,55 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Sku</p>
  */
 public class Sku extends TeaModel {
-    @NameInMap("barcode")
+    @com.aliyun.core.annotation.NameInMap("barcode")
     private String barcode;
 
-    @NameInMap("canSell")
+    @com.aliyun.core.annotation.NameInMap("canSell")
     private Boolean canSell;
 
-    @NameInMap("divisionCode")
+    @com.aliyun.core.annotation.NameInMap("divisionCode")
     private String divisionCode;
 
-    @NameInMap("fuzzyQuantity")
+    @com.aliyun.core.annotation.NameInMap("fuzzyQuantity")
     private String fuzzyQuantity;
 
-    @NameInMap("markPrice")
+    @com.aliyun.core.annotation.NameInMap("markPrice")
     private Long markPrice;
 
-    @NameInMap("picUrl")
+    @com.aliyun.core.annotation.NameInMap("picUrl")
     private String picUrl;
 
-    @NameInMap("platformPrice")
+    @com.aliyun.core.annotation.NameInMap("platformPrice")
     private Long platformPrice;
 
-    @NameInMap("price")
+    @com.aliyun.core.annotation.NameInMap("price")
     private Long price;
 
-    @NameInMap("productId")
+    @com.aliyun.core.annotation.NameInMap("productId")
     private String productId;
 
-    @NameInMap("quantity")
+    @com.aliyun.core.annotation.NameInMap("quantity")
     private Long quantity;
 
-    @NameInMap("rankValue")
+    @com.aliyun.core.annotation.NameInMap("rankValue")
     private Long rankValue;
 
-    @NameInMap("shopId")
+    @com.aliyun.core.annotation.NameInMap("shopId")
     private String shopId;
 
-    @NameInMap("skuId")
+    @com.aliyun.core.annotation.NameInMap("skuId")
     private String skuId;
 
-    @NameInMap("skuSpecs")
+    @com.aliyun.core.annotation.NameInMap("skuSpecs")
     private java.util.List < SkuSpec > skuSpecs;
 
-    @NameInMap("skuSpecsCode")
+    @com.aliyun.core.annotation.NameInMap("skuSpecsCode")
     private String skuSpecsCode;
 
-    @NameInMap("skuStatus")
+    @com.aliyun.core.annotation.NameInMap("skuStatus")
     private String skuStatus;
 
-    @NameInMap("title")
+    @com.aliyun.core.annotation.NameInMap("title")
     private String title;
 
     private Sku(Builder builder) {

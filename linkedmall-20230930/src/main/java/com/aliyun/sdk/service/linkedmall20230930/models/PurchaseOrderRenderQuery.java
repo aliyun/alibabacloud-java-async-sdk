@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PurchaseOrderRenderQuery</p>
  */
 public class PurchaseOrderRenderQuery extends TeaModel {
-    @NameInMap("buyerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("buyerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String buyerId;
 
-    @NameInMap("deliveryAddress")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("deliveryAddress")
+    @com.aliyun.core.annotation.Validation(required = true)
     private AddressInfo deliveryAddress;
 
-    @NameInMap("extInfo")
+    @com.aliyun.core.annotation.NameInMap("extInfo")
     private java.util.Map < String, ? > extInfo;
 
-    @NameInMap("productList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("productList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < OrderRenderProductDTO > productList;
 
     private PurchaseOrderRenderQuery(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RefundRenderResult</p>
  */
 public class RefundRenderResult extends TeaModel {
-    @NameInMap("bizClaimType")
+    @com.aliyun.core.annotation.NameInMap("bizClaimType")
     private Integer bizClaimType;
 
-    @NameInMap("maxRefundFeeData")
+    @com.aliyun.core.annotation.NameInMap("maxRefundFeeData")
     private DistributionMaxRefundFee maxRefundFeeData;
 
-    @NameInMap("orderLineId")
+    @com.aliyun.core.annotation.NameInMap("orderLineId")
     private String orderLineId;
 
-    @NameInMap("refundReasonList")
+    @com.aliyun.core.annotation.NameInMap("refundReasonList")
     private java.util.List < RefundReason > refundReasonList;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private RefundRenderResult(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Division</p>
  */
 public class Division extends TeaModel {
-    @NameInMap("divisionCode")
+    @com.aliyun.core.annotation.NameInMap("divisionCode")
     private Long divisionCode;
 
-    @NameInMap("divisionLevel")
+    @com.aliyun.core.annotation.NameInMap("divisionLevel")
     private Long divisionLevel;
 
-    @NameInMap("divisionName")
+    @com.aliyun.core.annotation.NameInMap("divisionName")
     private String divisionName;
 
-    @NameInMap("parentId")
+    @com.aliyun.core.annotation.NameInMap("parentId")
     private Long parentId;
 
-    @NameInMap("pinyin")
+    @com.aliyun.core.annotation.NameInMap("pinyin")
     private String pinyin;
 
     private Division(Builder builder) {

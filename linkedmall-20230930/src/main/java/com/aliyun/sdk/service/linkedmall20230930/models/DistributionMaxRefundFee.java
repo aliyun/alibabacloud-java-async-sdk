@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DistributionMaxRefundFee</p>
  */
 public class DistributionMaxRefundFee extends TeaModel {
-    @NameInMap("maxRefundFee")
+    @com.aliyun.core.annotation.NameInMap("maxRefundFee")
     private Long maxRefundFee;
 
-    @NameInMap("minRefundFee")
+    @com.aliyun.core.annotation.NameInMap("minRefundFee")
     private Long minRefundFee;
 
     private DistributionMaxRefundFee(Builder builder) {

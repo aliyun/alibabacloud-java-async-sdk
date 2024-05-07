@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>OrderRenderResult</p>
  */
 public class OrderRenderResult extends TeaModel {
-    @NameInMap("canSell")
+    @com.aliyun.core.annotation.NameInMap("canSell")
     private Boolean canSell;
 
-    @NameInMap("deliveryInfoList")
+    @com.aliyun.core.annotation.NameInMap("deliveryInfoList")
     private java.util.List < DeliveryInfo > deliveryInfoList;
 
-    @NameInMap("extInfo")
+    @com.aliyun.core.annotation.NameInMap("extInfo")
     private java.util.Map < String, ? > extInfo;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("productList")
+    @com.aliyun.core.annotation.NameInMap("productList")
     private java.util.List < OrderProductResult > productList;
 
     private OrderRenderResult(Builder builder) {

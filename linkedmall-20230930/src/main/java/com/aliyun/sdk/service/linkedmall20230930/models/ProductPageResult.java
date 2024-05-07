@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ProductPageResult</p>
  */
 public class ProductPageResult extends TeaModel {
-    @NameInMap("pageNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNumber;
 
-    @NameInMap("pageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("pageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @NameInMap("products")
+    @com.aliyun.core.annotation.NameInMap("products")
     private java.util.List < Product > products;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("total")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("total")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer total;
 
     private ProductPageResult(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,70 +11,70 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Product</p>
  */
 public class Product extends TeaModel {
-    @NameInMap("brandName")
+    @com.aliyun.core.annotation.NameInMap("brandName")
     private String brandName;
 
-    @NameInMap("canSell")
+    @com.aliyun.core.annotation.NameInMap("canSell")
     private Boolean canSell;
 
-    @NameInMap("categoryChain")
+    @com.aliyun.core.annotation.NameInMap("categoryChain")
     private java.util.List < Category > categoryChain;
 
-    @NameInMap("categoryLeafId")
+    @com.aliyun.core.annotation.NameInMap("categoryLeafId")
     private Long categoryLeafId;
 
-    @NameInMap("descPath")
+    @com.aliyun.core.annotation.NameInMap("descPath")
     private String descPath;
 
-    @NameInMap("divisionCode")
+    @com.aliyun.core.annotation.NameInMap("divisionCode")
     private String divisionCode;
 
-    @NameInMap("fuzzyQuantity")
+    @com.aliyun.core.annotation.NameInMap("fuzzyQuantity")
     private String fuzzyQuantity;
 
-    @NameInMap("images")
+    @com.aliyun.core.annotation.NameInMap("images")
     private java.util.List < String > images;
 
-    @NameInMap("picUrl")
+    @com.aliyun.core.annotation.NameInMap("picUrl")
     private String picUrl;
 
-    @NameInMap("productId")
+    @com.aliyun.core.annotation.NameInMap("productId")
     private String productId;
 
-    @NameInMap("productSpecs")
+    @com.aliyun.core.annotation.NameInMap("productSpecs")
     private java.util.List < ProductSpec > productSpecs;
 
-    @NameInMap("productStatus")
+    @com.aliyun.core.annotation.NameInMap("productStatus")
     private String productStatus;
 
-    @NameInMap("productType")
+    @com.aliyun.core.annotation.NameInMap("productType")
     private String productType;
 
-    @NameInMap("properties")
+    @com.aliyun.core.annotation.NameInMap("properties")
     private java.util.List < ProductProperty > properties;
 
-    @NameInMap("quantity")
+    @com.aliyun.core.annotation.NameInMap("quantity")
     private Long quantity;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("shopId")
+    @com.aliyun.core.annotation.NameInMap("shopId")
     private String shopId;
 
-    @NameInMap("skus")
+    @com.aliyun.core.annotation.NameInMap("skus")
     private java.util.List < Sku > skus;
 
-    @NameInMap("soldQuantity")
+    @com.aliyun.core.annotation.NameInMap("soldQuantity")
     private String soldQuantity;
 
-    @NameInMap("taxCode")
+    @com.aliyun.core.annotation.NameInMap("taxCode")
     private String taxCode;
 
-    @NameInMap("taxRate")
+    @com.aliyun.core.annotation.NameInMap("taxRate")
     private Integer taxRate;
 
-    @NameInMap("title")
+    @com.aliyun.core.annotation.NameInMap("title")
     private String title;
 
     private Product(Builder builder) {

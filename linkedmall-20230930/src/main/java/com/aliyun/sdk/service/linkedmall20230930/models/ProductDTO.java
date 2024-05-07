@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ProductDTO</p>
  */
 public class ProductDTO extends TeaModel {
-    @NameInMap("price")
+    @com.aliyun.core.annotation.NameInMap("price")
     private Long price;
 
-    @NameInMap("productId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("productId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productId;
 
-    @NameInMap("purchaserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("purchaserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String purchaserId;
 
-    @NameInMap("quantity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("quantity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer quantity;
 
-    @NameInMap("skuId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("skuId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String skuId;
 
     private ProductDTO(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Money</p>
  */
 public class Money extends TeaModel {
-    @NameInMap("amount")
+    @com.aliyun.core.annotation.NameInMap("amount")
     private Long amount;
 
-    @NameInMap("amountAsString")
+    @com.aliyun.core.annotation.NameInMap("amountAsString")
     private String amountAsString;
 
-    @NameInMap("amountString")
+    @com.aliyun.core.annotation.NameInMap("amountString")
     private String amountString;
 
-    @NameInMap("cent")
+    @com.aliyun.core.annotation.NameInMap("cent")
     private Long cent;
 
-    @NameInMap("currency")
+    @com.aliyun.core.annotation.NameInMap("currency")
     private Currency currency;
 
-    @NameInMap("currencyCode")
+    @com.aliyun.core.annotation.NameInMap("currencyCode")
     private String currencyCode;
 
-    @NameInMap("positive")
+    @com.aliyun.core.annotation.NameInMap("positive")
     private Boolean positive;
 
     private Money(Builder builder) {
@@ -172,19 +171,19 @@ public class Money extends TeaModel {
     } 
 
     public static class Currency extends TeaModel {
-        @NameInMap("currencyCode")
+        @com.aliyun.core.annotation.NameInMap("currencyCode")
         private String currencyCode;
 
-        @NameInMap("defaultFractionDigits")
+        @com.aliyun.core.annotation.NameInMap("defaultFractionDigits")
         private Integer defaultFractionDigits;
 
-        @NameInMap("displayName")
+        @com.aliyun.core.annotation.NameInMap("displayName")
         private String displayName;
 
-        @NameInMap("numericCode")
+        @com.aliyun.core.annotation.NameInMap("numericCode")
         private Integer numericCode;
 
-        @NameInMap("symbol")
+        @com.aliyun.core.annotation.NameInMap("symbol")
         private String symbol;
 
         private Currency(Builder builder) {

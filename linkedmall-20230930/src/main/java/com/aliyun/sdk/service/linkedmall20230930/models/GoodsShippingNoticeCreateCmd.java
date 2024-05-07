@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GoodsShippingNoticeCreateCmd</p>
  */
 public class GoodsShippingNoticeCreateCmd extends TeaModel {
-    @NameInMap("cpCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("cpCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cpCode;
 
-    @NameInMap("disputeId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("disputeId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String disputeId;
 
-    @NameInMap("logisticsNo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("logisticsNo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String logisticsNo;
 
     private GoodsShippingNoticeCreateCmd(Builder builder) {

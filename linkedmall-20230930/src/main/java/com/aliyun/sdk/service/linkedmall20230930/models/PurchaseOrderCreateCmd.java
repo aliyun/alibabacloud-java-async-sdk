@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PurchaseOrderCreateCmd</p>
  */
 public class PurchaseOrderCreateCmd extends TeaModel {
-    @NameInMap("buyerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("buyerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String buyerId;
 
-    @NameInMap("deliveryAddress")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("deliveryAddress")
+    @com.aliyun.core.annotation.Validation(required = true)
     private AddressInfo deliveryAddress;
 
-    @NameInMap("extInfo")
+    @com.aliyun.core.annotation.NameInMap("extInfo")
     private java.util.Map < String, ? > extInfo;
 
-    @NameInMap("outerPurchaseOrderId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("outerPurchaseOrderId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String outerPurchaseOrderId;
 
-    @NameInMap("productList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("productList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < ProductDTO > productList;
 
     private PurchaseOrderCreateCmd(Builder builder) {

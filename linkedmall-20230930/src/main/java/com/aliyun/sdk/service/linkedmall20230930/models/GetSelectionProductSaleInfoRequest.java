@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSelectionProductSaleInfoRequest</p>
  */
 public class GetSelectionProductSaleInfoRequest extends Request {
-    @Path
-    @NameInMap("productId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("productId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productId;
 
-    @Query
-    @NameInMap("divisionCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("divisionCode")
     private String divisionCode;
 
-    @Query
-    @NameInMap("purchaserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("purchaserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String purchaserId;
 
     private GetSelectionProductSaleInfoRequest(Builder builder) {

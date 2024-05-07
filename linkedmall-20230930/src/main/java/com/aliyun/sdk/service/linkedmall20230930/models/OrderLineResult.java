@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.linkedmall20230930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>OrderLineResult</p>
  */
 public class OrderLineResult extends TeaModel {
-    @NameInMap("logisticsStatus")
+    @com.aliyun.core.annotation.NameInMap("logisticsStatus")
     private String logisticsStatus;
 
-    @NameInMap("number")
+    @com.aliyun.core.annotation.NameInMap("number")
     private String number;
 
-    @NameInMap("orderId")
+    @com.aliyun.core.annotation.NameInMap("orderId")
     private String orderId;
 
-    @NameInMap("orderLineId")
+    @com.aliyun.core.annotation.NameInMap("orderLineId")
     private String orderLineId;
 
-    @NameInMap("orderLineStatus")
+    @com.aliyun.core.annotation.NameInMap("orderLineStatus")
     private String orderLineStatus;
 
-    @NameInMap("payFee")
+    @com.aliyun.core.annotation.NameInMap("payFee")
     private Long payFee;
 
-    @NameInMap("productId")
+    @com.aliyun.core.annotation.NameInMap("productId")
     private String productId;
 
-    @NameInMap("productPic")
+    @com.aliyun.core.annotation.NameInMap("productPic")
     private String productPic;
 
-    @NameInMap("productTitle")
+    @com.aliyun.core.annotation.NameInMap("productTitle")
     private String productTitle;
 
-    @NameInMap("skuId")
+    @com.aliyun.core.annotation.NameInMap("skuId")
     private String skuId;
 
-    @NameInMap("skuTitle")
+    @com.aliyun.core.annotation.NameInMap("skuTitle")
     private String skuTitle;
 
     private OrderLineResult(Builder builder) {
