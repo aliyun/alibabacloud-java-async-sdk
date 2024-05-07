@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateLoginProfileResponseBody</p>
  */
 public class UpdateLoginProfileResponseBody extends TeaModel {
-    @NameInMap("LoginProfile")
+    @com.aliyun.core.annotation.NameInMap("LoginProfile")
     private LoginProfile loginProfile;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateLoginProfileResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
     } 
 
     public static class LoginProfile extends TeaModel {
-        @NameInMap("MFABindRequired")
+        @com.aliyun.core.annotation.NameInMap("MFABindRequired")
         private Boolean MFABindRequired;
 
-        @NameInMap("PasswordResetRequired")
+        @com.aliyun.core.annotation.NameInMap("PasswordResetRequired")
         private Boolean passwordResetRequired;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UpdateDate")
+        @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
 
-        @NameInMap("UserPrincipalName")
+        @com.aliyun.core.annotation.NameInMap("UserPrincipalName")
         private String userPrincipalName;
 
         private LoginProfile(Builder builder) {

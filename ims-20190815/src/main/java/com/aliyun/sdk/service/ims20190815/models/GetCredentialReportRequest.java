@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetCredentialReportRequest</p>
  */
 public class GetCredentialReportRequest extends Request {
-    @Query
-    @NameInMap("MaxItems")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxItems")
     private String maxItems;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
     private GetCredentialReportRequest(Builder builder) {

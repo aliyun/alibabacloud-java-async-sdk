@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,41 +11,41 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateApplicationRequest</p>
  */
 public class UpdateApplicationRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("NewAccessTokenValidity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewAccessTokenValidity")
     private Integer newAccessTokenValidity;
 
-    @Query
-    @NameInMap("NewDisplayName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewDisplayName")
     private String newDisplayName;
 
-    @Query
-    @NameInMap("NewIsMultiTenant")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewIsMultiTenant")
     private Boolean newIsMultiTenant;
 
-    @Query
-    @NameInMap("NewPredefinedScopes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewPredefinedScopes")
     private String newPredefinedScopes;
 
-    @Query
-    @NameInMap("NewRedirectUris")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewRedirectUris")
     private String newRedirectUris;
 
-    @Query
-    @NameInMap("NewRefreshTokenValidity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewRefreshTokenValidity")
     private Integer newRefreshTokenValidity;
 
-    @Query
-    @NameInMap("NewRequiredScopes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewRequiredScopes")
     private String newRequiredScopes;
 
-    @Query
-    @NameInMap("NewSecretRequired")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewSecretRequired")
     private Boolean newSecretRequired;
 
     private UpdateApplicationRequest(Builder builder) {
@@ -176,7 +175,7 @@ public class UpdateApplicationRequest extends Request {
         }
 
         /**
-         * The validity period of the new access token.
+         * The validity period of the access token.
          * <p>
          * 
          * Valid values: 900 to 10800. Unit: seconds.
@@ -188,7 +187,7 @@ public class UpdateApplicationRequest extends Request {
         }
 
         /**
-         * The new display name of the application.
+         * The display name.
          */
         public Builder newDisplayName(String newDisplayName) {
             this.putQueryParameter("NewDisplayName", newDisplayName);
@@ -210,14 +209,14 @@ public class UpdateApplicationRequest extends Request {
         }
 
         /**
-         * The new scope of application permissions.
+         * The permission that is granted on the application.
          * <p>
          * 
-         * For more information about the application permission scope, see [Open authorization scope](~~93693~~). You can also call the [ListPredefinedScopes](~~187206~~) operation to obtain the permission scopes supported by different types of applications.
+         * For more information about the application permission scope, see [OAuth scopes](~~93693~~). You can also call the [ListPredefinedScopes](~~187206~~) operation to query the permissions that are supported by different types of applications.
          * 
-         * Separate multiple permission scopes with semicolons (;).
+         * If you enter multiple permissions, separate them with semicolons (;).
          * 
-         * If you specify a new permission scope, the new permission scope takes effect. For example, if the original permission scope is `/acs/ccc`, and the new permission scope is `/acs/alidns`, `/acs/alidns` takes effect. If you want to retain the original permission scope, set the new permission scope to `/acs/ccc;/acs/alidns`.
+         * The new value of this parameter overwrites the original value, and the permission specified by the new value takes effect. For example, if the original value is `/acs/ccc`, and the new value is `/acs/alidns`, `/acs/alidns` takes effect. If you want to retain the original permission and the `/acs/alidns` permission, set the value to `/acs/ccc;/acs/alidns`.
          */
         public Builder newPredefinedScopes(String newPredefinedScopes) {
             this.putQueryParameter("NewPredefinedScopes", newPredefinedScopes);
@@ -226,10 +225,10 @@ public class UpdateApplicationRequest extends Request {
         }
 
         /**
-         * The new callback URL.
+         * The callback URL.
          * <p>
          * 
-         * Separate multiple callback URLs with semicolons (;).
+         * If you enter multiple callback URLs, separate them with semicolons (;).
          */
         public Builder newRedirectUris(String newRedirectUris) {
             this.putQueryParameter("NewRedirectUris", newRedirectUris);
@@ -238,7 +237,7 @@ public class UpdateApplicationRequest extends Request {
         }
 
         /**
-         * The validity period of the refreshed token.
+         * The validity period of the refresh token.
          * <p>
          * 
          * Valid values: 7200 to 31536000. Unit: seconds.
@@ -250,7 +249,18 @@ public class UpdateApplicationRequest extends Request {
         }
 
         /**
-         * NewRequiredScopes.
+         * The required permission.
+         * <p>
+         * 
+         * You can specify one or more permissions for the `RequiredScopes` parameter. After you specify this parameter, the required permissions are automatically selected and cannot be revoked when a user grants permissions on the application.
+         * 
+         * If you also specify the `NewPredefinedScopes` parameter, the `NewPredefinedScopes` parameter specifies the permissions that can be granted on the application, and this parameter specifies the required permissions.
+         * 
+         * If you enter multiple permissions, separate them with semicolons (;).
+         * 
+         * The new value of this parameter overwrites the original value, and the required permission specified by the new value takes effect.
+         * 
+         * >  If the permission that you specify for the `RequiredScopes` parameter is not included in value of the `PredefinedScopes` parameter, the permission does not take effect.
          */
         public Builder newRequiredScopes(String newRequiredScopes) {
             this.putQueryParameter("NewRequiredScopes", newRequiredScopes);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateVirtualMFADeviceResponseBody</p>
  */
 public class CreateVirtualMFADeviceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VirtualMFADevice")
+    @com.aliyun.core.annotation.NameInMap("VirtualMFADevice")
     private VirtualMFADevice virtualMFADevice;
 
     private CreateVirtualMFADeviceResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class CreateVirtualMFADeviceResponseBody extends TeaModel {
     } 
 
     public static class VirtualMFADevice extends TeaModel {
-        @NameInMap("Base32StringSeed")
+        @com.aliyun.core.annotation.NameInMap("Base32StringSeed")
         private String base32StringSeed;
 
-        @NameInMap("QRCodePNG")
+        @com.aliyun.core.annotation.NameInMap("QRCodePNG")
         private String QRCodePNG;
 
-        @NameInMap("SerialNumber")
+        @com.aliyun.core.annotation.NameInMap("SerialNumber")
         private String serialNumber;
 
         private VirtualMFADevice(Builder builder) {

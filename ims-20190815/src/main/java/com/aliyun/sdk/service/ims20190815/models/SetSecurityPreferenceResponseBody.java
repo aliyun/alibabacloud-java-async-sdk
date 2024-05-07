@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetSecurityPreferenceResponseBody</p>
  */
 public class SetSecurityPreferenceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecurityPreference")
+    @com.aliyun.core.annotation.NameInMap("SecurityPreference")
     private SecurityPreference securityPreference;
 
     private SetSecurityPreferenceResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
     } 
 
     public static class AccessKeyPreference extends TeaModel {
-        @NameInMap("AllowUserToManageAccessKeys")
+        @com.aliyun.core.annotation.NameInMap("AllowUserToManageAccessKeys")
         private Boolean allowUserToManageAccessKeys;
 
         private AccessKeyPreference(Builder builder) {
@@ -113,22 +112,22 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
 
     }
     public static class LoginProfilePreference extends TeaModel {
-        @NameInMap("AllowUserToChangePassword")
+        @com.aliyun.core.annotation.NameInMap("AllowUserToChangePassword")
         private Boolean allowUserToChangePassword;
 
-        @NameInMap("EnableSaveMFATicket")
+        @com.aliyun.core.annotation.NameInMap("EnableSaveMFATicket")
         private Boolean enableSaveMFATicket;
 
-        @NameInMap("LoginNetworkMasks")
+        @com.aliyun.core.annotation.NameInMap("LoginNetworkMasks")
         private String loginNetworkMasks;
 
-        @NameInMap("LoginSessionDuration")
+        @com.aliyun.core.annotation.NameInMap("LoginSessionDuration")
         private Integer loginSessionDuration;
 
-        @NameInMap("MFAOperationForLogin")
+        @com.aliyun.core.annotation.NameInMap("MFAOperationForLogin")
         private String MFAOperationForLogin;
 
-        @NameInMap("OperationForRiskLogin")
+        @com.aliyun.core.annotation.NameInMap("OperationForRiskLogin")
         private String operationForRiskLogin;
 
         private LoginProfilePreference(Builder builder) {
@@ -254,7 +253,7 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
 
     }
     public static class MFAPreference extends TeaModel {
-        @NameInMap("AllowUserToManageMFADevices")
+        @com.aliyun.core.annotation.NameInMap("AllowUserToManageMFADevices")
         private Boolean allowUserToManageMFADevices;
 
         private MFAPreference(Builder builder) {
@@ -295,7 +294,7 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
 
     }
     public static class PersonalInfoPreference extends TeaModel {
-        @NameInMap("AllowUserToManagePersonalDingTalk")
+        @com.aliyun.core.annotation.NameInMap("AllowUserToManagePersonalDingTalk")
         private Boolean allowUserToManagePersonalDingTalk;
 
         private PersonalInfoPreference(Builder builder) {
@@ -336,7 +335,7 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
 
     }
     public static class VerificationPreference extends TeaModel {
-        @NameInMap("VerificationTypes")
+        @com.aliyun.core.annotation.NameInMap("VerificationTypes")
         private java.util.List < String > verificationTypes;
 
         private VerificationPreference(Builder builder) {
@@ -377,19 +376,19 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
 
     }
     public static class SecurityPreference extends TeaModel {
-        @NameInMap("AccessKeyPreference")
+        @com.aliyun.core.annotation.NameInMap("AccessKeyPreference")
         private AccessKeyPreference accessKeyPreference;
 
-        @NameInMap("LoginProfilePreference")
+        @com.aliyun.core.annotation.NameInMap("LoginProfilePreference")
         private LoginProfilePreference loginProfilePreference;
 
-        @NameInMap("MFAPreference")
+        @com.aliyun.core.annotation.NameInMap("MFAPreference")
         private MFAPreference MFAPreference;
 
-        @NameInMap("PersonalInfoPreference")
+        @com.aliyun.core.annotation.NameInMap("PersonalInfoPreference")
         private PersonalInfoPreference personalInfoPreference;
 
-        @NameInMap("VerificationPreference")
+        @com.aliyun.core.annotation.NameInMap("VerificationPreference")
         private VerificationPreference verificationPreference;
 
         private SecurityPreference(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateSAMLProviderRequest</p>
  */
 public class UpdateSAMLProviderRequest extends Request {
-    @Query
-    @NameInMap("NewDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewDescription")
     private String newDescription;
 
-    @Query
-    @NameInMap("NewEncodedSAMLMetadataDocument")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewEncodedSAMLMetadataDocument")
     private String newEncodedSAMLMetadataDocument;
 
-    @Query
-    @NameInMap("SAMLProviderName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SAMLProviderName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String SAMLProviderName;
 
     private UpdateSAMLProviderRequest(Builder builder) {

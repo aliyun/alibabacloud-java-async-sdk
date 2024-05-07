@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,44 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetSecurityPreferenceRequest</p>
  */
 public class SetSecurityPreferenceRequest extends Request {
-    @Query
-    @NameInMap("AllowUserToChangePassword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllowUserToChangePassword")
     private Boolean allowUserToChangePassword;
 
-    @Query
-    @NameInMap("AllowUserToManageAccessKeys")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllowUserToManageAccessKeys")
     private Boolean allowUserToManageAccessKeys;
 
-    @Query
-    @NameInMap("AllowUserToManageMFADevices")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllowUserToManageMFADevices")
     private Boolean allowUserToManageMFADevices;
 
-    @Query
-    @NameInMap("AllowUserToManagePersonalDingTalk")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllowUserToManagePersonalDingTalk")
     private Boolean allowUserToManagePersonalDingTalk;
 
-    @Query
-    @NameInMap("EnableSaveMFATicket")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableSaveMFATicket")
     private Boolean enableSaveMFATicket;
 
-    @Query
-    @NameInMap("LoginNetworkMasks")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoginNetworkMasks")
     private String loginNetworkMasks;
 
-    @Query
-    @NameInMap("LoginSessionDuration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoginSessionDuration")
     private Integer loginSessionDuration;
 
-    @Query
-    @NameInMap("MFAOperationForLogin")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MFAOperationForLogin")
     private String MFAOperationForLogin;
 
-    @Query
-    @NameInMap("OperationForRiskLogin")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationForRiskLogin")
     private String operationForRiskLogin;
 
-    @Query
-    @NameInMap("VerificationTypes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VerificationTypes")
     private java.util.List < String > verificationTypes;
 
     private SetSecurityPreferenceRequest(Builder builder) {

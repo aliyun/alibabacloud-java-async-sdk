@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListGroupsForUserResponseBody</p>
  */
 public class ListGroupsForUserResponseBody extends TeaModel {
-    @NameInMap("Groups")
+    @com.aliyun.core.annotation.NameInMap("Groups")
     private Groups groups;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListGroupsForUserResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class ListGroupsForUserResponseBody extends TeaModel {
     } 
 
     public static class Group extends TeaModel {
-        @NameInMap("Comments")
+        @com.aliyun.core.annotation.NameInMap("Comments")
         private String comments;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("JoinDate")
+        @com.aliyun.core.annotation.NameInMap("JoinDate")
         private String joinDate;
 
         private Group(Builder builder) {
@@ -193,7 +192,7 @@ public class ListGroupsForUserResponseBody extends TeaModel {
 
     }
     public static class Groups extends TeaModel {
-        @NameInMap("Group")
+        @com.aliyun.core.annotation.NameInMap("Group")
         private java.util.List < Group> group;
 
         private Groups(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetApplicationResponseBody</p>
  */
 public class GetApplicationResponseBody extends TeaModel {
-    @NameInMap("Application")
+    @com.aliyun.core.annotation.NameInMap("Application")
     private Application application;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetApplicationResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class GetApplicationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The configuration information about the application.
+         * The information about the application.
          */
         public Builder application(Application application) {
             this.application = application;
@@ -72,13 +71,13 @@ public class GetApplicationResponseBody extends TeaModel {
     } 
 
     public static class PredefinedScope extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Required")
+        @com.aliyun.core.annotation.NameInMap("Required")
         private Boolean required;
 
         private PredefinedScope(Builder builder) {
@@ -138,7 +137,13 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Required.
+             * Indicates whether the permission is automatically selected by default when you install the application. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
+             * 
+             * `openid` is required by default.
              */
             public Builder required(Boolean required) {
                 this.required = required;
@@ -153,7 +158,7 @@ public class GetApplicationResponseBody extends TeaModel {
 
     }
     public static class PredefinedScopes extends TeaModel {
-        @NameInMap("PredefinedScope")
+        @com.aliyun.core.annotation.NameInMap("PredefinedScope")
         private java.util.List < PredefinedScope> predefinedScope;
 
         private PredefinedScopes(Builder builder) {
@@ -194,7 +199,7 @@ public class GetApplicationResponseBody extends TeaModel {
 
     }
     public static class DelegatedScope extends TeaModel {
-        @NameInMap("PredefinedScopes")
+        @com.aliyun.core.annotation.NameInMap("PredefinedScopes")
         private PredefinedScopes predefinedScopes;
 
         private DelegatedScope(Builder builder) {
@@ -235,7 +240,7 @@ public class GetApplicationResponseBody extends TeaModel {
 
     }
     public static class RedirectUris extends TeaModel {
-        @NameInMap("RedirectUri")
+        @com.aliyun.core.annotation.NameInMap("RedirectUri")
         private java.util.List < String > redirectUri;
 
         private RedirectUris(Builder builder) {
@@ -276,43 +281,43 @@ public class GetApplicationResponseBody extends TeaModel {
 
     }
     public static class Application extends TeaModel {
-        @NameInMap("AccessTokenValidity")
+        @com.aliyun.core.annotation.NameInMap("AccessTokenValidity")
         private Integer accessTokenValidity;
 
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("AppType")
+        @com.aliyun.core.annotation.NameInMap("AppType")
         private String appType;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("DelegatedScope")
+        @com.aliyun.core.annotation.NameInMap("DelegatedScope")
         private DelegatedScope delegatedScope;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("IsMultiTenant")
+        @com.aliyun.core.annotation.NameInMap("IsMultiTenant")
         private Boolean isMultiTenant;
 
-        @NameInMap("RedirectUris")
+        @com.aliyun.core.annotation.NameInMap("RedirectUris")
         private RedirectUris redirectUris;
 
-        @NameInMap("RefreshTokenValidity")
+        @com.aliyun.core.annotation.NameInMap("RefreshTokenValidity")
         private Integer refreshTokenValidity;
 
-        @NameInMap("SecretRequired")
+        @com.aliyun.core.annotation.NameInMap("SecretRequired")
         private Boolean secretRequired;
 
-        @NameInMap("UpdateDate")
+        @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
 
         private Application(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPredefinedScopesResponseBody</p>
  */
 public class ListPredefinedScopesResponseBody extends TeaModel {
-    @NameInMap("PredefinedScopes")
+    @com.aliyun.core.annotation.NameInMap("PredefinedScopes")
     private PredefinedScopes predefinedScopes;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListPredefinedScopesResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class ListPredefinedScopesResponseBody extends TeaModel {
     } 
 
     public static class PredefinedScope extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private PredefinedScope(Builder builder) {
@@ -133,7 +132,7 @@ public class ListPredefinedScopesResponseBody extends TeaModel {
 
     }
     public static class PredefinedScopes extends TeaModel {
-        @NameInMap("PredefinedScope")
+        @com.aliyun.core.annotation.NameInMap("PredefinedScope")
         private java.util.List < PredefinedScope> predefinedScope;
 
         private PredefinedScopes(Builder builder) {

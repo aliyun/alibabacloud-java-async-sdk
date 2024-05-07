@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUsersForGroupResponseBody</p>
  */
 public class ListUsersForGroupResponseBody extends TeaModel {
-    @NameInMap("IsTruncated")
+    @com.aliyun.core.annotation.NameInMap("IsTruncated")
     private Boolean isTruncated;
 
-    @NameInMap("Marker")
+    @com.aliyun.core.annotation.NameInMap("Marker")
     private String marker;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Users")
+    @com.aliyun.core.annotation.NameInMap("Users")
     private Users users;
 
     private ListUsersForGroupResponseBody(Builder builder) {
@@ -116,16 +115,16 @@ public class ListUsersForGroupResponseBody extends TeaModel {
     } 
 
     public static class User extends TeaModel {
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("JoinDate")
+        @com.aliyun.core.annotation.NameInMap("JoinDate")
         private String joinDate;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserPrincipalName")
+        @com.aliyun.core.annotation.NameInMap("UserPrincipalName")
         private String userPrincipalName;
 
         private User(Builder builder) {
@@ -217,7 +216,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
 
     }
     public static class Users extends TeaModel {
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private java.util.List < User> user;
 
         private Users(Builder builder) {

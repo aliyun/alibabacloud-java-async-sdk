@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateUserResponseBody</p>
  */
 public class UpdateUserResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("User")
+    @com.aliyun.core.annotation.NameInMap("User")
     private User user;
 
     private UpdateUserResponseBody(Builder builder) {
@@ -72,34 +71,34 @@ public class UpdateUserResponseBody extends TeaModel {
     } 
 
     public static class User extends TeaModel {
-        @NameInMap("Comments")
+        @com.aliyun.core.annotation.NameInMap("Comments")
         private String comments;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("LastLoginDate")
+        @com.aliyun.core.annotation.NameInMap("LastLoginDate")
         private String lastLoginDate;
 
-        @NameInMap("MobilePhone")
+        @com.aliyun.core.annotation.NameInMap("MobilePhone")
         private String mobilePhone;
 
-        @NameInMap("ProvisionType")
+        @com.aliyun.core.annotation.NameInMap("ProvisionType")
         private String provisionType;
 
-        @NameInMap("UpdateDate")
+        @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserPrincipalName")
+        @com.aliyun.core.annotation.NameInMap("UserPrincipalName")
         private String userPrincipalName;
 
         private User(Builder builder) {

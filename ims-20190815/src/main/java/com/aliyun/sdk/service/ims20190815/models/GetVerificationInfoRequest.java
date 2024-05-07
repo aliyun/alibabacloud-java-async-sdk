@@ -6,17 +6,16 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UnbindMFADeviceRequest} extends {@link RequestModel}
+ * {@link GetVerificationInfoRequest} extends {@link RequestModel}
  *
- * <p>UnbindMFADeviceRequest</p>
+ * <p>GetVerificationInfoRequest</p>
  */
-public class UnbindMFADeviceRequest extends Request {
+public class GetVerificationInfoRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserPrincipalName")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String userPrincipalName;
 
-    private UnbindMFADeviceRequest(Builder builder) {
+    private GetVerificationInfoRequest(Builder builder) {
         super(builder);
         this.userPrincipalName = builder.userPrincipalName;
     }
@@ -25,7 +24,7 @@ public class UnbindMFADeviceRequest extends Request {
         return new Builder();
     }
 
-    public static UnbindMFADeviceRequest create() {
+    public static GetVerificationInfoRequest create() {
         return builder().build();
     }
 
@@ -41,20 +40,20 @@ public class UnbindMFADeviceRequest extends Request {
         return this.userPrincipalName;
     }
 
-    public static final class Builder extends Request.Builder<UnbindMFADeviceRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetVerificationInfoRequest, Builder> {
         private String userPrincipalName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UnbindMFADeviceRequest request) {
+        private Builder(GetVerificationInfoRequest request) {
             super(request);
             this.userPrincipalName = request.userPrincipalName;
         } 
 
         /**
-         * The logon name of the RAM user.
+         * UserPrincipalName.
          */
         public Builder userPrincipalName(String userPrincipalName) {
             this.putQueryParameter("UserPrincipalName", userPrincipalName);
@@ -63,8 +62,8 @@ public class UnbindMFADeviceRequest extends Request {
         }
 
         @Override
-        public UnbindMFADeviceRequest build() {
-            return new UnbindMFADeviceRequest(this);
+        public GetVerificationInfoRequest build() {
+            return new GetVerificationInfoRequest(this);
         } 
 
     } 

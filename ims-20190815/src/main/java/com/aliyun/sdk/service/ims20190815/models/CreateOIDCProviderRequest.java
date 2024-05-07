@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateOIDCProviderRequest</p>
  */
 public class CreateOIDCProviderRequest extends Request {
-    @Query
-    @NameInMap("ClientIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientIds")
     private String clientIds;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Fingerprints")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Fingerprints")
     private String fingerprints;
 
-    @Query
-    @NameInMap("IssuanceLimitTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IssuanceLimitTime")
     private Long issuanceLimitTime;
 
-    @Query
-    @NameInMap("IssuerUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IssuerUrl")
     private String issuerUrl;
 
-    @Query
-    @NameInMap("OIDCProviderName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OIDCProviderName")
     private String OIDCProviderName;
 
     private CreateOIDCProviderRequest(Builder builder) {

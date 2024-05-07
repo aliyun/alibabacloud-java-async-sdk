@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSAMLProviderResponseBody</p>
  */
 public class GetSAMLProviderResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SAMLProvider")
+    @com.aliyun.core.annotation.NameInMap("SAMLProvider")
     private SAMLProvider SAMLProvider;
 
     private GetSAMLProviderResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class GetSAMLProviderResponseBody extends TeaModel {
     } 
 
     public static class SAMLProvider extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EncodedSAMLMetadataDocument")
+        @com.aliyun.core.annotation.NameInMap("EncodedSAMLMetadataDocument")
         private String encodedSAMLMetadataDocument;
 
-        @NameInMap("SAMLProviderName")
+        @com.aliyun.core.annotation.NameInMap("SAMLProviderName")
         private String SAMLProviderName;
 
-        @NameInMap("UpdateDate")
+        @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
 
         private SAMLProvider(Builder builder) {

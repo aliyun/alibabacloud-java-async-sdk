@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSAMLProvidersResponseBody</p>
  */
 public class ListSAMLProvidersResponseBody extends TeaModel {
-    @NameInMap("IsTruncated")
+    @com.aliyun.core.annotation.NameInMap("IsTruncated")
     private Boolean isTruncated;
 
-    @NameInMap("Marker")
+    @com.aliyun.core.annotation.NameInMap("Marker")
     private String marker;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SAMLProviders")
+    @com.aliyun.core.annotation.NameInMap("SAMLProviders")
     private SAMLProviders SAMLProviders;
 
     private ListSAMLProvidersResponseBody(Builder builder) {
@@ -116,19 +115,19 @@ public class ListSAMLProvidersResponseBody extends TeaModel {
     } 
 
     public static class SAMLProvider extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("SAMLProviderName")
+        @com.aliyun.core.annotation.NameInMap("SAMLProviderName")
         private String SAMLProviderName;
 
-        @NameInMap("UpdateDate")
+        @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
 
         private SAMLProvider(Builder builder) {
@@ -237,7 +236,7 @@ public class ListSAMLProvidersResponseBody extends TeaModel {
 
     }
     public static class SAMLProviders extends TeaModel {
-        @NameInMap("SAMLProvider")
+        @com.aliyun.core.annotation.NameInMap("SAMLProvider")
         private java.util.List < SAMLProvider> SAMLProvider;
 
         private SAMLProviders(Builder builder) {

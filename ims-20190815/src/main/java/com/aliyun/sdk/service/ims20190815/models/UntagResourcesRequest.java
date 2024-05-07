@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UntagResourcesRequest</p>
  */
 public class UntagResourcesRequest extends Request {
-    @Query
-    @NameInMap("All")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("All")
     private Boolean all;
 
-    @Query
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
     private java.util.List < String > resourceId;
 
-    @Query
-    @NameInMap("ResourcePrincipalName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourcePrincipalName")
     private java.util.List < String > resourcePrincipalName;
 
-    @Query
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
-    @Query
-    @NameInMap("TagKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagKey")
     private java.util.List < String > tagKey;
 
     private UntagResourcesRequest(Builder builder) {

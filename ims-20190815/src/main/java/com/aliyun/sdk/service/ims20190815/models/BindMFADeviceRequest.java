@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BindMFADeviceRequest</p>
  */
 public class BindMFADeviceRequest extends Request {
-    @Query
-    @NameInMap("AuthenticationCode1")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthenticationCode1")
     private String authenticationCode1;
 
-    @Query
-    @NameInMap("AuthenticationCode2")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthenticationCode2")
     private String authenticationCode2;
 
-    @Query
-    @NameInMap("SerialNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SerialNumber")
     private String serialNumber;
 
-    @Query
-    @NameInMap("UserPrincipalName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserPrincipalName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userPrincipalName;
 
     private BindMFADeviceRequest(Builder builder) {

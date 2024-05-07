@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAccessKeysResponseBody</p>
  */
 public class ListAccessKeysResponseBody extends TeaModel {
-    @NameInMap("AccessKeys")
+    @com.aliyun.core.annotation.NameInMap("AccessKeys")
     private AccessKeys accessKeys;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListAccessKeysResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class ListAccessKeysResponseBody extends TeaModel {
     } 
 
     public static class AccessKey extends TeaModel {
-        @NameInMap("AccessKeyId")
+        @com.aliyun.core.annotation.NameInMap("AccessKeyId")
         private String accessKeyId;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UpdateDate")
+        @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
 
         private AccessKey(Builder builder) {
@@ -177,7 +176,7 @@ public class ListAccessKeysResponseBody extends TeaModel {
 
     }
     public static class AccessKeys extends TeaModel {
-        @NameInMap("AccessKey")
+        @com.aliyun.core.annotation.NameInMap("AccessKey")
         private java.util.List < AccessKey> accessKey;
 
         private AccessKeys(Builder builder) {

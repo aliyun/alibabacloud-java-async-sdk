@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListVirtualMFADevicesResponseBody</p>
  */
 public class ListVirtualMFADevicesResponseBody extends TeaModel {
-    @NameInMap("IsTruncated")
+    @com.aliyun.core.annotation.NameInMap("IsTruncated")
     private Boolean isTruncated;
 
-    @NameInMap("Marker")
+    @com.aliyun.core.annotation.NameInMap("Marker")
     private String marker;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VirtualMFADevices")
+    @com.aliyun.core.annotation.NameInMap("VirtualMFADevices")
     private VirtualMFADevices virtualMFADevices;
 
     private ListVirtualMFADevicesResponseBody(Builder builder) {
@@ -116,13 +115,13 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
     } 
 
     public static class User extends TeaModel {
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserPrincipalName")
+        @com.aliyun.core.annotation.NameInMap("UserPrincipalName")
         private String userPrincipalName;
 
         private User(Builder builder) {
@@ -197,13 +196,13 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
 
     }
     public static class VirtualMFADevice extends TeaModel {
-        @NameInMap("ActivateDate")
+        @com.aliyun.core.annotation.NameInMap("ActivateDate")
         private String activateDate;
 
-        @NameInMap("SerialNumber")
+        @com.aliyun.core.annotation.NameInMap("SerialNumber")
         private String serialNumber;
 
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private User user;
 
         private VirtualMFADevice(Builder builder) {
@@ -278,7 +277,7 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
 
     }
     public static class VirtualMFADevices extends TeaModel {
-        @NameInMap("VirtualMFADevice")
+        @com.aliyun.core.annotation.NameInMap("VirtualMFADevice")
         private java.util.List < VirtualMFADevice> virtualMFADevice;
 
         private VirtualMFADevices(Builder builder) {

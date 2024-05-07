@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.ims20190815;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.ims20190815.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -18,11 +19,6 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
-    /**
-      * ###
-      * This topic provides an example on how to add the client ID `598469743454717****` to the OIDC IdP named `TestOIDCProvider`.
-      *
-     */
     CompletableFuture<AddClientIdToOIDCProviderResponse> addClientIdToOIDCProvider(AddClientIdToOIDCProviderRequest request);
 
     /**
@@ -152,6 +148,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetUserMFAInfoResponse> getUserMFAInfo(GetUserMFAInfoRequest request);
 
     CompletableFuture<GetUserSsoSettingsResponse> getUserSsoSettings(GetUserSsoSettingsRequest request);
+
+    CompletableFuture<GetVerificationInfoResponse> getVerificationInfo(GetVerificationInfoRequest request);
 
     CompletableFuture<ListAccessKeysResponse> listAccessKeys(ListAccessKeysRequest request);
 

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateGroupRequest</p>
  */
 public class CreateGroupRequest extends Request {
-    @Query
-    @NameInMap("Comments")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comments")
     private String comments;
 
-    @Query
-    @NameInMap("DisplayName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
     private String displayName;
 
-    @Query
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
     private CreateGroupRequest(Builder builder) {

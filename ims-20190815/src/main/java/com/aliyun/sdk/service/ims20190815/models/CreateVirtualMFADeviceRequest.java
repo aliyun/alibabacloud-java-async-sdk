@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateVirtualMFADeviceRequest</p>
  */
 public class CreateVirtualMFADeviceRequest extends Request {
-    @Query
-    @NameInMap("VirtualMFADeviceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VirtualMFADeviceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String virtualMFADeviceName;
 
     private CreateVirtualMFADeviceRequest(Builder builder) {

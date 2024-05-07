@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAccountSecurityPracticeReportResponseBody</p>
  */
 public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
-    @NameInMap("AccountSecurityPracticeInfo")
+    @com.aliyun.core.annotation.NameInMap("AccountSecurityPracticeInfo")
     private AccountSecurityPracticeInfo accountSecurityPracticeInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetAccountSecurityPracticeReportResponseBody(Builder builder) {
@@ -72,31 +71,31 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
     } 
 
     public static class AccountSecurityPracticeUserInfo extends TeaModel {
-        @NameInMap("BindMfa")
+        @com.aliyun.core.annotation.NameInMap("BindMfa")
         private Boolean bindMfa;
 
-        @NameInMap("OldAkNum")
+        @com.aliyun.core.annotation.NameInMap("OldAkNum")
         private Integer oldAkNum;
 
-        @NameInMap("RootWithAccessKey")
+        @com.aliyun.core.annotation.NameInMap("RootWithAccessKey")
         private Integer rootWithAccessKey;
 
-        @NameInMap("SubUser")
+        @com.aliyun.core.annotation.NameInMap("SubUser")
         private Integer subUser;
 
-        @NameInMap("SubUserBindMfa")
+        @com.aliyun.core.annotation.NameInMap("SubUserBindMfa")
         private Integer subUserBindMfa;
 
-        @NameInMap("SubUserPwdLevel")
+        @com.aliyun.core.annotation.NameInMap("SubUserPwdLevel")
         private String subUserPwdLevel;
 
-        @NameInMap("SubUserWithOldAccessKey")
+        @com.aliyun.core.annotation.NameInMap("SubUserWithOldAccessKey")
         private Integer subUserWithOldAccessKey;
 
-        @NameInMap("SubUserWithUnusedAccessKey")
+        @com.aliyun.core.annotation.NameInMap("SubUserWithUnusedAccessKey")
         private Integer subUserWithUnusedAccessKey;
 
-        @NameInMap("UnusedAkNum")
+        @com.aliyun.core.annotation.NameInMap("UnusedAkNum")
         private Integer unusedAkNum;
 
         private AccountSecurityPracticeUserInfo(Builder builder) {
@@ -282,10 +281,10 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
 
     }
     public static class AccountSecurityPracticeInfo extends TeaModel {
-        @NameInMap("AccountSecurityPracticeUserInfo")
+        @com.aliyun.core.annotation.NameInMap("AccountSecurityPracticeUserInfo")
         private AccountSecurityPracticeUserInfo accountSecurityPracticeUserInfo;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private Integer score;
 
         private AccountSecurityPracticeInfo(Builder builder) {

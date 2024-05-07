@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateOIDCProviderResponseBody</p>
  */
 public class CreateOIDCProviderResponseBody extends TeaModel {
-    @NameInMap("OIDCProvider")
+    @com.aliyun.core.annotation.NameInMap("OIDCProvider")
     private OIDCProvider OIDCProvider;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateOIDCProviderResponseBody(Builder builder) {
@@ -72,37 +71,37 @@ public class CreateOIDCProviderResponseBody extends TeaModel {
     } 
 
     public static class OIDCProvider extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
-        @NameInMap("ClientIds")
+        @com.aliyun.core.annotation.NameInMap("ClientIds")
         private String clientIds;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Fingerprints")
+        @com.aliyun.core.annotation.NameInMap("Fingerprints")
         private String fingerprints;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("IssuanceLimitTime")
+        @com.aliyun.core.annotation.NameInMap("IssuanceLimitTime")
         private Long issuanceLimitTime;
 
-        @NameInMap("IssuerUrl")
+        @com.aliyun.core.annotation.NameInMap("IssuerUrl")
         private String issuerUrl;
 
-        @NameInMap("OIDCProviderName")
+        @com.aliyun.core.annotation.NameInMap("OIDCProviderName")
         private String OIDCProviderName;
 
-        @NameInMap("UpdateDate")
+        @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
 
         private OIDCProvider(Builder builder) {

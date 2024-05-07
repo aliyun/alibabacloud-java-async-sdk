@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetUserSsoSettingsResponseBody</p>
  */
 public class GetUserSsoSettingsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UserSsoSettings")
+    @com.aliyun.core.annotation.NameInMap("UserSsoSettings")
     private UserSsoSettings userSsoSettings;
 
     private GetUserSsoSettingsResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class GetUserSsoSettingsResponseBody extends TeaModel {
     } 
 
     public static class UserSsoSettings extends TeaModel {
-        @NameInMap("AuxiliaryDomain")
+        @com.aliyun.core.annotation.NameInMap("AuxiliaryDomain")
         private String auxiliaryDomain;
 
-        @NameInMap("MetadataDocument")
+        @com.aliyun.core.annotation.NameInMap("MetadataDocument")
         private String metadataDocument;
 
-        @NameInMap("SsoEnabled")
+        @com.aliyun.core.annotation.NameInMap("SsoEnabled")
         private Boolean ssoEnabled;
 
         private UserSsoSettings(Builder builder) {

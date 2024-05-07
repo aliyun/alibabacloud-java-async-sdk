@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetUserResponseBody</p>
  */
 public class GetUserResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("User")
+    @com.aliyun.core.annotation.NameInMap("User")
     private User user;
 
     private GetUserResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class GetUserResponseBody extends TeaModel {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -133,7 +132,7 @@ public class GetUserResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -174,37 +173,37 @@ public class GetUserResponseBody extends TeaModel {
 
     }
     public static class User extends TeaModel {
-        @NameInMap("Comments")
+        @com.aliyun.core.annotation.NameInMap("Comments")
         private String comments;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("LastLoginDate")
+        @com.aliyun.core.annotation.NameInMap("LastLoginDate")
         private String lastLoginDate;
 
-        @NameInMap("MobilePhone")
+        @com.aliyun.core.annotation.NameInMap("MobilePhone")
         private String mobilePhone;
 
-        @NameInMap("ProvisionType")
+        @com.aliyun.core.annotation.NameInMap("ProvisionType")
         private String provisionType;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("UpdateDate")
+        @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserPrincipalName")
+        @com.aliyun.core.annotation.NameInMap("UserPrincipalName")
         private String userPrincipalName;
 
         private User(Builder builder) {

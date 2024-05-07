@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateUserRequest</p>
  */
 public class CreateUserRequest extends Request {
-    @Query
-    @NameInMap("Comments")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comments")
     private String comments;
 
-    @Query
-    @NameInMap("DisplayName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String displayName;
 
-    @Query
-    @NameInMap("Email")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Email")
     private String email;
 
-    @Query
-    @NameInMap("MobilePhone")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MobilePhone")
     private String mobilePhone;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("UserPrincipalName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserPrincipalName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userPrincipalName;
 
     private CreateUserRequest(Builder builder) {
@@ -209,10 +208,10 @@ public class CreateUserRequest extends Request {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

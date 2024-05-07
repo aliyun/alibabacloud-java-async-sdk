@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetCredentialReportResponseBody</p>
  */
 public class GetCredentialReportResponseBody extends TeaModel {
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private String content;
 
-    @NameInMap("GeneratedTime")
+    @com.aliyun.core.annotation.NameInMap("GeneratedTime")
     private String generatedTime;
 
-    @NameInMap("IsTruncated")
+    @com.aliyun.core.annotation.NameInMap("IsTruncated")
     private String isTruncated;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetCredentialReportResponseBody(Builder builder) {

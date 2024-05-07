@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAppSecretResponseBody</p>
  */
 public class CreateAppSecretResponseBody extends TeaModel {
-    @NameInMap("AppSecret")
+    @com.aliyun.core.annotation.NameInMap("AppSecret")
     private AppSecret appSecret;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateAppSecretResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class CreateAppSecretResponseBody extends TeaModel {
     } 
 
     public static class AppSecret extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppSecretId")
+        @com.aliyun.core.annotation.NameInMap("AppSecretId")
         private String appSecretId;
 
-        @NameInMap("AppSecretValue")
+        @com.aliyun.core.annotation.NameInMap("AppSecretValue")
         private String appSecretValue;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
         private AppSecret(Builder builder) {

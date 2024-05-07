@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RemoveClientIdFromOIDCProviderRequest</p>
  */
 public class RemoveClientIdFromOIDCProviderRequest extends Request {
-    @Query
-    @NameInMap("ClientId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientId")
     private String clientId;
 
-    @Query
-    @NameInMap("OIDCProviderName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OIDCProviderName")
     private String OIDCProviderName;
 
     private RemoveClientIdFromOIDCProviderRequest(Builder builder) {

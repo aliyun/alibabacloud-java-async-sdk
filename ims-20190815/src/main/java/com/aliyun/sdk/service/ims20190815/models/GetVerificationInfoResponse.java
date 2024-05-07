@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UpdateOIDCProviderResponse} extends {@link TeaModel}
+ * {@link GetVerificationInfoResponse} extends {@link TeaModel}
  *
- * <p>UpdateOIDCProviderResponse</p>
+ * <p>GetVerificationInfoResponse</p>
  */
-public class UpdateOIDCProviderResponse extends Response {
+public class GetVerificationInfoResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +18,16 @@ public class UpdateOIDCProviderResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private UpdateOIDCProviderResponseBody body;
+    private GetVerificationInfoResponseBody body;
 
-    private UpdateOIDCProviderResponse(BuilderImpl builder) {
+    private GetVerificationInfoResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static UpdateOIDCProviderResponse create() {
+    public static GetVerificationInfoResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +53,35 @@ public class UpdateOIDCProviderResponse extends Response {
     /**
      * @return body
      */
-    public UpdateOIDCProviderResponseBody getBody() {
+    public GetVerificationInfoResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<UpdateOIDCProviderResponse, Builder> {
+    public interface Builder extends Response.Builder<GetVerificationInfoResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(UpdateOIDCProviderResponseBody body);
+        Builder body(GetVerificationInfoResponseBody body);
 
         @Override
-        UpdateOIDCProviderResponse build();
+        GetVerificationInfoResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<UpdateOIDCProviderResponse, Builder>
+            extends Response.BuilderImpl<GetVerificationInfoResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private UpdateOIDCProviderResponseBody body; 
+        private GetVerificationInfoResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(UpdateOIDCProviderResponse response) {
+        private BuilderImpl(GetVerificationInfoResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +110,14 @@ public class UpdateOIDCProviderResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(UpdateOIDCProviderResponseBody body) {
+        public Builder body(GetVerificationInfoResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public UpdateOIDCProviderResponse build() {
-            return new UpdateOIDCProviderResponse(this);
+        public GetVerificationInfoResponse build() {
+            return new GetVerificationInfoResponse(this);
         } 
 
     } 

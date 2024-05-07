@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAccessKeyResponseBody</p>
  */
 public class CreateAccessKeyResponseBody extends TeaModel {
-    @NameInMap("AccessKey")
+    @com.aliyun.core.annotation.NameInMap("AccessKey")
     private AccessKey accessKey;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateAccessKeyResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class CreateAccessKeyResponseBody extends TeaModel {
     } 
 
     public static class AccessKey extends TeaModel {
-        @NameInMap("AccessKeyId")
+        @com.aliyun.core.annotation.NameInMap("AccessKeyId")
         private String accessKeyId;
 
-        @NameInMap("AccessKeySecret")
+        @com.aliyun.core.annotation.NameInMap("AccessKeySecret")
         private String accessKeySecret;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private AccessKey(Builder builder) {

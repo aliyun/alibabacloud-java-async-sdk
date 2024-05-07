@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,48 +11,48 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetPasswordPolicyRequest</p>
  */
 public class SetPasswordPolicyRequest extends Request {
-    @Query
-    @NameInMap("HardExpire")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HardExpire")
     private Boolean hardExpire;
 
-    @Query
-    @NameInMap("MaxLoginAttemps")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxLoginAttemps")
     private Integer maxLoginAttemps;
 
-    @Query
-    @NameInMap("MaxPasswordAge")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxPasswordAge")
     private Integer maxPasswordAge;
 
-    @Query
-    @NameInMap("MinimumPasswordDifferentCharacter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumPasswordDifferentCharacter")
     private Integer minimumPasswordDifferentCharacter;
 
-    @Query
-    @NameInMap("MinimumPasswordLength")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumPasswordLength")
     private Integer minimumPasswordLength;
 
-    @Query
-    @NameInMap("PasswordNotContainUserName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordNotContainUserName")
     private Boolean passwordNotContainUserName;
 
-    @Query
-    @NameInMap("PasswordReusePrevention")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordReusePrevention")
     private Integer passwordReusePrevention;
 
-    @Query
-    @NameInMap("RequireLowercaseCharacters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequireLowercaseCharacters")
     private Boolean requireLowercaseCharacters;
 
-    @Query
-    @NameInMap("RequireNumbers")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequireNumbers")
     private Boolean requireNumbers;
 
-    @Query
-    @NameInMap("RequireSymbols")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequireSymbols")
     private Boolean requireSymbols;
 
-    @Query
-    @NameInMap("RequireUppercaseCharacters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequireUppercaseCharacters")
     private Boolean requireUppercaseCharacters;
 
     private SetPasswordPolicyRequest(Builder builder) {

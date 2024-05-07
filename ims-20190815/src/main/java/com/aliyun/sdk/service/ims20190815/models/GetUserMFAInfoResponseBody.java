@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetUserMFAInfoResponseBody</p>
  */
 public class GetUserMFAInfoResponseBody extends TeaModel {
-    @NameInMap("IsMFAEnable")
+    @com.aliyun.core.annotation.NameInMap("IsMFAEnable")
     private Boolean isMFAEnable;
 
-    @NameInMap("MFADevice")
+    @com.aliyun.core.annotation.NameInMap("MFADevice")
     private MFADevice MFADevice;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetUserMFAInfoResponseBody(Builder builder) {
@@ -96,10 +95,10 @@ public class GetUserMFAInfoResponseBody extends TeaModel {
     } 
 
     public static class MFADevice extends TeaModel {
-        @NameInMap("SerialNumber")
+        @com.aliyun.core.annotation.NameInMap("SerialNumber")
         private String serialNumber;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private MFADevice(Builder builder) {

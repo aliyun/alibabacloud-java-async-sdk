@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddClientIdToOIDCProviderRequest</p>
  */
 public class AddClientIdToOIDCProviderRequest extends Request {
-    @Query
-    @NameInMap("ClientId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientId")
     private String clientId;
 
-    @Query
-    @NameInMap("OIDCProviderName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OIDCProviderName")
     private String OIDCProviderName;
 
     private AddClientIdToOIDCProviderRequest(Builder builder) {
@@ -71,7 +70,7 @@ public class AddClientIdToOIDCProviderRequest extends Request {
          * The client ID that you want to add.
          * <p>
          * 
-         * ````
+         * The client ID can contain letters, digits, and special characters and cannot start with the special characters. The special characters are periods (.), hyphens (-), underscores (_), colons (:), and forward slashes (/). 
          * 
          * The client ID can be up to 64 characters in length.
          */

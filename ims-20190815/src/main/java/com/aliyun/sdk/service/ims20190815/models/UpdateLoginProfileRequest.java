@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateLoginProfileRequest</p>
  */
 public class UpdateLoginProfileRequest extends Request {
-    @Query
-    @NameInMap("MFABindRequired")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MFABindRequired")
     private Boolean MFABindRequired;
 
-    @Query
-    @NameInMap("Password")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Password")
     private String password;
 
-    @Query
-    @NameInMap("PasswordResetRequired")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordResetRequired")
     private Boolean passwordResetRequired;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("UserPrincipalName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserPrincipalName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userPrincipalName;
 
     private UpdateLoginProfileRequest(Builder builder) {

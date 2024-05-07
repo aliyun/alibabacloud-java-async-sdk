@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAccountSummaryResponseBody</p>
  */
 public class GetAccountSummaryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SummaryMap")
+    @com.aliyun.core.annotation.NameInMap("SummaryMap")
     private SummaryMap summaryMap;
 
     private GetAccountSummaryResponseBody(Builder builder) {
@@ -72,67 +71,67 @@ public class GetAccountSummaryResponseBody extends TeaModel {
     } 
 
     public static class SummaryMap extends TeaModel {
-        @NameInMap("AccessKeysPerUserQuota")
+        @com.aliyun.core.annotation.NameInMap("AccessKeysPerUserQuota")
         private Integer accessKeysPerUserQuota;
 
-        @NameInMap("AttachedPoliciesPerGroupQuota")
+        @com.aliyun.core.annotation.NameInMap("AttachedPoliciesPerGroupQuota")
         private Integer attachedPoliciesPerGroupQuota;
 
-        @NameInMap("AttachedPoliciesPerRoleQuota")
+        @com.aliyun.core.annotation.NameInMap("AttachedPoliciesPerRoleQuota")
         private Integer attachedPoliciesPerRoleQuota;
 
-        @NameInMap("AttachedPoliciesPerUserQuota")
+        @com.aliyun.core.annotation.NameInMap("AttachedPoliciesPerUserQuota")
         private Integer attachedPoliciesPerUserQuota;
 
-        @NameInMap("AttachedSystemPoliciesPerGroupQuota")
+        @com.aliyun.core.annotation.NameInMap("AttachedSystemPoliciesPerGroupQuota")
         private Integer attachedSystemPoliciesPerGroupQuota;
 
-        @NameInMap("AttachedSystemPoliciesPerRoleQuota")
+        @com.aliyun.core.annotation.NameInMap("AttachedSystemPoliciesPerRoleQuota")
         private Integer attachedSystemPoliciesPerRoleQuota;
 
-        @NameInMap("AttachedSystemPoliciesPerUserQuota")
+        @com.aliyun.core.annotation.NameInMap("AttachedSystemPoliciesPerUserQuota")
         private Integer attachedSystemPoliciesPerUserQuota;
 
-        @NameInMap("Groups")
+        @com.aliyun.core.annotation.NameInMap("Groups")
         private Integer groups;
 
-        @NameInMap("GroupsPerUserQuota")
+        @com.aliyun.core.annotation.NameInMap("GroupsPerUserQuota")
         private Integer groupsPerUserQuota;
 
-        @NameInMap("GroupsQuota")
+        @com.aliyun.core.annotation.NameInMap("GroupsQuota")
         private Integer groupsQuota;
 
-        @NameInMap("MFADevices")
+        @com.aliyun.core.annotation.NameInMap("MFADevices")
         private Integer MFADevices;
 
-        @NameInMap("MFADevicesInUse")
+        @com.aliyun.core.annotation.NameInMap("MFADevicesInUse")
         private Integer MFADevicesInUse;
 
-        @NameInMap("Policies")
+        @com.aliyun.core.annotation.NameInMap("Policies")
         private Integer policies;
 
-        @NameInMap("PoliciesQuota")
+        @com.aliyun.core.annotation.NameInMap("PoliciesQuota")
         private Integer policiesQuota;
 
-        @NameInMap("PolicySizeQuota")
+        @com.aliyun.core.annotation.NameInMap("PolicySizeQuota")
         private Integer policySizeQuota;
 
-        @NameInMap("Roles")
+        @com.aliyun.core.annotation.NameInMap("Roles")
         private Integer roles;
 
-        @NameInMap("RolesQuota")
+        @com.aliyun.core.annotation.NameInMap("RolesQuota")
         private Integer rolesQuota;
 
-        @NameInMap("Users")
+        @com.aliyun.core.annotation.NameInMap("Users")
         private Integer users;
 
-        @NameInMap("UsersQuota")
+        @com.aliyun.core.annotation.NameInMap("UsersQuota")
         private Integer usersQuota;
 
-        @NameInMap("VersionsPerPolicyQuota")
+        @com.aliyun.core.annotation.NameInMap("VersionsPerPolicyQuota")
         private Integer versionsPerPolicyQuota;
 
-        @NameInMap("VirtualMFADevicesQuota")
+        @com.aliyun.core.annotation.NameInMap("VirtualMFADevicesQuota")
         private Integer virtualMFADevicesQuota;
 
         private SummaryMap(Builder builder) {

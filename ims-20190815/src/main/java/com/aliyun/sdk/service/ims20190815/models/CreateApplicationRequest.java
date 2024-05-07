@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,46 +11,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateApplicationRequest</p>
  */
 public class CreateApplicationRequest extends Request {
-    @Query
-    @NameInMap("AccessTokenValidity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessTokenValidity")
     private Integer accessTokenValidity;
 
-    @Query
-    @NameInMap("AppName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
     private String appName;
 
-    @Query
-    @NameInMap("AppType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appType;
 
-    @Query
-    @NameInMap("DisplayName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String displayName;
 
-    @Query
-    @NameInMap("IsMultiTenant")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsMultiTenant")
     private Boolean isMultiTenant;
 
-    @Query
-    @NameInMap("PredefinedScopes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PredefinedScopes")
     private String predefinedScopes;
 
-    @Query
-    @NameInMap("RedirectUris")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RedirectUris")
     private String redirectUris;
 
-    @Query
-    @NameInMap("RefreshTokenValidity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RefreshTokenValidity")
     private Integer refreshTokenValidity;
 
-    @Query
-    @NameInMap("RequiredScopes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequiredScopes")
     private String requiredScopes;
 
-    @Query
-    @NameInMap("SecretRequired")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecretRequired")
     private Boolean secretRequired;
 
     private CreateApplicationRequest(Builder builder) {
@@ -196,7 +195,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The name of the application.
+         * The application name.
          * <p>
          * 
          * The name can be up to 64 characters in length. The name can contain letters, digits, periods (.), underscores (\_), and hyphens (-).
@@ -290,7 +289,14 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * RequiredScopes.
+         * The required permission.
+         * <p>
+         * 
+         * You can specify one or more permissions for the `RequiredScopes` parameter. After you specify this parameter, the required permissions are automatically selected and cannot be revoked when a user grants permissions on the application.
+         * 
+         * If you enter multiple permissions, separate them with semicolons (;).
+         * 
+         * >  If the permission that you specify for the `RequiredScopes` parameter is not included in value of the `PredefinedScopes` parameter, the permission does not take effect.
          */
         public Builder requiredScopes(String requiredScopes) {
             this.putQueryParameter("RequiredScopes", requiredScopes);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUsersForGroupRequest</p>
  */
 public class ListUsersForGroupRequest extends Request {
-    @Query
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
-    @Query
-    @NameInMap("Marker")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Marker")
     private String marker;
 
-    @Query
-    @NameInMap("MaxItems")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxItems")
     private Integer maxItems;
 
     private ListUsersForGroupRequest(Builder builder) {

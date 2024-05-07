@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ims20190815.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ChangePasswordRequest</p>
  */
 public class ChangePasswordRequest extends Request {
-    @Query
-    @NameInMap("NewPassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewPassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String newPassword;
 
-    @Query
-    @NameInMap("OldPassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OldPassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String oldPassword;
 
     private ChangePasswordRequest(Builder builder) {
