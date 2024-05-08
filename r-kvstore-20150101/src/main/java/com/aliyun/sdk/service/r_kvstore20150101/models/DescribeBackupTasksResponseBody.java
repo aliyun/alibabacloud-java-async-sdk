@@ -73,7 +73,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The following parameters are internal parameters. Ignore the parameters.
+         * The following parameters are no longer used. Ignore the parameters.
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -217,7 +217,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             private String policyType; 
 
             /**
-             * An internal parameter. Ignore this parameter.
+             * This parameter is no longer used. Ignore this parameter.
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -225,7 +225,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * An internal parameter. Ignore this parameter.
+             * This parameter is no longer used. Ignore this parameter.
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -233,7 +233,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * An internal parameter. Ignore this parameter.
+             * This parameter is no longer used. Ignore this parameter.
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -241,7 +241,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * An internal parameter. Ignore this parameter.
+             * This parameter is no longer used. Ignore this parameter.
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -249,7 +249,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * An internal parameter. Ignore this parameter.
+             * This parameter is no longer used. Ignore this parameter.
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -257,7 +257,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * An internal parameter. Ignore this parameter.
+             * This parameter is no longer used. Ignore this parameter.
              */
             public Builder noPermissionType(String noPermissionType) {
                 this.noPermissionType = noPermissionType;
@@ -265,7 +265,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * An internal parameter. Ignore this parameter.
+             * This parameter is no longer used. Ignore this parameter.
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;

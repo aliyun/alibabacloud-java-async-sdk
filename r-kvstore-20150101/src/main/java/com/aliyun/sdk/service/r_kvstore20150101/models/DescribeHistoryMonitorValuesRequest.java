@@ -39,6 +39,10 @@ public class DescribeHistoryMonitorValuesRequest extends Request {
     private String nodeId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeRole")
+    private String nodeRole;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -71,6 +75,7 @@ public class DescribeHistoryMonitorValuesRequest extends Request {
         this.intervalForHistory = builder.intervalForHistory;
         this.monitorKeys = builder.monitorKeys;
         this.nodeId = builder.nodeId;
+        this.nodeRole = builder.nodeRole;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -135,6 +140,13 @@ public class DescribeHistoryMonitorValuesRequest extends Request {
     }
 
     /**
+     * @return nodeRole
+     */
+    public String getNodeRole() {
+        return this.nodeRole;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -183,6 +195,7 @@ public class DescribeHistoryMonitorValuesRequest extends Request {
         private String intervalForHistory; 
         private String monitorKeys; 
         private String nodeId; 
+        private String nodeRole; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
@@ -202,6 +215,7 @@ public class DescribeHistoryMonitorValuesRequest extends Request {
             this.intervalForHistory = request.intervalForHistory;
             this.monitorKeys = request.monitorKeys;
             this.nodeId = request.nodeId;
+            this.nodeRole = request.nodeRole;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -274,6 +288,15 @@ public class DescribeHistoryMonitorValuesRequest extends Request {
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
             this.nodeId = nodeId;
+            return this;
+        }
+
+        /**
+         * NodeRole.
+         */
+        public Builder nodeRole(String nodeRole) {
+            this.putQueryParameter("NodeRole", nodeRole);
+            this.nodeRole = nodeRole;
             return this;
         }
 

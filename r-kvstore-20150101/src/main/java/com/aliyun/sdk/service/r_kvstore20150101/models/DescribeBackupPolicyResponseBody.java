@@ -121,7 +121,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccessDeniedDetail.
+         * The following parameters are no longer used. Ignore the parameters.
          */
         public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -137,7 +137,11 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * DbsInstance.
+         * Indicates whether the backup-as-a-service feature is enabled for the instance. Valid values:
+         * <p>
+         * 
+         * *   **1**: The backup-as-a-service feature is enabled for the instance.
+         * *   **0**: The backup-as-a-service feature is disabled for the instance.
          */
         public Builder dbsInstance(String dbsInstance) {
             this.dbsInstance = dbsInstance;
@@ -302,7 +306,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             private String policyType; 
 
             /**
-             * AuthAction.
+             * This parameter is no longer used. Ignore this parameter.
              */
             public Builder authAction(String authAction) {
                 this.authAction = authAction;
@@ -310,7 +314,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalDisplayName.
+             * This parameter is no longer used. Ignore this parameter.
              */
             public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
                 this.authPrincipalDisplayName = authPrincipalDisplayName;
@@ -318,7 +322,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalOwnerId.
+             * This parameter is no longer used. Ignore this parameter.
              */
             public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
                 this.authPrincipalOwnerId = authPrincipalOwnerId;
@@ -326,7 +330,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * AuthPrincipalType.
+             * This parameter is no longer used. Ignore this parameter.
              */
             public Builder authPrincipalType(String authPrincipalType) {
                 this.authPrincipalType = authPrincipalType;
@@ -334,7 +338,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedDiagnosticMessage.
+             * This parameter is no longer used. Ignore this parameter.
              */
             public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
                 this.encodedDiagnosticMessage = encodedDiagnosticMessage;
@@ -342,7 +346,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * NoPermissionType.
+             * This parameter is no longer used. Ignore this parameter.
              */
             public Builder noPermissionType(String noPermissionType) {
                 this.noPermissionType = noPermissionType;
@@ -350,7 +354,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * This parameter is no longer used. Ignore this parameter.
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;

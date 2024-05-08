@@ -990,7 +990,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1146,7 +1146,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The service port of the ApsaraDB for Redis instance.
+             * The service port of the instance.
              */
             public Builder port(Long port) {
                 this.port = port;
@@ -1255,7 +1255,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * SlaveReadOnlyCount.
+             * The number of read replicas in the secondary zone. This parameter is returned only after read/write splitting is enabled for the instance across multiple zones.
              */
             public Builder slaveReadOnlyCount(Long slaveReadOnlyCount) {
                 this.slaveReadOnlyCount = slaveReadOnlyCount;
@@ -1287,7 +1287,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch ID.
+             * The ID of the vSwitch.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;

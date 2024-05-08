@@ -168,10 +168,10 @@ public class CreateGlobalSecurityIPGroupRequest extends Request {
         } 
 
         /**
-         * The IP address in the whitelist template.
+         * The IP addresses in the IP whitelist template.
          * <p>
          * 
-         * >  Separate multiple IP addresses with commas (,). You can create up to 1,000 IP addresses or CIDR blocks for all IP whitelists.
+         * >  Separate multiple IP addresses with commas (,). The maximum number of IP addresses is 1,000.
          */
         public Builder gIpList(String gIpList) {
             this.putQueryParameter("GIpList", gIpList);

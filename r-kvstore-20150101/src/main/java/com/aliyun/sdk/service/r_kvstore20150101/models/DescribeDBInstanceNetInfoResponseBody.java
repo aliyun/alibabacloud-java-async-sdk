@@ -73,7 +73,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The list of network information about the instance.
+         * The network information about the instance.
          */
         public Builder netInfoItems(NetInfoItems netInfoItems) {
             this.netInfoItems = netInfoItems;
@@ -261,12 +261,12 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The network type of the endpoint. Valid values:
+             * The network type of the instance. Valid values:
              * <p>
              * 
-             * *   **0**: the Internet.
-             * *   **1**: classic network.
-             * *   **2**: VPC.
+             * *   **0**: Internet
+             * *   **1**: classic network
+             * *   **2**: Virtual Private Cloud (VPC)
              */
             public Builder DBInstanceNetType(String DBInstanceNetType) {
                 this.DBInstanceNetType = DBInstanceNetType;
@@ -277,8 +277,8 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
              * Indicates whether the address is a private endpoint. Valid values:
              * <p>
              * 
-             * *   **0**: no.
-             * *   **1**: yes.
+             * *   **0**: The address is not a private endpoint.
+             * *   **1**: The address is a private endpoint.
              */
             public Builder directConnection(Integer directConnection) {
                 this.directConnection = directConnection;
@@ -286,7 +286,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time of the classic network address of an ApsaraDB for Redis instance. Unit: seconds.
+             * The expiration time of the classic network endpoint. Unit: seconds.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -305,9 +305,9 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
              * The network type of the IP address. Valid values:
              * <p>
              * 
-             * *   **Public**: Internet.
-             * *   **Inner**: classic network.
-             * *   **Private**: VPC.
+             * *   **Public**: Internet
+             * *   **Inner**: classic network
+             * *   **Private**: VPC
              */
             public Builder IPType(String IPType) {
                 this.IPType = IPType;
@@ -315,7 +315,10 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IsSlaveProxy.
+             * Indicates whether the address is the endpoint for the secondary zone. Valid values: 1 and 0. A value of 1 indicates that the address is the endpoint for the secondary zone.
+             * <p>
+             * 
+             * >  This parameter is returned only after you enable the multi-zone read/write splitting architecture for the instance.
              */
             public Builder isSlaveProxy(Integer isSlaveProxy) {
                 this.isSlaveProxy = isSlaveProxy;
@@ -323,7 +326,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The service port of the ApsaraDB for Redis instance.
+             * The service port of the instance.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -331,10 +334,10 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The remaining validity period of the endpoint of the classic network. Unit: seconds.
+             * The remaining validity period of the classic network endpoint. Unit: seconds.
              * <p>
              * 
-             * >  A value of **0** indicates that the endpoint never expires.
+             * >  **A value of 0 indicates that the endpoint never expires.
              */
             public Builder upgradeable(String upgradeable) {
                 this.upgradeable = upgradeable;
@@ -342,7 +345,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC where the instance is deployed.
+             * The ID of the VPC to which the instance belongs.
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;
@@ -350,7 +353,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The instance ID.
              */
             public Builder VPCInstanceId(String VPCInstanceId) {
                 this.VPCInstanceId = VPCInstanceId;

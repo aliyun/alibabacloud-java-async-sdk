@@ -294,13 +294,12 @@ public class DescribeActiveOperationTaskRequest extends Request {
         }
 
         /**
-         * The type of the O&M task. Valid values:
+         * The type of the O\&M task. Valid values:
          * <p>
          * 
          * *   **rds_apsaradb_ha**: master-replica switchover
          * *   **rds_apsaradb_transfer**: instance migration
          * *   **rds_apsaradb_upgrade**: minor version update
-         * *   **all**: all types
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);
