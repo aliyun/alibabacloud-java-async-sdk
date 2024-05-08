@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,72 +11,72 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAutoSnapshotPolicyRequest</p>
  */
 public class CreateAutoSnapshotPolicyRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("CopiedSnapshotsRetentionDays")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CopiedSnapshotsRetentionDays")
     private Integer copiedSnapshotsRetentionDays;
 
-    @Query
-    @NameInMap("CopyEncryptionConfiguration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CopyEncryptionConfiguration")
     private CopyEncryptionConfiguration copyEncryptionConfiguration;
 
-    @Query
-    @NameInMap("EnableCrossRegionCopy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableCrossRegionCopy")
     private Boolean enableCrossRegionCopy;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("StorageLocationArn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageLocationArn")
     private String storageLocationArn;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("TargetCopyRegions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetCopyRegions")
     private String targetCopyRegions;
 
-    @Query
-    @NameInMap("autoSnapshotPolicyName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("autoSnapshotPolicyName")
     private String autoSnapshotPolicyName;
 
-    @Query
-    @NameInMap("regionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("regionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("repeatWeekdays")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("repeatWeekdays")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String repeatWeekdays;
 
-    @Query
-    @NameInMap("retentionDays")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("retentionDays")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer retentionDays;
 
-    @Query
-    @NameInMap("timePoints")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("timePoints")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String timePoints;
 
     private CreateAutoSnapshotPolicyRequest(Builder builder) {
@@ -446,13 +445,13 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
     } 
 
     public static class Arn extends TeaModel {
-        @NameInMap("AssumeRoleFor")
+        @com.aliyun.core.annotation.NameInMap("AssumeRoleFor")
         private Long assumeRoleFor;
 
-        @NameInMap("RoleType")
+        @com.aliyun.core.annotation.NameInMap("RoleType")
         private String roleType;
 
-        @NameInMap("Rolearn")
+        @com.aliyun.core.annotation.NameInMap("Rolearn")
         private String rolearn;
 
         private Arn(Builder builder) {
@@ -527,13 +526,13 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
 
     }
     public static class CopyEncryptionConfiguration extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private java.util.List < Arn> arn;
 
-        @NameInMap("Encrypted")
+        @com.aliyun.core.annotation.NameInMap("Encrypted")
         private Boolean encrypted;
 
-        @NameInMap("KMSKeyId")
+        @com.aliyun.core.annotation.NameInMap("KMSKeyId")
         private String KMSKeyId;
 
         private CopyEncryptionConfiguration(Builder builder) {
@@ -614,10 +613,10 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

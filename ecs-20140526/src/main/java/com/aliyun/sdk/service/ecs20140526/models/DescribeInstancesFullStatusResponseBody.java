@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstancesFullStatusResponseBody</p>
  */
 public class DescribeInstancesFullStatusResponseBody extends TeaModel {
-    @NameInMap("InstanceFullStatusSet")
+    @com.aliyun.core.annotation.NameInMap("InstanceFullStatusSet")
     private InstanceFullStatusSet instanceFullStatusSet;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeInstancesFullStatusResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
     } 
 
     public static class HealthStatus extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private Integer code;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private HealthStatus(Builder builder) {
@@ -193,10 +192,10 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
 
     }
     public static class EventCycleStatus extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private Integer code;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private EventCycleStatus(Builder builder) {
@@ -254,10 +253,10 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
 
     }
     public static class EventType extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private Integer code;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private EventType(Builder builder) {
@@ -315,19 +314,19 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
 
     }
     public static class InactiveDisk extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DeviceCategory")
+        @com.aliyun.core.annotation.NameInMap("DeviceCategory")
         private String deviceCategory;
 
-        @NameInMap("DeviceSize")
+        @com.aliyun.core.annotation.NameInMap("DeviceSize")
         private String deviceSize;
 
-        @NameInMap("DeviceType")
+        @com.aliyun.core.annotation.NameInMap("DeviceType")
         private String deviceType;
 
-        @NameInMap("ReleaseTime")
+        @com.aliyun.core.annotation.NameInMap("ReleaseTime")
         private String releaseTime;
 
         private InactiveDisk(Builder builder) {
@@ -450,7 +449,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
 
     }
     public static class InactiveDisks extends TeaModel {
-        @NameInMap("InactiveDisk")
+        @com.aliyun.core.annotation.NameInMap("InactiveDisk")
         private java.util.List < InactiveDisk> inactiveDisk;
 
         private InactiveDisks(Builder builder) {
@@ -491,13 +490,13 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
 
     }
     public static class ExtendedAttribute extends TeaModel {
-        @NameInMap("Device")
+        @com.aliyun.core.annotation.NameInMap("Device")
         private String device;
 
-        @NameInMap("DiskId")
+        @com.aliyun.core.annotation.NameInMap("DiskId")
         private String diskId;
 
-        @NameInMap("InactiveDisks")
+        @com.aliyun.core.annotation.NameInMap("InactiveDisks")
         private InactiveDisks inactiveDisks;
 
         private ExtendedAttribute(Builder builder) {
@@ -572,28 +571,28 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
 
     }
     public static class ScheduledSystemEventType extends TeaModel {
-        @NameInMap("EventCycleStatus")
+        @com.aliyun.core.annotation.NameInMap("EventCycleStatus")
         private EventCycleStatus eventCycleStatus;
 
-        @NameInMap("EventId")
+        @com.aliyun.core.annotation.NameInMap("EventId")
         private String eventId;
 
-        @NameInMap("EventPublishTime")
+        @com.aliyun.core.annotation.NameInMap("EventPublishTime")
         private String eventPublishTime;
 
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private EventType eventType;
 
-        @NameInMap("ExtendedAttribute")
+        @com.aliyun.core.annotation.NameInMap("ExtendedAttribute")
         private ExtendedAttribute extendedAttribute;
 
-        @NameInMap("ImpactLevel")
+        @com.aliyun.core.annotation.NameInMap("ImpactLevel")
         private String impactLevel;
 
-        @NameInMap("NotBefore")
+        @com.aliyun.core.annotation.NameInMap("NotBefore")
         private String notBefore;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
         private ScheduledSystemEventType(Builder builder) {
@@ -753,7 +752,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
 
     }
     public static class ScheduledSystemEventSet extends TeaModel {
-        @NameInMap("ScheduledSystemEventType")
+        @com.aliyun.core.annotation.NameInMap("ScheduledSystemEventType")
         private java.util.List < ScheduledSystemEventType> scheduledSystemEventType;
 
         private ScheduledSystemEventSet(Builder builder) {
@@ -794,10 +793,10 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
 
     }
     public static class Status extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private Integer code;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Status(Builder builder) {
@@ -855,16 +854,16 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
 
     }
     public static class InstanceFullStatusType extends TeaModel {
-        @NameInMap("HealthStatus")
+        @com.aliyun.core.annotation.NameInMap("HealthStatus")
         private HealthStatus healthStatus;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("ScheduledSystemEventSet")
+        @com.aliyun.core.annotation.NameInMap("ScheduledSystemEventSet")
         private ScheduledSystemEventSet scheduledSystemEventSet;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Status status;
 
         private InstanceFullStatusType(Builder builder) {
@@ -956,7 +955,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
 
     }
     public static class InstanceFullStatusSet extends TeaModel {
-        @NameInMap("InstanceFullStatusType")
+        @com.aliyun.core.annotation.NameInMap("InstanceFullStatusType")
         private java.util.List < InstanceFullStatusType> instanceFullStatusType;
 
         private InstanceFullStatusSet(Builder builder) {

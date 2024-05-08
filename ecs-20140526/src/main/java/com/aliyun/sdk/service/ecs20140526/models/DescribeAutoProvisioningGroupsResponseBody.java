@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAutoProvisioningGroupsResponseBody</p>
  */
 public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
-    @NameInMap("AutoProvisioningGroups")
+    @com.aliyun.core.annotation.NameInMap("AutoProvisioningGroups")
     private AutoProvisioningGroups autoProvisioningGroups;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeAutoProvisioningGroupsResponseBody(Builder builder) {
@@ -132,19 +131,19 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
     } 
 
     public static class LaunchTemplateConfig extends TeaModel {
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("MaxPrice")
+        @com.aliyun.core.annotation.NameInMap("MaxPrice")
         private Float maxPrice;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Float priority;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("WeightedCapacity")
+        @com.aliyun.core.annotation.NameInMap("WeightedCapacity")
         private Float weightedCapacity;
 
         private LaunchTemplateConfig(Builder builder) {
@@ -253,7 +252,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
 
     }
     public static class LaunchTemplateConfigs extends TeaModel {
-        @NameInMap("LaunchTemplateConfig")
+        @com.aliyun.core.annotation.NameInMap("LaunchTemplateConfig")
         private java.util.List < LaunchTemplateConfig> launchTemplateConfig;
 
         private LaunchTemplateConfigs(Builder builder) {
@@ -294,7 +293,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
 
     }
     public static class PayAsYouGoOptions extends TeaModel {
-        @NameInMap("AllocationStrategy")
+        @com.aliyun.core.annotation.NameInMap("AllocationStrategy")
         private String allocationStrategy;
 
         private PayAsYouGoOptions(Builder builder) {
@@ -341,13 +340,13 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
 
     }
     public static class SpotOptions extends TeaModel {
-        @NameInMap("AllocationStrategy")
+        @com.aliyun.core.annotation.NameInMap("AllocationStrategy")
         private String allocationStrategy;
 
-        @NameInMap("InstanceInterruptionBehavior")
+        @com.aliyun.core.annotation.NameInMap("InstanceInterruptionBehavior")
         private String instanceInterruptionBehavior;
 
-        @NameInMap("InstancePoolsToUseCount")
+        @com.aliyun.core.annotation.NameInMap("InstancePoolsToUseCount")
         private Integer instancePoolsToUseCount;
 
         private SpotOptions(Builder builder) {
@@ -433,10 +432,10 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -500,7 +499,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -541,16 +540,16 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
 
     }
     public static class TargetCapacitySpecification extends TeaModel {
-        @NameInMap("DefaultTargetCapacityType")
+        @com.aliyun.core.annotation.NameInMap("DefaultTargetCapacityType")
         private String defaultTargetCapacityType;
 
-        @NameInMap("PayAsYouGoTargetCapacity")
+        @com.aliyun.core.annotation.NameInMap("PayAsYouGoTargetCapacity")
         private Float payAsYouGoTargetCapacity;
 
-        @NameInMap("SpotTargetCapacity")
+        @com.aliyun.core.annotation.NameInMap("SpotTargetCapacity")
         private Float spotTargetCapacity;
 
-        @NameInMap("TotalTargetCapacity")
+        @com.aliyun.core.annotation.NameInMap("TotalTargetCapacity")
         private Float totalTargetCapacity;
 
         private TargetCapacitySpecification(Builder builder) {
@@ -651,67 +650,67 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
 
     }
     public static class AutoProvisioningGroup extends TeaModel {
-        @NameInMap("AutoProvisioningGroupId")
+        @com.aliyun.core.annotation.NameInMap("AutoProvisioningGroupId")
         private String autoProvisioningGroupId;
 
-        @NameInMap("AutoProvisioningGroupName")
+        @com.aliyun.core.annotation.NameInMap("AutoProvisioningGroupName")
         private String autoProvisioningGroupName;
 
-        @NameInMap("AutoProvisioningGroupType")
+        @com.aliyun.core.annotation.NameInMap("AutoProvisioningGroupType")
         private String autoProvisioningGroupType;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("ExcessCapacityTerminationPolicy")
+        @com.aliyun.core.annotation.NameInMap("ExcessCapacityTerminationPolicy")
         private String excessCapacityTerminationPolicy;
 
-        @NameInMap("LaunchTemplateConfigs")
+        @com.aliyun.core.annotation.NameInMap("LaunchTemplateConfigs")
         private LaunchTemplateConfigs launchTemplateConfigs;
 
-        @NameInMap("LaunchTemplateId")
+        @com.aliyun.core.annotation.NameInMap("LaunchTemplateId")
         private String launchTemplateId;
 
-        @NameInMap("LaunchTemplateVersion")
+        @com.aliyun.core.annotation.NameInMap("LaunchTemplateVersion")
         private String launchTemplateVersion;
 
-        @NameInMap("MaxSpotPrice")
+        @com.aliyun.core.annotation.NameInMap("MaxSpotPrice")
         private Float maxSpotPrice;
 
-        @NameInMap("PayAsYouGoOptions")
+        @com.aliyun.core.annotation.NameInMap("PayAsYouGoOptions")
         private PayAsYouGoOptions payAsYouGoOptions;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SpotOptions")
+        @com.aliyun.core.annotation.NameInMap("SpotOptions")
         private SpotOptions spotOptions;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("TargetCapacitySpecification")
+        @com.aliyun.core.annotation.NameInMap("TargetCapacitySpecification")
         private TargetCapacitySpecification targetCapacitySpecification;
 
-        @NameInMap("TerminateInstances")
+        @com.aliyun.core.annotation.NameInMap("TerminateInstances")
         private Boolean terminateInstances;
 
-        @NameInMap("TerminateInstancesWithExpiration")
+        @com.aliyun.core.annotation.NameInMap("TerminateInstancesWithExpiration")
         private Boolean terminateInstancesWithExpiration;
 
-        @NameInMap("ValidFrom")
+        @com.aliyun.core.annotation.NameInMap("ValidFrom")
         private String validFrom;
 
-        @NameInMap("ValidUntil")
+        @com.aliyun.core.annotation.NameInMap("ValidUntil")
         private String validUntil;
 
         private AutoProvisioningGroup(Builder builder) {
@@ -1126,7 +1125,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
 
     }
     public static class AutoProvisioningGroups extends TeaModel {
-        @NameInMap("AutoProvisioningGroup")
+        @com.aliyun.core.annotation.NameInMap("AutoProvisioningGroup")
         private java.util.List < AutoProvisioningGroup> autoProvisioningGroup;
 
         private AutoProvisioningGroups(Builder builder) {

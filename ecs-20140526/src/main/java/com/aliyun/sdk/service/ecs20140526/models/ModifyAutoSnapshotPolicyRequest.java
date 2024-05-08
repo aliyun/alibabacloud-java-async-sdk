@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,56 +11,56 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyAutoSnapshotPolicyRequest</p>
  */
 public class ModifyAutoSnapshotPolicyRequest extends Request {
-    @Query
-    @NameInMap("DataDiskPolicyEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataDiskPolicyEnabled")
     private Boolean dataDiskPolicyEnabled;
 
-    @Query
-    @NameInMap("DataDiskPolicyRetentionDays")
-    @Validation(maximum = 3, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataDiskPolicyRetentionDays")
+    @com.aliyun.core.annotation.Validation(maximum = 3, minimum = 1)
     private Integer dataDiskPolicyRetentionDays;
 
-    @Query
-    @NameInMap("DataDiskPolicyRetentionLastWeek")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataDiskPolicyRetentionLastWeek")
     private Boolean dataDiskPolicyRetentionLastWeek;
 
-    @Query
-    @NameInMap("DataDiskPolicyTimePeriod")
-    @Validation(maximum = 4, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataDiskPolicyTimePeriod")
+    @com.aliyun.core.annotation.Validation(maximum = 4, minimum = 1)
     private Integer dataDiskPolicyTimePeriod;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SystemDiskPolicyEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SystemDiskPolicyEnabled")
     private Boolean systemDiskPolicyEnabled;
 
-    @Query
-    @NameInMap("SystemDiskPolicyRetentionDays")
-    @Validation(maximum = 3, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SystemDiskPolicyRetentionDays")
+    @com.aliyun.core.annotation.Validation(maximum = 3, minimum = 1)
     private Integer systemDiskPolicyRetentionDays;
 
-    @Query
-    @NameInMap("SystemDiskPolicyRetentionLastWeek")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SystemDiskPolicyRetentionLastWeek")
     private Boolean systemDiskPolicyRetentionLastWeek;
 
-    @Query
-    @NameInMap("SystemDiskPolicyTimePeriod")
-    @Validation(maximum = 4, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SystemDiskPolicyTimePeriod")
+    @com.aliyun.core.annotation.Validation(maximum = 4, minimum = 1)
     private Integer systemDiskPolicyTimePeriod;
 
     private ModifyAutoSnapshotPolicyRequest(Builder builder) {

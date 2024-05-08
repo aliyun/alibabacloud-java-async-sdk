@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDiagnosticReportsResponseBody</p>
  */
 public class DescribeDiagnosticReportsResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("Reports")
+    @com.aliyun.core.annotation.NameInMap("Reports")
     private Reports reports;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDiagnosticReportsResponseBody(Builder builder) {
@@ -92,16 +91,16 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
     } 
 
     public static class Issue extends TeaModel {
-        @NameInMap("IssueId")
+        @com.aliyun.core.annotation.NameInMap("IssueId")
         private String issueId;
 
-        @NameInMap("MetricCategory")
+        @com.aliyun.core.annotation.NameInMap("MetricCategory")
         private String metricCategory;
 
-        @NameInMap("MetricId")
+        @com.aliyun.core.annotation.NameInMap("MetricId")
         private String metricId;
 
-        @NameInMap("Severity")
+        @com.aliyun.core.annotation.NameInMap("Severity")
         private String severity;
 
         private Issue(Builder builder) {
@@ -198,7 +197,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
 
     }
     public static class Issues extends TeaModel {
-        @NameInMap("Issue")
+        @com.aliyun.core.annotation.NameInMap("Issue")
         private java.util.List < Issue> issue;
 
         private Issues(Builder builder) {
@@ -239,37 +238,37 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
 
     }
     public static class Report extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("FinishedTime")
+        @com.aliyun.core.annotation.NameInMap("FinishedTime")
         private String finishedTime;
 
-        @NameInMap("Issues")
+        @com.aliyun.core.annotation.NameInMap("Issues")
         private Issues issues;
 
-        @NameInMap("MetricSetId")
+        @com.aliyun.core.annotation.NameInMap("MetricSetId")
         private String metricSetId;
 
-        @NameInMap("ReportId")
+        @com.aliyun.core.annotation.NameInMap("ReportId")
         private String reportId;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("Severity")
+        @com.aliyun.core.annotation.NameInMap("Severity")
         private String severity;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Report(Builder builder) {
@@ -487,7 +486,7 @@ public class DescribeDiagnosticReportsResponseBody extends TeaModel {
 
     }
     public static class Reports extends TeaModel {
-        @NameInMap("Report")
+        @com.aliyun.core.annotation.NameInMap("Report")
         private java.util.List < Report> report;
 
         private Reports(Builder builder) {

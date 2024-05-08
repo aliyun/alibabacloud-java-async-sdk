@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,65 +11,65 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyAutoProvisioningGroupRequest</p>
  */
 public class ModifyAutoProvisioningGroupRequest extends Request {
-    @Query
-    @NameInMap("AutoProvisioningGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoProvisioningGroupId")
     private String autoProvisioningGroupId;
 
-    @Query
-    @NameInMap("AutoProvisioningGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoProvisioningGroupName")
     private String autoProvisioningGroupName;
 
-    @Query
-    @NameInMap("DefaultTargetCapacityType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefaultTargetCapacityType")
     private String defaultTargetCapacityType;
 
-    @Query
-    @NameInMap("ExcessCapacityTerminationPolicy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExcessCapacityTerminationPolicy")
     private String excessCapacityTerminationPolicy;
 
-    @Query
-    @NameInMap("LaunchTemplateConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LaunchTemplateConfig")
     private java.util.List < LaunchTemplateConfig> launchTemplateConfig;
 
-    @Query
-    @NameInMap("MaxSpotPrice")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxSpotPrice")
     private Float maxSpotPrice;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PayAsYouGoTargetCapacity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PayAsYouGoTargetCapacity")
     private String payAsYouGoTargetCapacity;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SpotTargetCapacity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotTargetCapacity")
     private String spotTargetCapacity;
 
-    @Query
-    @NameInMap("TerminateInstancesWithExpiration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TerminateInstancesWithExpiration")
     private Boolean terminateInstancesWithExpiration;
 
-    @Query
-    @NameInMap("TotalTargetCapacity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TotalTargetCapacity")
     private String totalTargetCapacity;
 
     private ModifyAutoProvisioningGroupRequest(Builder builder) {
@@ -411,19 +410,19 @@ public class ModifyAutoProvisioningGroupRequest extends Request {
     } 
 
     public static class LaunchTemplateConfig extends TeaModel {
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("MaxPrice")
+        @com.aliyun.core.annotation.NameInMap("MaxPrice")
         private Double maxPrice;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("WeightedCapacity")
+        @com.aliyun.core.annotation.NameInMap("WeightedCapacity")
         private Double weightedCapacity;
 
         private LaunchTemplateConfig(Builder builder) {

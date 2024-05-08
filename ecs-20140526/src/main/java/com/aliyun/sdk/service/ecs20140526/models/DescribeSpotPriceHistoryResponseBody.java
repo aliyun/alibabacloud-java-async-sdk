@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSpotPriceHistoryResponseBody</p>
  */
 public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
-    @NameInMap("Currency")
+    @com.aliyun.core.annotation.NameInMap("Currency")
     private String currency;
 
-    @NameInMap("NextOffset")
+    @com.aliyun.core.annotation.NameInMap("NextOffset")
     private Integer nextOffset;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SpotPrices")
+    @com.aliyun.core.annotation.NameInMap("SpotPrices")
     private SpotPrices spotPrices;
 
     private DescribeSpotPriceHistoryResponseBody(Builder builder) {
@@ -112,25 +111,25 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
     } 
 
     public static class SpotPriceType extends TeaModel {
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("IoOptimized")
+        @com.aliyun.core.annotation.NameInMap("IoOptimized")
         private String ioOptimized;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("OriginPrice")
+        @com.aliyun.core.annotation.NameInMap("OriginPrice")
         private Float originPrice;
 
-        @NameInMap("SpotPrice")
+        @com.aliyun.core.annotation.NameInMap("SpotPrice")
         private Float spotPrice;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private String timestamp;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private SpotPriceType(Builder builder) {
@@ -278,7 +277,7 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
 
     }
     public static class SpotPrices extends TeaModel {
-        @NameInMap("SpotPriceType")
+        @com.aliyun.core.annotation.NameInMap("SpotPriceType")
         private java.util.List < SpotPriceType> spotPriceType;
 
         private SpotPrices(Builder builder) {

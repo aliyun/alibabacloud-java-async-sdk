@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEniMonitorDataResponseBody</p>
  */
 public class DescribeEniMonitorDataResponseBody extends TeaModel {
-    @NameInMap("MonitorData")
+    @com.aliyun.core.annotation.NameInMap("MonitorData")
     private MonitorData monitorData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeEniMonitorDataResponseBody(Builder builder) {
@@ -92,28 +91,28 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
     } 
 
     public static class EniMonitorData extends TeaModel {
-        @NameInMap("DropPacketRx")
+        @com.aliyun.core.annotation.NameInMap("DropPacketRx")
         private String dropPacketRx;
 
-        @NameInMap("DropPacketTx")
+        @com.aliyun.core.annotation.NameInMap("DropPacketTx")
         private String dropPacketTx;
 
-        @NameInMap("EniId")
+        @com.aliyun.core.annotation.NameInMap("EniId")
         private String eniId;
 
-        @NameInMap("IntranetRx")
+        @com.aliyun.core.annotation.NameInMap("IntranetRx")
         private String intranetRx;
 
-        @NameInMap("IntranetTx")
+        @com.aliyun.core.annotation.NameInMap("IntranetTx")
         private String intranetTx;
 
-        @NameInMap("PacketRx")
+        @com.aliyun.core.annotation.NameInMap("PacketRx")
         private String packetRx;
 
-        @NameInMap("PacketTx")
+        @com.aliyun.core.annotation.NameInMap("PacketTx")
         private String packetTx;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private EniMonitorData(Builder builder) {
@@ -273,7 +272,7 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
 
     }
     public static class MonitorData extends TeaModel {
-        @NameInMap("EniMonitorData")
+        @com.aliyun.core.annotation.NameInMap("EniMonitorData")
         private java.util.List < EniMonitorData> eniMonitorData;
 
         private MonitorData(Builder builder) {

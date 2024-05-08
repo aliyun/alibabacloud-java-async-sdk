@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,110 +11,110 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AllocateDedicatedHostsRequest</p>
  */
 public class AllocateDedicatedHostsRequest extends Request {
-    @Query
-    @NameInMap("NetworkAttributes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkAttributes")
     private NetworkAttributes networkAttributes;
 
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("ActionOnMaintenance")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ActionOnMaintenance")
     private String actionOnMaintenance;
 
-    @Query
-    @NameInMap("AutoPlacement")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPlacement")
     private String autoPlacement;
 
-    @Query
-    @NameInMap("AutoReleaseTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoReleaseTime")
     private String autoReleaseTime;
 
-    @Query
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private Boolean autoRenew;
 
-    @Query
-    @NameInMap("AutoRenewPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenewPeriod")
     private Integer autoRenewPeriod;
 
-    @Query
-    @NameInMap("ChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("CpuOverCommitRatio")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CpuOverCommitRatio")
     private Float cpuOverCommitRatio;
 
-    @Query
-    @NameInMap("DedicatedHostClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DedicatedHostClusterId")
     private String dedicatedHostClusterId;
 
-    @Query
-    @NameInMap("DedicatedHostName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DedicatedHostName")
     private String dedicatedHostName;
 
-    @Query
-    @NameInMap("DedicatedHostType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DedicatedHostType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dedicatedHostType;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("MinQuantity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinQuantity")
     private Integer minQuantity;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
-    @Query
-    @NameInMap("PeriodUnit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeriodUnit")
     private String periodUnit;
 
-    @Query
-    @NameInMap("Quantity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Quantity")
     private Integer quantity;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private AllocateDedicatedHostsRequest(Builder builder) {
@@ -709,10 +708,10 @@ public class AllocateDedicatedHostsRequest extends Request {
     } 
 
     public static class NetworkAttributes extends TeaModel {
-        @NameInMap("SlbUdpTimeout")
+        @com.aliyun.core.annotation.NameInMap("SlbUdpTimeout")
         private Integer slbUdpTimeout;
 
-        @NameInMap("UdpTimeout")
+        @com.aliyun.core.annotation.NameInMap("UdpTimeout")
         private Integer udpTimeout;
 
         private NetworkAttributes(Builder builder) {
@@ -770,10 +769,10 @@ public class AllocateDedicatedHostsRequest extends Request {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

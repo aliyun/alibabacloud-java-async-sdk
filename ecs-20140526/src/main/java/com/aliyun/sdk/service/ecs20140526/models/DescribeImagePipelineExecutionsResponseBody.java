@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImagePipelineExecutionsResponseBody</p>
  */
 public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
-    @NameInMap("ImagePipelineExecution")
+    @com.aliyun.core.annotation.NameInMap("ImagePipelineExecution")
     private ImagePipelineExecution imagePipelineExecution;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeImagePipelineExecutionsResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -193,7 +192,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -234,31 +233,31 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
 
     }
     public static class ImagePipelineExecutionSet extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("ExecutionId")
+        @com.aliyun.core.annotation.NameInMap("ExecutionId")
         private String executionId;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("ImagePipelineId")
+        @com.aliyun.core.annotation.NameInMap("ImagePipelineId")
         private String imagePipelineId;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
         private ImagePipelineExecutionSet(Builder builder) {
@@ -444,7 +443,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
 
     }
     public static class ImagePipelineExecution extends TeaModel {
-        @NameInMap("ImagePipelineExecutionSet")
+        @com.aliyun.core.annotation.NameInMap("ImagePipelineExecutionSet")
         private java.util.List < ImagePipelineExecutionSet> imagePipelineExecutionSet;
 
         private ImagePipelineExecution(Builder builder) {

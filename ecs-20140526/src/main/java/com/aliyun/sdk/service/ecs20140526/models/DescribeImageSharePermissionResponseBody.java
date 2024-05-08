@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImageSharePermissionResponseBody</p>
  */
 public class DescribeImageSharePermissionResponseBody extends TeaModel {
-    @NameInMap("Accounts")
+    @com.aliyun.core.annotation.NameInMap("Accounts")
     private Accounts accounts;
 
-    @NameInMap("ImageId")
+    @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ShareGroups")
+    @com.aliyun.core.annotation.NameInMap("ShareGroups")
     private ShareGroups shareGroups;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeImageSharePermissionResponseBody(Builder builder) {
@@ -192,10 +191,10 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
     } 
 
     public static class Account extends TeaModel {
-        @NameInMap("AliyunId")
+        @com.aliyun.core.annotation.NameInMap("AliyunId")
         private String aliyunId;
 
-        @NameInMap("SharedTime")
+        @com.aliyun.core.annotation.NameInMap("SharedTime")
         private String sharedTime;
 
         private Account(Builder builder) {
@@ -253,7 +252,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
 
     }
     public static class Accounts extends TeaModel {
-        @NameInMap("Account")
+        @com.aliyun.core.annotation.NameInMap("Account")
         private java.util.List < Account> account;
 
         private Accounts(Builder builder) {
@@ -294,7 +293,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
 
     }
     public static class ShareGroup extends TeaModel {
-        @NameInMap("Group")
+        @com.aliyun.core.annotation.NameInMap("Group")
         private String group;
 
         private ShareGroup(Builder builder) {
@@ -335,7 +334,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
 
     }
     public static class ShareGroups extends TeaModel {
-        @NameInMap("ShareGroup")
+        @com.aliyun.core.annotation.NameInMap("ShareGroup")
         private java.util.List < ShareGroup> shareGroup;
 
         private ShareGroups(Builder builder) {

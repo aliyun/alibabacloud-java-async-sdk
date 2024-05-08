@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AttachKeyPairResponseBody</p>
  */
 public class AttachKeyPairResponseBody extends TeaModel {
-    @NameInMap("FailCount")
+    @com.aliyun.core.annotation.NameInMap("FailCount")
     private String failCount;
 
-    @NameInMap("KeyPairName")
+    @com.aliyun.core.annotation.NameInMap("KeyPairName")
     private String keyPairName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Results")
+    @com.aliyun.core.annotation.NameInMap("Results")
     private Results results;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private AttachKeyPairResponseBody(Builder builder) {
@@ -132,16 +131,16 @@ public class AttachKeyPairResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private String success;
 
         private Result(Builder builder) {
@@ -233,7 +232,7 @@ public class AttachKeyPairResponseBody extends TeaModel {
 
     }
     public static class Results extends TeaModel {
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private java.util.List < Result> result;
 
         private Results(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeReservedInstancesResponseBody</p>
  */
 public class DescribeReservedInstancesResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ReservedInstances")
+    @com.aliyun.core.annotation.NameInMap("ReservedInstances")
     private ReservedInstances reservedInstances;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeReservedInstancesResponseBody(Builder builder) {
@@ -132,7 +131,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
     } 
 
     public static class OperationLock extends TeaModel {
-        @NameInMap("LockReason")
+        @com.aliyun.core.annotation.NameInMap("LockReason")
         private String lockReason;
 
         private OperationLock(Builder builder) {
@@ -173,7 +172,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
 
     }
     public static class OperationLocks extends TeaModel {
-        @NameInMap("OperationLock")
+        @com.aliyun.core.annotation.NameInMap("OperationLock")
         private java.util.List < OperationLock> operationLock;
 
         private OperationLocks(Builder builder) {
@@ -214,10 +213,10 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -275,7 +274,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -316,58 +315,58 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
 
     }
     public static class ReservedInstance extends TeaModel {
-        @NameInMap("AllocationStatus")
+        @com.aliyun.core.annotation.NameInMap("AllocationStatus")
         private String allocationStatus;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("InstanceAmount")
+        @com.aliyun.core.annotation.NameInMap("InstanceAmount")
         private Integer instanceAmount;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("OfferingType")
+        @com.aliyun.core.annotation.NameInMap("OfferingType")
         private String offeringType;
 
-        @NameInMap("OperationLocks")
+        @com.aliyun.core.annotation.NameInMap("OperationLocks")
         private OperationLocks operationLocks;
 
-        @NameInMap("Platform")
+        @com.aliyun.core.annotation.NameInMap("Platform")
         private String platform;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ReservedInstanceId")
+        @com.aliyun.core.annotation.NameInMap("ReservedInstanceId")
         private String reservedInstanceId;
 
-        @NameInMap("ReservedInstanceName")
+        @com.aliyun.core.annotation.NameInMap("ReservedInstanceName")
         private String reservedInstanceName;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Scope")
+        @com.aliyun.core.annotation.NameInMap("Scope")
         private String scope;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private ReservedInstance(Builder builder) {
@@ -705,7 +704,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
 
     }
     public static class ReservedInstances extends TeaModel {
-        @NameInMap("ReservedInstance")
+        @com.aliyun.core.annotation.NameInMap("ReservedInstance")
         private java.util.List < ReservedInstance> reservedInstance;
 
         private ReservedInstances(Builder builder) {

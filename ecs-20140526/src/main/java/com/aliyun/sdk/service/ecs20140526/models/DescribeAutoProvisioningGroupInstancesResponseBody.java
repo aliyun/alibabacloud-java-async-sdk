@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAutoProvisioningGroupInstancesResponseBody</p>
  */
 public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel {
-    @NameInMap("Instances")
+    @com.aliyun.core.annotation.NameInMap("Instances")
     private Instances instances;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeAutoProvisioningGroupInstancesResponseBody(Builder builder) {
@@ -132,40 +131,40 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
     } 
 
     public static class Instance extends TeaModel {
-        @NameInMap("CPU")
+        @com.aliyun.core.annotation.NameInMap("CPU")
         private Integer CPU;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("IoOptimized")
+        @com.aliyun.core.annotation.NameInMap("IoOptimized")
         private Boolean ioOptimized;
 
-        @NameInMap("IsSpot")
+        @com.aliyun.core.annotation.NameInMap("IsSpot")
         private Boolean isSpot;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Integer memory;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("OsType")
+        @com.aliyun.core.annotation.NameInMap("OsType")
         private String osType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Instance(Builder builder) {
@@ -401,7 +400,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
 
     }
     public static class Instances extends TeaModel {
-        @NameInMap("Instance")
+        @com.aliyun.core.annotation.NameInMap("Instance")
         private java.util.List < Instance> instance;
 
         private Instances(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImageComponentsResponseBody</p>
  */
 public class DescribeImageComponentsResponseBody extends TeaModel {
-    @NameInMap("ImageComponent")
+    @com.aliyun.core.annotation.NameInMap("ImageComponent")
     private ImageComponent imageComponent;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeImageComponentsResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -193,7 +192,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -234,34 +233,34 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
 
     }
     public static class ImageComponentSet extends TeaModel {
-        @NameInMap("ComponentType")
+        @com.aliyun.core.annotation.NameInMap("ComponentType")
         private String componentType;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ImageComponentId")
+        @com.aliyun.core.annotation.NameInMap("ImageComponentId")
         private String imageComponentId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SystemType")
+        @com.aliyun.core.annotation.NameInMap("SystemType")
         private String systemType;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
         private ImageComponentSet(Builder builder) {
@@ -459,7 +458,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
 
     }
     public static class ImageComponent extends TeaModel {
-        @NameInMap("ImageComponentSet")
+        @com.aliyun.core.annotation.NameInMap("ImageComponentSet")
         private java.util.List < ImageComponentSet> imageComponentSet;
 
         private ImageComponent(Builder builder) {

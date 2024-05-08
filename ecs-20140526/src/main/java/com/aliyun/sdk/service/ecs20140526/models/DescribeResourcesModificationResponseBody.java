@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeResourcesModificationResponseBody</p>
  */
 public class DescribeResourcesModificationResponseBody extends TeaModel {
-    @NameInMap("AvailableZones")
+    @com.aliyun.core.annotation.NameInMap("AvailableZones")
     private AvailableZones availableZones;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeResourcesModificationResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
     } 
 
     public static class Condition extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
         private Condition(Builder builder) {
@@ -116,7 +115,7 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
 
     }
     public static class Conditions extends TeaModel {
-        @NameInMap("Condition")
+        @com.aliyun.core.annotation.NameInMap("Condition")
         private java.util.List < Condition> condition;
 
         private Conditions(Builder builder) {
@@ -157,25 +156,25 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
 
     }
     public static class ConditionSupportedResource extends TeaModel {
-        @NameInMap("Conditions")
+        @com.aliyun.core.annotation.NameInMap("Conditions")
         private Conditions conditions;
 
-        @NameInMap("Max")
+        @com.aliyun.core.annotation.NameInMap("Max")
         private Integer max;
 
-        @NameInMap("Min")
+        @com.aliyun.core.annotation.NameInMap("Min")
         private Integer min;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusCategory")
+        @com.aliyun.core.annotation.NameInMap("StatusCategory")
         private String statusCategory;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private ConditionSupportedResource(Builder builder) {
@@ -327,7 +326,7 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
 
     }
     public static class ConditionSupportedResources extends TeaModel {
-        @NameInMap("ConditionSupportedResource")
+        @com.aliyun.core.annotation.NameInMap("ConditionSupportedResource")
         private java.util.List < ConditionSupportedResource> conditionSupportedResource;
 
         private ConditionSupportedResources(Builder builder) {
@@ -368,22 +367,22 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
 
     }
     public static class SupportedResource extends TeaModel {
-        @NameInMap("Max")
+        @com.aliyun.core.annotation.NameInMap("Max")
         private Integer max;
 
-        @NameInMap("Min")
+        @com.aliyun.core.annotation.NameInMap("Min")
         private Integer min;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusCategory")
+        @com.aliyun.core.annotation.NameInMap("StatusCategory")
         private String statusCategory;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SupportedResource(Builder builder) {
@@ -518,7 +517,7 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
 
     }
     public static class SupportedResources extends TeaModel {
-        @NameInMap("SupportedResource")
+        @com.aliyun.core.annotation.NameInMap("SupportedResource")
         private java.util.List < SupportedResource> supportedResource;
 
         private SupportedResources(Builder builder) {
@@ -559,13 +558,13 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
 
     }
     public static class AvailableResource extends TeaModel {
-        @NameInMap("ConditionSupportedResources")
+        @com.aliyun.core.annotation.NameInMap("ConditionSupportedResources")
         private ConditionSupportedResources conditionSupportedResources;
 
-        @NameInMap("SupportedResources")
+        @com.aliyun.core.annotation.NameInMap("SupportedResources")
         private SupportedResources supportedResources;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private AvailableResource(Builder builder) {
@@ -648,7 +647,7 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
 
     }
     public static class AvailableResources extends TeaModel {
-        @NameInMap("AvailableResource")
+        @com.aliyun.core.annotation.NameInMap("AvailableResource")
         private java.util.List < AvailableResource> availableResource;
 
         private AvailableResources(Builder builder) {
@@ -689,19 +688,19 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
 
     }
     public static class AvailableZone extends TeaModel {
-        @NameInMap("AvailableResources")
+        @com.aliyun.core.annotation.NameInMap("AvailableResources")
         private AvailableResources availableResources;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusCategory")
+        @com.aliyun.core.annotation.NameInMap("StatusCategory")
         private String statusCategory;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private AvailableZone(Builder builder) {
@@ -819,7 +818,7 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
 
     }
     public static class AvailableZones extends TeaModel {
-        @NameInMap("AvailableZone")
+        @com.aliyun.core.annotation.NameInMap("AvailableZone")
         private java.util.List < AvailableZone> availableZone;
 
         private AvailableZones(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSimulatedSystemEventsResponseBody</p>
  */
 public class CreateSimulatedSystemEventsResponseBody extends TeaModel {
-    @NameInMap("EventIdSet")
+    @com.aliyun.core.annotation.NameInMap("EventIdSet")
     private EventIdSet eventIdSet;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateSimulatedSystemEventsResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class CreateSimulatedSystemEventsResponseBody extends TeaModel {
     } 
 
     public static class EventIdSet extends TeaModel {
-        @NameInMap("EventId")
+        @com.aliyun.core.annotation.NameInMap("EventId")
         private java.util.List < String > eventId;
 
         private EventIdSet(Builder builder) {

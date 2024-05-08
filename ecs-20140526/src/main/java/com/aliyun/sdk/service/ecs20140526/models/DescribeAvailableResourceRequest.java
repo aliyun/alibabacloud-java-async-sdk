@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,91 +11,91 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAvailableResourceRequest</p>
  */
 public class DescribeAvailableResourceRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("Cores")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Cores")
     private Integer cores;
 
-    @Query
-    @NameInMap("DataDiskCategory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataDiskCategory")
     private String dataDiskCategory;
 
-    @Query
-    @NameInMap("DedicatedHostId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DedicatedHostId")
     private String dedicatedHostId;
 
-    @Query
-    @NameInMap("DestinationResource")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationResource")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String destinationResource;
 
-    @Query
-    @NameInMap("InstanceChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
     private String instanceChargeType;
 
-    @Query
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
-    @Query
-    @NameInMap("IoOptimized")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IoOptimized")
     private String ioOptimized;
 
-    @Query
-    @NameInMap("Memory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Memory")
     private Float memory;
 
-    @Query
-    @NameInMap("NetworkCategory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkCategory")
     private String networkCategory;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
-    @Query
-    @NameInMap("Scope")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scope")
     private String scope;
 
-    @Query
-    @NameInMap("SpotDuration")
-    @Validation(maximum = 6)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotDuration")
+    @com.aliyun.core.annotation.Validation(maximum = 6)
     private Integer spotDuration;
 
-    @Query
-    @NameInMap("SpotStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotStrategy")
     private String spotStrategy;
 
-    @Query
-    @NameInMap("SystemDiskCategory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SystemDiskCategory")
     private String systemDiskCategory;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private DescribeAvailableResourceRequest(Builder builder) {

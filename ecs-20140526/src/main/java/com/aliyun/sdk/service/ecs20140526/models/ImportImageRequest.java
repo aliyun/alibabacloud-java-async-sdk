@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,77 +11,77 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ImportImageRequest</p>
  */
 public class ImportImageRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("Architecture")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Architecture")
     private String architecture;
 
-    @Query
-    @NameInMap("BootMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BootMode")
     private String bootMode;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DetectionStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DetectionStrategy")
     private String detectionStrategy;
 
-    @Query
-    @NameInMap("DiskDeviceMapping")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskDeviceMapping")
     private java.util.List < DiskDeviceMapping> diskDeviceMapping;
 
-    @Query
-    @NameInMap("ImageName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageName")
     private String imageName;
 
-    @Query
-    @NameInMap("LicenseType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LicenseType")
     private String licenseType;
 
-    @Query
-    @NameInMap("OSType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OSType")
     private String OSType;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Platform")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Platform")
     private String platform;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RoleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleName")
     private String roleName;
 
-    @Query
-    @NameInMap("StorageLocationArn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageLocationArn")
     private String storageLocationArn;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
     private ImportImageRequest(Builder builder) {
@@ -523,22 +522,22 @@ public class ImportImageRequest extends Request {
     } 
 
     public static class DiskDeviceMapping extends TeaModel {
-        @NameInMap("Device")
+        @com.aliyun.core.annotation.NameInMap("Device")
         private String device;
 
-        @NameInMap("DiskImSize")
+        @com.aliyun.core.annotation.NameInMap("DiskImSize")
         private Integer diskImSize;
 
-        @NameInMap("DiskImageSize")
+        @com.aliyun.core.annotation.NameInMap("DiskImageSize")
         private Integer diskImageSize;
 
-        @NameInMap("Format")
+        @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
 
-        @NameInMap("OSSBucket")
+        @com.aliyun.core.annotation.NameInMap("OSSBucket")
         private String OSSBucket;
 
-        @NameInMap("OSSObject")
+        @com.aliyun.core.annotation.NameInMap("OSSObject")
         private String OSSObject;
 
         private DiskDeviceMapping(Builder builder) {
@@ -695,10 +694,10 @@ public class ImportImageRequest extends Request {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

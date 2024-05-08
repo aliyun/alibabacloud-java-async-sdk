@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSecurityGroupsResponseBody</p>
  */
 public class DescribeSecurityGroupsResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecurityGroups")
+    @com.aliyun.core.annotation.NameInMap("SecurityGroups")
     private SecurityGroups securityGroups;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeSecurityGroupsResponseBody(Builder builder) {
@@ -178,10 +177,10 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -239,7 +238,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -280,40 +279,40 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
 
     }
     public static class SecurityGroup extends TeaModel {
-        @NameInMap("AvailableInstanceAmount")
+        @com.aliyun.core.annotation.NameInMap("AvailableInstanceAmount")
         private Integer availableInstanceAmount;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EcsCount")
+        @com.aliyun.core.annotation.NameInMap("EcsCount")
         private Integer ecsCount;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("SecurityGroupName")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupName")
         private String securityGroupName;
 
-        @NameInMap("SecurityGroupType")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupType")
         private String securityGroupType;
 
-        @NameInMap("ServiceID")
+        @com.aliyun.core.annotation.NameInMap("ServiceID")
         private Long serviceID;
 
-        @NameInMap("ServiceManaged")
+        @com.aliyun.core.annotation.NameInMap("ServiceManaged")
         private Boolean serviceManaged;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private SecurityGroup(Builder builder) {
@@ -555,7 +554,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
 
     }
     public static class SecurityGroups extends TeaModel {
-        @NameInMap("SecurityGroup")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroup")
         private java.util.List < SecurityGroup> securityGroup;
 
         private SecurityGroups(Builder builder) {

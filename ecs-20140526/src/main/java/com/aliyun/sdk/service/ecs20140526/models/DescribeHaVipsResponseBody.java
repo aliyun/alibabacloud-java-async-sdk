@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHaVipsResponseBody</p>
  */
 public class DescribeHaVipsResponseBody extends TeaModel {
-    @NameInMap("HaVips")
+    @com.aliyun.core.annotation.NameInMap("HaVips")
     private HaVips haVips;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeHaVipsResponseBody(Builder builder) {
@@ -132,7 +131,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
     } 
 
     public static class AssociatedEipAddresses extends TeaModel {
-        @NameInMap("associatedEipAddresse")
+        @com.aliyun.core.annotation.NameInMap("associatedEipAddresse")
         private java.util.List < String > associatedEipAddresse;
 
         private AssociatedEipAddresses(Builder builder) {
@@ -173,7 +172,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
 
     }
     public static class AssociatedInstances extends TeaModel {
-        @NameInMap("associatedInstance")
+        @com.aliyun.core.annotation.NameInMap("associatedInstance")
         private java.util.List < String > associatedInstance;
 
         private AssociatedInstances(Builder builder) {
@@ -214,37 +213,37 @@ public class DescribeHaVipsResponseBody extends TeaModel {
 
     }
     public static class HaVip extends TeaModel {
-        @NameInMap("AssociatedEipAddresses")
+        @com.aliyun.core.annotation.NameInMap("AssociatedEipAddresses")
         private AssociatedEipAddresses associatedEipAddresses;
 
-        @NameInMap("AssociatedInstances")
+        @com.aliyun.core.annotation.NameInMap("AssociatedInstances")
         private AssociatedInstances associatedInstances;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("HaVipId")
+        @com.aliyun.core.annotation.NameInMap("HaVipId")
         private String haVipId;
 
-        @NameInMap("IpAddress")
+        @com.aliyun.core.annotation.NameInMap("IpAddress")
         private String ipAddress;
 
-        @NameInMap("MasterInstanceId")
+        @com.aliyun.core.annotation.NameInMap("MasterInstanceId")
         private String masterInstanceId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private HaVip(Builder builder) {
@@ -455,7 +454,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
 
     }
     public static class HaVips extends TeaModel {
-        @NameInMap("HaVip")
+        @com.aliyun.core.annotation.NameInMap("HaVip")
         private java.util.List < HaVip> haVip;
 
         private HaVips(Builder builder) {

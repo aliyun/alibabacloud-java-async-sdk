@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteLaunchTemplateVersionResponseBody</p>
  */
 public class DeleteLaunchTemplateVersionResponseBody extends TeaModel {
-    @NameInMap("LaunchTemplateVersions")
+    @com.aliyun.core.annotation.NameInMap("LaunchTemplateVersions")
     private LaunchTemplateVersions launchTemplateVersions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteLaunchTemplateVersionResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DeleteLaunchTemplateVersionResponseBody extends TeaModel {
     } 
 
     public static class LaunchTemplateVersion extends TeaModel {
-        @NameInMap("LaunchTemplateId")
+        @com.aliyun.core.annotation.NameInMap("LaunchTemplateId")
         private String launchTemplateId;
 
-        @NameInMap("LaunchTemplateVersionNumber")
+        @com.aliyun.core.annotation.NameInMap("LaunchTemplateVersionNumber")
         private Long launchTemplateVersionNumber;
 
         private LaunchTemplateVersion(Builder builder) {
@@ -133,7 +132,7 @@ public class DeleteLaunchTemplateVersionResponseBody extends TeaModel {
 
     }
     public static class LaunchTemplateVersions extends TeaModel {
-        @NameInMap("LaunchTemplateVersion")
+        @com.aliyun.core.annotation.NameInMap("LaunchTemplateVersion")
         private java.util.List < LaunchTemplateVersion> launchTemplateVersion;
 
         private LaunchTemplateVersions(Builder builder) {

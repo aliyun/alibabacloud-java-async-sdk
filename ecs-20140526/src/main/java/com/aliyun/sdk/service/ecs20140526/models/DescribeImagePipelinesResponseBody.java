@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImagePipelinesResponseBody</p>
  */
 public class DescribeImagePipelinesResponseBody extends TeaModel {
-    @NameInMap("ImagePipeline")
+    @com.aliyun.core.annotation.NameInMap("ImagePipeline")
     private ImagePipeline imagePipeline;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeImagePipelinesResponseBody(Builder builder) {
@@ -132,7 +131,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
     } 
 
     public static class AddAccounts extends TeaModel {
-        @NameInMap("AddAccount")
+        @com.aliyun.core.annotation.NameInMap("AddAccount")
         private java.util.List < String > addAccount;
 
         private AddAccounts(Builder builder) {
@@ -173,10 +172,10 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -234,7 +233,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -275,7 +274,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
 
     }
     public static class ToRegionIds extends TeaModel {
-        @NameInMap("ToRegionId")
+        @com.aliyun.core.annotation.NameInMap("ToRegionId")
         private java.util.List < String > toRegionId;
 
         private ToRegionIds(Builder builder) {
@@ -316,55 +315,55 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
 
     }
     public static class ImagePipelineSet extends TeaModel {
-        @NameInMap("AddAccounts")
+        @com.aliyun.core.annotation.NameInMap("AddAccounts")
         private AddAccounts addAccounts;
 
-        @NameInMap("BaseImage")
+        @com.aliyun.core.annotation.NameInMap("BaseImage")
         private String baseImage;
 
-        @NameInMap("BaseImageType")
+        @com.aliyun.core.annotation.NameInMap("BaseImageType")
         private String baseImageType;
 
-        @NameInMap("BuildContent")
+        @com.aliyun.core.annotation.NameInMap("BuildContent")
         private String buildContent;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DeleteInstanceOnFailure")
+        @com.aliyun.core.annotation.NameInMap("DeleteInstanceOnFailure")
         private Boolean deleteInstanceOnFailure;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ImageName")
+        @com.aliyun.core.annotation.NameInMap("ImageName")
         private String imageName;
 
-        @NameInMap("ImagePipelineId")
+        @com.aliyun.core.annotation.NameInMap("ImagePipelineId")
         private String imagePipelineId;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("InternetMaxBandwidthOut")
+        @com.aliyun.core.annotation.NameInMap("InternetMaxBandwidthOut")
         private Integer internetMaxBandwidthOut;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SystemDiskSize")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
         private Integer systemDiskSize;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("ToRegionIds")
+        @com.aliyun.core.annotation.NameInMap("ToRegionIds")
         private ToRegionIds toRegionIds;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
         private ImagePipelineSet(Builder builder) {
@@ -685,7 +684,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
 
     }
     public static class ImagePipeline extends TeaModel {
-        @NameInMap("ImagePipelineSet")
+        @com.aliyun.core.annotation.NameInMap("ImagePipelineSet")
         private java.util.List < ImagePipelineSet> imagePipelineSet;
 
         private ImagePipeline(Builder builder) {

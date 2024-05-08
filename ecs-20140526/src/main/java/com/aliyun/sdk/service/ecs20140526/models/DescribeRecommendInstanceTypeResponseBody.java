@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRecommendInstanceTypeResponseBody</p>
  */
 public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeRecommendInstanceTypeResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
     } 
 
     public static class InstanceType extends TeaModel {
-        @NameInMap("Cores")
+        @com.aliyun.core.annotation.NameInMap("Cores")
         private Integer cores;
 
-        @NameInMap("Generation")
+        @com.aliyun.core.annotation.NameInMap("Generation")
         private String generation;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("InstanceTypeFamily")
+        @com.aliyun.core.annotation.NameInMap("InstanceTypeFamily")
         private String instanceTypeFamily;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Integer memory;
 
-        @NameInMap("SupportIoOptimized")
+        @com.aliyun.core.annotation.NameInMap("SupportIoOptimized")
         private String supportIoOptimized;
 
         private InstanceType(Builder builder) {
@@ -213,7 +212,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
 
     }
     public static class NetworkTypes extends TeaModel {
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private java.util.List < String > networkType;
 
         private NetworkTypes(Builder builder) {
@@ -254,10 +253,10 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
 
     }
     public static class Zone extends TeaModel {
-        @NameInMap("NetworkTypes")
+        @com.aliyun.core.annotation.NameInMap("NetworkTypes")
         private NetworkTypes networkTypes;
 
-        @NameInMap("ZoneNo")
+        @com.aliyun.core.annotation.NameInMap("ZoneNo")
         private String zoneNo;
 
         private Zone(Builder builder) {
@@ -315,7 +314,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
 
     }
     public static class Zones extends TeaModel {
-        @NameInMap("zone")
+        @com.aliyun.core.annotation.NameInMap("zone")
         private java.util.List < Zone> zone;
 
         private Zones(Builder builder) {
@@ -356,34 +355,34 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
 
     }
     public static class RecommendInstanceType extends TeaModel {
-        @NameInMap("CommodityCode")
+        @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
 
-        @NameInMap("InstanceChargeType")
+        @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
         private String instanceChargeType;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private InstanceType instanceType;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Scene")
+        @com.aliyun.core.annotation.NameInMap("Scene")
         private String scene;
 
-        @NameInMap("SpotStrategy")
+        @com.aliyun.core.annotation.NameInMap("SpotStrategy")
         private String spotStrategy;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
-        @NameInMap("Zones")
+        @com.aliyun.core.annotation.NameInMap("Zones")
         private Zones zones;
 
         private RecommendInstanceType(Builder builder) {
@@ -577,7 +576,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("RecommendInstanceType")
+        @com.aliyun.core.annotation.NameInMap("RecommendInstanceType")
         private java.util.List < RecommendInstanceType> recommendInstanceType;
 
         private Data(Builder builder) {

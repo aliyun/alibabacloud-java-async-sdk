@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteLaunchTemplateResponseBody</p>
  */
 public class DeleteLaunchTemplateResponseBody extends TeaModel {
-    @NameInMap("LaunchTemplateId")
+    @com.aliyun.core.annotation.NameInMap("LaunchTemplateId")
     private String launchTemplateId;
 
-    @NameInMap("LaunchTemplateVersionNumbers")
+    @com.aliyun.core.annotation.NameInMap("LaunchTemplateVersionNumbers")
     private LaunchTemplateVersionNumbers launchTemplateVersionNumbers;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteLaunchTemplateResponseBody(Builder builder) {
@@ -95,7 +94,7 @@ public class DeleteLaunchTemplateResponseBody extends TeaModel {
     } 
 
     public static class LaunchTemplateVersionNumbers extends TeaModel {
-        @NameInMap("versionNumbers")
+        @com.aliyun.core.annotation.NameInMap("versionNumbers")
         private java.util.List < Long > versionNumbers;
 
         private LaunchTemplateVersionNumbers(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceTypeFamiliesResponseBody</p>
  */
 public class DescribeInstanceTypeFamiliesResponseBody extends TeaModel {
-    @NameInMap("InstanceTypeFamilies")
+    @com.aliyun.core.annotation.NameInMap("InstanceTypeFamilies")
     private InstanceTypeFamilies instanceTypeFamilies;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceTypeFamiliesResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class DescribeInstanceTypeFamiliesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about instance families.
+         * The instance families.
          */
         public Builder instanceTypeFamilies(InstanceTypeFamilies instanceTypeFamilies) {
             this.instanceTypeFamilies = instanceTypeFamilies;
@@ -72,10 +71,10 @@ public class DescribeInstanceTypeFamiliesResponseBody extends TeaModel {
     } 
 
     public static class InstanceTypeFamily extends TeaModel {
-        @NameInMap("Generation")
+        @com.aliyun.core.annotation.NameInMap("Generation")
         private String generation;
 
-        @NameInMap("InstanceTypeFamilyId")
+        @com.aliyun.core.annotation.NameInMap("InstanceTypeFamilyId")
         private String instanceTypeFamilyId;
 
         private InstanceTypeFamily(Builder builder) {
@@ -133,7 +132,7 @@ public class DescribeInstanceTypeFamiliesResponseBody extends TeaModel {
 
     }
     public static class InstanceTypeFamilies extends TeaModel {
-        @NameInMap("InstanceTypeFamily")
+        @com.aliyun.core.annotation.NameInMap("InstanceTypeFamily")
         private java.util.List < InstanceTypeFamily> instanceTypeFamily;
 
         private InstanceTypeFamilies(Builder builder) {

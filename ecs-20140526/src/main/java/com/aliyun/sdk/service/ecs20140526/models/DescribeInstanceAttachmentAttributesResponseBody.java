@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceAttachmentAttributesResponseBody</p>
  */
 public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
-    @NameInMap("Instances")
+    @com.aliyun.core.annotation.NameInMap("Instances")
     private Instances instances;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeInstanceAttachmentAttributesResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
     } 
 
     public static class Instance extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("PrivatePoolOptionsId")
+        @com.aliyun.core.annotation.NameInMap("PrivatePoolOptionsId")
         private String privatePoolOptionsId;
 
-        @NameInMap("PrivatePoolOptionsMatchCriteria")
+        @com.aliyun.core.annotation.NameInMap("PrivatePoolOptionsMatchCriteria")
         private String privatePoolOptionsMatchCriteria;
 
         private Instance(Builder builder) {
@@ -218,7 +217,7 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
 
     }
     public static class Instances extends TeaModel {
-        @NameInMap("Instance")
+        @com.aliyun.core.annotation.NameInMap("Instance")
         private java.util.List < Instance> instance;
 
         private Instances(Builder builder) {

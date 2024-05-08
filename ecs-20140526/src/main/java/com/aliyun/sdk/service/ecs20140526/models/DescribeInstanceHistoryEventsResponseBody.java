@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceHistoryEventsResponseBody</p>
  */
 public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
-    @NameInMap("InstanceSystemEventSet")
+    @com.aliyun.core.annotation.NameInMap("InstanceSystemEventSet")
     private InstanceSystemEventSet instanceSystemEventSet;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeInstanceHistoryEventsResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
     } 
 
     public static class EventCycleStatus extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private Integer code;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private EventCycleStatus(Builder builder) {
@@ -193,10 +192,10 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
 
     }
     public static class EventType extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private Integer code;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private EventType(Builder builder) {
@@ -254,19 +253,19 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
 
     }
     public static class InactiveDisk extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DeviceCategory")
+        @com.aliyun.core.annotation.NameInMap("DeviceCategory")
         private String deviceCategory;
 
-        @NameInMap("DeviceSize")
+        @com.aliyun.core.annotation.NameInMap("DeviceSize")
         private String deviceSize;
 
-        @NameInMap("DeviceType")
+        @com.aliyun.core.annotation.NameInMap("DeviceType")
         private String deviceType;
 
-        @NameInMap("ReleaseTime")
+        @com.aliyun.core.annotation.NameInMap("ReleaseTime")
         private String releaseTime;
 
         private InactiveDisk(Builder builder) {
@@ -389,7 +388,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
 
     }
     public static class InactiveDisks extends TeaModel {
-        @NameInMap("InactiveDisk")
+        @com.aliyun.core.annotation.NameInMap("InactiveDisk")
         private java.util.List < InactiveDisk> inactiveDisk;
 
         private InactiveDisks(Builder builder) {
@@ -430,7 +429,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
 
     }
     public static class MigrationOptions extends TeaModel {
-        @NameInMap("MigrationOption")
+        @com.aliyun.core.annotation.NameInMap("MigrationOption")
         private java.util.List < String > migrationOption;
 
         private MigrationOptions(Builder builder) {
@@ -471,46 +470,46 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
 
     }
     public static class ExtendedAttribute extends TeaModel {
-        @NameInMap("CanAccept")
+        @com.aliyun.core.annotation.NameInMap("CanAccept")
         private String canAccept;
 
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Device")
+        @com.aliyun.core.annotation.NameInMap("Device")
         private String device;
 
-        @NameInMap("DiskId")
+        @com.aliyun.core.annotation.NameInMap("DiskId")
         private String diskId;
 
-        @NameInMap("HostId")
+        @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;
 
-        @NameInMap("HostType")
+        @com.aliyun.core.annotation.NameInMap("HostType")
         private String hostType;
 
-        @NameInMap("InactiveDisks")
+        @com.aliyun.core.annotation.NameInMap("InactiveDisks")
         private InactiveDisks inactiveDisks;
 
-        @NameInMap("MigrationOptions")
+        @com.aliyun.core.annotation.NameInMap("MigrationOptions")
         private MigrationOptions migrationOptions;
 
-        @NameInMap("OnlineRepairPolicy")
+        @com.aliyun.core.annotation.NameInMap("OnlineRepairPolicy")
         private String onlineRepairPolicy;
 
-        @NameInMap("PunishDomain")
+        @com.aliyun.core.annotation.NameInMap("PunishDomain")
         private String punishDomain;
 
-        @NameInMap("PunishType")
+        @com.aliyun.core.annotation.NameInMap("PunishType")
         private String punishType;
 
-        @NameInMap("PunishUrl")
+        @com.aliyun.core.annotation.NameInMap("PunishUrl")
         private String punishUrl;
 
-        @NameInMap("Rack")
+        @com.aliyun.core.annotation.NameInMap("Rack")
         private String rack;
 
-        @NameInMap("ResponseResult")
+        @com.aliyun.core.annotation.NameInMap("ResponseResult")
         private String responseResult;
 
         private ExtendedAttribute(Builder builder) {
@@ -780,37 +779,37 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
 
     }
     public static class InstanceSystemEventType extends TeaModel {
-        @NameInMap("EventCycleStatus")
+        @com.aliyun.core.annotation.NameInMap("EventCycleStatus")
         private EventCycleStatus eventCycleStatus;
 
-        @NameInMap("EventFinishTime")
+        @com.aliyun.core.annotation.NameInMap("EventFinishTime")
         private String eventFinishTime;
 
-        @NameInMap("EventId")
+        @com.aliyun.core.annotation.NameInMap("EventId")
         private String eventId;
 
-        @NameInMap("EventPublishTime")
+        @com.aliyun.core.annotation.NameInMap("EventPublishTime")
         private String eventPublishTime;
 
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private EventType eventType;
 
-        @NameInMap("ExtendedAttribute")
+        @com.aliyun.core.annotation.NameInMap("ExtendedAttribute")
         private ExtendedAttribute extendedAttribute;
 
-        @NameInMap("ImpactLevel")
+        @com.aliyun.core.annotation.NameInMap("ImpactLevel")
         private String impactLevel;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("NotBefore")
+        @com.aliyun.core.annotation.NameInMap("NotBefore")
         private String notBefore;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
         private InstanceSystemEventType(Builder builder) {
@@ -1026,7 +1025,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
 
     }
     public static class InstanceSystemEventSet extends TeaModel {
-        @NameInMap("InstanceSystemEventType")
+        @com.aliyun.core.annotation.NameInMap("InstanceSystemEventType")
         private java.util.List < InstanceSystemEventType> instanceSystemEventType;
 
         private InstanceSystemEventSet(Builder builder) {

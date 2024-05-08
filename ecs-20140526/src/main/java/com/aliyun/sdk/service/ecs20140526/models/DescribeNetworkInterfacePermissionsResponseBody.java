@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeNetworkInterfacePermissionsResponseBody</p>
  */
 public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
-    @NameInMap("NetworkInterfacePermissions")
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfacePermissions")
     private NetworkInterfacePermissions networkInterfacePermissions;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeNetworkInterfacePermissionsResponseBody(Builder builder) {
@@ -132,22 +131,22 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
     } 
 
     public static class NetworkInterfacePermission extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
 
-        @NameInMap("NetworkInterfaceId")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
         private String networkInterfaceId;
 
-        @NameInMap("NetworkInterfacePermissionId")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfacePermissionId")
         private String networkInterfacePermissionId;
 
-        @NameInMap("Permission")
+        @com.aliyun.core.annotation.NameInMap("Permission")
         private String permission;
 
-        @NameInMap("PermissionState")
+        @com.aliyun.core.annotation.NameInMap("PermissionState")
         private String permissionState;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
         private NetworkInterfacePermission(Builder builder) {
@@ -279,7 +278,7 @@ public class DescribeNetworkInterfacePermissionsResponseBody extends TeaModel {
 
     }
     public static class NetworkInterfacePermissions extends TeaModel {
-        @NameInMap("NetworkInterfacePermission")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfacePermission")
         private java.util.List < NetworkInterfacePermission> networkInterfacePermission;
 
         private NetworkInterfacePermissions(Builder builder) {

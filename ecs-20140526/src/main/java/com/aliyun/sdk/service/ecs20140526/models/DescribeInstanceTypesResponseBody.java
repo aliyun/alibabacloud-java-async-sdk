@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceTypesResponseBody</p>
  */
 public class DescribeInstanceTypesResponseBody extends TeaModel {
-    @NameInMap("InstanceTypes")
+    @com.aliyun.core.annotation.NameInMap("InstanceTypes")
     private InstanceTypes instanceTypes;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceTypesResponseBody(Builder builder) {
@@ -92,7 +91,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
     } 
 
     public static class NetworkCardInfo extends TeaModel {
-        @NameInMap("NetworkCardIndex")
+        @com.aliyun.core.annotation.NameInMap("NetworkCardIndex")
         private Integer networkCardIndex;
 
         private NetworkCardInfo(Builder builder) {
@@ -133,7 +132,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
 
     }
     public static class NetworkCards extends TeaModel {
-        @NameInMap("NetworkCardInfo")
+        @com.aliyun.core.annotation.NameInMap("NetworkCardInfo")
         private java.util.List < NetworkCardInfo> networkCardInfo;
 
         private NetworkCards(Builder builder) {
@@ -174,7 +173,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
 
     }
     public static class SupportedBootModes extends TeaModel {
-        @NameInMap("SupportedBootMode")
+        @com.aliyun.core.annotation.NameInMap("SupportedBootMode")
         private java.util.List < String > supportedBootMode;
 
         private SupportedBootModes(Builder builder) {
@@ -215,121 +214,121 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
 
     }
     public static class InstanceType extends TeaModel {
-        @NameInMap("BaselineCredit")
+        @com.aliyun.core.annotation.NameInMap("BaselineCredit")
         private Integer baselineCredit;
 
-        @NameInMap("CpuArchitecture")
+        @com.aliyun.core.annotation.NameInMap("CpuArchitecture")
         private String cpuArchitecture;
 
-        @NameInMap("CpuCoreCount")
+        @com.aliyun.core.annotation.NameInMap("CpuCoreCount")
         private Integer cpuCoreCount;
 
-        @NameInMap("CpuSpeedFrequency")
+        @com.aliyun.core.annotation.NameInMap("CpuSpeedFrequency")
         private Float cpuSpeedFrequency;
 
-        @NameInMap("CpuTurboFrequency")
+        @com.aliyun.core.annotation.NameInMap("CpuTurboFrequency")
         private Float cpuTurboFrequency;
 
-        @NameInMap("DiskQuantity")
+        @com.aliyun.core.annotation.NameInMap("DiskQuantity")
         private Integer diskQuantity;
 
-        @NameInMap("EniIpv6AddressQuantity")
+        @com.aliyun.core.annotation.NameInMap("EniIpv6AddressQuantity")
         private Integer eniIpv6AddressQuantity;
 
-        @NameInMap("EniPrivateIpAddressQuantity")
+        @com.aliyun.core.annotation.NameInMap("EniPrivateIpAddressQuantity")
         private Integer eniPrivateIpAddressQuantity;
 
-        @NameInMap("EniQuantity")
+        @com.aliyun.core.annotation.NameInMap("EniQuantity")
         private Integer eniQuantity;
 
-        @NameInMap("EniTotalQuantity")
+        @com.aliyun.core.annotation.NameInMap("EniTotalQuantity")
         private Integer eniTotalQuantity;
 
-        @NameInMap("EniTrunkSupported")
+        @com.aliyun.core.annotation.NameInMap("EniTrunkSupported")
         private Boolean eniTrunkSupported;
 
-        @NameInMap("EriQuantity")
+        @com.aliyun.core.annotation.NameInMap("EriQuantity")
         private Integer eriQuantity;
 
-        @NameInMap("GPUAmount")
+        @com.aliyun.core.annotation.NameInMap("GPUAmount")
         private Integer GPUAmount;
 
-        @NameInMap("GPUMemorySize")
+        @com.aliyun.core.annotation.NameInMap("GPUMemorySize")
         private Float GPUMemorySize;
 
-        @NameInMap("GPUSpec")
+        @com.aliyun.core.annotation.NameInMap("GPUSpec")
         private String GPUSpec;
 
-        @NameInMap("InitialCredit")
+        @com.aliyun.core.annotation.NameInMap("InitialCredit")
         private Integer initialCredit;
 
-        @NameInMap("InstanceBandwidthRx")
+        @com.aliyun.core.annotation.NameInMap("InstanceBandwidthRx")
         private Integer instanceBandwidthRx;
 
-        @NameInMap("InstanceBandwidthTx")
+        @com.aliyun.core.annotation.NameInMap("InstanceBandwidthTx")
         private Integer instanceBandwidthTx;
 
-        @NameInMap("InstanceCategory")
+        @com.aliyun.core.annotation.NameInMap("InstanceCategory")
         private String instanceCategory;
 
-        @NameInMap("InstanceFamilyLevel")
+        @com.aliyun.core.annotation.NameInMap("InstanceFamilyLevel")
         private String instanceFamilyLevel;
 
-        @NameInMap("InstancePpsRx")
+        @com.aliyun.core.annotation.NameInMap("InstancePpsRx")
         private Long instancePpsRx;
 
-        @NameInMap("InstancePpsTx")
+        @com.aliyun.core.annotation.NameInMap("InstancePpsTx")
         private Long instancePpsTx;
 
-        @NameInMap("InstanceTypeFamily")
+        @com.aliyun.core.annotation.NameInMap("InstanceTypeFamily")
         private String instanceTypeFamily;
 
-        @NameInMap("InstanceTypeId")
+        @com.aliyun.core.annotation.NameInMap("InstanceTypeId")
         private String instanceTypeId;
 
-        @NameInMap("LocalStorageAmount")
+        @com.aliyun.core.annotation.NameInMap("LocalStorageAmount")
         private Integer localStorageAmount;
 
-        @NameInMap("LocalStorageCapacity")
+        @com.aliyun.core.annotation.NameInMap("LocalStorageCapacity")
         private Long localStorageCapacity;
 
-        @NameInMap("LocalStorageCategory")
+        @com.aliyun.core.annotation.NameInMap("LocalStorageCategory")
         private String localStorageCategory;
 
-        @NameInMap("MaximumQueueNumberPerEni")
+        @com.aliyun.core.annotation.NameInMap("MaximumQueueNumberPerEni")
         private Integer maximumQueueNumberPerEni;
 
-        @NameInMap("MemorySize")
+        @com.aliyun.core.annotation.NameInMap("MemorySize")
         private Float memorySize;
 
-        @NameInMap("NetworkCardQuantity")
+        @com.aliyun.core.annotation.NameInMap("NetworkCardQuantity")
         private Integer networkCardQuantity;
 
-        @NameInMap("NetworkCards")
+        @com.aliyun.core.annotation.NameInMap("NetworkCards")
         private NetworkCards networkCards;
 
-        @NameInMap("NetworkEncryptionSupport")
+        @com.aliyun.core.annotation.NameInMap("NetworkEncryptionSupport")
         private Boolean networkEncryptionSupport;
 
-        @NameInMap("NvmeSupport")
+        @com.aliyun.core.annotation.NameInMap("NvmeSupport")
         private String nvmeSupport;
 
-        @NameInMap("PhysicalProcessorModel")
+        @com.aliyun.core.annotation.NameInMap("PhysicalProcessorModel")
         private String physicalProcessorModel;
 
-        @NameInMap("PrimaryEniQueueNumber")
+        @com.aliyun.core.annotation.NameInMap("PrimaryEniQueueNumber")
         private Integer primaryEniQueueNumber;
 
-        @NameInMap("QueuePairNumber")
+        @com.aliyun.core.annotation.NameInMap("QueuePairNumber")
         private Integer queuePairNumber;
 
-        @NameInMap("SecondaryEniQueueNumber")
+        @com.aliyun.core.annotation.NameInMap("SecondaryEniQueueNumber")
         private Integer secondaryEniQueueNumber;
 
-        @NameInMap("SupportedBootModes")
+        @com.aliyun.core.annotation.NameInMap("SupportedBootModes")
         private SupportedBootModes supportedBootModes;
 
-        @NameInMap("TotalEniQueueQuantity")
+        @com.aliyun.core.annotation.NameInMap("TotalEniQueueQuantity")
         private Integer totalEniQueueQuantity;
 
         private InstanceType(Builder builder) {
@@ -697,7 +696,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             private Integer totalEniQueueQuantity; 
 
             /**
-             * The baseline vCPU computing performance (overall computing performance of all vCPUs) of the t5 or t6 burstable instance.
+             * The baseline vCPU computing performance (overall baseline performance of all vCPUs) per t5 or t6 burstable instance.
              */
             public Builder baselineCredit(Integer baselineCredit) {
                 this.baselineCredit = baselineCredit;
@@ -708,8 +707,8 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
              * The CPU architecture. Valid values:
              * <p>
              * 
-             * *   X86: x86
-             * *   ARM: ARM
+             * *   X86
+             * *   ARM
              */
             public Builder cpuArchitecture(String cpuArchitecture) {
                 this.cpuArchitecture = cpuArchitecture;
@@ -765,7 +764,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of ENIs.
+             * The maximum number of ENIs per instance.
              */
             public Builder eniQuantity(Integer eniQuantity) {
                 this.eniQuantity = eniQuantity;
@@ -773,10 +772,10 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of NICs, including the primary NIC, ENIs, and trunk NICs.
+             * The maximum number of ENIs, including primary, secondary, and trunk ENIs.
              * <p>
              * 
-             * >  This parameter is in invitational preview and unavailable for general users.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder eniTotalQuantity(Integer eniTotalQuantity) {
                 this.eniTotalQuantity = eniTotalQuantity;
@@ -784,10 +783,10 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether NICs on instances of the instance type support trunking.
+             * Indicates whether trunk ENIs are supported.
              * <p>
              * 
-             * >  This parameter is in invitational preview and unavailable for general users.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder eniTrunkSupported(Boolean eniTrunkSupported) {
                 this.eniTrunkSupported = eniTrunkSupported;
@@ -798,7 +797,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
              * The number of ERIs.
              * <p>
              * 
-             * >  This parameter is in invitational preview and unavailable for general users.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder eriQuantity(Integer eriQuantity) {
                 this.eriQuantity = eriQuantity;
@@ -814,7 +813,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of GPU memory per GPU. Unit: GiB.
+             * The amount of GPU memory per GPU. Unit: GiB
              */
             public Builder GPUMemorySize(Float GPUMemorySize) {
                 this.GPUMemorySize = GPUMemorySize;
@@ -830,7 +829,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The initial vCPU credits of a t5 or t6 burstable instance.
+             * The initial vCPU credits per t5 or t6 burstable instance.
              */
             public Builder initialCredit(Integer initialCredit) {
                 this.initialCredit = initialCredit;
@@ -872,8 +871,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
              * *   Compute-optimized with NPU: NPU-accelerated compute-optimized instance type
              * *   ECS Bare Metal: ECS Bare Metal Instance type
              * *   Super Computing Cluster: SCC instance type
-             * - High Performance Compute.
-             * - Cloud Physical Server.
+             * *   High Performance Compute: high-performance computing instance type
              */
             public Builder instanceCategory(String instanceCategory) {
                 this.instanceCategory = instanceCategory;
@@ -885,8 +883,8 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
              * <p>
              * 
              * *   EntryLevel: entry level (shared).
-             * *   EnterpriseLevel: enterprise level.
-             * *   CreditEntryLevel: credit-based entry level. For more information about instance families of this level, see [Overview](~~59977~~).
+             * *   EnterpriseLevel: enterprise level
+             * *   CreditEntryLevel: credit-based entry level For more information, see [Overview](~~59977~~).
              */
             public Builder instanceFamilyLevel(String instanceFamilyLevel) {
                 this.instanceFamilyLevel = instanceFamilyLevel;
@@ -894,7 +892,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The inbound packet forwarding rate of the internal network. Unit: pps.
+             * The inbound packet forwarding rate over the internal network. Unit: pps.
              */
             public Builder instancePpsRx(Long instancePpsRx) {
                 this.instancePpsRx = instancePpsRx;
@@ -934,7 +932,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The capacity of each local disk. Unit: GiB.
+             * The capacity of each local disk. Unit: GiB
              */
             public Builder localStorageCapacity(Long localStorageCapacity) {
                 this.localStorageCapacity = localStorageCapacity;
@@ -945,8 +943,8 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
              * The category of local disks. For more information, see [Local disks](~~63138~~). Valid values:
              * <p>
              * 
-             * *   local_hdd_pro: local SATA HDDs, which are used by d1ne or d1 instances
-             * *   local_ssd_pro: local NVMe SSDs, which are used by i2, i2g, i1, ga1, or gn5 instances
+             * *   local_hdd_pro: local SATA HDDs, which are attached to d1ne or d1 instances
+             * *   local_ssd_pro: local NVMe SSDs, which are attached to i2, i2g, i1, ga1, or gn5 instances
              */
             public Builder localStorageCategory(String localStorageCategory) {
                 this.localStorageCategory = localStorageCategory;
@@ -954,7 +952,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of queues per ENI (including primary and secondary ENIs).
+             * The maximum number of queues per ENI, including primary and secondary ENIs.
              */
             public Builder maximumQueueNumberPerEni(Integer maximumQueueNumberPerEni) {
                 this.maximumQueueNumberPerEni = maximumQueueNumberPerEni;
@@ -962,7 +960,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size. Unit: GiB.
+             * The memory size. Unit: GiB
              */
             public Builder memorySize(Float memorySize) {
                 this.memorySize = memorySize;
@@ -978,7 +976,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the network cards.
+             * The information of the network cards.
              */
             public Builder networkCards(NetworkCards networkCards) {
                 this.networkCards = networkCards;
@@ -989,8 +987,8 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
              * Indicates whether to allow network traffic transmitted over virtual private clouds (VPCs) to be encrypted. Valid values:
              * <p>
              * 
-             * *   true: allows network traffic transmitted over VPCs to be encrypted.
-             * *   false: does not allow network traffic transmitted over VPCs to be encrypted.
+             * *   true
+             * *   false
              */
             public Builder networkEncryptionSupport(Boolean networkEncryptionSupport) {
                 this.networkEncryptionSupport = networkEncryptionSupport;
@@ -998,11 +996,11 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the cloud disk can be attached by using the NVMe protocol. Valid values:
+             * Indicates whether cloud disks can be attached by using the NVMe protocol. Valid values:
              * <p>
              * 
-             * *   required: The cloud disk can be attached by using the NVMe protocol.
-             * *   unsupported: The cloud disk cannot be attached by using the NVMe protocol.
+             * *   required: Cloud disks can be attached by using the NVMe protocol.
+             * *   unsupported: Cloud disks cannot be attached by using the NVMe protocol.
              */
             public Builder nvmeSupport(String nvmeSupport) {
                 this.nvmeSupport = nvmeSupport;
@@ -1018,7 +1016,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The default number of queues per primary NIC.
+             * The default number of queues per primary ENI.
              */
             public Builder primaryEniQueueNumber(Integer primaryEniQueueNumber) {
                 this.primaryEniQueueNumber = primaryEniQueueNumber;
@@ -1026,7 +1024,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of QP queues per ERI.
+             * The maximum number of QPs per ERI.
              */
             public Builder queuePairNumber(Integer queuePairNumber) {
                 this.queuePairNumber = queuePairNumber;
@@ -1034,7 +1032,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The default number of queues supported by the secondary ENI.
+             * The default number of queues per secondary ENI.
              */
             public Builder secondaryEniQueueNumber(Integer secondaryEniQueueNumber) {
                 this.secondaryEniQueueNumber = secondaryEniQueueNumber;
@@ -1065,7 +1063,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
 
     }
     public static class InstanceTypes extends TeaModel {
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private java.util.List < InstanceType> instanceType;
 
         private InstanceTypes(Builder builder) {

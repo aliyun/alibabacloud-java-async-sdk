@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AllocateDedicatedHostsResponseBody</p>
  */
 public class AllocateDedicatedHostsResponseBody extends TeaModel {
-    @NameInMap("DedicatedHostIdSets")
+    @com.aliyun.core.annotation.NameInMap("DedicatedHostIdSets")
     private DedicatedHostIdSets dedicatedHostIdSets;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AllocateDedicatedHostsResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class AllocateDedicatedHostsResponseBody extends TeaModel {
     } 
 
     public static class DedicatedHostIdSets extends TeaModel {
-        @NameInMap("DedicatedHostId")
+        @com.aliyun.core.annotation.NameInMap("DedicatedHostId")
         private java.util.List < String > dedicatedHostId;
 
         private DedicatedHostIdSets(Builder builder) {

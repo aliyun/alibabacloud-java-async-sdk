@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDiskMonitorDataResponseBody</p>
  */
 public class DescribeDiskMonitorDataResponseBody extends TeaModel {
-    @NameInMap("MonitorData")
+    @com.aliyun.core.annotation.NameInMap("MonitorData")
     private MonitorData monitorData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDiskMonitorDataResponseBody(Builder builder) {
@@ -92,34 +91,34 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
     } 
 
     public static class DiskMonitorData extends TeaModel {
-        @NameInMap("BPSRead")
+        @com.aliyun.core.annotation.NameInMap("BPSRead")
         private Integer BPSRead;
 
-        @NameInMap("BPSTotal")
+        @com.aliyun.core.annotation.NameInMap("BPSTotal")
         private Integer BPSTotal;
 
-        @NameInMap("BPSWrite")
+        @com.aliyun.core.annotation.NameInMap("BPSWrite")
         private Integer BPSWrite;
 
-        @NameInMap("DiskId")
+        @com.aliyun.core.annotation.NameInMap("DiskId")
         private String diskId;
 
-        @NameInMap("IOPSRead")
+        @com.aliyun.core.annotation.NameInMap("IOPSRead")
         private Integer IOPSRead;
 
-        @NameInMap("IOPSTotal")
+        @com.aliyun.core.annotation.NameInMap("IOPSTotal")
         private Integer IOPSTotal;
 
-        @NameInMap("IOPSWrite")
+        @com.aliyun.core.annotation.NameInMap("IOPSWrite")
         private Integer IOPSWrite;
 
-        @NameInMap("LatencyRead")
+        @com.aliyun.core.annotation.NameInMap("LatencyRead")
         private Integer latencyRead;
 
-        @NameInMap("LatencyWrite")
+        @com.aliyun.core.annotation.NameInMap("LatencyWrite")
         private Integer latencyWrite;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private DiskMonitorData(Builder builder) {
@@ -313,7 +312,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
 
     }
     public static class MonitorData extends TeaModel {
-        @NameInMap("DiskMonitorData")
+        @com.aliyun.core.annotation.NameInMap("DiskMonitorData")
         private java.util.List < DiskMonitorData> diskMonitorData;
 
         private MonitorData(Builder builder) {

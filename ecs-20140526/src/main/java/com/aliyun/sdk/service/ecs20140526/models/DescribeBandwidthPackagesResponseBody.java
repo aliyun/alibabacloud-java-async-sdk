@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBandwidthPackagesResponseBody</p>
  */
 public class DescribeBandwidthPackagesResponseBody extends TeaModel {
-    @NameInMap("BandwidthPackages")
+    @com.aliyun.core.annotation.NameInMap("BandwidthPackages")
     private BandwidthPackages bandwidthPackages;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeBandwidthPackagesResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeBandwidthPackagesResponseBody extends TeaModel {
     } 
 
     public static class PublicIpAddresse extends TeaModel {
-        @NameInMap("AllocationId")
+        @com.aliyun.core.annotation.NameInMap("AllocationId")
         private String allocationId;
 
-        @NameInMap("IpAddress")
+        @com.aliyun.core.annotation.NameInMap("IpAddress")
         private String ipAddress;
 
         private PublicIpAddresse(Builder builder) {
@@ -193,7 +192,7 @@ public class DescribeBandwidthPackagesResponseBody extends TeaModel {
 
     }
     public static class PublicIpAddresses extends TeaModel {
-        @NameInMap("PublicIpAddresse")
+        @com.aliyun.core.annotation.NameInMap("PublicIpAddresse")
         private java.util.List < PublicIpAddresse> publicIpAddresse;
 
         private PublicIpAddresses(Builder builder) {
@@ -234,49 +233,49 @@ public class DescribeBandwidthPackagesResponseBody extends TeaModel {
 
     }
     public static class BandwidthPackage extends TeaModel {
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private String bandwidth;
 
-        @NameInMap("BandwidthPackageId")
+        @com.aliyun.core.annotation.NameInMap("BandwidthPackageId")
         private String bandwidthPackageId;
 
-        @NameInMap("BusinessStatus")
+        @com.aliyun.core.annotation.NameInMap("BusinessStatus")
         private String businessStatus;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ISP")
+        @com.aliyun.core.annotation.NameInMap("ISP")
         private String ISP;
 
-        @NameInMap("InstanceChargeType")
+        @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
         private String instanceChargeType;
 
-        @NameInMap("InternetChargeType")
+        @com.aliyun.core.annotation.NameInMap("InternetChargeType")
         private String internetChargeType;
 
-        @NameInMap("IpCount")
+        @com.aliyun.core.annotation.NameInMap("IpCount")
         private String ipCount;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NatGatewayId")
+        @com.aliyun.core.annotation.NameInMap("NatGatewayId")
         private String natGatewayId;
 
-        @NameInMap("PublicIpAddresses")
+        @com.aliyun.core.annotation.NameInMap("PublicIpAddresses")
         private PublicIpAddresses publicIpAddresses;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private BandwidthPackage(Builder builder) {
@@ -555,7 +554,7 @@ public class DescribeBandwidthPackagesResponseBody extends TeaModel {
 
     }
     public static class BandwidthPackages extends TeaModel {
-        @NameInMap("BandwidthPackage")
+        @com.aliyun.core.annotation.NameInMap("BandwidthPackage")
         private java.util.List < BandwidthPackage> bandwidthPackage;
 
         private BandwidthPackages(Builder builder) {

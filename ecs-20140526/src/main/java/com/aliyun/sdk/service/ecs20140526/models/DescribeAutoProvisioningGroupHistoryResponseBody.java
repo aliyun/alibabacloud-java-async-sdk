@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAutoProvisioningGroupHistoryResponseBody</p>
  */
 public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
-    @NameInMap("AutoProvisioningGroupHistories")
+    @com.aliyun.core.annotation.NameInMap("AutoProvisioningGroupHistories")
     private AutoProvisioningGroupHistories autoProvisioningGroupHistories;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeAutoProvisioningGroupHistoryResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
     } 
 
     public static class ActivityDetail extends TeaModel {
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private String detail;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ActivityDetail(Builder builder) {
@@ -199,7 +198,7 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
 
     }
     public static class ActivityDetails extends TeaModel {
-        @NameInMap("ActivityDetail")
+        @com.aliyun.core.annotation.NameInMap("ActivityDetail")
         private java.util.List < ActivityDetail> activityDetail;
 
         private ActivityDetails(Builder builder) {
@@ -240,19 +239,19 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
 
     }
     public static class AutoProvisioningGroupHistory extends TeaModel {
-        @NameInMap("ActivityDetails")
+        @com.aliyun.core.annotation.NameInMap("ActivityDetails")
         private ActivityDetails activityDetails;
 
-        @NameInMap("LastEventTime")
+        @com.aliyun.core.annotation.NameInMap("LastEventTime")
         private String lastEventTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
         private AutoProvisioningGroupHistory(Builder builder) {
@@ -366,7 +365,7 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
 
     }
     public static class AutoProvisioningGroupHistories extends TeaModel {
-        @NameInMap("AutoProvisioningGroupHistory")
+        @com.aliyun.core.annotation.NameInMap("AutoProvisioningGroupHistory")
         private java.util.List < AutoProvisioningGroupHistory> autoProvisioningGroupHistory;
 
         private AutoProvisioningGroupHistories(Builder builder) {

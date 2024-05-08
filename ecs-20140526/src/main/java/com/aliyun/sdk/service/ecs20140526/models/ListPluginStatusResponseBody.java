@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPluginStatusResponseBody</p>
  */
 public class ListPluginStatusResponseBody extends TeaModel {
-    @NameInMap("InstancePluginStatusSet")
+    @com.aliyun.core.annotation.NameInMap("InstancePluginStatusSet")
     private InstancePluginStatusSet instancePluginStatusSet;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListPluginStatusResponseBody(Builder builder) {
@@ -152,19 +151,19 @@ public class ListPluginStatusResponseBody extends TeaModel {
     } 
 
     public static class PluginStatus extends TeaModel {
-        @NameInMap("FirstHeartbeatTime")
+        @com.aliyun.core.annotation.NameInMap("FirstHeartbeatTime")
         private String firstHeartbeatTime;
 
-        @NameInMap("LastHeartbeatTime")
+        @com.aliyun.core.annotation.NameInMap("LastHeartbeatTime")
         private String lastHeartbeatTime;
 
-        @NameInMap("PluginName")
+        @com.aliyun.core.annotation.NameInMap("PluginName")
         private String pluginName;
 
-        @NameInMap("PluginStatus")
+        @com.aliyun.core.annotation.NameInMap("PluginStatus")
         private String pluginStatus;
 
-        @NameInMap("PluginVersion")
+        @com.aliyun.core.annotation.NameInMap("PluginVersion")
         private String pluginVersion;
 
         private PluginStatus(Builder builder) {
@@ -282,7 +281,7 @@ public class ListPluginStatusResponseBody extends TeaModel {
 
     }
     public static class PluginStatusSet extends TeaModel {
-        @NameInMap("PluginStatus")
+        @com.aliyun.core.annotation.NameInMap("PluginStatus")
         private java.util.List < PluginStatus> pluginStatus;
 
         private PluginStatusSet(Builder builder) {
@@ -332,10 +331,10 @@ public class ListPluginStatusResponseBody extends TeaModel {
 
     }
     public static class InstancePluginStatus extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("PluginStatusSet")
+        @com.aliyun.core.annotation.NameInMap("PluginStatusSet")
         private PluginStatusSet pluginStatusSet;
 
         private InstancePluginStatus(Builder builder) {
@@ -393,7 +392,7 @@ public class ListPluginStatusResponseBody extends TeaModel {
 
     }
     public static class InstancePluginStatusSet extends TeaModel {
-        @NameInMap("InstancePluginStatus")
+        @com.aliyun.core.annotation.NameInMap("InstancePluginStatus")
         private java.util.List < InstancePluginStatus> instancePluginStatus;
 
         private InstancePluginStatusSet(Builder builder) {

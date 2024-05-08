@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVSwitchesResponseBody</p>
  */
 public class DescribeVSwitchesResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("VSwitches")
+    @com.aliyun.core.annotation.NameInMap("VSwitches")
     private VSwitches vSwitches;
 
     private DescribeVSwitchesResponseBody(Builder builder) {
@@ -132,37 +131,37 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     } 
 
     public static class VSwitch extends TeaModel {
-        @NameInMap("AvailableIpAddressCount")
+        @com.aliyun.core.annotation.NameInMap("AvailableIpAddressCount")
         private Long availableIpAddressCount;
 
-        @NameInMap("CidrBlock")
+        @com.aliyun.core.annotation.NameInMap("CidrBlock")
         private String cidrBlock;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("IsDefault")
+        @com.aliyun.core.annotation.NameInMap("IsDefault")
         private Boolean isDefault;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VSwitchName")
+        @com.aliyun.core.annotation.NameInMap("VSwitchName")
         private String vSwitchName;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private VSwitch(Builder builder) {
@@ -373,7 +372,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
 
     }
     public static class VSwitches extends TeaModel {
-        @NameInMap("VSwitch")
+        @com.aliyun.core.annotation.NameInMap("VSwitch")
         private java.util.List < VSwitch> vSwitch;
 
         private VSwitches(Builder builder) {

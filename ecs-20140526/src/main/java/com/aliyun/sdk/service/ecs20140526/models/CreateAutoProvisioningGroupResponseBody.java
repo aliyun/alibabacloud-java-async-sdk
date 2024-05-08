@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAutoProvisioningGroupResponseBody</p>
  */
 public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
-    @NameInMap("AutoProvisioningGroupId")
+    @com.aliyun.core.annotation.NameInMap("AutoProvisioningGroupId")
     private String autoProvisioningGroupId;
 
-    @NameInMap("LaunchResults")
+    @com.aliyun.core.annotation.NameInMap("LaunchResults")
     private LaunchResults launchResults;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateAutoProvisioningGroupResponseBody(Builder builder) {
@@ -92,7 +91,7 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
     } 
 
     public static class InstanceIds extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private java.util.List < String > instanceId;
 
         private InstanceIds(Builder builder) {
@@ -133,25 +132,25 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
 
     }
     public static class LaunchResult extends TeaModel {
-        @NameInMap("Amount")
+        @com.aliyun.core.annotation.NameInMap("Amount")
         private Integer amount;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
 
-        @NameInMap("InstanceIds")
+        @com.aliyun.core.annotation.NameInMap("InstanceIds")
         private InstanceIds instanceIds;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("SpotStrategy")
+        @com.aliyun.core.annotation.NameInMap("SpotStrategy")
         private String spotStrategy;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private LaunchResult(Builder builder) {
@@ -299,7 +298,7 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
 
     }
     public static class LaunchResults extends TeaModel {
-        @NameInMap("LaunchResult")
+        @com.aliyun.core.annotation.NameInMap("LaunchResult")
         private java.util.List < LaunchResult> launchResult;
 
         private LaunchResults(Builder builder) {

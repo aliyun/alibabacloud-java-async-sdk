@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceRamRoleResponseBody</p>
  */
 public class DescribeInstanceRamRoleResponseBody extends TeaModel {
-    @NameInMap("InstanceRamRoleSets")
+    @com.aliyun.core.annotation.NameInMap("InstanceRamRoleSets")
     private InstanceRamRoleSets instanceRamRoleSets;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeInstanceRamRoleResponseBody(Builder builder) {
@@ -112,10 +111,10 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
     } 
 
     public static class InstanceRamRoleSet extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("RamRoleName")
+        @com.aliyun.core.annotation.NameInMap("RamRoleName")
         private String ramRoleName;
 
         private InstanceRamRoleSet(Builder builder) {
@@ -173,7 +172,7 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
 
     }
     public static class InstanceRamRoleSets extends TeaModel {
-        @NameInMap("InstanceRamRoleSet")
+        @com.aliyun.core.annotation.NameInMap("InstanceRamRoleSet")
         private java.util.List < InstanceRamRoleSet> instanceRamRoleSet;
 
         private InstanceRamRoleSets(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBandwidthLimitationResponseBody</p>
  */
 public class DescribeBandwidthLimitationResponseBody extends TeaModel {
-    @NameInMap("Bandwidths")
+    @com.aliyun.core.annotation.NameInMap("Bandwidths")
     private Bandwidths bandwidths;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeBandwidthLimitationResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
     } 
 
     public static class Bandwidth extends TeaModel {
-        @NameInMap("InternetChargeType")
+        @com.aliyun.core.annotation.NameInMap("InternetChargeType")
         private String internetChargeType;
 
-        @NameInMap("Max")
+        @com.aliyun.core.annotation.NameInMap("Max")
         private Integer max;
 
-        @NameInMap("Min")
+        @com.aliyun.core.annotation.NameInMap("Min")
         private Integer min;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
         private Bandwidth(Builder builder) {
@@ -177,7 +176,7 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
 
     }
     public static class Bandwidths extends TeaModel {
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private java.util.List < Bandwidth> bandwidth;
 
         private Bandwidths(Builder builder) {

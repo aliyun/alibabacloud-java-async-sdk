@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDeploymentSetsResponseBody</p>
  */
 public class DescribeDeploymentSetsResponseBody extends TeaModel {
-    @NameInMap("DeploymentSets")
+    @com.aliyun.core.annotation.NameInMap("DeploymentSets")
     private DeploymentSets deploymentSets;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDeploymentSetsResponseBody(Builder builder) {
@@ -152,13 +151,13 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
     } 
 
     public static class Capacity extends TeaModel {
-        @NameInMap("AvailableAmount")
+        @com.aliyun.core.annotation.NameInMap("AvailableAmount")
         private Integer availableAmount;
 
-        @NameInMap("UsedAmount")
+        @com.aliyun.core.annotation.NameInMap("UsedAmount")
         private Integer usedAmount;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Capacity(Builder builder) {
@@ -233,7 +232,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
 
     }
     public static class Capacities extends TeaModel {
-        @NameInMap("Capacity")
+        @com.aliyun.core.annotation.NameInMap("Capacity")
         private java.util.List < Capacity> capacity;
 
         private Capacities(Builder builder) {
@@ -274,7 +273,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
 
     }
     public static class InstanceIds extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private java.util.List < String > instanceId;
 
         private InstanceIds(Builder builder) {
@@ -315,40 +314,40 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
 
     }
     public static class DeploymentSet extends TeaModel {
-        @NameInMap("Capacities")
+        @com.aliyun.core.annotation.NameInMap("Capacities")
         private Capacities capacities;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DeploymentSetDescription")
+        @com.aliyun.core.annotation.NameInMap("DeploymentSetDescription")
         private String deploymentSetDescription;
 
-        @NameInMap("DeploymentSetId")
+        @com.aliyun.core.annotation.NameInMap("DeploymentSetId")
         private String deploymentSetId;
 
-        @NameInMap("DeploymentSetName")
+        @com.aliyun.core.annotation.NameInMap("DeploymentSetName")
         private String deploymentSetName;
 
-        @NameInMap("DeploymentStrategy")
+        @com.aliyun.core.annotation.NameInMap("DeploymentStrategy")
         private String deploymentStrategy;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Granularity")
+        @com.aliyun.core.annotation.NameInMap("Granularity")
         private String granularity;
 
-        @NameInMap("GroupCount")
+        @com.aliyun.core.annotation.NameInMap("GroupCount")
         private Integer groupCount;
 
-        @NameInMap("InstanceAmount")
+        @com.aliyun.core.annotation.NameInMap("InstanceAmount")
         private Integer instanceAmount;
 
-        @NameInMap("InstanceIds")
+        @com.aliyun.core.annotation.NameInMap("InstanceIds")
         private InstanceIds instanceIds;
 
-        @NameInMap("Strategy")
+        @com.aliyun.core.annotation.NameInMap("Strategy")
         private String strategy;
 
         private DeploymentSet(Builder builder) {
@@ -579,7 +578,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
 
     }
     public static class DeploymentSets extends TeaModel {
-        @NameInMap("DeploymentSet")
+        @com.aliyun.core.annotation.NameInMap("DeploymentSet")
         private java.util.List < DeploymentSet> deploymentSet;
 
         private DeploymentSets(Builder builder) {

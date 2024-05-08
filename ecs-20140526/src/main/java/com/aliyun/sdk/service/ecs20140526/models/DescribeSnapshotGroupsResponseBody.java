@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSnapshotGroupsResponseBody</p>
  */
 public class DescribeSnapshotGroupsResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SnapshotGroups")
+    @com.aliyun.core.annotation.NameInMap("SnapshotGroups")
     private SnapshotGroups snapshotGroups;
 
     private DescribeSnapshotGroupsResponseBody(Builder builder) {
@@ -95,10 +94,10 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -156,7 +155,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -197,28 +196,28 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
 
     }
     public static class Snapshot extends TeaModel {
-        @NameInMap("Available")
+        @com.aliyun.core.annotation.NameInMap("Available")
         private Boolean available;
 
-        @NameInMap("InstantAccess")
+        @com.aliyun.core.annotation.NameInMap("InstantAccess")
         private Boolean instantAccess;
 
-        @NameInMap("InstantAccessRetentionDays")
+        @com.aliyun.core.annotation.NameInMap("InstantAccessRetentionDays")
         private Integer instantAccessRetentionDays;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("SnapshotId")
+        @com.aliyun.core.annotation.NameInMap("SnapshotId")
         private String snapshotId;
 
-        @NameInMap("SourceDiskId")
+        @com.aliyun.core.annotation.NameInMap("SourceDiskId")
         private String sourceDiskId;
 
-        @NameInMap("SourceDiskType")
+        @com.aliyun.core.annotation.NameInMap("SourceDiskType")
         private String sourceDiskType;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
         private Snapshot(Builder builder) {
@@ -393,7 +392,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
 
     }
     public static class Snapshots extends TeaModel {
-        @NameInMap("Snapshot")
+        @com.aliyun.core.annotation.NameInMap("Snapshot")
         private java.util.List < Snapshot> snapshot;
 
         private Snapshots(Builder builder) {
@@ -434,10 +433,10 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
 
     }
     public static class TagsTag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private TagsTag(Builder builder) {
@@ -495,7 +494,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
 
     }
     public static class SnapshotGroupTags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < TagsTag> tag;
 
         private SnapshotGroupTags(Builder builder) {
@@ -536,34 +535,34 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
 
     }
     public static class SnapshotGroup extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ProgressStatus")
+        @com.aliyun.core.annotation.NameInMap("ProgressStatus")
         private String progressStatus;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SnapshotGroupId")
+        @com.aliyun.core.annotation.NameInMap("SnapshotGroupId")
         private String snapshotGroupId;
 
-        @NameInMap("Snapshots")
+        @com.aliyun.core.annotation.NameInMap("Snapshots")
         private Snapshots snapshots;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private SnapshotGroupTags tags;
 
         private SnapshotGroup(Builder builder) {
@@ -762,7 +761,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
 
     }
     public static class SnapshotGroups extends TeaModel {
-        @NameInMap("SnapshotGroup")
+        @com.aliyun.core.annotation.NameInMap("SnapshotGroup")
         private java.util.List < SnapshotGroup> snapshotGroup;
 
         private SnapshotGroups(Builder builder) {

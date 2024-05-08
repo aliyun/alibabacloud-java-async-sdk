@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,67 +11,72 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyNetworkInterfaceAttributeRequest</p>
  */
 public class ModifyNetworkInterfaceAttributeRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("DeleteOnRelease")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectionTrackingConfiguration")
+    private ConnectionTrackingConfiguration connectionTrackingConfiguration;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeleteOnRelease")
     private Boolean deleteOnRelease;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("NetworkInterfaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String networkInterfaceId;
 
-    @Query
-    @NameInMap("NetworkInterfaceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfaceName")
     private String networkInterfaceName;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("QueueNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueueNumber")
     private Integer queueNumber;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RxQueueSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RxQueueSize")
     private Integer rxQueueSize;
 
-    @Query
-    @NameInMap("SecurityGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
     private java.util.List < String > securityGroupId;
 
-    @Query
-    @NameInMap("TxQueueSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TxQueueSize")
     private Integer txQueueSize;
 
     private ModifyNetworkInterfaceAttributeRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
+        this.connectionTrackingConfiguration = builder.connectionTrackingConfiguration;
         this.deleteOnRelease = builder.deleteOnRelease;
         this.description = builder.description;
         this.networkInterfaceId = builder.networkInterfaceId;
@@ -106,6 +110,13 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
      */
     public String getSourceRegionId() {
         return this.sourceRegionId;
+    }
+
+    /**
+     * @return connectionTrackingConfiguration
+     */
+    public ConnectionTrackingConfiguration getConnectionTrackingConfiguration() {
+        return this.connectionTrackingConfiguration;
     }
 
     /**
@@ -201,6 +212,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyNetworkInterfaceAttributeRequest, Builder> {
         private String sourceRegionId; 
+        private ConnectionTrackingConfiguration connectionTrackingConfiguration; 
         private Boolean deleteOnRelease; 
         private String description; 
         private String networkInterfaceId; 
@@ -222,6 +234,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         private Builder(ModifyNetworkInterfaceAttributeRequest request) {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
+            this.connectionTrackingConfiguration = request.connectionTrackingConfiguration;
             this.deleteOnRelease = request.deleteOnRelease;
             this.description = request.description;
             this.networkInterfaceId = request.networkInterfaceId;
@@ -243,6 +256,15 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         public Builder sourceRegionId(String sourceRegionId) {
             this.putHostParameter("SourceRegionId", sourceRegionId);
             this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * ConnectionTrackingConfiguration.
+         */
+        public Builder connectionTrackingConfiguration(ConnectionTrackingConfiguration connectionTrackingConfiguration) {
+            this.putQueryParameter("ConnectionTrackingConfiguration", connectionTrackingConfiguration);
+            this.connectionTrackingConfiguration = connectionTrackingConfiguration;
             return this;
         }
 
@@ -401,4 +423,85 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
 
     } 
 
+    public static class ConnectionTrackingConfiguration extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TcpClosedAndTimeWaitTimeout")
+        private Integer tcpClosedAndTimeWaitTimeout;
+
+        @com.aliyun.core.annotation.NameInMap("TcpEstablishedTimeout")
+        private Integer tcpEstablishedTimeout;
+
+        @com.aliyun.core.annotation.NameInMap("UdpTimeout")
+        private Integer udpTimeout;
+
+        private ConnectionTrackingConfiguration(Builder builder) {
+            this.tcpClosedAndTimeWaitTimeout = builder.tcpClosedAndTimeWaitTimeout;
+            this.tcpEstablishedTimeout = builder.tcpEstablishedTimeout;
+            this.udpTimeout = builder.udpTimeout;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ConnectionTrackingConfiguration create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tcpClosedAndTimeWaitTimeout
+         */
+        public Integer getTcpClosedAndTimeWaitTimeout() {
+            return this.tcpClosedAndTimeWaitTimeout;
+        }
+
+        /**
+         * @return tcpEstablishedTimeout
+         */
+        public Integer getTcpEstablishedTimeout() {
+            return this.tcpEstablishedTimeout;
+        }
+
+        /**
+         * @return udpTimeout
+         */
+        public Integer getUdpTimeout() {
+            return this.udpTimeout;
+        }
+
+        public static final class Builder {
+            private Integer tcpClosedAndTimeWaitTimeout; 
+            private Integer tcpEstablishedTimeout; 
+            private Integer udpTimeout; 
+
+            /**
+             * TcpClosedAndTimeWaitTimeout.
+             */
+            public Builder tcpClosedAndTimeWaitTimeout(Integer tcpClosedAndTimeWaitTimeout) {
+                this.tcpClosedAndTimeWaitTimeout = tcpClosedAndTimeWaitTimeout;
+                return this;
+            }
+
+            /**
+             * TcpEstablishedTimeout.
+             */
+            public Builder tcpEstablishedTimeout(Integer tcpEstablishedTimeout) {
+                this.tcpEstablishedTimeout = tcpEstablishedTimeout;
+                return this;
+            }
+
+            /**
+             * UdpTimeout.
+             */
+            public Builder udpTimeout(Integer udpTimeout) {
+                this.udpTimeout = udpTimeout;
+                return this;
+            }
+
+            public ConnectionTrackingConfiguration build() {
+                return new ConnectionTrackingConfiguration(this);
+            } 
+
+        } 
+
+    }
 }

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRouterInterfacesResponseBody</p>
  */
 public class DescribeRouterInterfacesResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RouterInterfaceSet")
+    @com.aliyun.core.annotation.NameInMap("RouterInterfaceSet")
     private RouterInterfaceSet routerInterfaceSet;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeRouterInterfacesResponseBody(Builder builder) {
@@ -132,79 +131,79 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
     } 
 
     public static class RouterInterfaceType extends TeaModel {
-        @NameInMap("AccessPointId")
+        @com.aliyun.core.annotation.NameInMap("AccessPointId")
         private String accessPointId;
 
-        @NameInMap("BusinessStatus")
+        @com.aliyun.core.annotation.NameInMap("BusinessStatus")
         private String businessStatus;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("ConnectedTime")
+        @com.aliyun.core.annotation.NameInMap("ConnectedTime")
         private String connectedTime;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("HealthCheckSourceIp")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckSourceIp")
         private String healthCheckSourceIp;
 
-        @NameInMap("HealthCheckTargetIp")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckTargetIp")
         private String healthCheckTargetIp;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OppositeAccessPointId")
+        @com.aliyun.core.annotation.NameInMap("OppositeAccessPointId")
         private String oppositeAccessPointId;
 
-        @NameInMap("OppositeInterfaceBusinessStatus")
+        @com.aliyun.core.annotation.NameInMap("OppositeInterfaceBusinessStatus")
         private String oppositeInterfaceBusinessStatus;
 
-        @NameInMap("OppositeInterfaceId")
+        @com.aliyun.core.annotation.NameInMap("OppositeInterfaceId")
         private String oppositeInterfaceId;
 
-        @NameInMap("OppositeInterfaceOwnerId")
+        @com.aliyun.core.annotation.NameInMap("OppositeInterfaceOwnerId")
         private String oppositeInterfaceOwnerId;
 
-        @NameInMap("OppositeInterfaceSpec")
+        @com.aliyun.core.annotation.NameInMap("OppositeInterfaceSpec")
         private String oppositeInterfaceSpec;
 
-        @NameInMap("OppositeInterfaceStatus")
+        @com.aliyun.core.annotation.NameInMap("OppositeInterfaceStatus")
         private String oppositeInterfaceStatus;
 
-        @NameInMap("OppositeRegionId")
+        @com.aliyun.core.annotation.NameInMap("OppositeRegionId")
         private String oppositeRegionId;
 
-        @NameInMap("OppositeRouterId")
+        @com.aliyun.core.annotation.NameInMap("OppositeRouterId")
         private String oppositeRouterId;
 
-        @NameInMap("OppositeRouterType")
+        @com.aliyun.core.annotation.NameInMap("OppositeRouterType")
         private String oppositeRouterType;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("RouterId")
+        @com.aliyun.core.annotation.NameInMap("RouterId")
         private String routerId;
 
-        @NameInMap("RouterInterfaceId")
+        @com.aliyun.core.annotation.NameInMap("RouterInterfaceId")
         private String routerInterfaceId;
 
-        @NameInMap("RouterType")
+        @com.aliyun.core.annotation.NameInMap("RouterType")
         private String routerType;
 
-        @NameInMap("Spec")
+        @com.aliyun.core.annotation.NameInMap("Spec")
         private String spec;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private RouterInterfaceType(Builder builder) {
@@ -653,7 +652,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
 
     }
     public static class RouterInterfaceSet extends TeaModel {
-        @NameInMap("RouterInterfaceType")
+        @com.aliyun.core.annotation.NameInMap("RouterInterfaceType")
         private java.util.List < RouterInterfaceType> routerInterfaceType;
 
         private RouterInterfaceSet(Builder builder) {

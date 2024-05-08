@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCloudAssistantStatusResponse</p>
  */
 public class DescribeCloudAssistantStatusResponse extends Response {
-    @NameInMap("headers")
+    @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
-    @NameInMap("statusCode")
+    @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    @NameInMap("body")
+    @com.aliyun.core.annotation.NameInMap("body")
     private DescribeCloudAssistantStatusResponseBody body;
 
     private DescribeCloudAssistantStatusResponse(BuilderImpl builder) {

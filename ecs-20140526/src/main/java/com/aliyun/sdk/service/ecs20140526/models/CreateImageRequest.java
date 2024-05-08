@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,85 +11,85 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateImageRequest</p>
  */
 public class CreateImageRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("Architecture")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Architecture")
     private String architecture;
 
-    @Query
-    @NameInMap("BootMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BootMode")
     private String bootMode;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DetectionStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DetectionStrategy")
     private String detectionStrategy;
 
-    @Query
-    @NameInMap("DiskDeviceMapping")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskDeviceMapping")
     private java.util.List < DiskDeviceMapping> diskDeviceMapping;
 
-    @Query
-    @NameInMap("ImageFamily")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageFamily")
     private String imageFamily;
 
-    @Query
-    @NameInMap("ImageName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageName")
     private String imageName;
 
-    @Query
-    @NameInMap("ImageVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageVersion")
     private String imageVersion;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Platform")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Platform")
     private String platform;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SnapshotId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotId")
     private String snapshotId;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
     private CreateImageRequest(Builder builder) {
@@ -379,28 +378,10 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The mode that you want to use to check the source image. If you do not specify this parameter, the source image is not checked. Only Linux images can be checked. Set the value to Standard, which indicates standard check mode.
+         * The mode in which to check the custom image. If you do not specify this parameter, the image is not checked. Only the standard check mode is supported.
          * <p>
          * 
-         * The following items are checked in standard check mode:
-         * 
-         * *   Virtio: whether the virtio driver is installed.
-         * *   Fstab: whether mounting configurations in the fstab file are correct.
-         * *   Grub: whether GRand Unified Bootloader (GRUB) configurations are correct.
-         * *   SystemImage: whether the image is valid. Do not import images that are in the ISO format or empty.
-         * *   CloudInit: whether cloud-init is installed.
-         * *   NVMe: whether the Non-Volatile Memory Express (NVMe) driver is installed.
-         * *   Selinux: whether SElinux is enabled.
-         * *   OnlineResizeFS: whether the root partition can be automatically resized.
-         * *   Dhcp: whether Dynamic Host Configuration Protocol (DHCP) is enabled for network interface controllers (NICs).
-         * *   RtcTimeMode: the RTC time mode.
-         * *   Platform: the platform. Examples: Linux and Windows.
-         * *   OSVersion: the operating system version. Example: Centos 7.9.
-         * *   Architecture: the architecture. Examples: ARM and x86\_64.
-         * *   BootMode: the boot mode. Examples: UEFI and Legacy.
-         * *   KernelVersion: the kernel version.
-         * *   CloudAssistant: whether the Cloud Assistant client is installed.
-         * *   SecurityCenterAgent: whether the Security Center agent is installed.
+         * >  This parameter is supported for most Linux and Windows operating system versions. For information about image check items and operating system limits for image check, see [Overview of image check](~~439819~~) and [Operating system limits for image check](~~475800~~).
          */
         public Builder detectionStrategy(String detectionStrategy) {
             this.putQueryParameter("DetectionStrategy", detectionStrategy);
@@ -409,7 +390,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The custom images.
+         * The information about the custom image.
          */
         public Builder diskDeviceMapping(java.util.List < DiskDeviceMapping> diskDeviceMapping) {
             this.putQueryParameter("DiskDeviceMapping", diskDeviceMapping);
@@ -418,7 +399,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The name of the image family. The name must be 2 to 128 characters in length and can contain digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter and cannot start with acs: or aliyun. It cannot contain [http:// or https://.](http://https://。、（:）、（\_）（-）。)
+         * The name of the image family. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with acs: or aliyun. The name cannot contain http:// or https://. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
          */
         public Builder imageFamily(String imageFamily) {
             this.putQueryParameter("ImageFamily", imageFamily);
@@ -427,7 +408,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The image name. The name must be 2 to 128 characters in length and can contain digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with [http:// or https://.](http://https://。、（:）、（\_）（-）。)
+         * The name of the custom image. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -475,21 +456,35 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The distribution of the operating system for the system disk in the custom image. If you specify a data disk snapshot to create the system disk of the custom image, you must use Platform to specify the distribution of the operating system for the system disk. Valid values:
+         * The operating system distribution for the system disk in the custom image. If you specify a data disk snapshot to create the system disk of the custom image, use Platform to specify the operating system distribution for the system disk. Valid values:
          * <p>
          * 
+         * *   Aliyun
+         * *   Anolis
          * *   CentOS
          * *   Ubuntu
-         * *   SUSE
-         * *   OpenSUSE
-         * *   RedHat
-         * *   Debian
          * *   CoreOS
-         * *   Aliyun
-         * *   Windows Server 2012
-         * *   Windows 7
+         * *   SUSE
+         * *   Debian
+         * *   OpenSUSE
+         * *   FreeBSD
+         * *   RedHat
+         * *   Kylin
+         * *   UOS
+         * *   Fedora
+         * *   Fedora CoreOS
+         * *   CentOS Stream
+         * *   AlmaLinux
+         * *   Rocky Linux
+         * *   Gentoo
          * *   Customized Linux
          * *   Others Linux
+         * *   Windows Server 2022
+         * *   Windows Server 2019
+         * *   Windows Server 2016
+         * *   Windows Server 2012
+         * *   Windows Server 2008
+         * *   Windows Server 2003
          * 
          * Default value: Others Linux.
          */
@@ -509,10 +504,10 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which you want to assign the custom image. If you leave this parameter empty, the image is assigned to the default resource group.
+         * The ID of the resource group to which to assign the custom image. If you do not specify this parameter, the image is assigned to the default resource group.
          * <p>
          * 
-         * > If you call the CreateImage operation as a RAM user who is not authorized to manage the default resource group and leave `ResourceGroupId` empty, the `Forbidden: User not authorized to operate on the specified resource` error message is returned. Before you call the CreateImage operation again, you must specify the ID of a resource group that the RAM user is authorized to manage or authorize the RAM user to manage the default resource group.
+         * >  If you call the CreateImage operation as a Resource Access Management (RAM) user who does not have the permissions to manage the default resource group and do not specify `ResourceGroupId`, the `Forbbiden: User not authorized to operate on the specified resource` error message is returned. You must specify the ID of a resource group that the RAM user has the permissions to manage or grant the RAM user the permissions to manage the default resource group before you call the CreateImage operation again.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -539,7 +534,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The ID of the snapshot that is used to create the custom image.
+         * The ID of the snapshot that you want to use to create the custom image.
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
@@ -564,16 +559,16 @@ public class CreateImageRequest extends Request {
     } 
 
     public static class DiskDeviceMapping extends TeaModel {
-        @NameInMap("Device")
+        @com.aliyun.core.annotation.NameInMap("Device")
         private String device;
 
-        @NameInMap("DiskType")
+        @com.aliyun.core.annotation.NameInMap("DiskType")
         private String diskType;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
-        @NameInMap("SnapshotId")
+        @com.aliyun.core.annotation.NameInMap("SnapshotId")
         private String snapshotId;
 
         private DiskDeviceMapping(Builder builder) {
@@ -629,8 +624,8 @@ public class CreateImageRequest extends Request {
              * The device name of disk N in the custom image. Valid values:
              * <p>
              * 
-             * *   For disks other than basic disks, such as standard SSDs, ultra disks, and enhanced SSDs (ESSDs), the valid values range from /dev/vda to /dev/vdz in ascending alphabetical order.
-             * *   For basic disks, the valid values are in alphabetical order from /dev/xvda to /dev/xvdz.
+             * *   For disks other than basic disks, such as standard SSDs, ultra disks, and enhanced SSDs (ESSDs), the valid values range from /dev/vda to /dev/vdz in alphabetical order.
+             * *   For basic disks, the valid values range from /dev/xvda to /dev/xvdz in alphabetical order.
              */
             public Builder device(String device) {
                 this.device = device;
@@ -641,8 +636,8 @@ public class CreateImageRequest extends Request {
              * The type of disk N in the custom image. You can specify this parameter to create the system disk of the custom image from a data disk snapshot. If you do not specify this parameter, the disk type is determined by the corresponding snapshot. Valid values:
              * <p>
              * 
-             * *   system: system disk
-             * *   data: data disk
+             * *   system: system disk. You can specify only one snapshot to use to create the system disk in the custom image.
+             * *   data: data disk. You can specify up to 16 snapshots to use to create data disks in the custom image.
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -650,15 +645,15 @@ public class CreateImageRequest extends Request {
             }
 
             /**
-             * The size of disk N in the custom image. Unit: GiB. The valid values and default value of DiskDeviceMapping.N.Size depend on the value of DiskDeviceMapping.N.SnapshotId.
+             * The size of disk N in the custom image. Unit: GiB. The valid values and default value of DiskDeviceMapping.N.Size vary based on the value of DiskDeviceMapping.N.SnapshotId.
              * <p>
              * 
-             * *   If no corresponding snapshot IDs are specified in the DiskDeviceMapping.N.SnapshotId value, the following valid values and default values are available for DiskDeviceMapping.N.Size:
+             * *   If no corresponding snapshot IDs are specified in the value of DiskDeviceMapping.N.SnapshotId, DiskDeviceMapping.N.Size has the following valid values and default values:
              * 
-             *     *   For basic disks, the valid values are 5 to 2000, and the default value is 5.
-             *     *   For other types of disk, the valid values are 20 to 32768, and the default value is 20.
+             *     *   For basic disks, the valid values range from 5 to 2000, and the default value is 5.
+             *     *   For other disks, the valid values range from 20 to 32768, and the default value is 20.
              * 
-             * *   If a corresponding snapshot ID is specified in the DiskDeviceMapping.N.SnapshotId value, the value of DiskDeviceMapping.N.Size must be greater than or equal to the size of the specified snapshot. The default value of DiskDeviceMapping.N.Size is the size of the specified snapshot.
+             * *   If a corresponding snapshot ID is specified in the value of DiskDeviceMapping.N.SnapshotId, the value of DiskDeviceMapping.N.Size must be greater than or equal to the size of the specified snapshot. The default value of DiskDeviceMapping.N.Size is the size of the specified snapshot.
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -666,7 +661,7 @@ public class CreateImageRequest extends Request {
             }
 
             /**
-             * The ID of the snapshot that is used to create the custom image.
+             * The ID of snapshot N to use to create the custom image.
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -681,10 +676,10 @@ public class CreateImageRequest extends Request {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

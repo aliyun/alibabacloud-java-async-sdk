@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTasksResponseBody</p>
  */
 public class DescribeTasksResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskSet")
+    @com.aliyun.core.annotation.NameInMap("TaskSet")
     private TaskSet taskSet;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeTasksResponseBody(Builder builder) {
@@ -152,25 +151,25 @@ public class DescribeTasksResponseBody extends TeaModel {
     } 
 
     public static class Task extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("FinishedTime")
+        @com.aliyun.core.annotation.NameInMap("FinishedTime")
         private String finishedTime;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("SupportCancel")
+        @com.aliyun.core.annotation.NameInMap("SupportCancel")
         private String supportCancel;
 
-        @NameInMap("TaskAction")
+        @com.aliyun.core.annotation.NameInMap("TaskAction")
         private String taskAction;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TaskStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private String taskStatus;
 
         private Task(Builder builder) {
@@ -313,7 +312,7 @@ public class DescribeTasksResponseBody extends TeaModel {
 
     }
     public static class TaskSet extends TeaModel {
-        @NameInMap("Task")
+        @com.aliyun.core.annotation.NameInMap("Task")
         private java.util.List < Task> task;
 
         private TaskSet(Builder builder) {

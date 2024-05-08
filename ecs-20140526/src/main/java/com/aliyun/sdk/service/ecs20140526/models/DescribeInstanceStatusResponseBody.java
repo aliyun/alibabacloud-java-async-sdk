@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceStatusResponseBody</p>
  */
 public class DescribeInstanceStatusResponseBody extends TeaModel {
-    @NameInMap("InstanceStatuses")
+    @com.aliyun.core.annotation.NameInMap("InstanceStatuses")
     private InstanceStatuses instanceStatuses;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeInstanceStatusResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
     } 
 
     public static class InstanceStatus extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private InstanceStatus(Builder builder) {
@@ -200,7 +199,7 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
 
     }
     public static class InstanceStatuses extends TeaModel {
-        @NameInMap("InstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("InstanceStatus")
         private java.util.List < InstanceStatus> instanceStatus;
 
         private InstanceStatuses(Builder builder) {

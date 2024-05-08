@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInstanceConsoleOutputResponseBody</p>
  */
 public class GetInstanceConsoleOutputResponseBody extends TeaModel {
-    @NameInMap("ConsoleOutput")
+    @com.aliyun.core.annotation.NameInMap("ConsoleOutput")
     private String consoleOutput;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("LastUpdateTime")
+    @com.aliyun.core.annotation.NameInMap("LastUpdateTime")
     private String lastUpdateTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetInstanceConsoleOutputResponseBody(Builder builder) {

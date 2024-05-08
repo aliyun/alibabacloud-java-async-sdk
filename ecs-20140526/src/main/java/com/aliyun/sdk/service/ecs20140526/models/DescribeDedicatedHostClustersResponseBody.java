@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDedicatedHostClustersResponseBody</p>
  */
 public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
-    @NameInMap("DedicatedHostClusters")
+    @com.aliyun.core.annotation.NameInMap("DedicatedHostClusters")
     private DedicatedHostClusters dedicatedHostClusters;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDedicatedHostClustersResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
     } 
 
     public static class AvailableInstanceType extends TeaModel {
-        @NameInMap("AvailableInstanceCapacity")
+        @com.aliyun.core.annotation.NameInMap("AvailableInstanceCapacity")
         private Integer availableInstanceCapacity;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
         private AvailableInstanceType(Builder builder) {
@@ -193,7 +192,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
 
     }
     public static class AvailableInstanceTypes extends TeaModel {
-        @NameInMap("AvailableInstanceType")
+        @com.aliyun.core.annotation.NameInMap("AvailableInstanceType")
         private java.util.List < AvailableInstanceType> availableInstanceType;
 
         private AvailableInstanceTypes(Builder builder) {
@@ -234,13 +233,13 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
 
     }
     public static class LocalStorageCapacity extends TeaModel {
-        @NameInMap("AvailableDisk")
+        @com.aliyun.core.annotation.NameInMap("AvailableDisk")
         private Integer availableDisk;
 
-        @NameInMap("DataDiskCategory")
+        @com.aliyun.core.annotation.NameInMap("DataDiskCategory")
         private String dataDiskCategory;
 
-        @NameInMap("TotalDisk")
+        @com.aliyun.core.annotation.NameInMap("TotalDisk")
         private Integer totalDisk;
 
         private LocalStorageCapacity(Builder builder) {
@@ -322,7 +321,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
 
     }
     public static class LocalStorageCapacities extends TeaModel {
-        @NameInMap("LocalStorageCapacity")
+        @com.aliyun.core.annotation.NameInMap("LocalStorageCapacity")
         private java.util.List < LocalStorageCapacity> localStorageCapacity;
 
         private LocalStorageCapacities(Builder builder) {
@@ -363,22 +362,22 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
 
     }
     public static class DedicatedHostClusterCapacity extends TeaModel {
-        @NameInMap("AvailableInstanceTypes")
+        @com.aliyun.core.annotation.NameInMap("AvailableInstanceTypes")
         private AvailableInstanceTypes availableInstanceTypes;
 
-        @NameInMap("AvailableMemory")
+        @com.aliyun.core.annotation.NameInMap("AvailableMemory")
         private Integer availableMemory;
 
-        @NameInMap("AvailableVcpus")
+        @com.aliyun.core.annotation.NameInMap("AvailableVcpus")
         private Integer availableVcpus;
 
-        @NameInMap("LocalStorageCapacities")
+        @com.aliyun.core.annotation.NameInMap("LocalStorageCapacities")
         private LocalStorageCapacities localStorageCapacities;
 
-        @NameInMap("TotalMemory")
+        @com.aliyun.core.annotation.NameInMap("TotalMemory")
         private Integer totalMemory;
 
-        @NameInMap("TotalVcpus")
+        @com.aliyun.core.annotation.NameInMap("TotalVcpus")
         private Integer totalVcpus;
 
         private DedicatedHostClusterCapacity(Builder builder) {
@@ -504,7 +503,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
 
     }
     public static class DedicatedHostIds extends TeaModel {
-        @NameInMap("DedicatedHostId")
+        @com.aliyun.core.annotation.NameInMap("DedicatedHostId")
         private java.util.List < String > dedicatedHostId;
 
         private DedicatedHostIds(Builder builder) {
@@ -545,10 +544,10 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -606,7 +605,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -647,31 +646,31 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
 
     }
     public static class DedicatedHostCluster extends TeaModel {
-        @NameInMap("DedicatedHostClusterCapacity")
+        @com.aliyun.core.annotation.NameInMap("DedicatedHostClusterCapacity")
         private DedicatedHostClusterCapacity dedicatedHostClusterCapacity;
 
-        @NameInMap("DedicatedHostClusterId")
+        @com.aliyun.core.annotation.NameInMap("DedicatedHostClusterId")
         private String dedicatedHostClusterId;
 
-        @NameInMap("DedicatedHostClusterName")
+        @com.aliyun.core.annotation.NameInMap("DedicatedHostClusterName")
         private String dedicatedHostClusterName;
 
-        @NameInMap("DedicatedHostIds")
+        @com.aliyun.core.annotation.NameInMap("DedicatedHostIds")
         private DedicatedHostIds dedicatedHostIds;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private DedicatedHostCluster(Builder builder) {
@@ -848,7 +847,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
 
     }
     public static class DedicatedHostClusters extends TeaModel {
-        @NameInMap("DedicatedHostCluster")
+        @com.aliyun.core.annotation.NameInMap("DedicatedHostCluster")
         private java.util.List < DedicatedHostCluster> dedicatedHostCluster;
 
         private DedicatedHostClusters(Builder builder) {

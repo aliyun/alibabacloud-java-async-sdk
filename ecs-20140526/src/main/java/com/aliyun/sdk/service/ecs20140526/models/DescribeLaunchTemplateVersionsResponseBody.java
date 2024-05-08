@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLaunchTemplateVersionsResponseBody</p>
  */
 public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
-    @NameInMap("LaunchTemplateVersionSets")
+    @com.aliyun.core.annotation.NameInMap("LaunchTemplateVersionSets")
     private LaunchTemplateVersionSets launchTemplateVersionSets;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeLaunchTemplateVersionsResponseBody(Builder builder) {
@@ -132,40 +131,40 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
     } 
 
     public static class DataDisk extends TeaModel {
-        @NameInMap("AutoSnapshotPolicyId")
+        @com.aliyun.core.annotation.NameInMap("AutoSnapshotPolicyId")
         private String autoSnapshotPolicyId;
 
-        @NameInMap("BurstingEnabled")
+        @com.aliyun.core.annotation.NameInMap("BurstingEnabled")
         private Boolean burstingEnabled;
 
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("DeleteWithInstance")
+        @com.aliyun.core.annotation.NameInMap("DeleteWithInstance")
         private Boolean deleteWithInstance;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Device")
+        @com.aliyun.core.annotation.NameInMap("Device")
         private String device;
 
-        @NameInMap("DiskName")
+        @com.aliyun.core.annotation.NameInMap("DiskName")
         private String diskName;
 
-        @NameInMap("Encrypted")
+        @com.aliyun.core.annotation.NameInMap("Encrypted")
         private String encrypted;
 
-        @NameInMap("PerformanceLevel")
+        @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
         private String performanceLevel;
 
-        @NameInMap("ProvisionedIops")
+        @com.aliyun.core.annotation.NameInMap("ProvisionedIops")
         private Long provisionedIops;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
-        @NameInMap("SnapshotId")
+        @com.aliyun.core.annotation.NameInMap("SnapshotId")
         private String snapshotId;
 
         private DataDisk(Builder builder) {
@@ -411,7 +410,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
 
     }
     public static class DataDisks extends TeaModel {
-        @NameInMap("DataDisk")
+        @com.aliyun.core.annotation.NameInMap("DataDisk")
         private java.util.List < DataDisk> dataDisk;
 
         private DataDisks(Builder builder) {
@@ -452,7 +451,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
 
     }
     public static class SecurityGroupIds extends TeaModel {
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private java.util.List < String > securityGroupId;
 
         private SecurityGroupIds(Builder builder) {
@@ -493,28 +492,28 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
 
     }
     public static class NetworkInterface extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("NetworkInterfaceName")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceName")
         private String networkInterfaceName;
 
-        @NameInMap("NetworkInterfaceTrafficMode")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceTrafficMode")
         private String networkInterfaceTrafficMode;
 
-        @NameInMap("PrimaryIpAddress")
+        @com.aliyun.core.annotation.NameInMap("PrimaryIpAddress")
         private String primaryIpAddress;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("SecurityGroupIds")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
         private SecurityGroupIds securityGroupIds;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
         private NetworkInterface(Builder builder) {
@@ -686,7 +685,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
 
     }
     public static class NetworkInterfaces extends TeaModel {
-        @NameInMap("NetworkInterface")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterface")
         private java.util.List < NetworkInterface> networkInterface;
 
         private NetworkInterfaces(Builder builder) {
@@ -727,7 +726,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
 
     }
     public static class LaunchTemplateDataSecurityGroupIds extends TeaModel {
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private java.util.List < String > securityGroupId;
 
         private LaunchTemplateDataSecurityGroupIds(Builder builder) {
@@ -771,10 +770,10 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
 
     }
     public static class InstanceTag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private InstanceTag(Builder builder) {
@@ -832,7 +831,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("InstanceTag")
+        @com.aliyun.core.annotation.NameInMap("InstanceTag")
         private java.util.List < InstanceTag> instanceTag;
 
         private Tags(Builder builder) {
@@ -873,148 +872,148 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
 
     }
     public static class LaunchTemplateData extends TeaModel {
-        @NameInMap("AutoReleaseTime")
+        @com.aliyun.core.annotation.NameInMap("AutoReleaseTime")
         private String autoReleaseTime;
 
-        @NameInMap("CreditSpecification")
+        @com.aliyun.core.annotation.NameInMap("CreditSpecification")
         private String creditSpecification;
 
-        @NameInMap("DataDisks")
+        @com.aliyun.core.annotation.NameInMap("DataDisks")
         private DataDisks dataDisks;
 
-        @NameInMap("DeletionProtection")
+        @com.aliyun.core.annotation.NameInMap("DeletionProtection")
         private Boolean deletionProtection;
 
-        @NameInMap("DeploymentSetId")
+        @com.aliyun.core.annotation.NameInMap("DeploymentSetId")
         private String deploymentSetId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EnableVmOsConfig")
+        @com.aliyun.core.annotation.NameInMap("EnableVmOsConfig")
         private Boolean enableVmOsConfig;
 
-        @NameInMap("HostName")
+        @com.aliyun.core.annotation.NameInMap("HostName")
         private String hostName;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("ImageOwnerAlias")
+        @com.aliyun.core.annotation.NameInMap("ImageOwnerAlias")
         private String imageOwnerAlias;
 
-        @NameInMap("InstanceChargeType")
+        @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
         private String instanceChargeType;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("InternetChargeType")
+        @com.aliyun.core.annotation.NameInMap("InternetChargeType")
         private String internetChargeType;
 
-        @NameInMap("InternetMaxBandwidthIn")
+        @com.aliyun.core.annotation.NameInMap("InternetMaxBandwidthIn")
         private Integer internetMaxBandwidthIn;
 
-        @NameInMap("InternetMaxBandwidthOut")
+        @com.aliyun.core.annotation.NameInMap("InternetMaxBandwidthOut")
         private Integer internetMaxBandwidthOut;
 
-        @NameInMap("IoOptimized")
+        @com.aliyun.core.annotation.NameInMap("IoOptimized")
         private String ioOptimized;
 
-        @NameInMap("Ipv6AddressCount")
+        @com.aliyun.core.annotation.NameInMap("Ipv6AddressCount")
         private Integer ipv6AddressCount;
 
-        @NameInMap("KeyPairName")
+        @com.aliyun.core.annotation.NameInMap("KeyPairName")
         private String keyPairName;
 
-        @NameInMap("NetworkInterfaces")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaces")
         private NetworkInterfaces networkInterfaces;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("PasswordInherit")
+        @com.aliyun.core.annotation.NameInMap("PasswordInherit")
         private Boolean passwordInherit;
 
-        @NameInMap("Period")
+        @com.aliyun.core.annotation.NameInMap("Period")
         private Integer period;
 
-        @NameInMap("PrivateIpAddress")
+        @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
         private String privateIpAddress;
 
-        @NameInMap("RamRoleName")
+        @com.aliyun.core.annotation.NameInMap("RamRoleName")
         private String ramRoleName;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SecurityEnhancementStrategy")
+        @com.aliyun.core.annotation.NameInMap("SecurityEnhancementStrategy")
         private String securityEnhancementStrategy;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("SecurityGroupIds")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
         private LaunchTemplateDataSecurityGroupIds securityGroupIds;
 
-        @NameInMap("SpotDuration")
+        @com.aliyun.core.annotation.NameInMap("SpotDuration")
         private Integer spotDuration;
 
-        @NameInMap("SpotPriceLimit")
+        @com.aliyun.core.annotation.NameInMap("SpotPriceLimit")
         private Float spotPriceLimit;
 
-        @NameInMap("SpotStrategy")
+        @com.aliyun.core.annotation.NameInMap("SpotStrategy")
         private String spotStrategy;
 
-        @NameInMap("SystemDisk.AutoSnapshotPolicyId")
+        @com.aliyun.core.annotation.NameInMap("SystemDisk.AutoSnapshotPolicyId")
         private String systemDisk_autoSnapshotPolicyId;
 
-        @NameInMap("SystemDisk.BurstingEnabled")
+        @com.aliyun.core.annotation.NameInMap("SystemDisk.BurstingEnabled")
         private Boolean systemDisk_burstingEnabled;
 
-        @NameInMap("SystemDisk.Category")
+        @com.aliyun.core.annotation.NameInMap("SystemDisk.Category")
         private String systemDisk_category;
 
-        @NameInMap("SystemDisk.DeleteWithInstance")
+        @com.aliyun.core.annotation.NameInMap("SystemDisk.DeleteWithInstance")
         private Boolean systemDisk_deleteWithInstance;
 
-        @NameInMap("SystemDisk.Description")
+        @com.aliyun.core.annotation.NameInMap("SystemDisk.Description")
         private String systemDisk_description;
 
-        @NameInMap("SystemDisk.DiskName")
+        @com.aliyun.core.annotation.NameInMap("SystemDisk.DiskName")
         private String systemDisk_diskName;
 
-        @NameInMap("SystemDisk.Encrypted")
+        @com.aliyun.core.annotation.NameInMap("SystemDisk.Encrypted")
         private String systemDisk_encrypted;
 
-        @NameInMap("SystemDisk.Iops")
+        @com.aliyun.core.annotation.NameInMap("SystemDisk.Iops")
         private Integer systemDisk_iops;
 
-        @NameInMap("SystemDisk.PerformanceLevel")
+        @com.aliyun.core.annotation.NameInMap("SystemDisk.PerformanceLevel")
         private String systemDisk_performanceLevel;
 
-        @NameInMap("SystemDisk.ProvisionedIops")
+        @com.aliyun.core.annotation.NameInMap("SystemDisk.ProvisionedIops")
         private Long systemDisk_provisionedIops;
 
-        @NameInMap("SystemDisk.Size")
+        @com.aliyun.core.annotation.NameInMap("SystemDisk.Size")
         private Integer systemDisk_size;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("UserData")
+        @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private LaunchTemplateData(Builder builder) {
@@ -1899,31 +1898,31 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
 
     }
     public static class LaunchTemplateVersionSet extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreatedBy")
+        @com.aliyun.core.annotation.NameInMap("CreatedBy")
         private String createdBy;
 
-        @NameInMap("DefaultVersion")
+        @com.aliyun.core.annotation.NameInMap("DefaultVersion")
         private Boolean defaultVersion;
 
-        @NameInMap("LaunchTemplateData")
+        @com.aliyun.core.annotation.NameInMap("LaunchTemplateData")
         private LaunchTemplateData launchTemplateData;
 
-        @NameInMap("LaunchTemplateId")
+        @com.aliyun.core.annotation.NameInMap("LaunchTemplateId")
         private String launchTemplateId;
 
-        @NameInMap("LaunchTemplateName")
+        @com.aliyun.core.annotation.NameInMap("LaunchTemplateName")
         private String launchTemplateName;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("VersionDescription")
+        @com.aliyun.core.annotation.NameInMap("VersionDescription")
         private String versionDescription;
 
-        @NameInMap("VersionNumber")
+        @com.aliyun.core.annotation.NameInMap("VersionNumber")
         private Long versionNumber;
 
         private LaunchTemplateVersionSet(Builder builder) {
@@ -2100,7 +2099,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
 
     }
     public static class LaunchTemplateVersionSets extends TeaModel {
-        @NameInMap("LaunchTemplateVersionSet")
+        @com.aliyun.core.annotation.NameInMap("LaunchTemplateVersionSet")
         private java.util.List < LaunchTemplateVersionSet> launchTemplateVersionSet;
 
         private LaunchTemplateVersionSets(Builder builder) {

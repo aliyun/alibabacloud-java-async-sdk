@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeregisterManagedInstanceResponseBody</p>
  */
 public class DeregisterManagedInstanceResponseBody extends TeaModel {
-    @NameInMap("Instance")
+    @com.aliyun.core.annotation.NameInMap("Instance")
     private Instance instance;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeregisterManagedInstanceResponseBody(Builder builder) {
@@ -72,46 +71,46 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
     } 
 
     public static class Instance extends TeaModel {
-        @NameInMap("ActivationId")
+        @com.aliyun.core.annotation.NameInMap("ActivationId")
         private String activationId;
 
-        @NameInMap("AgentVersion")
+        @com.aliyun.core.annotation.NameInMap("AgentVersion")
         private String agentVersion;
 
-        @NameInMap("Hostname")
+        @com.aliyun.core.annotation.NameInMap("Hostname")
         private String hostname;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IntranetIp")
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("InvocationCount")
+        @com.aliyun.core.annotation.NameInMap("InvocationCount")
         private Long invocationCount;
 
-        @NameInMap("LastInvokedTime")
+        @com.aliyun.core.annotation.NameInMap("LastInvokedTime")
         private String lastInvokedTime;
 
-        @NameInMap("MachineId")
+        @com.aliyun.core.annotation.NameInMap("MachineId")
         private String machineId;
 
-        @NameInMap("OsType")
+        @com.aliyun.core.annotation.NameInMap("OsType")
         private String osType;
 
-        @NameInMap("OsVersion")
+        @com.aliyun.core.annotation.NameInMap("OsVersion")
         private String osVersion;
 
-        @NameInMap("RegistrationTime")
+        @com.aliyun.core.annotation.NameInMap("RegistrationTime")
         private String registrationTime;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
         private Instance(Builder builder) {

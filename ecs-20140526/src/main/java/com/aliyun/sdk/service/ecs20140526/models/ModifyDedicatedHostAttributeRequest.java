@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,62 +11,62 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDedicatedHostAttributeRequest</p>
  */
 public class ModifyDedicatedHostAttributeRequest extends Request {
-    @Query
-    @NameInMap("NetworkAttributes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkAttributes")
     private NetworkAttributes networkAttributes;
 
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("ActionOnMaintenance")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ActionOnMaintenance")
     private String actionOnMaintenance;
 
-    @Query
-    @NameInMap("AutoPlacement")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPlacement")
     private String autoPlacement;
 
-    @Query
-    @NameInMap("CpuOverCommitRatio")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CpuOverCommitRatio")
     private Float cpuOverCommitRatio;
 
-    @Query
-    @NameInMap("DedicatedHostClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DedicatedHostClusterId")
     private String dedicatedHostClusterId;
 
-    @Query
-    @NameInMap("DedicatedHostId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DedicatedHostId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dedicatedHostId;
 
-    @Query
-    @NameInMap("DedicatedHostName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DedicatedHostName")
     private String dedicatedHostName;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyDedicatedHostAttributeRequest(Builder builder) {
@@ -388,10 +387,10 @@ public class ModifyDedicatedHostAttributeRequest extends Request {
     } 
 
     public static class NetworkAttributes extends TeaModel {
-        @NameInMap("SlbUdpTimeout")
+        @com.aliyun.core.annotation.NameInMap("SlbUdpTimeout")
         private Integer slbUdpTimeout;
 
-        @NameInMap("UdpTimeout")
+        @com.aliyun.core.annotation.NameInMap("UdpTimeout")
         private Integer udpTimeout;
 
         private NetworkAttributes(Builder builder) {

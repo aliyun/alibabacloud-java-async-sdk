@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeKeyPairsResponseBody</p>
  */
 public class DescribeKeyPairsResponseBody extends TeaModel {
-    @NameInMap("KeyPairs")
+    @com.aliyun.core.annotation.NameInMap("KeyPairs")
     private KeyPairs keyPairs;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeKeyPairsResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -193,7 +192,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -234,22 +233,22 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
 
     }
     public static class KeyPair extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("KeyPairFingerPrint")
+        @com.aliyun.core.annotation.NameInMap("KeyPairFingerPrint")
         private String keyPairFingerPrint;
 
-        @NameInMap("KeyPairName")
+        @com.aliyun.core.annotation.NameInMap("KeyPairName")
         private String keyPairName;
 
-        @NameInMap("PublicKey")
+        @com.aliyun.core.annotation.NameInMap("PublicKey")
         private String publicKey;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
         private KeyPair(Builder builder) {
@@ -375,7 +374,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
 
     }
     public static class KeyPairs extends TeaModel {
-        @NameInMap("KeyPair")
+        @com.aliyun.core.annotation.NameInMap("KeyPair")
         private java.util.List < KeyPair> keyPair;
 
         private KeyPairs(Builder builder) {

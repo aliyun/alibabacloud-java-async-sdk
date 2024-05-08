@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDedicatedHostsResponseBody</p>
  */
 public class DescribeDedicatedHostsResponseBody extends TeaModel {
-    @NameInMap("DedicatedHosts")
+    @com.aliyun.core.annotation.NameInMap("DedicatedHosts")
     private DedicatedHosts dedicatedHosts;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDedicatedHostsResponseBody(Builder builder) {
@@ -152,19 +151,19 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
     } 
 
     public static class SocketCapacity extends TeaModel {
-        @NameInMap("AvailableMemory")
+        @com.aliyun.core.annotation.NameInMap("AvailableMemory")
         private Float availableMemory;
 
-        @NameInMap("AvailableVcpu")
+        @com.aliyun.core.annotation.NameInMap("AvailableVcpu")
         private Integer availableVcpu;
 
-        @NameInMap("SocketId")
+        @com.aliyun.core.annotation.NameInMap("SocketId")
         private Integer socketId;
 
-        @NameInMap("TotalMemory")
+        @com.aliyun.core.annotation.NameInMap("TotalMemory")
         private Float totalMemory;
 
-        @NameInMap("TotalVcpu")
+        @com.aliyun.core.annotation.NameInMap("TotalVcpu")
         private Integer totalVcpu;
 
         private SocketCapacity(Builder builder) {
@@ -273,7 +272,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     }
     public static class SocketCapacities extends TeaModel {
-        @NameInMap("SocketCapacity")
+        @com.aliyun.core.annotation.NameInMap("SocketCapacity")
         private java.util.List < SocketCapacity> socketCapacity;
 
         private SocketCapacities(Builder builder) {
@@ -314,34 +313,34 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     }
     public static class Capacity extends TeaModel {
-        @NameInMap("AvailableLocalStorage")
+        @com.aliyun.core.annotation.NameInMap("AvailableLocalStorage")
         private Integer availableLocalStorage;
 
-        @NameInMap("AvailableMemory")
+        @com.aliyun.core.annotation.NameInMap("AvailableMemory")
         private Float availableMemory;
 
-        @NameInMap("AvailableVcpus")
+        @com.aliyun.core.annotation.NameInMap("AvailableVcpus")
         private Integer availableVcpus;
 
-        @NameInMap("AvailableVgpus")
+        @com.aliyun.core.annotation.NameInMap("AvailableVgpus")
         private Integer availableVgpus;
 
-        @NameInMap("LocalStorageCategory")
+        @com.aliyun.core.annotation.NameInMap("LocalStorageCategory")
         private String localStorageCategory;
 
-        @NameInMap("SocketCapacities")
+        @com.aliyun.core.annotation.NameInMap("SocketCapacities")
         private SocketCapacities socketCapacities;
 
-        @NameInMap("TotalLocalStorage")
+        @com.aliyun.core.annotation.NameInMap("TotalLocalStorage")
         private Integer totalLocalStorage;
 
-        @NameInMap("TotalMemory")
+        @com.aliyun.core.annotation.NameInMap("TotalMemory")
         private Float totalMemory;
 
-        @NameInMap("TotalVcpus")
+        @com.aliyun.core.annotation.NameInMap("TotalVcpus")
         private Integer totalVcpus;
 
-        @NameInMap("TotalVgpus")
+        @com.aliyun.core.annotation.NameInMap("TotalVgpus")
         private Integer totalVgpus;
 
         private Capacity(Builder builder) {
@@ -535,7 +534,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     }
     public static class HostDetailInfo extends TeaModel {
-        @NameInMap("SerialNumber")
+        @com.aliyun.core.annotation.NameInMap("SerialNumber")
         private String serialNumber;
 
         private HostDetailInfo(Builder builder) {
@@ -576,16 +575,16 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     }
     public static class Instance extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceOwnerId")
+        @com.aliyun.core.annotation.NameInMap("InstanceOwnerId")
         private Long instanceOwnerId;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("SocketId")
+        @com.aliyun.core.annotation.NameInMap("SocketId")
         private String socketId;
 
         private Instance(Builder builder) {
@@ -677,7 +676,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     }
     public static class Instances extends TeaModel {
-        @NameInMap("Instance")
+        @com.aliyun.core.annotation.NameInMap("Instance")
         private java.util.List < Instance> instance;
 
         private Instances(Builder builder) {
@@ -718,10 +717,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     }
     public static class NetworkAttributes extends TeaModel {
-        @NameInMap("SlbUdpTimeout")
+        @com.aliyun.core.annotation.NameInMap("SlbUdpTimeout")
         private Integer slbUdpTimeout;
 
-        @NameInMap("UdpTimeout")
+        @com.aliyun.core.annotation.NameInMap("UdpTimeout")
         private Integer udpTimeout;
 
         private NetworkAttributes(Builder builder) {
@@ -779,7 +778,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     }
     public static class OperationLock extends TeaModel {
-        @NameInMap("LockReason")
+        @com.aliyun.core.annotation.NameInMap("LockReason")
         private String lockReason;
 
         private OperationLock(Builder builder) {
@@ -824,7 +823,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     }
     public static class OperationLocks extends TeaModel {
-        @NameInMap("OperationLock")
+        @com.aliyun.core.annotation.NameInMap("OperationLock")
         private java.util.List < OperationLock> operationLock;
 
         private OperationLocks(Builder builder) {
@@ -865,7 +864,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     }
     public static class SupportedCustomInstanceTypeFamilies extends TeaModel {
-        @NameInMap("SupportedCustomInstanceTypeFamily")
+        @com.aliyun.core.annotation.NameInMap("SupportedCustomInstanceTypeFamily")
         private java.util.List < String > supportedCustomInstanceTypeFamily;
 
         private SupportedCustomInstanceTypeFamilies(Builder builder) {
@@ -906,7 +905,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     }
     public static class SupportedInstanceTypeFamilies extends TeaModel {
-        @NameInMap("SupportedInstanceTypeFamily")
+        @com.aliyun.core.annotation.NameInMap("SupportedInstanceTypeFamily")
         private java.util.List < String > supportedInstanceTypeFamily;
 
         private SupportedInstanceTypeFamilies(Builder builder) {
@@ -947,7 +946,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     }
     public static class SupportedInstanceTypesList extends TeaModel {
-        @NameInMap("SupportedInstanceTypesList")
+        @com.aliyun.core.annotation.NameInMap("SupportedInstanceTypesList")
         private java.util.List < String > supportedInstanceTypesList;
 
         private SupportedInstanceTypesList(Builder builder) {
@@ -988,10 +987,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -1049,7 +1048,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -1090,103 +1089,103 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     }
     public static class DedicatedHost extends TeaModel {
-        @NameInMap("ActionOnMaintenance")
+        @com.aliyun.core.annotation.NameInMap("ActionOnMaintenance")
         private String actionOnMaintenance;
 
-        @NameInMap("AutoPlacement")
+        @com.aliyun.core.annotation.NameInMap("AutoPlacement")
         private String autoPlacement;
 
-        @NameInMap("AutoReleaseTime")
+        @com.aliyun.core.annotation.NameInMap("AutoReleaseTime")
         private String autoReleaseTime;
 
-        @NameInMap("Capacity")
+        @com.aliyun.core.annotation.NameInMap("Capacity")
         private Capacity capacity;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("Cores")
+        @com.aliyun.core.annotation.NameInMap("Cores")
         private Integer cores;
 
-        @NameInMap("CpuOverCommitRatio")
+        @com.aliyun.core.annotation.NameInMap("CpuOverCommitRatio")
         private Float cpuOverCommitRatio;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DedicatedHostClusterId")
+        @com.aliyun.core.annotation.NameInMap("DedicatedHostClusterId")
         private String dedicatedHostClusterId;
 
-        @NameInMap("DedicatedHostId")
+        @com.aliyun.core.annotation.NameInMap("DedicatedHostId")
         private String dedicatedHostId;
 
-        @NameInMap("DedicatedHostName")
+        @com.aliyun.core.annotation.NameInMap("DedicatedHostName")
         private String dedicatedHostName;
 
-        @NameInMap("DedicatedHostOwnerId")
+        @com.aliyun.core.annotation.NameInMap("DedicatedHostOwnerId")
         private Long dedicatedHostOwnerId;
 
-        @NameInMap("DedicatedHostType")
+        @com.aliyun.core.annotation.NameInMap("DedicatedHostType")
         private String dedicatedHostType;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("GPUSpec")
+        @com.aliyun.core.annotation.NameInMap("GPUSpec")
         private String GPUSpec;
 
-        @NameInMap("HostDetailInfo")
+        @com.aliyun.core.annotation.NameInMap("HostDetailInfo")
         private HostDetailInfo hostDetailInfo;
 
-        @NameInMap("Instances")
+        @com.aliyun.core.annotation.NameInMap("Instances")
         private Instances instances;
 
-        @NameInMap("MachineId")
+        @com.aliyun.core.annotation.NameInMap("MachineId")
         private String machineId;
 
-        @NameInMap("NetworkAttributes")
+        @com.aliyun.core.annotation.NameInMap("NetworkAttributes")
         private NetworkAttributes networkAttributes;
 
-        @NameInMap("OperationLocks")
+        @com.aliyun.core.annotation.NameInMap("OperationLocks")
         private OperationLocks operationLocks;
 
-        @NameInMap("PhysicalGpus")
+        @com.aliyun.core.annotation.NameInMap("PhysicalGpus")
         private Integer physicalGpus;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SaleCycle")
+        @com.aliyun.core.annotation.NameInMap("SaleCycle")
         private String saleCycle;
 
-        @NameInMap("SchedulerOptions.ManagedPrivateSpaceId")
+        @com.aliyun.core.annotation.NameInMap("SchedulerOptions.ManagedPrivateSpaceId")
         private String schedulerOptions_managedPrivateSpaceId;
 
-        @NameInMap("Sockets")
+        @com.aliyun.core.annotation.NameInMap("Sockets")
         private Integer sockets;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SupportedCustomInstanceTypeFamilies")
+        @com.aliyun.core.annotation.NameInMap("SupportedCustomInstanceTypeFamilies")
         private SupportedCustomInstanceTypeFamilies supportedCustomInstanceTypeFamilies;
 
-        @NameInMap("SupportedInstanceTypeFamilies")
+        @com.aliyun.core.annotation.NameInMap("SupportedInstanceTypeFamilies")
         private SupportedInstanceTypeFamilies supportedInstanceTypeFamilies;
 
-        @NameInMap("SupportedInstanceTypesList")
+        @com.aliyun.core.annotation.NameInMap("SupportedInstanceTypesList")
         private SupportedInstanceTypesList supportedInstanceTypesList;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private DedicatedHost(Builder builder) {
@@ -1792,7 +1791,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     }
     public static class DedicatedHosts extends TeaModel {
-        @NameInMap("DedicatedHost")
+        @com.aliyun.core.annotation.NameInMap("DedicatedHost")
         private java.util.List < DedicatedHost> dedicatedHost;
 
         private DedicatedHosts(Builder builder) {

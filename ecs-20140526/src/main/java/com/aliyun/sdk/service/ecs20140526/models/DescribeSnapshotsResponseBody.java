@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSnapshotsResponseBody</p>
  */
 public class DescribeSnapshotsResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Snapshots")
+    @com.aliyun.core.annotation.NameInMap("Snapshots")
     private Snapshots snapshots;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeSnapshotsResponseBody(Builder builder) {
@@ -152,10 +151,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -213,7 +212,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -254,88 +253,88 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
     }
     public static class Snapshot extends TeaModel {
-        @NameInMap("Available")
+        @com.aliyun.core.annotation.NameInMap("Available")
         private Boolean available;
 
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Encrypted")
+        @com.aliyun.core.annotation.NameInMap("Encrypted")
         private Boolean encrypted;
 
-        @NameInMap("InstantAccess")
+        @com.aliyun.core.annotation.NameInMap("InstantAccess")
         private Boolean instantAccess;
 
-        @NameInMap("InstantAccessRetentionDays")
+        @com.aliyun.core.annotation.NameInMap("InstantAccessRetentionDays")
         private Integer instantAccessRetentionDays;
 
-        @NameInMap("KMSKeyId")
+        @com.aliyun.core.annotation.NameInMap("KMSKeyId")
         private String KMSKeyId;
 
-        @NameInMap("LastModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("LastModifiedTime")
         private String lastModifiedTime;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RemainTime")
+        @com.aliyun.core.annotation.NameInMap("RemainTime")
         private Integer remainTime;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("RetentionDays")
+        @com.aliyun.core.annotation.NameInMap("RetentionDays")
         private Integer retentionDays;
 
-        @NameInMap("SnapshotId")
+        @com.aliyun.core.annotation.NameInMap("SnapshotId")
         private String snapshotId;
 
-        @NameInMap("SnapshotName")
+        @com.aliyun.core.annotation.NameInMap("SnapshotName")
         private String snapshotName;
 
-        @NameInMap("SnapshotSN")
+        @com.aliyun.core.annotation.NameInMap("SnapshotSN")
         private String snapshotSN;
 
-        @NameInMap("SnapshotType")
+        @com.aliyun.core.annotation.NameInMap("SnapshotType")
         private String snapshotType;
 
-        @NameInMap("SourceDiskId")
+        @com.aliyun.core.annotation.NameInMap("SourceDiskId")
         private String sourceDiskId;
 
-        @NameInMap("SourceDiskSize")
+        @com.aliyun.core.annotation.NameInMap("SourceDiskSize")
         private String sourceDiskSize;
 
-        @NameInMap("SourceDiskType")
+        @com.aliyun.core.annotation.NameInMap("SourceDiskType")
         private String sourceDiskType;
 
-        @NameInMap("SourceRegionId")
+        @com.aliyun.core.annotation.NameInMap("SourceRegionId")
         private String sourceRegionId;
 
-        @NameInMap("SourceSnapshotId")
+        @com.aliyun.core.annotation.NameInMap("SourceSnapshotId")
         private String sourceSnapshotId;
 
-        @NameInMap("SourceStorageType")
+        @com.aliyun.core.annotation.NameInMap("SourceStorageType")
         private String sourceStorageType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("Usage")
+        @com.aliyun.core.annotation.NameInMap("Usage")
         private String usage;
 
         private Snapshot(Builder builder) {
@@ -872,7 +871,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
     }
     public static class Snapshots extends TeaModel {
-        @NameInMap("Snapshot")
+        @com.aliyun.core.annotation.NameInMap("Snapshot")
         private java.util.List < Snapshot> snapshot;
 
         private Snapshots(Builder builder) {

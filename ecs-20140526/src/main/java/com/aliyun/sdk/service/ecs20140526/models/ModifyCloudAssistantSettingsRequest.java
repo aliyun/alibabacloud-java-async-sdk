@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,46 +11,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyCloudAssistantSettingsRequest</p>
  */
 public class ModifyCloudAssistantSettingsRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("AgentUpgradeConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentUpgradeConfig")
     private AgentUpgradeConfig agentUpgradeConfig;
 
-    @Query
-    @NameInMap("OssDeliveryConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssDeliveryConfig")
     private OssDeliveryConfig ossDeliveryConfig;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SettingType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SettingType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String settingType;
 
-    @Query
-    @NameInMap("SlsDeliveryConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SlsDeliveryConfig")
     private SlsDeliveryConfig slsDeliveryConfig;
 
     private ModifyCloudAssistantSettingsRequest(Builder builder) {
@@ -286,13 +285,13 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
     } 
 
     public static class AgentUpgradeConfig extends TeaModel {
-        @NameInMap("AllowedUpgradeWindow")
+        @com.aliyun.core.annotation.NameInMap("AllowedUpgradeWindow")
         private java.util.List < String > allowedUpgradeWindow;
 
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("TimeZone")
+        @com.aliyun.core.annotation.NameInMap("TimeZone")
         private String timeZone;
 
         private AgentUpgradeConfig(Builder builder) {
@@ -381,22 +380,22 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
 
     }
     public static class OssDeliveryConfig extends TeaModel {
-        @NameInMap("BucketName")
+        @com.aliyun.core.annotation.NameInMap("BucketName")
         private String bucketName;
 
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("EncryptionAlgorithm")
+        @com.aliyun.core.annotation.NameInMap("EncryptionAlgorithm")
         private String encryptionAlgorithm;
 
-        @NameInMap("EncryptionKeyId")
+        @com.aliyun.core.annotation.NameInMap("EncryptionKeyId")
         private String encryptionKeyId;
 
-        @NameInMap("EncryptionType")
+        @com.aliyun.core.annotation.NameInMap("EncryptionType")
         private String encryptionType;
 
-        @NameInMap("Prefix")
+        @com.aliyun.core.annotation.NameInMap("Prefix")
         private String prefix;
 
         private OssDeliveryConfig(Builder builder) {
@@ -537,13 +536,13 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
 
     }
     public static class SlsDeliveryConfig extends TeaModel {
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("LogstoreName")
+        @com.aliyun.core.annotation.NameInMap("LogstoreName")
         private String logstoreName;
 
-        @NameInMap("ProjectName")
+        @com.aliyun.core.annotation.NameInMap("ProjectName")
         private String projectName;
 
         private SlsDeliveryConfig(Builder builder) {

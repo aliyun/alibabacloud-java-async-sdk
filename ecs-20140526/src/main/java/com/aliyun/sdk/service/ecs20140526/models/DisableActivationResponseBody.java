@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DisableActivationResponseBody</p>
  */
 public class DisableActivationResponseBody extends TeaModel {
-    @NameInMap("Activation")
+    @com.aliyun.core.annotation.NameInMap("Activation")
     private Activation activation;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DisableActivationResponseBody(Builder builder) {
@@ -72,34 +71,34 @@ public class DisableActivationResponseBody extends TeaModel {
     } 
 
     public static class Activation extends TeaModel {
-        @NameInMap("ActivationId")
+        @com.aliyun.core.annotation.NameInMap("ActivationId")
         private String activationId;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DeregisteredCount")
+        @com.aliyun.core.annotation.NameInMap("DeregisteredCount")
         private Integer deregisteredCount;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Disabled")
+        @com.aliyun.core.annotation.NameInMap("Disabled")
         private Boolean disabled;
 
-        @NameInMap("InstanceCount")
+        @com.aliyun.core.annotation.NameInMap("InstanceCount")
         private Integer instanceCount;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("IpAddressRange")
+        @com.aliyun.core.annotation.NameInMap("IpAddressRange")
         private String ipAddressRange;
 
-        @NameInMap("RegisteredCount")
+        @com.aliyun.core.annotation.NameInMap("RegisteredCount")
         private Integer registeredCount;
 
-        @NameInMap("TimeToLiveInHours")
+        @com.aliyun.core.annotation.NameInMap("TimeToLiveInHours")
         private Long timeToLiveInHours;
 
         private Activation(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,49 +11,49 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDiskSpecRequest</p>
  */
 public class ModifyDiskSpecRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("DiskCategory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskCategory")
     private String diskCategory;
 
-    @Query
-    @NameInMap("DiskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String diskId;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PerformanceControlOptions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PerformanceControlOptions")
     private PerformanceControlOptions performanceControlOptions;
 
-    @Query
-    @NameInMap("PerformanceLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
     private String performanceLevel;
 
-    @Query
-    @NameInMap("ProvisionedIops")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProvisionedIops")
     private Long provisionedIops;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyDiskSpecRequest(Builder builder) {
@@ -332,13 +331,13 @@ public class ModifyDiskSpecRequest extends Request {
     } 
 
     public static class PerformanceControlOptions extends TeaModel {
-        @NameInMap("IOPS")
+        @com.aliyun.core.annotation.NameInMap("IOPS")
         private Integer IOPS;
 
-        @NameInMap("Recover")
+        @com.aliyun.core.annotation.NameInMap("Recover")
         private String recover;
 
-        @NameInMap("Throughput")
+        @com.aliyun.core.annotation.NameInMap("Throughput")
         private Integer throughput;
 
         private PerformanceControlOptions(Builder builder) {

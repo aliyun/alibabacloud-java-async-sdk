@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAccountAttributesResponseBody</p>
  */
 public class DescribeAccountAttributesResponseBody extends TeaModel {
-    @NameInMap("AccountAttributeItems")
+    @com.aliyun.core.annotation.NameInMap("AccountAttributeItems")
     private AccountAttributeItems accountAttributeItems;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAccountAttributesResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
     } 
 
     public static class ValueItem extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("DiskCategory")
+        @com.aliyun.core.annotation.NameInMap("DiskCategory")
         private String diskCategory;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("InstanceChargeType")
+        @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
         private String instanceChargeType;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private ValueItem(Builder builder) {
@@ -267,7 +266,7 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
 
     }
     public static class AttributeValues extends TeaModel {
-        @NameInMap("ValueItem")
+        @com.aliyun.core.annotation.NameInMap("ValueItem")
         private java.util.List < ValueItem> valueItem;
 
         private AttributeValues(Builder builder) {
@@ -308,10 +307,10 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
 
     }
     public static class AccountAttributeItem extends TeaModel {
-        @NameInMap("AttributeName")
+        @com.aliyun.core.annotation.NameInMap("AttributeName")
         private String attributeName;
 
-        @NameInMap("AttributeValues")
+        @com.aliyun.core.annotation.NameInMap("AttributeValues")
         private AttributeValues attributeValues;
 
         private AccountAttributeItem(Builder builder) {
@@ -386,7 +385,7 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
 
     }
     public static class AccountAttributeItems extends TeaModel {
-        @NameInMap("AccountAttributeItem")
+        @com.aliyun.core.annotation.NameInMap("AccountAttributeItem")
         private java.util.List < AccountAttributeItem> accountAttributeItem;
 
         private AccountAttributeItems(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCapacityReservationInstancesResponseBody</p>
  */
 public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
-    @NameInMap("CapacityReservationItem")
+    @com.aliyun.core.annotation.NameInMap("CapacityReservationItem")
     private CapacityReservationItem capacityReservationItem;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeCapacityReservationInstancesResponseBody(Builder builder) {
@@ -132,7 +131,7 @@ public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
     } 
 
     public static class InstanceIdSet extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
         private InstanceIdSet(Builder builder) {
@@ -173,7 +172,7 @@ public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
 
     }
     public static class CapacityReservationItem extends TeaModel {
-        @NameInMap("InstanceIdSet")
+        @com.aliyun.core.annotation.NameInMap("InstanceIdSet")
         private java.util.List < InstanceIdSet> instanceIdSet;
 
         private CapacityReservationItem(Builder builder) {

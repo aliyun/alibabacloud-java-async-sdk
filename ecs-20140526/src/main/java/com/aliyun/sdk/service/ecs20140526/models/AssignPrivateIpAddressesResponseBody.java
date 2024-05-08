@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AssignPrivateIpAddressesResponseBody</p>
  */
 public class AssignPrivateIpAddressesResponseBody extends TeaModel {
-    @NameInMap("AssignedPrivateIpAddressesSet")
+    @com.aliyun.core.annotation.NameInMap("AssignedPrivateIpAddressesSet")
     private AssignedPrivateIpAddressesSet assignedPrivateIpAddressesSet;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AssignPrivateIpAddressesResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
     } 
 
     public static class Ipv4PrefixSet extends TeaModel {
-        @NameInMap("Ipv4Prefixes")
+        @com.aliyun.core.annotation.NameInMap("Ipv4Prefixes")
         private java.util.List < String > ipv4Prefixes;
 
         private Ipv4PrefixSet(Builder builder) {
@@ -113,7 +112,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
 
     }
     public static class PrivateIpSet extends TeaModel {
-        @NameInMap("PrivateIpAddress")
+        @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
         private java.util.List < String > privateIpAddress;
 
         private PrivateIpSet(Builder builder) {
@@ -154,13 +153,13 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
 
     }
     public static class AssignedPrivateIpAddressesSet extends TeaModel {
-        @NameInMap("Ipv4PrefixSet")
+        @com.aliyun.core.annotation.NameInMap("Ipv4PrefixSet")
         private Ipv4PrefixSet ipv4PrefixSet;
 
-        @NameInMap("NetworkInterfaceId")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
         private String networkInterfaceId;
 
-        @NameInMap("PrivateIpSet")
+        @com.aliyun.core.annotation.NameInMap("PrivateIpSet")
         private PrivateIpSet privateIpSet;
 
         private AssignedPrivateIpAddressesSet(Builder builder) {

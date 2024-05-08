@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeStorageCapacityUnitsResponseBody</p>
  */
 public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StorageCapacityUnits")
+    @com.aliyun.core.annotation.NameInMap("StorageCapacityUnits")
     private StorageCapacityUnits storageCapacityUnits;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeStorageCapacityUnitsResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -193,7 +192,7 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -234,37 +233,37 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
 
     }
     public static class StorageCapacityUnit extends TeaModel {
-        @NameInMap("AllocationStatus")
+        @com.aliyun.core.annotation.NameInMap("AllocationStatus")
         private String allocationStatus;
 
-        @NameInMap("Capacity")
+        @com.aliyun.core.annotation.NameInMap("Capacity")
         private Integer capacity;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StorageCapacityUnitId")
+        @com.aliyun.core.annotation.NameInMap("StorageCapacityUnitId")
         private String storageCapacityUnitId;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
         private StorageCapacityUnit(Builder builder) {
@@ -479,7 +478,7 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
 
     }
     public static class StorageCapacityUnits extends TeaModel {
-        @NameInMap("StorageCapacityUnit")
+        @com.aliyun.core.annotation.NameInMap("StorageCapacityUnit")
         private java.util.List < StorageCapacityUnit> storageCapacityUnit;
 
         private StorageCapacityUnits(Builder builder) {

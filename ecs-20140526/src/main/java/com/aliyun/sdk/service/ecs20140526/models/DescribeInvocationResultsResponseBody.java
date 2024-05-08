@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInvocationResultsResponseBody</p>
  */
 public class DescribeInvocationResultsResponseBody extends TeaModel {
-    @NameInMap("Invocation")
+    @com.aliyun.core.annotation.NameInMap("Invocation")
     private Invocation invocation;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInvocationResultsResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -133,7 +132,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -174,58 +173,58 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
 
     }
     public static class InvocationResult extends TeaModel {
-        @NameInMap("CommandId")
+        @com.aliyun.core.annotation.NameInMap("CommandId")
         private String commandId;
 
-        @NameInMap("ContainerId")
+        @com.aliyun.core.annotation.NameInMap("ContainerId")
         private String containerId;
 
-        @NameInMap("ContainerName")
+        @com.aliyun.core.annotation.NameInMap("ContainerName")
         private String containerName;
 
-        @NameInMap("Dropped")
+        @com.aliyun.core.annotation.NameInMap("Dropped")
         private Integer dropped;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorInfo")
+        @com.aliyun.core.annotation.NameInMap("ErrorInfo")
         private String errorInfo;
 
-        @NameInMap("ExitCode")
+        @com.aliyun.core.annotation.NameInMap("ExitCode")
         private Long exitCode;
 
-        @NameInMap("FinishedTime")
+        @com.aliyun.core.annotation.NameInMap("FinishedTime")
         private String finishedTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InvocationStatus")
+        @com.aliyun.core.annotation.NameInMap("InvocationStatus")
         private String invocationStatus;
 
-        @NameInMap("InvokeId")
+        @com.aliyun.core.annotation.NameInMap("InvokeId")
         private String invokeId;
 
-        @NameInMap("InvokeRecordStatus")
+        @com.aliyun.core.annotation.NameInMap("InvokeRecordStatus")
         private String invokeRecordStatus;
 
-        @NameInMap("Output")
+        @com.aliyun.core.annotation.NameInMap("Output")
         private String output;
 
-        @NameInMap("Repeats")
+        @com.aliyun.core.annotation.NameInMap("Repeats")
         private Integer repeats;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("StopTime")
+        @com.aliyun.core.annotation.NameInMap("StopTime")
         private String stopTime;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("Username")
+        @com.aliyun.core.annotation.NameInMap("Username")
         private String username;
 
         private InvocationResult(Builder builder) {
@@ -665,7 +664,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
 
     }
     public static class InvocationResults extends TeaModel {
-        @NameInMap("InvocationResult")
+        @com.aliyun.core.annotation.NameInMap("InvocationResult")
         private java.util.List < InvocationResult> invocationResult;
 
         private InvocationResults(Builder builder) {
@@ -706,19 +705,19 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
 
     }
     public static class Invocation extends TeaModel {
-        @NameInMap("InvocationResults")
+        @com.aliyun.core.annotation.NameInMap("InvocationResults")
         private InvocationResults invocationResults;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Long pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Long pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private Invocation(Builder builder) {

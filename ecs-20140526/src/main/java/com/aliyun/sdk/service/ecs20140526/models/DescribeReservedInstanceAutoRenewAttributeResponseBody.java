@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeReservedInstanceAutoRenewAttributeResponseBody</p>
  */
 public class DescribeReservedInstanceAutoRenewAttributeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ReservedInstanceRenewAttributes")
+    @com.aliyun.core.annotation.NameInMap("ReservedInstanceRenewAttributes")
     private ReservedInstanceRenewAttributes reservedInstanceRenewAttributes;
 
     private DescribeReservedInstanceAutoRenewAttributeResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribeReservedInstanceAutoRenewAttributeResponseBody extends TeaM
     } 
 
     public static class ReservedInstanceRenewAttribute extends TeaModel {
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Integer duration;
 
-        @NameInMap("PeriodUnit")
+        @com.aliyun.core.annotation.NameInMap("PeriodUnit")
         private String periodUnit;
 
-        @NameInMap("RenewalStatus")
+        @com.aliyun.core.annotation.NameInMap("RenewalStatus")
         private String renewalStatus;
 
-        @NameInMap("ReservedInstanceId")
+        @com.aliyun.core.annotation.NameInMap("ReservedInstanceId")
         private String reservedInstanceId;
 
         private ReservedInstanceRenewAttribute(Builder builder) {
@@ -180,7 +179,7 @@ public class DescribeReservedInstanceAutoRenewAttributeResponseBody extends TeaM
 
     }
     public static class ReservedInstanceRenewAttributes extends TeaModel {
-        @NameInMap("ReservedInstanceRenewAttribute")
+        @com.aliyun.core.annotation.NameInMap("ReservedInstanceRenewAttribute")
         private java.util.List < ReservedInstanceRenewAttribute> reservedInstanceRenewAttribute;
 
         private ReservedInstanceRenewAttributes(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,136 +11,140 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateNetworkInterfaceRequest</p>
  */
 public class CreateNetworkInterfaceRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("BusinessType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessType")
     private String businessType;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DeleteOnRelease")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectionTrackingConfiguration")
+    private ConnectionTrackingConfiguration connectionTrackingConfiguration;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeleteOnRelease")
     private Boolean deleteOnRelease;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
-    @Query
-    @NameInMap("Ipv4Prefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv4Prefix")
     private java.util.List < String > ipv4Prefix;
 
-    @Query
-    @NameInMap("Ipv4PrefixCount")
-    @Validation(maximum = 10, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv4PrefixCount")
+    @com.aliyun.core.annotation.Validation(maximum = 10, minimum = 1)
     private Integer ipv4PrefixCount;
 
-    @Query
-    @NameInMap("Ipv6Address")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6Address")
     private java.util.List < String > ipv6Address;
 
-    @Query
-    @NameInMap("Ipv6AddressCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6AddressCount")
     private Integer ipv6AddressCount;
 
-    @Query
-    @NameInMap("Ipv6Prefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6Prefix")
     private java.util.List < String > ipv6Prefix;
 
-    @Query
-    @NameInMap("Ipv6PrefixCount")
-    @Validation(maximum = 10, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6PrefixCount")
+    @com.aliyun.core.annotation.Validation(maximum = 10, minimum = 1)
     private Integer ipv6PrefixCount;
 
-    @Query
-    @NameInMap("NetworkInterfaceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfaceName")
     private String networkInterfaceName;
 
-    @Query
-    @NameInMap("NetworkInterfaceTrafficMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfaceTrafficMode")
     private String networkInterfaceTrafficMode;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PrimaryIpAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrimaryIpAddress")
     private String primaryIpAddress;
 
-    @Query
-    @NameInMap("PrivateIpAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
     private java.util.List < String > privateIpAddress;
 
-    @Query
-    @NameInMap("QueueNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueueNumber")
     private Integer queueNumber;
 
-    @Query
-    @NameInMap("QueuePairNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueuePairNumber")
     private Integer queuePairNumber;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RxQueueSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RxQueueSize")
     private Integer rxQueueSize;
 
-    @Query
-    @NameInMap("SecondaryPrivateIpAddressCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecondaryPrivateIpAddressCount")
     private Integer secondaryPrivateIpAddressCount;
 
-    @Query
-    @NameInMap("SecurityGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
     private String securityGroupId;
 
-    @Query
-    @NameInMap("SecurityGroupIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
     private java.util.List < String > securityGroupIds;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("TxQueueSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TxQueueSize")
     private Integer txQueueSize;
 
-    @Query
-    @NameInMap("VSwitchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
 
-    @Query
-    @NameInMap("Visible")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Visible")
     private Boolean visible;
 
     private CreateNetworkInterfaceRequest(Builder builder) {
@@ -149,6 +152,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         this.sourceRegionId = builder.sourceRegionId;
         this.businessType = builder.businessType;
         this.clientToken = builder.clientToken;
+        this.connectionTrackingConfiguration = builder.connectionTrackingConfiguration;
         this.deleteOnRelease = builder.deleteOnRelease;
         this.description = builder.description;
         this.instanceType = builder.instanceType;
@@ -212,6 +216,13 @@ public class CreateNetworkInterfaceRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return connectionTrackingConfiguration
+     */
+    public ConnectionTrackingConfiguration getConnectionTrackingConfiguration() {
+        return this.connectionTrackingConfiguration;
     }
 
     /**
@@ -421,6 +432,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         private String sourceRegionId; 
         private String businessType; 
         private String clientToken; 
+        private ConnectionTrackingConfiguration connectionTrackingConfiguration; 
         private Boolean deleteOnRelease; 
         private String description; 
         private String instanceType; 
@@ -460,6 +472,7 @@ public class CreateNetworkInterfaceRequest extends Request {
             this.sourceRegionId = request.sourceRegionId;
             this.businessType = request.businessType;
             this.clientToken = request.clientToken;
+            this.connectionTrackingConfiguration = request.connectionTrackingConfiguration;
             this.deleteOnRelease = request.deleteOnRelease;
             this.description = request.description;
             this.instanceType = request.instanceType;
@@ -515,6 +528,15 @@ public class CreateNetworkInterfaceRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * ConnectionTrackingConfiguration.
+         */
+        public Builder connectionTrackingConfiguration(ConnectionTrackingConfiguration connectionTrackingConfiguration) {
+            this.putQueryParameter("ConnectionTrackingConfiguration", connectionTrackingConfiguration);
+            this.connectionTrackingConfiguration = connectionTrackingConfiguration;
             return this;
         }
 
@@ -861,11 +883,92 @@ public class CreateNetworkInterfaceRequest extends Request {
 
     } 
 
+    public static class ConnectionTrackingConfiguration extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TcpClosedAndTimeWaitTimeout")
+        private Integer tcpClosedAndTimeWaitTimeout;
+
+        @com.aliyun.core.annotation.NameInMap("TcpEstablishedTimeout")
+        private Integer tcpEstablishedTimeout;
+
+        @com.aliyun.core.annotation.NameInMap("UdpTimeout")
+        private Integer udpTimeout;
+
+        private ConnectionTrackingConfiguration(Builder builder) {
+            this.tcpClosedAndTimeWaitTimeout = builder.tcpClosedAndTimeWaitTimeout;
+            this.tcpEstablishedTimeout = builder.tcpEstablishedTimeout;
+            this.udpTimeout = builder.udpTimeout;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ConnectionTrackingConfiguration create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tcpClosedAndTimeWaitTimeout
+         */
+        public Integer getTcpClosedAndTimeWaitTimeout() {
+            return this.tcpClosedAndTimeWaitTimeout;
+        }
+
+        /**
+         * @return tcpEstablishedTimeout
+         */
+        public Integer getTcpEstablishedTimeout() {
+            return this.tcpEstablishedTimeout;
+        }
+
+        /**
+         * @return udpTimeout
+         */
+        public Integer getUdpTimeout() {
+            return this.udpTimeout;
+        }
+
+        public static final class Builder {
+            private Integer tcpClosedAndTimeWaitTimeout; 
+            private Integer tcpEstablishedTimeout; 
+            private Integer udpTimeout; 
+
+            /**
+             * TcpClosedAndTimeWaitTimeout.
+             */
+            public Builder tcpClosedAndTimeWaitTimeout(Integer tcpClosedAndTimeWaitTimeout) {
+                this.tcpClosedAndTimeWaitTimeout = tcpClosedAndTimeWaitTimeout;
+                return this;
+            }
+
+            /**
+             * TcpEstablishedTimeout.
+             */
+            public Builder tcpEstablishedTimeout(Integer tcpEstablishedTimeout) {
+                this.tcpEstablishedTimeout = tcpEstablishedTimeout;
+                return this;
+            }
+
+            /**
+             * UdpTimeout.
+             */
+            public Builder udpTimeout(Integer udpTimeout) {
+                this.udpTimeout = udpTimeout;
+                return this;
+            }
+
+            public ConnectionTrackingConfiguration build() {
+                return new ConnectionTrackingConfiguration(this);
+            } 
+
+        } 
+
+    }
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

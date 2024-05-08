@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeActivationsResponseBody</p>
  */
 public class DescribeActivationsResponseBody extends TeaModel {
-    @NameInMap("ActivationList")
+    @com.aliyun.core.annotation.NameInMap("ActivationList")
     private java.util.List < ActivationList> activationList;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeActivationsResponseBody(Builder builder) {
@@ -152,10 +151,10 @@ public class DescribeActivationsResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tags(Builder builder) {
@@ -213,40 +212,40 @@ public class DescribeActivationsResponseBody extends TeaModel {
 
     }
     public static class ActivationList extends TeaModel {
-        @NameInMap("ActivationId")
+        @com.aliyun.core.annotation.NameInMap("ActivationId")
         private String activationId;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DeregisteredCount")
+        @com.aliyun.core.annotation.NameInMap("DeregisteredCount")
         private Integer deregisteredCount;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Disabled")
+        @com.aliyun.core.annotation.NameInMap("Disabled")
         private Boolean disabled;
 
-        @NameInMap("InstanceCount")
+        @com.aliyun.core.annotation.NameInMap("InstanceCount")
         private Integer instanceCount;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("IpAddressRange")
+        @com.aliyun.core.annotation.NameInMap("IpAddressRange")
         private String ipAddressRange;
 
-        @NameInMap("RegisteredCount")
+        @com.aliyun.core.annotation.NameInMap("RegisteredCount")
         private Integer registeredCount;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("TimeToLiveInHours")
+        @com.aliyun.core.annotation.NameInMap("TimeToLiveInHours")
         private Long timeToLiveInHours;
 
         private ActivationList(Builder builder) {

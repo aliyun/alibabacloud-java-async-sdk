@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDisksFullStatusResponseBody</p>
  */
 public class DescribeDisksFullStatusResponseBody extends TeaModel {
-    @NameInMap("DiskFullStatusSet")
+    @com.aliyun.core.annotation.NameInMap("DiskFullStatusSet")
     private DiskFullStatusSet diskFullStatusSet;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDisksFullStatusResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
     } 
 
     public static class EventType extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private Integer code;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private EventType(Builder builder) {
@@ -199,19 +198,19 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
 
     }
     public static class DiskEventType extends TeaModel {
-        @NameInMap("EventEndTime")
+        @com.aliyun.core.annotation.NameInMap("EventEndTime")
         private String eventEndTime;
 
-        @NameInMap("EventId")
+        @com.aliyun.core.annotation.NameInMap("EventId")
         private String eventId;
 
-        @NameInMap("EventTime")
+        @com.aliyun.core.annotation.NameInMap("EventTime")
         private String eventTime;
 
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private EventType eventType;
 
-        @NameInMap("ImpactLevel")
+        @com.aliyun.core.annotation.NameInMap("ImpactLevel")
         private String impactLevel;
 
         private DiskEventType(Builder builder) {
@@ -320,7 +319,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
 
     }
     public static class DiskEventSet extends TeaModel {
-        @NameInMap("DiskEventType")
+        @com.aliyun.core.annotation.NameInMap("DiskEventType")
         private java.util.List < DiskEventType> diskEventType;
 
         private DiskEventSet(Builder builder) {
@@ -361,10 +360,10 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
 
     }
     public static class HealthStatus extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private Integer code;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private HealthStatus(Builder builder) {
@@ -422,10 +421,10 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
 
     }
     public static class Status extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private Integer code;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Status(Builder builder) {
@@ -483,22 +482,22 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
 
     }
     public static class DiskFullStatusType extends TeaModel {
-        @NameInMap("Device")
+        @com.aliyun.core.annotation.NameInMap("Device")
         private String device;
 
-        @NameInMap("DiskEventSet")
+        @com.aliyun.core.annotation.NameInMap("DiskEventSet")
         private DiskEventSet diskEventSet;
 
-        @NameInMap("DiskId")
+        @com.aliyun.core.annotation.NameInMap("DiskId")
         private String diskId;
 
-        @NameInMap("HealthStatus")
+        @com.aliyun.core.annotation.NameInMap("HealthStatus")
         private HealthStatus healthStatus;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Status status;
 
         private DiskFullStatusType(Builder builder) {
@@ -629,7 +628,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
 
     }
     public static class DiskFullStatusSet extends TeaModel {
-        @NameInMap("DiskFullStatusType")
+        @com.aliyun.core.annotation.NameInMap("DiskFullStatusType")
         private java.util.List < DiskFullStatusType> diskFullStatusType;
 
         private DiskFullStatusSet(Builder builder) {

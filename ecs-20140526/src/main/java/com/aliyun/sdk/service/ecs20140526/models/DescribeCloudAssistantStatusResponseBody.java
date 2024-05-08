@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCloudAssistantStatusResponseBody</p>
  */
 public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
-    @NameInMap("InstanceCloudAssistantStatusSet")
+    @com.aliyun.core.annotation.NameInMap("InstanceCloudAssistantStatusSet")
     private InstanceCloudAssistantStatusSet instanceCloudAssistantStatusSet;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeCloudAssistantStatusResponseBody(Builder builder) {
@@ -152,31 +151,31 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
     } 
 
     public static class InstanceCloudAssistantStatus extends TeaModel {
-        @NameInMap("ActiveTaskCount")
+        @com.aliyun.core.annotation.NameInMap("ActiveTaskCount")
         private Long activeTaskCount;
 
-        @NameInMap("CloudAssistantStatus")
+        @com.aliyun.core.annotation.NameInMap("CloudAssistantStatus")
         private String cloudAssistantStatus;
 
-        @NameInMap("CloudAssistantVersion")
+        @com.aliyun.core.annotation.NameInMap("CloudAssistantVersion")
         private String cloudAssistantVersion;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InvocationCount")
+        @com.aliyun.core.annotation.NameInMap("InvocationCount")
         private Long invocationCount;
 
-        @NameInMap("LastHeartbeatTime")
+        @com.aliyun.core.annotation.NameInMap("LastHeartbeatTime")
         private String lastHeartbeatTime;
 
-        @NameInMap("LastInvokedTime")
+        @com.aliyun.core.annotation.NameInMap("LastInvokedTime")
         private String lastInvokedTime;
 
-        @NameInMap("OSType")
+        @com.aliyun.core.annotation.NameInMap("OSType")
         private String OSType;
 
-        @NameInMap("SupportSessionManager")
+        @com.aliyun.core.annotation.NameInMap("SupportSessionManager")
         private Boolean supportSessionManager;
 
         private InstanceCloudAssistantStatus(Builder builder) {
@@ -368,7 +367,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
 
     }
     public static class InstanceCloudAssistantStatusSet extends TeaModel {
-        @NameInMap("InstanceCloudAssistantStatus")
+        @com.aliyun.core.annotation.NameInMap("InstanceCloudAssistantStatus")
         private java.util.List < InstanceCloudAssistantStatus> instanceCloudAssistantStatus;
 
         private InstanceCloudAssistantStatusSet(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTagsResponseBody</p>
  */
 public class DescribeTagsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private Tags tags;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeTagsResponseBody(Builder builder) {
@@ -132,40 +131,40 @@ public class DescribeTagsResponseBody extends TeaModel {
     } 
 
     public static class ResourceTypeCount extends TeaModel {
-        @NameInMap("Ddh")
+        @com.aliyun.core.annotation.NameInMap("Ddh")
         private Integer ddh;
 
-        @NameInMap("Disk")
+        @com.aliyun.core.annotation.NameInMap("Disk")
         private Integer disk;
 
-        @NameInMap("Eni")
+        @com.aliyun.core.annotation.NameInMap("Eni")
         private Integer eni;
 
-        @NameInMap("Image")
+        @com.aliyun.core.annotation.NameInMap("Image")
         private Integer image;
 
-        @NameInMap("Instance")
+        @com.aliyun.core.annotation.NameInMap("Instance")
         private Integer instance;
 
-        @NameInMap("KeyPair")
+        @com.aliyun.core.annotation.NameInMap("KeyPair")
         private Integer keyPair;
 
-        @NameInMap("LaunchTemplate")
+        @com.aliyun.core.annotation.NameInMap("LaunchTemplate")
         private Integer launchTemplate;
 
-        @NameInMap("ReservedInstance")
+        @com.aliyun.core.annotation.NameInMap("ReservedInstance")
         private Integer reservedInstance;
 
-        @NameInMap("Securitygroup")
+        @com.aliyun.core.annotation.NameInMap("Securitygroup")
         private Integer securitygroup;
 
-        @NameInMap("Snapshot")
+        @com.aliyun.core.annotation.NameInMap("Snapshot")
         private Integer snapshot;
 
-        @NameInMap("SnapshotPolicy")
+        @com.aliyun.core.annotation.NameInMap("SnapshotPolicy")
         private Integer snapshotPolicy;
 
-        @NameInMap("Volume")
+        @com.aliyun.core.annotation.NameInMap("Volume")
         private Integer volume;
 
         private ResourceTypeCount(Builder builder) {
@@ -393,13 +392,13 @@ public class DescribeTagsResponseBody extends TeaModel {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("ResourceTypeCount")
+        @com.aliyun.core.annotation.NameInMap("ResourceTypeCount")
         private ResourceTypeCount resourceTypeCount;
 
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -474,7 +473,7 @@ public class DescribeTagsResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {

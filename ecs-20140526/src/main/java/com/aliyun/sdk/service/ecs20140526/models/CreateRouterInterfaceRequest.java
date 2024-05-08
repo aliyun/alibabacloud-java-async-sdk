@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,114 +11,114 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateRouterInterfaceRequest</p>
  */
 public class CreateRouterInterfaceRequest extends Request {
-    @Query
-    @NameInMap("AccessPointId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessPointId")
     private String accessPointId;
 
-    @Query
-    @NameInMap("AutoPay")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
     private Boolean autoPay;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("HealthCheckSourceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckSourceIp")
     private String healthCheckSourceIp;
 
-    @Query
-    @NameInMap("HealthCheckTargetIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckTargetIp")
     private String healthCheckTargetIp;
 
-    @Query
-    @NameInMap("InstanceChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
     private String instanceChargeType;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OppositeAccessPointId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OppositeAccessPointId")
     private String oppositeAccessPointId;
 
-    @Query
-    @NameInMap("OppositeInterfaceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OppositeInterfaceId")
     private String oppositeInterfaceId;
 
-    @Query
-    @NameInMap("OppositeInterfaceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OppositeInterfaceOwnerId")
     private String oppositeInterfaceOwnerId;
 
-    @Query
-    @NameInMap("OppositeRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OppositeRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String oppositeRegionId;
 
-    @Query
-    @NameInMap("OppositeRouterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OppositeRouterId")
     private String oppositeRouterId;
 
-    @Query
-    @NameInMap("OppositeRouterType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OppositeRouterType")
     private String oppositeRouterType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
-    @Query
-    @NameInMap("PricingCycle")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PricingCycle")
     private String pricingCycle;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Role")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Role")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String role;
 
-    @Query
-    @NameInMap("RouterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String routerId;
 
-    @Query
-    @NameInMap("RouterType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouterType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String routerType;
 
-    @Query
-    @NameInMap("Spec")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Spec")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String spec;
 
-    @Query
-    @NameInMap("UserCidr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserCidr")
     private String userCidr;
 
     private CreateRouterInterfaceRequest(Builder builder) {

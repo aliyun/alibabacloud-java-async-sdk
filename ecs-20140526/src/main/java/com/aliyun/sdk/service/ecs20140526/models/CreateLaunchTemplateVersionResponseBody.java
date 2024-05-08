@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateLaunchTemplateVersionResponseBody</p>
  */
 public class CreateLaunchTemplateVersionResponseBody extends TeaModel {
-    @NameInMap("LaunchTemplateId")
+    @com.aliyun.core.annotation.NameInMap("LaunchTemplateId")
     private String launchTemplateId;
 
-    @NameInMap("LaunchTemplateVersionNumber")
+    @com.aliyun.core.annotation.NameInMap("LaunchTemplateVersionNumber")
     private Long launchTemplateVersionNumber;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateLaunchTemplateVersionResponseBody(Builder builder) {
@@ -62,10 +61,10 @@ public class CreateLaunchTemplateVersionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 启动模板ID。更多信息，请参见[DescribeLaunchTemplates](~~73759~~)。
+         * The ID of the launch template. For more information, see [DescribeLaunchTemplates](~~73759~~).
          * <p>
          * 
-         * 使用启动模板创建实例时，您必须指定`LaunchTemplateId`或`LaunchTemplateName`以确定启动模板。
+         * You must specify `LaunchTemplateId` or `LaunchTemplateName` to specify a launch template.
          */
         public Builder launchTemplateId(String launchTemplateId) {
             this.launchTemplateId = launchTemplateId;
@@ -81,7 +80,7 @@ public class CreateLaunchTemplateVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

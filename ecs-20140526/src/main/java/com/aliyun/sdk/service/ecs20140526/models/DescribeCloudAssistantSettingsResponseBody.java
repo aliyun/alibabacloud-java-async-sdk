@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCloudAssistantSettingsResponseBody</p>
  */
 public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
-    @NameInMap("AgentUpgradeConfig")
+    @com.aliyun.core.annotation.NameInMap("AgentUpgradeConfig")
     private AgentUpgradeConfig agentUpgradeConfig;
 
-    @NameInMap("OssDeliveryConfigs")
+    @com.aliyun.core.annotation.NameInMap("OssDeliveryConfigs")
     private OssDeliveryConfigs ossDeliveryConfigs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SlsDeliveryConfigs")
+    @com.aliyun.core.annotation.NameInMap("SlsDeliveryConfigs")
     private SlsDeliveryConfigs slsDeliveryConfigs;
 
     private DescribeCloudAssistantSettingsResponseBody(Builder builder) {
@@ -112,7 +111,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
     } 
 
     public static class AllowedUpgradeWindows extends TeaModel {
-        @NameInMap("AllowedUpgradeWindow")
+        @com.aliyun.core.annotation.NameInMap("AllowedUpgradeWindow")
         private java.util.List < String > allowedUpgradeWindow;
 
         private AllowedUpgradeWindows(Builder builder) {
@@ -153,13 +152,13 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
 
     }
     public static class AgentUpgradeConfig extends TeaModel {
-        @NameInMap("AllowedUpgradeWindows")
+        @com.aliyun.core.annotation.NameInMap("AllowedUpgradeWindows")
         private AllowedUpgradeWindows allowedUpgradeWindows;
 
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("TimeZone")
+        @com.aliyun.core.annotation.NameInMap("TimeZone")
         private String timeZone;
 
         private AgentUpgradeConfig(Builder builder) {
@@ -234,25 +233,25 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
 
     }
     public static class OssDeliveryConfig extends TeaModel {
-        @NameInMap("BucketName")
+        @com.aliyun.core.annotation.NameInMap("BucketName")
         private String bucketName;
 
-        @NameInMap("DeliveryType")
+        @com.aliyun.core.annotation.NameInMap("DeliveryType")
         private String deliveryType;
 
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("EncryptionAlgorithm")
+        @com.aliyun.core.annotation.NameInMap("EncryptionAlgorithm")
         private String encryptionAlgorithm;
 
-        @NameInMap("EncryptionKeyId")
+        @com.aliyun.core.annotation.NameInMap("EncryptionKeyId")
         private String encryptionKeyId;
 
-        @NameInMap("EncryptionType")
+        @com.aliyun.core.annotation.NameInMap("EncryptionType")
         private String encryptionType;
 
-        @NameInMap("Prefix")
+        @com.aliyun.core.annotation.NameInMap("Prefix")
         private String prefix;
 
         private OssDeliveryConfig(Builder builder) {
@@ -408,7 +407,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
 
     }
     public static class OssDeliveryConfigs extends TeaModel {
-        @NameInMap("OssDeliveryConfig")
+        @com.aliyun.core.annotation.NameInMap("OssDeliveryConfig")
         private java.util.List < OssDeliveryConfig> ossDeliveryConfig;
 
         private OssDeliveryConfigs(Builder builder) {
@@ -449,16 +448,16 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
 
     }
     public static class SlsDeliveryConfig extends TeaModel {
-        @NameInMap("DeliveryType")
+        @com.aliyun.core.annotation.NameInMap("DeliveryType")
         private String deliveryType;
 
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("LogstoreName")
+        @com.aliyun.core.annotation.NameInMap("LogstoreName")
         private String logstoreName;
 
-        @NameInMap("ProjectName")
+        @com.aliyun.core.annotation.NameInMap("ProjectName")
         private String projectName;
 
         private SlsDeliveryConfig(Builder builder) {
@@ -554,7 +553,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
 
     }
     public static class SlsDeliveryConfigs extends TeaModel {
-        @NameInMap("SlsDeliveryConfig")
+        @com.aliyun.core.annotation.NameInMap("SlsDeliveryConfig")
         private java.util.List < SlsDeliveryConfig> slsDeliveryConfig;
 
         private SlsDeliveryConfigs(Builder builder) {

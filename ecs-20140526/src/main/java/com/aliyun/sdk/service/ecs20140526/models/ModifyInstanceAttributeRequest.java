@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,81 +11,81 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyInstanceAttributeRequest</p>
  */
 public class ModifyInstanceAttributeRequest extends Request {
-    @Query
-    @NameInMap("CpuOptions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CpuOptions")
     private CpuOptions cpuOptions;
 
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("CreditSpecification")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreditSpecification")
     private String creditSpecification;
 
-    @Query
-    @NameInMap("DeletionProtection")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeletionProtection")
     private Boolean deletionProtection;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("EnableJumboFrame")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableJumboFrame")
     private Boolean enableJumboFrame;
 
-    @Query
-    @NameInMap("HostName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostName")
     private String hostName;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @Query
-    @NameInMap("NetworkInterfaceQueueNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfaceQueueNumber")
     private Integer networkInterfaceQueueNumber;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Password")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Password")
     private String password;
 
-    @Query
-    @NameInMap("Recyclable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Recyclable")
     private Boolean recyclable;
 
-    @Query
-    @NameInMap("RemoteConnectionOptions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RemoteConnectionOptions")
     private RemoteConnectionOptions remoteConnectionOptions;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityGroupIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
     private java.util.List < String > securityGroupIds;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
     private ModifyInstanceAttributeRequest(Builder builder) {
@@ -535,7 +534,7 @@ public class ModifyInstanceAttributeRequest extends Request {
     } 
 
     public static class CpuOptions extends TeaModel {
-        @NameInMap("TopologyType")
+        @com.aliyun.core.annotation.NameInMap("TopologyType")
         private String topologyType;
 
         private CpuOptions(Builder builder) {
@@ -586,10 +585,10 @@ public class ModifyInstanceAttributeRequest extends Request {
 
     }
     public static class RemoteConnectionOptions extends TeaModel {
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private RemoteConnectionOptions(Builder builder) {

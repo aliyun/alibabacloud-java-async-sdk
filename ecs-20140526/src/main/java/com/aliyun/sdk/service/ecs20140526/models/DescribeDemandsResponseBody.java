@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDemandsResponseBody</p>
  */
 public class DescribeDemandsResponseBody extends TeaModel {
-    @NameInMap("Demands")
+    @com.aliyun.core.annotation.NameInMap("Demands")
     private Demands demands;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDemandsResponseBody(Builder builder) {
@@ -152,19 +151,19 @@ public class DescribeDemandsResponseBody extends TeaModel {
     } 
 
     public static class SupplyInfo extends TeaModel {
-        @NameInMap("Amount")
+        @com.aliyun.core.annotation.NameInMap("Amount")
         private Integer amount;
 
-        @NameInMap("PrivatePoolId")
+        @com.aliyun.core.annotation.NameInMap("PrivatePoolId")
         private String privatePoolId;
 
-        @NameInMap("SupplyEndTime")
+        @com.aliyun.core.annotation.NameInMap("SupplyEndTime")
         private String supplyEndTime;
 
-        @NameInMap("SupplyStartTime")
+        @com.aliyun.core.annotation.NameInMap("SupplyStartTime")
         private String supplyStartTime;
 
-        @NameInMap("SupplyStatus")
+        @com.aliyun.core.annotation.NameInMap("SupplyStatus")
         private String supplyStatus;
 
         private SupplyInfo(Builder builder) {
@@ -277,7 +276,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
 
     }
     public static class SupplyInfos extends TeaModel {
-        @NameInMap("SupplyInfo")
+        @com.aliyun.core.annotation.NameInMap("SupplyInfo")
         private java.util.List < SupplyInfo> supplyInfo;
 
         private SupplyInfos(Builder builder) {
@@ -318,61 +317,61 @@ public class DescribeDemandsResponseBody extends TeaModel {
 
     }
     public static class Demand extends TeaModel {
-        @NameInMap("AvailableAmount")
+        @com.aliyun.core.annotation.NameInMap("AvailableAmount")
         private Integer availableAmount;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("DeliveringAmount")
+        @com.aliyun.core.annotation.NameInMap("DeliveringAmount")
         private Integer deliveringAmount;
 
-        @NameInMap("DemandDescription")
+        @com.aliyun.core.annotation.NameInMap("DemandDescription")
         private String demandDescription;
 
-        @NameInMap("DemandId")
+        @com.aliyun.core.annotation.NameInMap("DemandId")
         private String demandId;
 
-        @NameInMap("DemandName")
+        @com.aliyun.core.annotation.NameInMap("DemandName")
         private String demandName;
 
-        @NameInMap("DemandStatus")
+        @com.aliyun.core.annotation.NameInMap("DemandStatus")
         private String demandStatus;
 
-        @NameInMap("DemandTime")
+        @com.aliyun.core.annotation.NameInMap("DemandTime")
         private String demandTime;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("InstanceChargeType")
+        @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
         private String instanceChargeType;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("InstanceTypeFamily")
+        @com.aliyun.core.annotation.NameInMap("InstanceTypeFamily")
         private String instanceTypeFamily;
 
-        @NameInMap("Period")
+        @com.aliyun.core.annotation.NameInMap("Period")
         private Integer period;
 
-        @NameInMap("PeriodUnit")
+        @com.aliyun.core.annotation.NameInMap("PeriodUnit")
         private String periodUnit;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("SupplyInfos")
+        @com.aliyun.core.annotation.NameInMap("SupplyInfos")
         private SupplyInfos supplyInfos;
 
-        @NameInMap("TotalAmount")
+        @com.aliyun.core.annotation.NameInMap("TotalAmount")
         private Integer totalAmount;
 
-        @NameInMap("UsedAmount")
+        @com.aliyun.core.annotation.NameInMap("UsedAmount")
         private Integer usedAmount;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Demand(Builder builder) {
@@ -737,7 +736,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
 
     }
     public static class Demands extends TeaModel {
-        @NameInMap("Demand")
+        @com.aliyun.core.annotation.NameInMap("Demand")
         private java.util.List < Demand> demand;
 
         private Demands(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCommandsResponseBody</p>
  */
 public class DescribeCommandsResponseBody extends TeaModel {
-    @NameInMap("Commands")
+    @com.aliyun.core.annotation.NameInMap("Commands")
     private Commands commands;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeCommandsResponseBody(Builder builder) {
@@ -152,7 +151,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
     } 
 
     public static class PossibleValues extends TeaModel {
-        @NameInMap("PossibleValue")
+        @com.aliyun.core.annotation.NameInMap("PossibleValue")
         private java.util.List < String > possibleValue;
 
         private PossibleValues(Builder builder) {
@@ -193,19 +192,19 @@ public class DescribeCommandsResponseBody extends TeaModel {
 
     }
     public static class ParameterDefinition extends TeaModel {
-        @NameInMap("DefaultValue")
+        @com.aliyun.core.annotation.NameInMap("DefaultValue")
         private String defaultValue;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
-        @NameInMap("PossibleValues")
+        @com.aliyun.core.annotation.NameInMap("PossibleValues")
         private PossibleValues possibleValues;
 
-        @NameInMap("Required")
+        @com.aliyun.core.annotation.NameInMap("Required")
         private Boolean required;
 
         private ParameterDefinition(Builder builder) {
@@ -320,7 +319,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
 
     }
     public static class ParameterDefinitions extends TeaModel {
-        @NameInMap("ParameterDefinition")
+        @com.aliyun.core.annotation.NameInMap("ParameterDefinition")
         private java.util.List < ParameterDefinition> parameterDefinition;
 
         private ParameterDefinitions(Builder builder) {
@@ -361,7 +360,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
 
     }
     public static class ParameterNames extends TeaModel {
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private java.util.List < String > parameterName;
 
         private ParameterNames(Builder builder) {
@@ -402,10 +401,10 @@ public class DescribeCommandsResponseBody extends TeaModel {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -463,7 +462,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -504,58 +503,58 @@ public class DescribeCommandsResponseBody extends TeaModel {
 
     }
     public static class Command extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("CommandContent")
+        @com.aliyun.core.annotation.NameInMap("CommandContent")
         private String commandContent;
 
-        @NameInMap("CommandId")
+        @com.aliyun.core.annotation.NameInMap("CommandId")
         private String commandId;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EnableParameter")
+        @com.aliyun.core.annotation.NameInMap("EnableParameter")
         private Boolean enableParameter;
 
-        @NameInMap("InvokeTimes")
+        @com.aliyun.core.annotation.NameInMap("InvokeTimes")
         private Integer invokeTimes;
 
-        @NameInMap("Latest")
+        @com.aliyun.core.annotation.NameInMap("Latest")
         private Boolean latest;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ParameterDefinitions")
+        @com.aliyun.core.annotation.NameInMap("ParameterDefinitions")
         private ParameterDefinitions parameterDefinitions;
 
-        @NameInMap("ParameterNames")
+        @com.aliyun.core.annotation.NameInMap("ParameterNames")
         private ParameterNames parameterNames;
 
-        @NameInMap("Provider")
+        @com.aliyun.core.annotation.NameInMap("Provider")
         private String provider;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("Timeout")
+        @com.aliyun.core.annotation.NameInMap("Timeout")
         private Long timeout;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private Integer version;
 
-        @NameInMap("WorkingDir")
+        @com.aliyun.core.annotation.NameInMap("WorkingDir")
         private String workingDir;
 
         private Command(Builder builder) {
@@ -889,7 +888,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
 
     }
     public static class Commands extends TeaModel {
-        @NameInMap("Command")
+        @com.aliyun.core.annotation.NameInMap("Command")
         private java.util.List < Command> command;
 
         private Commands(Builder builder) {

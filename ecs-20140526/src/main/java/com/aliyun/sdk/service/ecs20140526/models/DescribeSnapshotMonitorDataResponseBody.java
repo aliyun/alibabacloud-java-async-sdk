@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSnapshotMonitorDataResponseBody</p>
  */
 public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
-    @NameInMap("MonitorData")
+    @com.aliyun.core.annotation.NameInMap("MonitorData")
     private MonitorData monitorData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeSnapshotMonitorDataResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
     } 
 
     public static class DataPoint extends TeaModel {
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private DataPoint(Builder builder) {
@@ -133,7 +132,7 @@ public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
 
     }
     public static class MonitorData extends TeaModel {
-        @NameInMap("DataPoint")
+        @com.aliyun.core.annotation.NameInMap("DataPoint")
         private java.util.List < DataPoint> dataPoint;
 
         private MonitorData(Builder builder) {

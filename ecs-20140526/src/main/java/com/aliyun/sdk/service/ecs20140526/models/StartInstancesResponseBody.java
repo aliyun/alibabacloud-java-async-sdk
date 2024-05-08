@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StartInstancesResponseBody</p>
  */
 public class StartInstancesResponseBody extends TeaModel {
-    @NameInMap("InstanceResponses")
+    @com.aliyun.core.annotation.NameInMap("InstanceResponses")
     private InstanceResponses instanceResponses;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private StartInstancesResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class StartInstancesResponseBody extends TeaModel {
     } 
 
     public static class InstanceResponse extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("CurrentStatus")
+        @com.aliyun.core.annotation.NameInMap("CurrentStatus")
         private String currentStatus;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("PreviousStatus")
+        @com.aliyun.core.annotation.NameInMap("PreviousStatus")
         private String previousStatus;
 
         private InstanceResponse(Builder builder) {
@@ -193,7 +192,7 @@ public class StartInstancesResponseBody extends TeaModel {
 
     }
     public static class InstanceResponses extends TeaModel {
-        @NameInMap("InstanceResponse")
+        @com.aliyun.core.annotation.NameInMap("InstanceResponse")
         private java.util.List < InstanceResponse> instanceResponse;
 
         private InstanceResponses(Builder builder) {

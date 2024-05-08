@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,65 +11,65 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSpotAdviceRequest</p>
  */
 public class DescribeSpotAdviceRequest extends Request {
-    @Query
-    @NameInMap("Cores")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Cores")
     private Integer cores;
 
-    @Query
-    @NameInMap("GpuAmount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GpuAmount")
     private Integer gpuAmount;
 
-    @Query
-    @NameInMap("GpuSpec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GpuSpec")
     private String gpuSpec;
 
-    @Query
-    @NameInMap("InstanceFamilyLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceFamilyLevel")
     private String instanceFamilyLevel;
 
-    @Query
-    @NameInMap("InstanceTypeFamily")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceTypeFamily")
     private String instanceTypeFamily;
 
-    @Query
-    @NameInMap("InstanceTypes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceTypes")
     private java.util.List < String > instanceTypes;
 
-    @Query
-    @NameInMap("Memory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Memory")
     private Float memory;
 
-    @Query
-    @NameInMap("MinCores")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinCores")
     private Integer minCores;
 
-    @Query
-    @NameInMap("MinMemory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinMemory")
     private Float minMemory;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private DescribeSpotAdviceRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHpcClustersResponseBody</p>
  */
 public class DescribeHpcClustersResponseBody extends TeaModel {
-    @NameInMap("HpcClusters")
+    @com.aliyun.core.annotation.NameInMap("HpcClusters")
     private HpcClusters hpcClusters;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeHpcClustersResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
     } 
 
     public static class HpcCluster extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("HpcClusterId")
+        @com.aliyun.core.annotation.NameInMap("HpcClusterId")
         private String hpcClusterId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private HpcCluster(Builder builder) {
@@ -213,7 +212,7 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
 
     }
     public static class HpcClusters extends TeaModel {
-        @NameInMap("HpcCluster")
+        @com.aliyun.core.annotation.NameInMap("HpcCluster")
         private java.util.List < HpcCluster> hpcCluster;
 
         private HpcClusters(Builder builder) {

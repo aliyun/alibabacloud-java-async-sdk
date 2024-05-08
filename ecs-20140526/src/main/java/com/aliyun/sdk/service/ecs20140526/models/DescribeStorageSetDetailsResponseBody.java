@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeStorageSetDetailsResponseBody</p>
  */
 public class DescribeStorageSetDetailsResponseBody extends TeaModel {
-    @NameInMap("Disks")
+    @com.aliyun.core.annotation.NameInMap("Disks")
     private Disks disks;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeStorageSetDetailsResponseBody(Builder builder) {
@@ -132,28 +131,28 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
     } 
 
     public static class Disk extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DiskId")
+        @com.aliyun.core.annotation.NameInMap("DiskId")
         private String diskId;
 
-        @NameInMap("DiskName")
+        @com.aliyun.core.annotation.NameInMap("DiskName")
         private String diskName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("StorageSetId")
+        @com.aliyun.core.annotation.NameInMap("StorageSetId")
         private String storageSetId;
 
-        @NameInMap("StorageSetPartitionNumber")
+        @com.aliyun.core.annotation.NameInMap("StorageSetPartitionNumber")
         private Integer storageSetPartitionNumber;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Disk(Builder builder) {
@@ -313,7 +312,7 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
 
     }
     public static class Disks extends TeaModel {
-        @NameInMap("Disk")
+        @com.aliyun.core.annotation.NameInMap("Disk")
         private java.util.List < Disk> disk;
 
         private Disks(Builder builder) {

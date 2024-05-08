@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSnapshotLinksResponseBody</p>
  */
 public class DescribeSnapshotLinksResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SnapshotLinks")
+    @com.aliyun.core.annotation.NameInMap("SnapshotLinks")
     private SnapshotLinks snapshotLinks;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeSnapshotLinksResponseBody(Builder builder) {
@@ -132,40 +131,40 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
     } 
 
     public static class SnapshotLink extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InstantAccess")
+        @com.aliyun.core.annotation.NameInMap("InstantAccess")
         private Boolean instantAccess;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SnapshotLinkId")
+        @com.aliyun.core.annotation.NameInMap("SnapshotLinkId")
         private String snapshotLinkId;
 
-        @NameInMap("SourceDiskId")
+        @com.aliyun.core.annotation.NameInMap("SourceDiskId")
         private String sourceDiskId;
 
-        @NameInMap("SourceDiskName")
+        @com.aliyun.core.annotation.NameInMap("SourceDiskName")
         private String sourceDiskName;
 
-        @NameInMap("SourceDiskSize")
+        @com.aliyun.core.annotation.NameInMap("SourceDiskSize")
         private Integer sourceDiskSize;
 
-        @NameInMap("SourceDiskType")
+        @com.aliyun.core.annotation.NameInMap("SourceDiskType")
         private String sourceDiskType;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Long totalSize;
 
         private SnapshotLink(Builder builder) {
@@ -403,7 +402,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
 
     }
     public static class SnapshotLinks extends TeaModel {
-        @NameInMap("SnapshotLink")
+        @com.aliyun.core.annotation.NameInMap("SnapshotLink")
         private java.util.List < SnapshotLink> snapshotLink;
 
         private SnapshotLinks(Builder builder) {

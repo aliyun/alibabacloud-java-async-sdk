@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDiagnosticMetricsResponseBody</p>
  */
 public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
-    @NameInMap("Metrics")
+    @com.aliyun.core.annotation.NameInMap("Metrics")
     private java.util.List < Metrics> metrics;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDiagnosticMetricsResponseBody(Builder builder) {
@@ -92,25 +91,25 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
     } 
 
     public static class Metrics extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GuestMetric")
+        @com.aliyun.core.annotation.NameInMap("GuestMetric")
         private Boolean guestMetric;
 
-        @NameInMap("MetricCategory")
+        @com.aliyun.core.annotation.NameInMap("MetricCategory")
         private String metricCategory;
 
-        @NameInMap("MetricId")
+        @com.aliyun.core.annotation.NameInMap("MetricId")
         private String metricId;
 
-        @NameInMap("MetricName")
+        @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("SupportedOperatingSystem")
+        @com.aliyun.core.annotation.NameInMap("SupportedOperatingSystem")
         private String supportedOperatingSystem;
 
         private Metrics(Builder builder) {

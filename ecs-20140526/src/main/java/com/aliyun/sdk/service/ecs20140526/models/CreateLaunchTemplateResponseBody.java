@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateLaunchTemplateResponseBody</p>
  */
 public class CreateLaunchTemplateResponseBody extends TeaModel {
-    @NameInMap("LaunchTemplateId")
+    @com.aliyun.core.annotation.NameInMap("LaunchTemplateId")
     private String launchTemplateId;
 
-    @NameInMap("LaunchTemplateVersionNumber")
+    @com.aliyun.core.annotation.NameInMap("LaunchTemplateVersionNumber")
     private Long launchTemplateVersionNumber;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateLaunchTemplateResponseBody(Builder builder) {

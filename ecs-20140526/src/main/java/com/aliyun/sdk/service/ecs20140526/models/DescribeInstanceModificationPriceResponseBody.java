@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceModificationPriceResponseBody</p>
  */
 public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
-    @NameInMap("PriceInfo")
+    @com.aliyun.core.annotation.NameInMap("PriceInfo")
     private PriceInfo priceInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceModificationPriceResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
     } 
 
     public static class Price extends TeaModel {
-        @NameInMap("Currency")
+        @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
-        @NameInMap("DiscountPrice")
+        @com.aliyun.core.annotation.NameInMap("DiscountPrice")
         private Float discountPrice;
 
-        @NameInMap("OriginalPrice")
+        @com.aliyun.core.annotation.NameInMap("OriginalPrice")
         private Float originalPrice;
 
-        @NameInMap("TradePrice")
+        @com.aliyun.core.annotation.NameInMap("TradePrice")
         private Float tradePrice;
 
         private Price(Builder builder) {
@@ -178,10 +177,10 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
 
     }
     public static class Rule extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
         private Rule(Builder builder) {
@@ -239,7 +238,7 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
 
     }
     public static class Rules extends TeaModel {
-        @NameInMap("Rule")
+        @com.aliyun.core.annotation.NameInMap("Rule")
         private java.util.List < Rule> rule;
 
         private Rules(Builder builder) {
@@ -280,10 +279,10 @@ public class DescribeInstanceModificationPriceResponseBody extends TeaModel {
 
     }
     public static class PriceInfo extends TeaModel {
-        @NameInMap("Price")
+        @com.aliyun.core.annotation.NameInMap("Price")
         private Price price;
 
-        @NameInMap("Rules")
+        @com.aliyun.core.annotation.NameInMap("Rules")
         private Rules rules;
 
         private PriceInfo(Builder builder) {

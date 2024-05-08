@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeClustersResponseBody</p>
  */
 public class DescribeClustersResponseBody extends TeaModel {
-    @NameInMap("Clusters")
+    @com.aliyun.core.annotation.NameInMap("Clusters")
     private Clusters clusters;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeClustersResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class DescribeClustersResponseBody extends TeaModel {
     } 
 
     public static class Cluster extends TeaModel {
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
         private Cluster(Builder builder) {
@@ -113,7 +112,7 @@ public class DescribeClustersResponseBody extends TeaModel {
 
     }
     public static class Clusters extends TeaModel {
-        @NameInMap("Cluster")
+        @com.aliyun.core.annotation.NameInMap("Cluster")
         private java.util.List < Cluster> cluster;
 
         private Clusters(Builder builder) {

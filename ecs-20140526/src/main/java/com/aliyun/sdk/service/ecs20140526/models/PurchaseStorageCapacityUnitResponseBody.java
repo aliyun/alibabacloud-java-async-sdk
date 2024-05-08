@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PurchaseStorageCapacityUnitResponseBody</p>
  */
 public class PurchaseStorageCapacityUnitResponseBody extends TeaModel {
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StorageCapacityUnitIds")
+    @com.aliyun.core.annotation.NameInMap("StorageCapacityUnitIds")
     private StorageCapacityUnitIds storageCapacityUnitIds;
 
     private PurchaseStorageCapacityUnitResponseBody(Builder builder) {
@@ -92,7 +91,7 @@ public class PurchaseStorageCapacityUnitResponseBody extends TeaModel {
     } 
 
     public static class StorageCapacityUnitIds extends TeaModel {
-        @NameInMap("StorageCapacityUnitId")
+        @com.aliyun.core.annotation.NameInMap("StorageCapacityUnitId")
         private java.util.List < String > storageCapacityUnitId;
 
         private StorageCapacityUnitIds(Builder builder) {

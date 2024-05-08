@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,54 +11,58 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AttachDiskRequest</p>
  */
 public class AttachDiskRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("Bootable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bootable")
     private Boolean bootable;
 
-    @Query
-    @NameInMap("DeleteWithInstance")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeleteWithInstance")
     private Boolean deleteWithInstance;
 
-    @Query
-    @NameInMap("Device")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Device")
     private String device;
 
-    @Query
-    @NameInMap("DiskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String diskId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Force")
+    private Boolean force;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("KeyPairName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyPairName")
     private String keyPairName;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Password")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Password")
     private String password;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private AttachDiskRequest(Builder builder) {
@@ -69,6 +72,7 @@ public class AttachDiskRequest extends Request {
         this.deleteWithInstance = builder.deleteWithInstance;
         this.device = builder.device;
         this.diskId = builder.diskId;
+        this.force = builder.force;
         this.instanceId = builder.instanceId;
         this.keyPairName = builder.keyPairName;
         this.ownerAccount = builder.ownerAccount;
@@ -127,6 +131,13 @@ public class AttachDiskRequest extends Request {
     }
 
     /**
+     * @return force
+     */
+    public Boolean getForce() {
+        return this.force;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -181,6 +192,7 @@ public class AttachDiskRequest extends Request {
         private Boolean deleteWithInstance; 
         private String device; 
         private String diskId; 
+        private Boolean force; 
         private String instanceId; 
         private String keyPairName; 
         private String ownerAccount; 
@@ -200,6 +212,7 @@ public class AttachDiskRequest extends Request {
             this.deleteWithInstance = request.deleteWithInstance;
             this.device = request.device;
             this.diskId = request.diskId;
+            this.force = request.force;
             this.instanceId = request.instanceId;
             this.keyPairName = request.keyPairName;
             this.ownerAccount = request.ownerAccount;
@@ -273,6 +286,15 @@ public class AttachDiskRequest extends Request {
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
             this.diskId = diskId;
+            return this;
+        }
+
+        /**
+         * Force.
+         */
+        public Builder force(Boolean force) {
+            this.putQueryParameter("Force", force);
+            this.force = force;
             return this;
         }
 

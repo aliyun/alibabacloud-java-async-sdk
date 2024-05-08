@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceMaintenanceAttributesResponseBody</p>
  */
 public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel {
-    @NameInMap("MaintenanceAttributes")
+    @com.aliyun.core.annotation.NameInMap("MaintenanceAttributes")
     private MaintenanceAttributes maintenanceAttributes;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeInstanceMaintenanceAttributesResponseBody(Builder builder) {
@@ -132,7 +131,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
     } 
 
     public static class SupportedValues extends TeaModel {
-        @NameInMap("SupportedValue")
+        @com.aliyun.core.annotation.NameInMap("SupportedValue")
         private java.util.List < String > supportedValue;
 
         private SupportedValues(Builder builder) {
@@ -173,13 +172,13 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
 
     }
     public static class ActionOnMaintenance extends TeaModel {
-        @NameInMap("DefaultValue")
+        @com.aliyun.core.annotation.NameInMap("DefaultValue")
         private String defaultValue;
 
-        @NameInMap("SupportedValues")
+        @com.aliyun.core.annotation.NameInMap("SupportedValues")
         private SupportedValues supportedValues;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private ActionOnMaintenance(Builder builder) {
@@ -259,10 +258,10 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
 
     }
     public static class MaintenanceWindow extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private MaintenanceWindow(Builder builder) {
@@ -320,7 +319,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
 
     }
     public static class MaintenanceWindows extends TeaModel {
-        @NameInMap("MaintenanceWindow")
+        @com.aliyun.core.annotation.NameInMap("MaintenanceWindow")
         private java.util.List < MaintenanceWindow> maintenanceWindow;
 
         private MaintenanceWindows(Builder builder) {
@@ -361,16 +360,16 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
 
     }
     public static class MaintenanceAttribute extends TeaModel {
-        @NameInMap("ActionOnMaintenance")
+        @com.aliyun.core.annotation.NameInMap("ActionOnMaintenance")
         private ActionOnMaintenance actionOnMaintenance;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("MaintenanceWindows")
+        @com.aliyun.core.annotation.NameInMap("MaintenanceWindows")
         private MaintenanceWindows maintenanceWindows;
 
-        @NameInMap("NotifyOnMaintenance")
+        @com.aliyun.core.annotation.NameInMap("NotifyOnMaintenance")
         private Boolean notifyOnMaintenance;
 
         private MaintenanceAttribute(Builder builder) {
@@ -462,7 +461,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
 
     }
     public static class MaintenanceAttributes extends TeaModel {
-        @NameInMap("MaintenanceAttribute")
+        @com.aliyun.core.annotation.NameInMap("MaintenanceAttribute")
         private java.util.List < MaintenanceAttribute> maintenanceAttribute;
 
         private MaintenanceAttributes(Builder builder) {

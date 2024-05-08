@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceTopologyResponseBody</p>
  */
 public class DescribeInstanceTopologyResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Topologys")
+    @com.aliyun.core.annotation.NameInMap("Topologys")
     private Topologys topologys;
 
     private DescribeInstanceTopologyResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
     } 
 
     public static class Topology extends TeaModel {
-        @NameInMap("HostId")
+        @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
         private Topology(Builder builder) {
@@ -133,7 +132,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
     }
     public static class Topologys extends TeaModel {
-        @NameInMap("Topology")
+        @com.aliyun.core.annotation.NameInMap("Topology")
         private java.util.List < Topology> topology;
 
         private Topologys(Builder builder) {

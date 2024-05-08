@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteSnapshotGroupResponseBody</p>
  */
 public class DeleteSnapshotGroupResponseBody extends TeaModel {
-    @NameInMap("OperationProgressSet")
+    @com.aliyun.core.annotation.NameInMap("OperationProgressSet")
     private OperationProgressSet operationProgressSet;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteSnapshotGroupResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
     } 
 
     public static class RelatedItem extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private RelatedItem(Builder builder) {
@@ -133,7 +132,7 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
 
     }
     public static class RelatedItemSet extends TeaModel {
-        @NameInMap("RelatedItem")
+        @com.aliyun.core.annotation.NameInMap("RelatedItem")
         private java.util.List < RelatedItem> relatedItem;
 
         private RelatedItemSet(Builder builder) {
@@ -174,16 +173,16 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
 
     }
     public static class OperationProgress extends TeaModel {
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
 
-        @NameInMap("OperationStatus")
+        @com.aliyun.core.annotation.NameInMap("OperationStatus")
         private String operationStatus;
 
-        @NameInMap("RelatedItemSet")
+        @com.aliyun.core.annotation.NameInMap("RelatedItemSet")
         private RelatedItemSet relatedItemSet;
 
         private OperationProgress(Builder builder) {
@@ -281,7 +280,7 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
 
     }
     public static class OperationProgressSet extends TeaModel {
-        @NameInMap("OperationProgress")
+        @com.aliyun.core.annotation.NameInMap("OperationProgress")
         private java.util.List < OperationProgress> operationProgress;
 
         private OperationProgressSet(Builder builder) {

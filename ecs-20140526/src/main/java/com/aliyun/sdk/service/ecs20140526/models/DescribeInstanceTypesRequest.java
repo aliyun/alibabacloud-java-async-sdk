@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,198 +11,198 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceTypesRequest</p>
  */
 public class DescribeInstanceTypesRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("CpuArchitecture")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CpuArchitecture")
     private String cpuArchitecture;
 
-    @Query
-    @NameInMap("CpuArchitectures")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CpuArchitectures")
     private java.util.List < String > cpuArchitectures;
 
-    @Query
-    @NameInMap("GPUSpec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GPUSpec")
     private String GPUSpec;
 
-    @Query
-    @NameInMap("GpuSpecs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GpuSpecs")
     private java.util.List < String > gpuSpecs;
 
-    @Query
-    @NameInMap("InstanceCategories")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceCategories")
     private java.util.List < String > instanceCategories;
 
-    @Query
-    @NameInMap("InstanceCategory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceCategory")
     private String instanceCategory;
 
-    @Query
-    @NameInMap("InstanceFamilyLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceFamilyLevel")
     private String instanceFamilyLevel;
 
-    @Query
-    @NameInMap("InstanceTypeFamilies")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceTypeFamilies")
     private java.util.List < String > instanceTypeFamilies;
 
-    @Query
-    @NameInMap("InstanceTypeFamily")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceTypeFamily")
     private String instanceTypeFamily;
 
-    @Query
-    @NameInMap("InstanceTypes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceTypes")
     private java.util.List < String > instanceTypes;
 
-    @Query
-    @NameInMap("LocalStorageCategories")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LocalStorageCategories")
     private java.util.List < String > localStorageCategories;
 
-    @Query
-    @NameInMap("LocalStorageCategory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LocalStorageCategory")
     private String localStorageCategory;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 1600, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 1600, minimum = 1)
     private Long maxResults;
 
-    @Query
-    @NameInMap("MaximumCpuCoreCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaximumCpuCoreCount")
     private Integer maximumCpuCoreCount;
 
-    @Query
-    @NameInMap("MaximumCpuSpeedFrequency")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaximumCpuSpeedFrequency")
     private Float maximumCpuSpeedFrequency;
 
-    @Query
-    @NameInMap("MaximumCpuTurboFrequency")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaximumCpuTurboFrequency")
     private Float maximumCpuTurboFrequency;
 
-    @Query
-    @NameInMap("MaximumGPUAmount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaximumGPUAmount")
     private Integer maximumGPUAmount;
 
-    @Query
-    @NameInMap("MaximumMemorySize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaximumMemorySize")
     private Float maximumMemorySize;
 
-    @Query
-    @NameInMap("MinimumBaselineCredit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumBaselineCredit")
     private Integer minimumBaselineCredit;
 
-    @Query
-    @NameInMap("MinimumCpuCoreCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumCpuCoreCount")
     private Integer minimumCpuCoreCount;
 
-    @Query
-    @NameInMap("MinimumCpuSpeedFrequency")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumCpuSpeedFrequency")
     private Float minimumCpuSpeedFrequency;
 
-    @Query
-    @NameInMap("MinimumCpuTurboFrequency")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumCpuTurboFrequency")
     private Float minimumCpuTurboFrequency;
 
-    @Query
-    @NameInMap("MinimumDiskQuantity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumDiskQuantity")
     private Integer minimumDiskQuantity;
 
-    @Query
-    @NameInMap("MinimumEniIpv6AddressQuantity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumEniIpv6AddressQuantity")
     private Integer minimumEniIpv6AddressQuantity;
 
-    @Query
-    @NameInMap("MinimumEniPrivateIpAddressQuantity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumEniPrivateIpAddressQuantity")
     private Integer minimumEniPrivateIpAddressQuantity;
 
-    @Query
-    @NameInMap("MinimumEniQuantity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumEniQuantity")
     private Integer minimumEniQuantity;
 
-    @Query
-    @NameInMap("MinimumEriQuantity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumEriQuantity")
     private Integer minimumEriQuantity;
 
-    @Query
-    @NameInMap("MinimumGPUAmount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumGPUAmount")
     private Integer minimumGPUAmount;
 
-    @Query
-    @NameInMap("MinimumInitialCredit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumInitialCredit")
     private Integer minimumInitialCredit;
 
-    @Query
-    @NameInMap("MinimumInstanceBandwidthRx")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumInstanceBandwidthRx")
     private Integer minimumInstanceBandwidthRx;
 
-    @Query
-    @NameInMap("MinimumInstanceBandwidthTx")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumInstanceBandwidthTx")
     private Integer minimumInstanceBandwidthTx;
 
-    @Query
-    @NameInMap("MinimumInstancePpsRx")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumInstancePpsRx")
     private Long minimumInstancePpsRx;
 
-    @Query
-    @NameInMap("MinimumInstancePpsTx")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumInstancePpsTx")
     private Long minimumInstancePpsTx;
 
-    @Query
-    @NameInMap("MinimumLocalStorageAmount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumLocalStorageAmount")
     private Integer minimumLocalStorageAmount;
 
-    @Query
-    @NameInMap("MinimumLocalStorageCapacity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumLocalStorageCapacity")
     private Long minimumLocalStorageCapacity;
 
-    @Query
-    @NameInMap("MinimumMemorySize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumMemorySize")
     private Float minimumMemorySize;
 
-    @Query
-    @NameInMap("MinimumPrimaryEniQueueNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumPrimaryEniQueueNumber")
     private Integer minimumPrimaryEniQueueNumber;
 
-    @Query
-    @NameInMap("MinimumQueuePairNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumQueuePairNumber")
     private Integer minimumQueuePairNumber;
 
-    @Query
-    @NameInMap("MinimumSecondaryEniQueueNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumSecondaryEniQueueNumber")
     private Integer minimumSecondaryEniQueueNumber;
 
-    @Query
-    @NameInMap("NextToken")
-    @Validation(maxLength = 50)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 50)
     private String nextToken;
 
-    @Query
-    @NameInMap("NvmeSupport")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NvmeSupport")
     private String nvmeSupport;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PhysicalProcessorModel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhysicalProcessorModel")
     private String physicalProcessorModel;
 
-    @Query
-    @NameInMap("PhysicalProcessorModels")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhysicalProcessorModels")
     private java.util.List < String > physicalProcessorModels;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private DescribeInstanceTypesRequest(Builder builder) {
@@ -726,8 +725,8 @@ public class DescribeInstanceTypesRequest extends Request {
          * The CPU architecture. Valid values:
          * <p>
          * 
-         * *   X86: x86
-         * *   ARM: ARM
+         * *   X86
+         * *   ARM
          */
         public Builder cpuArchitecture(String cpuArchitecture) {
             this.putQueryParameter("CpuArchitecture", cpuArchitecture);
@@ -736,7 +735,13 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * CpuArchitectures.
+         * The CPU architectures of instance types. Valid values:
+         * <p>
+         * 
+         * >  Valid values of N: 1 and 2.
+         * 
+         * *   X86
+         * *   ARM
          */
         public Builder cpuArchitectures(java.util.List < String > cpuArchitectures) {
             this.putQueryParameter("CpuArchitectures", cpuArchitectures);
@@ -757,7 +762,7 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * GpuSpecs.
+         * The GPU models of instance types. Valid values of N: 1 to 10.
          */
         public Builder gpuSpecs(java.util.List < String > gpuSpecs) {
             this.putQueryParameter("GpuSpecs", gpuSpecs);
@@ -766,7 +771,27 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * InstanceCategories.
+         * The categories of instance types. Valid values:
+         * <p>
+         * 
+         * >  Valid values of N: 1 to 10.
+         * 
+         * *   General-purpose: general-purpose instance type
+         * *   Compute-optimized: compute-optimized instance type
+         * *   Memory-optimized: memory-optimized instance type
+         * *   Big data: big data instance type
+         * *   Local SSDs: instance type with local SSDs
+         * *   High Clock Speed: instance type with high clock speeds
+         * *   Enhanced: enhanced instance type
+         * *   Shared: shared instance type
+         * *   Compute-optimized with GPU: GPU-accelerated compute-optimized instance type
+         * *   Visual Compute-optimized: visual compute-optimized instance type
+         * *   Heterogeneous Service: heterogeneous service instance type
+         * *   Compute-optimized with FPGA: FPGA-accelerated compute-optimized instance type
+         * *   Compute-optimized with NPU: NPU-accelerated compute-optimized instance type
+         * *   ECS Bare Metal: ECS Bare Metal Instance type
+         * *   Super Computing Cluster: SCC instance type
+         * *   High Performance Compute: high-performance computing instance type
          */
         public Builder instanceCategories(java.util.List < String > instanceCategories) {
             this.putQueryParameter("InstanceCategories", instanceCategories);
@@ -793,8 +818,7 @@ public class DescribeInstanceTypesRequest extends Request {
          * *   Compute-optimized with NPU: NPU-accelerated compute-optimized instance type
          * *   ECS Bare Metal: ECS Bare Metal Instance type
          * *   Super Computing Cluster: Super Computing Cluster (SCC) instance type
-         * - High Performance Compute.
-         * - Cloud Physical Server.
+         * *   High Performance Compute: high-performance computing instance type
          */
         public Builder instanceCategory(String instanceCategory) {
             this.putQueryParameter("InstanceCategory", instanceCategory);
@@ -817,7 +841,7 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * InstanceTypeFamilies.
+         * The instance families of instance types that you want to query. Valid values of N: 1 to 10.
          */
         public Builder instanceTypeFamilies(java.util.List < String > instanceTypeFamilies) {
             this.putQueryParameter("InstanceTypeFamilies", instanceTypeFamilies);
@@ -847,7 +871,11 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * LocalStorageCategories.
+         * The categories of local disks. Valid values of N: 1 and 2. For more information, see [Local disks](~~63138#section_n2w\_8yc\_5u1~~). Valid values:
+         * <p>
+         * 
+         * *   local_hdd_pro: local SATA HDDs, which are attached to d1ne or d1 instances
+         * *   local_ssd_pro: local NVMe SSDs, which are attached to i2, i2g, i1, ga1, or gn5 instances
          */
         public Builder localStorageCategories(java.util.List < String > localStorageCategories) {
             this.putQueryParameter("LocalStorageCategories", localStorageCategories);
@@ -859,8 +887,13 @@ public class DescribeInstanceTypesRequest extends Request {
          * The category of local disks. For more information, see [Local disks](~~63138#section_n2w\_8yc\_5u1~~). Valid values:
          * <p>
          * 
-         * *   local_hdd_pro: local Serial Advanced Technology Attachment (SATA) HDDs, which are used by d1ne or d1 instances
-         * *   local_ssd_pro: local Non-Volatile Memory Express (NVMe) SSDs, which are used by i2, i2g, i1, ga1, or gn5 instances
+         * *   local_hdd_pro: local Serial Advanced Technology Attachment (SATA) HDDs, which are attached to d1ne or d1 instances.
+         * *   local_ssd_pro: local Non-Volatile Memory Express (NVMe) SSDs, which are attached to i2, i2g, i1, ga1, or gn5 instances.
+         * 
+         * Enumerated values:
+         * 
+         * *   local_hdd_pro
+         * *   local_ssd_pro
          */
         public Builder localStorageCategory(String localStorageCategory) {
             this.putQueryParameter("LocalStorageCategory", localStorageCategory);
@@ -869,7 +902,7 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return on each page. Maximum value: 1600.
+         * The maximum number of entries per page. Maximum value: 1600.
          * <p>
          * 
          * Default value: 1600.
@@ -1202,8 +1235,8 @@ public class DescribeInstanceTypesRequest extends Request {
          * Specifies whether cloud disks can be attached by using the NVMe protocol. Valid values:
          * <p>
          * 
-         * *   required: The cloud disk can be attached by using the NVMe protocol.
-         * *   unsupported: The cloud disk cannot be attached by using the NVMe protocol.
+         * *   required: Cloud disks can be attached by using the NVMe protocol.
+         * *   unsupported: Cloud disks cannot be attached by using the NVMe protocol.
          */
         public Builder nvmeSupport(String nvmeSupport) {
             this.putQueryParameter("NvmeSupport", nvmeSupport);
@@ -1242,7 +1275,7 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * PhysicalProcessorModels.
+         * The CPU models of instance types. Valid values of N: 1 to 10.
          */
         public Builder physicalProcessorModels(java.util.List < String > physicalProcessorModels) {
             this.putQueryParameter("PhysicalProcessorModels", physicalProcessorModels);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSpotAdviceResponseBody</p>
  */
 public class DescribeSpotAdviceResponseBody extends TeaModel {
-    @NameInMap("AvailableSpotZones")
+    @com.aliyun.core.annotation.NameInMap("AvailableSpotZones")
     private AvailableSpotZones availableSpotZones;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeSpotAdviceResponseBody(Builder builder) {
@@ -95,16 +94,16 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
     } 
 
     public static class AvailableSpotResource extends TeaModel {
-        @NameInMap("AverageSpotDiscount")
+        @com.aliyun.core.annotation.NameInMap("AverageSpotDiscount")
         private Integer averageSpotDiscount;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("InterruptRateDesc")
+        @com.aliyun.core.annotation.NameInMap("InterruptRateDesc")
         private String interruptRateDesc;
 
-        @NameInMap("InterruptionRate")
+        @com.aliyun.core.annotation.NameInMap("InterruptionRate")
         private Float interruptionRate;
 
         private AvailableSpotResource(Builder builder) {
@@ -205,7 +204,7 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
 
     }
     public static class AvailableSpotResources extends TeaModel {
-        @NameInMap("AvailableSpotResource")
+        @com.aliyun.core.annotation.NameInMap("AvailableSpotResource")
         private java.util.List < AvailableSpotResource> availableSpotResource;
 
         private AvailableSpotResources(Builder builder) {
@@ -246,10 +245,10 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
 
     }
     public static class AvailableSpotZone extends TeaModel {
-        @NameInMap("AvailableSpotResources")
+        @com.aliyun.core.annotation.NameInMap("AvailableSpotResources")
         private AvailableSpotResources availableSpotResources;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private AvailableSpotZone(Builder builder) {
@@ -307,7 +306,7 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
 
     }
     public static class AvailableSpotZones extends TeaModel {
-        @NameInMap("AvailableSpotZone")
+        @com.aliyun.core.annotation.NameInMap("AvailableSpotZone")
         private java.util.List < AvailableSpotZone> availableSpotZone;
 
         private AvailableSpotZones(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEipAddressesResponseBody</p>
  */
 public class DescribeEipAddressesResponseBody extends TeaModel {
-    @NameInMap("EipAddresses")
+    @com.aliyun.core.annotation.NameInMap("EipAddresses")
     private EipAddresses eipAddresses;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeEipAddressesResponseBody(Builder builder) {
@@ -132,7 +131,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
     } 
 
     public static class LockReason extends TeaModel {
-        @NameInMap("LockReason")
+        @com.aliyun.core.annotation.NameInMap("LockReason")
         private String lockReason;
 
         private LockReason(Builder builder) {
@@ -173,7 +172,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
 
     }
     public static class OperationLocks extends TeaModel {
-        @NameInMap("LockReason")
+        @com.aliyun.core.annotation.NameInMap("LockReason")
         private java.util.List < LockReason> lockReason;
 
         private OperationLocks(Builder builder) {
@@ -214,43 +213,43 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
 
     }
     public static class EipAddress extends TeaModel {
-        @NameInMap("AllocationId")
+        @com.aliyun.core.annotation.NameInMap("AllocationId")
         private String allocationId;
 
-        @NameInMap("AllocationTime")
+        @com.aliyun.core.annotation.NameInMap("AllocationTime")
         private String allocationTime;
 
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private String bandwidth;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("EipBandwidth")
+        @com.aliyun.core.annotation.NameInMap("EipBandwidth")
         private String eipBandwidth;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("InternetChargeType")
+        @com.aliyun.core.annotation.NameInMap("InternetChargeType")
         private String internetChargeType;
 
-        @NameInMap("IpAddress")
+        @com.aliyun.core.annotation.NameInMap("IpAddress")
         private String ipAddress;
 
-        @NameInMap("OperationLocks")
+        @com.aliyun.core.annotation.NameInMap("OperationLocks")
         private OperationLocks operationLocks;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private EipAddress(Builder builder) {
@@ -495,7 +494,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
 
     }
     public static class EipAddresses extends TeaModel {
-        @NameInMap("EipAddress")
+        @com.aliyun.core.annotation.NameInMap("EipAddress")
         private java.util.List < EipAddress> eipAddress;
 
         private EipAddresses(Builder builder) {

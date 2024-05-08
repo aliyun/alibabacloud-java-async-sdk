@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,89 +11,89 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ReplaceSystemDiskRequest</p>
  */
 public class ReplaceSystemDiskRequest extends Request {
-    @Query
-    @NameInMap("SystemDisk")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SystemDisk")
     private SystemDisk systemDisk;
 
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("Architecture")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Architecture")
     private String architecture;
 
-    @Query
-    @NameInMap("Arn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Arn")
     private java.util.List < Arn> arn;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DiskId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskId")
     private String diskId;
 
-    @Query
-    @NameInMap("EncryptAlgorithm")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptAlgorithm")
     private String encryptAlgorithm;
 
-    @Query
-    @NameInMap("Encrypted")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Encrypted")
     private Boolean encrypted;
 
-    @Query
-    @NameInMap("ImageId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("KMSKeyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KMSKeyId")
     private String KMSKeyId;
 
-    @Query
-    @NameInMap("KeyPairName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyPairName")
     private String keyPairName;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Password")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Password")
     private String password;
 
-    @Query
-    @NameInMap("PasswordInherit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordInherit")
     private Boolean passwordInherit;
 
-    @Query
-    @NameInMap("Platform")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Platform")
     private String platform;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityEnhancementStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityEnhancementStrategy")
     private String securityEnhancementStrategy;
 
-    @Query
-    @NameInMap("UseAdditionalService")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseAdditionalService")
     private Boolean useAdditionalService;
 
     private ReplaceSystemDiskRequest(Builder builder) {
@@ -581,7 +580,7 @@ public class ReplaceSystemDiskRequest extends Request {
     } 
 
     public static class SystemDisk extends TeaModel {
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
         private SystemDisk(Builder builder) {
@@ -627,13 +626,13 @@ public class ReplaceSystemDiskRequest extends Request {
 
     }
     public static class Arn extends TeaModel {
-        @NameInMap("AssumeRoleFor")
+        @com.aliyun.core.annotation.NameInMap("AssumeRoleFor")
         private Long assumeRoleFor;
 
-        @NameInMap("RoleType")
+        @com.aliyun.core.annotation.NameInMap("RoleType")
         private String roleType;
 
-        @NameInMap("Rolearn")
+        @com.aliyun.core.annotation.NameInMap("Rolearn")
         private String rolearn;
 
         private Arn(Builder builder) {

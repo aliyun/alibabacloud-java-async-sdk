@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,138 +11,138 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAutoProvisioningGroupRequest</p>
  */
 public class CreateAutoProvisioningGroupRequest extends Request {
-    @Query
-    @NameInMap("LaunchConfiguration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LaunchConfiguration")
     private LaunchConfiguration launchConfiguration;
 
-    @Query
-    @NameInMap("AutoProvisioningGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoProvisioningGroupName")
     private String autoProvisioningGroupName;
 
-    @Query
-    @NameInMap("AutoProvisioningGroupType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoProvisioningGroupType")
     private String autoProvisioningGroupType;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DataDiskConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataDiskConfig")
     private java.util.List < DataDiskConfig> dataDiskConfig;
 
-    @Query
-    @NameInMap("DefaultTargetCapacityType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefaultTargetCapacityType")
     private String defaultTargetCapacityType;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("ExcessCapacityTerminationPolicy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExcessCapacityTerminationPolicy")
     private String excessCapacityTerminationPolicy;
 
-    @Query
-    @NameInMap("HibernationOptionsConfigured")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HibernationOptionsConfigured")
     private Boolean hibernationOptionsConfigured;
 
-    @Query
-    @NameInMap("LaunchTemplateConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LaunchTemplateConfig")
     private java.util.List < LaunchTemplateConfig> launchTemplateConfig;
 
-    @Query
-    @NameInMap("LaunchTemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LaunchTemplateId")
     private String launchTemplateId;
 
-    @Query
-    @NameInMap("LaunchTemplateVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LaunchTemplateVersion")
     private String launchTemplateVersion;
 
-    @Query
-    @NameInMap("MaxSpotPrice")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxSpotPrice")
     private Float maxSpotPrice;
 
-    @Query
-    @NameInMap("MinTargetCapacity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinTargetCapacity")
     private String minTargetCapacity;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PayAsYouGoAllocationStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PayAsYouGoAllocationStrategy")
     private String payAsYouGoAllocationStrategy;
 
-    @Query
-    @NameInMap("PayAsYouGoTargetCapacity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PayAsYouGoTargetCapacity")
     private String payAsYouGoTargetCapacity;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SpotAllocationStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotAllocationStrategy")
     private String spotAllocationStrategy;
 
-    @Query
-    @NameInMap("SpotInstanceInterruptionBehavior")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotInstanceInterruptionBehavior")
     private String spotInstanceInterruptionBehavior;
 
-    @Query
-    @NameInMap("SpotInstancePoolsToUseCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotInstancePoolsToUseCount")
     private Integer spotInstancePoolsToUseCount;
 
-    @Query
-    @NameInMap("SpotTargetCapacity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotTargetCapacity")
     private String spotTargetCapacity;
 
-    @Query
-    @NameInMap("SystemDiskConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SystemDiskConfig")
     private java.util.List < SystemDiskConfig> systemDiskConfig;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("TerminateInstances")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TerminateInstances")
     private Boolean terminateInstances;
 
-    @Query
-    @NameInMap("TerminateInstancesWithExpiration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TerminateInstancesWithExpiration")
     private Boolean terminateInstancesWithExpiration;
 
-    @Query
-    @NameInMap("TotalTargetCapacity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TotalTargetCapacity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String totalTargetCapacity;
 
-    @Query
-    @NameInMap("ValidFrom")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ValidFrom")
     private String validFrom;
 
-    @Query
-    @NameInMap("ValidUntil")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ValidUntil")
     private String validUntil;
 
     private CreateAutoProvisioningGroupRequest(Builder builder) {
@@ -885,13 +884,13 @@ public class CreateAutoProvisioningGroupRequest extends Request {
     } 
 
     public static class Arn extends TeaModel {
-        @NameInMap("AssumeRoleFor")
+        @com.aliyun.core.annotation.NameInMap("AssumeRoleFor")
         private Long assumeRoleFor;
 
-        @NameInMap("RoleType")
+        @com.aliyun.core.annotation.NameInMap("RoleType")
         private String roleType;
 
-        @NameInMap("Rolearn")
+        @com.aliyun.core.annotation.NameInMap("Rolearn")
         private String rolearn;
 
         private Arn(Builder builder) {
@@ -966,45 +965,57 @@ public class CreateAutoProvisioningGroupRequest extends Request {
 
     }
     public static class DataDisk extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("BurstingEnabled")
+        private Boolean burstingEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("DeleteWithInstance")
+        @com.aliyun.core.annotation.NameInMap("DeleteWithInstance")
         private Boolean deleteWithInstance;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Device")
+        @com.aliyun.core.annotation.NameInMap("Device")
         private String device;
 
-        @NameInMap("DiskName")
+        @com.aliyun.core.annotation.NameInMap("DiskName")
         private String diskName;
 
-        @NameInMap("Encrypted")
+        @com.aliyun.core.annotation.NameInMap("EncryptAlgorithm")
+        private String encryptAlgorithm;
+
+        @com.aliyun.core.annotation.NameInMap("Encrypted")
         private Boolean encrypted;
 
-        @NameInMap("KmsKeyId")
+        @com.aliyun.core.annotation.NameInMap("KmsKeyId")
         private String kmsKeyId;
 
-        @NameInMap("PerformanceLevel")
+        @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
         private String performanceLevel;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("ProvisionedIops")
+        private Long provisionedIops;
+
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
-        @NameInMap("SnapshotId")
+        @com.aliyun.core.annotation.NameInMap("SnapshotId")
         private String snapshotId;
 
         private DataDisk(Builder builder) {
+            this.burstingEnabled = builder.burstingEnabled;
             this.category = builder.category;
             this.deleteWithInstance = builder.deleteWithInstance;
             this.description = builder.description;
             this.device = builder.device;
             this.diskName = builder.diskName;
+            this.encryptAlgorithm = builder.encryptAlgorithm;
             this.encrypted = builder.encrypted;
             this.kmsKeyId = builder.kmsKeyId;
             this.performanceLevel = builder.performanceLevel;
+            this.provisionedIops = builder.provisionedIops;
             this.size = builder.size;
             this.snapshotId = builder.snapshotId;
         }
@@ -1015,6 +1026,13 @@ public class CreateAutoProvisioningGroupRequest extends Request {
 
         public static DataDisk create() {
             return builder().build();
+        }
+
+        /**
+         * @return burstingEnabled
+         */
+        public Boolean getBurstingEnabled() {
+            return this.burstingEnabled;
         }
 
         /**
@@ -1053,6 +1071,13 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
+         * @return encryptAlgorithm
+         */
+        public String getEncryptAlgorithm() {
+            return this.encryptAlgorithm;
+        }
+
+        /**
          * @return encrypted
          */
         public Boolean getEncrypted() {
@@ -1074,6 +1099,13 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
+         * @return provisionedIops
+         */
+        public Long getProvisionedIops() {
+            return this.provisionedIops;
+        }
+
+        /**
          * @return size
          */
         public Integer getSize() {
@@ -1088,16 +1120,27 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         public static final class Builder {
+            private Boolean burstingEnabled; 
             private String category; 
             private Boolean deleteWithInstance; 
             private String description; 
             private String device; 
             private String diskName; 
+            private String encryptAlgorithm; 
             private Boolean encrypted; 
             private String kmsKeyId; 
             private String performanceLevel; 
+            private Long provisionedIops; 
             private Integer size; 
             private String snapshotId; 
+
+            /**
+             * BurstingEnabled.
+             */
+            public Builder burstingEnabled(Boolean burstingEnabled) {
+                this.burstingEnabled = burstingEnabled;
+                return this;
+            }
 
             /**
              * The category of data disk N. Valid values of N: 1 to 16. Valid values:
@@ -1163,6 +1206,14 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
+             * EncryptAlgorithm.
+             */
+            public Builder encryptAlgorithm(String encryptAlgorithm) {
+                this.encryptAlgorithm = encryptAlgorithm;
+                return this;
+            }
+
+            /**
              * Specifies whether to encrypt data disk N. Valid values:
              * <p>
              * 
@@ -1201,6 +1252,14 @@ public class CreateAutoProvisioningGroupRequest extends Request {
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
+                return this;
+            }
+
+            /**
+             * ProvisionedIops.
+             */
+            public Builder provisionedIops(Long provisionedIops) {
+                this.provisionedIops = provisionedIops;
                 return this;
             }
 
@@ -1251,19 +1310,27 @@ public class CreateAutoProvisioningGroupRequest extends Request {
 
     }
     public static class SystemDisk extends TeaModel {
-        @NameInMap("EncryptAlgorithm")
+        @com.aliyun.core.annotation.NameInMap("BurstingEnabled")
+        private Boolean burstingEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("EncryptAlgorithm")
         private String encryptAlgorithm;
 
-        @NameInMap("Encrypted")
+        @com.aliyun.core.annotation.NameInMap("Encrypted")
         private String encrypted;
 
-        @NameInMap("KMSKeyId")
+        @com.aliyun.core.annotation.NameInMap("KMSKeyId")
         private String KMSKeyId;
 
+        @com.aliyun.core.annotation.NameInMap("ProvisionedIops")
+        private Long provisionedIops;
+
         private SystemDisk(Builder builder) {
+            this.burstingEnabled = builder.burstingEnabled;
             this.encryptAlgorithm = builder.encryptAlgorithm;
             this.encrypted = builder.encrypted;
             this.KMSKeyId = builder.KMSKeyId;
+            this.provisionedIops = builder.provisionedIops;
         }
 
         public static Builder builder() {
@@ -1272,6 +1339,13 @@ public class CreateAutoProvisioningGroupRequest extends Request {
 
         public static SystemDisk create() {
             return builder().build();
+        }
+
+        /**
+         * @return burstingEnabled
+         */
+        public Boolean getBurstingEnabled() {
+            return this.burstingEnabled;
         }
 
         /**
@@ -1295,10 +1369,27 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             return this.KMSKeyId;
         }
 
+        /**
+         * @return provisionedIops
+         */
+        public Long getProvisionedIops() {
+            return this.provisionedIops;
+        }
+
         public static final class Builder {
+            private Boolean burstingEnabled; 
             private String encryptAlgorithm; 
             private String encrypted; 
             private String KMSKeyId; 
+            private Long provisionedIops; 
+
+            /**
+             * BurstingEnabled.
+             */
+            public Builder burstingEnabled(Boolean burstingEnabled) {
+                this.burstingEnabled = burstingEnabled;
+                return this;
+            }
 
             /**
              * The algorithm to use to encrypt the system disk. Valid values:
@@ -1343,6 +1434,14 @@ public class CreateAutoProvisioningGroupRequest extends Request {
                 return this;
             }
 
+            /**
+             * ProvisionedIops.
+             */
+            public Builder provisionedIops(Long provisionedIops) {
+                this.provisionedIops = provisionedIops;
+                return this;
+            }
+
             public SystemDisk build() {
                 return new SystemDisk(this);
             } 
@@ -1351,10 +1450,10 @@ public class CreateAutoProvisioningGroupRequest extends Request {
 
     }
     public static class LaunchConfigurationTag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private LaunchConfigurationTag(Builder builder) {
@@ -1412,97 +1511,97 @@ public class CreateAutoProvisioningGroupRequest extends Request {
 
     }
     public static class LaunchConfiguration extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private java.util.List < Arn> arn;
 
-        @NameInMap("AutoReleaseTime")
+        @com.aliyun.core.annotation.NameInMap("AutoReleaseTime")
         private String autoReleaseTime;
 
-        @NameInMap("CreditSpecification")
+        @com.aliyun.core.annotation.NameInMap("CreditSpecification")
         private String creditSpecification;
 
-        @NameInMap("DataDisk")
+        @com.aliyun.core.annotation.NameInMap("DataDisk")
         private java.util.List < DataDisk> dataDisk;
 
-        @NameInMap("DeploymentSetId")
+        @com.aliyun.core.annotation.NameInMap("DeploymentSetId")
         private String deploymentSetId;
 
-        @NameInMap("HostName")
+        @com.aliyun.core.annotation.NameInMap("HostName")
         private String hostName;
 
-        @NameInMap("HostNames")
+        @com.aliyun.core.annotation.NameInMap("HostNames")
         private java.util.List < String > hostNames;
 
-        @NameInMap("ImageFamily")
+        @com.aliyun.core.annotation.NameInMap("ImageFamily")
         private String imageFamily;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("InstanceDescription")
+        @com.aliyun.core.annotation.NameInMap("InstanceDescription")
         private String instanceDescription;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InternetChargeType")
+        @com.aliyun.core.annotation.NameInMap("InternetChargeType")
         private String internetChargeType;
 
-        @NameInMap("InternetMaxBandwidthIn")
+        @com.aliyun.core.annotation.NameInMap("InternetMaxBandwidthIn")
         private Integer internetMaxBandwidthIn;
 
-        @NameInMap("InternetMaxBandwidthOut")
+        @com.aliyun.core.annotation.NameInMap("InternetMaxBandwidthOut")
         private Integer internetMaxBandwidthOut;
 
-        @NameInMap("IoOptimized")
+        @com.aliyun.core.annotation.NameInMap("IoOptimized")
         private String ioOptimized;
 
-        @NameInMap("KeyPairName")
+        @com.aliyun.core.annotation.NameInMap("KeyPairName")
         private String keyPairName;
 
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
 
-        @NameInMap("PasswordInherit")
+        @com.aliyun.core.annotation.NameInMap("PasswordInherit")
         private Boolean passwordInherit;
 
-        @NameInMap("RamRoleName")
+        @com.aliyun.core.annotation.NameInMap("RamRoleName")
         private String ramRoleName;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SecurityEnhancementStrategy")
+        @com.aliyun.core.annotation.NameInMap("SecurityEnhancementStrategy")
         private String securityEnhancementStrategy;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("SecurityGroupIds")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
         private java.util.List < String > securityGroupIds;
 
-        @NameInMap("SystemDisk")
+        @com.aliyun.core.annotation.NameInMap("SystemDisk")
         private SystemDisk systemDisk;
 
-        @NameInMap("SystemDiskCategory")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskCategory")
         private String systemDiskCategory;
 
-        @NameInMap("SystemDiskDescription")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskDescription")
         private String systemDiskDescription;
 
-        @NameInMap("SystemDiskName")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskName")
         private String systemDiskName;
 
-        @NameInMap("SystemDiskPerformanceLevel")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskPerformanceLevel")
         private String systemDiskPerformanceLevel;
 
-        @NameInMap("SystemDiskSize")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
         private Integer systemDiskSize;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < LaunchConfigurationTag> tag;
 
-        @NameInMap("UserData")
+        @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
         private LaunchConfiguration(Builder builder) {
@@ -2170,7 +2269,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
 
     }
     public static class DataDiskConfig extends TeaModel {
-        @NameInMap("DiskCategory")
+        @com.aliyun.core.annotation.NameInMap("DiskCategory")
         private String diskCategory;
 
         private DataDiskConfig(Builder builder) {
@@ -2217,40 +2316,40 @@ public class CreateAutoProvisioningGroupRequest extends Request {
 
     }
     public static class LaunchTemplateConfig extends TeaModel {
-        @NameInMap("Architectures")
+        @com.aliyun.core.annotation.NameInMap("Architectures")
         private java.util.List < String > architectures;
 
-        @NameInMap("BurstablePerformance")
+        @com.aliyun.core.annotation.NameInMap("BurstablePerformance")
         private String burstablePerformance;
 
-        @NameInMap("Cores")
+        @com.aliyun.core.annotation.NameInMap("Cores")
         private java.util.List < Integer > cores;
 
-        @NameInMap("ExcludedInstanceTypes")
+        @com.aliyun.core.annotation.NameInMap("ExcludedInstanceTypes")
         private java.util.List < String > excludedInstanceTypes;
 
-        @NameInMap("InstanceFamilyLevel")
+        @com.aliyun.core.annotation.NameInMap("InstanceFamilyLevel")
         private String instanceFamilyLevel;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("MaxPrice")
+        @com.aliyun.core.annotation.NameInMap("MaxPrice")
         private Double maxPrice;
 
-        @NameInMap("MaxQuantity")
+        @com.aliyun.core.annotation.NameInMap("MaxQuantity")
         private Integer maxQuantity;
 
-        @NameInMap("Memories")
+        @com.aliyun.core.annotation.NameInMap("Memories")
         private java.util.List < Float > memories;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("WeightedCapacity")
+        @com.aliyun.core.annotation.NameInMap("WeightedCapacity")
         private Double weightedCapacity;
 
         private LaunchTemplateConfig(Builder builder) {
@@ -2504,7 +2603,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
 
     }
     public static class SystemDiskConfig extends TeaModel {
-        @NameInMap("DiskCategory")
+        @com.aliyun.core.annotation.NameInMap("DiskCategory")
         private String diskCategory;
 
         private SystemDiskConfig(Builder builder) {
@@ -2551,10 +2650,10 @@ public class CreateAutoProvisioningGroupRequest extends Request {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

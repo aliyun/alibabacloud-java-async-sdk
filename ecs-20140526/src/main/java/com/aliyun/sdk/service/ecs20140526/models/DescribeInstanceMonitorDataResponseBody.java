@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceMonitorDataResponseBody</p>
  */
 public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
-    @NameInMap("MonitorData")
+    @com.aliyun.core.annotation.NameInMap("MonitorData")
     private MonitorData monitorData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceMonitorDataResponseBody(Builder builder) {
@@ -72,55 +71,55 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
     } 
 
     public static class InstanceMonitorData extends TeaModel {
-        @NameInMap("BPSRead")
+        @com.aliyun.core.annotation.NameInMap("BPSRead")
         private Integer BPSRead;
 
-        @NameInMap("BPSWrite")
+        @com.aliyun.core.annotation.NameInMap("BPSWrite")
         private Integer BPSWrite;
 
-        @NameInMap("CPU")
+        @com.aliyun.core.annotation.NameInMap("CPU")
         private Integer CPU;
 
-        @NameInMap("CPUAdvanceCreditBalance")
+        @com.aliyun.core.annotation.NameInMap("CPUAdvanceCreditBalance")
         private Float CPUAdvanceCreditBalance;
 
-        @NameInMap("CPUCreditBalance")
+        @com.aliyun.core.annotation.NameInMap("CPUCreditBalance")
         private Float CPUCreditBalance;
 
-        @NameInMap("CPUCreditUsage")
+        @com.aliyun.core.annotation.NameInMap("CPUCreditUsage")
         private Float CPUCreditUsage;
 
-        @NameInMap("CPUNotpaidSurplusCreditUsage")
+        @com.aliyun.core.annotation.NameInMap("CPUNotpaidSurplusCreditUsage")
         private Float CPUNotpaidSurplusCreditUsage;
 
-        @NameInMap("IOPSRead")
+        @com.aliyun.core.annotation.NameInMap("IOPSRead")
         private Integer IOPSRead;
 
-        @NameInMap("IOPSWrite")
+        @com.aliyun.core.annotation.NameInMap("IOPSWrite")
         private Integer IOPSWrite;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InternetBandwidth")
+        @com.aliyun.core.annotation.NameInMap("InternetBandwidth")
         private Integer internetBandwidth;
 
-        @NameInMap("InternetRX")
+        @com.aliyun.core.annotation.NameInMap("InternetRX")
         private Integer internetRX;
 
-        @NameInMap("InternetTX")
+        @com.aliyun.core.annotation.NameInMap("InternetTX")
         private Integer internetTX;
 
-        @NameInMap("IntranetBandwidth")
+        @com.aliyun.core.annotation.NameInMap("IntranetBandwidth")
         private Integer intranetBandwidth;
 
-        @NameInMap("IntranetRX")
+        @com.aliyun.core.annotation.NameInMap("IntranetRX")
         private Integer intranetRX;
 
-        @NameInMap("IntranetTX")
+        @com.aliyun.core.annotation.NameInMap("IntranetTX")
         private Integer intranetTX;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private InstanceMonitorData(Builder builder) {
@@ -433,7 +432,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
 
     }
     public static class MonitorData extends TeaModel {
-        @NameInMap("InstanceMonitorData")
+        @com.aliyun.core.annotation.NameInMap("InstanceMonitorData")
         private java.util.List < InstanceMonitorData> instanceMonitorData;
 
         private MonitorData(Builder builder) {

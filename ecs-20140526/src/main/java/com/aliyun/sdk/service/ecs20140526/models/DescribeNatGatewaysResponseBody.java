@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeNatGatewaysResponseBody</p>
  */
 public class DescribeNatGatewaysResponseBody extends TeaModel {
-    @NameInMap("NatGateways")
+    @com.aliyun.core.annotation.NameInMap("NatGateways")
     private NatGateways natGateways;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeNatGatewaysResponseBody(Builder builder) {
@@ -132,7 +131,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
     } 
 
     public static class BandwidthPackageIds extends TeaModel {
-        @NameInMap("BandwidthPackageId")
+        @com.aliyun.core.annotation.NameInMap("BandwidthPackageId")
         private java.util.List < String > bandwidthPackageId;
 
         private BandwidthPackageIds(Builder builder) {
@@ -173,7 +172,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
 
     }
     public static class ForwardTableIds extends TeaModel {
-        @NameInMap("ForwardTableId")
+        @com.aliyun.core.annotation.NameInMap("ForwardTableId")
         private java.util.List < String > forwardTableId;
 
         private ForwardTableIds(Builder builder) {
@@ -214,40 +213,40 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
 
     }
     public static class NatGateway extends TeaModel {
-        @NameInMap("BandwidthPackageIds")
+        @com.aliyun.core.annotation.NameInMap("BandwidthPackageIds")
         private BandwidthPackageIds bandwidthPackageIds;
 
-        @NameInMap("BusinessStatus")
+        @com.aliyun.core.annotation.NameInMap("BusinessStatus")
         private String businessStatus;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ForwardTableIds")
+        @com.aliyun.core.annotation.NameInMap("ForwardTableIds")
         private ForwardTableIds forwardTableIds;
 
-        @NameInMap("InstanceChargeType")
+        @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
         private String instanceChargeType;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NatGatewayId")
+        @com.aliyun.core.annotation.NameInMap("NatGatewayId")
         private String natGatewayId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Spec")
+        @com.aliyun.core.annotation.NameInMap("Spec")
         private String spec;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private NatGateway(Builder builder) {
@@ -475,7 +474,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
 
     }
     public static class NatGateways extends TeaModel {
-        @NameInMap("NatGateway")
+        @com.aliyun.core.annotation.NameInMap("NatGateway")
         private java.util.List < NatGateway> natGateway;
 
         private NatGateways(Builder builder) {

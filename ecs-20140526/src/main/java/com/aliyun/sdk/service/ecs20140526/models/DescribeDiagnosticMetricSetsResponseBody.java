@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDiagnosticMetricSetsResponseBody</p>
  */
 public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
-    @NameInMap("MetricSets")
+    @com.aliyun.core.annotation.NameInMap("MetricSets")
     private java.util.List < MetricSets> metricSets;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDiagnosticMetricSetsResponseBody(Builder builder) {
@@ -92,22 +91,22 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
     } 
 
     public static class MetricSets extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("MetricIds")
+        @com.aliyun.core.annotation.NameInMap("MetricIds")
         private java.util.List < String > metricIds;
 
-        @NameInMap("MetricSetId")
+        @com.aliyun.core.annotation.NameInMap("MetricSetId")
         private String metricSetId;
 
-        @NameInMap("MetricSetName")
+        @com.aliyun.core.annotation.NameInMap("MetricSetName")
         private String metricSetName;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private MetricSets(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeManagedInstancesResponseBody</p>
  */
 public class DescribeManagedInstancesResponseBody extends TeaModel {
-    @NameInMap("Instances")
+    @com.aliyun.core.annotation.NameInMap("Instances")
     private java.util.List < Instances> instances;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeManagedInstancesResponseBody(Builder builder) {
@@ -152,10 +151,10 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tags(Builder builder) {
@@ -221,52 +220,52 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
 
     }
     public static class Instances extends TeaModel {
-        @NameInMap("ActivationId")
+        @com.aliyun.core.annotation.NameInMap("ActivationId")
         private String activationId;
 
-        @NameInMap("AgentVersion")
+        @com.aliyun.core.annotation.NameInMap("AgentVersion")
         private String agentVersion;
 
-        @NameInMap("Connected")
+        @com.aliyun.core.annotation.NameInMap("Connected")
         private Boolean connected;
 
-        @NameInMap("Hostname")
+        @com.aliyun.core.annotation.NameInMap("Hostname")
         private String hostname;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IntranetIp")
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("InvocationCount")
+        @com.aliyun.core.annotation.NameInMap("InvocationCount")
         private Long invocationCount;
 
-        @NameInMap("LastInvokedTime")
+        @com.aliyun.core.annotation.NameInMap("LastInvokedTime")
         private String lastInvokedTime;
 
-        @NameInMap("MachineId")
+        @com.aliyun.core.annotation.NameInMap("MachineId")
         private String machineId;
 
-        @NameInMap("OsType")
+        @com.aliyun.core.annotation.NameInMap("OsType")
         private String osType;
 
-        @NameInMap("OsVersion")
+        @com.aliyun.core.annotation.NameInMap("OsVersion")
         private String osVersion;
 
-        @NameInMap("RegistrationTime")
+        @com.aliyun.core.annotation.NameInMap("RegistrationTime")
         private String registrationTime;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
         private Instances(Builder builder) {

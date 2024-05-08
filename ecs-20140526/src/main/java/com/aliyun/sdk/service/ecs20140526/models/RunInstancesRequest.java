@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,317 +11,317 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RunInstancesRequest</p>
  */
 public class RunInstancesRequest extends Request {
-    @Query
-    @NameInMap("CpuOptions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CpuOptions")
     private CpuOptions cpuOptions;
 
-    @Query
-    @NameInMap("HibernationOptions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HibernationOptions")
     private HibernationOptions hibernationOptions;
 
-    @Query
-    @NameInMap("PrivatePoolOptions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivatePoolOptions")
     private PrivatePoolOptions privatePoolOptions;
 
-    @Query
-    @NameInMap("SchedulerOptions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SchedulerOptions")
     private SchedulerOptions schedulerOptions;
 
-    @Query
-    @NameInMap("SecurityOptions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityOptions")
     private SecurityOptions securityOptions;
 
-    @Query
-    @NameInMap("SystemDisk")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SystemDisk")
     private SystemDisk systemDisk;
 
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("Affinity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Affinity")
     private String affinity;
 
-    @Query
-    @NameInMap("Amount")
-    @Validation(maximum = 1000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Amount")
+    @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 1)
     private Integer amount;
 
-    @Query
-    @NameInMap("Arn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Arn")
     private java.util.List < Arn> arn;
 
-    @Query
-    @NameInMap("AutoPay")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
     private Boolean autoPay;
 
-    @Query
-    @NameInMap("AutoReleaseTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoReleaseTime")
     private String autoReleaseTime;
 
-    @Query
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private Boolean autoRenew;
 
-    @Query
-    @NameInMap("AutoRenewPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenewPeriod")
     private Integer autoRenewPeriod;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("CreditSpecification")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreditSpecification")
     private String creditSpecification;
 
-    @Query
-    @NameInMap("DataDisk")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataDisk")
     private java.util.List < DataDisk> dataDisk;
 
-    @Query
-    @NameInMap("DedicatedHostId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DedicatedHostId")
     private String dedicatedHostId;
 
-    @Query
-    @NameInMap("DeletionProtection")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeletionProtection")
     private Boolean deletionProtection;
 
-    @Query
-    @NameInMap("DeploymentSetGroupNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeploymentSetGroupNo")
     private Integer deploymentSetGroupNo;
 
-    @Query
-    @NameInMap("DeploymentSetId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeploymentSetId")
     private String deploymentSetId;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("HostName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostName")
     private String hostName;
 
-    @Query
-    @NameInMap("HostNames")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostNames")
     private java.util.List < String > hostNames;
 
-    @Query
-    @NameInMap("HpcClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HpcClusterId")
     private String hpcClusterId;
 
-    @Query
-    @NameInMap("HttpEndpoint")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpEndpoint")
     private String httpEndpoint;
 
-    @Query
-    @NameInMap("HttpPutResponseHopLimit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpPutResponseHopLimit")
     private Integer httpPutResponseHopLimit;
 
-    @Query
-    @NameInMap("HttpTokens")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpTokens")
     private String httpTokens;
 
-    @Query
-    @NameInMap("ImageFamily")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageFamily")
     private String imageFamily;
 
-    @Query
-    @NameInMap("ImageId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
-    @Query
-    @NameInMap("ImageOptions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageOptions")
     private ImageOptions imageOptions;
 
-    @Query
-    @NameInMap("InstanceChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
     private String instanceChargeType;
 
-    @Query
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @Query
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
-    @Query
-    @NameInMap("InternetChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetChargeType")
     private String internetChargeType;
 
-    @Query
-    @NameInMap("InternetMaxBandwidthIn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetMaxBandwidthIn")
     private Integer internetMaxBandwidthIn;
 
-    @Query
-    @NameInMap("InternetMaxBandwidthOut")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetMaxBandwidthOut")
     private Integer internetMaxBandwidthOut;
 
-    @Query
-    @NameInMap("IoOptimized")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IoOptimized")
     private String ioOptimized;
 
-    @Query
-    @NameInMap("Ipv6Address")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6Address")
     private java.util.List < String > ipv6Address;
 
-    @Query
-    @NameInMap("Ipv6AddressCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6AddressCount")
     private Integer ipv6AddressCount;
 
-    @Query
-    @NameInMap("Isp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Isp")
     private String isp;
 
-    @Query
-    @NameInMap("KeyPairName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyPairName")
     private String keyPairName;
 
-    @Query
-    @NameInMap("LaunchTemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LaunchTemplateId")
     private String launchTemplateId;
 
-    @Query
-    @NameInMap("LaunchTemplateName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LaunchTemplateName")
     private String launchTemplateName;
 
-    @Query
-    @NameInMap("LaunchTemplateVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LaunchTemplateVersion")
     private Long launchTemplateVersion;
 
-    @Query
-    @NameInMap("MinAmount")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinAmount")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer minAmount;
 
-    @Query
-    @NameInMap("NetworkInterface")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkInterface")
     private java.util.List < NetworkInterface> networkInterface;
 
-    @Query
-    @NameInMap("NetworkInterfaceQueueNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfaceQueueNumber")
     private Integer networkInterfaceQueueNumber;
 
-    @Query
-    @NameInMap("NetworkOptions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkOptions")
     private NetworkOptions networkOptions;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Password")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Password")
     private String password;
 
-    @Query
-    @NameInMap("PasswordInherit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordInherit")
     private Boolean passwordInherit;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
-    @Query
-    @NameInMap("PeriodUnit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeriodUnit")
     private String periodUnit;
 
-    @Query
-    @NameInMap("PrivateIpAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
     private String privateIpAddress;
 
-    @Query
-    @NameInMap("RamRoleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RamRoleName")
     private String ramRoleName;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityEnhancementStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityEnhancementStrategy")
     private String securityEnhancementStrategy;
 
-    @Query
-    @NameInMap("SecurityGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
     private String securityGroupId;
 
-    @Query
-    @NameInMap("SecurityGroupIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
     private java.util.List < String > securityGroupIds;
 
-    @Query
-    @NameInMap("SpotDuration")
-    @Validation(maximum = 6)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotDuration")
+    @com.aliyun.core.annotation.Validation(maximum = 6)
     private Integer spotDuration;
 
-    @Query
-    @NameInMap("SpotInterruptionBehavior")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotInterruptionBehavior")
     private String spotInterruptionBehavior;
 
-    @Query
-    @NameInMap("SpotPriceLimit")
-    @Validation(maximum = 999999)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotPriceLimit")
+    @com.aliyun.core.annotation.Validation(maximum = 999999)
     private Float spotPriceLimit;
 
-    @Query
-    @NameInMap("SpotStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotStrategy")
     private String spotStrategy;
 
-    @Query
-    @NameInMap("StorageSetId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageSetId")
     private String storageSetId;
 
-    @Query
-    @NameInMap("StorageSetPartitionNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageSetPartitionNumber")
     private Integer storageSetPartitionNumber;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("Tenancy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tenancy")
     private String tenancy;
 
-    @Query
-    @NameInMap("UniqueSuffix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UniqueSuffix")
     private Boolean uniqueSuffix;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
-    @Query
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private RunInstancesRequest(Builder builder) {
@@ -1312,7 +1311,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * Details of the data disks.
+         * The data disks.
          */
         public Builder dataDisk(java.util.List < DataDisk> dataDisk) {
             this.putQueryParameter("DataDisk", dataDisk);
@@ -1533,7 +1532,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The name of the instance. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-). The default value of this parameter is the `InstanceId` value.
+         * The instance name. The name must be 2 to 128 characters in length and support Unicode characters under the Decimal Number category and the categories whose names contain Letter. The name can contain colons (:), underscores (\_), periods (.), and hyphens (-). The default value of this parameter is the `InstanceId` value.
          * <p>
          * 
          * When you batch create instances, you can batch configure sequential names for the instances. For more information, see [Batch configure sequential names or hostnames for multiple instances](~~196048~~).
@@ -2008,7 +2007,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The tags to add to the instance, disks, and primary ENI. You can specify up to 20 tags.
+         * The tags to add to the instance, disks, and primary ENI.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -2099,16 +2098,16 @@ public class RunInstancesRequest extends Request {
     } 
 
     public static class CpuOptions extends TeaModel {
-        @NameInMap("Core")
+        @com.aliyun.core.annotation.NameInMap("Core")
         private Integer core;
 
-        @NameInMap("Numa")
+        @com.aliyun.core.annotation.NameInMap("Numa")
         private String numa;
 
-        @NameInMap("ThreadsPerCore")
+        @com.aliyun.core.annotation.NameInMap("ThreadsPerCore")
         private Integer threadsPerCore;
 
-        @NameInMap("TopologyType")
+        @com.aliyun.core.annotation.NameInMap("TopologyType")
         private String topologyType;
 
         private CpuOptions(Builder builder) {
@@ -2215,7 +2214,7 @@ public class RunInstancesRequest extends Request {
 
     }
     public static class HibernationOptions extends TeaModel {
-        @NameInMap("Configured")
+        @com.aliyun.core.annotation.NameInMap("Configured")
         private Boolean configured;
 
         private HibernationOptions(Builder builder) {
@@ -2256,10 +2255,10 @@ public class RunInstancesRequest extends Request {
 
     }
     public static class PrivatePoolOptions extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("MatchCriteria")
+        @com.aliyun.core.annotation.NameInMap("MatchCriteria")
         private String matchCriteria;
 
         private PrivatePoolOptions(Builder builder) {
@@ -2330,7 +2329,7 @@ public class RunInstancesRequest extends Request {
 
     }
     public static class SchedulerOptions extends TeaModel {
-        @NameInMap("DedicatedHostClusterId")
+        @com.aliyun.core.annotation.NameInMap("DedicatedHostClusterId")
         private String dedicatedHostClusterId;
 
         private SchedulerOptions(Builder builder) {
@@ -2381,10 +2380,10 @@ public class RunInstancesRequest extends Request {
 
     }
     public static class SecurityOptions extends TeaModel {
-        @NameInMap("ConfidentialComputingMode")
+        @com.aliyun.core.annotation.NameInMap("ConfidentialComputingMode")
         private String confidentialComputingMode;
 
-        @NameInMap("TrustedSystemMode")
+        @com.aliyun.core.annotation.NameInMap("TrustedSystemMode")
         private String trustedSystemMode;
 
         private SecurityOptions(Builder builder) {
@@ -2467,40 +2466,40 @@ public class RunInstancesRequest extends Request {
 
     }
     public static class SystemDisk extends TeaModel {
-        @NameInMap("AutoSnapshotPolicyId")
+        @com.aliyun.core.annotation.NameInMap("AutoSnapshotPolicyId")
         private String autoSnapshotPolicyId;
 
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DiskName")
+        @com.aliyun.core.annotation.NameInMap("DiskName")
         private String diskName;
 
-        @NameInMap("PerformanceLevel")
+        @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
         private String performanceLevel;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private String size;
 
-        @NameInMap("BurstingEnabled")
+        @com.aliyun.core.annotation.NameInMap("BurstingEnabled")
         private Boolean burstingEnabled;
 
-        @NameInMap("EncryptAlgorithm")
+        @com.aliyun.core.annotation.NameInMap("EncryptAlgorithm")
         private String encryptAlgorithm;
 
-        @NameInMap("Encrypted")
+        @com.aliyun.core.annotation.NameInMap("Encrypted")
         private String encrypted;
 
-        @NameInMap("KMSKeyId")
+        @com.aliyun.core.annotation.NameInMap("KMSKeyId")
         private String KMSKeyId;
 
-        @NameInMap("ProvisionedIops")
+        @com.aliyun.core.annotation.NameInMap("ProvisionedIops")
         private Long provisionedIops;
 
-        @NameInMap("StorageClusterId")
+        @com.aliyun.core.annotation.NameInMap("StorageClusterId")
         private String storageClusterId;
 
         private SystemDisk(Builder builder) {
@@ -2661,7 +2660,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The name of the system disk. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).
+             * The name of the system disk. The name must be 2 to 128 characters in length and support Unicode characters under the Decimal Number category and the categories whose names contain Letter. The name can contain colons (:), underscores (\_), periods (.), and hyphens (-).
              */
             public Builder diskName(String diskName) {
                 this.diskName = diskName;
@@ -2775,13 +2774,13 @@ public class RunInstancesRequest extends Request {
 
     }
     public static class Arn extends TeaModel {
-        @NameInMap("AssumeRoleFor")
+        @com.aliyun.core.annotation.NameInMap("AssumeRoleFor")
         private Long assumeRoleFor;
 
-        @NameInMap("RoleType")
+        @com.aliyun.core.annotation.NameInMap("RoleType")
         private String roleType;
 
-        @NameInMap("Rolearn")
+        @com.aliyun.core.annotation.NameInMap("Rolearn")
         private String rolearn;
 
         private Arn(Builder builder) {
@@ -2856,49 +2855,49 @@ public class RunInstancesRequest extends Request {
 
     }
     public static class DataDisk extends TeaModel {
-        @NameInMap("AutoSnapshotPolicyId")
+        @com.aliyun.core.annotation.NameInMap("AutoSnapshotPolicyId")
         private String autoSnapshotPolicyId;
 
-        @NameInMap("BurstingEnabled")
+        @com.aliyun.core.annotation.NameInMap("BurstingEnabled")
         private Boolean burstingEnabled;
 
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("DeleteWithInstance")
+        @com.aliyun.core.annotation.NameInMap("DeleteWithInstance")
         private Boolean deleteWithInstance;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Device")
+        @com.aliyun.core.annotation.NameInMap("Device")
         private String device;
 
-        @NameInMap("DiskName")
+        @com.aliyun.core.annotation.NameInMap("DiskName")
         private String diskName;
 
-        @NameInMap("EncryptAlgorithm")
+        @com.aliyun.core.annotation.NameInMap("EncryptAlgorithm")
         private String encryptAlgorithm;
 
-        @NameInMap("Encrypted")
+        @com.aliyun.core.annotation.NameInMap("Encrypted")
         private String encrypted;
 
-        @NameInMap("KMSKeyId")
+        @com.aliyun.core.annotation.NameInMap("KMSKeyId")
         private String KMSKeyId;
 
-        @NameInMap("PerformanceLevel")
+        @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
         private String performanceLevel;
 
-        @NameInMap("ProvisionedIops")
+        @com.aliyun.core.annotation.NameInMap("ProvisionedIops")
         private Long provisionedIops;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
-        @NameInMap("SnapshotId")
+        @com.aliyun.core.annotation.NameInMap("SnapshotId")
         private String snapshotId;
 
-        @NameInMap("StorageClusterId")
+        @com.aliyun.core.annotation.NameInMap("StorageClusterId")
         private String storageClusterId;
 
         private DataDisk(Builder builder) {
@@ -3064,7 +3063,7 @@ public class RunInstancesRequest extends Request {
              * *   true
              * *   false
              * 
-             * >  This parameter is available only if you set the DataDisk.N.Category parameter to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~).
+             * >  This parameter is available only if you set DataDisk.N.Category to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~).
              */
             public Builder burstingEnabled(Boolean burstingEnabled) {
                 this.burstingEnabled = burstingEnabled;
@@ -3075,7 +3074,7 @@ public class RunInstancesRequest extends Request {
              * The category of data disk N. Valid values:
              * <p>
              * 
-             * *   cloud_efficiency: ultra disk
+             * *   cloud_efficiency: utra disk
              * *   cloud_ssd: standard SSD
              * *   cloud_essd: ESSD
              * *   cloud: basic disk
@@ -3120,7 +3119,7 @@ public class RunInstancesRequest extends Request {
              * *   1st to 25th data disks: /dev/xvd`[b-z]`.
              * *   From the 26th data disk on: /dev/xvd`[aa-zz]`. For example, the 26th data disk is named /dev/xvdaa, the 27th data disk is named /dev/xvdab, and so on.
              * 
-             * >  This parameter is applicable to scenarios in which a full image is used to create instances. A full image is an image that contains an operating system, application software, and business data. For these scenarios, you can set the parameter to the mount point of data disk N contained in the full image and modify the `DataDisk.N.Size` and `DataDisk.N.Category` parameters to change the category and size of data disk N created based on the image.
+             * >  This parameter is applicable to scenarios in which a full image is used to create instances. A full image is an image that contains an operating system, application software, and business data. For these scenarios, you can set the parameter to the mount point of data disk N contained in the full image and modify `DataDisk.N.Size` and `DataDisk.N.Category` to change the category and size of data disk N created based on the image.
              */
             public Builder device(String device) {
                 this.device = device;
@@ -3128,7 +3127,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The name of data disk N. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).
+             * The name of data disk N. The name must be 2 to 128 characters in length and support Unicode characters under the Decimal Number category and the categories whose names contain Letter. The name can contain colons (:), underscores (\_), periods (.), and hyphens (-).
              */
             public Builder diskName(String diskName) {
                 this.diskName = diskName;
@@ -3169,10 +3168,10 @@ public class RunInstancesRequest extends Request {
              * The performance level of the ESSD to use as data disk N. The value of N must be the same as that in `DataDisk.N.Category` when DataDisk.N.Category is set to cloud_essd. Valid values:
              * <p>
              * 
-             * *   PL0: A single ESSD can deliver up to 10000 random read/write IOPS.
-             * *   PL1 (default): A single ESSD can deliver up to 50000 random read/write IOPS.
-             * *   PL2: A single ESSD can deliver up to 100000 random read/write IOPS.
-             * *   PL3: A single ESSD can deliver up to 1000000 random read/write IOPS.
+             * *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
+             * *   PL1 (default): A single ESSD can deliver up to 50,000 random read/write IOPS.
+             * *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
+             * *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
              * 
              * For information about ESSD performance levels, see [ESSDs](~~122389~~).
              */
@@ -3187,7 +3186,7 @@ public class RunInstancesRequest extends Request {
              * 
              * Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.
              * 
-             * >  This parameter is available only if you set the DataDisk.N.Category parameter to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~).
+             * >  This parameter is available only if you set DataDisk.N.Category to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~).
              */
             public Builder provisionedIops(Long provisionedIops) {
                 this.provisionedIops = provisionedIops;
@@ -3204,18 +3203,18 @@ public class RunInstancesRequest extends Request {
              * 
              * *   Valid values when DataDisk.N.Category is set to cloud_essd: vary based on the `DataDisk.N.PerformanceLevel` value.
              * 
-             *     *   Valid values when DataDisk.N.PerformanceLevel is set to PL0: 40 to 32768.
+             *     *   Valid values when DataDisk.N.PerformanceLevel is set to PL0: 1 to 32768.
              *     *   Valid values when DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.
              *     *   Valid values when DataDisk.N.PerformanceLevel is set to PL2: 461 to 32768.
              *     *   Valid values when DataDisk.N.PerformanceLevel is set to PL3: 1261 to 32768.
              * 
              * *   Valid values when DataDisk.N.Category is set to cloud: 5 to 2000.
              * 
-             * *   Valid values when DataDisk.N.Category is set to cloud_auto: 40 to 32768.
+             * *   Valid values when DataDisk.N.Category is set to cloud_auto: 1 to 32768.
              * 
              * *   Valid values when DataDisk.N.Category is set to cloud_essd_entry: 10 to 32768.
              * 
-             * The value of this parameter must be greater than or equal to the size of the snapshot specified by the `DataDisk.N.SnapshotId` parameter.
+             * >  The value of this parameter must be greater than or equal to the size of the snapshot specified by `SnapshotId`.
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -3226,7 +3225,7 @@ public class RunInstancesRequest extends Request {
              * The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16.
              * <p>
              * 
-             * When the `DataDisk.N.SnapshotId` parameter is specified, the `DataDisk.N.Size` parameter is ignored. The data disk is created with the size of the specified snapshot. Use snapshots created on or after July 15, 2013. Otherwise, an error is returned and your request is rejected.
+             * When `DataDisk.N.SnapshotId` is specified, `DataDisk.N.Size` is ignored. The data disk is created with the size of the specified snapshot. Use snapshots created on or after July 15, 2013. Otherwise, an error is returned and your request is rejected.
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -3249,7 +3248,7 @@ public class RunInstancesRequest extends Request {
 
     }
     public static class ImageOptions extends TeaModel {
-        @NameInMap("LoginAsNonRoot")
+        @com.aliyun.core.annotation.NameInMap("LoginAsNonRoot")
         private Boolean loginAsNonRoot;
 
         private ImageOptions(Builder builder) {
@@ -3294,55 +3293,55 @@ public class RunInstancesRequest extends Request {
 
     }
     public static class NetworkInterface extends TeaModel {
-        @NameInMap("DeleteOnRelease")
+        @com.aliyun.core.annotation.NameInMap("DeleteOnRelease")
         private Boolean deleteOnRelease;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("Ipv6Address")
+        @com.aliyun.core.annotation.NameInMap("Ipv6Address")
         private java.util.List < String > ipv6Address;
 
-        @NameInMap("Ipv6AddressCount")
+        @com.aliyun.core.annotation.NameInMap("Ipv6AddressCount")
         private Long ipv6AddressCount;
 
-        @NameInMap("NetworkCardIndex")
+        @com.aliyun.core.annotation.NameInMap("NetworkCardIndex")
         private Integer networkCardIndex;
 
-        @NameInMap("NetworkInterfaceId")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
         private String networkInterfaceId;
 
-        @NameInMap("NetworkInterfaceName")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceName")
         private String networkInterfaceName;
 
-        @NameInMap("NetworkInterfaceTrafficMode")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceTrafficMode")
         private String networkInterfaceTrafficMode;
 
-        @NameInMap("PrimaryIpAddress")
+        @com.aliyun.core.annotation.NameInMap("PrimaryIpAddress")
         private String primaryIpAddress;
 
-        @NameInMap("QueueNumber")
+        @com.aliyun.core.annotation.NameInMap("QueueNumber")
         private Integer queueNumber;
 
-        @NameInMap("QueuePairNumber")
+        @com.aliyun.core.annotation.NameInMap("QueuePairNumber")
         private Long queuePairNumber;
 
-        @NameInMap("RxQueueSize")
+        @com.aliyun.core.annotation.NameInMap("RxQueueSize")
         private Integer rxQueueSize;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("SecurityGroupIds")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
         private java.util.List < String > securityGroupIds;
 
-        @NameInMap("TxQueueSize")
+        @com.aliyun.core.annotation.NameInMap("TxQueueSize")
         private Integer txQueueSize;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
         private NetworkInterface(Builder builder) {
@@ -3596,7 +3595,7 @@ public class RunInstancesRequest extends Request {
              * 
              * *   You can specify network card indexes only for instances of specific instance types.
              * *   When NetworkInterface.N.InstanceType is set to Primary, you can set NetworkInterface.N.NetworkCardIndex only to 0 for instance types that support network cards.
-             * *   When NetworkInterface.N.InstanceType is set to Secondary or left empty, you can set NetworkInterface.N.NetworkCardIndex based on instance types if the instance types support network cards. For more information, see [Overview of instance families](~~25378~~).
+             * *   When NetworkInterface.N.InstanceType is set to Secondary or left empty, you can set NetworkInterface.N.NetworkCardIndex based on instance types if the instance types support network cards. For more information, see the [Overview of instance families](~~25378~~) topic.
              */
             public Builder networkCardIndex(Integer networkCardIndex) {
                 this.networkCardIndex = networkCardIndex;
@@ -3615,7 +3614,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The name of ENI N.
+             * The name of ENI N. The name must be 2 to 128 characters in length and support Unicode characters under the Decimal Number category and the categories whose names contain Letter. The name can contain colons (:), underscores (\_), periods (.), and hyphens (-).
              * <p>
              * 
              * Take note of the following items:
@@ -3632,8 +3631,8 @@ public class RunInstancesRequest extends Request {
              * The communication mode of ENI N. Valid values:
              * <p>
              * 
-             * *   Standard: uses the TCP communication mode.
-             * *   HighPerformance: uses the remote direct memory access (RDMA) communication mode with Elastic RDMA Interface (ERI) enabled.
+             * *   Standard: The TCP communication mode is used.
+             * *   HighPerformance: The Elastic RDMA Interface (ERI) is enabled and the remote direct memory access (RDMA) communication mode is used.
              * 
              * Default value: Standard.
              * 
@@ -3661,7 +3660,7 @@ public class RunInstancesRequest extends Request {
              * 
              * > 
              * 
-             * *   You can attach only a single secondary ENI when you create an instance. After the instance is created, you can call the [CreateNetworkInterface](~~58504~~) and [AttachNetworkInterface](~~58515~~) operations to attach more secondary ENIs.
+             * *   You can attach only a single secondary ENI when you create an ECS instance. After the instance is created, you can call the [CreateNetworkInterface](~~58504~~) and [AttachNetworkInterface](~~58515~~) operations to attach more secondary ENIs.
              * 
              * *   The first IP address and last three IP addresses of each vSwitch CIDR block are reserved. You cannot specify the IP addresses. For example, if a vSwitch CIDR block is 192.168.1.0/24, the IP addresses 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255 are reserved.
              */
@@ -3777,7 +3776,7 @@ public class RunInstancesRequest extends Request {
 
     }
     public static class NetworkOptions extends TeaModel {
-        @NameInMap("EnableJumboFrame")
+        @com.aliyun.core.annotation.NameInMap("EnableJumboFrame")
         private Boolean enableJumboFrame;
 
         private NetworkOptions(Builder builder) {
@@ -3826,10 +3825,10 @@ public class RunInstancesRequest extends Request {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -3864,10 +3863,7 @@ public class RunInstancesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag of the instance, disks, and primary ENI.
-             * <p>
-             * 
-             * The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * The key of tag N to add to the instance, disks, and primary ENI. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -3875,10 +3871,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The value of tag of the instance, disks, and primary ENI.
-             * <p>
-             * 
-             * The tag value can be an empty string. It can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * The value of tag N to add to the instance, disks, and primary ENI. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.
              */
             public Builder value(String value) {
                 this.value = value;

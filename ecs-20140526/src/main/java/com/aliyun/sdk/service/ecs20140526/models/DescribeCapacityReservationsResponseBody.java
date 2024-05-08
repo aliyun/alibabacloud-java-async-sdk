@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCapacityReservationsResponseBody</p>
  */
 public class DescribeCapacityReservationsResponseBody extends TeaModel {
-    @NameInMap("CapacityReservationSet")
+    @com.aliyun.core.annotation.NameInMap("CapacityReservationSet")
     private CapacityReservationSet capacityReservationSet;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeCapacityReservationsResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
     } 
 
     public static class CapacityReservationUsage extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
-        @NameInMap("UsedAmount")
+        @com.aliyun.core.annotation.NameInMap("UsedAmount")
         private Integer usedAmount;
 
         private CapacityReservationUsage(Builder builder) {
@@ -213,7 +212,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
 
     }
     public static class CapacityReservationUsages extends TeaModel {
-        @NameInMap("CapacityReservationUsage")
+        @com.aliyun.core.annotation.NameInMap("CapacityReservationUsage")
         private java.util.List < CapacityReservationUsage> capacityReservationUsage;
 
         private CapacityReservationUsages(Builder builder) {
@@ -254,22 +253,22 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
 
     }
     public static class AllocatedResource extends TeaModel {
-        @NameInMap("AvailableAmount")
+        @com.aliyun.core.annotation.NameInMap("AvailableAmount")
         private Integer availableAmount;
 
-        @NameInMap("CapacityReservationUsages")
+        @com.aliyun.core.annotation.NameInMap("CapacityReservationUsages")
         private CapacityReservationUsages capacityReservationUsages;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("TotalAmount")
+        @com.aliyun.core.annotation.NameInMap("TotalAmount")
         private Integer totalAmount;
 
-        @NameInMap("UsedAmount")
+        @com.aliyun.core.annotation.NameInMap("UsedAmount")
         private Integer usedAmount;
 
-        @NameInMap("zoneId")
+        @com.aliyun.core.annotation.NameInMap("zoneId")
         private String zoneId;
 
         private AllocatedResource(Builder builder) {
@@ -395,7 +394,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
 
     }
     public static class AllocatedResources extends TeaModel {
-        @NameInMap("AllocatedResource")
+        @com.aliyun.core.annotation.NameInMap("AllocatedResource")
         private java.util.List < AllocatedResource> allocatedResource;
 
         private AllocatedResources(Builder builder) {
@@ -436,10 +435,10 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -497,7 +496,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -538,61 +537,61 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
 
     }
     public static class CapacityReservationItem extends TeaModel {
-        @NameInMap("AllocatedResources")
+        @com.aliyun.core.annotation.NameInMap("AllocatedResources")
         private AllocatedResources allocatedResources;
 
-        @NameInMap("CapacityReservationOwnerId")
+        @com.aliyun.core.annotation.NameInMap("CapacityReservationOwnerId")
         private String capacityReservationOwnerId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("EndTimeType")
+        @com.aliyun.core.annotation.NameInMap("EndTimeType")
         private String endTimeType;
 
-        @NameInMap("InstanceChargeType")
+        @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
         private String instanceChargeType;
 
-        @NameInMap("Platform")
+        @com.aliyun.core.annotation.NameInMap("Platform")
         private String platform;
 
-        @NameInMap("PrivatePoolOptionsId")
+        @com.aliyun.core.annotation.NameInMap("PrivatePoolOptionsId")
         private String privatePoolOptionsId;
 
-        @NameInMap("PrivatePoolOptionsMatchCriteria")
+        @com.aliyun.core.annotation.NameInMap("PrivatePoolOptionsMatchCriteria")
         private String privatePoolOptionsMatchCriteria;
 
-        @NameInMap("PrivatePoolOptionsName")
+        @com.aliyun.core.annotation.NameInMap("PrivatePoolOptionsName")
         private String privatePoolOptionsName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ReservedInstanceId")
+        @com.aliyun.core.annotation.NameInMap("ReservedInstanceId")
         private String reservedInstanceId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SavingPlanId")
+        @com.aliyun.core.annotation.NameInMap("SavingPlanId")
         private String savingPlanId;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("StartTimeType")
+        @com.aliyun.core.annotation.NameInMap("StartTimeType")
         private String startTimeType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("TimeSlot")
+        @com.aliyun.core.annotation.NameInMap("TimeSlot")
         private String timeSlot;
 
         private CapacityReservationItem(Builder builder) {
@@ -966,7 +965,7 @@ public class DescribeCapacityReservationsResponseBody extends TeaModel {
 
     }
     public static class CapacityReservationSet extends TeaModel {
-        @NameInMap("CapacityReservationItem")
+        @com.aliyun.core.annotation.NameInMap("CapacityReservationItem")
         private java.util.List < CapacityReservationItem> capacityReservationItem;
 
         private CapacityReservationSet(Builder builder) {

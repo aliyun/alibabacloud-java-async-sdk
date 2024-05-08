@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,120 +11,120 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RevokeSecurityGroupRequest</p>
  */
 public class RevokeSecurityGroupRequest extends Request {
-    @Host
-    @NameInMap("SourceRegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     @Deprecated
     private String description;
 
-    @Query
-    @NameInMap("DestCidrIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestCidrIp")
     @Deprecated
     private String destCidrIp;
 
-    @Query
-    @NameInMap("IpProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpProtocol")
     @Deprecated
     private String ipProtocol;
 
-    @Query
-    @NameInMap("Ipv6DestCidrIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6DestCidrIp")
     @Deprecated
     private String ipv6DestCidrIp;
 
-    @Query
-    @NameInMap("Ipv6SourceCidrIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6SourceCidrIp")
     @Deprecated
     private String ipv6SourceCidrIp;
 
-    @Query
-    @NameInMap("NicType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NicType")
     @Deprecated
     private String nicType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Permissions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Permissions")
     private java.util.List < Permissions> permissions;
 
-    @Query
-    @NameInMap("Policy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Policy")
     @Deprecated
     private String policy;
 
-    @Query
-    @NameInMap("PortRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PortRange")
     @Deprecated
     private String portRange;
 
-    @Query
-    @NameInMap("Priority")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Priority")
     @Deprecated
     private String priority;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String securityGroupId;
 
-    @Query
-    @NameInMap("SecurityGroupRuleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupRuleId")
     private java.util.List < String > securityGroupRuleId;
 
-    @Query
-    @NameInMap("SourceCidrIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceCidrIp")
     @Deprecated
     private String sourceCidrIp;
 
-    @Query
-    @NameInMap("SourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceGroupId")
     @Deprecated
     private String sourceGroupId;
 
-    @Query
-    @NameInMap("SourceGroupOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceGroupOwnerAccount")
     @Deprecated
     private String sourceGroupOwnerAccount;
 
-    @Query
-    @NameInMap("SourceGroupOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceGroupOwnerId")
     @Deprecated
     private Long sourceGroupOwnerId;
 
-    @Query
-    @NameInMap("SourcePortRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourcePortRange")
     @Deprecated
     private String sourcePortRange;
 
-    @Query
-    @NameInMap("SourcePrefixListId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourcePrefixListId")
     @Deprecated
     private String sourcePrefixListId;
 
@@ -639,49 +638,49 @@ public class RevokeSecurityGroupRequest extends Request {
     } 
 
     public static class Permissions extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DestCidrIp")
+        @com.aliyun.core.annotation.NameInMap("DestCidrIp")
         private String destCidrIp;
 
-        @NameInMap("IpProtocol")
+        @com.aliyun.core.annotation.NameInMap("IpProtocol")
         private String ipProtocol;
 
-        @NameInMap("Ipv6DestCidrIp")
+        @com.aliyun.core.annotation.NameInMap("Ipv6DestCidrIp")
         private String ipv6DestCidrIp;
 
-        @NameInMap("Ipv6SourceCidrIp")
+        @com.aliyun.core.annotation.NameInMap("Ipv6SourceCidrIp")
         private String ipv6SourceCidrIp;
 
-        @NameInMap("NicType")
+        @com.aliyun.core.annotation.NameInMap("NicType")
         private String nicType;
 
-        @NameInMap("Policy")
+        @com.aliyun.core.annotation.NameInMap("Policy")
         private String policy;
 
-        @NameInMap("PortRange")
+        @com.aliyun.core.annotation.NameInMap("PortRange")
         private String portRange;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private String priority;
 
-        @NameInMap("SourceCidrIp")
+        @com.aliyun.core.annotation.NameInMap("SourceCidrIp")
         private String sourceCidrIp;
 
-        @NameInMap("SourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("SourceGroupId")
         private String sourceGroupId;
 
-        @NameInMap("SourceGroupOwnerAccount")
+        @com.aliyun.core.annotation.NameInMap("SourceGroupOwnerAccount")
         private String sourceGroupOwnerAccount;
 
-        @NameInMap("SourceGroupOwnerId")
+        @com.aliyun.core.annotation.NameInMap("SourceGroupOwnerId")
         private Long sourceGroupOwnerId;
 
-        @NameInMap("SourcePortRange")
+        @com.aliyun.core.annotation.NameInMap("SourcePortRange")
         private String sourcePortRange;
 
-        @NameInMap("SourcePrefixListId")
+        @com.aliyun.core.annotation.NameInMap("SourcePrefixListId")
         private String sourcePrefixListId;
 
         private Permissions(Builder builder) {

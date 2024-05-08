@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePrefixListAttributesResponseBody</p>
  */
 public class DescribePrefixListAttributesResponseBody extends TeaModel {
-    @NameInMap("AddressFamily")
+    @com.aliyun.core.annotation.NameInMap("AddressFamily")
     private String addressFamily;
 
-    @NameInMap("CreationTime")
+    @com.aliyun.core.annotation.NameInMap("CreationTime")
     private String creationTime;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("Entries")
+    @com.aliyun.core.annotation.NameInMap("Entries")
     private Entries entries;
 
-    @NameInMap("MaxEntries")
+    @com.aliyun.core.annotation.NameInMap("MaxEntries")
     private Integer maxEntries;
 
-    @NameInMap("PrefixListId")
+    @com.aliyun.core.annotation.NameInMap("PrefixListId")
     private String prefixListId;
 
-    @NameInMap("PrefixListName")
+    @com.aliyun.core.annotation.NameInMap("PrefixListName")
     private String prefixListName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePrefixListAttributesResponseBody(Builder builder) {
@@ -196,10 +195,10 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
     } 
 
     public static class Entry extends TeaModel {
-        @NameInMap("Cidr")
+        @com.aliyun.core.annotation.NameInMap("Cidr")
         private String cidr;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
         private Entry(Builder builder) {
@@ -257,7 +256,7 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
 
     }
     public static class Entries extends TeaModel {
-        @NameInMap("Entry")
+        @com.aliyun.core.annotation.NameInMap("Entry")
         private java.util.List < Entry> entry;
 
         private Entries(Builder builder) {

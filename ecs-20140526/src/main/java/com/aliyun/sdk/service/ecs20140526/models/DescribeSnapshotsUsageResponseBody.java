@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSnapshotsUsageResponseBody</p>
  */
 public class DescribeSnapshotsUsageResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SnapshotCount")
+    @com.aliyun.core.annotation.NameInMap("SnapshotCount")
     private Integer snapshotCount;
 
-    @NameInMap("SnapshotSize")
+    @com.aliyun.core.annotation.NameInMap("SnapshotSize")
     private Long snapshotSize;
 
     private DescribeSnapshotsUsageResponseBody(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSnapshotPackageResponseBody</p>
  */
 public class DescribeSnapshotPackageResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SnapshotPackages")
+    @com.aliyun.core.annotation.NameInMap("SnapshotPackages")
     private SnapshotPackages snapshotPackages;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeSnapshotPackageResponseBody(Builder builder) {
@@ -132,16 +131,16 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
     } 
 
     public static class SnapshotPackage extends TeaModel {
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("InitCapacity")
+        @com.aliyun.core.annotation.NameInMap("InitCapacity")
         private Long initCapacity;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private SnapshotPackage(Builder builder) {
@@ -233,7 +232,7 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
 
     }
     public static class SnapshotPackages extends TeaModel {
-        @NameInMap("SnapshotPackage")
+        @com.aliyun.core.annotation.NameInMap("SnapshotPackage")
         private java.util.List < SnapshotPackage> snapshotPackage;
 
         private SnapshotPackages(Builder builder) {

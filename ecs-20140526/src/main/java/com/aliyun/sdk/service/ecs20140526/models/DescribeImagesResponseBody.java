@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImagesResponseBody</p>
  */
 public class DescribeImagesResponseBody extends TeaModel {
-    @NameInMap("Images")
+    @com.aliyun.core.annotation.NameInMap("Images")
     private Images images;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeImagesResponseBody(Builder builder) {
@@ -152,16 +151,16 @@ public class DescribeImagesResponseBody extends TeaModel {
     } 
 
     public static class Item extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RiskCode")
+        @com.aliyun.core.annotation.NameInMap("RiskCode")
         private String riskCode;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Item(Builder builder) {
@@ -259,7 +258,7 @@ public class DescribeImagesResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("Item")
+        @com.aliyun.core.annotation.NameInMap("Item")
         private java.util.List < Item> item;
 
         private Items(Builder builder) {
@@ -300,10 +299,10 @@ public class DescribeImagesResponseBody extends TeaModel {
 
     }
     public static class DetectionOptions extends TeaModel {
-        @NameInMap("Items")
+        @com.aliyun.core.annotation.NameInMap("Items")
         private Items items;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private DetectionOptions(Builder builder) {
@@ -365,31 +364,31 @@ public class DescribeImagesResponseBody extends TeaModel {
 
     }
     public static class DiskDeviceMapping extends TeaModel {
-        @NameInMap("Device")
+        @com.aliyun.core.annotation.NameInMap("Device")
         private String device;
 
-        @NameInMap("Format")
+        @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
 
-        @NameInMap("ImportOSSBucket")
+        @com.aliyun.core.annotation.NameInMap("ImportOSSBucket")
         private String importOSSBucket;
 
-        @NameInMap("ImportOSSObject")
+        @com.aliyun.core.annotation.NameInMap("ImportOSSObject")
         private String importOSSObject;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("RemainTime")
+        @com.aliyun.core.annotation.NameInMap("RemainTime")
         private Integer remainTime;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private String size;
 
-        @NameInMap("SnapshotId")
+        @com.aliyun.core.annotation.NameInMap("SnapshotId")
         private String snapshotId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private DiskDeviceMapping(Builder builder) {
@@ -569,7 +568,7 @@ public class DescribeImagesResponseBody extends TeaModel {
 
     }
     public static class DiskDeviceMappings extends TeaModel {
-        @NameInMap("DiskDeviceMapping")
+        @com.aliyun.core.annotation.NameInMap("DiskDeviceMapping")
         private java.util.List < DiskDeviceMapping> diskDeviceMapping;
 
         private DiskDeviceMappings(Builder builder) {
@@ -610,7 +609,7 @@ public class DescribeImagesResponseBody extends TeaModel {
 
     }
     public static class Features extends TeaModel {
-        @NameInMap("NvmeSupport")
+        @com.aliyun.core.annotation.NameInMap("NvmeSupport")
         private String nvmeSupport;
 
         private Features(Builder builder) {
@@ -655,10 +654,10 @@ public class DescribeImagesResponseBody extends TeaModel {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -716,7 +715,7 @@ public class DescribeImagesResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -757,100 +756,100 @@ public class DescribeImagesResponseBody extends TeaModel {
 
     }
     public static class Image extends TeaModel {
-        @NameInMap("Architecture")
+        @com.aliyun.core.annotation.NameInMap("Architecture")
         private String architecture;
 
-        @NameInMap("BootMode")
+        @com.aliyun.core.annotation.NameInMap("BootMode")
         private String bootMode;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DetectionOptions")
+        @com.aliyun.core.annotation.NameInMap("DetectionOptions")
         private DetectionOptions detectionOptions;
 
-        @NameInMap("DiskDeviceMappings")
+        @com.aliyun.core.annotation.NameInMap("DiskDeviceMappings")
         private DiskDeviceMappings diskDeviceMappings;
 
-        @NameInMap("Features")
+        @com.aliyun.core.annotation.NameInMap("Features")
         private Features features;
 
-        @NameInMap("ImageFamily")
+        @com.aliyun.core.annotation.NameInMap("ImageFamily")
         private String imageFamily;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("ImageName")
+        @com.aliyun.core.annotation.NameInMap("ImageName")
         private String imageName;
 
-        @NameInMap("ImageOwnerAlias")
+        @com.aliyun.core.annotation.NameInMap("ImageOwnerAlias")
         private String imageOwnerAlias;
 
-        @NameInMap("ImageOwnerId")
+        @com.aliyun.core.annotation.NameInMap("ImageOwnerId")
         private Long imageOwnerId;
 
-        @NameInMap("ImageVersion")
+        @com.aliyun.core.annotation.NameInMap("ImageVersion")
         private String imageVersion;
 
-        @NameInMap("IsCopied")
+        @com.aliyun.core.annotation.NameInMap("IsCopied")
         private Boolean isCopied;
 
-        @NameInMap("IsPublic")
+        @com.aliyun.core.annotation.NameInMap("IsPublic")
         private Boolean isPublic;
 
-        @NameInMap("IsSelfShared")
+        @com.aliyun.core.annotation.NameInMap("IsSelfShared")
         private String isSelfShared;
 
-        @NameInMap("IsSubscribed")
+        @com.aliyun.core.annotation.NameInMap("IsSubscribed")
         private Boolean isSubscribed;
 
-        @NameInMap("IsSupportCloudinit")
+        @com.aliyun.core.annotation.NameInMap("IsSupportCloudinit")
         private Boolean isSupportCloudinit;
 
-        @NameInMap("IsSupportIoOptimized")
+        @com.aliyun.core.annotation.NameInMap("IsSupportIoOptimized")
         private Boolean isSupportIoOptimized;
 
-        @NameInMap("LoginAsNonRootSupported")
+        @com.aliyun.core.annotation.NameInMap("LoginAsNonRootSupported")
         private Boolean loginAsNonRootSupported;
 
-        @NameInMap("OSName")
+        @com.aliyun.core.annotation.NameInMap("OSName")
         private String OSName;
 
-        @NameInMap("OSNameEn")
+        @com.aliyun.core.annotation.NameInMap("OSNameEn")
         private String OSNameEn;
 
-        @NameInMap("OSType")
+        @com.aliyun.core.annotation.NameInMap("OSType")
         private String OSType;
 
-        @NameInMap("Platform")
+        @com.aliyun.core.annotation.NameInMap("Platform")
         private String platform;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SupplierName")
+        @com.aliyun.core.annotation.NameInMap("SupplierName")
         private String supplierName;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("Usage")
+        @com.aliyun.core.annotation.NameInMap("Usage")
         private String usage;
 
         private Image(Builder builder) {
@@ -1455,7 +1454,7 @@ public class DescribeImagesResponseBody extends TeaModel {
 
     }
     public static class Images extends TeaModel {
-        @NameInMap("Image")
+        @com.aliyun.core.annotation.NameInMap("Image")
         private java.util.List < Image> image;
 
         private Images(Builder builder) {

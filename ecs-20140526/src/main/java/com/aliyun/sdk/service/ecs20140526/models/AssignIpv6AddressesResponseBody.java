@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AssignIpv6AddressesResponseBody</p>
  */
 public class AssignIpv6AddressesResponseBody extends TeaModel {
-    @NameInMap("Ipv6PrefixSets")
+    @com.aliyun.core.annotation.NameInMap("Ipv6PrefixSets")
     private Ipv6PrefixSets ipv6PrefixSets;
 
-    @NameInMap("Ipv6Sets")
+    @com.aliyun.core.annotation.NameInMap("Ipv6Sets")
     private Ipv6Sets ipv6Sets;
 
-    @NameInMap("NetworkInterfaceId")
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
     private String networkInterfaceId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AssignIpv6AddressesResponseBody(Builder builder) {
@@ -112,7 +111,7 @@ public class AssignIpv6AddressesResponseBody extends TeaModel {
     } 
 
     public static class Ipv6PrefixSets extends TeaModel {
-        @NameInMap("Ipv6Prefix")
+        @com.aliyun.core.annotation.NameInMap("Ipv6Prefix")
         private java.util.List < String > ipv6Prefix;
 
         private Ipv6PrefixSets(Builder builder) {
@@ -153,7 +152,7 @@ public class AssignIpv6AddressesResponseBody extends TeaModel {
 
     }
     public static class Ipv6Sets extends TeaModel {
-        @NameInMap("Ipv6Address")
+        @com.aliyun.core.annotation.NameInMap("Ipv6Address")
         private java.util.List < String > ipv6Address;
 
         private Ipv6Sets(Builder builder) {

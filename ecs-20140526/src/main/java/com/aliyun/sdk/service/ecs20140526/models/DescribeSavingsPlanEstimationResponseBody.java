@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSavingsPlanEstimationResponseBody</p>
  */
 public class DescribeSavingsPlanEstimationResponseBody extends TeaModel {
-    @NameInMap("CommittedAmount")
+    @com.aliyun.core.annotation.NameInMap("CommittedAmount")
     private String committedAmount;
 
-    @NameInMap("Currency")
+    @com.aliyun.core.annotation.NameInMap("Currency")
     private String currency;
 
-    @NameInMap("InstanceTypeFamily")
+    @com.aliyun.core.annotation.NameInMap("InstanceTypeFamily")
     private String instanceTypeFamily;
 
-    @NameInMap("OfferingType")
+    @com.aliyun.core.annotation.NameInMap("OfferingType")
     private String offeringType;
 
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
-    @NameInMap("PeriodUnit")
+    @com.aliyun.core.annotation.NameInMap("PeriodUnit")
     private String periodUnit;
 
-    @NameInMap("PlanType")
+    @com.aliyun.core.annotation.NameInMap("PlanType")
     private String planType;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
     private DescribeSavingsPlanEstimationResponseBody(Builder builder) {

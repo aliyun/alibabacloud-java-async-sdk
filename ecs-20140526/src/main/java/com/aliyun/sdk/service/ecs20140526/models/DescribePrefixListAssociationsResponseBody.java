@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePrefixListAssociationsResponseBody</p>
  */
 public class DescribePrefixListAssociationsResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("PrefixListAssociations")
+    @com.aliyun.core.annotation.NameInMap("PrefixListAssociations")
     private PrefixListAssociations prefixListAssociations;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePrefixListAssociationsResponseBody(Builder builder) {
@@ -92,10 +91,10 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
     } 
 
     public static class PrefixListAssociation extends TeaModel {
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
         private PrefixListAssociation(Builder builder) {
@@ -153,7 +152,7 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
 
     }
     public static class PrefixListAssociations extends TeaModel {
-        @NameInMap("PrefixListAssociation")
+        @com.aliyun.core.annotation.NameInMap("PrefixListAssociation")
         private java.util.List < PrefixListAssociation> prefixListAssociation;
 
         private PrefixListAssociations(Builder builder) {

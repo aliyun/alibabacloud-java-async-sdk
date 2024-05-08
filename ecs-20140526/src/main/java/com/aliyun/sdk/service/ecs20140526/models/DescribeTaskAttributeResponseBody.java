@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,43 +11,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTaskAttributeResponseBody</p>
  */
 public class DescribeTaskAttributeResponseBody extends TeaModel {
-    @NameInMap("CreationTime")
+    @com.aliyun.core.annotation.NameInMap("CreationTime")
     private String creationTime;
 
-    @NameInMap("FailedCount")
+    @com.aliyun.core.annotation.NameInMap("FailedCount")
     private Integer failedCount;
 
-    @NameInMap("FinishedTime")
+    @com.aliyun.core.annotation.NameInMap("FinishedTime")
     private String finishedTime;
 
-    @NameInMap("OperationProgressSet")
+    @com.aliyun.core.annotation.NameInMap("OperationProgressSet")
     private OperationProgressSet operationProgressSet;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SuccessCount")
+    @com.aliyun.core.annotation.NameInMap("SuccessCount")
     private Integer successCount;
 
-    @NameInMap("SupportCancel")
+    @com.aliyun.core.annotation.NameInMap("SupportCancel")
     private String supportCancel;
 
-    @NameInMap("TaskAction")
+    @com.aliyun.core.annotation.NameInMap("TaskAction")
     private String taskAction;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
-    @NameInMap("TaskProcess")
+    @com.aliyun.core.annotation.NameInMap("TaskProcess")
     private String taskProcess;
 
-    @NameInMap("TaskStatus")
+    @com.aliyun.core.annotation.NameInMap("TaskStatus")
     private String taskStatus;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeTaskAttributeResponseBody(Builder builder) {
@@ -296,10 +295,10 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
     } 
 
     public static class RelatedItem extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private RelatedItem(Builder builder) {
@@ -357,7 +356,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
 
     }
     public static class RelatedItemSet extends TeaModel {
-        @NameInMap("RelatedItem")
+        @com.aliyun.core.annotation.NameInMap("RelatedItem")
         private java.util.List < RelatedItem> relatedItem;
 
         private RelatedItemSet(Builder builder) {
@@ -398,16 +397,16 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
 
     }
     public static class OperationProgress extends TeaModel {
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
 
-        @NameInMap("OperationStatus")
+        @com.aliyun.core.annotation.NameInMap("OperationStatus")
         private String operationStatus;
 
-        @NameInMap("RelatedItemSet")
+        @com.aliyun.core.annotation.NameInMap("RelatedItemSet")
         private RelatedItemSet relatedItemSet;
 
         private OperationProgress(Builder builder) {
@@ -499,7 +498,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
 
     }
     public static class OperationProgressSet extends TeaModel {
-        @NameInMap("OperationProgress")
+        @com.aliyun.core.annotation.NameInMap("OperationProgress")
         private java.util.List < OperationProgress> operationProgress;
 
         private OperationProgressSet(Builder builder) {

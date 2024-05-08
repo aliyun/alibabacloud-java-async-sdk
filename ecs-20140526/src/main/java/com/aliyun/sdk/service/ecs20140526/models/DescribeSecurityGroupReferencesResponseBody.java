@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSecurityGroupReferencesResponseBody</p>
  */
 public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecurityGroupReferences")
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupReferences")
     private SecurityGroupReferences securityGroupReferences;
 
     private DescribeSecurityGroupReferencesResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
     } 
 
     public static class ReferencingSecurityGroup extends TeaModel {
-        @NameInMap("AliUid")
+        @com.aliyun.core.annotation.NameInMap("AliUid")
         private String aliUid;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
         private ReferencingSecurityGroup(Builder builder) {
@@ -133,7 +132,7 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
 
     }
     public static class ReferencingSecurityGroups extends TeaModel {
-        @NameInMap("ReferencingSecurityGroup")
+        @com.aliyun.core.annotation.NameInMap("ReferencingSecurityGroup")
         private java.util.List < ReferencingSecurityGroup> referencingSecurityGroup;
 
         private ReferencingSecurityGroups(Builder builder) {
@@ -174,10 +173,10 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
 
     }
     public static class SecurityGroupReference extends TeaModel {
-        @NameInMap("ReferencingSecurityGroups")
+        @com.aliyun.core.annotation.NameInMap("ReferencingSecurityGroups")
         private ReferencingSecurityGroups referencingSecurityGroups;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
         private SecurityGroupReference(Builder builder) {
@@ -235,7 +234,7 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
 
     }
     public static class SecurityGroupReferences extends TeaModel {
-        @NameInMap("SecurityGroupReference")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupReference")
         private java.util.List < SecurityGroupReference> securityGroupReference;
 
         private SecurityGroupReferences(Builder builder) {

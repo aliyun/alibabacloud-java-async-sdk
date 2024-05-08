@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLaunchTemplatesResponseBody</p>
  */
 public class DescribeLaunchTemplatesResponseBody extends TeaModel {
-    @NameInMap("LaunchTemplateSets")
+    @com.aliyun.core.annotation.NameInMap("LaunchTemplateSets")
     private LaunchTemplateSets launchTemplateSets;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeLaunchTemplatesResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -193,7 +192,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -234,31 +233,31 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
 
     }
     public static class LaunchTemplateSet extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreatedBy")
+        @com.aliyun.core.annotation.NameInMap("CreatedBy")
         private String createdBy;
 
-        @NameInMap("DefaultVersionNumber")
+        @com.aliyun.core.annotation.NameInMap("DefaultVersionNumber")
         private Long defaultVersionNumber;
 
-        @NameInMap("LatestVersionNumber")
+        @com.aliyun.core.annotation.NameInMap("LatestVersionNumber")
         private Long latestVersionNumber;
 
-        @NameInMap("LaunchTemplateId")
+        @com.aliyun.core.annotation.NameInMap("LaunchTemplateId")
         private String launchTemplateId;
 
-        @NameInMap("LaunchTemplateName")
+        @com.aliyun.core.annotation.NameInMap("LaunchTemplateName")
         private String launchTemplateName;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
         private LaunchTemplateSet(Builder builder) {
@@ -435,7 +434,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
 
     }
     public static class LaunchTemplateSets extends TeaModel {
-        @NameInMap("LaunchTemplateSet")
+        @com.aliyun.core.annotation.NameInMap("LaunchTemplateSet")
         private java.util.List < LaunchTemplateSet> launchTemplateSet;
 
         private LaunchTemplateSets(Builder builder) {

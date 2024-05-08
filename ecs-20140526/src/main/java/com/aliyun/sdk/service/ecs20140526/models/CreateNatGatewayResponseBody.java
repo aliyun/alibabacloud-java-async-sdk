@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateNatGatewayResponseBody</p>
  */
 public class CreateNatGatewayResponseBody extends TeaModel {
-    @NameInMap("BandwidthPackageIds")
+    @com.aliyun.core.annotation.NameInMap("BandwidthPackageIds")
     private BandwidthPackageIds bandwidthPackageIds;
 
-    @NameInMap("ForwardTableIds")
+    @com.aliyun.core.annotation.NameInMap("ForwardTableIds")
     private ForwardTableIds forwardTableIds;
 
-    @NameInMap("NatGatewayId")
+    @com.aliyun.core.annotation.NameInMap("NatGatewayId")
     private String natGatewayId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateNatGatewayResponseBody(Builder builder) {
@@ -112,7 +111,7 @@ public class CreateNatGatewayResponseBody extends TeaModel {
     } 
 
     public static class BandwidthPackageIds extends TeaModel {
-        @NameInMap("BandwidthPackageId")
+        @com.aliyun.core.annotation.NameInMap("BandwidthPackageId")
         private java.util.List < String > bandwidthPackageId;
 
         private BandwidthPackageIds(Builder builder) {
@@ -153,7 +152,7 @@ public class CreateNatGatewayResponseBody extends TeaModel {
 
     }
     public static class ForwardTableIds extends TeaModel {
-        @NameInMap("ForwardTableId")
+        @com.aliyun.core.annotation.NameInMap("ForwardTableId")
         private java.util.List < String > forwardTableId;
 
         private ForwardTableIds(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeNewProjectEipMonitorDataResponseBody</p>
  */
 public class DescribeNewProjectEipMonitorDataResponseBody extends TeaModel {
-    @NameInMap("EipMonitorDatas")
+    @com.aliyun.core.annotation.NameInMap("EipMonitorDatas")
     private EipMonitorDatas eipMonitorDatas;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeNewProjectEipMonitorDataResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class DescribeNewProjectEipMonitorDataResponseBody extends TeaModel {
     } 
 
     public static class EipMonitorData extends TeaModel {
-        @NameInMap("EipBandwidth")
+        @com.aliyun.core.annotation.NameInMap("EipBandwidth")
         private Integer eipBandwidth;
 
-        @NameInMap("EipFlow")
+        @com.aliyun.core.annotation.NameInMap("EipFlow")
         private Integer eipFlow;
 
-        @NameInMap("EipPackets")
+        @com.aliyun.core.annotation.NameInMap("EipPackets")
         private Integer eipPackets;
 
-        @NameInMap("EipRX")
+        @com.aliyun.core.annotation.NameInMap("EipRX")
         private Integer eipRX;
 
-        @NameInMap("EipTX")
+        @com.aliyun.core.annotation.NameInMap("EipTX")
         private Integer eipTX;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private EipMonitorData(Builder builder) {
@@ -213,7 +212,7 @@ public class DescribeNewProjectEipMonitorDataResponseBody extends TeaModel {
 
     }
     public static class EipMonitorDatas extends TeaModel {
-        @NameInMap("EipMonitorData")
+        @com.aliyun.core.annotation.NameInMap("EipMonitorData")
         private java.util.List < EipMonitorData> eipMonitorData;
 
         private EipMonitorDatas(Builder builder) {

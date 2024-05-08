@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImageFromFamilyResponseBody</p>
  */
 public class DescribeImageFromFamilyResponseBody extends TeaModel {
-    @NameInMap("Image")
+    @com.aliyun.core.annotation.NameInMap("Image")
     private Image image;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeImageFromFamilyResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
     } 
 
     public static class DiskDeviceMapping extends TeaModel {
-        @NameInMap("Device")
+        @com.aliyun.core.annotation.NameInMap("Device")
         private String device;
 
-        @NameInMap("Format")
+        @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
 
-        @NameInMap("ImportOSSBucket")
+        @com.aliyun.core.annotation.NameInMap("ImportOSSBucket")
         private String importOSSBucket;
 
-        @NameInMap("ImportOSSObject")
+        @com.aliyun.core.annotation.NameInMap("ImportOSSObject")
         private String importOSSObject;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private String size;
 
-        @NameInMap("SnapshotId")
+        @com.aliyun.core.annotation.NameInMap("SnapshotId")
         private String snapshotId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private DiskDeviceMapping(Builder builder) {
@@ -236,7 +235,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
 
     }
     public static class DiskDeviceMappings extends TeaModel {
-        @NameInMap("DiskDeviceMapping")
+        @com.aliyun.core.annotation.NameInMap("DiskDeviceMapping")
         private java.util.List < DiskDeviceMapping> diskDeviceMapping;
 
         private DiskDeviceMappings(Builder builder) {
@@ -277,10 +276,10 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -338,7 +337,7 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -379,73 +378,73 @@ public class DescribeImageFromFamilyResponseBody extends TeaModel {
 
     }
     public static class Image extends TeaModel {
-        @NameInMap("Architecture")
+        @com.aliyun.core.annotation.NameInMap("Architecture")
         private String architecture;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DiskDeviceMappings")
+        @com.aliyun.core.annotation.NameInMap("DiskDeviceMappings")
         private DiskDeviceMappings diskDeviceMappings;
 
-        @NameInMap("ImageFamily")
+        @com.aliyun.core.annotation.NameInMap("ImageFamily")
         private String imageFamily;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("ImageName")
+        @com.aliyun.core.annotation.NameInMap("ImageName")
         private String imageName;
 
-        @NameInMap("ImageOwnerAlias")
+        @com.aliyun.core.annotation.NameInMap("ImageOwnerAlias")
         private String imageOwnerAlias;
 
-        @NameInMap("ImageVersion")
+        @com.aliyun.core.annotation.NameInMap("ImageVersion")
         private String imageVersion;
 
-        @NameInMap("IsCopied")
+        @com.aliyun.core.annotation.NameInMap("IsCopied")
         private Boolean isCopied;
 
-        @NameInMap("IsSelfShared")
+        @com.aliyun.core.annotation.NameInMap("IsSelfShared")
         private String isSelfShared;
 
-        @NameInMap("IsSubscribed")
+        @com.aliyun.core.annotation.NameInMap("IsSubscribed")
         private Boolean isSubscribed;
 
-        @NameInMap("IsSupportCloudinit")
+        @com.aliyun.core.annotation.NameInMap("IsSupportCloudinit")
         private Boolean isSupportCloudinit;
 
-        @NameInMap("IsSupportIoOptimized")
+        @com.aliyun.core.annotation.NameInMap("IsSupportIoOptimized")
         private Boolean isSupportIoOptimized;
 
-        @NameInMap("OSName")
+        @com.aliyun.core.annotation.NameInMap("OSName")
         private String OSName;
 
-        @NameInMap("OSType")
+        @com.aliyun.core.annotation.NameInMap("OSType")
         private String OSType;
 
-        @NameInMap("Platform")
+        @com.aliyun.core.annotation.NameInMap("Platform")
         private String platform;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("Usage")
+        @com.aliyun.core.annotation.NameInMap("Usage")
         private String usage;
 
         private Image(Builder builder) {

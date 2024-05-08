@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSendFileResultsResponseBody</p>
  */
 public class DescribeSendFileResultsResponseBody extends TeaModel {
-    @NameInMap("Invocations")
+    @com.aliyun.core.annotation.NameInMap("Invocations")
     private Invocations invocations;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeSendFileResultsResponseBody(Builder builder) {
@@ -152,28 +151,28 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
     } 
 
     public static class InvokeInstance extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorInfo")
+        @com.aliyun.core.annotation.NameInMap("ErrorInfo")
         private String errorInfo;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InvocationStatus")
+        @com.aliyun.core.annotation.NameInMap("InvocationStatus")
         private String invocationStatus;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private InvokeInstance(Builder builder) {
@@ -374,7 +373,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
 
     }
     public static class InvokeInstances extends TeaModel {
-        @NameInMap("InvokeInstance")
+        @com.aliyun.core.annotation.NameInMap("InvokeInstance")
         private java.util.List < InvokeInstance> invokeInstance;
 
         private InvokeInstances(Builder builder) {
@@ -415,10 +414,10 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -476,7 +475,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -517,49 +516,49 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
 
     }
     public static class Invocation extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("ContentType")
+        @com.aliyun.core.annotation.NameInMap("ContentType")
         private String contentType;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("FileGroup")
+        @com.aliyun.core.annotation.NameInMap("FileGroup")
         private String fileGroup;
 
-        @NameInMap("FileMode")
+        @com.aliyun.core.annotation.NameInMap("FileMode")
         private String fileMode;
 
-        @NameInMap("FileOwner")
+        @com.aliyun.core.annotation.NameInMap("FileOwner")
         private String fileOwner;
 
-        @NameInMap("InvocationStatus")
+        @com.aliyun.core.annotation.NameInMap("InvocationStatus")
         private String invocationStatus;
 
-        @NameInMap("InvokeId")
+        @com.aliyun.core.annotation.NameInMap("InvokeId")
         private String invokeId;
 
-        @NameInMap("InvokeInstances")
+        @com.aliyun.core.annotation.NameInMap("InvokeInstances")
         private InvokeInstances invokeInstances;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Overwrite")
+        @com.aliyun.core.annotation.NameInMap("Overwrite")
         private String overwrite;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("TargetDir")
+        @com.aliyun.core.annotation.NameInMap("TargetDir")
         private String targetDir;
 
-        @NameInMap("VmCount")
+        @com.aliyun.core.annotation.NameInMap("VmCount")
         private Integer vmCount;
 
         private Invocation(Builder builder) {
@@ -855,7 +854,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
 
     }
     public static class Invocations extends TeaModel {
-        @NameInMap("Invocation")
+        @com.aliyun.core.annotation.NameInMap("Invocation")
         private java.util.List < Invocation> invocation;
 
         private Invocations(Builder builder) {

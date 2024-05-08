@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,43 +11,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDiagnosticReportAttributesResponseBody</p>
  */
 public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
-    @NameInMap("Attributes")
+    @com.aliyun.core.annotation.NameInMap("Attributes")
     private String attributes;
 
-    @NameInMap("CreationTime")
+    @com.aliyun.core.annotation.NameInMap("CreationTime")
     private String creationTime;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("FinishedTime")
+    @com.aliyun.core.annotation.NameInMap("FinishedTime")
     private String finishedTime;
 
-    @NameInMap("MetricResults")
+    @com.aliyun.core.annotation.NameInMap("MetricResults")
     private MetricResults metricResults;
 
-    @NameInMap("MetricSetId")
+    @com.aliyun.core.annotation.NameInMap("MetricSetId")
     private String metricSetId;
 
-    @NameInMap("ReportId")
+    @com.aliyun.core.annotation.NameInMap("ReportId")
     private String reportId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
-    @NameInMap("Severity")
+    @com.aliyun.core.annotation.NameInMap("Severity")
     private String severity;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeDiagnosticReportAttributesResponseBody(Builder builder) {
@@ -304,16 +303,16 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
     } 
 
     public static class Issue extends TeaModel {
-        @NameInMap("Additional")
+        @com.aliyun.core.annotation.NameInMap("Additional")
         private String additional;
 
-        @NameInMap("IssueId")
+        @com.aliyun.core.annotation.NameInMap("IssueId")
         private String issueId;
 
-        @NameInMap("OccurrenceTime")
+        @com.aliyun.core.annotation.NameInMap("OccurrenceTime")
         private String occurrenceTime;
 
-        @NameInMap("Severity")
+        @com.aliyun.core.annotation.NameInMap("Severity")
         private String severity;
 
         private Issue(Builder builder) {
@@ -410,7 +409,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
 
     }
     public static class Issues extends TeaModel {
-        @NameInMap("Issue")
+        @com.aliyun.core.annotation.NameInMap("Issue")
         private java.util.List < Issue> issue;
 
         private Issues(Builder builder) {
@@ -451,19 +450,19 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
 
     }
     public static class MetricResult extends TeaModel {
-        @NameInMap("Issues")
+        @com.aliyun.core.annotation.NameInMap("Issues")
         private Issues issues;
 
-        @NameInMap("MetricCategory")
+        @com.aliyun.core.annotation.NameInMap("MetricCategory")
         private String metricCategory;
 
-        @NameInMap("MetricId")
+        @com.aliyun.core.annotation.NameInMap("MetricId")
         private String metricId;
 
-        @NameInMap("Severity")
+        @com.aliyun.core.annotation.NameInMap("Severity")
         private String severity;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private MetricResult(Builder builder) {
@@ -585,7 +584,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
 
     }
     public static class MetricResults extends TeaModel {
-        @NameInMap("MetricResult")
+        @com.aliyun.core.annotation.NameInMap("MetricResult")
         private java.util.List < MetricResult> metricResult;
 
         private MetricResults(Builder builder) {

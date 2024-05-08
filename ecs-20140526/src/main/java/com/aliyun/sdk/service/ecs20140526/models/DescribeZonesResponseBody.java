@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeZonesResponseBody</p>
  */
 public class DescribeZonesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Zones")
+    @com.aliyun.core.annotation.NameInMap("Zones")
     private Zones zones;
 
     private DescribeZonesResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class DescribeZonesResponseBody extends TeaModel {
     } 
 
     public static class AvailableDedicatedHostTypes extends TeaModel {
-        @NameInMap("DedicatedHostType")
+        @com.aliyun.core.annotation.NameInMap("DedicatedHostType")
         private java.util.List < String > dedicatedHostType;
 
         private AvailableDedicatedHostTypes(Builder builder) {
@@ -113,7 +112,7 @@ public class DescribeZonesResponseBody extends TeaModel {
 
     }
     public static class AvailableDiskCategories extends TeaModel {
-        @NameInMap("DiskCategories")
+        @com.aliyun.core.annotation.NameInMap("DiskCategories")
         private java.util.List < String > diskCategories;
 
         private AvailableDiskCategories(Builder builder) {
@@ -154,7 +153,7 @@ public class DescribeZonesResponseBody extends TeaModel {
 
     }
     public static class AvailableInstanceTypes extends TeaModel {
-        @NameInMap("InstanceTypes")
+        @com.aliyun.core.annotation.NameInMap("InstanceTypes")
         private java.util.List < String > instanceTypes;
 
         private AvailableInstanceTypes(Builder builder) {
@@ -195,7 +194,7 @@ public class DescribeZonesResponseBody extends TeaModel {
 
     }
     public static class AvailableResourceCreation extends TeaModel {
-        @NameInMap("ResourceTypes")
+        @com.aliyun.core.annotation.NameInMap("ResourceTypes")
         private java.util.List < String > resourceTypes;
 
         private AvailableResourceCreation(Builder builder) {
@@ -236,7 +235,7 @@ public class DescribeZonesResponseBody extends TeaModel {
 
     }
     public static class DataDiskCategories extends TeaModel {
-        @NameInMap("supportedDataDiskCategory")
+        @com.aliyun.core.annotation.NameInMap("supportedDataDiskCategory")
         private java.util.List < String > supportedDataDiskCategory;
 
         private DataDiskCategories(Builder builder) {
@@ -277,7 +276,7 @@ public class DescribeZonesResponseBody extends TeaModel {
 
     }
     public static class InstanceGenerations extends TeaModel {
-        @NameInMap("supportedInstanceGeneration")
+        @com.aliyun.core.annotation.NameInMap("supportedInstanceGeneration")
         private java.util.List < String > supportedInstanceGeneration;
 
         private InstanceGenerations(Builder builder) {
@@ -318,7 +317,7 @@ public class DescribeZonesResponseBody extends TeaModel {
 
     }
     public static class InstanceTypeFamilies extends TeaModel {
-        @NameInMap("supportedInstanceTypeFamily")
+        @com.aliyun.core.annotation.NameInMap("supportedInstanceTypeFamily")
         private java.util.List < String > supportedInstanceTypeFamily;
 
         private InstanceTypeFamilies(Builder builder) {
@@ -359,7 +358,7 @@ public class DescribeZonesResponseBody extends TeaModel {
 
     }
     public static class InstanceTypes extends TeaModel {
-        @NameInMap("supportedInstanceType")
+        @com.aliyun.core.annotation.NameInMap("supportedInstanceType")
         private java.util.List < String > supportedInstanceType;
 
         private InstanceTypes(Builder builder) {
@@ -400,7 +399,7 @@ public class DescribeZonesResponseBody extends TeaModel {
 
     }
     public static class NetworkTypes extends TeaModel {
-        @NameInMap("supportedNetworkCategory")
+        @com.aliyun.core.annotation.NameInMap("supportedNetworkCategory")
         private java.util.List < String > supportedNetworkCategory;
 
         private NetworkTypes(Builder builder) {
@@ -441,7 +440,7 @@ public class DescribeZonesResponseBody extends TeaModel {
 
     }
     public static class SystemDiskCategories extends TeaModel {
-        @NameInMap("supportedSystemDiskCategory")
+        @com.aliyun.core.annotation.NameInMap("supportedSystemDiskCategory")
         private java.util.List < String > supportedSystemDiskCategory;
 
         private SystemDiskCategories(Builder builder) {
@@ -482,25 +481,25 @@ public class DescribeZonesResponseBody extends TeaModel {
 
     }
     public static class ResourcesInfo extends TeaModel {
-        @NameInMap("DataDiskCategories")
+        @com.aliyun.core.annotation.NameInMap("DataDiskCategories")
         private DataDiskCategories dataDiskCategories;
 
-        @NameInMap("InstanceGenerations")
+        @com.aliyun.core.annotation.NameInMap("InstanceGenerations")
         private InstanceGenerations instanceGenerations;
 
-        @NameInMap("InstanceTypeFamilies")
+        @com.aliyun.core.annotation.NameInMap("InstanceTypeFamilies")
         private InstanceTypeFamilies instanceTypeFamilies;
 
-        @NameInMap("InstanceTypes")
+        @com.aliyun.core.annotation.NameInMap("InstanceTypes")
         private InstanceTypes instanceTypes;
 
-        @NameInMap("IoOptimized")
+        @com.aliyun.core.annotation.NameInMap("IoOptimized")
         private Boolean ioOptimized;
 
-        @NameInMap("NetworkTypes")
+        @com.aliyun.core.annotation.NameInMap("NetworkTypes")
         private NetworkTypes networkTypes;
 
-        @NameInMap("SystemDiskCategories")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskCategories")
         private SystemDiskCategories systemDiskCategories;
 
         private ResourcesInfo(Builder builder) {
@@ -643,7 +642,7 @@ public class DescribeZonesResponseBody extends TeaModel {
 
     }
     public static class AvailableResources extends TeaModel {
-        @NameInMap("ResourcesInfo")
+        @com.aliyun.core.annotation.NameInMap("ResourcesInfo")
         private java.util.List < ResourcesInfo> resourcesInfo;
 
         private AvailableResources(Builder builder) {
@@ -684,7 +683,7 @@ public class DescribeZonesResponseBody extends TeaModel {
 
     }
     public static class AvailableVolumeCategories extends TeaModel {
-        @NameInMap("VolumeCategories")
+        @com.aliyun.core.annotation.NameInMap("VolumeCategories")
         private java.util.List < String > volumeCategories;
 
         private AvailableVolumeCategories(Builder builder) {
@@ -725,7 +724,7 @@ public class DescribeZonesResponseBody extends TeaModel {
 
     }
     public static class DedicatedHostGenerations extends TeaModel {
-        @NameInMap("DedicatedHostGeneration")
+        @com.aliyun.core.annotation.NameInMap("DedicatedHostGeneration")
         private java.util.List < String > dedicatedHostGeneration;
 
         private DedicatedHostGenerations(Builder builder) {
@@ -766,34 +765,34 @@ public class DescribeZonesResponseBody extends TeaModel {
 
     }
     public static class Zone extends TeaModel {
-        @NameInMap("AvailableDedicatedHostTypes")
+        @com.aliyun.core.annotation.NameInMap("AvailableDedicatedHostTypes")
         private AvailableDedicatedHostTypes availableDedicatedHostTypes;
 
-        @NameInMap("AvailableDiskCategories")
+        @com.aliyun.core.annotation.NameInMap("AvailableDiskCategories")
         private AvailableDiskCategories availableDiskCategories;
 
-        @NameInMap("AvailableInstanceTypes")
+        @com.aliyun.core.annotation.NameInMap("AvailableInstanceTypes")
         private AvailableInstanceTypes availableInstanceTypes;
 
-        @NameInMap("AvailableResourceCreation")
+        @com.aliyun.core.annotation.NameInMap("AvailableResourceCreation")
         private AvailableResourceCreation availableResourceCreation;
 
-        @NameInMap("AvailableResources")
+        @com.aliyun.core.annotation.NameInMap("AvailableResources")
         private AvailableResources availableResources;
 
-        @NameInMap("AvailableVolumeCategories")
+        @com.aliyun.core.annotation.NameInMap("AvailableVolumeCategories")
         private AvailableVolumeCategories availableVolumeCategories;
 
-        @NameInMap("DedicatedHostGenerations")
+        @com.aliyun.core.annotation.NameInMap("DedicatedHostGenerations")
         private DedicatedHostGenerations dedicatedHostGenerations;
 
-        @NameInMap("LocalName")
+        @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
-        @NameInMap("ZoneType")
+        @com.aliyun.core.annotation.NameInMap("ZoneType")
         private String zoneType;
 
         private Zone(Builder builder) {
@@ -1004,7 +1003,7 @@ public class DescribeZonesResponseBody extends TeaModel {
 
     }
     public static class Zones extends TeaModel {
-        @NameInMap("Zone")
+        @com.aliyun.core.annotation.NameInMap("Zone")
         private java.util.List < Zone> zone;
 
         private Zones(Builder builder) {

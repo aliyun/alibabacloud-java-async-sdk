@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTerminalSessionsResponseBody</p>
  */
 public class DescribeTerminalSessionsResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Sessions")
+    @com.aliyun.core.annotation.NameInMap("Sessions")
     private Sessions sessions;
 
     private DescribeTerminalSessionsResponseBody(Builder builder) {
@@ -92,19 +91,19 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
     } 
 
     public static class Connection extends TeaModel {
-        @NameInMap("ClosedReason")
+        @com.aliyun.core.annotation.NameInMap("ClosedReason")
         private String closedReason;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Connection(Builder builder) {
@@ -231,7 +230,7 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
 
     }
     public static class Connections extends TeaModel {
-        @NameInMap("Connection")
+        @com.aliyun.core.annotation.NameInMap("Connection")
         private java.util.List < Connection> connection;
 
         private Connections(Builder builder) {
@@ -272,31 +271,31 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
 
     }
     public static class Session extends TeaModel {
-        @NameInMap("ClientIP")
+        @com.aliyun.core.annotation.NameInMap("ClientIP")
         private String clientIP;
 
-        @NameInMap("Connections")
+        @com.aliyun.core.annotation.NameInMap("Connections")
         private Connections connections;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("IdentityType")
+        @com.aliyun.core.annotation.NameInMap("IdentityType")
         private String identityType;
 
-        @NameInMap("PortNumber")
+        @com.aliyun.core.annotation.NameInMap("PortNumber")
         private Integer portNumber;
 
-        @NameInMap("PrincipalId")
+        @com.aliyun.core.annotation.NameInMap("PrincipalId")
         private String principalId;
 
-        @NameInMap("SessionId")
+        @com.aliyun.core.annotation.NameInMap("SessionId")
         private String sessionId;
 
-        @NameInMap("TargetServer")
+        @com.aliyun.core.annotation.NameInMap("TargetServer")
         private String targetServer;
 
-        @NameInMap("Username")
+        @com.aliyun.core.annotation.NameInMap("Username")
         private String username;
 
         private Session(Builder builder) {
@@ -483,7 +482,7 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
 
     }
     public static class Sessions extends TeaModel {
-        @NameInMap("Session")
+        @com.aliyun.core.annotation.NameInMap("Session")
         private java.util.List < Session> session;
 
         private Sessions(Builder builder) {

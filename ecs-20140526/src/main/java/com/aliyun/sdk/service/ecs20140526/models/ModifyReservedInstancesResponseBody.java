@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecs20140526.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyReservedInstancesResponseBody</p>
  */
 public class ModifyReservedInstancesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ReservedInstanceIdSets")
+    @com.aliyun.core.annotation.NameInMap("ReservedInstanceIdSets")
     private ReservedInstanceIdSets reservedInstanceIdSets;
 
     private ModifyReservedInstancesResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class ModifyReservedInstancesResponseBody extends TeaModel {
     } 
 
     public static class ReservedInstanceIdSets extends TeaModel {
-        @NameInMap("ReservedInstanceId")
+        @com.aliyun.core.annotation.NameInMap("ReservedInstanceId")
         private java.util.List < String > reservedInstanceId;
 
         private ReservedInstanceIdSets(Builder builder) {
