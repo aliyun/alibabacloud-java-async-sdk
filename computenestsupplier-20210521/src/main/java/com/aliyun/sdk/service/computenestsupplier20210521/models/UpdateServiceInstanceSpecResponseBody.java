@@ -6,15 +6,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeployServiceInstanceResponseBody} extends {@link TeaModel}
+ * {@link UpdateServiceInstanceSpecResponseBody} extends {@link TeaModel}
  *
- * <p>DeployServiceInstanceResponseBody</p>
+ * <p>UpdateServiceInstanceSpecResponseBody</p>
  */
-public class DeployServiceInstanceResponseBody extends TeaModel {
+public class UpdateServiceInstanceSpecResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private DeployServiceInstanceResponseBody(Builder builder) {
+    private UpdateServiceInstanceSpecResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -22,7 +22,7 @@ public class DeployServiceInstanceResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DeployServiceInstanceResponseBody create() {
+    public static UpdateServiceInstanceSpecResponseBody create() {
         return builder().build();
     }
 
@@ -44,8 +44,8 @@ public class DeployServiceInstanceResponseBody extends TeaModel {
             return this;
         }
 
-        public DeployServiceInstanceResponseBody build() {
-            return new DeployServiceInstanceResponseBody(this);
+        public UpdateServiceInstanceSpecResponseBody build() {
+            return new UpdateServiceInstanceSpecResponseBody(this);
         } 
 
     } 

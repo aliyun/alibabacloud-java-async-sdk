@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ContinueDeployServiceInstanceResponseBody</p>
  */
 public class ContinueDeployServiceInstanceResponseBody extends TeaModel {
-    @NameInMap("DryRunResult")
+    @com.aliyun.core.annotation.NameInMap("DryRunResult")
     private DryRunResult dryRunResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServiceInstanceId")
+    @com.aliyun.core.annotation.NameInMap("ServiceInstanceId")
     private String serviceInstanceId;
 
     private ContinueDeployServiceInstanceResponseBody(Builder builder) {
@@ -92,13 +91,13 @@ public class ContinueDeployServiceInstanceResponseBody extends TeaModel {
     } 
 
     public static class DryRunResult extends TeaModel {
-        @NameInMap("ParametersAllowedToBeModified")
+        @com.aliyun.core.annotation.NameInMap("ParametersAllowedToBeModified")
         private java.util.List < String > parametersAllowedToBeModified;
 
-        @NameInMap("ParametersConditionallyAllowedToBeModified")
+        @com.aliyun.core.annotation.NameInMap("ParametersConditionallyAllowedToBeModified")
         private java.util.List < String > parametersConditionallyAllowedToBeModified;
 
-        @NameInMap("ParametersNotAllowedToBeModified")
+        @com.aliyun.core.annotation.NameInMap("ParametersNotAllowedToBeModified")
         private java.util.List < String > parametersNotAllowedToBeModified;
 
         private DryRunResult(Builder builder) {

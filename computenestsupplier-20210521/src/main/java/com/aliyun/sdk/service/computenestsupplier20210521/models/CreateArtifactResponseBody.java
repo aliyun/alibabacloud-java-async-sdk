@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateArtifactResponseBody</p>
  */
 public class CreateArtifactResponseBody extends TeaModel {
-    @NameInMap("ArtifactId")
+    @com.aliyun.core.annotation.NameInMap("ArtifactId")
     private String artifactId;
 
-    @NameInMap("ArtifactProperty")
+    @com.aliyun.core.annotation.NameInMap("ArtifactProperty")
     private String artifactProperty;
 
-    @NameInMap("ArtifactType")
+    @com.aliyun.core.annotation.NameInMap("ArtifactType")
     private String artifactType;
 
-    @NameInMap("ArtifactVersion")
+    @com.aliyun.core.annotation.NameInMap("ArtifactVersion")
     private String artifactVersion;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("GmtModified")
+    @com.aliyun.core.annotation.NameInMap("GmtModified")
     private String gmtModified;
 
-    @NameInMap("MaxVersion")
+    @com.aliyun.core.annotation.NameInMap("MaxVersion")
     private Long maxVersion;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("SupportRegionIds")
+    @com.aliyun.core.annotation.NameInMap("SupportRegionIds")
     private String supportRegionIds;
 
-    @NameInMap("VersionName")
+    @com.aliyun.core.annotation.NameInMap("VersionName")
     private String versionName;
 
     private CreateArtifactResponseBody(Builder builder) {

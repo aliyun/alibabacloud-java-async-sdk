@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetServiceTemplateParameterConstraintsResponseBody</p>
  */
 public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel {
-    @NameInMap("FamilyConstraints")
+    @com.aliyun.core.annotation.NameInMap("FamilyConstraints")
     private java.util.List < String > familyConstraints;
 
-    @NameInMap("ParameterConstraints")
+    @com.aliyun.core.annotation.NameInMap("ParameterConstraints")
     private java.util.List < ParameterConstraints> parameterConstraints;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetServiceTemplateParameterConstraintsResponseBody(Builder builder) {
@@ -92,16 +91,16 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
     } 
 
     public static class OriginalConstraints extends TeaModel {
-        @NameInMap("AllowedValues")
+        @com.aliyun.core.annotation.NameInMap("AllowedValues")
         private java.util.List < String > allowedValues;
 
-        @NameInMap("PropertyName")
+        @com.aliyun.core.annotation.NameInMap("PropertyName")
         private String propertyName;
 
-        @NameInMap("ResourceName")
+        @com.aliyun.core.annotation.NameInMap("ResourceName")
         private String resourceName;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
         private OriginalConstraints(Builder builder) {
@@ -193,25 +192,25 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
 
     }
     public static class ParameterConstraints extends TeaModel {
-        @NameInMap("AllowedValues")
+        @com.aliyun.core.annotation.NameInMap("AllowedValues")
         private java.util.List < String > allowedValues;
 
-        @NameInMap("AssociationParameterNames")
+        @com.aliyun.core.annotation.NameInMap("AssociationParameterNames")
         private java.util.List < String > associationParameterNames;
 
-        @NameInMap("Behavior")
+        @com.aliyun.core.annotation.NameInMap("Behavior")
         private String behavior;
 
-        @NameInMap("BehaviorReason")
+        @com.aliyun.core.annotation.NameInMap("BehaviorReason")
         private String behaviorReason;
 
-        @NameInMap("OriginalConstraints")
+        @com.aliyun.core.annotation.NameInMap("OriginalConstraints")
         private java.util.List < OriginalConstraints> originalConstraints;
 
-        @NameInMap("ParameterKey")
+        @com.aliyun.core.annotation.NameInMap("ParameterKey")
         private String parameterKey;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private ParameterConstraints(Builder builder) {

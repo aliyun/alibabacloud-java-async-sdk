@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAcrImageRepositoriesResponseBody</p>
  */
 public class ListAcrImageRepositoriesResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("Repositories")
+    @com.aliyun.core.annotation.NameInMap("Repositories")
     private java.util.List < Repositories> repositories;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListAcrImageRepositoriesResponseBody(Builder builder) {
@@ -132,16 +131,16 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
     } 
 
     public static class Repositories extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("RepoId")
+        @com.aliyun.core.annotation.NameInMap("RepoId")
         private String repoId;
 
-        @NameInMap("RepoName")
+        @com.aliyun.core.annotation.NameInMap("RepoName")
         private String repoName;
 
         private Repositories(Builder builder) {

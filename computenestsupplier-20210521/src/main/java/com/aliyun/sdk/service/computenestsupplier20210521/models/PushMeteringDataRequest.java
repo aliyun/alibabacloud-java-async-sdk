@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PushMeteringDataRequest</p>
  */
 public class PushMeteringDataRequest extends Request {
-    @Query
-    @NameInMap("Metering")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Metering")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String metering;
 
-    @Query
-    @NameInMap("ServiceInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceInstanceId;
 
     private PushMeteringDataRequest(Builder builder) {

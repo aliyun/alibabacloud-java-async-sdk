@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,41 +11,41 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetServiceEstimateCostRequest</p>
  */
 public class GetServiceEstimateCostRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Commodity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Commodity")
     private Commodity commodity;
 
-    @Query
-    @NameInMap("Parameters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Parameters")
     private java.util.Map < String, ? > parameters;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ServiceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceId;
 
-    @Query
-    @NameInMap("ServiceInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceInstanceId")
     private String serviceInstanceId;
 
-    @Query
-    @NameInMap("ServiceVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceVersion")
     private String serviceVersion;
 
-    @Query
-    @NameInMap("SpecificationName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpecificationName")
     private String specificationName;
 
-    @Query
-    @NameInMap("TemplateName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
     private String templateName;
 
     private GetServiceEstimateCostRequest(Builder builder) {
@@ -257,10 +256,10 @@ public class GetServiceEstimateCostRequest extends Request {
     } 
 
     public static class Commodity extends TeaModel {
-        @NameInMap("PayPeriod")
+        @com.aliyun.core.annotation.NameInMap("PayPeriod")
         private Integer payPeriod;
 
-        @NameInMap("PayPeriodUnit")
+        @com.aliyun.core.annotation.NameInMap("PayPeriodUnit")
         private String payPeriodUnit;
 
         private Commodity(Builder builder) {

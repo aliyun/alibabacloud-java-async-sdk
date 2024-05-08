@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetArtifactRequest</p>
  */
 public class GetArtifactRequest extends Request {
-    @Query
-    @NameInMap("ArtifactId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArtifactId")
     private String artifactId;
 
-    @Query
-    @NameInMap("ArtifactName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArtifactName")
     private String artifactName;
 
-    @Query
-    @NameInMap("ArtifactVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArtifactVersion")
     private String artifactVersion;
 
     private GetArtifactRequest(Builder builder) {

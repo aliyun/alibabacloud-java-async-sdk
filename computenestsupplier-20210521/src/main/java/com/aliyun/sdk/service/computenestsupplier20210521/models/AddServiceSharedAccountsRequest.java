@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddServiceSharedAccountsRequest</p>
  */
 public class AddServiceSharedAccountsRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ServiceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceId;
 
-    @Query
-    @NameInMap("SharedAccounts")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SharedAccounts")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < SharedAccounts> sharedAccounts;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private AddServiceSharedAccountsRequest(Builder builder) {
@@ -165,12 +164,12 @@ public class AddServiceSharedAccountsRequest extends Request {
     } 
 
     public static class SharedAccounts extends TeaModel {
-        @NameInMap("Permission")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Permission")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String permission;
 
-        @NameInMap("UserAliUid")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("UserAliUid")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String userAliUid;
 
         private SharedAccounts(Builder builder) {

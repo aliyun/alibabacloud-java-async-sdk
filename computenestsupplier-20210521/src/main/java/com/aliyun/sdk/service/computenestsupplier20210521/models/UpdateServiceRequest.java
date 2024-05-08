@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,86 +11,86 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateServiceRequest</p>
  */
 public class UpdateServiceRequest extends Request {
-    @Query
-    @NameInMap("AlarmMetadata")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlarmMetadata")
     private String alarmMetadata;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DeployMetadata")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeployMetadata")
     private String deployMetadata;
 
-    @Query
-    @NameInMap("DeployType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeployType")
     private String deployType;
 
-    @Query
-    @NameInMap("Duration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Duration")
     private Long duration;
 
-    @Query
-    @NameInMap("IsSupportOperated")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsSupportOperated")
     private Boolean isSupportOperated;
 
-    @Query
-    @NameInMap("LicenseMetadata")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LicenseMetadata")
     private String licenseMetadata;
 
-    @Query
-    @NameInMap("LogMetadata")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogMetadata")
     private String logMetadata;
 
-    @Query
-    @NameInMap("OperationMetadata")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationMetadata")
     private String operationMetadata;
 
-    @Query
-    @NameInMap("PolicyNames")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyNames")
     private String policyNames;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Resellable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Resellable")
     private Boolean resellable;
 
-    @Query
-    @NameInMap("ServiceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceId;
 
-    @Query
-    @NameInMap("ServiceInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceInfo")
     private java.util.List < ServiceInfo> serviceInfo;
 
-    @Query
-    @NameInMap("ServiceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceType")
     private String serviceType;
 
-    @Query
-    @NameInMap("ServiceVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceVersion")
     private String serviceVersion;
 
-    @Query
-    @NameInMap("TenantType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TenantType")
     private String tenantType;
 
-    @Query
-    @NameInMap("TrialDuration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrialDuration")
     private Integer trialDuration;
 
-    @Query
-    @NameInMap("UpgradeMetadata")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UpgradeMetadata")
     private String upgradeMetadata;
 
-    @Query
-    @NameInMap("VersionName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VersionName")
     private String versionName;
 
     private UpdateServiceRequest(Builder builder) {
@@ -509,10 +508,10 @@ public class UpdateServiceRequest extends Request {
     } 
 
     public static class Agreements extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private Agreements(Builder builder) {
@@ -570,22 +569,22 @@ public class UpdateServiceRequest extends Request {
 
     }
     public static class ServiceInfo extends TeaModel {
-        @NameInMap("Agreements")
+        @com.aliyun.core.annotation.NameInMap("Agreements")
         private java.util.List < Agreements> agreements;
 
-        @NameInMap("Image")
+        @com.aliyun.core.annotation.NameInMap("Image")
         private String image;
 
-        @NameInMap("Locale")
+        @com.aliyun.core.annotation.NameInMap("Locale")
         private String locale;
 
-        @NameInMap("LongDescriptionUrl")
+        @com.aliyun.core.annotation.NameInMap("LongDescriptionUrl")
         private String longDescriptionUrl;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ShortDescription")
+        @com.aliyun.core.annotation.NameInMap("ShortDescription")
         private String shortDescription;
 
         private ServiceInfo(Builder builder) {

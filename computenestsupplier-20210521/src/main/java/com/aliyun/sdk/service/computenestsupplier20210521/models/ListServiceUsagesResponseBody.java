@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListServiceUsagesResponseBody</p>
  */
 public class ListServiceUsagesResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServiceUsages")
+    @com.aliyun.core.annotation.NameInMap("ServiceUsages")
     private java.util.List < ServiceUsages> serviceUsages;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListServiceUsagesResponseBody(Builder builder) {
@@ -132,31 +131,31 @@ public class ListServiceUsagesResponseBody extends TeaModel {
     } 
 
     public static class ServiceUsages extends TeaModel {
-        @NameInMap("Comments")
+        @com.aliyun.core.annotation.NameInMap("Comments")
         private String comments;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ServiceId")
+        @com.aliyun.core.annotation.NameInMap("ServiceId")
         private String serviceId;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SupplierName")
+        @com.aliyun.core.annotation.NameInMap("SupplierName")
         private String supplierName;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("UserAliUid")
+        @com.aliyun.core.annotation.NameInMap("UserAliUid")
         private Long userAliUid;
 
-        @NameInMap("UserInformation")
+        @com.aliyun.core.annotation.NameInMap("UserInformation")
         private java.util.Map < String, String > userInformation;
 
         private ServiceUsages(Builder builder) {

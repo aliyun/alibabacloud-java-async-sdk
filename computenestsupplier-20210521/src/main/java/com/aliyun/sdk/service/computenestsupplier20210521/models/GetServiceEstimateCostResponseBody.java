@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetServiceEstimateCostResponseBody</p>
  */
 public class GetServiceEstimateCostResponseBody extends TeaModel {
-    @NameInMap("Commodity")
+    @com.aliyun.core.annotation.NameInMap("Commodity")
     private java.util.Map < String, ? > commodity;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Resources")
+    @com.aliyun.core.annotation.NameInMap("Resources")
     private java.util.Map < String, ? > resources;
 
     private GetServiceEstimateCostResponseBody(Builder builder) {

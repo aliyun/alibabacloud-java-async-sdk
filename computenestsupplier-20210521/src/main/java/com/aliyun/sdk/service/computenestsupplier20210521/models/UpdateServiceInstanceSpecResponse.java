@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UpgradeServiceInstanceResponse} extends {@link TeaModel}
+ * {@link UpdateServiceInstanceSpecResponse} extends {@link TeaModel}
  *
- * <p>UpgradeServiceInstanceResponse</p>
+ * <p>UpdateServiceInstanceSpecResponse</p>
  */
-public class UpgradeServiceInstanceResponse extends Response {
+public class UpdateServiceInstanceSpecResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +18,16 @@ public class UpgradeServiceInstanceResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private UpgradeServiceInstanceResponseBody body;
+    private UpdateServiceInstanceSpecResponseBody body;
 
-    private UpgradeServiceInstanceResponse(BuilderImpl builder) {
+    private UpdateServiceInstanceSpecResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static UpgradeServiceInstanceResponse create() {
+    public static UpdateServiceInstanceSpecResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +53,35 @@ public class UpgradeServiceInstanceResponse extends Response {
     /**
      * @return body
      */
-    public UpgradeServiceInstanceResponseBody getBody() {
+    public UpdateServiceInstanceSpecResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<UpgradeServiceInstanceResponse, Builder> {
+    public interface Builder extends Response.Builder<UpdateServiceInstanceSpecResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(UpgradeServiceInstanceResponseBody body);
+        Builder body(UpdateServiceInstanceSpecResponseBody body);
 
         @Override
-        UpgradeServiceInstanceResponse build();
+        UpdateServiceInstanceSpecResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<UpgradeServiceInstanceResponse, Builder>
+            extends Response.BuilderImpl<UpdateServiceInstanceSpecResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private UpgradeServiceInstanceResponseBody body; 
+        private UpdateServiceInstanceSpecResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(UpgradeServiceInstanceResponse response) {
+        private BuilderImpl(UpdateServiceInstanceSpecResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +110,14 @@ public class UpgradeServiceInstanceResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(UpgradeServiceInstanceResponseBody body) {
+        public Builder body(UpdateServiceInstanceSpecResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public UpgradeServiceInstanceResponse build() {
-            return new UpgradeServiceInstanceResponse(this);
+        public UpdateServiceInstanceSpecResponse build() {
+            return new UpdateServiceInstanceSpecResponse(this);
         } 
 
     } 

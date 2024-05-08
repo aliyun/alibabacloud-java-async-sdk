@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetArtifactRepositoryCredentialsResponseBody</p>
  */
 public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
-    @NameInMap("AvailableResources")
+    @com.aliyun.core.annotation.NameInMap("AvailableResources")
     private java.util.List < AvailableResources> availableResources;
 
-    @NameInMap("Credentials")
+    @com.aliyun.core.annotation.NameInMap("Credentials")
     private Credentials credentials;
 
-    @NameInMap("ExpireDate")
+    @com.aliyun.core.annotation.NameInMap("ExpireDate")
     private String expireDate;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetArtifactRepositoryCredentialsResponseBody(Builder builder) {
@@ -112,13 +111,13 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
     } 
 
     public static class AvailableResources extends TeaModel {
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RepositoryName")
+        @com.aliyun.core.annotation.NameInMap("RepositoryName")
         private String repositoryName;
 
         private AvailableResources(Builder builder) {
@@ -193,19 +192,19 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
 
     }
     public static class Credentials extends TeaModel {
-        @NameInMap("AccessKeyId")
+        @com.aliyun.core.annotation.NameInMap("AccessKeyId")
         private String accessKeyId;
 
-        @NameInMap("AccessKeySecret")
+        @com.aliyun.core.annotation.NameInMap("AccessKeySecret")
         private String accessKeySecret;
 
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
 
-        @NameInMap("SecurityToken")
+        @com.aliyun.core.annotation.NameInMap("SecurityToken")
         private String securityToken;
 
-        @NameInMap("Username")
+        @com.aliyun.core.annotation.NameInMap("Username")
         private String username;
 
         private Credentials(Builder builder) {

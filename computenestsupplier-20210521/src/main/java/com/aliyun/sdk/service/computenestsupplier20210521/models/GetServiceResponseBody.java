@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,181 +11,181 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetServiceResponseBody</p>
  */
 public class GetServiceResponseBody extends TeaModel {
-    @NameInMap("AlarmMetadata")
+    @com.aliyun.core.annotation.NameInMap("AlarmMetadata")
     private String alarmMetadata;
 
-    @NameInMap("ApprovalType")
+    @com.aliyun.core.annotation.NameInMap("ApprovalType")
     private String approvalType;
 
-    @NameInMap("BillEntityMappings")
+    @com.aliyun.core.annotation.NameInMap("BillEntityMappings")
     private BillEntityMappings billEntityMappings;
 
-    @NameInMap("Categories")
+    @com.aliyun.core.annotation.NameInMap("Categories")
     private String categories;
 
-    @NameInMap("Commodity")
+    @com.aliyun.core.annotation.NameInMap("Commodity")
     private Commodity commodity;
 
-    @NameInMap("CommodityCode")
+    @com.aliyun.core.annotation.NameInMap("CommodityCode")
     private String commodityCode;
 
-    @NameInMap("CommodityEntities")
+    @com.aliyun.core.annotation.NameInMap("CommodityEntities")
     private java.util.List < CommodityEntities> commodityEntities;
 
-    @NameInMap("CommoditySpecifications")
+    @com.aliyun.core.annotation.NameInMap("CommoditySpecifications")
     private java.util.List < CommoditySpecifications> commoditySpecifications;
 
-    @NameInMap("ComponentsConfigs")
+    @com.aliyun.core.annotation.NameInMap("ComponentsConfigs")
     private java.util.List < ComponentsConfigs> componentsConfigs;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("CrossRegionConnectionStatus")
+    @com.aliyun.core.annotation.NameInMap("CrossRegionConnectionStatus")
     private String crossRegionConnectionStatus;
 
-    @NameInMap("DefaultLicenseDays")
+    @com.aliyun.core.annotation.NameInMap("DefaultLicenseDays")
     private Long defaultLicenseDays;
 
-    @NameInMap("DeployMetadata")
+    @com.aliyun.core.annotation.NameInMap("DeployMetadata")
     private String deployMetadata;
 
-    @NameInMap("DeployType")
+    @com.aliyun.core.annotation.NameInMap("DeployType")
     private String deployType;
 
-    @NameInMap("Duration")
+    @com.aliyun.core.annotation.NameInMap("Duration")
     private Long duration;
 
-    @NameInMap("EntityAdditionalInfo")
+    @com.aliyun.core.annotation.NameInMap("EntityAdditionalInfo")
     private java.util.Map < String, EntityAdditionalInfoValue > entityAdditionalInfo;
 
-    @NameInMap("EntitySource")
+    @com.aliyun.core.annotation.NameInMap("EntitySource")
     private java.util.Map < String, String > entitySource;
 
-    @NameInMap("IsSupportOperated")
+    @com.aliyun.core.annotation.NameInMap("IsSupportOperated")
     private Boolean isSupportOperated;
 
-    @NameInMap("LicenseMetadata")
+    @com.aliyun.core.annotation.NameInMap("LicenseMetadata")
     private String licenseMetadata;
 
-    @NameInMap("LogMetadata")
+    @com.aliyun.core.annotation.NameInMap("LogMetadata")
     private String logMetadata;
 
-    @NameInMap("OperationMetadata")
+    @com.aliyun.core.annotation.NameInMap("OperationMetadata")
     private String operationMetadata;
 
-    @NameInMap("PayFromType")
+    @com.aliyun.core.annotation.NameInMap("PayFromType")
     private String payFromType;
 
-    @NameInMap("PayType")
+    @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
 
-    @NameInMap("Permission")
+    @com.aliyun.core.annotation.NameInMap("Permission")
     private String permission;
 
-    @NameInMap("PolicyNames")
+    @com.aliyun.core.annotation.NameInMap("PolicyNames")
     private String policyNames;
 
-    @NameInMap("Progress")
+    @com.aliyun.core.annotation.NameInMap("Progress")
     private Long progress;
 
-    @NameInMap("PublishTime")
+    @com.aliyun.core.annotation.NameInMap("PublishTime")
     private String publishTime;
 
-    @NameInMap("RegistrationId")
+    @com.aliyun.core.annotation.NameInMap("RegistrationId")
     private String registrationId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Resellable")
+    @com.aliyun.core.annotation.NameInMap("Resellable")
     private Boolean resellable;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("ServiceAuditDocumentUrl")
+    @com.aliyun.core.annotation.NameInMap("ServiceAuditDocumentUrl")
     private String serviceAuditDocumentUrl;
 
-    @NameInMap("ServiceDiscoverable")
+    @com.aliyun.core.annotation.NameInMap("ServiceDiscoverable")
     private String serviceDiscoverable;
 
-    @NameInMap("ServiceDocUrl")
+    @com.aliyun.core.annotation.NameInMap("ServiceDocUrl")
     private String serviceDocUrl;
 
-    @NameInMap("ServiceId")
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
     private String serviceId;
 
-    @NameInMap("ServiceInfos")
+    @com.aliyun.core.annotation.NameInMap("ServiceInfos")
     private java.util.List < ServiceInfos> serviceInfos;
 
-    @NameInMap("ServiceProductUrl")
+    @com.aliyun.core.annotation.NameInMap("ServiceProductUrl")
     private String serviceProductUrl;
 
-    @NameInMap("ServiceType")
+    @com.aliyun.core.annotation.NameInMap("ServiceType")
     private String serviceType;
 
-    @NameInMap("ShareType")
+    @com.aliyun.core.annotation.NameInMap("ShareType")
     private String shareType;
 
-    @NameInMap("ShareTypeStatus")
+    @com.aliyun.core.annotation.NameInMap("ShareTypeStatus")
     private String shareTypeStatus;
 
-    @NameInMap("SourceServiceId")
+    @com.aliyun.core.annotation.NameInMap("SourceServiceId")
     private String sourceServiceId;
 
-    @NameInMap("SourceServiceVersion")
+    @com.aliyun.core.annotation.NameInMap("SourceServiceVersion")
     private String sourceServiceVersion;
 
-    @NameInMap("SourceSupplierName")
+    @com.aliyun.core.annotation.NameInMap("SourceSupplierName")
     private String sourceSupplierName;
 
-    @NameInMap("Statistic")
+    @com.aliyun.core.annotation.NameInMap("Statistic")
     private Statistic statistic;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("StatusDetail")
+    @com.aliyun.core.annotation.NameInMap("StatusDetail")
     private String statusDetail;
 
-    @NameInMap("SupplierName")
+    @com.aliyun.core.annotation.NameInMap("SupplierName")
     private String supplierName;
 
-    @NameInMap("SupplierUrl")
+    @com.aliyun.core.annotation.NameInMap("SupplierUrl")
     private String supplierUrl;
 
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List < Tags> tags;
 
-    @NameInMap("TenantType")
+    @com.aliyun.core.annotation.NameInMap("TenantType")
     private String tenantType;
 
-    @NameInMap("TestStatus")
+    @com.aliyun.core.annotation.NameInMap("TestStatus")
     private String testStatus;
 
-    @NameInMap("TrialDuration")
+    @com.aliyun.core.annotation.NameInMap("TrialDuration")
     private Long trialDuration;
 
-    @NameInMap("TrialType")
+    @com.aliyun.core.annotation.NameInMap("TrialType")
     private String trialType;
 
-    @NameInMap("UpdateTime")
+    @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
-    @NameInMap("UpgradeMetadata")
+    @com.aliyun.core.annotation.NameInMap("UpgradeMetadata")
     private String upgradeMetadata;
 
-    @NameInMap("Version")
+    @com.aliyun.core.annotation.NameInMap("Version")
     private String version;
 
-    @NameInMap("VersionName")
+    @com.aliyun.core.annotation.NameInMap("VersionName")
     private String versionName;
 
-    @NameInMap("VirtualInternetService")
+    @com.aliyun.core.annotation.NameInMap("VirtualInternetService")
     private String virtualInternetService;
 
-    @NameInMap("VirtualInternetServiceId")
+    @com.aliyun.core.annotation.NameInMap("VirtualInternetServiceId")
     private String virtualInternetServiceId;
 
     private GetServiceResponseBody(Builder builder) {
@@ -1212,13 +1211,13 @@ public class GetServiceResponseBody extends TeaModel {
     } 
 
     public static class Mappings extends TeaModel {
-        @NameInMap("BillCode")
+        @com.aliyun.core.annotation.NameInMap("BillCode")
         private String billCode;
 
-        @NameInMap("Entity")
+        @com.aliyun.core.annotation.NameInMap("Entity")
         private String entity;
 
-        @NameInMap("MeteringAssist")
+        @com.aliyun.core.annotation.NameInMap("MeteringAssist")
         private String meteringAssist;
 
         private Mappings(Builder builder) {
@@ -1293,13 +1292,13 @@ public class GetServiceResponseBody extends TeaModel {
 
     }
     public static class MappingConfig extends TeaModel {
-        @NameInMap("Mappings")
+        @com.aliyun.core.annotation.NameInMap("Mappings")
         private java.util.List < Mappings> mappings;
 
-        @NameInMap("PredefinedParameters")
+        @com.aliyun.core.annotation.NameInMap("PredefinedParameters")
         private String predefinedParameters;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
         private MappingConfig(Builder builder) {
@@ -1374,10 +1373,10 @@ public class GetServiceResponseBody extends TeaModel {
 
     }
     public static class BillEntityMappings extends TeaModel {
-        @NameInMap("MappingConfig")
+        @com.aliyun.core.annotation.NameInMap("MappingConfig")
         private java.util.List < MappingConfig> mappingConfig;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private BillEntityMappings(Builder builder) {
@@ -1435,10 +1434,10 @@ public class GetServiceResponseBody extends TeaModel {
 
     }
     public static class ComponentsMappings extends TeaModel {
-        @NameInMap("Mappings")
+        @com.aliyun.core.annotation.NameInMap("Mappings")
         private java.util.Map < String, String > mappings;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
         private ComponentsMappings(Builder builder) {
@@ -1496,7 +1495,7 @@ public class GetServiceResponseBody extends TeaModel {
 
     }
     public static class CssMetadata extends TeaModel {
-        @NameInMap("ComponentsMappings")
+        @com.aliyun.core.annotation.NameInMap("ComponentsMappings")
         private java.util.List < ComponentsMappings> componentsMappings;
 
         private CssMetadata(Builder builder) {
@@ -1537,16 +1536,16 @@ public class GetServiceResponseBody extends TeaModel {
 
     }
     public static class MeteringEntityExtraInfos extends TeaModel {
-        @NameInMap("EntityId")
+        @com.aliyun.core.annotation.NameInMap("EntityId")
         private String entityId;
 
-        @NameInMap("MetricName")
+        @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
 
-        @NameInMap("Promql")
+        @com.aliyun.core.annotation.NameInMap("Promql")
         private String promql;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private MeteringEntityExtraInfos(Builder builder) {
@@ -1638,13 +1637,13 @@ public class GetServiceResponseBody extends TeaModel {
 
     }
     public static class MeteringEntityMappings extends TeaModel {
-        @NameInMap("EntityIds")
+        @com.aliyun.core.annotation.NameInMap("EntityIds")
         private String entityIds;
 
-        @NameInMap("SpecificationName")
+        @com.aliyun.core.annotation.NameInMap("SpecificationName")
         private String specificationName;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
         private MeteringEntityMappings(Builder builder) {
@@ -1719,16 +1718,16 @@ public class GetServiceResponseBody extends TeaModel {
 
     }
     public static class SpecificationMappings extends TeaModel {
-        @NameInMap("SpecificationCode")
+        @com.aliyun.core.annotation.NameInMap("SpecificationCode")
         private String specificationCode;
 
-        @NameInMap("SpecificationName")
+        @com.aliyun.core.annotation.NameInMap("SpecificationName")
         private String specificationName;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
-        @NameInMap("TrialType")
+        @com.aliyun.core.annotation.NameInMap("TrialType")
         private String trialType;
 
         private SpecificationMappings(Builder builder) {
@@ -1820,13 +1819,13 @@ public class GetServiceResponseBody extends TeaModel {
 
     }
     public static class MarketplaceMetadata extends TeaModel {
-        @NameInMap("MeteringEntityExtraInfos")
+        @com.aliyun.core.annotation.NameInMap("MeteringEntityExtraInfos")
         private java.util.List < MeteringEntityExtraInfos> meteringEntityExtraInfos;
 
-        @NameInMap("MeteringEntityMappings")
+        @com.aliyun.core.annotation.NameInMap("MeteringEntityMappings")
         private java.util.List < MeteringEntityMappings> meteringEntityMappings;
 
-        @NameInMap("SpecificationMappings")
+        @com.aliyun.core.annotation.NameInMap("SpecificationMappings")
         private java.util.List < SpecificationMappings> specificationMappings;
 
         private MarketplaceMetadata(Builder builder) {
@@ -1901,10 +1900,10 @@ public class GetServiceResponseBody extends TeaModel {
 
     }
     public static class MeteringEntities extends TeaModel {
-        @NameInMap("EntityId")
+        @com.aliyun.core.annotation.NameInMap("EntityId")
         private String entityId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private MeteringEntities(Builder builder) {
@@ -1962,13 +1961,13 @@ public class GetServiceResponseBody extends TeaModel {
 
     }
     public static class Specifications extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Times")
+        @com.aliyun.core.annotation.NameInMap("Times")
         private java.util.List < String > times;
 
         private Specifications(Builder builder) {
@@ -2043,34 +2042,34 @@ public class GetServiceResponseBody extends TeaModel {
 
     }
     public static class Commodity extends TeaModel {
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("CommodityCode")
+        @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
 
-        @NameInMap("Components")
+        @com.aliyun.core.annotation.NameInMap("Components")
         private java.util.List < String > components;
 
-        @NameInMap("CssMetadata")
+        @com.aliyun.core.annotation.NameInMap("CssMetadata")
         private CssMetadata cssMetadata;
 
-        @NameInMap("MarketplaceMetadata")
+        @com.aliyun.core.annotation.NameInMap("MarketplaceMetadata")
         private MarketplaceMetadata marketplaceMetadata;
 
-        @NameInMap("MeteringEntities")
+        @com.aliyun.core.annotation.NameInMap("MeteringEntities")
         private java.util.List < MeteringEntities> meteringEntities;
 
-        @NameInMap("OrderTime")
+        @com.aliyun.core.annotation.NameInMap("OrderTime")
         private java.util.Map < String, java.util.List<String>> orderTime;
 
-        @NameInMap("SaasBoostMetadata")
+        @com.aliyun.core.annotation.NameInMap("SaasBoostMetadata")
         private String saasBoostMetadata;
 
-        @NameInMap("Specifications")
+        @com.aliyun.core.annotation.NameInMap("Specifications")
         private java.util.List < Specifications> specifications;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Commodity(Builder builder) {
@@ -2264,13 +2263,13 @@ public class GetServiceResponseBody extends TeaModel {
 
     }
     public static class CommodityEntities extends TeaModel {
-        @NameInMap("EntityIds")
+        @com.aliyun.core.annotation.NameInMap("EntityIds")
         private java.util.List < String > entityIds;
 
-        @NameInMap("PredefinedParameterName")
+        @com.aliyun.core.annotation.NameInMap("PredefinedParameterName")
         private String predefinedParameterName;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
         private CommodityEntities(Builder builder) {
@@ -2345,13 +2344,13 @@ public class GetServiceResponseBody extends TeaModel {
 
     }
     public static class CommoditySpecifications extends TeaModel {
-        @NameInMap("PredefinedParameterName")
+        @com.aliyun.core.annotation.NameInMap("PredefinedParameterName")
         private String predefinedParameterName;
 
-        @NameInMap("SpecificationCode")
+        @com.aliyun.core.annotation.NameInMap("SpecificationCode")
         private String specificationCode;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
         private CommoditySpecifications(Builder builder) {
@@ -2426,10 +2425,10 @@ public class GetServiceResponseBody extends TeaModel {
 
     }
     public static class ComponentsConfigs extends TeaModel {
-        @NameInMap("ComponentsMappings")
+        @com.aliyun.core.annotation.NameInMap("ComponentsMappings")
         private java.util.Map < String, String > componentsMappings;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
         private ComponentsConfigs(Builder builder) {
@@ -2487,10 +2486,10 @@ public class GetServiceResponseBody extends TeaModel {
 
     }
     public static class Agreements extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private Agreements(Builder builder) {
@@ -2548,22 +2547,22 @@ public class GetServiceResponseBody extends TeaModel {
 
     }
     public static class ServiceInfos extends TeaModel {
-        @NameInMap("Agreements")
+        @com.aliyun.core.annotation.NameInMap("Agreements")
         private java.util.List < Agreements> agreements;
 
-        @NameInMap("Image")
+        @com.aliyun.core.annotation.NameInMap("Image")
         private String image;
 
-        @NameInMap("Locale")
+        @com.aliyun.core.annotation.NameInMap("Locale")
         private String locale;
 
-        @NameInMap("LongDescriptionUrl")
+        @com.aliyun.core.annotation.NameInMap("LongDescriptionUrl")
         private String longDescriptionUrl;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ShortDescription")
+        @com.aliyun.core.annotation.NameInMap("ShortDescription")
         private String shortDescription;
 
         private ServiceInfos(Builder builder) {
@@ -2689,31 +2688,31 @@ public class GetServiceResponseBody extends TeaModel {
 
     }
     public static class Statistic extends TeaModel {
-        @NameInMap("AccumulativeInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("AccumulativeInstanceCount")
         private Integer accumulativeInstanceCount;
 
-        @NameInMap("AccumulativePocAmount")
+        @com.aliyun.core.annotation.NameInMap("AccumulativePocAmount")
         private Double accumulativePocAmount;
 
-        @NameInMap("AccumulativeUserCount")
+        @com.aliyun.core.annotation.NameInMap("AccumulativeUserCount")
         private Integer accumulativeUserCount;
 
-        @NameInMap("AveragePocAmount")
+        @com.aliyun.core.annotation.NameInMap("AveragePocAmount")
         private Double averagePocAmount;
 
-        @NameInMap("AveragePocDuration")
+        @com.aliyun.core.annotation.NameInMap("AveragePocDuration")
         private Double averagePocDuration;
 
-        @NameInMap("AveragePocUnitAmount")
+        @com.aliyun.core.annotation.NameInMap("AveragePocUnitAmount")
         private Double averagePocUnitAmount;
 
-        @NameInMap("DeployedServiceInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("DeployedServiceInstanceCount")
         private Integer deployedServiceInstanceCount;
 
-        @NameInMap("DeployedUserCount")
+        @com.aliyun.core.annotation.NameInMap("DeployedUserCount")
         private Integer deployedUserCount;
 
-        @NameInMap("SubmittedUsageCount")
+        @com.aliyun.core.annotation.NameInMap("SubmittedUsageCount")
         private Integer submittedUsageCount;
 
         private Statistic(Builder builder) {
@@ -2890,10 +2889,10 @@ public class GetServiceResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {

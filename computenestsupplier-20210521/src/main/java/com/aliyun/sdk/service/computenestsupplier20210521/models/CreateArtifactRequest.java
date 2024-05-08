@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,43 +11,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateArtifactRequest</p>
  */
 public class CreateArtifactRequest extends Request {
-    @Query
-    @NameInMap("ArtifactId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArtifactId")
     private String artifactId;
 
-    @Query
-    @NameInMap("ArtifactProperty")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArtifactProperty")
     private ArtifactProperty artifactProperty;
 
-    @Query
-    @NameInMap("ArtifactType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArtifactType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String artifactType;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("SupportRegionIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SupportRegionIds")
     private java.util.List < String > supportRegionIds;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("VersionName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VersionName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String versionName;
 
     private CreateArtifactRequest(Builder builder) {
@@ -258,34 +257,34 @@ public class CreateArtifactRequest extends Request {
     } 
 
     public static class ArtifactProperty extends TeaModel {
-        @NameInMap("CommodityCode")
+        @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
 
-        @NameInMap("CommodityVersion")
+        @com.aliyun.core.annotation.NameInMap("CommodityVersion")
         private String commodityVersion;
 
-        @NameInMap("FileScriptMetadata")
+        @com.aliyun.core.annotation.NameInMap("FileScriptMetadata")
         private String fileScriptMetadata;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RepoId")
+        @com.aliyun.core.annotation.NameInMap("RepoId")
         private String repoId;
 
-        @NameInMap("RepoName")
+        @com.aliyun.core.annotation.NameInMap("RepoName")
         private String repoName;
 
-        @NameInMap("ScriptMetadata")
+        @com.aliyun.core.annotation.NameInMap("ScriptMetadata")
         private String scriptMetadata;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private ArtifactProperty(Builder builder) {
@@ -479,10 +478,10 @@ public class CreateArtifactRequest extends Request {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

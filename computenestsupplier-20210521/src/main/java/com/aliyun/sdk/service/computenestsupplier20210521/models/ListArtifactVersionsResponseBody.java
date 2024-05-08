@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListArtifactVersionsResponseBody</p>
  */
 public class ListArtifactVersionsResponseBody extends TeaModel {
-    @NameInMap("Artifacts")
+    @com.aliyun.core.annotation.NameInMap("Artifacts")
     private java.util.List < Artifacts> artifacts;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListArtifactVersionsResponseBody(Builder builder) {
@@ -132,43 +131,43 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
     } 
 
     public static class Artifacts extends TeaModel {
-        @NameInMap("ArtifactId")
+        @com.aliyun.core.annotation.NameInMap("ArtifactId")
         private String artifactId;
 
-        @NameInMap("ArtifactProperty")
+        @com.aliyun.core.annotation.NameInMap("ArtifactProperty")
         private String artifactProperty;
 
-        @NameInMap("ArtifactType")
+        @com.aliyun.core.annotation.NameInMap("ArtifactType")
         private String artifactType;
 
-        @NameInMap("ArtifactVersion")
+        @com.aliyun.core.annotation.NameInMap("ArtifactVersion")
         private String artifactVersion;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("ImageDelivery")
+        @com.aliyun.core.annotation.NameInMap("ImageDelivery")
         private java.util.Map < String, String > imageDelivery;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("ResultFile")
+        @com.aliyun.core.annotation.NameInMap("ResultFile")
         private String resultFile;
 
-        @NameInMap("SecurityAuditResult")
+        @com.aliyun.core.annotation.NameInMap("SecurityAuditResult")
         private String securityAuditResult;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SupportRegionIds")
+        @com.aliyun.core.annotation.NameInMap("SupportRegionIds")
         private String supportRegionIds;
 
-        @NameInMap("VersionName")
+        @com.aliyun.core.annotation.NameInMap("VersionName")
         private String versionName;
 
         private Artifacts(Builder builder) {

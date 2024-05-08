@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenestsupplier20210521.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>EntityAdditionalInfoValue</p>
  */
 public class EntityAdditionalInfoValue extends TeaModel {
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @NameInMap("Promql")
+    @com.aliyun.core.annotation.NameInMap("Promql")
     private String promql;
 
     private EntityAdditionalInfoValue(Builder builder) {
