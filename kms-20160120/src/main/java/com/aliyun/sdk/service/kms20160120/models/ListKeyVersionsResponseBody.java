@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListKeyVersionsResponseBody</p>
  */
 public class ListKeyVersionsResponseBody extends TeaModel {
-    @NameInMap("KeyVersions")
+    @com.aliyun.core.annotation.NameInMap("KeyVersions")
     private KeyVersions keyVersions;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListKeyVersionsResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class ListKeyVersionsResponseBody extends TeaModel {
     } 
 
     public static class KeyVersion extends TeaModel {
-        @NameInMap("CreationDate")
+        @com.aliyun.core.annotation.NameInMap("CreationDate")
         private String creationDate;
 
-        @NameInMap("KeyId")
+        @com.aliyun.core.annotation.NameInMap("KeyId")
         private String keyId;
 
-        @NameInMap("KeyVersionId")
+        @com.aliyun.core.annotation.NameInMap("KeyVersionId")
         private String keyVersionId;
 
         private KeyVersion(Builder builder) {
@@ -216,7 +215,7 @@ public class ListKeyVersionsResponseBody extends TeaModel {
 
     }
     public static class KeyVersions extends TeaModel {
-        @NameInMap("KeyVersion")
+        @com.aliyun.core.annotation.NameInMap("KeyVersion")
         private java.util.List < KeyVersion> keyVersion;
 
         private KeyVersions(Builder builder) {

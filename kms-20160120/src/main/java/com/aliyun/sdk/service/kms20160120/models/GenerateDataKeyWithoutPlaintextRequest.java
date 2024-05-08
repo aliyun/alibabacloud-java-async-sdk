@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GenerateDataKeyWithoutPlaintextRequest</p>
  */
 public class GenerateDataKeyWithoutPlaintextRequest extends Request {
-    @Query
-    @NameInMap("EncryptionContext")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptionContext")
     private java.util.Map < String, ? > encryptionContext;
 
-    @Query
-    @NameInMap("KeyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String keyId;
 
-    @Query
-    @NameInMap("KeySpec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeySpec")
     private String keySpec;
 
-    @Query
-    @NameInMap("NumberOfBytes")
-    @Validation(maximum = 1024)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NumberOfBytes")
+    @com.aliyun.core.annotation.Validation(maximum = 1024)
     private Integer numberOfBytes;
 
     private GenerateDataKeyWithoutPlaintextRequest(Builder builder) {

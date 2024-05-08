@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeKeyResponseBody</p>
  */
 public class DescribeKeyResponseBody extends TeaModel {
-    @NameInMap("KeyMetadata")
+    @com.aliyun.core.annotation.NameInMap("KeyMetadata")
     private KeyMetadata keyMetadata;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeKeyResponseBody(Builder builder) {
@@ -72,64 +71,64 @@ public class DescribeKeyResponseBody extends TeaModel {
     } 
 
     public static class KeyMetadata extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
-        @NameInMap("AutomaticRotation")
+        @com.aliyun.core.annotation.NameInMap("AutomaticRotation")
         private String automaticRotation;
 
-        @NameInMap("CreationDate")
+        @com.aliyun.core.annotation.NameInMap("CreationDate")
         private String creationDate;
 
-        @NameInMap("Creator")
+        @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
 
-        @NameInMap("DKMSInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DKMSInstanceId")
         private String DKMSInstanceId;
 
-        @NameInMap("DeleteDate")
+        @com.aliyun.core.annotation.NameInMap("DeleteDate")
         private String deleteDate;
 
-        @NameInMap("DeletionProtection")
+        @com.aliyun.core.annotation.NameInMap("DeletionProtection")
         private String deletionProtection;
 
-        @NameInMap("DeletionProtectionDescription")
+        @com.aliyun.core.annotation.NameInMap("DeletionProtectionDescription")
         private String deletionProtectionDescription;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("KeyId")
+        @com.aliyun.core.annotation.NameInMap("KeyId")
         private String keyId;
 
-        @NameInMap("KeySpec")
+        @com.aliyun.core.annotation.NameInMap("KeySpec")
         private String keySpec;
 
-        @NameInMap("KeyState")
+        @com.aliyun.core.annotation.NameInMap("KeyState")
         private String keyState;
 
-        @NameInMap("KeyUsage")
+        @com.aliyun.core.annotation.NameInMap("KeyUsage")
         private String keyUsage;
 
-        @NameInMap("LastRotationDate")
+        @com.aliyun.core.annotation.NameInMap("LastRotationDate")
         private String lastRotationDate;
 
-        @NameInMap("MaterialExpireTime")
+        @com.aliyun.core.annotation.NameInMap("MaterialExpireTime")
         private String materialExpireTime;
 
-        @NameInMap("NextRotationDate")
+        @com.aliyun.core.annotation.NameInMap("NextRotationDate")
         private String nextRotationDate;
 
-        @NameInMap("Origin")
+        @com.aliyun.core.annotation.NameInMap("Origin")
         private String origin;
 
-        @NameInMap("PrimaryKeyVersion")
+        @com.aliyun.core.annotation.NameInMap("PrimaryKeyVersion")
         private String primaryKeyVersion;
 
-        @NameInMap("ProtectionLevel")
+        @com.aliyun.core.annotation.NameInMap("ProtectionLevel")
         private String protectionLevel;
 
-        @NameInMap("RotationInterval")
+        @com.aliyun.core.annotation.NameInMap("RotationInterval")
         private String rotationInterval;
 
         private KeyMetadata(Builder builder) {

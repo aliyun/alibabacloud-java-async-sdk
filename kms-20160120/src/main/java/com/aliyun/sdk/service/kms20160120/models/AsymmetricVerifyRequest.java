@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AsymmetricVerifyRequest</p>
  */
 public class AsymmetricVerifyRequest extends Request {
-    @Query
-    @NameInMap("Algorithm")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Algorithm")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String algorithm;
 
-    @Query
-    @NameInMap("Digest")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Digest")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String digest;
 
-    @Query
-    @NameInMap("KeyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String keyId;
 
-    @Query
-    @NameInMap("KeyVersionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyVersionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String keyVersionId;
 
-    @Query
-    @NameInMap("Value")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Value")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String value;
 
     private AsymmetricVerifyRequest(Builder builder) {

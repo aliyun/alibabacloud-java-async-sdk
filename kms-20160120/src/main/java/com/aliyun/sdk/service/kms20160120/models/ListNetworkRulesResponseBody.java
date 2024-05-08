@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListNetworkRulesResponseBody</p>
  */
 public class ListNetworkRulesResponseBody extends TeaModel {
-    @NameInMap("NetworkRules")
+    @com.aliyun.core.annotation.NameInMap("NetworkRules")
     private NetworkRules networkRules;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListNetworkRulesResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class ListNetworkRulesResponseBody extends TeaModel {
     } 
 
     public static class NetworkRule extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private NetworkRule(Builder builder) {
@@ -193,7 +192,7 @@ public class ListNetworkRulesResponseBody extends TeaModel {
 
     }
     public static class NetworkRules extends TeaModel {
-        @NameInMap("NetworkRule")
+        @com.aliyun.core.annotation.NameInMap("NetworkRule")
         private java.util.List < NetworkRule> networkRule;
 
         private NetworkRules(Builder builder) {

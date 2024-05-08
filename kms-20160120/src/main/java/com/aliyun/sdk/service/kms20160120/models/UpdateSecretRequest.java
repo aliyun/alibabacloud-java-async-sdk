@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateSecretRequest</p>
  */
 public class UpdateSecretRequest extends Request {
-    @Query
-    @NameInMap("ExtendedConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtendedConfig")
     private ExtendedConfig extendedConfig;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("SecretName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecretName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String secretName;
 
     private UpdateSecretRequest(Builder builder) {
@@ -117,7 +116,7 @@ public class UpdateSecretRequest extends Request {
     } 
 
     public static class ExtendedConfig extends TeaModel {
-        @NameInMap("CustomData")
+        @com.aliyun.core.annotation.NameInMap("CustomData")
         private java.util.Map < String, ? > customData;
 
         private ExtendedConfig(Builder builder) {

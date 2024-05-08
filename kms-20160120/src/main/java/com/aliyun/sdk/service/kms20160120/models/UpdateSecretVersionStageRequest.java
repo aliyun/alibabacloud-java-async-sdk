@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateSecretVersionStageRequest</p>
  */
 public class UpdateSecretVersionStageRequest extends Request {
-    @Query
-    @NameInMap("MoveToVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MoveToVersion")
     private String moveToVersion;
 
-    @Query
-    @NameInMap("RemoveFromVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RemoveFromVersion")
     private String removeFromVersion;
 
-    @Query
-    @NameInMap("SecretName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecretName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String secretName;
 
-    @Query
-    @NameInMap("VersionStage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VersionStage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String versionStage;
 
     private UpdateSecretVersionStageRequest(Builder builder) {

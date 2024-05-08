@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateSecretRotationPolicyRequest</p>
  */
 public class UpdateSecretRotationPolicyRequest extends Request {
-    @Query
-    @NameInMap("EnableAutomaticRotation")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableAutomaticRotation")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean enableAutomaticRotation;
 
-    @Query
-    @NameInMap("RotationInterval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RotationInterval")
     private String rotationInterval;
 
-    @Query
-    @NameInMap("SecretName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecretName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String secretName;
 
     private UpdateSecretRotationPolicyRequest(Builder builder) {

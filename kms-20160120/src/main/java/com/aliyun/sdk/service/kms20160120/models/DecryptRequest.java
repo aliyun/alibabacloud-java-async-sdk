@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DecryptRequest</p>
  */
 public class DecryptRequest extends Request {
-    @Query
-    @NameInMap("CiphertextBlob")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CiphertextBlob")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ciphertextBlob;
 
-    @Query
-    @NameInMap("EncryptionContext")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptionContext")
     private java.util.Map < String, ? > encryptionContext;
 
     private DecryptRequest(Builder builder) {

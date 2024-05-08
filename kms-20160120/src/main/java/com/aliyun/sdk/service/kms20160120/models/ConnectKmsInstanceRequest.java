@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ConnectKmsInstanceRequest</p>
  */
 public class ConnectKmsInstanceRequest extends Request {
-    @Query
-    @NameInMap("KMProvider")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KMProvider")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String KMProvider;
 
-    @Query
-    @NameInMap("KmsInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KmsInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String kmsInstanceId;
 
-    @Query
-    @NameInMap("VSwitchIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchIds;
 
-    @Query
-    @NameInMap("VpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
-    @Query
-    @NameInMap("ZoneIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String zoneIds;
 
     private ConnectKmsInstanceRequest(Builder builder) {

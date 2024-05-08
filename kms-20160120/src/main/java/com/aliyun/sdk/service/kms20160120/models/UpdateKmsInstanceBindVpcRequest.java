@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateKmsInstanceBindVpcRequest</p>
  */
 public class UpdateKmsInstanceBindVpcRequest extends Request {
-    @Query
-    @NameInMap("BindVpcs")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BindVpcs")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bindVpcs;
 
-    @Query
-    @NameInMap("KmsInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KmsInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String kmsInstanceId;
 
     private UpdateKmsInstanceBindVpcRequest(Builder builder) {

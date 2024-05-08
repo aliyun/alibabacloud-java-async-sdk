@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeNetworkRuleResponseBody</p>
  */
 public class DescribeNetworkRuleResponseBody extends TeaModel {
-    @NameInMap("Arn")
+    @com.aliyun.core.annotation.NameInMap("Arn")
     private String arn;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SourcePrivateIp")
+    @com.aliyun.core.annotation.NameInMap("SourcePrivateIp")
     private String sourcePrivateIp;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private DescribeNetworkRuleResponseBody(Builder builder) {

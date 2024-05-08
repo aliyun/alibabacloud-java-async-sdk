@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ExportDataKeyRequest</p>
  */
 public class ExportDataKeyRequest extends Request {
-    @Query
-    @NameInMap("CiphertextBlob")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CiphertextBlob")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ciphertextBlob;
 
-    @Query
-    @NameInMap("EncryptionContext")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptionContext")
     private java.util.Map < String, ? > encryptionContext;
 
-    @Query
-    @NameInMap("PublicKeyBlob")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PublicKeyBlob")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String publicKeyBlob;
 
-    @Query
-    @NameInMap("WrappingAlgorithm")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WrappingAlgorithm")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String wrappingAlgorithm;
 
-    @Query
-    @NameInMap("WrappingKeySpec")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WrappingKeySpec")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String wrappingKeySpec;
 
     private ExportDataKeyRequest(Builder builder) {

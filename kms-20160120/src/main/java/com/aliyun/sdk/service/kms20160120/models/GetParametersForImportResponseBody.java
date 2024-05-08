@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetParametersForImportResponseBody</p>
  */
 public class GetParametersForImportResponseBody extends TeaModel {
-    @NameInMap("ImportToken")
+    @com.aliyun.core.annotation.NameInMap("ImportToken")
     private String importToken;
 
-    @NameInMap("KeyId")
+    @com.aliyun.core.annotation.NameInMap("KeyId")
     private String keyId;
 
-    @NameInMap("PublicKey")
+    @com.aliyun.core.annotation.NameInMap("PublicKey")
     private String publicKey;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TokenExpireTime")
+    @com.aliyun.core.annotation.NameInMap("TokenExpireTime")
     private String tokenExpireTime;
 
     private GetParametersForImportResponseBody(Builder builder) {

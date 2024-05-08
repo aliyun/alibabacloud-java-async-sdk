@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSecretValueRequest</p>
  */
 public class GetSecretValueRequest extends Request {
-    @Query
-    @NameInMap("FetchExtendedConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FetchExtendedConfig")
     private Boolean fetchExtendedConfig;
 
-    @Query
-    @NameInMap("SecretName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecretName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String secretName;
 
-    @Query
-    @NameInMap("VersionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VersionId")
     private String versionId;
 
-    @Query
-    @NameInMap("VersionStage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VersionStage")
     private String versionStage;
 
     private GetSecretValueRequest(Builder builder) {

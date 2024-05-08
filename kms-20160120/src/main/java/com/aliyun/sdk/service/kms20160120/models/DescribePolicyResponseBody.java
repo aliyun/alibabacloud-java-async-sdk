@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePolicyResponseBody</p>
  */
 public class DescribePolicyResponseBody extends TeaModel {
-    @NameInMap("AccessControlRules")
+    @com.aliyun.core.annotation.NameInMap("AccessControlRules")
     private String accessControlRules;
 
-    @NameInMap("Arn")
+    @com.aliyun.core.annotation.NameInMap("Arn")
     private String arn;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("KmsInstance")
+    @com.aliyun.core.annotation.NameInMap("KmsInstance")
     private String kmsInstance;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("Permissions")
+    @com.aliyun.core.annotation.NameInMap("Permissions")
     private java.util.List < String > permissions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Resources")
+    @com.aliyun.core.annotation.NameInMap("Resources")
     private java.util.List < String > resources;
 
     private DescribePolicyResponseBody(Builder builder) {

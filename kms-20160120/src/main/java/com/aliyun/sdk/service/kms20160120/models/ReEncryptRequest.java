@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ReEncryptRequest</p>
  */
 public class ReEncryptRequest extends Request {
-    @Query
-    @NameInMap("CiphertextBlob")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CiphertextBlob")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ciphertextBlob;
 
-    @Query
-    @NameInMap("DestinationEncryptionContext")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationEncryptionContext")
     private java.util.Map < String, ? > destinationEncryptionContext;
 
-    @Query
-    @NameInMap("DestinationKeyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationKeyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String destinationKeyId;
 
-    @Query
-    @NameInMap("SourceEncryptionAlgorithm")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEncryptionAlgorithm")
     private String sourceEncryptionAlgorithm;
 
-    @Query
-    @NameInMap("SourceEncryptionContext")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEncryptionContext")
     private java.util.Map < String, ? > sourceEncryptionContext;
 
-    @Query
-    @NameInMap("SourceKeyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceKeyId")
     private String sourceKeyId;
 
-    @Query
-    @NameInMap("SourceKeyVersionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceKeyVersionId")
     private String sourceKeyVersionId;
 
     private ReEncryptRequest(Builder builder) {

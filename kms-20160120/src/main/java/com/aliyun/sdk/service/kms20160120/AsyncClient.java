@@ -373,6 +373,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetClientKeyResponse> getClientKey(GetClientKeyRequest request);
 
+    CompletableFuture<GetKeyPolicyResponse> getKeyPolicy(GetKeyPolicyRequest request);
+
     CompletableFuture<GetKmsInstanceResponse> getKmsInstance(GetKmsInstanceRequest request);
 
     /**
@@ -396,6 +398,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetPublicKeyResponse> getPublicKey(GetPublicKeyRequest request);
 
     CompletableFuture<GetRandomPasswordResponse> getRandomPassword(GetRandomPasswordRequest request);
+
+    CompletableFuture<GetSecretPolicyResponse> getSecretPolicy(GetSecretPolicyRequest request);
 
     /**
       * If you do not specify a version number or stage label, Secrets Manager returns the secret value of the version marked with ACSCurrent.
@@ -523,6 +527,10 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<SetDeletionProtectionResponse> setDeletionProtection(SetDeletionProtectionRequest request);
+
+    CompletableFuture<SetKeyPolicyResponse> setKeyPolicy(SetKeyPolicyRequest request);
+
+    CompletableFuture<SetSecretPolicyResponse> setSecretPolicy(SetSecretPolicyRequest request);
 
     /**
       * You can add up to 10 tags to a CMK, secret, or certificate.

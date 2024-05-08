@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetCertificateResponseBody</p>
  */
 public class GetCertificateResponseBody extends TeaModel {
-    @NameInMap("Certificate")
+    @com.aliyun.core.annotation.NameInMap("Certificate")
     private String certificate;
 
-    @NameInMap("CertificateChain")
+    @com.aliyun.core.annotation.NameInMap("CertificateChain")
     private String certificateChain;
 
-    @NameInMap("CertificateId")
+    @com.aliyun.core.annotation.NameInMap("CertificateId")
     private String certificateId;
 
-    @NameInMap("Csr")
+    @com.aliyun.core.annotation.NameInMap("Csr")
     private String csr;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetCertificateResponseBody(Builder builder) {

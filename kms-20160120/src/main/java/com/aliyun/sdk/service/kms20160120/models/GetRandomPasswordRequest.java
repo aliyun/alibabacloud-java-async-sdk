@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetRandomPasswordRequest</p>
  */
 public class GetRandomPasswordRequest extends Request {
-    @Query
-    @NameInMap("ExcludeCharacters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExcludeCharacters")
     private String excludeCharacters;
 
-    @Query
-    @NameInMap("ExcludeLowercase")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExcludeLowercase")
     private String excludeLowercase;
 
-    @Query
-    @NameInMap("ExcludeNumbers")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExcludeNumbers")
     private String excludeNumbers;
 
-    @Query
-    @NameInMap("ExcludePunctuation")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExcludePunctuation")
     private String excludePunctuation;
 
-    @Query
-    @NameInMap("ExcludeUppercase")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExcludeUppercase")
     private String excludeUppercase;
 
-    @Query
-    @NameInMap("PasswordLength")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordLength")
     private String passwordLength;
 
-    @Query
-    @NameInMap("RequireEachIncludedType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequireEachIncludedType")
     private String requireEachIncludedType;
 
     private GetRandomPasswordRequest(Builder builder) {

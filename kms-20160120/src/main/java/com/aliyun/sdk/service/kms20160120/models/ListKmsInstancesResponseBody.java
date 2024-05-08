@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListKmsInstancesResponseBody</p>
  */
 public class ListKmsInstancesResponseBody extends TeaModel {
-    @NameInMap("KmsInstances")
+    @com.aliyun.core.annotation.NameInMap("KmsInstances")
     private KmsInstances kmsInstances;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListKmsInstancesResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class ListKmsInstancesResponseBody extends TeaModel {
     } 
 
     public static class KmsInstance extends TeaModel {
-        @NameInMap("KmsInstanceArn")
+        @com.aliyun.core.annotation.NameInMap("KmsInstanceArn")
         private String kmsInstanceArn;
 
-        @NameInMap("KmsInstanceId")
+        @com.aliyun.core.annotation.NameInMap("KmsInstanceId")
         private String kmsInstanceId;
 
         private KmsInstance(Builder builder) {
@@ -193,7 +192,7 @@ public class ListKmsInstancesResponseBody extends TeaModel {
 
     }
     public static class KmsInstances extends TeaModel {
-        @NameInMap("KmsInstance")
+        @com.aliyun.core.annotation.NameInMap("KmsInstance")
         private java.util.List < KmsInstance> kmsInstance;
 
         private KmsInstances(Builder builder) {

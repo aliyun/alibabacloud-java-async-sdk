@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCertificateRequest</p>
  */
 public class CreateCertificateRequest extends Request {
-    @Query
-    @NameInMap("ExportablePrivateKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExportablePrivateKey")
     private Boolean exportablePrivateKey;
 
-    @Query
-    @NameInMap("KeySpec")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeySpec")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String keySpec;
 
-    @Query
-    @NameInMap("Subject")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Subject")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subject;
 
-    @Query
-    @NameInMap("SubjectAlternativeNames")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubjectAlternativeNames")
     private java.util.Map < String, ? > subjectAlternativeNames;
 
     private CreateCertificateRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetKmsInstanceResponseBody</p>
  */
 public class GetKmsInstanceResponseBody extends TeaModel {
-    @NameInMap("KmsInstance")
+    @com.aliyun.core.annotation.NameInMap("KmsInstance")
     private KmsInstance kmsInstance;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetKmsInstanceResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class GetKmsInstanceResponseBody extends TeaModel {
     } 
 
     public static class BindVpc extends TeaModel {
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcOwnerId")
+        @com.aliyun.core.annotation.NameInMap("VpcOwnerId")
         private String vpcOwnerId;
 
         private BindVpc(Builder builder) {
@@ -173,7 +172,7 @@ public class GetKmsInstanceResponseBody extends TeaModel {
 
     }
     public static class BindVpcs extends TeaModel {
-        @NameInMap("BindVpc")
+        @com.aliyun.core.annotation.NameInMap("BindVpc")
         private java.util.List < BindVpc> bindVpc;
 
         private BindVpcs(Builder builder) {
@@ -214,49 +213,49 @@ public class GetKmsInstanceResponseBody extends TeaModel {
 
     }
     public static class KmsInstance extends TeaModel {
-        @NameInMap("BindVpcs")
+        @com.aliyun.core.annotation.NameInMap("BindVpcs")
         private BindVpcs bindVpcs;
 
-        @NameInMap("CaCertificateChainPem")
+        @com.aliyun.core.annotation.NameInMap("CaCertificateChainPem")
         private String caCertificateChainPem;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("EndDate")
+        @com.aliyun.core.annotation.NameInMap("EndDate")
         private String endDate;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("KeyNum")
+        @com.aliyun.core.annotation.NameInMap("KeyNum")
         private Long keyNum;
 
-        @NameInMap("SecretNum")
+        @com.aliyun.core.annotation.NameInMap("SecretNum")
         private String secretNum;
 
-        @NameInMap("Spec")
+        @com.aliyun.core.annotation.NameInMap("Spec")
         private Long spec;
 
-        @NameInMap("StartDate")
+        @com.aliyun.core.annotation.NameInMap("StartDate")
         private String startDate;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcNum")
+        @com.aliyun.core.annotation.NameInMap("VpcNum")
         private Long vpcNum;
 
-        @NameInMap("VswitchIds")
+        @com.aliyun.core.annotation.NameInMap("VswitchIds")
         private String vswitchIds;
 
-        @NameInMap("ZoneIds")
+        @com.aliyun.core.annotation.NameInMap("ZoneIds")
         private String zoneIds;
 
         private KmsInstance(Builder builder) {

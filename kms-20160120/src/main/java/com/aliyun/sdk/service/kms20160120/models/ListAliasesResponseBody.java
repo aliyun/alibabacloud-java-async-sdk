@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAliasesResponseBody</p>
  */
 public class ListAliasesResponseBody extends TeaModel {
-    @NameInMap("Aliases")
+    @com.aliyun.core.annotation.NameInMap("Aliases")
     private Aliases aliases;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListAliasesResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class ListAliasesResponseBody extends TeaModel {
     } 
 
     public static class Alias extends TeaModel {
-        @NameInMap("AliasArn")
+        @com.aliyun.core.annotation.NameInMap("AliasArn")
         private String aliasArn;
 
-        @NameInMap("AliasName")
+        @com.aliyun.core.annotation.NameInMap("AliasName")
         private String aliasName;
 
-        @NameInMap("KeyId")
+        @com.aliyun.core.annotation.NameInMap("KeyId")
         private String keyId;
 
         private Alias(Builder builder) {
@@ -213,7 +212,7 @@ public class ListAliasesResponseBody extends TeaModel {
 
     }
     public static class Aliases extends TeaModel {
-        @NameInMap("Alias")
+        @com.aliyun.core.annotation.NameInMap("Alias")
         private java.util.List < Alias> alias;
 
         private Aliases(Builder builder) {

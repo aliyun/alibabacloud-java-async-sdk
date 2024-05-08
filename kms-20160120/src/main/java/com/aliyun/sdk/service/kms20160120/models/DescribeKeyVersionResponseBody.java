@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeKeyVersionResponseBody</p>
  */
 public class DescribeKeyVersionResponseBody extends TeaModel {
-    @NameInMap("KeyVersion")
+    @com.aliyun.core.annotation.NameInMap("KeyVersion")
     private KeyVersion keyVersion;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeKeyVersionResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeKeyVersionResponseBody extends TeaModel {
     } 
 
     public static class KeyVersion extends TeaModel {
-        @NameInMap("CreationDate")
+        @com.aliyun.core.annotation.NameInMap("CreationDate")
         private String creationDate;
 
-        @NameInMap("KeyId")
+        @com.aliyun.core.annotation.NameInMap("KeyId")
         private String keyId;
 
-        @NameInMap("KeyVersionId")
+        @com.aliyun.core.annotation.NameInMap("KeyVersionId")
         private String keyVersionId;
 
         private KeyVersion(Builder builder) {

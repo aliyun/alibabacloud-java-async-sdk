@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListApplicationAccessPointsResponseBody</p>
  */
 public class ListApplicationAccessPointsResponseBody extends TeaModel {
-    @NameInMap("ApplicationAccessPoints")
+    @com.aliyun.core.annotation.NameInMap("ApplicationAccessPoints")
     private ApplicationAccessPoints applicationAccessPoints;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListApplicationAccessPointsResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class ListApplicationAccessPointsResponseBody extends TeaModel {
     } 
 
     public static class ApplicationAccessPoint extends TeaModel {
-        @NameInMap("AuthenticationMethod")
+        @com.aliyun.core.annotation.NameInMap("AuthenticationMethod")
         private String authenticationMethod;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private ApplicationAccessPoint(Builder builder) {
@@ -193,7 +192,7 @@ public class ListApplicationAccessPointsResponseBody extends TeaModel {
 
     }
     public static class ApplicationAccessPoints extends TeaModel {
-        @NameInMap("ApplicationAccessPoint")
+        @com.aliyun.core.annotation.NameInMap("ApplicationAccessPoint")
         private java.util.List < ApplicationAccessPoint> applicationAccessPoint;
 
         private ApplicationAccessPoints(Builder builder) {

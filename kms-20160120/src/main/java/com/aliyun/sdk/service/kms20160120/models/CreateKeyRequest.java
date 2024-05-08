@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateKeyRequest</p>
  */
 public class CreateKeyRequest extends Request {
-    @Query
-    @NameInMap("DKMSInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DKMSInstanceId")
     private String DKMSInstanceId;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("EnableAutomaticRotation")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableAutomaticRotation")
     private Boolean enableAutomaticRotation;
 
-    @Query
-    @NameInMap("KeySpec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeySpec")
     private String keySpec;
 
-    @Query
-    @NameInMap("KeyUsage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyUsage")
     private String keyUsage;
 
-    @Query
-    @NameInMap("Origin")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Origin")
     private String origin;
 
-    @Query
-    @NameInMap("ProtectionLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Policy")
+    private String policy;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProtectionLevel")
     private String protectionLevel;
 
-    @Query
-    @NameInMap("RotationInterval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RotationInterval")
     private String rotationInterval;
 
-    @Query
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private String tags;
 
     private CreateKeyRequest(Builder builder) {
@@ -56,6 +59,7 @@ public class CreateKeyRequest extends Request {
         this.keySpec = builder.keySpec;
         this.keyUsage = builder.keyUsage;
         this.origin = builder.origin;
+        this.policy = builder.policy;
         this.protectionLevel = builder.protectionLevel;
         this.rotationInterval = builder.rotationInterval;
         this.tags = builder.tags;
@@ -117,6 +121,13 @@ public class CreateKeyRequest extends Request {
     }
 
     /**
+     * @return policy
+     */
+    public String getPolicy() {
+        return this.policy;
+    }
+
+    /**
      * @return protectionLevel
      */
     public String getProtectionLevel() {
@@ -144,6 +155,7 @@ public class CreateKeyRequest extends Request {
         private String keySpec; 
         private String keyUsage; 
         private String origin; 
+        private String policy; 
         private String protectionLevel; 
         private String rotationInterval; 
         private String tags; 
@@ -160,6 +172,7 @@ public class CreateKeyRequest extends Request {
             this.keySpec = request.keySpec;
             this.keyUsage = request.keyUsage;
             this.origin = request.origin;
+            this.policy = request.policy;
             this.protectionLevel = request.protectionLevel;
             this.rotationInterval = request.rotationInterval;
             this.tags = request.tags;
@@ -246,6 +259,15 @@ public class CreateKeyRequest extends Request {
         public Builder origin(String origin) {
             this.putQueryParameter("Origin", origin);
             this.origin = origin;
+            return this;
+        }
+
+        /**
+         * Policy.
+         */
+        public Builder policy(String policy) {
+            this.putQueryParameter("Policy", policy);
+            this.policy = policy;
             return this;
         }
 

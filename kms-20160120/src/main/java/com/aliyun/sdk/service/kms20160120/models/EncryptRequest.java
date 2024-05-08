@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>EncryptRequest</p>
  */
 public class EncryptRequest extends Request {
-    @Query
-    @NameInMap("EncryptionContext")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptionContext")
     private java.util.Map < String, ? > encryptionContext;
 
-    @Query
-    @NameInMap("KeyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String keyId;
 
-    @Query
-    @NameInMap("Plaintext")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Plaintext")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String plaintext;
 
     private EncryptRequest(Builder builder) {

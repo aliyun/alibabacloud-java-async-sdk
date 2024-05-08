@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ScheduleKeyDeletionRequest</p>
  */
 public class ScheduleKeyDeletionRequest extends Request {
-    @Query
-    @NameInMap("KeyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String keyId;
 
-    @Query
-    @NameInMap("PendingWindowInDays")
-    @Validation(required = true, maximum = 366, minimum = 7)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PendingWindowInDays")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 366, minimum = 7)
     private Integer pendingWindowInDays;
 
     private ScheduleKeyDeletionRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPoliciesResponseBody</p>
  */
 public class ListPoliciesResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("Policies")
+    @com.aliyun.core.annotation.NameInMap("Policies")
     private Policies policies;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListPoliciesResponseBody(Builder builder) {
@@ -132,7 +131,7 @@ public class ListPoliciesResponseBody extends TeaModel {
     } 
 
     public static class Policy extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Policy(Builder builder) {
@@ -173,7 +172,7 @@ public class ListPoliciesResponseBody extends TeaModel {
 
     }
     public static class Policies extends TeaModel {
-        @NameInMap("Policy")
+        @com.aliyun.core.annotation.NameInMap("Policy")
         private java.util.List < Policy> policy;
 
         private Policies(Builder builder) {

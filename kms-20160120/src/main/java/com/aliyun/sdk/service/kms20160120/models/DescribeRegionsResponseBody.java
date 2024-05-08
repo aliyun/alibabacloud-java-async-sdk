@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRegionsResponseBody</p>
  */
 public class DescribeRegionsResponseBody extends TeaModel {
-    @NameInMap("Regions")
+    @com.aliyun.core.annotation.NameInMap("Regions")
     private Regions regions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeRegionsResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
     } 
 
     public static class Region extends TeaModel {
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private Region(Builder builder) {
@@ -113,7 +112,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     }
     public static class Regions extends TeaModel {
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private java.util.List < Region> region;
 
         private Regions(Builder builder) {

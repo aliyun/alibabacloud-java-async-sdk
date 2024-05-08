@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateClientKeyResponseBody</p>
  */
 public class CreateClientKeyResponseBody extends TeaModel {
-    @NameInMap("ClientKeyId")
+    @com.aliyun.core.annotation.NameInMap("ClientKeyId")
     private String clientKeyId;
 
-    @NameInMap("KeyAlgorithm")
+    @com.aliyun.core.annotation.NameInMap("KeyAlgorithm")
     private String keyAlgorithm;
 
-    @NameInMap("NotAfter")
+    @com.aliyun.core.annotation.NameInMap("NotAfter")
     private String notAfter;
 
-    @NameInMap("NotBefore")
+    @com.aliyun.core.annotation.NameInMap("NotBefore")
     private String notBefore;
 
-    @NameInMap("PrivateKeyData")
+    @com.aliyun.core.annotation.NameInMap("PrivateKeyData")
     private String privateKeyData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateClientKeyResponseBody(Builder builder) {

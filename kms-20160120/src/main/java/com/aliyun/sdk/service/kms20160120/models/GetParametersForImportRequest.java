@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetParametersForImportRequest</p>
  */
 public class GetParametersForImportRequest extends Request {
-    @Query
-    @NameInMap("KeyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String keyId;
 
-    @Query
-    @NameInMap("WrappingAlgorithm")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WrappingAlgorithm")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String wrappingAlgorithm;
 
-    @Query
-    @NameInMap("WrappingKeySpec")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WrappingKeySpec")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String wrappingKeySpec;
 
     private GetParametersForImportRequest(Builder builder) {

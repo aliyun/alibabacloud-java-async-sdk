@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSecretVersionIdsResponseBody</p>
  */
 public class ListSecretVersionIdsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecretName")
+    @com.aliyun.core.annotation.NameInMap("SecretName")
     private String secretName;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("VersionIds")
+    @com.aliyun.core.annotation.NameInMap("VersionIds")
     private VersionIds versionIds;
 
     private ListSecretVersionIdsResponseBody(Builder builder) {
@@ -152,7 +151,7 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
     } 
 
     public static class VersionStages extends TeaModel {
-        @NameInMap("VersionStage")
+        @com.aliyun.core.annotation.NameInMap("VersionStage")
         private java.util.List < String > versionStage;
 
         private VersionStages(Builder builder) {
@@ -193,13 +192,13 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
 
     }
     public static class VersionId extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("VersionId")
+        @com.aliyun.core.annotation.NameInMap("VersionId")
         private String versionId;
 
-        @NameInMap("VersionStages")
+        @com.aliyun.core.annotation.NameInMap("VersionStages")
         private VersionStages versionStages;
 
         private VersionId(Builder builder) {
@@ -274,7 +273,7 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
 
     }
     public static class VersionIds extends TeaModel {
-        @NameInMap("VersionId")
+        @com.aliyun.core.annotation.NameInMap("VersionId")
         private java.util.List < VersionId> versionId;
 
         private VersionIds(Builder builder) {
