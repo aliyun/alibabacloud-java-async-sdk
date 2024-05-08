@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetNotifyMeResponseBody</p>
  */
 public class GetNotifyMeResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private java.util.List < Data> data;
 
-    @NameInMap("pageNumber")
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Long pageNumber;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("totalCount")
+    @com.aliyun.core.annotation.NameInMap("totalCount")
     private Long totalCount;
 
-    @NameInMap("vendorRequestId")
+    @com.aliyun.core.annotation.NameInMap("vendorRequestId")
     private String vendorRequestId;
 
-    @NameInMap("vendorType")
+    @com.aliyun.core.annotation.NameInMap("vendorType")
     private String vendorType;
 
     private GetNotifyMeResponseBody(Builder builder) {
@@ -152,31 +151,31 @@ public class GetNotifyMeResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("ActivityId")
+        @com.aliyun.core.annotation.NameInMap("ActivityId")
         private String activityId;
 
-        @NameInMap("AppType")
+        @com.aliyun.core.annotation.NameInMap("AppType")
         private String appType;
 
-        @NameInMap("CorpId")
+        @com.aliyun.core.annotation.NameInMap("CorpId")
         private String corpId;
 
-        @NameInMap("CreateTimeGMT")
+        @com.aliyun.core.annotation.NameInMap("CreateTimeGMT")
         private String createTimeGMT;
 
-        @NameInMap("CreatorUserId")
+        @com.aliyun.core.annotation.NameInMap("CreatorUserId")
         private String creatorUserId;
 
-        @NameInMap("FormInstanceId")
+        @com.aliyun.core.annotation.NameInMap("FormInstanceId")
         private String formInstanceId;
 
-        @NameInMap("InstStatus")
+        @com.aliyun.core.annotation.NameInMap("InstStatus")
         private String instStatus;
 
-        @NameInMap("MobileUrl")
+        @com.aliyun.core.annotation.NameInMap("MobileUrl")
         private String mobileUrl;
 
-        @NameInMap("ModifiedTimeGMT")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTimeGMT")
         private String modifiedTimeGMT;
 
         private Data(Builder builder) {

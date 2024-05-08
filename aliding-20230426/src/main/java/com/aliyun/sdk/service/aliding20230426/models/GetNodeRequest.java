@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetNodeRequest</p>
  */
 public class GetNodeRequest extends Request {
-    @Header
-    @NameInMap("AccountContext")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("AccountContext")
     private AccountContext accountContext;
 
-    @Body
-    @NameInMap("NodeId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodeId;
 
-    @Body
-    @NameInMap("TenantContext")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantContext")
     private TenantContext tenantContext;
 
-    @Body
-    @NameInMap("WithPermissionRole")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WithPermissionRole")
     private Boolean withPermissionRole;
 
-    @Body
-    @NameInMap("WithStatisticalInfo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WithStatisticalInfo")
     private Boolean withStatisticalInfo;
 
     private GetNodeRequest(Builder builder) {
@@ -165,8 +164,8 @@ public class GetNodeRequest extends Request {
     } 
 
     public static class AccountContext extends TeaModel {
-        @NameInMap("accountId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("accountId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String accountId;
 
         private AccountContext(Builder builder) {
@@ -207,7 +206,7 @@ public class GetNodeRequest extends Request {
 
     }
     public static class TenantContext extends TeaModel {
-        @NameInMap("tenantId")
+        @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;
 
         private TenantContext(Builder builder) {

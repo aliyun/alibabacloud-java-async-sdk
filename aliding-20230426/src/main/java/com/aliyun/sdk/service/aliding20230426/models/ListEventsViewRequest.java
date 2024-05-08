@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListEventsViewRequest</p>
  */
 public class ListEventsViewRequest extends Request {
-    @Header
-    @NameInMap("AccountContext")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("AccountContext")
     private AccountContext accountContext;
 
-    @Body
-    @NameInMap("CalendarId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CalendarId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String calendarId;
 
-    @Body
-    @NameInMap("MaxAttendees")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxAttendees")
     private Integer maxAttendees;
 
-    @Body
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Body
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Body
-    @NameInMap("TimeMax")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TimeMax")
     private String timeMax;
 
-    @Body
-    @NameInMap("TimeMin")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TimeMin")
     private String timeMin;
 
     private ListEventsViewRequest(Builder builder) {
@@ -210,8 +209,8 @@ public class ListEventsViewRequest extends Request {
     } 
 
     public static class AccountContext extends TeaModel {
-        @NameInMap("accountId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("accountId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String accountId;
 
         private AccountContext(Builder builder) {

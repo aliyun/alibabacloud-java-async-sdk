@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,58 +11,58 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PatchEventRequest</p>
  */
 public class PatchEventRequest extends Request {
-    @Header
-    @NameInMap("AccountContext")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("AccountContext")
     private AccountContext accountContext;
 
-    @Body
-    @NameInMap("Attendees")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Attendees")
     private java.util.List < Attendees> attendees;
 
-    @Body
-    @NameInMap("CalendarId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CalendarId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String calendarId;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("End")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("End")
     private End end;
 
-    @Body
-    @NameInMap("EventId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EventId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String eventId;
 
-    @Body
-    @NameInMap("Extra")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Extra")
     private java.util.Map < String, String > extra;
 
-    @Body
-    @NameInMap("IsAllDay")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IsAllDay")
     private Boolean isAllDay;
 
-    @Body
-    @NameInMap("Location")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Location")
     private Location location;
 
-    @Body
-    @NameInMap("Recurrence")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Recurrence")
     private Recurrence recurrence;
 
-    @Body
-    @NameInMap("Reminders")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Reminders")
     private java.util.List < Reminders> reminders;
 
-    @Body
-    @NameInMap("Start")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Start")
     private Start start;
 
-    @Body
-    @NameInMap("Summary")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Summary")
     private String summary;
 
     private PatchEventRequest(Builder builder) {
@@ -356,8 +355,8 @@ public class PatchEventRequest extends Request {
     } 
 
     public static class AccountContext extends TeaModel {
-        @NameInMap("accountId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("accountId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String accountId;
 
         private AccountContext(Builder builder) {
@@ -398,10 +397,10 @@ public class PatchEventRequest extends Request {
 
     }
     public static class Attendees extends TeaModel {
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("isOptional")
+        @com.aliyun.core.annotation.NameInMap("isOptional")
         private Boolean isOptional;
 
         private Attendees(Builder builder) {
@@ -459,13 +458,13 @@ public class PatchEventRequest extends Request {
 
     }
     public static class End extends TeaModel {
-        @NameInMap("date")
+        @com.aliyun.core.annotation.NameInMap("date")
         private String date;
 
-        @NameInMap("dateTime")
+        @com.aliyun.core.annotation.NameInMap("dateTime")
         private String dateTime;
 
-        @NameInMap("timeZone")
+        @com.aliyun.core.annotation.NameInMap("timeZone")
         private String timeZone;
 
         private End(Builder builder) {
@@ -540,7 +539,7 @@ public class PatchEventRequest extends Request {
 
     }
     public static class Location extends TeaModel {
-        @NameInMap("displayName")
+        @com.aliyun.core.annotation.NameInMap("displayName")
         private String displayName;
 
         private Location(Builder builder) {
@@ -581,19 +580,19 @@ public class PatchEventRequest extends Request {
 
     }
     public static class Pattern extends TeaModel {
-        @NameInMap("dayOfMonth")
+        @com.aliyun.core.annotation.NameInMap("dayOfMonth")
         private Integer dayOfMonth;
 
-        @NameInMap("daysOfWeek")
+        @com.aliyun.core.annotation.NameInMap("daysOfWeek")
         private String daysOfWeek;
 
-        @NameInMap("index")
+        @com.aliyun.core.annotation.NameInMap("index")
         private String index;
 
-        @NameInMap("interval")
+        @com.aliyun.core.annotation.NameInMap("interval")
         private Integer interval;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Pattern(Builder builder) {
@@ -702,13 +701,13 @@ public class PatchEventRequest extends Request {
 
     }
     public static class Range extends TeaModel {
-        @NameInMap("endDate")
+        @com.aliyun.core.annotation.NameInMap("endDate")
         private String endDate;
 
-        @NameInMap("numberOfOccurrences")
+        @com.aliyun.core.annotation.NameInMap("numberOfOccurrences")
         private Integer numberOfOccurrences;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Range(Builder builder) {
@@ -783,10 +782,10 @@ public class PatchEventRequest extends Request {
 
     }
     public static class Recurrence extends TeaModel {
-        @NameInMap("pattern")
+        @com.aliyun.core.annotation.NameInMap("pattern")
         private Pattern pattern;
 
-        @NameInMap("range")
+        @com.aliyun.core.annotation.NameInMap("range")
         private Range range;
 
         private Recurrence(Builder builder) {
@@ -844,10 +843,10 @@ public class PatchEventRequest extends Request {
 
     }
     public static class Reminders extends TeaModel {
-        @NameInMap("method")
+        @com.aliyun.core.annotation.NameInMap("method")
         private String method;
 
-        @NameInMap("minutes")
+        @com.aliyun.core.annotation.NameInMap("minutes")
         private Integer minutes;
 
         private Reminders(Builder builder) {
@@ -905,13 +904,13 @@ public class PatchEventRequest extends Request {
 
     }
     public static class Start extends TeaModel {
-        @NameInMap("date")
+        @com.aliyun.core.annotation.NameInMap("date")
         private String date;
 
-        @NameInMap("dateTime")
+        @com.aliyun.core.annotation.NameInMap("dateTime")
         private String dateTime;
 
-        @NameInMap("timeZone")
+        @com.aliyun.core.annotation.NameInMap("timeZone")
         private String timeZone;
 
         private Start(Builder builder) {

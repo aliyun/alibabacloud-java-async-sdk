@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetActivityListResponseBody</p>
  */
 public class GetActivityListResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < Result> result;
 
-    @NameInMap("vendorRequestId")
+    @com.aliyun.core.annotation.NameInMap("vendorRequestId")
     private String vendorRequestId;
 
-    @NameInMap("vendorType")
+    @com.aliyun.core.annotation.NameInMap("vendorType")
     private String vendorType;
 
     private GetActivityListResponseBody(Builder builder) {
@@ -112,13 +111,13 @@ public class GetActivityListResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("ActivityId")
+        @com.aliyun.core.annotation.NameInMap("ActivityId")
         private String activityId;
 
-        @NameInMap("ActivityName")
+        @com.aliyun.core.annotation.NameInMap("ActivityName")
         private String activityName;
 
-        @NameInMap("ActivityNameInEnglish")
+        @com.aliyun.core.annotation.NameInMap("ActivityNameInEnglish")
         private String activityNameInEnglish;
 
         private Result(Builder builder) {

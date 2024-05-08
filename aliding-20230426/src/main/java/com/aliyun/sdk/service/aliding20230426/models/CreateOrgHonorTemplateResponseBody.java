@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateOrgHonorTemplateResponseBody</p>
  */
 public class CreateOrgHonorTemplateResponseBody extends TeaModel {
-    @NameInMap("honorId")
+    @com.aliyun.core.annotation.NameInMap("honorId")
     private String honorId;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private CreateOrgHonorTemplateResponseBody(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryMeetingRoomListResponseBody</p>
  */
 public class QueryMeetingRoomListResponseBody extends TeaModel {
-    @NameInMap("hasMore")
+    @com.aliyun.core.annotation.NameInMap("hasMore")
     private Boolean hasMore;
 
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private Long nextToken;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < Result> result;
 
     private QueryMeetingRoomListResponseBody(Builder builder) {
@@ -112,13 +111,13 @@ public class QueryMeetingRoomListResponseBody extends TeaModel {
     } 
 
     public static class RoomGroup extends TeaModel {
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private Long groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("ParentId")
+        @com.aliyun.core.annotation.NameInMap("ParentId")
         private Long parentId;
 
         private RoomGroup(Builder builder) {
@@ -193,10 +192,10 @@ public class QueryMeetingRoomListResponseBody extends TeaModel {
 
     }
     public static class RoomLabels extends TeaModel {
-        @NameInMap("LabelId")
+        @com.aliyun.core.annotation.NameInMap("LabelId")
         private Long labelId;
 
-        @NameInMap("LabelName")
+        @com.aliyun.core.annotation.NameInMap("LabelName")
         private String labelName;
 
         private RoomLabels(Builder builder) {
@@ -254,10 +253,10 @@ public class QueryMeetingRoomListResponseBody extends TeaModel {
 
     }
     public static class RoomLocation extends TeaModel {
-        @NameInMap("Desc")
+        @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private RoomLocation(Builder builder) {
@@ -315,37 +314,37 @@ public class QueryMeetingRoomListResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("CorpId")
+        @com.aliyun.core.annotation.NameInMap("CorpId")
         private String corpId;
 
-        @NameInMap("IsvRoomId")
+        @com.aliyun.core.annotation.NameInMap("IsvRoomId")
         private String isvRoomId;
 
-        @NameInMap("RoomCapacity")
+        @com.aliyun.core.annotation.NameInMap("RoomCapacity")
         private Integer roomCapacity;
 
-        @NameInMap("RoomGroup")
+        @com.aliyun.core.annotation.NameInMap("RoomGroup")
         private RoomGroup roomGroup;
 
-        @NameInMap("RoomId")
+        @com.aliyun.core.annotation.NameInMap("RoomId")
         private String roomId;
 
-        @NameInMap("RoomLabels")
+        @com.aliyun.core.annotation.NameInMap("RoomLabels")
         private java.util.List < RoomLabels> roomLabels;
 
-        @NameInMap("RoomLocation")
+        @com.aliyun.core.annotation.NameInMap("RoomLocation")
         private RoomLocation roomLocation;
 
-        @NameInMap("RoomName")
+        @com.aliyun.core.annotation.NameInMap("RoomName")
         private String roomName;
 
-        @NameInMap("RoomPicture")
+        @com.aliyun.core.annotation.NameInMap("RoomPicture")
         private String roomPicture;
 
-        @NameInMap("RoomStaffId")
+        @com.aliyun.core.annotation.NameInMap("RoomStaffId")
         private String roomStaffId;
 
-        @NameInMap("RoomStatus")
+        @com.aliyun.core.annotation.NameInMap("RoomStatus")
         private Integer roomStatus;
 
         private Result(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,41 +11,41 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateTodoTaskRequest</p>
  */
 public class UpdateTodoTaskRequest extends Request {
-    @Header
-    @NameInMap("AccountContext")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("AccountContext")
     private AccountContext accountContext;
 
-    @Body
-    @NameInMap("TenantContext")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantContext")
     private TenantContext tenantContext;
 
-    @Body
-    @NameInMap("description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @Body
-    @NameInMap("done")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("done")
     private Boolean done;
 
-    @Body
-    @NameInMap("dueTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dueTime")
     private Long dueTime;
 
-    @Body
-    @NameInMap("executorIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("executorIds")
     private java.util.List < String > executorIds;
 
-    @Body
-    @NameInMap("participantIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("participantIds")
     private java.util.List < String > participantIds;
 
-    @Body
-    @NameInMap("subject")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("subject")
     private String subject;
 
-    @Body
-    @NameInMap("taskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("taskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskId;
 
     private UpdateTodoTaskRequest(Builder builder) {
@@ -259,7 +258,7 @@ public class UpdateTodoTaskRequest extends Request {
     } 
 
     public static class AccountContext extends TeaModel {
-        @NameInMap("accountId")
+        @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
 
         private AccountContext(Builder builder) {
@@ -300,7 +299,7 @@ public class UpdateTodoTaskRequest extends Request {
 
     }
     public static class TenantContext extends TeaModel {
-        @NameInMap("tenantId")
+        @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;
 
         private TenantContext(Builder builder) {

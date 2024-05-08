@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateScheduleConfSettingsRequest</p>
  */
 public class UpdateScheduleConfSettingsRequest extends Request {
-    @Header
-    @NameInMap("AccountContext")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("AccountContext")
     private AccountContext accountContext;
 
-    @Body
-    @NameInMap("ScheduleConfSettingModel")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ScheduleConfSettingModel")
     private ScheduleConfSettingModel scheduleConfSettingModel;
 
-    @Body
-    @NameInMap("ScheduleConferenceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ScheduleConferenceId")
     private String scheduleConferenceId;
 
-    @Body
-    @NameInMap("TenantContext")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantContext")
     private TenantContext tenantContext;
 
     private UpdateScheduleConfSettingsRequest(Builder builder) {
@@ -142,8 +141,8 @@ public class UpdateScheduleConfSettingsRequest extends Request {
     } 
 
     public static class AccountContext extends TeaModel {
-        @NameInMap("accountId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("accountId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String accountId;
 
         private AccountContext(Builder builder) {
@@ -184,22 +183,22 @@ public class UpdateScheduleConfSettingsRequest extends Request {
 
     }
     public static class MoziConfVirtualExtraSetting extends TeaModel {
-        @NameInMap("EnableChat")
+        @com.aliyun.core.annotation.NameInMap("EnableChat")
         private Integer enableChat;
 
-        @NameInMap("EnableWebAnonymousJoin")
+        @com.aliyun.core.annotation.NameInMap("EnableWebAnonymousJoin")
         private Boolean enableWebAnonymousJoin;
 
-        @NameInMap("JoinBeforeHost")
+        @com.aliyun.core.annotation.NameInMap("JoinBeforeHost")
         private Integer joinBeforeHost;
 
-        @NameInMap("LockMediaStatusMicMute")
+        @com.aliyun.core.annotation.NameInMap("LockMediaStatusMicMute")
         private Integer lockMediaStatusMicMute;
 
-        @NameInMap("LockNick")
+        @com.aliyun.core.annotation.NameInMap("LockNick")
         private Integer lockNick;
 
-        @NameInMap("WaitingRoom")
+        @com.aliyun.core.annotation.NameInMap("WaitingRoom")
         private Integer waitingRoom;
 
         private MoziConfVirtualExtraSetting(Builder builder) {
@@ -325,25 +324,25 @@ public class UpdateScheduleConfSettingsRequest extends Request {
 
     }
     public static class ScheduleConfSettingModel extends TeaModel {
-        @NameInMap("CohostUserIds")
+        @com.aliyun.core.annotation.NameInMap("CohostUserIds")
         private java.util.List < String > cohostUserIds;
 
-        @NameInMap("ConfAllowedCorpId")
+        @com.aliyun.core.annotation.NameInMap("ConfAllowedCorpId")
         private String confAllowedCorpId;
 
-        @NameInMap("HostUserId")
+        @com.aliyun.core.annotation.NameInMap("HostUserId")
         private String hostUserId;
 
-        @NameInMap("LockRoom")
+        @com.aliyun.core.annotation.NameInMap("LockRoom")
         private Integer lockRoom;
 
-        @NameInMap("MoziConfVirtualExtraSetting")
+        @com.aliyun.core.annotation.NameInMap("MoziConfVirtualExtraSetting")
         private MoziConfVirtualExtraSetting moziConfVirtualExtraSetting;
 
-        @NameInMap("MuteOnJoin")
+        @com.aliyun.core.annotation.NameInMap("MuteOnJoin")
         private Integer muteOnJoin;
 
-        @NameInMap("ScreenShareForbidden")
+        @com.aliyun.core.annotation.NameInMap("ScreenShareForbidden")
         private Integer screenShareForbidden;
 
         private ScheduleConfSettingModel(Builder builder) {
@@ -486,7 +485,7 @@ public class UpdateScheduleConfSettingsRequest extends Request {
 
     }
     public static class TenantContext extends TeaModel {
-        @NameInMap("tenantId")
+        @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;
 
         private TenantContext(Builder builder) {

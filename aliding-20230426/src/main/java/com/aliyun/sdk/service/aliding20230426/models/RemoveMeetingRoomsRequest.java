@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RemoveMeetingRoomsRequest</p>
  */
 public class RemoveMeetingRoomsRequest extends Request {
-    @Header
-    @NameInMap("AccountContext")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("AccountContext")
     private AccountContext accountContext;
 
-    @Body
-    @NameInMap("CalendarId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CalendarId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String calendarId;
 
-    @Body
-    @NameInMap("EventId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EventId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String eventId;
 
-    @Body
-    @NameInMap("MeetingRoomsToRemove")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MeetingRoomsToRemove")
     private java.util.List < MeetingRoomsToRemove> meetingRoomsToRemove;
 
     private RemoveMeetingRoomsRequest(Builder builder) {
@@ -143,8 +142,8 @@ public class RemoveMeetingRoomsRequest extends Request {
     } 
 
     public static class AccountContext extends TeaModel {
-        @NameInMap("accountId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("accountId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String accountId;
 
         private AccountContext(Builder builder) {
@@ -185,8 +184,8 @@ public class RemoveMeetingRoomsRequest extends Request {
 
     }
     public static class MeetingRoomsToRemove extends TeaModel {
-        @NameInMap("RoomId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("RoomId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String roomId;
 
         private MeetingRoomsToRemove(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetRangeResponseBody</p>
  */
 public class GetRangeResponseBody extends TeaModel {
-    @NameInMap("backgroundColors")
+    @com.aliyun.core.annotation.NameInMap("backgroundColors")
     private java.util.List < java.util.List < BackgroundColors> > backgroundColors;
 
-    @NameInMap("displayValues")
+    @com.aliyun.core.annotation.NameInMap("displayValues")
     private java.util.List < java.util.List < String > > displayValues;
 
-    @NameInMap("formulas")
+    @com.aliyun.core.annotation.NameInMap("formulas")
     private java.util.List < java.util.List < String > > formulas;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("values")
+    @com.aliyun.core.annotation.NameInMap("values")
     private java.util.List < java.util.List < ? > > values;
 
     private GetRangeResponseBody(Builder builder) {
@@ -132,16 +131,16 @@ public class GetRangeResponseBody extends TeaModel {
     } 
 
     public static class BackgroundColors extends TeaModel {
-        @NameInMap("Red")
+        @com.aliyun.core.annotation.NameInMap("Red")
         private Integer red;
 
-        @NameInMap("Green")
+        @com.aliyun.core.annotation.NameInMap("Green")
         private Integer green;
 
-        @NameInMap("Blue")
+        @com.aliyun.core.annotation.NameInMap("Blue")
         private Integer blue;
 
-        @NameInMap("HexString")
+        @com.aliyun.core.annotation.NameInMap("HexString")
         private String hexString;
 
         private BackgroundColors(Builder builder) {

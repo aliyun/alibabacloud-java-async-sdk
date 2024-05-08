@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DentriesAppPropertiesValue</p>
  */
 public class DentriesAppPropertiesValue extends TeaModel {
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("Value")
+    @com.aliyun.core.annotation.NameInMap("Value")
     private String value;
 
-    @NameInMap("Visibility")
+    @com.aliyun.core.annotation.NameInMap("Visibility")
     private String visibility;
 
     private DentriesAppPropertiesValue(Builder builder) {

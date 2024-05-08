@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateTodoTaskExecutorStatusRequest</p>
  */
 public class UpdateTodoTaskExecutorStatusRequest extends Request {
-    @Header
-    @NameInMap("AccountContext")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("AccountContext")
     private AccountContext accountContext;
 
-    @Body
-    @NameInMap("TenantContext")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantContext")
     private TenantContext tenantContext;
 
-    @Body
-    @NameInMap("executorStatusList")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("executorStatusList")
     private java.util.List < ExecutorStatusList> executorStatusList;
 
-    @Body
-    @NameInMap("operatorId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("operatorId")
     private String operatorId;
 
-    @Body
-    @NameInMap("taskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("taskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskId;
 
     private UpdateTodoTaskExecutorStatusRequest(Builder builder) {
@@ -166,7 +165,7 @@ public class UpdateTodoTaskExecutorStatusRequest extends Request {
     } 
 
     public static class AccountContext extends TeaModel {
-        @NameInMap("accountId")
+        @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
 
         private AccountContext(Builder builder) {
@@ -207,7 +206,7 @@ public class UpdateTodoTaskExecutorStatusRequest extends Request {
 
     }
     public static class TenantContext extends TeaModel {
-        @NameInMap("tenantId")
+        @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;
 
         private TenantContext(Builder builder) {
@@ -248,10 +247,10 @@ public class UpdateTodoTaskExecutorStatusRequest extends Request {
 
     }
     public static class ExecutorStatusList extends TeaModel {
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("isDone")
+        @com.aliyun.core.annotation.NameInMap("isDone")
         private Boolean isDone;
 
         private ExecutorStatusList(Builder builder) {

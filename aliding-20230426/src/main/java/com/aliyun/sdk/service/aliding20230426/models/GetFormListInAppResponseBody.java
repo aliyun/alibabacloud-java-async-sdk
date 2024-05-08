@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetFormListInAppResponseBody</p>
  */
 public class GetFormListInAppResponseBody extends TeaModel {
-    @NameInMap("currentPage")
+    @com.aliyun.core.annotation.NameInMap("currentPage")
     private Integer currentPage;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private java.util.List < Data> data;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("totalCount")
+    @com.aliyun.core.annotation.NameInMap("totalCount")
     private Integer totalCount;
 
-    @NameInMap("vendorRequestId")
+    @com.aliyun.core.annotation.NameInMap("vendorRequestId")
     private String vendorRequestId;
 
-    @NameInMap("vendorType")
+    @com.aliyun.core.annotation.NameInMap("vendorType")
     private String vendorType;
 
     private GetFormListInAppResponseBody(Builder builder) {
@@ -172,10 +171,10 @@ public class GetFormListInAppResponseBody extends TeaModel {
     } 
 
     public static class Title extends TeaModel {
-        @NameInMap("EnUS")
+        @com.aliyun.core.annotation.NameInMap("EnUS")
         private String enUS;
 
-        @NameInMap("ZhCN")
+        @com.aliyun.core.annotation.NameInMap("ZhCN")
         private String zhCN;
 
         private Title(Builder builder) {
@@ -233,19 +232,19 @@ public class GetFormListInAppResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Creator")
+        @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
 
-        @NameInMap("FormType")
+        @com.aliyun.core.annotation.NameInMap("FormType")
         private String formType;
 
-        @NameInMap("FormUuid")
+        @com.aliyun.core.annotation.NameInMap("FormUuid")
         private String formUuid;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private Title title;
 
         private Data(Builder builder) {

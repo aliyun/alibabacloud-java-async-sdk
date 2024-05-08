@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDentriesResponseBody</p>
  */
 public class ListDentriesResponseBody extends TeaModel {
-    @NameInMap("dentries")
+    @com.aliyun.core.annotation.NameInMap("dentries")
     private java.util.List < Dentries> dentries;
 
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("vendorRequestId")
+    @com.aliyun.core.annotation.NameInMap("vendorRequestId")
     private String vendorRequestId;
 
-    @NameInMap("vendorType")
+    @com.aliyun.core.annotation.NameInMap("vendorType")
     private String vendorType;
 
     private ListDentriesResponseBody(Builder builder) {
@@ -132,7 +131,7 @@ public class ListDentriesResponseBody extends TeaModel {
     } 
 
     public static class Properties extends TeaModel {
-        @NameInMap("ReadOnly")
+        @com.aliyun.core.annotation.NameInMap("ReadOnly")
         private Boolean readOnly;
 
         private Properties(Builder builder) {
@@ -173,13 +172,13 @@ public class ListDentriesResponseBody extends TeaModel {
 
     }
     public static class Thumbnail extends TeaModel {
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Integer height;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private Integer width;
 
         private Thumbnail(Builder builder) {
@@ -254,64 +253,64 @@ public class ListDentriesResponseBody extends TeaModel {
 
     }
     public static class Dentries extends TeaModel {
-        @NameInMap("AppProperties")
+        @com.aliyun.core.annotation.NameInMap("AppProperties")
         private java.util.Map < String, java.util.List<DentriesAppPropertiesValue>> appProperties;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreatorId")
+        @com.aliyun.core.annotation.NameInMap("CreatorId")
         private String creatorId;
 
-        @NameInMap("Extension")
+        @com.aliyun.core.annotation.NameInMap("Extension")
         private String extension;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("ModifierId")
+        @com.aliyun.core.annotation.NameInMap("ModifierId")
         private String modifierId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ParentId")
+        @com.aliyun.core.annotation.NameInMap("ParentId")
         private String parentId;
 
-        @NameInMap("PartitionType")
+        @com.aliyun.core.annotation.NameInMap("PartitionType")
         private String partitionType;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("Properties")
+        @com.aliyun.core.annotation.NameInMap("Properties")
         private Properties properties;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("SpaceId")
+        @com.aliyun.core.annotation.NameInMap("SpaceId")
         private String spaceId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StorageDriver")
+        @com.aliyun.core.annotation.NameInMap("StorageDriver")
         private String storageDriver;
 
-        @NameInMap("Thumbnail")
+        @com.aliyun.core.annotation.NameInMap("Thumbnail")
         private Thumbnail thumbnail;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private Long version;
 
         private Dentries(Builder builder) {

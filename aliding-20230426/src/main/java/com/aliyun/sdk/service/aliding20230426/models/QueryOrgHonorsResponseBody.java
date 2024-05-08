@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryOrgHonorsResponseBody</p>
  */
 public class QueryOrgHonorsResponseBody extends TeaModel {
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @NameInMap("openHonors")
+    @com.aliyun.core.annotation.NameInMap("openHonors")
     private java.util.List < OpenHonors> openHonors;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private QueryOrgHonorsResponseBody(Builder builder) {
@@ -92,19 +91,19 @@ public class QueryOrgHonorsResponseBody extends TeaModel {
     } 
 
     public static class OpenHonors extends TeaModel {
-        @NameInMap("honorDesc")
+        @com.aliyun.core.annotation.NameInMap("honorDesc")
         private String honorDesc;
 
-        @NameInMap("honorId")
+        @com.aliyun.core.annotation.NameInMap("honorId")
         private Long honorId;
 
-        @NameInMap("honorImgUrl")
+        @com.aliyun.core.annotation.NameInMap("honorImgUrl")
         private String honorImgUrl;
 
-        @NameInMap("honorName")
+        @com.aliyun.core.annotation.NameInMap("honorName")
         private String honorName;
 
-        @NameInMap("honorPendantImgUrl")
+        @com.aliyun.core.annotation.NameInMap("honorPendantImgUrl")
         private String honorPendantImgUrl;
 
         private OpenHonors(Builder builder) {

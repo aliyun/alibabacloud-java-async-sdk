@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateVideoConferenceResponseBody</p>
  */
 public class CreateVideoConferenceResponseBody extends TeaModel {
-    @NameInMap("conferenceId")
+    @com.aliyun.core.annotation.NameInMap("conferenceId")
     private String conferenceId;
 
-    @NameInMap("conferencePassword")
+    @com.aliyun.core.annotation.NameInMap("conferencePassword")
     private String conferencePassword;
 
-    @NameInMap("externalLinkUrl")
+    @com.aliyun.core.annotation.NameInMap("externalLinkUrl")
     private String externalLinkUrl;
 
-    @NameInMap("hostPassword")
+    @com.aliyun.core.annotation.NameInMap("hostPassword")
     private String hostPassword;
 
-    @NameInMap("phoneNumbers")
+    @com.aliyun.core.annotation.NameInMap("phoneNumbers")
     private java.util.List < String > phoneNumbers;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("roomCode")
+    @com.aliyun.core.annotation.NameInMap("roomCode")
     private String roomCode;
 
     private CreateVideoConferenceResponseBody(Builder builder) {

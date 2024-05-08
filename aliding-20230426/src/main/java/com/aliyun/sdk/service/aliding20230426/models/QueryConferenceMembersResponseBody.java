@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryConferenceMembersResponseBody</p>
  */
 public class QueryConferenceMembersResponseBody extends TeaModel {
-    @NameInMap("memberModels")
+    @com.aliyun.core.annotation.NameInMap("memberModels")
     private java.util.List < MemberModels> memberModels;
 
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("totalCount")
+    @com.aliyun.core.annotation.NameInMap("totalCount")
     private Integer totalCount;
 
     private QueryConferenceMembersResponseBody(Builder builder) {
@@ -112,37 +111,37 @@ public class QueryConferenceMembersResponseBody extends TeaModel {
     } 
 
     public static class MemberModels extends TeaModel {
-        @NameInMap("AttendStatus")
+        @com.aliyun.core.annotation.NameInMap("AttendStatus")
         private Integer attendStatus;
 
-        @NameInMap("CoHost")
+        @com.aliyun.core.annotation.NameInMap("CoHost")
         private Boolean coHost;
 
-        @NameInMap("ConferenceId")
+        @com.aliyun.core.annotation.NameInMap("ConferenceId")
         private String conferenceId;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
 
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private Boolean host;
 
-        @NameInMap("JoinTime")
+        @com.aliyun.core.annotation.NameInMap("JoinTime")
         private Long joinTime;
 
-        @NameInMap("LeaveTime")
+        @com.aliyun.core.annotation.NameInMap("LeaveTime")
         private Long leaveTime;
 
-        @NameInMap("OuterOrgMember")
+        @com.aliyun.core.annotation.NameInMap("OuterOrgMember")
         private Boolean outerOrgMember;
 
-        @NameInMap("PstnJoin")
+        @com.aliyun.core.annotation.NameInMap("PstnJoin")
         private Boolean pstnJoin;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserNick")
+        @com.aliyun.core.annotation.NameInMap("UserNick")
         private String userNick;
 
         private MemberModels(Builder builder) {

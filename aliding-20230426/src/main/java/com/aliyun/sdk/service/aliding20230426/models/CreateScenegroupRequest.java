@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,90 +11,90 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateScenegroupRequest</p>
  */
 public class CreateScenegroupRequest extends Request {
-    @Header
-    @NameInMap("AccountContext")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("AccountContext")
     private AccountContext accountContext;
 
-    @Body
-    @NameInMap("AddFriendForbidden")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AddFriendForbidden")
     private Long addFriendForbidden;
 
-    @Body
-    @NameInMap("AllMembersCanCreateCalendar")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AllMembersCanCreateCalendar")
     private Long allMembersCanCreateCalendar;
 
-    @Body
-    @NameInMap("AllMembersCanCreateMcsConf")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AllMembersCanCreateMcsConf")
     private Long allMembersCanCreateMcsConf;
 
-    @Body
-    @NameInMap("ChatBannedType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChatBannedType")
     private Long chatBannedType;
 
-    @Body
-    @NameInMap("GroupEmailDisabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GroupEmailDisabled")
     private Long groupEmailDisabled;
 
-    @Body
-    @NameInMap("GroupLiveSwitch")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GroupLiveSwitch")
     private Long groupLiveSwitch;
 
-    @Body
-    @NameInMap("Icon")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Icon")
     private String icon;
 
-    @Body
-    @NameInMap("ManagementType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ManagementType")
     private Long managementType;
 
-    @Body
-    @NameInMap("MembersToAdminChat")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MembersToAdminChat")
     private Long membersToAdminChat;
 
-    @Body
-    @NameInMap("MentionAllAuthority")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MentionAllAuthority")
     private Long mentionAllAuthority;
 
-    @Body
-    @NameInMap("OnlyAdminCanDing")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OnlyAdminCanDing")
     private Long onlyAdminCanDing;
 
-    @Body
-    @NameInMap("OnlyAdminCanSetMsgTop")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OnlyAdminCanSetMsgTop")
     private Long onlyAdminCanSetMsgTop;
 
-    @Body
-    @NameInMap("Searchable")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Searchable")
     private Long searchable;
 
-    @Body
-    @NameInMap("ShowHistoryType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ShowHistoryType")
     private Long showHistoryType;
 
-    @Body
-    @NameInMap("SubadminIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SubadminIds")
     private String subadminIds;
 
-    @Body
-    @NameInMap("TemplateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateId;
 
-    @Body
-    @NameInMap("Title")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Title")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String title;
 
-    @Body
-    @NameInMap("UserIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserIds")
     private String userIds;
 
-    @Body
-    @NameInMap("Uuid")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Uuid")
     private String uuid;
 
-    @Body
-    @NameInMap("ValidationType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ValidationType")
     private Long validationType;
 
     private CreateScenegroupRequest(Builder builder) {
@@ -533,8 +532,8 @@ public class CreateScenegroupRequest extends Request {
     } 
 
     public static class AccountContext extends TeaModel {
-        @NameInMap("accountId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("accountId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String accountId;
 
         private AccountContext(Builder builder) {

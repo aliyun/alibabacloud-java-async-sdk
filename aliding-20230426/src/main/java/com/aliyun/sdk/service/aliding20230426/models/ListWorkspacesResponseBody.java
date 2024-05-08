@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListWorkspacesResponseBody</p>
  */
 public class ListWorkspacesResponseBody extends TeaModel {
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("workspaces")
+    @com.aliyun.core.annotation.NameInMap("workspaces")
     private java.util.List < Workspaces> workspaces;
 
     private ListWorkspacesResponseBody(Builder builder) {
@@ -92,10 +91,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
     } 
 
     public static class Icon extends TeaModel {
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Icon(Builder builder) {
@@ -153,49 +152,49 @@ public class ListWorkspacesResponseBody extends TeaModel {
 
     }
     public static class Workspaces extends TeaModel {
-        @NameInMap("CorpId")
+        @com.aliyun.core.annotation.NameInMap("CorpId")
         private String corpId;
 
-        @NameInMap("Cover")
+        @com.aliyun.core.annotation.NameInMap("Cover")
         private String cover;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreatorId")
+        @com.aliyun.core.annotation.NameInMap("CreatorId")
         private String creatorId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Icon")
+        @com.aliyun.core.annotation.NameInMap("Icon")
         private Icon icon;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("ModifierId")
+        @com.aliyun.core.annotation.NameInMap("ModifierId")
         private String modifierId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PermissionRole")
+        @com.aliyun.core.annotation.NameInMap("PermissionRole")
         private String permissionRole;
 
-        @NameInMap("RootNodeId")
+        @com.aliyun.core.annotation.NameInMap("RootNodeId")
         private String rootNodeId;
 
-        @NameInMap("TeamId")
+        @com.aliyun.core.annotation.NameInMap("TeamId")
         private String teamId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
-        @NameInMap("WorkspaceId")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceId")
         private String workspaceId;
 
         private Workspaces(Builder builder) {

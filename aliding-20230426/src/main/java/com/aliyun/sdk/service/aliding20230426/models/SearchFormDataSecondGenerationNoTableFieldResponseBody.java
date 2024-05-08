@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SearchFormDataSecondGenerationNoTableFieldResponseBody</p>
  */
 public class SearchFormDataSecondGenerationNoTableFieldResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private java.util.List < Data> data;
 
-    @NameInMap("pageNumber")
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Long pageNumber;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("totalCount")
+    @com.aliyun.core.annotation.NameInMap("totalCount")
     private Long totalCount;
 
-    @NameInMap("vendorRequestId")
+    @com.aliyun.core.annotation.NameInMap("vendorRequestId")
     private String vendorRequestId;
 
-    @NameInMap("vendorType")
+    @com.aliyun.core.annotation.NameInMap("vendorType")
     private String vendorType;
 
     private SearchFormDataSecondGenerationNoTableFieldResponseBody(Builder builder) {
@@ -152,10 +151,10 @@ public class SearchFormDataSecondGenerationNoTableFieldResponseBody extends TeaM
     } 
 
     public static class Name extends TeaModel {
-        @NameInMap("NameInChinese")
+        @com.aliyun.core.annotation.NameInMap("NameInChinese")
         private String nameInChinese;
 
-        @NameInMap("NameInEnglish")
+        @com.aliyun.core.annotation.NameInMap("NameInEnglish")
         private String nameInEnglish;
 
         private Name(Builder builder) {
@@ -213,10 +212,10 @@ public class SearchFormDataSecondGenerationNoTableFieldResponseBody extends TeaM
 
     }
     public static class ModifyUser extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private Name name;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private ModifyUser(Builder builder) {
@@ -274,10 +273,10 @@ public class SearchFormDataSecondGenerationNoTableFieldResponseBody extends TeaM
 
     }
     public static class OriginatorName extends TeaModel {
-        @NameInMap("NameInChinese")
+        @com.aliyun.core.annotation.NameInMap("NameInChinese")
         private String nameInChinese;
 
-        @NameInMap("NameInEnglish")
+        @com.aliyun.core.annotation.NameInMap("NameInEnglish")
         private String nameInEnglish;
 
         private OriginatorName(Builder builder) {
@@ -335,10 +334,10 @@ public class SearchFormDataSecondGenerationNoTableFieldResponseBody extends TeaM
 
     }
     public static class Originator extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private OriginatorName name;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private Originator(Builder builder) {
@@ -396,49 +395,49 @@ public class SearchFormDataSecondGenerationNoTableFieldResponseBody extends TeaM
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("CreateTimeGMT")
+        @com.aliyun.core.annotation.NameInMap("CreateTimeGMT")
         private String createTimeGMT;
 
-        @NameInMap("CreatorUserId")
+        @com.aliyun.core.annotation.NameInMap("CreatorUserId")
         private String creatorUserId;
 
-        @NameInMap("FormData")
+        @com.aliyun.core.annotation.NameInMap("FormData")
         private java.util.Map < String, ? > formData;
 
-        @NameInMap("FormInstanceId")
+        @com.aliyun.core.annotation.NameInMap("FormInstanceId")
         private String formInstanceId;
 
-        @NameInMap("FormUuid")
+        @com.aliyun.core.annotation.NameInMap("FormUuid")
         private String formUuid;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("InstanceValue")
+        @com.aliyun.core.annotation.NameInMap("InstanceValue")
         private String instanceValue;
 
-        @NameInMap("ModifiedTimeGMT")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTimeGMT")
         private String modifiedTimeGMT;
 
-        @NameInMap("Modifier")
+        @com.aliyun.core.annotation.NameInMap("Modifier")
         private String modifier;
 
-        @NameInMap("ModifyUser")
+        @com.aliyun.core.annotation.NameInMap("ModifyUser")
         private ModifyUser modifyUser;
 
-        @NameInMap("Originator")
+        @com.aliyun.core.annotation.NameInMap("Originator")
         private Originator originator;
 
-        @NameInMap("Sequence")
+        @com.aliyun.core.annotation.NameInMap("Sequence")
         private String sequence;
 
-        @NameInMap("SerialNumber")
+        @com.aliyun.core.annotation.NameInMap("SerialNumber")
         private String serialNumber;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private Long version;
 
         private Data(Builder builder) {

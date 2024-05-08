@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInstancesByIdListResponseBody</p>
  */
 public class GetInstancesByIdListResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < Result> result;
 
-    @NameInMap("vendorRequestId")
+    @com.aliyun.core.annotation.NameInMap("vendorRequestId")
     private String vendorRequestId;
 
-    @NameInMap("vendorType")
+    @com.aliyun.core.annotation.NameInMap("vendorType")
     private String vendorType;
 
     private GetInstancesByIdListResponseBody(Builder builder) {
@@ -112,13 +111,13 @@ public class GetInstancesByIdListResponseBody extends TeaModel {
     } 
 
     public static class Name extends TeaModel {
-        @NameInMap("NameInChinese")
+        @com.aliyun.core.annotation.NameInMap("NameInChinese")
         private String nameInChinese;
 
-        @NameInMap("NameInEnglish")
+        @com.aliyun.core.annotation.NameInMap("NameInEnglish")
         private String nameInEnglish;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Name(Builder builder) {
@@ -193,16 +192,16 @@ public class GetInstancesByIdListResponseBody extends TeaModel {
 
     }
     public static class ActionExecutor extends TeaModel {
-        @NameInMap("DepartmentName")
+        @com.aliyun.core.annotation.NameInMap("DepartmentName")
         private String departmentName;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private Name name;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private ActionExecutor(Builder builder) {
@@ -294,13 +293,13 @@ public class GetInstancesByIdListResponseBody extends TeaModel {
 
     }
     public static class OriginatorName extends TeaModel {
-        @NameInMap("NameInChinese")
+        @com.aliyun.core.annotation.NameInMap("NameInChinese")
         private String nameInChinese;
 
-        @NameInMap("NameInEnglish")
+        @com.aliyun.core.annotation.NameInMap("NameInEnglish")
         private String nameInEnglish;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private OriginatorName(Builder builder) {
@@ -375,16 +374,16 @@ public class GetInstancesByIdListResponseBody extends TeaModel {
 
     }
     public static class Originator extends TeaModel {
-        @NameInMap("DepartmentName")
+        @com.aliyun.core.annotation.NameInMap("DepartmentName")
         private String departmentName;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private OriginatorName name;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private Originator(Builder builder) {
@@ -476,31 +475,31 @@ public class GetInstancesByIdListResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("ActionExecutor")
+        @com.aliyun.core.annotation.NameInMap("ActionExecutor")
         private java.util.List < ActionExecutor> actionExecutor;
 
-        @NameInMap("ApprovedResult")
+        @com.aliyun.core.annotation.NameInMap("ApprovedResult")
         private String approvedResult;
 
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private java.util.Map < String, ? > data;
 
-        @NameInMap("FormUuid")
+        @com.aliyun.core.annotation.NameInMap("FormUuid")
         private String formUuid;
 
-        @NameInMap("InstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("InstanceStatus")
         private String instanceStatus;
 
-        @NameInMap("Originator")
+        @com.aliyun.core.annotation.NameInMap("Originator")
         private Originator originator;
 
-        @NameInMap("ProcessCode")
+        @com.aliyun.core.annotation.NameInMap("ProcessCode")
         private String processCode;
 
-        @NameInMap("ProcessInstanceId")
+        @com.aliyun.core.annotation.NameInMap("ProcessInstanceId")
         private String processInstanceId;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private Result(Builder builder) {

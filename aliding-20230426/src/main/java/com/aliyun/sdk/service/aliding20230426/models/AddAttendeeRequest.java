@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddAttendeeRequest</p>
  */
 public class AddAttendeeRequest extends Request {
-    @Header
-    @NameInMap("AccountContext")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("AccountContext")
     private AccountContext accountContext;
 
-    @Body
-    @NameInMap("AttendeesToAdd")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AttendeesToAdd")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < AttendeesToAdd> attendeesToAdd;
 
-    @Body
-    @NameInMap("CalendarId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CalendarId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String calendarId;
 
-    @Body
-    @NameInMap("EventId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EventId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String eventId;
 
-    @Body
-    @NameInMap("chatNotification")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("chatNotification")
     private Boolean chatNotification;
 
-    @Body
-    @NameInMap("pushNotification")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("pushNotification")
     private Boolean pushNotification;
 
     private AddAttendeeRequest(Builder builder) {
@@ -190,8 +189,8 @@ public class AddAttendeeRequest extends Request {
     } 
 
     public static class AccountContext extends TeaModel {
-        @NameInMap("accountId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("accountId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String accountId;
 
         private AccountContext(Builder builder) {
@@ -232,10 +231,10 @@ public class AddAttendeeRequest extends Request {
 
     }
     public static class AttendeesToAdd extends TeaModel {
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("isOptional")
+        @com.aliyun.core.annotation.NameInMap("isOptional")
         private Boolean isOptional;
 
         private AttendeesToAdd(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCalendarsResponseBody</p>
  */
 public class ListCalendarsResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("response")
+    @com.aliyun.core.annotation.NameInMap("response")
     private Response response;
 
     private ListCalendarsResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class ListCalendarsResponseBody extends TeaModel {
     } 
 
     public static class Calendars extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ETag")
+        @com.aliyun.core.annotation.NameInMap("ETag")
         private String eTag;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Privilege")
+        @com.aliyun.core.annotation.NameInMap("Privilege")
         private String privilege;
 
-        @NameInMap("Summary")
+        @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
 
-        @NameInMap("TimeZone")
+        @com.aliyun.core.annotation.NameInMap("TimeZone")
         private String timeZone;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Calendars(Builder builder) {
@@ -233,7 +232,7 @@ public class ListCalendarsResponseBody extends TeaModel {
 
     }
     public static class Response extends TeaModel {
-        @NameInMap("Calendars")
+        @com.aliyun.core.annotation.NameInMap("Calendars")
         private java.util.List < Calendars> calendars;
 
         private Response(Builder builder) {

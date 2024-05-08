@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateScheduleConferenceResponseBody</p>
  */
 public class CreateScheduleConferenceResponseBody extends TeaModel {
-    @NameInMap("phones")
+    @com.aliyun.core.annotation.NameInMap("phones")
     private java.util.List < String > phones;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("roomCode")
+    @com.aliyun.core.annotation.NameInMap("roomCode")
     private String roomCode;
 
-    @NameInMap("scheduleConferenceId")
+    @com.aliyun.core.annotation.NameInMap("scheduleConferenceId")
     private String scheduleConferenceId;
 
-    @NameInMap("url")
+    @com.aliyun.core.annotation.NameInMap("url")
     private String url;
 
     private CreateScheduleConferenceResponseBody(Builder builder) {

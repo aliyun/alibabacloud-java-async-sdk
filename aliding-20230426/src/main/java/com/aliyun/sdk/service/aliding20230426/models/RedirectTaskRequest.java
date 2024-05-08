@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,45 +11,45 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RedirectTaskRequest</p>
  */
 public class RedirectTaskRequest extends Request {
-    @Header
-    @NameInMap("AccountContext")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("AccountContext")
     private AccountContext accountContext;
 
-    @Body
-    @NameInMap("AppType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appType;
 
-    @Body
-    @NameInMap("ByManager")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ByManager")
     private String byManager;
 
-    @Body
-    @NameInMap("Language")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Language")
     private String language;
 
-    @Body
-    @NameInMap("NowActionExecutorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NowActionExecutorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nowActionExecutorId;
 
-    @Body
-    @NameInMap("ProcessInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProcessInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String processInstanceId;
 
-    @Body
-    @NameInMap("Remark")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
-    @Body
-    @NameInMap("SystemToken")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SystemToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String systemToken;
 
-    @Body
-    @NameInMap("TaskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long taskId;
 
     private RedirectTaskRequest(Builder builder) {
@@ -260,8 +259,8 @@ public class RedirectTaskRequest extends Request {
     } 
 
     public static class AccountContext extends TeaModel {
-        @NameInMap("accountId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("accountId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String accountId;
 
         private AccountContext(Builder builder) {

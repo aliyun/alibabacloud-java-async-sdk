@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,43 +11,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryLiveInfoResponseBody</p>
  */
 public class QueryLiveInfoResponseBody extends TeaModel {
-    @NameInMap("coverUrl")
+    @com.aliyun.core.annotation.NameInMap("coverUrl")
     private String coverUrl;
 
-    @NameInMap("duration")
+    @com.aliyun.core.annotation.NameInMap("duration")
     private Long duration;
 
-    @NameInMap("endTime")
+    @com.aliyun.core.annotation.NameInMap("endTime")
     private Long endTime;
 
-    @NameInMap("introduction")
+    @com.aliyun.core.annotation.NameInMap("introduction")
     private String introduction;
 
-    @NameInMap("liveId")
+    @com.aliyun.core.annotation.NameInMap("liveId")
     private String liveId;
 
-    @NameInMap("livePlayUrl")
+    @com.aliyun.core.annotation.NameInMap("livePlayUrl")
     private String livePlayUrl;
 
-    @NameInMap("liveStatus")
+    @com.aliyun.core.annotation.NameInMap("liveStatus")
     private Integer liveStatus;
 
-    @NameInMap("playbackDuration")
+    @com.aliyun.core.annotation.NameInMap("playbackDuration")
     private Long playbackDuration;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("startTime")
+    @com.aliyun.core.annotation.NameInMap("startTime")
     private Long startTime;
 
-    @NameInMap("subscribeCount")
+    @com.aliyun.core.annotation.NameInMap("subscribeCount")
     private Integer subscribeCount;
 
-    @NameInMap("title")
+    @com.aliyun.core.annotation.NameInMap("title")
     private String title;
 
-    @NameInMap("uv")
+    @com.aliyun.core.annotation.NameInMap("uv")
     private Integer uv;
 
     private QueryLiveInfoResponseBody(Builder builder) {

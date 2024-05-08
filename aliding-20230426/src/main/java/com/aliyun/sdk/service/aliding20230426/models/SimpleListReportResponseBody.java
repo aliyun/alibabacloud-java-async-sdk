@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SimpleListReportResponseBody</p>
  */
 public class SimpleListReportResponseBody extends TeaModel {
-    @NameInMap("dataList")
+    @com.aliyun.core.annotation.NameInMap("dataList")
     private java.util.List < DataList> dataList;
 
-    @NameInMap("hasMore")
+    @com.aliyun.core.annotation.NameInMap("hasMore")
     private Boolean hasMore;
 
-    @NameInMap("nextCursor")
+    @com.aliyun.core.annotation.NameInMap("nextCursor")
     private Long nextCursor;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("size")
+    @com.aliyun.core.annotation.NameInMap("size")
     private Long size;
 
     private SimpleListReportResponseBody(Builder builder) {
@@ -132,25 +131,25 @@ public class SimpleListReportResponseBody extends TeaModel {
     } 
 
     public static class DataList extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("CreatorId")
+        @com.aliyun.core.annotation.NameInMap("CreatorId")
         private String creatorId;
 
-        @NameInMap("CreatorName")
+        @com.aliyun.core.annotation.NameInMap("CreatorName")
         private String creatorName;
 
-        @NameInMap("DeptName")
+        @com.aliyun.core.annotation.NameInMap("DeptName")
         private String deptName;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("ReportId")
+        @com.aliyun.core.annotation.NameInMap("ReportId")
         private String reportId;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
         private DataList(Builder builder) {

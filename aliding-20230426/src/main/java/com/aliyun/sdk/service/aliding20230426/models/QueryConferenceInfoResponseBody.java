@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryConferenceInfoResponseBody</p>
  */
 public class QueryConferenceInfoResponseBody extends TeaModel {
-    @NameInMap("confInfo")
+    @com.aliyun.core.annotation.NameInMap("confInfo")
     private ConfInfo confInfo;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private QueryConferenceInfoResponseBody(Builder builder) {
@@ -72,43 +71,43 @@ public class QueryConferenceInfoResponseBody extends TeaModel {
     } 
 
     public static class ConfInfo extends TeaModel {
-        @NameInMap("ActiveNum")
+        @com.aliyun.core.annotation.NameInMap("ActiveNum")
         private Integer activeNum;
 
-        @NameInMap("AttendNum")
+        @com.aliyun.core.annotation.NameInMap("AttendNum")
         private Integer attendNum;
 
-        @NameInMap("ConfDuration")
+        @com.aliyun.core.annotation.NameInMap("ConfDuration")
         private Long confDuration;
 
-        @NameInMap("ConferenceId")
+        @com.aliyun.core.annotation.NameInMap("ConferenceId")
         private String conferenceId;
 
-        @NameInMap("CreatorId")
+        @com.aliyun.core.annotation.NameInMap("CreatorId")
         private String creatorId;
 
-        @NameInMap("CreatorNick")
+        @com.aliyun.core.annotation.NameInMap("CreatorNick")
         private String creatorNick;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("ExternalLinkUrl")
+        @com.aliyun.core.annotation.NameInMap("ExternalLinkUrl")
         private String externalLinkUrl;
 
-        @NameInMap("InvitedNum")
+        @com.aliyun.core.annotation.NameInMap("InvitedNum")
         private Integer invitedNum;
 
-        @NameInMap("RoomCode")
+        @com.aliyun.core.annotation.NameInMap("RoomCode")
         private String roomCode;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private ConfInfo(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryCloudRecordVideoPlayInfoResponseBody</p>
  */
 public class QueryCloudRecordVideoPlayInfoResponseBody extends TeaModel {
-    @NameInMap("duration")
+    @com.aliyun.core.annotation.NameInMap("duration")
     private Long duration;
 
-    @NameInMap("fileSize")
+    @com.aliyun.core.annotation.NameInMap("fileSize")
     private Long fileSize;
 
-    @NameInMap("mp4FileUrl")
+    @com.aliyun.core.annotation.NameInMap("mp4FileUrl")
     private String mp4FileUrl;
 
-    @NameInMap("playUrl")
+    @com.aliyun.core.annotation.NameInMap("playUrl")
     private String playUrl;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("status")
+    @com.aliyun.core.annotation.NameInMap("status")
     private Long status;
 
     private QueryCloudRecordVideoPlayInfoResponseBody(Builder builder) {

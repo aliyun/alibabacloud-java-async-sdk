@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetConversaionSpaceResponseBody</p>
  */
 public class GetConversaionSpaceResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("space")
+    @com.aliyun.core.annotation.NameInMap("space")
     private Space space;
 
-    @NameInMap("vendorRequestId")
+    @com.aliyun.core.annotation.NameInMap("vendorRequestId")
     private String vendorRequestId;
 
-    @NameInMap("vendorType")
+    @com.aliyun.core.annotation.NameInMap("vendorType")
     private String vendorType;
 
     private GetConversaionSpaceResponseBody(Builder builder) {
@@ -112,16 +111,16 @@ public class GetConversaionSpaceResponseBody extends TeaModel {
     } 
 
     public static class Space extends TeaModel {
-        @NameInMap("CorpId")
+        @com.aliyun.core.annotation.NameInMap("CorpId")
         private String corpId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("SpaceId")
+        @com.aliyun.core.annotation.NameInMap("SpaceId")
         private String spaceId;
 
         private Space(Builder builder) {

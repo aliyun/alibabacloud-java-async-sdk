@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetOperationRecordsResponseBody</p>
  */
 public class GetOperationRecordsResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < Result> result;
 
-    @NameInMap("vendorRequestId")
+    @com.aliyun.core.annotation.NameInMap("vendorRequestId")
     private String vendorRequestId;
 
-    @NameInMap("vendorType")
+    @com.aliyun.core.annotation.NameInMap("vendorType")
     private String vendorType;
 
     private GetOperationRecordsResponseBody(Builder builder) {
@@ -112,76 +111,76 @@ public class GetOperationRecordsResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("ActionExit")
+        @com.aliyun.core.annotation.NameInMap("ActionExit")
         private String actionExit;
 
-        @NameInMap("ActiveTimeGMT")
+        @com.aliyun.core.annotation.NameInMap("ActiveTimeGMT")
         private String activeTimeGMT;
 
-        @NameInMap("ActivityId")
+        @com.aliyun.core.annotation.NameInMap("ActivityId")
         private String activityId;
 
-        @NameInMap("DataId")
+        @com.aliyun.core.annotation.NameInMap("DataId")
         private Long dataId;
 
-        @NameInMap("DigitalSign")
+        @com.aliyun.core.annotation.NameInMap("DigitalSign")
         private String digitalSign;
 
-        @NameInMap("Files")
+        @com.aliyun.core.annotation.NameInMap("Files")
         private String files;
 
-        @NameInMap("OperateTimeGMT")
+        @com.aliyun.core.annotation.NameInMap("OperateTimeGMT")
         private String operateTimeGMT;
 
-        @NameInMap("OperateType")
+        @com.aliyun.core.annotation.NameInMap("OperateType")
         private String operateType;
 
-        @NameInMap("OperatorDisplayName")
+        @com.aliyun.core.annotation.NameInMap("OperatorDisplayName")
         private String operatorDisplayName;
 
-        @NameInMap("OperatorName")
+        @com.aliyun.core.annotation.NameInMap("OperatorName")
         private String operatorName;
 
-        @NameInMap("OperatorNickName")
+        @com.aliyun.core.annotation.NameInMap("OperatorNickName")
         private String operatorNickName;
 
-        @NameInMap("OperatorPhotoUrl")
+        @com.aliyun.core.annotation.NameInMap("OperatorPhotoUrl")
         private String operatorPhotoUrl;
 
-        @NameInMap("OperatorStatus")
+        @com.aliyun.core.annotation.NameInMap("OperatorStatus")
         private String operatorStatus;
 
-        @NameInMap("OperatorUserId")
+        @com.aliyun.core.annotation.NameInMap("OperatorUserId")
         private String operatorUserId;
 
-        @NameInMap("ProcessInstanceId")
+        @com.aliyun.core.annotation.NameInMap("ProcessInstanceId")
         private String processInstanceId;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("ShowName")
+        @com.aliyun.core.annotation.NameInMap("ShowName")
         private String showName;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
-        @NameInMap("TaskExecuteType")
+        @com.aliyun.core.annotation.NameInMap("TaskExecuteType")
         private String taskExecuteType;
 
-        @NameInMap("TaskHoldTimeGMT")
+        @com.aliyun.core.annotation.NameInMap("TaskHoldTimeGMT")
         private Long taskHoldTimeGMT;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Result(Builder builder) {

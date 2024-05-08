@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSubscribedCalendarResponseBody</p>
  */
 public class GetSubscribedCalendarResponseBody extends TeaModel {
-    @NameInMap("author")
+    @com.aliyun.core.annotation.NameInMap("author")
     private String author;
 
-    @NameInMap("calendarId")
+    @com.aliyun.core.annotation.NameInMap("calendarId")
     private String calendarId;
 
-    @NameInMap("description")
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @NameInMap("managers")
+    @com.aliyun.core.annotation.NameInMap("managers")
     private java.util.List < String > managers;
 
-    @NameInMap("name")
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("subscribeScope")
+    @com.aliyun.core.annotation.NameInMap("subscribeScope")
     private SubscribeScope subscribeScope;
 
     private GetSubscribedCalendarResponseBody(Builder builder) {
@@ -172,13 +171,13 @@ public class GetSubscribedCalendarResponseBody extends TeaModel {
     } 
 
     public static class SubscribeScope extends TeaModel {
-        @NameInMap("CorpIds")
+        @com.aliyun.core.annotation.NameInMap("CorpIds")
         private java.util.List < String > corpIds;
 
-        @NameInMap("OpenConversationIds")
+        @com.aliyun.core.annotation.NameInMap("OpenConversationIds")
         private java.util.List < String > openConversationIds;
 
-        @NameInMap("UserIds")
+        @com.aliyun.core.annotation.NameInMap("UserIds")
         private java.util.List < String > userIds;
 
         private SubscribeScope(Builder builder) {

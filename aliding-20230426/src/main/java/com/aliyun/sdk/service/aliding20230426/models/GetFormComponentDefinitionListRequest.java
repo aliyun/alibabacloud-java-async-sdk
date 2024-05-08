@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetFormComponentDefinitionListRequest</p>
  */
 public class GetFormComponentDefinitionListRequest extends Request {
-    @Header
-    @NameInMap("AccountContext")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("AccountContext")
     private AccountContext accountContext;
 
-    @Body
-    @NameInMap("AppType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appType;
 
-    @Body
-    @NameInMap("FormUuid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FormUuid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String formUuid;
 
-    @Body
-    @NameInMap("Language")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Language")
     private String language;
 
-    @Body
-    @NameInMap("SystemToken")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SystemToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String systemToken;
 
     private GetFormComponentDefinitionListRequest(Builder builder) {
@@ -166,8 +165,8 @@ public class GetFormComponentDefinitionListRequest extends Request {
     } 
 
     public static class AccountContext extends TeaModel {
-        @NameInMap("accountId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("accountId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String accountId;
 
         private AccountContext(Builder builder) {

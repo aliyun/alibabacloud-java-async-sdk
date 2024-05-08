@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CommentListReportResponseBody</p>
  */
 public class CommentListReportResponseBody extends TeaModel {
-    @NameInMap("comments")
+    @com.aliyun.core.annotation.NameInMap("comments")
     private java.util.List < Comments> comments;
 
-    @NameInMap("hasMore")
+    @com.aliyun.core.annotation.NameInMap("hasMore")
     private Boolean hasMore;
 
-    @NameInMap("nextCursor")
+    @com.aliyun.core.annotation.NameInMap("nextCursor")
     private Long nextCursor;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private CommentListReportResponseBody(Builder builder) {
@@ -112,13 +111,13 @@ public class CommentListReportResponseBody extends TeaModel {
     } 
 
     public static class Comments extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Userid")
+        @com.aliyun.core.annotation.NameInMap("Userid")
         private String userid;
 
         private Comments(Builder builder) {

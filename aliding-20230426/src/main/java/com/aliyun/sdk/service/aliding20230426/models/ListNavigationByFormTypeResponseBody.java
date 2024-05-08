@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListNavigationByFormTypeResponseBody</p>
  */
 public class ListNavigationByFormTypeResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < Result> result;
 
-    @NameInMap("vendorRequestId")
+    @com.aliyun.core.annotation.NameInMap("vendorRequestId")
     private String vendorRequestId;
 
-    @NameInMap("vendorType")
+    @com.aliyun.core.annotation.NameInMap("vendorType")
     private String vendorType;
 
     private ListNavigationByFormTypeResponseBody(Builder builder) {
@@ -112,13 +111,13 @@ public class ListNavigationByFormTypeResponseBody extends TeaModel {
     } 
 
     public static class Title extends TeaModel {
-        @NameInMap("NameInChinese")
+        @com.aliyun.core.annotation.NameInMap("NameInChinese")
         private String nameInChinese;
 
-        @NameInMap("NameInEnglish")
+        @com.aliyun.core.annotation.NameInMap("NameInEnglish")
         private String nameInEnglish;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Title(Builder builder) {
@@ -193,13 +192,13 @@ public class ListNavigationByFormTypeResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("FormUuid")
+        @com.aliyun.core.annotation.NameInMap("FormUuid")
         private String formUuid;
 
-        @NameInMap("ProcessCode")
+        @com.aliyun.core.annotation.NameInMap("ProcessCode")
         private String processCode;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private Title title;
 
         private Result(Builder builder) {

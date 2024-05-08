@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StatisticsReportResponseBody</p>
  */
 public class StatisticsReportResponseBody extends TeaModel {
-    @NameInMap("commentNum")
+    @com.aliyun.core.annotation.NameInMap("commentNum")
     private Long commentNum;
 
-    @NameInMap("commentUserNum")
+    @com.aliyun.core.annotation.NameInMap("commentUserNum")
     private Long commentUserNum;
 
-    @NameInMap("likeNum")
+    @com.aliyun.core.annotation.NameInMap("likeNum")
     private Long likeNum;
 
-    @NameInMap("readNum")
+    @com.aliyun.core.annotation.NameInMap("readNum")
     private Long readNum;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private StatisticsReportResponseBody(Builder builder) {

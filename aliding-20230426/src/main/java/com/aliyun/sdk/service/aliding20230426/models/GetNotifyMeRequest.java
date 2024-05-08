@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,58 +11,58 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetNotifyMeRequest</p>
  */
 public class GetNotifyMeRequest extends Request {
-    @Header
-    @NameInMap("AccountContext")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("AccountContext")
     private AccountContext accountContext;
 
-    @Body
-    @NameInMap("AppTypes")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppTypes")
     private String appTypes;
 
-    @Body
-    @NameInMap("CorpId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CorpId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String corpId;
 
-    @Body
-    @NameInMap("CreateFromTimeGMT")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CreateFromTimeGMT")
     private Long createFromTimeGMT;
 
-    @Body
-    @NameInMap("CreateToTimeGMT")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CreateToTimeGMT")
     private Long createToTimeGMT;
 
-    @Body
-    @NameInMap("InstanceCreateFromTimeGMT")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceCreateFromTimeGMT")
     private Long instanceCreateFromTimeGMT;
 
-    @Body
-    @NameInMap("InstanceCreateToTimeGMT")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceCreateToTimeGMT")
     private Long instanceCreateToTimeGMT;
 
-    @Body
-    @NameInMap("Keyword")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
-    @Body
-    @NameInMap("Language")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Language")
     private String language;
 
-    @Body
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Body
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Body
-    @NameInMap("ProcessCodes")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProcessCodes")
     private String processCodes;
 
-    @Body
-    @NameInMap("Token")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Token")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String token;
 
     private GetNotifyMeRequest(Builder builder) {
@@ -349,8 +348,8 @@ public class GetNotifyMeRequest extends Request {
     } 
 
     public static class AccountContext extends TeaModel {
-        @NameInMap("accountId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("accountId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String accountId;
 
         private AccountContext(Builder builder) {

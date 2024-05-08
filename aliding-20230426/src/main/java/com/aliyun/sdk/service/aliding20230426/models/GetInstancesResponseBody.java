@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInstancesResponseBody</p>
  */
 public class GetInstancesResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private java.util.List < Data> data;
 
-    @NameInMap("pageNumber")
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Long pageNumber;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("totalCount")
+    @com.aliyun.core.annotation.NameInMap("totalCount")
     private Long totalCount;
 
-    @NameInMap("vendorRequestId")
+    @com.aliyun.core.annotation.NameInMap("vendorRequestId")
     private String vendorRequestId;
 
-    @NameInMap("vendorType")
+    @com.aliyun.core.annotation.NameInMap("vendorType")
     private String vendorType;
 
     private GetInstancesResponseBody(Builder builder) {
@@ -152,13 +151,13 @@ public class GetInstancesResponseBody extends TeaModel {
     } 
 
     public static class Name extends TeaModel {
-        @NameInMap("NameInChinese")
+        @com.aliyun.core.annotation.NameInMap("NameInChinese")
         private String nameInChinese;
 
-        @NameInMap("NameInEnglish")
+        @com.aliyun.core.annotation.NameInMap("NameInEnglish")
         private String nameInEnglish;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Name(Builder builder) {
@@ -233,16 +232,16 @@ public class GetInstancesResponseBody extends TeaModel {
 
     }
     public static class ActionExecutor extends TeaModel {
-        @NameInMap("DeptName")
+        @com.aliyun.core.annotation.NameInMap("DeptName")
         private String deptName;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private Name name;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private ActionExecutor(Builder builder) {
@@ -334,13 +333,13 @@ public class GetInstancesResponseBody extends TeaModel {
 
     }
     public static class OriginatorName extends TeaModel {
-        @NameInMap("NameInChinese")
+        @com.aliyun.core.annotation.NameInMap("NameInChinese")
         private String nameInChinese;
 
-        @NameInMap("NameInEnglish")
+        @com.aliyun.core.annotation.NameInMap("NameInEnglish")
         private String nameInEnglish;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private OriginatorName(Builder builder) {
@@ -415,16 +414,16 @@ public class GetInstancesResponseBody extends TeaModel {
 
     }
     public static class Originator extends TeaModel {
-        @NameInMap("DeptName")
+        @com.aliyun.core.annotation.NameInMap("DeptName")
         private String deptName;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private OriginatorName name;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private Originator(Builder builder) {
@@ -516,40 +515,40 @@ public class GetInstancesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("ActionExecutor")
+        @com.aliyun.core.annotation.NameInMap("ActionExecutor")
         private java.util.List < ActionExecutor> actionExecutor;
 
-        @NameInMap("ApprovedResult")
+        @com.aliyun.core.annotation.NameInMap("ApprovedResult")
         private String approvedResult;
 
-        @NameInMap("CreateTimeGMT")
+        @com.aliyun.core.annotation.NameInMap("CreateTimeGMT")
         private String createTimeGMT;
 
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private java.util.Map < String, ? > data;
 
-        @NameInMap("FormUuid")
+        @com.aliyun.core.annotation.NameInMap("FormUuid")
         private String formUuid;
 
-        @NameInMap("InstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("InstanceStatus")
         private String instanceStatus;
 
-        @NameInMap("ModifiedTimeGMT")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTimeGMT")
         private String modifiedTimeGMT;
 
-        @NameInMap("Originator")
+        @com.aliyun.core.annotation.NameInMap("Originator")
         private Originator originator;
 
-        @NameInMap("ProcessCode")
+        @com.aliyun.core.annotation.NameInMap("ProcessCode")
         private String processCode;
 
-        @NameInMap("ProcessInstanceId")
+        @com.aliyun.core.annotation.NameInMap("ProcessInstanceId")
         private String processInstanceId;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private Long version;
 
         private Data(Builder builder) {

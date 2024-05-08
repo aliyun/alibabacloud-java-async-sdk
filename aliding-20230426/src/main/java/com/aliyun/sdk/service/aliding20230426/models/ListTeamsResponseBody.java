@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTeamsResponseBody</p>
  */
 public class ListTeamsResponseBody extends TeaModel {
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("teams")
+    @com.aliyun.core.annotation.NameInMap("teams")
     private java.util.List < Teams> teams;
 
-    @NameInMap("vendorRequestId")
+    @com.aliyun.core.annotation.NameInMap("vendorRequestId")
     private String vendorRequestId;
 
-    @NameInMap("vendorType")
+    @com.aliyun.core.annotation.NameInMap("vendorType")
     private String vendorType;
 
     private ListTeamsResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class ListTeamsResponseBody extends TeaModel {
     } 
 
     public static class Icon extends TeaModel {
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Icon(Builder builder) {
@@ -193,34 +192,34 @@ public class ListTeamsResponseBody extends TeaModel {
 
     }
     public static class Teams extends TeaModel {
-        @NameInMap("CorpId")
+        @com.aliyun.core.annotation.NameInMap("CorpId")
         private String corpId;
 
-        @NameInMap("Cover")
+        @com.aliyun.core.annotation.NameInMap("Cover")
         private String cover;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreatorId")
+        @com.aliyun.core.annotation.NameInMap("CreatorId")
         private String creatorId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Icon")
+        @com.aliyun.core.annotation.NameInMap("Icon")
         private Icon icon;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("ModifierId")
+        @com.aliyun.core.annotation.NameInMap("ModifierId")
         private String modifierId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("TeamId")
+        @com.aliyun.core.annotation.NameInMap("TeamId")
         private String teamId;
 
         private Teams(Builder builder) {

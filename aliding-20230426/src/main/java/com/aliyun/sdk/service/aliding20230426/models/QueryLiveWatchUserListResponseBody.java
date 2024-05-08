@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryLiveWatchUserListResponseBody</p>
  */
 public class QueryLiveWatchUserListResponseBody extends TeaModel {
-    @NameInMap("orgUsesList")
+    @com.aliyun.core.annotation.NameInMap("orgUsesList")
     private java.util.List < OrgUsesList> orgUsesList;
 
-    @NameInMap("outOrgUserList")
+    @com.aliyun.core.annotation.NameInMap("outOrgUserList")
     private java.util.List < OutOrgUserList> outOrgUserList;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private QueryLiveWatchUserListResponseBody(Builder builder) {
@@ -92,22 +91,22 @@ public class QueryLiveWatchUserListResponseBody extends TeaModel {
     } 
 
     public static class OrgUsesList extends TeaModel {
-        @NameInMap("DeptName")
+        @com.aliyun.core.annotation.NameInMap("DeptName")
         private String deptName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("WatchLiveTime")
+        @com.aliyun.core.annotation.NameInMap("WatchLiveTime")
         private Long watchLiveTime;
 
-        @NameInMap("WatchPlaybackTime")
+        @com.aliyun.core.annotation.NameInMap("WatchPlaybackTime")
         private Long watchPlaybackTime;
 
-        @NameInMap("WatchProgressMs")
+        @com.aliyun.core.annotation.NameInMap("WatchProgressMs")
         private Long watchProgressMs;
 
         private OrgUsesList(Builder builder) {
@@ -233,16 +232,16 @@ public class QueryLiveWatchUserListResponseBody extends TeaModel {
 
     }
     public static class OutOrgUserList extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("WatchLiveTime")
+        @com.aliyun.core.annotation.NameInMap("WatchLiveTime")
         private Long watchLiveTime;
 
-        @NameInMap("WatchPlaybackTime")
+        @com.aliyun.core.annotation.NameInMap("WatchPlaybackTime")
         private Long watchPlaybackTime;
 
-        @NameInMap("WatchProgressMs")
+        @com.aliyun.core.annotation.NameInMap("WatchProgressMs")
         private Long watchProgressMs;
 
         private OutOrgUserList(Builder builder) {

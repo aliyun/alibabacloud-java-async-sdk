@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InviteUsersRequest</p>
  */
 public class InviteUsersRequest extends Request {
-    @Header
-    @NameInMap("AccountContext")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("AccountContext")
     private AccountContext accountContext;
 
-    @Body
-    @NameInMap("InviteeList")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InviteeList")
     private java.util.List < InviteeList> inviteeList;
 
-    @Body
-    @NameInMap("TenantContext")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantContext")
     private TenantContext tenantContext;
 
-    @Body
-    @NameInMap("conferenceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("conferenceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String conferenceId;
 
-    @Body
-    @NameInMap("phoneInviteeList")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("phoneInviteeList")
     private java.util.List < PhoneInviteeList> phoneInviteeList;
 
     private InviteUsersRequest(Builder builder) {
@@ -167,8 +166,8 @@ public class InviteUsersRequest extends Request {
     } 
 
     public static class AccountContext extends TeaModel {
-        @NameInMap("accountId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("accountId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String accountId;
 
         private AccountContext(Builder builder) {
@@ -209,11 +208,11 @@ public class InviteUsersRequest extends Request {
 
     }
     public static class InviteeList extends TeaModel {
-        @NameInMap("Nick")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Nick")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String nick;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private InviteeList(Builder builder) {
@@ -271,7 +270,7 @@ public class InviteUsersRequest extends Request {
 
     }
     public static class TenantContext extends TeaModel {
-        @NameInMap("tenantId")
+        @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;
 
         private TenantContext(Builder builder) {
@@ -312,10 +311,10 @@ public class InviteUsersRequest extends Request {
 
     }
     public static class PhoneInviteeList extends TeaModel {
-        @NameInMap("Nick")
+        @com.aliyun.core.annotation.NameInMap("Nick")
         private String nick;
 
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
         private PhoneInviteeList(Builder builder) {

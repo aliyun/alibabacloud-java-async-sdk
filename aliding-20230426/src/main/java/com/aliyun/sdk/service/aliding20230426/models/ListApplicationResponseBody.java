@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListApplicationResponseBody</p>
  */
 public class ListApplicationResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private java.util.List < Data> data;
 
-    @NameInMap("pageNumber")
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Long pageNumber;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("totalCount")
+    @com.aliyun.core.annotation.NameInMap("totalCount")
     private Long totalCount;
 
-    @NameInMap("vendorRequestId")
+    @com.aliyun.core.annotation.NameInMap("vendorRequestId")
     private String vendorRequestId;
 
-    @NameInMap("vendorType")
+    @com.aliyun.core.annotation.NameInMap("vendorType")
     private String vendorType;
 
     private ListApplicationResponseBody(Builder builder) {
@@ -152,34 +151,34 @@ public class ListApplicationResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AppConfig")
+        @com.aliyun.core.annotation.NameInMap("AppConfig")
         private String appConfig;
 
-        @NameInMap("AppType")
+        @com.aliyun.core.annotation.NameInMap("AppType")
         private String appType;
 
-        @NameInMap("ApplicationStatus")
+        @com.aliyun.core.annotation.NameInMap("ApplicationStatus")
         private String applicationStatus;
 
-        @NameInMap("CorpId")
+        @com.aliyun.core.annotation.NameInMap("CorpId")
         private String corpId;
 
-        @NameInMap("CreatorUserId")
+        @com.aliyun.core.annotation.NameInMap("CreatorUserId")
         private String creatorUserId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Icon")
+        @com.aliyun.core.annotation.NameInMap("Icon")
         private String icon;
 
-        @NameInMap("Inexistence")
+        @com.aliyun.core.annotation.NameInMap("Inexistence")
         private String inexistence;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("SubCorpId")
+        @com.aliyun.core.annotation.NameInMap("SubCorpId")
         private String subCorpId;
 
         private Data(Builder builder) {

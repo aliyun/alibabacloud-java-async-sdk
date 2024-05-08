@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryLiveWatchDetailResponseBody</p>
  */
 public class QueryLiveWatchDetailResponseBody extends TeaModel {
-    @NameInMap("avgWatchTime")
+    @com.aliyun.core.annotation.NameInMap("avgWatchTime")
     private Long avgWatchTime;
 
-    @NameInMap("liveUv")
+    @com.aliyun.core.annotation.NameInMap("liveUv")
     private Integer liveUv;
 
-    @NameInMap("msgCount")
+    @com.aliyun.core.annotation.NameInMap("msgCount")
     private Integer msgCount;
 
-    @NameInMap("playbackUv")
+    @com.aliyun.core.annotation.NameInMap("playbackUv")
     private Integer playbackUv;
 
-    @NameInMap("praiseCount")
+    @com.aliyun.core.annotation.NameInMap("praiseCount")
     private Integer praiseCount;
 
-    @NameInMap("pv")
+    @com.aliyun.core.annotation.NameInMap("pv")
     private Integer pv;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("totalWatchTime")
+    @com.aliyun.core.annotation.NameInMap("totalWatchTime")
     private Long totalWatchTime;
 
-    @NameInMap("uv")
+    @com.aliyun.core.annotation.NameInMap("uv")
     private Integer uv;
 
     private QueryLiveWatchDetailResponseBody(Builder builder) {

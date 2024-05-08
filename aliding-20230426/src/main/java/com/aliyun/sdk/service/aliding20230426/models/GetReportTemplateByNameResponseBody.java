@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetReportTemplateByNameResponseBody</p>
  */
 public class GetReportTemplateByNameResponseBody extends TeaModel {
-    @NameInMap("defaultReceivedConvs")
+    @com.aliyun.core.annotation.NameInMap("defaultReceivedConvs")
     private java.util.List < DefaultReceivedConvs> defaultReceivedConvs;
 
-    @NameInMap("defaultReceivers")
+    @com.aliyun.core.annotation.NameInMap("defaultReceivers")
     private java.util.List < DefaultReceivers> defaultReceivers;
 
-    @NameInMap("fields")
+    @com.aliyun.core.annotation.NameInMap("fields")
     private java.util.List < Fields> fields;
 
-    @NameInMap("id")
+    @com.aliyun.core.annotation.NameInMap("id")
     private String id;
 
-    @NameInMap("name")
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("userName")
+    @com.aliyun.core.annotation.NameInMap("userName")
     private String userName;
 
-    @NameInMap("userid")
+    @com.aliyun.core.annotation.NameInMap("userid")
     private String userid;
 
     private GetReportTemplateByNameResponseBody(Builder builder) {
@@ -192,10 +191,10 @@ public class GetReportTemplateByNameResponseBody extends TeaModel {
     } 
 
     public static class DefaultReceivedConvs extends TeaModel {
-        @NameInMap("ConversationId")
+        @com.aliyun.core.annotation.NameInMap("ConversationId")
         private String conversationId;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private DefaultReceivedConvs(Builder builder) {
@@ -253,10 +252,10 @@ public class GetReportTemplateByNameResponseBody extends TeaModel {
 
     }
     public static class DefaultReceivers extends TeaModel {
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
-        @NameInMap("Userid")
+        @com.aliyun.core.annotation.NameInMap("Userid")
         private String userid;
 
         private DefaultReceivers(Builder builder) {
@@ -314,13 +313,13 @@ public class GetReportTemplateByNameResponseBody extends TeaModel {
 
     }
     public static class Fields extends TeaModel {
-        @NameInMap("FieldName")
+        @com.aliyun.core.annotation.NameInMap("FieldName")
         private String fieldName;
 
-        @NameInMap("Sort")
+        @com.aliyun.core.annotation.NameInMap("Sort")
         private Long sort;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Long type;
 
         private Fields(Builder builder) {

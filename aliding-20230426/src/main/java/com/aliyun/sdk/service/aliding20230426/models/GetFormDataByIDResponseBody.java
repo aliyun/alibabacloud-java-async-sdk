@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetFormDataByIDResponseBody</p>
  */
 public class GetFormDataByIDResponseBody extends TeaModel {
-    @NameInMap("formData")
+    @com.aliyun.core.annotation.NameInMap("formData")
     private java.util.Map < String, ? > formData;
 
-    @NameInMap("formInstId")
+    @com.aliyun.core.annotation.NameInMap("formInstId")
     private String formInstId;
 
-    @NameInMap("modifiedTimeGMT")
+    @com.aliyun.core.annotation.NameInMap("modifiedTimeGMT")
     private String modifiedTimeGMT;
 
-    @NameInMap("originator")
+    @com.aliyun.core.annotation.NameInMap("originator")
     private Originator originator;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("vendorRequestId")
+    @com.aliyun.core.annotation.NameInMap("vendorRequestId")
     private String vendorRequestId;
 
-    @NameInMap("vendorType")
+    @com.aliyun.core.annotation.NameInMap("vendorType")
     private String vendorType;
 
     private GetFormDataByIDResponseBody(Builder builder) {
@@ -172,13 +171,13 @@ public class GetFormDataByIDResponseBody extends TeaModel {
     } 
 
     public static class Name extends TeaModel {
-        @NameInMap("NameInChinese")
+        @com.aliyun.core.annotation.NameInMap("NameInChinese")
         private String nameInChinese;
 
-        @NameInMap("NameInEnglish")
+        @com.aliyun.core.annotation.NameInMap("NameInEnglish")
         private String nameInEnglish;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Name(Builder builder) {
@@ -253,16 +252,16 @@ public class GetFormDataByIDResponseBody extends TeaModel {
 
     }
     public static class Originator extends TeaModel {
-        @NameInMap("DepartmentName")
+        @com.aliyun.core.annotation.NameInMap("DepartmentName")
         private String departmentName;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private Name name;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private Originator(Builder builder) {

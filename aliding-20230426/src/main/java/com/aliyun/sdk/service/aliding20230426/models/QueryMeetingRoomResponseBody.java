@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryMeetingRoomResponseBody</p>
  */
 public class QueryMeetingRoomResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
-    @NameInMap("vendorRequestId")
+    @com.aliyun.core.annotation.NameInMap("vendorRequestId")
     private String vendorRequestId;
 
-    @NameInMap("vendorType")
+    @com.aliyun.core.annotation.NameInMap("vendorType")
     private String vendorType;
 
     private QueryMeetingRoomResponseBody(Builder builder) {
@@ -112,13 +111,13 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
     } 
 
     public static class AuthorizedMembers extends TeaModel {
-        @NameInMap("MemberId")
+        @com.aliyun.core.annotation.NameInMap("MemberId")
         private String memberId;
 
-        @NameInMap("MemberName")
+        @com.aliyun.core.annotation.NameInMap("MemberName")
         private String memberName;
 
-        @NameInMap("MemberType")
+        @com.aliyun.core.annotation.NameInMap("MemberType")
         private String memberType;
 
         private AuthorizedMembers(Builder builder) {
@@ -193,7 +192,7 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
 
     }
     public static class ReservationAuthority extends TeaModel {
-        @NameInMap("AuthorizedMembers")
+        @com.aliyun.core.annotation.NameInMap("AuthorizedMembers")
         private java.util.List < AuthorizedMembers> authorizedMembers;
 
         private ReservationAuthority(Builder builder) {
@@ -234,13 +233,13 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
 
     }
     public static class RoomGroup extends TeaModel {
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private Long groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("ParentId")
+        @com.aliyun.core.annotation.NameInMap("ParentId")
         private Long parentId;
 
         private RoomGroup(Builder builder) {
@@ -315,10 +314,10 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
 
     }
     public static class RoomLabels extends TeaModel {
-        @NameInMap("LabelId")
+        @com.aliyun.core.annotation.NameInMap("LabelId")
         private Long labelId;
 
-        @NameInMap("LabelName")
+        @com.aliyun.core.annotation.NameInMap("LabelName")
         private String labelName;
 
         private RoomLabels(Builder builder) {
@@ -376,10 +375,10 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
 
     }
     public static class RoomLocation extends TeaModel {
-        @NameInMap("Desc")
+        @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private RoomLocation(Builder builder) {
@@ -437,46 +436,46 @@ public class QueryMeetingRoomResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("CorpId")
+        @com.aliyun.core.annotation.NameInMap("CorpId")
         private String corpId;
 
-        @NameInMap("DeviceUnionIds")
+        @com.aliyun.core.annotation.NameInMap("DeviceUnionIds")
         private java.util.List < String > deviceUnionIds;
 
-        @NameInMap("EnableCycleReservation")
+        @com.aliyun.core.annotation.NameInMap("EnableCycleReservation")
         private Boolean enableCycleReservation;
 
-        @NameInMap("IsvRoomId")
+        @com.aliyun.core.annotation.NameInMap("IsvRoomId")
         private String isvRoomId;
 
-        @NameInMap("ReservationAuthority")
+        @com.aliyun.core.annotation.NameInMap("ReservationAuthority")
         private ReservationAuthority reservationAuthority;
 
-        @NameInMap("RoomCapacity")
+        @com.aliyun.core.annotation.NameInMap("RoomCapacity")
         private Integer roomCapacity;
 
-        @NameInMap("RoomGroup")
+        @com.aliyun.core.annotation.NameInMap("RoomGroup")
         private RoomGroup roomGroup;
 
-        @NameInMap("RoomId")
+        @com.aliyun.core.annotation.NameInMap("RoomId")
         private String roomId;
 
-        @NameInMap("RoomLabels")
+        @com.aliyun.core.annotation.NameInMap("RoomLabels")
         private java.util.List < RoomLabels> roomLabels;
 
-        @NameInMap("RoomLocation")
+        @com.aliyun.core.annotation.NameInMap("RoomLocation")
         private RoomLocation roomLocation;
 
-        @NameInMap("RoomName")
+        @com.aliyun.core.annotation.NameInMap("RoomName")
         private String roomName;
 
-        @NameInMap("RoomPicture")
+        @com.aliyun.core.annotation.NameInMap("RoomPicture")
         private String roomPicture;
 
-        @NameInMap("RoomStaffId")
+        @com.aliyun.core.annotation.NameInMap("RoomStaffId")
         private String roomStaffId;
 
-        @NameInMap("RoomStatus")
+        @com.aliyun.core.annotation.NameInMap("RoomStatus")
         private Integer roomStatus;
 
         private Result(Builder builder) {

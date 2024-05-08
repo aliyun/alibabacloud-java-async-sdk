@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,38 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SyncDingTypeRequest</p>
  */
 public class SyncDingTypeRequest extends Request {
-    @Header
-    @NameInMap("AccountContext")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("AccountContext")
     private AccountContext accountContext;
 
-    @Body
-    @NameInMap("DingType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DingType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dingType;
 
-    @Body
-    @NameInMap("Source")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IsDimission")
+    private String isDimission;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Source")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String source;
 
-    @Body
-    @NameInMap("TenantContext")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantContext")
     private TenantContext tenantContext;
 
-    @Body
-    @NameInMap("WorkNo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkNo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workNo;
 
     private SyncDingTypeRequest(Builder builder) {
         super(builder);
         this.accountContext = builder.accountContext;
         this.dingType = builder.dingType;
+        this.isDimission = builder.isDimission;
         this.source = builder.source;
         this.tenantContext = builder.tenantContext;
         this.workNo = builder.workNo;
@@ -72,6 +76,13 @@ public class SyncDingTypeRequest extends Request {
     }
 
     /**
+     * @return isDimission
+     */
+    public String getIsDimission() {
+        return this.isDimission;
+    }
+
+    /**
      * @return source
      */
     public String getSource() {
@@ -95,6 +106,7 @@ public class SyncDingTypeRequest extends Request {
     public static final class Builder extends Request.Builder<SyncDingTypeRequest, Builder> {
         private AccountContext accountContext; 
         private String dingType; 
+        private String isDimission; 
         private String source; 
         private TenantContext tenantContext; 
         private String workNo; 
@@ -107,6 +119,7 @@ public class SyncDingTypeRequest extends Request {
             super(request);
             this.accountContext = request.accountContext;
             this.dingType = request.dingType;
+            this.isDimission = request.isDimission;
             this.source = request.source;
             this.tenantContext = request.tenantContext;
             this.workNo = request.workNo;
@@ -128,6 +141,15 @@ public class SyncDingTypeRequest extends Request {
         public Builder dingType(String dingType) {
             this.putBodyParameter("DingType", dingType);
             this.dingType = dingType;
+            return this;
+        }
+
+        /**
+         * IsDimission.
+         */
+        public Builder isDimission(String isDimission) {
+            this.putBodyParameter("IsDimission", isDimission);
+            this.isDimission = isDimission;
             return this;
         }
 
@@ -167,8 +189,8 @@ public class SyncDingTypeRequest extends Request {
     } 
 
     public static class AccountContext extends TeaModel {
-        @NameInMap("accountId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("accountId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String accountId;
 
         private AccountContext(Builder builder) {
@@ -209,7 +231,7 @@ public class SyncDingTypeRequest extends Request {
 
     }
     public static class TenantContext extends TeaModel {
-        @NameInMap("tenantId")
+        @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;
 
         private TenantContext(Builder builder) {

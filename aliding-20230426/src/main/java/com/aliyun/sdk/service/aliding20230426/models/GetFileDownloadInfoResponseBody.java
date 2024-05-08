@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetFileDownloadInfoResponseBody</p>
  */
 public class GetFileDownloadInfoResponseBody extends TeaModel {
-    @NameInMap("headerSignatureInfo")
+    @com.aliyun.core.annotation.NameInMap("headerSignatureInfo")
     private HeaderSignatureInfo headerSignatureInfo;
 
-    @NameInMap("protocol")
+    @com.aliyun.core.annotation.NameInMap("protocol")
     private String protocol;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("vendorRequestId")
+    @com.aliyun.core.annotation.NameInMap("vendorRequestId")
     private String vendorRequestId;
 
-    @NameInMap("vendorType")
+    @com.aliyun.core.annotation.NameInMap("vendorType")
     private String vendorType;
 
     private GetFileDownloadInfoResponseBody(Builder builder) {
@@ -132,19 +131,19 @@ public class GetFileDownloadInfoResponseBody extends TeaModel {
     } 
 
     public static class HeaderSignatureInfo extends TeaModel {
-        @NameInMap("ExpirationSeconds")
+        @com.aliyun.core.annotation.NameInMap("ExpirationSeconds")
         private Integer expirationSeconds;
 
-        @NameInMap("Headers")
+        @com.aliyun.core.annotation.NameInMap("Headers")
         private java.util.Map < String, String > headers;
 
-        @NameInMap("InternalResourceUrls")
+        @com.aliyun.core.annotation.NameInMap("InternalResourceUrls")
         private java.util.List < String > internalResourceUrls;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("ResourceUrls")
+        @com.aliyun.core.annotation.NameInMap("ResourceUrls")
         private java.util.List < String > resourceUrls;
 
         private HeaderSignatureInfo(Builder builder) {

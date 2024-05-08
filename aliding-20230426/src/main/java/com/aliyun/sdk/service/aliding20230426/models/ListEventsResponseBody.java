@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListEventsResponseBody</p>
  */
 public class ListEventsResponseBody extends TeaModel {
-    @NameInMap("events")
+    @com.aliyun.core.annotation.NameInMap("events")
     private java.util.List < Events> events;
 
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("syncToken")
+    @com.aliyun.core.annotation.NameInMap("syncToken")
     private String syncToken;
 
-    @NameInMap("vendorRequestId")
+    @com.aliyun.core.annotation.NameInMap("vendorRequestId")
     private String vendorRequestId;
 
-    @NameInMap("vendorType")
+    @com.aliyun.core.annotation.NameInMap("vendorType")
     private String vendorType;
 
     private ListEventsResponseBody(Builder builder) {
@@ -152,16 +151,16 @@ public class ListEventsResponseBody extends TeaModel {
     } 
 
     public static class Attendees extends TeaModel {
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("IsOptional")
+        @com.aliyun.core.annotation.NameInMap("IsOptional")
         private Boolean isOptional;
 
-        @NameInMap("ResponseStatus")
+        @com.aliyun.core.annotation.NameInMap("ResponseStatus")
         private String responseStatus;
 
-        @NameInMap("Self")
+        @com.aliyun.core.annotation.NameInMap("Self")
         private Boolean self;
 
         private Attendees(Builder builder) {
@@ -253,7 +252,7 @@ public class ListEventsResponseBody extends TeaModel {
 
     }
     public static class Categories extends TeaModel {
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
         private Categories(Builder builder) {
@@ -294,13 +293,13 @@ public class ListEventsResponseBody extends TeaModel {
 
     }
     public static class End extends TeaModel {
-        @NameInMap("Date")
+        @com.aliyun.core.annotation.NameInMap("Date")
         private String date;
 
-        @NameInMap("DateTime")
+        @com.aliyun.core.annotation.NameInMap("DateTime")
         private String dateTime;
 
-        @NameInMap("TimeZone")
+        @com.aliyun.core.annotation.NameInMap("TimeZone")
         private String timeZone;
 
         private End(Builder builder) {
@@ -375,10 +374,10 @@ public class ListEventsResponseBody extends TeaModel {
 
     }
     public static class SharedProperties extends TeaModel {
-        @NameInMap("BelongCorpId")
+        @com.aliyun.core.annotation.NameInMap("BelongCorpId")
         private String belongCorpId;
 
-        @NameInMap("SourceOpenCid")
+        @com.aliyun.core.annotation.NameInMap("SourceOpenCid")
         private String sourceOpenCid;
 
         private SharedProperties(Builder builder) {
@@ -436,7 +435,7 @@ public class ListEventsResponseBody extends TeaModel {
 
     }
     public static class ExtendedProperties extends TeaModel {
-        @NameInMap("SharedProperties")
+        @com.aliyun.core.annotation.NameInMap("SharedProperties")
         private SharedProperties sharedProperties;
 
         private ExtendedProperties(Builder builder) {
@@ -477,10 +476,10 @@ public class ListEventsResponseBody extends TeaModel {
 
     }
     public static class Location extends TeaModel {
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("MeetingRooms")
+        @com.aliyun.core.annotation.NameInMap("MeetingRooms")
         private java.util.List < String > meetingRooms;
 
         private Location(Builder builder) {
@@ -538,13 +537,13 @@ public class ListEventsResponseBody extends TeaModel {
 
     }
     public static class MeetingRooms extends TeaModel {
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("ResponseStatus")
+        @com.aliyun.core.annotation.NameInMap("ResponseStatus")
         private String responseStatus;
 
-        @NameInMap("RoomId")
+        @com.aliyun.core.annotation.NameInMap("RoomId")
         private String roomId;
 
         private MeetingRooms(Builder builder) {
@@ -619,16 +618,16 @@ public class ListEventsResponseBody extends TeaModel {
 
     }
     public static class OnlineMeetingInfo extends TeaModel {
-        @NameInMap("ConferenceId")
+        @com.aliyun.core.annotation.NameInMap("ConferenceId")
         private String conferenceId;
 
-        @NameInMap("ExtraInfo")
+        @com.aliyun.core.annotation.NameInMap("ExtraInfo")
         private java.util.Map < String, ? > extraInfo;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private OnlineMeetingInfo(Builder builder) {
@@ -720,13 +719,13 @@ public class ListEventsResponseBody extends TeaModel {
 
     }
     public static class Organizer extends TeaModel {
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("ResponseStatus")
+        @com.aliyun.core.annotation.NameInMap("ResponseStatus")
         private String responseStatus;
 
-        @NameInMap("Self")
+        @com.aliyun.core.annotation.NameInMap("Self")
         private Boolean self;
 
         private Organizer(Builder builder) {
@@ -801,7 +800,7 @@ public class ListEventsResponseBody extends TeaModel {
 
     }
     public static class OriginStart extends TeaModel {
-        @NameInMap("DateTime")
+        @com.aliyun.core.annotation.NameInMap("DateTime")
         private String dateTime;
 
         private OriginStart(Builder builder) {
@@ -842,19 +841,19 @@ public class ListEventsResponseBody extends TeaModel {
 
     }
     public static class Pattern extends TeaModel {
-        @NameInMap("DayOfMonth")
+        @com.aliyun.core.annotation.NameInMap("DayOfMonth")
         private Integer dayOfMonth;
 
-        @NameInMap("DaysOfWeek")
+        @com.aliyun.core.annotation.NameInMap("DaysOfWeek")
         private String daysOfWeek;
 
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private String index;
 
-        @NameInMap("Interval")
+        @com.aliyun.core.annotation.NameInMap("Interval")
         private Integer interval;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Pattern(Builder builder) {
@@ -963,13 +962,13 @@ public class ListEventsResponseBody extends TeaModel {
 
     }
     public static class Range extends TeaModel {
-        @NameInMap("EndDate")
+        @com.aliyun.core.annotation.NameInMap("EndDate")
         private String endDate;
 
-        @NameInMap("NumberOfOccurrences")
+        @com.aliyun.core.annotation.NameInMap("NumberOfOccurrences")
         private Integer numberOfOccurrences;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Range(Builder builder) {
@@ -1044,10 +1043,10 @@ public class ListEventsResponseBody extends TeaModel {
 
     }
     public static class Recurrence extends TeaModel {
-        @NameInMap("Pattern")
+        @com.aliyun.core.annotation.NameInMap("Pattern")
         private Pattern pattern;
 
-        @NameInMap("Range")
+        @com.aliyun.core.annotation.NameInMap("Range")
         private Range range;
 
         private Recurrence(Builder builder) {
@@ -1105,10 +1104,10 @@ public class ListEventsResponseBody extends TeaModel {
 
     }
     public static class Reminders extends TeaModel {
-        @NameInMap("Method")
+        @com.aliyun.core.annotation.NameInMap("Method")
         private String method;
 
-        @NameInMap("Minutes")
+        @com.aliyun.core.annotation.NameInMap("Minutes")
         private String minutes;
 
         private Reminders(Builder builder) {
@@ -1166,7 +1165,7 @@ public class ListEventsResponseBody extends TeaModel {
 
     }
     public static class RichTextDescription extends TeaModel {
-        @NameInMap("Text")
+        @com.aliyun.core.annotation.NameInMap("Text")
         private String text;
 
         private RichTextDescription(Builder builder) {
@@ -1207,13 +1206,13 @@ public class ListEventsResponseBody extends TeaModel {
 
     }
     public static class Start extends TeaModel {
-        @NameInMap("Date")
+        @com.aliyun.core.annotation.NameInMap("Date")
         private String date;
 
-        @NameInMap("DateTime")
+        @com.aliyun.core.annotation.NameInMap("DateTime")
         private String dateTime;
 
-        @NameInMap("TimeZone")
+        @com.aliyun.core.annotation.NameInMap("TimeZone")
         private String timeZone;
 
         private Start(Builder builder) {
@@ -1288,67 +1287,67 @@ public class ListEventsResponseBody extends TeaModel {
 
     }
     public static class Events extends TeaModel {
-        @NameInMap("Attendees")
+        @com.aliyun.core.annotation.NameInMap("Attendees")
         private java.util.List < Attendees> attendees;
 
-        @NameInMap("Categories")
+        @com.aliyun.core.annotation.NameInMap("Categories")
         private java.util.List < Categories> categories;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("End")
+        @com.aliyun.core.annotation.NameInMap("End")
         private End end;
 
-        @NameInMap("ExtendedProperties")
+        @com.aliyun.core.annotation.NameInMap("ExtendedProperties")
         private ExtendedProperties extendedProperties;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("IsAllDay")
+        @com.aliyun.core.annotation.NameInMap("IsAllDay")
         private Boolean isAllDay;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private Location location;
 
-        @NameInMap("MeetingRooms")
+        @com.aliyun.core.annotation.NameInMap("MeetingRooms")
         private java.util.List < MeetingRooms> meetingRooms;
 
-        @NameInMap("OnlineMeetingInfo")
+        @com.aliyun.core.annotation.NameInMap("OnlineMeetingInfo")
         private OnlineMeetingInfo onlineMeetingInfo;
 
-        @NameInMap("Organizer")
+        @com.aliyun.core.annotation.NameInMap("Organizer")
         private Organizer organizer;
 
-        @NameInMap("OriginStart")
+        @com.aliyun.core.annotation.NameInMap("OriginStart")
         private OriginStart originStart;
 
-        @NameInMap("Recurrence")
+        @com.aliyun.core.annotation.NameInMap("Recurrence")
         private Recurrence recurrence;
 
-        @NameInMap("Reminders")
+        @com.aliyun.core.annotation.NameInMap("Reminders")
         private java.util.List < Reminders> reminders;
 
-        @NameInMap("RichTextDescription")
+        @com.aliyun.core.annotation.NameInMap("RichTextDescription")
         private RichTextDescription richTextDescription;
 
-        @NameInMap("SeriesMasterId")
+        @com.aliyun.core.annotation.NameInMap("SeriesMasterId")
         private String seriesMasterId;
 
-        @NameInMap("Start")
+        @com.aliyun.core.annotation.NameInMap("Start")
         private Start start;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Summary")
+        @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private Events(Builder builder) {

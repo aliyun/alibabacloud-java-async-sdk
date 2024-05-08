@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,65 +11,65 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateTodoTaskRequest</p>
  */
 public class CreateTodoTaskRequest extends Request {
-    @Header
-    @NameInMap("AccountContext")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("AccountContext")
     private AccountContext accountContext;
 
-    @Body
-    @NameInMap("TenantContext")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantContext")
     private TenantContext tenantContext;
 
-    @Body
-    @NameInMap("contentFieldList")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("contentFieldList")
     private java.util.List < ContentFieldList> contentFieldList;
 
-    @Body
-    @NameInMap("creatorId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("creatorId")
     private String creatorId;
 
-    @Body
-    @NameInMap("description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @Body
-    @NameInMap("detailUrl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("detailUrl")
     private DetailUrl detailUrl;
 
-    @Body
-    @NameInMap("dueTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dueTime")
     private Long dueTime;
 
-    @Body
-    @NameInMap("executorIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("executorIds")
     private java.util.List < String > executorIds;
 
-    @Body
-    @NameInMap("isOnlyShowExecutor")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("isOnlyShowExecutor")
     private Boolean isOnlyShowExecutor;
 
-    @Body
-    @NameInMap("notifyConfigs")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("notifyConfigs")
     private NotifyConfigs notifyConfigs;
 
-    @Query
-    @NameInMap("operatorId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("operatorId")
     private String operatorId;
 
-    @Body
-    @NameInMap("participantIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("participantIds")
     private java.util.List < String > participantIds;
 
-    @Body
-    @NameInMap("priority")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("priority")
     private Integer priority;
 
-    @Body
-    @NameInMap("sourceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sourceId")
     private String sourceId;
 
-    @Body
-    @NameInMap("subject")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("subject")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subject;
 
     private CreateTodoTaskRequest(Builder builder) {
@@ -400,7 +399,7 @@ public class CreateTodoTaskRequest extends Request {
     } 
 
     public static class AccountContext extends TeaModel {
-        @NameInMap("accountId")
+        @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
 
         private AccountContext(Builder builder) {
@@ -441,7 +440,7 @@ public class CreateTodoTaskRequest extends Request {
 
     }
     public static class TenantContext extends TeaModel {
-        @NameInMap("tenantId")
+        @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;
 
         private TenantContext(Builder builder) {
@@ -482,10 +481,10 @@ public class CreateTodoTaskRequest extends Request {
 
     }
     public static class ContentFieldList extends TeaModel {
-        @NameInMap("fieldKey")
+        @com.aliyun.core.annotation.NameInMap("fieldKey")
         private String fieldKey;
 
-        @NameInMap("fieldValue")
+        @com.aliyun.core.annotation.NameInMap("fieldValue")
         private String fieldValue;
 
         private ContentFieldList(Builder builder) {
@@ -543,10 +542,10 @@ public class CreateTodoTaskRequest extends Request {
 
     }
     public static class DetailUrl extends TeaModel {
-        @NameInMap("appUrl")
+        @com.aliyun.core.annotation.NameInMap("appUrl")
         private String appUrl;
 
-        @NameInMap("pcUrl")
+        @com.aliyun.core.annotation.NameInMap("pcUrl")
         private String pcUrl;
 
         private DetailUrl(Builder builder) {
@@ -604,7 +603,7 @@ public class CreateTodoTaskRequest extends Request {
 
     }
     public static class NotifyConfigs extends TeaModel {
-        @NameInMap("dingNotify")
+        @com.aliyun.core.annotation.NameInMap("dingNotify")
         private String dingNotify;
 
         private NotifyConfigs(Builder builder) {

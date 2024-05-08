@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryCloudRecordTextResponseBody</p>
  */
 public class QueryCloudRecordTextResponseBody extends TeaModel {
-    @NameInMap("hasMore")
+    @com.aliyun.core.annotation.NameInMap("hasMore")
     private Boolean hasMore;
 
-    @NameInMap("paragraphList")
+    @com.aliyun.core.annotation.NameInMap("paragraphList")
     private java.util.List < ParagraphList> paragraphList;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private QueryCloudRecordTextResponseBody(Builder builder) {
@@ -92,16 +91,16 @@ public class QueryCloudRecordTextResponseBody extends TeaModel {
     } 
 
     public static class WordList extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("Word")
+        @com.aliyun.core.annotation.NameInMap("Word")
         private String word;
 
-        @NameInMap("WordId")
+        @com.aliyun.core.annotation.NameInMap("WordId")
         private String wordId;
 
         private WordList(Builder builder) {
@@ -193,19 +192,19 @@ public class QueryCloudRecordTextResponseBody extends TeaModel {
 
     }
     public static class SentenceList extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("Sentence")
+        @com.aliyun.core.annotation.NameInMap("Sentence")
         private String sentence;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("WordList")
+        @com.aliyun.core.annotation.NameInMap("WordList")
         private java.util.List < WordList> wordList;
 
         private SentenceList(Builder builder) {
@@ -314,31 +313,31 @@ public class QueryCloudRecordTextResponseBody extends TeaModel {
 
     }
     public static class ParagraphList extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("NextTtoken")
+        @com.aliyun.core.annotation.NameInMap("NextTtoken")
         private Long nextTtoken;
 
-        @NameInMap("NickName")
+        @com.aliyun.core.annotation.NameInMap("NickName")
         private String nickName;
 
-        @NameInMap("Paragraph")
+        @com.aliyun.core.annotation.NameInMap("Paragraph")
         private String paragraph;
 
-        @NameInMap("RecordId")
+        @com.aliyun.core.annotation.NameInMap("RecordId")
         private Long recordId;
 
-        @NameInMap("SentenceList")
+        @com.aliyun.core.annotation.NameInMap("SentenceList")
         private java.util.List < SentenceList> sentenceList;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Long status;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private ParagraphList(Builder builder) {

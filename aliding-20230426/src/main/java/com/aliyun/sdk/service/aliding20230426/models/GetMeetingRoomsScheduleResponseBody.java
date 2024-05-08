@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMeetingRoomsScheduleResponseBody</p>
  */
 public class GetMeetingRoomsScheduleResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("scheduleInformation")
+    @com.aliyun.core.annotation.NameInMap("scheduleInformation")
     private java.util.List < ScheduleInformation> scheduleInformation;
 
     private GetMeetingRoomsScheduleResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class GetMeetingRoomsScheduleResponseBody extends TeaModel {
     } 
 
     public static class End extends TeaModel {
-        @NameInMap("DateTime")
+        @com.aliyun.core.annotation.NameInMap("DateTime")
         private String dateTime;
 
-        @NameInMap("TimeZone")
+        @com.aliyun.core.annotation.NameInMap("TimeZone")
         private String timeZone;
 
         private End(Builder builder) {
@@ -133,7 +132,7 @@ public class GetMeetingRoomsScheduleResponseBody extends TeaModel {
 
     }
     public static class Organizer extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
         private Organizer(Builder builder) {
@@ -174,10 +173,10 @@ public class GetMeetingRoomsScheduleResponseBody extends TeaModel {
 
     }
     public static class Start extends TeaModel {
-        @NameInMap("DateTime")
+        @com.aliyun.core.annotation.NameInMap("DateTime")
         private String dateTime;
 
-        @NameInMap("TimeZone")
+        @com.aliyun.core.annotation.NameInMap("TimeZone")
         private String timeZone;
 
         private Start(Builder builder) {
@@ -235,19 +234,19 @@ public class GetMeetingRoomsScheduleResponseBody extends TeaModel {
 
     }
     public static class ScheduleItems extends TeaModel {
-        @NameInMap("End")
+        @com.aliyun.core.annotation.NameInMap("End")
         private End end;
 
-        @NameInMap("EventId")
+        @com.aliyun.core.annotation.NameInMap("EventId")
         private String eventId;
 
-        @NameInMap("Organizer")
+        @com.aliyun.core.annotation.NameInMap("Organizer")
         private Organizer organizer;
 
-        @NameInMap("Start")
+        @com.aliyun.core.annotation.NameInMap("Start")
         private Start start;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ScheduleItems(Builder builder) {
@@ -356,13 +355,13 @@ public class GetMeetingRoomsScheduleResponseBody extends TeaModel {
 
     }
     public static class ScheduleInformation extends TeaModel {
-        @NameInMap("Error")
+        @com.aliyun.core.annotation.NameInMap("Error")
         private String error;
 
-        @NameInMap("RoomId")
+        @com.aliyun.core.annotation.NameInMap("RoomId")
         private String roomId;
 
-        @NameInMap("ScheduleItems")
+        @com.aliyun.core.annotation.NameInMap("ScheduleItems")
         private java.util.List < ScheduleItems> scheduleItems;
 
         private ScheduleInformation(Builder builder) {

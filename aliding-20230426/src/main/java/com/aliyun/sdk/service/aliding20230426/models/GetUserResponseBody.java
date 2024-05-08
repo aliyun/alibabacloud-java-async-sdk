@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,103 +11,103 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetUserResponseBody</p>
  */
 public class GetUserResponseBody extends TeaModel {
-    @NameInMap("active")
+    @com.aliyun.core.annotation.NameInMap("active")
     private Boolean active;
 
-    @NameInMap("admin")
+    @com.aliyun.core.annotation.NameInMap("admin")
     private Boolean admin;
 
-    @NameInMap("avatar")
+    @com.aliyun.core.annotation.NameInMap("avatar")
     private String avatar;
 
-    @NameInMap("boss")
+    @com.aliyun.core.annotation.NameInMap("boss")
     private Boolean boss;
 
-    @NameInMap("deptIdList")
+    @com.aliyun.core.annotation.NameInMap("deptIdList")
     private java.util.List < Long > deptIdList;
 
-    @NameInMap("deptOrderList")
+    @com.aliyun.core.annotation.NameInMap("deptOrderList")
     private java.util.List < DeptOrderList> deptOrderList;
 
-    @NameInMap("email")
+    @com.aliyun.core.annotation.NameInMap("email")
     private String email;
 
-    @NameInMap("exclusiveAccount")
+    @com.aliyun.core.annotation.NameInMap("exclusiveAccount")
     private Boolean exclusiveAccount;
 
-    @NameInMap("exclusiveAccountCorpId")
+    @com.aliyun.core.annotation.NameInMap("exclusiveAccountCorpId")
     private String exclusiveAccountCorpId;
 
-    @NameInMap("exclusiveAccountCorpName")
+    @com.aliyun.core.annotation.NameInMap("exclusiveAccountCorpName")
     private String exclusiveAccountCorpName;
 
-    @NameInMap("exclusiveAccountType")
+    @com.aliyun.core.annotation.NameInMap("exclusiveAccountType")
     private String exclusiveAccountType;
 
-    @NameInMap("extension")
+    @com.aliyun.core.annotation.NameInMap("extension")
     private String extension;
 
-    @NameInMap("hideMobile")
+    @com.aliyun.core.annotation.NameInMap("hideMobile")
     private Boolean hideMobile;
 
-    @NameInMap("hiredDate")
+    @com.aliyun.core.annotation.NameInMap("hiredDate")
     private Long hiredDate;
 
-    @NameInMap("jobNumber")
+    @com.aliyun.core.annotation.NameInMap("jobNumber")
     private String jobNumber;
 
-    @NameInMap("leaderInDept")
+    @com.aliyun.core.annotation.NameInMap("leaderInDept")
     private java.util.List < LeaderInDept> leaderInDept;
 
-    @NameInMap("loginId")
+    @com.aliyun.core.annotation.NameInMap("loginId")
     private String loginId;
 
-    @NameInMap("managerUserid")
+    @com.aliyun.core.annotation.NameInMap("managerUserid")
     private String managerUserid;
 
-    @NameInMap("mobile")
+    @com.aliyun.core.annotation.NameInMap("mobile")
     private String mobile;
 
-    @NameInMap("name")
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @NameInMap("nickname")
+    @com.aliyun.core.annotation.NameInMap("nickname")
     private String nickname;
 
-    @NameInMap("orgEmail")
+    @com.aliyun.core.annotation.NameInMap("orgEmail")
     private String orgEmail;
 
-    @NameInMap("realAuthed")
+    @com.aliyun.core.annotation.NameInMap("realAuthed")
     private Boolean realAuthed;
 
-    @NameInMap("remark")
+    @com.aliyun.core.annotation.NameInMap("remark")
     private String remark;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("roleList")
+    @com.aliyun.core.annotation.NameInMap("roleList")
     private java.util.List < RoleList> roleList;
 
-    @NameInMap("senior")
+    @com.aliyun.core.annotation.NameInMap("senior")
     private Boolean senior;
 
-    @NameInMap("stateCode")
+    @com.aliyun.core.annotation.NameInMap("stateCode")
     private String stateCode;
 
-    @NameInMap("telephone")
+    @com.aliyun.core.annotation.NameInMap("telephone")
     private String telephone;
 
-    @NameInMap("title")
+    @com.aliyun.core.annotation.NameInMap("title")
     private String title;
 
-    @NameInMap("unionEmpExt")
+    @com.aliyun.core.annotation.NameInMap("unionEmpExt")
     private UnionEmpExt unionEmpExt;
 
-    @NameInMap("userid")
+    @com.aliyun.core.annotation.NameInMap("userid")
     private String userid;
 
-    @NameInMap("workPlace")
+    @com.aliyun.core.annotation.NameInMap("workPlace")
     private String workPlace;
 
     private GetUserResponseBody(Builder builder) {
@@ -692,10 +691,10 @@ public class GetUserResponseBody extends TeaModel {
     } 
 
     public static class DeptOrderList extends TeaModel {
-        @NameInMap("deptId")
+        @com.aliyun.core.annotation.NameInMap("deptId")
         private Long deptId;
 
-        @NameInMap("order")
+        @com.aliyun.core.annotation.NameInMap("order")
         private Long order;
 
         private DeptOrderList(Builder builder) {
@@ -753,10 +752,10 @@ public class GetUserResponseBody extends TeaModel {
 
     }
     public static class LeaderInDept extends TeaModel {
-        @NameInMap("deptId")
+        @com.aliyun.core.annotation.NameInMap("deptId")
         private Long deptId;
 
-        @NameInMap("leader")
+        @com.aliyun.core.annotation.NameInMap("leader")
         private Boolean leader;
 
         private LeaderInDept(Builder builder) {
@@ -814,13 +813,13 @@ public class GetUserResponseBody extends TeaModel {
 
     }
     public static class RoleList extends TeaModel {
-        @NameInMap("groupName")
+        @com.aliyun.core.annotation.NameInMap("groupName")
         private String groupName;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private RoleList(Builder builder) {
@@ -895,10 +894,10 @@ public class GetUserResponseBody extends TeaModel {
 
     }
     public static class UnionEmpMapList extends TeaModel {
-        @NameInMap("cropId")
+        @com.aliyun.core.annotation.NameInMap("cropId")
         private String cropId;
 
-        @NameInMap("userid")
+        @com.aliyun.core.annotation.NameInMap("userid")
         private String userid;
 
         private UnionEmpMapList(Builder builder) {
@@ -956,13 +955,13 @@ public class GetUserResponseBody extends TeaModel {
 
     }
     public static class UnionEmpExt extends TeaModel {
-        @NameInMap("corpId")
+        @com.aliyun.core.annotation.NameInMap("corpId")
         private String corpId;
 
-        @NameInMap("unionEmpMapList")
+        @com.aliyun.core.annotation.NameInMap("unionEmpMapList")
         private java.util.List < UnionEmpMapList> unionEmpMapList;
 
-        @NameInMap("userid")
+        @com.aliyun.core.annotation.NameInMap("userid")
         private String userid;
 
         private UnionEmpExt(Builder builder) {

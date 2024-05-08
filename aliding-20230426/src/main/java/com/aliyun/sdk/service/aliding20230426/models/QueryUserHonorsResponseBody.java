@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryUserHonorsResponseBody</p>
  */
 public class QueryUserHonorsResponseBody extends TeaModel {
-    @NameInMap("honors")
+    @com.aliyun.core.annotation.NameInMap("honors")
     private java.util.List < Honors> honors;
 
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private QueryUserHonorsResponseBody(Builder builder) {
@@ -92,10 +91,10 @@ public class QueryUserHonorsResponseBody extends TeaModel {
     } 
 
     public static class GrantHistory extends TeaModel {
-        @NameInMap("grantTime")
+        @com.aliyun.core.annotation.NameInMap("grantTime")
         private Long grantTime;
 
-        @NameInMap("senderUserid")
+        @com.aliyun.core.annotation.NameInMap("senderUserid")
         private String senderUserid;
 
         private GrantHistory(Builder builder) {
@@ -153,19 +152,19 @@ public class QueryUserHonorsResponseBody extends TeaModel {
 
     }
     public static class Honors extends TeaModel {
-        @NameInMap("expirationTime")
+        @com.aliyun.core.annotation.NameInMap("expirationTime")
         private Long expirationTime;
 
-        @NameInMap("grantHistory")
+        @com.aliyun.core.annotation.NameInMap("grantHistory")
         private java.util.List < GrantHistory> grantHistory;
 
-        @NameInMap("honorDesc")
+        @com.aliyun.core.annotation.NameInMap("honorDesc")
         private String honorDesc;
 
-        @NameInMap("honorId")
+        @com.aliyun.core.annotation.NameInMap("honorId")
         private String honorId;
 
-        @NameInMap("honorName")
+        @com.aliyun.core.annotation.NameInMap("honorName")
         private String honorName;
 
         private Honors(Builder builder) {

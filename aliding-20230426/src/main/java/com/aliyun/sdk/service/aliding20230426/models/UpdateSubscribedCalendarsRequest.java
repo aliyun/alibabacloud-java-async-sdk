@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateSubscribedCalendarsRequest</p>
  */
 public class UpdateSubscribedCalendarsRequest extends Request {
-    @Header
-    @NameInMap("AccountContext")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("AccountContext")
     private AccountContext accountContext;
 
-    @Body
-    @NameInMap("CalendarId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CalendarId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String calendarId;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("Managers")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Managers")
     private java.util.List < String > managers;
 
-    @Body
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Body
-    @NameInMap("SubscribeScope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SubscribeScope")
     private SubscribeScope subscribeScope;
 
     private UpdateSubscribedCalendarsRequest(Builder builder) {
@@ -189,8 +188,8 @@ public class UpdateSubscribedCalendarsRequest extends Request {
     } 
 
     public static class AccountContext extends TeaModel {
-        @NameInMap("accountId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("accountId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String accountId;
 
         private AccountContext(Builder builder) {
@@ -231,7 +230,7 @@ public class UpdateSubscribedCalendarsRequest extends Request {
 
     }
     public static class SubscribeScope extends TeaModel {
-        @NameInMap("UserIds")
+        @com.aliyun.core.annotation.NameInMap("UserIds")
         private java.util.List < String > userIds;
 
         private SubscribeScope(Builder builder) {

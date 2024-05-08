@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetNodeByUrlResponseBody</p>
  */
 public class GetNodeByUrlResponseBody extends TeaModel {
-    @NameInMap("node")
+    @com.aliyun.core.annotation.NameInMap("node")
     private Node node;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private GetNodeByUrlResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class GetNodeByUrlResponseBody extends TeaModel {
     } 
 
     public static class StatisticalInfo extends TeaModel {
-        @NameInMap("WordCount")
+        @com.aliyun.core.annotation.NameInMap("WordCount")
         private Long wordCount;
 
         private StatisticalInfo(Builder builder) {
@@ -113,49 +112,49 @@ public class GetNodeByUrlResponseBody extends TeaModel {
 
     }
     public static class Node extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreatorId")
+        @com.aliyun.core.annotation.NameInMap("CreatorId")
         private String creatorId;
 
-        @NameInMap("Extension")
+        @com.aliyun.core.annotation.NameInMap("Extension")
         private String extension;
 
-        @NameInMap("HasChildren")
+        @com.aliyun.core.annotation.NameInMap("HasChildren")
         private Boolean hasChildren;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("ModifierId")
+        @com.aliyun.core.annotation.NameInMap("ModifierId")
         private String modifierId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("PermissionRole")
+        @com.aliyun.core.annotation.NameInMap("PermissionRole")
         private String permissionRole;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("StatisticalInfo")
+        @com.aliyun.core.annotation.NameInMap("StatisticalInfo")
         private StatisticalInfo statisticalInfo;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
-        @NameInMap("WorkspaceId")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceId")
         private String workspaceId;
 
         private Node(Builder builder) {

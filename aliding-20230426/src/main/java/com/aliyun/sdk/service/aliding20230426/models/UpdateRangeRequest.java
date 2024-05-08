@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,43 +11,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateRangeRequest</p>
  */
 public class UpdateRangeRequest extends Request {
-    @Header
-    @NameInMap("AccountContext")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("AccountContext")
     private AccountContext accountContext;
 
-    @Body
-    @NameInMap("BackgroundColors")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BackgroundColors")
     private java.util.List < java.util.List < String > > backgroundColors;
 
-    @Body
-    @NameInMap("Hyperlinks")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Hyperlinks")
     private java.util.List < java.util.List < Hyperlinks> > hyperlinks;
 
-    @Body
-    @NameInMap("NumberFormat")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NumberFormat")
     private String numberFormat;
 
-    @Body
-    @NameInMap("RangeAddress")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RangeAddress")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String rangeAddress;
 
-    @Body
-    @NameInMap("SheetId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SheetId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sheetId;
 
-    @Body
-    @NameInMap("TenantContext")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantContext")
     private TenantContext tenantContext;
 
-    @Body
-    @NameInMap("Values")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Values")
     private java.util.List < java.util.List < String > > values;
 
-    @Body
-    @NameInMap("WorkbookId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkbookId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workbookId;
 
     private UpdateRangeRequest(Builder builder) {
@@ -262,7 +261,7 @@ public class UpdateRangeRequest extends Request {
     } 
 
     public static class AccountContext extends TeaModel {
-        @NameInMap("accountId")
+        @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
 
         private AccountContext(Builder builder) {
@@ -303,13 +302,13 @@ public class UpdateRangeRequest extends Request {
 
     }
     public static class Hyperlinks extends TeaModel {
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Link")
+        @com.aliyun.core.annotation.NameInMap("Link")
         private String link;
 
-        @NameInMap("Text")
+        @com.aliyun.core.annotation.NameInMap("Text")
         private String text;
 
         private Hyperlinks(Builder builder) {
@@ -384,7 +383,7 @@ public class UpdateRangeRequest extends Request {
 
     }
     public static class TenantContext extends TeaModel {
-        @NameInMap("tenantId")
+        @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;
 
         private TenantContext(Builder builder) {

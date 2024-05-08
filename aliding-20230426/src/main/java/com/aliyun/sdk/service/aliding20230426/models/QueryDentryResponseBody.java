@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,61 +11,61 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryDentryResponseBody</p>
  */
 public class QueryDentryResponseBody extends TeaModel {
-    @NameInMap("contentType")
+    @com.aliyun.core.annotation.NameInMap("contentType")
     private String contentType;
 
-    @NameInMap("createdTime")
+    @com.aliyun.core.annotation.NameInMap("createdTime")
     private Long createdTime;
 
-    @NameInMap("creator")
+    @com.aliyun.core.annotation.NameInMap("creator")
     private Creator creator;
 
-    @NameInMap("dentryId")
+    @com.aliyun.core.annotation.NameInMap("dentryId")
     private String dentryId;
 
-    @NameInMap("dentryType")
+    @com.aliyun.core.annotation.NameInMap("dentryType")
     private String dentryType;
 
-    @NameInMap("dentryUuid")
+    @com.aliyun.core.annotation.NameInMap("dentryUuid")
     private String dentryUuid;
 
-    @NameInMap("docKey")
+    @com.aliyun.core.annotation.NameInMap("docKey")
     private String docKey;
 
-    @NameInMap("extension")
+    @com.aliyun.core.annotation.NameInMap("extension")
     private String extension;
 
-    @NameInMap("hasChildren")
+    @com.aliyun.core.annotation.NameInMap("hasChildren")
     private Boolean hasChildren;
 
-    @NameInMap("linkSourceInfo")
+    @com.aliyun.core.annotation.NameInMap("linkSourceInfo")
     private LinkSourceInfo linkSourceInfo;
 
-    @NameInMap("name")
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @NameInMap("path")
+    @com.aliyun.core.annotation.NameInMap("path")
     private String path;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("space")
+    @com.aliyun.core.annotation.NameInMap("space")
     private Space space;
 
-    @NameInMap("spaceId")
+    @com.aliyun.core.annotation.NameInMap("spaceId")
     private String spaceId;
 
-    @NameInMap("updatedTime")
+    @com.aliyun.core.annotation.NameInMap("updatedTime")
     private Long updatedTime;
 
-    @NameInMap("updater")
+    @com.aliyun.core.annotation.NameInMap("updater")
     private Updater updater;
 
-    @NameInMap("url")
+    @com.aliyun.core.annotation.NameInMap("url")
     private String url;
 
-    @NameInMap("visitorInfo")
+    @com.aliyun.core.annotation.NameInMap("visitorInfo")
     private VisitorInfo visitorInfo;
 
     private QueryDentryResponseBody(Builder builder) {
@@ -412,10 +411,10 @@ public class QueryDentryResponseBody extends TeaModel {
     } 
 
     public static class Creator extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private Creator(Builder builder) {
@@ -473,10 +472,10 @@ public class QueryDentryResponseBody extends TeaModel {
 
     }
     public static class IconUrl extends TeaModel {
-        @NameInMap("Line")
+        @com.aliyun.core.annotation.NameInMap("Line")
         private String line;
 
-        @NameInMap("Small")
+        @com.aliyun.core.annotation.NameInMap("Small")
         private String small;
 
         private IconUrl(Builder builder) {
@@ -534,19 +533,19 @@ public class QueryDentryResponseBody extends TeaModel {
 
     }
     public static class LinkSourceInfo extends TeaModel {
-        @NameInMap("Extension")
+        @com.aliyun.core.annotation.NameInMap("Extension")
         private String extension;
 
-        @NameInMap("IconUrl")
+        @com.aliyun.core.annotation.NameInMap("IconUrl")
         private IconUrl iconUrl;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("LinkType")
+        @com.aliyun.core.annotation.NameInMap("LinkType")
         private Long linkType;
 
-        @NameInMap("SpaceId")
+        @com.aliyun.core.annotation.NameInMap("SpaceId")
         private String spaceId;
 
         private LinkSourceInfo(Builder builder) {
@@ -655,10 +654,10 @@ public class QueryDentryResponseBody extends TeaModel {
 
     }
     public static class HdIconVO extends TeaModel {
-        @NameInMap("Icon")
+        @com.aliyun.core.annotation.NameInMap("Icon")
         private String icon;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private HdIconVO(Builder builder) {
@@ -716,10 +715,10 @@ public class QueryDentryResponseBody extends TeaModel {
 
     }
     public static class IconVO extends TeaModel {
-        @NameInMap("Icon")
+        @com.aliyun.core.annotation.NameInMap("Icon")
         private String icon;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private IconVO(Builder builder) {
@@ -777,10 +776,10 @@ public class QueryDentryResponseBody extends TeaModel {
 
     }
     public static class Owner extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private Owner(Builder builder) {
@@ -838,10 +837,10 @@ public class QueryDentryResponseBody extends TeaModel {
 
     }
     public static class RecentListCreator extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private RecentListCreator(Builder builder) {
@@ -899,10 +898,10 @@ public class QueryDentryResponseBody extends TeaModel {
 
     }
     public static class LinkSourceInfoIconUrl extends TeaModel {
-        @NameInMap("Line")
+        @com.aliyun.core.annotation.NameInMap("Line")
         private String line;
 
-        @NameInMap("Small")
+        @com.aliyun.core.annotation.NameInMap("Small")
         private String small;
 
         private LinkSourceInfoIconUrl(Builder builder) {
@@ -960,19 +959,19 @@ public class QueryDentryResponseBody extends TeaModel {
 
     }
     public static class RecentListLinkSourceInfo extends TeaModel {
-        @NameInMap("Extension")
+        @com.aliyun.core.annotation.NameInMap("Extension")
         private String extension;
 
-        @NameInMap("IconUrl")
+        @com.aliyun.core.annotation.NameInMap("IconUrl")
         private LinkSourceInfoIconUrl iconUrl;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("LinkType")
+        @com.aliyun.core.annotation.NameInMap("LinkType")
         private Long linkType;
 
-        @NameInMap("SpaceId")
+        @com.aliyun.core.annotation.NameInMap("SpaceId")
         private String spaceId;
 
         private RecentListLinkSourceInfo(Builder builder) {
@@ -1081,7 +1080,7 @@ public class QueryDentryResponseBody extends TeaModel {
 
     }
     public static class StatisticalInfo extends TeaModel {
-        @NameInMap("WordCount")
+        @com.aliyun.core.annotation.NameInMap("WordCount")
         private Long wordCount;
 
         private StatisticalInfo(Builder builder) {
@@ -1122,10 +1121,10 @@ public class QueryDentryResponseBody extends TeaModel {
 
     }
     public static class RecentListUpdater extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private RecentListUpdater(Builder builder) {
@@ -1183,13 +1182,13 @@ public class QueryDentryResponseBody extends TeaModel {
 
     }
     public static class RecentListVisitorInfo extends TeaModel {
-        @NameInMap("DentryActions")
+        @com.aliyun.core.annotation.NameInMap("DentryActions")
         private java.util.List < String > dentryActions;
 
-        @NameInMap("RoleCode")
+        @com.aliyun.core.annotation.NameInMap("RoleCode")
         private String roleCode;
 
-        @NameInMap("SpaceActions")
+        @com.aliyun.core.annotation.NameInMap("SpaceActions")
         private java.util.List < String > spaceActions;
 
         private RecentListVisitorInfo(Builder builder) {
@@ -1264,61 +1263,61 @@ public class QueryDentryResponseBody extends TeaModel {
 
     }
     public static class RecentList extends TeaModel {
-        @NameInMap("ContentType")
+        @com.aliyun.core.annotation.NameInMap("ContentType")
         private String contentType;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private Long createdTime;
 
-        @NameInMap("Creator")
+        @com.aliyun.core.annotation.NameInMap("Creator")
         private RecentListCreator creator;
 
-        @NameInMap("DentryId")
+        @com.aliyun.core.annotation.NameInMap("DentryId")
         private String dentryId;
 
-        @NameInMap("DentryType")
+        @com.aliyun.core.annotation.NameInMap("DentryType")
         private String dentryType;
 
-        @NameInMap("DentryUuid")
+        @com.aliyun.core.annotation.NameInMap("DentryUuid")
         private String dentryUuid;
 
-        @NameInMap("DocKey")
+        @com.aliyun.core.annotation.NameInMap("DocKey")
         private String docKey;
 
-        @NameInMap("Extension")
+        @com.aliyun.core.annotation.NameInMap("Extension")
         private String extension;
 
-        @NameInMap("HasChildren")
+        @com.aliyun.core.annotation.NameInMap("HasChildren")
         private Boolean hasChildren;
 
-        @NameInMap("LinkSourceInfo")
+        @com.aliyun.core.annotation.NameInMap("LinkSourceInfo")
         private RecentListLinkSourceInfo linkSourceInfo;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("Space")
+        @com.aliyun.core.annotation.NameInMap("Space")
         private Object space;
 
-        @NameInMap("SpaceId")
+        @com.aliyun.core.annotation.NameInMap("SpaceId")
         private String spaceId;
 
-        @NameInMap("StatisticalInfo")
+        @com.aliyun.core.annotation.NameInMap("StatisticalInfo")
         private StatisticalInfo statisticalInfo;
 
-        @NameInMap("UpdatedTime")
+        @com.aliyun.core.annotation.NameInMap("UpdatedTime")
         private Long updatedTime;
 
-        @NameInMap("Updater")
+        @com.aliyun.core.annotation.NameInMap("Updater")
         private RecentListUpdater updater;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
-        @NameInMap("VisitorInfo")
+        @com.aliyun.core.annotation.NameInMap("VisitorInfo")
         private RecentListVisitorInfo visitorInfo;
 
         private RecentList(Builder builder) {
@@ -1665,13 +1664,13 @@ public class QueryDentryResponseBody extends TeaModel {
 
     }
     public static class SpaceVisitorInfo extends TeaModel {
-        @NameInMap("DentryActions")
+        @com.aliyun.core.annotation.NameInMap("DentryActions")
         private java.util.List < String > dentryActions;
 
-        @NameInMap("RoleCode")
+        @com.aliyun.core.annotation.NameInMap("RoleCode")
         private String roleCode;
 
-        @NameInMap("SpaceActions")
+        @com.aliyun.core.annotation.NameInMap("SpaceActions")
         private java.util.List < String > spaceActions;
 
         private SpaceVisitorInfo(Builder builder) {
@@ -1746,37 +1745,37 @@ public class QueryDentryResponseBody extends TeaModel {
 
     }
     public static class Space extends TeaModel {
-        @NameInMap("Cover")
+        @com.aliyun.core.annotation.NameInMap("Cover")
         private String cover;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("HdIconVO")
+        @com.aliyun.core.annotation.NameInMap("HdIconVO")
         private HdIconVO hdIconVO;
 
-        @NameInMap("IconVO")
+        @com.aliyun.core.annotation.NameInMap("IconVO")
         private IconVO iconVO;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private Owner owner;
 
-        @NameInMap("RecentList")
+        @com.aliyun.core.annotation.NameInMap("RecentList")
         private java.util.List < RecentList> recentList;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
-        @NameInMap("VisitorInfo")
+        @com.aliyun.core.annotation.NameInMap("VisitorInfo")
         private SpaceVisitorInfo visitorInfo;
 
         private Space(Builder builder) {
@@ -1987,10 +1986,10 @@ public class QueryDentryResponseBody extends TeaModel {
 
     }
     public static class Updater extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private Updater(Builder builder) {
@@ -2048,13 +2047,13 @@ public class QueryDentryResponseBody extends TeaModel {
 
     }
     public static class VisitorInfo extends TeaModel {
-        @NameInMap("DentryActions")
+        @com.aliyun.core.annotation.NameInMap("DentryActions")
         private java.util.List < String > dentryActions;
 
-        @NameInMap("RoleCode")
+        @com.aliyun.core.annotation.NameInMap("RoleCode")
         private String roleCode;
 
-        @NameInMap("SpaceActions")
+        @com.aliyun.core.annotation.NameInMap("SpaceActions")
         private java.util.List < String > spaceActions;
 
         private VisitorInfo(Builder builder) {

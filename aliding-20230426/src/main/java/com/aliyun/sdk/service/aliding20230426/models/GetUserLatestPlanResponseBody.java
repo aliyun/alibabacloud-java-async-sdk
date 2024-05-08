@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,49 +11,49 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetUserLatestPlanResponseBody</p>
  */
 public class GetUserLatestPlanResponseBody extends TeaModel {
-    @NameInMap("accountHandleStatus")
+    @com.aliyun.core.annotation.NameInMap("accountHandleStatus")
     private Integer accountHandleStatus;
 
-    @NameInMap("accountHandleTime")
+    @com.aliyun.core.annotation.NameInMap("accountHandleTime")
     private String accountHandleTime;
 
-    @NameInMap("accountType")
+    @com.aliyun.core.annotation.NameInMap("accountType")
     private Integer accountType;
 
-    @NameInMap("agreementFirstSignTime")
+    @com.aliyun.core.annotation.NameInMap("agreementFirstSignTime")
     private String agreementFirstSignTime;
 
-    @NameInMap("agreementLastSignTime")
+    @com.aliyun.core.annotation.NameInMap("agreementLastSignTime")
     private String agreementLastSignTime;
 
-    @NameInMap("agreementStatus")
+    @com.aliyun.core.annotation.NameInMap("agreementStatus")
     private Integer agreementStatus;
 
-    @NameInMap("dataHandleEndTime")
+    @com.aliyun.core.annotation.NameInMap("dataHandleEndTime")
     private String dataHandleEndTime;
 
-    @NameInMap("dataHandleStartTime")
+    @com.aliyun.core.annotation.NameInMap("dataHandleStartTime")
     private String dataHandleStartTime;
 
-    @NameInMap("dataHandleStatus")
+    @com.aliyun.core.annotation.NameInMap("dataHandleStatus")
     private Integer dataHandleStatus;
 
-    @NameInMap("exclusivePlan")
+    @com.aliyun.core.annotation.NameInMap("exclusivePlan")
     private Integer exclusivePlan;
 
-    @NameInMap("newAccountUid")
+    @com.aliyun.core.annotation.NameInMap("newAccountUid")
     private Long newAccountUid;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("status")
+    @com.aliyun.core.annotation.NameInMap("status")
     private Integer status;
 
-    @NameInMap("vendorRequestId")
+    @com.aliyun.core.annotation.NameInMap("vendorRequestId")
     private String vendorRequestId;
 
-    @NameInMap("vendorType")
+    @com.aliyun.core.annotation.NameInMap("vendorType")
     private String vendorType;
 
     private GetUserLatestPlanResponseBody(Builder builder) {

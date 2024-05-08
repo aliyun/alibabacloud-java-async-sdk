@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,44 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetProcessDefinitionRequest</p>
  */
 public class GetProcessDefinitionRequest extends Request {
-    @Header
-    @NameInMap("AccountContext")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("AccountContext")
     private AccountContext accountContext;
 
-    @Body
-    @NameInMap("AppType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppType")
     private String appType;
 
-    @Body
-    @NameInMap("CorpId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CorpId")
     private String corpId;
 
-    @Body
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Body
-    @NameInMap("Language")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Language")
     private String language;
 
-    @Body
-    @NameInMap("NameSpace")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NameSpace")
     private String nameSpace;
 
-    @Body
-    @NameInMap("OrderNumber")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OrderNumber")
     private String orderNumber;
 
-    @Body
-    @NameInMap("ProcessInstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProcessInstanceId")
     private String processInstanceId;
 
-    @Body
-    @NameInMap("SystemToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SystemToken")
     private String systemToken;
 
-    @Body
-    @NameInMap("SystemType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SystemType")
     private String systemType;
 
     private GetProcessDefinitionRequest(Builder builder) {
@@ -278,8 +277,8 @@ public class GetProcessDefinitionRequest extends Request {
     } 
 
     public static class AccountContext extends TeaModel {
-        @NameInMap("accountId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("accountId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String accountId;
 
         private AccountContext(Builder builder) {

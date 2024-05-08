@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,43 +11,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetProcessDefinitionResponseBody</p>
  */
 public class GetProcessDefinitionResponseBody extends TeaModel {
-    @NameInMap("formUuid")
+    @com.aliyun.core.annotation.NameInMap("formUuid")
     private String formUuid;
 
-    @NameInMap("originator")
+    @com.aliyun.core.annotation.NameInMap("originator")
     private Originator originator;
 
-    @NameInMap("outResult")
+    @com.aliyun.core.annotation.NameInMap("outResult")
     private String outResult;
 
-    @NameInMap("owners")
+    @com.aliyun.core.annotation.NameInMap("owners")
     private java.util.List < Owners> owners;
 
-    @NameInMap("processId")
+    @com.aliyun.core.annotation.NameInMap("processId")
     private String processId;
 
-    @NameInMap("processInstanceId")
+    @com.aliyun.core.annotation.NameInMap("processInstanceId")
     private String processInstanceId;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("status")
+    @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
-    @NameInMap("tasks")
+    @com.aliyun.core.annotation.NameInMap("tasks")
     private java.util.List < Tasks> tasks;
 
-    @NameInMap("title")
+    @com.aliyun.core.annotation.NameInMap("title")
     private String title;
 
-    @NameInMap("variables")
+    @com.aliyun.core.annotation.NameInMap("variables")
     private java.util.Map < String, ? > variables;
 
-    @NameInMap("vendorRequestId")
+    @com.aliyun.core.annotation.NameInMap("vendorRequestId")
     private String vendorRequestId;
 
-    @NameInMap("vendorType")
+    @com.aliyun.core.annotation.NameInMap("vendorType")
     private String vendorType;
 
     private GetProcessDefinitionResponseBody(Builder builder) {
@@ -292,28 +291,28 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
     } 
 
     public static class MasterDataDepartments extends TeaModel {
-        @NameInMap("DeptName")
+        @com.aliyun.core.annotation.NameInMap("DeptName")
         private String deptName;
 
-        @NameInMap("DeptNameInEnglish")
+        @com.aliyun.core.annotation.NameInMap("DeptNameInEnglish")
         private String deptNameInEnglish;
 
-        @NameInMap("DeptNo")
+        @com.aliyun.core.annotation.NameInMap("DeptNo")
         private String deptNo;
 
-        @NameInMap("DeptPath")
+        @com.aliyun.core.annotation.NameInMap("DeptPath")
         private String deptPath;
 
-        @NameInMap("HumanSourceGroupOrderNumber")
+        @com.aliyun.core.annotation.NameInMap("HumanSourceGroupOrderNumber")
         private String humanSourceGroupOrderNumber;
 
-        @NameInMap("HumanSourceGroupWorkNo")
+        @com.aliyun.core.annotation.NameInMap("HumanSourceGroupWorkNo")
         private String humanSourceGroupWorkNo;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("MasterWorkNo")
+        @com.aliyun.core.annotation.NameInMap("MasterWorkNo")
         private String masterWorkNo;
 
         private MasterDataDepartments(Builder builder) {
@@ -473,34 +472,34 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
 
     }
     public static class Originator extends TeaModel {
-        @NameInMap("DepartmentDescription")
+        @com.aliyun.core.annotation.NameInMap("DepartmentDescription")
         private String departmentDescription;
 
-        @NameInMap("DisplayEnName")
+        @com.aliyun.core.annotation.NameInMap("DisplayEnName")
         private String displayEnName;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("MasterDataDepartments")
+        @com.aliyun.core.annotation.NameInMap("MasterDataDepartments")
         private java.util.List < MasterDataDepartments> masterDataDepartments;
 
-        @NameInMap("OrderNumber")
+        @com.aliyun.core.annotation.NameInMap("OrderNumber")
         private String orderNumber;
 
-        @NameInMap("PersonalPhoto")
+        @com.aliyun.core.annotation.NameInMap("PersonalPhoto")
         private String personalPhoto;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TbWang")
+        @com.aliyun.core.annotation.NameInMap("TbWang")
         private String tbWang;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserInfo")
+        @com.aliyun.core.annotation.NameInMap("UserInfo")
         private String userInfo;
 
         private Originator(Builder builder) {
@@ -694,28 +693,28 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
 
     }
     public static class OwnersMasterDataDepartments extends TeaModel {
-        @NameInMap("DeptName")
+        @com.aliyun.core.annotation.NameInMap("DeptName")
         private String deptName;
 
-        @NameInMap("DeptNameInEnglish")
+        @com.aliyun.core.annotation.NameInMap("DeptNameInEnglish")
         private String deptNameInEnglish;
 
-        @NameInMap("DeptNo")
+        @com.aliyun.core.annotation.NameInMap("DeptNo")
         private String deptNo;
 
-        @NameInMap("DeptPath")
+        @com.aliyun.core.annotation.NameInMap("DeptPath")
         private String deptPath;
 
-        @NameInMap("HumanSourceGroupOrderNumber")
+        @com.aliyun.core.annotation.NameInMap("HumanSourceGroupOrderNumber")
         private String humanSourceGroupOrderNumber;
 
-        @NameInMap("HumanSourceGroupWorkNo")
+        @com.aliyun.core.annotation.NameInMap("HumanSourceGroupWorkNo")
         private String humanSourceGroupWorkNo;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("MasterWorkNo")
+        @com.aliyun.core.annotation.NameInMap("MasterWorkNo")
         private String masterWorkNo;
 
         private OwnersMasterDataDepartments(Builder builder) {
@@ -875,34 +874,34 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
 
     }
     public static class Owners extends TeaModel {
-        @NameInMap("DepartmentDescription")
+        @com.aliyun.core.annotation.NameInMap("DepartmentDescription")
         private String departmentDescription;
 
-        @NameInMap("DisplayEnName")
+        @com.aliyun.core.annotation.NameInMap("DisplayEnName")
         private String displayEnName;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("MasterDataDepartments")
+        @com.aliyun.core.annotation.NameInMap("MasterDataDepartments")
         private java.util.List < OwnersMasterDataDepartments> masterDataDepartments;
 
-        @NameInMap("OrderNumber")
+        @com.aliyun.core.annotation.NameInMap("OrderNumber")
         private String orderNumber;
 
-        @NameInMap("PersonalPhoto")
+        @com.aliyun.core.annotation.NameInMap("PersonalPhoto")
         private String personalPhoto;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TbWang")
+        @com.aliyun.core.annotation.NameInMap("TbWang")
         private String tbWang;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserInfo")
+        @com.aliyun.core.annotation.NameInMap("UserInfo")
         private String userInfo;
 
         private Owners(Builder builder) {
@@ -1096,19 +1095,19 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
 
     }
     public static class Activity extends TeaModel {
-        @NameInMap("ActivityId")
+        @com.aliyun.core.annotation.NameInMap("ActivityId")
         private String activityId;
 
-        @NameInMap("ActivityInstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("ActivityInstanceStatus")
         private String activityInstanceStatus;
 
-        @NameInMap("ActivityName")
+        @com.aliyun.core.annotation.NameInMap("ActivityName")
         private String activityName;
 
-        @NameInMap("ActivityNameInEnglish")
+        @com.aliyun.core.annotation.NameInMap("ActivityNameInEnglish")
         private String activityNameInEnglish;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
         private Activity(Builder builder) {
@@ -1217,16 +1216,16 @@ public class GetProcessDefinitionResponseBody extends TeaModel {
 
     }
     public static class Tasks extends TeaModel {
-        @NameInMap("ActionerId")
+        @com.aliyun.core.annotation.NameInMap("ActionerId")
         private String actionerId;
 
-        @NameInMap("Activity")
+        @com.aliyun.core.annotation.NameInMap("Activity")
         private Activity activity;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private Long taskId;
 
         private Tasks(Builder builder) {

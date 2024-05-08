@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ReceiverListReportResponseBody</p>
  */
 public class ReceiverListReportResponseBody extends TeaModel {
-    @NameInMap("hasMore")
+    @com.aliyun.core.annotation.NameInMap("hasMore")
     private Boolean hasMore;
 
-    @NameInMap("nextCursor")
+    @com.aliyun.core.annotation.NameInMap("nextCursor")
     private Long nextCursor;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("useridList")
+    @com.aliyun.core.annotation.NameInMap("useridList")
     private java.util.List < String > useridList;
 
     private ReceiverListReportResponseBody(Builder builder) {

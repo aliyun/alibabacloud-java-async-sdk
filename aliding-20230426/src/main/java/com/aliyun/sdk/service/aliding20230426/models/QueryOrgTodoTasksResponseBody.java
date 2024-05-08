@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryOrgTodoTasksResponseBody</p>
  */
 public class QueryOrgTodoTasksResponseBody extends TeaModel {
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("todoCards")
+    @com.aliyun.core.annotation.NameInMap("todoCards")
     private java.util.List < TodoCards> todoCards;
 
     private QueryOrgTodoTasksResponseBody(Builder builder) {
@@ -92,10 +91,10 @@ public class QueryOrgTodoTasksResponseBody extends TeaModel {
     } 
 
     public static class DetailUrl extends TeaModel {
-        @NameInMap("appUrl")
+        @com.aliyun.core.annotation.NameInMap("appUrl")
         private String appUrl;
 
-        @NameInMap("pcUrl")
+        @com.aliyun.core.annotation.NameInMap("pcUrl")
         private String pcUrl;
 
         private DetailUrl(Builder builder) {
@@ -153,37 +152,37 @@ public class QueryOrgTodoTasksResponseBody extends TeaModel {
 
     }
     public static class TodoCards extends TeaModel {
-        @NameInMap("bizTag")
+        @com.aliyun.core.annotation.NameInMap("bizTag")
         private String bizTag;
 
-        @NameInMap("createdTime")
+        @com.aliyun.core.annotation.NameInMap("createdTime")
         private Long createdTime;
 
-        @NameInMap("creatorId")
+        @com.aliyun.core.annotation.NameInMap("creatorId")
         private String creatorId;
 
-        @NameInMap("detailUrl")
+        @com.aliyun.core.annotation.NameInMap("detailUrl")
         private DetailUrl detailUrl;
 
-        @NameInMap("dueTime")
+        @com.aliyun.core.annotation.NameInMap("dueTime")
         private Long dueTime;
 
-        @NameInMap("isDone")
+        @com.aliyun.core.annotation.NameInMap("isDone")
         private Boolean isDone;
 
-        @NameInMap("modifiedTime")
+        @com.aliyun.core.annotation.NameInMap("modifiedTime")
         private Long modifiedTime;
 
-        @NameInMap("priority")
+        @com.aliyun.core.annotation.NameInMap("priority")
         private Integer priority;
 
-        @NameInMap("sourceId")
+        @com.aliyun.core.annotation.NameInMap("sourceId")
         private String sourceId;
 
-        @NameInMap("subject")
+        @com.aliyun.core.annotation.NameInMap("subject")
         private String subject;
 
-        @NameInMap("taskId")
+        @com.aliyun.core.annotation.NameInMap("taskId")
         private String taskId;
 
         private TodoCards(Builder builder) {

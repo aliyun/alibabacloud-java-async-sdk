@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GrantHonorResponseBody</p>
  */
 public class GrantHonorResponseBody extends TeaModel {
-    @NameInMap("failedUserIds")
+    @com.aliyun.core.annotation.NameInMap("failedUserIds")
     private java.util.List < String > failedUserIds;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("successUserIds")
+    @com.aliyun.core.annotation.NameInMap("successUserIds")
     private java.util.List < String > successUserIds;
 
     private GrantHonorResponseBody(Builder builder) {

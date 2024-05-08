@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,52 +11,52 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateMeetingRoomRequest</p>
  */
 public class CreateMeetingRoomRequest extends Request {
-    @Header
-    @NameInMap("AccountContext")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("AccountContext")
     private AccountContext accountContext;
 
-    @Body
-    @NameInMap("EnableCycleReservation")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableCycleReservation")
     private Boolean enableCycleReservation;
 
-    @Body
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private Long groupId;
 
-    @Body
-    @NameInMap("IsvRoomId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IsvRoomId")
     private String isvRoomId;
 
-    @Body
-    @NameInMap("ReservationAuthority")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ReservationAuthority")
     private ReservationAuthority reservationAuthority;
 
-    @Body
-    @NameInMap("RoomCapacity")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoomCapacity")
     private Integer roomCapacity;
 
-    @Body
-    @NameInMap("RoomLabelIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoomLabelIds")
     private java.util.List < Long > roomLabelIds;
 
-    @Body
-    @NameInMap("RoomLocation")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoomLocation")
     private RoomLocation roomLocation;
 
-    @Body
-    @NameInMap("RoomName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoomName")
     private String roomName;
 
-    @Body
-    @NameInMap("RoomPicture")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoomPicture")
     private String roomPicture;
 
-    @Body
-    @NameInMap("RoomStatus")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoomStatus")
     private Integer roomStatus;
 
-    @Body
-    @NameInMap("TenantContext")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantContext")
     private TenantContext tenantContext;
 
     private CreateMeetingRoomRequest(Builder builder) {
@@ -328,8 +327,8 @@ public class CreateMeetingRoomRequest extends Request {
     } 
 
     public static class AccountContext extends TeaModel {
-        @NameInMap("accountId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("accountId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String accountId;
 
         private AccountContext(Builder builder) {
@@ -370,13 +369,13 @@ public class CreateMeetingRoomRequest extends Request {
 
     }
     public static class AuthorizedMembers extends TeaModel {
-        @NameInMap("MemberId")
+        @com.aliyun.core.annotation.NameInMap("MemberId")
         private String memberId;
 
-        @NameInMap("MemberName")
+        @com.aliyun.core.annotation.NameInMap("MemberName")
         private String memberName;
 
-        @NameInMap("MemberType")
+        @com.aliyun.core.annotation.NameInMap("MemberType")
         private String memberType;
 
         private AuthorizedMembers(Builder builder) {
@@ -451,7 +450,7 @@ public class CreateMeetingRoomRequest extends Request {
 
     }
     public static class ReservationAuthority extends TeaModel {
-        @NameInMap("AuthorizedMembers")
+        @com.aliyun.core.annotation.NameInMap("AuthorizedMembers")
         private java.util.List < AuthorizedMembers> authorizedMembers;
 
         private ReservationAuthority(Builder builder) {
@@ -492,10 +491,10 @@ public class CreateMeetingRoomRequest extends Request {
 
     }
     public static class RoomLocation extends TeaModel {
-        @NameInMap("Desc")
+        @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private RoomLocation(Builder builder) {
@@ -553,7 +552,7 @@ public class CreateMeetingRoomRequest extends Request {
 
     }
     public static class TenantContext extends TeaModel {
-        @NameInMap("tenantId")
+        @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;
 
         private TenantContext(Builder builder) {

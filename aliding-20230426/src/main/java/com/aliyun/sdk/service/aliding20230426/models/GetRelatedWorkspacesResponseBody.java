@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetRelatedWorkspacesResponseBody</p>
  */
 public class GetRelatedWorkspacesResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("vendorRequestId")
+    @com.aliyun.core.annotation.NameInMap("vendorRequestId")
     private String vendorRequestId;
 
-    @NameInMap("vendorType")
+    @com.aliyun.core.annotation.NameInMap("vendorType")
     private String vendorType;
 
-    @NameInMap("workspaces")
+    @com.aliyun.core.annotation.NameInMap("workspaces")
     private java.util.List < Workspaces> workspaces;
 
     private GetRelatedWorkspacesResponseBody(Builder builder) {
@@ -112,16 +111,16 @@ public class GetRelatedWorkspacesResponseBody extends TeaModel {
     } 
 
     public static class RecentList extends TeaModel {
-        @NameInMap("LastEditTime")
+        @com.aliyun.core.annotation.NameInMap("LastEditTime")
         private Long lastEditTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private RecentList(Builder builder) {
@@ -213,28 +212,28 @@ public class GetRelatedWorkspacesResponseBody extends TeaModel {
 
     }
     public static class Workspaces extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Deleted")
+        @com.aliyun.core.annotation.NameInMap("Deleted")
         private Boolean deleted;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("RecentList")
+        @com.aliyun.core.annotation.NameInMap("RecentList")
         private java.util.List < RecentList> recentList;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
-        @NameInMap("WorkspaceId")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceId")
         private String workspaceId;
 
         private Workspaces(Builder builder) {

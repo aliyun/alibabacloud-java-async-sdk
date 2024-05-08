@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateWorkspaceResponseBody</p>
  */
 public class CreateWorkspaceResponseBody extends TeaModel {
-    @NameInMap("description")
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @NameInMap("name")
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("url")
+    @com.aliyun.core.annotation.NameInMap("url")
     private String url;
 
-    @NameInMap("workspaceId")
+    @com.aliyun.core.annotation.NameInMap("workspaceId")
     private String workspaceId;
 
     private CreateWorkspaceResponseBody(Builder builder) {

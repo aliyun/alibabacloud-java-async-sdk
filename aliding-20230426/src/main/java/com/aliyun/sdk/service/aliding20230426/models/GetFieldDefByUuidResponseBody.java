@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetFieldDefByUuidResponseBody</p>
  */
 public class GetFieldDefByUuidResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < Result> result;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("vendorRequestId")
+    @com.aliyun.core.annotation.NameInMap("vendorRequestId")
     private String vendorRequestId;
 
-    @NameInMap("vendorType")
+    @com.aliyun.core.annotation.NameInMap("vendorType")
     private String vendorType;
 
     private GetFieldDefByUuidResponseBody(Builder builder) {
@@ -132,25 +131,25 @@ public class GetFieldDefByUuidResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("Behavior")
+        @com.aliyun.core.annotation.NameInMap("Behavior")
         private String behavior;
 
-        @NameInMap("Children")
+        @com.aliyun.core.annotation.NameInMap("Children")
         private String children;
 
-        @NameInMap("ComponentName")
+        @com.aliyun.core.annotation.NameInMap("ComponentName")
         private String componentName;
 
-        @NameInMap("FieldId")
+        @com.aliyun.core.annotation.NameInMap("FieldId")
         private String fieldId;
 
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private Object label;
 
-        @NameInMap("Props")
+        @com.aliyun.core.annotation.NameInMap("Props")
         private Object props;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private Result(Builder builder) {

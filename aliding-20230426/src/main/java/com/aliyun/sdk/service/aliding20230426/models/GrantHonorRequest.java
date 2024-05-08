@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aliding20230426.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,58 +11,58 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GrantHonorRequest</p>
  */
 public class GrantHonorRequest extends Request {
-    @Header
-    @NameInMap("AccountContext")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("AccountContext")
     private AccountContext accountContext;
 
-    @Body
-    @NameInMap("TenantContext")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantContext")
     private TenantContext tenantContext;
 
-    @Body
-    @NameInMap("expirationTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("expirationTime")
     private Long expirationTime;
 
-    @Body
-    @NameInMap("grantReason")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("grantReason")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String grantReason;
 
-    @Body
-    @NameInMap("granterName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("granterName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String granterName;
 
-    @Body
-    @NameInMap("honorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("honorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String honorId;
 
-    @Body
-    @NameInMap("noticeAnnouncer")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("noticeAnnouncer")
     private Boolean noticeAnnouncer;
 
-    @Body
-    @NameInMap("noticeSingle")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("noticeSingle")
     private Boolean noticeSingle;
 
-    @Body
-    @NameInMap("openConversationIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("openConversationIds")
     private java.util.List < String > openConversationIds;
 
-    @Body
-    @NameInMap("orgId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("orgId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long orgId;
 
-    @Body
-    @NameInMap("receiverUserIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("receiverUserIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > receiverUserIds;
 
-    @Body
-    @NameInMap("senderUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("senderUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String senderUserId;
 
     private GrantHonorRequest(Builder builder) {
@@ -333,7 +332,7 @@ public class GrantHonorRequest extends Request {
     } 
 
     public static class AccountContext extends TeaModel {
-        @NameInMap("accountId")
+        @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
 
         private AccountContext(Builder builder) {
@@ -374,7 +373,7 @@ public class GrantHonorRequest extends Request {
 
     }
     public static class TenantContext extends TeaModel {
-        @NameInMap("tenantId")
+        @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;
 
         private TenantContext(Builder builder) {
