@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mns_open20220119.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetQueueAttributesRequest</p>
  */
 public class SetQueueAttributesRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("DelaySeconds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DelaySeconds")
     private Long delaySeconds;
 
-    @Query
-    @NameInMap("EnableLogging")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableLogging")
     private Boolean enableLogging;
 
-    @Query
-    @NameInMap("MaximumMessageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaximumMessageSize")
     private Long maximumMessageSize;
 
-    @Query
-    @NameInMap("MessageRetentionPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MessageRetentionPeriod")
     private Long messageRetentionPeriod;
 
-    @Query
-    @NameInMap("PollingWaitSeconds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PollingWaitSeconds")
     private Long pollingWaitSeconds;
 
-    @Query
-    @NameInMap("QueueName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueueName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String queueName;
 
-    @Query
-    @NameInMap("VisibilityTimeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VisibilityTimeout")
     private Long visibilityTimeout;
 
     private SetQueueAttributesRequest(Builder builder) {

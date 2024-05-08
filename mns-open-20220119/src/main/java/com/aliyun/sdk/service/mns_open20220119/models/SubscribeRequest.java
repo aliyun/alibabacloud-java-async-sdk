@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mns_open20220119.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubscribeRequest</p>
  */
 public class SubscribeRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Endpoint")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Endpoint")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endpoint;
 
-    @Query
-    @NameInMap("MessageTag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MessageTag")
     private String messageTag;
 
-    @Query
-    @NameInMap("NotifyContentFormat")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NotifyContentFormat")
     private String notifyContentFormat;
 
-    @Query
-    @NameInMap("NotifyStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NotifyStrategy")
     private String notifyStrategy;
 
-    @Query
-    @NameInMap("PushType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PushType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pushType;
 
-    @Query
-    @NameInMap("SubscriptionName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscriptionName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subscriptionName;
 
-    @Query
-    @NameInMap("TopicName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TopicName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String topicName;
 
     private SubscribeRequest(Builder builder) {

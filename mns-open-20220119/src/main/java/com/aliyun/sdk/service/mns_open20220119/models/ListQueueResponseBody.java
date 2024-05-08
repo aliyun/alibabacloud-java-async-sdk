@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mns_open20220119.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListQueueResponseBody</p>
  */
 public class ListQueueResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListQueueResponseBody(Builder builder) {
@@ -152,40 +151,40 @@ public class ListQueueResponseBody extends TeaModel {
     } 
 
     public static class PageData extends TeaModel {
-        @NameInMap("ActiveMessages")
+        @com.aliyun.core.annotation.NameInMap("ActiveMessages")
         private Long activeMessages;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("DelayMessages")
+        @com.aliyun.core.annotation.NameInMap("DelayMessages")
         private Long delayMessages;
 
-        @NameInMap("DelaySeconds")
+        @com.aliyun.core.annotation.NameInMap("DelaySeconds")
         private Long delaySeconds;
 
-        @NameInMap("InactiveMessages")
+        @com.aliyun.core.annotation.NameInMap("InactiveMessages")
         private Long inactiveMessages;
 
-        @NameInMap("LastModifyTime")
+        @com.aliyun.core.annotation.NameInMap("LastModifyTime")
         private Long lastModifyTime;
 
-        @NameInMap("LoggingEnabled")
+        @com.aliyun.core.annotation.NameInMap("LoggingEnabled")
         private Boolean loggingEnabled;
 
-        @NameInMap("MaximumMessageSize")
+        @com.aliyun.core.annotation.NameInMap("MaximumMessageSize")
         private Long maximumMessageSize;
 
-        @NameInMap("MessageRetentionPeriod")
+        @com.aliyun.core.annotation.NameInMap("MessageRetentionPeriod")
         private Long messageRetentionPeriod;
 
-        @NameInMap("PollingWaitSeconds")
+        @com.aliyun.core.annotation.NameInMap("PollingWaitSeconds")
         private Long pollingWaitSeconds;
 
-        @NameInMap("QueueName")
+        @com.aliyun.core.annotation.NameInMap("QueueName")
         private String queueName;
 
-        @NameInMap("VisibilityTimeout")
+        @com.aliyun.core.annotation.NameInMap("VisibilityTimeout")
         private Long visibilityTimeout;
 
         private PageData(Builder builder) {
@@ -413,22 +412,22 @@ public class ListQueueResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("PageData")
+        @com.aliyun.core.annotation.NameInMap("PageData")
         private java.util.List < PageData> pageData;
 
-        @NameInMap("PageNum")
+        @com.aliyun.core.annotation.NameInMap("PageNum")
         private Long pageNum;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Long pageSize;
 
-        @NameInMap("Pages")
+        @com.aliyun.core.annotation.NameInMap("Pages")
         private Long pages;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private Data(Builder builder) {

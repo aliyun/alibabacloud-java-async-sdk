@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mns_open20220119.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTopicResponseBody</p>
  */
 public class ListTopicResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListTopicResponseBody(Builder builder) {
@@ -152,26 +151,32 @@ public class ListTopicResponseBody extends TeaModel {
     } 
 
     public static class PageData extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("LastModifyTime")
+        @com.aliyun.core.annotation.NameInMap("LastModifyTime")
         private Long lastModifyTime;
 
-        @NameInMap("LoggingEnabled")
+        @com.aliyun.core.annotation.NameInMap("LoggingEnabled")
         private Boolean loggingEnabled;
 
-        @NameInMap("MaxMessageSize")
+        @com.aliyun.core.annotation.NameInMap("MaxMessageSize")
         private Long maxMessageSize;
 
-        @NameInMap("MessageCount")
+        @com.aliyun.core.annotation.NameInMap("MessageCount")
         private Long messageCount;
 
-        @NameInMap("MessageRetentionPeriod")
+        @com.aliyun.core.annotation.NameInMap("MessageRetentionPeriod")
         private Long messageRetentionPeriod;
 
-        @NameInMap("TopicName")
+        @com.aliyun.core.annotation.NameInMap("TopicInnerUrl")
+        private String topicInnerUrl;
+
+        @com.aliyun.core.annotation.NameInMap("TopicName")
         private String topicName;
+
+        @com.aliyun.core.annotation.NameInMap("TopicUrl")
+        private String topicUrl;
 
         private PageData(Builder builder) {
             this.createTime = builder.createTime;
@@ -180,7 +185,9 @@ public class ListTopicResponseBody extends TeaModel {
             this.maxMessageSize = builder.maxMessageSize;
             this.messageCount = builder.messageCount;
             this.messageRetentionPeriod = builder.messageRetentionPeriod;
+            this.topicInnerUrl = builder.topicInnerUrl;
             this.topicName = builder.topicName;
+            this.topicUrl = builder.topicUrl;
         }
 
         public static Builder builder() {
@@ -234,10 +241,24 @@ public class ListTopicResponseBody extends TeaModel {
         }
 
         /**
+         * @return topicInnerUrl
+         */
+        public String getTopicInnerUrl() {
+            return this.topicInnerUrl;
+        }
+
+        /**
          * @return topicName
          */
         public String getTopicName() {
             return this.topicName;
+        }
+
+        /**
+         * @return topicUrl
+         */
+        public String getTopicUrl() {
+            return this.topicUrl;
         }
 
         public static final class Builder {
@@ -247,7 +268,9 @@ public class ListTopicResponseBody extends TeaModel {
             private Long maxMessageSize; 
             private Long messageCount; 
             private Long messageRetentionPeriod; 
+            private String topicInnerUrl; 
             private String topicName; 
+            private String topicUrl; 
 
             /**
              * CreateTime.
@@ -298,10 +321,26 @@ public class ListTopicResponseBody extends TeaModel {
             }
 
             /**
+             * TopicInnerUrl.
+             */
+            public Builder topicInnerUrl(String topicInnerUrl) {
+                this.topicInnerUrl = topicInnerUrl;
+                return this;
+            }
+
+            /**
              * TopicName.
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;
+                return this;
+            }
+
+            /**
+             * TopicUrl.
+             */
+            public Builder topicUrl(String topicUrl) {
+                this.topicUrl = topicUrl;
                 return this;
             }
 
@@ -313,16 +352,16 @@ public class ListTopicResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("PageData")
+        @com.aliyun.core.annotation.NameInMap("PageData")
         private java.util.List < PageData> pageData;
 
-        @NameInMap("PageNum")
+        @com.aliyun.core.annotation.NameInMap("PageNum")
         private Long pageNum;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Long pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private Data(Builder builder) {
