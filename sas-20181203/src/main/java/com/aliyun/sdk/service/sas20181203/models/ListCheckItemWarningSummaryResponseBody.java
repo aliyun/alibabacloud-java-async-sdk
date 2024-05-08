@@ -121,6 +121,9 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("EnableRisks")
+        private java.util.List < String > enableRisks;
+
         @com.aliyun.core.annotation.NameInMap("RiskType")
         private String riskType;
 
@@ -141,6 +144,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             this.checkType = builder.checkType;
             this.containerCheckItem = builder.containerCheckItem;
             this.description = builder.description;
+            this.enableRisks = builder.enableRisks;
             this.riskType = builder.riskType;
             this.status = builder.status;
             this.warningMachineCount = builder.warningMachineCount;
@@ -225,6 +229,13 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
         }
 
         /**
+         * @return enableRisks
+         */
+        public java.util.List < String > getEnableRisks() {
+            return this.enableRisks;
+        }
+
+        /**
          * @return riskType
          */
         public String getRiskType() {
@@ -256,6 +267,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             private String checkType; 
             private Boolean containerCheckItem; 
             private String description; 
+            private java.util.List < String > enableRisks; 
             private String riskType; 
             private Integer status; 
             private Integer warningMachineCount; 
@@ -346,6 +358,14 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * EnableRisks.
+             */
+            public Builder enableRisks(java.util.List < String > enableRisks) {
+                this.enableRisks = enableRisks;
                 return this;
             }
 
