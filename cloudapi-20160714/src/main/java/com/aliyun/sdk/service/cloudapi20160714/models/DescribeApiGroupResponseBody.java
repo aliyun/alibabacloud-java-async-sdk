@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,103 +11,103 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeApiGroupResponseBody</p>
  */
 public class DescribeApiGroupResponseBody extends TeaModel {
-    @NameInMap("BasePath")
+    @com.aliyun.core.annotation.NameInMap("BasePath")
     private String basePath;
 
-    @NameInMap("BillingStatus")
+    @com.aliyun.core.annotation.NameInMap("BillingStatus")
     private String billingStatus;
 
-    @NameInMap("CloudMarketCommodity")
+    @com.aliyun.core.annotation.NameInMap("CloudMarketCommodity")
     private Boolean cloudMarketCommodity;
 
-    @NameInMap("CmsMonitorGroup")
+    @com.aliyun.core.annotation.NameInMap("CmsMonitorGroup")
     private String cmsMonitorGroup;
 
-    @NameInMap("CompatibleFlags")
+    @com.aliyun.core.annotation.NameInMap("CompatibleFlags")
     private String compatibleFlags;
 
-    @NameInMap("CreatedTime")
+    @com.aliyun.core.annotation.NameInMap("CreatedTime")
     private String createdTime;
 
-    @NameInMap("CustomDomains")
+    @com.aliyun.core.annotation.NameInMap("CustomDomains")
     private CustomDomains customDomains;
 
-    @NameInMap("CustomTraceConfig")
+    @com.aliyun.core.annotation.NameInMap("CustomTraceConfig")
     private String customTraceConfig;
 
-    @NameInMap("CustomerConfigs")
+    @com.aliyun.core.annotation.NameInMap("CustomerConfigs")
     private String customerConfigs;
 
-    @NameInMap("DedicatedInstanceType")
+    @com.aliyun.core.annotation.NameInMap("DedicatedInstanceType")
     private String dedicatedInstanceType;
 
-    @NameInMap("DefaultDomain")
+    @com.aliyun.core.annotation.NameInMap("DefaultDomain")
     private String defaultDomain;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("DisableInnerDomain")
+    @com.aliyun.core.annotation.NameInMap("DisableInnerDomain")
     private Boolean disableInnerDomain;
 
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
-    @NameInMap("HttpsPolicy")
+    @com.aliyun.core.annotation.NameInMap("HttpsPolicy")
     private String httpsPolicy;
 
-    @NameInMap("IllegalStatus")
+    @com.aliyun.core.annotation.NameInMap("IllegalStatus")
     private String illegalStatus;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
-    @NameInMap("Ipv6Status")
+    @com.aliyun.core.annotation.NameInMap("Ipv6Status")
     private String ipv6Status;
 
-    @NameInMap("MigrationError")
+    @com.aliyun.core.annotation.NameInMap("MigrationError")
     private String migrationError;
 
-    @NameInMap("MigrationStatus")
+    @com.aliyun.core.annotation.NameInMap("MigrationStatus")
     private String migrationStatus;
 
-    @NameInMap("ModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("ModifiedTime")
     private String modifiedTime;
 
-    @NameInMap("PassthroughHeaders")
+    @com.aliyun.core.annotation.NameInMap("PassthroughHeaders")
     private String passthroughHeaders;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StageItems")
+    @com.aliyun.core.annotation.NameInMap("StageItems")
     private StageItems stageItems;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("SubDomain")
+    @com.aliyun.core.annotation.NameInMap("SubDomain")
     private String subDomain;
 
-    @NameInMap("TrafficLimit")
+    @com.aliyun.core.annotation.NameInMap("TrafficLimit")
     private Integer trafficLimit;
 
-    @NameInMap("UserLogConfig")
+    @com.aliyun.core.annotation.NameInMap("UserLogConfig")
     private String userLogConfig;
 
-    @NameInMap("VpcDomain")
+    @com.aliyun.core.annotation.NameInMap("VpcDomain")
     private String vpcDomain;
 
-    @NameInMap("VpcSlbIntranetDomain")
+    @com.aliyun.core.annotation.NameInMap("VpcSlbIntranetDomain")
     private String vpcSlbIntranetDomain;
 
     private DescribeApiGroupResponseBody(Builder builder) {
@@ -713,49 +712,49 @@ public class DescribeApiGroupResponseBody extends TeaModel {
     } 
 
     public static class DomainItem extends TeaModel {
-        @NameInMap("BindStageAlias")
+        @com.aliyun.core.annotation.NameInMap("BindStageAlias")
         private String bindStageAlias;
 
-        @NameInMap("BindStageName")
+        @com.aliyun.core.annotation.NameInMap("BindStageName")
         private String bindStageName;
 
-        @NameInMap("CertificateId")
+        @com.aliyun.core.annotation.NameInMap("CertificateId")
         private String certificateId;
 
-        @NameInMap("CertificateName")
+        @com.aliyun.core.annotation.NameInMap("CertificateName")
         private String certificateName;
 
-        @NameInMap("CertificateValidEnd")
+        @com.aliyun.core.annotation.NameInMap("CertificateValidEnd")
         private Long certificateValidEnd;
 
-        @NameInMap("CertificateValidStart")
+        @com.aliyun.core.annotation.NameInMap("CertificateValidStart")
         private Long certificateValidStart;
 
-        @NameInMap("CustomDomainType")
+        @com.aliyun.core.annotation.NameInMap("CustomDomainType")
         private String customDomainType;
 
-        @NameInMap("DomainBindingStatus")
+        @com.aliyun.core.annotation.NameInMap("DomainBindingStatus")
         private String domainBindingStatus;
 
-        @NameInMap("DomainCNAMEStatus")
+        @com.aliyun.core.annotation.NameInMap("DomainCNAMEStatus")
         private String domainCNAMEStatus;
 
-        @NameInMap("DomainLegalStatus")
+        @com.aliyun.core.annotation.NameInMap("DomainLegalStatus")
         private String domainLegalStatus;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("DomainRemark")
+        @com.aliyun.core.annotation.NameInMap("DomainRemark")
         private String domainRemark;
 
-        @NameInMap("DomainWebSocketStatus")
+        @com.aliyun.core.annotation.NameInMap("DomainWebSocketStatus")
         private String domainWebSocketStatus;
 
-        @NameInMap("IsHttpRedirectToHttps")
+        @com.aliyun.core.annotation.NameInMap("IsHttpRedirectToHttps")
         private Boolean isHttpRedirectToHttps;
 
-        @NameInMap("WildcardDomainPatterns")
+        @com.aliyun.core.annotation.NameInMap("WildcardDomainPatterns")
         private String wildcardDomainPatterns;
 
         private DomainItem(Builder builder) {
@@ -1046,7 +1045,7 @@ public class DescribeApiGroupResponseBody extends TeaModel {
 
     }
     public static class CustomDomains extends TeaModel {
-        @NameInMap("DomainItem")
+        @com.aliyun.core.annotation.NameInMap("DomainItem")
         private java.util.List < DomainItem> domainItem;
 
         private CustomDomains(Builder builder) {
@@ -1087,13 +1086,13 @@ public class DescribeApiGroupResponseBody extends TeaModel {
 
     }
     public static class StageInfo extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("StageId")
+        @com.aliyun.core.annotation.NameInMap("StageId")
         private String stageId;
 
-        @NameInMap("StageName")
+        @com.aliyun.core.annotation.NameInMap("StageName")
         private String stageName;
 
         private StageInfo(Builder builder) {
@@ -1168,7 +1167,7 @@ public class DescribeApiGroupResponseBody extends TeaModel {
 
     }
     public static class StageItems extends TeaModel {
-        @NameInMap("StageInfo")
+        @com.aliyun.core.annotation.NameInMap("StageInfo")
         private java.util.List < StageInfo> stageInfo;
 
         private StageItems(Builder builder) {

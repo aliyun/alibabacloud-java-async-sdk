@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeApiGroupsResponseBody</p>
  */
 public class DescribeApiGroupsResponseBody extends TeaModel {
-    @NameInMap("ApiGroupAttributes")
+    @com.aliyun.core.annotation.NameInMap("ApiGroupAttributes")
     private ApiGroupAttributes apiGroupAttributes;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeApiGroupsResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
     } 
 
     public static class TagInfo extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private TagInfo(Builder builder) {
@@ -193,7 +192,7 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("TagInfo")
+        @com.aliyun.core.annotation.NameInMap("TagInfo")
         private java.util.List < TagInfo> tagInfo;
 
         private Tags(Builder builder) {
@@ -234,49 +233,49 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
 
     }
     public static class ApiGroupAttribute extends TeaModel {
-        @NameInMap("BasePath")
+        @com.aliyun.core.annotation.NameInMap("BasePath")
         private String basePath;
 
-        @NameInMap("BillingStatus")
+        @com.aliyun.core.annotation.NameInMap("BillingStatus")
         private String billingStatus;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("HttpsPolicy")
+        @com.aliyun.core.annotation.NameInMap("HttpsPolicy")
         private String httpsPolicy;
 
-        @NameInMap("IllegalStatus")
+        @com.aliyun.core.annotation.NameInMap("IllegalStatus")
         private String illegalStatus;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SubDomain")
+        @com.aliyun.core.annotation.NameInMap("SubDomain")
         private String subDomain;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("TrafficLimit")
+        @com.aliyun.core.annotation.NameInMap("TrafficLimit")
         private Integer trafficLimit;
 
         private ApiGroupAttribute(Builder builder) {
@@ -563,7 +562,7 @@ public class DescribeApiGroupsResponseBody extends TeaModel {
 
     }
     public static class ApiGroupAttributes extends TeaModel {
-        @NameInMap("ApiGroupAttribute")
+        @com.aliyun.core.annotation.NameInMap("ApiGroupAttribute")
         private java.util.List < ApiGroupAttribute> apiGroupAttribute;
 
         private ApiGroupAttributes(Builder builder) {

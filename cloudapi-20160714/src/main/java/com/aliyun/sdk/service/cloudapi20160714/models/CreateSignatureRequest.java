@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSignatureRequest</p>
  */
 public class CreateSignatureRequest extends Request {
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("SignatureKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SignatureKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String signatureKey;
 
-    @Query
-    @NameInMap("SignatureName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SignatureName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String signatureName;
 
-    @Query
-    @NameInMap("SignatureSecret")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SignatureSecret")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String signatureSecret;
 
     private CreateSignatureRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeApiQpsDataResponseBody</p>
  */
 public class DescribeApiQpsDataResponseBody extends TeaModel {
-    @NameInMap("CallFails")
+    @com.aliyun.core.annotation.NameInMap("CallFails")
     private CallFails callFails;
 
-    @NameInMap("CallSuccesses")
+    @com.aliyun.core.annotation.NameInMap("CallSuccesses")
     private CallSuccesses callSuccesses;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeApiQpsDataResponseBody(Builder builder) {
@@ -92,10 +91,10 @@ public class DescribeApiQpsDataResponseBody extends TeaModel {
     } 
 
     public static class MonitorItem extends TeaModel {
-        @NameInMap("ItemTime")
+        @com.aliyun.core.annotation.NameInMap("ItemTime")
         private String itemTime;
 
-        @NameInMap("ItemValue")
+        @com.aliyun.core.annotation.NameInMap("ItemValue")
         private String itemValue;
 
         private MonitorItem(Builder builder) {
@@ -153,7 +152,7 @@ public class DescribeApiQpsDataResponseBody extends TeaModel {
 
     }
     public static class CallFails extends TeaModel {
-        @NameInMap("MonitorItem")
+        @com.aliyun.core.annotation.NameInMap("MonitorItem")
         private java.util.List < MonitorItem> monitorItem;
 
         private CallFails(Builder builder) {
@@ -194,10 +193,10 @@ public class DescribeApiQpsDataResponseBody extends TeaModel {
 
     }
     public static class CallSuccessesMonitorItem extends TeaModel {
-        @NameInMap("ItemTime")
+        @com.aliyun.core.annotation.NameInMap("ItemTime")
         private String itemTime;
 
-        @NameInMap("ItemValue")
+        @com.aliyun.core.annotation.NameInMap("ItemValue")
         private String itemValue;
 
         private CallSuccessesMonitorItem(Builder builder) {
@@ -255,7 +254,7 @@ public class DescribeApiQpsDataResponseBody extends TeaModel {
 
     }
     public static class CallSuccesses extends TeaModel {
-        @NameInMap("MonitorItem")
+        @com.aliyun.core.annotation.NameInMap("MonitorItem")
         private java.util.List < CallSuccessesMonitorItem> monitorItem;
 
         private CallSuccesses(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTrafficControlsByApiResponseBody</p>
  */
 public class DescribeTrafficControlsByApiResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TrafficControlItems")
+    @com.aliyun.core.annotation.NameInMap("TrafficControlItems")
     private TrafficControlItems trafficControlItems;
 
     private DescribeTrafficControlsByApiResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeTrafficControlsByApiResponseBody extends TeaModel {
     } 
 
     public static class TrafficControlItem extends TeaModel {
-        @NameInMap("BoundTime")
+        @com.aliyun.core.annotation.NameInMap("BoundTime")
         private String boundTime;
 
-        @NameInMap("TrafficControlItemId")
+        @com.aliyun.core.annotation.NameInMap("TrafficControlItemId")
         private String trafficControlItemId;
 
-        @NameInMap("TrafficControlItemName")
+        @com.aliyun.core.annotation.NameInMap("TrafficControlItemName")
         private String trafficControlItemName;
 
         private TrafficControlItem(Builder builder) {
@@ -153,7 +152,7 @@ public class DescribeTrafficControlsByApiResponseBody extends TeaModel {
 
     }
     public static class TrafficControlItems extends TeaModel {
-        @NameInMap("TrafficControlItem")
+        @com.aliyun.core.annotation.NameInMap("TrafficControlItem")
         private java.util.List < TrafficControlItem> trafficControlItem;
 
         private TrafficControlItems(Builder builder) {

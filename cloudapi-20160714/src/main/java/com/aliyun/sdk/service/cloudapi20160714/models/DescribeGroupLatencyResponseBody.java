@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeGroupLatencyResponseBody</p>
  */
 public class DescribeGroupLatencyResponseBody extends TeaModel {
-    @NameInMap("LatencyPacket")
+    @com.aliyun.core.annotation.NameInMap("LatencyPacket")
     private LatencyPacket latencyPacket;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeGroupLatencyResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeGroupLatencyResponseBody extends TeaModel {
     } 
 
     public static class MonitorItem extends TeaModel {
-        @NameInMap("Item")
+        @com.aliyun.core.annotation.NameInMap("Item")
         private String item;
 
-        @NameInMap("ItemTime")
+        @com.aliyun.core.annotation.NameInMap("ItemTime")
         private String itemTime;
 
-        @NameInMap("ItemValue")
+        @com.aliyun.core.annotation.NameInMap("ItemValue")
         private String itemValue;
 
         private MonitorItem(Builder builder) {
@@ -157,7 +156,7 @@ public class DescribeGroupLatencyResponseBody extends TeaModel {
 
     }
     public static class LatencyPacket extends TeaModel {
-        @NameInMap("MonitorItem")
+        @com.aliyun.core.annotation.NameInMap("MonitorItem")
         private java.util.List < MonitorItem> monitorItem;
 
         private LatencyPacket(Builder builder) {

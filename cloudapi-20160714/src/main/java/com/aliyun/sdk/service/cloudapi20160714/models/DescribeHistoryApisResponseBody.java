@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHistoryApisResponseBody</p>
  */
 public class DescribeHistoryApisResponseBody extends TeaModel {
-    @NameInMap("ApiHisItems")
+    @com.aliyun.core.annotation.NameInMap("ApiHisItems")
     private ApiHisItems apiHisItems;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeHistoryApisResponseBody(Builder builder) {
@@ -132,37 +131,37 @@ public class DescribeHistoryApisResponseBody extends TeaModel {
     } 
 
     public static class ApiHisItem extends TeaModel {
-        @NameInMap("ApiId")
+        @com.aliyun.core.annotation.NameInMap("ApiId")
         private String apiId;
 
-        @NameInMap("ApiName")
+        @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
 
-        @NameInMap("DeployedTime")
+        @com.aliyun.core.annotation.NameInMap("DeployedTime")
         private String deployedTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("HistoryVersion")
+        @com.aliyun.core.annotation.NameInMap("HistoryVersion")
         private String historyVersion;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("StageAlias")
+        @com.aliyun.core.annotation.NameInMap("StageAlias")
         private String stageAlias;
 
-        @NameInMap("StageName")
+        @com.aliyun.core.annotation.NameInMap("StageName")
         private String stageName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ApiHisItem(Builder builder) {
@@ -373,7 +372,7 @@ public class DescribeHistoryApisResponseBody extends TeaModel {
 
     }
     public static class ApiHisItems extends TeaModel {
-        @NameInMap("ApiHisItem")
+        @com.aliyun.core.annotation.NameInMap("ApiHisItem")
         private java.util.List < ApiHisItem> apiHisItem;
 
         private ApiHisItems(Builder builder) {

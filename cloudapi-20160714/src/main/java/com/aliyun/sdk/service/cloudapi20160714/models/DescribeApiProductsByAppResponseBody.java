@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeApiProductsByAppResponseBody</p>
  */
 public class DescribeApiProductsByAppResponseBody extends TeaModel {
-    @NameInMap("ApiProductInfoList")
+    @com.aliyun.core.annotation.NameInMap("ApiProductInfoList")
     private ApiProductInfoList apiProductInfoList;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeApiProductsByAppResponseBody(Builder builder) {
@@ -132,7 +131,7 @@ public class DescribeApiProductsByAppResponseBody extends TeaModel {
     } 
 
     public static class ApiProductInfo extends TeaModel {
-        @NameInMap("ApiProductId")
+        @com.aliyun.core.annotation.NameInMap("ApiProductId")
         private String apiProductId;
 
         private ApiProductInfo(Builder builder) {
@@ -173,7 +172,7 @@ public class DescribeApiProductsByAppResponseBody extends TeaModel {
 
     }
     public static class ApiProductInfoList extends TeaModel {
-        @NameInMap("ApiProductInfo")
+        @com.aliyun.core.annotation.NameInMap("ApiProductInfo")
         private java.util.List < ApiProductInfo> apiProductInfo;
 
         private ApiProductInfoList(Builder builder) {

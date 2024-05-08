@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryRequestLogsResponseBody</p>
  */
 public class QueryRequestLogsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RequestLogs")
+    @com.aliyun.core.annotation.NameInMap("RequestLogs")
     private RequestLogs requestLogs;
 
     private QueryRequestLogsResponseBody(Builder builder) {
@@ -72,136 +71,136 @@ public class QueryRequestLogsResponseBody extends TeaModel {
     } 
 
     public static class RequestLog extends TeaModel {
-        @NameInMap("ApiId")
+        @com.aliyun.core.annotation.NameInMap("ApiId")
         private String apiId;
 
-        @NameInMap("ApiName")
+        @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("BackendRequestEnd")
+        @com.aliyun.core.annotation.NameInMap("BackendRequestEnd")
         private Long backendRequestEnd;
 
-        @NameInMap("BackendRequestStart")
+        @com.aliyun.core.annotation.NameInMap("BackendRequestStart")
         private Long backendRequestStart;
 
-        @NameInMap("BackendResponseEnd")
+        @com.aliyun.core.annotation.NameInMap("BackendResponseEnd")
         private Long backendResponseEnd;
 
-        @NameInMap("BackendResponseStart")
+        @com.aliyun.core.annotation.NameInMap("BackendResponseStart")
         private Long backendResponseStart;
 
-        @NameInMap("ClientIp")
+        @com.aliyun.core.annotation.NameInMap("ClientIp")
         private String clientIp;
 
-        @NameInMap("ClientNonce")
+        @com.aliyun.core.annotation.NameInMap("ClientNonce")
         private String clientNonce;
 
-        @NameInMap("ConsumerAppId")
+        @com.aliyun.core.annotation.NameInMap("ConsumerAppId")
         private String consumerAppId;
 
-        @NameInMap("ConsumerAppKey")
+        @com.aliyun.core.annotation.NameInMap("ConsumerAppKey")
         private String consumerAppKey;
 
-        @NameInMap("CustomTraceId")
+        @com.aliyun.core.annotation.NameInMap("CustomTraceId")
         private String customTraceId;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Exception")
+        @com.aliyun.core.annotation.NameInMap("Exception")
         private String exception;
 
-        @NameInMap("FrontRequestEnd")
+        @com.aliyun.core.annotation.NameInMap("FrontRequestEnd")
         private Long frontRequestEnd;
 
-        @NameInMap("FrontRequestStart")
+        @com.aliyun.core.annotation.NameInMap("FrontRequestStart")
         private Long frontRequestStart;
 
-        @NameInMap("FrontResponseEnd")
+        @com.aliyun.core.annotation.NameInMap("FrontResponseEnd")
         private Long frontResponseEnd;
 
-        @NameInMap("FrontResponseStart")
+        @com.aliyun.core.annotation.NameInMap("FrontResponseStart")
         private Long frontResponseStart;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("HttpMethod")
+        @com.aliyun.core.annotation.NameInMap("HttpMethod")
         private String httpMethod;
 
-        @NameInMap("HttpPath")
+        @com.aliyun.core.annotation.NameInMap("HttpPath")
         private String httpPath;
 
-        @NameInMap("InitialRequestId")
+        @com.aliyun.core.annotation.NameInMap("InitialRequestId")
         private String initialRequestId;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("JwtClaims")
+        @com.aliyun.core.annotation.NameInMap("JwtClaims")
         private String jwtClaims;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("RequestBody")
+        @com.aliyun.core.annotation.NameInMap("RequestBody")
         private String requestBody;
 
-        @NameInMap("RequestHeaders")
+        @com.aliyun.core.annotation.NameInMap("RequestHeaders")
         private String requestHeaders;
 
-        @NameInMap("RequestId")
+        @com.aliyun.core.annotation.NameInMap("RequestId")
         private String requestId;
 
-        @NameInMap("RequestProtocol")
+        @com.aliyun.core.annotation.NameInMap("RequestProtocol")
         private String requestProtocol;
 
-        @NameInMap("RequestQueryString")
+        @com.aliyun.core.annotation.NameInMap("RequestQueryString")
         private String requestQueryString;
 
-        @NameInMap("RequestSize")
+        @com.aliyun.core.annotation.NameInMap("RequestSize")
         private String requestSize;
 
-        @NameInMap("RequestTime")
+        @com.aliyun.core.annotation.NameInMap("RequestTime")
         private String requestTime;
 
-        @NameInMap("ResponseBody")
+        @com.aliyun.core.annotation.NameInMap("ResponseBody")
         private String responseBody;
 
-        @NameInMap("ResponseHeaders")
+        @com.aliyun.core.annotation.NameInMap("ResponseHeaders")
         private String responseHeaders;
 
-        @NameInMap("ResponseSize")
+        @com.aliyun.core.annotation.NameInMap("ResponseSize")
         private String responseSize;
 
-        @NameInMap("ServiceLatency")
+        @com.aliyun.core.annotation.NameInMap("ServiceLatency")
         private String serviceLatency;
 
-        @NameInMap("StageId")
+        @com.aliyun.core.annotation.NameInMap("StageId")
         private String stageId;
 
-        @NameInMap("StageName")
+        @com.aliyun.core.annotation.NameInMap("StageName")
         private String stageName;
 
-        @NameInMap("StatusCode")
+        @com.aliyun.core.annotation.NameInMap("StatusCode")
         private String statusCode;
 
-        @NameInMap("TotalLatency")
+        @com.aliyun.core.annotation.NameInMap("TotalLatency")
         private String totalLatency;
 
-        @NameInMap("plugin")
+        @com.aliyun.core.annotation.NameInMap("plugin")
         private String plugin;
 
         private RequestLog(Builder builder) {
@@ -973,7 +972,7 @@ public class QueryRequestLogsResponseBody extends TeaModel {
 
     }
     public static class RequestLogs extends TeaModel {
-        @NameInMap("RequestLog")
+        @com.aliyun.core.annotation.NameInMap("RequestLog")
         private java.util.List < RequestLog> requestLog;
 
         private RequestLogs(Builder builder) {

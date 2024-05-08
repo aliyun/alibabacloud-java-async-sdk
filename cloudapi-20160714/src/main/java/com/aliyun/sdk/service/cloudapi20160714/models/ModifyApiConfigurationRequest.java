@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,149 +11,149 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyApiConfigurationRequest</p>
  */
 public class ModifyApiConfigurationRequest extends Request {
-    @Query
-    @NameInMap("AllowSignatureMethod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllowSignatureMethod")
     private String allowSignatureMethod;
 
-    @Query
-    @NameInMap("ApiId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApiId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String apiId;
 
-    @Query
-    @NameInMap("ApiName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApiName")
     private String apiName;
 
-    @Query
-    @NameInMap("AppCodeAuthType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppCodeAuthType")
     private String appCodeAuthType;
 
-    @Query
-    @NameInMap("AuthType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthType")
     private String authType;
 
-    @Query
-    @NameInMap("BackendName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackendName")
     private String backendName;
 
-    @Query
-    @NameInMap("BodyFormat")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BodyFormat")
     private String bodyFormat;
 
-    @Query
-    @NameInMap("BodyModel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BodyModel")
     private String bodyModel;
 
-    @Query
-    @NameInMap("ContentTypeCategory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContentTypeCategory")
     private String contentTypeCategory;
 
-    @Query
-    @NameInMap("ContentTypeValue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContentTypeValue")
     private String contentTypeValue;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DisableInternet")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisableInternet")
     private Boolean disableInternet;
 
-    @Query
-    @NameInMap("ErrorCodeSamples")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ErrorCodeSamples")
     private String errorCodeSamples;
 
-    @Query
-    @NameInMap("FailResultSample")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FailResultSample")
     private String failResultSample;
 
-    @Query
-    @NameInMap("ForceNonceCheck")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForceNonceCheck")
     private Boolean forceNonceCheck;
 
-    @Query
-    @NameInMap("FunctionComputeConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FunctionComputeConfig")
     private String functionComputeConfig;
 
-    @Query
-    @NameInMap("HttpConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpConfig")
     private String httpConfig;
 
-    @Query
-    @NameInMap("MockConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MockConfig")
     private String mockConfig;
 
-    @Query
-    @NameInMap("ModelName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModelName")
     private String modelName;
 
-    @Query
-    @NameInMap("OssConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssConfig")
     private String ossConfig;
 
-    @Query
-    @NameInMap("PostBodyDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PostBodyDescription")
     private String postBodyDescription;
 
-    @Query
-    @NameInMap("RequestHttpMethod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestHttpMethod")
     private String requestHttpMethod;
 
-    @Query
-    @NameInMap("RequestMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestMode")
     private String requestMode;
 
-    @Query
-    @NameInMap("RequestParameters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestParameters")
     private String requestParameters;
 
-    @Query
-    @NameInMap("RequestPath")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestPath")
     private String requestPath;
 
-    @Query
-    @NameInMap("RequestProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestProtocol")
     private String requestProtocol;
 
-    @Query
-    @NameInMap("ResultSample")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResultSample")
     private String resultSample;
 
-    @Query
-    @NameInMap("ResultType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResultType")
     private String resultType;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("ServiceParameters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceParameters")
     private String serviceParameters;
 
-    @Query
-    @NameInMap("ServiceParametersMap")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceParametersMap")
     private String serviceParametersMap;
 
-    @Query
-    @NameInMap("ServiceProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceProtocol")
     private String serviceProtocol;
 
-    @Query
-    @NameInMap("ServiceTimeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceTimeout")
     private Integer serviceTimeout;
 
-    @Query
-    @NameInMap("UseBackendService")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseBackendService")
     private Boolean useBackendService;
 
-    @Query
-    @NameInMap("Visibility")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Visibility")
     private String visibility;
 
-    @Query
-    @NameInMap("VpcConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcConfig")
     private String vpcConfig;
 
     private ModifyApiConfigurationRequest(Builder builder) {

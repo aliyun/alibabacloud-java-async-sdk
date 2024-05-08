@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSummaryDataResponseBody</p>
  */
 public class DescribeSummaryDataResponseBody extends TeaModel {
-    @NameInMap("ExpireInstanceNum")
+    @com.aliyun.core.annotation.NameInMap("ExpireInstanceNum")
     private Integer expireInstanceNum;
 
-    @NameInMap("Region")
+    @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UsageApiNum")
+    @com.aliyun.core.annotation.NameInMap("UsageApiNum")
     private Integer usageApiNum;
 
-    @NameInMap("UsageGroupNum")
+    @com.aliyun.core.annotation.NameInMap("UsageGroupNum")
     private Integer usageGroupNum;
 
-    @NameInMap("UsageInstanceNum")
+    @com.aliyun.core.annotation.NameInMap("UsageInstanceNum")
     private Integer usageInstanceNum;
 
     private DescribeSummaryDataResponseBody(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeApisResponseBody</p>
  */
 public class DescribeApisResponseBody extends TeaModel {
-    @NameInMap("ApiSummarys")
+    @com.aliyun.core.annotation.NameInMap("ApiSummarys")
     private ApiSummarys apiSummarys;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeApisResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class DescribeApisResponseBody extends TeaModel {
     } 
 
     public static class DeployedInfo extends TeaModel {
-        @NameInMap("DeployedStatus")
+        @com.aliyun.core.annotation.NameInMap("DeployedStatus")
         private String deployedStatus;
 
-        @NameInMap("EffectiveVersion")
+        @com.aliyun.core.annotation.NameInMap("EffectiveVersion")
         private String effectiveVersion;
 
-        @NameInMap("StageName")
+        @com.aliyun.core.annotation.NameInMap("StageName")
         private String stageName;
 
         private DeployedInfo(Builder builder) {
@@ -218,7 +217,7 @@ public class DescribeApisResponseBody extends TeaModel {
 
     }
     public static class DeployedInfos extends TeaModel {
-        @NameInMap("DeployedInfo")
+        @com.aliyun.core.annotation.NameInMap("DeployedInfo")
         private java.util.List < DeployedInfo> deployedInfo;
 
         private DeployedInfos(Builder builder) {
@@ -259,10 +258,10 @@ public class DescribeApisResponseBody extends TeaModel {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -320,7 +319,7 @@ public class DescribeApisResponseBody extends TeaModel {
 
     }
     public static class TagList extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private TagList(Builder builder) {
@@ -361,43 +360,43 @@ public class DescribeApisResponseBody extends TeaModel {
 
     }
     public static class ApiSummary extends TeaModel {
-        @NameInMap("ApiId")
+        @com.aliyun.core.annotation.NameInMap("ApiId")
         private String apiId;
 
-        @NameInMap("ApiMethod")
+        @com.aliyun.core.annotation.NameInMap("ApiMethod")
         private String apiMethod;
 
-        @NameInMap("ApiName")
+        @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
 
-        @NameInMap("ApiPath")
+        @com.aliyun.core.annotation.NameInMap("ApiPath")
         private String apiPath;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("DeployedInfos")
+        @com.aliyun.core.annotation.NameInMap("DeployedInfos")
         private DeployedInfos deployedInfos;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("TagList")
+        @com.aliyun.core.annotation.NameInMap("TagList")
         private TagList tagList;
 
-        @NameInMap("Visibility")
+        @com.aliyun.core.annotation.NameInMap("Visibility")
         private String visibility;
 
         private ApiSummary(Builder builder) {
@@ -646,7 +645,7 @@ public class DescribeApisResponseBody extends TeaModel {
 
     }
     public static class ApiSummarys extends TeaModel {
-        @NameInMap("ApiSummary")
+        @com.aliyun.core.annotation.NameInMap("ApiSummary")
         private java.util.List < ApiSummary> apiSummary;
 
         private ApiSummarys(Builder builder) {

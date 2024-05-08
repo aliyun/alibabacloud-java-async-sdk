@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUpdateVpcInfoTaskResponseBody</p>
  */
 public class DescribeUpdateVpcInfoTaskResponseBody extends TeaModel {
-    @NameInMap("ApiUpdateVpcInfoResults")
+    @com.aliyun.core.annotation.NameInMap("ApiUpdateVpcInfoResults")
     private ApiUpdateVpcInfoResults apiUpdateVpcInfoResults;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeUpdateVpcInfoTaskResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class DescribeUpdateVpcInfoTaskResponseBody extends TeaModel {
     } 
 
     public static class ApiUpdateVpcInfoResult extends TeaModel {
-        @NameInMap("ApiName")
+        @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
 
-        @NameInMap("ApiUid")
+        @com.aliyun.core.annotation.NameInMap("ApiUid")
         private String apiUid;
 
-        @NameInMap("ErrorMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("StageId")
+        @com.aliyun.core.annotation.NameInMap("StageId")
         private String stageId;
 
-        @NameInMap("StageName")
+        @com.aliyun.core.annotation.NameInMap("StageName")
         private String stageName;
 
-        @NameInMap("UpdateStatus")
+        @com.aliyun.core.annotation.NameInMap("UpdateStatus")
         private String updateStatus;
 
         private ApiUpdateVpcInfoResult(Builder builder) {
@@ -253,7 +252,7 @@ public class DescribeUpdateVpcInfoTaskResponseBody extends TeaModel {
 
     }
     public static class ApiUpdateVpcInfoResults extends TeaModel {
-        @NameInMap("ApiUpdateVpcInfoResult")
+        @com.aliyun.core.annotation.NameInMap("ApiUpdateVpcInfoResult")
         private java.util.List < ApiUpdateVpcInfoResult> apiUpdateVpcInfoResult;
 
         private ApiUpdateVpcInfoResults(Builder builder) {

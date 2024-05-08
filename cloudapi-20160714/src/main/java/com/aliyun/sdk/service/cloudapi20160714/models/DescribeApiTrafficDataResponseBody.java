@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeApiTrafficDataResponseBody</p>
  */
 public class DescribeApiTrafficDataResponseBody extends TeaModel {
-    @NameInMap("CallDownloads")
+    @com.aliyun.core.annotation.NameInMap("CallDownloads")
     private CallDownloads callDownloads;
 
-    @NameInMap("CallUploads")
+    @com.aliyun.core.annotation.NameInMap("CallUploads")
     private CallUploads callUploads;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeApiTrafficDataResponseBody(Builder builder) {
@@ -92,10 +91,10 @@ public class DescribeApiTrafficDataResponseBody extends TeaModel {
     } 
 
     public static class MonitorItem extends TeaModel {
-        @NameInMap("ItemTime")
+        @com.aliyun.core.annotation.NameInMap("ItemTime")
         private String itemTime;
 
-        @NameInMap("ItemValue")
+        @com.aliyun.core.annotation.NameInMap("ItemValue")
         private String itemValue;
 
         private MonitorItem(Builder builder) {
@@ -153,7 +152,7 @@ public class DescribeApiTrafficDataResponseBody extends TeaModel {
 
     }
     public static class CallDownloads extends TeaModel {
-        @NameInMap("MonitorItem")
+        @com.aliyun.core.annotation.NameInMap("MonitorItem")
         private java.util.List < MonitorItem> monitorItem;
 
         private CallDownloads(Builder builder) {
@@ -194,10 +193,10 @@ public class DescribeApiTrafficDataResponseBody extends TeaModel {
 
     }
     public static class CallUploadsMonitorItem extends TeaModel {
-        @NameInMap("ItemTime")
+        @com.aliyun.core.annotation.NameInMap("ItemTime")
         private String itemTime;
 
-        @NameInMap("ItemValue")
+        @com.aliyun.core.annotation.NameInMap("ItemValue")
         private String itemValue;
 
         private CallUploadsMonitorItem(Builder builder) {
@@ -255,7 +254,7 @@ public class DescribeApiTrafficDataResponseBody extends TeaModel {
 
     }
     public static class CallUploads extends TeaModel {
-        @NameInMap("MonitorItem")
+        @com.aliyun.core.annotation.NameInMap("MonitorItem")
         private java.util.List < CallUploadsMonitorItem> monitorItem;
 
         private CallUploads(Builder builder) {

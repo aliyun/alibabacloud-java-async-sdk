@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSignaturesResponseBody</p>
  */
 public class DescribeSignaturesResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SignatureInfos")
+    @com.aliyun.core.annotation.NameInMap("SignatureInfos")
     private SignatureInfos signatureInfos;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeSignaturesResponseBody(Builder builder) {
@@ -132,25 +131,25 @@ public class DescribeSignaturesResponseBody extends TeaModel {
     } 
 
     public static class SignatureInfo extends TeaModel {
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SignatureId")
+        @com.aliyun.core.annotation.NameInMap("SignatureId")
         private String signatureId;
 
-        @NameInMap("SignatureKey")
+        @com.aliyun.core.annotation.NameInMap("SignatureKey")
         private String signatureKey;
 
-        @NameInMap("SignatureName")
+        @com.aliyun.core.annotation.NameInMap("SignatureName")
         private String signatureName;
 
-        @NameInMap("SignatureSecret")
+        @com.aliyun.core.annotation.NameInMap("SignatureSecret")
         private String signatureSecret;
 
         private SignatureInfo(Builder builder) {
@@ -293,7 +292,7 @@ public class DescribeSignaturesResponseBody extends TeaModel {
 
     }
     public static class SignatureInfos extends TeaModel {
-        @NameInMap("SignatureInfo")
+        @com.aliyun.core.annotation.NameInMap("SignatureInfo")
         private java.util.List < SignatureInfo> signatureInfo;
 
         private SignatureInfos(Builder builder) {

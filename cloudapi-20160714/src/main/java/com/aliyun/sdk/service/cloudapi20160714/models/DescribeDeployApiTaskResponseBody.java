@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDeployApiTaskResponseBody</p>
  */
 public class DescribeDeployApiTaskResponseBody extends TeaModel {
-    @NameInMap("DeployedResults")
+    @com.aliyun.core.annotation.NameInMap("DeployedResults")
     private DeployedResults deployedResults;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDeployApiTaskResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribeDeployApiTaskResponseBody extends TeaModel {
     } 
 
     public static class DeployedResult extends TeaModel {
-        @NameInMap("ApiUid")
+        @com.aliyun.core.annotation.NameInMap("ApiUid")
         private String apiUid;
 
-        @NameInMap("DeployedStatus")
+        @com.aliyun.core.annotation.NameInMap("DeployedStatus")
         private String deployedStatus;
 
-        @NameInMap("ErrorMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("StageName")
+        @com.aliyun.core.annotation.NameInMap("StageName")
         private String stageName;
 
         private DeployedResult(Builder builder) {
@@ -197,7 +196,7 @@ public class DescribeDeployApiTaskResponseBody extends TeaModel {
 
     }
     public static class DeployedResults extends TeaModel {
-        @NameInMap("DeployedResult")
+        @com.aliyun.core.annotation.NameInMap("DeployedResult")
         private java.util.List < DeployedResult> deployedResult;
 
         private DeployedResults(Builder builder) {

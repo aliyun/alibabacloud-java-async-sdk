@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DryRunSwaggerResponseBody</p>
  */
 public class DryRunSwaggerResponseBody extends TeaModel {
-    @NameInMap("Failed")
+    @com.aliyun.core.annotation.NameInMap("Failed")
     private Failed failed;
 
-    @NameInMap("GlobalCondition")
+    @com.aliyun.core.annotation.NameInMap("GlobalCondition")
     private String globalCondition;
 
-    @NameInMap("ModelFailed")
+    @com.aliyun.core.annotation.NameInMap("ModelFailed")
     private ModelFailed modelFailed;
 
-    @NameInMap("ModelSuccess")
+    @com.aliyun.core.annotation.NameInMap("ModelSuccess")
     private ModelSuccess modelSuccess;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Success success;
 
     private DryRunSwaggerResponseBody(Builder builder) {
@@ -152,13 +151,13 @@ public class DryRunSwaggerResponseBody extends TeaModel {
     } 
 
     public static class ApiImportSwaggerFailed extends TeaModel {
-        @NameInMap("ErrorMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
 
-        @NameInMap("HttpMethod")
+        @com.aliyun.core.annotation.NameInMap("HttpMethod")
         private String httpMethod;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
         private ApiImportSwaggerFailed(Builder builder) {
@@ -233,7 +232,7 @@ public class DryRunSwaggerResponseBody extends TeaModel {
 
     }
     public static class Failed extends TeaModel {
-        @NameInMap("ApiImportSwaggerFailed")
+        @com.aliyun.core.annotation.NameInMap("ApiImportSwaggerFailed")
         private java.util.List < ApiImportSwaggerFailed> apiImportSwaggerFailed;
 
         private Failed(Builder builder) {
@@ -274,13 +273,13 @@ public class DryRunSwaggerResponseBody extends TeaModel {
 
     }
     public static class ApiImportModelFailed extends TeaModel {
-        @NameInMap("ErrorMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("ModelName")
+        @com.aliyun.core.annotation.NameInMap("ModelName")
         private String modelName;
 
         private ApiImportModelFailed(Builder builder) {
@@ -355,7 +354,7 @@ public class DryRunSwaggerResponseBody extends TeaModel {
 
     }
     public static class ModelFailed extends TeaModel {
-        @NameInMap("ApiImportModelFailed")
+        @com.aliyun.core.annotation.NameInMap("ApiImportModelFailed")
         private java.util.List < ApiImportModelFailed> apiImportModelFailed;
 
         private ModelFailed(Builder builder) {
@@ -396,16 +395,16 @@ public class DryRunSwaggerResponseBody extends TeaModel {
 
     }
     public static class ApiImportModelSuccess extends TeaModel {
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("ModelName")
+        @com.aliyun.core.annotation.NameInMap("ModelName")
         private String modelName;
 
-        @NameInMap("ModelOperation")
+        @com.aliyun.core.annotation.NameInMap("ModelOperation")
         private String modelOperation;
 
-        @NameInMap("ModelUid")
+        @com.aliyun.core.annotation.NameInMap("ModelUid")
         private String modelUid;
 
         private ApiImportModelSuccess(Builder builder) {
@@ -497,7 +496,7 @@ public class DryRunSwaggerResponseBody extends TeaModel {
 
     }
     public static class ModelSuccess extends TeaModel {
-        @NameInMap("ApiImportModelSuccess")
+        @com.aliyun.core.annotation.NameInMap("ApiImportModelSuccess")
         private java.util.List < ApiImportModelSuccess> apiImportModelSuccess;
 
         private ModelSuccess(Builder builder) {
@@ -538,19 +537,19 @@ public class DryRunSwaggerResponseBody extends TeaModel {
 
     }
     public static class ApiDryRunSwaggerSuccess extends TeaModel {
-        @NameInMap("ApiOperation")
+        @com.aliyun.core.annotation.NameInMap("ApiOperation")
         private String apiOperation;
 
-        @NameInMap("ApiSwagger")
+        @com.aliyun.core.annotation.NameInMap("ApiSwagger")
         private String apiSwagger;
 
-        @NameInMap("ApiUid")
+        @com.aliyun.core.annotation.NameInMap("ApiUid")
         private String apiUid;
 
-        @NameInMap("HttpMethod")
+        @com.aliyun.core.annotation.NameInMap("HttpMethod")
         private String httpMethod;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
         private ApiDryRunSwaggerSuccess(Builder builder) {
@@ -659,7 +658,7 @@ public class DryRunSwaggerResponseBody extends TeaModel {
 
     }
     public static class Success extends TeaModel {
-        @NameInMap("ApiDryRunSwaggerSuccess")
+        @com.aliyun.core.annotation.NameInMap("ApiDryRunSwaggerSuccess")
         private java.util.List < ApiDryRunSwaggerSuccess> apiDryRunSwaggerSuccess;
 
         private Success(Builder builder) {

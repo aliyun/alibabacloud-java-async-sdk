@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeGroupQpsResponseBody</p>
  */
 public class DescribeGroupQpsResponseBody extends TeaModel {
-    @NameInMap("GroupQps")
+    @com.aliyun.core.annotation.NameInMap("GroupQps")
     private GroupQps groupQps;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeGroupQpsResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeGroupQpsResponseBody extends TeaModel {
     } 
 
     public static class MonitorItem extends TeaModel {
-        @NameInMap("ItemTime")
+        @com.aliyun.core.annotation.NameInMap("ItemTime")
         private String itemTime;
 
-        @NameInMap("ItemValue")
+        @com.aliyun.core.annotation.NameInMap("ItemValue")
         private String itemValue;
 
         private MonitorItem(Builder builder) {
@@ -133,7 +132,7 @@ public class DescribeGroupQpsResponseBody extends TeaModel {
 
     }
     public static class GroupQps extends TeaModel {
-        @NameInMap("MonitorItem")
+        @com.aliyun.core.annotation.NameInMap("MonitorItem")
         private java.util.List < MonitorItem> monitorItem;
 
         private GroupQps(Builder builder) {

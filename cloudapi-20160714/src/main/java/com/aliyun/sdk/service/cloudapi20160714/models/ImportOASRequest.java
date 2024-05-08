@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,47 +11,47 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ImportOASRequest</p>
  */
 public class ImportOASRequest extends Request {
-    @Query
-    @NameInMap("AuthType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthType")
     private String authType;
 
-    @Query
-    @NameInMap("BackendName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackendName")
     private String backendName;
 
-    @Body
-    @NameInMap("Data")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Data")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String data;
 
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("IgnoreWarning")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IgnoreWarning")
     private Boolean ignoreWarning;
 
-    @Query
-    @NameInMap("OASVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OASVersion")
     private String OASVersion;
 
-    @Query
-    @NameInMap("Overwrite")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Overwrite")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean overwrite;
 
-    @Query
-    @NameInMap("RequestMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestMode")
     private String requestMode;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("SkipDryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkipDryRun")
     private Boolean skipDryRun;
 
     private ImportOASRequest(Builder builder) {

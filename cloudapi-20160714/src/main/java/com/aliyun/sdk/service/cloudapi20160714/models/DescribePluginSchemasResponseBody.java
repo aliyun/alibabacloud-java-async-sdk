@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePluginSchemasResponseBody</p>
  */
 public class DescribePluginSchemasResponseBody extends TeaModel {
-    @NameInMap("PluginSchemas")
+    @com.aliyun.core.annotation.NameInMap("PluginSchemas")
     private PluginSchemas pluginSchemas;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePluginSchemasResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribePluginSchemasResponseBody extends TeaModel {
     } 
 
     public static class PluginSchema extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DocumentId")
+        @com.aliyun.core.annotation.NameInMap("DocumentId")
         private String documentId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("SupportClassic")
+        @com.aliyun.core.annotation.NameInMap("SupportClassic")
         private Boolean supportClassic;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private PluginSchema(Builder builder) {
@@ -193,7 +192,7 @@ public class DescribePluginSchemasResponseBody extends TeaModel {
 
     }
     public static class PluginSchemas extends TeaModel {
-        @NameInMap("PluginSchema")
+        @com.aliyun.core.annotation.NameInMap("PluginSchema")
         private java.util.List < PluginSchema> pluginSchema;
 
         private PluginSchemas(Builder builder) {

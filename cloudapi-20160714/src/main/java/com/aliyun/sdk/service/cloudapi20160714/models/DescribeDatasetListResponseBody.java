@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDatasetListResponseBody</p>
  */
 public class DescribeDatasetListResponseBody extends TeaModel {
-    @NameInMap("DatasetInfoList")
+    @com.aliyun.core.annotation.NameInMap("DatasetInfoList")
     private java.util.List < DatasetInfoList> datasetInfoList;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDatasetListResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeDatasetListResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -193,22 +192,22 @@ public class DescribeDatasetListResponseBody extends TeaModel {
 
     }
     public static class DatasetInfoList extends TeaModel {
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("DatasetId")
+        @com.aliyun.core.annotation.NameInMap("DatasetId")
         private String datasetId;
 
-        @NameInMap("DatasetName")
+        @com.aliyun.core.annotation.NameInMap("DatasetName")
         private String datasetName;
 
-        @NameInMap("DatasetType")
+        @com.aliyun.core.annotation.NameInMap("DatasetType")
         private String datasetType;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
         private DatasetInfoList(Builder builder) {

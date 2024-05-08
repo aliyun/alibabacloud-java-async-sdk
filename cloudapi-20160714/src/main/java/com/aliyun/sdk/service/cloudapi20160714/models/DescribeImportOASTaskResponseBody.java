@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImportOASTaskResponseBody</p>
  */
 public class DescribeImportOASTaskResponseBody extends TeaModel {
-    @NameInMap("ApiResults")
+    @com.aliyun.core.annotation.NameInMap("ApiResults")
     private ApiResults apiResults;
 
-    @NameInMap("ModelResults")
+    @com.aliyun.core.annotation.NameInMap("ModelResults")
     private ModelResults modelResults;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskStatus")
+    @com.aliyun.core.annotation.NameInMap("TaskStatus")
     private String taskStatus;
 
     private DescribeImportOASTaskResponseBody(Builder builder) {
@@ -130,28 +129,28 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
     } 
 
     public static class ApiResult extends TeaModel {
-        @NameInMap("ApiId")
+        @com.aliyun.core.annotation.NameInMap("ApiId")
         private String apiId;
 
-        @NameInMap("ApiName")
+        @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("Method")
+        @com.aliyun.core.annotation.NameInMap("Method")
         private String method;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("UpdateStatus")
+        @com.aliyun.core.annotation.NameInMap("UpdateStatus")
         private String updateStatus;
 
         private ApiResult(Builder builder) {
@@ -311,7 +310,7 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
 
     }
     public static class ApiResults extends TeaModel {
-        @NameInMap("ApiResult")
+        @com.aliyun.core.annotation.NameInMap("ApiResult")
         private java.util.List < ApiResult> apiResult;
 
         private ApiResults(Builder builder) {
@@ -352,19 +351,19 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
 
     }
     public static class ModelResult extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("ModelId")
+        @com.aliyun.core.annotation.NameInMap("ModelId")
         private String modelId;
 
-        @NameInMap("ModelName")
+        @com.aliyun.core.annotation.NameInMap("ModelName")
         private String modelName;
 
-        @NameInMap("UpdateStatus")
+        @com.aliyun.core.annotation.NameInMap("UpdateStatus")
         private String updateStatus;
 
         private ModelResult(Builder builder) {
@@ -473,7 +472,7 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
 
     }
     public static class ModelResults extends TeaModel {
-        @NameInMap("ModelResult")
+        @com.aliyun.core.annotation.NameInMap("ModelResult")
         private java.util.List < ModelResult> modelResult;
 
         private ModelResults(Builder builder) {

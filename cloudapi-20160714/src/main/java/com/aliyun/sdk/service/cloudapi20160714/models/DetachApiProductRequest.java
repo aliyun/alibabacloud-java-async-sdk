@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DetachApiProductRequest</p>
  */
 public class DetachApiProductRequest extends Request {
-    @Query
-    @NameInMap("ApiProductId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApiProductId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String apiProductId;
 
-    @Query
-    @NameInMap("Apis")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Apis")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Apis> apis;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private DetachApiProductRequest(Builder builder) {
@@ -118,12 +117,12 @@ public class DetachApiProductRequest extends Request {
     } 
 
     public static class Apis extends TeaModel {
-        @NameInMap("ApiId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ApiId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String apiId;
 
-        @NameInMap("StageName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("StageName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String stageName;
 
         private Apis(Builder builder) {

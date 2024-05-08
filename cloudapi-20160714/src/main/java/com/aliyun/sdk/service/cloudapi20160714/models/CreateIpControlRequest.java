@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,26 +11,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateIpControlRequest</p>
  */
 public class CreateIpControlRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("IpControlName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpControlName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ipControlName;
 
-    @Query
-    @NameInMap("IpControlPolicys")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpControlPolicys")
     private java.util.List < IpControlPolicys> ipControlPolicys;
 
-    @Query
-    @NameInMap("IpControlType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpControlType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ipControlType;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private CreateIpControlRequest(Builder builder) {
@@ -168,10 +167,10 @@ public class CreateIpControlRequest extends Request {
     } 
 
     public static class IpControlPolicys extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("CidrIp")
+        @com.aliyun.core.annotation.NameInMap("CidrIp")
         private String cidrIp;
 
         private IpControlPolicys(Builder builder) {

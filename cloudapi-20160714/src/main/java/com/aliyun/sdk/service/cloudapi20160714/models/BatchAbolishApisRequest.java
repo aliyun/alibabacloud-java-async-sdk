@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BatchAbolishApisRequest</p>
  */
 public class BatchAbolishApisRequest extends Request {
-    @Query
-    @NameInMap("Api")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Api")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Api> api;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private BatchAbolishApisRequest(Builder builder) {
@@ -94,18 +93,18 @@ public class BatchAbolishApisRequest extends Request {
     } 
 
     public static class Api extends TeaModel {
-        @NameInMap("ApiUid")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ApiUid")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String apiUid;
 
-        @NameInMap("GroupId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("GroupId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String groupId;
 
-        @NameInMap("StageId")
+        @com.aliyun.core.annotation.NameInMap("StageId")
         private String stageId;
 
-        @NameInMap("StageName")
+        @com.aliyun.core.annotation.NameInMap("StageName")
         private String stageName;
 
         private Api(Builder builder) {

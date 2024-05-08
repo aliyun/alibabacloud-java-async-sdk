@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,35 +11,35 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateTrafficControlRequest</p>
  */
 public class CreateTrafficControlRequest extends Request {
-    @Query
-    @NameInMap("ApiDefault")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApiDefault")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer apiDefault;
 
-    @Query
-    @NameInMap("AppDefault")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppDefault")
     private Integer appDefault;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("TrafficControlName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficControlName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String trafficControlName;
 
-    @Query
-    @NameInMap("TrafficControlUnit")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficControlUnit")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String trafficControlUnit;
 
-    @Query
-    @NameInMap("UserDefault")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserDefault")
     private Integer userDefault;
 
     private CreateTrafficControlRequest(Builder builder) {

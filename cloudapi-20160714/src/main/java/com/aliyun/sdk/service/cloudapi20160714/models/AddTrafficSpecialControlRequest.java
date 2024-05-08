@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddTrafficSpecialControlRequest</p>
  */
 public class AddTrafficSpecialControlRequest extends Request {
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("SpecialKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpecialKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String specialKey;
 
-    @Query
-    @NameInMap("SpecialType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpecialType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String specialType;
 
-    @Query
-    @NameInMap("TrafficControlId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficControlId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String trafficControlId;
 
-    @Query
-    @NameInMap("TrafficValue")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficValue")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer trafficValue;
 
     private AddTrafficSpecialControlRequest(Builder builder) {

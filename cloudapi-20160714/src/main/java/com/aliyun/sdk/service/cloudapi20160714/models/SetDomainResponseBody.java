@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetDomainResponseBody</p>
  */
 public class SetDomainResponseBody extends TeaModel {
-    @NameInMap("DomainBindingStatus")
+    @com.aliyun.core.annotation.NameInMap("DomainBindingStatus")
     private String domainBindingStatus;
 
-    @NameInMap("DomainLegalStatus")
+    @com.aliyun.core.annotation.NameInMap("DomainLegalStatus")
     private String domainLegalStatus;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("DomainRemark")
+    @com.aliyun.core.annotation.NameInMap("DomainRemark")
     private String domainRemark;
 
-    @NameInMap("DomainWebSocketStatus")
+    @com.aliyun.core.annotation.NameInMap("DomainWebSocketStatus")
     private String domainWebSocketStatus;
 
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubDomain")
+    @com.aliyun.core.annotation.NameInMap("SubDomain")
     private String subDomain;
 
     private SetDomainResponseBody(Builder builder) {

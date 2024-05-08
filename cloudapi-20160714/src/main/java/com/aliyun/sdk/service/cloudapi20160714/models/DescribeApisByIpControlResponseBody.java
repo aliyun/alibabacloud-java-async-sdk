@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeApisByIpControlResponseBody</p>
  */
 public class DescribeApisByIpControlResponseBody extends TeaModel {
-    @NameInMap("ApiInfos")
+    @com.aliyun.core.annotation.NameInMap("ApiInfos")
     private ApiInfos apiInfos;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeApisByIpControlResponseBody(Builder builder) {
@@ -132,31 +131,31 @@ public class DescribeApisByIpControlResponseBody extends TeaModel {
     } 
 
     public static class ApiInfo extends TeaModel {
-        @NameInMap("ApiId")
+        @com.aliyun.core.annotation.NameInMap("ApiId")
         private String apiId;
 
-        @NameInMap("ApiName")
+        @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
 
-        @NameInMap("BoundTime")
+        @com.aliyun.core.annotation.NameInMap("BoundTime")
         private String boundTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("StageName")
+        @com.aliyun.core.annotation.NameInMap("StageName")
         private String stageName;
 
-        @NameInMap("Visibility")
+        @com.aliyun.core.annotation.NameInMap("Visibility")
         private String visibility;
 
         private ApiInfo(Builder builder) {
@@ -341,7 +340,7 @@ public class DescribeApisByIpControlResponseBody extends TeaModel {
 
     }
     public static class ApiInfos extends TeaModel {
-        @NameInMap("ApiInfo")
+        @com.aliyun.core.annotation.NameInMap("ApiInfo")
         private java.util.List < ApiInfo> apiInfo;
 
         private ApiInfos(Builder builder) {

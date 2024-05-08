@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDatasetInfoResponseBody</p>
  */
 public class DescribeDatasetInfoResponseBody extends TeaModel {
-    @NameInMap("DatasetInfo")
+    @com.aliyun.core.annotation.NameInMap("DatasetInfo")
     private DatasetInfo datasetInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDatasetInfoResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribeDatasetInfoResponseBody extends TeaModel {
     } 
 
     public static class DatasetInfo extends TeaModel {
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("DatasetId")
+        @com.aliyun.core.annotation.NameInMap("DatasetId")
         private String datasetId;
 
-        @NameInMap("DatasetName")
+        @com.aliyun.core.annotation.NameInMap("DatasetName")
         private String datasetName;
 
-        @NameInMap("DatasetType")
+        @com.aliyun.core.annotation.NameInMap("DatasetType")
         private String datasetType;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
         private DatasetInfo(Builder builder) {

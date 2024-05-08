@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLogConfigResponseBody</p>
  */
 public class DescribeLogConfigResponseBody extends TeaModel {
-    @NameInMap("LogInfos")
+    @com.aliyun.core.annotation.NameInMap("LogInfos")
     private LogInfos logInfos;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeLogConfigResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribeLogConfigResponseBody extends TeaModel {
     } 
 
     public static class LogInfo extends TeaModel {
-        @NameInMap("LogType")
+        @com.aliyun.core.annotation.NameInMap("LogType")
         private String logType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SlsLogStore")
+        @com.aliyun.core.annotation.NameInMap("SlsLogStore")
         private String slsLogStore;
 
-        @NameInMap("SlsProject")
+        @com.aliyun.core.annotation.NameInMap("SlsProject")
         private String slsProject;
 
         private LogInfo(Builder builder) {
@@ -173,7 +172,7 @@ public class DescribeLogConfigResponseBody extends TeaModel {
 
     }
     public static class LogInfos extends TeaModel {
-        @NameInMap("LogInfo")
+        @com.aliyun.core.annotation.NameInMap("LogInfo")
         private java.util.List < LogInfo> logInfo;
 
         private LogInfos(Builder builder) {

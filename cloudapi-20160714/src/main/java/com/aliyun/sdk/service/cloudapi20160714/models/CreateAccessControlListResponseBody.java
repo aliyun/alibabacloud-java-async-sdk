@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAccessControlListResponseBody</p>
  */
 public class CreateAccessControlListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("AclId")
+    private String aclId;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateAccessControlListResponseBody(Builder builder) {
+        this.aclId = builder.aclId;
         this.requestId = builder.requestId;
     }
 
@@ -28,6 +31,13 @@ public class CreateAccessControlListResponseBody extends TeaModel {
     }
 
     /**
+     * @return aclId
+     */
+    public String getAclId() {
+        return this.aclId;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -35,7 +45,16 @@ public class CreateAccessControlListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String aclId; 
         private String requestId; 
+
+        /**
+         * AclId.
+         */
+        public Builder aclId(String aclId) {
+            this.aclId = aclId;
+            return this;
+        }
 
         /**
          * The ID of the request.

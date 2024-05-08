@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeIpControlsResponseBody</p>
  */
 public class DescribeIpControlsResponseBody extends TeaModel {
-    @NameInMap("IpControlInfos")
+    @com.aliyun.core.annotation.NameInMap("IpControlInfos")
     private IpControlInfos ipControlInfos;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeIpControlsResponseBody(Builder builder) {
@@ -132,25 +131,25 @@ public class DescribeIpControlsResponseBody extends TeaModel {
     } 
 
     public static class IpControlInfo extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("IpControlId")
+        @com.aliyun.core.annotation.NameInMap("IpControlId")
         private String ipControlId;
 
-        @NameInMap("IpControlName")
+        @com.aliyun.core.annotation.NameInMap("IpControlName")
         private String ipControlName;
 
-        @NameInMap("IpControlType")
+        @com.aliyun.core.annotation.NameInMap("IpControlType")
         private String ipControlType;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private IpControlInfo(Builder builder) {
@@ -293,7 +292,7 @@ public class DescribeIpControlsResponseBody extends TeaModel {
 
     }
     public static class IpControlInfos extends TeaModel {
-        @NameInMap("IpControlInfo")
+        @com.aliyun.core.annotation.NameInMap("IpControlInfo")
         private java.util.List < IpControlInfo> ipControlInfo;
 
         private IpControlInfos(Builder builder) {

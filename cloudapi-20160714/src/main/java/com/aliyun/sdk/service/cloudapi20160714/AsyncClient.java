@@ -397,6 +397,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeApisByTrafficControlResponse> describeApisByTrafficControl(DescribeApisByTrafficControlRequest request);
 
+    CompletableFuture<DescribeApisByVpcAccessResponse> describeApisByVpcAccess(DescribeApisByVpcAccessRequest request);
+
     CompletableFuture<DescribeApisWithStageNameIntegratedByAppResponse> describeApisWithStageNameIntegratedByApp(DescribeApisWithStageNameIntegratedByAppRequest request);
 
     CompletableFuture<DescribeAppResponse> describeApp(DescribeAppRequest request);

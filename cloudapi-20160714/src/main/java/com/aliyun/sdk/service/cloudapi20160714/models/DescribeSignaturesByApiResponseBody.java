@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSignaturesByApiResponseBody</p>
  */
 public class DescribeSignaturesByApiResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Signatures")
+    @com.aliyun.core.annotation.NameInMap("Signatures")
     private Signatures signatures;
 
     private DescribeSignaturesByApiResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeSignaturesByApiResponseBody extends TeaModel {
     } 
 
     public static class SignatureItem extends TeaModel {
-        @NameInMap("BoundTime")
+        @com.aliyun.core.annotation.NameInMap("BoundTime")
         private String boundTime;
 
-        @NameInMap("SignatureId")
+        @com.aliyun.core.annotation.NameInMap("SignatureId")
         private String signatureId;
 
-        @NameInMap("SignatureName")
+        @com.aliyun.core.annotation.NameInMap("SignatureName")
         private String signatureName;
 
         private SignatureItem(Builder builder) {
@@ -153,7 +152,7 @@ public class DescribeSignaturesByApiResponseBody extends TeaModel {
 
     }
     public static class Signatures extends TeaModel {
-        @NameInMap("SignatureItem")
+        @com.aliyun.core.annotation.NameInMap("SignatureItem")
         private java.util.List < SignatureItem> signatureItem;
 
         private Signatures(Builder builder) {

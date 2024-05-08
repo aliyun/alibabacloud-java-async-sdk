@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAppSecurityResponseBody</p>
  */
 public class DescribeAppSecurityResponseBody extends TeaModel {
-    @NameInMap("AppCode")
+    @com.aliyun.core.annotation.NameInMap("AppCode")
     private String appCode;
 
-    @NameInMap("AppKey")
+    @com.aliyun.core.annotation.NameInMap("AppKey")
     private String appKey;
 
-    @NameInMap("AppSecret")
+    @com.aliyun.core.annotation.NameInMap("AppSecret")
     private String appSecret;
 
-    @NameInMap("CreatedTime")
+    @com.aliyun.core.annotation.NameInMap("CreatedTime")
     private String createdTime;
 
-    @NameInMap("ModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("ModifiedTime")
     private String modifiedTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAppSecurityResponseBody(Builder builder) {

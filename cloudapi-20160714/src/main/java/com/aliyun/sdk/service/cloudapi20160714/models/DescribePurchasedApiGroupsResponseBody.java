@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePurchasedApiGroupsResponseBody</p>
  */
 public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("PurchasedApiGroupAttributes")
+    @com.aliyun.core.annotation.NameInMap("PurchasedApiGroupAttributes")
     private PurchasedApiGroupAttributes purchasedApiGroupAttributes;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribePurchasedApiGroupsResponseBody(Builder builder) {
@@ -132,34 +131,34 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
     } 
 
     public static class PurchasedApiGroupAttribute extends TeaModel {
-        @NameInMap("BillingType")
+        @com.aliyun.core.annotation.NameInMap("BillingType")
         private String billingType;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("InvokeTimesMax")
+        @com.aliyun.core.annotation.NameInMap("InvokeTimesMax")
         private Long invokeTimesMax;
 
-        @NameInMap("InvokeTimesNow")
+        @com.aliyun.core.annotation.NameInMap("InvokeTimesNow")
         private Long invokeTimesNow;
 
-        @NameInMap("PurchasedTime")
+        @com.aliyun.core.annotation.NameInMap("PurchasedTime")
         private String purchasedTime;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private PurchasedApiGroupAttribute(Builder builder) {
@@ -357,7 +356,7 @@ public class DescribePurchasedApiGroupsResponseBody extends TeaModel {
 
     }
     public static class PurchasedApiGroupAttributes extends TeaModel {
-        @NameInMap("PurchasedApiGroupAttribute")
+        @com.aliyun.core.annotation.NameInMap("PurchasedApiGroupAttribute")
         private java.util.List < PurchasedApiGroupAttribute> purchasedApiGroupAttribute;
 
         private PurchasedApiGroupAttributes(Builder builder) {

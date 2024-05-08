@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,53 +11,53 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyInstanceAttributeRequest</p>
  */
 public class ModifyInstanceAttributeRequest extends Request {
-    @Query
-    @NameInMap("DeleteVpcIpBlock")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeleteVpcIpBlock")
     private String deleteVpcIpBlock;
 
-    @Query
-    @NameInMap("EgressIpv6Enable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EgressIpv6Enable")
     private String egressIpv6Enable;
 
-    @Query
-    @NameInMap("HttpsPolicy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpsPolicy")
     private String httpsPolicy;
 
-    @Query
-    @NameInMap("IPV6Enabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IPV6Enabled")
     private String IPV6Enabled;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @Query
-    @NameInMap("IntranetSegments")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntranetSegments")
     private String intranetSegments;
 
-    @Query
-    @NameInMap("MaintainEndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaintainEndTime")
     private String maintainEndTime;
 
-    @Query
-    @NameInMap("MaintainStartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaintainStartTime")
     private String maintainStartTime;
 
-    @Query
-    @NameInMap("ToConnectVpcIpBlock")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ToConnectVpcIpBlock")
     private ToConnectVpcIpBlock toConnectVpcIpBlock;
 
-    @Query
-    @NameInMap("Token")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Token")
     private String token;
 
-    @Query
-    @NameInMap("VpcSlbIntranetEnable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcSlbIntranetEnable")
     private String vpcSlbIntranetEnable;
 
     private ModifyInstanceAttributeRequest(Builder builder) {
@@ -325,16 +324,16 @@ public class ModifyInstanceAttributeRequest extends Request {
     } 
 
     public static class ToConnectVpcIpBlock extends TeaModel {
-        @NameInMap("CidrBlock")
+        @com.aliyun.core.annotation.NameInMap("CidrBlock")
         private String cidrBlock;
 
-        @NameInMap("Customized")
+        @com.aliyun.core.annotation.NameInMap("Customized")
         private Boolean customized;
 
-        @NameInMap("VswitchId")
+        @com.aliyun.core.annotation.NameInMap("VswitchId")
         private String vswitchId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private ToConnectVpcIpBlock(Builder builder) {

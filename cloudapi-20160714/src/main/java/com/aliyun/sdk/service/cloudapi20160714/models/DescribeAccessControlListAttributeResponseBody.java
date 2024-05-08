@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,26 +11,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAccessControlListAttributeResponseBody</p>
  */
 public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
-    @NameInMap("AclEntrys")
+    @com.aliyun.core.annotation.NameInMap("AclEntrys")
     private AclEntrys aclEntrys;
 
-    @NameInMap("AclId")
+    @com.aliyun.core.annotation.NameInMap("AclId")
     private String aclId;
 
-    @NameInMap("AclName")
+    @com.aliyun.core.annotation.NameInMap("AclName")
     private String aclName;
 
-    @NameInMap("IsUsed")
-    private String isUsed;
+    @com.aliyun.core.annotation.NameInMap("AddressIPVersion")
+    private String addressIPVersion;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAccessControlListAttributeResponseBody(Builder builder) {
         this.aclEntrys = builder.aclEntrys;
         this.aclId = builder.aclId;
         this.aclName = builder.aclName;
-        this.isUsed = builder.isUsed;
+        this.addressIPVersion = builder.addressIPVersion;
         this.requestId = builder.requestId;
     }
 
@@ -65,10 +64,10 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
     }
 
     /**
-     * @return isUsed
+     * @return addressIPVersion
      */
-    public String getIsUsed() {
-        return this.isUsed;
+    public String getAddressIPVersion() {
+        return this.addressIPVersion;
     }
 
     /**
@@ -82,7 +81,7 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
         private AclEntrys aclEntrys; 
         private String aclId; 
         private String aclName; 
-        private String isUsed; 
+        private String addressIPVersion; 
         private String requestId; 
 
         /**
@@ -110,10 +109,10 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the policy was used.
+         * AddressIPVersion.
          */
-        public Builder isUsed(String isUsed) {
-            this.isUsed = isUsed;
+        public Builder addressIPVersion(String addressIPVersion) {
+            this.addressIPVersion = addressIPVersion;
             return this;
         }
 
@@ -132,10 +131,10 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
     } 
 
     public static class AclEntry extends TeaModel {
-        @NameInMap("AclEntryComment")
+        @com.aliyun.core.annotation.NameInMap("AclEntryComment")
         private String aclEntryComment;
 
-        @NameInMap("AclEntryIp")
+        @com.aliyun.core.annotation.NameInMap("AclEntryIp")
         private String aclEntryIp;
 
         private AclEntry(Builder builder) {
@@ -193,7 +192,7 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
 
     }
     public static class AclEntrys extends TeaModel {
-        @NameInMap("AclEntry")
+        @com.aliyun.core.annotation.NameInMap("AclEntry")
         private java.util.List < AclEntry> aclEntry;
 
         private AclEntrys(Builder builder) {

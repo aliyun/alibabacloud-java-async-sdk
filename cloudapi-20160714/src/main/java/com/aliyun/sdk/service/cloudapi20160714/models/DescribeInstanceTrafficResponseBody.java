@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceTrafficResponseBody</p>
  */
 public class DescribeInstanceTrafficResponseBody extends TeaModel {
-    @NameInMap("InstanceTraffic")
+    @com.aliyun.core.annotation.NameInMap("InstanceTraffic")
     private InstanceTraffic instanceTraffic;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceTrafficResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeInstanceTrafficResponseBody extends TeaModel {
     } 
 
     public static class MonitorItem extends TeaModel {
-        @NameInMap("Item")
+        @com.aliyun.core.annotation.NameInMap("Item")
         private String item;
 
-        @NameInMap("ItemTime")
+        @com.aliyun.core.annotation.NameInMap("ItemTime")
         private String itemTime;
 
-        @NameInMap("ItemValue")
+        @com.aliyun.core.annotation.NameInMap("ItemValue")
         private String itemValue;
 
         private MonitorItem(Builder builder) {
@@ -157,7 +156,7 @@ public class DescribeInstanceTrafficResponseBody extends TeaModel {
 
     }
     public static class InstanceTraffic extends TeaModel {
-        @NameInMap("MonitorItem")
+        @com.aliyun.core.annotation.NameInMap("MonitorItem")
         private java.util.List < MonitorItem> monitorItem;
 
         private InstanceTraffic(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RemoveVpcAccessResponseBody</p>
  */
 public class RemoveVpcAccessResponseBody extends TeaModel {
-    @NameInMap("Apis")
+    @com.aliyun.core.annotation.NameInMap("Apis")
     private Apis apis;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private RemoveVpcAccessResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class RemoveVpcAccessResponseBody extends TeaModel {
     } 
 
     public static class Api extends TeaModel {
-        @NameInMap("ApiId")
+        @com.aliyun.core.annotation.NameInMap("ApiId")
         private String apiId;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("StageId")
+        @com.aliyun.core.annotation.NameInMap("StageId")
         private String stageId;
 
         private Api(Builder builder) {
@@ -153,7 +152,7 @@ public class RemoveVpcAccessResponseBody extends TeaModel {
 
     }
     public static class Apis extends TeaModel {
-        @NameInMap("Api")
+        @com.aliyun.core.annotation.NameInMap("Api")
         private java.util.List < Api> api;
 
         private Apis(Builder builder) {

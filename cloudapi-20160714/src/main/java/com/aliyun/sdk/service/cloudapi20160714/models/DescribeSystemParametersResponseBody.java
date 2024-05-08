@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSystemParametersResponseBody</p>
  */
 public class DescribeSystemParametersResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SystemParams")
+    @com.aliyun.core.annotation.NameInMap("SystemParams")
     private SystemParams systemParams;
 
     private DescribeSystemParametersResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
     } 
 
     public static class SystemParamItem extends TeaModel {
-        @NameInMap("DemoValue")
+        @com.aliyun.core.annotation.NameInMap("DemoValue")
         private String demoValue;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ParamName")
+        @com.aliyun.core.annotation.NameInMap("ParamName")
         private String paramName;
 
-        @NameInMap("ParamType")
+        @com.aliyun.core.annotation.NameInMap("ParamType")
         private String paramType;
 
         private SystemParamItem(Builder builder) {
@@ -173,7 +172,7 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
 
     }
     public static class SystemParams extends TeaModel {
-        @NameInMap("SystemParamItem")
+        @com.aliyun.core.annotation.NameInMap("SystemParamItem")
         private java.util.List < SystemParamItem> systemParamItem;
 
         private SystemParams(Builder builder) {

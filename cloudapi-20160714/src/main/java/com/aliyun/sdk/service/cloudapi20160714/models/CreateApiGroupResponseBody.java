@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateApiGroupResponseBody</p>
  */
 public class CreateApiGroupResponseBody extends TeaModel {
-    @NameInMap("BasePath")
+    @com.aliyun.core.annotation.NameInMap("BasePath")
     private String basePath;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubDomain")
+    @com.aliyun.core.annotation.NameInMap("SubDomain")
     private String subDomain;
 
-    @NameInMap("TagStatus")
+    @com.aliyun.core.annotation.NameInMap("TagStatus")
     private Boolean tagStatus;
 
     private CreateApiGroupResponseBody(Builder builder) {

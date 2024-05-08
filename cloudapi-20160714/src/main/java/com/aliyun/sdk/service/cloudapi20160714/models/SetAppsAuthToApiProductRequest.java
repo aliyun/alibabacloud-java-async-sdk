@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,26 +11,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetAppsAuthToApiProductRequest</p>
  */
 public class SetAppsAuthToApiProductRequest extends Request {
-    @Query
-    @NameInMap("ApiProductId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApiProductId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String apiProductId;
 
-    @Query
-    @NameInMap("AppIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Long > appIds;
 
-    @Query
-    @NameInMap("AuthValidTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthValidTime")
     private String authValidTime;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private SetAppsAuthToApiProductRequest(Builder builder) {

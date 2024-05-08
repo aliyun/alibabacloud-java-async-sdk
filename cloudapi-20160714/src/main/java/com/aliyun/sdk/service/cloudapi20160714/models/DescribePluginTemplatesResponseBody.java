@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePluginTemplatesResponseBody</p>
  */
 public class DescribePluginTemplatesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Templates")
+    @com.aliyun.core.annotation.NameInMap("Templates")
     private Templates templates;
 
     private DescribePluginTemplatesResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
     } 
 
     public static class Template extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DocumentAnchor")
+        @com.aliyun.core.annotation.NameInMap("DocumentAnchor")
         private String documentAnchor;
 
-        @NameInMap("DocumentId")
+        @com.aliyun.core.annotation.NameInMap("DocumentId")
         private String documentId;
 
-        @NameInMap("Sample")
+        @com.aliyun.core.annotation.NameInMap("Sample")
         private String sample;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private Template(Builder builder) {
@@ -193,7 +192,7 @@ public class DescribePluginTemplatesResponseBody extends TeaModel {
 
     }
     public static class Templates extends TeaModel {
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private java.util.List < Template> template;
 
         private Templates(Builder builder) {

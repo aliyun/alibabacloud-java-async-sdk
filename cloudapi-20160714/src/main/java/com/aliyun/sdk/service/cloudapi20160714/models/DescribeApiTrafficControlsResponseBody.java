@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeApiTrafficControlsResponseBody</p>
  */
 public class DescribeApiTrafficControlsResponseBody extends TeaModel {
-    @NameInMap("ApiTrafficControls")
+    @com.aliyun.core.annotation.NameInMap("ApiTrafficControls")
     private ApiTrafficControls apiTrafficControls;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeApiTrafficControlsResponseBody(Builder builder) {
@@ -132,19 +131,19 @@ public class DescribeApiTrafficControlsResponseBody extends TeaModel {
     } 
 
     public static class ApiTrafficControlItem extends TeaModel {
-        @NameInMap("ApiId")
+        @com.aliyun.core.annotation.NameInMap("ApiId")
         private String apiId;
 
-        @NameInMap("ApiName")
+        @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
 
-        @NameInMap("BoundTime")
+        @com.aliyun.core.annotation.NameInMap("BoundTime")
         private String boundTime;
 
-        @NameInMap("TrafficControlId")
+        @com.aliyun.core.annotation.NameInMap("TrafficControlId")
         private String trafficControlId;
 
-        @NameInMap("TrafficControlName")
+        @com.aliyun.core.annotation.NameInMap("TrafficControlName")
         private String trafficControlName;
 
         private ApiTrafficControlItem(Builder builder) {
@@ -253,7 +252,7 @@ public class DescribeApiTrafficControlsResponseBody extends TeaModel {
 
     }
     public static class ApiTrafficControls extends TeaModel {
-        @NameInMap("ApiTrafficControlItem")
+        @com.aliyun.core.annotation.NameInMap("ApiTrafficControlItem")
         private java.util.List < ApiTrafficControlItem> apiTrafficControlItem;
 
         private ApiTrafficControls(Builder builder) {

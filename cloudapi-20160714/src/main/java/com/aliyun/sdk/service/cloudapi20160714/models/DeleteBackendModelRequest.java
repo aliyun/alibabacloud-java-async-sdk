@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteBackendModelRequest</p>
  */
 public class DeleteBackendModelRequest extends Request {
-    @Query
-    @NameInMap("BackendId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackendId")
     private String backendId;
 
-    @Query
-    @NameInMap("BackendModelId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackendModelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String backendModelId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("StageName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StageName")
     private String stageName;
 
     private DeleteBackendModelRequest(Builder builder) {

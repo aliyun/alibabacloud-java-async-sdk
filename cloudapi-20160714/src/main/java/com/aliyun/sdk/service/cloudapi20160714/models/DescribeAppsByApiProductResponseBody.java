@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAppsByApiProductResponseBody</p>
  */
 public class DescribeAppsByApiProductResponseBody extends TeaModel {
-    @NameInMap("AuthorizedApps")
+    @com.aliyun.core.annotation.NameInMap("AuthorizedApps")
     private AuthorizedApps authorizedApps;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeAppsByApiProductResponseBody(Builder builder) {
@@ -132,22 +131,22 @@ public class DescribeAppsByApiProductResponseBody extends TeaModel {
     } 
 
     public static class AuthorizedApp extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private Long appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("AuthValidTime")
+        @com.aliyun.core.annotation.NameInMap("AuthValidTime")
         private String authValidTime;
 
-        @NameInMap("AuthorizedTime")
+        @com.aliyun.core.annotation.NameInMap("AuthorizedTime")
         private String authorizedTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Extend")
+        @com.aliyun.core.annotation.NameInMap("Extend")
         private String extend;
 
         private AuthorizedApp(Builder builder) {
@@ -273,7 +272,7 @@ public class DescribeAppsByApiProductResponseBody extends TeaModel {
 
     }
     public static class AuthorizedApps extends TeaModel {
-        @NameInMap("AuthorizedApp")
+        @com.aliyun.core.annotation.NameInMap("AuthorizedApp")
         private java.util.List < AuthorizedApp> authorizedApp;
 
         private AuthorizedApps(Builder builder) {

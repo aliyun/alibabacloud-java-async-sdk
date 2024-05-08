@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAbolishApiTaskResponseBody</p>
  */
 public class DescribeAbolishApiTaskResponseBody extends TeaModel {
-    @NameInMap("ApiAbolishResults")
+    @com.aliyun.core.annotation.NameInMap("ApiAbolishResults")
     private ApiAbolishResults apiAbolishResults;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAbolishApiTaskResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class DescribeAbolishApiTaskResponseBody extends TeaModel {
     } 
 
     public static class ApiAbolishResult extends TeaModel {
-        @NameInMap("AbolishStatus")
+        @com.aliyun.core.annotation.NameInMap("AbolishStatus")
         private String abolishStatus;
 
-        @NameInMap("ApiName")
+        @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
 
-        @NameInMap("ApiUid")
+        @com.aliyun.core.annotation.NameInMap("ApiUid")
         private String apiUid;
 
-        @NameInMap("ErrorMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("StageId")
+        @com.aliyun.core.annotation.NameInMap("StageId")
         private String stageId;
 
-        @NameInMap("StageName")
+        @com.aliyun.core.annotation.NameInMap("StageName")
         private String stageName;
 
         private ApiAbolishResult(Builder builder) {
@@ -257,7 +256,7 @@ public class DescribeAbolishApiTaskResponseBody extends TeaModel {
 
     }
     public static class ApiAbolishResults extends TeaModel {
-        @NameInMap("ApiAbolishResult")
+        @com.aliyun.core.annotation.NameInMap("ApiAbolishResult")
         private java.util.List < ApiAbolishResult> apiAbolishResult;
 
         private ApiAbolishResults(Builder builder) {

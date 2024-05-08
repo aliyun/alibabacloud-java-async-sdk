@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAuthorizedApisResponseBody</p>
  */
 public class DescribeAuthorizedApisResponseBody extends TeaModel {
-    @NameInMap("AuthorizedApis")
+    @com.aliyun.core.annotation.NameInMap("AuthorizedApis")
     private AuthorizedApis authorizedApis;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeAuthorizedApisResponseBody(Builder builder) {
@@ -132,37 +131,37 @@ public class DescribeAuthorizedApisResponseBody extends TeaModel {
     } 
 
     public static class AuthorizedApi extends TeaModel {
-        @NameInMap("ApiId")
+        @com.aliyun.core.annotation.NameInMap("ApiId")
         private String apiId;
 
-        @NameInMap("ApiName")
+        @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
 
-        @NameInMap("AuthVaildTime")
+        @com.aliyun.core.annotation.NameInMap("AuthVaildTime")
         private String authVaildTime;
 
-        @NameInMap("AuthorizationSource")
+        @com.aliyun.core.annotation.NameInMap("AuthorizationSource")
         private String authorizationSource;
 
-        @NameInMap("AuthorizedTime")
+        @com.aliyun.core.annotation.NameInMap("AuthorizedTime")
         private String authorizedTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("StageName")
+        @com.aliyun.core.annotation.NameInMap("StageName")
         private String stageName;
 
         private AuthorizedApi(Builder builder) {
@@ -385,7 +384,7 @@ public class DescribeAuthorizedApisResponseBody extends TeaModel {
 
     }
     public static class AuthorizedApis extends TeaModel {
-        @NameInMap("AuthorizedApi")
+        @com.aliyun.core.annotation.NameInMap("AuthorizedApi")
         private java.util.List < AuthorizedApi> authorizedApi;
 
         private AuthorizedApis(Builder builder) {

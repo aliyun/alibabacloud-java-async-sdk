@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyApiGroupNetworkPolicyRequest</p>
  */
 public class ModifyApiGroupNetworkPolicyRequest extends Request {
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("HttpsPolicy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpsPolicy")
     private String httpsPolicy;
 
-    @Query
-    @NameInMap("InnerDomainEnable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InnerDomainEnable")
     private Boolean innerDomainEnable;
 
-    @Query
-    @NameInMap("InternetEnable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetEnable")
     private Boolean internetEnable;
 
-    @Query
-    @NameInMap("InternetIPV6Enable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetIPV6Enable")
     private Boolean internetIPV6Enable;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("VpcIntranetEnable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcIntranetEnable")
     private Boolean vpcIntranetEnable;
 
-    @Query
-    @NameInMap("VpcSlbIntranetEnable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcSlbIntranetEnable")
     private Boolean vpcSlbIntranetEnable;
 
     private ModifyApiGroupNetworkPolicyRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePluginsResponseBody</p>
  */
 public class DescribePluginsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("Plugins")
+    @com.aliyun.core.annotation.NameInMap("Plugins")
     private Plugins plugins;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribePluginsResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribePluginsResponseBody extends TeaModel {
     } 
 
     public static class TagInfo extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private TagInfo(Builder builder) {
@@ -193,7 +192,7 @@ public class DescribePluginsResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("TagInfo")
+        @com.aliyun.core.annotation.NameInMap("TagInfo")
         private java.util.List < TagInfo> tagInfo;
 
         private Tags(Builder builder) {
@@ -234,31 +233,31 @@ public class DescribePluginsResponseBody extends TeaModel {
 
     }
     public static class PluginAttribute extends TeaModel {
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("PluginData")
+        @com.aliyun.core.annotation.NameInMap("PluginData")
         private String pluginData;
 
-        @NameInMap("PluginId")
+        @com.aliyun.core.annotation.NameInMap("PluginId")
         private String pluginId;
 
-        @NameInMap("PluginName")
+        @com.aliyun.core.annotation.NameInMap("PluginName")
         private String pluginName;
 
-        @NameInMap("PluginType")
+        @com.aliyun.core.annotation.NameInMap("PluginType")
         private String pluginType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
         private PluginAttribute(Builder builder) {
@@ -435,7 +434,7 @@ public class DescribePluginsResponseBody extends TeaModel {
 
     }
     public static class Plugins extends TeaModel {
-        @NameInMap("PluginAttribute")
+        @com.aliyun.core.annotation.NameInMap("PluginAttribute")
         private java.util.List < PluginAttribute> pluginAttribute;
 
         private Plugins(Builder builder) {

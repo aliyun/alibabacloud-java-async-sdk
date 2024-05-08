@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,121 +11,121 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateApiRequest</p>
  */
 public class CreateApiRequest extends Request {
-    @Query
-    @NameInMap("AllowSignatureMethod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllowSignatureMethod")
     private String allowSignatureMethod;
 
-    @Query
-    @NameInMap("ApiName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApiName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String apiName;
 
-    @Query
-    @NameInMap("AppCodeAuthType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppCodeAuthType")
     private String appCodeAuthType;
 
-    @Query
-    @NameInMap("AuthType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthType")
     private String authType;
 
-    @Query
-    @NameInMap("BackendEnable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackendEnable")
     private Boolean backendEnable;
 
-    @Query
-    @NameInMap("BackendId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackendId")
     private String backendId;
 
-    @Body
-    @NameInMap("ConstantParameters")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConstantParameters")
     private String constantParameters;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DisableInternet")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisableInternet")
     private Boolean disableInternet;
 
-    @Body
-    @NameInMap("ErrorCodeSamples")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ErrorCodeSamples")
     private String errorCodeSamples;
 
-    @Body
-    @NameInMap("FailResultSample")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FailResultSample")
     private String failResultSample;
 
-    @Query
-    @NameInMap("ForceNonceCheck")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForceNonceCheck")
     private Boolean forceNonceCheck;
 
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("OpenIdConnectConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpenIdConnectConfig")
     private String openIdConnectConfig;
 
-    @Query
-    @NameInMap("RequestConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String requestConfig;
 
-    @Body
-    @NameInMap("RequestParameters")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RequestParameters")
     private String requestParameters;
 
-    @Query
-    @NameInMap("ResultBodyModel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResultBodyModel")
     private String resultBodyModel;
 
-    @Body
-    @NameInMap("ResultDescriptions")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResultDescriptions")
     private String resultDescriptions;
 
-    @Body
-    @NameInMap("ResultSample")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResultSample")
     private String resultSample;
 
-    @Query
-    @NameInMap("ResultType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResultType")
     private String resultType;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("ServiceConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceConfig;
 
-    @Body
-    @NameInMap("ServiceParameters")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceParameters")
     private String serviceParameters;
 
-    @Body
-    @NameInMap("ServiceParametersMap")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceParametersMap")
     private String serviceParametersMap;
 
-    @Body
-    @NameInMap("SystemParameters")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SystemParameters")
     private String systemParameters;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("Visibility")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Visibility")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String visibility;
 
-    @Query
-    @NameInMap("WebSocketApiType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WebSocketApiType")
     private String webSocketApiType;
 
     private CreateApiRequest(Builder builder) {
@@ -729,10 +728,10 @@ public class CreateApiRequest extends Request {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

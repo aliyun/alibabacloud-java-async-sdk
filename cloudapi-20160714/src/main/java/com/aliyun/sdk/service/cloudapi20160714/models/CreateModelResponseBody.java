@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateModelResponseBody</p>
  */
 public class CreateModelResponseBody extends TeaModel {
-    @NameInMap("CreatedTime")
+    @com.aliyun.core.annotation.NameInMap("CreatedTime")
     private String createdTime;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @NameInMap("ModelId")
+    @com.aliyun.core.annotation.NameInMap("ModelId")
     private String modelId;
 
-    @NameInMap("ModelName")
+    @com.aliyun.core.annotation.NameInMap("ModelName")
     private String modelName;
 
-    @NameInMap("ModelRef")
+    @com.aliyun.core.annotation.NameInMap("ModelRef")
     private String modelRef;
 
-    @NameInMap("ModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("ModifiedTime")
     private String modifiedTime;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Schema")
+    @com.aliyun.core.annotation.NameInMap("Schema")
     private String schema;
 
     private CreateModelResponseBody(Builder builder) {

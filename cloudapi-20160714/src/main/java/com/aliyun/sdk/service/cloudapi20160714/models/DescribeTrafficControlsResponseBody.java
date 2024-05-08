@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTrafficControlsResponseBody</p>
  */
 public class DescribeTrafficControlsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("TrafficControls")
+    @com.aliyun.core.annotation.NameInMap("TrafficControls")
     private TrafficControls trafficControls;
 
     private DescribeTrafficControlsResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
     } 
 
     public static class Special extends TeaModel {
-        @NameInMap("SpecialKey")
+        @com.aliyun.core.annotation.NameInMap("SpecialKey")
         private String specialKey;
 
-        @NameInMap("TrafficValue")
+        @com.aliyun.core.annotation.NameInMap("TrafficValue")
         private Integer trafficValue;
 
         private Special(Builder builder) {
@@ -193,7 +192,7 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
 
     }
     public static class Specials extends TeaModel {
-        @NameInMap("Special")
+        @com.aliyun.core.annotation.NameInMap("Special")
         private java.util.List < Special> special;
 
         private Specials(Builder builder) {
@@ -234,10 +233,10 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
 
     }
     public static class SpecialPolicy extends TeaModel {
-        @NameInMap("SpecialType")
+        @com.aliyun.core.annotation.NameInMap("SpecialType")
         private String specialType;
 
-        @NameInMap("Specials")
+        @com.aliyun.core.annotation.NameInMap("Specials")
         private Specials specials;
 
         private SpecialPolicy(Builder builder) {
@@ -299,7 +298,7 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
 
     }
     public static class SpecialPolicies extends TeaModel {
-        @NameInMap("SpecialPolicy")
+        @com.aliyun.core.annotation.NameInMap("SpecialPolicy")
         private java.util.List < SpecialPolicy> specialPolicy;
 
         private SpecialPolicies(Builder builder) {
@@ -340,34 +339,34 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
 
     }
     public static class TrafficControl extends TeaModel {
-        @NameInMap("ApiDefault")
+        @com.aliyun.core.annotation.NameInMap("ApiDefault")
         private Integer apiDefault;
 
-        @NameInMap("AppDefault")
+        @com.aliyun.core.annotation.NameInMap("AppDefault")
         private Integer appDefault;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("SpecialPolicies")
+        @com.aliyun.core.annotation.NameInMap("SpecialPolicies")
         private SpecialPolicies specialPolicies;
 
-        @NameInMap("TrafficControlId")
+        @com.aliyun.core.annotation.NameInMap("TrafficControlId")
         private String trafficControlId;
 
-        @NameInMap("TrafficControlName")
+        @com.aliyun.core.annotation.NameInMap("TrafficControlName")
         private String trafficControlName;
 
-        @NameInMap("TrafficControlUnit")
+        @com.aliyun.core.annotation.NameInMap("TrafficControlUnit")
         private String trafficControlUnit;
 
-        @NameInMap("UserDefault")
+        @com.aliyun.core.annotation.NameInMap("UserDefault")
         private Integer userDefault;
 
         private TrafficControl(Builder builder) {
@@ -566,7 +565,7 @@ public class DescribeTrafficControlsResponseBody extends TeaModel {
 
     }
     public static class TrafficControls extends TeaModel {
-        @NameInMap("TrafficControl")
+        @com.aliyun.core.annotation.NameInMap("TrafficControl")
         private java.util.List < TrafficControl> trafficControl;
 
         private TrafficControls(Builder builder) {

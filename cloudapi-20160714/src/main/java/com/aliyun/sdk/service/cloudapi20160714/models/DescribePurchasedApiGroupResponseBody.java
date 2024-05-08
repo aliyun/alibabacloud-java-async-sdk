@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePurchasedApiGroupResponseBody</p>
  */
 public class DescribePurchasedApiGroupResponseBody extends TeaModel {
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("Domains")
+    @com.aliyun.core.annotation.NameInMap("Domains")
     private Domains domains;
 
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
-    @NameInMap("PurchasedTime")
+    @com.aliyun.core.annotation.NameInMap("PurchasedTime")
     private String purchasedTime;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribePurchasedApiGroupResponseBody(Builder builder) {
@@ -196,7 +195,7 @@ public class DescribePurchasedApiGroupResponseBody extends TeaModel {
     } 
 
     public static class DomainItem extends TeaModel {
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
         private DomainItem(Builder builder) {
@@ -237,7 +236,7 @@ public class DescribePurchasedApiGroupResponseBody extends TeaModel {
 
     }
     public static class Domains extends TeaModel {
-        @NameInMap("DomainItem")
+        @com.aliyun.core.annotation.NameInMap("DomainItem")
         private java.util.List < DomainItem> domainItem;
 
         private Domains(Builder builder) {

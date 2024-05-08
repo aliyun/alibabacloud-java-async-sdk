@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,49 +11,49 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainResponseBody</p>
  */
 public class DescribeDomainResponseBody extends TeaModel {
-    @NameInMap("CertificateBody")
+    @com.aliyun.core.annotation.NameInMap("CertificateBody")
     private String certificateBody;
 
-    @NameInMap("CertificateId")
+    @com.aliyun.core.annotation.NameInMap("CertificateId")
     private String certificateId;
 
-    @NameInMap("CertificateName")
+    @com.aliyun.core.annotation.NameInMap("CertificateName")
     private String certificateName;
 
-    @NameInMap("CertificatePrivateKey")
+    @com.aliyun.core.annotation.NameInMap("CertificatePrivateKey")
     private String certificatePrivateKey;
 
-    @NameInMap("CertificateValidEnd")
+    @com.aliyun.core.annotation.NameInMap("CertificateValidEnd")
     private Long certificateValidEnd;
 
-    @NameInMap("CertificateValidStart")
+    @com.aliyun.core.annotation.NameInMap("CertificateValidStart")
     private Long certificateValidStart;
 
-    @NameInMap("DomainBindingStatus")
+    @com.aliyun.core.annotation.NameInMap("DomainBindingStatus")
     private String domainBindingStatus;
 
-    @NameInMap("DomainCNAMEStatus")
+    @com.aliyun.core.annotation.NameInMap("DomainCNAMEStatus")
     private String domainCNAMEStatus;
 
-    @NameInMap("DomainLegalStatus")
+    @com.aliyun.core.annotation.NameInMap("DomainLegalStatus")
     private String domainLegalStatus;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("DomainRemark")
+    @com.aliyun.core.annotation.NameInMap("DomainRemark")
     private String domainRemark;
 
-    @NameInMap("DomainWebSocketStatus")
+    @com.aliyun.core.annotation.NameInMap("DomainWebSocketStatus")
     private String domainWebSocketStatus;
 
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubDomain")
+    @com.aliyun.core.annotation.NameInMap("SubDomain")
     private String subDomain;
 
     private DescribeDomainResponseBody(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,39 +11,39 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetDomainCertificateRequest</p>
  */
 public class SetDomainCertificateRequest extends Request {
-    @Query
-    @NameInMap("CaCertificateBody")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CaCertificateBody")
     private String caCertificateBody;
 
-    @Query
-    @NameInMap("CertificateBody")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertificateBody")
     private String certificateBody;
 
-    @Query
-    @NameInMap("CertificateName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertificateName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String certificateName;
 
-    @Query
-    @NameInMap("CertificatePrivateKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertificatePrivateKey")
     private String certificatePrivateKey;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("SslVerifyDepth")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SslVerifyDepth")
     private String sslVerifyDepth;
 
     private SetDomainCertificateRequest(Builder builder) {

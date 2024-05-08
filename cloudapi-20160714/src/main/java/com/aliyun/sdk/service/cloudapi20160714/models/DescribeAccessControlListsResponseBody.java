@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAccessControlListsResponseBody</p>
  */
 public class DescribeAccessControlListsResponseBody extends TeaModel {
-    @NameInMap("Acls")
+    @com.aliyun.core.annotation.NameInMap("Acls")
     private Acls acls;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeAccessControlListsResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
     } 
 
     public static class Acl extends TeaModel {
-        @NameInMap("AclId")
+        @com.aliyun.core.annotation.NameInMap("AclId")
         private String aclId;
 
-        @NameInMap("AclName")
+        @com.aliyun.core.annotation.NameInMap("AclName")
         private String aclName;
 
-        @NameInMap("AddressIPVersion")
+        @com.aliyun.core.annotation.NameInMap("AddressIPVersion")
         private String addressIPVersion;
 
         private Acl(Builder builder) {
@@ -216,7 +215,7 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
 
     }
     public static class Acls extends TeaModel {
-        @NameInMap("Acl")
+        @com.aliyun.core.annotation.NameInMap("Acl")
         private java.util.List < Acl> acl;
 
         private Acls(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SdkGenerateByAppForRegionResponseBody</p>
  */
 public class SdkGenerateByAppForRegionResponseBody extends TeaModel {
-    @NameInMap("DownloadLink")
+    @com.aliyun.core.annotation.NameInMap("DownloadLink")
     private String downloadLink;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SdkGenerateByAppForRegionResponseBody(Builder builder) {

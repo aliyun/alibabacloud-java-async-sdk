@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstancesResponseBody</p>
  */
 public class DescribeInstancesResponseBody extends TeaModel {
-    @NameInMap("Instances")
+    @com.aliyun.core.annotation.NameInMap("Instances")
     private Instances instances;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeInstancesResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
     } 
 
     public static class SpecAttribute extends TeaModel {
-        @NameInMap("LocalName")
+        @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SpecAttribute(Builder builder) {
@@ -193,7 +192,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
     public static class InstanceSpecAttributes extends TeaModel {
-        @NameInMap("SpecAttribute")
+        @com.aliyun.core.annotation.NameInMap("SpecAttribute")
         private java.util.List < SpecAttribute> specAttribute;
 
         private InstanceSpecAttributes(Builder builder) {
@@ -234,16 +233,16 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
     public static class NetworkInterfaceAttribute extends TeaModel {
-        @NameInMap("CidrBlock")
+        @com.aliyun.core.annotation.NameInMap("CidrBlock")
         private String cidrBlock;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("VswitchId")
+        @com.aliyun.core.annotation.NameInMap("VswitchId")
         private String vswitchId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private NetworkInterfaceAttribute(Builder builder) {
@@ -335,7 +334,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
     public static class NetworkInterfaceAttributes extends TeaModel {
-        @NameInMap("NetworkInterfaceAttribute")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceAttribute")
         private java.util.List < NetworkInterfaceAttribute> networkInterfaceAttribute;
 
         private NetworkInterfaceAttributes(Builder builder) {
@@ -376,7 +375,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
     public static class PrivateDnsList extends TeaModel {
-        @NameInMap("PrivateDns")
+        @com.aliyun.core.annotation.NameInMap("PrivateDns")
         private java.util.List < String > privateDns;
 
         private PrivateDnsList(Builder builder) {
@@ -416,131 +415,236 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
     }
+    public static class TagInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private TagInfo(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TagInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public TagInfo build() {
+                return new TagInfo(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagInfo")
+        private java.util.List < TagInfo> tagInfo;
+
+        private Tags(Builder builder) {
+            this.tagInfo = builder.tagInfo;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagInfo
+         */
+        public java.util.List < TagInfo> getTagInfo() {
+            return this.tagInfo;
+        }
+
+        public static final class Builder {
+            private java.util.List < TagInfo> tagInfo; 
+
+            /**
+             * TagInfo.
+             */
+            public Builder tagInfo(java.util.List < TagInfo> tagInfo) {
+                this.tagInfo = tagInfo;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class InstanceAttribute extends TeaModel {
-        @NameInMap("AclId")
+        @com.aliyun.core.annotation.NameInMap("AclId")
         private String aclId;
 
-        @NameInMap("AclName")
+        @com.aliyun.core.annotation.NameInMap("AclName")
         private String aclName;
 
-        @NameInMap("AclStatus")
+        @com.aliyun.core.annotation.NameInMap("AclStatus")
         private String aclStatus;
 
-        @NameInMap("AclType")
+        @com.aliyun.core.annotation.NameInMap("AclType")
         private String aclType;
 
-        @NameInMap("ClassicEgressAddress")
+        @com.aliyun.core.annotation.NameInMap("ClassicEgressAddress")
         private String classicEgressAddress;
 
-        @NameInMap("ConnectCidrBlocks")
+        @com.aliyun.core.annotation.NameInMap("ConnectCidrBlocks")
         private String connectCidrBlocks;
 
-        @NameInMap("ConnectVpcId")
+        @com.aliyun.core.annotation.NameInMap("ConnectVpcId")
         private String connectVpcId;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("DedicatedInstanceType")
+        @com.aliyun.core.annotation.NameInMap("DedicatedInstanceType")
         private String dedicatedInstanceType;
 
-        @NameInMap("EgressIpv6Enable")
+        @com.aliyun.core.annotation.NameInMap("EgressIpv6Enable")
         private Boolean egressIpv6Enable;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("HttpsPolicies")
+        @com.aliyun.core.annotation.NameInMap("HttpsPolicies")
         private String httpsPolicies;
 
-        @NameInMap("IPV6AclId")
+        @com.aliyun.core.annotation.NameInMap("IPV6AclId")
         private String IPV6AclId;
 
-        @NameInMap("IPV6AclName")
+        @com.aliyun.core.annotation.NameInMap("IPV6AclName")
         private String IPV6AclName;
 
-        @NameInMap("IPV6AclStatus")
+        @com.aliyun.core.annotation.NameInMap("IPV6AclStatus")
         private String IPV6AclStatus;
 
-        @NameInMap("IPV6AclType")
+        @com.aliyun.core.annotation.NameInMap("IPV6AclType")
         private String IPV6AclType;
 
-        @NameInMap("InstanceChargeType")
+        @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
         private String instanceChargeType;
 
-        @NameInMap("InstanceCidrBlock")
+        @com.aliyun.core.annotation.NameInMap("InstanceCidrBlock")
         private String instanceCidrBlock;
 
-        @NameInMap("InstanceClusterId")
+        @com.aliyun.core.annotation.NameInMap("InstanceClusterId")
         private String instanceClusterId;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InstanceRpsLimit")
+        @com.aliyun.core.annotation.NameInMap("InstanceRpsLimit")
         private Integer instanceRpsLimit;
 
-        @NameInMap("InstanceSpec")
+        @com.aliyun.core.annotation.NameInMap("InstanceSpec")
         private String instanceSpec;
 
-        @NameInMap("InstanceSpecAttributes")
+        @com.aliyun.core.annotation.NameInMap("InstanceSpecAttributes")
         private InstanceSpecAttributes instanceSpecAttributes;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("InternetEgressAddress")
+        @com.aliyun.core.annotation.NameInMap("InternetEgressAddress")
         private String internetEgressAddress;
 
-        @NameInMap("IntranetSegments")
+        @com.aliyun.core.annotation.NameInMap("IntranetSegments")
         private String intranetSegments;
 
-        @NameInMap("MaintainEndTime")
+        @com.aliyun.core.annotation.NameInMap("MaintainEndTime")
         private String maintainEndTime;
 
-        @NameInMap("MaintainStartTime")
+        @com.aliyun.core.annotation.NameInMap("MaintainStartTime")
         private String maintainStartTime;
 
-        @NameInMap("NetworkInterfaceAttributes")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceAttributes")
         private NetworkInterfaceAttributes networkInterfaceAttributes;
 
-        @NameInMap("PrivateDnsList")
+        @com.aliyun.core.annotation.NameInMap("PrivateDnsList")
         private PrivateDnsList privateDnsList;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SupportIpv6")
+        @com.aliyun.core.annotation.NameInMap("SupportIpv6")
         private Boolean supportIpv6;
 
-        @NameInMap("UserVpcId")
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private Tags tags;
+
+        @com.aliyun.core.annotation.NameInMap("UserVpcId")
         private String userVpcId;
 
-        @NameInMap("UserVswitchId")
+        @com.aliyun.core.annotation.NameInMap("UserVswitchId")
         private String userVswitchId;
 
-        @NameInMap("VpcEgressAddress")
+        @com.aliyun.core.annotation.NameInMap("VpcEgressAddress")
         private String vpcEgressAddress;
 
-        @NameInMap("VpcIntranetEnable")
+        @com.aliyun.core.annotation.NameInMap("VpcIntranetEnable")
         private Boolean vpcIntranetEnable;
 
-        @NameInMap("VpcOwnerId")
+        @com.aliyun.core.annotation.NameInMap("VpcOwnerId")
         private Long vpcOwnerId;
 
-        @NameInMap("VpcSlbIntranetEnable")
+        @com.aliyun.core.annotation.NameInMap("VpcSlbIntranetEnable")
         private Boolean vpcSlbIntranetEnable;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
-        @NameInMap("ZoneLocalName")
+        @com.aliyun.core.annotation.NameInMap("ZoneLocalName")
         private String zoneLocalName;
 
         private InstanceAttribute(Builder builder) {
@@ -578,6 +682,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.regionId = builder.regionId;
             this.status = builder.status;
             this.supportIpv6 = builder.supportIpv6;
+            this.tags = builder.tags;
             this.userVpcId = builder.userVpcId;
             this.userVswitchId = builder.userVswitchId;
             this.vpcEgressAddress = builder.vpcEgressAddress;
@@ -835,6 +940,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public Tags getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return userVpcId
          */
         public String getUserVpcId() {
@@ -925,6 +1037,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String regionId; 
             private String status; 
             private Boolean supportIpv6; 
+            private Tags tags; 
             private String userVpcId; 
             private String userVswitchId; 
             private String vpcEgressAddress; 
@@ -1213,6 +1326,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * Tags.
+             */
+            public Builder tags(Tags tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
              * UserVpcId.
              */
             public Builder userVpcId(String userVpcId) {
@@ -1284,7 +1405,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
     public static class Instances extends TeaModel {
-        @NameInMap("InstanceAttribute")
+        @com.aliyun.core.annotation.NameInMap("InstanceAttribute")
         private java.util.List < InstanceAttribute> instanceAttribute;
 
         private Instances(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeApisWithStageNameIntegratedByAppResponseBody</p>
  */
 public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaModel {
-    @NameInMap("AppApiRelationInfos")
+    @com.aliyun.core.annotation.NameInMap("AppApiRelationInfos")
     private AppApiRelationInfos appApiRelationInfos;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeApisWithStageNameIntegratedByAppResponseBody(Builder builder) {
@@ -132,40 +131,40 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
     } 
 
     public static class AppApiRelationInfo extends TeaModel {
-        @NameInMap("ApiId")
+        @com.aliyun.core.annotation.NameInMap("ApiId")
         private String apiId;
 
-        @NameInMap("ApiName")
+        @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
 
-        @NameInMap("AuthorizationSource")
+        @com.aliyun.core.annotation.NameInMap("AuthorizationSource")
         private String authorizationSource;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("Method")
+        @com.aliyun.core.annotation.NameInMap("Method")
         private String method;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("StageNameAndAuth")
+        @com.aliyun.core.annotation.NameInMap("StageNameAndAuth")
         private java.util.Map < String, String > stageNameAndAuth;
 
         private AppApiRelationInfo(Builder builder) {
@@ -397,7 +396,7 @@ public class DescribeApisWithStageNameIntegratedByAppResponseBody extends TeaMod
 
     }
     public static class AppApiRelationInfos extends TeaModel {
-        @NameInMap("AppApiRelationInfo")
+        @com.aliyun.core.annotation.NameInMap("AppApiRelationInfo")
         private java.util.List < AppApiRelationInfo> appApiRelationInfo;
 
         private AppApiRelationInfos(Builder builder) {

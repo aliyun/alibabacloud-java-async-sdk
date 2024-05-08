@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDatasetItemInfoResponseBody</p>
  */
 public class DescribeDatasetItemInfoResponseBody extends TeaModel {
-    @NameInMap("DatasetItemInfo")
+    @com.aliyun.core.annotation.NameInMap("DatasetItemInfo")
     private DatasetItemInfo datasetItemInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDatasetItemInfoResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class DescribeDatasetItemInfoResponseBody extends TeaModel {
     } 
 
     public static class DatasetItemInfo extends TeaModel {
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("DatasetId")
+        @com.aliyun.core.annotation.NameInMap("DatasetId")
         private String datasetId;
 
-        @NameInMap("DatasetItemId")
+        @com.aliyun.core.annotation.NameInMap("DatasetItemId")
         private String datasetItemId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private DatasetItemInfo(Builder builder) {

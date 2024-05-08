@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ResetAppSecretRequest</p>
  */
 public class ResetAppSecretRequest extends Request {
-    @Query
-    @NameInMap("AppKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appKey;
 
-    @Query
-    @NameInMap("NewAppKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewAppKey")
     private String newAppKey;
 
-    @Query
-    @NameInMap("NewAppSecret")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewAppSecret")
     private String newAppSecret;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private ResetAppSecretRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeIpControlPolicyItemsResponseBody</p>
  */
 public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
-    @NameInMap("IpControlPolicyItems")
+    @com.aliyun.core.annotation.NameInMap("IpControlPolicyItems")
     private IpControlPolicyItems ipControlPolicyItems;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeIpControlPolicyItemsResponseBody(Builder builder) {
@@ -132,19 +131,19 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
     } 
 
     public static class IpControlPolicyItem extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("CidrIp")
+        @com.aliyun.core.annotation.NameInMap("CidrIp")
         private String cidrIp;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("PolicyItemId")
+        @com.aliyun.core.annotation.NameInMap("PolicyItemId")
         private String policyItemId;
 
         private IpControlPolicyItem(Builder builder) {
@@ -253,7 +252,7 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
 
     }
     public static class IpControlPolicyItems extends TeaModel {
-        @NameInMap("IpControlPolicyItem")
+        @com.aliyun.core.annotation.NameInMap("IpControlPolicyItem")
         private java.util.List < IpControlPolicyItem> ipControlPolicyItem;
 
         private IpControlPolicyItems(Builder builder) {

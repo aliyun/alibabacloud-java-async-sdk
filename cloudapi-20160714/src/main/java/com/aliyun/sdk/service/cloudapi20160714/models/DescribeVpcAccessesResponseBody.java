@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVpcAccessesResponseBody</p>
  */
 public class DescribeVpcAccessesResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("VpcAccessAttributes")
+    @com.aliyun.core.annotation.NameInMap("VpcAccessAttributes")
     private VpcAccessAttributes vpcAccessAttributes;
 
     private DescribeVpcAccessesResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
     } 
 
     public static class TagInfo extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private TagInfo(Builder builder) {
@@ -193,7 +192,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("TagInfo")
+        @com.aliyun.core.annotation.NameInMap("TagInfo")
         private java.util.List < TagInfo> tagInfo;
 
         private Tags(Builder builder) {
@@ -234,34 +233,34 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
 
     }
     public static class VpcAccessAttribute extends TeaModel {
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("VpcAccessId")
+        @com.aliyun.core.annotation.NameInMap("VpcAccessId")
         private String vpcAccessId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcTargetHostName")
+        @com.aliyun.core.annotation.NameInMap("VpcTargetHostName")
         private String vpcTargetHostName;
 
         private VpcAccessAttribute(Builder builder) {
@@ -455,7 +454,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
 
     }
     public static class VpcAccessAttributes extends TeaModel {
-        @NameInMap("VpcAccessAttribute")
+        @com.aliyun.core.annotation.NameInMap("VpcAccessAttribute")
         private java.util.List < VpcAccessAttribute> vpcAccessAttribute;
 
         private VpcAccessAttributes(Builder builder) {

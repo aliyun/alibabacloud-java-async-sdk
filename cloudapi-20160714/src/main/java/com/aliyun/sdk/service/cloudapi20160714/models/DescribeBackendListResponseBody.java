@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBackendListResponseBody</p>
  */
 public class DescribeBackendListResponseBody extends TeaModel {
-    @NameInMap("BackendInfoList")
+    @com.aliyun.core.annotation.NameInMap("BackendInfoList")
     private java.util.List < BackendInfoList> backendInfoList;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeBackendListResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeBackendListResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -193,25 +192,25 @@ public class DescribeBackendListResponseBody extends TeaModel {
 
     }
     public static class BackendInfoList extends TeaModel {
-        @NameInMap("BackendId")
+        @com.aliyun.core.annotation.NameInMap("BackendId")
         private String backendId;
 
-        @NameInMap("BackendName")
+        @com.aliyun.core.annotation.NameInMap("BackendName")
         private String backendName;
 
-        @NameInMap("BackendType")
+        @com.aliyun.core.annotation.NameInMap("BackendType")
         private String backendType;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
         private BackendInfoList(Builder builder) {

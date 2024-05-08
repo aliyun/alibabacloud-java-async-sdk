@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAppsResponseBody</p>
  */
 public class DescribeAppsResponseBody extends TeaModel {
-    @NameInMap("Apps")
+    @com.aliyun.core.annotation.NameInMap("Apps")
     private Apps apps;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeAppsResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class DescribeAppsResponseBody extends TeaModel {
     } 
 
     public static class AppItem extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private Long appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
         private AppItem(Builder builder) {
@@ -213,7 +212,7 @@ public class DescribeAppsResponseBody extends TeaModel {
 
     }
     public static class Apps extends TeaModel {
-        @NameInMap("AppItem")
+        @com.aliyun.core.annotation.NameInMap("AppItem")
         private java.util.List < AppItem> appItem;
 
         private Apps(Builder builder) {

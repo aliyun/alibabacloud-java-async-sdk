@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,61 +11,61 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeApiDocResponseBody</p>
  */
 public class DescribeApiDocResponseBody extends TeaModel {
-    @NameInMap("ApiId")
+    @com.aliyun.core.annotation.NameInMap("ApiId")
     private String apiId;
 
-    @NameInMap("ApiName")
+    @com.aliyun.core.annotation.NameInMap("ApiName")
     private String apiName;
 
-    @NameInMap("AuthType")
+    @com.aliyun.core.annotation.NameInMap("AuthType")
     private String authType;
 
-    @NameInMap("DeployedTime")
+    @com.aliyun.core.annotation.NameInMap("DeployedTime")
     private String deployedTime;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("DisableInternet")
+    @com.aliyun.core.annotation.NameInMap("DisableInternet")
     private Boolean disableInternet;
 
-    @NameInMap("ErrorCodeSamples")
+    @com.aliyun.core.annotation.NameInMap("ErrorCodeSamples")
     private ErrorCodeSamples errorCodeSamples;
 
-    @NameInMap("FailResultSample")
+    @com.aliyun.core.annotation.NameInMap("FailResultSample")
     private String failResultSample;
 
-    @NameInMap("ForceNonceCheck")
+    @com.aliyun.core.annotation.NameInMap("ForceNonceCheck")
     private Boolean forceNonceCheck;
 
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestConfig")
+    @com.aliyun.core.annotation.NameInMap("RequestConfig")
     private RequestConfig requestConfig;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RequestParameters")
+    @com.aliyun.core.annotation.NameInMap("RequestParameters")
     private RequestParameters requestParameters;
 
-    @NameInMap("ResultSample")
+    @com.aliyun.core.annotation.NameInMap("ResultSample")
     private String resultSample;
 
-    @NameInMap("ResultType")
+    @com.aliyun.core.annotation.NameInMap("ResultType")
     private String resultType;
 
-    @NameInMap("StageName")
+    @com.aliyun.core.annotation.NameInMap("StageName")
     private String stageName;
 
-    @NameInMap("Visibility")
+    @com.aliyun.core.annotation.NameInMap("Visibility")
     private String visibility;
 
     private DescribeApiDocResponseBody(Builder builder) {
@@ -420,13 +419,13 @@ public class DescribeApiDocResponseBody extends TeaModel {
     } 
 
     public static class ErrorCodeSample extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
         private ErrorCodeSample(Builder builder) {
@@ -501,7 +500,7 @@ public class DescribeApiDocResponseBody extends TeaModel {
 
     }
     public static class ErrorCodeSamples extends TeaModel {
-        @NameInMap("ErrorCodeSample")
+        @com.aliyun.core.annotation.NameInMap("ErrorCodeSample")
         private java.util.List < ErrorCodeSample> errorCodeSample;
 
         private ErrorCodeSamples(Builder builder) {
@@ -542,22 +541,22 @@ public class DescribeApiDocResponseBody extends TeaModel {
 
     }
     public static class RequestConfig extends TeaModel {
-        @NameInMap("BodyFormat")
+        @com.aliyun.core.annotation.NameInMap("BodyFormat")
         private String bodyFormat;
 
-        @NameInMap("PostBodyDescription")
+        @com.aliyun.core.annotation.NameInMap("PostBodyDescription")
         private String postBodyDescription;
 
-        @NameInMap("RequestHttpMethod")
+        @com.aliyun.core.annotation.NameInMap("RequestHttpMethod")
         private String requestHttpMethod;
 
-        @NameInMap("RequestMode")
+        @com.aliyun.core.annotation.NameInMap("RequestMode")
         private String requestMode;
 
-        @NameInMap("RequestPath")
+        @com.aliyun.core.annotation.NameInMap("RequestPath")
         private String requestPath;
 
-        @NameInMap("RequestProtocol")
+        @com.aliyun.core.annotation.NameInMap("RequestProtocol")
         private String requestProtocol;
 
         private RequestConfig(Builder builder) {
@@ -691,55 +690,55 @@ public class DescribeApiDocResponseBody extends TeaModel {
 
     }
     public static class RequestParameter extends TeaModel {
-        @NameInMap("ApiParameterName")
+        @com.aliyun.core.annotation.NameInMap("ApiParameterName")
         private String apiParameterName;
 
-        @NameInMap("ArrayItemsType")
+        @com.aliyun.core.annotation.NameInMap("ArrayItemsType")
         private String arrayItemsType;
 
-        @NameInMap("DefaultValue")
+        @com.aliyun.core.annotation.NameInMap("DefaultValue")
         private String defaultValue;
 
-        @NameInMap("DemoValue")
+        @com.aliyun.core.annotation.NameInMap("DemoValue")
         private String demoValue;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DocOrder")
+        @com.aliyun.core.annotation.NameInMap("DocOrder")
         private Integer docOrder;
 
-        @NameInMap("DocShow")
+        @com.aliyun.core.annotation.NameInMap("DocShow")
         private String docShow;
 
-        @NameInMap("EnumValue")
+        @com.aliyun.core.annotation.NameInMap("EnumValue")
         private String enumValue;
 
-        @NameInMap("JsonScheme")
+        @com.aliyun.core.annotation.NameInMap("JsonScheme")
         private String jsonScheme;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("MaxLength")
+        @com.aliyun.core.annotation.NameInMap("MaxLength")
         private Long maxLength;
 
-        @NameInMap("MaxValue")
+        @com.aliyun.core.annotation.NameInMap("MaxValue")
         private Long maxValue;
 
-        @NameInMap("MinLength")
+        @com.aliyun.core.annotation.NameInMap("MinLength")
         private Long minLength;
 
-        @NameInMap("MinValue")
+        @com.aliyun.core.annotation.NameInMap("MinValue")
         private Long minValue;
 
-        @NameInMap("ParameterType")
+        @com.aliyun.core.annotation.NameInMap("ParameterType")
         private String parameterType;
 
-        @NameInMap("RegularExpression")
+        @com.aliyun.core.annotation.NameInMap("RegularExpression")
         private String regularExpression;
 
-        @NameInMap("Required")
+        @com.aliyun.core.annotation.NameInMap("Required")
         private String required;
 
         private RequestParameter(Builder builder) {
@@ -1052,7 +1051,7 @@ public class DescribeApiDocResponseBody extends TeaModel {
 
     }
     public static class RequestParameters extends TeaModel {
-        @NameInMap("RequestParameter")
+        @com.aliyun.core.annotation.NameInMap("RequestParameter")
         private java.util.List < RequestParameter> requestParameter;
 
         private RequestParameters(Builder builder) {

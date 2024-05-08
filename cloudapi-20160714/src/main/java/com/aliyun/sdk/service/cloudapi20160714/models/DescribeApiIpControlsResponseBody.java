@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeApiIpControlsResponseBody</p>
  */
 public class DescribeApiIpControlsResponseBody extends TeaModel {
-    @NameInMap("ApiIpControls")
+    @com.aliyun.core.annotation.NameInMap("ApiIpControls")
     private ApiIpControls apiIpControls;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeApiIpControlsResponseBody(Builder builder) {
@@ -132,19 +131,19 @@ public class DescribeApiIpControlsResponseBody extends TeaModel {
     } 
 
     public static class ApiIpControlItem extends TeaModel {
-        @NameInMap("ApiId")
+        @com.aliyun.core.annotation.NameInMap("ApiId")
         private String apiId;
 
-        @NameInMap("ApiName")
+        @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
 
-        @NameInMap("BoundTime")
+        @com.aliyun.core.annotation.NameInMap("BoundTime")
         private String boundTime;
 
-        @NameInMap("IpControlId")
+        @com.aliyun.core.annotation.NameInMap("IpControlId")
         private String ipControlId;
 
-        @NameInMap("IpControlName")
+        @com.aliyun.core.annotation.NameInMap("IpControlName")
         private String ipControlName;
 
         private ApiIpControlItem(Builder builder) {
@@ -253,7 +252,7 @@ public class DescribeApiIpControlsResponseBody extends TeaModel {
 
     }
     public static class ApiIpControls extends TeaModel {
-        @NameInMap("ApiIpControlItem")
+        @com.aliyun.core.annotation.NameInMap("ApiIpControlItem")
         private java.util.List < ApiIpControlItem> apiIpControlItem;
 
         private ApiIpControls(Builder builder) {

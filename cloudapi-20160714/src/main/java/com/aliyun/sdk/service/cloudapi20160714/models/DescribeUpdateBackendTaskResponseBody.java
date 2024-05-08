@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUpdateBackendTaskResponseBody</p>
  */
 public class DescribeUpdateBackendTaskResponseBody extends TeaModel {
-    @NameInMap("ApiUpdateBackendResults")
+    @com.aliyun.core.annotation.NameInMap("ApiUpdateBackendResults")
     private ApiUpdateBackendResults apiUpdateBackendResults;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeUpdateBackendTaskResponseBody(Builder builder) {
@@ -72,31 +71,31 @@ public class DescribeUpdateBackendTaskResponseBody extends TeaModel {
     } 
 
     public static class ApiUpdateBackendResult extends TeaModel {
-        @NameInMap("ApiName")
+        @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
 
-        @NameInMap("ApiUid")
+        @com.aliyun.core.annotation.NameInMap("ApiUid")
         private String apiUid;
 
-        @NameInMap("BackendId")
+        @com.aliyun.core.annotation.NameInMap("BackendId")
         private String backendId;
 
-        @NameInMap("ErrorMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("StageId")
+        @com.aliyun.core.annotation.NameInMap("StageId")
         private String stageId;
 
-        @NameInMap("StageName")
+        @com.aliyun.core.annotation.NameInMap("StageName")
         private String stageName;
 
-        @NameInMap("UpdateStatus")
+        @com.aliyun.core.annotation.NameInMap("UpdateStatus")
         private String updateStatus;
 
         private ApiUpdateBackendResult(Builder builder) {
@@ -273,7 +272,7 @@ public class DescribeUpdateBackendTaskResponseBody extends TeaModel {
 
     }
     public static class ApiUpdateBackendResults extends TeaModel {
-        @NameInMap("ApiUpdateBackendResult")
+        @com.aliyun.core.annotation.NameInMap("ApiUpdateBackendResult")
         private java.util.List < ApiUpdateBackendResult> apiUpdateBackendResult;
 
         private ApiUpdateBackendResults(Builder builder) {

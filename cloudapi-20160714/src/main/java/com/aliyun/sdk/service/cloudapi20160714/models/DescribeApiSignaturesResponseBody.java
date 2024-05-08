@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeApiSignaturesResponseBody</p>
  */
 public class DescribeApiSignaturesResponseBody extends TeaModel {
-    @NameInMap("ApiSignatures")
+    @com.aliyun.core.annotation.NameInMap("ApiSignatures")
     private ApiSignatures apiSignatures;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeApiSignaturesResponseBody(Builder builder) {
@@ -132,19 +131,19 @@ public class DescribeApiSignaturesResponseBody extends TeaModel {
     } 
 
     public static class ApiSignatureItem extends TeaModel {
-        @NameInMap("ApiId")
+        @com.aliyun.core.annotation.NameInMap("ApiId")
         private String apiId;
 
-        @NameInMap("ApiName")
+        @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
 
-        @NameInMap("BoundTime")
+        @com.aliyun.core.annotation.NameInMap("BoundTime")
         private String boundTime;
 
-        @NameInMap("SignatureId")
+        @com.aliyun.core.annotation.NameInMap("SignatureId")
         private String signatureId;
 
-        @NameInMap("SignatureName")
+        @com.aliyun.core.annotation.NameInMap("SignatureName")
         private String signatureName;
 
         private ApiSignatureItem(Builder builder) {
@@ -253,7 +252,7 @@ public class DescribeApiSignaturesResponseBody extends TeaModel {
 
     }
     public static class ApiSignatures extends TeaModel {
-        @NameInMap("ApiSignatureItem")
+        @com.aliyun.core.annotation.NameInMap("ApiSignatureItem")
         private java.util.List < ApiSignatureItem> apiSignatureItem;
 
         private ApiSignatures(Builder builder) {

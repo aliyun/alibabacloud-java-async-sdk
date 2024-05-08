@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeApiMarketAttributesResponseBody</p>
  */
 public class DescribeApiMarketAttributesResponseBody extends TeaModel {
-    @NameInMap("ApiId")
+    @com.aliyun.core.annotation.NameInMap("ApiId")
     private String apiId;
 
-    @NameInMap("MarketChargingMode")
+    @com.aliyun.core.annotation.NameInMap("MarketChargingMode")
     private String marketChargingMode;
 
-    @NameInMap("NeedCharging")
+    @com.aliyun.core.annotation.NameInMap("NeedCharging")
     private String needCharging;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeApiMarketAttributesResponseBody(Builder builder) {

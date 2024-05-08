@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBackendInfoResponseBody</p>
  */
 public class DescribeBackendInfoResponseBody extends TeaModel {
-    @NameInMap("BackendInfo")
+    @com.aliyun.core.annotation.NameInMap("BackendInfo")
     private BackendInfo backendInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeBackendInfoResponseBody(Builder builder) {
@@ -72,34 +71,34 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
     } 
 
     public static class NacosConfig extends TeaModel {
-        @NameInMap("AccessKey")
+        @com.aliyun.core.annotation.NameInMap("AccessKey")
         private String accessKey;
 
-        @NameInMap("AuthType")
+        @com.aliyun.core.annotation.NameInMap("AuthType")
         private String authType;
 
-        @NameInMap("Clusters")
+        @com.aliyun.core.annotation.NameInMap("Clusters")
         private String clusters;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
 
-        @NameInMap("SecretKey")
+        @com.aliyun.core.annotation.NameInMap("SecretKey")
         private String secretKey;
 
-        @NameInMap("ServerAddress")
+        @com.aliyun.core.annotation.NameInMap("ServerAddress")
         private String serverAddress;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private NacosConfig(Builder builder) {
@@ -293,13 +292,13 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
 
     }
     public static class ZookeeperConfig extends TeaModel {
-        @NameInMap("ConnectString")
+        @com.aliyun.core.annotation.NameInMap("ConnectString")
         private String connectString;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
         private ZookeeperConfig(Builder builder) {
@@ -374,13 +373,13 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
 
     }
     public static class DiscoveryConfig extends TeaModel {
-        @NameInMap("NacosConfig")
+        @com.aliyun.core.annotation.NameInMap("NacosConfig")
         private NacosConfig nacosConfig;
 
-        @NameInMap("RcType")
+        @com.aliyun.core.annotation.NameInMap("RcType")
         private String rcType;
 
-        @NameInMap("ZookeeperConfig")
+        @com.aliyun.core.annotation.NameInMap("ZookeeperConfig")
         private ZookeeperConfig zookeeperConfig;
 
         private DiscoveryConfig(Builder builder) {
@@ -455,25 +454,25 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
 
     }
     public static class EdasConfig extends TeaModel {
-        @NameInMap("EdasAppId")
+        @com.aliyun.core.annotation.NameInMap("EdasAppId")
         private String edasAppId;
 
-        @NameInMap("MicroserviceNamespace")
+        @com.aliyun.core.annotation.NameInMap("MicroserviceNamespace")
         private String microserviceNamespace;
 
-        @NameInMap("MicroserviceNamespaceId")
+        @com.aliyun.core.annotation.NameInMap("MicroserviceNamespaceId")
         private String microserviceNamespaceId;
 
-        @NameInMap("MicroserviceNamespaceName")
+        @com.aliyun.core.annotation.NameInMap("MicroserviceNamespaceName")
         private String microserviceNamespaceName;
 
-        @NameInMap("MseInstanceId")
+        @com.aliyun.core.annotation.NameInMap("MseInstanceId")
         private String mseInstanceId;
 
-        @NameInMap("RegistryType")
+        @com.aliyun.core.annotation.NameInMap("RegistryType")
         private String registryType;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
         private EdasConfig(Builder builder) {
@@ -616,16 +615,16 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
 
     }
     public static class EventBridgeConfig extends TeaModel {
-        @NameInMap("EventBridgeRegionId")
+        @com.aliyun.core.annotation.NameInMap("EventBridgeRegionId")
         private String eventBridgeRegionId;
 
-        @NameInMap("EventBus")
+        @com.aliyun.core.annotation.NameInMap("EventBus")
         private String eventBus;
 
-        @NameInMap("EventSource")
+        @com.aliyun.core.annotation.NameInMap("EventSource")
         private String eventSource;
 
-        @NameInMap("RoleArn")
+        @com.aliyun.core.annotation.NameInMap("RoleArn")
         private String roleArn;
 
         private EventBridgeConfig(Builder builder) {
@@ -717,28 +716,28 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
 
     }
     public static class FunctionComputeConfig extends TeaModel {
-        @NameInMap("FcBaseUrl")
+        @com.aliyun.core.annotation.NameInMap("FcBaseUrl")
         private String fcBaseUrl;
 
-        @NameInMap("FcRegionId")
+        @com.aliyun.core.annotation.NameInMap("FcRegionId")
         private String fcRegionId;
 
-        @NameInMap("FcType")
+        @com.aliyun.core.annotation.NameInMap("FcType")
         private String fcType;
 
-        @NameInMap("FunctionName")
+        @com.aliyun.core.annotation.NameInMap("FunctionName")
         private String functionName;
 
-        @NameInMap("OnlyBusinessPath")
+        @com.aliyun.core.annotation.NameInMap("OnlyBusinessPath")
         private Boolean onlyBusinessPath;
 
-        @NameInMap("Qualifier")
+        @com.aliyun.core.annotation.NameInMap("Qualifier")
         private String qualifier;
 
-        @NameInMap("RoleArn")
+        @com.aliyun.core.annotation.NameInMap("RoleArn")
         private String roleArn;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
         private FunctionComputeConfig(Builder builder) {
@@ -898,10 +897,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
 
     }
     public static class MockHeaders extends TeaModel {
-        @NameInMap("HeaderName")
+        @com.aliyun.core.annotation.NameInMap("HeaderName")
         private String headerName;
 
-        @NameInMap("HeaderValue")
+        @com.aliyun.core.annotation.NameInMap("HeaderValue")
         private String headerValue;
 
         private MockHeaders(Builder builder) {
@@ -959,13 +958,13 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
 
     }
     public static class MockConfig extends TeaModel {
-        @NameInMap("MockHeaders")
+        @com.aliyun.core.annotation.NameInMap("MockHeaders")
         private java.util.List < MockHeaders> mockHeaders;
 
-        @NameInMap("MockResult")
+        @com.aliyun.core.annotation.NameInMap("MockResult")
         private String mockResult;
 
-        @NameInMap("MockStatusCode")
+        @com.aliyun.core.annotation.NameInMap("MockStatusCode")
         private String mockStatusCode;
 
         private MockConfig(Builder builder) {
@@ -1040,10 +1039,10 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
 
     }
     public static class OssConfig extends TeaModel {
-        @NameInMap("BucketName")
+        @com.aliyun.core.annotation.NameInMap("BucketName")
         private String bucketName;
 
-        @NameInMap("OssRegionId")
+        @com.aliyun.core.annotation.NameInMap("OssRegionId")
         private String ossRegionId;
 
         private OssConfig(Builder builder) {
@@ -1101,25 +1100,25 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
 
     }
     public static class VpcConfig extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Long port;
 
-        @NameInMap("VpcAccessId")
+        @com.aliyun.core.annotation.NameInMap("VpcAccessId")
         private String vpcAccessId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcScheme")
+        @com.aliyun.core.annotation.NameInMap("VpcScheme")
         private String vpcScheme;
 
-        @NameInMap("VpcTargetHostName")
+        @com.aliyun.core.annotation.NameInMap("VpcTargetHostName")
         private String vpcTargetHostName;
 
         private VpcConfig(Builder builder) {
@@ -1262,37 +1261,37 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
 
     }
     public static class BackendConfig extends TeaModel {
-        @NameInMap("DiscoveryConfig")
+        @com.aliyun.core.annotation.NameInMap("DiscoveryConfig")
         private DiscoveryConfig discoveryConfig;
 
-        @NameInMap("EdasConfig")
+        @com.aliyun.core.annotation.NameInMap("EdasConfig")
         private EdasConfig edasConfig;
 
-        @NameInMap("EventBridgeConfig")
+        @com.aliyun.core.annotation.NameInMap("EventBridgeConfig")
         private EventBridgeConfig eventBridgeConfig;
 
-        @NameInMap("FunctionComputeConfig")
+        @com.aliyun.core.annotation.NameInMap("FunctionComputeConfig")
         private FunctionComputeConfig functionComputeConfig;
 
-        @NameInMap("HttpTargetHostName")
+        @com.aliyun.core.annotation.NameInMap("HttpTargetHostName")
         private String httpTargetHostName;
 
-        @NameInMap("MockConfig")
+        @com.aliyun.core.annotation.NameInMap("MockConfig")
         private MockConfig mockConfig;
 
-        @NameInMap("OssConfig")
+        @com.aliyun.core.annotation.NameInMap("OssConfig")
         private OssConfig ossConfig;
 
-        @NameInMap("ServiceAddress")
+        @com.aliyun.core.annotation.NameInMap("ServiceAddress")
         private String serviceAddress;
 
-        @NameInMap("ServiceTimeout")
+        @com.aliyun.core.annotation.NameInMap("ServiceTimeout")
         private Integer serviceTimeout;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("VpcConfig")
+        @com.aliyun.core.annotation.NameInMap("VpcConfig")
         private VpcConfig vpcConfig;
 
         private BackendConfig(Builder builder) {
@@ -1503,25 +1502,25 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
 
     }
     public static class BackendModels extends TeaModel {
-        @NameInMap("BackendConfig")
+        @com.aliyun.core.annotation.NameInMap("BackendConfig")
         private BackendConfig backendConfig;
 
-        @NameInMap("BackendModelId")
+        @com.aliyun.core.annotation.NameInMap("BackendModelId")
         private String backendModelId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("StageModeId")
+        @com.aliyun.core.annotation.NameInMap("StageModeId")
         private String stageModeId;
 
-        @NameInMap("StageName")
+        @com.aliyun.core.annotation.NameInMap("StageName")
         private String stageName;
 
         private BackendModels(Builder builder) {
@@ -1664,25 +1663,25 @@ public class DescribeBackendInfoResponseBody extends TeaModel {
 
     }
     public static class BackendInfo extends TeaModel {
-        @NameInMap("BackendId")
+        @com.aliyun.core.annotation.NameInMap("BackendId")
         private String backendId;
 
-        @NameInMap("BackendModels")
+        @com.aliyun.core.annotation.NameInMap("BackendModels")
         private java.util.List < BackendModels> backendModels;
 
-        @NameInMap("BackendName")
+        @com.aliyun.core.annotation.NameInMap("BackendName")
         private String backendName;
 
-        @NameInMap("BackendType")
+        @com.aliyun.core.annotation.NameInMap("BackendType")
         private String backendType;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
         private BackendInfo(Builder builder) {

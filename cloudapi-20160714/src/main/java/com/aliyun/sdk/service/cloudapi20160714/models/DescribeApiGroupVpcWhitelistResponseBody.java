@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeApiGroupVpcWhitelistResponseBody</p>
  */
 public class DescribeApiGroupVpcWhitelistResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VpcIds")
+    @com.aliyun.core.annotation.NameInMap("VpcIds")
     private String vpcIds;
 
     private DescribeApiGroupVpcWhitelistResponseBody(Builder builder) {

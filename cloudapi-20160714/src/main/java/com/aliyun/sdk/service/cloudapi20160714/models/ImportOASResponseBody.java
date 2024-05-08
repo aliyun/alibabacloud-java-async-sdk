@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudapi20160714.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ImportOASResponseBody</p>
  */
 public class ImportOASResponseBody extends TeaModel {
-    @NameInMap("ErrorMessages")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessages")
     private ErrorMessages errorMessages;
 
-    @NameInMap("FailedApis")
+    @com.aliyun.core.annotation.NameInMap("FailedApis")
     private FailedApis failedApis;
 
-    @NameInMap("FailedModels")
+    @com.aliyun.core.annotation.NameInMap("FailedModels")
     private FailedModels failedModels;
 
-    @NameInMap("OperationId")
+    @com.aliyun.core.annotation.NameInMap("OperationId")
     private String operationId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SuccessApis")
+    @com.aliyun.core.annotation.NameInMap("SuccessApis")
     private SuccessApis successApis;
 
-    @NameInMap("SuccessModels")
+    @com.aliyun.core.annotation.NameInMap("SuccessModels")
     private SuccessModels successModels;
 
-    @NameInMap("WarningMessages")
+    @com.aliyun.core.annotation.NameInMap("WarningMessages")
     private WarningMessages warningMessages;
 
     private ImportOASResponseBody(Builder builder) {
@@ -192,7 +191,7 @@ public class ImportOASResponseBody extends TeaModel {
     } 
 
     public static class ErrorMessages extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private java.util.List < String > errorMessage;
 
         private ErrorMessages(Builder builder) {
@@ -233,13 +232,13 @@ public class ImportOASResponseBody extends TeaModel {
 
     }
     public static class FailedApi extends TeaModel {
-        @NameInMap("ErrorMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
 
-        @NameInMap("HttpMethod")
+        @com.aliyun.core.annotation.NameInMap("HttpMethod")
         private String httpMethod;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
         private FailedApi(Builder builder) {
@@ -314,7 +313,7 @@ public class ImportOASResponseBody extends TeaModel {
 
     }
     public static class FailedApis extends TeaModel {
-        @NameInMap("FailedApi")
+        @com.aliyun.core.annotation.NameInMap("FailedApi")
         private java.util.List < FailedApi> failedApi;
 
         private FailedApis(Builder builder) {
@@ -355,13 +354,13 @@ public class ImportOASResponseBody extends TeaModel {
 
     }
     public static class FailedModel extends TeaModel {
-        @NameInMap("ErrorMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("ModelName")
+        @com.aliyun.core.annotation.NameInMap("ModelName")
         private String modelName;
 
         private FailedModel(Builder builder) {
@@ -436,7 +435,7 @@ public class ImportOASResponseBody extends TeaModel {
 
     }
     public static class FailedModels extends TeaModel {
-        @NameInMap("FailedModel")
+        @com.aliyun.core.annotation.NameInMap("FailedModel")
         private java.util.List < FailedModel> failedModel;
 
         private FailedModels(Builder builder) {
@@ -477,16 +476,16 @@ public class ImportOASResponseBody extends TeaModel {
 
     }
     public static class SuccessApi extends TeaModel {
-        @NameInMap("ApiId")
+        @com.aliyun.core.annotation.NameInMap("ApiId")
         private String apiId;
 
-        @NameInMap("ApiOperation")
+        @com.aliyun.core.annotation.NameInMap("ApiOperation")
         private String apiOperation;
 
-        @NameInMap("HttpMethod")
+        @com.aliyun.core.annotation.NameInMap("HttpMethod")
         private String httpMethod;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
         private SuccessApi(Builder builder) {
@@ -578,7 +577,7 @@ public class ImportOASResponseBody extends TeaModel {
 
     }
     public static class SuccessApis extends TeaModel {
-        @NameInMap("SuccessApi")
+        @com.aliyun.core.annotation.NameInMap("SuccessApi")
         private java.util.List < SuccessApi> successApi;
 
         private SuccessApis(Builder builder) {
@@ -619,16 +618,16 @@ public class ImportOASResponseBody extends TeaModel {
 
     }
     public static class SuccessModel extends TeaModel {
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("ModelName")
+        @com.aliyun.core.annotation.NameInMap("ModelName")
         private String modelName;
 
-        @NameInMap("ModelOperation")
+        @com.aliyun.core.annotation.NameInMap("ModelOperation")
         private String modelOperation;
 
-        @NameInMap("ModelUid")
+        @com.aliyun.core.annotation.NameInMap("ModelUid")
         private String modelUid;
 
         private SuccessModel(Builder builder) {
@@ -720,7 +719,7 @@ public class ImportOASResponseBody extends TeaModel {
 
     }
     public static class SuccessModels extends TeaModel {
-        @NameInMap("SuccessModel")
+        @com.aliyun.core.annotation.NameInMap("SuccessModel")
         private java.util.List < SuccessModel> successModel;
 
         private SuccessModels(Builder builder) {
@@ -761,7 +760,7 @@ public class ImportOASResponseBody extends TeaModel {
 
     }
     public static class WarningMessages extends TeaModel {
-        @NameInMap("WarningMessage")
+        @com.aliyun.core.annotation.NameInMap("WarningMessage")
         private java.util.List < String > warningMessage;
 
         private WarningMessages(Builder builder) {
