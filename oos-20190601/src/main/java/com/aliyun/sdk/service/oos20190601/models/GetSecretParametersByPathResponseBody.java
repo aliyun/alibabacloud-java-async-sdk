@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSecretParametersByPathResponseBody</p>
  */
 public class GetSecretParametersByPathResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("Parameters")
+    @com.aliyun.core.annotation.NameInMap("Parameters")
     private java.util.List < Parameters> parameters;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private GetSecretParametersByPathResponseBody(Builder builder) {
@@ -132,43 +131,43 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
     } 
 
     public static class Parameters extends TeaModel {
-        @NameInMap("Constraints")
+        @com.aliyun.core.annotation.NameInMap("Constraints")
         private String constraints;
 
-        @NameInMap("CreatedBy")
+        @com.aliyun.core.annotation.NameInMap("CreatedBy")
         private String createdBy;
 
-        @NameInMap("CreatedDate")
+        @com.aliyun.core.annotation.NameInMap("CreatedDate")
         private String createdDate;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("KeyId")
+        @com.aliyun.core.annotation.NameInMap("KeyId")
         private String keyId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ParameterVersion")
+        @com.aliyun.core.annotation.NameInMap("ParameterVersion")
         private Integer parameterVersion;
 
-        @NameInMap("ShareType")
+        @com.aliyun.core.annotation.NameInMap("ShareType")
         private String shareType;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UpdatedBy")
+        @com.aliyun.core.annotation.NameInMap("UpdatedBy")
         private String updatedBy;
 
-        @NameInMap("UpdatedDate")
+        @com.aliyun.core.annotation.NameInMap("UpdatedDate")
         private String updatedDate;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Parameters(Builder builder) {

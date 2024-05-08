@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstancePatchStatesResponseBody</p>
  */
 public class ListInstancePatchStatesResponseBody extends TeaModel {
-    @NameInMap("InstancePatchStates")
+    @com.aliyun.core.annotation.NameInMap("InstancePatchStates")
     private java.util.List < InstancePatchStates> instancePatchStates;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListInstancePatchStatesResponseBody(Builder builder) {
@@ -112,43 +111,43 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
     } 
 
     public static class InstancePatchStates extends TeaModel {
-        @NameInMap("BaselineId")
+        @com.aliyun.core.annotation.NameInMap("BaselineId")
         private String baselineId;
 
-        @NameInMap("FailedCount")
+        @com.aliyun.core.annotation.NameInMap("FailedCount")
         private String failedCount;
 
-        @NameInMap("InstalledCount")
+        @com.aliyun.core.annotation.NameInMap("InstalledCount")
         private String installedCount;
 
-        @NameInMap("InstalledOtherCount")
+        @com.aliyun.core.annotation.NameInMap("InstalledOtherCount")
         private String installedOtherCount;
 
-        @NameInMap("InstalledPendingRebootCount")
+        @com.aliyun.core.annotation.NameInMap("InstalledPendingRebootCount")
         private String installedPendingRebootCount;
 
-        @NameInMap("InstalledRejectedCount")
+        @com.aliyun.core.annotation.NameInMap("InstalledRejectedCount")
         private String installedRejectedCount;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("MissingCount")
+        @com.aliyun.core.annotation.NameInMap("MissingCount")
         private String missingCount;
 
-        @NameInMap("OperationEndTime")
+        @com.aliyun.core.annotation.NameInMap("OperationEndTime")
         private String operationEndTime;
 
-        @NameInMap("OperationStartTime")
+        @com.aliyun.core.annotation.NameInMap("OperationStartTime")
         private String operationStartTime;
 
-        @NameInMap("OperationType")
+        @com.aliyun.core.annotation.NameInMap("OperationType")
         private String operationType;
 
-        @NameInMap("OwnerInformation")
+        @com.aliyun.core.annotation.NameInMap("OwnerInformation")
         private String ownerInformation;
 
-        @NameInMap("PatchGroup")
+        @com.aliyun.core.annotation.NameInMap("PatchGroup")
         private String patchGroup;
 
         private InstancePatchStates(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,72 +11,72 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTemplatesRequest</p>
  */
 public class ListTemplatesRequest extends Request {
-    @Query
-    @NameInMap("Category")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Category")
     private String category;
 
-    @Query
-    @NameInMap("CreatedBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreatedBy")
     private String createdBy;
 
-    @Query
-    @NameInMap("CreatedDateAfter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreatedDateAfter")
     private String createdDateAfter;
 
-    @Query
-    @NameInMap("CreatedDateBefore")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreatedDateBefore")
     private String createdDateBefore;
 
-    @Query
-    @NameInMap("HasTrigger")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HasTrigger")
     private Boolean hasTrigger;
 
-    @Query
-    @NameInMap("IsFavorite")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsFavorite")
     private Boolean isFavorite;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ShareType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShareType")
     private String shareType;
 
-    @Query
-    @NameInMap("SortField")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortField")
     private String sortField;
 
-    @Query
-    @NameInMap("SortOrder")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortOrder")
     private String sortOrder;
 
-    @Query
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.Map < String, ? > tags;
 
-    @Query
-    @NameInMap("TemplateFormat")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateFormat")
     private String templateFormat;
 
-    @Query
-    @NameInMap("TemplateName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
     private String templateName;
 
-    @Query
-    @NameInMap("TemplateType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateType")
     private String templateType;
 
     private ListTemplatesRequest(Builder builder) {

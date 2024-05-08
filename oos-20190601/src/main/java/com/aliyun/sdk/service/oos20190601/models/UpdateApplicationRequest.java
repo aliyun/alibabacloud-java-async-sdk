@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateApplicationRequest</p>
  */
 public class UpdateApplicationRequest extends Request {
-    @Query
-    @NameInMap("AlarmConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlarmConfig")
     private AlarmConfig alarmConfig;
 
-    @Query
-    @NameInMap("DeleteAlarmRulesBeforeUpdate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeleteAlarmRulesBeforeUpdate")
     private Boolean deleteAlarmRulesBeforeUpdate;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.Map < String, ? > tags;
 
     private UpdateApplicationRequest(Builder builder) {
@@ -188,13 +187,13 @@ public class UpdateApplicationRequest extends Request {
     } 
 
     public static class AlarmConfig extends TeaModel {
-        @NameInMap("ContactGroups")
+        @com.aliyun.core.annotation.NameInMap("ContactGroups")
         private java.util.List < String > contactGroups;
 
-        @NameInMap("HealthCheckUrl")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckUrl")
         private String healthCheckUrl;
 
-        @NameInMap("TemplateIds")
+        @com.aliyun.core.annotation.NameInMap("TemplateIds")
         private java.util.List < String > templateIds;
 
         private AlarmConfig(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetServiceSettingsResponseBody</p>
  */
 public class SetServiceSettingsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServiceSettings")
+    @com.aliyun.core.annotation.NameInMap("ServiceSettings")
     private java.util.List < ServiceSettings> serviceSettings;
 
     private SetServiceSettingsResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class SetServiceSettingsResponseBody extends TeaModel {
     } 
 
     public static class ServiceSettings extends TeaModel {
-        @NameInMap("DeliveryOssBucketName")
+        @com.aliyun.core.annotation.NameInMap("DeliveryOssBucketName")
         private String deliveryOssBucketName;
 
-        @NameInMap("DeliveryOssEnabled")
+        @com.aliyun.core.annotation.NameInMap("DeliveryOssEnabled")
         private Boolean deliveryOssEnabled;
 
-        @NameInMap("DeliveryOssKeyPrefix")
+        @com.aliyun.core.annotation.NameInMap("DeliveryOssKeyPrefix")
         private String deliveryOssKeyPrefix;
 
-        @NameInMap("DeliverySlsEnabled")
+        @com.aliyun.core.annotation.NameInMap("DeliverySlsEnabled")
         private Boolean deliverySlsEnabled;
 
-        @NameInMap("DeliverySlsProjectName")
+        @com.aliyun.core.annotation.NameInMap("DeliverySlsProjectName")
         private String deliverySlsProjectName;
 
-        @NameInMap("RdcEnterpriseId")
+        @com.aliyun.core.annotation.NameInMap("RdcEnterpriseId")
         private String rdcEnterpriseId;
 
         private ServiceSettings(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInventorySchemaResponseBody</p>
  */
 public class GetInventorySchemaResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private String maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Schemas")
+    @com.aliyun.core.annotation.NameInMap("Schemas")
     private java.util.List < Schemas> schemas;
 
     private GetInventorySchemaResponseBody(Builder builder) {
@@ -112,10 +111,10 @@ public class GetInventorySchemaResponseBody extends TeaModel {
     } 
 
     public static class Attributes extends TeaModel {
-        @NameInMap("DataType")
+        @com.aliyun.core.annotation.NameInMap("DataType")
         private String dataType;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Attributes(Builder builder) {
@@ -173,13 +172,13 @@ public class GetInventorySchemaResponseBody extends TeaModel {
 
     }
     public static class Schemas extends TeaModel {
-        @NameInMap("Attributes")
+        @com.aliyun.core.annotation.NameInMap("Attributes")
         private java.util.List < Attributes> attributes;
 
-        @NameInMap("TypeName")
+        @com.aliyun.core.annotation.NameInMap("TypeName")
         private String typeName;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private Schemas(Builder builder) {

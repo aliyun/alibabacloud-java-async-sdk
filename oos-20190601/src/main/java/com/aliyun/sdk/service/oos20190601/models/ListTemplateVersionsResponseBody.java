@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTemplateVersionsResponseBody</p>
  */
 public class ListTemplateVersionsResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TemplateVersions")
+    @com.aliyun.core.annotation.NameInMap("TemplateVersions")
     private java.util.List < TemplateVersions> templateVersions;
 
     private ListTemplateVersionsResponseBody(Builder builder) {
@@ -112,22 +111,22 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
     } 
 
     public static class TemplateVersions extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("TemplateFormat")
+        @com.aliyun.core.annotation.NameInMap("TemplateFormat")
         private String templateFormat;
 
-        @NameInMap("TemplateVersion")
+        @com.aliyun.core.annotation.NameInMap("TemplateVersion")
         private String templateVersion;
 
-        @NameInMap("UpdatedBy")
+        @com.aliyun.core.annotation.NameInMap("UpdatedBy")
         private String updatedBy;
 
-        @NameInMap("UpdatedDate")
+        @com.aliyun.core.annotation.NameInMap("UpdatedDate")
         private String updatedDate;
 
-        @NameInMap("VersionName")
+        @com.aliyun.core.annotation.NameInMap("VersionName")
         private String versionName;
 
         private TemplateVersions(Builder builder) {

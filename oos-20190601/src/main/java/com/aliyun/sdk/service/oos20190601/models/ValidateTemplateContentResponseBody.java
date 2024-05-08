@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ValidateTemplateContentResponseBody</p>
  */
 public class ValidateTemplateContentResponseBody extends TeaModel {
-    @NameInMap("Outputs")
+    @com.aliyun.core.annotation.NameInMap("Outputs")
     private String outputs;
 
-    @NameInMap("Parameters")
+    @com.aliyun.core.annotation.NameInMap("Parameters")
     private String parameters;
 
-    @NameInMap("RamRole")
+    @com.aliyun.core.annotation.NameInMap("RamRole")
     private String ramRole;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Tasks")
+    @com.aliyun.core.annotation.NameInMap("Tasks")
     private java.util.List < Tasks> tasks;
 
     private ValidateTemplateContentResponseBody(Builder builder) {
@@ -132,19 +131,19 @@ public class ValidateTemplateContentResponseBody extends TeaModel {
     } 
 
     public static class Tasks extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Outputs")
+        @com.aliyun.core.annotation.NameInMap("Outputs")
         private String outputs;
 
-        @NameInMap("Properties")
+        @com.aliyun.core.annotation.NameInMap("Properties")
         private String properties;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Tasks(Builder builder) {

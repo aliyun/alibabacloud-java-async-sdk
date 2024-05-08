@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetOpsItemResponseBody</p>
  */
 public class GetOpsItemResponseBody extends TeaModel {
-    @NameInMap("OpsItem")
+    @com.aliyun.core.annotation.NameInMap("OpsItem")
     private OpsItem opsItem;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetOpsItemResponseBody(Builder builder) {
@@ -72,55 +71,55 @@ public class GetOpsItemResponseBody extends TeaModel {
     } 
 
     public static class OpsItem extends TeaModel {
-        @NameInMap("Attributes")
+        @com.aliyun.core.annotation.NameInMap("Attributes")
         private java.util.Map < String, ? > attributes;
 
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("CreateBy")
+        @com.aliyun.core.annotation.NameInMap("CreateBy")
         private String createBy;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("LastModifiedBy")
+        @com.aliyun.core.annotation.NameInMap("LastModifiedBy")
         private String lastModifiedBy;
 
-        @NameInMap("OpsItemId")
+        @com.aliyun.core.annotation.NameInMap("OpsItemId")
         private String opsItemId;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Resources")
+        @com.aliyun.core.annotation.NameInMap("Resources")
         private java.util.List < String > resources;
 
-        @NameInMap("Severity")
+        @com.aliyun.core.annotation.NameInMap("Severity")
         private String severity;
 
-        @NameInMap("Solutions")
+        @com.aliyun.core.annotation.NameInMap("Solutions")
         private java.util.List < java.util.Map<String, ?>> solutions;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.Map < String, ? > tags;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("UpdateDate")
+        @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
 
         private OpsItem(Builder builder) {

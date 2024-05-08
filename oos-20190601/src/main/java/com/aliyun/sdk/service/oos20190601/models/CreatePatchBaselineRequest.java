@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,59 +11,59 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreatePatchBaselineRequest</p>
  */
 public class CreatePatchBaselineRequest extends Request {
-    @Query
-    @NameInMap("ApprovalRules")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApprovalRules")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String approvalRules;
 
-    @Query
-    @NameInMap("ApprovedPatches")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApprovedPatches")
     private java.util.List < String > approvedPatches;
 
-    @Query
-    @NameInMap("ApprovedPatchesEnableNonSecurity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApprovedPatchesEnableNonSecurity")
     private Boolean approvedPatchesEnableNonSecurity;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("OperationSystem")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationSystem")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String operationSystem;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("RejectedPatches")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RejectedPatches")
     private java.util.List < String > rejectedPatches;
 
-    @Query
-    @NameInMap("RejectedPatchesAction")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RejectedPatchesAction")
     private String rejectedPatchesAction;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("Sources")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sources")
     private java.util.List < String > sources;
 
-    @Query
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List < Tags> tags;
 
     private CreatePatchBaselineRequest(Builder builder) {
@@ -363,10 +362,10 @@ public class CreatePatchBaselineRequest extends Request {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {

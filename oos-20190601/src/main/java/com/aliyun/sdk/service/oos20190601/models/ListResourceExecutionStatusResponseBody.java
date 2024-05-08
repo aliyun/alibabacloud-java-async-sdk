@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListResourceExecutionStatusResponseBody</p>
  */
 public class ListResourceExecutionStatusResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceExecutionStatus")
+    @com.aliyun.core.annotation.NameInMap("ResourceExecutionStatus")
     private java.util.List < ResourceExecutionStatus> resourceExecutionStatus;
 
     private ListResourceExecutionStatusResponseBody(Builder builder) {
@@ -112,19 +111,19 @@ public class ListResourceExecutionStatusResponseBody extends TeaModel {
     } 
 
     public static class ResourceExecutionStatus extends TeaModel {
-        @NameInMap("ExecutionId")
+        @com.aliyun.core.annotation.NameInMap("ExecutionId")
         private String executionId;
 
-        @NameInMap("ExecutionTime")
+        @com.aliyun.core.annotation.NameInMap("ExecutionTime")
         private String executionTime;
 
-        @NameInMap("Outputs")
+        @com.aliyun.core.annotation.NameInMap("Outputs")
         private String outputs;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ResourceExecutionStatus(Builder builder) {

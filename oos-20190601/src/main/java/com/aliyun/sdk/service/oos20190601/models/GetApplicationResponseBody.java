@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetApplicationResponseBody</p>
  */
 public class GetApplicationResponseBody extends TeaModel {
-    @NameInMap("Application")
+    @com.aliyun.core.annotation.NameInMap("Application")
     private Application application;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetApplicationResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class GetApplicationResponseBody extends TeaModel {
     } 
 
     public static class AlarmConfig extends TeaModel {
-        @NameInMap("ContactGroups")
+        @com.aliyun.core.annotation.NameInMap("ContactGroups")
         private java.util.List < String > contactGroups;
 
-        @NameInMap("HealthCheckUrl")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckUrl")
         private String healthCheckUrl;
 
-        @NameInMap("TemplateIds")
+        @com.aliyun.core.annotation.NameInMap("TemplateIds")
         private java.util.List < String > templateIds;
 
         private AlarmConfig(Builder builder) {
@@ -153,31 +152,31 @@ public class GetApplicationResponseBody extends TeaModel {
 
     }
     public static class Application extends TeaModel {
-        @NameInMap("AlarmConfig")
+        @com.aliyun.core.annotation.NameInMap("AlarmConfig")
         private AlarmConfig alarmConfig;
 
-        @NameInMap("ApplicationType")
+        @com.aliyun.core.annotation.NameInMap("ApplicationType")
         private String applicationType;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ServiceId")
+        @com.aliyun.core.annotation.NameInMap("ServiceId")
         private String serviceId;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.Map < String, ? > tags;
 
-        @NameInMap("UpdateDate")
+        @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
 
         private Application(Builder builder) {

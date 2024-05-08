@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateStateConfigurationResponseBody</p>
  */
 public class CreateStateConfigurationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StateConfiguration")
+    @com.aliyun.core.annotation.NameInMap("StateConfiguration")
     private StateConfiguration stateConfiguration;
 
     private CreateStateConfigurationResponseBody(Builder builder) {
@@ -72,43 +71,43 @@ public class CreateStateConfigurationResponseBody extends TeaModel {
     } 
 
     public static class StateConfiguration extends TeaModel {
-        @NameInMap("ConfigureMode")
+        @com.aliyun.core.annotation.NameInMap("ConfigureMode")
         private String configureMode;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Parameters")
+        @com.aliyun.core.annotation.NameInMap("Parameters")
         private java.util.Map < String, ? > parameters;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ScheduleExpression")
+        @com.aliyun.core.annotation.NameInMap("ScheduleExpression")
         private String scheduleExpression;
 
-        @NameInMap("ScheduleType")
+        @com.aliyun.core.annotation.NameInMap("ScheduleType")
         private String scheduleType;
 
-        @NameInMap("StateConfigurationId")
+        @com.aliyun.core.annotation.NameInMap("StateConfigurationId")
         private String stateConfigurationId;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.Map < String, ? > tags;
 
-        @NameInMap("Targets")
+        @com.aliyun.core.annotation.NameInMap("Targets")
         private String targets;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
-        @NameInMap("TemplateVersion")
+        @com.aliyun.core.annotation.NameInMap("TemplateVersion")
         private String templateVersion;
 
         private StateConfiguration(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetServiceSettingsRequest</p>
  */
 public class SetServiceSettingsRequest extends Request {
-    @Query
-    @NameInMap("DeliveryOssBucketName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeliveryOssBucketName")
     private String deliveryOssBucketName;
 
-    @Query
-    @NameInMap("DeliveryOssEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeliveryOssEnabled")
     private Boolean deliveryOssEnabled;
 
-    @Query
-    @NameInMap("DeliveryOssKeyPrefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeliveryOssKeyPrefix")
     private String deliveryOssKeyPrefix;
 
-    @Query
-    @NameInMap("DeliverySlsEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeliverySlsEnabled")
     private Boolean deliverySlsEnabled;
 
-    @Query
-    @NameInMap("DeliverySlsProjectName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeliverySlsProjectName")
     private String deliverySlsProjectName;
 
-    @Query
-    @NameInMap("RdcEnterpriseId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RdcEnterpriseId")
     private String rdcEnterpriseId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private SetServiceSettingsRequest(Builder builder) {

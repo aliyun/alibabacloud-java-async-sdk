@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSecretParameterRequest</p>
  */
 public class GetSecretParameterRequest extends Request {
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("ParameterVersion")
-    @Validation(maximum = 200, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParameterVersion")
+    @com.aliyun.core.annotation.Validation(maximum = 200, minimum = 1)
     private Integer parameterVersion;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("WithDecryption")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WithDecryption")
     private Boolean withDecryption;
 
     private GetSecretParameterRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstancePatchesResponseBody</p>
  */
 public class ListInstancePatchesResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("Patches")
+    @com.aliyun.core.annotation.NameInMap("Patches")
     private java.util.List < Patches> patches;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListInstancePatchesResponseBody(Builder builder) {
@@ -112,22 +111,22 @@ public class ListInstancePatchesResponseBody extends TeaModel {
     } 
 
     public static class Patches extends TeaModel {
-        @NameInMap("Classification")
+        @com.aliyun.core.annotation.NameInMap("Classification")
         private String classification;
 
-        @NameInMap("InstalledTime")
+        @com.aliyun.core.annotation.NameInMap("InstalledTime")
         private String installedTime;
 
-        @NameInMap("KBId")
+        @com.aliyun.core.annotation.NameInMap("KBId")
         private String KBId;
 
-        @NameInMap("Severity")
+        @com.aliyun.core.annotation.NameInMap("Severity")
         private String severity;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private Patches(Builder builder) {

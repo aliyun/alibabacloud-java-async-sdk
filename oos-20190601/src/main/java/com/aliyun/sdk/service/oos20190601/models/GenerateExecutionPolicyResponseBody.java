@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GenerateExecutionPolicyResponseBody</p>
  */
 public class GenerateExecutionPolicyResponseBody extends TeaModel {
-    @NameInMap("MissingPolicy")
+    @com.aliyun.core.annotation.NameInMap("MissingPolicy")
     private String missingPolicy;
 
-    @NameInMap("Policy")
+    @com.aliyun.core.annotation.NameInMap("Policy")
     private String policy;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GenerateExecutionPolicyResponseBody(Builder builder) {

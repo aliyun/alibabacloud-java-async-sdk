@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,46 +11,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>NotifyExecutionRequest</p>
  */
 public class NotifyExecutionRequest extends Request {
-    @Query
-    @NameInMap("ExecutionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExecutionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String executionId;
 
-    @Query
-    @NameInMap("ExecutionStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExecutionStatus")
     private String executionStatus;
 
-    @Query
-    @NameInMap("LoopItem")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoopItem")
     private String loopItem;
 
-    @Query
-    @NameInMap("NotifyNote")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NotifyNote")
     private String notifyNote;
 
-    @Query
-    @NameInMap("NotifyType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NotifyType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String notifyType;
 
-    @Query
-    @NameInMap("Parameters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Parameters")
     private String parameters;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("TaskExecutionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskExecutionId")
     private String taskExecutionId;
 
-    @Query
-    @NameInMap("TaskExecutionIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskExecutionIds")
     private String taskExecutionIds;
 
-    @Query
-    @NameInMap("TaskName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskName")
     private String taskName;
 
     private NotifyExecutionRequest(Builder builder) {

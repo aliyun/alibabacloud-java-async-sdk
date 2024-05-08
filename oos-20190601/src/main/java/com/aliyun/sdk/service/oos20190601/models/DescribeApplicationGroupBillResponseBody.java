@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeApplicationGroupBillResponseBody</p>
  */
 public class DescribeApplicationGroupBillResponseBody extends TeaModel {
-    @NameInMap("ApplicationGroupConsume")
+    @com.aliyun.core.annotation.NameInMap("ApplicationGroupConsume")
     private java.util.List < ApplicationGroupConsume> applicationGroupConsume;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeApplicationGroupBillResponseBody(Builder builder) {
@@ -112,34 +111,34 @@ public class DescribeApplicationGroupBillResponseBody extends TeaModel {
     } 
 
     public static class ApplicationGroupConsume extends TeaModel {
-        @NameInMap("Amount")
+        @com.aliyun.core.annotation.NameInMap("Amount")
         private Float amount;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Currency")
+        @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("Optimization")
+        @com.aliyun.core.annotation.NameInMap("Optimization")
         private String optimization;
 
-        @NameInMap("PeakType")
+        @com.aliyun.core.annotation.NameInMap("PeakType")
         private String peakType;
 
-        @NameInMap("Performance")
+        @com.aliyun.core.annotation.NameInMap("Performance")
         private String performance;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ApplicationGroupConsume(Builder builder) {

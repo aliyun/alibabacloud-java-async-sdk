@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListExecutionRiskyTasksResponseBody</p>
  */
 public class ListExecutionRiskyTasksResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RiskyTasks")
+    @com.aliyun.core.annotation.NameInMap("RiskyTasks")
     private java.util.List < RiskyTasks> riskyTasks;
 
     private ListExecutionRiskyTasksResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class ListExecutionRiskyTasksResponseBody extends TeaModel {
     } 
 
     public static class RiskyTasks extends TeaModel {
-        @NameInMap("API")
+        @com.aliyun.core.annotation.NameInMap("API")
         private String API;
 
-        @NameInMap("Service")
+        @com.aliyun.core.annotation.NameInMap("Service")
         private String service;
 
-        @NameInMap("Task")
+        @com.aliyun.core.annotation.NameInMap("Task")
         private java.util.List < String > task;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private java.util.List < String > template;
 
         private RiskyTasks(Builder builder) {

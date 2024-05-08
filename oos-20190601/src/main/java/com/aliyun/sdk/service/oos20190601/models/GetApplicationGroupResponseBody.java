@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetApplicationGroupResponseBody</p>
  */
 public class GetApplicationGroupResponseBody extends TeaModel {
-    @NameInMap("ApplicationGroup")
+    @com.aliyun.core.annotation.NameInMap("ApplicationGroup")
     private ApplicationGroup applicationGroup;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetApplicationGroupResponseBody(Builder builder) {
@@ -72,46 +71,46 @@ public class GetApplicationGroupResponseBody extends TeaModel {
     } 
 
     public static class ApplicationGroup extends TeaModel {
-        @NameInMap("ApplicationName")
+        @com.aliyun.core.annotation.NameInMap("ApplicationName")
         private String applicationName;
 
-        @NameInMap("CmsGroupId")
+        @com.aliyun.core.annotation.NameInMap("CmsGroupId")
         private String cmsGroupId;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("DeployOutputs")
+        @com.aliyun.core.annotation.NameInMap("DeployOutputs")
         private String deployOutputs;
 
-        @NameInMap("DeployParameters")
+        @com.aliyun.core.annotation.NameInMap("DeployParameters")
         private String deployParameters;
 
-        @NameInMap("DeployRegionId")
+        @com.aliyun.core.annotation.NameInMap("DeployRegionId")
         private String deployRegionId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ImportTagKey")
+        @com.aliyun.core.annotation.NameInMap("ImportTagKey")
         private String importTagKey;
 
-        @NameInMap("ImportTagValue")
+        @com.aliyun.core.annotation.NameInMap("ImportTagValue")
         private String importTagValue;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusReason")
+        @com.aliyun.core.annotation.NameInMap("StatusReason")
         private String statusReason;
 
-        @NameInMap("UpdateDate")
+        @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
 
         private ApplicationGroup(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oos20190601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListActionsResponseBody</p>
  */
 public class ListActionsResponseBody extends TeaModel {
-    @NameInMap("Actions")
+    @com.aliyun.core.annotation.NameInMap("Actions")
     private java.util.List < Actions> actions;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListActionsResponseBody(Builder builder) {
@@ -112,25 +111,25 @@ public class ListActionsResponseBody extends TeaModel {
     } 
 
     public static class Actions extends TeaModel {
-        @NameInMap("ActionType")
+        @com.aliyun.core.annotation.NameInMap("ActionType")
         private String actionType;
 
-        @NameInMap("CreatedDate")
+        @com.aliyun.core.annotation.NameInMap("CreatedDate")
         private String createdDate;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("OOSActionName")
+        @com.aliyun.core.annotation.NameInMap("OOSActionName")
         private String OOSActionName;
 
-        @NameInMap("Popularity")
+        @com.aliyun.core.annotation.NameInMap("Popularity")
         private Integer popularity;
 
-        @NameInMap("Properties")
+        @com.aliyun.core.annotation.NameInMap("Properties")
         private String properties;
 
-        @NameInMap("TemplateVersion")
+        @com.aliyun.core.annotation.NameInMap("TemplateVersion")
         private String templateVersion;
 
         private Actions(Builder builder) {
