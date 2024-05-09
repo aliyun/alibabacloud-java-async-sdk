@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,45 +11,45 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ConfigureMigrationJobAlertRequest</p>
  */
 public class ConfigureMigrationJobAlertRequest extends Request {
-    @Query
-    @NameInMap("AccountId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountId")
     private String accountId;
 
-    @Query
-    @NameInMap("DelayAlertPhone")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DelayAlertPhone")
     private String delayAlertPhone;
 
-    @Query
-    @NameInMap("DelayAlertStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DelayAlertStatus")
     private String delayAlertStatus;
 
-    @Query
-    @NameInMap("DelayOverSeconds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DelayOverSeconds")
     private String delayOverSeconds;
 
-    @Query
-    @NameInMap("ErrorAlertPhone")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ErrorAlertPhone")
     private String errorAlertPhone;
 
-    @Query
-    @NameInMap("ErrorAlertStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ErrorAlertStatus")
     private String errorAlertStatus;
 
-    @Query
-    @NameInMap("MigrationJobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MigrationJobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String migrationJobId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private ConfigureMigrationJobAlertRequest(Builder builder) {

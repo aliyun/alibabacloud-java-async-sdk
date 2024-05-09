@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSubscriptionMetaResponseBody</p>
  */
 public class DescribeSubscriptionMetaResponseBody extends TeaModel {
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private String httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubscriptionMetaList")
+    @com.aliyun.core.annotation.NameInMap("SubscriptionMetaList")
     private java.util.List < SubscriptionMetaList> subscriptionMetaList;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private DescribeSubscriptionMetaResponseBody(Builder builder) {
@@ -152,19 +151,19 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
     } 
 
     public static class SubscriptionMetaList extends TeaModel {
-        @NameInMap("Checkpoint")
+        @com.aliyun.core.annotation.NameInMap("Checkpoint")
         private Long checkpoint;
 
-        @NameInMap("DBList")
+        @com.aliyun.core.annotation.NameInMap("DBList")
         private String DBList;
 
-        @NameInMap("DProxyUrl")
+        @com.aliyun.core.annotation.NameInMap("DProxyUrl")
         private String dProxyUrl;
 
-        @NameInMap("Sid")
+        @com.aliyun.core.annotation.NameInMap("Sid")
         private String sid;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
         private SubscriptionMetaList(Builder builder) {

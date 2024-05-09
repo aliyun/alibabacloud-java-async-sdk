@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCheckJobsResponseBody</p>
  */
 public class DescribeCheckJobsResponseBody extends TeaModel {
-    @NameInMap("CheckJobs")
+    @com.aliyun.core.annotation.NameInMap("CheckJobs")
     private java.util.List < CheckJobs> checkJobs;
 
-    @NameInMap("DynamicCode")
+    @com.aliyun.core.annotation.NameInMap("DynamicCode")
     private String dynamicCode;
 
-    @NameInMap("DynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("DynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Long pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Long totalRecordCount;
 
     private DescribeCheckJobsResponseBody(Builder builder) {
@@ -252,52 +251,52 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
     } 
 
     public static class CheckJobs extends TeaModel {
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("CheckPoint")
+        @com.aliyun.core.annotation.NameInMap("CheckPoint")
         private Long checkPoint;
 
-        @NameInMap("CheckType")
+        @com.aliyun.core.annotation.NameInMap("CheckType")
         private Integer checkType;
 
-        @NameInMap("DiffCount")
+        @com.aliyun.core.annotation.NameInMap("DiffCount")
         private Long diffCount;
 
-        @NameInMap("DiffSum")
+        @com.aliyun.core.annotation.NameInMap("DiffSum")
         private Long diffSum;
 
-        @NameInMap("DtsInstanceID")
+        @com.aliyun.core.annotation.NameInMap("DtsInstanceID")
         private String dtsInstanceID;
 
-        @NameInMap("DtsJobId")
+        @com.aliyun.core.annotation.NameInMap("DtsJobId")
         private String dtsJobId;
 
-        @NameInMap("FinishCount")
+        @com.aliyun.core.annotation.NameInMap("FinishCount")
         private Long finishCount;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("InstanceClass")
+        @com.aliyun.core.annotation.NameInMap("InstanceClass")
         private String instanceClass;
 
-        @NameInMap("JobName")
+        @com.aliyun.core.annotation.NameInMap("JobName")
         private String jobName;
 
-        @NameInMap("JobStepId")
+        @com.aliyun.core.annotation.NameInMap("JobStepId")
         private String jobStepId;
 
-        @NameInMap("ParentJobType")
+        @com.aliyun.core.annotation.NameInMap("ParentJobType")
         private String parentJobType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private CheckJobs(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,48 +11,48 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyConsumerGroupPasswordRequest</p>
  */
 public class ModifyConsumerGroupPasswordRequest extends Request {
-    @Query
-    @NameInMap("AccountId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountId")
     private String accountId;
 
-    @Query
-    @NameInMap("ConsumerGroupID")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConsumerGroupID")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String consumerGroupID;
 
-    @Query
-    @NameInMap("ConsumerGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConsumerGroupName")
     private String consumerGroupName;
 
-    @Query
-    @NameInMap("ConsumerGroupPassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConsumerGroupPassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String consumerGroupPassword;
 
-    @Query
-    @NameInMap("ConsumerGroupUserName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConsumerGroupUserName")
     private String consumerGroupUserName;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("SubscriptionInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscriptionInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subscriptionInstanceId;
 
-    @Query
-    @NameInMap("consumerGroupNewPassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("consumerGroupNewPassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String consumerGroupNewPassword;
 
     private ModifyConsumerGroupPasswordRequest(Builder builder) {

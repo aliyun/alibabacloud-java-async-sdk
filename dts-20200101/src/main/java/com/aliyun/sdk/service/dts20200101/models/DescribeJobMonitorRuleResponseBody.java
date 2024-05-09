@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeJobMonitorRuleResponseBody</p>
  */
 public class DescribeJobMonitorRuleResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("DtsJobId")
+    @com.aliyun.core.annotation.NameInMap("DtsJobId")
     private String dtsJobId;
 
-    @NameInMap("DynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("DynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("MonitorRules")
+    @com.aliyun.core.annotation.NameInMap("MonitorRules")
     private java.util.List < MonitorRules> monitorRules;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Topics")
+    @com.aliyun.core.annotation.NameInMap("Topics")
     private java.util.List < String > topics;
 
     private DescribeJobMonitorRuleResponseBody(Builder builder) {
@@ -239,31 +238,31 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
     } 
 
     public static class MonitorRules extends TeaModel {
-        @NameInMap("DelayRuleTime")
+        @com.aliyun.core.annotation.NameInMap("DelayRuleTime")
         private Long delayRuleTime;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("JobType")
+        @com.aliyun.core.annotation.NameInMap("JobType")
         private String jobType;
 
-        @NameInMap("NoticeValue")
+        @com.aliyun.core.annotation.NameInMap("NoticeValue")
         private Integer noticeValue;
 
-        @NameInMap("Period")
+        @com.aliyun.core.annotation.NameInMap("Period")
         private Integer period;
 
-        @NameInMap("Phone")
+        @com.aliyun.core.annotation.NameInMap("Phone")
         private String phone;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Times")
+        @com.aliyun.core.annotation.NameInMap("Times")
         private Integer times;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private MonitorRules(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,82 +11,82 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDedicatedClusterResponseBody</p>
  */
 public class DescribeDedicatedClusterResponseBody extends TeaModel {
-    @NameInMap("CpuUtilization")
+    @com.aliyun.core.annotation.NameInMap("CpuUtilization")
     private Long cpuUtilization;
 
-    @NameInMap("DedicatedClusterId")
+    @com.aliyun.core.annotation.NameInMap("DedicatedClusterId")
     private String dedicatedClusterId;
 
-    @NameInMap("DedicatedClusterName")
+    @com.aliyun.core.annotation.NameInMap("DedicatedClusterName")
     private String dedicatedClusterName;
 
-    @NameInMap("DiskUtilization")
+    @com.aliyun.core.annotation.NameInMap("DiskUtilization")
     private Long diskUtilization;
 
-    @NameInMap("DtsInstanceID")
+    @com.aliyun.core.annotation.NameInMap("DtsInstanceID")
     private String dtsInstanceID;
 
-    @NameInMap("Du")
+    @com.aliyun.core.annotation.NameInMap("Du")
     private Long du;
 
-    @NameInMap("DuUtilization")
+    @com.aliyun.core.annotation.NameInMap("DuUtilization")
     private Long duUtilization;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("GmtCreated")
+    @com.aliyun.core.annotation.NameInMap("GmtCreated")
     private Long gmtCreated;
 
-    @NameInMap("GmtFinished")
+    @com.aliyun.core.annotation.NameInMap("GmtFinished")
     private Long gmtFinished;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private String httpStatusCode;
 
-    @NameInMap("MemUtilization")
+    @com.aliyun.core.annotation.NameInMap("MemUtilization")
     private Long memUtilization;
 
-    @NameInMap("NodeCount")
+    @com.aliyun.core.annotation.NameInMap("NodeCount")
     private Long nodeCount;
 
-    @NameInMap("OversoldDu")
+    @com.aliyun.core.annotation.NameInMap("OversoldDu")
     private Long oversoldDu;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("State")
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
-    @NameInMap("TotalCpuCore")
+    @com.aliyun.core.annotation.NameInMap("TotalCpuCore")
     private Long totalCpuCore;
 
-    @NameInMap("TotalDiskGBSize")
+    @com.aliyun.core.annotation.NameInMap("TotalDiskGBSize")
     private Long totalDiskGBSize;
 
-    @NameInMap("TotalMemGBSize")
+    @com.aliyun.core.annotation.NameInMap("TotalMemGBSize")
     private Long totalMemGBSize;
 
-    @NameInMap("UsedCpuCore")
+    @com.aliyun.core.annotation.NameInMap("UsedCpuCore")
     private Long usedCpuCore;
 
-    @NameInMap("UsedDiskGBSize")
+    @com.aliyun.core.annotation.NameInMap("UsedDiskGBSize")
     private Long usedDiskGBSize;
 
-    @NameInMap("UsedDu")
+    @com.aliyun.core.annotation.NameInMap("UsedDu")
     private Long usedDu;
 
-    @NameInMap("UsedMemGBSize")
+    @com.aliyun.core.annotation.NameInMap("UsedMemGBSize")
     private Long usedMemGBSize;
 
     private DescribeDedicatedClusterResponseBody(Builder builder) {

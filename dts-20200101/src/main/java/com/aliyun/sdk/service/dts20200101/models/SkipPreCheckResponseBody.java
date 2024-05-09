@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SkipPreCheckResponseBody</p>
  */
 public class SkipPreCheckResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("DynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("DynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("MigrationJobId")
+    @com.aliyun.core.annotation.NameInMap("MigrationJobId")
     private String migrationJobId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ScheduleJobId")
+    @com.aliyun.core.annotation.NameInMap("ScheduleJobId")
     private String scheduleJobId;
 
-    @NameInMap("SkipItems")
+    @com.aliyun.core.annotation.NameInMap("SkipItems")
     private String skipItems;
 
-    @NameInMap("SkipNames")
+    @com.aliyun.core.annotation.NameInMap("SkipNames")
     private String skipNames;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private SkipPreCheckResponseBody(Builder builder) {

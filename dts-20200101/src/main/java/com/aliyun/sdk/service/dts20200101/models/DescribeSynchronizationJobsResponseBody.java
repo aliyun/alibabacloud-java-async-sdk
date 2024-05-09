@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSynchronizationJobsResponseBody</p>
  */
 public class DescribeSynchronizationJobsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SynchronizationInstances")
+    @com.aliyun.core.annotation.NameInMap("SynchronizationInstances")
     private java.util.List < SynchronizationInstances> synchronizationInstances;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Long totalRecordCount;
 
     private DescribeSynchronizationJobsResponseBody(Builder builder) {
@@ -148,16 +147,16 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
     } 
 
     public static class DataInitializationStatus extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private DataInitializationStatus(Builder builder) {
@@ -258,16 +257,16 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
 
     }
     public static class DataSynchronizationStatus extends TeaModel {
-        @NameInMap("Delay")
+        @com.aliyun.core.annotation.NameInMap("Delay")
         private String delay;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private DataSynchronizationStatus(Builder builder) {
@@ -362,22 +361,22 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
 
     }
     public static class DestinationEndpoint extends TeaModel {
-        @NameInMap("EngineName")
+        @com.aliyun.core.annotation.NameInMap("EngineName")
         private String engineName;
 
-        @NameInMap("IP")
+        @com.aliyun.core.annotation.NameInMap("IP")
         private String ip;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private DestinationEndpoint(Builder builder) {
@@ -503,10 +502,10 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
 
     }
     public static class Performance extends TeaModel {
-        @NameInMap("FLOW")
+        @com.aliyun.core.annotation.NameInMap("FLOW")
         private String FLOW;
 
-        @NameInMap("RPS")
+        @com.aliyun.core.annotation.NameInMap("RPS")
         private String RPS;
 
         private Performance(Builder builder) {
@@ -568,16 +567,16 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
 
     }
     public static class Detail extends TeaModel {
-        @NameInMap("CheckStatus")
+        @com.aliyun.core.annotation.NameInMap("CheckStatus")
         private String checkStatus;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("ItemName")
+        @com.aliyun.core.annotation.NameInMap("ItemName")
         private String itemName;
 
-        @NameInMap("RepairMethod")
+        @com.aliyun.core.annotation.NameInMap("RepairMethod")
         private String repairMethod;
 
         private Detail(Builder builder) {
@@ -672,13 +671,13 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
 
     }
     public static class PrecheckStatus extends TeaModel {
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private java.util.List < Detail> detail;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private PrecheckStatus(Builder builder) {
@@ -760,22 +759,22 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
 
     }
     public static class SourceEndpoint extends TeaModel {
-        @NameInMap("EngineName")
+        @com.aliyun.core.annotation.NameInMap("EngineName")
         private String engineName;
 
-        @NameInMap("IP")
+        @com.aliyun.core.annotation.NameInMap("IP")
         private String ip;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private SourceEndpoint(Builder builder) {
@@ -907,16 +906,16 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
 
     }
     public static class StructureInitializationStatus extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private StructureInitializationStatus(Builder builder) {
@@ -1014,7 +1013,7 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
 
     }
     public static class TableExcludes extends TeaModel {
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private TableExcludes(Builder builder) {
@@ -1055,7 +1054,7 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
 
     }
     public static class TableIncludes extends TeaModel {
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private TableIncludes(Builder builder) {
@@ -1096,16 +1095,16 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
 
     }
     public static class SynchronizationObjects extends TeaModel {
-        @NameInMap("NewSchemaName")
+        @com.aliyun.core.annotation.NameInMap("NewSchemaName")
         private String newSchemaName;
 
-        @NameInMap("SchemaName")
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
         private String schemaName;
 
-        @NameInMap("TableExcludes")
+        @com.aliyun.core.annotation.NameInMap("TableExcludes")
         private java.util.List < TableExcludes> tableExcludes;
 
-        @NameInMap("TableIncludes")
+        @com.aliyun.core.annotation.NameInMap("TableIncludes")
         private java.util.List < TableIncludes> tableIncludes;
 
         private SynchronizationObjects(Builder builder) {
@@ -1203,10 +1202,10 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -1264,73 +1263,73 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
 
     }
     public static class SynchronizationInstances extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DataInitialization")
+        @com.aliyun.core.annotation.NameInMap("DataInitialization")
         private String dataInitialization;
 
-        @NameInMap("DataInitializationStatus")
+        @com.aliyun.core.annotation.NameInMap("DataInitializationStatus")
         private DataInitializationStatus dataInitializationStatus;
 
-        @NameInMap("DataSynchronizationStatus")
+        @com.aliyun.core.annotation.NameInMap("DataSynchronizationStatus")
         private DataSynchronizationStatus dataSynchronizationStatus;
 
-        @NameInMap("Delay")
+        @com.aliyun.core.annotation.NameInMap("Delay")
         private String delay;
 
-        @NameInMap("DestinationEndpoint")
+        @com.aliyun.core.annotation.NameInMap("DestinationEndpoint")
         private DestinationEndpoint destinationEndpoint;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("InstanceCreateTime")
+        @com.aliyun.core.annotation.NameInMap("InstanceCreateTime")
         private String instanceCreateTime;
 
-        @NameInMap("JobCreateTime")
+        @com.aliyun.core.annotation.NameInMap("JobCreateTime")
         private String jobCreateTime;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("Performance")
+        @com.aliyun.core.annotation.NameInMap("Performance")
         private Performance performance;
 
-        @NameInMap("PrecheckStatus")
+        @com.aliyun.core.annotation.NameInMap("PrecheckStatus")
         private PrecheckStatus precheckStatus;
 
-        @NameInMap("SourceEndpoint")
+        @com.aliyun.core.annotation.NameInMap("SourceEndpoint")
         private SourceEndpoint sourceEndpoint;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StructureInitialization")
+        @com.aliyun.core.annotation.NameInMap("StructureInitialization")
         private String structureInitialization;
 
-        @NameInMap("StructureInitializationStatus")
+        @com.aliyun.core.annotation.NameInMap("StructureInitializationStatus")
         private StructureInitializationStatus structureInitializationStatus;
 
-        @NameInMap("SynchronizationDirection")
+        @com.aliyun.core.annotation.NameInMap("SynchronizationDirection")
         private String synchronizationDirection;
 
-        @NameInMap("SynchronizationJobClass")
+        @com.aliyun.core.annotation.NameInMap("SynchronizationJobClass")
         private String synchronizationJobClass;
 
-        @NameInMap("SynchronizationJobId")
+        @com.aliyun.core.annotation.NameInMap("SynchronizationJobId")
         private String synchronizationJobId;
 
-        @NameInMap("SynchronizationJobName")
+        @com.aliyun.core.annotation.NameInMap("SynchronizationJobName")
         private String synchronizationJobName;
 
-        @NameInMap("SynchronizationObjects")
+        @com.aliyun.core.annotation.NameInMap("SynchronizationObjects")
         private java.util.List < SynchronizationObjects> synchronizationObjects;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
         private SynchronizationInstances(Builder builder) {

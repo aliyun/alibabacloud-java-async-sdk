@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,68 +11,68 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ConfigureSynchronizationJobRequest</p>
  */
 public class ConfigureSynchronizationJobRequest extends Request {
-    @Query
-    @NameInMap("DestinationEndpoint")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationEndpoint")
     private DestinationEndpoint destinationEndpoint;
 
-    @Query
-    @NameInMap("PartitionKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PartitionKey")
     private PartitionKey partitionKey;
 
-    @Query
-    @NameInMap("SourceEndpoint")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpoint")
     private SourceEndpoint sourceEndpoint;
 
-    @Query
-    @NameInMap("AccountId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountId")
     private String accountId;
 
-    @Query
-    @NameInMap("Checkpoint")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Checkpoint")
     private String checkpoint;
 
-    @Query
-    @NameInMap("DataInitialization")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataInitialization")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean dataInitialization;
 
-    @Query
-    @NameInMap("MigrationReserved")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MigrationReserved")
     private String migrationReserved;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("StructureInitialization")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StructureInitialization")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean structureInitialization;
 
-    @Query
-    @NameInMap("SynchronizationDirection")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SynchronizationDirection")
     private String synchronizationDirection;
 
-    @Query
-    @NameInMap("SynchronizationJobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SynchronizationJobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String synchronizationJobId;
 
-    @Query
-    @NameInMap("SynchronizationJobName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SynchronizationJobName")
     private String synchronizationJobName;
 
-    @Body
-    @NameInMap("SynchronizationObjects")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SynchronizationObjects")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String synchronizationObjects;
 
     private ConfigureSynchronizationJobRequest(Builder builder) {
@@ -422,25 +421,25 @@ public class ConfigureSynchronizationJobRequest extends Request {
     } 
 
     public static class DestinationEndpoint extends TeaModel {
-        @NameInMap("DataBaseName")
+        @com.aliyun.core.annotation.NameInMap("DataBaseName")
         private String dataBaseName;
 
-        @NameInMap("IP")
+        @com.aliyun.core.annotation.NameInMap("IP")
         private String ip;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private DestinationEndpoint(Builder builder) {
@@ -618,19 +617,19 @@ public class ConfigureSynchronizationJobRequest extends Request {
 
     }
     public static class PartitionKey extends TeaModel {
-        @NameInMap("ModifyTime_Day")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime_Day")
         private Boolean modifyTimeDay;
 
-        @NameInMap("ModifyTime_Hour")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime_Hour")
         private Boolean modifyTimeHour;
 
-        @NameInMap("ModifyTime_Minute")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime_Minute")
         private Boolean modifyTimeMinute;
 
-        @NameInMap("ModifyTime_Month")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime_Month")
         private Boolean modifyTimeMonth;
 
-        @NameInMap("ModifyTime_Year")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime_Year")
         private Boolean modifyTimeYear;
 
         private PartitionKey(Builder builder) {
@@ -754,31 +753,31 @@ public class ConfigureSynchronizationJobRequest extends Request {
 
     }
     public static class SourceEndpoint extends TeaModel {
-        @NameInMap("DatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
-        @NameInMap("IP")
+        @com.aliyun.core.annotation.NameInMap("IP")
         private String ip;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("OwnerID")
+        @com.aliyun.core.annotation.NameInMap("OwnerID")
         private String ownerID;
 
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private SourceEndpoint(Builder builder) {

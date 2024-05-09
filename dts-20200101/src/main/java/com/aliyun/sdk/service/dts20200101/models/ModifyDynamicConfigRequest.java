@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDynamicConfigRequest</p>
  */
 public class ModifyDynamicConfigRequest extends Request {
-    @Query
-    @NameInMap("ConfigList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigList")
     private String configList;
 
-    @Query
-    @NameInMap("DtsJobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DtsJobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dtsJobId;
 
-    @Query
-    @NameInMap("EnableLimit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableLimit")
     private Boolean enableLimit;
 
-    @Query
-    @NameInMap("JobCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobCode;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private ModifyDynamicConfigRequest(Builder builder) {

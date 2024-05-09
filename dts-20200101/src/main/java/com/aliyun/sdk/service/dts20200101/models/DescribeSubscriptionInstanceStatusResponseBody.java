@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,61 +11,61 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSubscriptionInstanceStatusResponseBody</p>
  */
 public class DescribeSubscriptionInstanceStatusResponseBody extends TeaModel {
-    @NameInMap("BeginTimestamp")
+    @com.aliyun.core.annotation.NameInMap("BeginTimestamp")
     private String beginTimestamp;
 
-    @NameInMap("ConsumptionCheckpoint")
+    @com.aliyun.core.annotation.NameInMap("ConsumptionCheckpoint")
     private String consumptionCheckpoint;
 
-    @NameInMap("ConsumptionClient")
+    @com.aliyun.core.annotation.NameInMap("ConsumptionClient")
     private String consumptionClient;
 
-    @NameInMap("EndTimestamp")
+    @com.aliyun.core.annotation.NameInMap("EndTimestamp")
     private String endTimestamp;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("PayType")
+    @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SourceEndpoint")
+    @com.aliyun.core.annotation.NameInMap("SourceEndpoint")
     private SourceEndpoint sourceEndpoint;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("SubscribeTopic")
+    @com.aliyun.core.annotation.NameInMap("SubscribeTopic")
     private String subscribeTopic;
 
-    @NameInMap("SubscriptionDataType")
+    @com.aliyun.core.annotation.NameInMap("SubscriptionDataType")
     private SubscriptionDataType subscriptionDataType;
 
-    @NameInMap("SubscriptionHost")
+    @com.aliyun.core.annotation.NameInMap("SubscriptionHost")
     private SubscriptionHost subscriptionHost;
 
-    @NameInMap("SubscriptionInstanceID")
+    @com.aliyun.core.annotation.NameInMap("SubscriptionInstanceID")
     private String subscriptionInstanceID;
 
-    @NameInMap("SubscriptionInstanceName")
+    @com.aliyun.core.annotation.NameInMap("SubscriptionInstanceName")
     private String subscriptionInstanceName;
 
-    @NameInMap("SubscriptionObject")
+    @com.aliyun.core.annotation.NameInMap("SubscriptionObject")
     private SubscriptionObject subscriptionObject;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
     private DescribeSubscriptionInstanceStatusResponseBody(Builder builder) {
@@ -427,10 +426,10 @@ public class DescribeSubscriptionInstanceStatusResponseBody extends TeaModel {
     } 
 
     public static class SourceEndpoint extends TeaModel {
-        @NameInMap("InstanceID")
+        @com.aliyun.core.annotation.NameInMap("InstanceID")
         private String instanceID;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
         private SourceEndpoint(Builder builder) {
@@ -491,10 +490,10 @@ public class DescribeSubscriptionInstanceStatusResponseBody extends TeaModel {
 
     }
     public static class SubscriptionDataType extends TeaModel {
-        @NameInMap("DDL")
+        @com.aliyun.core.annotation.NameInMap("DDL")
         private Boolean DDL;
 
-        @NameInMap("DML")
+        @com.aliyun.core.annotation.NameInMap("DML")
         private Boolean DML;
 
         private SubscriptionDataType(Builder builder) {
@@ -560,13 +559,13 @@ public class DescribeSubscriptionInstanceStatusResponseBody extends TeaModel {
 
     }
     public static class SubscriptionHost extends TeaModel {
-        @NameInMap("PrivateHost")
+        @com.aliyun.core.annotation.NameInMap("PrivateHost")
         private String privateHost;
 
-        @NameInMap("PublicHost")
+        @com.aliyun.core.annotation.NameInMap("PublicHost")
         private String publicHost;
 
-        @NameInMap("VPCHost")
+        @com.aliyun.core.annotation.NameInMap("VPCHost")
         private String VPCHost;
 
         private SubscriptionHost(Builder builder) {
@@ -641,7 +640,7 @@ public class DescribeSubscriptionInstanceStatusResponseBody extends TeaModel {
 
     }
     public static class TableList extends TeaModel {
-        @NameInMap("Table")
+        @com.aliyun.core.annotation.NameInMap("Table")
         private java.util.List < String > table;
 
         private TableList(Builder builder) {
@@ -682,13 +681,13 @@ public class DescribeSubscriptionInstanceStatusResponseBody extends TeaModel {
 
     }
     public static class SynchronousObject extends TeaModel {
-        @NameInMap("DatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
-        @NameInMap("TableList")
+        @com.aliyun.core.annotation.NameInMap("TableList")
         private TableList tableList;
 
-        @NameInMap("WholeDatabase")
+        @com.aliyun.core.annotation.NameInMap("WholeDatabase")
         private String wholeDatabase;
 
         private SynchronousObject(Builder builder) {
@@ -767,7 +766,7 @@ public class DescribeSubscriptionInstanceStatusResponseBody extends TeaModel {
 
     }
     public static class SubscriptionObject extends TeaModel {
-        @NameInMap("SynchronousObject")
+        @com.aliyun.core.annotation.NameInMap("SynchronousObject")
         private java.util.List < SynchronousObject> synchronousObject;
 
         private SubscriptionObject(Builder builder) {

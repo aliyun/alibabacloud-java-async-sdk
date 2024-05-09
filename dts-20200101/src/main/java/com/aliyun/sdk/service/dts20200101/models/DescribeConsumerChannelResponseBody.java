@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeConsumerChannelResponseBody</p>
  */
 public class DescribeConsumerChannelResponseBody extends TeaModel {
-    @NameInMap("ConsumerChannels")
+    @com.aliyun.core.annotation.NameInMap("ConsumerChannels")
     private java.util.List < ConsumerChannels> consumerChannels;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private String httpStatusCode;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Long totalRecordCount;
 
     private DescribeConsumerChannelResponseBody(Builder builder) {
@@ -212,22 +211,22 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
     } 
 
     public static class ConsumerChannels extends TeaModel {
-        @NameInMap("ConsumerGroupId")
+        @com.aliyun.core.annotation.NameInMap("ConsumerGroupId")
         private String consumerGroupId;
 
-        @NameInMap("ConsumerGroupName")
+        @com.aliyun.core.annotation.NameInMap("ConsumerGroupName")
         private String consumerGroupName;
 
-        @NameInMap("ConsumerGroupUserName")
+        @com.aliyun.core.annotation.NameInMap("ConsumerGroupUserName")
         private String consumerGroupUserName;
 
-        @NameInMap("ConsumptionCheckpoint")
+        @com.aliyun.core.annotation.NameInMap("ConsumptionCheckpoint")
         private String consumptionCheckpoint;
 
-        @NameInMap("MessageDelay")
+        @com.aliyun.core.annotation.NameInMap("MessageDelay")
         private Long messageDelay;
 
-        @NameInMap("UnconsumedData")
+        @com.aliyun.core.annotation.NameInMap("UnconsumedData")
         private Long unconsumedData;
 
         private ConsumerChannels(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,58 +11,58 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMigrationJobStatusResponseBody</p>
  */
 public class DescribeMigrationJobStatusResponseBody extends TeaModel {
-    @NameInMap("DataInitializationStatus")
+    @com.aliyun.core.annotation.NameInMap("DataInitializationStatus")
     private DataInitializationStatus dataInitializationStatus;
 
-    @NameInMap("DataSynchronizationStatus")
+    @com.aliyun.core.annotation.NameInMap("DataSynchronizationStatus")
     private DataSynchronizationStatus dataSynchronizationStatus;
 
-    @NameInMap("DestinationEndpoint")
+    @com.aliyun.core.annotation.NameInMap("DestinationEndpoint")
     private DestinationEndpoint destinationEndpoint;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("MigrationJobClass")
+    @com.aliyun.core.annotation.NameInMap("MigrationJobClass")
     private String migrationJobClass;
 
-    @NameInMap("MigrationJobId")
+    @com.aliyun.core.annotation.NameInMap("MigrationJobId")
     private String migrationJobId;
 
-    @NameInMap("MigrationJobName")
+    @com.aliyun.core.annotation.NameInMap("MigrationJobName")
     private String migrationJobName;
 
-    @NameInMap("MigrationJobStatus")
+    @com.aliyun.core.annotation.NameInMap("MigrationJobStatus")
     private String migrationJobStatus;
 
-    @NameInMap("MigrationMode")
+    @com.aliyun.core.annotation.NameInMap("MigrationMode")
     private MigrationMode migrationMode;
 
-    @NameInMap("MigrationObject")
+    @com.aliyun.core.annotation.NameInMap("MigrationObject")
     private String migrationObject;
 
-    @NameInMap("PayType")
+    @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
 
-    @NameInMap("PrecheckStatus")
+    @com.aliyun.core.annotation.NameInMap("PrecheckStatus")
     private PrecheckStatus precheckStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SourceEndpoint")
+    @com.aliyun.core.annotation.NameInMap("SourceEndpoint")
     private SourceEndpoint sourceEndpoint;
 
-    @NameInMap("StructureInitializationStatus")
+    @com.aliyun.core.annotation.NameInMap("StructureInitializationStatus")
     private StructureInitializationStatus structureInitializationStatus;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
     private DescribeMigrationJobStatusResponseBody(Builder builder) {
@@ -401,16 +400,16 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
     } 
 
     public static class DataInitializationStatus extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private DataInitializationStatus(Builder builder) {
@@ -508,19 +507,19 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
 
     }
     public static class DataSynchronizationStatus extends TeaModel {
-        @NameInMap("Checkpoint")
+        @com.aliyun.core.annotation.NameInMap("Checkpoint")
         private String checkpoint;
 
-        @NameInMap("Delay")
+        @com.aliyun.core.annotation.NameInMap("Delay")
         private String delay;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private DataSynchronizationStatus(Builder builder) {
@@ -636,28 +635,28 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
 
     }
     public static class DestinationEndpoint extends TeaModel {
-        @NameInMap("DatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
-        @NameInMap("EngineName")
+        @com.aliyun.core.annotation.NameInMap("EngineName")
         private String engineName;
 
-        @NameInMap("IP")
+        @com.aliyun.core.annotation.NameInMap("IP")
         private String ip;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
-        @NameInMap("oracleSID")
+        @com.aliyun.core.annotation.NameInMap("oracleSID")
         private String oracleSID;
 
         private DestinationEndpoint(Builder builder) {
@@ -820,13 +819,13 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
 
     }
     public static class MigrationMode extends TeaModel {
-        @NameInMap("dataInitialization")
+        @com.aliyun.core.annotation.NameInMap("dataInitialization")
         private Boolean dataInitialization;
 
-        @NameInMap("dataSynchronization")
+        @com.aliyun.core.annotation.NameInMap("dataSynchronization")
         private Boolean dataSynchronization;
 
-        @NameInMap("structureInitialization")
+        @com.aliyun.core.annotation.NameInMap("structureInitialization")
         private Boolean structureInitialization;
 
         private MigrationMode(Builder builder) {
@@ -913,16 +912,16 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
 
     }
     public static class CheckItem extends TeaModel {
-        @NameInMap("CheckStatus")
+        @com.aliyun.core.annotation.NameInMap("CheckStatus")
         private String checkStatus;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("ItemName")
+        @com.aliyun.core.annotation.NameInMap("ItemName")
         private String itemName;
 
-        @NameInMap("RepairMethod")
+        @com.aliyun.core.annotation.NameInMap("RepairMethod")
         private String repairMethod;
 
         private CheckItem(Builder builder) {
@@ -1024,7 +1023,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
 
     }
     public static class Detail extends TeaModel {
-        @NameInMap("CheckItem")
+        @com.aliyun.core.annotation.NameInMap("CheckItem")
         private java.util.List < CheckItem> checkItem;
 
         private Detail(Builder builder) {
@@ -1065,13 +1064,13 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
 
     }
     public static class PrecheckStatus extends TeaModel {
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private Detail detail;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private PrecheckStatus(Builder builder) {
@@ -1153,28 +1152,28 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
 
     }
     public static class SourceEndpoint extends TeaModel {
-        @NameInMap("DatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
-        @NameInMap("EngineName")
+        @com.aliyun.core.annotation.NameInMap("EngineName")
         private String engineName;
 
-        @NameInMap("IP")
+        @com.aliyun.core.annotation.NameInMap("IP")
         private String ip;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
-        @NameInMap("oracleSID")
+        @com.aliyun.core.annotation.NameInMap("oracleSID")
         private String oracleSID;
 
         private SourceEndpoint(Builder builder) {
@@ -1345,16 +1344,16 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
 
     }
     public static class StructureInitializationStatus extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private StructureInitializationStatus(Builder builder) {

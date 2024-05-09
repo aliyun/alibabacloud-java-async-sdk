@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEtlJobLogsResponseBody</p>
  */
 public class DescribeEtlJobLogsResponseBody extends TeaModel {
-    @NameInMap("DynamicCode")
+    @com.aliyun.core.annotation.NameInMap("DynamicCode")
     private String dynamicCode;
 
-    @NameInMap("DynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("DynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("EtlRunningLogs")
+    @com.aliyun.core.annotation.NameInMap("EtlRunningLogs")
     private java.util.List < EtlRunningLogs> etlRunningLogs;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeEtlJobLogsResponseBody(Builder builder) {
@@ -192,22 +191,22 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
     } 
 
     public static class EtlRunningLogs extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("ContentKey")
+        @com.aliyun.core.annotation.NameInMap("ContentKey")
         private String contentKey;
 
-        @NameInMap("EtlId")
+        @com.aliyun.core.annotation.NameInMap("EtlId")
         private String etlId;
 
-        @NameInMap("LogDatetime")
+        @com.aliyun.core.annotation.NameInMap("LogDatetime")
         private String logDatetime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private EtlRunningLogs(Builder builder) {

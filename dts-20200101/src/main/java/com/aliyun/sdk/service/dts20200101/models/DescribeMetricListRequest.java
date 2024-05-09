@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,54 +11,54 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMetricListRequest</p>
  */
 public class DescribeMetricListRequest extends Request {
-    @Body
-    @NameInMap("AccountId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccountId")
     private String accountId;
 
-    @Body
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("DtsJobId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DtsJobId")
     private String dtsJobId;
 
-    @Body
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @Body
-    @NameInMap("Env")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Env")
     private String env;
 
-    @Body
-    @NameInMap("MetricName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MetricName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String metricName;
 
-    @Body
-    @NameInMap("MetricType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MetricType")
     private String metricType;
 
-    @Body
-    @NameInMap("OwnerID")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OwnerID")
     private String ownerID;
 
-    @Body
-    @NameInMap("Param")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Param")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String param;
 
-    @Body
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Long period;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Body
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
     private DescribeMetricListRequest(Builder builder) {

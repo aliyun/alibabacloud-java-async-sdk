@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSubscriptionInstanceAlertResponseBody</p>
  */
 public class DescribeSubscriptionInstanceAlertResponseBody extends TeaModel {
-    @NameInMap("DelayAlertPhone")
+    @com.aliyun.core.annotation.NameInMap("DelayAlertPhone")
     private String delayAlertPhone;
 
-    @NameInMap("DelayAlertStatus")
+    @com.aliyun.core.annotation.NameInMap("DelayAlertStatus")
     private String delayAlertStatus;
 
-    @NameInMap("DelayOverSeconds")
+    @com.aliyun.core.annotation.NameInMap("DelayOverSeconds")
     private String delayOverSeconds;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("ErrorAlertPhone")
+    @com.aliyun.core.annotation.NameInMap("ErrorAlertPhone")
     private String errorAlertPhone;
 
-    @NameInMap("ErrorAlertStatus")
+    @com.aliyun.core.annotation.NameInMap("ErrorAlertStatus")
     private String errorAlertStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubscriptionInstanceID")
+    @com.aliyun.core.annotation.NameInMap("SubscriptionInstanceID")
     private String subscriptionInstanceID;
 
-    @NameInMap("SubscriptionInstanceName")
+    @com.aliyun.core.annotation.NameInMap("SubscriptionInstanceName")
     private String subscriptionInstanceName;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private DescribeSubscriptionInstanceAlertResponseBody(Builder builder) {

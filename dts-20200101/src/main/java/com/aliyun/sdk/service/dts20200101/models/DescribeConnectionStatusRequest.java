@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,102 +11,102 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeConnectionStatusRequest</p>
  */
 public class DescribeConnectionStatusRequest extends Request {
-    @Query
-    @NameInMap("DestinationEndpointArchitecture")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationEndpointArchitecture")
     private String destinationEndpointArchitecture;
 
-    @Query
-    @NameInMap("DestinationEndpointDatabaseName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationEndpointDatabaseName")
     private String destinationEndpointDatabaseName;
 
-    @Query
-    @NameInMap("DestinationEndpointEngineName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationEndpointEngineName")
     private String destinationEndpointEngineName;
 
-    @Query
-    @NameInMap("DestinationEndpointIP")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationEndpointIP")
     private String destinationEndpointIP;
 
-    @Query
-    @NameInMap("DestinationEndpointInstanceID")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationEndpointInstanceID")
     private String destinationEndpointInstanceID;
 
-    @Query
-    @NameInMap("DestinationEndpointInstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationEndpointInstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String destinationEndpointInstanceType;
 
-    @Query
-    @NameInMap("DestinationEndpointOracleSID")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationEndpointOracleSID")
     private String destinationEndpointOracleSID;
 
-    @Query
-    @NameInMap("DestinationEndpointPassword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationEndpointPassword")
     private String destinationEndpointPassword;
 
-    @Query
-    @NameInMap("DestinationEndpointPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationEndpointPort")
     private String destinationEndpointPort;
 
-    @Query
-    @NameInMap("DestinationEndpointRegion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationEndpointRegion")
     private String destinationEndpointRegion;
 
-    @Query
-    @NameInMap("DestinationEndpointUserName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationEndpointUserName")
     private String destinationEndpointUserName;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("SourceEndpointArchitecture")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpointArchitecture")
     private String sourceEndpointArchitecture;
 
-    @Query
-    @NameInMap("SourceEndpointDatabaseName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpointDatabaseName")
     private String sourceEndpointDatabaseName;
 
-    @Query
-    @NameInMap("SourceEndpointEngineName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpointEngineName")
     private String sourceEndpointEngineName;
 
-    @Query
-    @NameInMap("SourceEndpointIP")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpointIP")
     private String sourceEndpointIP;
 
-    @Query
-    @NameInMap("SourceEndpointInstanceID")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpointInstanceID")
     private String sourceEndpointInstanceID;
 
-    @Query
-    @NameInMap("SourceEndpointInstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpointInstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceEndpointInstanceType;
 
-    @Query
-    @NameInMap("SourceEndpointOracleSID")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpointOracleSID")
     private String sourceEndpointOracleSID;
 
-    @Query
-    @NameInMap("SourceEndpointPassword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpointPassword")
     private String sourceEndpointPassword;
 
-    @Query
-    @NameInMap("SourceEndpointPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpointPort")
     private String sourceEndpointPort;
 
-    @Query
-    @NameInMap("SourceEndpointRegion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpointRegion")
     private String sourceEndpointRegion;
 
-    @Query
-    @NameInMap("SourceEndpointUserName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpointUserName")
     private String sourceEndpointUserName;
 
     private DescribeConnectionStatusRequest(Builder builder) {

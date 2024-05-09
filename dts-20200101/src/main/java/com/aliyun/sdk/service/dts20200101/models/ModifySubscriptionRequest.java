@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,35 +11,35 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifySubscriptionRequest</p>
  */
 public class ModifySubscriptionRequest extends Request {
-    @Query
-    @NameInMap("DbList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbList;
 
-    @Query
-    @NameInMap("DtsInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DtsInstanceId")
     private String dtsInstanceId;
 
-    @Query
-    @NameInMap("DtsJobId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DtsJobId")
     private String dtsJobId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("SubscriptionDataTypeDDL")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscriptionDataTypeDDL")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean subscriptionDataTypeDDL;
 
-    @Query
-    @NameInMap("SubscriptionDataTypeDML")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscriptionDataTypeDML")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean subscriptionDataTypeDML;
 
     private ModifySubscriptionRequest(Builder builder) {

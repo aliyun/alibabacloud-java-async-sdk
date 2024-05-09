@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSynchronizationJobStatusListResponseBody</p>
  */
 public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
-    @NameInMap("SynchronizationJobListStatusList")
+    @com.aliyun.core.annotation.NameInMap("SynchronizationJobListStatusList")
     private java.util.List < SynchronizationJobListStatusList> synchronizationJobListStatusList;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Long totalRecordCount;
 
     private DescribeSynchronizationJobStatusListResponseBody(Builder builder) {
@@ -192,13 +191,13 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
     } 
 
     public static class SynchronizationDirectionInfoList extends TeaModel {
-        @NameInMap("Checkpoint")
+        @com.aliyun.core.annotation.NameInMap("Checkpoint")
         private String checkpoint;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SynchronizationDirection")
+        @com.aliyun.core.annotation.NameInMap("SynchronizationDirection")
         private String synchronizationDirection;
 
         private SynchronizationDirectionInfoList(Builder builder) {
@@ -292,10 +291,10 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
 
     }
     public static class SynchronizationJobListStatusList extends TeaModel {
-        @NameInMap("SynchronizationDirectionInfoList")
+        @com.aliyun.core.annotation.NameInMap("SynchronizationDirectionInfoList")
         private java.util.List < SynchronizationDirectionInfoList> synchronizationDirectionInfoList;
 
-        @NameInMap("SynchronizationJobId")
+        @com.aliyun.core.annotation.NameInMap("SynchronizationJobId")
         private String synchronizationJobId;
 
         private SynchronizationJobListStatusList(Builder builder) {

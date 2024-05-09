@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,96 +11,96 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDtsInstanceRequest</p>
  */
 public class CreateDtsInstanceRequest extends Request {
-    @Query
-    @NameInMap("AutoPay")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
     private Boolean autoPay;
 
-    @Query
-    @NameInMap("AutoStart")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoStart")
     private Boolean autoStart;
 
-    @Query
-    @NameInMap("ComputeUnit")
-    @Validation(maximum = 999999, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComputeUnit")
+    @com.aliyun.core.annotation.Validation(maximum = 999999, minimum = 1)
     private Integer computeUnit;
 
-    @Query
-    @NameInMap("DatabaseCount")
-    @Validation(maximum = 10000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabaseCount")
+    @com.aliyun.core.annotation.Validation(maximum = 10000, minimum = 1)
     private Integer databaseCount;
 
-    @Query
-    @NameInMap("DestinationEndpointEngineName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationEndpointEngineName")
     private String destinationEndpointEngineName;
 
-    @Query
-    @NameInMap("DestinationRegion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationRegion")
     private String destinationRegion;
 
-    @Query
-    @NameInMap("Du")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Du")
     private Integer du;
 
-    @Query
-    @NameInMap("FeeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FeeType")
     private String feeType;
 
-    @Query
-    @NameInMap("InstanceClass")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceClass")
     private String instanceClass;
 
-    @Query
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @Query
-    @NameInMap("MaxDu")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxDu")
     private Double maxDu;
 
-    @Query
-    @NameInMap("MinDu")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinDu")
     private Double minDu;
 
-    @Query
-    @NameInMap("PayType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private String period;
 
-    @Query
-    @NameInMap("Quantity")
-    @Validation(maximum = 9999999, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Quantity")
+    @com.aliyun.core.annotation.Validation(maximum = 9999999, minimum = 1)
     private Integer quantity;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("SourceEndpointEngineName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpointEngineName")
     private String sourceEndpointEngineName;
 
-    @Query
-    @NameInMap("SourceRegion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceRegion")
     private String sourceRegion;
 
-    @Query
-    @NameInMap("SyncArchitecture")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SyncArchitecture")
     private String syncArchitecture;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @Query
-    @NameInMap("UsedTime")
-    @Validation(maximum = 10000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UsedTime")
+    @com.aliyun.core.annotation.Validation(maximum = 10000, minimum = 1)
     private Integer usedTime;
 
     private CreateDtsInstanceRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,50 +11,50 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ConfigureSubscriptionInstanceRequest</p>
  */
 public class ConfigureSubscriptionInstanceRequest extends Request {
-    @Query
-    @NameInMap("SourceEndpoint")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpoint")
     private SourceEndpoint sourceEndpoint;
 
-    @Query
-    @NameInMap("SubscriptionDataType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscriptionDataType")
     private SubscriptionDataType subscriptionDataType;
 
-    @Query
-    @NameInMap("SubscriptionInstance")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscriptionInstance")
     private SubscriptionInstance subscriptionInstance;
 
-    @Query
-    @NameInMap("AccountId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountId")
     private String accountId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("SubscriptionInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscriptionInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subscriptionInstanceId;
 
-    @Query
-    @NameInMap("SubscriptionInstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscriptionInstanceName")
     private String subscriptionInstanceName;
 
-    @Query
-    @NameInMap("SubscriptionInstanceNetworkType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscriptionInstanceNetworkType")
     private String subscriptionInstanceNetworkType;
 
-    @Body
-    @NameInMap("SubscriptionObject")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SubscriptionObject")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subscriptionObject;
 
     private ConfigureSubscriptionInstanceRequest(Builder builder) {
@@ -307,34 +306,34 @@ public class ConfigureSubscriptionInstanceRequest extends Request {
     } 
 
     public static class SourceEndpoint extends TeaModel {
-        @NameInMap("DatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
-        @NameInMap("IP")
+        @com.aliyun.core.annotation.NameInMap("IP")
         private String ip;
 
-        @NameInMap("InstanceID")
+        @com.aliyun.core.annotation.NameInMap("InstanceID")
         private String instanceID;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("OracleSID")
+        @com.aliyun.core.annotation.NameInMap("OracleSID")
         private String oracleSID;
 
-        @NameInMap("OwnerID")
+        @com.aliyun.core.annotation.NameInMap("OwnerID")
         private String ownerID;
 
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private SourceEndpoint(Builder builder) {
@@ -560,12 +559,12 @@ public class ConfigureSubscriptionInstanceRequest extends Request {
 
     }
     public static class SubscriptionDataType extends TeaModel {
-        @NameInMap("DDL")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DDL")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Boolean DDL;
 
-        @NameInMap("DML")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DML")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Boolean DML;
 
         private SubscriptionDataType(Builder builder) {
@@ -631,10 +630,10 @@ public class ConfigureSubscriptionInstanceRequest extends Request {
 
     }
     public static class SubscriptionInstance extends TeaModel {
-        @NameInMap("VPCId")
+        @com.aliyun.core.annotation.NameInMap("VPCId")
         private String VPCId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
         private SubscriptionInstance(Builder builder) {

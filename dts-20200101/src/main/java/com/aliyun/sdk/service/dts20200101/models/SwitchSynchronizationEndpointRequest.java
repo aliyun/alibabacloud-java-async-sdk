@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SwitchSynchronizationEndpointRequest</p>
  */
 public class SwitchSynchronizationEndpointRequest extends Request {
-    @Query
-    @NameInMap("Endpoint")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Endpoint")
     private Endpoint endpoint;
 
-    @Query
-    @NameInMap("SourceEndpoint")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpoint")
     private SourceEndpoint sourceEndpoint;
 
-    @Query
-    @NameInMap("AccountId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountId")
     private String accountId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("SynchronizationDirection")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SynchronizationDirection")
     private String synchronizationDirection;
 
-    @Query
-    @NameInMap("SynchronizationJobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SynchronizationJobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String synchronizationJobId;
 
     private SwitchSynchronizationEndpointRequest(Builder builder) {
@@ -240,23 +239,23 @@ public class SwitchSynchronizationEndpointRequest extends Request {
     } 
 
     public static class Endpoint extends TeaModel {
-        @NameInMap("IP")
+        @com.aliyun.core.annotation.NameInMap("IP")
         private String ip;
 
-        @NameInMap("InstanceId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String instanceId;
 
-        @NameInMap("InstanceType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String instanceType;
 
-        @NameInMap("Port")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Port")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String port;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private Endpoint(Builder builder) {
@@ -382,10 +381,10 @@ public class SwitchSynchronizationEndpointRequest extends Request {
 
     }
     public static class SourceEndpoint extends TeaModel {
-        @NameInMap("OwnerID")
+        @com.aliyun.core.annotation.NameInMap("OwnerID")
         private String ownerID;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
         private SourceEndpoint(Builder builder) {

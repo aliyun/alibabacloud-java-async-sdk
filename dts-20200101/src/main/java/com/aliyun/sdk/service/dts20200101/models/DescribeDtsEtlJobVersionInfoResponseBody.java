@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDtsEtlJobVersionInfoResponseBody</p>
  */
 public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
-    @NameInMap("DtsEtlJobVersionInfos")
+    @com.aliyun.core.annotation.NameInMap("DtsEtlJobVersionInfos")
     private java.util.List < DtsEtlJobVersionInfos> dtsEtlJobVersionInfos;
 
-    @NameInMap("DynamicCode")
+    @com.aliyun.core.annotation.NameInMap("DynamicCode")
     private String dynamicCode;
 
-    @NameInMap("DynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("DynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private String httpStatusCode;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeDtsEtlJobVersionInfoResponseBody(Builder builder) {
@@ -252,34 +251,34 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
     } 
 
     public static class DtsEtlJobVersionInfos extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Creator")
+        @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
 
-        @NameInMap("CreatorName")
+        @com.aliyun.core.annotation.NameInMap("CreatorName")
         private String creatorName;
 
-        @NameInMap("DtsInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DtsInstanceId")
         private String dtsInstanceId;
 
-        @NameInMap("DtsJobId")
+        @com.aliyun.core.annotation.NameInMap("DtsJobId")
         private String dtsJobId;
 
-        @NameInMap("DtsJobName")
+        @com.aliyun.core.annotation.NameInMap("DtsJobName")
         private String dtsJobName;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("SafeCheckpoint")
+        @com.aliyun.core.annotation.NameInMap("SafeCheckpoint")
         private String safeCheckpoint;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private Integer version;
 
         private DtsEtlJobVersionInfos(Builder builder) {

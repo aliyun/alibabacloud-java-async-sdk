@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,55 +11,55 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeClusterUsedUtilizationResponseBody</p>
  */
 public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("CpuTotal")
+    @com.aliyun.core.annotation.NameInMap("CpuTotal")
     private Float cpuTotal;
 
-    @NameInMap("DedicatedClusterId")
+    @com.aliyun.core.annotation.NameInMap("DedicatedClusterId")
     private String dedicatedClusterId;
 
-    @NameInMap("DiskTotal")
+    @com.aliyun.core.annotation.NameInMap("DiskTotal")
     private Float diskTotal;
 
-    @NameInMap("DiskUsed")
+    @com.aliyun.core.annotation.NameInMap("DiskUsed")
     private Float diskUsed;
 
-    @NameInMap("DuTotal")
+    @com.aliyun.core.annotation.NameInMap("DuTotal")
     private Integer duTotal;
 
-    @NameInMap("DuUsed")
+    @com.aliyun.core.annotation.NameInMap("DuUsed")
     private Integer duUsed;
 
-    @NameInMap("DynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("DynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("MemoryTotal")
+    @com.aliyun.core.annotation.NameInMap("MemoryTotal")
     private Float memoryTotal;
 
-    @NameInMap("MemoryUsed")
+    @com.aliyun.core.annotation.NameInMap("MemoryUsed")
     private Float memoryUsed;
 
-    @NameInMap("MemoryUsedPercentage")
+    @com.aliyun.core.annotation.NameInMap("MemoryUsedPercentage")
     private Float memoryUsedPercentage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TaskRunning")
+    @com.aliyun.core.annotation.NameInMap("TaskRunning")
     private Integer taskRunning;
 
     private DescribeClusterUsedUtilizationResponseBody(Builder builder) {

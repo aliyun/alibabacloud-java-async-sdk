@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,38 +11,38 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyConsumerChannelRequest</p>
  */
 public class ModifyConsumerChannelRequest extends Request {
-    @Query
-    @NameInMap("ConsumerGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConsumerGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String consumerGroupId;
 
-    @Query
-    @NameInMap("ConsumerGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConsumerGroupName")
     private String consumerGroupName;
 
-    @Query
-    @NameInMap("ConsumerGroupPassword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConsumerGroupPassword")
     private String consumerGroupPassword;
 
-    @Query
-    @NameInMap("ConsumerGroupUserName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConsumerGroupUserName")
     private String consumerGroupUserName;
 
-    @Query
-    @NameInMap("DtsInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DtsInstanceId")
     private String dtsInstanceId;
 
-    @Query
-    @NameInMap("DtsJobId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DtsJobId")
     private String dtsJobId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private ModifyConsumerChannelRequest(Builder builder) {

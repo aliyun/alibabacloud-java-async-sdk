@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMigrationJobDetailResponseBody</p>
  */
 public class DescribeMigrationJobDetailResponseBody extends TeaModel {
-    @NameInMap("DataInitializationDetailList")
+    @com.aliyun.core.annotation.NameInMap("DataInitializationDetailList")
     private DataInitializationDetailList dataInitializationDetailList;
 
-    @NameInMap("DataSynchronizationDetailList")
+    @com.aliyun.core.annotation.NameInMap("DataSynchronizationDetailList")
     private DataSynchronizationDetailList dataSynchronizationDetailList;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StructureInitializationDetailList")
+    @com.aliyun.core.annotation.NameInMap("StructureInitializationDetailList")
     private StructureInitializationDetailList structureInitializationDetailList;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Long totalRecordCount;
 
     private DescribeMigrationJobDetailResponseBody(Builder builder) {
@@ -232,28 +231,28 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
     } 
 
     public static class DataInitializationDetail extends TeaModel {
-        @NameInMap("DestinationOwnerDBName")
+        @com.aliyun.core.annotation.NameInMap("DestinationOwnerDBName")
         private String destinationOwnerDBName;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("FinishRowNum")
+        @com.aliyun.core.annotation.NameInMap("FinishRowNum")
         private String finishRowNum;
 
-        @NameInMap("MigrationTime")
+        @com.aliyun.core.annotation.NameInMap("MigrationTime")
         private String migrationTime;
 
-        @NameInMap("SourceOwnerDBName")
+        @com.aliyun.core.annotation.NameInMap("SourceOwnerDBName")
         private String sourceOwnerDBName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
-        @NameInMap("TotalRowNum")
+        @com.aliyun.core.annotation.NameInMap("TotalRowNum")
         private String totalRowNum;
 
         private DataInitializationDetail(Builder builder) {
@@ -419,7 +418,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
 
     }
     public static class DataInitializationDetailList extends TeaModel {
-        @NameInMap("DataInitializationDetail")
+        @com.aliyun.core.annotation.NameInMap("DataInitializationDetail")
         private java.util.List < DataInitializationDetail> dataInitializationDetail;
 
         private DataInitializationDetailList(Builder builder) {
@@ -460,19 +459,19 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
 
     }
     public static class DataSynchronizationDetail extends TeaModel {
-        @NameInMap("DestinationOwnerDBName")
+        @com.aliyun.core.annotation.NameInMap("DestinationOwnerDBName")
         private String destinationOwnerDBName;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("SourceOwnerDBName")
+        @com.aliyun.core.annotation.NameInMap("SourceOwnerDBName")
         private String sourceOwnerDBName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private DataSynchronizationDetail(Builder builder) {
@@ -587,7 +586,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
 
     }
     public static class DataSynchronizationDetailList extends TeaModel {
-        @NameInMap("DataSynchronizationDetail")
+        @com.aliyun.core.annotation.NameInMap("DataSynchronizationDetail")
         private java.util.List < DataSynchronizationDetail> dataSynchronizationDetail;
 
         private DataSynchronizationDetailList(Builder builder) {
@@ -628,25 +627,25 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
 
     }
     public static class StructureInitializationDetail extends TeaModel {
-        @NameInMap("DestinationOwnerDBName")
+        @com.aliyun.core.annotation.NameInMap("DestinationOwnerDBName")
         private String destinationOwnerDBName;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("ObjectDefinition")
+        @com.aliyun.core.annotation.NameInMap("ObjectDefinition")
         private String objectDefinition;
 
-        @NameInMap("ObjectName")
+        @com.aliyun.core.annotation.NameInMap("ObjectName")
         private String objectName;
 
-        @NameInMap("ObjectType")
+        @com.aliyun.core.annotation.NameInMap("ObjectType")
         private String objectType;
 
-        @NameInMap("SourceOwnerDBName")
+        @com.aliyun.core.annotation.NameInMap("SourceOwnerDBName")
         private String sourceOwnerDBName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private StructureInitializationDetail(Builder builder) {
@@ -795,7 +794,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
 
     }
     public static class ConstraintList extends TeaModel {
-        @NameInMap("StructureInitializationDetail")
+        @com.aliyun.core.annotation.NameInMap("StructureInitializationDetail")
         private java.util.List < StructureInitializationDetail> structureInitializationDetail;
 
         private ConstraintList(Builder builder) {
@@ -836,28 +835,28 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
 
     }
     public static class StructureInitializationDetailListStructureInitializationDetail extends TeaModel {
-        @NameInMap("ConstraintList")
+        @com.aliyun.core.annotation.NameInMap("ConstraintList")
         private ConstraintList constraintList;
 
-        @NameInMap("DestinationOwnerDBName")
+        @com.aliyun.core.annotation.NameInMap("DestinationOwnerDBName")
         private String destinationOwnerDBName;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("ObjectDefinition")
+        @com.aliyun.core.annotation.NameInMap("ObjectDefinition")
         private String objectDefinition;
 
-        @NameInMap("ObjectName")
+        @com.aliyun.core.annotation.NameInMap("ObjectName")
         private String objectName;
 
-        @NameInMap("ObjectType")
+        @com.aliyun.core.annotation.NameInMap("ObjectType")
         private String objectType;
 
-        @NameInMap("SourceOwnerDBName")
+        @com.aliyun.core.annotation.NameInMap("SourceOwnerDBName")
         private String sourceOwnerDBName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private StructureInitializationDetailListStructureInitializationDetail(Builder builder) {
@@ -1026,7 +1025,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
 
     }
     public static class StructureInitializationDetailList extends TeaModel {
-        @NameInMap("StructureInitializationDetail")
+        @com.aliyun.core.annotation.NameInMap("StructureInitializationDetail")
         private java.util.List < StructureInitializationDetailListStructureInitializationDetail> structureInitializationDetail;
 
         private StructureInitializationDetailList(Builder builder) {

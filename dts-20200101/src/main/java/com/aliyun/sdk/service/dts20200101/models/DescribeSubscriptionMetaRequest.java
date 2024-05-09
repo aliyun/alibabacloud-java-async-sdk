@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSubscriptionMetaRequest</p>
  */
 public class DescribeSubscriptionMetaRequest extends Request {
-    @Query
-    @NameInMap("DtsInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DtsInstanceId")
     private String dtsInstanceId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("Sid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sid;
 
-    @Query
-    @NameInMap("SubMigrationJobIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubMigrationJobIds")
     private java.util.Map < String, ? > subMigrationJobIds;
 
-    @Query
-    @NameInMap("Topics")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Topics")
     private java.util.Map < String, ? > topics;
 
     private DescribeSubscriptionMetaRequest(Builder builder) {

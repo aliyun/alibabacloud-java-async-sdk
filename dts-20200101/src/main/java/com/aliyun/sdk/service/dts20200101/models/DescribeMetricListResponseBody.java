@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMetricListResponseBody</p>
  */
 public class DescribeMetricListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("DataPoints")
+    @com.aliyun.core.annotation.NameInMap("DataPoints")
     private java.util.List < DataPoints> dataPoints;
 
-    @NameInMap("DynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("DynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("MetricName")
+    @com.aliyun.core.annotation.NameInMap("MetricName")
     private String metricName;
 
-    @NameInMap("MetricType")
+    @com.aliyun.core.annotation.NameInMap("MetricType")
     private String metricType;
 
-    @NameInMap("Param")
+    @com.aliyun.core.annotation.NameInMap("Param")
     private String param;
 
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Long period;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeMetricListResponseBody(Builder builder) {
@@ -287,10 +286,10 @@ public class DescribeMetricListResponseBody extends TeaModel {
     } 
 
     public static class DataPoints extends TeaModel {
-        @NameInMap("Statistics")
+        @com.aliyun.core.annotation.NameInMap("Statistics")
         private Float statistics;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
         private DataPoints(Builder builder) {

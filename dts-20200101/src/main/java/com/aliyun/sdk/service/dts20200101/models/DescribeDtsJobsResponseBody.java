@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDtsJobsResponseBody</p>
  */
 public class DescribeDtsJobsResponseBody extends TeaModel {
-    @NameInMap("DtsJobList")
+    @com.aliyun.core.annotation.NameInMap("DtsJobList")
     private java.util.List < DtsJobList> dtsJobList;
 
-    @NameInMap("DynamicCode")
+    @com.aliyun.core.annotation.NameInMap("DynamicCode")
     private String dynamicCode;
 
-    @NameInMap("DynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("DynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("EtlDemoList")
+    @com.aliyun.core.annotation.NameInMap("EtlDemoList")
     private java.util.List < EtlDemoList> etlDemoList;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeDtsJobsResponseBody(Builder builder) {
@@ -275,19 +274,19 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     } 
 
     public static class DataCloudStatus extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("NeedUpgrade")
+        @com.aliyun.core.annotation.NameInMap("NeedUpgrade")
         private Boolean needUpgrade;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private DataCloudStatus(Builder builder) {
@@ -400,16 +399,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class DataEtlStatus extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private DataEtlStatus(Builder builder) {
@@ -508,16 +507,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class DataInitializationStatus extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private DataInitializationStatus(Builder builder) {
@@ -615,19 +614,19 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class DataSynchronizationStatus extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("NeedUpgrade")
+        @com.aliyun.core.annotation.NameInMap("NeedUpgrade")
         private Boolean needUpgrade;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private DataSynchronizationStatus(Builder builder) {
@@ -749,34 +748,34 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class DestinationEndpoint extends TeaModel {
-        @NameInMap("DatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
-        @NameInMap("EngineName")
+        @com.aliyun.core.annotation.NameInMap("EngineName")
         private String engineName;
 
-        @NameInMap("InstanceID")
+        @com.aliyun.core.annotation.NameInMap("InstanceID")
         private String instanceID;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("OracleSID")
+        @com.aliyun.core.annotation.NameInMap("OracleSID")
         private String oracleSID;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("SslSolutionEnum")
+        @com.aliyun.core.annotation.NameInMap("SslSolutionEnum")
         private String sslSolutionEnum;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private DestinationEndpoint(Builder builder) {
@@ -979,10 +978,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class ErrorDetails extends TeaModel {
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("HelpUrl")
+        @com.aliyun.core.annotation.NameInMap("HelpUrl")
         private String helpUrl;
 
         private ErrorDetails(Builder builder) {
@@ -1040,16 +1039,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class FullDataCheckStatus extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private FullDataCheckStatus(Builder builder) {
@@ -1147,16 +1146,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class IncDataCheckStatus extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private IncDataCheckStatus(Builder builder) {
@@ -1254,19 +1253,19 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class MigrationMode extends TeaModel {
-        @NameInMap("DataInitialization")
+        @com.aliyun.core.annotation.NameInMap("DataInitialization")
         private Boolean dataInitialization;
 
-        @NameInMap("DataSynchronization")
+        @com.aliyun.core.annotation.NameInMap("DataSynchronization")
         private Boolean dataSynchronization;
 
-        @NameInMap("FullDataCheck")
+        @com.aliyun.core.annotation.NameInMap("FullDataCheck")
         private Boolean fullDataCheck;
 
-        @NameInMap("IncDataCheck")
+        @com.aliyun.core.annotation.NameInMap("IncDataCheck")
         private Boolean incDataCheck;
 
-        @NameInMap("StructureInitialization")
+        @com.aliyun.core.annotation.NameInMap("StructureInitialization")
         private Boolean structureInitialization;
 
         private MigrationMode(Builder builder) {
@@ -1393,10 +1392,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class Performance extends TeaModel {
-        @NameInMap("Flow")
+        @com.aliyun.core.annotation.NameInMap("Flow")
         private String flow;
 
-        @NameInMap("Rps")
+        @com.aliyun.core.annotation.NameInMap("Rps")
         private String rps;
 
         private Performance(Builder builder) {
@@ -1454,19 +1453,19 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class Detail extends TeaModel {
-        @NameInMap("CheckItem")
+        @com.aliyun.core.annotation.NameInMap("CheckItem")
         private String checkItem;
 
-        @NameInMap("CheckItemDescription")
+        @com.aliyun.core.annotation.NameInMap("CheckItemDescription")
         private String checkItemDescription;
 
-        @NameInMap("CheckResult")
+        @com.aliyun.core.annotation.NameInMap("CheckResult")
         private String checkResult;
 
-        @NameInMap("FailedReason")
+        @com.aliyun.core.annotation.NameInMap("FailedReason")
         private String failedReason;
 
-        @NameInMap("RepairMethod")
+        @com.aliyun.core.annotation.NameInMap("RepairMethod")
         private String repairMethod;
 
         private Detail(Builder builder) {
@@ -1585,16 +1584,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class PrecheckStatus extends TeaModel {
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private java.util.List < Detail> detail;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private PrecheckStatus(Builder builder) {
@@ -1693,46 +1692,46 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class RetryState extends TeaModel {
-        @NameInMap("ErrMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrMessage")
         private String errMessage;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("MaxRetryTime")
+        @com.aliyun.core.annotation.NameInMap("MaxRetryTime")
         private Integer maxRetryTime;
 
-        @NameInMap("MigrationErrCode")
+        @com.aliyun.core.annotation.NameInMap("MigrationErrCode")
         private String migrationErrCode;
 
-        @NameInMap("MigrationErrHelpDocId")
+        @com.aliyun.core.annotation.NameInMap("MigrationErrHelpDocId")
         private String migrationErrHelpDocId;
 
-        @NameInMap("MigrationErrHelpDocKey")
+        @com.aliyun.core.annotation.NameInMap("MigrationErrHelpDocKey")
         private String migrationErrHelpDocKey;
 
-        @NameInMap("MigrationErrMsg")
+        @com.aliyun.core.annotation.NameInMap("MigrationErrMsg")
         private String migrationErrMsg;
 
-        @NameInMap("MigrationErrType")
+        @com.aliyun.core.annotation.NameInMap("MigrationErrType")
         private String migrationErrType;
 
-        @NameInMap("MigrationErrWorkaround")
+        @com.aliyun.core.annotation.NameInMap("MigrationErrWorkaround")
         private String migrationErrWorkaround;
 
-        @NameInMap("Module")
+        @com.aliyun.core.annotation.NameInMap("Module")
         private String module;
 
-        @NameInMap("RetryCount")
+        @com.aliyun.core.annotation.NameInMap("RetryCount")
         private Integer retryCount;
 
-        @NameInMap("RetryTarget")
+        @com.aliyun.core.annotation.NameInMap("RetryTarget")
         private String retryTarget;
 
-        @NameInMap("RetryTime")
+        @com.aliyun.core.annotation.NameInMap("RetryTime")
         private Integer retryTime;
 
-        @NameInMap("Retrying")
+        @com.aliyun.core.annotation.NameInMap("Retrying")
         private Boolean retrying;
 
         private RetryState(Builder builder) {
@@ -2003,16 +2002,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class ReverseJobDataInitializationStatus extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ReverseJobDataInitializationStatus(Builder builder) {
@@ -2110,19 +2109,19 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class ReverseJobDataSynchronizationStatus extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("NeedUpgrade")
+        @com.aliyun.core.annotation.NameInMap("NeedUpgrade")
         private Boolean needUpgrade;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ReverseJobDataSynchronizationStatus(Builder builder) {
@@ -2237,34 +2236,34 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class ReverseJobDestinationEndpoint extends TeaModel {
-        @NameInMap("DatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
-        @NameInMap("EngineName")
+        @com.aliyun.core.annotation.NameInMap("EngineName")
         private String engineName;
 
-        @NameInMap("InstanceID")
+        @com.aliyun.core.annotation.NameInMap("InstanceID")
         private String instanceID;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("OracleSID")
+        @com.aliyun.core.annotation.NameInMap("OracleSID")
         private String oracleSID;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("SslSolutionEnum")
+        @com.aliyun.core.annotation.NameInMap("SslSolutionEnum")
         private String sslSolutionEnum;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private ReverseJobDestinationEndpoint(Builder builder) {
@@ -2467,10 +2466,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class ReverseJobErrorDetails extends TeaModel {
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("HelpUrl")
+        @com.aliyun.core.annotation.NameInMap("HelpUrl")
         private String helpUrl;
 
         private ReverseJobErrorDetails(Builder builder) {
@@ -2528,16 +2527,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class ReverseJobFullDataCheckStatus extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ReverseJobFullDataCheckStatus(Builder builder) {
@@ -2635,16 +2634,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class ReverseJobIncDataCheckStatus extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ReverseJobIncDataCheckStatus(Builder builder) {
@@ -2742,19 +2741,19 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class ReverseJobMigrationMode extends TeaModel {
-        @NameInMap("DataInitialization")
+        @com.aliyun.core.annotation.NameInMap("DataInitialization")
         private Boolean dataInitialization;
 
-        @NameInMap("DataSynchronization")
+        @com.aliyun.core.annotation.NameInMap("DataSynchronization")
         private Boolean dataSynchronization;
 
-        @NameInMap("FullDataCheck")
+        @com.aliyun.core.annotation.NameInMap("FullDataCheck")
         private Boolean fullDataCheck;
 
-        @NameInMap("IncDataCheck")
+        @com.aliyun.core.annotation.NameInMap("IncDataCheck")
         private Boolean incDataCheck;
 
-        @NameInMap("StructureInitialization")
+        @com.aliyun.core.annotation.NameInMap("StructureInitialization")
         private Boolean structureInitialization;
 
         private ReverseJobMigrationMode(Builder builder) {
@@ -2879,10 +2878,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class ReverseJobPerformance extends TeaModel {
-        @NameInMap("Flow")
+        @com.aliyun.core.annotation.NameInMap("Flow")
         private String flow;
 
-        @NameInMap("Rps")
+        @com.aliyun.core.annotation.NameInMap("Rps")
         private String rps;
 
         private ReverseJobPerformance(Builder builder) {
@@ -2940,19 +2939,19 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class PrecheckStatusDetail extends TeaModel {
-        @NameInMap("CheckItem")
+        @com.aliyun.core.annotation.NameInMap("CheckItem")
         private String checkItem;
 
-        @NameInMap("CheckItemDescription")
+        @com.aliyun.core.annotation.NameInMap("CheckItemDescription")
         private String checkItemDescription;
 
-        @NameInMap("CheckResult")
+        @com.aliyun.core.annotation.NameInMap("CheckResult")
         private String checkResult;
 
-        @NameInMap("FailedReason")
+        @com.aliyun.core.annotation.NameInMap("FailedReason")
         private String failedReason;
 
-        @NameInMap("RepairMethod")
+        @com.aliyun.core.annotation.NameInMap("RepairMethod")
         private String repairMethod;
 
         private PrecheckStatusDetail(Builder builder) {
@@ -3065,16 +3064,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class ReverseJobPrecheckStatus extends TeaModel {
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private java.util.List < PrecheckStatusDetail> detail;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ReverseJobPrecheckStatus(Builder builder) {
@@ -3173,34 +3172,34 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class SourceEndpoint extends TeaModel {
-        @NameInMap("DatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
-        @NameInMap("EngineName")
+        @com.aliyun.core.annotation.NameInMap("EngineName")
         private String engineName;
 
-        @NameInMap("InstanceID")
+        @com.aliyun.core.annotation.NameInMap("InstanceID")
         private String instanceID;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("OracleSID")
+        @com.aliyun.core.annotation.NameInMap("OracleSID")
         private String oracleSID;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("SslSolutionEnum")
+        @com.aliyun.core.annotation.NameInMap("SslSolutionEnum")
         private String sslSolutionEnum;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private SourceEndpoint(Builder builder) {
@@ -3403,16 +3402,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class StructureInitializationStatus extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private StructureInitializationStatus(Builder builder) {
@@ -3510,100 +3509,100 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class ReverseJob extends TeaModel {
-        @NameInMap("Checkpoint")
+        @com.aliyun.core.annotation.NameInMap("Checkpoint")
         private String checkpoint;
 
-        @NameInMap("CpuUsage")
+        @com.aliyun.core.annotation.NameInMap("CpuUsage")
         private String cpuUsage;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DataInitializationStatus")
+        @com.aliyun.core.annotation.NameInMap("DataInitializationStatus")
         private ReverseJobDataInitializationStatus dataInitializationStatus;
 
-        @NameInMap("DataSynchronizationStatus")
+        @com.aliyun.core.annotation.NameInMap("DataSynchronizationStatus")
         private ReverseJobDataSynchronizationStatus dataSynchronizationStatus;
 
-        @NameInMap("DbObject")
+        @com.aliyun.core.annotation.NameInMap("DbObject")
         private String dbObject;
 
-        @NameInMap("DedicatedClusterId")
+        @com.aliyun.core.annotation.NameInMap("DedicatedClusterId")
         private String dedicatedClusterId;
 
-        @NameInMap("Delay")
+        @com.aliyun.core.annotation.NameInMap("Delay")
         private Long delay;
 
-        @NameInMap("DestinationEndpoint")
+        @com.aliyun.core.annotation.NameInMap("DestinationEndpoint")
         private ReverseJobDestinationEndpoint destinationEndpoint;
 
-        @NameInMap("DtsInstanceID")
+        @com.aliyun.core.annotation.NameInMap("DtsInstanceID")
         private String dtsInstanceID;
 
-        @NameInMap("DtsJobClass")
+        @com.aliyun.core.annotation.NameInMap("DtsJobClass")
         private String dtsJobClass;
 
-        @NameInMap("DtsJobDirection")
+        @com.aliyun.core.annotation.NameInMap("DtsJobDirection")
         private String dtsJobDirection;
 
-        @NameInMap("DtsJobId")
+        @com.aliyun.core.annotation.NameInMap("DtsJobId")
         private String dtsJobId;
 
-        @NameInMap("DtsJobName")
+        @com.aliyun.core.annotation.NameInMap("DtsJobName")
         private String dtsJobName;
 
-        @NameInMap("DuUsage")
+        @com.aliyun.core.annotation.NameInMap("DuUsage")
         private Long duUsage;
 
-        @NameInMap("ErrorDetails")
+        @com.aliyun.core.annotation.NameInMap("ErrorDetails")
         private java.util.List < ReverseJobErrorDetails> errorDetails;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("EtlSafeCheckpoint")
+        @com.aliyun.core.annotation.NameInMap("EtlSafeCheckpoint")
         private String etlSafeCheckpoint;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("FullDataCheckStatus")
+        @com.aliyun.core.annotation.NameInMap("FullDataCheckStatus")
         private ReverseJobFullDataCheckStatus fullDataCheckStatus;
 
-        @NameInMap("IncDataCheckStatus")
+        @com.aliyun.core.annotation.NameInMap("IncDataCheckStatus")
         private ReverseJobIncDataCheckStatus incDataCheckStatus;
 
-        @NameInMap("MaxDu")
+        @com.aliyun.core.annotation.NameInMap("MaxDu")
         private Double maxDu;
 
-        @NameInMap("MemUsage")
+        @com.aliyun.core.annotation.NameInMap("MemUsage")
         private String memUsage;
 
-        @NameInMap("MigrationMode")
+        @com.aliyun.core.annotation.NameInMap("MigrationMode")
         private ReverseJobMigrationMode migrationMode;
 
-        @NameInMap("MinDu")
+        @com.aliyun.core.annotation.NameInMap("MinDu")
         private Double minDu;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("Performance")
+        @com.aliyun.core.annotation.NameInMap("Performance")
         private ReverseJobPerformance performance;
 
-        @NameInMap("PrecheckStatus")
+        @com.aliyun.core.annotation.NameInMap("PrecheckStatus")
         private ReverseJobPrecheckStatus precheckStatus;
 
-        @NameInMap("Reserved")
+        @com.aliyun.core.annotation.NameInMap("Reserved")
         private String reserved;
 
-        @NameInMap("SourceEndpoint")
+        @com.aliyun.core.annotation.NameInMap("SourceEndpoint")
         private SourceEndpoint sourceEndpoint;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StructureInitializationStatus")
+        @com.aliyun.core.annotation.NameInMap("StructureInitializationStatus")
         private StructureInitializationStatus structureInitializationStatus;
 
         private ReverseJob(Builder builder) {
@@ -4181,34 +4180,34 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class DtsJobListSourceEndpoint extends TeaModel {
-        @NameInMap("DatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
-        @NameInMap("EngineName")
+        @com.aliyun.core.annotation.NameInMap("EngineName")
         private String engineName;
 
-        @NameInMap("InstanceID")
+        @com.aliyun.core.annotation.NameInMap("InstanceID")
         private String instanceID;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("OracleSID")
+        @com.aliyun.core.annotation.NameInMap("OracleSID")
         private String oracleSID;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("SslSolutionEnum")
+        @com.aliyun.core.annotation.NameInMap("SslSolutionEnum")
         private String sslSolutionEnum;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private DtsJobListSourceEndpoint(Builder builder) {
@@ -4411,16 +4410,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class DtsJobListStructureInitializationStatus extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private DtsJobListStructureInitializationStatus(Builder builder) {
@@ -4518,10 +4517,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class TagList extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private TagList(Builder builder) {
@@ -4579,163 +4578,163 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class DtsJobList extends TeaModel {
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("BeginTimestamp")
+        @com.aliyun.core.annotation.NameInMap("BeginTimestamp")
         private String beginTimestamp;
 
-        @NameInMap("Checkpoint")
+        @com.aliyun.core.annotation.NameInMap("Checkpoint")
         private String checkpoint;
 
-        @NameInMap("ConsumptionCheckpoint")
+        @com.aliyun.core.annotation.NameInMap("ConsumptionCheckpoint")
         private String consumptionCheckpoint;
 
-        @NameInMap("ConsumptionClient")
+        @com.aliyun.core.annotation.NameInMap("ConsumptionClient")
         private String consumptionClient;
 
-        @NameInMap("CpuUsage")
+        @com.aliyun.core.annotation.NameInMap("CpuUsage")
         private String cpuUsage;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DataCloudStatus")
+        @com.aliyun.core.annotation.NameInMap("DataCloudStatus")
         private DataCloudStatus dataCloudStatus;
 
-        @NameInMap("DataEtlStatus")
+        @com.aliyun.core.annotation.NameInMap("DataEtlStatus")
         private DataEtlStatus dataEtlStatus;
 
-        @NameInMap("DataInitializationStatus")
+        @com.aliyun.core.annotation.NameInMap("DataInitializationStatus")
         private DataInitializationStatus dataInitializationStatus;
 
-        @NameInMap("DataSynchronizationStatus")
+        @com.aliyun.core.annotation.NameInMap("DataSynchronizationStatus")
         private DataSynchronizationStatus dataSynchronizationStatus;
 
-        @NameInMap("DbObject")
+        @com.aliyun.core.annotation.NameInMap("DbObject")
         private String dbObject;
 
-        @NameInMap("DedicatedClusterId")
+        @com.aliyun.core.annotation.NameInMap("DedicatedClusterId")
         private String dedicatedClusterId;
 
-        @NameInMap("Delay")
+        @com.aliyun.core.annotation.NameInMap("Delay")
         private Long delay;
 
-        @NameInMap("DestinationEndpoint")
+        @com.aliyun.core.annotation.NameInMap("DestinationEndpoint")
         private DestinationEndpoint destinationEndpoint;
 
-        @NameInMap("DtsBisLabel")
+        @com.aliyun.core.annotation.NameInMap("DtsBisLabel")
         private String dtsBisLabel;
 
-        @NameInMap("DtsInstanceID")
+        @com.aliyun.core.annotation.NameInMap("DtsInstanceID")
         private String dtsInstanceID;
 
-        @NameInMap("DtsJobClass")
+        @com.aliyun.core.annotation.NameInMap("DtsJobClass")
         private String dtsJobClass;
 
-        @NameInMap("DtsJobDirection")
+        @com.aliyun.core.annotation.NameInMap("DtsJobDirection")
         private String dtsJobDirection;
 
-        @NameInMap("DtsJobId")
+        @com.aliyun.core.annotation.NameInMap("DtsJobId")
         private String dtsJobId;
 
-        @NameInMap("DtsJobName")
+        @com.aliyun.core.annotation.NameInMap("DtsJobName")
         private String dtsJobName;
 
-        @NameInMap("DuUsage")
+        @com.aliyun.core.annotation.NameInMap("DuUsage")
         private Long duUsage;
 
-        @NameInMap("EndTimestamp")
+        @com.aliyun.core.annotation.NameInMap("EndTimestamp")
         private String endTimestamp;
 
-        @NameInMap("ErrorDetails")
+        @com.aliyun.core.annotation.NameInMap("ErrorDetails")
         private java.util.List < ErrorDetails> errorDetails;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("EtlSafeCheckpoint")
+        @com.aliyun.core.annotation.NameInMap("EtlSafeCheckpoint")
         private String etlSafeCheckpoint;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("FullDataCheckStatus")
+        @com.aliyun.core.annotation.NameInMap("FullDataCheckStatus")
         private FullDataCheckStatus fullDataCheckStatus;
 
-        @NameInMap("IncDataCheckStatus")
+        @com.aliyun.core.annotation.NameInMap("IncDataCheckStatus")
         private IncDataCheckStatus incDataCheckStatus;
 
-        @NameInMap("JobType")
+        @com.aliyun.core.annotation.NameInMap("JobType")
         private String jobType;
 
-        @NameInMap("MaxDu")
+        @com.aliyun.core.annotation.NameInMap("MaxDu")
         private Double maxDu;
 
-        @NameInMap("MemUsage")
+        @com.aliyun.core.annotation.NameInMap("MemUsage")
         private String memUsage;
 
-        @NameInMap("MigrationErrCode")
+        @com.aliyun.core.annotation.NameInMap("MigrationErrCode")
         private String migrationErrCode;
 
-        @NameInMap("MigrationErrHelpDocId")
+        @com.aliyun.core.annotation.NameInMap("MigrationErrHelpDocId")
         private String migrationErrHelpDocId;
 
-        @NameInMap("MigrationErrHelpDocKey")
+        @com.aliyun.core.annotation.NameInMap("MigrationErrHelpDocKey")
         private String migrationErrHelpDocKey;
 
-        @NameInMap("MigrationErrMsg")
+        @com.aliyun.core.annotation.NameInMap("MigrationErrMsg")
         private String migrationErrMsg;
 
-        @NameInMap("MigrationErrType")
+        @com.aliyun.core.annotation.NameInMap("MigrationErrType")
         private String migrationErrType;
 
-        @NameInMap("MigrationErrWorkaround")
+        @com.aliyun.core.annotation.NameInMap("MigrationErrWorkaround")
         private String migrationErrWorkaround;
 
-        @NameInMap("MigrationMode")
+        @com.aliyun.core.annotation.NameInMap("MigrationMode")
         private MigrationMode migrationMode;
 
-        @NameInMap("MinDu")
+        @com.aliyun.core.annotation.NameInMap("MinDu")
         private Double minDu;
 
-        @NameInMap("OriginType")
+        @com.aliyun.core.annotation.NameInMap("OriginType")
         private String originType;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("Performance")
+        @com.aliyun.core.annotation.NameInMap("Performance")
         private Performance performance;
 
-        @NameInMap("PrecheckStatus")
+        @com.aliyun.core.annotation.NameInMap("PrecheckStatus")
         private PrecheckStatus precheckStatus;
 
-        @NameInMap("Reserved")
+        @com.aliyun.core.annotation.NameInMap("Reserved")
         private String reserved;
 
-        @NameInMap("ResourceGroupDisplayName")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupDisplayName")
         private String resourceGroupDisplayName;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("RetryState")
+        @com.aliyun.core.annotation.NameInMap("RetryState")
         private RetryState retryState;
 
-        @NameInMap("ReverseJob")
+        @com.aliyun.core.annotation.NameInMap("ReverseJob")
         private ReverseJob reverseJob;
 
-        @NameInMap("SourceEndpoint")
+        @com.aliyun.core.annotation.NameInMap("SourceEndpoint")
         private DtsJobListSourceEndpoint sourceEndpoint;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StructureInitializationStatus")
+        @com.aliyun.core.annotation.NameInMap("StructureInitializationStatus")
         private DtsJobListStructureInitializationStatus structureInitializationStatus;
 
-        @NameInMap("TagList")
+        @com.aliyun.core.annotation.NameInMap("TagList")
         private java.util.List < TagList> tagList;
 
         private DtsJobList(Builder builder) {
@@ -5693,16 +5692,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class EtlDemoListDataEtlStatus extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private EtlDemoListDataEtlStatus(Builder builder) {
@@ -5801,16 +5800,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class EtlDemoListDataInitializationStatus extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private EtlDemoListDataInitializationStatus(Builder builder) {
@@ -5908,19 +5907,19 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class EtlDemoListDataSynchronizationStatus extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("NeedUpgrade")
+        @com.aliyun.core.annotation.NameInMap("NeedUpgrade")
         private Boolean needUpgrade;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private EtlDemoListDataSynchronizationStatus(Builder builder) {
@@ -6042,34 +6041,34 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class EtlDemoListDestinationEndpoint extends TeaModel {
-        @NameInMap("DatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
-        @NameInMap("EngineName")
+        @com.aliyun.core.annotation.NameInMap("EngineName")
         private String engineName;
 
-        @NameInMap("InstanceID")
+        @com.aliyun.core.annotation.NameInMap("InstanceID")
         private String instanceID;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("OracleSID")
+        @com.aliyun.core.annotation.NameInMap("OracleSID")
         private String oracleSID;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("SslSolutionEnum")
+        @com.aliyun.core.annotation.NameInMap("SslSolutionEnum")
         private String sslSolutionEnum;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private EtlDemoListDestinationEndpoint(Builder builder) {
@@ -6272,13 +6271,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class EtlDemoListMigrationMode extends TeaModel {
-        @NameInMap("DataInitialization")
+        @com.aliyun.core.annotation.NameInMap("DataInitialization")
         private Boolean dataInitialization;
 
-        @NameInMap("DataSynchronization")
+        @com.aliyun.core.annotation.NameInMap("DataSynchronization")
         private Boolean dataSynchronization;
 
-        @NameInMap("StructureInitialization")
+        @com.aliyun.core.annotation.NameInMap("StructureInitialization")
         private Boolean structureInitialization;
 
         private EtlDemoListMigrationMode(Builder builder) {
@@ -6365,10 +6364,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class EtlDemoListPerformance extends TeaModel {
-        @NameInMap("Flow")
+        @com.aliyun.core.annotation.NameInMap("Flow")
         private String flow;
 
-        @NameInMap("Rps")
+        @com.aliyun.core.annotation.NameInMap("Rps")
         private String rps;
 
         private EtlDemoListPerformance(Builder builder) {
@@ -6426,19 +6425,19 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class EtlDemoListPrecheckStatusDetail extends TeaModel {
-        @NameInMap("CheckItem")
+        @com.aliyun.core.annotation.NameInMap("CheckItem")
         private String checkItem;
 
-        @NameInMap("CheckItemDescription")
+        @com.aliyun.core.annotation.NameInMap("CheckItemDescription")
         private String checkItemDescription;
 
-        @NameInMap("CheckResult")
+        @com.aliyun.core.annotation.NameInMap("CheckResult")
         private String checkResult;
 
-        @NameInMap("FailedReason")
+        @com.aliyun.core.annotation.NameInMap("FailedReason")
         private String failedReason;
 
-        @NameInMap("RepairMethod")
+        @com.aliyun.core.annotation.NameInMap("RepairMethod")
         private String repairMethod;
 
         private EtlDemoListPrecheckStatusDetail(Builder builder) {
@@ -6557,16 +6556,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class EtlDemoListPrecheckStatus extends TeaModel {
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private java.util.List < EtlDemoListPrecheckStatusDetail> detail;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private EtlDemoListPrecheckStatus(Builder builder) {
@@ -6665,28 +6664,28 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class EtlDemoListRetryState extends TeaModel {
-        @NameInMap("ErrMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrMessage")
         private String errMessage;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("MaxRetryTime")
+        @com.aliyun.core.annotation.NameInMap("MaxRetryTime")
         private Integer maxRetryTime;
 
-        @NameInMap("Module")
+        @com.aliyun.core.annotation.NameInMap("Module")
         private String module;
 
-        @NameInMap("RetryCount")
+        @com.aliyun.core.annotation.NameInMap("RetryCount")
         private Integer retryCount;
 
-        @NameInMap("RetryTarget")
+        @com.aliyun.core.annotation.NameInMap("RetryTarget")
         private String retryTarget;
 
-        @NameInMap("RetryTime")
+        @com.aliyun.core.annotation.NameInMap("RetryTime")
         private Integer retryTime;
 
-        @NameInMap("Retrying")
+        @com.aliyun.core.annotation.NameInMap("Retrying")
         private Boolean retrying;
 
         private EtlDemoListRetryState(Builder builder) {
@@ -6855,16 +6854,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class EtlDemoListReverseJobDataInitializationStatus extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private EtlDemoListReverseJobDataInitializationStatus(Builder builder) {
@@ -6962,19 +6961,19 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class EtlDemoListReverseJobDataSynchronizationStatus extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("NeedUpgrade")
+        @com.aliyun.core.annotation.NameInMap("NeedUpgrade")
         private Boolean needUpgrade;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private EtlDemoListReverseJobDataSynchronizationStatus(Builder builder) {
@@ -7089,34 +7088,34 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class EtlDemoListReverseJobDestinationEndpoint extends TeaModel {
-        @NameInMap("DatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
-        @NameInMap("EngineName")
+        @com.aliyun.core.annotation.NameInMap("EngineName")
         private String engineName;
 
-        @NameInMap("InstanceID")
+        @com.aliyun.core.annotation.NameInMap("InstanceID")
         private String instanceID;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("OracleSID")
+        @com.aliyun.core.annotation.NameInMap("OracleSID")
         private String oracleSID;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("SslSolutionEnum")
+        @com.aliyun.core.annotation.NameInMap("SslSolutionEnum")
         private String sslSolutionEnum;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private EtlDemoListReverseJobDestinationEndpoint(Builder builder) {
@@ -7319,13 +7318,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class EtlDemoListReverseJobMigrationMode extends TeaModel {
-        @NameInMap("DataInitialization")
+        @com.aliyun.core.annotation.NameInMap("DataInitialization")
         private Boolean dataInitialization;
 
-        @NameInMap("DataSynchronization")
+        @com.aliyun.core.annotation.NameInMap("DataSynchronization")
         private Boolean dataSynchronization;
 
-        @NameInMap("StructureInitialization")
+        @com.aliyun.core.annotation.NameInMap("StructureInitialization")
         private Boolean structureInitialization;
 
         private EtlDemoListReverseJobMigrationMode(Builder builder) {
@@ -7412,10 +7411,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class EtlDemoListReverseJobPerformance extends TeaModel {
-        @NameInMap("Flow")
+        @com.aliyun.core.annotation.NameInMap("Flow")
         private String flow;
 
-        @NameInMap("Rps")
+        @com.aliyun.core.annotation.NameInMap("Rps")
         private String rps;
 
         private EtlDemoListReverseJobPerformance(Builder builder) {
@@ -7473,19 +7472,19 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class ReverseJobPrecheckStatusDetail extends TeaModel {
-        @NameInMap("CheckItem")
+        @com.aliyun.core.annotation.NameInMap("CheckItem")
         private String checkItem;
 
-        @NameInMap("CheckItemDescription")
+        @com.aliyun.core.annotation.NameInMap("CheckItemDescription")
         private String checkItemDescription;
 
-        @NameInMap("CheckResult")
+        @com.aliyun.core.annotation.NameInMap("CheckResult")
         private String checkResult;
 
-        @NameInMap("FailedReason")
+        @com.aliyun.core.annotation.NameInMap("FailedReason")
         private String failedReason;
 
-        @NameInMap("RepairMethod")
+        @com.aliyun.core.annotation.NameInMap("RepairMethod")
         private String repairMethod;
 
         private ReverseJobPrecheckStatusDetail(Builder builder) {
@@ -7604,16 +7603,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class EtlDemoListReverseJobPrecheckStatus extends TeaModel {
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private java.util.List < ReverseJobPrecheckStatusDetail> detail;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private EtlDemoListReverseJobPrecheckStatus(Builder builder) {
@@ -7712,34 +7711,34 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class ReverseJobSourceEndpoint extends TeaModel {
-        @NameInMap("DatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
-        @NameInMap("EngineName")
+        @com.aliyun.core.annotation.NameInMap("EngineName")
         private String engineName;
 
-        @NameInMap("InstanceID")
+        @com.aliyun.core.annotation.NameInMap("InstanceID")
         private String instanceID;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("OracleSID")
+        @com.aliyun.core.annotation.NameInMap("OracleSID")
         private String oracleSID;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("SslSolutionEnum")
+        @com.aliyun.core.annotation.NameInMap("SslSolutionEnum")
         private String sslSolutionEnum;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private ReverseJobSourceEndpoint(Builder builder) {
@@ -7942,16 +7941,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class ReverseJobStructureInitializationStatus extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ReverseJobStructureInitializationStatus(Builder builder) {
@@ -8049,73 +8048,73 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class EtlDemoListReverseJob extends TeaModel {
-        @NameInMap("Checkpoint")
+        @com.aliyun.core.annotation.NameInMap("Checkpoint")
         private String checkpoint;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DataInitializationStatus")
+        @com.aliyun.core.annotation.NameInMap("DataInitializationStatus")
         private EtlDemoListReverseJobDataInitializationStatus dataInitializationStatus;
 
-        @NameInMap("DataSynchronizationStatus")
+        @com.aliyun.core.annotation.NameInMap("DataSynchronizationStatus")
         private EtlDemoListReverseJobDataSynchronizationStatus dataSynchronizationStatus;
 
-        @NameInMap("DbObject")
+        @com.aliyun.core.annotation.NameInMap("DbObject")
         private String dbObject;
 
-        @NameInMap("Delay")
+        @com.aliyun.core.annotation.NameInMap("Delay")
         private Long delay;
 
-        @NameInMap("DestinationEndpoint")
+        @com.aliyun.core.annotation.NameInMap("DestinationEndpoint")
         private EtlDemoListReverseJobDestinationEndpoint destinationEndpoint;
 
-        @NameInMap("DtsInstanceID")
+        @com.aliyun.core.annotation.NameInMap("DtsInstanceID")
         private String dtsInstanceID;
 
-        @NameInMap("DtsJobClass")
+        @com.aliyun.core.annotation.NameInMap("DtsJobClass")
         private String dtsJobClass;
 
-        @NameInMap("DtsJobDirection")
+        @com.aliyun.core.annotation.NameInMap("DtsJobDirection")
         private String dtsJobDirection;
 
-        @NameInMap("DtsJobId")
+        @com.aliyun.core.annotation.NameInMap("DtsJobId")
         private String dtsJobId;
 
-        @NameInMap("DtsJobName")
+        @com.aliyun.core.annotation.NameInMap("DtsJobName")
         private String dtsJobName;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("EtlSafeCheckpoint")
+        @com.aliyun.core.annotation.NameInMap("EtlSafeCheckpoint")
         private String etlSafeCheckpoint;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("MigrationMode")
+        @com.aliyun.core.annotation.NameInMap("MigrationMode")
         private EtlDemoListReverseJobMigrationMode migrationMode;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("Performance")
+        @com.aliyun.core.annotation.NameInMap("Performance")
         private EtlDemoListReverseJobPerformance performance;
 
-        @NameInMap("PrecheckStatus")
+        @com.aliyun.core.annotation.NameInMap("PrecheckStatus")
         private EtlDemoListReverseJobPrecheckStatus precheckStatus;
 
-        @NameInMap("Reserved")
+        @com.aliyun.core.annotation.NameInMap("Reserved")
         private String reserved;
 
-        @NameInMap("SourceEndpoint")
+        @com.aliyun.core.annotation.NameInMap("SourceEndpoint")
         private ReverseJobSourceEndpoint sourceEndpoint;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StructureInitializationStatus")
+        @com.aliyun.core.annotation.NameInMap("StructureInitializationStatus")
         private ReverseJobStructureInitializationStatus structureInitializationStatus;
 
         private EtlDemoListReverseJob(Builder builder) {
@@ -8540,34 +8539,34 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class EtlDemoListSourceEndpoint extends TeaModel {
-        @NameInMap("DatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
-        @NameInMap("EngineName")
+        @com.aliyun.core.annotation.NameInMap("EngineName")
         private String engineName;
 
-        @NameInMap("InstanceID")
+        @com.aliyun.core.annotation.NameInMap("InstanceID")
         private String instanceID;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("OracleSID")
+        @com.aliyun.core.annotation.NameInMap("OracleSID")
         private String oracleSID;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("SslSolutionEnum")
+        @com.aliyun.core.annotation.NameInMap("SslSolutionEnum")
         private String sslSolutionEnum;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private EtlDemoListSourceEndpoint(Builder builder) {
@@ -8770,16 +8769,16 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class EtlDemoListStructureInitializationStatus extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private EtlDemoListStructureInitializationStatus(Builder builder) {
@@ -8877,10 +8876,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class EtlDemoListTagList extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private EtlDemoListTagList(Builder builder) {
@@ -8938,112 +8937,112 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
     public static class EtlDemoList extends TeaModel {
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("BeginTimestamp")
+        @com.aliyun.core.annotation.NameInMap("BeginTimestamp")
         private String beginTimestamp;
 
-        @NameInMap("Checkpoint")
+        @com.aliyun.core.annotation.NameInMap("Checkpoint")
         private String checkpoint;
 
-        @NameInMap("ConsumptionCheckpoint")
+        @com.aliyun.core.annotation.NameInMap("ConsumptionCheckpoint")
         private String consumptionCheckpoint;
 
-        @NameInMap("ConsumptionClient")
+        @com.aliyun.core.annotation.NameInMap("ConsumptionClient")
         private String consumptionClient;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DataEtlStatus")
+        @com.aliyun.core.annotation.NameInMap("DataEtlStatus")
         private EtlDemoListDataEtlStatus dataEtlStatus;
 
-        @NameInMap("DataInitializationStatus")
+        @com.aliyun.core.annotation.NameInMap("DataInitializationStatus")
         private EtlDemoListDataInitializationStatus dataInitializationStatus;
 
-        @NameInMap("DataSynchronizationStatus")
+        @com.aliyun.core.annotation.NameInMap("DataSynchronizationStatus")
         private EtlDemoListDataSynchronizationStatus dataSynchronizationStatus;
 
-        @NameInMap("DbObject")
+        @com.aliyun.core.annotation.NameInMap("DbObject")
         private String dbObject;
 
-        @NameInMap("Delay")
+        @com.aliyun.core.annotation.NameInMap("Delay")
         private Long delay;
 
-        @NameInMap("DestinationEndpoint")
+        @com.aliyun.core.annotation.NameInMap("DestinationEndpoint")
         private EtlDemoListDestinationEndpoint destinationEndpoint;
 
-        @NameInMap("DtsInstanceID")
+        @com.aliyun.core.annotation.NameInMap("DtsInstanceID")
         private String dtsInstanceID;
 
-        @NameInMap("DtsJobClass")
+        @com.aliyun.core.annotation.NameInMap("DtsJobClass")
         private String dtsJobClass;
 
-        @NameInMap("DtsJobDirection")
+        @com.aliyun.core.annotation.NameInMap("DtsJobDirection")
         private String dtsJobDirection;
 
-        @NameInMap("DtsJobId")
+        @com.aliyun.core.annotation.NameInMap("DtsJobId")
         private String dtsJobId;
 
-        @NameInMap("DtsJobName")
+        @com.aliyun.core.annotation.NameInMap("DtsJobName")
         private String dtsJobName;
 
-        @NameInMap("EndTimestamp")
+        @com.aliyun.core.annotation.NameInMap("EndTimestamp")
         private String endTimestamp;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("EtlSafeCheckpoint")
+        @com.aliyun.core.annotation.NameInMap("EtlSafeCheckpoint")
         private String etlSafeCheckpoint;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("JobType")
+        @com.aliyun.core.annotation.NameInMap("JobType")
         private String jobType;
 
-        @NameInMap("MigrationMode")
+        @com.aliyun.core.annotation.NameInMap("MigrationMode")
         private EtlDemoListMigrationMode migrationMode;
 
-        @NameInMap("OriginType")
+        @com.aliyun.core.annotation.NameInMap("OriginType")
         private String originType;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("Performance")
+        @com.aliyun.core.annotation.NameInMap("Performance")
         private EtlDemoListPerformance performance;
 
-        @NameInMap("PrecheckStatus")
+        @com.aliyun.core.annotation.NameInMap("PrecheckStatus")
         private EtlDemoListPrecheckStatus precheckStatus;
 
-        @NameInMap("Reserved")
+        @com.aliyun.core.annotation.NameInMap("Reserved")
         private String reserved;
 
-        @NameInMap("ResourceGroupDisplayName")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupDisplayName")
         private String resourceGroupDisplayName;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("RetryState")
+        @com.aliyun.core.annotation.NameInMap("RetryState")
         private EtlDemoListRetryState retryState;
 
-        @NameInMap("ReverseJob")
+        @com.aliyun.core.annotation.NameInMap("ReverseJob")
         private EtlDemoListReverseJob reverseJob;
 
-        @NameInMap("SourceEndpoint")
+        @com.aliyun.core.annotation.NameInMap("SourceEndpoint")
         private EtlDemoListSourceEndpoint sourceEndpoint;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StructureInitializationStatus")
+        @com.aliyun.core.annotation.NameInMap("StructureInitializationStatus")
         private EtlDemoListStructureInitializationStatus structureInitializationStatus;
 
-        @NameInMap("TagList")
+        @com.aliyun.core.annotation.NameInMap("TagList")
         private java.util.List < EtlDemoListTagList> tagList;
 
         private EtlDemoList(Builder builder) {

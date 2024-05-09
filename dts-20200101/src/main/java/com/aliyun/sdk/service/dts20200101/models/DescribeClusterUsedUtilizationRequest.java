@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,45 +11,45 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeClusterUsedUtilizationRequest</p>
  */
 public class DescribeClusterUsedUtilizationRequest extends Request {
-    @Body
-    @NameInMap("AccountId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccountId")
     private String accountId;
 
-    @Body
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("DedicatedClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DedicatedClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dedicatedClusterId;
 
-    @Body
-    @NameInMap("DtsJobId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DtsJobId")
     private String dtsJobId;
 
-    @Body
-    @NameInMap("Env")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Env")
     private String env;
 
-    @Body
-    @NameInMap("MetricType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MetricType")
     private String metricType;
 
-    @Body
-    @NameInMap("OwnerID")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OwnerID")
     private String ownerID;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Body
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private DescribeClusterUsedUtilizationRequest(Builder builder) {

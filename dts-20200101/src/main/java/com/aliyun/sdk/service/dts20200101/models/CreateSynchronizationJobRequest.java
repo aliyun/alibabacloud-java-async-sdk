@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,73 +11,73 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSynchronizationJobRequest</p>
  */
 public class CreateSynchronizationJobRequest extends Request {
-    @Query
-    @NameInMap("DestinationEndpoint")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationEndpoint")
     private DestinationEndpoint destinationEndpoint;
 
-    @Query
-    @NameInMap("SourceEndpoint")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpoint")
     private SourceEndpoint sourceEndpoint;
 
-    @Query
-    @NameInMap("AccountId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountId")
     private String accountId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DBInstanceCount")
-    @Validation(maximum = 10000)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceCount")
+    @com.aliyun.core.annotation.Validation(maximum = 10000)
     private Integer DBInstanceCount;
 
-    @Query
-    @NameInMap("DestRegion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestRegion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String destRegion;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
-    @Query
-    @NameInMap("PayType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PayType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String payType;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private String period;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("SourceRegion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceRegion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceRegion;
 
-    @Query
-    @NameInMap("SynchronizationJobClass")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SynchronizationJobClass")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String synchronizationJobClass;
 
-    @Query
-    @NameInMap("Topology")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Topology")
     private String topology;
 
-    @Query
-    @NameInMap("UsedTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UsedTime")
     private Integer usedTime;
 
-    @Query
-    @NameInMap("networkType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("networkType")
     private String networkType;
 
     private CreateSynchronizationJobRequest(Builder builder) {
@@ -450,7 +449,7 @@ public class CreateSynchronizationJobRequest extends Request {
     } 
 
     public static class DestinationEndpoint extends TeaModel {
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
         private DestinationEndpoint(Builder builder) {
@@ -501,7 +500,7 @@ public class CreateSynchronizationJobRequest extends Request {
 
     }
     public static class SourceEndpoint extends TeaModel {
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
         private SourceEndpoint(Builder builder) {

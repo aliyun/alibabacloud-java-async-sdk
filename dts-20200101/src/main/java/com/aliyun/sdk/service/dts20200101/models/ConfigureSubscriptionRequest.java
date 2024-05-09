@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,144 +11,144 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ConfigureSubscriptionRequest</p>
  */
 public class ConfigureSubscriptionRequest extends Request {
-    @Query
-    @NameInMap("Checkpoint")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Checkpoint")
     private String checkpoint;
 
-    @Query
-    @NameInMap("DbList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbList;
 
-    @Query
-    @NameInMap("DedicatedClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DedicatedClusterId")
     private String dedicatedClusterId;
 
-    @Query
-    @NameInMap("DelayNotice")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DelayNotice")
     private Boolean delayNotice;
 
-    @Query
-    @NameInMap("DelayPhone")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DelayPhone")
     private String delayPhone;
 
-    @Query
-    @NameInMap("DelayRuleTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DelayRuleTime")
     private Long delayRuleTime;
 
-    @Query
-    @NameInMap("DtsBisLabel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DtsBisLabel")
     private String dtsBisLabel;
 
-    @Query
-    @NameInMap("DtsInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DtsInstanceId")
     private String dtsInstanceId;
 
-    @Query
-    @NameInMap("DtsJobId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DtsJobId")
     private String dtsJobId;
 
-    @Query
-    @NameInMap("DtsJobName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DtsJobName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dtsJobName;
 
-    @Query
-    @NameInMap("ErrorNotice")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ErrorNotice")
     private Boolean errorNotice;
 
-    @Query
-    @NameInMap("ErrorPhone")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ErrorPhone")
     private String errorPhone;
 
-    @Query
-    @NameInMap("MaxDu")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxDu")
     private Double maxDu;
 
-    @Query
-    @NameInMap("MinDu")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinDu")
     private Double minDu;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Reserve")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Reserve")
     private String reserve;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("SourceEndpointDatabaseName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpointDatabaseName")
     private String sourceEndpointDatabaseName;
 
-    @Query
-    @NameInMap("SourceEndpointEngineName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpointEngineName")
     private String sourceEndpointEngineName;
 
-    @Query
-    @NameInMap("SourceEndpointIP")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpointIP")
     private String sourceEndpointIP;
 
-    @Query
-    @NameInMap("SourceEndpointInstanceID")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpointInstanceID")
     private String sourceEndpointInstanceID;
 
-    @Query
-    @NameInMap("SourceEndpointInstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpointInstanceType")
     private String sourceEndpointInstanceType;
 
-    @Query
-    @NameInMap("SourceEndpointOracleSID")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpointOracleSID")
     private String sourceEndpointOracleSID;
 
-    @Query
-    @NameInMap("SourceEndpointOwnerID")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpointOwnerID")
     private String sourceEndpointOwnerID;
 
-    @Query
-    @NameInMap("SourceEndpointPassword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpointPassword")
     private String sourceEndpointPassword;
 
-    @Query
-    @NameInMap("SourceEndpointPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpointPort")
     private String sourceEndpointPort;
 
-    @Query
-    @NameInMap("SourceEndpointRegion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpointRegion")
     private String sourceEndpointRegion;
 
-    @Query
-    @NameInMap("SourceEndpointRole")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpointRole")
     private String sourceEndpointRole;
 
-    @Query
-    @NameInMap("SourceEndpointUserName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEndpointUserName")
     private String sourceEndpointUserName;
 
-    @Query
-    @NameInMap("SubscriptionDataTypeDDL")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscriptionDataTypeDDL")
     private Boolean subscriptionDataTypeDDL;
 
-    @Query
-    @NameInMap("SubscriptionDataTypeDML")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscriptionDataTypeDML")
     private Boolean subscriptionDataTypeDML;
 
-    @Query
-    @NameInMap("SubscriptionInstanceNetworkType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscriptionInstanceNetworkType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subscriptionInstanceNetworkType;
 
-    @Query
-    @NameInMap("SubscriptionInstanceVPCId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscriptionInstanceVPCId")
     private String subscriptionInstanceVPCId;
 
-    @Query
-    @NameInMap("SubscriptionInstanceVSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscriptionInstanceVSwitchId")
     private String subscriptionInstanceVSwitchId;
 
     private ConfigureSubscriptionRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInitializationStatusResponseBody</p>
  */
 public class DescribeInitializationStatusResponseBody extends TeaModel {
-    @NameInMap("DataInitializationDetails")
+    @com.aliyun.core.annotation.NameInMap("DataInitializationDetails")
     private java.util.List < DataInitializationDetails> dataInitializationDetails;
 
-    @NameInMap("DataSynchronizationDetails")
+    @com.aliyun.core.annotation.NameInMap("DataSynchronizationDetails")
     private java.util.List < DataSynchronizationDetails> dataSynchronizationDetails;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StructureInitializationDetails")
+    @com.aliyun.core.annotation.NameInMap("StructureInitializationDetails")
     private java.util.List < StructureInitializationDetails> structureInitializationDetails;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private DescribeInitializationStatusResponseBody(Builder builder) {
@@ -175,28 +174,28 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
     } 
 
     public static class DataInitializationDetails extends TeaModel {
-        @NameInMap("DestinationOwnerDBName")
+        @com.aliyun.core.annotation.NameInMap("DestinationOwnerDBName")
         private String destinationOwnerDBName;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("FinishRowNum")
+        @com.aliyun.core.annotation.NameInMap("FinishRowNum")
         private String finishRowNum;
 
-        @NameInMap("SourceOwnerDBName")
+        @com.aliyun.core.annotation.NameInMap("SourceOwnerDBName")
         private String sourceOwnerDBName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
-        @NameInMap("TotalRowNum")
+        @com.aliyun.core.annotation.NameInMap("TotalRowNum")
         private String totalRowNum;
 
-        @NameInMap("UsedTime")
+        @com.aliyun.core.annotation.NameInMap("UsedTime")
         private String usedTime;
 
         private DataInitializationDetails(Builder builder) {
@@ -368,19 +367,19 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
 
     }
     public static class DataSynchronizationDetails extends TeaModel {
-        @NameInMap("DestinationOwnerDBName")
+        @com.aliyun.core.annotation.NameInMap("DestinationOwnerDBName")
         private String destinationOwnerDBName;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("SourceOwnerDBName")
+        @com.aliyun.core.annotation.NameInMap("SourceOwnerDBName")
         private String sourceOwnerDBName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private DataSynchronizationDetails(Builder builder) {
@@ -495,25 +494,25 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
 
     }
     public static class Constraints extends TeaModel {
-        @NameInMap("DestinationOwnerDBName")
+        @com.aliyun.core.annotation.NameInMap("DestinationOwnerDBName")
         private String destinationOwnerDBName;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("ObjectDefinition")
+        @com.aliyun.core.annotation.NameInMap("ObjectDefinition")
         private String objectDefinition;
 
-        @NameInMap("ObjectName")
+        @com.aliyun.core.annotation.NameInMap("ObjectName")
         private String objectName;
 
-        @NameInMap("ObjectType")
+        @com.aliyun.core.annotation.NameInMap("ObjectType")
         private String objectType;
 
-        @NameInMap("SourceOwnerDBName")
+        @com.aliyun.core.annotation.NameInMap("SourceOwnerDBName")
         private String sourceOwnerDBName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Constraints(Builder builder) {
@@ -662,28 +661,28 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
 
     }
     public static class StructureInitializationDetails extends TeaModel {
-        @NameInMap("Constraints")
+        @com.aliyun.core.annotation.NameInMap("Constraints")
         private java.util.List < Constraints> constraints;
 
-        @NameInMap("DestinationOwnerDBName")
+        @com.aliyun.core.annotation.NameInMap("DestinationOwnerDBName")
         private String destinationOwnerDBName;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("ObjectDefinition")
+        @com.aliyun.core.annotation.NameInMap("ObjectDefinition")
         private String objectDefinition;
 
-        @NameInMap("ObjectName")
+        @com.aliyun.core.annotation.NameInMap("ObjectName")
         private String objectName;
 
-        @NameInMap("ObjectType")
+        @com.aliyun.core.annotation.NameInMap("ObjectType")
         private String objectType;
 
-        @NameInMap("SourceOwnerDBName")
+        @com.aliyun.core.annotation.NameInMap("SourceOwnerDBName")
         private String sourceOwnerDBName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private StructureInitializationDetails(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDataCheckTableDetailsResponseBody</p>
  */
 public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
-    @NameInMap("DiffTableCount")
+    @com.aliyun.core.annotation.NameInMap("DiffTableCount")
     private Long diffTableCount;
 
-    @NameInMap("DynamicCode")
+    @com.aliyun.core.annotation.NameInMap("DynamicCode")
     private String dynamicCode;
 
-    @NameInMap("DynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("DynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("FinishedCount")
+    @com.aliyun.core.annotation.NameInMap("FinishedCount")
     private Long finishedCount;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TableDetails")
+    @com.aliyun.core.annotation.NameInMap("TableDetails")
     private java.util.List < TableDetails> tableDetails;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeDataCheckTableDetailsResponseBody(Builder builder) {
@@ -275,37 +274,37 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
     } 
 
     public static class TableDetails extends TeaModel {
-        @NameInMap("BootTime")
+        @com.aliyun.core.annotation.NameInMap("BootTime")
         private String bootTime;
 
-        @NameInMap("DiffCount")
+        @com.aliyun.core.annotation.NameInMap("DiffCount")
         private Long diffCount;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private Integer errorCode;
 
-        @NameInMap("FinishCount")
+        @com.aliyun.core.annotation.NameInMap("FinishCount")
         private Long finishCount;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("SourceDbName")
+        @com.aliyun.core.annotation.NameInMap("SourceDbName")
         private String sourceDbName;
 
-        @NameInMap("SourceTbName")
+        @com.aliyun.core.annotation.NameInMap("SourceTbName")
         private String sourceTbName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TargetDbName")
+        @com.aliyun.core.annotation.NameInMap("TargetDbName")
         private String targetDbName;
 
-        @NameInMap("TargetTbName")
+        @com.aliyun.core.annotation.NameInMap("TargetTbName")
         private String targetTbName;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private TableDetails(Builder builder) {

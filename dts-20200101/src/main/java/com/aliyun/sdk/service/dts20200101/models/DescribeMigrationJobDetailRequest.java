@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,42 +11,42 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMigrationJobDetailRequest</p>
  */
 public class DescribeMigrationJobDetailRequest extends Request {
-    @Query
-    @NameInMap("MigrationMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MigrationMode")
     private MigrationMode migrationMode;
 
-    @Query
-    @NameInMap("AccountId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountId")
     private String accountId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("MigrationJobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MigrationJobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String migrationJobId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
-    @Query
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private DescribeMigrationJobDetailRequest(Builder builder) {
@@ -256,13 +255,13 @@ public class DescribeMigrationJobDetailRequest extends Request {
     } 
 
     public static class MigrationMode extends TeaModel {
-        @NameInMap("DataInitialization")
+        @com.aliyun.core.annotation.NameInMap("DataInitialization")
         private Boolean dataInitialization;
 
-        @NameInMap("DataSynchronization")
+        @com.aliyun.core.annotation.NameInMap("DataSynchronization")
         private Boolean dataSynchronization;
 
-        @NameInMap("StructureInitialization")
+        @com.aliyun.core.annotation.NameInMap("StructureInitialization")
         private Boolean structureInitialization;
 
         private MigrationMode(Builder builder) {

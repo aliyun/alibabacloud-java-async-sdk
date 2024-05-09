@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSynchronizationObjectModifyStatusResponseBody</p>
  */
 public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaModel {
-    @NameInMap("DataInitializationStatus")
+    @com.aliyun.core.annotation.NameInMap("DataInitializationStatus")
     private DataInitializationStatus dataInitializationStatus;
 
-    @NameInMap("DataSynchronizationStatus")
+    @com.aliyun.core.annotation.NameInMap("DataSynchronizationStatus")
     private DataSynchronizationStatus dataSynchronizationStatus;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("PrecheckStatus")
+    @com.aliyun.core.annotation.NameInMap("PrecheckStatus")
     private PrecheckStatus precheckStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("StructureInitializationStatus")
+    @com.aliyun.core.annotation.NameInMap("StructureInitializationStatus")
     private StructureInitializationStatus structureInitializationStatus;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private DescribeSynchronizationObjectModifyStatusResponseBody(Builder builder) {
@@ -243,16 +242,16 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
     } 
 
     public static class DataInitializationStatus extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private DataInitializationStatus(Builder builder) {
@@ -350,16 +349,16 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
 
     }
     public static class DataSynchronizationStatus extends TeaModel {
-        @NameInMap("Delay")
+        @com.aliyun.core.annotation.NameInMap("Delay")
         private String delay;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private DataSynchronizationStatus(Builder builder) {
@@ -457,16 +456,16 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
 
     }
     public static class Detail extends TeaModel {
-        @NameInMap("CheckStatus")
+        @com.aliyun.core.annotation.NameInMap("CheckStatus")
         private String checkStatus;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("ItemName")
+        @com.aliyun.core.annotation.NameInMap("ItemName")
         private String itemName;
 
-        @NameInMap("RepairMethod")
+        @com.aliyun.core.annotation.NameInMap("RepairMethod")
         private String repairMethod;
 
         private Detail(Builder builder) {
@@ -568,13 +567,13 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
 
     }
     public static class PrecheckStatus extends TeaModel {
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private java.util.List < Detail> detail;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private PrecheckStatus(Builder builder) {
@@ -649,16 +648,16 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
 
     }
     public static class StructureInitializationStatus extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private String percent;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private StructureInitializationStatus(Builder builder) {

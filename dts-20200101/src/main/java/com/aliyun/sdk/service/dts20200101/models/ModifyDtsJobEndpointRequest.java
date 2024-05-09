@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,82 +11,86 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDtsJobEndpointRequest</p>
  */
 public class ModifyDtsJobEndpointRequest extends Request {
-    @Query
-    @NameInMap("AliyunUid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AliyunUid")
     private String aliyunUid;
 
-    @Query
-    @NameInMap("Database")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Database")
     private String database;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("DtsInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DtsInstanceId")
     private String dtsInstanceId;
 
-    @Query
-    @NameInMap("DtsJobId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DtsJobId")
     private String dtsJobId;
 
-    @Query
-    @NameInMap("Endpoint")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Endpoint")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endpoint;
 
-    @Query
-    @NameInMap("EndpointInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointInstanceId")
     private String endpointInstanceId;
 
-    @Query
-    @NameInMap("EndpointInstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointInstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endpointInstanceType;
 
-    @Query
-    @NameInMap("EndpointIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointIp")
     private String endpointIp;
 
-    @Query
-    @NameInMap("EndpointPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointPort")
     private String endpointPort;
 
-    @Query
-    @NameInMap("EndpointRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointRegionId")
     private String endpointRegionId;
 
-    @Query
-    @NameInMap("Password")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModifyAccount")
+    private Boolean modifyAccount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Password")
     private String password;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("RoleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleName")
     private String roleName;
 
-    @Query
-    @NameInMap("ShardPassword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShardPassword")
     private String shardPassword;
 
-    @Query
-    @NameInMap("ShardUsername")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShardUsername")
     private String shardUsername;
 
-    @Query
-    @NameInMap("SynchronizationDirection")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SynchronizationDirection")
     private String synchronizationDirection;
 
-    @Query
-    @NameInMap("Username")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Username")
     private String username;
 
     private ModifyDtsJobEndpointRequest(Builder builder) {
@@ -103,6 +106,7 @@ public class ModifyDtsJobEndpointRequest extends Request {
         this.endpointIp = builder.endpointIp;
         this.endpointPort = builder.endpointPort;
         this.endpointRegionId = builder.endpointRegionId;
+        this.modifyAccount = builder.modifyAccount;
         this.password = builder.password;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
@@ -204,6 +208,13 @@ public class ModifyDtsJobEndpointRequest extends Request {
     }
 
     /**
+     * @return modifyAccount
+     */
+    public Boolean getModifyAccount() {
+        return this.modifyAccount;
+    }
+
+    /**
      * @return password
      */
     public String getPassword() {
@@ -271,6 +282,7 @@ public class ModifyDtsJobEndpointRequest extends Request {
         private String endpointIp; 
         private String endpointPort; 
         private String endpointRegionId; 
+        private Boolean modifyAccount; 
         private String password; 
         private String regionId; 
         private String resourceGroupId; 
@@ -297,6 +309,7 @@ public class ModifyDtsJobEndpointRequest extends Request {
             this.endpointIp = request.endpointIp;
             this.endpointPort = request.endpointPort;
             this.endpointRegionId = request.endpointRegionId;
+            this.modifyAccount = request.modifyAccount;
             this.password = request.password;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
@@ -403,6 +416,15 @@ public class ModifyDtsJobEndpointRequest extends Request {
         public Builder endpointRegionId(String endpointRegionId) {
             this.putQueryParameter("EndpointRegionId", endpointRegionId);
             this.endpointRegionId = endpointRegionId;
+            return this;
+        }
+
+        /**
+         * ModifyAccount.
+         */
+        public Builder modifyAccount(Boolean modifyAccount) {
+            this.putQueryParameter("ModifyAccount", modifyAccount);
+            this.modifyAccount = modifyAccount;
             return this;
         }
 

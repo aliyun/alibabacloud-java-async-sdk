@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,58 +11,58 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePreCheckStatusResponseBody</p>
  */
 public class DescribePreCheckStatusResponseBody extends TeaModel {
-    @NameInMap("AnalysisJobProgress")
+    @com.aliyun.core.annotation.NameInMap("AnalysisJobProgress")
     private java.util.List < AnalysisJobProgress> analysisJobProgress;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("ErrorAnalysisItem")
+    @com.aliyun.core.annotation.NameInMap("ErrorAnalysisItem")
     private Integer errorAnalysisItem;
 
-    @NameInMap("ErrorItem")
+    @com.aliyun.core.annotation.NameInMap("ErrorItem")
     private Integer errorItem;
 
-    @NameInMap("FullNetCheckJobStatus")
+    @com.aliyun.core.annotation.NameInMap("FullNetCheckJobStatus")
     private java.util.List < FullNetCheckJobStatus> fullNetCheckJobStatus;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @NameInMap("JobName")
+    @com.aliyun.core.annotation.NameInMap("JobName")
     private String jobName;
 
-    @NameInMap("JobProgress")
+    @com.aliyun.core.annotation.NameInMap("JobProgress")
     private java.util.List < JobProgress> jobProgress;
 
-    @NameInMap("NetworkDiagnosisResult")
+    @com.aliyun.core.annotation.NameInMap("NetworkDiagnosisResult")
     private NetworkDiagnosisResult networkDiagnosisResult;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Long pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("State")
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
-    @NameInMap("SubDistributedJobStatus")
+    @com.aliyun.core.annotation.NameInMap("SubDistributedJobStatus")
     private java.util.List < SubDistributedJobStatus> subDistributedJobStatus;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Long totalRecordCount;
 
     private DescribePreCheckStatusResponseBody(Builder builder) {
@@ -407,16 +406,16 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
     } 
 
     public static class Logs extends TeaModel {
-        @NameInMap("ErrData")
+        @com.aliyun.core.annotation.NameInMap("ErrData")
         private String errData;
 
-        @NameInMap("ErrMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrMsg")
         private String errMsg;
 
-        @NameInMap("ErrType")
+        @com.aliyun.core.annotation.NameInMap("ErrType")
         private String errType;
 
-        @NameInMap("LogLevel")
+        @com.aliyun.core.annotation.NameInMap("LogLevel")
         private String logLevel;
 
         private Logs(Builder builder) {
@@ -508,79 +507,79 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
 
     }
     public static class AnalysisJobProgress extends TeaModel {
-        @NameInMap("BootTime")
+        @com.aliyun.core.annotation.NameInMap("BootTime")
         private String bootTime;
 
-        @NameInMap("CanSkip")
+        @com.aliyun.core.annotation.NameInMap("CanSkip")
         private Boolean canSkip;
 
-        @NameInMap("Current")
+        @com.aliyun.core.annotation.NameInMap("Current")
         private String current;
 
-        @NameInMap("DdlSql")
+        @com.aliyun.core.annotation.NameInMap("DdlSql")
         private String ddlSql;
 
-        @NameInMap("DelaySeconds")
+        @com.aliyun.core.annotation.NameInMap("DelaySeconds")
         private Integer delaySeconds;
 
-        @NameInMap("DestSchema")
+        @com.aliyun.core.annotation.NameInMap("DestSchema")
         private String destSchema;
 
-        @NameInMap("DiffRow")
+        @com.aliyun.core.annotation.NameInMap("DiffRow")
         private Long diffRow;
 
-        @NameInMap("ErrDetail")
+        @com.aliyun.core.annotation.NameInMap("ErrDetail")
         private String errDetail;
 
-        @NameInMap("ErrMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrMsg")
         private String errMsg;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("IgnoreFlag")
+        @com.aliyun.core.annotation.NameInMap("IgnoreFlag")
         private String ignoreFlag;
 
-        @NameInMap("Item")
+        @com.aliyun.core.annotation.NameInMap("Item")
         private String item;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("Logs")
+        @com.aliyun.core.annotation.NameInMap("Logs")
         private java.util.List < Logs> logs;
 
-        @NameInMap("Names")
+        @com.aliyun.core.annotation.NameInMap("Names")
         private String names;
 
-        @NameInMap("OrderNum")
+        @com.aliyun.core.annotation.NameInMap("OrderNum")
         private Integer orderNum;
 
-        @NameInMap("ParentObj")
+        @com.aliyun.core.annotation.NameInMap("ParentObj")
         private String parentObj;
 
-        @NameInMap("RepairMethod")
+        @com.aliyun.core.annotation.NameInMap("RepairMethod")
         private String repairMethod;
 
-        @NameInMap("Skip")
+        @com.aliyun.core.annotation.NameInMap("Skip")
         private Boolean skip;
 
-        @NameInMap("SourceSchema")
+        @com.aliyun.core.annotation.NameInMap("SourceSchema")
         private String sourceSchema;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Sub")
+        @com.aliyun.core.annotation.NameInMap("Sub")
         private String sub;
 
-        @NameInMap("TargetNames")
+        @com.aliyun.core.annotation.NameInMap("TargetNames")
         private String targetNames;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private AnalysisJobProgress(Builder builder) {
@@ -1038,16 +1037,16 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
 
     }
     public static class JobProgressLogs extends TeaModel {
-        @NameInMap("ErrData")
+        @com.aliyun.core.annotation.NameInMap("ErrData")
         private String errData;
 
-        @NameInMap("ErrMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrMsg")
         private String errMsg;
 
-        @NameInMap("ErrType")
+        @com.aliyun.core.annotation.NameInMap("ErrType")
         private String errType;
 
-        @NameInMap("LogLevel")
+        @com.aliyun.core.annotation.NameInMap("LogLevel")
         private String logLevel;
 
         private JobProgressLogs(Builder builder) {
@@ -1139,79 +1138,79 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
 
     }
     public static class FullNetCheckJobStatusJobProgress extends TeaModel {
-        @NameInMap("BootTime")
+        @com.aliyun.core.annotation.NameInMap("BootTime")
         private String bootTime;
 
-        @NameInMap("CanSkip")
+        @com.aliyun.core.annotation.NameInMap("CanSkip")
         private Boolean canSkip;
 
-        @NameInMap("Current")
+        @com.aliyun.core.annotation.NameInMap("Current")
         private String current;
 
-        @NameInMap("DdlSql")
+        @com.aliyun.core.annotation.NameInMap("DdlSql")
         private String ddlSql;
 
-        @NameInMap("DelaySeconds")
+        @com.aliyun.core.annotation.NameInMap("DelaySeconds")
         private Integer delaySeconds;
 
-        @NameInMap("DestSchema")
+        @com.aliyun.core.annotation.NameInMap("DestSchema")
         private String destSchema;
 
-        @NameInMap("DiffRow")
+        @com.aliyun.core.annotation.NameInMap("DiffRow")
         private Long diffRow;
 
-        @NameInMap("ErrDetail")
+        @com.aliyun.core.annotation.NameInMap("ErrDetail")
         private String errDetail;
 
-        @NameInMap("ErrMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrMsg")
         private String errMsg;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("IgnoreFlag")
+        @com.aliyun.core.annotation.NameInMap("IgnoreFlag")
         private String ignoreFlag;
 
-        @NameInMap("Item")
+        @com.aliyun.core.annotation.NameInMap("Item")
         private String item;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("Logs")
+        @com.aliyun.core.annotation.NameInMap("Logs")
         private java.util.List < JobProgressLogs> logs;
 
-        @NameInMap("Names")
+        @com.aliyun.core.annotation.NameInMap("Names")
         private String names;
 
-        @NameInMap("OrderNum")
+        @com.aliyun.core.annotation.NameInMap("OrderNum")
         private Integer orderNum;
 
-        @NameInMap("ParentObj")
+        @com.aliyun.core.annotation.NameInMap("ParentObj")
         private String parentObj;
 
-        @NameInMap("RepairMethod")
+        @com.aliyun.core.annotation.NameInMap("RepairMethod")
         private String repairMethod;
 
-        @NameInMap("Skip")
+        @com.aliyun.core.annotation.NameInMap("Skip")
         private Boolean skip;
 
-        @NameInMap("SourceSchema")
+        @com.aliyun.core.annotation.NameInMap("SourceSchema")
         private String sourceSchema;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Sub")
+        @com.aliyun.core.annotation.NameInMap("Sub")
         private String sub;
 
-        @NameInMap("TargetNames")
+        @com.aliyun.core.annotation.NameInMap("TargetNames")
         private String targetNames;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private FullNetCheckJobStatusJobProgress(Builder builder) {
@@ -1669,46 +1668,46 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
 
     }
     public static class FullNetCheckJobStatus extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("DestRegion")
+        @com.aliyun.core.annotation.NameInMap("DestRegion")
         private String destRegion;
 
-        @NameInMap("DestRegionCidr")
+        @com.aliyun.core.annotation.NameInMap("DestRegionCidr")
         private String destRegionCidr;
 
-        @NameInMap("DestinationEndpointType")
+        @com.aliyun.core.annotation.NameInMap("DestinationEndpointType")
         private String destinationEndpointType;
 
-        @NameInMap("ErrorItem")
+        @com.aliyun.core.annotation.NameInMap("ErrorItem")
         private Integer errorItem;
 
-        @NameInMap("HostRegion")
+        @com.aliyun.core.annotation.NameInMap("HostRegion")
         private String hostRegion;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("JobName")
+        @com.aliyun.core.annotation.NameInMap("JobName")
         private String jobName;
 
-        @NameInMap("JobProgress")
+        @com.aliyun.core.annotation.NameInMap("JobProgress")
         private java.util.List < FullNetCheckJobStatusJobProgress> jobProgress;
 
-        @NameInMap("SourceEndpointType")
+        @com.aliyun.core.annotation.NameInMap("SourceEndpointType")
         private String sourceEndpointType;
 
-        @NameInMap("SrcRegion")
+        @com.aliyun.core.annotation.NameInMap("SrcRegion")
         private String srcRegion;
 
-        @NameInMap("SrcRegionCidr")
+        @com.aliyun.core.annotation.NameInMap("SrcRegionCidr")
         private String srcRegionCidr;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private FullNetCheckJobStatus(Builder builder) {
@@ -1985,16 +1984,16 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
 
     }
     public static class DescribePreCheckStatusResponseBodyJobProgressLogs extends TeaModel {
-        @NameInMap("ErrData")
+        @com.aliyun.core.annotation.NameInMap("ErrData")
         private String errData;
 
-        @NameInMap("ErrMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrMsg")
         private String errMsg;
 
-        @NameInMap("ErrType")
+        @com.aliyun.core.annotation.NameInMap("ErrType")
         private String errType;
 
-        @NameInMap("LogLevel")
+        @com.aliyun.core.annotation.NameInMap("LogLevel")
         private String logLevel;
 
         private DescribePreCheckStatusResponseBodyJobProgressLogs(Builder builder) {
@@ -2086,79 +2085,79 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
 
     }
     public static class JobProgress extends TeaModel {
-        @NameInMap("BootTime")
+        @com.aliyun.core.annotation.NameInMap("BootTime")
         private String bootTime;
 
-        @NameInMap("CanSkip")
+        @com.aliyun.core.annotation.NameInMap("CanSkip")
         private Boolean canSkip;
 
-        @NameInMap("Current")
+        @com.aliyun.core.annotation.NameInMap("Current")
         private String current;
 
-        @NameInMap("DdlSql")
+        @com.aliyun.core.annotation.NameInMap("DdlSql")
         private String ddlSql;
 
-        @NameInMap("DelaySeconds")
+        @com.aliyun.core.annotation.NameInMap("DelaySeconds")
         private Integer delaySeconds;
 
-        @NameInMap("DestSchema")
+        @com.aliyun.core.annotation.NameInMap("DestSchema")
         private String destSchema;
 
-        @NameInMap("DiffRow")
+        @com.aliyun.core.annotation.NameInMap("DiffRow")
         private Long diffRow;
 
-        @NameInMap("ErrDetail")
+        @com.aliyun.core.annotation.NameInMap("ErrDetail")
         private String errDetail;
 
-        @NameInMap("ErrMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrMsg")
         private String errMsg;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("IgnoreFlag")
+        @com.aliyun.core.annotation.NameInMap("IgnoreFlag")
         private String ignoreFlag;
 
-        @NameInMap("Item")
+        @com.aliyun.core.annotation.NameInMap("Item")
         private String item;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("Logs")
+        @com.aliyun.core.annotation.NameInMap("Logs")
         private java.util.List < DescribePreCheckStatusResponseBodyJobProgressLogs> logs;
 
-        @NameInMap("Names")
+        @com.aliyun.core.annotation.NameInMap("Names")
         private String names;
 
-        @NameInMap("OrderNum")
+        @com.aliyun.core.annotation.NameInMap("OrderNum")
         private Integer orderNum;
 
-        @NameInMap("ParentObj")
+        @com.aliyun.core.annotation.NameInMap("ParentObj")
         private String parentObj;
 
-        @NameInMap("RepairMethod")
+        @com.aliyun.core.annotation.NameInMap("RepairMethod")
         private String repairMethod;
 
-        @NameInMap("Skip")
+        @com.aliyun.core.annotation.NameInMap("Skip")
         private Boolean skip;
 
-        @NameInMap("SourceSchema")
+        @com.aliyun.core.annotation.NameInMap("SourceSchema")
         private String sourceSchema;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Sub")
+        @com.aliyun.core.annotation.NameInMap("Sub")
         private String sub;
 
-        @NameInMap("TargetNames")
+        @com.aliyun.core.annotation.NameInMap("TargetNames")
         private String targetNames;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private JobProgress(Builder builder) {
@@ -2629,19 +2628,19 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
 
     }
     public static class Diagnosis extends TeaModel {
-        @NameInMap("CnDocUrl")
+        @com.aliyun.core.annotation.NameInMap("CnDocUrl")
         private String cnDocUrl;
 
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("EndpointType")
+        @com.aliyun.core.annotation.NameInMap("EndpointType")
         private String endpointType;
 
-        @NameInMap("InternationalDocUrl")
+        @com.aliyun.core.annotation.NameInMap("InternationalDocUrl")
         private String internationalDocUrl;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private String result;
 
         private Diagnosis(Builder builder) {
@@ -2756,10 +2755,10 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
 
     }
     public static class NetworkDiagnosisResult extends TeaModel {
-        @NameInMap("Diagnosis")
+        @com.aliyun.core.annotation.NameInMap("Diagnosis")
         private java.util.List < Diagnosis> diagnosis;
 
-        @NameInMap("ModelVersion")
+        @com.aliyun.core.annotation.NameInMap("ModelVersion")
         private String modelVersion;
 
         private NetworkDiagnosisResult(Builder builder) {
@@ -2817,16 +2816,16 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
 
     }
     public static class SubDistributedJobStatusJobProgressLogs extends TeaModel {
-        @NameInMap("ErrData")
+        @com.aliyun.core.annotation.NameInMap("ErrData")
         private String errData;
 
-        @NameInMap("ErrMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrMsg")
         private String errMsg;
 
-        @NameInMap("ErrType")
+        @com.aliyun.core.annotation.NameInMap("ErrType")
         private String errType;
 
-        @NameInMap("LogLevel")
+        @com.aliyun.core.annotation.NameInMap("LogLevel")
         private String logLevel;
 
         private SubDistributedJobStatusJobProgressLogs(Builder builder) {
@@ -2918,79 +2917,79 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
 
     }
     public static class SubDistributedJobStatusJobProgress extends TeaModel {
-        @NameInMap("BootTime")
+        @com.aliyun.core.annotation.NameInMap("BootTime")
         private String bootTime;
 
-        @NameInMap("CanSkip")
+        @com.aliyun.core.annotation.NameInMap("CanSkip")
         private Boolean canSkip;
 
-        @NameInMap("Current")
+        @com.aliyun.core.annotation.NameInMap("Current")
         private String current;
 
-        @NameInMap("DdlSql")
+        @com.aliyun.core.annotation.NameInMap("DdlSql")
         private String ddlSql;
 
-        @NameInMap("DelaySeconds")
+        @com.aliyun.core.annotation.NameInMap("DelaySeconds")
         private Integer delaySeconds;
 
-        @NameInMap("DestSchema")
+        @com.aliyun.core.annotation.NameInMap("DestSchema")
         private String destSchema;
 
-        @NameInMap("DiffRow")
+        @com.aliyun.core.annotation.NameInMap("DiffRow")
         private Long diffRow;
 
-        @NameInMap("ErrDetail")
+        @com.aliyun.core.annotation.NameInMap("ErrDetail")
         private String errDetail;
 
-        @NameInMap("ErrMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrMsg")
         private String errMsg;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("IgnoreFlag")
+        @com.aliyun.core.annotation.NameInMap("IgnoreFlag")
         private String ignoreFlag;
 
-        @NameInMap("Item")
+        @com.aliyun.core.annotation.NameInMap("Item")
         private String item;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("Logs")
+        @com.aliyun.core.annotation.NameInMap("Logs")
         private java.util.List < SubDistributedJobStatusJobProgressLogs> logs;
 
-        @NameInMap("Names")
+        @com.aliyun.core.annotation.NameInMap("Names")
         private String names;
 
-        @NameInMap("OrderNum")
+        @com.aliyun.core.annotation.NameInMap("OrderNum")
         private Integer orderNum;
 
-        @NameInMap("ParentObj")
+        @com.aliyun.core.annotation.NameInMap("ParentObj")
         private String parentObj;
 
-        @NameInMap("RepairMethod")
+        @com.aliyun.core.annotation.NameInMap("RepairMethod")
         private String repairMethod;
 
-        @NameInMap("Skip")
+        @com.aliyun.core.annotation.NameInMap("Skip")
         private Boolean skip;
 
-        @NameInMap("SourceSchema")
+        @com.aliyun.core.annotation.NameInMap("SourceSchema")
         private String sourceSchema;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Sub")
+        @com.aliyun.core.annotation.NameInMap("Sub")
         private String sub;
 
-        @NameInMap("TargetNames")
+        @com.aliyun.core.annotation.NameInMap("TargetNames")
         private String targetNames;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private SubDistributedJobStatusJobProgress(Builder builder) {
@@ -3463,25 +3462,25 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
 
     }
     public static class SubDistributedJobStatus extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("ErrorItem")
+        @com.aliyun.core.annotation.NameInMap("ErrorItem")
         private Integer errorItem;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("JobName")
+        @com.aliyun.core.annotation.NameInMap("JobName")
         private String jobName;
 
-        @NameInMap("JobProgress")
+        @com.aliyun.core.annotation.NameInMap("JobProgress")
         private java.util.List < SubDistributedJobStatusJobProgress> jobProgress;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private SubDistributedJobStatus(Builder builder) {

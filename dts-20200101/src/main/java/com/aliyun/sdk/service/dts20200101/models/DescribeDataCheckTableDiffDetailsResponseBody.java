@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dts20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDataCheckTableDiffDetailsResponseBody</p>
  */
 public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
-    @NameInMap("DbName")
+    @com.aliyun.core.annotation.NameInMap("DbName")
     private String dbName;
 
-    @NameInMap("DiffCount")
+    @com.aliyun.core.annotation.NameInMap("DiffCount")
     private Long diffCount;
 
-    @NameInMap("DiffDetails")
+    @com.aliyun.core.annotation.NameInMap("DiffDetails")
     private java.util.List < DiffDetails> diffDetails;
 
-    @NameInMap("DynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("DynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TbName")
+    @com.aliyun.core.annotation.NameInMap("TbName")
     private String tbName;
 
     private DescribeDataCheckTableDiffDetailsResponseBody(Builder builder) {
@@ -252,13 +251,13 @@ public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
     } 
 
     public static class DiffDetails extends TeaModel {
-        @NameInMap("Diff")
+        @com.aliyun.core.annotation.NameInMap("Diff")
         private String diff;
 
-        @NameInMap("GmtCreated")
+        @com.aliyun.core.annotation.NameInMap("GmtCreated")
         private String gmtCreated;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
         private DiffDetails(Builder builder) {
