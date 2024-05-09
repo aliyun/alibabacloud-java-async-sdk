@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ApplyQueryRequest</p>
  */
 public class ApplyQueryRequest extends Request {
-    @Query
-    @NameInMap("apply_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("apply_id")
     private Integer applyId;
 
-    @Query
-    @NameInMap("apply_show_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("apply_show_id")
     private String applyShowId;
 
-    @Query
-    @NameInMap("sub_corp_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("sub_corp_id")
     private String subCorpId;
 
-    @Query
-    @NameInMap("thirdpart_apply_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("thirdpart_apply_id")
     private String thirdpartApplyId;
 
-    @Query
-    @NameInMap("type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("type")
     private Integer type;
 
-    @Header
-    @NameInMap("x-acs-btrip-so-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-so-corp-token")
     private String xAcsBtripSoCorpToken;
 
     private ApplyQueryRequest(Builder builder) {

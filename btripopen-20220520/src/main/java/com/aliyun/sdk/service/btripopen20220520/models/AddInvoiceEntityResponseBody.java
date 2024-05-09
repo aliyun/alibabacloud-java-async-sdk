@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddInvoiceEntityResponseBody</p>
  */
 public class AddInvoiceEntityResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private AddInvoiceEntityResponseBody(Builder builder) {
@@ -152,10 +151,10 @@ public class AddInvoiceEntityResponseBody extends TeaModel {
     } 
 
     public static class Module extends TeaModel {
-        @NameInMap("add_num")
+        @com.aliyun.core.annotation.NameInMap("add_num")
         private Integer addNum;
 
-        @NameInMap("selected_user_num")
+        @com.aliyun.core.annotation.NameInMap("selected_user_num")
         private Integer selectedUserNum;
 
         private Module(Builder builder) {

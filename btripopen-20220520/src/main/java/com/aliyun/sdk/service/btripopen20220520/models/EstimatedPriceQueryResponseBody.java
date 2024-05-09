@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>EstimatedPriceQueryResponseBody</p>
  */
 public class EstimatedPriceQueryResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private Integer code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private EstimatedPriceQueryResponseBody(Builder builder) {
@@ -152,19 +151,19 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
     } 
 
     public static class HotelFeeDetail extends TeaModel {
-        @NameInMap("city")
+        @com.aliyun.core.annotation.NameInMap("city")
         private String city;
 
-        @NameInMap("criterion")
+        @com.aliyun.core.annotation.NameInMap("criterion")
         private Long criterion;
 
-        @NameInMap("itinerary_id")
+        @com.aliyun.core.annotation.NameInMap("itinerary_id")
         private String itineraryId;
 
-        @NameInMap("total")
+        @com.aliyun.core.annotation.NameInMap("total")
         private Long total;
 
-        @NameInMap("trip_days")
+        @com.aliyun.core.annotation.NameInMap("trip_days")
         private Integer tripDays;
 
         private HotelFeeDetail(Builder builder) {
@@ -273,19 +272,19 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
 
     }
     public static class Cheapest extends TeaModel {
-        @NameInMap("arr_time")
+        @com.aliyun.core.annotation.NameInMap("arr_time")
         private String arrTime;
 
-        @NameInMap("dep_time")
+        @com.aliyun.core.annotation.NameInMap("dep_time")
         private String depTime;
 
-        @NameInMap("fee")
+        @com.aliyun.core.annotation.NameInMap("fee")
         private Long fee;
 
-        @NameInMap("seat_grade")
+        @com.aliyun.core.annotation.NameInMap("seat_grade")
         private String seatGrade;
 
-        @NameInMap("vehicle_no")
+        @com.aliyun.core.annotation.NameInMap("vehicle_no")
         private String vehicleNo;
 
         private Cheapest(Builder builder) {
@@ -394,19 +393,19 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
 
     }
     public static class MostExpensive extends TeaModel {
-        @NameInMap("arr_time")
+        @com.aliyun.core.annotation.NameInMap("arr_time")
         private String arrTime;
 
-        @NameInMap("dep_time")
+        @com.aliyun.core.annotation.NameInMap("dep_time")
         private String depTime;
 
-        @NameInMap("fee")
+        @com.aliyun.core.annotation.NameInMap("fee")
         private Long fee;
 
-        @NameInMap("seat_grade")
+        @com.aliyun.core.annotation.NameInMap("seat_grade")
         private String seatGrade;
 
-        @NameInMap("vehicle_no")
+        @com.aliyun.core.annotation.NameInMap("vehicle_no")
         private String vehicleNo;
 
         private MostExpensive(Builder builder) {
@@ -515,31 +514,31 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
 
     }
     public static class BtripRoutes extends TeaModel {
-        @NameInMap("arr_city")
+        @com.aliyun.core.annotation.NameInMap("arr_city")
         private String arrCity;
 
-        @NameInMap("arr_date")
+        @com.aliyun.core.annotation.NameInMap("arr_date")
         private Long arrDate;
 
-        @NameInMap("cheapest")
+        @com.aliyun.core.annotation.NameInMap("cheapest")
         private Cheapest cheapest;
 
-        @NameInMap("dep_city")
+        @com.aliyun.core.annotation.NameInMap("dep_city")
         private String depCity;
 
-        @NameInMap("dep_date")
+        @com.aliyun.core.annotation.NameInMap("dep_date")
         private Long depDate;
 
-        @NameInMap("err_msg")
+        @com.aliyun.core.annotation.NameInMap("err_msg")
         private String errMsg;
 
-        @NameInMap("itinerary_id")
+        @com.aliyun.core.annotation.NameInMap("itinerary_id")
         private String itineraryId;
 
-        @NameInMap("most_expensive")
+        @com.aliyun.core.annotation.NameInMap("most_expensive")
         private MostExpensive mostExpensive;
 
-        @NameInMap("success")
+        @com.aliyun.core.annotation.NameInMap("success")
         private Boolean success;
 
         private BtripRoutes(Builder builder) {
@@ -716,19 +715,19 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
 
     }
     public static class TrafficFee extends TeaModel {
-        @NameInMap("btrip_routes")
+        @com.aliyun.core.annotation.NameInMap("btrip_routes")
         private java.util.List < BtripRoutes> btripRoutes;
 
-        @NameInMap("err_msg")
+        @com.aliyun.core.annotation.NameInMap("err_msg")
         private String errMsg;
 
-        @NameInMap("max_fee")
+        @com.aliyun.core.annotation.NameInMap("max_fee")
         private Long maxFee;
 
-        @NameInMap("min_fee")
+        @com.aliyun.core.annotation.NameInMap("min_fee")
         private Long minFee;
 
-        @NameInMap("success")
+        @com.aliyun.core.annotation.NameInMap("success")
         private Boolean success;
 
         private TrafficFee(Builder builder) {
@@ -837,13 +836,13 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
 
     }
     public static class Module extends TeaModel {
-        @NameInMap("hotel_fee_detail")
+        @com.aliyun.core.annotation.NameInMap("hotel_fee_detail")
         private java.util.List < HotelFeeDetail> hotelFeeDetail;
 
-        @NameInMap("total_hotel_fee")
+        @com.aliyun.core.annotation.NameInMap("total_hotel_fee")
         private Long totalHotelFee;
 
-        @NameInMap("traffic_fee")
+        @com.aliyun.core.annotation.NameInMap("traffic_fee")
         private TrafficFee trafficFee;
 
         private Module(Builder builder) {

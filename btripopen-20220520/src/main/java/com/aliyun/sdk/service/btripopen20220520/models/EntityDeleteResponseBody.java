@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>EntityDeleteResponseBody</p>
  */
 public class EntityDeleteResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("more_page")
+    @com.aliyun.core.annotation.NameInMap("more_page")
     private Boolean morePage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private EntityDeleteResponseBody(Builder builder) {
@@ -172,10 +171,10 @@ public class EntityDeleteResponseBody extends TeaModel {
     } 
 
     public static class Module extends TeaModel {
-        @NameInMap("remove_num")
+        @com.aliyun.core.annotation.NameInMap("remove_num")
         private Integer removeNum;
 
-        @NameInMap("selected_user_num")
+        @com.aliyun.core.annotation.NameInMap("selected_user_num")
         private Integer selectedUserNum;
 
         private Module(Builder builder) {

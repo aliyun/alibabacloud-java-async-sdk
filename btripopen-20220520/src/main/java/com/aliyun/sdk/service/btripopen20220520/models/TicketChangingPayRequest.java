@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,35 +11,35 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TicketChangingPayRequest</p>
  */
 public class TicketChangingPayRequest extends Request {
-    @Body
-    @NameInMap("corp_pay_price")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("corp_pay_price")
     private Long corpPayPrice;
 
-    @Body
-    @NameInMap("dis_order_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dis_order_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String disOrderId;
 
-    @Body
-    @NameInMap("dis_sub_order_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dis_sub_order_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String disSubOrderId;
 
-    @Body
-    @NameInMap("extra")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("extra")
     private java.util.Map < String, String > extra;
 
-    @Body
-    @NameInMap("personal_pay_price")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("personal_pay_price")
     private Long personalPayPrice;
 
-    @Body
-    @NameInMap("total_pay_price")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("total_pay_price")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long totalPayPrice;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private TicketChangingPayRequest(Builder builder) {

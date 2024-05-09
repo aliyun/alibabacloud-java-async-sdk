@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,41 +11,41 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>HotelOrderPayRequest</p>
  */
 public class HotelOrderPayRequest extends Request {
-    @Body
-    @NameInMap("btrip_order_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("btrip_order_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long btripOrderId;
 
-    @Body
-    @NameInMap("btrip_user_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("btrip_user_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String btripUserId;
 
-    @Body
-    @NameInMap("company_pay_fee")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("company_pay_fee")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long companyPayFee;
 
-    @Body
-    @NameInMap("person_pay_fee")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("person_pay_fee")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long personPayFee;
 
-    @Body
-    @NameInMap("third_pay_account")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("third_pay_account")
     private String thirdPayAccount;
 
-    @Body
-    @NameInMap("third_trade_no")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("third_trade_no")
     private String thirdTradeNo;
 
-    @Body
-    @NameInMap("total_price")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("total_price")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long totalPrice;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private HotelOrderPayRequest(Builder builder) {

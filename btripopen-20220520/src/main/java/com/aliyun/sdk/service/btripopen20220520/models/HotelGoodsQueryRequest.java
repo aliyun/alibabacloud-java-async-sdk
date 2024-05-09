@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,60 +11,60 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>HotelGoodsQueryRequest</p>
  */
 public class HotelGoodsQueryRequest extends Request {
-    @Query
-    @NameInMap("adult_num")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("adult_num")
     private String adultNum;
 
-    @Query
-    @NameInMap("agreement_price")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("agreement_price")
     private Boolean agreementPrice;
 
-    @Query
-    @NameInMap("begin_date")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("begin_date")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String beginDate;
 
-    @Query
-    @NameInMap("breakfast_included")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("breakfast_included")
     private Boolean breakfastIncluded;
 
-    @Query
-    @NameInMap("btrip_user_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("btrip_user_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String btripUserId;
 
-    @Query
-    @NameInMap("city_code")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("city_code")
     private String cityCode;
 
-    @Query
-    @NameInMap("end_date")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("end_date")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endDate;
 
-    @Query
-    @NameInMap("hotel_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("hotel_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hotelId;
 
-    @Query
-    @NameInMap("pay_over_type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pay_over_type")
     private Integer payOverType;
 
-    @Query
-    @NameInMap("payment_type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("payment_type")
     private Integer paymentType;
 
-    @Query
-    @NameInMap("special_invoice")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("special_invoice")
     private Boolean specialInvoice;
 
-    @Query
-    @NameInMap("super_man")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("super_man")
     private Integer superMan;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private HotelGoodsQueryRequest(Builder builder) {

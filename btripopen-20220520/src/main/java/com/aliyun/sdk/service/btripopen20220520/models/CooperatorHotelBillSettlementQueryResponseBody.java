@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CooperatorHotelBillSettlementQueryResponseBody</p>
  */
 public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private CooperatorHotelBillSettlementQueryResponseBody(Builder builder) {
@@ -152,256 +151,256 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("alipay_trade_no")
+        @com.aliyun.core.annotation.NameInMap("alipay_trade_no")
         private String alipayTradeNo;
 
-        @NameInMap("apply_arr_city_code")
+        @com.aliyun.core.annotation.NameInMap("apply_arr_city_code")
         private String applyArrCityCode;
 
-        @NameInMap("apply_arr_city_name")
+        @com.aliyun.core.annotation.NameInMap("apply_arr_city_name")
         private String applyArrCityName;
 
-        @NameInMap("apply_dep_city_code")
+        @com.aliyun.core.annotation.NameInMap("apply_dep_city_code")
         private String applyDepCityCode;
 
-        @NameInMap("apply_dep_city_name")
+        @com.aliyun.core.annotation.NameInMap("apply_dep_city_name")
         private String applyDepCityName;
 
-        @NameInMap("apply_extend_field")
+        @com.aliyun.core.annotation.NameInMap("apply_extend_field")
         private String applyExtendField;
 
-        @NameInMap("apply_id")
+        @com.aliyun.core.annotation.NameInMap("apply_id")
         private String applyId;
 
-        @NameInMap("average_nights")
+        @com.aliyun.core.annotation.NameInMap("average_nights")
         private Double averageNights;
 
-        @NameInMap("bill_record_time")
+        @com.aliyun.core.annotation.NameInMap("bill_record_time")
         private String billRecordTime;
 
-        @NameInMap("book_mode")
+        @com.aliyun.core.annotation.NameInMap("book_mode")
         private String bookMode;
 
-        @NameInMap("book_reason")
+        @com.aliyun.core.annotation.NameInMap("book_reason")
         private String bookReason;
 
-        @NameInMap("book_time")
+        @com.aliyun.core.annotation.NameInMap("book_time")
         private String bookTime;
 
-        @NameInMap("booker_id")
+        @com.aliyun.core.annotation.NameInMap("booker_id")
         private String bookerId;
 
-        @NameInMap("booker_job_no")
+        @com.aliyun.core.annotation.NameInMap("booker_job_no")
         private String bookerJobNo;
 
-        @NameInMap("booker_name")
+        @com.aliyun.core.annotation.NameInMap("booker_name")
         private String bookerName;
 
-        @NameInMap("brand_group")
+        @com.aliyun.core.annotation.NameInMap("brand_group")
         private String brandGroup;
 
-        @NameInMap("brand_name")
+        @com.aliyun.core.annotation.NameInMap("brand_name")
         private String brandName;
 
-        @NameInMap("business_trip_result")
+        @com.aliyun.core.annotation.NameInMap("business_trip_result")
         private String businessTripResult;
 
-        @NameInMap("capital_direction")
+        @com.aliyun.core.annotation.NameInMap("capital_direction")
         private String capitalDirection;
 
-        @NameInMap("cascade_department")
+        @com.aliyun.core.annotation.NameInMap("cascade_department")
         private String cascadeDepartment;
 
-        @NameInMap("check_in_date")
+        @com.aliyun.core.annotation.NameInMap("check_in_date")
         private String checkInDate;
 
-        @NameInMap("checkout_date")
+        @com.aliyun.core.annotation.NameInMap("checkout_date")
         private String checkoutDate;
 
-        @NameInMap("city")
+        @com.aliyun.core.annotation.NameInMap("city")
         private String city;
 
-        @NameInMap("city_code")
+        @com.aliyun.core.annotation.NameInMap("city_code")
         private String cityCode;
 
-        @NameInMap("city_county")
+        @com.aliyun.core.annotation.NameInMap("city_county")
         private String cityCounty;
 
-        @NameInMap("city_county_code")
+        @com.aliyun.core.annotation.NameInMap("city_county_code")
         private Integer cityCountyCode;
 
-        @NameInMap("cooperator_bill_code")
+        @com.aliyun.core.annotation.NameInMap("cooperator_bill_code")
         private String cooperatorBillCode;
 
-        @NameInMap("cooperator_name")
+        @com.aliyun.core.annotation.NameInMap("cooperator_name")
         private String cooperatorName;
 
-        @NameInMap("cooperator_order_id")
+        @com.aliyun.core.annotation.NameInMap("cooperator_order_id")
         private String cooperatorOrderId;
 
-        @NameInMap("corp_refund_fee")
+        @com.aliyun.core.annotation.NameInMap("corp_refund_fee")
         private Double corpRefundFee;
 
-        @NameInMap("corp_total_fee")
+        @com.aliyun.core.annotation.NameInMap("corp_total_fee")
         private Double corpTotalFee;
 
-        @NameInMap("cost_center")
+        @com.aliyun.core.annotation.NameInMap("cost_center")
         private String costCenter;
 
-        @NameInMap("cost_center_number")
+        @com.aliyun.core.annotation.NameInMap("cost_center_number")
         private String costCenterNumber;
 
-        @NameInMap("department")
+        @com.aliyun.core.annotation.NameInMap("department")
         private String department;
 
-        @NameInMap("department_id")
+        @com.aliyun.core.annotation.NameInMap("department_id")
         private String departmentId;
 
-        @NameInMap("exceed_reason")
+        @com.aliyun.core.annotation.NameInMap("exceed_reason")
         private String exceedReason;
 
-        @NameInMap("fee_type")
+        @com.aliyun.core.annotation.NameInMap("fee_type")
         private String feeType;
 
-        @NameInMap("fees")
+        @com.aliyun.core.annotation.NameInMap("fees")
         private Double fees;
 
-        @NameInMap("fines")
+        @com.aliyun.core.annotation.NameInMap("fines")
         private Double fines;
 
-        @NameInMap("fu_point_fee")
+        @com.aliyun.core.annotation.NameInMap("fu_point_fee")
         private Double fuPointFee;
 
-        @NameInMap("hotel_name")
+        @com.aliyun.core.annotation.NameInMap("hotel_name")
         private String hotelName;
 
-        @NameInMap("index")
+        @com.aliyun.core.annotation.NameInMap("index")
         private String index;
 
-        @NameInMap("invoice_title")
+        @com.aliyun.core.annotation.NameInMap("invoice_title")
         private String invoiceTitle;
 
-        @NameInMap("is_early_departure")
+        @com.aliyun.core.annotation.NameInMap("is_early_departure")
         private String isEarlyDeparture;
 
-        @NameInMap("is_negotiation")
+        @com.aliyun.core.annotation.NameInMap("is_negotiation")
         private String isNegotiation;
 
-        @NameInMap("is_share_str")
+        @com.aliyun.core.annotation.NameInMap("is_share_str")
         private String isShareStr;
 
-        @NameInMap("nights")
+        @com.aliyun.core.annotation.NameInMap("nights")
         private Integer nights;
 
-        @NameInMap("order_id")
+        @com.aliyun.core.annotation.NameInMap("order_id")
         private String orderId;
 
-        @NameInMap("order_price")
+        @com.aliyun.core.annotation.NameInMap("order_price")
         private Double orderPrice;
 
-        @NameInMap("order_status_desc")
+        @com.aliyun.core.annotation.NameInMap("order_status_desc")
         private String orderStatusDesc;
 
-        @NameInMap("order_type")
+        @com.aliyun.core.annotation.NameInMap("order_type")
         private String orderType;
 
-        @NameInMap("over_apply_id")
+        @com.aliyun.core.annotation.NameInMap("over_apply_id")
         private String overApplyId;
 
-        @NameInMap("payment_department_id")
+        @com.aliyun.core.annotation.NameInMap("payment_department_id")
         private String paymentDepartmentId;
 
-        @NameInMap("payment_department_name")
+        @com.aliyun.core.annotation.NameInMap("payment_department_name")
         private String paymentDepartmentName;
 
-        @NameInMap("person_refund_fee")
+        @com.aliyun.core.annotation.NameInMap("person_refund_fee")
         private Double personRefundFee;
 
-        @NameInMap("person_settle_price")
+        @com.aliyun.core.annotation.NameInMap("person_settle_price")
         private Double personSettlePrice;
 
-        @NameInMap("primary_id")
+        @com.aliyun.core.annotation.NameInMap("primary_id")
         private Long primaryId;
 
-        @NameInMap("project_code")
+        @com.aliyun.core.annotation.NameInMap("project_code")
         private String projectCode;
 
-        @NameInMap("project_name")
+        @com.aliyun.core.annotation.NameInMap("project_name")
         private String projectName;
 
-        @NameInMap("promotion_fee")
+        @com.aliyun.core.annotation.NameInMap("promotion_fee")
         private Double promotionFee;
 
-        @NameInMap("remark")
+        @com.aliyun.core.annotation.NameInMap("remark")
         private String remark;
 
-        @NameInMap("reserve_rule")
+        @com.aliyun.core.annotation.NameInMap("reserve_rule")
         private Integer reserveRule;
 
-        @NameInMap("room_no")
+        @com.aliyun.core.annotation.NameInMap("room_no")
         private String roomNo;
 
-        @NameInMap("room_number")
+        @com.aliyun.core.annotation.NameInMap("room_number")
         private Integer roomNumber;
 
-        @NameInMap("room_price")
+        @com.aliyun.core.annotation.NameInMap("room_price")
         private Double roomPrice;
 
-        @NameInMap("room_type")
+        @com.aliyun.core.annotation.NameInMap("room_type")
         private String roomType;
 
-        @NameInMap("service_fee")
+        @com.aliyun.core.annotation.NameInMap("service_fee")
         private Double serviceFee;
 
-        @NameInMap("settlement_fee")
+        @com.aliyun.core.annotation.NameInMap("settlement_fee")
         private Double settlementFee;
 
-        @NameInMap("settlement_grant_fee")
+        @com.aliyun.core.annotation.NameInMap("settlement_grant_fee")
         private Double settlementGrantFee;
 
-        @NameInMap("settlement_time")
+        @com.aliyun.core.annotation.NameInMap("settlement_time")
         private String settlementTime;
 
-        @NameInMap("settlement_type")
+        @com.aliyun.core.annotation.NameInMap("settlement_type")
         private String settlementType;
 
-        @NameInMap("star")
+        @com.aliyun.core.annotation.NameInMap("star")
         private String star;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("sub_order_id")
+        @com.aliyun.core.annotation.NameInMap("sub_order_id")
         private String subOrderId;
 
-        @NameInMap("tax_rate")
+        @com.aliyun.core.annotation.NameInMap("tax_rate")
         private String taxRate;
 
-        @NameInMap("third_invoice_id")
+        @com.aliyun.core.annotation.NameInMap("third_invoice_id")
         private String thirdInvoiceId;
 
-        @NameInMap("third_itinerary_id")
+        @com.aliyun.core.annotation.NameInMap("third_itinerary_id")
         private String thirdItineraryId;
 
-        @NameInMap("total_nights")
+        @com.aliyun.core.annotation.NameInMap("total_nights")
         private Integer totalNights;
 
-        @NameInMap("traveler_id")
+        @com.aliyun.core.annotation.NameInMap("traveler_id")
         private String travelerId;
 
-        @NameInMap("traveler_job_no")
+        @com.aliyun.core.annotation.NameInMap("traveler_job_no")
         private String travelerJobNo;
 
-        @NameInMap("traveler_member_type")
+        @com.aliyun.core.annotation.NameInMap("traveler_member_type")
         private String travelerMemberType;
 
-        @NameInMap("traveler_member_type_name")
+        @com.aliyun.core.annotation.NameInMap("traveler_member_type_name")
         private String travelerMemberTypeName;
 
-        @NameInMap("traveler_name")
+        @com.aliyun.core.annotation.NameInMap("traveler_name")
         private String travelerName;
 
-        @NameInMap("voucher_type")
+        @com.aliyun.core.annotation.NameInMap("voucher_type")
         private Integer voucherType;
 
         private Items(Builder builder) {
@@ -1853,22 +1852,22 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
 
     }
     public static class Module extends TeaModel {
-        @NameInMap("category")
+        @com.aliyun.core.annotation.NameInMap("category")
         private Integer category;
 
-        @NameInMap("corp_id")
+        @com.aliyun.core.annotation.NameInMap("corp_id")
         private String corpId;
 
-        @NameInMap("items")
+        @com.aliyun.core.annotation.NameInMap("items")
         private java.util.List < Items> items;
 
-        @NameInMap("period_end")
+        @com.aliyun.core.annotation.NameInMap("period_end")
         private String periodEnd;
 
-        @NameInMap("period_start")
+        @com.aliyun.core.annotation.NameInMap("period_start")
         private String periodStart;
 
-        @NameInMap("total_size")
+        @com.aliyun.core.annotation.NameInMap("total_size")
         private Long totalSize;
 
         private Module(Builder builder) {

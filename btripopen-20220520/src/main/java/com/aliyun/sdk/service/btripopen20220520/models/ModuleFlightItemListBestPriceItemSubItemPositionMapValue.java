@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModuleFlightItemListBestPriceItemSubItemPositionMapValue</p>
  */
 public class ModuleFlightItemListBestPriceItemSubItemPositionMapValue extends TeaModel {
-    @NameInMap("journey_index")
+    @com.aliyun.core.annotation.NameInMap("journey_index")
     private Integer journeyIndex;
 
-    @NameInMap("segment_index")
+    @com.aliyun.core.annotation.NameInMap("segment_index")
     private Integer segmentIndex;
 
     private ModuleFlightItemListBestPriceItemSubItemPositionMapValue(Builder builder) {

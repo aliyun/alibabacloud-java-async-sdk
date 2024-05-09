@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,88 +11,86 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CarApplyAddRequest</p>
  */
 public class CarApplyAddRequest extends Request {
-    @Body
-    @NameInMap("cause")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("cause")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cause;
 
-    @Body
-    @NameInMap("city")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("city")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String city;
 
-    @Body
-    @NameInMap("city_code_set")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("city_code_set")
     private String cityCodeSet;
 
-    @Body
-    @NameInMap("date")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("date")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String date;
 
-    @Body
-    @NameInMap("finished_date")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("finished_date")
     private String finishedDate;
 
-    @Body
-    @NameInMap("project_code")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("project_code")
     private String projectCode;
 
-    @Body
-    @NameInMap("project_name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("project_name")
     private String projectName;
 
-    @Body
-    @NameInMap("status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer status;
 
-    @Body
-    @NameInMap("third_part_apply_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("third_part_apply_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String thirdPartApplyId;
 
-    @Body
-    @NameInMap("third_part_cost_center_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("third_part_cost_center_id")
     private String thirdPartCostCenterId;
 
-    @Body
-    @NameInMap("third_part_invoice_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("third_part_invoice_id")
     private String thirdPartInvoiceId;
 
-    @Body
-    @NameInMap("times_total")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("times_total")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer timesTotal;
 
-    @Body
-    @NameInMap("times_type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("times_type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer timesType;
 
-    @Body
-    @NameInMap("times_used")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("times_used")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer timesUsed;
 
-    @Body
-    @NameInMap("title")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("title")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String title;
 
-    @Body
-    @NameInMap("traveler_standard")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("traveler_standard")
     private java.util.List < TravelerStandard> travelerStandard;
 
-    @Body
-    @NameInMap("user_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("user_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
-    @Header
-    @NameInMap("x-acs-btrip-so-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-so-corp-token")
     private String xAcsBtripSoCorpToken;
 
     private CarApplyAddRequest(Builder builder) {
@@ -474,12 +471,12 @@ public class CarApplyAddRequest extends Request {
     } 
 
     public static class CarCitySet extends TeaModel {
-        @NameInMap("city_code")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("city_code")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String cityCode;
 
-        @NameInMap("city_name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("city_name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String cityName;
 
         private CarCitySet(Builder builder) {
@@ -537,11 +534,11 @@ public class CarApplyAddRequest extends Request {
 
     }
     public static class TravelerStandard extends TeaModel {
-        @NameInMap("car_city_set")
+        @com.aliyun.core.annotation.NameInMap("car_city_set")
         private java.util.List < CarCitySet> carCitySet;
 
-        @NameInMap("user_id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("user_id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String userId;
 
         private TravelerStandard(Builder builder) {

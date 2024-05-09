@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,41 +11,41 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InsureOrderRefundRequest</p>
  */
 public class InsureOrderRefundRequest extends Request {
-    @Path
-    @NameInMap("ins_order_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ins_order_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String insOrderId;
 
-    @Body
-    @NameInMap("btrip_user_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("btrip_user_id")
     private String btripUserId;
 
-    @Body
-    @NameInMap("buyer_name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("buyer_name")
     private String buyerName;
 
-    @Body
-    @NameInMap("isv_name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("isv_name")
     private String isvName;
 
-    @Body
-    @NameInMap("out_apply_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("out_apply_id")
     private String outApplyId;
 
-    @Body
-    @NameInMap("policy_no_list")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("policy_no_list")
     private java.util.List < String > policyNoList;
 
-    @Body
-    @NameInMap("sub_ins_order_ids")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sub_ins_order_ids")
     private java.util.List < String > subInsOrderIds;
 
-    @Body
-    @NameInMap("supplier_code")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("supplier_code")
     private String supplierCode;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private InsureOrderRefundRequest(Builder builder) {

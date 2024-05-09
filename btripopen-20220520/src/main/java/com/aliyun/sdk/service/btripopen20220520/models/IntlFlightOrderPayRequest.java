@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>IntlFlightOrderPayRequest</p>
  */
 public class IntlFlightOrderPayRequest extends Request {
-    @Query
-    @NameInMap("ext_params")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ext_params")
     private java.util.Map < String, ? > extParams;
 
-    @Query
-    @NameInMap("isv_name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("isv_name")
     private String isvName;
 
-    @Query
-    @NameInMap("order_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("order_id")
     private String orderId;
 
-    @Query
-    @NameInMap("out_order_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("out_order_id")
     private String outOrderId;
 
-    @Query
-    @NameInMap("total_price")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("total_price")
     private Long totalPrice;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private IntlFlightOrderPayRequest(Builder builder) {

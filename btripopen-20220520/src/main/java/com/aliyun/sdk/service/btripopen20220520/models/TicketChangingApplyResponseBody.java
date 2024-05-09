@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TicketChangingApplyResponseBody</p>
  */
 public class TicketChangingApplyResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private TicketChangingApplyResponseBody(Builder builder) {
@@ -152,52 +151,52 @@ public class TicketChangingApplyResponseBody extends TeaModel {
     } 
 
     public static class Module extends TeaModel {
-        @NameInMap("booking_changed_total_fee")
+        @com.aliyun.core.annotation.NameInMap("booking_changed_total_fee")
         private Integer bookingChangedTotalFee;
 
-        @NameInMap("booking_origin_total_fee")
+        @com.aliyun.core.annotation.NameInMap("booking_origin_total_fee")
         private Integer bookingOriginTotalFee;
 
-        @NameInMap("booking_price_changed")
+        @com.aliyun.core.annotation.NameInMap("booking_price_changed")
         private Boolean bookingPriceChanged;
 
-        @NameInMap("btrip_order_id")
+        @com.aliyun.core.annotation.NameInMap("btrip_order_id")
         private Long btripOrderId;
 
-        @NameInMap("btrip_sub_order_id")
+        @com.aliyun.core.annotation.NameInMap("btrip_sub_order_id")
         private Long btripSubOrderId;
 
-        @NameInMap("can_pay")
+        @com.aliyun.core.annotation.NameInMap("can_pay")
         private Boolean canPay;
 
-        @NameInMap("change_fee")
+        @com.aliyun.core.annotation.NameInMap("change_fee")
         private Long changeFee;
 
-        @NameInMap("deadline_time")
+        @com.aliyun.core.annotation.NameInMap("deadline_time")
         private String deadlineTime;
 
-        @NameInMap("dis_order_id")
+        @com.aliyun.core.annotation.NameInMap("dis_order_id")
         private String disOrderId;
 
-        @NameInMap("dis_sub_order_id")
+        @com.aliyun.core.annotation.NameInMap("dis_sub_order_id")
         private String disSubOrderId;
 
-        @NameInMap("max_retry_times")
+        @com.aliyun.core.annotation.NameInMap("max_retry_times")
         private Integer maxRetryTimes;
 
-        @NameInMap("next_retry_interval")
+        @com.aliyun.core.annotation.NameInMap("next_retry_interval")
         private Long nextRetryInterval;
 
-        @NameInMap("retry")
+        @com.aliyun.core.annotation.NameInMap("retry")
         private Boolean retry;
 
-        @NameInMap("retry_client_tips")
+        @com.aliyun.core.annotation.NameInMap("retry_client_tips")
         private String retryClientTips;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("upgrade_fee")
+        @com.aliyun.core.annotation.NameInMap("upgrade_fee")
         private Long upgradeFee;
 
         private Module(Builder builder) {

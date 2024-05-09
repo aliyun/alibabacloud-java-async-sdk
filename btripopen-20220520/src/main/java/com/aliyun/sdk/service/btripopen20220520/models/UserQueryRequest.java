@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UserQueryRequest</p>
  */
 public class UserQueryRequest extends Request {
-    @Query
-    @NameInMap("modified_time_greater_or_equal_than")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("modified_time_greater_or_equal_than")
     private String modifiedTimeGreaterOrEqualThan;
 
-    @Query
-    @NameInMap("page_size")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page_size")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("page_token")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page_token")
     private String pageToken;
 
-    @Query
-    @NameInMap("third_part_job_no")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("third_part_job_no")
     private String thirdPartJobNo;
 
-    @Header
-    @NameInMap("x-acs-btrip-so-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-so-corp-token")
     private String xAcsBtripSoCorpToken;
 
     private UserQueryRequest(Builder builder) {

@@ -299,17 +299,41 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<TicketChangingPayResponse> ticketChangingPay(TicketChangingPayRequest request);
 
+    CompletableFuture<TrainApplyChangeResponse> trainApplyChange(TrainApplyChangeRequest request);
+
+    CompletableFuture<TrainApplyRefundResponse> trainApplyRefund(TrainApplyRefundRequest request);
+
     CompletableFuture<TrainBillSettlementQueryResponse> trainBillSettlementQuery(TrainBillSettlementQueryRequest request);
 
     CompletableFuture<TrainExceedApplyQueryResponse> trainExceedApplyQuery(TrainExceedApplyQueryRequest request);
 
+    CompletableFuture<TrainFeeCalculateChangeResponse> trainFeeCalculateChange(TrainFeeCalculateChangeRequest request);
+
+    CompletableFuture<TrainFeeCalculateRefundResponse> trainFeeCalculateRefund(TrainFeeCalculateRefundRequest request);
+
+    CompletableFuture<TrainNoInfoSearchResponse> trainNoInfoSearch(TrainNoInfoSearchRequest request);
+
+    CompletableFuture<TrainNoListSearchResponse> trainNoListSearch(TrainNoListSearchRequest request);
+
+    CompletableFuture<TrainOrderCancelResponse> trainOrderCancel(TrainOrderCancelRequest request);
+
+    CompletableFuture<TrainOrderChangeConfirmResponse> trainOrderChangeConfirm(TrainOrderChangeConfirmRequest request);
+
+    CompletableFuture<TrainOrderCreateResponse> trainOrderCreate(TrainOrderCreateRequest request);
+
+    CompletableFuture<TrainOrderDetailQueryResponse> trainOrderDetailQuery(TrainOrderDetailQueryRequest request);
+
     CompletableFuture<TrainOrderListQueryResponse> trainOrderListQuery(TrainOrderListQueryRequest request);
+
+    CompletableFuture<TrainOrderPayResponse> trainOrderPay(TrainOrderPayRequest request);
 
     CompletableFuture<TrainOrderQueryResponse> trainOrderQuery(TrainOrderQueryRequest request);
 
     CompletableFuture<TrainOrderQueryV2Response> trainOrderQueryV2(TrainOrderQueryV2Request request);
 
     CompletableFuture<TrainStationSearchResponse> trainStationSearch(TrainStationSearchRequest request);
+
+    CompletableFuture<TrainStopoverSearchResponse> trainStopoverSearch(TrainStopoverSearchRequest request);
 
     CompletableFuture<TrainTicketScanQueryResponse> trainTicketScanQuery(TrainTicketScanQueryRequest request);
 

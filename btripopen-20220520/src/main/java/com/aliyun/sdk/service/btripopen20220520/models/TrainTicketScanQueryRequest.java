@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,38 +11,38 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TrainTicketScanQueryRequest</p>
  */
 public class TrainTicketScanQueryRequest extends Request {
-    @Query
-    @NameInMap("bill_date")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("bill_date")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String billDate;
 
-    @Query
-    @NameInMap("bill_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("bill_id")
     private Long billId;
 
-    @Query
-    @NameInMap("invoice_sub_task_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("invoice_sub_task_id")
     private Long invoiceSubTaskId;
 
-    @Query
-    @NameInMap("page_no")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page_no")
     private Integer pageNo;
 
-    @Query
-    @NameInMap("page_size")
-    @Validation(maximum = 100)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page_size")
+    @com.aliyun.core.annotation.Validation(maximum = 100)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("serial_number")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("serial_number")
     private String serialNumber;
 
-    @Query
-    @NameInMap("ticket_no")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ticket_no")
     private String ticketNo;
 
-    @Header
-    @NameInMap("x-acs-btrip-so-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-so-corp-token")
     private String xAcsBtripSoCorpToken;
 
     private TrainTicketScanQueryRequest(Builder builder) {

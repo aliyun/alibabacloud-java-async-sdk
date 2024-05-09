@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CarSceneQueryResponseBody</p>
  */
 public class CarSceneQueryResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private java.util.List < Module> module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private CarSceneQueryResponseBody(Builder builder) {
@@ -152,13 +151,13 @@ public class CarSceneQueryResponseBody extends TeaModel {
     } 
 
     public static class Module extends TeaModel {
-        @NameInMap("scenarioTemplateId")
+        @com.aliyun.core.annotation.NameInMap("scenarioTemplateId")
         private String scenarioTemplateId;
 
-        @NameInMap("scenarioTemplateName")
+        @com.aliyun.core.annotation.NameInMap("scenarioTemplateName")
         private String scenarioTemplateName;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
         private Module(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>HotelOrderQueryResponseBody</p>
  */
 public class HotelOrderQueryResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private HotelOrderQueryResponseBody(Builder builder) {
@@ -152,37 +151,37 @@ public class HotelOrderQueryResponseBody extends TeaModel {
     } 
 
     public static class HotelInfo extends TeaModel {
-        @NameInMap("check_in")
+        @com.aliyun.core.annotation.NameInMap("check_in")
         private Long checkIn;
 
-        @NameInMap("check_out")
+        @com.aliyun.core.annotation.NameInMap("check_out")
         private Long checkOut;
 
-        @NameInMap("city")
+        @com.aliyun.core.annotation.NameInMap("city")
         private String city;
 
-        @NameInMap("city_ad_code")
+        @com.aliyun.core.annotation.NameInMap("city_ad_code")
         private String cityAdCode;
 
-        @NameInMap("hotel_address")
+        @com.aliyun.core.annotation.NameInMap("hotel_address")
         private String hotelAddress;
 
-        @NameInMap("hotel_name")
+        @com.aliyun.core.annotation.NameInMap("hotel_name")
         private String hotelName;
 
-        @NameInMap("hotel_phone")
+        @com.aliyun.core.annotation.NameInMap("hotel_phone")
         private String hotelPhone;
 
-        @NameInMap("hotel_support_vat_invoice_type")
+        @com.aliyun.core.annotation.NameInMap("hotel_support_vat_invoice_type")
         private Integer hotelSupportVatInvoiceType;
 
-        @NameInMap("night")
+        @com.aliyun.core.annotation.NameInMap("night")
         private Integer night;
 
-        @NameInMap("room_num")
+        @com.aliyun.core.annotation.NameInMap("room_num")
         private Integer roomNum;
 
-        @NameInMap("room_type")
+        @com.aliyun.core.annotation.NameInMap("room_type")
         private String roomType;
 
         private HotelInfo(Builder builder) {
@@ -393,10 +392,10 @@ public class HotelOrderQueryResponseBody extends TeaModel {
 
     }
     public static class InvoiceInfo extends TeaModel {
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("title")
+        @com.aliyun.core.annotation.NameInMap("title")
         private String title;
 
         private InvoiceInfo(Builder builder) {
@@ -454,61 +453,61 @@ public class HotelOrderQueryResponseBody extends TeaModel {
 
     }
     public static class OrderBaseInfo extends TeaModel {
-        @NameInMap("apply_id")
+        @com.aliyun.core.annotation.NameInMap("apply_id")
         private String applyId;
 
-        @NameInMap("btrip_title")
+        @com.aliyun.core.annotation.NameInMap("btrip_title")
         private String btripTitle;
 
-        @NameInMap("corp_id")
+        @com.aliyun.core.annotation.NameInMap("corp_id")
         private String corpId;
 
-        @NameInMap("corp_name")
+        @com.aliyun.core.annotation.NameInMap("corp_name")
         private String corpName;
 
-        @NameInMap("depart_id")
+        @com.aliyun.core.annotation.NameInMap("depart_id")
         private String departId;
 
-        @NameInMap("depart_name")
+        @com.aliyun.core.annotation.NameInMap("depart_name")
         private String departName;
 
-        @NameInMap("exceed_apply_nos")
+        @com.aliyun.core.annotation.NameInMap("exceed_apply_nos")
         private java.util.List < String > exceedApplyNos;
 
-        @NameInMap("extend_field")
+        @com.aliyun.core.annotation.NameInMap("extend_field")
         private String extendField;
 
-        @NameInMap("gmt_create")
+        @com.aliyun.core.annotation.NameInMap("gmt_create")
         private Long gmtCreate;
 
-        @NameInMap("gmt_modified")
+        @com.aliyun.core.annotation.NameInMap("gmt_modified")
         private Long gmtModified;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("itinerary_id")
+        @com.aliyun.core.annotation.NameInMap("itinerary_id")
         private String itineraryId;
 
-        @NameInMap("order_status")
+        @com.aliyun.core.annotation.NameInMap("order_status")
         private Integer orderStatus;
 
-        @NameInMap("order_type")
+        @com.aliyun.core.annotation.NameInMap("order_type")
         private Integer orderType;
 
-        @NameInMap("thirdpart_apply_id")
+        @com.aliyun.core.annotation.NameInMap("thirdpart_apply_id")
         private String thirdpartApplyId;
 
-        @NameInMap("thirdpart_depart_id")
+        @com.aliyun.core.annotation.NameInMap("thirdpart_depart_id")
         private String thirdpartDepartId;
 
-        @NameInMap("thirdpart_itinerary_id")
+        @com.aliyun.core.annotation.NameInMap("thirdpart_itinerary_id")
         private String thirdpartItineraryId;
 
-        @NameInMap("user_id")
+        @com.aliyun.core.annotation.NameInMap("user_id")
         private String userId;
 
-        @NameInMap("user_name")
+        @com.aliyun.core.annotation.NameInMap("user_name")
         private String userName;
 
         private OrderBaseInfo(Builder builder) {
@@ -855,49 +854,49 @@ public class HotelOrderQueryResponseBody extends TeaModel {
 
     }
     public static class PassengerList extends TeaModel {
-        @NameInMap("apply_id")
+        @com.aliyun.core.annotation.NameInMap("apply_id")
         private String applyId;
 
-        @NameInMap("cost_center_id")
+        @com.aliyun.core.annotation.NameInMap("cost_center_id")
         private Long costCenterId;
 
-        @NameInMap("cost_center_name")
+        @com.aliyun.core.annotation.NameInMap("cost_center_name")
         private String costCenterName;
 
-        @NameInMap("cost_center_number")
+        @com.aliyun.core.annotation.NameInMap("cost_center_number")
         private String costCenterNumber;
 
-        @NameInMap("itinerary_id")
+        @com.aliyun.core.annotation.NameInMap("itinerary_id")
         private String itineraryId;
 
-        @NameInMap("occupant_type")
+        @com.aliyun.core.annotation.NameInMap("occupant_type")
         private Integer occupantType;
 
-        @NameInMap("project_code")
+        @com.aliyun.core.annotation.NameInMap("project_code")
         private String projectCode;
 
-        @NameInMap("project_id")
+        @com.aliyun.core.annotation.NameInMap("project_id")
         private Long projectId;
 
-        @NameInMap("project_title")
+        @com.aliyun.core.annotation.NameInMap("project_title")
         private String projectTitle;
 
-        @NameInMap("thirdpart_apply_id")
+        @com.aliyun.core.annotation.NameInMap("thirdpart_apply_id")
         private String thirdpartApplyId;
 
-        @NameInMap("thirdpart_cost_center_id")
+        @com.aliyun.core.annotation.NameInMap("thirdpart_cost_center_id")
         private String thirdpartCostCenterId;
 
-        @NameInMap("thirdpart_project_id")
+        @com.aliyun.core.annotation.NameInMap("thirdpart_project_id")
         private String thirdpartProjectId;
 
-        @NameInMap("user_id")
+        @com.aliyun.core.annotation.NameInMap("user_id")
         private String userId;
 
-        @NameInMap("user_name")
+        @com.aliyun.core.annotation.NameInMap("user_name")
         private String userName;
 
-        @NameInMap("user_type")
+        @com.aliyun.core.annotation.NameInMap("user_type")
         private Integer userType;
 
         private PassengerList(Builder builder) {
@@ -1176,22 +1175,22 @@ public class HotelOrderQueryResponseBody extends TeaModel {
 
     }
     public static class PriceInfoList extends TeaModel {
-        @NameInMap("category_code")
+        @com.aliyun.core.annotation.NameInMap("category_code")
         private Integer categoryCode;
 
-        @NameInMap("gmt_create")
+        @com.aliyun.core.annotation.NameInMap("gmt_create")
         private Long gmtCreate;
 
-        @NameInMap("pay_type")
+        @com.aliyun.core.annotation.NameInMap("pay_type")
         private Integer payType;
 
-        @NameInMap("price")
+        @com.aliyun.core.annotation.NameInMap("price")
         private Double price;
 
-        @NameInMap("trade_id")
+        @com.aliyun.core.annotation.NameInMap("trade_id")
         private String tradeId;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private Integer type;
 
         private PriceInfoList(Builder builder) {
@@ -1317,19 +1316,19 @@ public class HotelOrderQueryResponseBody extends TeaModel {
 
     }
     public static class Module extends TeaModel {
-        @NameInMap("hotel_info")
+        @com.aliyun.core.annotation.NameInMap("hotel_info")
         private HotelInfo hotelInfo;
 
-        @NameInMap("invoice_info")
+        @com.aliyun.core.annotation.NameInMap("invoice_info")
         private InvoiceInfo invoiceInfo;
 
-        @NameInMap("order_base_info")
+        @com.aliyun.core.annotation.NameInMap("order_base_info")
         private OrderBaseInfo orderBaseInfo;
 
-        @NameInMap("passenger_list")
+        @com.aliyun.core.annotation.NameInMap("passenger_list")
         private java.util.List < PassengerList> passengerList;
 
-        @NameInMap("price_info_list")
+        @com.aliyun.core.annotation.NameInMap("price_info_list")
         private java.util.List < PriceInfoList> priceInfoList;
 
         private Module(Builder builder) {

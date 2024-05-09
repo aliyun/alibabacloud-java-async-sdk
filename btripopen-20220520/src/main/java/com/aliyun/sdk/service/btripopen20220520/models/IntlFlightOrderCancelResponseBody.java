@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>IntlFlightOrderCancelResponseBody</p>
  */
 public class IntlFlightOrderCancelResponseBody extends TeaModel {
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("request_id")
+    @com.aliyun.core.annotation.NameInMap("request_id")
     private String requestId;
 
-    @NameInMap("result_code")
+    @com.aliyun.core.annotation.NameInMap("result_code")
     private String resultCode;
 
-    @NameInMap("result_msg")
+    @com.aliyun.core.annotation.NameInMap("result_msg")
     private String resultMsg;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("trace_id")
+    @com.aliyun.core.annotation.NameInMap("trace_id")
     private String traceId;
 
     private IntlFlightOrderCancelResponseBody(Builder builder) {
@@ -152,7 +151,7 @@ public class IntlFlightOrderCancelResponseBody extends TeaModel {
     } 
 
     public static class Module extends TeaModel {
-        @NameInMap("cancel_time")
+        @com.aliyun.core.annotation.NameInMap("cancel_time")
         private String cancelTime;
 
         private Module(Builder builder) {

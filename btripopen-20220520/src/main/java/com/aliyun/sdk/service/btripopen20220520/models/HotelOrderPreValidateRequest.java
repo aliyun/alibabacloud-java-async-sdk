@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,71 +11,71 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>HotelOrderPreValidateRequest</p>
  */
 public class HotelOrderPreValidateRequest extends Request {
-    @Query
-    @NameInMap("btrip_user_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("btrip_user_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String btripUserId;
 
-    @Query
-    @NameInMap("check_in")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("check_in")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String checkIn;
 
-    @Query
-    @NameInMap("check_out")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("check_out")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String checkOut;
 
-    @Query
-    @NameInMap("daily_list")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("daily_list")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < DailyList> dailyList;
 
-    @Query
-    @NameInMap("item_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("item_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long itemId;
 
-    @Query
-    @NameInMap("number_of_adults_per_room")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("number_of_adults_per_room")
     private Integer numberOfAdultsPerRoom;
 
-    @Query
-    @NameInMap("occupant_info_list")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("occupant_info_list")
     private java.util.List < OccupantInfoList> occupantInfoList;
 
-    @Query
-    @NameInMap("rate_plan_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("rate_plan_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long ratePlanId;
 
-    @Query
-    @NameInMap("room_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("room_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long roomId;
 
-    @Query
-    @NameInMap("room_num")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("room_num")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer roomNum;
 
-    @Query
-    @NameInMap("search_room_price")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("search_room_price")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long searchRoomPrice;
 
-    @Query
-    @NameInMap("seller_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("seller_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long sellerId;
 
-    @Query
-    @NameInMap("shid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("shid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long shid;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private HotelOrderPreValidateRequest(Builder builder) {
@@ -382,16 +381,16 @@ public class HotelOrderPreValidateRequest extends Request {
     } 
 
     public static class DailyList extends TeaModel {
-        @NameInMap("board")
+        @com.aliyun.core.annotation.NameInMap("board")
         private String board;
 
-        @NameInMap("price")
+        @com.aliyun.core.annotation.NameInMap("price")
         private Long price;
 
-        @NameInMap("rate_start_time")
+        @com.aliyun.core.annotation.NameInMap("rate_start_time")
         private String rateStartTime;
 
-        @NameInMap("room_count")
+        @com.aliyun.core.annotation.NameInMap("room_count")
         private Integer roomCount;
 
         private DailyList(Builder builder) {
@@ -483,22 +482,22 @@ public class HotelOrderPreValidateRequest extends Request {
 
     }
     public static class OccupantInfoList extends TeaModel {
-        @NameInMap("card_no")
+        @com.aliyun.core.annotation.NameInMap("card_no")
         private String cardNo;
 
-        @NameInMap("card_type")
+        @com.aliyun.core.annotation.NameInMap("card_type")
         private Integer cardType;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("phone")
+        @com.aliyun.core.annotation.NameInMap("phone")
         private String phone;
 
-        @NameInMap("staff_no")
+        @com.aliyun.core.annotation.NameInMap("staff_no")
         private String staffNo;
 
-        @NameInMap("user_type")
+        @com.aliyun.core.annotation.NameInMap("user_type")
         private Integer userType;
 
         private OccupantInfoList(Builder builder) {

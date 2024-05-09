@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,71 +11,71 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>FlightRefundApplyRequest</p>
  */
 public class FlightRefundApplyRequest extends Request {
-    @Body
-    @NameInMap("corp_refund_price")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("corp_refund_price")
     private Long corpRefundPrice;
 
-    @Body
-    @NameInMap("dis_order_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dis_order_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String disOrderId;
 
-    @Body
-    @NameInMap("dis_sub_order_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dis_sub_order_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String disSubOrderId;
 
-    @Body
-    @NameInMap("display_refund_money")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("display_refund_money")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String displayRefundMoney;
 
-    @Body
-    @NameInMap("extra")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("extra")
     private java.util.Map < String, String > extra;
 
-    @Body
-    @NameInMap("is_voluntary")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("is_voluntary")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer isVoluntary;
 
-    @Body
-    @NameInMap("item_unit_ids")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("item_unit_ids")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String itemUnitIds;
 
-    @Body
-    @NameInMap("passenger_segment_info_list")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("passenger_segment_info_list")
     private java.util.List < PassengerSegmentInfoList> passengerSegmentInfoList;
 
-    @Body
-    @NameInMap("personal_refund_price")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("personal_refund_price")
     private Long personalRefundPrice;
 
-    @Body
-    @NameInMap("reason_detail")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("reason_detail")
     private String reasonDetail;
 
-    @Body
-    @NameInMap("reason_type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("reason_type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer reasonType;
 
-    @Body
-    @NameInMap("refund_voucher_info")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("refund_voucher_info")
     private java.util.List < String > refundVoucherInfo;
 
-    @Body
-    @NameInMap("session_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("session_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sessionId;
 
-    @Body
-    @NameInMap("total_refund_price")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("total_refund_price")
     private Long totalRefundPrice;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private FlightRefundApplyRequest(Builder builder) {
@@ -402,13 +401,13 @@ public class FlightRefundApplyRequest extends Request {
     } 
 
     public static class PassengerSegmentInfoList extends TeaModel {
-        @NameInMap("flight_no")
+        @com.aliyun.core.annotation.NameInMap("flight_no")
         private String flightNo;
 
-        @NameInMap("passenger_name")
+        @com.aliyun.core.annotation.NameInMap("passenger_name")
         private String passengerName;
 
-        @NameInMap("user_id")
+        @com.aliyun.core.annotation.NameInMap("user_id")
         private String userId;
 
         private PassengerSegmentInfoList(Builder builder) {

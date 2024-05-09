@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteInvoiceEntityRequest</p>
  */
 public class DeleteInvoiceEntityRequest extends Request {
-    @Query
-    @NameInMap("del_all")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("del_all")
     private Boolean delAll;
 
-    @Query
-    @NameInMap("entities")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("entities")
     private java.util.List < Entities> entities;
 
-    @Query
-    @NameInMap("third_part_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("third_part_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String thirdPartId;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private DeleteInvoiceEntityRequest(Builder builder) {
@@ -141,10 +140,10 @@ public class DeleteInvoiceEntityRequest extends Request {
     } 
 
     public static class Entities extends TeaModel {
-        @NameInMap("entity_id")
+        @com.aliyun.core.annotation.NameInMap("entity_id")
         private String entityId;
 
-        @NameInMap("entity_type")
+        @com.aliyun.core.annotation.NameInMap("entity_type")
         private String entityType;
 
         private Entities(Builder builder) {

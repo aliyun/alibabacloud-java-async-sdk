@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UserQueryResponseBody</p>
  */
 public class UserQueryResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private UserQueryResponseBody(Builder builder) {
@@ -152,16 +151,16 @@ public class UserQueryResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("employee_nick")
+        @com.aliyun.core.annotation.NameInMap("employee_nick")
         private String employeeNick;
 
-        @NameInMap("leave_status")
+        @com.aliyun.core.annotation.NameInMap("leave_status")
         private Integer leaveStatus;
 
-        @NameInMap("third_part_employee_id")
+        @com.aliyun.core.annotation.NameInMap("third_part_employee_id")
         private String thirdPartEmployeeId;
 
-        @NameInMap("third_part_job_no")
+        @com.aliyun.core.annotation.NameInMap("third_part_job_no")
         private String thirdPartJobNo;
 
         private Items(Builder builder) {
@@ -253,16 +252,16 @@ public class UserQueryResponseBody extends TeaModel {
 
     }
     public static class Module extends TeaModel {
-        @NameInMap("has_more")
+        @com.aliyun.core.annotation.NameInMap("has_more")
         private Boolean hasMore;
 
-        @NameInMap("items")
+        @com.aliyun.core.annotation.NameInMap("items")
         private java.util.List < Items> items;
 
-        @NameInMap("page_token")
+        @com.aliyun.core.annotation.NameInMap("page_token")
         private String pageToken;
 
-        @NameInMap("total")
+        @com.aliyun.core.annotation.NameInMap("total")
         private Long total;
 
         private Module(Builder builder) {

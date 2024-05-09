@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,46 +11,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModuleGroupItemSubItemsBaggageRuleBaggageInfoMapValue</p>
  */
 public class ModuleGroupItemSubItemsBaggageRuleBaggageInfoMapValue extends TeaModel {
-    @NameInMap("carry_freepc")
+    @com.aliyun.core.annotation.NameInMap("carry_freepc")
     private Integer carryFreepc;
 
-    @NameInMap("carry_bag_weight")
+    @com.aliyun.core.annotation.NameInMap("carry_bag_weight")
     private Integer carryBagWeight;
 
-    @NameInMap("carry_bag_size")
+    @com.aliyun.core.annotation.NameInMap("carry_bag_size")
     private String carryBagSize;
 
-    @NameInMap("is_all_carry_bag_weight")
+    @com.aliyun.core.annotation.NameInMap("is_all_carry_bag_weight")
     private Boolean isAllCarryBagWeight;
 
-    @NameInMap("airline")
+    @com.aliyun.core.annotation.NameInMap("airline")
     private String airline;
 
-    @NameInMap("start_airport")
+    @com.aliyun.core.annotation.NameInMap("start_airport")
     private String startAirport;
 
-    @NameInMap("end_airport")
+    @com.aliyun.core.annotation.NameInMap("end_airport")
     private String endAirport;
 
-    @NameInMap("start_city_code")
+    @com.aliyun.core.annotation.NameInMap("start_city_code")
     private String startCityCode;
 
-    @NameInMap("end_city_code")
+    @com.aliyun.core.annotation.NameInMap("end_city_code")
     private String endCityCode;
 
-    @NameInMap("free_pcs")
+    @com.aliyun.core.annotation.NameInMap("free_pcs")
     private Long freePcs;
 
-    @NameInMap("baggage_weight")
+    @com.aliyun.core.annotation.NameInMap("baggage_weight")
     private Long baggageWeight;
 
-    @NameInMap("baggage_unit")
+    @com.aliyun.core.annotation.NameInMap("baggage_unit")
     private String baggageUnit;
 
-    @NameInMap("baggage_size")
+    @com.aliyun.core.annotation.NameInMap("baggage_size")
     private String baggageSize;
 
-    @NameInMap("all_weight")
+    @com.aliyun.core.annotation.NameInMap("all_weight")
     private Boolean allWeight;
 
     private ModuleGroupItemSubItemsBaggageRuleBaggageInfoMapValue(Builder builder) {

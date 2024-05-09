@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,56 +11,56 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>FlightListingSearchV2Request</p>
  */
 public class FlightListingSearchV2Request extends Request {
-    @Query
-    @NameInMap("airline_code")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("airline_code")
     private String airlineCode;
 
-    @Query
-    @NameInMap("cabin_type_list")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("cabin_type_list")
     private java.util.List < Integer > cabinTypeList;
 
-    @Query
-    @NameInMap("direct_only")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("direct_only")
     private Boolean directOnly;
 
-    @Query
-    @NameInMap("isv_name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("isv_name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String isvName;
 
-    @Query
-    @NameInMap("need_multi_class_price")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("need_multi_class_price")
     private Boolean needMultiClassPrice;
 
-    @Query
-    @NameInMap("need_query_service_fee")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("need_query_service_fee")
     private Boolean needQueryServiceFee;
 
-    @Query
-    @NameInMap("need_share_flight")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("need_share_flight")
     private Boolean needShareFlight;
 
-    @Query
-    @NameInMap("need_y_c_best_price")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("need_y_c_best_price")
     private Boolean needYCBestPrice;
 
-    @Query
-    @NameInMap("search_journeys")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("search_journeys")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < SearchJourneys> searchJourneys;
 
-    @Query
-    @NameInMap("search_mode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("search_mode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer searchMode;
 
-    @Query
-    @NameInMap("trip_type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("trip_type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer tripType;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private FlightListingSearchV2Request(Builder builder) {
@@ -329,25 +328,25 @@ public class FlightListingSearchV2Request extends Request {
     } 
 
     public static class SelectedFlights extends TeaModel {
-        @NameInMap("arr_airport_code")
+        @com.aliyun.core.annotation.NameInMap("arr_airport_code")
         private String arrAirportCode;
 
-        @NameInMap("arr_city_code")
+        @com.aliyun.core.annotation.NameInMap("arr_city_code")
         private String arrCityCode;
 
-        @NameInMap("dep_airport_code")
+        @com.aliyun.core.annotation.NameInMap("dep_airport_code")
         private String depAirportCode;
 
-        @NameInMap("dep_city_code")
+        @com.aliyun.core.annotation.NameInMap("dep_city_code")
         private String depCityCode;
 
-        @NameInMap("flight_time")
+        @com.aliyun.core.annotation.NameInMap("flight_time")
         private String flightTime;
 
-        @NameInMap("market_flight_no")
+        @com.aliyun.core.annotation.NameInMap("market_flight_no")
         private String marketFlightNo;
 
-        @NameInMap("operate_flight_no")
+        @com.aliyun.core.annotation.NameInMap("operate_flight_no")
         private String operateFlightNo;
 
         private SelectedFlights(Builder builder) {
@@ -490,19 +489,19 @@ public class FlightListingSearchV2Request extends Request {
 
     }
     public static class SearchJourneys extends TeaModel {
-        @NameInMap("arr_city_code")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("arr_city_code")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String arrCityCode;
 
-        @NameInMap("dep_city_code")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("dep_city_code")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String depCityCode;
 
-        @NameInMap("dep_date")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("dep_date")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String depDate;
 
-        @NameInMap("selected_flights")
+        @com.aliyun.core.annotation.NameInMap("selected_flights")
         private java.util.List < SelectedFlights> selectedFlights;
 
         private SearchJourneys(Builder builder) {

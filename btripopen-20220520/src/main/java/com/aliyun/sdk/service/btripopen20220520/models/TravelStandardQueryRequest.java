@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TravelStandardQueryRequest</p>
  */
 public class TravelStandardQueryRequest extends Request {
-    @Query
-    @NameInMap("from_group")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("from_group")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean fromGroup;
 
-    @Query
-    @NameInMap("rule_code")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("rule_code")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long ruleCode;
 
-    @Query
-    @NameInMap("service_type_list")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("service_type_list")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > serviceTypeList;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private TravelStandardQueryRequest(Builder builder) {

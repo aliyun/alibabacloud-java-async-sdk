@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>IntlFlightOtaItemDetailRequest</p>
  */
 public class IntlFlightOtaItemDetailRequest extends Request {
-    @Path
-    @NameInMap("ota_item_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ota_item_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String otaItemId;
 
-    @Query
-    @NameInMap("btrip_user_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("btrip_user_id")
     private String btripUserId;
 
-    @Query
-    @NameInMap("buyer_name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("buyer_name")
     private String buyerName;
 
-    @Query
-    @NameInMap("isv_name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("isv_name")
     private String isvName;
 
-    @Query
-    @NameInMap("language")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("language")
     private String language;
 
-    @Query
-    @NameInMap("supplier_code")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("supplier_code")
     private String supplierCode;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private IntlFlightOtaItemDetailRequest(Builder builder) {

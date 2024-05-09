@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InsureOrderRefundResponseBody</p>
  */
 public class InsureOrderRefundResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private InsureOrderRefundResponseBody(Builder builder) {
@@ -152,13 +151,13 @@ public class InsureOrderRefundResponseBody extends TeaModel {
     } 
 
     public static class InsRefundList extends TeaModel {
-        @NameInMap("policy_refund_no")
+        @com.aliyun.core.annotation.NameInMap("policy_refund_no")
         private String policyRefundNo;
 
-        @NameInMap("refund_status")
+        @com.aliyun.core.annotation.NameInMap("refund_status")
         private String refundStatus;
 
-        @NameInMap("sub_ins_order_id")
+        @com.aliyun.core.annotation.NameInMap("sub_ins_order_id")
         private String subInsOrderId;
 
         private InsRefundList(Builder builder) {
@@ -233,16 +232,16 @@ public class InsureOrderRefundResponseBody extends TeaModel {
 
     }
     public static class Module extends TeaModel {
-        @NameInMap("apply_id")
+        @com.aliyun.core.annotation.NameInMap("apply_id")
         private String applyId;
 
-        @NameInMap("ins_order_id")
+        @com.aliyun.core.annotation.NameInMap("ins_order_id")
         private String insOrderId;
 
-        @NameInMap("ins_refund_list")
+        @com.aliyun.core.annotation.NameInMap("ins_refund_list")
         private java.util.List < InsRefundList> insRefundList;
 
-        @NameInMap("out_apply_id")
+        @com.aliyun.core.annotation.NameInMap("out_apply_id")
         private String outApplyId;
 
         private Module(Builder builder) {

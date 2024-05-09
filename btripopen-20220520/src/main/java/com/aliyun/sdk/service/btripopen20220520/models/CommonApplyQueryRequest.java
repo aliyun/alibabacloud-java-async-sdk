@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CommonApplyQueryRequest</p>
  */
 public class CommonApplyQueryRequest extends Request {
-    @Query
-    @NameInMap("apply_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("apply_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long applyId;
 
-    @Query
-    @NameInMap("biz_category")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("biz_category")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer bizCategory;
 
-    @Query
-    @NameInMap("user_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("user_id")
     private String userId;
 
-    @Header
-    @NameInMap("x-acs-btrip-so-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-so-corp-token")
     private String xAcsBtripSoCorpToken;
 
     private CommonApplyQueryRequest(Builder builder) {

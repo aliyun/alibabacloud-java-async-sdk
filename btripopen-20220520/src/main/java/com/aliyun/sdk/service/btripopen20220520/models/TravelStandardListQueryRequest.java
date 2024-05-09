@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TravelStandardListQueryRequest</p>
  */
 public class TravelStandardListQueryRequest extends Request {
-    @Query
-    @NameInMap("from_group")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("from_group")
     private Boolean fromGroup;
 
-    @Query
-    @NameInMap("page_no")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page_no")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Integer pageNo;
 
-    @Query
-    @NameInMap("page_size")
-    @Validation(required = true, maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page_size")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 50, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("rule_name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("rule_name")
     private String ruleName;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String xAcsBtripCorpToken;
 
     private TravelStandardListQueryRequest(Builder builder) {

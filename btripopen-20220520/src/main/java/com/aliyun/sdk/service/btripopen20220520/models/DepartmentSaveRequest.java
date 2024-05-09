@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DepartmentSaveRequest</p>
  */
 public class DepartmentSaveRequest extends Request {
-    @Body
-    @NameInMap("depart_list")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("depart_list")
     private java.util.List < DepartList> departList;
 
-    @Header
-    @NameInMap("x-acs-btrip-so-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-so-corp-token")
     private String xAcsBtripSoCorpToken;
 
     private DepartmentSaveRequest(Builder builder) {
@@ -94,26 +93,26 @@ public class DepartmentSaveRequest extends Request {
     } 
 
     public static class DepartList extends TeaModel {
-        @NameInMap("depart_id")
+        @com.aliyun.core.annotation.NameInMap("depart_id")
         private Long departId;
 
-        @NameInMap("depart_name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("depart_name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String departName;
 
-        @NameInMap("depart_pid")
+        @com.aliyun.core.annotation.NameInMap("depart_pid")
         private Long departPid;
 
-        @NameInMap("manager_ids")
+        @com.aliyun.core.annotation.NameInMap("manager_ids")
         private String managerIds;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("third_depart_id")
+        @com.aliyun.core.annotation.NameInMap("third_depart_id")
         private String thirdDepartId;
 
-        @NameInMap("third_depart_pid")
+        @com.aliyun.core.annotation.NameInMap("third_depart_pid")
         private String thirdDepartPid;
 
         private DepartList(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>IntlFlightSegmentAvailableCertRequest</p>
  */
 public class IntlFlightSegmentAvailableCertRequest extends Request {
-    @Path
-    @NameInMap("ota_item_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ota_item_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String otaItemId;
 
-    @Query
-    @NameInMap("isv_name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("isv_name")
     private String isvName;
 
-    @Query
-    @NameInMap("language")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("language")
     private String language;
 
-    @Query
-    @NameInMap("user_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("user_id")
     private String userId;
 
-    @Query
-    @NameInMap("user_name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("user_name")
     private String userName;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private IntlFlightSegmentAvailableCertRequest(Builder builder) {

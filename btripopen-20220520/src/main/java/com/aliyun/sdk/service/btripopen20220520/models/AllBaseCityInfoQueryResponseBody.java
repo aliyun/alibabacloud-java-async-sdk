@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AllBaseCityInfoQueryResponseBody</p>
  */
 public class AllBaseCityInfoQueryResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private AllBaseCityInfoQueryResponseBody(Builder builder) {
@@ -152,25 +151,25 @@ public class AllBaseCityInfoQueryResponseBody extends TeaModel {
     } 
 
     public static class AllCityBaseInfoList extends TeaModel {
-        @NameInMap("adcode")
+        @com.aliyun.core.annotation.NameInMap("adcode")
         private String adcode;
 
-        @NameInMap("city_code")
+        @com.aliyun.core.annotation.NameInMap("city_code")
         private String cityCode;
 
-        @NameInMap("city_level")
+        @com.aliyun.core.annotation.NameInMap("city_level")
         private String cityLevel;
 
-        @NameInMap("city_name")
+        @com.aliyun.core.annotation.NameInMap("city_name")
         private String cityName;
 
-        @NameInMap("cn_name_tree")
+        @com.aliyun.core.annotation.NameInMap("cn_name_tree")
         private String cnNameTree;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("other_name_list")
+        @com.aliyun.core.annotation.NameInMap("other_name_list")
         private java.util.List < String > otherNameList;
 
         private AllCityBaseInfoList(Builder builder) {
@@ -313,7 +312,7 @@ public class AllBaseCityInfoQueryResponseBody extends TeaModel {
 
     }
     public static class Module extends TeaModel {
-        @NameInMap("all_city_base_info_list")
+        @com.aliyun.core.annotation.NameInMap("all_city_base_info_list")
         private java.util.List < AllCityBaseInfoList> allCityBaseInfoList;
 
         private Module(Builder builder) {

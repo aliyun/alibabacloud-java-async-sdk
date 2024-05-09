@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>MealOrderDetailQueryResponseBody</p>
  */
 public class MealOrderDetailQueryResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private MealOrderDetailQueryResponseBody(Builder builder) {
@@ -152,58 +151,58 @@ public class MealOrderDetailQueryResponseBody extends TeaModel {
     } 
 
     public static class Module extends TeaModel {
-        @NameInMap("corp_code_order_id")
+        @com.aliyun.core.annotation.NameInMap("corp_code_order_id")
         private String corpCodeOrderId;
 
-        @NameInMap("corp_id")
+        @com.aliyun.core.annotation.NameInMap("corp_id")
         private String corpId;
 
-        @NameInMap("corp_pay_amount")
+        @com.aliyun.core.annotation.NameInMap("corp_pay_amount")
         private Long corpPayAmount;
 
-        @NameInMap("corp_refund_amount")
+        @com.aliyun.core.annotation.NameInMap("corp_refund_amount")
         private Long corpRefundAmount;
 
-        @NameInMap("merchant_name")
+        @com.aliyun.core.annotation.NameInMap("merchant_name")
         private String merchantName;
 
-        @NameInMap("order_id")
+        @com.aliyun.core.annotation.NameInMap("order_id")
         private String orderId;
 
-        @NameInMap("order_status")
+        @com.aliyun.core.annotation.NameInMap("order_status")
         private Integer orderStatus;
 
-        @NameInMap("order_sub_status")
+        @com.aliyun.core.annotation.NameInMap("order_sub_status")
         private Integer orderSubStatus;
 
-        @NameInMap("order_type")
+        @com.aliyun.core.annotation.NameInMap("order_type")
         private String orderType;
 
-        @NameInMap("pay_amount")
+        @com.aliyun.core.annotation.NameInMap("pay_amount")
         private Long payAmount;
 
-        @NameInMap("pay_type")
+        @com.aliyun.core.annotation.NameInMap("pay_type")
         private Integer payType;
 
-        @NameInMap("person_pay_amount")
+        @com.aliyun.core.annotation.NameInMap("person_pay_amount")
         private Long personPayAmount;
 
-        @NameInMap("person_refund_amount")
+        @com.aliyun.core.annotation.NameInMap("person_refund_amount")
         private Long personRefundAmount;
 
-        @NameInMap("refund_amount")
+        @com.aliyun.core.annotation.NameInMap("refund_amount")
         private Long refundAmount;
 
-        @NameInMap("scene_name")
+        @com.aliyun.core.annotation.NameInMap("scene_name")
         private String sceneName;
 
-        @NameInMap("settle_time")
+        @com.aliyun.core.annotation.NameInMap("settle_time")
         private String settleTime;
 
-        @NameInMap("user_alipay_id")
+        @com.aliyun.core.annotation.NameInMap("user_alipay_id")
         private String userAlipayId;
 
-        @NameInMap("user_id")
+        @com.aliyun.core.annotation.NameInMap("user_id")
         private String userId;
 
         private Module(Builder builder) {

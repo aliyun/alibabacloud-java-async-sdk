@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>FlightExceedApplyQueryResponseBody</p>
  */
 public class FlightExceedApplyQueryResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private FlightExceedApplyQueryResponseBody(Builder builder) {
@@ -152,49 +151,49 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
     } 
 
     public static class ApplyIntentionInfoDo extends TeaModel {
-        @NameInMap("arr_airport_name")
+        @com.aliyun.core.annotation.NameInMap("arr_airport_name")
         private String arrAirportName;
 
-        @NameInMap("arr_city")
+        @com.aliyun.core.annotation.NameInMap("arr_city")
         private String arrCity;
 
-        @NameInMap("arr_city_name")
+        @com.aliyun.core.annotation.NameInMap("arr_city_name")
         private String arrCityName;
 
-        @NameInMap("arr_time")
+        @com.aliyun.core.annotation.NameInMap("arr_time")
         private String arrTime;
 
-        @NameInMap("cabin")
+        @com.aliyun.core.annotation.NameInMap("cabin")
         private String cabin;
 
-        @NameInMap("cabin_class")
+        @com.aliyun.core.annotation.NameInMap("cabin_class")
         private Integer cabinClass;
 
-        @NameInMap("cabin_class_str")
+        @com.aliyun.core.annotation.NameInMap("cabin_class_str")
         private String cabinClassStr;
 
-        @NameInMap("dep_airport_name")
+        @com.aliyun.core.annotation.NameInMap("dep_airport_name")
         private String depAirportName;
 
-        @NameInMap("dep_city")
+        @com.aliyun.core.annotation.NameInMap("dep_city")
         private String depCity;
 
-        @NameInMap("dep_city_name")
+        @com.aliyun.core.annotation.NameInMap("dep_city_name")
         private String depCityName;
 
-        @NameInMap("dep_time")
+        @com.aliyun.core.annotation.NameInMap("dep_time")
         private String depTime;
 
-        @NameInMap("discount")
+        @com.aliyun.core.annotation.NameInMap("discount")
         private String discount;
 
-        @NameInMap("flight_no")
+        @com.aliyun.core.annotation.NameInMap("flight_no")
         private String flightNo;
 
-        @NameInMap("price")
+        @com.aliyun.core.annotation.NameInMap("price")
         private Long price;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private Integer type;
 
         private ApplyIntentionInfoDo(Builder builder) {
@@ -473,43 +472,43 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
 
     }
     public static class ApplyRecommendFlights extends TeaModel {
-        @NameInMap("arr_airport_name")
+        @com.aliyun.core.annotation.NameInMap("arr_airport_name")
         private String arrAirportName;
 
-        @NameInMap("arr_city_name")
+        @com.aliyun.core.annotation.NameInMap("arr_city_name")
         private String arrCityName;
 
-        @NameInMap("arr_time")
+        @com.aliyun.core.annotation.NameInMap("arr_time")
         private String arrTime;
 
-        @NameInMap("cabin")
+        @com.aliyun.core.annotation.NameInMap("cabin")
         private String cabin;
 
-        @NameInMap("cabin_class")
+        @com.aliyun.core.annotation.NameInMap("cabin_class")
         private Integer cabinClass;
 
-        @NameInMap("cabin_class_str")
+        @com.aliyun.core.annotation.NameInMap("cabin_class_str")
         private String cabinClassStr;
 
-        @NameInMap("dep_airport_name")
+        @com.aliyun.core.annotation.NameInMap("dep_airport_name")
         private String depAirportName;
 
-        @NameInMap("dep_city_name")
+        @com.aliyun.core.annotation.NameInMap("dep_city_name")
         private String depCityName;
 
-        @NameInMap("dep_time")
+        @com.aliyun.core.annotation.NameInMap("dep_time")
         private String depTime;
 
-        @NameInMap("discount")
+        @com.aliyun.core.annotation.NameInMap("discount")
         private String discount;
 
-        @NameInMap("flight_no")
+        @com.aliyun.core.annotation.NameInMap("flight_no")
         private String flightNo;
 
-        @NameInMap("price")
+        @com.aliyun.core.annotation.NameInMap("price")
         private Long price;
 
-        @NameInMap("transfer_airport_name")
+        @com.aliyun.core.annotation.NameInMap("transfer_airport_name")
         private String transferAirportName;
 
         private ApplyRecommendFlights(Builder builder) {
@@ -754,43 +753,43 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
 
     }
     public static class Module extends TeaModel {
-        @NameInMap("apply_id")
+        @com.aliyun.core.annotation.NameInMap("apply_id")
         private Long applyId;
 
-        @NameInMap("apply_intention_info_do")
+        @com.aliyun.core.annotation.NameInMap("apply_intention_info_do")
         private ApplyIntentionInfoDo applyIntentionInfoDo;
 
-        @NameInMap("apply_recommend_flights")
+        @com.aliyun.core.annotation.NameInMap("apply_recommend_flights")
         private ApplyRecommendFlights applyRecommendFlights;
 
-        @NameInMap("btrip_cause")
+        @com.aliyun.core.annotation.NameInMap("btrip_cause")
         private String btripCause;
 
-        @NameInMap("corp_id")
+        @com.aliyun.core.annotation.NameInMap("corp_id")
         private String corpId;
 
-        @NameInMap("exceed_reason")
+        @com.aliyun.core.annotation.NameInMap("exceed_reason")
         private String exceedReason;
 
-        @NameInMap("exceed_type")
+        @com.aliyun.core.annotation.NameInMap("exceed_type")
         private Integer exceedType;
 
-        @NameInMap("origin_standard")
+        @com.aliyun.core.annotation.NameInMap("origin_standard")
         private String originStandard;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("submit_time")
+        @com.aliyun.core.annotation.NameInMap("submit_time")
         private String submitTime;
 
-        @NameInMap("thirdpart_apply_id")
+        @com.aliyun.core.annotation.NameInMap("thirdpart_apply_id")
         private String thirdpartApplyId;
 
-        @NameInMap("thirdpart_corp_id")
+        @com.aliyun.core.annotation.NameInMap("thirdpart_corp_id")
         private String thirdpartCorpId;
 
-        @NameInMap("user_id")
+        @com.aliyun.core.annotation.NameInMap("user_id")
         private String userId;
 
         private Module(Builder builder) {

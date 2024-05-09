@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModuleFlightItemListItemListShoppingItemMapValueCabinQuantityValue</p>
  */
 public class ModuleFlightItemListItemListShoppingItemMapValueCabinQuantityValue extends TeaModel {
-    @NameInMap("cabin")
+    @com.aliyun.core.annotation.NameInMap("cabin")
     private String cabin;
 
-    @NameInMap("cabin_class")
+    @com.aliyun.core.annotation.NameInMap("cabin_class")
     private String cabinClass;
 
-    @NameInMap("cabin_class_name")
+    @com.aliyun.core.annotation.NameInMap("cabin_class_name")
     private String cabinClassName;
 
-    @NameInMap("cabin_class_memo")
+    @com.aliyun.core.annotation.NameInMap("cabin_class_memo")
     private String cabinClassMemo;
 
-    @NameInMap("specification")
+    @com.aliyun.core.annotation.NameInMap("specification")
     private String specification;
 
-    @NameInMap("quantity")
+    @com.aliyun.core.annotation.NameInMap("quantity")
     private String quantity;
 
-    @NameInMap("link_cabins")
+    @com.aliyun.core.annotation.NameInMap("link_cabins")
     private java.util.List < String > linkCabins;
 
-    @NameInMap("reshop_change_cabin")
+    @com.aliyun.core.annotation.NameInMap("reshop_change_cabin")
     private Boolean reshopChangeCabin;
 
-    @NameInMap("child_cabin_type")
+    @com.aliyun.core.annotation.NameInMap("child_cabin_type")
     private Integer childCabinType;
 
-    @NameInMap("infant_basic_cabin")
+    @com.aliyun.core.annotation.NameInMap("infant_basic_cabin")
     private String infantBasicCabin;
 
-    @NameInMap("inner_cabin_class")
+    @com.aliyun.core.annotation.NameInMap("inner_cabin_class")
     private Integer innerCabinClass;
 
     private ModuleFlightItemListItemListShoppingItemMapValueCabinQuantityValue(Builder builder) {

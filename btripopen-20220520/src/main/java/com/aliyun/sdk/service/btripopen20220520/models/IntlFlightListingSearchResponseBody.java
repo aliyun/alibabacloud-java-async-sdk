@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>IntlFlightListingSearchResponseBody</p>
  */
 public class IntlFlightListingSearchResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private IntlFlightListingSearchResponseBody(Builder builder) {
@@ -152,13 +151,13 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
     } 
 
     public static class BestPriceItem extends TeaModel {
-        @NameInMap("agreement_price_codes")
+        @com.aliyun.core.annotation.NameInMap("agreement_price_codes")
         private java.util.List < String > agreementPriceCodes;
 
-        @NameInMap("item_type")
+        @com.aliyun.core.annotation.NameInMap("item_type")
         private String itemType;
 
-        @NameInMap("shopping_item_map")
+        @com.aliyun.core.annotation.NameInMap("shopping_item_map")
         private java.util.Map < String, ModuleFlightItemListBestPriceItemShoppingItemMapValue > shoppingItemMap;
 
         private BestPriceItem(Builder builder) {
@@ -233,19 +232,19 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
 
     }
     public static class AirlineInfo extends TeaModel {
-        @NameInMap("airline_chinese_name")
+        @com.aliyun.core.annotation.NameInMap("airline_chinese_name")
         private String airlineChineseName;
 
-        @NameInMap("airline_chinese_short_name")
+        @com.aliyun.core.annotation.NameInMap("airline_chinese_short_name")
         private String airlineChineseShortName;
 
-        @NameInMap("airline_code")
+        @com.aliyun.core.annotation.NameInMap("airline_code")
         private String airlineCode;
 
-        @NameInMap("airline_icon")
+        @com.aliyun.core.annotation.NameInMap("airline_icon")
         private String airlineIcon;
 
-        @NameInMap("cheap_flight")
+        @com.aliyun.core.annotation.NameInMap("cheap_flight")
         private Boolean cheapFlight;
 
         private AirlineInfo(Builder builder) {
@@ -354,16 +353,16 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
 
     }
     public static class ArrAirportInfo extends TeaModel {
-        @NameInMap("airport_code")
+        @com.aliyun.core.annotation.NameInMap("airport_code")
         private String airportCode;
 
-        @NameInMap("airport_name")
+        @com.aliyun.core.annotation.NameInMap("airport_name")
         private String airportName;
 
-        @NameInMap("airport_short_name")
+        @com.aliyun.core.annotation.NameInMap("airport_short_name")
         private String airportShortName;
 
-        @NameInMap("terminal")
+        @com.aliyun.core.annotation.NameInMap("terminal")
         private String terminal;
 
         private ArrAirportInfo(Builder builder) {
@@ -455,16 +454,16 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
 
     }
     public static class DepAirportInfo extends TeaModel {
-        @NameInMap("airport_code")
+        @com.aliyun.core.annotation.NameInMap("airport_code")
         private String airportCode;
 
-        @NameInMap("airport_name")
+        @com.aliyun.core.annotation.NameInMap("airport_name")
         private String airportName;
 
-        @NameInMap("airport_short_name")
+        @com.aliyun.core.annotation.NameInMap("airport_short_name")
         private String airportShortName;
 
-        @NameInMap("terminal")
+        @com.aliyun.core.annotation.NameInMap("terminal")
         private String terminal;
 
         private DepAirportInfo(Builder builder) {
@@ -556,19 +555,19 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
 
     }
     public static class OperatingAirlineInfo extends TeaModel {
-        @NameInMap("airline_chinese_name")
+        @com.aliyun.core.annotation.NameInMap("airline_chinese_name")
         private String airlineChineseName;
 
-        @NameInMap("airline_chinese_short_name")
+        @com.aliyun.core.annotation.NameInMap("airline_chinese_short_name")
         private String airlineChineseShortName;
 
-        @NameInMap("airline_code")
+        @com.aliyun.core.annotation.NameInMap("airline_code")
         private String airlineCode;
 
-        @NameInMap("airline_icon")
+        @com.aliyun.core.annotation.NameInMap("airline_icon")
         private String airlineIcon;
 
-        @NameInMap("cheap_flight")
+        @com.aliyun.core.annotation.NameInMap("cheap_flight")
         private Boolean cheapFlight;
 
         private OperatingAirlineInfo(Builder builder) {
@@ -677,10 +676,10 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
 
     }
     public static class FlightShareInfo extends TeaModel {
-        @NameInMap("operating_airline_info")
+        @com.aliyun.core.annotation.NameInMap("operating_airline_info")
         private OperatingAirlineInfo operatingAirlineInfo;
 
-        @NameInMap("operating_flight_no")
+        @com.aliyun.core.annotation.NameInMap("operating_flight_no")
         private String operatingFlightNo;
 
         private FlightShareInfo(Builder builder) {
@@ -738,34 +737,34 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
 
     }
     public static class FlightStopInfo extends TeaModel {
-        @NameInMap("stop_airport")
+        @com.aliyun.core.annotation.NameInMap("stop_airport")
         private String stopAirport;
 
-        @NameInMap("stop_airport_name")
+        @com.aliyun.core.annotation.NameInMap("stop_airport_name")
         private String stopAirportName;
 
-        @NameInMap("stop_arr_term")
+        @com.aliyun.core.annotation.NameInMap("stop_arr_term")
         private String stopArrTerm;
 
-        @NameInMap("stop_arr_time")
+        @com.aliyun.core.annotation.NameInMap("stop_arr_time")
         private String stopArrTime;
 
-        @NameInMap("stop_city_code")
+        @com.aliyun.core.annotation.NameInMap("stop_city_code")
         private String stopCityCode;
 
-        @NameInMap("stop_city_name")
+        @com.aliyun.core.annotation.NameInMap("stop_city_name")
         private String stopCityName;
 
-        @NameInMap("stop_city_names")
+        @com.aliyun.core.annotation.NameInMap("stop_city_names")
         private java.util.List < String > stopCityNames;
 
-        @NameInMap("stop_dep_term")
+        @com.aliyun.core.annotation.NameInMap("stop_dep_term")
         private String stopDepTerm;
 
-        @NameInMap("stop_dep_time")
+        @com.aliyun.core.annotation.NameInMap("stop_dep_time")
         private String stopDepTime;
 
-        @NameInMap("stop_time")
+        @com.aliyun.core.annotation.NameInMap("stop_time")
         private String stopTime;
 
         private FlightStopInfo(Builder builder) {
@@ -959,94 +958,94 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
 
     }
     public static class FlightSegmentInfos extends TeaModel {
-        @NameInMap("airline_info")
+        @com.aliyun.core.annotation.NameInMap("airline_info")
         private AirlineInfo airlineInfo;
 
-        @NameInMap("arr_airport_info")
+        @com.aliyun.core.annotation.NameInMap("arr_airport_info")
         private ArrAirportInfo arrAirportInfo;
 
-        @NameInMap("arr_city_code")
+        @com.aliyun.core.annotation.NameInMap("arr_city_code")
         private String arrCityCode;
 
-        @NameInMap("arr_city_name")
+        @com.aliyun.core.annotation.NameInMap("arr_city_name")
         private String arrCityName;
 
-        @NameInMap("arr_time")
+        @com.aliyun.core.annotation.NameInMap("arr_time")
         private String arrTime;
 
-        @NameInMap("baggage_desc")
+        @com.aliyun.core.annotation.NameInMap("baggage_desc")
         private String baggageDesc;
 
-        @NameInMap("dep_airport_info")
+        @com.aliyun.core.annotation.NameInMap("dep_airport_info")
         private DepAirportInfo depAirportInfo;
 
-        @NameInMap("dep_city_code")
+        @com.aliyun.core.annotation.NameInMap("dep_city_code")
         private String depCityCode;
 
-        @NameInMap("dep_city_name")
+        @com.aliyun.core.annotation.NameInMap("dep_city_name")
         private String depCityName;
 
-        @NameInMap("dep_time")
+        @com.aliyun.core.annotation.NameInMap("dep_time")
         private String depTime;
 
-        @NameInMap("duration")
+        @com.aliyun.core.annotation.NameInMap("duration")
         private Integer duration;
 
-        @NameInMap("flight_no")
+        @com.aliyun.core.annotation.NameInMap("flight_no")
         private String flightNo;
 
-        @NameInMap("flight_share_info")
+        @com.aliyun.core.annotation.NameInMap("flight_share_info")
         private FlightShareInfo flightShareInfo;
 
-        @NameInMap("flight_size")
+        @com.aliyun.core.annotation.NameInMap("flight_size")
         private String flightSize;
 
-        @NameInMap("flight_stop_info")
+        @com.aliyun.core.annotation.NameInMap("flight_stop_info")
         private FlightStopInfo flightStopInfo;
 
-        @NameInMap("flight_type")
+        @com.aliyun.core.annotation.NameInMap("flight_type")
         private String flightType;
 
-        @NameInMap("manufacturer")
+        @com.aliyun.core.annotation.NameInMap("manufacturer")
         private String manufacturer;
 
-        @NameInMap("meal_desc")
+        @com.aliyun.core.annotation.NameInMap("meal_desc")
         private String mealDesc;
 
-        @NameInMap("miles")
+        @com.aliyun.core.annotation.NameInMap("miles")
         private Integer miles;
 
-        @NameInMap("on_time_rate")
+        @com.aliyun.core.annotation.NameInMap("on_time_rate")
         private String onTimeRate;
 
-        @NameInMap("one_more")
+        @com.aliyun.core.annotation.NameInMap("one_more")
         private Integer oneMore;
 
-        @NameInMap("one_more_show")
+        @com.aliyun.core.annotation.NameInMap("one_more_show")
         private String oneMoreShow;
 
-        @NameInMap("segment_index")
+        @com.aliyun.core.annotation.NameInMap("segment_index")
         private Integer segmentIndex;
 
-        @NameInMap("segment_key")
+        @com.aliyun.core.annotation.NameInMap("segment_key")
         private String segmentKey;
 
-        @NameInMap("share")
+        @com.aliyun.core.annotation.NameInMap("share")
         private Boolean share;
 
-        @NameInMap("short_flight_size")
+        @com.aliyun.core.annotation.NameInMap("short_flight_size")
         private String shortFlightSize;
 
-        @NameInMap("stop")
+        @com.aliyun.core.annotation.NameInMap("stop")
         private Boolean stop;
 
-        @NameInMap("total_time")
+        @com.aliyun.core.annotation.NameInMap("total_time")
         private String totalTime;
 
-        @NameInMap("transfer_time")
+        @com.aliyun.core.annotation.NameInMap("transfer_time")
         private String transferTime;
 
-        @NameInMap("transfer_time_number")
+        @com.aliyun.core.annotation.NameInMap("transfer_time_number")
         private Integer transferTimeNumber;
 
         private FlightSegmentInfos(Builder builder) {
@@ -1580,34 +1579,34 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
 
     }
     public static class FlightJourneyInfos extends TeaModel {
-        @NameInMap("arr_city_code")
+        @com.aliyun.core.annotation.NameInMap("arr_city_code")
         private String arrCityCode;
 
-        @NameInMap("arr_city_name")
+        @com.aliyun.core.annotation.NameInMap("arr_city_name")
         private String arrCityName;
 
-        @NameInMap("arr_time")
+        @com.aliyun.core.annotation.NameInMap("arr_time")
         private String arrTime;
 
-        @NameInMap("dep_city_code")
+        @com.aliyun.core.annotation.NameInMap("dep_city_code")
         private String depCityCode;
 
-        @NameInMap("dep_city_name")
+        @com.aliyun.core.annotation.NameInMap("dep_city_name")
         private String depCityName;
 
-        @NameInMap("dep_time")
+        @com.aliyun.core.annotation.NameInMap("dep_time")
         private String depTime;
 
-        @NameInMap("duration")
+        @com.aliyun.core.annotation.NameInMap("duration")
         private Integer duration;
 
-        @NameInMap("flight_segment_infos")
+        @com.aliyun.core.annotation.NameInMap("flight_segment_infos")
         private java.util.List < FlightSegmentInfos> flightSegmentInfos;
 
-        @NameInMap("journey_index")
+        @com.aliyun.core.annotation.NameInMap("journey_index")
         private Integer journeyIndex;
 
-        @NameInMap("transfer_time")
+        @com.aliyun.core.annotation.NameInMap("transfer_time")
         private Integer transferTime;
 
         private FlightJourneyInfos(Builder builder) {
@@ -1801,10 +1800,10 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
 
     }
     public static class FlightItemList extends TeaModel {
-        @NameInMap("best_price_item")
+        @com.aliyun.core.annotation.NameInMap("best_price_item")
         private BestPriceItem bestPriceItem;
 
-        @NameInMap("flight_journey_infos")
+        @com.aliyun.core.annotation.NameInMap("flight_journey_infos")
         private java.util.List < FlightJourneyInfos> flightJourneyInfos;
 
         private FlightItemList(Builder builder) {
@@ -1862,16 +1861,16 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
 
     }
     public static class Module extends TeaModel {
-        @NameInMap("flight_item_list")
+        @com.aliyun.core.annotation.NameInMap("flight_item_list")
         private java.util.List < FlightItemList> flightItemList;
 
-        @NameInMap("need_continue")
+        @com.aliyun.core.annotation.NameInMap("need_continue")
         private Boolean needContinue;
 
-        @NameInMap("query_record_id")
+        @com.aliyun.core.annotation.NameInMap("query_record_id")
         private String queryRecordId;
 
-        @NameInMap("token")
+        @com.aliyun.core.annotation.NameInMap("token")
         private String token;
 
         private Module(Builder builder) {

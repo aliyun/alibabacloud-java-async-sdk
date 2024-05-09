@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>IntlFlightSegmentAvailableCertResponseBody</p>
  */
 public class IntlFlightSegmentAvailableCertResponseBody extends TeaModel {
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result_code")
+    @com.aliyun.core.annotation.NameInMap("result_code")
     private String resultCode;
 
-    @NameInMap("result_msg")
+    @com.aliyun.core.annotation.NameInMap("result_msg")
     private String resultMsg;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private IntlFlightSegmentAvailableCertResponseBody(Builder builder) {
@@ -152,10 +151,10 @@ public class IntlFlightSegmentAvailableCertResponseBody extends TeaModel {
     } 
 
     public static class SegmentPosition extends TeaModel {
-        @NameInMap("journey_index")
+        @com.aliyun.core.annotation.NameInMap("journey_index")
         private Integer journeyIndex;
 
-        @NameInMap("segment_index")
+        @com.aliyun.core.annotation.NameInMap("segment_index")
         private Integer segmentIndex;
 
         private SegmentPosition(Builder builder) {
@@ -213,10 +212,10 @@ public class IntlFlightSegmentAvailableCertResponseBody extends TeaModel {
 
     }
     public static class SegmentAvailableCertList extends TeaModel {
-        @NameInMap("cert_types")
+        @com.aliyun.core.annotation.NameInMap("cert_types")
         private java.util.List < Integer > certTypes;
 
-        @NameInMap("segment_position")
+        @com.aliyun.core.annotation.NameInMap("segment_position")
         private SegmentPosition segmentPosition;
 
         private SegmentAvailableCertList(Builder builder) {
@@ -274,7 +273,7 @@ public class IntlFlightSegmentAvailableCertResponseBody extends TeaModel {
 
     }
     public static class Module extends TeaModel {
-        @NameInMap("segment_available_cert_list")
+        @com.aliyun.core.annotation.NameInMap("segment_available_cert_list")
         private java.util.List < SegmentAvailableCertList> segmentAvailableCertList;
 
         private Module(Builder builder) {

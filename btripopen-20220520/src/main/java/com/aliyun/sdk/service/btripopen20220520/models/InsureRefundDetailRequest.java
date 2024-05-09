@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InsureRefundDetailRequest</p>
  */
 public class InsureRefundDetailRequest extends Request {
-    @Query
-    @NameInMap("apply_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("apply_id")
     private String applyId;
 
-    @Query
-    @NameInMap("btrip_user_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("btrip_user_id")
     private String btripUserId;
 
-    @Query
-    @NameInMap("buyer_name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("buyer_name")
     private String buyerName;
 
-    @Query
-    @NameInMap("ins_order_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ins_order_id")
     private String insOrderId;
 
-    @Query
-    @NameInMap("isv_name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("isv_name")
     private String isvName;
 
-    @Query
-    @NameInMap("out_apply_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("out_apply_id")
     private String outApplyId;
 
-    @Query
-    @NameInMap("supplier_code")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("supplier_code")
     private String supplierCode;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private InsureRefundDetailRequest(Builder builder) {

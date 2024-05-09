@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TravelStandardListQueryResponseBody</p>
  */
 public class TravelStandardListQueryResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private Integer code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private TravelStandardListQueryResponseBody(Builder builder) {
@@ -152,19 +151,19 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
     } 
 
     public static class MainReserveRule extends TeaModel {
-        @NameInMap("open_service_type_list")
+        @com.aliyun.core.annotation.NameInMap("open_service_type_list")
         private java.util.List < String > openServiceTypeList;
 
-        @NameInMap("rule_code")
+        @com.aliyun.core.annotation.NameInMap("rule_code")
         private Long ruleCode;
 
-        @NameInMap("rule_desc")
+        @com.aliyun.core.annotation.NameInMap("rule_desc")
         private String ruleDesc;
 
-        @NameInMap("rule_id")
+        @com.aliyun.core.annotation.NameInMap("rule_id")
         private Long ruleId;
 
-        @NameInMap("rule_name")
+        @com.aliyun.core.annotation.NameInMap("rule_name")
         private String ruleName;
 
         private MainReserveRule(Builder builder) {
@@ -273,10 +272,10 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
 
     }
     public static class DataList extends TeaModel {
-        @NameInMap("key")
+        @com.aliyun.core.annotation.NameInMap("key")
         private String key;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private DataList(Builder builder) {
@@ -334,13 +333,13 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
 
     }
     public static class ReserveRuleDesc extends TeaModel {
-        @NameInMap("data_list")
+        @com.aliyun.core.annotation.NameInMap("data_list")
         private java.util.List < DataList> dataList;
 
-        @NameInMap("title")
+        @com.aliyun.core.annotation.NameInMap("title")
         private String title;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private ReserveRuleDesc(Builder builder) {
@@ -415,13 +414,13 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("main_reserve_rule")
+        @com.aliyun.core.annotation.NameInMap("main_reserve_rule")
         private MainReserveRule mainReserveRule;
 
-        @NameInMap("reserve_rule_desc")
+        @com.aliyun.core.annotation.NameInMap("reserve_rule_desc")
         private java.util.List < ReserveRuleDesc> reserveRuleDesc;
 
-        @NameInMap("scope")
+        @com.aliyun.core.annotation.NameInMap("scope")
         private Integer scope;
 
         private Items(Builder builder) {
@@ -496,10 +495,10 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
 
     }
     public static class Module extends TeaModel {
-        @NameInMap("items")
+        @com.aliyun.core.annotation.NameInMap("items")
         private java.util.List < Items> items;
 
-        @NameInMap("total_size")
+        @com.aliyun.core.annotation.NameInMap("total_size")
         private Integer totalSize;
 
         private Module(Builder builder) {

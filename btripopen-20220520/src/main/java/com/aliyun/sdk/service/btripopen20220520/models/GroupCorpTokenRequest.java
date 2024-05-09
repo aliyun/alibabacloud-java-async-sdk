@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GroupCorpTokenRequest</p>
  */
 public class GroupCorpTokenRequest extends Request {
-    @Query
-    @NameInMap("app_secret")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("app_secret")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appSecret;
 
-    @Query
-    @NameInMap("corp_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("corp_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String corpId;
 
-    @Query
-    @NameInMap("sub_corp_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("sub_corp_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subCorpId;
 
-    @Header
-    @NameInMap("x-acs-btrip-access-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-access-token")
     private String xAcsBtripAccessToken;
 
     private GroupCorpTokenRequest(Builder builder) {

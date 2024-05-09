@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModuleGroupItemShoppingItemMapValue</p>
  */
 public class ModuleGroupItemShoppingItemMapValue extends TeaModel {
-    @NameInMap("cabin_quantity_list")
+    @com.aliyun.core.annotation.NameInMap("cabin_quantity_list")
     private java.util.List < CabinQuantityList> cabinQuantityList;
 
-    @NameInMap("search_price")
+    @com.aliyun.core.annotation.NameInMap("search_price")
     private SearchPrice searchPrice;
 
-    @NameInMap("segment_price_list")
+    @com.aliyun.core.annotation.NameInMap("segment_price_list")
     private java.util.List < SegmentPriceList> segmentPriceList;
 
     private ModuleGroupItemShoppingItemMapValue(Builder builder) {
@@ -92,10 +91,10 @@ public class ModuleGroupItemShoppingItemMapValue extends TeaModel {
     } 
 
     public static class SegmentPosition extends TeaModel {
-        @NameInMap("journey_index")
+        @com.aliyun.core.annotation.NameInMap("journey_index")
         private Integer journeyIndex;
 
-        @NameInMap("segment_index")
+        @com.aliyun.core.annotation.NameInMap("segment_index")
         private Integer segmentIndex;
 
         private SegmentPosition(Builder builder) {
@@ -153,16 +152,16 @@ public class ModuleGroupItemShoppingItemMapValue extends TeaModel {
 
     }
     public static class Cabin extends TeaModel {
-        @NameInMap("cabin")
+        @com.aliyun.core.annotation.NameInMap("cabin")
         private String cabin;
 
-        @NameInMap("cabin_class")
+        @com.aliyun.core.annotation.NameInMap("cabin_class")
         private String cabinClass;
 
-        @NameInMap("cabin_class_name")
+        @com.aliyun.core.annotation.NameInMap("cabin_class_name")
         private String cabinClassName;
 
-        @NameInMap("quantity")
+        @com.aliyun.core.annotation.NameInMap("quantity")
         private String quantity;
 
         private Cabin(Builder builder) {
@@ -254,10 +253,10 @@ public class ModuleGroupItemShoppingItemMapValue extends TeaModel {
 
     }
     public static class CabinQuantityList extends TeaModel {
-        @NameInMap("segment_position")
+        @com.aliyun.core.annotation.NameInMap("segment_position")
         private SegmentPosition segmentPosition;
 
-        @NameInMap("cabin")
+        @com.aliyun.core.annotation.NameInMap("cabin")
         private Cabin cabin;
 
         private CabinQuantityList(Builder builder) {
@@ -315,13 +314,13 @@ public class ModuleGroupItemShoppingItemMapValue extends TeaModel {
 
     }
     public static class SearchPrice extends TeaModel {
-        @NameInMap("ticket_price")
+        @com.aliyun.core.annotation.NameInMap("ticket_price")
         private Integer ticketPrice;
 
-        @NameInMap("sell_price")
+        @com.aliyun.core.annotation.NameInMap("sell_price")
         private Integer sellPrice;
 
-        @NameInMap("tax")
+        @com.aliyun.core.annotation.NameInMap("tax")
         private Integer tax;
 
         private SearchPrice(Builder builder) {
@@ -396,10 +395,10 @@ public class ModuleGroupItemShoppingItemMapValue extends TeaModel {
 
     }
     public static class SegmentPriceListSegmentPosition extends TeaModel {
-        @NameInMap("journey_index")
+        @com.aliyun.core.annotation.NameInMap("journey_index")
         private Integer journeyIndex;
 
-        @NameInMap("segment_index")
+        @com.aliyun.core.annotation.NameInMap("segment_index")
         private Integer segmentIndex;
 
         private SegmentPriceListSegmentPosition(Builder builder) {
@@ -457,13 +456,13 @@ public class ModuleGroupItemShoppingItemMapValue extends TeaModel {
 
     }
     public static class SegmentPriceListSearchPrice extends TeaModel {
-        @NameInMap("ticket_price")
+        @com.aliyun.core.annotation.NameInMap("ticket_price")
         private Integer ticketPrice;
 
-        @NameInMap("sell_price")
+        @com.aliyun.core.annotation.NameInMap("sell_price")
         private Integer sellPrice;
 
-        @NameInMap("tax")
+        @com.aliyun.core.annotation.NameInMap("tax")
         private Integer tax;
 
         private SegmentPriceListSearchPrice(Builder builder) {
@@ -538,10 +537,10 @@ public class ModuleGroupItemShoppingItemMapValue extends TeaModel {
 
     }
     public static class SegmentPriceList extends TeaModel {
-        @NameInMap("segment_position")
+        @com.aliyun.core.annotation.NameInMap("segment_position")
         private SegmentPriceListSegmentPosition segmentPosition;
 
-        @NameInMap("search_price")
+        @com.aliyun.core.annotation.NameInMap("search_price")
         private SegmentPriceListSearchPrice searchPrice;
 
         private SegmentPriceList(Builder builder) {

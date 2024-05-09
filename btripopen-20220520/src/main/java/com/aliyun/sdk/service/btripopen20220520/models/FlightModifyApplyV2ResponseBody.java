@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>FlightModifyApplyV2ResponseBody</p>
  */
 public class FlightModifyApplyV2ResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private FlightModifyApplyV2ResponseBody(Builder builder) {
@@ -152,16 +151,16 @@ public class FlightModifyApplyV2ResponseBody extends TeaModel {
     } 
 
     public static class Module extends TeaModel {
-        @NameInMap("order_id")
+        @com.aliyun.core.annotation.NameInMap("order_id")
         private String orderId;
 
-        @NameInMap("out_order_id")
+        @com.aliyun.core.annotation.NameInMap("out_order_id")
         private String outOrderId;
 
-        @NameInMap("out_sub_order_id")
+        @com.aliyun.core.annotation.NameInMap("out_sub_order_id")
         private String outSubOrderId;
 
-        @NameInMap("sub_order_id")
+        @com.aliyun.core.annotation.NameInMap("sub_order_id")
         private String subOrderId;
 
         private Module(Builder builder) {

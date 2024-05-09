@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ApplyExternalNodeStatusUpdateRequest</p>
  */
 public class ApplyExternalNodeStatusUpdateRequest extends Request {
-    @Body
-    @NameInMap("node_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("node_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodeId;
 
-    @Body
-    @NameInMap("operation_records")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("operation_records")
     private java.util.List < OperationRecords> operationRecords;
 
-    @Body
-    @NameInMap("process_action_result")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("process_action_result")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String processActionResult;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private ApplyExternalNodeStatusUpdateRequest(Builder builder) {
@@ -142,19 +141,19 @@ public class ApplyExternalNodeStatusUpdateRequest extends Request {
     } 
 
     public static class OperationRecords extends TeaModel {
-        @NameInMap("comment")
+        @com.aliyun.core.annotation.NameInMap("comment")
         private String comment;
 
-        @NameInMap("operate_time")
+        @com.aliyun.core.annotation.NameInMap("operate_time")
         private String operateTime;
 
-        @NameInMap("operator_name")
+        @com.aliyun.core.annotation.NameInMap("operator_name")
         private String operatorName;
 
-        @NameInMap("result")
+        @com.aliyun.core.annotation.NameInMap("result")
         private String result;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private OperationRecords(Builder builder) {

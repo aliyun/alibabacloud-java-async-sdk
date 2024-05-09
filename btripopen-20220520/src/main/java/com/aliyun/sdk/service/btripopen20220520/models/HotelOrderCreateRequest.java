@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,113 +11,113 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>HotelOrderCreateRequest</p>
  */
 public class HotelOrderCreateRequest extends Request {
-    @Body
-    @NameInMap("btrip_user_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("btrip_user_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String btripUserId;
 
-    @Body
-    @NameInMap("check_in")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("check_in")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String checkIn;
 
-    @Body
-    @NameInMap("check_out")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("check_out")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String checkOut;
 
-    @Body
-    @NameInMap("contract_email")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("contract_email")
     private String contractEmail;
 
-    @Body
-    @NameInMap("contract_name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("contract_name")
     private String contractName;
 
-    @Body
-    @NameInMap("contract_phone")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("contract_phone")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String contractPhone;
 
-    @Body
-    @NameInMap("corp_pay_price")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("corp_pay_price")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long corpPayPrice;
 
-    @Body
-    @NameInMap("dis_order_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dis_order_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String disOrderId;
 
-    @Body
-    @NameInMap("extra")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("extra")
     private String extra;
 
-    @Body
-    @NameInMap("invoice_info")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("invoice_info")
     private InvoiceInfo invoiceInfo;
 
-    @Body
-    @NameInMap("item_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("item_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long itemId;
 
-    @Body
-    @NameInMap("itinerary_no")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("itinerary_no")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String itineraryNo;
 
-    @Body
-    @NameInMap("occupant_info_list")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("occupant_info_list")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < OccupantInfoList> occupantInfoList;
 
-    @Body
-    @NameInMap("person_pay_price")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("person_pay_price")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long personPayPrice;
 
-    @Body
-    @NameInMap("promotion_info")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("promotion_info")
     private PromotionInfo promotionInfo;
 
-    @Body
-    @NameInMap("rate_plan_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("rate_plan_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long ratePlanId;
 
-    @Body
-    @NameInMap("room_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("room_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long roomId;
 
-    @Body
-    @NameInMap("room_num")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("room_num")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer roomNum;
 
-    @Body
-    @NameInMap("seller_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("seller_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long sellerId;
 
-    @Body
-    @NameInMap("shid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("shid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long shid;
 
-    @Body
-    @NameInMap("total_order_price")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("total_order_price")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long totalOrderPrice;
 
-    @Body
-    @NameInMap("validate_res_key")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("validate_res_key")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String validateResKey;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private HotelOrderCreateRequest(Builder builder) {
@@ -596,55 +595,55 @@ public class HotelOrderCreateRequest extends Request {
     } 
 
     public static class InvoiceInfo extends TeaModel {
-        @NameInMap("buyer_add")
+        @com.aliyun.core.annotation.NameInMap("buyer_add")
         private String buyerAdd;
 
-        @NameInMap("buyer_bank_acc")
+        @com.aliyun.core.annotation.NameInMap("buyer_bank_acc")
         private String buyerBankAcc;
 
-        @NameInMap("buyer_bank_add")
+        @com.aliyun.core.annotation.NameInMap("buyer_bank_add")
         private String buyerBankAdd;
 
-        @NameInMap("buyer_phone")
+        @com.aliyun.core.annotation.NameInMap("buyer_phone")
         private String buyerPhone;
 
-        @NameInMap("buyer_tax_num")
+        @com.aliyun.core.annotation.NameInMap("buyer_tax_num")
         private String buyerTaxNum;
 
-        @NameInMap("delivery_address")
+        @com.aliyun.core.annotation.NameInMap("delivery_address")
         private String deliveryAddress;
 
-        @NameInMap("delivery_area")
+        @com.aliyun.core.annotation.NameInMap("delivery_area")
         private String deliveryArea;
 
-        @NameInMap("delivery_city")
+        @com.aliyun.core.annotation.NameInMap("delivery_city")
         private String deliveryCity;
 
-        @NameInMap("delivery_province")
+        @com.aliyun.core.annotation.NameInMap("delivery_province")
         private String deliveryProvince;
 
-        @NameInMap("delivery_street")
+        @com.aliyun.core.annotation.NameInMap("delivery_street")
         private String deliveryStreet;
 
-        @NameInMap("email")
+        @com.aliyun.core.annotation.NameInMap("email")
         private String email;
 
-        @NameInMap("invoice_material")
+        @com.aliyun.core.annotation.NameInMap("invoice_material")
         private Integer invoiceMaterial;
 
-        @NameInMap("invoice_title")
+        @com.aliyun.core.annotation.NameInMap("invoice_title")
         private String invoiceTitle;
 
-        @NameInMap("invoice_type")
+        @com.aliyun.core.annotation.NameInMap("invoice_type")
         private Integer invoiceType;
 
-        @NameInMap("receiver_name")
+        @com.aliyun.core.annotation.NameInMap("receiver_name")
         private String receiverName;
 
-        @NameInMap("receiver_phone")
+        @com.aliyun.core.annotation.NameInMap("receiver_phone")
         private String receiverPhone;
 
-        @NameInMap("remark")
+        @com.aliyun.core.annotation.NameInMap("remark")
         private String remark;
 
         private InvoiceInfo(Builder builder) {
@@ -957,48 +956,48 @@ public class HotelOrderCreateRequest extends Request {
 
     }
     public static class OccupantInfoList extends TeaModel {
-        @NameInMap("card_no")
+        @com.aliyun.core.annotation.NameInMap("card_no")
         private String cardNo;
 
-        @NameInMap("card_type")
+        @com.aliyun.core.annotation.NameInMap("card_type")
         private Integer cardType;
 
-        @NameInMap("customer_type")
+        @com.aliyun.core.annotation.NameInMap("customer_type")
         private Integer customerType;
 
-        @NameInMap("department_id")
+        @com.aliyun.core.annotation.NameInMap("department_id")
         private String departmentId;
 
-        @NameInMap("department_name")
+        @com.aliyun.core.annotation.NameInMap("department_name")
         private String departmentName;
 
-        @NameInMap("email")
+        @com.aliyun.core.annotation.NameInMap("email")
         private String email;
 
-        @NameInMap("employee_type")
+        @com.aliyun.core.annotation.NameInMap("employee_type")
         private Integer employeeType;
 
-        @NameInMap("first_name")
+        @com.aliyun.core.annotation.NameInMap("first_name")
         private String firstName;
 
-        @NameInMap("last_name")
+        @com.aliyun.core.annotation.NameInMap("last_name")
         private String lastName;
 
-        @NameInMap("name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
-        @NameInMap("phone")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("phone")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String phone;
 
-        @NameInMap("room_no")
+        @com.aliyun.core.annotation.NameInMap("room_no")
         private Integer roomNo;
 
-        @NameInMap("staff_no")
+        @com.aliyun.core.annotation.NameInMap("staff_no")
         private String staffNo;
 
-        @NameInMap("user_type")
+        @com.aliyun.core.annotation.NameInMap("user_type")
         private Integer userType;
 
         private OccupantInfoList(Builder builder) {
@@ -1260,25 +1259,25 @@ public class HotelOrderCreateRequest extends Request {
 
     }
     public static class PromotionDetailInfoList extends TeaModel {
-        @NameInMap("check_status")
+        @com.aliyun.core.annotation.NameInMap("check_status")
         private Boolean checkStatus;
 
-        @NameInMap("need_check")
+        @com.aliyun.core.annotation.NameInMap("need_check")
         private Boolean needCheck;
 
-        @NameInMap("promotion_code")
+        @com.aliyun.core.annotation.NameInMap("promotion_code")
         private String promotionCode;
 
-        @NameInMap("promotion_id")
+        @com.aliyun.core.annotation.NameInMap("promotion_id")
         private String promotionId;
 
-        @NameInMap("promotion_name")
+        @com.aliyun.core.annotation.NameInMap("promotion_name")
         private String promotionName;
 
-        @NameInMap("promotion_price")
+        @com.aliyun.core.annotation.NameInMap("promotion_price")
         private Long promotionPrice;
 
-        @NameInMap("promotion_type")
+        @com.aliyun.core.annotation.NameInMap("promotion_type")
         private String promotionType;
 
         private PromotionDetailInfoList(Builder builder) {
@@ -1421,10 +1420,10 @@ public class HotelOrderCreateRequest extends Request {
 
     }
     public static class PromotionInfo extends TeaModel {
-        @NameInMap("promotion_detail_info_list")
+        @com.aliyun.core.annotation.NameInMap("promotion_detail_info_list")
         private java.util.List < PromotionDetailInfoList> promotionDetailInfoList;
 
-        @NameInMap("promotion_total_price")
+        @com.aliyun.core.annotation.NameInMap("promotion_total_price")
         private Long promotionTotalPrice;
 
         private PromotionInfo(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>IsvUserSaveRequest</p>
  */
 public class IsvUserSaveRequest extends Request {
-    @Body
-    @NameInMap("user_list")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("user_list")
     private java.util.List < UserList> userList;
 
-    @Header
-    @NameInMap("x-acs-btrip-so-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-so-corp-token")
     private String xAcsBtripSoCorpToken;
 
     private IsvUserSaveRequest(Builder builder) {
@@ -94,19 +93,19 @@ public class IsvUserSaveRequest extends Request {
     } 
 
     public static class CertList extends TeaModel {
-        @NameInMap("cert_expired_time")
+        @com.aliyun.core.annotation.NameInMap("cert_expired_time")
         private String certExpiredTime;
 
-        @NameInMap("cert_nation")
+        @com.aliyun.core.annotation.NameInMap("cert_nation")
         private String certNation;
 
-        @NameInMap("cert_no")
+        @com.aliyun.core.annotation.NameInMap("cert_no")
         private String certNo;
 
-        @NameInMap("cert_type")
+        @com.aliyun.core.annotation.NameInMap("cert_type")
         private Integer certType;
 
-        @NameInMap("nationality")
+        @com.aliyun.core.annotation.NameInMap("nationality")
         private String nationality;
 
         private CertList(Builder builder) {
@@ -215,63 +214,63 @@ public class IsvUserSaveRequest extends Request {
 
     }
     public static class UserList extends TeaModel {
-        @NameInMap("base_city_code")
+        @com.aliyun.core.annotation.NameInMap("base_city_code")
         private String baseCityCode;
 
-        @NameInMap("birthday")
+        @com.aliyun.core.annotation.NameInMap("birthday")
         private String birthday;
 
-        @NameInMap("cert_list")
+        @com.aliyun.core.annotation.NameInMap("cert_list")
         private java.util.List < CertList> certList;
 
-        @NameInMap("depart_id")
+        @com.aliyun.core.annotation.NameInMap("depart_id")
         private Long departId;
 
-        @NameInMap("email")
+        @com.aliyun.core.annotation.NameInMap("email")
         private String email;
 
-        @NameInMap("gender")
+        @com.aliyun.core.annotation.NameInMap("gender")
         private String gender;
 
-        @NameInMap("is_admin")
+        @com.aliyun.core.annotation.NameInMap("is_admin")
         private Boolean isAdmin;
 
-        @NameInMap("job_no")
+        @com.aliyun.core.annotation.NameInMap("job_no")
         private String jobNo;
 
-        @NameInMap("leave_status")
+        @com.aliyun.core.annotation.NameInMap("leave_status")
         private Integer leaveStatus;
 
-        @NameInMap("manager_user_id")
+        @com.aliyun.core.annotation.NameInMap("manager_user_id")
         private String managerUserId;
 
-        @NameInMap("phone")
+        @com.aliyun.core.annotation.NameInMap("phone")
         private String phone;
 
-        @NameInMap("position")
+        @com.aliyun.core.annotation.NameInMap("position")
         private String position;
 
-        @NameInMap("position_level")
+        @com.aliyun.core.annotation.NameInMap("position_level")
         private String positionLevel;
 
-        @NameInMap("real_name_en")
+        @com.aliyun.core.annotation.NameInMap("real_name_en")
         private String realNameEn;
 
-        @NameInMap("third_depart_id")
+        @com.aliyun.core.annotation.NameInMap("third_depart_id")
         private String thirdDepartId;
 
-        @NameInMap("third_depart_id_list")
+        @com.aliyun.core.annotation.NameInMap("third_depart_id_list")
         private java.util.List < String > thirdDepartIdList;
 
-        @NameInMap("user_id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("user_id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String userId;
 
-        @NameInMap("user_name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("user_name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String userName;
 
-        @NameInMap("user_nick")
+        @com.aliyun.core.annotation.NameInMap("user_nick")
         private String userNick;
 
         private UserList(Builder builder) {

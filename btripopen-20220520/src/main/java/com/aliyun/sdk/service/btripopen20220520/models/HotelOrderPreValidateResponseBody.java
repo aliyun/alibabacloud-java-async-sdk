@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>HotelOrderPreValidateResponseBody</p>
  */
 public class HotelOrderPreValidateResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private HotelOrderPreValidateResponseBody(Builder builder) {
@@ -152,25 +151,25 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
     } 
 
     public static class PromotionDetailInfoList extends TeaModel {
-        @NameInMap("check_status")
+        @com.aliyun.core.annotation.NameInMap("check_status")
         private Boolean checkStatus;
 
-        @NameInMap("need_check")
+        @com.aliyun.core.annotation.NameInMap("need_check")
         private Boolean needCheck;
 
-        @NameInMap("promotion_code")
+        @com.aliyun.core.annotation.NameInMap("promotion_code")
         private String promotionCode;
 
-        @NameInMap("promotion_id")
+        @com.aliyun.core.annotation.NameInMap("promotion_id")
         private String promotionId;
 
-        @NameInMap("promotion_name")
+        @com.aliyun.core.annotation.NameInMap("promotion_name")
         private String promotionName;
 
-        @NameInMap("promotion_price")
+        @com.aliyun.core.annotation.NameInMap("promotion_price")
         private Long promotionPrice;
 
-        @NameInMap("promotion_type")
+        @com.aliyun.core.annotation.NameInMap("promotion_type")
         private String promotionType;
 
         private PromotionDetailInfoList(Builder builder) {
@@ -313,13 +312,13 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
 
     }
     public static class PromotionInfo extends TeaModel {
-        @NameInMap("ext_attr_map")
+        @com.aliyun.core.annotation.NameInMap("ext_attr_map")
         private java.util.Map < String, String > extAttrMap;
 
-        @NameInMap("promotion_detail_info_list")
+        @com.aliyun.core.annotation.NameInMap("promotion_detail_info_list")
         private java.util.List < PromotionDetailInfoList> promotionDetailInfoList;
 
-        @NameInMap("promotion_total_price")
+        @com.aliyun.core.annotation.NameInMap("promotion_total_price")
         private Long promotionTotalPrice;
 
         private PromotionInfo(Builder builder) {
@@ -394,31 +393,31 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
 
     }
     public static class RatePlanDaily extends TeaModel {
-        @NameInMap("board")
+        @com.aliyun.core.annotation.NameInMap("board")
         private String board;
 
-        @NameInMap("discount_price")
+        @com.aliyun.core.annotation.NameInMap("discount_price")
         private String discountPrice;
 
-        @NameInMap("max_booking_num")
+        @com.aliyun.core.annotation.NameInMap("max_booking_num")
         private Integer maxBookingNum;
 
-        @NameInMap("price")
+        @com.aliyun.core.annotation.NameInMap("price")
         private Long price;
 
-        @NameInMap("rate_start_time")
+        @com.aliyun.core.annotation.NameInMap("rate_start_time")
         private String rateStartTime;
 
-        @NameInMap("room_count")
+        @com.aliyun.core.annotation.NameInMap("room_count")
         private Integer roomCount;
 
-        @NameInMap("rounding_discount_price")
+        @com.aliyun.core.annotation.NameInMap("rounding_discount_price")
         private String roundingDiscountPrice;
 
-        @NameInMap("rounding_price")
+        @com.aliyun.core.annotation.NameInMap("rounding_price")
         private String roundingPrice;
 
-        @NameInMap("service_fee")
+        @com.aliyun.core.annotation.NameInMap("service_fee")
         private Long serviceFee;
 
         private RatePlanDaily(Builder builder) {
@@ -595,10 +594,10 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
 
     }
     public static class BtripHotelCancelPolicyInfoDTOList extends TeaModel {
-        @NameInMap("hour")
+        @com.aliyun.core.annotation.NameInMap("hour")
         private Long hour;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private Long value;
 
         private BtripHotelCancelPolicyInfoDTOList(Builder builder) {
@@ -656,10 +655,10 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
 
     }
     public static class BtripHotelCancelPolicyDTO extends TeaModel {
-        @NameInMap("btrip_hotel_cancel_policy_info_d_t_o_list")
+        @com.aliyun.core.annotation.NameInMap("btrip_hotel_cancel_policy_info_d_t_o_list")
         private java.util.List < BtripHotelCancelPolicyInfoDTOList> btripHotelCancelPolicyInfoDTOList;
 
-        @NameInMap("cancel_policy_type")
+        @com.aliyun.core.annotation.NameInMap("cancel_policy_type")
         private Integer cancelPolicyType;
 
         private BtripHotelCancelPolicyDTO(Builder builder) {
@@ -717,37 +716,37 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
 
     }
     public static class RatePlanInfo extends TeaModel {
-        @NameInMap("bed_desc")
+        @com.aliyun.core.annotation.NameInMap("bed_desc")
         private String bedDesc;
 
-        @NameInMap("btrip_hotel_cancel_policy_d_t_o")
+        @com.aliyun.core.annotation.NameInMap("btrip_hotel_cancel_policy_d_t_o")
         private BtripHotelCancelPolicyDTO btripHotelCancelPolicyDTO;
 
-        @NameInMap("earliest_check_in_time")
+        @com.aliyun.core.annotation.NameInMap("earliest_check_in_time")
         private String earliestCheckInTime;
 
-        @NameInMap("latest_check_out_time")
+        @com.aliyun.core.annotation.NameInMap("latest_check_out_time")
         private String latestCheckOutTime;
 
-        @NameInMap("max_booking_num")
+        @com.aliyun.core.annotation.NameInMap("max_booking_num")
         private Integer maxBookingNum;
 
-        @NameInMap("max_occupancy_num")
+        @com.aliyun.core.annotation.NameInMap("max_occupancy_num")
         private Integer maxOccupancyNum;
 
-        @NameInMap("need_certificate")
+        @com.aliyun.core.annotation.NameInMap("need_certificate")
         private Boolean needCertificate;
 
-        @NameInMap("need_email")
+        @com.aliyun.core.annotation.NameInMap("need_email")
         private Boolean needEmail;
 
-        @NameInMap("need_english_name")
+        @com.aliyun.core.annotation.NameInMap("need_english_name")
         private Boolean needEnglishName;
 
-        @NameInMap("total_order_price")
+        @com.aliyun.core.annotation.NameInMap("total_order_price")
         private Long totalOrderPrice;
 
-        @NameInMap("total_room_price")
+        @com.aliyun.core.annotation.NameInMap("total_room_price")
         private Long totalRoomPrice;
 
         private RatePlanInfo(Builder builder) {
@@ -958,25 +957,25 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
 
     }
     public static class Module extends TeaModel {
-        @NameInMap("extend_info")
+        @com.aliyun.core.annotation.NameInMap("extend_info")
         private String extendInfo;
 
-        @NameInMap("itinerary_no")
+        @com.aliyun.core.annotation.NameInMap("itinerary_no")
         private String itineraryNo;
 
-        @NameInMap("promotion_info")
+        @com.aliyun.core.annotation.NameInMap("promotion_info")
         private PromotionInfo promotionInfo;
 
-        @NameInMap("rate_plan_daily")
+        @com.aliyun.core.annotation.NameInMap("rate_plan_daily")
         private java.util.List < RatePlanDaily> ratePlanDaily;
 
-        @NameInMap("rate_plan_id")
+        @com.aliyun.core.annotation.NameInMap("rate_plan_id")
         private Long ratePlanId;
 
-        @NameInMap("rate_plan_info")
+        @com.aliyun.core.annotation.NameInMap("rate_plan_info")
         private RatePlanInfo ratePlanInfo;
 
-        @NameInMap("validate_res_key")
+        @com.aliyun.core.annotation.NameInMap("validate_res_key")
         private String validateResKey;
 
         private Module(Builder builder) {

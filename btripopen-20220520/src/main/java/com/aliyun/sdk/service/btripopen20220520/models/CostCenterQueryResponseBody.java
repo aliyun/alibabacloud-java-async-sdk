@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CostCenterQueryResponseBody</p>
  */
 public class CostCenterQueryResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private java.util.List < Module> module;
 
-    @NameInMap("more_page")
+    @com.aliyun.core.annotation.NameInMap("more_page")
     private Boolean morePage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private CostCenterQueryResponseBody(Builder builder) {
@@ -172,19 +171,19 @@ public class CostCenterQueryResponseBody extends TeaModel {
     } 
 
     public static class EntityDOS extends TeaModel {
-        @NameInMap("corp_id")
+        @com.aliyun.core.annotation.NameInMap("corp_id")
         private String corpId;
 
-        @NameInMap("entity_id")
+        @com.aliyun.core.annotation.NameInMap("entity_id")
         private String entityId;
 
-        @NameInMap("entity_type")
+        @com.aliyun.core.annotation.NameInMap("entity_type")
         private String entityType;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("user_num")
+        @com.aliyun.core.annotation.NameInMap("user_num")
         private Integer userNum;
 
         private EntityDOS(Builder builder) {
@@ -293,34 +292,34 @@ public class CostCenterQueryResponseBody extends TeaModel {
 
     }
     public static class Module extends TeaModel {
-        @NameInMap("alipay_no")
+        @com.aliyun.core.annotation.NameInMap("alipay_no")
         private String alipayNo;
 
-        @NameInMap("corp_id")
+        @com.aliyun.core.annotation.NameInMap("corp_id")
         private String corpId;
 
-        @NameInMap("disable")
+        @com.aliyun.core.annotation.NameInMap("disable")
         private Long disable;
 
-        @NameInMap("entity_d_o_s")
+        @com.aliyun.core.annotation.NameInMap("entity_d_o_s")
         private java.util.List < EntityDOS> entityDOS;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("number")
+        @com.aliyun.core.annotation.NameInMap("number")
         private String number;
 
-        @NameInMap("rule_code")
+        @com.aliyun.core.annotation.NameInMap("rule_code")
         private Long ruleCode;
 
-        @NameInMap("scope")
+        @com.aliyun.core.annotation.NameInMap("scope")
         private Long scope;
 
-        @NameInMap("thirdpart_id")
+        @com.aliyun.core.annotation.NameInMap("thirdpart_id")
         private String thirdpartId;
 
-        @NameInMap("title")
+        @com.aliyun.core.annotation.NameInMap("title")
         private String title;
 
         private Module(Builder builder) {

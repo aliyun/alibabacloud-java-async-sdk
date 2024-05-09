@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TrainTicketScanQueryResponseBody</p>
  */
 public class TrainTicketScanQueryResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private TrainTicketScanQueryResponseBody(Builder builder) {
@@ -152,70 +151,70 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("apply_id")
+        @com.aliyun.core.annotation.NameInMap("apply_id")
         private String applyId;
 
-        @NameInMap("arr_station")
+        @com.aliyun.core.annotation.NameInMap("arr_station")
         private String arrStation;
 
-        @NameInMap("bill_date")
+        @com.aliyun.core.annotation.NameInMap("bill_date")
         private String billDate;
 
-        @NameInMap("coach_name")
+        @com.aliyun.core.annotation.NameInMap("coach_name")
         private String coachName;
 
-        @NameInMap("cost_center")
+        @com.aliyun.core.annotation.NameInMap("cost_center")
         private String costCenter;
 
-        @NameInMap("dep_station")
+        @com.aliyun.core.annotation.NameInMap("dep_station")
         private String depStation;
 
-        @NameInMap("dep_time")
+        @com.aliyun.core.annotation.NameInMap("dep_time")
         private String depTime;
 
-        @NameInMap("department")
+        @com.aliyun.core.annotation.NameInMap("department")
         private String department;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("invoice_title")
+        @com.aliyun.core.annotation.NameInMap("invoice_title")
         private String invoiceTitle;
 
-        @NameInMap("order_id")
+        @com.aliyun.core.annotation.NameInMap("order_id")
         private Long orderId;
 
-        @NameInMap("oss_url")
+        @com.aliyun.core.annotation.NameInMap("oss_url")
         private String ossUrl;
 
-        @NameInMap("passenger")
+        @com.aliyun.core.annotation.NameInMap("passenger")
         private String passenger;
 
-        @NameInMap("price")
+        @com.aliyun.core.annotation.NameInMap("price")
         private String price;
 
-        @NameInMap("project")
+        @com.aliyun.core.annotation.NameInMap("project")
         private String project;
 
-        @NameInMap("seat")
+        @com.aliyun.core.annotation.NameInMap("seat")
         private String seat;
 
-        @NameInMap("seat_no")
+        @com.aliyun.core.annotation.NameInMap("seat_no")
         private String seatNo;
 
-        @NameInMap("serial_number")
+        @com.aliyun.core.annotation.NameInMap("serial_number")
         private String serialNumber;
 
-        @NameInMap("tax_amount")
+        @com.aliyun.core.annotation.NameInMap("tax_amount")
         private String taxAmount;
 
-        @NameInMap("tax_rate")
+        @com.aliyun.core.annotation.NameInMap("tax_rate")
         private String taxRate;
 
-        @NameInMap("ticket_no")
+        @com.aliyun.core.annotation.NameInMap("ticket_no")
         private String ticketNo;
 
-        @NameInMap("train_no")
+        @com.aliyun.core.annotation.NameInMap("train_no")
         private String trainNo;
 
         private Items(Builder builder) {
@@ -613,19 +612,19 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
 
     }
     public static class Module extends TeaModel {
-        @NameInMap("items")
+        @com.aliyun.core.annotation.NameInMap("items")
         private java.util.List < Items> items;
 
-        @NameInMap("page_no")
+        @com.aliyun.core.annotation.NameInMap("page_no")
         private Integer pageNo;
 
-        @NameInMap("page_size")
+        @com.aliyun.core.annotation.NameInMap("page_size")
         private Integer pageSize;
 
-        @NameInMap("total_page")
+        @com.aliyun.core.annotation.NameInMap("total_page")
         private Integer totalPage;
 
-        @NameInMap("total_size")
+        @com.aliyun.core.annotation.NameInMap("total_size")
         private Integer totalSize;
 
         private Module(Builder builder) {

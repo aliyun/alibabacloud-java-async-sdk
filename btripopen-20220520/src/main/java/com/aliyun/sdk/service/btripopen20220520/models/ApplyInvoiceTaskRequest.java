@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ApplyInvoiceTaskRequest</p>
  */
 public class ApplyInvoiceTaskRequest extends Request {
-    @Body
-    @NameInMap("bill_date")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("bill_date")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String billDate;
 
-    @Body
-    @NameInMap("invoice_task_list")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("invoice_task_list")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < InvoiceTaskList> invoiceTaskList;
 
-    @Header
-    @NameInMap("x-acs-btrip-so-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-so-corp-token")
     private String xAcsBtripSoCorpToken;
 
     private ApplyInvoiceTaskRequest(Builder builder) {
@@ -119,68 +118,68 @@ public class ApplyInvoiceTaskRequest extends Request {
     } 
 
     public static class InvoiceTaskList extends TeaModel {
-        @NameInMap("contact")
+        @com.aliyun.core.annotation.NameInMap("contact")
         private String contact;
 
-        @NameInMap("email")
+        @com.aliyun.core.annotation.NameInMap("email")
         private String email;
 
-        @NameInMap("flight_invoice_fee")
+        @com.aliyun.core.annotation.NameInMap("flight_invoice_fee")
         private String flightInvoiceFee;
 
-        @NameInMap("fu_point_invoice_fee")
+        @com.aliyun.core.annotation.NameInMap("fu_point_invoice_fee")
         private String fuPointInvoiceFee;
 
-        @NameInMap("hotel_normal_invoice_fee")
+        @com.aliyun.core.annotation.NameInMap("hotel_normal_invoice_fee")
         private String hotelNormalInvoiceFee;
 
-        @NameInMap("hotel_special_invoice_fee")
+        @com.aliyun.core.annotation.NameInMap("hotel_special_invoice_fee")
         private String hotelSpecialInvoiceFee;
 
-        @NameInMap("international_flight_invoice_fee")
+        @com.aliyun.core.annotation.NameInMap("international_flight_invoice_fee")
         private String internationalFlightInvoiceFee;
 
-        @NameInMap("international_hotel_invoice_fee")
+        @com.aliyun.core.annotation.NameInMap("international_hotel_invoice_fee")
         private String internationalHotelInvoiceFee;
 
-        @NameInMap("invoice_third_part_id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("invoice_third_part_id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String invoiceThirdPartId;
 
-        @NameInMap("invoice_type")
+        @com.aliyun.core.annotation.NameInMap("invoice_type")
         private Integer invoiceType;
 
-        @NameInMap("mail_address")
+        @com.aliyun.core.annotation.NameInMap("mail_address")
         private String mailAddress;
 
-        @NameInMap("mail_city")
+        @com.aliyun.core.annotation.NameInMap("mail_city")
         private String mailCity;
 
-        @NameInMap("mail_full_address")
+        @com.aliyun.core.annotation.NameInMap("mail_full_address")
         private String mailFullAddress;
 
-        @NameInMap("mail_province")
+        @com.aliyun.core.annotation.NameInMap("mail_province")
         private String mailProvince;
 
-        @NameInMap("meal_normal_invoice_fee")
+        @com.aliyun.core.annotation.NameInMap("meal_normal_invoice_fee")
         private String mealNormalInvoiceFee;
 
-        @NameInMap("penalty_fee")
+        @com.aliyun.core.annotation.NameInMap("penalty_fee")
         private String penaltyFee;
 
-        @NameInMap("remark")
+        @com.aliyun.core.annotation.NameInMap("remark")
         private String remark;
 
-        @NameInMap("service_fee")
+        @com.aliyun.core.annotation.NameInMap("service_fee")
         private String serviceFee;
 
-        @NameInMap("telephone")
+        @com.aliyun.core.annotation.NameInMap("telephone")
         private String telephone;
 
-        @NameInMap("train_invoice_fee")
+        @com.aliyun.core.annotation.NameInMap("train_invoice_fee")
         private String trainInvoiceFee;
 
-        @NameInMap("vehicle_invoice_fee")
+        @com.aliyun.core.annotation.NameInMap("vehicle_invoice_fee")
         private String vehicleInvoiceFee;
 
         private InvoiceTaskList(Builder builder) {

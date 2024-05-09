@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CarApplyQueryRequest</p>
  */
 public class CarApplyQueryRequest extends Request {
-    @Query
-    @NameInMap("created_end_at")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("created_end_at")
     private String createdEndAt;
 
-    @Query
-    @NameInMap("created_start_at")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("created_start_at")
     private String createdStartAt;
 
-    @Query
-    @NameInMap("page_number")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page_number")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("page_size")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page_size")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("third_part_apply_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("third_part_apply_id")
     private String thirdPartApplyId;
 
-    @Query
-    @NameInMap("user_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("user_id")
     private String userId;
 
-    @Header
-    @NameInMap("x-acs-btrip-so-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-so-corp-token")
     private String xAcsBtripSoCorpToken;
 
     private CarApplyQueryRequest(Builder builder) {

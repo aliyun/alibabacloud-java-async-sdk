@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InsureRefundDetailResponseBody</p>
  */
 public class InsureRefundDetailResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private InsureRefundDetailResponseBody(Builder builder) {
@@ -152,16 +151,16 @@ public class InsureRefundDetailResponseBody extends TeaModel {
     } 
 
     public static class Applicant extends TeaModel {
-        @NameInMap("cert_name")
+        @com.aliyun.core.annotation.NameInMap("cert_name")
         private String certName;
 
-        @NameInMap("cert_no")
+        @com.aliyun.core.annotation.NameInMap("cert_no")
         private String certNo;
 
-        @NameInMap("cert_type")
+        @com.aliyun.core.annotation.NameInMap("cert_type")
         private String certType;
 
-        @NameInMap("phone")
+        @com.aliyun.core.annotation.NameInMap("phone")
         private String phone;
 
         private Applicant(Builder builder) {
@@ -253,34 +252,34 @@ public class InsureRefundDetailResponseBody extends TeaModel {
 
     }
     public static class InsureOrder extends TeaModel {
-        @NameInMap("applicant")
+        @com.aliyun.core.annotation.NameInMap("applicant")
         private Applicant applicant;
 
-        @NameInMap("biz_order_id")
+        @com.aliyun.core.annotation.NameInMap("biz_order_id")
         private String bizOrderId;
 
-        @NameInMap("biz_type")
+        @com.aliyun.core.annotation.NameInMap("biz_type")
         private Integer bizType;
 
-        @NameInMap("close_time")
+        @com.aliyun.core.annotation.NameInMap("close_time")
         private String closeTime;
 
-        @NameInMap("ins_order_id")
+        @com.aliyun.core.annotation.NameInMap("ins_order_id")
         private String insOrderId;
 
-        @NameInMap("out_ins_order_id")
+        @com.aliyun.core.annotation.NameInMap("out_ins_order_id")
         private String outInsOrderId;
 
-        @NameInMap("pay_time")
+        @com.aliyun.core.annotation.NameInMap("pay_time")
         private String payTime;
 
-        @NameInMap("price")
+        @com.aliyun.core.annotation.NameInMap("price")
         private Long price;
 
-        @NameInMap("settle_type")
+        @com.aliyun.core.annotation.NameInMap("settle_type")
         private Integer settleType;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
         private InsureOrder(Builder builder) {
@@ -474,31 +473,31 @@ public class InsureRefundDetailResponseBody extends TeaModel {
 
     }
     public static class InsureSegment extends TeaModel {
-        @NameInMap("arr_airport_code")
+        @com.aliyun.core.annotation.NameInMap("arr_airport_code")
         private String arrAirportCode;
 
-        @NameInMap("arr_city")
+        @com.aliyun.core.annotation.NameInMap("arr_city")
         private String arrCity;
 
-        @NameInMap("arr_city_code")
+        @com.aliyun.core.annotation.NameInMap("arr_city_code")
         private String arrCityCode;
 
-        @NameInMap("arr_time")
+        @com.aliyun.core.annotation.NameInMap("arr_time")
         private String arrTime;
 
-        @NameInMap("dep_airport_code")
+        @com.aliyun.core.annotation.NameInMap("dep_airport_code")
         private String depAirportCode;
 
-        @NameInMap("dep_city")
+        @com.aliyun.core.annotation.NameInMap("dep_city")
         private String depCity;
 
-        @NameInMap("dep_city_code")
+        @com.aliyun.core.annotation.NameInMap("dep_city_code")
         private String depCityCode;
 
-        @NameInMap("dep_time")
+        @com.aliyun.core.annotation.NameInMap("dep_time")
         private String depTime;
 
-        @NameInMap("flight_no")
+        @com.aliyun.core.annotation.NameInMap("flight_no")
         private String flightNo;
 
         private InsureSegment(Builder builder) {
@@ -675,25 +674,25 @@ public class InsureRefundDetailResponseBody extends TeaModel {
 
     }
     public static class Insured extends TeaModel {
-        @NameInMap("birthday")
+        @com.aliyun.core.annotation.NameInMap("birthday")
         private String birthday;
 
-        @NameInMap("btrip_user_id")
+        @com.aliyun.core.annotation.NameInMap("btrip_user_id")
         private String btripUserId;
 
-        @NameInMap("cert_name")
+        @com.aliyun.core.annotation.NameInMap("cert_name")
         private String certName;
 
-        @NameInMap("cert_no")
+        @com.aliyun.core.annotation.NameInMap("cert_no")
         private String certNo;
 
-        @NameInMap("cert_type")
+        @com.aliyun.core.annotation.NameInMap("cert_type")
         private String certType;
 
-        @NameInMap("gender")
+        @com.aliyun.core.annotation.NameInMap("gender")
         private String gender;
 
-        @NameInMap("phone")
+        @com.aliyun.core.annotation.NameInMap("phone")
         private String phone;
 
         private Insured(Builder builder) {
@@ -836,49 +835,49 @@ public class InsureRefundDetailResponseBody extends TeaModel {
 
     }
     public static class SubOrderRefundList extends TeaModel {
-        @NameInMap("effective_end_time")
+        @com.aliyun.core.annotation.NameInMap("effective_end_time")
         private String effectiveEndTime;
 
-        @NameInMap("effective_start_time")
+        @com.aliyun.core.annotation.NameInMap("effective_start_time")
         private String effectiveStartTime;
 
-        @NameInMap("insure_segment")
+        @com.aliyun.core.annotation.NameInMap("insure_segment")
         private InsureSegment insureSegment;
 
-        @NameInMap("insure_time")
+        @com.aliyun.core.annotation.NameInMap("insure_time")
         private String insureTime;
 
-        @NameInMap("insured")
+        @com.aliyun.core.annotation.NameInMap("insured")
         private Insured insured;
 
-        @NameInMap("out_sub_ins_order_id")
+        @com.aliyun.core.annotation.NameInMap("out_sub_ins_order_id")
         private String outSubInsOrderId;
 
-        @NameInMap("policy_no")
+        @com.aliyun.core.annotation.NameInMap("policy_no")
         private String policyNo;
 
-        @NameInMap("policy_refund_no")
+        @com.aliyun.core.annotation.NameInMap("policy_refund_no")
         private String policyRefundNo;
 
-        @NameInMap("price")
+        @com.aliyun.core.annotation.NameInMap("price")
         private Long price;
 
-        @NameInMap("product_name")
+        @com.aliyun.core.annotation.NameInMap("product_name")
         private String productName;
 
-        @NameInMap("product_no")
+        @com.aliyun.core.annotation.NameInMap("product_no")
         private String productNo;
 
-        @NameInMap("refund_status")
+        @com.aliyun.core.annotation.NameInMap("refund_status")
         private String refundStatus;
 
-        @NameInMap("refund_time")
+        @com.aliyun.core.annotation.NameInMap("refund_time")
         private String refundTime;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("sub_ins_order_id")
+        @com.aliyun.core.annotation.NameInMap("sub_ins_order_id")
         private String subInsOrderId;
 
         private SubOrderRefundList(Builder builder) {
@@ -1157,25 +1156,25 @@ public class InsureRefundDetailResponseBody extends TeaModel {
 
     }
     public static class Module extends TeaModel {
-        @NameInMap("apply_id")
+        @com.aliyun.core.annotation.NameInMap("apply_id")
         private String applyId;
 
-        @NameInMap("gmt_create")
+        @com.aliyun.core.annotation.NameInMap("gmt_create")
         private String gmtCreate;
 
-        @NameInMap("gmt_modified")
+        @com.aliyun.core.annotation.NameInMap("gmt_modified")
         private String gmtModified;
 
-        @NameInMap("ins_order_id")
+        @com.aliyun.core.annotation.NameInMap("ins_order_id")
         private String insOrderId;
 
-        @NameInMap("insure_order")
+        @com.aliyun.core.annotation.NameInMap("insure_order")
         private InsureOrder insureOrder;
 
-        @NameInMap("out_apply_id")
+        @com.aliyun.core.annotation.NameInMap("out_apply_id")
         private String outApplyId;
 
-        @NameInMap("sub_order_refund_list")
+        @com.aliyun.core.annotation.NameInMap("sub_order_refund_list")
         private java.util.List < SubOrderRefundList> subOrderRefundList;
 
         private Module(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BaseCityInfoSearchRequest</p>
  */
 public class BaseCityInfoSearchRequest extends Request {
-    @Query
-    @NameInMap("keyword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("keyword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String keyword;
 
-    @Query
-    @NameInMap("region")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("region")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String region;
 
-    @Header
-    @NameInMap("x-acs-btrip-access-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-access-token")
     private String xAcsBtripAccessToken;
 
     private BaseCityInfoSearchRequest(Builder builder) {

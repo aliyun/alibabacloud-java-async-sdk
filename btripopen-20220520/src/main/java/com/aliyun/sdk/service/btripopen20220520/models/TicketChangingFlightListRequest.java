@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TicketChangingFlightListRequest</p>
  */
 public class TicketChangingFlightListRequest extends Request {
-    @Query
-    @NameInMap("arr_city")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("arr_city")
     private String arrCity;
 
-    @Query
-    @NameInMap("dep_city")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dep_city")
     private String depCity;
 
-    @Query
-    @NameInMap("dep_date")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dep_date")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String depDate;
 
-    @Query
-    @NameInMap("dis_order_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dis_order_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String disOrderId;
 
-    @Query
-    @NameInMap("is_voluntary")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("is_voluntary")
     private Integer isVoluntary;
 
-    @Query
-    @NameInMap("traveler_info_list")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("traveler_info_list")
     private java.util.List < TravelerInfoList> travelerInfoList;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private TicketChangingFlightListRequest(Builder builder) {
@@ -211,22 +210,22 @@ public class TicketChangingFlightListRequest extends Request {
     } 
 
     public static class TravelerInfoList extends TeaModel {
-        @NameInMap("arr_city")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("arr_city")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String arrCity;
 
-        @NameInMap("dep_city")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("dep_city")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String depCity;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("user_id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("user_id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String userId;
 
         private TravelerInfoList(Builder builder) {

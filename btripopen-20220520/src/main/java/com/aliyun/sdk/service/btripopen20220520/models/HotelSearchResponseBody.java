@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>HotelSearchResponseBody</p>
  */
 public class HotelSearchResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private HotelSearchResponseBody(Builder builder) {
@@ -152,10 +151,10 @@ public class HotelSearchResponseBody extends TeaModel {
     } 
 
     public static class DiscountDetail extends TeaModel {
-        @NameInMap("label_name")
+        @com.aliyun.core.annotation.NameInMap("label_name")
         private java.util.List < String > labelName;
 
-        @NameInMap("money_desc")
+        @com.aliyun.core.annotation.NameInMap("money_desc")
         private String moneyDesc;
 
         private DiscountDetail(Builder builder) {
@@ -213,19 +212,19 @@ public class HotelSearchResponseBody extends TeaModel {
 
     }
     public static class DiscountDesc extends TeaModel {
-        @NameInMap("cash_reduce_total")
+        @com.aliyun.core.annotation.NameInMap("cash_reduce_total")
         private String cashReduceTotal;
 
-        @NameInMap("dinamic_label")
+        @com.aliyun.core.annotation.NameInMap("dinamic_label")
         private String dinamicLabel;
 
-        @NameInMap("discount_detail")
+        @com.aliyun.core.annotation.NameInMap("discount_detail")
         private java.util.List < DiscountDetail> discountDetail;
 
-        @NameInMap("sub_title")
+        @com.aliyun.core.annotation.NameInMap("sub_title")
         private String subTitle;
 
-        @NameInMap("title")
+        @com.aliyun.core.annotation.NameInMap("title")
         private String title;
 
         private DiscountDesc(Builder builder) {
@@ -334,61 +333,61 @@ public class HotelSearchResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("brand_name")
+        @com.aliyun.core.annotation.NameInMap("brand_name")
         private String brandName;
 
-        @NameInMap("btand_code")
+        @com.aliyun.core.annotation.NameInMap("btand_code")
         private String btandCode;
 
-        @NameInMap("city_code")
+        @com.aliyun.core.annotation.NameInMap("city_code")
         private String cityCode;
 
-        @NameInMap("discount_desc")
+        @com.aliyun.core.annotation.NameInMap("discount_desc")
         private DiscountDesc discountDesc;
 
-        @NameInMap("distance")
+        @com.aliyun.core.annotation.NameInMap("distance")
         private Integer distance;
 
-        @NameInMap("district_code")
+        @com.aliyun.core.annotation.NameInMap("district_code")
         private String districtCode;
 
-        @NameInMap("hotel_address")
+        @com.aliyun.core.annotation.NameInMap("hotel_address")
         private String hotelAddress;
 
-        @NameInMap("hotel_code")
+        @com.aliyun.core.annotation.NameInMap("hotel_code")
         private String hotelCode;
 
-        @NameInMap("hotel_en_name")
+        @com.aliyun.core.annotation.NameInMap("hotel_en_name")
         private String hotelEnName;
 
-        @NameInMap("hotel_name")
+        @com.aliyun.core.annotation.NameInMap("hotel_name")
         private String hotelName;
 
-        @NameInMap("hotel_star")
+        @com.aliyun.core.annotation.NameInMap("hotel_star")
         private String hotelStar;
 
-        @NameInMap("image_url")
+        @com.aliyun.core.annotation.NameInMap("image_url")
         private String imageUrl;
 
-        @NameInMap("is_protocol")
+        @com.aliyun.core.annotation.NameInMap("is_protocol")
         private Boolean isProtocol;
 
-        @NameInMap("location")
+        @com.aliyun.core.annotation.NameInMap("location")
         private String location;
 
-        @NameInMap("min_price")
+        @com.aliyun.core.annotation.NameInMap("min_price")
         private Double minPrice;
 
-        @NameInMap("original_min_price")
+        @com.aliyun.core.annotation.NameInMap("original_min_price")
         private Double originalMinPrice;
 
-        @NameInMap("score")
+        @com.aliyun.core.annotation.NameInMap("score")
         private String score;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("tel")
+        @com.aliyun.core.annotation.NameInMap("tel")
         private String tel;
 
         private Items(Builder builder) {
@@ -735,7 +734,7 @@ public class HotelSearchResponseBody extends TeaModel {
 
     }
     public static class Module extends TeaModel {
-        @NameInMap("items")
+        @com.aliyun.core.annotation.NameInMap("items")
         private java.util.List < Items> items;
 
         private Module(Builder builder) {

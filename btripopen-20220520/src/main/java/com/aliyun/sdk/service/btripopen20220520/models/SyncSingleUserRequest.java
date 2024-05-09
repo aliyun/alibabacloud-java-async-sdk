@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,54 +11,54 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SyncSingleUserRequest</p>
  */
 public class SyncSingleUserRequest extends Request {
-    @Body
-    @NameInMap("email")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("email")
     private String email;
 
-    @Body
-    @NameInMap("job_no")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("job_no")
     private String jobNo;
 
-    @Body
-    @NameInMap("leave_status")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("leave_status")
     private Integer leaveStatus;
 
-    @Body
-    @NameInMap("manager_user_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("manager_user_id")
     private String managerUserId;
 
-    @Body
-    @NameInMap("phone")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("phone")
     private String phone;
 
-    @Body
-    @NameInMap("position")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("position")
     private String position;
 
-    @Body
-    @NameInMap("position_level")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("position_level")
     private String positionLevel;
 
-    @Body
-    @NameInMap("real_name_en")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("real_name_en")
     private String realNameEn;
 
-    @Body
-    @NameInMap("third_depart_id_list")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("third_depart_id_list")
     private java.util.List < String > thirdDepartIdList;
 
-    @Body
-    @NameInMap("user_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("user_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
-    @Body
-    @NameInMap("user_name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("user_name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userName;
 
-    @Header
-    @NameInMap("x-acs-btrip-so-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-so-corp-token")
     private String xAcsBtripSoCorpToken;
 
     private SyncSingleUserRequest(Builder builder) {

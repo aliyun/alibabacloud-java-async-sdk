@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,39 +11,39 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GroupDepartSaveRequest</p>
  */
 public class GroupDepartSaveRequest extends Request {
-    @Body
-    @NameInMap("dept_name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dept_name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deptName;
 
-    @Body
-    @NameInMap("manager_ids")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("manager_ids")
     private String managerIds;
 
-    @Body
-    @NameInMap("outer_dept_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("outer_dept_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String outerDeptId;
 
-    @Body
-    @NameInMap("outer_dept_pid")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("outer_dept_pid")
     private String outerDeptPid;
 
-    @Body
-    @NameInMap("status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer status;
 
-    @Body
-    @NameInMap("sub_corp_id_list")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sub_corp_id_list")
     private java.util.List < String > subCorpIdList;
 
-    @Body
-    @NameInMap("sync_group")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sync_group")
     private Boolean syncGroup;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private GroupDepartSaveRequest(Builder builder) {

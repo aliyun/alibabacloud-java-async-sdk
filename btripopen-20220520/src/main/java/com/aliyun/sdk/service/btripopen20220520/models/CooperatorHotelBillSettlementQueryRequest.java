@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CooperatorHotelBillSettlementQueryRequest</p>
  */
 public class CooperatorHotelBillSettlementQueryRequest extends Request {
-    @Query
-    @NameInMap("cooperator_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("cooperator_id")
     private String cooperatorId;
 
-    @Query
-    @NameInMap("page_no")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page_no")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNo;
 
-    @Query
-    @NameInMap("page_size")
-    @Validation(required = true, maximum = 100)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page_size")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("period_end")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("period_end")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String periodEnd;
 
-    @Query
-    @NameInMap("period_start")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("period_start")
     private String periodStart;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private CooperatorHotelBillSettlementQueryRequest(Builder builder) {

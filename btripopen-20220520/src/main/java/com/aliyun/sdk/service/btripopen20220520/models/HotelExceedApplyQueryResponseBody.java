@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>HotelExceedApplyQueryResponseBody</p>
  */
 public class HotelExceedApplyQueryResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private HotelExceedApplyQueryResponseBody(Builder builder) {
@@ -152,25 +151,25 @@ public class HotelExceedApplyQueryResponseBody extends TeaModel {
     } 
 
     public static class ApplyIntentionInfoDo extends TeaModel {
-        @NameInMap("check_in")
+        @com.aliyun.core.annotation.NameInMap("check_in")
         private String checkIn;
 
-        @NameInMap("check_out")
+        @com.aliyun.core.annotation.NameInMap("check_out")
         private String checkOut;
 
-        @NameInMap("city_code")
+        @com.aliyun.core.annotation.NameInMap("city_code")
         private String cityCode;
 
-        @NameInMap("city_name")
+        @com.aliyun.core.annotation.NameInMap("city_name")
         private String cityName;
 
-        @NameInMap("price")
+        @com.aliyun.core.annotation.NameInMap("price")
         private Long price;
 
-        @NameInMap("together")
+        @com.aliyun.core.annotation.NameInMap("together")
         private Boolean together;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private Integer type;
 
         private ApplyIntentionInfoDo(Builder builder) {
@@ -313,40 +312,40 @@ public class HotelExceedApplyQueryResponseBody extends TeaModel {
 
     }
     public static class Module extends TeaModel {
-        @NameInMap("apply_id")
+        @com.aliyun.core.annotation.NameInMap("apply_id")
         private Long applyId;
 
-        @NameInMap("apply_intention_info_do")
+        @com.aliyun.core.annotation.NameInMap("apply_intention_info_do")
         private ApplyIntentionInfoDo applyIntentionInfoDo;
 
-        @NameInMap("btrip_cause")
+        @com.aliyun.core.annotation.NameInMap("btrip_cause")
         private String btripCause;
 
-        @NameInMap("corp_id")
+        @com.aliyun.core.annotation.NameInMap("corp_id")
         private String corpId;
 
-        @NameInMap("exceed_reason")
+        @com.aliyun.core.annotation.NameInMap("exceed_reason")
         private String exceedReason;
 
-        @NameInMap("exceed_type")
+        @com.aliyun.core.annotation.NameInMap("exceed_type")
         private Integer exceedType;
 
-        @NameInMap("origin_standard")
+        @com.aliyun.core.annotation.NameInMap("origin_standard")
         private String originStandard;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("submit_time")
+        @com.aliyun.core.annotation.NameInMap("submit_time")
         private String submitTime;
 
-        @NameInMap("thirdpart_apply_id")
+        @com.aliyun.core.annotation.NameInMap("thirdpart_apply_id")
         private String thirdpartApplyId;
 
-        @NameInMap("thirdpart_corp_id")
+        @com.aliyun.core.annotation.NameInMap("thirdpart_corp_id")
         private String thirdpartCorpId;
 
-        @NameInMap("user_id")
+        @com.aliyun.core.annotation.NameInMap("user_id")
         private String userId;
 
         private Module(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CorpAuthLinkInfoQueryResponseBody</p>
  */
 public class CorpAuthLinkInfoQueryResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private CorpAuthLinkInfoQueryResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class CorpAuthLinkInfoQueryResponseBody extends TeaModel {
     } 
 
     public static class LinkCorps extends TeaModel {
-        @NameInMap("corp_name")
+        @com.aliyun.core.annotation.NameInMap("corp_name")
         private String corpName;
 
-        @NameInMap("open_corp_id")
+        @com.aliyun.core.annotation.NameInMap("open_corp_id")
         private String openCorpId;
 
-        @NameInMap("true_corp_id")
+        @com.aliyun.core.annotation.NameInMap("true_corp_id")
         private String trueCorpId;
 
         private LinkCorps(Builder builder) {
@@ -213,13 +212,13 @@ public class CorpAuthLinkInfoQueryResponseBody extends TeaModel {
 
     }
     public static class OrgCorp extends TeaModel {
-        @NameInMap("corp_name")
+        @com.aliyun.core.annotation.NameInMap("corp_name")
         private String corpName;
 
-        @NameInMap("open_corp_id")
+        @com.aliyun.core.annotation.NameInMap("open_corp_id")
         private String openCorpId;
 
-        @NameInMap("true_corp_id")
+        @com.aliyun.core.annotation.NameInMap("true_corp_id")
         private String trueCorpId;
 
         private OrgCorp(Builder builder) {
@@ -294,10 +293,10 @@ public class CorpAuthLinkInfoQueryResponseBody extends TeaModel {
 
     }
     public static class Module extends TeaModel {
-        @NameInMap("link_corps")
+        @com.aliyun.core.annotation.NameInMap("link_corps")
         private java.util.List < LinkCorps> linkCorps;
 
-        @NameInMap("org_corp")
+        @com.aliyun.core.annotation.NameInMap("org_corp")
         private OrgCorp orgCorp;
 
         private Module(Builder builder) {

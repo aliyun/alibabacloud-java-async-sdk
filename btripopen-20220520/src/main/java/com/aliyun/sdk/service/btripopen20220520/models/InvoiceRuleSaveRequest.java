@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InvoiceRuleSaveRequest</p>
  */
 public class InvoiceRuleSaveRequest extends Request {
-    @Body
-    @NameInMap("all_employe")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("all_employe")
     private Boolean allEmploye;
 
-    @Body
-    @NameInMap("entities")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("entities")
     private java.util.List < Entities> entities;
 
-    @Body
-    @NameInMap("scope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("scope")
     private Integer scope;
 
-    @Body
-    @NameInMap("third_part_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("third_part_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String thirdPartId;
 
-    @Header
-    @NameInMap("x-acs-btrip-so-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-so-corp-token")
     private String xAcsBtripSoCorpToken;
 
     private InvoiceRuleSaveRequest(Builder builder) {
@@ -164,13 +163,13 @@ public class InvoiceRuleSaveRequest extends Request {
     } 
 
     public static class Entities extends TeaModel {
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private Integer type;
 
         private Entities(Builder builder) {

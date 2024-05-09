@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>HotelPricePullRequest</p>
  */
 public class HotelPricePullRequest extends Request {
-    @Query
-    @NameInMap("btrip_user_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("btrip_user_id")
     private String btripUserId;
 
-    @Query
-    @NameInMap("check_in")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("check_in")
     private String checkIn;
 
-    @Query
-    @NameInMap("check_out")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("check_out")
     private String checkOut;
 
-    @Query
-    @NameInMap("city_code")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("city_code")
     private Integer cityCode;
 
-    @Query
-    @NameInMap("hotel_ids")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("hotel_ids")
     private java.util.List < String > hotelIds;
 
-    @Query
-    @NameInMap("payment_type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("payment_type")
     private Integer paymentType;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private HotelPricePullRequest(Builder builder) {

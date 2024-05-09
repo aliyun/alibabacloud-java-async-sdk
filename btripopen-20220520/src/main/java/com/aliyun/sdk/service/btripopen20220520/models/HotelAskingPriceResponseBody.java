@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>HotelAskingPriceResponseBody</p>
  */
 public class HotelAskingPriceResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private HotelAskingPriceResponseBody(Builder builder) {
@@ -152,25 +151,25 @@ public class HotelAskingPriceResponseBody extends TeaModel {
     } 
 
     public static class HotelAskingPriceDetails extends TeaModel {
-        @NameInMap("city_code")
+        @com.aliyun.core.annotation.NameInMap("city_code")
         private String cityCode;
 
-        @NameInMap("hotel_address")
+        @com.aliyun.core.annotation.NameInMap("hotel_address")
         private String hotelAddress;
 
-        @NameInMap("hotel_code")
+        @com.aliyun.core.annotation.NameInMap("hotel_code")
         private String hotelCode;
 
-        @NameInMap("hotel_name")
+        @com.aliyun.core.annotation.NameInMap("hotel_name")
         private String hotelName;
 
-        @NameInMap("is_protocol")
+        @com.aliyun.core.annotation.NameInMap("is_protocol")
         private Boolean isProtocol;
 
-        @NameInMap("min_price")
+        @com.aliyun.core.annotation.NameInMap("min_price")
         private Double minPrice;
 
-        @NameInMap("original_min_price")
+        @com.aliyun.core.annotation.NameInMap("original_min_price")
         private Double originalMinPrice;
 
         private HotelAskingPriceDetails(Builder builder) {
@@ -313,7 +312,7 @@ public class HotelAskingPriceResponseBody extends TeaModel {
 
     }
     public static class Module extends TeaModel {
-        @NameInMap("hotel_asking_price_details")
+        @com.aliyun.core.annotation.NameInMap("hotel_asking_price_details")
         private java.util.List < HotelAskingPriceDetails> hotelAskingPriceDetails;
 
         private Module(Builder builder) {

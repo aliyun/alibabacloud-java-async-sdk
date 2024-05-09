@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ApplyApproveRequest</p>
  */
 public class ApplyApproveRequest extends Request {
-    @Body
-    @NameInMap("apply_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("apply_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String applyId;
 
-    @Body
-    @NameInMap("note")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("note")
     private String note;
 
-    @Body
-    @NameInMap("operate_time")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("operate_time")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String operateTime;
 
-    @Body
-    @NameInMap("status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer status;
 
-    @Body
-    @NameInMap("sub_corp_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sub_corp_id")
     private String subCorpId;
 
-    @Body
-    @NameInMap("user_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("user_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
-    @Body
-    @NameInMap("user_name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("user_name")
     private String userName;
 
-    @Header
-    @NameInMap("x-acs-btrip-so-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-so-corp-token")
     private String xAcsBtripSoCorpToken;
 
     private ApplyApproveRequest(Builder builder) {

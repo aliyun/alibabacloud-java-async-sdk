@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CommonApplyQueryResponseBody</p>
  */
 public class CommonApplyQueryResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private CommonApplyQueryResponseBody(Builder builder) {
@@ -152,37 +151,37 @@ public class CommonApplyQueryResponseBody extends TeaModel {
     } 
 
     public static class Module extends TeaModel {
-        @NameInMap("apply_id")
+        @com.aliyun.core.annotation.NameInMap("apply_id")
         private Long applyId;
 
-        @NameInMap("biz_category")
+        @com.aliyun.core.annotation.NameInMap("biz_category")
         private Integer bizCategory;
 
-        @NameInMap("cause")
+        @com.aliyun.core.annotation.NameInMap("cause")
         private String cause;
 
-        @NameInMap("corp_id")
+        @com.aliyun.core.annotation.NameInMap("corp_id")
         private String corpId;
 
-        @NameInMap("extend_value")
+        @com.aliyun.core.annotation.NameInMap("extend_value")
         private String extendValue;
 
-        @NameInMap("gmt_create")
+        @com.aliyun.core.annotation.NameInMap("gmt_create")
         private String gmtCreate;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("thirdpart_corp_id")
+        @com.aliyun.core.annotation.NameInMap("thirdpart_corp_id")
         private String thirdpartCorpId;
 
-        @NameInMap("thirdpart_id")
+        @com.aliyun.core.annotation.NameInMap("thirdpart_id")
         private String thirdpartId;
 
-        @NameInMap("trip_cause")
+        @com.aliyun.core.annotation.NameInMap("trip_cause")
         private String tripCause;
 
-        @NameInMap("user_id")
+        @com.aliyun.core.annotation.NameInMap("user_id")
         private String userId;
 
         private Module(Builder builder) {

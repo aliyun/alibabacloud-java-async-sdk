@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SyncThirdUserMappingRequest</p>
  */
 public class SyncThirdUserMappingRequest extends Request {
-    @Body
-    @NameInMap("status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer status;
 
-    @Body
-    @NameInMap("third_channel_type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("third_channel_type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String thirdChannelType;
 
-    @Body
-    @NameInMap("third_user_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("third_user_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String thirdUserId;
 
-    @Body
-    @NameInMap("user_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("user_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private SyncThirdUserMappingRequest(Builder builder) {

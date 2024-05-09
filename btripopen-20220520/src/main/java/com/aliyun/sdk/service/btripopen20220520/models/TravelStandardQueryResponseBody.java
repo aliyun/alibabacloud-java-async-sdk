@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TravelStandardQueryResponseBody</p>
  */
 public class TravelStandardQueryResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private TravelStandardQueryResponseBody(Builder builder) {
@@ -152,19 +151,19 @@ public class TravelStandardQueryResponseBody extends TeaModel {
     } 
 
     public static class MainReserveRule extends TeaModel {
-        @NameInMap("open_service_type_list")
+        @com.aliyun.core.annotation.NameInMap("open_service_type_list")
         private java.util.List < String > openServiceTypeList;
 
-        @NameInMap("rule_code")
+        @com.aliyun.core.annotation.NameInMap("rule_code")
         private Long ruleCode;
 
-        @NameInMap("rule_desc")
+        @com.aliyun.core.annotation.NameInMap("rule_desc")
         private String ruleDesc;
 
-        @NameInMap("rule_id")
+        @com.aliyun.core.annotation.NameInMap("rule_id")
         private Long ruleId;
 
-        @NameInMap("rule_name")
+        @com.aliyun.core.annotation.NameInMap("rule_name")
         private String ruleName;
 
         private MainReserveRule(Builder builder) {
@@ -273,10 +272,10 @@ public class TravelStandardQueryResponseBody extends TeaModel {
 
     }
     public static class ModuleConfigList extends TeaModel {
-        @NameInMap("code")
+        @com.aliyun.core.annotation.NameInMap("code")
         private String code;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private ModuleConfigList(Builder builder) {
@@ -334,10 +333,10 @@ public class TravelStandardQueryResponseBody extends TeaModel {
 
     }
     public static class ReserveRule extends TeaModel {
-        @NameInMap("main_reserve_rule")
+        @com.aliyun.core.annotation.NameInMap("main_reserve_rule")
         private MainReserveRule mainReserveRule;
 
-        @NameInMap("module_config_list")
+        @com.aliyun.core.annotation.NameInMap("module_config_list")
         private java.util.List < ModuleConfigList> moduleConfigList;
 
         private ReserveRule(Builder builder) {
@@ -395,10 +394,10 @@ public class TravelStandardQueryResponseBody extends TeaModel {
 
     }
     public static class Module extends TeaModel {
-        @NameInMap("activated_service_type_list")
+        @com.aliyun.core.annotation.NameInMap("activated_service_type_list")
         private java.util.List < String > activatedServiceTypeList;
 
-        @NameInMap("reserve_rule")
+        @com.aliyun.core.annotation.NameInMap("reserve_rule")
         private ReserveRule reserveRule;
 
         private Module(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,35 +11,35 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>IsvRuleSaveRequest</p>
  */
 public class IsvRuleSaveRequest extends Request {
-    @Body
-    @NameInMap("apply_need")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("apply_need")
     private Boolean applyNeed;
 
-    @Body
-    @NameInMap("book_type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("book_type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bookType;
 
-    @Body
-    @NameInMap("bookuser_list")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("bookuser_list")
     private java.util.List < BookuserList> bookuserList;
 
-    @Body
-    @NameInMap("rule_need")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("rule_need")
     private Boolean ruleNeed;
 
-    @Body
-    @NameInMap("status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer status;
 
-    @Body
-    @NameInMap("user_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("user_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
-    @Header
-    @NameInMap("x-acs-btrip-so-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-so-corp-token")
     private String xAcsBtripSoCorpToken;
 
     private IsvRuleSaveRequest(Builder builder) {
@@ -212,12 +211,12 @@ public class IsvRuleSaveRequest extends Request {
     } 
 
     public static class BookuserList extends TeaModel {
-        @NameInMap("entity_id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("entity_id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String entityId;
 
-        @NameInMap("entity_type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("entity_type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer entityType;
 
         private BookuserList(Builder builder) {

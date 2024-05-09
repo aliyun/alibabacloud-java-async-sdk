@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>IntlFlightInventoryPriceCheckResponseBody</p>
  */
 public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result_code")
+    @com.aliyun.core.annotation.NameInMap("result_code")
     private String resultCode;
 
-    @NameInMap("result_msg")
+    @com.aliyun.core.annotation.NameInMap("result_msg")
     private String resultMsg;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private IntlFlightInventoryPriceCheckResponseBody(Builder builder) {
@@ -152,16 +151,16 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
     } 
 
     public static class ChangedPrice extends TeaModel {
-        @NameInMap("build_price")
+        @com.aliyun.core.annotation.NameInMap("build_price")
         private Long buildPrice;
 
-        @NameInMap("oil_price")
+        @com.aliyun.core.annotation.NameInMap("oil_price")
         private Long oilPrice;
 
-        @NameInMap("tax_price")
+        @com.aliyun.core.annotation.NameInMap("tax_price")
         private Long taxPrice;
 
-        @NameInMap("ticket_price")
+        @com.aliyun.core.annotation.NameInMap("ticket_price")
         private Long ticketPrice;
 
         private ChangedPrice(Builder builder) {
@@ -253,16 +252,16 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
 
     }
     public static class OriginalPrice extends TeaModel {
-        @NameInMap("build_price")
+        @com.aliyun.core.annotation.NameInMap("build_price")
         private Long buildPrice;
 
-        @NameInMap("oil_price")
+        @com.aliyun.core.annotation.NameInMap("oil_price")
         private Long oilPrice;
 
-        @NameInMap("tax_price")
+        @com.aliyun.core.annotation.NameInMap("tax_price")
         private Long taxPrice;
 
-        @NameInMap("ticket_price")
+        @com.aliyun.core.annotation.NameInMap("ticket_price")
         private Long ticketPrice;
 
         private OriginalPrice(Builder builder) {
@@ -354,16 +353,16 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
 
     }
     public static class PassengerChangedPriceInfoList extends TeaModel {
-        @NameInMap("changed")
+        @com.aliyun.core.annotation.NameInMap("changed")
         private Boolean changed;
 
-        @NameInMap("changed_price")
+        @com.aliyun.core.annotation.NameInMap("changed_price")
         private ChangedPrice changedPrice;
 
-        @NameInMap("original_price")
+        @com.aliyun.core.annotation.NameInMap("original_price")
         private OriginalPrice originalPrice;
 
-        @NameInMap("passenger_type")
+        @com.aliyun.core.annotation.NameInMap("passenger_type")
         private Integer passengerType;
 
         private PassengerChangedPriceInfoList(Builder builder) {
@@ -455,16 +454,16 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
 
     }
     public static class Module extends TeaModel {
-        @NameInMap("check_success")
+        @com.aliyun.core.annotation.NameInMap("check_success")
         private Boolean checkSuccess;
 
-        @NameInMap("fail_type")
+        @com.aliyun.core.annotation.NameInMap("fail_type")
         private Integer failType;
 
-        @NameInMap("passenger_changed_price_info_list")
+        @com.aliyun.core.annotation.NameInMap("passenger_changed_price_info_list")
         private java.util.List < PassengerChangedPriceInfoList> passengerChangedPriceInfoList;
 
-        @NameInMap("render_key")
+        @com.aliyun.core.annotation.NameInMap("render_key")
         private String renderKey;
 
         private Module(Builder builder) {

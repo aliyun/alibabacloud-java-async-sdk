@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,95 +11,95 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>FlightCreateOrderRequest</p>
  */
 public class FlightCreateOrderRequest extends Request {
-    @Body
-    @NameInMap("arr_airport_code")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("arr_airport_code")
     private String arrAirportCode;
 
-    @Body
-    @NameInMap("arr_city_code")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("arr_city_code")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String arrCityCode;
 
-    @Body
-    @NameInMap("auto_pay")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("auto_pay")
     private Integer autoPay;
 
-    @Body
-    @NameInMap("buyer_name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("buyer_name")
     private String buyerName;
 
-    @Body
-    @NameInMap("buyer_unique_key")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("buyer_unique_key")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String buyerUniqueKey;
 
-    @Body
-    @NameInMap("contact_info")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("contact_info")
+    @com.aliyun.core.annotation.Validation(required = true)
     private ContactInfo contactInfo;
 
-    @Body
-    @NameInMap("dep_airport_code")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dep_airport_code")
     private String depAirportCode;
 
-    @Body
-    @NameInMap("dep_city_code")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dep_city_code")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String depCityCode;
 
-    @Body
-    @NameInMap("dep_date")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dep_date")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String depDate;
 
-    @Body
-    @NameInMap("dis_order_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dis_order_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String disOrderId;
 
-    @Body
-    @NameInMap("order_attr")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("order_attr")
     private java.util.Map < String, ? > orderAttr;
 
-    @Body
-    @NameInMap("order_params")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("order_params")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String orderParams;
 
-    @Body
-    @NameInMap("ota_item_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ota_item_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String otaItemId;
 
-    @Body
-    @NameInMap("price")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("price")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long price;
 
-    @Body
-    @NameInMap("receipt_address")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("receipt_address")
     private String receiptAddress;
 
-    @Body
-    @NameInMap("receipt_target")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("receipt_target")
     private Integer receiptTarget;
 
-    @Body
-    @NameInMap("receipt_title")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("receipt_title")
     private String receiptTitle;
 
-    @Body
-    @NameInMap("traveler_info_list")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("traveler_info_list")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < TravelerInfoList> travelerInfoList;
 
-    @Body
-    @NameInMap("trip_type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("trip_type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer tripType;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private FlightCreateOrderRequest(Builder builder) {
@@ -521,15 +520,15 @@ public class FlightCreateOrderRequest extends Request {
     } 
 
     public static class ContactInfo extends TeaModel {
-        @NameInMap("contact_email")
+        @com.aliyun.core.annotation.NameInMap("contact_email")
         private String contactEmail;
 
-        @NameInMap("contact_name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("contact_name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String contactName;
 
-        @NameInMap("contact_phone")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("contact_phone")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String contactPhone;
 
         private ContactInfo(Builder builder) {
@@ -604,46 +603,46 @@ public class FlightCreateOrderRequest extends Request {
 
     }
     public static class TravelerInfoList extends TeaModel {
-        @NameInMap("birthday")
+        @com.aliyun.core.annotation.NameInMap("birthday")
         private String birthday;
 
-        @NameInMap("cert_nation")
+        @com.aliyun.core.annotation.NameInMap("cert_nation")
         private String certNation;
 
-        @NameInMap("cert_no")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("cert_no")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String certNo;
 
-        @NameInMap("cert_type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("cert_type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String certType;
 
-        @NameInMap("cert_valid_date")
+        @com.aliyun.core.annotation.NameInMap("cert_valid_date")
         private String certValidDate;
 
-        @NameInMap("name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
-        @NameInMap("nationality")
+        @com.aliyun.core.annotation.NameInMap("nationality")
         private String nationality;
 
-        @NameInMap("nationality_code")
+        @com.aliyun.core.annotation.NameInMap("nationality_code")
         private String nationalityCode;
 
-        @NameInMap("out_user_id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("out_user_id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String outUserId;
 
-        @NameInMap("phone")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("phone")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String phone;
 
-        @NameInMap("sex")
+        @com.aliyun.core.annotation.NameInMap("sex")
         private Integer sex;
 
-        @NameInMap("type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private TravelerInfoList(Builder builder) {

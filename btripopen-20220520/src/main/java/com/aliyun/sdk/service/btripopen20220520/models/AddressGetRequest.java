@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,74 +11,74 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddressGetRequest</p>
  */
 public class AddressGetRequest extends Request {
-    @Query
-    @NameInMap("action_type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("action_type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer actionType;
 
-    @Query
-    @NameInMap("arr_city_code")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("arr_city_code")
     private String arrCityCode;
 
-    @Query
-    @NameInMap("arr_city_name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("arr_city_name")
     private String arrCityName;
 
-    @Query
-    @NameInMap("car_scenes_code")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("car_scenes_code")
     private String carScenesCode;
 
-    @Query
-    @NameInMap("dep_city_code")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dep_city_code")
     private String depCityCode;
 
-    @Query
-    @NameInMap("dep_city_name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dep_city_name")
     private String depCityName;
 
-    @Query
-    @NameInMap("dep_date")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dep_date")
     private String depDate;
 
-    @Query
-    @NameInMap("itinerary_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("itinerary_id")
     private String itineraryId;
 
-    @Query
-    @NameInMap("order_Id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("order_Id")
     private String orderId;
 
-    @Query
-    @NameInMap("phone")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("phone")
     private String phone;
 
-    @Query
-    @NameInMap("sub_corp_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("sub_corp_id")
     private String subCorpId;
 
-    @Query
-    @NameInMap("taobao_callback_url")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("taobao_callback_url")
     private String taobaoCallbackUrl;
 
-    @Query
-    @NameInMap("traveler_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("traveler_id")
     private String travelerId;
 
-    @Query
-    @NameInMap("type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("type")
     private Integer type;
 
-    @Query
-    @NameInMap("use_booking_proxy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("use_booking_proxy")
     private Integer useBookingProxy;
 
-    @Query
-    @NameInMap("user_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("user_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
-    @Header
-    @NameInMap("x-acs-btrip-so-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-so-corp-token")
     private String xAcsBtripSoCorpToken;
 
     private AddressGetRequest(Builder builder) {

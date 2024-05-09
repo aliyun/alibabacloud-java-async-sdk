@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,45 +11,45 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TicketChangingApplyRequest</p>
  */
 public class TicketChangingApplyRequest extends Request {
-    @Body
-    @NameInMap("dis_order_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dis_order_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String disOrderId;
 
-    @Body
-    @NameInMap("dis_sub_order_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dis_sub_order_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String disSubOrderId;
 
-    @Body
-    @NameInMap("is_voluntary")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("is_voluntary")
     private Integer isVoluntary;
 
-    @Body
-    @NameInMap("modify_flight_info_list")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("modify_flight_info_list")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < ModifyFlightInfoList> modifyFlightInfoList;
 
-    @Body
-    @NameInMap("ota_item_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ota_item_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String otaItemId;
 
-    @Body
-    @NameInMap("reason")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("reason")
     private String reason;
 
-    @Body
-    @NameInMap("session_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("session_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sessionId;
 
-    @Body
-    @NameInMap("whether_retry")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("whether_retry")
     private Boolean whetherRetry;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private TicketChangingApplyRequest(Builder builder) {
@@ -260,16 +259,16 @@ public class TicketChangingApplyRequest extends Request {
     } 
 
     public static class PassengerInfoList extends TeaModel {
-        @NameInMap("origin_flight_no")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("origin_flight_no")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String originFlightNo;
 
-        @NameInMap("out_user_id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("out_user_id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String outUserId;
 
-        @NameInMap("passenger_name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("passenger_name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String passengerName;
 
         private PassengerInfoList(Builder builder) {
@@ -344,27 +343,27 @@ public class TicketChangingApplyRequest extends Request {
 
     }
     public static class ModifyFlightInfoList extends TeaModel {
-        @NameInMap("arr_city")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("arr_city")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String arrCity;
 
-        @NameInMap("cabin")
+        @com.aliyun.core.annotation.NameInMap("cabin")
         private String cabin;
 
-        @NameInMap("dep_city")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("dep_city")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String depCity;
 
-        @NameInMap("dep_date")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("dep_date")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String depDate;
 
-        @NameInMap("flight_no")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("flight_no")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String flightNo;
 
-        @NameInMap("passenger_info_list")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("passenger_info_list")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List < PassengerInfoList> passengerInfoList;
 
         private ModifyFlightInfoList(Builder builder) {

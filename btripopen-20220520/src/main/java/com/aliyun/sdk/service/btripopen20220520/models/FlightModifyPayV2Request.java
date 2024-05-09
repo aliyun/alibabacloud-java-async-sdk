@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>FlightModifyPayV2Request</p>
  */
 public class FlightModifyPayV2Request extends Request {
-    @Body
-    @NameInMap("ext_params")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ext_params")
     private java.util.Map < String, ? > extParams;
 
-    @Body
-    @NameInMap("isv_name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("isv_name")
     private String isvName;
 
-    @Body
-    @NameInMap("modify_pay_amount")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("modify_pay_amount")
     private Long modifyPayAmount;
 
-    @Body
-    @NameInMap("order_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("order_id")
     private Long orderId;
 
-    @Body
-    @NameInMap("out_order_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("out_order_id")
     private String outOrderId;
 
-    @Body
-    @NameInMap("out_sub_order_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("out_sub_order_id")
     private String outSubOrderId;
 
-    @Body
-    @NameInMap("sub_order_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sub_order_id")
     private Long subOrderId;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private FlightModifyPayV2Request(Builder builder) {

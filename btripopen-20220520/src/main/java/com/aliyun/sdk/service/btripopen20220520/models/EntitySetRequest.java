@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>EntitySetRequest</p>
  */
 public class EntitySetRequest extends Request {
-    @Body
-    @NameInMap("entity_d_o_list")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("entity_d_o_list")
     private java.util.List < EntityDOList> entityDOList;
 
-    @Body
-    @NameInMap("thirdpart_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("thirdpart_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String thirdpartId;
 
-    @Header
-    @NameInMap("x-acs-btrip-so-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-so-corp-token")
     private String xAcsBtripSoCorpToken;
 
     private EntitySetRequest(Builder builder) {
@@ -118,12 +117,12 @@ public class EntitySetRequest extends Request {
     } 
 
     public static class EntityDOList extends TeaModel {
-        @NameInMap("entity_id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("entity_id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String entityId;
 
-        @NameInMap("entity_type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("entity_type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String entityType;
 
         private EntityDOList(Builder builder) {

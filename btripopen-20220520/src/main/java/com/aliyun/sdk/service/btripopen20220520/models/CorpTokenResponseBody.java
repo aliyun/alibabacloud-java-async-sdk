@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CorpTokenResponseBody</p>
  */
 public class CorpTokenResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private CorpTokenResponseBody(Builder builder) {
@@ -172,10 +171,10 @@ public class CorpTokenResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("expire")
+        @com.aliyun.core.annotation.NameInMap("expire")
         private Long expire;
 
-        @NameInMap("token")
+        @com.aliyun.core.annotation.NameInMap("token")
         private String token;
 
         private Data(Builder builder) {
@@ -233,13 +232,13 @@ public class CorpTokenResponseBody extends TeaModel {
 
     }
     public static class Module extends TeaModel {
-        @NameInMap("expire")
+        @com.aliyun.core.annotation.NameInMap("expire")
         private Long expire;
 
-        @NameInMap("start")
+        @com.aliyun.core.annotation.NameInMap("start")
         private Long start;
 
-        @NameInMap("token")
+        @com.aliyun.core.annotation.NameInMap("token")
         private String token;
 
         private Module(Builder builder) {

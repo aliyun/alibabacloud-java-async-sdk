@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,101 +11,101 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>HotelSearchRequest</p>
  */
 public class HotelSearchRequest extends Request {
-    @Query
-    @NameInMap("adult_num")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("adult_num")
     private String adultNum;
 
-    @Query
-    @NameInMap("brand_code")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("brand_code")
     private java.util.List < String > brandCode;
 
-    @Query
-    @NameInMap("btrip_user_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("btrip_user_id")
     private String btripUserId;
 
-    @Query
-    @NameInMap("check_in_date")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("check_in_date")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String checkInDate;
 
-    @Query
-    @NameInMap("check_out_date")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("check_out_date")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String checkOutDate;
 
-    @Query
-    @NameInMap("city_code")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("city_code")
     private String cityCode;
 
-    @Query
-    @NameInMap("dir")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dir")
     private Integer dir;
 
-    @Query
-    @NameInMap("distance")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("distance")
     private Integer distance;
 
-    @Query
-    @NameInMap("district_code")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("district_code")
     private String districtCode;
 
-    @Query
-    @NameInMap("hotel_star")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("hotel_star")
     private String hotelStar;
 
-    @Query
-    @NameInMap("is_protocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("is_protocol")
     private Boolean isProtocol;
 
-    @Query
-    @NameInMap("key_words")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("key_words")
     private String keyWords;
 
-    @Query
-    @NameInMap("location")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("location")
     private String location;
 
-    @Query
-    @NameInMap("max_price")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("max_price")
     private Double maxPrice;
 
-    @Query
-    @NameInMap("min_price")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("min_price")
     private Double minPrice;
 
-    @Query
-    @NameInMap("page_no")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page_no")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNo;
 
-    @Query
-    @NameInMap("page_size")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page_size")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("pay_over_type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pay_over_type")
     private Integer payOverType;
 
-    @Query
-    @NameInMap("payment_type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("payment_type")
     private Integer paymentType;
 
-    @Query
-    @NameInMap("shids")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("shids")
     private java.util.List < Long > shids;
 
-    @Query
-    @NameInMap("sort_code")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("sort_code")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer sortCode;
 
-    @Query
-    @NameInMap("super_man")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("super_man")
     private Integer superMan;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private HotelSearchRequest(Builder builder) {

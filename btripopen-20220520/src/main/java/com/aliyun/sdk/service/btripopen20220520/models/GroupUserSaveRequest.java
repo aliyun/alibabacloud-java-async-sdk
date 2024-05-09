@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,51 +11,51 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GroupUserSaveRequest</p>
  */
 public class GroupUserSaveRequest extends Request {
-    @Body
-    @NameInMap("base_city_code")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("base_city_code")
     private String baseCityCode;
 
-    @Body
-    @NameInMap("birthday")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("birthday")
     private String birthday;
 
-    @Body
-    @NameInMap("cert_list")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("cert_list")
     private java.util.List < CertList> certList;
 
-    @Body
-    @NameInMap("gender")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("gender")
     private String gender;
 
-    @Body
-    @NameInMap("job_no")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("job_no")
     private String jobNo;
 
-    @Body
-    @NameInMap("phone")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("phone")
     private String phone;
 
-    @Body
-    @NameInMap("real_name_en")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("real_name_en")
     private String realNameEn;
 
-    @Body
-    @NameInMap("sub_corp_id_list")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sub_corp_id_list")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < SubCorpIdList> subCorpIdList;
 
-    @Body
-    @NameInMap("user_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("user_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
-    @Body
-    @NameInMap("user_name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("user_name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userName;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private GroupUserSaveRequest(Builder builder) {
@@ -305,19 +304,19 @@ public class GroupUserSaveRequest extends Request {
     } 
 
     public static class CertList extends TeaModel {
-        @NameInMap("cert_expired_time")
+        @com.aliyun.core.annotation.NameInMap("cert_expired_time")
         private String certExpiredTime;
 
-        @NameInMap("cert_nation")
+        @com.aliyun.core.annotation.NameInMap("cert_nation")
         private String certNation;
 
-        @NameInMap("cert_no")
+        @com.aliyun.core.annotation.NameInMap("cert_no")
         private String certNo;
 
-        @NameInMap("cert_type")
+        @com.aliyun.core.annotation.NameInMap("cert_type")
         private Integer certType;
 
-        @NameInMap("nationality")
+        @com.aliyun.core.annotation.NameInMap("nationality")
         private String nationality;
 
         private CertList(Builder builder) {
@@ -426,24 +425,24 @@ public class GroupUserSaveRequest extends Request {
 
     }
     public static class SubCorpIdList extends TeaModel {
-        @NameInMap("depart_ids")
+        @com.aliyun.core.annotation.NameInMap("depart_ids")
         private java.util.List < String > departIds;
 
-        @NameInMap("email")
+        @com.aliyun.core.annotation.NameInMap("email")
         private String email;
 
-        @NameInMap("leave_status")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("leave_status")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer leaveStatus;
 
-        @NameInMap("manager_user_id")
+        @com.aliyun.core.annotation.NameInMap("manager_user_id")
         private String managerUserId;
 
-        @NameInMap("position_level")
+        @com.aliyun.core.annotation.NameInMap("position_level")
         private String positionLevel;
 
-        @NameInMap("sub_corp_id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("sub_corp_id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String subCorpId;
 
         private SubCorpIdList(Builder builder) {

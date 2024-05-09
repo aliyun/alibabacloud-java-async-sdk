@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ProjectAddRequest</p>
  */
 public class ProjectAddRequest extends Request {
-    @Body
-    @NameInMap("code")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("code")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String code;
 
-    @Body
-    @NameInMap("project_name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("project_name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectName;
 
-    @Body
-    @NameInMap("third_part_cost_center_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("third_part_cost_center_id")
     private String thirdPartCostCenterId;
 
-    @Body
-    @NameInMap("third_part_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("third_part_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String thirdPartId;
 
-    @Body
-    @NameInMap("third_part_invoice_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("third_part_invoice_id")
     private String thirdPartInvoiceId;
 
-    @Header
-    @NameInMap("x-acs-btrip-so-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-so-corp-token")
     private String xAcsBtripSoCorpToken;
 
     private ProjectAddRequest(Builder builder) {

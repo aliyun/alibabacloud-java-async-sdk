@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>HotelRoomInfoResponseBody</p>
  */
 public class HotelRoomInfoResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private java.util.List < Module> module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private HotelRoomInfoResponseBody(Builder builder) {
@@ -152,22 +151,22 @@ public class HotelRoomInfoResponseBody extends TeaModel {
     } 
 
     public static class BedInfos extends TeaModel {
-        @NameInMap("bed_desc")
+        @com.aliyun.core.annotation.NameInMap("bed_desc")
         private String bedDesc;
 
-        @NameInMap("bed_num")
+        @com.aliyun.core.annotation.NameInMap("bed_num")
         private Integer bedNum;
 
-        @NameInMap("bed_size")
+        @com.aliyun.core.annotation.NameInMap("bed_size")
         private String bedSize;
 
-        @NameInMap("bed_type")
+        @com.aliyun.core.annotation.NameInMap("bed_type")
         private String bedType;
 
-        @NameInMap("length")
+        @com.aliyun.core.annotation.NameInMap("length")
         private String length;
 
-        @NameInMap("width")
+        @com.aliyun.core.annotation.NameInMap("width")
         private String width;
 
         private BedInfos(Builder builder) {
@@ -293,7 +292,7 @@ public class HotelRoomInfoResponseBody extends TeaModel {
 
     }
     public static class BedInfoGroupList extends TeaModel {
-        @NameInMap("bed_infos")
+        @com.aliyun.core.annotation.NameInMap("bed_infos")
         private java.util.List < BedInfos> bedInfos;
 
         private BedInfoGroupList(Builder builder) {
@@ -334,22 +333,22 @@ public class HotelRoomInfoResponseBody extends TeaModel {
 
     }
     public static class ModuleBedInfos extends TeaModel {
-        @NameInMap("bed_desc")
+        @com.aliyun.core.annotation.NameInMap("bed_desc")
         private String bedDesc;
 
-        @NameInMap("bed_num")
+        @com.aliyun.core.annotation.NameInMap("bed_num")
         private Integer bedNum;
 
-        @NameInMap("bed_size")
+        @com.aliyun.core.annotation.NameInMap("bed_size")
         private String bedSize;
 
-        @NameInMap("bed_type")
+        @com.aliyun.core.annotation.NameInMap("bed_type")
         private String bedType;
 
-        @NameInMap("length")
+        @com.aliyun.core.annotation.NameInMap("length")
         private String length;
 
-        @NameInMap("width")
+        @com.aliyun.core.annotation.NameInMap("width")
         private String width;
 
         private ModuleBedInfos(Builder builder) {
@@ -475,13 +474,13 @@ public class HotelRoomInfoResponseBody extends TeaModel {
 
     }
     public static class RoomImages extends TeaModel {
-        @NameInMap("bed_infos2")
+        @com.aliyun.core.annotation.NameInMap("bed_infos2")
         private String bedInfos2;
 
-        @NameInMap("tag")
+        @com.aliyun.core.annotation.NameInMap("tag")
         private Integer tag;
 
-        @NameInMap("url")
+        @com.aliyun.core.annotation.NameInMap("url")
         private String url;
 
         private RoomImages(Builder builder) {
@@ -556,67 +555,67 @@ public class HotelRoomInfoResponseBody extends TeaModel {
 
     }
     public static class Module extends TeaModel {
-        @NameInMap("bed_info_group_list")
+        @com.aliyun.core.annotation.NameInMap("bed_info_group_list")
         private java.util.List < BedInfoGroupList> bedInfoGroupList;
 
-        @NameInMap("bed_infos")
+        @com.aliyun.core.annotation.NameInMap("bed_infos")
         private java.util.List < ModuleBedInfos> bedInfos;
 
-        @NameInMap("extra_bed")
+        @com.aliyun.core.annotation.NameInMap("extra_bed")
         private Integer extraBed;
 
-        @NameInMap("extra_bed_desc")
+        @com.aliyun.core.annotation.NameInMap("extra_bed_desc")
         private String extraBedDesc;
 
-        @NameInMap("floor")
+        @com.aliyun.core.annotation.NameInMap("floor")
         private String floor;
 
-        @NameInMap("internet_way")
+        @com.aliyun.core.annotation.NameInMap("internet_way")
         private String internetWay;
 
-        @NameInMap("max_occupancy")
+        @com.aliyun.core.annotation.NameInMap("max_occupancy")
         private Integer maxOccupancy;
 
-        @NameInMap("room_desc")
+        @com.aliyun.core.annotation.NameInMap("room_desc")
         private String roomDesc;
 
-        @NameInMap("room_facilities")
+        @com.aliyun.core.annotation.NameInMap("room_facilities")
         private String roomFacilities;
 
-        @NameInMap("room_facility_list")
+        @com.aliyun.core.annotation.NameInMap("room_facility_list")
         private java.util.List < String > roomFacilityList;
 
-        @NameInMap("room_id")
+        @com.aliyun.core.annotation.NameInMap("room_id")
         private String roomId;
 
-        @NameInMap("room_image")
+        @com.aliyun.core.annotation.NameInMap("room_image")
         private String roomImage;
 
-        @NameInMap("room_images")
+        @com.aliyun.core.annotation.NameInMap("room_images")
         private java.util.List < RoomImages> roomImages;
 
-        @NameInMap("room_name")
+        @com.aliyun.core.annotation.NameInMap("room_name")
         private String roomName;
 
-        @NameInMap("room_type")
+        @com.aliyun.core.annotation.NameInMap("room_type")
         private Integer roomType;
 
-        @NameInMap("roomarea")
+        @com.aliyun.core.annotation.NameInMap("roomarea")
         private String roomarea;
 
-        @NameInMap("rooms")
+        @com.aliyun.core.annotation.NameInMap("rooms")
         private Integer rooms;
 
-        @NameInMap("smoke")
+        @com.aliyun.core.annotation.NameInMap("smoke")
         private String smoke;
 
-        @NameInMap("window")
+        @com.aliyun.core.annotation.NameInMap("window")
         private String window;
 
-        @NameInMap("window_bad")
+        @com.aliyun.core.annotation.NameInMap("window_bad")
         private String windowBad;
 
-        @NameInMap("window_view")
+        @com.aliyun.core.annotation.NameInMap("window_view")
         private String windowView;
 
         private Module(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>FlightRefundPreCalV2ResponseBody</p>
  */
 public class FlightRefundPreCalV2ResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private FlightRefundPreCalV2ResponseBody(Builder builder) {
@@ -152,16 +151,16 @@ public class FlightRefundPreCalV2ResponseBody extends TeaModel {
     } 
 
     public static class MultiRefundFeeDTOS extends TeaModel {
-        @NameInMap("passenger_id")
+        @com.aliyun.core.annotation.NameInMap("passenger_id")
         private String passengerId;
 
-        @NameInMap("passenger_name")
+        @com.aliyun.core.annotation.NameInMap("passenger_name")
         private String passengerName;
 
-        @NameInMap("pre_refund_money")
+        @com.aliyun.core.annotation.NameInMap("pre_refund_money")
         private Long preRefundMoney;
 
-        @NameInMap("refund_charge_fee")
+        @com.aliyun.core.annotation.NameInMap("refund_charge_fee")
         private Long refundChargeFee;
 
         private MultiRefundFeeDTOS(Builder builder) {
@@ -253,13 +252,13 @@ public class FlightRefundPreCalV2ResponseBody extends TeaModel {
 
     }
     public static class RefundReasonOptionDTOS extends TeaModel {
-        @NameInMap("reason")
+        @com.aliyun.core.annotation.NameInMap("reason")
         private String reason;
 
-        @NameInMap("reason_type")
+        @com.aliyun.core.annotation.NameInMap("reason_type")
         private Integer reasonType;
 
-        @NameInMap("volunteer")
+        @com.aliyun.core.annotation.NameInMap("volunteer")
         private Boolean volunteer;
 
         private RefundReasonOptionDTOS(Builder builder) {
@@ -334,19 +333,19 @@ public class FlightRefundPreCalV2ResponseBody extends TeaModel {
 
     }
     public static class Module extends TeaModel {
-        @NameInMap("multi_refund_fee_d_t_o_s")
+        @com.aliyun.core.annotation.NameInMap("multi_refund_fee_d_t_o_s")
         private java.util.List < MultiRefundFeeDTOS> multiRefundFeeDTOS;
 
-        @NameInMap("pre_refund_money")
+        @com.aliyun.core.annotation.NameInMap("pre_refund_money")
         private Long preRefundMoney;
 
-        @NameInMap("refund_charge_fee")
+        @com.aliyun.core.annotation.NameInMap("refund_charge_fee")
         private Long refundChargeFee;
 
-        @NameInMap("refund_reason_option_d_t_o_s")
+        @com.aliyun.core.annotation.NameInMap("refund_reason_option_d_t_o_s")
         private java.util.List < RefundReasonOptionDTOS> refundReasonOptionDTOS;
 
-        @NameInMap("service_charge_fee")
+        @com.aliyun.core.annotation.NameInMap("service_charge_fee")
         private Long serviceChargeFee;
 
         private Module(Builder builder) {

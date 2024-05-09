@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CarApplyQueryResponseBody</p>
  */
 public class CarApplyQueryResponseBody extends TeaModel {
-    @NameInMap("apply_list")
+    @com.aliyun.core.annotation.NameInMap("apply_list")
     private java.util.List < ApplyList> applyList;
 
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("total")
+    @com.aliyun.core.annotation.NameInMap("total")
     private Integer total;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private CarApplyQueryResponseBody(Builder builder) {
@@ -172,25 +171,25 @@ public class CarApplyQueryResponseBody extends TeaModel {
     } 
 
     public static class ApproverList extends TeaModel {
-        @NameInMap("note")
+        @com.aliyun.core.annotation.NameInMap("note")
         private String note;
 
-        @NameInMap("operate_time")
+        @com.aliyun.core.annotation.NameInMap("operate_time")
         private String operateTime;
 
-        @NameInMap("order")
+        @com.aliyun.core.annotation.NameInMap("order")
         private Integer order;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("status_desc")
+        @com.aliyun.core.annotation.NameInMap("status_desc")
         private String statusDesc;
 
-        @NameInMap("user_id")
+        @com.aliyun.core.annotation.NameInMap("user_id")
         private String userId;
 
-        @NameInMap("user_name")
+        @com.aliyun.core.annotation.NameInMap("user_name")
         private String userName;
 
         private ApproverList(Builder builder) {
@@ -333,46 +332,46 @@ public class CarApplyQueryResponseBody extends TeaModel {
 
     }
     public static class ItineraryList extends TeaModel {
-        @NameInMap("arr_city")
+        @com.aliyun.core.annotation.NameInMap("arr_city")
         private String arrCity;
 
-        @NameInMap("arr_city_code")
+        @com.aliyun.core.annotation.NameInMap("arr_city_code")
         private String arrCityCode;
 
-        @NameInMap("arr_date")
+        @com.aliyun.core.annotation.NameInMap("arr_date")
         private String arrDate;
 
-        @NameInMap("cost_center_id")
+        @com.aliyun.core.annotation.NameInMap("cost_center_id")
         private Long costCenterId;
 
-        @NameInMap("cost_center_name")
+        @com.aliyun.core.annotation.NameInMap("cost_center_name")
         private String costCenterName;
 
-        @NameInMap("dep_city")
+        @com.aliyun.core.annotation.NameInMap("dep_city")
         private String depCity;
 
-        @NameInMap("dep_city_code")
+        @com.aliyun.core.annotation.NameInMap("dep_city_code")
         private String depCityCode;
 
-        @NameInMap("dep_date")
+        @com.aliyun.core.annotation.NameInMap("dep_date")
         private String depDate;
 
-        @NameInMap("invoice_id")
+        @com.aliyun.core.annotation.NameInMap("invoice_id")
         private Long invoiceId;
 
-        @NameInMap("invoice_name")
+        @com.aliyun.core.annotation.NameInMap("invoice_name")
         private String invoiceName;
 
-        @NameInMap("itinerary_id")
+        @com.aliyun.core.annotation.NameInMap("itinerary_id")
         private String itineraryId;
 
-        @NameInMap("project_code")
+        @com.aliyun.core.annotation.NameInMap("project_code")
         private String projectCode;
 
-        @NameInMap("project_title")
+        @com.aliyun.core.annotation.NameInMap("project_title")
         private String projectTitle;
 
-        @NameInMap("traffic_type")
+        @com.aliyun.core.annotation.NameInMap("traffic_type")
         private Integer trafficType;
 
         private ItineraryList(Builder builder) {
@@ -634,10 +633,10 @@ public class CarApplyQueryResponseBody extends TeaModel {
 
     }
     public static class CarCitySet extends TeaModel {
-        @NameInMap("city_code")
+        @com.aliyun.core.annotation.NameInMap("city_code")
         private String cityCode;
 
-        @NameInMap("city_name")
+        @com.aliyun.core.annotation.NameInMap("city_name")
         private String cityName;
 
         private CarCitySet(Builder builder) {
@@ -695,10 +694,10 @@ public class CarApplyQueryResponseBody extends TeaModel {
 
     }
     public static class TravelerStandard extends TeaModel {
-        @NameInMap("car_city_set")
+        @com.aliyun.core.annotation.NameInMap("car_city_set")
         private java.util.List < CarCitySet> carCitySet;
 
-        @NameInMap("user_id")
+        @com.aliyun.core.annotation.NameInMap("user_id")
         private String userId;
 
         private TravelerStandard(Builder builder) {
@@ -756,46 +755,46 @@ public class CarApplyQueryResponseBody extends TeaModel {
 
     }
     public static class ApplyList extends TeaModel {
-        @NameInMap("approver_list")
+        @com.aliyun.core.annotation.NameInMap("approver_list")
         private java.util.List < ApproverList> approverList;
 
-        @NameInMap("depart_id")
+        @com.aliyun.core.annotation.NameInMap("depart_id")
         private String departId;
 
-        @NameInMap("depart_name")
+        @com.aliyun.core.annotation.NameInMap("depart_name")
         private String departName;
 
-        @NameInMap("gmt_create")
+        @com.aliyun.core.annotation.NameInMap("gmt_create")
         private String gmtCreate;
 
-        @NameInMap("gmt_modified")
+        @com.aliyun.core.annotation.NameInMap("gmt_modified")
         private String gmtModified;
 
-        @NameInMap("itinerary_list")
+        @com.aliyun.core.annotation.NameInMap("itinerary_list")
         private java.util.List < ItineraryList> itineraryList;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("status_desc")
+        @com.aliyun.core.annotation.NameInMap("status_desc")
         private String statusDesc;
 
-        @NameInMap("thirdpart_id")
+        @com.aliyun.core.annotation.NameInMap("thirdpart_id")
         private String thirdpartId;
 
-        @NameInMap("traveler_standard")
+        @com.aliyun.core.annotation.NameInMap("traveler_standard")
         private java.util.List < TravelerStandard> travelerStandard;
 
-        @NameInMap("trip_cause")
+        @com.aliyun.core.annotation.NameInMap("trip_cause")
         private String tripCause;
 
-        @NameInMap("trip_title")
+        @com.aliyun.core.annotation.NameInMap("trip_title")
         private String tripTitle;
 
-        @NameInMap("user_id")
+        @com.aliyun.core.annotation.NameInMap("user_id")
         private String userId;
 
-        @NameInMap("user_name")
+        @com.aliyun.core.annotation.NameInMap("user_name")
         private String userName;
 
         private ApplyList(Builder builder) {

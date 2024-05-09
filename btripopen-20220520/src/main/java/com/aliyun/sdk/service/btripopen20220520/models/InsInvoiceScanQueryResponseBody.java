@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InsInvoiceScanQueryResponseBody</p>
  */
 public class InsInvoiceScanQueryResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private InsInvoiceScanQueryResponseBody(Builder builder) {
@@ -152,31 +151,31 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
     } 
 
     public static class InvoiceDetails extends TeaModel {
-        @NameInMap("amount")
+        @com.aliyun.core.annotation.NameInMap("amount")
         private String amount;
 
-        @NameInMap("index")
+        @com.aliyun.core.annotation.NameInMap("index")
         private String index;
 
-        @NameInMap("item_name")
+        @com.aliyun.core.annotation.NameInMap("item_name")
         private String itemName;
 
-        @NameInMap("quantity")
+        @com.aliyun.core.annotation.NameInMap("quantity")
         private String quantity;
 
-        @NameInMap("specification")
+        @com.aliyun.core.annotation.NameInMap("specification")
         private String specification;
 
-        @NameInMap("tax")
+        @com.aliyun.core.annotation.NameInMap("tax")
         private String tax;
 
-        @NameInMap("tax_rate")
+        @com.aliyun.core.annotation.NameInMap("tax_rate")
         private String taxRate;
 
-        @NameInMap("unit")
+        @com.aliyun.core.annotation.NameInMap("unit")
         private String unit;
 
-        @NameInMap("unit_price")
+        @com.aliyun.core.annotation.NameInMap("unit_price")
         private String unitPrice;
 
         private InvoiceDetails(Builder builder) {
@@ -353,118 +352,118 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("amount_with_tax")
+        @com.aliyun.core.annotation.NameInMap("amount_with_tax")
         private String amountWithTax;
 
-        @NameInMap("amount_without_tax")
+        @com.aliyun.core.annotation.NameInMap("amount_without_tax")
         private String amountWithoutTax;
 
-        @NameInMap("bill_date")
+        @com.aliyun.core.annotation.NameInMap("bill_date")
         private String billDate;
 
-        @NameInMap("check_code")
+        @com.aliyun.core.annotation.NameInMap("check_code")
         private String checkCode;
 
-        @NameInMap("cost_center")
+        @com.aliyun.core.annotation.NameInMap("cost_center")
         private String costCenter;
 
-        @NameInMap("department")
+        @com.aliyun.core.annotation.NameInMap("department")
         private String department;
 
-        @NameInMap("drawer")
+        @com.aliyun.core.annotation.NameInMap("drawer")
         private String drawer;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("insurance_company")
+        @com.aliyun.core.annotation.NameInMap("insurance_company")
         private String insuranceCompany;
 
-        @NameInMap("insurance_order_id")
+        @com.aliyun.core.annotation.NameInMap("insurance_order_id")
         private String insuranceOrderId;
 
-        @NameInMap("insurance_type")
+        @com.aliyun.core.annotation.NameInMap("insurance_type")
         private String insuranceType;
 
-        @NameInMap("invoice_code")
+        @com.aliyun.core.annotation.NameInMap("invoice_code")
         private String invoiceCode;
 
-        @NameInMap("invoice_day")
+        @com.aliyun.core.annotation.NameInMap("invoice_day")
         private String invoiceDay;
 
-        @NameInMap("invoice_details")
+        @com.aliyun.core.annotation.NameInMap("invoice_details")
         private java.util.List < InvoiceDetails> invoiceDetails;
 
-        @NameInMap("invoice_location")
+        @com.aliyun.core.annotation.NameInMap("invoice_location")
         private String invoiceLocation;
 
-        @NameInMap("invoice_no")
+        @com.aliyun.core.annotation.NameInMap("invoice_no")
         private String invoiceNo;
 
-        @NameInMap("invoice_title")
+        @com.aliyun.core.annotation.NameInMap("invoice_title")
         private String invoiceTitle;
 
-        @NameInMap("machine_code")
+        @com.aliyun.core.annotation.NameInMap("machine_code")
         private String machineCode;
 
-        @NameInMap("order_id")
+        @com.aliyun.core.annotation.NameInMap("order_id")
         private Long orderId;
 
-        @NameInMap("oss_url")
+        @com.aliyun.core.annotation.NameInMap("oss_url")
         private String ossUrl;
 
-        @NameInMap("passenger")
+        @com.aliyun.core.annotation.NameInMap("passenger")
         private String passenger;
 
-        @NameInMap("password_area")
+        @com.aliyun.core.annotation.NameInMap("password_area")
         private String passwordArea;
 
-        @NameInMap("project")
+        @com.aliyun.core.annotation.NameInMap("project")
         private String project;
 
-        @NameInMap("purchaser_bank_account_info")
+        @com.aliyun.core.annotation.NameInMap("purchaser_bank_account_info")
         private String purchaserBankAccountInfo;
 
-        @NameInMap("purchaser_contact_info")
+        @com.aliyun.core.annotation.NameInMap("purchaser_contact_info")
         private String purchaserContactInfo;
 
-        @NameInMap("purchaser_name")
+        @com.aliyun.core.annotation.NameInMap("purchaser_name")
         private String purchaserName;
 
-        @NameInMap("purchaser_tax_no")
+        @com.aliyun.core.annotation.NameInMap("purchaser_tax_no")
         private String purchaserTaxNo;
 
-        @NameInMap("recipient")
+        @com.aliyun.core.annotation.NameInMap("recipient")
         private String recipient;
 
-        @NameInMap("remarks")
+        @com.aliyun.core.annotation.NameInMap("remarks")
         private String remarks;
 
-        @NameInMap("reviewer")
+        @com.aliyun.core.annotation.NameInMap("reviewer")
         private String reviewer;
 
-        @NameInMap("seller_bank_account_info")
+        @com.aliyun.core.annotation.NameInMap("seller_bank_account_info")
         private String sellerBankAccountInfo;
 
-        @NameInMap("seller_contact_info")
+        @com.aliyun.core.annotation.NameInMap("seller_contact_info")
         private String sellerContactInfo;
 
-        @NameInMap("seller_name")
+        @com.aliyun.core.annotation.NameInMap("seller_name")
         private String sellerName;
 
-        @NameInMap("seller_tax_no")
+        @com.aliyun.core.annotation.NameInMap("seller_tax_no")
         private String sellerTaxNo;
 
-        @NameInMap("smart_check_code")
+        @com.aliyun.core.annotation.NameInMap("smart_check_code")
         private String smartCheckCode;
 
-        @NameInMap("tax_amount")
+        @com.aliyun.core.annotation.NameInMap("tax_amount")
         private String taxAmount;
 
-        @NameInMap("tax_rate")
+        @com.aliyun.core.annotation.NameInMap("tax_rate")
         private String taxRate;
 
-        @NameInMap("total_amount_in_words")
+        @com.aliyun.core.annotation.NameInMap("total_amount_in_words")
         private String totalAmountInWords;
 
         private Items(Builder builder) {
@@ -1134,19 +1133,19 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
 
     }
     public static class Module extends TeaModel {
-        @NameInMap("items")
+        @com.aliyun.core.annotation.NameInMap("items")
         private java.util.List < Items> items;
 
-        @NameInMap("page_no")
+        @com.aliyun.core.annotation.NameInMap("page_no")
         private Integer pageNo;
 
-        @NameInMap("page_size")
+        @com.aliyun.core.annotation.NameInMap("page_size")
         private Integer pageSize;
 
-        @NameInMap("total_page")
+        @com.aliyun.core.annotation.NameInMap("total_page")
         private Integer totalPage;
 
-        @NameInMap("total_size")
+        @com.aliyun.core.annotation.NameInMap("total_size")
         private Integer totalSize;
 
         private Module(Builder builder) {

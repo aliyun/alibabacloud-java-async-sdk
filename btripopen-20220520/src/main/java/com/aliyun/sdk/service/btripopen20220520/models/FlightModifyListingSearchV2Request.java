@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,59 +11,69 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>FlightModifyListingSearchV2Request</p>
  */
 public class FlightModifyListingSearchV2Request extends Request {
-    @Query
-    @NameInMap("cabin_class")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("cabin_class")
     private java.util.List < Integer > cabinClass;
 
-    @Query
-    @NameInMap("dep_date")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dep_date")
     private java.util.List < String > depDate;
 
-    @Query
-    @NameInMap("isv_name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("interface_caller_is_support_retry")
+    private Boolean interfaceCallerIsSupportRetry;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("isv_name")
     private String isvName;
 
-    @Query
-    @NameInMap("order_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("order_id")
     private Long orderId;
 
-    @Query
-    @NameInMap("out_order_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("out_order_id")
     private String outOrderId;
 
-    @Query
-    @NameInMap("passenger_segment_relations")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("passenger_segment_relations")
     private java.util.List < PassengerSegmentRelations> passengerSegmentRelations;
 
-    @Query
-    @NameInMap("search_mode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("search_mode")
     private Integer searchMode;
 
-    @Query
-    @NameInMap("selected_segments")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("search_retry_token")
+    private String searchRetryToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("selected_segments")
     private java.util.List < SelectedSegments> selectedSegments;
 
-    @Query
-    @NameInMap("session_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("session_id")
     private String sessionId;
 
-    @Query
-    @NameInMap("voluntary")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("voluntary")
     private Boolean voluntary;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private FlightModifyListingSearchV2Request(Builder builder) {
         super(builder);
         this.cabinClass = builder.cabinClass;
         this.depDate = builder.depDate;
+        this.interfaceCallerIsSupportRetry = builder.interfaceCallerIsSupportRetry;
         this.isvName = builder.isvName;
         this.orderId = builder.orderId;
         this.outOrderId = builder.outOrderId;
         this.passengerSegmentRelations = builder.passengerSegmentRelations;
         this.searchMode = builder.searchMode;
+        this.searchRetryToken = builder.searchRetryToken;
         this.selectedSegments = builder.selectedSegments;
         this.sessionId = builder.sessionId;
         this.voluntary = builder.voluntary;
@@ -96,6 +105,13 @@ public class FlightModifyListingSearchV2Request extends Request {
      */
     public java.util.List < String > getDepDate() {
         return this.depDate;
+    }
+
+    /**
+     * @return interfaceCallerIsSupportRetry
+     */
+    public Boolean getInterfaceCallerIsSupportRetry() {
+        return this.interfaceCallerIsSupportRetry;
     }
 
     /**
@@ -134,6 +150,13 @@ public class FlightModifyListingSearchV2Request extends Request {
     }
 
     /**
+     * @return searchRetryToken
+     */
+    public String getSearchRetryToken() {
+        return this.searchRetryToken;
+    }
+
+    /**
      * @return selectedSegments
      */
     public java.util.List < SelectedSegments> getSelectedSegments() {
@@ -164,11 +187,13 @@ public class FlightModifyListingSearchV2Request extends Request {
     public static final class Builder extends Request.Builder<FlightModifyListingSearchV2Request, Builder> {
         private java.util.List < Integer > cabinClass; 
         private java.util.List < String > depDate; 
+        private Boolean interfaceCallerIsSupportRetry; 
         private String isvName; 
         private Long orderId; 
         private String outOrderId; 
         private java.util.List < PassengerSegmentRelations> passengerSegmentRelations; 
         private Integer searchMode; 
+        private String searchRetryToken; 
         private java.util.List < SelectedSegments> selectedSegments; 
         private String sessionId; 
         private Boolean voluntary; 
@@ -182,11 +207,13 @@ public class FlightModifyListingSearchV2Request extends Request {
             super(request);
             this.cabinClass = request.cabinClass;
             this.depDate = request.depDate;
+            this.interfaceCallerIsSupportRetry = request.interfaceCallerIsSupportRetry;
             this.isvName = request.isvName;
             this.orderId = request.orderId;
             this.outOrderId = request.outOrderId;
             this.passengerSegmentRelations = request.passengerSegmentRelations;
             this.searchMode = request.searchMode;
+            this.searchRetryToken = request.searchRetryToken;
             this.selectedSegments = request.selectedSegments;
             this.sessionId = request.sessionId;
             this.voluntary = request.voluntary;
@@ -210,6 +237,15 @@ public class FlightModifyListingSearchV2Request extends Request {
             String depDateShrink = shrink(depDate, "dep_date", "json");
             this.putQueryParameter("dep_date", depDateShrink);
             this.depDate = depDate;
+            return this;
+        }
+
+        /**
+         * interface_caller_is_support_retry.
+         */
+        public Builder interfaceCallerIsSupportRetry(Boolean interfaceCallerIsSupportRetry) {
+            this.putQueryParameter("interface_caller_is_support_retry", interfaceCallerIsSupportRetry);
+            this.interfaceCallerIsSupportRetry = interfaceCallerIsSupportRetry;
             return this;
         }
 
@@ -260,6 +296,15 @@ public class FlightModifyListingSearchV2Request extends Request {
         }
 
         /**
+         * search_retry_token.
+         */
+        public Builder searchRetryToken(String searchRetryToken) {
+            this.putQueryParameter("search_retry_token", searchRetryToken);
+            this.searchRetryToken = searchRetryToken;
+            return this;
+        }
+
+        /**
          * selected_segments.
          */
         public Builder selectedSegments(java.util.List < SelectedSegments> selectedSegments) {
@@ -304,10 +349,10 @@ public class FlightModifyListingSearchV2Request extends Request {
     } 
 
     public static class PassengerSegmentRelations extends TeaModel {
-        @NameInMap("passenger_id")
+        @com.aliyun.core.annotation.NameInMap("passenger_id")
         private String passengerId;
 
-        @NameInMap("segment_id_list")
+        @com.aliyun.core.annotation.NameInMap("segment_id_list")
         private java.util.List < String > segmentIdList;
 
         private PassengerSegmentRelations(Builder builder) {
@@ -365,25 +410,25 @@ public class FlightModifyListingSearchV2Request extends Request {
 
     }
     public static class SelectedSegments extends TeaModel {
-        @NameInMap("arr_city_code")
+        @com.aliyun.core.annotation.NameInMap("arr_city_code")
         private String arrCityCode;
 
-        @NameInMap("dep_city_code")
+        @com.aliyun.core.annotation.NameInMap("dep_city_code")
         private String depCityCode;
 
-        @NameInMap("dep_date_time")
+        @com.aliyun.core.annotation.NameInMap("dep_date_time")
         private String depDateTime;
 
-        @NameInMap("journey_seq")
+        @com.aliyun.core.annotation.NameInMap("journey_seq")
         private Integer journeySeq;
 
-        @NameInMap("marketing_flight_no")
+        @com.aliyun.core.annotation.NameInMap("marketing_flight_no")
         private String marketingFlightNo;
 
-        @NameInMap("operating_flight_no")
+        @com.aliyun.core.annotation.NameInMap("operating_flight_no")
         private String operatingFlightNo;
 
-        @NameInMap("segment_seq")
+        @com.aliyun.core.annotation.NameInMap("segment_seq")
         private Integer segmentSeq;
 
         private SelectedSegments(Builder builder) {

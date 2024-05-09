@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>MonthBillGetResponseBody</p>
  */
 public class MonthBillGetResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private java.util.List < Module> module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private MonthBillGetResponseBody(Builder builder) {
@@ -152,37 +151,37 @@ public class MonthBillGetResponseBody extends TeaModel {
     } 
 
     public static class MonthAccountBillDetail extends TeaModel {
-        @NameInMap("billConfirmed")
+        @com.aliyun.core.annotation.NameInMap("billConfirmed")
         private Integer billConfirmed;
 
-        @NameInMap("carAmount")
+        @com.aliyun.core.annotation.NameInMap("carAmount")
         private Double carAmount;
 
-        @NameInMap("damageAmount")
+        @com.aliyun.core.annotation.NameInMap("damageAmount")
         private Double damageAmount;
 
-        @NameInMap("flightAmount")
+        @com.aliyun.core.annotation.NameInMap("flightAmount")
         private Double flightAmount;
 
-        @NameInMap("fuPoint")
+        @com.aliyun.core.annotation.NameInMap("fuPoint")
         private Double fuPoint;
 
-        @NameInMap("hotelAmount")
+        @com.aliyun.core.annotation.NameInMap("hotelAmount")
         private Double hotelAmount;
 
-        @NameInMap("ieFlightAmount")
+        @com.aliyun.core.annotation.NameInMap("ieFlightAmount")
         private Double ieFlightAmount;
 
-        @NameInMap("ieHotelAmount")
+        @com.aliyun.core.annotation.NameInMap("ieHotelAmount")
         private Double ieHotelAmount;
 
-        @NameInMap("mailBillDate")
+        @com.aliyun.core.annotation.NameInMap("mailBillDate")
         private Long mailBillDate;
 
-        @NameInMap("serviceAmount")
+        @com.aliyun.core.annotation.NameInMap("serviceAmount")
         private Double serviceAmount;
 
-        @NameInMap("trainAmount")
+        @com.aliyun.core.annotation.NameInMap("trainAmount")
         private Double trainAmount;
 
         private MonthAccountBillDetail(Builder builder) {
@@ -393,16 +392,16 @@ public class MonthBillGetResponseBody extends TeaModel {
 
     }
     public static class Module extends TeaModel {
-        @NameInMap("end_date")
+        @com.aliyun.core.annotation.NameInMap("end_date")
         private String endDate;
 
-        @NameInMap("monthAccountBillDetail")
+        @com.aliyun.core.annotation.NameInMap("monthAccountBillDetail")
         private MonthAccountBillDetail monthAccountBillDetail;
 
-        @NameInMap("start_date")
+        @com.aliyun.core.annotation.NameInMap("start_date")
         private String startDate;
 
-        @NameInMap("url")
+        @com.aliyun.core.annotation.NameInMap("url")
         private String url;
 
         private Module(Builder builder) {

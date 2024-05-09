@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>FlightRefundPreCalRequest</p>
  */
 public class FlightRefundPreCalRequest extends Request {
-    @Query
-    @NameInMap("dis_order_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dis_order_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String disOrderId;
 
-    @Query
-    @NameInMap("is_voluntary")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("is_voluntary")
     private String isVoluntary;
 
-    @Query
-    @NameInMap("passenger_segment_info_list")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("passenger_segment_info_list")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < PassengerSegmentInfoList> passengerSegmentInfoList;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private FlightRefundPreCalRequest(Builder builder) {
@@ -142,16 +141,16 @@ public class FlightRefundPreCalRequest extends Request {
     } 
 
     public static class PassengerSegmentInfoList extends TeaModel {
-        @NameInMap("flight_no")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("flight_no")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String flightNo;
 
-        @NameInMap("passenger_name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("passenger_name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String passengerName;
 
-        @NameInMap("user_id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("user_id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String userId;
 
         private PassengerSegmentInfoList(Builder builder) {

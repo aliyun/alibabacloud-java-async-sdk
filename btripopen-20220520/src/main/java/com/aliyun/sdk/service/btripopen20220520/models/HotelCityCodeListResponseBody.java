@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>HotelCityCodeListResponseBody</p>
  */
 public class HotelCityCodeListResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("module")
+    @com.aliyun.core.annotation.NameInMap("module")
     private java.util.List < Module> module;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private HotelCityCodeListResponseBody(Builder builder) {
@@ -152,10 +151,10 @@ public class HotelCityCodeListResponseBody extends TeaModel {
     } 
 
     public static class Districts extends TeaModel {
-        @NameInMap("district_code")
+        @com.aliyun.core.annotation.NameInMap("district_code")
         private String districtCode;
 
-        @NameInMap("district_name")
+        @com.aliyun.core.annotation.NameInMap("district_name")
         private String districtName;
 
         private Districts(Builder builder) {
@@ -213,13 +212,13 @@ public class HotelCityCodeListResponseBody extends TeaModel {
 
     }
     public static class Citys extends TeaModel {
-        @NameInMap("city_code")
+        @com.aliyun.core.annotation.NameInMap("city_code")
         private String cityCode;
 
-        @NameInMap("city_name")
+        @com.aliyun.core.annotation.NameInMap("city_name")
         private String cityName;
 
-        @NameInMap("districts")
+        @com.aliyun.core.annotation.NameInMap("districts")
         private java.util.List < Districts> districts;
 
         private Citys(Builder builder) {
@@ -294,13 +293,13 @@ public class HotelCityCodeListResponseBody extends TeaModel {
 
     }
     public static class Module extends TeaModel {
-        @NameInMap("citys")
+        @com.aliyun.core.annotation.NameInMap("citys")
         private java.util.List < Citys> citys;
 
-        @NameInMap("provice_code")
+        @com.aliyun.core.annotation.NameInMap("provice_code")
         private String proviceCode;
 
-        @NameInMap("province_name")
+        @com.aliyun.core.annotation.NameInMap("province_name")
         private String provinceName;
 
         private Module(Builder builder) {

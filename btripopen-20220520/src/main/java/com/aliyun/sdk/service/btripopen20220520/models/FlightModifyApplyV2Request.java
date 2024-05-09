@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.btripopen20220520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,52 +11,52 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>FlightModifyApplyV2Request</p>
  */
 public class FlightModifyApplyV2Request extends Request {
-    @Body
-    @NameInMap("cache_key")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("cache_key")
     private String cacheKey;
 
-    @Body
-    @NameInMap("contact_phone")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("contact_phone")
     private String contactPhone;
 
-    @Body
-    @NameInMap("isv_name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("isv_name")
     private String isvName;
 
-    @Body
-    @NameInMap("item_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("item_id")
     private String itemId;
 
-    @Body
-    @NameInMap("order_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("order_id")
     private Long orderId;
 
-    @Body
-    @NameInMap("out_order_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("out_order_id")
     private String outOrderId;
 
-    @Body
-    @NameInMap("out_sub_order_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("out_sub_order_id")
     private String outSubOrderId;
 
-    @Body
-    @NameInMap("passenger_segment_relations")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("passenger_segment_relations")
     private java.util.List < PassengerSegmentRelations> passengerSegmentRelations;
 
-    @Body
-    @NameInMap("reason")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("reason")
     private String reason;
 
-    @Body
-    @NameInMap("session_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("session_id")
     private String sessionId;
 
-    @Body
-    @NameInMap("voluntary")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("voluntary")
     private Boolean voluntary;
 
-    @Header
-    @NameInMap("x-acs-btrip-corp-token")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
     private FlightModifyApplyV2Request(Builder builder) {
@@ -324,10 +323,10 @@ public class FlightModifyApplyV2Request extends Request {
     } 
 
     public static class PassengerSegmentRelations extends TeaModel {
-        @NameInMap("passenger_id")
+        @com.aliyun.core.annotation.NameInMap("passenger_id")
         private String passengerId;
 
-        @NameInMap("segment_id_list")
+        @com.aliyun.core.annotation.NameInMap("segment_id_list")
         private java.util.List < String > segmentIdList;
 
         private PassengerSegmentRelations(Builder builder) {
