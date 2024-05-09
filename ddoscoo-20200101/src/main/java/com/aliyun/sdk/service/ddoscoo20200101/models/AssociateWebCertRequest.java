@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,41 +11,41 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AssociateWebCertRequest</p>
  */
 public class AssociateWebCertRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Cert")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Cert")
     private String cert;
 
-    @Query
-    @NameInMap("CertId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertId")
     private Integer certId;
 
-    @Query
-    @NameInMap("CertIdentifier")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertIdentifier")
     private String certIdentifier;
 
-    @Query
-    @NameInMap("CertName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertName")
     private String certName;
 
-    @Query
-    @NameInMap("CertRegion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertRegion")
     private String certRegion;
 
-    @Query
-    @NameInMap("Domain")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Domain")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domain;
 
-    @Query
-    @NameInMap("Key")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Key")
     private String key;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private AssociateWebCertRequest(Builder builder) {

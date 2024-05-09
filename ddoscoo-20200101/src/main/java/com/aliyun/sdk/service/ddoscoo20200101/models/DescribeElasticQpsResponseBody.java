@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeElasticQpsResponseBody</p>
  */
 public class DescribeElasticQpsResponseBody extends TeaModel {
-    @NameInMap("ElasticQps")
+    @com.aliyun.core.annotation.NameInMap("ElasticQps")
     private java.util.List < ElasticQps> elasticQps;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeElasticQpsResponseBody(Builder builder) {
@@ -72,31 +71,31 @@ public class DescribeElasticQpsResponseBody extends TeaModel {
     } 
 
     public static class ElasticQps extends TeaModel {
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private Long index;
 
-        @NameInMap("MaxNormalQps")
+        @com.aliyun.core.annotation.NameInMap("MaxNormalQps")
         private Long maxNormalQps;
 
-        @NameInMap("MaxQps")
+        @com.aliyun.core.annotation.NameInMap("MaxQps")
         private Long maxQps;
 
-        @NameInMap("Pv")
+        @com.aliyun.core.annotation.NameInMap("Pv")
         private Long pv;
 
-        @NameInMap("Status2")
+        @com.aliyun.core.annotation.NameInMap("Status2")
         private Long status2;
 
-        @NameInMap("Status3")
+        @com.aliyun.core.annotation.NameInMap("Status3")
         private Long status3;
 
-        @NameInMap("Status4")
+        @com.aliyun.core.annotation.NameInMap("Status4")
         private Long status4;
 
-        @NameInMap("Status5")
+        @com.aliyun.core.annotation.NameInMap("Status5")
         private Long status5;
 
-        @NameInMap("Ups")
+        @com.aliyun.core.annotation.NameInMap("Ups")
         private Long ups;
 
         private ElasticQps(Builder builder) {

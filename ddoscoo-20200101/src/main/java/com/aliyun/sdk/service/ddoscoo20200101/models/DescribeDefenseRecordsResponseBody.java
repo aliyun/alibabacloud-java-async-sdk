@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDefenseRecordsResponseBody</p>
  */
 public class DescribeDefenseRecordsResponseBody extends TeaModel {
-    @NameInMap("DefenseRecords")
+    @com.aliyun.core.annotation.NameInMap("DefenseRecords")
     private java.util.List < DefenseRecords> defenseRecords;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeDefenseRecordsResponseBody(Builder builder) {
@@ -92,22 +91,22 @@ public class DescribeDefenseRecordsResponseBody extends TeaModel {
     } 
 
     public static class DefenseRecords extends TeaModel {
-        @NameInMap("AttackPeak")
+        @com.aliyun.core.annotation.NameInMap("AttackPeak")
         private Long attackPeak;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("EventCount")
+        @com.aliyun.core.annotation.NameInMap("EventCount")
         private Integer eventCount;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private DefenseRecords(Builder builder) {

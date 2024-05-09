@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstancesResponseBody</p>
  */
 public class DescribeInstancesResponseBody extends TeaModel {
-    @NameInMap("Instances")
+    @com.aliyun.core.annotation.NameInMap("Instances")
     private java.util.List < Instances> instances;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeInstancesResponseBody(Builder builder) {
@@ -92,43 +91,43 @@ public class DescribeInstancesResponseBody extends TeaModel {
     } 
 
     public static class Instances extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("DebtStatus")
+        @com.aliyun.core.annotation.NameInMap("DebtStatus")
         private Integer debtStatus;
 
-        @NameInMap("Edition")
+        @com.aliyun.core.annotation.NameInMap("Edition")
         private Integer edition;
 
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Integer enabled;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private Long expireTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("IpMode")
+        @com.aliyun.core.annotation.NameInMap("IpMode")
         private String ipMode;
 
-        @NameInMap("IpVersion")
+        @com.aliyun.core.annotation.NameInMap("IpVersion")
         private String ipVersion;
 
-        @NameInMap("IsFirstOpenBw")
+        @com.aliyun.core.annotation.NameInMap("IsFirstOpenBw")
         private Long isFirstOpenBw;
 
-        @NameInMap("IsFirstOpenQps")
+        @com.aliyun.core.annotation.NameInMap("IsFirstOpenQps")
         private Long isFirstOpenQps;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private Instances(Builder builder) {

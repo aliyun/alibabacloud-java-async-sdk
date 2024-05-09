@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeL7RsPolicyResponseBody</p>
  */
 public class DescribeL7RsPolicyResponseBody extends TeaModel {
-    @NameInMap("Attributes")
+    @com.aliyun.core.annotation.NameInMap("Attributes")
     private java.util.List < Attributes> attributes;
 
-    @NameInMap("ProxyMode")
+    @com.aliyun.core.annotation.NameInMap("ProxyMode")
     private String proxyMode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("UpstreamRetry")
+    private Integer upstreamRetry;
 
     private DescribeL7RsPolicyResponseBody(Builder builder) {
         this.attributes = builder.attributes;
         this.proxyMode = builder.proxyMode;
         this.requestId = builder.requestId;
+        this.upstreamRetry = builder.upstreamRetry;
     }
 
     public static Builder builder() {
@@ -56,10 +59,18 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return upstreamRetry
+     */
+    public Integer getUpstreamRetry() {
+        return this.upstreamRetry;
+    }
+
     public static final class Builder {
         private java.util.List < Attributes> attributes; 
         private String proxyMode; 
         private String requestId; 
+        private Integer upstreamRetry; 
 
         /**
          * The details of the parameters for back-to-origin.
@@ -90,6 +101,14 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
             return this;
         }
 
+        /**
+         * UpstreamRetry.
+         */
+        public Builder upstreamRetry(Integer upstreamRetry) {
+            this.upstreamRetry = upstreamRetry;
+            return this;
+        }
+
         public DescribeL7RsPolicyResponseBody build() {
             return new DescribeL7RsPolicyResponseBody(this);
         } 
@@ -97,10 +116,34 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
     } 
 
     public static class Attribute extends TeaModel {
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("ConnectTimeout")
+        private Integer connectTimeout;
+
+        @com.aliyun.core.annotation.NameInMap("FailTimeout")
+        private Integer failTimeout;
+
+        @com.aliyun.core.annotation.NameInMap("MaxFails")
+        private Integer maxFails;
+
+        @com.aliyun.core.annotation.NameInMap("Mode")
+        private String mode;
+
+        @com.aliyun.core.annotation.NameInMap("ReadTimeout")
+        private Integer readTimeout;
+
+        @com.aliyun.core.annotation.NameInMap("SendTimeout")
+        private Integer sendTimeout;
+
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private Attribute(Builder builder) {
+            this.connectTimeout = builder.connectTimeout;
+            this.failTimeout = builder.failTimeout;
+            this.maxFails = builder.maxFails;
+            this.mode = builder.mode;
+            this.readTimeout = builder.readTimeout;
+            this.sendTimeout = builder.sendTimeout;
             this.weight = builder.weight;
         }
 
@@ -113,6 +156,48 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
         }
 
         /**
+         * @return connectTimeout
+         */
+        public Integer getConnectTimeout() {
+            return this.connectTimeout;
+        }
+
+        /**
+         * @return failTimeout
+         */
+        public Integer getFailTimeout() {
+            return this.failTimeout;
+        }
+
+        /**
+         * @return maxFails
+         */
+        public Integer getMaxFails() {
+            return this.maxFails;
+        }
+
+        /**
+         * @return mode
+         */
+        public String getMode() {
+            return this.mode;
+        }
+
+        /**
+         * @return readTimeout
+         */
+        public Integer getReadTimeout() {
+            return this.readTimeout;
+        }
+
+        /**
+         * @return sendTimeout
+         */
+        public Integer getSendTimeout() {
+            return this.sendTimeout;
+        }
+
+        /**
          * @return weight
          */
         public Integer getWeight() {
@@ -120,7 +205,61 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer connectTimeout; 
+            private Integer failTimeout; 
+            private Integer maxFails; 
+            private String mode; 
+            private Integer readTimeout; 
+            private Integer sendTimeout; 
             private Integer weight; 
+
+            /**
+             * ConnectTimeout.
+             */
+            public Builder connectTimeout(Integer connectTimeout) {
+                this.connectTimeout = connectTimeout;
+                return this;
+            }
+
+            /**
+             * FailTimeout.
+             */
+            public Builder failTimeout(Integer failTimeout) {
+                this.failTimeout = failTimeout;
+                return this;
+            }
+
+            /**
+             * MaxFails.
+             */
+            public Builder maxFails(Integer maxFails) {
+                this.maxFails = maxFails;
+                return this;
+            }
+
+            /**
+             * Mode.
+             */
+            public Builder mode(String mode) {
+                this.mode = mode;
+                return this;
+            }
+
+            /**
+             * ReadTimeout.
+             */
+            public Builder readTimeout(Integer readTimeout) {
+                this.readTimeout = readTimeout;
+                return this;
+            }
+
+            /**
+             * SendTimeout.
+             */
+            public Builder sendTimeout(Integer sendTimeout) {
+                this.sendTimeout = sendTimeout;
+                return this;
+            }
 
             /**
              * The weight of the origin server. This parameter takes effect only when **ProxyMode** is set to **rr**.
@@ -141,13 +280,13 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
 
     }
     public static class Attributes extends TeaModel {
-        @NameInMap("Attribute")
+        @com.aliyun.core.annotation.NameInMap("Attribute")
         private Attribute attribute;
 
-        @NameInMap("RealServer")
+        @com.aliyun.core.annotation.NameInMap("RealServer")
         private String realServer;
 
-        @NameInMap("RsType")
+        @com.aliyun.core.annotation.NameInMap("RsType")
         private Integer rsType;
 
         private Attributes(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHealthCheckStatusResponseBody</p>
  */
 public class DescribeHealthCheckStatusResponseBody extends TeaModel {
-    @NameInMap("HealthCheckStatus")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckStatus")
     private java.util.List < HealthCheckStatus> healthCheckStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeHealthCheckStatusResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
     } 
 
     public static class RealServerStatusList extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private RealServerStatusList(Builder builder) {
@@ -137,19 +136,19 @@ public class DescribeHealthCheckStatusResponseBody extends TeaModel {
 
     }
     public static class HealthCheckStatus extends TeaModel {
-        @NameInMap("FrontendPort")
+        @com.aliyun.core.annotation.NameInMap("FrontendPort")
         private Integer frontendPort;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("RealServerStatusList")
+        @com.aliyun.core.annotation.NameInMap("RealServerStatusList")
         private java.util.List < RealServerStatusList> realServerStatusList;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private HealthCheckStatus(Builder builder) {

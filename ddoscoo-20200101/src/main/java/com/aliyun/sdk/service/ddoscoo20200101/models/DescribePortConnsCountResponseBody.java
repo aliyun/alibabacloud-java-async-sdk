@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePortConnsCountResponseBody</p>
  */
 public class DescribePortConnsCountResponseBody extends TeaModel {
-    @NameInMap("ActConns")
+    @com.aliyun.core.annotation.NameInMap("ActConns")
     private Long actConns;
 
-    @NameInMap("Conns")
+    @com.aliyun.core.annotation.NameInMap("Conns")
     private Long conns;
 
-    @NameInMap("Cps")
+    @com.aliyun.core.annotation.NameInMap("Cps")
     private Long cps;
 
-    @NameInMap("InActConns")
+    @com.aliyun.core.annotation.NameInMap("InActConns")
     private Long inActConns;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePortConnsCountResponseBody(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePortCcAttackTopIPResponseBody</p>
  */
 public class DescribePortCcAttackTopIPResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TopIp")
+    @com.aliyun.core.annotation.NameInMap("TopIp")
     private java.util.List < TopIp> topIp;
 
     private DescribePortCcAttackTopIPResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribePortCcAttackTopIPResponseBody extends TeaModel {
     } 
 
     public static class TopIp extends TeaModel {
-        @NameInMap("AreaId")
+        @com.aliyun.core.annotation.NameInMap("AreaId")
         private String areaId;
 
-        @NameInMap("Pv")
+        @com.aliyun.core.annotation.NameInMap("Pv")
         private Long pv;
 
-        @NameInMap("SrcIp")
+        @com.aliyun.core.annotation.NameInMap("SrcIp")
         private String srcIp;
 
         private TopIp(Builder builder) {

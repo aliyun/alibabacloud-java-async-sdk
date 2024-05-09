@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainSecurityProfileResponseBody</p>
  */
 public class DescribeDomainSecurityProfileResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private DescribeDomainSecurityProfileResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeDomainSecurityProfileResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("GlobalEnable")
+        @com.aliyun.core.annotation.NameInMap("GlobalEnable")
         private Boolean globalEnable;
 
-        @NameInMap("GlobalMode")
+        @com.aliyun.core.annotation.NameInMap("GlobalMode")
         private String globalMode;
 
         private Result(Builder builder) {

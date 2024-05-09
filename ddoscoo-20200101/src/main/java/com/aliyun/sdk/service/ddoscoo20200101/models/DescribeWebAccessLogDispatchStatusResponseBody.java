@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeWebAccessLogDispatchStatusResponseBody</p>
  */
 public class DescribeWebAccessLogDispatchStatusResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SlsConfigStatus")
+    @com.aliyun.core.annotation.NameInMap("SlsConfigStatus")
     private java.util.List < SlsConfigStatus> slsConfigStatus;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeWebAccessLogDispatchStatusResponseBody(Builder builder) {
@@ -92,10 +91,10 @@ public class DescribeWebAccessLogDispatchStatusResponseBody extends TeaModel {
     } 
 
     public static class SlsConfigStatus extends TeaModel {
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
 
         private SlsConfigStatus(Builder builder) {

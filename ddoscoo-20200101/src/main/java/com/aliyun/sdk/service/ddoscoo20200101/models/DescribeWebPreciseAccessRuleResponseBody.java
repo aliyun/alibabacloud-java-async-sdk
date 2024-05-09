@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeWebPreciseAccessRuleResponseBody</p>
  */
 public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
-    @NameInMap("PreciseAccessConfigList")
+    @com.aliyun.core.annotation.NameInMap("PreciseAccessConfigList")
     private java.util.List < PreciseAccessConfigList> preciseAccessConfigList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeWebPreciseAccessRuleResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
     } 
 
     public static class ConditionList extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("ContentList")
+        @com.aliyun.core.annotation.NameInMap("ContentList")
         private java.util.List < String > contentList;
 
-        @NameInMap("Field")
+        @com.aliyun.core.annotation.NameInMap("Field")
         private String field;
 
-        @NameInMap("HeaderName")
+        @com.aliyun.core.annotation.NameInMap("HeaderName")
         private String headerName;
 
-        @NameInMap("MatchMethod")
+        @com.aliyun.core.annotation.NameInMap("MatchMethod")
         private String matchMethod;
 
         private ConditionList(Builder builder) {
@@ -196,19 +195,19 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
 
     }
     public static class RuleList extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("ConditionList")
+        @com.aliyun.core.annotation.NameInMap("ConditionList")
         private java.util.List < ConditionList> conditionList;
 
-        @NameInMap("Expires")
+        @com.aliyun.core.annotation.NameInMap("Expires")
         private Long expires;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
         private RuleList(Builder builder) {
@@ -326,10 +325,10 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
 
     }
     public static class PreciseAccessConfigList extends TeaModel {
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("RuleList")
+        @com.aliyun.core.annotation.NameInMap("RuleList")
         private java.util.List < RuleList> ruleList;
 
         private PreciseAccessConfigList(Builder builder) {

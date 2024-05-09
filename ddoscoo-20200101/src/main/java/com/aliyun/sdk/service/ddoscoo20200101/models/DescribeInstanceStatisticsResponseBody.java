@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceStatisticsResponseBody</p>
  */
 public class DescribeInstanceStatisticsResponseBody extends TeaModel {
-    @NameInMap("InstanceStatistics")
+    @com.aliyun.core.annotation.NameInMap("InstanceStatistics")
     private java.util.List < InstanceStatistics> instanceStatistics;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceStatisticsResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
     } 
 
     public static class InstanceStatistics extends TeaModel {
-        @NameInMap("DefenseCountUsage")
+        @com.aliyun.core.annotation.NameInMap("DefenseCountUsage")
         private Integer defenseCountUsage;
 
-        @NameInMap("DomainUsage")
+        @com.aliyun.core.annotation.NameInMap("DomainUsage")
         private Integer domainUsage;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("PortUsage")
+        @com.aliyun.core.annotation.NameInMap("PortUsage")
         private Integer portUsage;
 
-        @NameInMap("SiteUsage")
+        @com.aliyun.core.annotation.NameInMap("SiteUsage")
         private Integer siteUsage;
 
         private InstanceStatistics(Builder builder) {

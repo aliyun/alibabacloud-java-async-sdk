@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePortResponseBody</p>
  */
 public class DescribePortResponseBody extends TeaModel {
-    @NameInMap("NetworkRules")
+    @com.aliyun.core.annotation.NameInMap("NetworkRules")
     private java.util.List < NetworkRules> networkRules;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribePortResponseBody(Builder builder) {
@@ -92,22 +91,22 @@ public class DescribePortResponseBody extends TeaModel {
     } 
 
     public static class NetworkRules extends TeaModel {
-        @NameInMap("BackendPort")
+        @com.aliyun.core.annotation.NameInMap("BackendPort")
         private Integer backendPort;
 
-        @NameInMap("FrontendPort")
+        @com.aliyun.core.annotation.NameInMap("FrontendPort")
         private Integer frontendPort;
 
-        @NameInMap("FrontendProtocol")
+        @com.aliyun.core.annotation.NameInMap("FrontendProtocol")
         private String frontendProtocol;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("IsAutoCreate")
+        @com.aliyun.core.annotation.NameInMap("IsAutoCreate")
         private Boolean isAutoCreate;
 
-        @NameInMap("RealServers")
+        @com.aliyun.core.annotation.NameInMap("RealServers")
         private java.util.List < String > realServers;
 
         private NetworkRules(Builder builder) {

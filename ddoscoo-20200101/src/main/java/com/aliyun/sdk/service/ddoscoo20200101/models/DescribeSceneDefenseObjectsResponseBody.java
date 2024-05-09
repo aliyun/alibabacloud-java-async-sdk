@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSceneDefenseObjectsResponseBody</p>
  */
 public class DescribeSceneDefenseObjectsResponseBody extends TeaModel {
-    @NameInMap("Objects")
+    @com.aliyun.core.annotation.NameInMap("Objects")
     private java.util.List < Objects> objects;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeSceneDefenseObjectsResponseBody(Builder builder) {
@@ -96,13 +95,13 @@ public class DescribeSceneDefenseObjectsResponseBody extends TeaModel {
     } 
 
     public static class Objects extends TeaModel {
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("PolicyId")
+        @com.aliyun.core.annotation.NameInMap("PolicyId")
         private String policyId;
 
-        @NameInMap("Vip")
+        @com.aliyun.core.annotation.NameInMap("Vip")
         private String vip;
 
         private Objects(Builder builder) {

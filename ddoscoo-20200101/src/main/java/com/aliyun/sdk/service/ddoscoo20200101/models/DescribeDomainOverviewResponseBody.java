@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainOverviewResponseBody</p>
  */
 public class DescribeDomainOverviewResponseBody extends TeaModel {
-    @NameInMap("MaxHttp")
+    @com.aliyun.core.annotation.NameInMap("MaxHttp")
     private Long maxHttp;
 
-    @NameInMap("MaxHttps")
+    @com.aliyun.core.annotation.NameInMap("MaxHttps")
     private Long maxHttps;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDomainOverviewResponseBody(Builder builder) {

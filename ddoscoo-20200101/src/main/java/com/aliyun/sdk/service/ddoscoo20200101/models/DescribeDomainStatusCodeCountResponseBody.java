@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,43 +11,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainStatusCodeCountResponseBody</p>
  */
 public class DescribeDomainStatusCodeCountResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status200")
+    @com.aliyun.core.annotation.NameInMap("Status200")
     private Long status200;
 
-    @NameInMap("Status2XX")
+    @com.aliyun.core.annotation.NameInMap("Status2XX")
     private Long status2XX;
 
-    @NameInMap("Status3XX")
+    @com.aliyun.core.annotation.NameInMap("Status3XX")
     private Long status3XX;
 
-    @NameInMap("Status403")
+    @com.aliyun.core.annotation.NameInMap("Status403")
     private Long status403;
 
-    @NameInMap("Status404")
+    @com.aliyun.core.annotation.NameInMap("Status404")
     private Long status404;
 
-    @NameInMap("Status405")
+    @com.aliyun.core.annotation.NameInMap("Status405")
     private Long status405;
 
-    @NameInMap("Status4XX")
+    @com.aliyun.core.annotation.NameInMap("Status4XX")
     private Long status4XX;
 
-    @NameInMap("Status501")
+    @com.aliyun.core.annotation.NameInMap("Status501")
     private Long status501;
 
-    @NameInMap("Status502")
+    @com.aliyun.core.annotation.NameInMap("Status502")
     private Long status502;
 
-    @NameInMap("Status503")
+    @com.aliyun.core.annotation.NameInMap("Status503")
     private Long status503;
 
-    @NameInMap("Status504")
+    @com.aliyun.core.annotation.NameInMap("Status504")
     private Long status504;
 
-    @NameInMap("Status5XX")
+    @com.aliyun.core.annotation.NameInMap("Status5XX")
     private Long status5XX;
 
     private DescribeDomainStatusCodeCountResponseBody(Builder builder) {

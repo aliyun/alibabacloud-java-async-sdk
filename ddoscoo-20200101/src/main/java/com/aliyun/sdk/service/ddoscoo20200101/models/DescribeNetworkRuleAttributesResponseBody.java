@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeNetworkRuleAttributesResponseBody</p>
  */
 public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
-    @NameInMap("NetworkRuleAttributes")
+    @com.aliyun.core.annotation.NameInMap("NetworkRuleAttributes")
     private java.util.List < NetworkRuleAttributes> networkRuleAttributes;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeNetworkRuleAttributesResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
     } 
 
     public static class Sblack extends TeaModel {
-        @NameInMap("Cnt")
+        @com.aliyun.core.annotation.NameInMap("Cnt")
         private Integer cnt;
 
-        @NameInMap("During")
+        @com.aliyun.core.annotation.NameInMap("During")
         private Integer during;
 
-        @NameInMap("Expires")
+        @com.aliyun.core.annotation.NameInMap("Expires")
         private Integer expires;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
         private Sblack(Builder builder) {
@@ -179,7 +178,7 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
 
     }
     public static class Cc extends TeaModel {
-        @NameInMap("Sblack")
+        @com.aliyun.core.annotation.NameInMap("Sblack")
         private java.util.List < Sblack> sblack;
 
         private Cc(Builder builder) {
@@ -220,10 +219,10 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
 
     }
     public static class PayloadLen extends TeaModel {
-        @NameInMap("Max")
+        @com.aliyun.core.annotation.NameInMap("Max")
         private Integer max;
 
-        @NameInMap("Min")
+        @com.aliyun.core.annotation.NameInMap("Min")
         private Integer min;
 
         private PayloadLen(Builder builder) {
@@ -281,16 +280,16 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
 
     }
     public static class Sla extends TeaModel {
-        @NameInMap("Cps")
+        @com.aliyun.core.annotation.NameInMap("Cps")
         private Integer cps;
 
-        @NameInMap("CpsEnable")
+        @com.aliyun.core.annotation.NameInMap("CpsEnable")
         private Integer cpsEnable;
 
-        @NameInMap("Maxconn")
+        @com.aliyun.core.annotation.NameInMap("Maxconn")
         private Integer maxconn;
 
-        @NameInMap("MaxconnEnable")
+        @com.aliyun.core.annotation.NameInMap("MaxconnEnable")
         private Integer maxconnEnable;
 
         private Sla(Builder builder) {
@@ -390,25 +389,25 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
 
     }
     public static class Slimit extends TeaModel {
-        @NameInMap("Bps")
+        @com.aliyun.core.annotation.NameInMap("Bps")
         private Long bps;
 
-        @NameInMap("Cps")
+        @com.aliyun.core.annotation.NameInMap("Cps")
         private Integer cps;
 
-        @NameInMap("CpsEnable")
+        @com.aliyun.core.annotation.NameInMap("CpsEnable")
         private Integer cpsEnable;
 
-        @NameInMap("CpsMode")
+        @com.aliyun.core.annotation.NameInMap("CpsMode")
         private Integer cpsMode;
 
-        @NameInMap("Maxconn")
+        @com.aliyun.core.annotation.NameInMap("Maxconn")
         private Integer maxconn;
 
-        @NameInMap("MaxconnEnable")
+        @com.aliyun.core.annotation.NameInMap("MaxconnEnable")
         private Integer maxconnEnable;
 
-        @NameInMap("Pps")
+        @com.aliyun.core.annotation.NameInMap("Pps")
         private Long pps;
 
         private Slimit(Builder builder) {
@@ -563,25 +562,25 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
 
     }
     public static class Config extends TeaModel {
-        @NameInMap("Cc")
+        @com.aliyun.core.annotation.NameInMap("Cc")
         private Cc cc;
 
-        @NameInMap("NodataConn")
+        @com.aliyun.core.annotation.NameInMap("NodataConn")
         private String nodataConn;
 
-        @NameInMap("PayloadLen")
+        @com.aliyun.core.annotation.NameInMap("PayloadLen")
         private PayloadLen payloadLen;
 
-        @NameInMap("PersistenceTimeout")
+        @com.aliyun.core.annotation.NameInMap("PersistenceTimeout")
         private Integer persistenceTimeout;
 
-        @NameInMap("Sla")
+        @com.aliyun.core.annotation.NameInMap("Sla")
         private Sla sla;
 
-        @NameInMap("Slimit")
+        @com.aliyun.core.annotation.NameInMap("Slimit")
         private Slimit slimit;
 
-        @NameInMap("Synproxy")
+        @com.aliyun.core.annotation.NameInMap("Synproxy")
         private String synproxy;
 
         private Config(Builder builder) {
@@ -732,16 +731,16 @@ public class DescribeNetworkRuleAttributesResponseBody extends TeaModel {
 
     }
     public static class NetworkRuleAttributes extends TeaModel {
-        @NameInMap("Config")
+        @com.aliyun.core.annotation.NameInMap("Config")
         private Config config;
 
-        @NameInMap("FrontendPort")
+        @com.aliyun.core.annotation.NameInMap("FrontendPort")
         private Integer frontendPort;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
         private NetworkRuleAttributes(Builder builder) {

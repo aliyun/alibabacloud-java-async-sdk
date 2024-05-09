@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAutoCcBlacklistResponseBody</p>
  */
 public class DescribeAutoCcBlacklistResponseBody extends TeaModel {
-    @NameInMap("AutoCcBlacklist")
+    @com.aliyun.core.annotation.NameInMap("AutoCcBlacklist")
     private java.util.List < AutoCcBlacklist> autoCcBlacklist;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeAutoCcBlacklistResponseBody(Builder builder) {
@@ -92,16 +91,16 @@ public class DescribeAutoCcBlacklistResponseBody extends TeaModel {
     } 
 
     public static class AutoCcBlacklist extends TeaModel {
-        @NameInMap("DestIp")
+        @com.aliyun.core.annotation.NameInMap("DestIp")
         private String destIp;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("SourceIp")
+        @com.aliyun.core.annotation.NameInMap("SourceIp")
         private String sourceIp;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private AutoCcBlacklist(Builder builder) {

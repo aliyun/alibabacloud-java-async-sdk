@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHeadersResponseBody</p>
  */
 public class DescribeHeadersResponseBody extends TeaModel {
-    @NameInMap("CustomHeader")
+    @com.aliyun.core.annotation.NameInMap("CustomHeader")
     private CustomHeader customHeader;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeHeadersResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeHeadersResponseBody extends TeaModel {
     } 
 
     public static class CustomHeader extends TeaModel {
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Headers")
+        @com.aliyun.core.annotation.NameInMap("Headers")
         private String headers;
 
         private CustomHeader(Builder builder) {

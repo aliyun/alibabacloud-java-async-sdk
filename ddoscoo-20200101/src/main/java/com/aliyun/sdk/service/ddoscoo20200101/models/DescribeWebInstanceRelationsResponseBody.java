@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeWebInstanceRelationsResponseBody</p>
  */
 public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("WebInstanceRelations")
+    @com.aliyun.core.annotation.NameInMap("WebInstanceRelations")
     private java.util.List < WebInstanceRelations> webInstanceRelations;
 
     private DescribeWebInstanceRelationsResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
     } 
 
     public static class InstanceDetails extends TeaModel {
-        @NameInMap("EipList")
+        @com.aliyun.core.annotation.NameInMap("EipList")
         private java.util.List < String > eipList;
 
-        @NameInMap("FunctionVersion")
+        @com.aliyun.core.annotation.NameInMap("FunctionVersion")
         private String functionVersion;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
         private InstanceDetails(Builder builder) {
@@ -157,10 +156,10 @@ public class DescribeWebInstanceRelationsResponseBody extends TeaModel {
 
     }
     public static class WebInstanceRelations extends TeaModel {
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("InstanceDetails")
+        @com.aliyun.core.annotation.NameInMap("InstanceDetails")
         private java.util.List < InstanceDetails> instanceDetails;
 
         private WebInstanceRelations(Builder builder) {

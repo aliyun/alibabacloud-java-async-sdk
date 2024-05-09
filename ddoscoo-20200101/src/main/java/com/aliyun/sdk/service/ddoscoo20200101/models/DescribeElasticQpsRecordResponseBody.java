@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeElasticQpsRecordResponseBody</p>
  */
 public class DescribeElasticQpsRecordResponseBody extends TeaModel {
-    @NameInMap("ElasticQpsList")
+    @com.aliyun.core.annotation.NameInMap("ElasticQpsList")
     private java.util.List < ElasticQpsList> elasticQpsList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeElasticQpsRecordResponseBody(Builder builder) {
@@ -72,31 +71,31 @@ public class DescribeElasticQpsRecordResponseBody extends TeaModel {
     } 
 
     public static class ElasticQpsList extends TeaModel {
-        @NameInMap("Date")
+        @com.aliyun.core.annotation.NameInMap("Date")
         private Long date;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("OpsElasticQps")
+        @com.aliyun.core.annotation.NameInMap("OpsElasticQps")
         private Long opsElasticQps;
 
-        @NameInMap("OpsQps")
+        @com.aliyun.core.annotation.NameInMap("OpsQps")
         private Long opsQps;
 
-        @NameInMap("OriginQps")
+        @com.aliyun.core.annotation.NameInMap("OriginQps")
         private Long originQps;
 
-        @NameInMap("Qps")
+        @com.aliyun.core.annotation.NameInMap("Qps")
         private Long qps;
 
-        @NameInMap("QpsPeak")
+        @com.aliyun.core.annotation.NameInMap("QpsPeak")
         private Long qpsPeak;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Long status;
 
         private ElasticQpsList(Builder builder) {

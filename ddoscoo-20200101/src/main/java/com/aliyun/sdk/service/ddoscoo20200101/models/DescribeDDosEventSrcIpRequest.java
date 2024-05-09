@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDDosEventSrcIpRequest</p>
  */
 public class DescribeDDosEventSrcIpRequest extends Request {
-    @Query
-    @NameInMap("EventType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String eventType;
 
-    @Query
-    @NameInMap("Ip")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ip")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ip;
 
-    @Query
-    @NameInMap("Range")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Range")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long range;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
     private DescribeDDosEventSrcIpRequest(Builder builder) {

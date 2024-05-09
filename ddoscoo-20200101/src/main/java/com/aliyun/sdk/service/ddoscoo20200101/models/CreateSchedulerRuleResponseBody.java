@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSchedulerRuleResponseBody</p>
  */
 public class CreateSchedulerRuleResponseBody extends TeaModel {
-    @NameInMap("Cname")
+    @com.aliyun.core.annotation.NameInMap("Cname")
     private String cname;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RuleName")
+    @com.aliyun.core.annotation.NameInMap("RuleName")
     private String ruleName;
 
     private CreateSchedulerRuleResponseBody(Builder builder) {

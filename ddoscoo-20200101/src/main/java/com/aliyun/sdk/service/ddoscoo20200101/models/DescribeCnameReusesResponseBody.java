@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCnameReusesResponseBody</p>
  */
 public class DescribeCnameReusesResponseBody extends TeaModel {
-    @NameInMap("CnameReuses")
+    @com.aliyun.core.annotation.NameInMap("CnameReuses")
     private java.util.List < CnameReuses> cnameReuses;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCnameReusesResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeCnameReusesResponseBody extends TeaModel {
     } 
 
     public static class CnameReuses extends TeaModel {
-        @NameInMap("Cname")
+        @com.aliyun.core.annotation.NameInMap("Cname")
         private String cname;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Integer enable;
 
         private CnameReuses(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeNetworkRulesResponseBody</p>
  */
 public class DescribeNetworkRulesResponseBody extends TeaModel {
-    @NameInMap("NetworkRules")
+    @com.aliyun.core.annotation.NameInMap("NetworkRules")
     private java.util.List < NetworkRules> networkRules;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeNetworkRulesResponseBody(Builder builder) {
@@ -92,25 +91,25 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
     } 
 
     public static class NetworkRules extends TeaModel {
-        @NameInMap("BackendPort")
+        @com.aliyun.core.annotation.NameInMap("BackendPort")
         private Integer backendPort;
 
-        @NameInMap("FrontendPort")
+        @com.aliyun.core.annotation.NameInMap("FrontendPort")
         private Integer frontendPort;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("IsAutoCreate")
+        @com.aliyun.core.annotation.NameInMap("IsAutoCreate")
         private Boolean isAutoCreate;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("RealServers")
+        @com.aliyun.core.annotation.NameInMap("RealServers")
         private java.util.List < String > realServers;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
         private NetworkRules(Builder builder) {

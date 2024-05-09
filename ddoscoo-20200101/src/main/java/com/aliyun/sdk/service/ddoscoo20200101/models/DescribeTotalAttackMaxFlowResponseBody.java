@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTotalAttackMaxFlowResponseBody</p>
  */
 public class DescribeTotalAttackMaxFlowResponseBody extends TeaModel {
-    @NameInMap("Bps")
+    @com.aliyun.core.annotation.NameInMap("Bps")
     private Long bps;
 
-    @NameInMap("Pps")
+    @com.aliyun.core.annotation.NameInMap("Pps")
     private Long pps;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeTotalAttackMaxFlowResponseBody(Builder builder) {

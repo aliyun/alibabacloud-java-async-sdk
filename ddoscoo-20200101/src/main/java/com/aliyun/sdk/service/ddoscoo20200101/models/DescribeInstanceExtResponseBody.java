@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceExtResponseBody</p>
  */
 public class DescribeInstanceExtResponseBody extends TeaModel {
-    @NameInMap("InstanceExtSpecs")
+    @com.aliyun.core.annotation.NameInMap("InstanceExtSpecs")
     private java.util.List < InstanceExtSpecs> instanceExtSpecs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeInstanceExtResponseBody(Builder builder) {
@@ -92,19 +91,19 @@ public class DescribeInstanceExtResponseBody extends TeaModel {
     } 
 
     public static class InstanceExtSpecs extends TeaModel {
-        @NameInMap("FunctionVersion")
+        @com.aliyun.core.annotation.NameInMap("FunctionVersion")
         private Long functionVersion;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("NormalBandwidth")
+        @com.aliyun.core.annotation.NameInMap("NormalBandwidth")
         private Long normalBandwidth;
 
-        @NameInMap("ProductPlan")
+        @com.aliyun.core.annotation.NameInMap("ProductPlan")
         private Long productPlan;
 
-        @NameInMap("ServicePartner")
+        @com.aliyun.core.annotation.NameInMap("ServicePartner")
         private String servicePartner;
 
         private InstanceExtSpecs(Builder builder) {

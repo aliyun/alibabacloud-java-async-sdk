@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBlackholeStatusResponseBody</p>
  */
 public class DescribeBlackholeStatusResponseBody extends TeaModel {
-    @NameInMap("BlackholeStatus")
+    @com.aliyun.core.annotation.NameInMap("BlackholeStatus")
     private java.util.List < BlackholeStatus> blackholeStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeBlackholeStatusResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribeBlackholeStatusResponseBody extends TeaModel {
     } 
 
     public static class BlackholeStatus extends TeaModel {
-        @NameInMap("BlackStatus")
+        @com.aliyun.core.annotation.NameInMap("BlackStatus")
         private String blackStatus;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
         private BlackholeStatus(Builder builder) {

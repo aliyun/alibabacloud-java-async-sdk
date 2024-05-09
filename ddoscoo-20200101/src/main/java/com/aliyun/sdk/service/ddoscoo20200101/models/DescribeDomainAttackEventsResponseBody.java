@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainAttackEventsResponseBody</p>
  */
 public class DescribeDomainAttackEventsResponseBody extends TeaModel {
-    @NameInMap("DomainAttackEvents")
+    @com.aliyun.core.annotation.NameInMap("DomainAttackEvents")
     private java.util.List < DomainAttackEvents> domainAttackEvents;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeDomainAttackEventsResponseBody(Builder builder) {
@@ -92,16 +91,16 @@ public class DescribeDomainAttackEventsResponseBody extends TeaModel {
     } 
 
     public static class DomainAttackEvents extends TeaModel {
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("MaxQps")
+        @com.aliyun.core.annotation.NameInMap("MaxQps")
         private Long maxQps;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
         private DomainAttackEvents(Builder builder) {

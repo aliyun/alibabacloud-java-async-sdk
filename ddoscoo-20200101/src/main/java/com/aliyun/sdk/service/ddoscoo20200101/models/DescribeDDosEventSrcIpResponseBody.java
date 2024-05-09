@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDDosEventSrcIpResponseBody</p>
  */
 public class DescribeDDosEventSrcIpResponseBody extends TeaModel {
-    @NameInMap("Ips")
+    @com.aliyun.core.annotation.NameInMap("Ips")
     private java.util.List < Ips> ips;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDDosEventSrcIpResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeDDosEventSrcIpResponseBody extends TeaModel {
     } 
 
     public static class Ips extends TeaModel {
-        @NameInMap("AreaId")
+        @com.aliyun.core.annotation.NameInMap("AreaId")
         private String areaId;
 
-        @NameInMap("Isp")
+        @com.aliyun.core.annotation.NameInMap("Isp")
         private String isp;
 
-        @NameInMap("SrcIp")
+        @com.aliyun.core.annotation.NameInMap("SrcIp")
         private String srcIp;
 
         private Ips(Builder builder) {

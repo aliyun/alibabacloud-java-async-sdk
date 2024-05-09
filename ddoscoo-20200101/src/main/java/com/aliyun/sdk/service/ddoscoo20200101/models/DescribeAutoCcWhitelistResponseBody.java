@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAutoCcWhitelistResponseBody</p>
  */
 public class DescribeAutoCcWhitelistResponseBody extends TeaModel {
-    @NameInMap("AutoCcWhitelist")
+    @com.aliyun.core.annotation.NameInMap("AutoCcWhitelist")
     private java.util.List < AutoCcWhitelist> autoCcWhitelist;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeAutoCcWhitelistResponseBody(Builder builder) {
@@ -92,16 +91,16 @@ public class DescribeAutoCcWhitelistResponseBody extends TeaModel {
     } 
 
     public static class AutoCcWhitelist extends TeaModel {
-        @NameInMap("DestIp")
+        @com.aliyun.core.annotation.NameInMap("DestIp")
         private String destIp;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("SourceIp")
+        @com.aliyun.core.annotation.NameInMap("SourceIp")
         private String sourceIp;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private AutoCcWhitelist(Builder builder) {

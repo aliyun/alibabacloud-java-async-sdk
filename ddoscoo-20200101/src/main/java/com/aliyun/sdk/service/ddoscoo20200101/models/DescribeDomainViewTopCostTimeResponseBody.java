@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainViewTopCostTimeResponseBody</p>
  */
 public class DescribeDomainViewTopCostTimeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UrlList")
+    @com.aliyun.core.annotation.NameInMap("UrlList")
     private java.util.List < UrlList> urlList;
 
     private DescribeDomainViewTopCostTimeResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeDomainViewTopCostTimeResponseBody extends TeaModel {
     } 
 
     public static class UrlList extends TeaModel {
-        @NameInMap("CostTime")
+        @com.aliyun.core.annotation.NameInMap("CostTime")
         private Float costTime;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private UrlList(Builder builder) {

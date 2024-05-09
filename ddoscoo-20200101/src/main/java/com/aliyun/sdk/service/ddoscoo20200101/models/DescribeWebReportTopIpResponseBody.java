@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeWebReportTopIpResponseBody</p>
  */
 public class DescribeWebReportTopIpResponseBody extends TeaModel {
-    @NameInMap("DataList")
+    @com.aliyun.core.annotation.NameInMap("DataList")
     private java.util.List < DataList> dataList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeWebReportTopIpResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribeWebReportTopIpResponseBody extends TeaModel {
     } 
 
     public static class DataList extends TeaModel {
-        @NameInMap("AreaId")
+        @com.aliyun.core.annotation.NameInMap("AreaId")
         private String areaId;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("Isp")
+        @com.aliyun.core.annotation.NameInMap("Isp")
         private String isp;
 
-        @NameInMap("SourceIp")
+        @com.aliyun.core.annotation.NameInMap("SourceIp")
         private String sourceIp;
 
         private DataList(Builder builder) {

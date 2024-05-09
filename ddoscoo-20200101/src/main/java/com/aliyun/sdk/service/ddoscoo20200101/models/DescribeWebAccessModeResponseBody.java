@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeWebAccessModeResponseBody</p>
  */
 public class DescribeWebAccessModeResponseBody extends TeaModel {
-    @NameInMap("DomainModes")
+    @com.aliyun.core.annotation.NameInMap("DomainModes")
     private java.util.List < DomainModes> domainModes;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeWebAccessModeResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeWebAccessModeResponseBody extends TeaModel {
     } 
 
     public static class DomainModes extends TeaModel {
-        @NameInMap("AccessMode")
+        @com.aliyun.core.annotation.NameInMap("AccessMode")
         private Integer accessMode;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
         private DomainModes(Builder builder) {

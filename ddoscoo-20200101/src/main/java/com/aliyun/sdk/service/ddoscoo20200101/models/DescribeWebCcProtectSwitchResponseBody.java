@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeWebCcProtectSwitchResponseBody</p>
  */
 public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
-    @NameInMap("ProtectSwitchList")
+    @com.aliyun.core.annotation.NameInMap("ProtectSwitchList")
     private java.util.List < ProtectSwitchList> protectSwitchList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeWebCcProtectSwitchResponseBody(Builder builder) {
@@ -72,37 +71,37 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
     } 
 
     public static class ProtectSwitchList extends TeaModel {
-        @NameInMap("AiMode")
+        @com.aliyun.core.annotation.NameInMap("AiMode")
         private String aiMode;
 
-        @NameInMap("AiRuleEnable")
+        @com.aliyun.core.annotation.NameInMap("AiRuleEnable")
         private Integer aiRuleEnable;
 
-        @NameInMap("AiTemplate")
+        @com.aliyun.core.annotation.NameInMap("AiTemplate")
         private String aiTemplate;
 
-        @NameInMap("BlackWhiteListEnable")
+        @com.aliyun.core.annotation.NameInMap("BlackWhiteListEnable")
         private Integer blackWhiteListEnable;
 
-        @NameInMap("CcCustomRuleEnable")
+        @com.aliyun.core.annotation.NameInMap("CcCustomRuleEnable")
         private Integer ccCustomRuleEnable;
 
-        @NameInMap("CcEnable")
+        @com.aliyun.core.annotation.NameInMap("CcEnable")
         private Integer ccEnable;
 
-        @NameInMap("CcGlobalSwitch")
+        @com.aliyun.core.annotation.NameInMap("CcGlobalSwitch")
         private String ccGlobalSwitch;
 
-        @NameInMap("CcTemplate")
+        @com.aliyun.core.annotation.NameInMap("CcTemplate")
         private String ccTemplate;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("PreciseRuleEnable")
+        @com.aliyun.core.annotation.NameInMap("PreciseRuleEnable")
         private Integer preciseRuleEnable;
 
-        @NameInMap("RegionBlockEnable")
+        @com.aliyun.core.annotation.NameInMap("RegionBlockEnable")
         private Integer regionBlockEnable;
 
         private ProtectSwitchList(Builder builder) {

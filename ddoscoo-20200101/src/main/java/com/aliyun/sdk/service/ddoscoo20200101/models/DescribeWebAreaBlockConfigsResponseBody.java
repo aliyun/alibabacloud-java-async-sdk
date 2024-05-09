@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeWebAreaBlockConfigsResponseBody</p>
  */
 public class DescribeWebAreaBlockConfigsResponseBody extends TeaModel {
-    @NameInMap("AreaBlockConfigs")
+    @com.aliyun.core.annotation.NameInMap("AreaBlockConfigs")
     private java.util.List < AreaBlockConfigs> areaBlockConfigs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeWebAreaBlockConfigsResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeWebAreaBlockConfigsResponseBody extends TeaModel {
     } 
 
     public static class RegionList extends TeaModel {
-        @NameInMap("Block")
+        @com.aliyun.core.annotation.NameInMap("Block")
         private Integer block;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
         private RegionList(Builder builder) {
@@ -137,10 +136,10 @@ public class DescribeWebAreaBlockConfigsResponseBody extends TeaModel {
 
     }
     public static class AreaBlockConfigs extends TeaModel {
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("RegionList")
+        @com.aliyun.core.annotation.NameInMap("RegionList")
         private java.util.List < RegionList> regionList;
 
         private AreaBlockConfigs(Builder builder) {

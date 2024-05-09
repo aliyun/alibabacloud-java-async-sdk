@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeWebCCRulesResponseBody</p>
  */
 public class DescribeWebCCRulesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
-    @NameInMap("WebCCRules")
+    @com.aliyun.core.annotation.NameInMap("WebCCRules")
     private java.util.List < WebCCRules> webCCRules;
 
     private DescribeWebCCRulesResponseBody(Builder builder) {
@@ -92,25 +91,25 @@ public class DescribeWebCCRulesResponseBody extends TeaModel {
     } 
 
     public static class WebCCRules extends TeaModel {
-        @NameInMap("Act")
+        @com.aliyun.core.annotation.NameInMap("Act")
         private String act;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("Interval")
+        @com.aliyun.core.annotation.NameInMap("Interval")
         private Integer interval;
 
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Ttl")
+        @com.aliyun.core.annotation.NameInMap("Ttl")
         private Integer ttl;
 
-        @NameInMap("Uri")
+        @com.aliyun.core.annotation.NameInMap("Uri")
         private String uri;
 
         private WebCCRules(Builder builder) {

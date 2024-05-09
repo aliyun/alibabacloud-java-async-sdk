@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeWebRulesResponseBody</p>
  */
 public class DescribeWebRulesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
-    @NameInMap("WebRules")
+    @com.aliyun.core.annotation.NameInMap("WebRules")
     private java.util.List < WebRules> webRules;
 
     private DescribeWebRulesResponseBody(Builder builder) {
@@ -92,13 +91,13 @@ public class DescribeWebRulesResponseBody extends TeaModel {
     } 
 
     public static class GmCert extends TeaModel {
-        @NameInMap("CertId")
+        @com.aliyun.core.annotation.NameInMap("CertId")
         private String certId;
 
-        @NameInMap("GmEnable")
+        @com.aliyun.core.annotation.NameInMap("GmEnable")
         private Long gmEnable;
 
-        @NameInMap("GmOnly")
+        @com.aliyun.core.annotation.NameInMap("GmOnly")
         private Long gmOnly;
 
         private GmCert(Builder builder) {
@@ -173,10 +172,10 @@ public class DescribeWebRulesResponseBody extends TeaModel {
 
     }
     public static class ProxyTypes extends TeaModel {
-        @NameInMap("ProxyPorts")
+        @com.aliyun.core.annotation.NameInMap("ProxyPorts")
         private java.util.List < String > proxyPorts;
 
-        @NameInMap("ProxyType")
+        @com.aliyun.core.annotation.NameInMap("ProxyType")
         private String proxyType;
 
         private ProxyTypes(Builder builder) {
@@ -234,10 +233,10 @@ public class DescribeWebRulesResponseBody extends TeaModel {
 
     }
     public static class RealServers extends TeaModel {
-        @NameInMap("RealServer")
+        @com.aliyun.core.annotation.NameInMap("RealServer")
         private String realServer;
 
-        @NameInMap("RsType")
+        @com.aliyun.core.annotation.NameInMap("RsType")
         private Integer rsType;
 
         private RealServers(Builder builder) {
@@ -295,76 +294,76 @@ public class DescribeWebRulesResponseBody extends TeaModel {
 
     }
     public static class WebRules extends TeaModel {
-        @NameInMap("BlackList")
+        @com.aliyun.core.annotation.NameInMap("BlackList")
         private java.util.List < String > blackList;
 
-        @NameInMap("CcEnabled")
+        @com.aliyun.core.annotation.NameInMap("CcEnabled")
         private Boolean ccEnabled;
 
-        @NameInMap("CcRuleEnabled")
+        @com.aliyun.core.annotation.NameInMap("CcRuleEnabled")
         private Boolean ccRuleEnabled;
 
-        @NameInMap("CcTemplate")
+        @com.aliyun.core.annotation.NameInMap("CcTemplate")
         private String ccTemplate;
 
-        @NameInMap("CertName")
+        @com.aliyun.core.annotation.NameInMap("CertName")
         private String certName;
 
-        @NameInMap("CertRegion")
+        @com.aliyun.core.annotation.NameInMap("CertRegion")
         private String certRegion;
 
-        @NameInMap("Cname")
+        @com.aliyun.core.annotation.NameInMap("Cname")
         private String cname;
 
-        @NameInMap("CustomCiphers")
+        @com.aliyun.core.annotation.NameInMap("CustomCiphers")
         private java.util.List < String > customCiphers;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("GmCert")
+        @com.aliyun.core.annotation.NameInMap("GmCert")
         private GmCert gmCert;
 
-        @NameInMap("Http2Enable")
+        @com.aliyun.core.annotation.NameInMap("Http2Enable")
         private Boolean http2Enable;
 
-        @NameInMap("Http2HttpsEnable")
+        @com.aliyun.core.annotation.NameInMap("Http2HttpsEnable")
         private Boolean http2HttpsEnable;
 
-        @NameInMap("Https2HttpEnable")
+        @com.aliyun.core.annotation.NameInMap("Https2HttpEnable")
         private Boolean https2HttpEnable;
 
-        @NameInMap("OcspEnabled")
+        @com.aliyun.core.annotation.NameInMap("OcspEnabled")
         private Boolean ocspEnabled;
 
-        @NameInMap("PolicyMode")
+        @com.aliyun.core.annotation.NameInMap("PolicyMode")
         private String policyMode;
 
-        @NameInMap("ProxyEnabled")
+        @com.aliyun.core.annotation.NameInMap("ProxyEnabled")
         private Boolean proxyEnabled;
 
-        @NameInMap("ProxyTypes")
+        @com.aliyun.core.annotation.NameInMap("ProxyTypes")
         private java.util.List < ProxyTypes> proxyTypes;
 
-        @NameInMap("PunishReason")
+        @com.aliyun.core.annotation.NameInMap("PunishReason")
         private Integer punishReason;
 
-        @NameInMap("PunishStatus")
+        @com.aliyun.core.annotation.NameInMap("PunishStatus")
         private Boolean punishStatus;
 
-        @NameInMap("RealServers")
+        @com.aliyun.core.annotation.NameInMap("RealServers")
         private java.util.List < RealServers> realServers;
 
-        @NameInMap("Ssl13Enabled")
+        @com.aliyun.core.annotation.NameInMap("Ssl13Enabled")
         private Boolean ssl13Enabled;
 
-        @NameInMap("SslCiphers")
+        @com.aliyun.core.annotation.NameInMap("SslCiphers")
         private String sslCiphers;
 
-        @NameInMap("SslProtocols")
+        @com.aliyun.core.annotation.NameInMap("SslProtocols")
         private String sslProtocols;
 
-        @NameInMap("WhiteList")
+        @com.aliyun.core.annotation.NameInMap("WhiteList")
         private java.util.List < String > whiteList;
 
         private WebRules(Builder builder) {

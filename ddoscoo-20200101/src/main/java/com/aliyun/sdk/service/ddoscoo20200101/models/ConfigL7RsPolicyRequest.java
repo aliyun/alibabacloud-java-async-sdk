@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ConfigL7RsPolicyRequest</p>
  */
 public class ConfigL7RsPolicyRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Domain")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Domain")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domain;
 
-    @Query
-    @NameInMap("Policy")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Policy")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policy;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UpstreamRetry")
+    private Integer upstreamRetry;
 
     private ConfigL7RsPolicyRequest(Builder builder) {
         super(builder);
@@ -36,6 +39,7 @@ public class ConfigL7RsPolicyRequest extends Request {
         this.domain = builder.domain;
         this.policy = builder.policy;
         this.resourceGroupId = builder.resourceGroupId;
+        this.upstreamRetry = builder.upstreamRetry;
     }
 
     public static Builder builder() {
@@ -79,11 +83,19 @@ public class ConfigL7RsPolicyRequest extends Request {
         return this.resourceGroupId;
     }
 
+    /**
+     * @return upstreamRetry
+     */
+    public Integer getUpstreamRetry() {
+        return this.upstreamRetry;
+    }
+
     public static final class Builder extends Request.Builder<ConfigL7RsPolicyRequest, Builder> {
         private String regionId; 
         private String domain; 
         private String policy; 
         private String resourceGroupId; 
+        private Integer upstreamRetry; 
 
         private Builder() {
             super();
@@ -95,6 +107,7 @@ public class ConfigL7RsPolicyRequest extends Request {
             this.domain = request.domain;
             this.policy = request.policy;
             this.resourceGroupId = request.resourceGroupId;
+            this.upstreamRetry = request.upstreamRetry;
         } 
 
         /**
@@ -151,6 +164,15 @@ public class ConfigL7RsPolicyRequest extends Request {
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * UpstreamRetry.
+         */
+        public Builder upstreamRetry(Integer upstreamRetry) {
+            this.putQueryParameter("UpstreamRetry", upstreamRetry);
+            this.upstreamRetry = upstreamRetry;
             return this;
         }
 

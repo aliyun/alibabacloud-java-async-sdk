@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainTopAttackListResponseBody</p>
  */
 public class DescribeDomainTopAttackListResponseBody extends TeaModel {
-    @NameInMap("AttackList")
+    @com.aliyun.core.annotation.NameInMap("AttackList")
     private java.util.List < AttackList> attackList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDomainTopAttackListResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeDomainTopAttackListResponseBody extends TeaModel {
     } 
 
     public static class AttackList extends TeaModel {
-        @NameInMap("Attack")
+        @com.aliyun.core.annotation.NameInMap("Attack")
         private Long attack;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
         private AttackList(Builder builder) {

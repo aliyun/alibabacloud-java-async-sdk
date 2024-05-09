@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDDosEventAreaResponseBody</p>
  */
 public class DescribeDDosEventAreaResponseBody extends TeaModel {
-    @NameInMap("Areas")
+    @com.aliyun.core.annotation.NameInMap("Areas")
     private java.util.List < Areas> areas;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDDosEventAreaResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeDDosEventAreaResponseBody extends TeaModel {
     } 
 
     public static class Areas extends TeaModel {
-        @NameInMap("Area")
+        @com.aliyun.core.annotation.NameInMap("Area")
         private String area;
 
-        @NameInMap("InPkts")
+        @com.aliyun.core.annotation.NameInMap("InPkts")
         private Long inPkts;
 
         private Areas(Builder builder) {

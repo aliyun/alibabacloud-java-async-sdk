@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainViewTopUrlResponseBody</p>
  */
 public class DescribeDomainViewTopUrlResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UrlList")
+    @com.aliyun.core.annotation.NameInMap("UrlList")
     private java.util.List < UrlList> urlList;
 
     private DescribeDomainViewTopUrlResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeDomainViewTopUrlResponseBody extends TeaModel {
     } 
 
     public static class UrlList extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private UrlList(Builder builder) {

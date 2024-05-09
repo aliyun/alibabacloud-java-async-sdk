@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePortAutoCcStatusResponseBody</p>
  */
 public class DescribePortAutoCcStatusResponseBody extends TeaModel {
-    @NameInMap("PortAutoCcStatus")
+    @com.aliyun.core.annotation.NameInMap("PortAutoCcStatus")
     private java.util.List < PortAutoCcStatus> portAutoCcStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePortAutoCcStatusResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribePortAutoCcStatusResponseBody extends TeaModel {
     } 
 
     public static class PortAutoCcStatus extends TeaModel {
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
-        @NameInMap("Switch")
+        @com.aliyun.core.annotation.NameInMap("Switch")
         private String _switch;
 
-        @NameInMap("WebMode")
+        @com.aliyun.core.annotation.NameInMap("WebMode")
         private String webMode;
 
-        @NameInMap("WebSwitch")
+        @com.aliyun.core.annotation.NameInMap("WebSwitch")
         private String webSwitch;
 
         private PortAutoCcStatus(Builder builder) {

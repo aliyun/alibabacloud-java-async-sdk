@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePortFlowListResponseBody</p>
  */
 public class DescribePortFlowListResponseBody extends TeaModel {
-    @NameInMap("PortFlowList")
+    @com.aliyun.core.annotation.NameInMap("PortFlowList")
     private java.util.List < PortFlowList> portFlowList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePortFlowListResponseBody(Builder builder) {
@@ -72,55 +71,55 @@ public class DescribePortFlowListResponseBody extends TeaModel {
     } 
 
     public static class PortFlowList extends TeaModel {
-        @NameInMap("AttackBps")
+        @com.aliyun.core.annotation.NameInMap("AttackBps")
         private Long attackBps;
 
-        @NameInMap("AttackPps")
+        @com.aliyun.core.annotation.NameInMap("AttackPps")
         private Long attackPps;
 
-        @NameInMap("InBps")
+        @com.aliyun.core.annotation.NameInMap("InBps")
         private Long inBps;
 
-        @NameInMap("InPps")
+        @com.aliyun.core.annotation.NameInMap("InPps")
         private Long inPps;
 
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private Long index;
 
-        @NameInMap("OutBps")
+        @com.aliyun.core.annotation.NameInMap("OutBps")
         private Long outBps;
 
-        @NameInMap("OutPps")
+        @com.aliyun.core.annotation.NameInMap("OutPps")
         private Long outPps;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("SlaBpsDropBps")
+        @com.aliyun.core.annotation.NameInMap("SlaBpsDropBps")
         private Long slaBpsDropBps;
 
-        @NameInMap("SlaBpsDropPps")
+        @com.aliyun.core.annotation.NameInMap("SlaBpsDropPps")
         private Long slaBpsDropPps;
 
-        @NameInMap("SlaConnDropBps")
+        @com.aliyun.core.annotation.NameInMap("SlaConnDropBps")
         private Long slaConnDropBps;
 
-        @NameInMap("SlaConnDropPps")
+        @com.aliyun.core.annotation.NameInMap("SlaConnDropPps")
         private Long slaConnDropPps;
 
-        @NameInMap("SlaCpsDropBps")
+        @com.aliyun.core.annotation.NameInMap("SlaCpsDropBps")
         private Long slaCpsDropBps;
 
-        @NameInMap("SlaCpsDropPps")
+        @com.aliyun.core.annotation.NameInMap("SlaCpsDropPps")
         private Long slaCpsDropPps;
 
-        @NameInMap("SlaPpsDropBps")
+        @com.aliyun.core.annotation.NameInMap("SlaPpsDropBps")
         private Long slaPpsDropBps;
 
-        @NameInMap("SlaPpsDropPps")
+        @com.aliyun.core.annotation.NameInMap("SlaPpsDropPps")
         private Long slaPpsDropPps;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private Long time;
 
         private PortFlowList(Builder builder) {

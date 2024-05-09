@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDDoSEventsResponseBody</p>
  */
 public class DescribeDDoSEventsResponseBody extends TeaModel {
-    @NameInMap("DDoSEvents")
+    @com.aliyun.core.annotation.NameInMap("DDoSEvents")
     private java.util.List < DDoSEvents> dDoSEvents;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
 
     private DescribeDDoSEventsResponseBody(Builder builder) {
@@ -92,28 +91,28 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
     } 
 
     public static class DDoSEvents extends TeaModel {
-        @NameInMap("Bps")
+        @com.aliyun.core.annotation.NameInMap("Bps")
         private Long bps;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("Pps")
+        @com.aliyun.core.annotation.NameInMap("Pps")
         private Long pps;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
         private DDoSEvents(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainResourceResponseBody</p>
  */
 public class DescribeDomainResourceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
-    @NameInMap("WebRules")
+    @com.aliyun.core.annotation.NameInMap("WebRules")
     private java.util.List < WebRules> webRules;
 
     private DescribeDomainResourceResponseBody(Builder builder) {
@@ -92,10 +91,10 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
     } 
 
     public static class ProxyTypes extends TeaModel {
-        @NameInMap("ProxyPorts")
+        @com.aliyun.core.annotation.NameInMap("ProxyPorts")
         private java.util.List < String > proxyPorts;
 
-        @NameInMap("ProxyType")
+        @com.aliyun.core.annotation.NameInMap("ProxyType")
         private String proxyType;
 
         private ProxyTypes(Builder builder) {
@@ -159,79 +158,79 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
 
     }
     public static class WebRules extends TeaModel {
-        @NameInMap("BlackList")
+        @com.aliyun.core.annotation.NameInMap("BlackList")
         private java.util.List < String > blackList;
 
-        @NameInMap("CcEnabled")
+        @com.aliyun.core.annotation.NameInMap("CcEnabled")
         private Boolean ccEnabled;
 
-        @NameInMap("CcRuleEnabled")
+        @com.aliyun.core.annotation.NameInMap("CcRuleEnabled")
         private Boolean ccRuleEnabled;
 
-        @NameInMap("CcTemplate")
+        @com.aliyun.core.annotation.NameInMap("CcTemplate")
         private String ccTemplate;
 
-        @NameInMap("CertName")
+        @com.aliyun.core.annotation.NameInMap("CertName")
         private String certName;
 
-        @NameInMap("Cname")
+        @com.aliyun.core.annotation.NameInMap("Cname")
         private String cname;
 
-        @NameInMap("CustomCiphers")
+        @com.aliyun.core.annotation.NameInMap("CustomCiphers")
         private java.util.List < String > customCiphers;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Http2Enable")
+        @com.aliyun.core.annotation.NameInMap("Http2Enable")
         private Boolean http2Enable;
 
-        @NameInMap("Http2HttpsEnable")
+        @com.aliyun.core.annotation.NameInMap("Http2HttpsEnable")
         private Boolean http2HttpsEnable;
 
-        @NameInMap("Https2HttpEnable")
+        @com.aliyun.core.annotation.NameInMap("Https2HttpEnable")
         private Boolean https2HttpEnable;
 
-        @NameInMap("HttpsExt")
+        @com.aliyun.core.annotation.NameInMap("HttpsExt")
         private String httpsExt;
 
-        @NameInMap("InstanceIds")
+        @com.aliyun.core.annotation.NameInMap("InstanceIds")
         private java.util.List < String > instanceIds;
 
-        @NameInMap("OcspEnabled")
+        @com.aliyun.core.annotation.NameInMap("OcspEnabled")
         private Boolean ocspEnabled;
 
-        @NameInMap("PolicyMode")
+        @com.aliyun.core.annotation.NameInMap("PolicyMode")
         private String policyMode;
 
-        @NameInMap("ProxyEnabled")
+        @com.aliyun.core.annotation.NameInMap("ProxyEnabled")
         private Boolean proxyEnabled;
 
-        @NameInMap("ProxyTypes")
+        @com.aliyun.core.annotation.NameInMap("ProxyTypes")
         private java.util.List < ProxyTypes> proxyTypes;
 
-        @NameInMap("PunishReason")
+        @com.aliyun.core.annotation.NameInMap("PunishReason")
         private Integer punishReason;
 
-        @NameInMap("PunishStatus")
+        @com.aliyun.core.annotation.NameInMap("PunishStatus")
         private Boolean punishStatus;
 
-        @NameInMap("RealServers")
+        @com.aliyun.core.annotation.NameInMap("RealServers")
         private java.util.List < String > realServers;
 
-        @NameInMap("RsType")
+        @com.aliyun.core.annotation.NameInMap("RsType")
         private Integer rsType;
 
-        @NameInMap("Ssl13Enabled")
+        @com.aliyun.core.annotation.NameInMap("Ssl13Enabled")
         private Boolean ssl13Enabled;
 
-        @NameInMap("SslCiphers")
+        @com.aliyun.core.annotation.NameInMap("SslCiphers")
         private String sslCiphers;
 
-        @NameInMap("SslProtocols")
+        @com.aliyun.core.annotation.NameInMap("SslProtocols")
         private String sslProtocols;
 
-        @NameInMap("WhiteList")
+        @com.aliyun.core.annotation.NameInMap("WhiteList")
         private java.util.List < String > whiteList;
 
         private WebRules(Builder builder) {

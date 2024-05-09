@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceIdsResponseBody</p>
  */
 public class DescribeInstanceIdsResponseBody extends TeaModel {
-    @NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private java.util.List < InstanceIds> instanceIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceIdsResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribeInstanceIdsResponseBody extends TeaModel {
     } 
 
     public static class InstanceIds extends TeaModel {
-        @NameInMap("Edition")
+        @com.aliyun.core.annotation.NameInMap("Edition")
         private Integer edition;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("IpMode")
+        @com.aliyun.core.annotation.NameInMap("IpMode")
         private String ipMode;
 
-        @NameInMap("IpVersion")
+        @com.aliyun.core.annotation.NameInMap("IpVersion")
         private String ipVersion;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
         private InstanceIds(Builder builder) {

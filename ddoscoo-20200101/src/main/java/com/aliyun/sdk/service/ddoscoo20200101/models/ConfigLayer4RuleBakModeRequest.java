@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ConfigLayer4RuleBakModeRequest</p>
  */
 public class ConfigLayer4RuleBakModeRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("BakMode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BakMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bakMode;
 
-    @Query
-    @NameInMap("Listeners")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Listeners")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String listeners;
 
     private ConfigLayer4RuleBakModeRequest(Builder builder) {

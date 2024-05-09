@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceSpecsResponseBody</p>
  */
 public class DescribeInstanceSpecsResponseBody extends TeaModel {
-    @NameInMap("InstanceSpecs")
+    @com.aliyun.core.annotation.NameInMap("InstanceSpecs")
     private java.util.List < InstanceSpecs> instanceSpecs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceSpecsResponseBody(Builder builder) {
@@ -72,55 +71,55 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
     } 
 
     public static class InstanceSpecs extends TeaModel {
-        @NameInMap("BandwidthMbps")
+        @com.aliyun.core.annotation.NameInMap("BandwidthMbps")
         private Integer bandwidthMbps;
 
-        @NameInMap("BaseBandwidth")
+        @com.aliyun.core.annotation.NameInMap("BaseBandwidth")
         private Integer baseBandwidth;
 
-        @NameInMap("ConnLimit")
+        @com.aliyun.core.annotation.NameInMap("ConnLimit")
         private Long connLimit;
 
-        @NameInMap("CpsLimit")
+        @com.aliyun.core.annotation.NameInMap("CpsLimit")
         private Long cpsLimit;
 
-        @NameInMap("DefenseCount")
+        @com.aliyun.core.annotation.NameInMap("DefenseCount")
         private Integer defenseCount;
 
-        @NameInMap("DomainLimit")
+        @com.aliyun.core.annotation.NameInMap("DomainLimit")
         private Integer domainLimit;
 
-        @NameInMap("ElasticBandwidth")
+        @com.aliyun.core.annotation.NameInMap("ElasticBandwidth")
         private Integer elasticBandwidth;
 
-        @NameInMap("ElasticBw")
+        @com.aliyun.core.annotation.NameInMap("ElasticBw")
         private Integer elasticBw;
 
-        @NameInMap("ElasticBwModel")
+        @com.aliyun.core.annotation.NameInMap("ElasticBwModel")
         private String elasticBwModel;
 
-        @NameInMap("ElasticQps")
+        @com.aliyun.core.annotation.NameInMap("ElasticQps")
         private Long elasticQps;
 
-        @NameInMap("ElasticQpsMode")
+        @com.aliyun.core.annotation.NameInMap("ElasticQpsMode")
         private String elasticQpsMode;
 
-        @NameInMap("FunctionVersion")
+        @com.aliyun.core.annotation.NameInMap("FunctionVersion")
         private String functionVersion;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("PortLimit")
+        @com.aliyun.core.annotation.NameInMap("PortLimit")
         private Integer portLimit;
 
-        @NameInMap("QpsLimit")
+        @com.aliyun.core.annotation.NameInMap("QpsLimit")
         private Integer qpsLimit;
 
-        @NameInMap("RealLimitBw")
+        @com.aliyun.core.annotation.NameInMap("RealLimitBw")
         private Long realLimitBw;
 
-        @NameInMap("SiteLimit")
+        @com.aliyun.core.annotation.NameInMap("SiteLimit")
         private Integer siteLimit;
 
         private InstanceSpecs(Builder builder) {

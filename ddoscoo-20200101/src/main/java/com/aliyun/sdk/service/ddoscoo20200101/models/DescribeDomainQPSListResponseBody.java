@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainQPSListResponseBody</p>
  */
 public class DescribeDomainQPSListResponseBody extends TeaModel {
-    @NameInMap("DomainQPSList")
+    @com.aliyun.core.annotation.NameInMap("DomainQPSList")
     private java.util.List < DomainQPSList> domainQPSList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDomainQPSListResponseBody(Builder builder) {
@@ -72,31 +71,31 @@ public class DescribeDomainQPSListResponseBody extends TeaModel {
     } 
 
     public static class DomainQPSList extends TeaModel {
-        @NameInMap("AttackQps")
+        @com.aliyun.core.annotation.NameInMap("AttackQps")
         private Long attackQps;
 
-        @NameInMap("CacheHits")
+        @com.aliyun.core.annotation.NameInMap("CacheHits")
         private Long cacheHits;
 
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private Long index;
 
-        @NameInMap("MaxAttackQps")
+        @com.aliyun.core.annotation.NameInMap("MaxAttackQps")
         private Long maxAttackQps;
 
-        @NameInMap("MaxNormalQps")
+        @com.aliyun.core.annotation.NameInMap("MaxNormalQps")
         private Long maxNormalQps;
 
-        @NameInMap("MaxQps")
+        @com.aliyun.core.annotation.NameInMap("MaxQps")
         private Long maxQps;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private Long time;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
-        @NameInMap("TotalQps")
+        @com.aliyun.core.annotation.NameInMap("TotalQps")
         private Long totalQps;
 
         private DomainQPSList(Builder builder) {

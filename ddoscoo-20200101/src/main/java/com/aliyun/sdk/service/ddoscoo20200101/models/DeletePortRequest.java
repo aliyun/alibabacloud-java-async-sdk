@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeletePortRequest</p>
  */
 public class DeletePortRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("BackendPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackendPort")
     private String backendPort;
 
-    @Query
-    @NameInMap("FrontendPort")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FrontendPort")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String frontendPort;
 
-    @Query
-    @NameInMap("FrontendProtocol")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FrontendProtocol")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String frontendProtocol;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RealServers")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RealServers")
     private java.util.List < String > realServers;
 
     private DeletePortRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAsyncTasksResponseBody</p>
  */
 public class DescribeAsyncTasksResponseBody extends TeaModel {
-    @NameInMap("AsyncTasks")
+    @com.aliyun.core.annotation.NameInMap("AsyncTasks")
     private java.util.List < AsyncTasks> asyncTasks;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeAsyncTasksResponseBody(Builder builder) {
@@ -92,25 +91,25 @@ public class DescribeAsyncTasksResponseBody extends TeaModel {
     } 
 
     public static class AsyncTasks extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private Long taskId;
 
-        @NameInMap("TaskParams")
+        @com.aliyun.core.annotation.NameInMap("TaskParams")
         private String taskParams;
 
-        @NameInMap("TaskResult")
+        @com.aliyun.core.annotation.NameInMap("TaskResult")
         private String taskResult;
 
-        @NameInMap("TaskStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private Integer taskStatus;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private Integer taskType;
 
         private AsyncTasks(Builder builder) {

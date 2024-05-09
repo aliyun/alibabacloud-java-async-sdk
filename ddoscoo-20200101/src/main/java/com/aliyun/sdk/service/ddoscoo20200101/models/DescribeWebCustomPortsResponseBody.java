@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeWebCustomPortsResponseBody</p>
  */
 public class DescribeWebCustomPortsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("WebCustomPorts")
+    @com.aliyun.core.annotation.NameInMap("WebCustomPorts")
     private java.util.List < WebCustomPorts> webCustomPorts;
 
     private DescribeWebCustomPortsResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeWebCustomPortsResponseBody extends TeaModel {
     } 
 
     public static class WebCustomPorts extends TeaModel {
-        @NameInMap("ProxyPorts")
+        @com.aliyun.core.annotation.NameInMap("ProxyPorts")
         private java.util.List < String > proxyPorts;
 
-        @NameInMap("ProxyType")
+        @com.aliyun.core.annotation.NameInMap("ProxyType")
         private String proxyType;
 
         private WebCustomPorts(Builder builder) {

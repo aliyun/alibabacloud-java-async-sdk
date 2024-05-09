@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeNetworkRegionBlockResponseBody</p>
  */
 public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
-    @NameInMap("Config")
+    @com.aliyun.core.annotation.NameInMap("Config")
     private Config config;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeNetworkRegionBlockResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
     } 
 
     public static class Config extends TeaModel {
-        @NameInMap("Countries")
+        @com.aliyun.core.annotation.NameInMap("Countries")
         private java.util.List < String > countries;
 
-        @NameInMap("Provinces")
+        @com.aliyun.core.annotation.NameInMap("Provinces")
         private java.util.List < String > provinces;
 
-        @NameInMap("RegionBlockSwitch")
+        @com.aliyun.core.annotation.NameInMap("RegionBlockSwitch")
         private String regionBlockSwitch;
 
         private Config(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLayer4RulePolicyResponseBody</p>
  */
 public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
-    @NameInMap("BackendPort")
+    @com.aliyun.core.annotation.NameInMap("BackendPort")
     private Integer backendPort;
 
-    @NameInMap("BakMode")
+    @com.aliyun.core.annotation.NameInMap("BakMode")
     private String bakMode;
 
-    @NameInMap("CurrentIndex")
+    @com.aliyun.core.annotation.NameInMap("CurrentIndex")
     private Integer currentIndex;
 
-    @NameInMap("ForwardProtocol")
+    @com.aliyun.core.annotation.NameInMap("ForwardProtocol")
     private String forwardProtocol;
 
-    @NameInMap("FrontendPort")
+    @com.aliyun.core.annotation.NameInMap("FrontendPort")
     private Integer frontendPort;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("PriRealServers")
+    @com.aliyun.core.annotation.NameInMap("PriRealServers")
     private java.util.List < PriRealServers> priRealServers;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecRealServers")
+    @com.aliyun.core.annotation.NameInMap("SecRealServers")
     private java.util.List < SecRealServers> secRealServers;
 
     private DescribeLayer4RulePolicyResponseBody(Builder builder) {
@@ -220,22 +219,22 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
     } 
 
     public static class PriRealServers extends TeaModel {
-        @NameInMap("CurrentIndex")
+        @com.aliyun.core.annotation.NameInMap("CurrentIndex")
         private Integer currentIndex;
 
-        @NameInMap("Eip")
+        @com.aliyun.core.annotation.NameInMap("Eip")
         private String eip;
 
-        @NameInMap("FrontendPort")
+        @com.aliyun.core.annotation.NameInMap("FrontendPort")
         private Integer frontendPort;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("RealServer")
+        @com.aliyun.core.annotation.NameInMap("RealServer")
         private String realServer;
 
         private PriRealServers(Builder builder) {
@@ -365,22 +364,22 @@ public class DescribeLayer4RulePolicyResponseBody extends TeaModel {
 
     }
     public static class SecRealServers extends TeaModel {
-        @NameInMap("CurrentIndex")
+        @com.aliyun.core.annotation.NameInMap("CurrentIndex")
         private Integer currentIndex;
 
-        @NameInMap("Eip")
+        @com.aliyun.core.annotation.NameInMap("Eip")
         private String eip;
 
-        @NameInMap("FrontendPort")
+        @com.aliyun.core.annotation.NameInMap("FrontendPort")
         private Integer frontendPort;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("RealServer")
+        @com.aliyun.core.annotation.NameInMap("RealServer")
         private String realServer;
 
         private SecRealServers(Builder builder) {

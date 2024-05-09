@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDDosEventMaxResponseBody</p>
  */
 public class DescribeDDosEventMaxResponseBody extends TeaModel {
-    @NameInMap("Cps")
+    @com.aliyun.core.annotation.NameInMap("Cps")
     private Long cps;
 
-    @NameInMap("Mbps")
+    @com.aliyun.core.annotation.NameInMap("Mbps")
     private Long mbps;
 
-    @NameInMap("Qps")
+    @com.aliyun.core.annotation.NameInMap("Qps")
     private Long qps;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDDosEventMaxResponseBody(Builder builder) {

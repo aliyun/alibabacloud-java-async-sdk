@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceDetailsResponseBody</p>
  */
 public class DescribeInstanceDetailsResponseBody extends TeaModel {
-    @NameInMap("InstanceDetails")
+    @com.aliyun.core.annotation.NameInMap("InstanceDetails")
     private java.util.List < InstanceDetails> instanceDetails;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceDetailsResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
     } 
 
     public static class EipInfos extends TeaModel {
-        @NameInMap("Eip")
+        @com.aliyun.core.annotation.NameInMap("Eip")
         private String eip;
 
-        @NameInMap("IpMode")
+        @com.aliyun.core.annotation.NameInMap("IpMode")
         private String ipMode;
 
-        @NameInMap("IpVersion")
+        @com.aliyun.core.annotation.NameInMap("IpVersion")
         private String ipVersion;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private EipInfos(Builder builder) {
@@ -188,13 +187,13 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
 
     }
     public static class InstanceDetails extends TeaModel {
-        @NameInMap("EipInfos")
+        @com.aliyun.core.annotation.NameInMap("EipInfos")
         private java.util.List < EipInfos> eipInfos;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Line")
+        @com.aliyun.core.annotation.NameInMap("Line")
         private String line;
 
         private InstanceDetails(Builder builder) {

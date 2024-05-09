@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainViewSourceCountriesResponseBody</p>
  */
 public class DescribeDomainViewSourceCountriesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SourceCountrys")
+    @com.aliyun.core.annotation.NameInMap("SourceCountrys")
     private java.util.List < SourceCountrys> sourceCountrys;
 
     private DescribeDomainViewSourceCountriesResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeDomainViewSourceCountriesResponseBody extends TeaModel {
     } 
 
     public static class SourceCountrys extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("CountryId")
+        @com.aliyun.core.annotation.NameInMap("CountryId")
         private String countryId;
 
         private SourceCountrys(Builder builder) {

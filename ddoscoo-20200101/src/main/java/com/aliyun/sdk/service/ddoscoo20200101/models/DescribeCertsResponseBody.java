@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCertsResponseBody</p>
  */
 public class DescribeCertsResponseBody extends TeaModel {
-    @NameInMap("Certs")
+    @com.aliyun.core.annotation.NameInMap("Certs")
     private java.util.List < Certs> certs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCertsResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class DescribeCertsResponseBody extends TeaModel {
     } 
 
     public static class Certs extends TeaModel {
-        @NameInMap("CertIdentifier")
+        @com.aliyun.core.annotation.NameInMap("CertIdentifier")
         private String certIdentifier;
 
-        @NameInMap("Common")
+        @com.aliyun.core.annotation.NameInMap("Common")
         private String common;
 
-        @NameInMap("DomainRelated")
+        @com.aliyun.core.annotation.NameInMap("DomainRelated")
         private Boolean domainRelated;
 
-        @NameInMap("EndDate")
+        @com.aliyun.core.annotation.NameInMap("EndDate")
         private String endDate;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
-        @NameInMap("Issuer")
+        @com.aliyun.core.annotation.NameInMap("Issuer")
         private String issuer;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("StartDate")
+        @com.aliyun.core.annotation.NameInMap("StartDate")
         private String startDate;
 
         private Certs(Builder builder) {

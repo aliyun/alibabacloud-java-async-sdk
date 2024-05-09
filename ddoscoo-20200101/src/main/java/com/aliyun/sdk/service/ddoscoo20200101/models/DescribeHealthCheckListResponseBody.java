@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHealthCheckListResponseBody</p>
  */
 public class DescribeHealthCheckListResponseBody extends TeaModel {
-    @NameInMap("HealthCheckList")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckList")
     private java.util.List < HealthCheckList> healthCheckList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeHealthCheckListResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
     } 
 
     public static class HealthCheck extends TeaModel {
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Down")
+        @com.aliyun.core.annotation.NameInMap("Down")
         private Integer down;
 
-        @NameInMap("Interval")
+        @com.aliyun.core.annotation.NameInMap("Interval")
         private Integer interval;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Timeout")
+        @com.aliyun.core.annotation.NameInMap("Timeout")
         private Integer timeout;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Up")
+        @com.aliyun.core.annotation.NameInMap("Up")
         private Integer up;
 
-        @NameInMap("Uri")
+        @com.aliyun.core.annotation.NameInMap("Uri")
         private String uri;
 
         private HealthCheck(Builder builder) {
@@ -263,16 +262,16 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
 
     }
     public static class HealthCheckList extends TeaModel {
-        @NameInMap("FrontendPort")
+        @com.aliyun.core.annotation.NameInMap("FrontendPort")
         private Integer frontendPort;
 
-        @NameInMap("HealthCheck")
+        @com.aliyun.core.annotation.NameInMap("HealthCheck")
         private HealthCheck healthCheck;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
         private HealthCheckList(Builder builder) {

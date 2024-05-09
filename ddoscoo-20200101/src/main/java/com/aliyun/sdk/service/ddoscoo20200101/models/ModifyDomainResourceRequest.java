@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDomainResourceRequest</p>
  */
 public class ModifyDomainResourceRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Domain")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Domain")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domain;
 
-    @Query
-    @NameInMap("HttpsExt")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpsExt")
     private String httpsExt;
 
-    @Query
-    @NameInMap("InstanceIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > instanceIds;
 
-    @Query
-    @NameInMap("ProxyTypes")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProxyTypes")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < ProxyTypes> proxyTypes;
 
-    @Query
-    @NameInMap("RealServers")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RealServers")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > realServers;
 
-    @Query
-    @NameInMap("RsType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RsType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer rsType;
 
     private ModifyDomainResourceRequest(Builder builder) {
@@ -233,11 +232,11 @@ public class ModifyDomainResourceRequest extends Request {
     } 
 
     public static class ProxyTypes extends TeaModel {
-        @NameInMap("ProxyPorts")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ProxyPorts")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List < Integer > proxyPorts;
 
-        @NameInMap("ProxyType")
+        @com.aliyun.core.annotation.NameInMap("ProxyType")
         private String proxyType;
 
         private ProxyTypes(Builder builder) {

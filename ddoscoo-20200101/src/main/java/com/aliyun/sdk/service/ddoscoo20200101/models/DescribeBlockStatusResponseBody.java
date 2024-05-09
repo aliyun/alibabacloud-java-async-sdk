@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBlockStatusResponseBody</p>
  */
 public class DescribeBlockStatusResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StatusList")
+    @com.aliyun.core.annotation.NameInMap("StatusList")
     private java.util.List < StatusList> statusList;
 
     private DescribeBlockStatusResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
     } 
 
     public static class BlockStatusList extends TeaModel {
-        @NameInMap("BlockStatus")
+        @com.aliyun.core.annotation.NameInMap("BlockStatus")
         private String blockStatus;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("Line")
+        @com.aliyun.core.annotation.NameInMap("Line")
         private String line;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
         private BlockStatusList(Builder builder) {
@@ -181,10 +180,10 @@ public class DescribeBlockStatusResponseBody extends TeaModel {
 
     }
     public static class StatusList extends TeaModel {
-        @NameInMap("BlockStatusList")
+        @com.aliyun.core.annotation.NameInMap("BlockStatusList")
         private java.util.List < BlockStatusList> blockStatusList;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
         private StatusList(Builder builder) {

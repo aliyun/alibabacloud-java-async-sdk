@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTagKeysResponseBody</p>
  */
 public class DescribeTagKeysResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TagKeys")
+    @com.aliyun.core.annotation.NameInMap("TagKeys")
     private java.util.List < TagKeys> tagKeys;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeTagKeysResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeTagKeysResponseBody extends TeaModel {
     } 
 
     public static class TagKeys extends TeaModel {
-        @NameInMap("TagCount")
+        @com.aliyun.core.annotation.NameInMap("TagCount")
         private Integer tagCount;
 
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
         private TagKeys(Builder builder) {

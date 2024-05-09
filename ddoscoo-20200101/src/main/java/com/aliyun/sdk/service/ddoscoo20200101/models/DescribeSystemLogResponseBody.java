@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSystemLogResponseBody</p>
  */
 public class DescribeSystemLogResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SystemLog")
+    @com.aliyun.core.annotation.NameInMap("SystemLog")
     private java.util.List < SystemLog> systemLog;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
 
     private DescribeSystemLogResponseBody(Builder builder) {
@@ -92,28 +91,28 @@ public class DescribeSystemLogResponseBody extends TeaModel {
     } 
 
     public static class SystemLog extends TeaModel {
-        @NameInMap("EntityObject")
+        @com.aliyun.core.annotation.NameInMap("EntityObject")
         private String entityObject;
 
-        @NameInMap("EntityType")
+        @com.aliyun.core.annotation.NameInMap("EntityType")
         private Integer entityType;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
-        @NameInMap("OpAccount")
+        @com.aliyun.core.annotation.NameInMap("OpAccount")
         private String opAccount;
 
-        @NameInMap("OpAction")
+        @com.aliyun.core.annotation.NameInMap("OpAction")
         private Integer opAction;
 
-        @NameInMap("OpDesc")
+        @com.aliyun.core.annotation.NameInMap("OpDesc")
         private String opDesc;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private SystemLog(Builder builder) {

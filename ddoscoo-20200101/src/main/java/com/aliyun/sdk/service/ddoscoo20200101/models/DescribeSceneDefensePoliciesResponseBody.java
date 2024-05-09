@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSceneDefensePoliciesResponseBody</p>
  */
 public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
-    @NameInMap("Policies")
+    @com.aliyun.core.annotation.NameInMap("Policies")
     private java.util.List < Policies> policies;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeSceneDefensePoliciesResponseBody(Builder builder) {
@@ -96,16 +95,16 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
     } 
 
     public static class RuntimePolicies extends TeaModel {
-        @NameInMap("NewValue")
+        @com.aliyun.core.annotation.NameInMap("NewValue")
         private String newValue;
 
-        @NameInMap("PolicyType")
+        @com.aliyun.core.annotation.NameInMap("PolicyType")
         private Integer policyType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("oldValue")
+        @com.aliyun.core.annotation.NameInMap("oldValue")
         private String oldValue;
 
         private RuntimePolicies(Builder builder) {
@@ -220,31 +219,31 @@ public class DescribeSceneDefensePoliciesResponseBody extends TeaModel {
 
     }
     public static class Policies extends TeaModel {
-        @NameInMap("Done")
+        @com.aliyun.core.annotation.NameInMap("Done")
         private Integer done;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ObjectCount")
+        @com.aliyun.core.annotation.NameInMap("ObjectCount")
         private Integer objectCount;
 
-        @NameInMap("PolicyId")
+        @com.aliyun.core.annotation.NameInMap("PolicyId")
         private String policyId;
 
-        @NameInMap("RuntimePolicies")
+        @com.aliyun.core.annotation.NameInMap("RuntimePolicies")
         private java.util.List < RuntimePolicies> runtimePolicies;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
         private Policies(Builder builder) {

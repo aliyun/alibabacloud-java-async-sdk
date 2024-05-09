@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeWebAccessLogStatusResponseBody</p>
  */
 public class DescribeWebAccessLogStatusResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SlsLogstore")
+    @com.aliyun.core.annotation.NameInMap("SlsLogstore")
     private String slsLogstore;
 
-    @NameInMap("SlsProject")
+    @com.aliyun.core.annotation.NameInMap("SlsProject")
     private String slsProject;
 
-    @NameInMap("SlsStatus")
+    @com.aliyun.core.annotation.NameInMap("SlsStatus")
     private Boolean slsStatus;
 
     private DescribeWebAccessLogStatusResponseBody(Builder builder) {

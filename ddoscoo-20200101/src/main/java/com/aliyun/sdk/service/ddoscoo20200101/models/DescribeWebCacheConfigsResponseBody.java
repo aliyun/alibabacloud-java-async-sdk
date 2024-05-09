@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddoscoo20200101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeWebCacheConfigsResponseBody</p>
  */
 public class DescribeWebCacheConfigsResponseBody extends TeaModel {
-    @NameInMap("DomainCacheConfigs")
+    @com.aliyun.core.annotation.NameInMap("DomainCacheConfigs")
     private java.util.List < DomainCacheConfigs> domainCacheConfigs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeWebCacheConfigsResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
     } 
 
     public static class CustomRules extends TeaModel {
-        @NameInMap("CacheTtl")
+        @com.aliyun.core.annotation.NameInMap("CacheTtl")
         private Long cacheTtl;
 
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Uri")
+        @com.aliyun.core.annotation.NameInMap("Uri")
         private String uri;
 
         private CustomRules(Builder builder) {
@@ -178,16 +177,16 @@ public class DescribeWebCacheConfigsResponseBody extends TeaModel {
 
     }
     public static class DomainCacheConfigs extends TeaModel {
-        @NameInMap("CustomRules")
+        @com.aliyun.core.annotation.NameInMap("CustomRules")
         private java.util.List < CustomRules> customRules;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Integer enable;
 
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
         private DomainCacheConfigs(Builder builder) {
