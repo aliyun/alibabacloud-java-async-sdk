@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSparkTemplateRequest</p>
  */
 public class CreateSparkTemplateRequest extends Request {
-    @Body
-    @NameInMap("AppType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppType")
     private String appType;
 
-    @Body
-    @NameInMap("DBClusterId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String DBClusterId;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String name;
 
-    @Body
-    @NameInMap("ParentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ParentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long parentId;
 
-    @Body
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private CreateSparkTemplateRequest(Builder builder) {

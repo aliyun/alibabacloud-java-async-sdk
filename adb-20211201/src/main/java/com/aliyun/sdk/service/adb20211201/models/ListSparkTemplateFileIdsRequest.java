@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,8 +11,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSparkTemplateFileIdsRequest</p>
  */
 public class ListSparkTemplateFileIdsRequest extends Request {
-    @Body
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
     private ListSparkTemplateFileIdsRequest(Builder builder) {

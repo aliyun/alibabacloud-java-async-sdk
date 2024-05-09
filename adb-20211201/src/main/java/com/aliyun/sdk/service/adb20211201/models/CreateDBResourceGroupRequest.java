@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,55 +11,55 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDBResourceGroupRequest</p>
  */
 public class CreateDBResourceGroupRequest extends Request {
-    @Query
-    @NameInMap("ClusterMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterMode")
     private String clusterMode;
 
-    @Query
-    @NameInMap("ClusterSizeResource")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterSizeResource")
     private String clusterSizeResource;
 
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("EnableSpot")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableSpot")
     private Boolean enableSpot;
 
-    @Query
-    @NameInMap("GroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupName;
 
-    @Query
-    @NameInMap("GroupType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupType;
 
-    @Query
-    @NameInMap("MaxClusterCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxClusterCount")
     private Integer maxClusterCount;
 
-    @Query
-    @NameInMap("MaxComputeResource")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxComputeResource")
     private String maxComputeResource;
 
-    @Query
-    @NameInMap("MinClusterCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinClusterCount")
     private Integer minClusterCount;
 
-    @Query
-    @NameInMap("MinComputeResource")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinComputeResource")
     private String minComputeResource;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Rules")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Rules")
     private java.util.List < Rules> rules;
 
     private CreateDBResourceGroupRequest(Builder builder) {
@@ -238,7 +237,11 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * EnableSpot.
+         * Specifies whether to enable the preemptible instance feature for the resource group. After you enable the preemptible instance feature, you are charged for resources at a lower unit price but the resources are probably released. You can enable the preemptible instance feature only for job resource groups. Valid values:
+         * <p>
+         * 
+         * *   **True**
+         * *   **False**
          */
         public Builder enableSpot(Boolean enableSpot) {
             this.putQueryParameter("EnableSpot", enableSpot);
@@ -332,7 +335,7 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * Rules.
+         * The job resubmission rules.
          */
         public Builder rules(java.util.List < Rules> rules) {
             String rulesShrink = shrink(rules, "Rules", "json");
@@ -349,13 +352,13 @@ public class CreateDBResourceGroupRequest extends Request {
     } 
 
     public static class Rules extends TeaModel {
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("QueryTime")
+        @com.aliyun.core.annotation.NameInMap("QueryTime")
         private String queryTime;
 
-        @NameInMap("TargetGroupName")
+        @com.aliyun.core.annotation.NameInMap("TargetGroupName")
         private String targetGroupName;
 
         private Rules(Builder builder) {
@@ -403,7 +406,7 @@ public class CreateDBResourceGroupRequest extends Request {
              * <p>
              * 
              * *   The name can be up to 255 characters in length.
-             * *   The name must start with a letter or a digit.
+             * *   The name must start with a letter or digit.
              * *   The name can contain letters, digits, hyphens (\_), and underscores (\_).
              */
             public Builder groupName(String groupName) {
@@ -412,7 +415,7 @@ public class CreateDBResourceGroupRequest extends Request {
             }
 
             /**
-             * QueryTime.
+             * The execution duration of the query. Unit: milliseconds.
              */
             public Builder queryTime(String queryTime) {
                 this.queryTime = queryTime;
@@ -420,7 +423,7 @@ public class CreateDBResourceGroupRequest extends Request {
             }
 
             /**
-             * TargetGroupName.
+             * The name of the destination resource group.
              */
             public Builder targetGroupName(String targetGroupName) {
                 this.targetGroupName = targetGroupName;

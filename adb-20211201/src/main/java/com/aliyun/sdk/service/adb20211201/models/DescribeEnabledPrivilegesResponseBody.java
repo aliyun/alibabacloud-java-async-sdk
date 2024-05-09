@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEnabledPrivilegesResponseBody</p>
  */
 public class DescribeEnabledPrivilegesResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeEnabledPrivilegesResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeEnabledPrivilegesResponseBody extends TeaModel {
     } 
 
     public static class Privileges extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
         private Privileges(Builder builder) {
@@ -133,16 +132,16 @@ public class DescribeEnabledPrivilegesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Description")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Description")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String description;
 
-        @NameInMap("Privileges")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Privileges")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List < Privileges> privileges;
 
-        @NameInMap("Scope")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Scope")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String scope;
 
         private Data(Builder builder) {

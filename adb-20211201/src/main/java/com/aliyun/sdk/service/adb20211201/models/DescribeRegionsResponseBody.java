@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRegionsResponseBody</p>
  */
 public class DescribeRegionsResponseBody extends TeaModel {
-    @NameInMap("Regions")
+    @com.aliyun.core.annotation.NameInMap("Regions")
     private Regions regions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeRegionsResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details of the regions.
+         * The queried regions.
          */
         public Builder regions(Regions regions) {
             this.regions = regions;
@@ -58,7 +57,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,13 +71,13 @@ public class DescribeRegionsResponseBody extends TeaModel {
     } 
 
     public static class Zone extends TeaModel {
-        @NameInMap("LocalName")
+        @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
 
-        @NameInMap("VpcEnabled")
+        @com.aliyun.core.annotation.NameInMap("VpcEnabled")
         private Boolean vpcEnabled;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Zone(Builder builder) {
@@ -133,8 +132,8 @@ public class DescribeRegionsResponseBody extends TeaModel {
              * Indicates whether Virtual Private Cloud (VPC) is supported in the zone. Valid values:
              * <p>
              * 
-             * *   **true**: VPC is supported.
-             * *   **false**: VPC is not supported.
+             * *   **true**
+             * *   **false**
              */
             public Builder vpcEnabled(Boolean vpcEnabled) {
                 this.vpcEnabled = vpcEnabled;
@@ -142,7 +141,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone.
+             * The zone ID.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -157,7 +156,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     }
     public static class Zones extends TeaModel {
-        @NameInMap("Zone")
+        @com.aliyun.core.annotation.NameInMap("Zone")
         private java.util.List < Zone> zone;
 
         private Zones(Builder builder) {
@@ -198,16 +197,16 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     }
     public static class Region extends TeaModel {
-        @NameInMap("LocalName")
+        @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
 
-        @NameInMap("RegionEndpoint")
+        @com.aliyun.core.annotation.NameInMap("RegionEndpoint")
         private String regionEndpoint;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Zones")
+        @com.aliyun.core.annotation.NameInMap("Zones")
         private Zones zones;
 
         private Region(Builder builder) {
@@ -276,7 +275,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -284,7 +283,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the zones.
+             * The queried zones.
              */
             public Builder zones(Zones zones) {
                 this.zones = zones;
@@ -299,7 +298,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     }
     public static class Regions extends TeaModel {
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private java.util.List < Region> region;
 
         private Regions(Builder builder) {

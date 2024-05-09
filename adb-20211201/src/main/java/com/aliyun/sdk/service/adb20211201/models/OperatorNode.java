@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>OperatorNode</p>
  */
 public class OperatorNode extends TeaModel {
-    @NameInMap("children")
+    @com.aliyun.core.annotation.NameInMap("children")
     private java.util.List < OperatorNode > children;
 
-    @NameInMap("id")
+    @com.aliyun.core.annotation.NameInMap("id")
     private Integer id;
 
-    @NameInMap("levelWidth")
+    @com.aliyun.core.annotation.NameInMap("levelWidth")
     private Integer levelWidth;
 
-    @NameInMap("nodeDepth")
+    @com.aliyun.core.annotation.NameInMap("nodeDepth")
     private Integer nodeDepth;
 
-    @NameInMap("nodeName")
+    @com.aliyun.core.annotation.NameInMap("nodeName")
     private String nodeName;
 
-    @NameInMap("nodeWidth")
+    @com.aliyun.core.annotation.NameInMap("nodeWidth")
     private Integer nodeWidth;
 
-    @NameInMap("parentId")
+    @com.aliyun.core.annotation.NameInMap("parentId")
     private Integer parentId;
 
-    @NameInMap("stats")
+    @com.aliyun.core.annotation.NameInMap("stats")
     private Stats stats;
 
     private OperatorNode(Builder builder) {
@@ -192,19 +191,19 @@ public class OperatorNode extends TeaModel {
     } 
 
     public static class Stats extends TeaModel {
-        @NameInMap("bytes")
+        @com.aliyun.core.annotation.NameInMap("bytes")
         private Long bytes;
 
-        @NameInMap("outputRows")
+        @com.aliyun.core.annotation.NameInMap("outputRows")
         private Long outputRows;
 
-        @NameInMap("parameters")
+        @com.aliyun.core.annotation.NameInMap("parameters")
         private String parameters;
 
-        @NameInMap("peakMemory")
+        @com.aliyun.core.annotation.NameInMap("peakMemory")
         private Long peakMemory;
 
-        @NameInMap("timeCost")
+        @com.aliyun.core.annotation.NameInMap("timeCost")
         private Long timeCost;
 
         private Stats(Builder builder) {

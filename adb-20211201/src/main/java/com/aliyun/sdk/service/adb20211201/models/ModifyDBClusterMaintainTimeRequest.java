@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDBClusterMaintainTimeRequest</p>
  */
 public class ModifyDBClusterMaintainTimeRequest extends Request {
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("MaintainTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaintainTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String maintainTime;
 
     private ModifyDBClusterMaintainTimeRequest(Builder builder) {
@@ -82,7 +81,7 @@ public class ModifyDBClusterMaintainTimeRequest extends Request {
          * The maintenance window of the cluster. It must be in the hh:mmZ-hh:mmZ format.
          * <p>
          * 
-         * > The interval must be 1 hour on the hour.
+         * > The interval must be 1 hour and start and end at the beginning of an hour.
          */
         public Builder maintainTime(String maintainTime) {
             this.putQueryParameter("MaintainTime", maintainTime);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBResourceGroupResponseBody</p>
  */
 public class DescribeDBResourceGroupResponseBody extends TeaModel {
-    @NameInMap("GroupsInfo")
+    @com.aliyun.core.annotation.NameInMap("GroupsInfo")
     private java.util.List < GroupsInfo> groupsInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBResourceGroupResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
     } 
 
     public static class Rules extends TeaModel {
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("QueryTime")
+        @com.aliyun.core.annotation.NameInMap("QueryTime")
         private String queryTime;
 
-        @NameInMap("TargetGroupName")
+        @com.aliyun.core.annotation.NameInMap("TargetGroupName")
         private String targetGroupName;
 
         private Rules(Builder builder) {
@@ -122,7 +121,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             private String targetGroupName; 
 
             /**
-             * GroupName.
+             * The name of the resource group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -130,7 +129,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * QueryTime.
+             * The execution duration of the query. Unit: milliseconds.
              */
             public Builder queryTime(String queryTime) {
                 this.queryTime = queryTime;
@@ -138,7 +137,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * TargetGroupName.
+             * The name of the destination resource group.
              */
             public Builder targetGroupName(String targetGroupName) {
                 this.targetGroupName = targetGroupName;
@@ -153,52 +152,52 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
 
     }
     public static class GroupsInfo extends TeaModel {
-        @NameInMap("ClusterMode")
+        @com.aliyun.core.annotation.NameInMap("ClusterMode")
         private String clusterMode;
 
-        @NameInMap("ClusterSizeResource")
+        @com.aliyun.core.annotation.NameInMap("ClusterSizeResource")
         private String clusterSizeResource;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ElasticMinComputeResource")
+        @com.aliyun.core.annotation.NameInMap("ElasticMinComputeResource")
         private String elasticMinComputeResource;
 
-        @NameInMap("EnableSpot")
+        @com.aliyun.core.annotation.NameInMap("EnableSpot")
         private String enableSpot;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("GroupType")
+        @com.aliyun.core.annotation.NameInMap("GroupType")
         private String groupType;
 
-        @NameInMap("GroupUsers")
+        @com.aliyun.core.annotation.NameInMap("GroupUsers")
         private String groupUsers;
 
-        @NameInMap("MaxClusterCount")
+        @com.aliyun.core.annotation.NameInMap("MaxClusterCount")
         private Integer maxClusterCount;
 
-        @NameInMap("MaxComputeResource")
+        @com.aliyun.core.annotation.NameInMap("MaxComputeResource")
         private String maxComputeResource;
 
-        @NameInMap("MinClusterCount")
+        @com.aliyun.core.annotation.NameInMap("MinClusterCount")
         private Integer minClusterCount;
 
-        @NameInMap("MinComputeResource")
+        @com.aliyun.core.annotation.NameInMap("MinComputeResource")
         private String minComputeResource;
 
-        @NameInMap("Rules")
+        @com.aliyun.core.annotation.NameInMap("Rules")
         private java.util.List < Rules> rules;
 
-        @NameInMap("RunningClusterCount")
+        @com.aliyun.core.annotation.NameInMap("RunningClusterCount")
         private Integer runningClusterCount;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private GroupsInfo(Builder builder) {
@@ -383,7 +382,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum amount of elastic computing resources. Unit: ACU.
+             * The minimum amount of elastic computing resources. Unit: ACUs.
              */
             public Builder elasticMinComputeResource(String elasticMinComputeResource) {
                 this.elasticMinComputeResource = elasticMinComputeResource;
@@ -391,7 +390,13 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * EnableSpot.
+             * Indicates whether the preemptible instance feature is enabled for the resource group. After the preemptible instance feature is enabled, you are charged for resources at a lower unit price but the resources are probably released. Valid values:
+             * <p>
+             * 
+             * *   **True**
+             * *   **False**
+             * 
+             * The True value is returned only for job resource groups.
              */
             public Builder enableSpot(String enableSpot) {
                 this.enableSpot = enableSpot;
@@ -437,7 +442,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum amount of reserved computing resources. Unit: ACU.
+             * The maximum amount of reserved computing resources. Unit: ACUs.
              */
             public Builder maxComputeResource(String maxComputeResource) {
                 this.maxComputeResource = maxComputeResource;
@@ -453,7 +458,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum amount of reserved computing resources. Unit: AnalyticDB compute unit (ACU).
+             * The minimum amount of reserved computing resources. Unit: AnalyticDB compute units (ACUs).
              */
             public Builder minComputeResource(String minComputeResource) {
                 this.minComputeResource = minComputeResource;
@@ -461,7 +466,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Rules.
+             * The job resubmission rules.
              */
             public Builder rules(java.util.List < Rules> rules) {
                 this.rules = rules;

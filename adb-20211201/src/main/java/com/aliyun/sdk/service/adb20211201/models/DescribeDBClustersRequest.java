@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,45 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBClustersRequest</p>
  */
 public class DescribeDBClustersRequest extends Request {
-    @Query
-    @NameInMap("DBClusterDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterDescription")
     private String DBClusterDescription;
 
-    @Query
-    @NameInMap("DBClusterIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterIds")
     private String DBClusterIds;
 
-    @Query
-    @NameInMap("DBClusterStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterStatus")
     private String DBClusterStatus;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterVersion")
+    private String DBClusterVersion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductVersion")
+    private String productVersion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
     private DescribeDBClustersRequest(Builder builder) {
@@ -50,8 +57,10 @@ public class DescribeDBClustersRequest extends Request {
         this.DBClusterDescription = builder.DBClusterDescription;
         this.DBClusterIds = builder.DBClusterIds;
         this.DBClusterStatus = builder.DBClusterStatus;
+        this.DBClusterVersion = builder.DBClusterVersion;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.productVersion = builder.productVersion;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.tag = builder.tag;
@@ -92,6 +101,13 @@ public class DescribeDBClustersRequest extends Request {
     }
 
     /**
+     * @return DBClusterVersion
+     */
+    public String getDBClusterVersion() {
+        return this.DBClusterVersion;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -103,6 +119,13 @@ public class DescribeDBClustersRequest extends Request {
      */
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    /**
+     * @return productVersion
+     */
+    public String getProductVersion() {
+        return this.productVersion;
     }
 
     /**
@@ -130,8 +153,10 @@ public class DescribeDBClustersRequest extends Request {
         private String DBClusterDescription; 
         private String DBClusterIds; 
         private String DBClusterStatus; 
+        private String DBClusterVersion; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String productVersion; 
         private String regionId; 
         private String resourceGroupId; 
         private java.util.List < Tag> tag; 
@@ -145,8 +170,10 @@ public class DescribeDBClustersRequest extends Request {
             this.DBClusterDescription = request.DBClusterDescription;
             this.DBClusterIds = request.DBClusterIds;
             this.DBClusterStatus = request.DBClusterStatus;
+            this.DBClusterVersion = request.DBClusterVersion;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.productVersion = request.productVersion;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.tag = request.tag;
@@ -207,6 +234,15 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
+         * DBClusterVersion.
+         */
+        public Builder DBClusterVersion(String DBClusterVersion) {
+            this.putQueryParameter("DBClusterVersion", DBClusterVersion);
+            this.DBClusterVersion = DBClusterVersion;
+            return this;
+        }
+
+        /**
          * The page number. Pages start from page 1. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
@@ -226,6 +262,15 @@ public class DescribeDBClustersRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ProductVersion.
+         */
+        public Builder productVersion(String productVersion) {
+            this.putQueryParameter("ProductVersion", productVersion);
+            this.productVersion = productVersion;
             return this;
         }
 
@@ -267,10 +312,10 @@ public class DescribeDBClustersRequest extends Request {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDiagnosisSQLInfoResponseBody</p>
  */
 public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
-    @NameInMap("DiagnosisSQLInfo")
+    @com.aliyun.core.annotation.NameInMap("DiagnosisSQLInfo")
     private String diagnosisSQLInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StageInfos")
+    @com.aliyun.core.annotation.NameInMap("StageInfos")
     private java.util.List < StageInfos> stageInfos;
 
     private DescribeDiagnosisSQLInfoResponseBody(Builder builder) {
@@ -92,31 +91,31 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
     } 
 
     public static class StageInfos extends TeaModel {
-        @NameInMap("InputDataSize")
+        @com.aliyun.core.annotation.NameInMap("InputDataSize")
         private Long inputDataSize;
 
-        @NameInMap("InputRows")
+        @com.aliyun.core.annotation.NameInMap("InputRows")
         private Long inputRows;
 
-        @NameInMap("OperatorCost")
+        @com.aliyun.core.annotation.NameInMap("OperatorCost")
         private Long operatorCost;
 
-        @NameInMap("OutputDataSize")
+        @com.aliyun.core.annotation.NameInMap("OutputDataSize")
         private Long outputDataSize;
 
-        @NameInMap("OutputRows")
+        @com.aliyun.core.annotation.NameInMap("OutputRows")
         private Long outputRows;
 
-        @NameInMap("PeakMemory")
+        @com.aliyun.core.annotation.NameInMap("PeakMemory")
         private Long peakMemory;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private Double progress;
 
-        @NameInMap("StageId")
+        @com.aliyun.core.annotation.NameInMap("StageId")
         private String stageId;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private StageInfos(Builder builder) {

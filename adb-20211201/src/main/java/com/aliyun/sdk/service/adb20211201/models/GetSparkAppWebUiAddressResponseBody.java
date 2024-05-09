@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSparkAppWebUiAddressResponseBody</p>
  */
 public class GetSparkAppWebUiAddressResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetSparkAppWebUiAddressResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class GetSparkAppWebUiAddressResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("DBClusterId")
+        @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
 
-        @NameInMap("ExpirationTimeInMillis")
+        @com.aliyun.core.annotation.NameInMap("ExpirationTimeInMillis")
         private Long expirationTimeInMillis;
 
-        @NameInMap("WebUiAddress")
+        @com.aliyun.core.annotation.NameInMap("WebUiAddress")
         private String webUiAddress;
 
         private Data(Builder builder) {

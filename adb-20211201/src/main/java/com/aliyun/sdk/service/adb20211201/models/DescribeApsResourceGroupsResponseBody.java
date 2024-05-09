@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeApsResourceGroupsResponseBody</p>
  */
 public class DescribeApsResourceGroupsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Long httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeApsResourceGroupsResponseBody(Builder builder) {
@@ -140,25 +139,25 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
     } 
 
     public static class ResourceGroups extends TeaModel {
-        @NameInMap("Available")
+        @com.aliyun.core.annotation.NameInMap("Available")
         private Boolean available;
 
-        @NameInMap("CuOptions")
+        @com.aliyun.core.annotation.NameInMap("CuOptions")
         private java.util.List < Long > cuOptions;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("GroupType")
+        @com.aliyun.core.annotation.NameInMap("GroupType")
         private String groupType;
 
-        @NameInMap("LeftComputeResource")
+        @com.aliyun.core.annotation.NameInMap("LeftComputeResource")
         private Integer leftComputeResource;
 
-        @NameInMap("MaxComputeResource")
+        @com.aliyun.core.annotation.NameInMap("MaxComputeResource")
         private Integer maxComputeResource;
 
-        @NameInMap("MinComputeResource")
+        @com.aliyun.core.annotation.NameInMap("MinComputeResource")
         private Integer minComputeResource;
 
         private ResourceGroups(Builder builder) {
@@ -319,10 +318,10 @@ public class DescribeApsResourceGroupsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("ResourceGroups")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroups")
         private java.util.List < ResourceGroups> resourceGroups;
 
-        @NameInMap("Step")
+        @com.aliyun.core.annotation.NameInMap("Step")
         private Long step;
 
         private Data(Builder builder) {

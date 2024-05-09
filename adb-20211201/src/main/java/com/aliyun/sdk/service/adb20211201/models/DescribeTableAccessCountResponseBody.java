@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTableAccessCountResponseBody</p>
  */
 public class DescribeTableAccessCountResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeTableAccessCountResponseBody(Builder builder) {
@@ -132,19 +131,19 @@ public class DescribeTableAccessCountResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("AccessCount")
+        @com.aliyun.core.annotation.NameInMap("AccessCount")
         private String accessCount;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("ReportDate")
+        @com.aliyun.core.annotation.NameInMap("ReportDate")
         private String reportDate;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
-        @NameInMap("TableSchema")
+        @com.aliyun.core.annotation.NameInMap("TableSchema")
         private String tableSchema;
 
         private Items(Builder builder) {

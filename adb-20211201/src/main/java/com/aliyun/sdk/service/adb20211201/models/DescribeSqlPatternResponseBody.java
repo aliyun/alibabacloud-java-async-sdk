@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSqlPatternResponseBody</p>
  */
 public class DescribeSqlPatternResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeSqlPatternResponseBody(Builder builder) {
@@ -132,52 +131,52 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("AccessIP")
+        @com.aliyun.core.annotation.NameInMap("AccessIP")
         private String accessIP;
 
-        @NameInMap("AvgCpuTime")
+        @com.aliyun.core.annotation.NameInMap("AvgCpuTime")
         private String avgCpuTime;
 
-        @NameInMap("AvgPeakMemory")
+        @com.aliyun.core.annotation.NameInMap("AvgPeakMemory")
         private String avgPeakMemory;
 
-        @NameInMap("AvgScanSize")
+        @com.aliyun.core.annotation.NameInMap("AvgScanSize")
         private String avgScanSize;
 
-        @NameInMap("AvgStageCount")
+        @com.aliyun.core.annotation.NameInMap("AvgStageCount")
         private String avgStageCount;
 
-        @NameInMap("AvgTaskCount")
+        @com.aliyun.core.annotation.NameInMap("AvgTaskCount")
         private String avgTaskCount;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("MaxCpuTime")
+        @com.aliyun.core.annotation.NameInMap("MaxCpuTime")
         private String maxCpuTime;
 
-        @NameInMap("MaxPeakMemory")
+        @com.aliyun.core.annotation.NameInMap("MaxPeakMemory")
         private String maxPeakMemory;
 
-        @NameInMap("MaxScanSize")
+        @com.aliyun.core.annotation.NameInMap("MaxScanSize")
         private String maxScanSize;
 
-        @NameInMap("MaxStageCount")
+        @com.aliyun.core.annotation.NameInMap("MaxStageCount")
         private String maxStageCount;
 
-        @NameInMap("MaxTaskCount")
+        @com.aliyun.core.annotation.NameInMap("MaxTaskCount")
         private String maxTaskCount;
 
-        @NameInMap("Pattern")
+        @com.aliyun.core.annotation.NameInMap("Pattern")
         private String pattern;
 
-        @NameInMap("QueryCount")
+        @com.aliyun.core.annotation.NameInMap("QueryCount")
         private String queryCount;
 
-        @NameInMap("ReportDate")
+        @com.aliyun.core.annotation.NameInMap("ReportDate")
         private String reportDate;
 
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private String user;
 
         private Items(Builder builder) {

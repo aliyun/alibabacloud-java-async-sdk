@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TableDetailModel</p>
  */
 public class TableDetailModel extends TeaModel {
-    @NameInMap("Catalog")
+    @com.aliyun.core.annotation.NameInMap("Catalog")
     private String catalog;
 
-    @NameInMap("Columns")
+    @com.aliyun.core.annotation.NameInMap("Columns")
     private java.util.List < ColDetailModel > columns;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("Owner")
+    @com.aliyun.core.annotation.NameInMap("Owner")
     private String owner;
 
-    @NameInMap("SchemaName")
+    @com.aliyun.core.annotation.NameInMap("SchemaName")
     private String schemaName;
 
-    @NameInMap("TableName")
+    @com.aliyun.core.annotation.NameInMap("TableName")
     private String tableName;
 
-    @NameInMap("TableType")
+    @com.aliyun.core.annotation.NameInMap("TableType")
     private String tableType;
 
-    @NameInMap("UpdateTime")
+    @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
     private TableDetailModel(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,148 +11,148 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TableModel</p>
  */
 public class TableModel extends TeaModel {
-    @NameInMap("ArchiveType")
+    @com.aliyun.core.annotation.NameInMap("ArchiveType")
     private String archiveType;
 
-    @NameInMap("BlockSize")
+    @com.aliyun.core.annotation.NameInMap("BlockSize")
     private Long blockSize;
 
-    @NameInMap("Bucket")
+    @com.aliyun.core.annotation.NameInMap("Bucket")
     private Long bucket;
 
-    @NameInMap("BucketCount")
+    @com.aliyun.core.annotation.NameInMap("BucketCount")
     private Long bucketCount;
 
-    @NameInMap("Cols")
+    @com.aliyun.core.annotation.NameInMap("Cols")
     private java.util.List < FieldSchemaModel > cols;
 
-    @NameInMap("Comment")
+    @com.aliyun.core.annotation.NameInMap("Comment")
     private String comment;
 
-    @NameInMap("Compression")
+    @com.aliyun.core.annotation.NameInMap("Compression")
     private String compression;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("CurrentVersion")
+    @com.aliyun.core.annotation.NameInMap("CurrentVersion")
     private Long currentVersion;
 
-    @NameInMap("DbName")
+    @com.aliyun.core.annotation.NameInMap("DbName")
     private String dbName;
 
-    @NameInMap("DictEncode")
+    @com.aliyun.core.annotation.NameInMap("DictEncode")
     private Boolean dictEncode;
 
-    @NameInMap("DistributeColumns")
+    @com.aliyun.core.annotation.NameInMap("DistributeColumns")
     private java.util.List < FieldSchemaModel > distributeColumns;
 
-    @NameInMap("DistributeType")
+    @com.aliyun.core.annotation.NameInMap("DistributeType")
     private String distributeType;
 
-    @NameInMap("EnableDfs")
+    @com.aliyun.core.annotation.NameInMap("EnableDfs")
     private Boolean enableDfs;
 
-    @NameInMap("HotPartitionCount")
+    @com.aliyun.core.annotation.NameInMap("HotPartitionCount")
     private Long hotPartitionCount;
 
-    @NameInMap("Indexes")
+    @com.aliyun.core.annotation.NameInMap("Indexes")
     private java.util.List < CstoreIndexModel > indexes;
 
-    @NameInMap("IsAllIndex")
+    @com.aliyun.core.annotation.NameInMap("IsAllIndex")
     private Boolean isAllIndex;
 
-    @NameInMap("IsFulltextDict")
+    @com.aliyun.core.annotation.NameInMap("IsFulltextDict")
     private Boolean isFulltextDict;
 
-    @NameInMap("MaxColumnId")
+    @com.aliyun.core.annotation.NameInMap("MaxColumnId")
     private Long maxColumnId;
 
-    @NameInMap("Parameters")
+    @com.aliyun.core.annotation.NameInMap("Parameters")
     private java.util.Map < String, String > parameters;
 
-    @NameInMap("PartitionColumn")
+    @com.aliyun.core.annotation.NameInMap("PartitionColumn")
     private String partitionColumn;
 
-    @NameInMap("PartitionCount")
+    @com.aliyun.core.annotation.NameInMap("PartitionCount")
     private Long partitionCount;
 
-    @NameInMap("PartitionKeys")
+    @com.aliyun.core.annotation.NameInMap("PartitionKeys")
     private java.util.List < FieldSchemaModel > partitionKeys;
 
-    @NameInMap("PartitionType")
+    @com.aliyun.core.annotation.NameInMap("PartitionType")
     private String partitionType;
 
-    @NameInMap("PhysicalDatabaseName")
+    @com.aliyun.core.annotation.NameInMap("PhysicalDatabaseName")
     private String physicalDatabaseName;
 
-    @NameInMap("PhysicalTableName")
+    @com.aliyun.core.annotation.NameInMap("PhysicalTableName")
     private String physicalTableName;
 
-    @NameInMap("PreviousVersion")
+    @com.aliyun.core.annotation.NameInMap("PreviousVersion")
     private Long previousVersion;
 
-    @NameInMap("RawTableName")
+    @com.aliyun.core.annotation.NameInMap("RawTableName")
     private String rawTableName;
 
-    @NameInMap("RouteColumns")
+    @com.aliyun.core.annotation.NameInMap("RouteColumns")
     private java.util.List < FieldSchemaModel > routeColumns;
 
-    @NameInMap("RouteEffectiveColumn")
+    @com.aliyun.core.annotation.NameInMap("RouteEffectiveColumn")
     private FieldSchemaModel routeEffectiveColumn;
 
-    @NameInMap("RouteType")
+    @com.aliyun.core.annotation.NameInMap("RouteType")
     private String routeType;
 
-    @NameInMap("RtEngineType")
+    @com.aliyun.core.annotation.NameInMap("RtEngineType")
     private String rtEngineType;
 
-    @NameInMap("RtIndexAll")
+    @com.aliyun.core.annotation.NameInMap("RtIndexAll")
     private Boolean rtIndexAll;
 
-    @NameInMap("RtModeType")
+    @com.aliyun.core.annotation.NameInMap("RtModeType")
     private String rtModeType;
 
-    @NameInMap("Sd")
+    @com.aliyun.core.annotation.NameInMap("Sd")
     private StorageDescriptorModel sd;
 
-    @NameInMap("StoragePolicy")
+    @com.aliyun.core.annotation.NameInMap("StoragePolicy")
     private String storagePolicy;
 
-    @NameInMap("SubpartitionColumn")
+    @com.aliyun.core.annotation.NameInMap("SubpartitionColumn")
     private String subpartitionColumn;
 
-    @NameInMap("SubpartitionCount")
+    @com.aliyun.core.annotation.NameInMap("SubpartitionCount")
     private Long subpartitionCount;
 
-    @NameInMap("SubpartitionType")
+    @com.aliyun.core.annotation.NameInMap("SubpartitionType")
     private String subpartitionType;
 
-    @NameInMap("TableEngineName")
+    @com.aliyun.core.annotation.NameInMap("TableEngineName")
     private String tableEngineName;
 
-    @NameInMap("TableName")
+    @com.aliyun.core.annotation.NameInMap("TableName")
     private String tableName;
 
-    @NameInMap("TableType")
+    @com.aliyun.core.annotation.NameInMap("TableType")
     private String tableType;
 
-    @NameInMap("TblId")
+    @com.aliyun.core.annotation.NameInMap("TblId")
     private Long tblId;
 
-    @NameInMap("Temporary")
+    @com.aliyun.core.annotation.NameInMap("Temporary")
     private Boolean temporary;
 
-    @NameInMap("UpdateTime")
+    @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
-    @NameInMap("ViewExpandedText")
+    @com.aliyun.core.annotation.NameInMap("ViewExpandedText")
     private String viewExpandedText;
 
-    @NameInMap("ViewOriginalText")
+    @com.aliyun.core.annotation.NameInMap("ViewOriginalText")
     private String viewOriginalText;
 
-    @NameInMap("ViewSecurityMode")
+    @com.aliyun.core.annotation.NameInMap("ViewSecurityMode")
     private String viewSecurityMode;
 
     private TableModel(Builder builder) {

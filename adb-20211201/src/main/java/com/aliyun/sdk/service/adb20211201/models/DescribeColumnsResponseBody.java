@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeColumnsResponseBody</p>
  */
 public class DescribeColumnsResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeColumnsResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class DescribeColumnsResponseBody extends TeaModel {
     } 
 
     public static class Column extends TeaModel {
-        @NameInMap("AutoIncrementColumn")
+        @com.aliyun.core.annotation.NameInMap("AutoIncrementColumn")
         private Boolean autoIncrementColumn;
 
-        @NameInMap("ColumnName")
+        @com.aliyun.core.annotation.NameInMap("ColumnName")
         private String columnName;
 
-        @NameInMap("DBClusterId")
+        @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
 
-        @NameInMap("PrimaryKey")
+        @com.aliyun.core.annotation.NameInMap("PrimaryKey")
         private Boolean primaryKey;
 
-        @NameInMap("SchemaName")
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
         private String schemaName;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Column(Builder builder) {
@@ -241,7 +240,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("Column")
+        @com.aliyun.core.annotation.NameInMap("Column")
         private java.util.List < Column> column;
 
         private Items(Builder builder) {

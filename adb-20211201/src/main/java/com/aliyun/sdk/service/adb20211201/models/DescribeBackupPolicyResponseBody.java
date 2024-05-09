@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBackupPolicyResponseBody</p>
  */
 public class DescribeBackupPolicyResponseBody extends TeaModel {
-    @NameInMap("BackupRetentionPeriod")
+    @com.aliyun.core.annotation.NameInMap("BackupRetentionPeriod")
     private Integer backupRetentionPeriod;
 
-    @NameInMap("EnableBackupLog")
+    @com.aliyun.core.annotation.NameInMap("EnableBackupLog")
     private String enableBackupLog;
 
-    @NameInMap("LogBackupRetentionPeriod")
+    @com.aliyun.core.annotation.NameInMap("LogBackupRetentionPeriod")
     private Integer logBackupRetentionPeriod;
 
-    @NameInMap("PreferredBackupPeriod")
+    @com.aliyun.core.annotation.NameInMap("PreferredBackupPeriod")
     private String preferredBackupPeriod;
 
-    @NameInMap("PreferredBackupTime")
+    @com.aliyun.core.annotation.NameInMap("PreferredBackupTime")
     private String preferredBackupTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeBackupPolicyResponseBody(Builder builder) {

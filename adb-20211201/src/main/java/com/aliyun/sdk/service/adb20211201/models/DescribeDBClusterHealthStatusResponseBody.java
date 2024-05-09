@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBClusterHealthStatusResponseBody</p>
  */
 public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
-    @NameInMap("CS")
+    @com.aliyun.core.annotation.NameInMap("CS")
     private Cs cs;
 
-    @NameInMap("Executor")
+    @com.aliyun.core.annotation.NameInMap("Executor")
     private Executor executor;
 
-    @NameInMap("InstanceStatus")
+    @com.aliyun.core.annotation.NameInMap("InstanceStatus")
     private String instanceStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Worker")
+    @com.aliyun.core.annotation.NameInMap("Worker")
     private Worker worker;
 
     private DescribeDBClusterHealthStatusResponseBody(Builder builder) {
@@ -139,19 +138,19 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
     } 
 
     public static class Cs extends TeaModel {
-        @NameInMap("ActiveCount")
+        @com.aliyun.core.annotation.NameInMap("ActiveCount")
         private Long activeCount;
 
-        @NameInMap("ExpectedCount")
+        @com.aliyun.core.annotation.NameInMap("ExpectedCount")
         private Long expectedCount;
 
-        @NameInMap("RiskCount")
+        @com.aliyun.core.annotation.NameInMap("RiskCount")
         private Long riskCount;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UnavailableCount")
+        @com.aliyun.core.annotation.NameInMap("UnavailableCount")
         private Long unavailableCount;
 
         private Cs(Builder builder) {
@@ -265,19 +264,19 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
 
     }
     public static class Executor extends TeaModel {
-        @NameInMap("ActiveCount")
+        @com.aliyun.core.annotation.NameInMap("ActiveCount")
         private Long activeCount;
 
-        @NameInMap("ExpectedCount")
+        @com.aliyun.core.annotation.NameInMap("ExpectedCount")
         private Long expectedCount;
 
-        @NameInMap("RiskCount")
+        @com.aliyun.core.annotation.NameInMap("RiskCount")
         private Long riskCount;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UnavailableCount")
+        @com.aliyun.core.annotation.NameInMap("UnavailableCount")
         private Long unavailableCount;
 
         private Executor(Builder builder) {
@@ -391,19 +390,19 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
 
     }
     public static class Worker extends TeaModel {
-        @NameInMap("ActiveCount")
+        @com.aliyun.core.annotation.NameInMap("ActiveCount")
         private Long activeCount;
 
-        @NameInMap("ExpectedCount")
+        @com.aliyun.core.annotation.NameInMap("ExpectedCount")
         private Long expectedCount;
 
-        @NameInMap("RiskCount")
+        @com.aliyun.core.annotation.NameInMap("RiskCount")
         private Long riskCount;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UnavailableCount")
+        @com.aliyun.core.annotation.NameInMap("UnavailableCount")
         private Long unavailableCount;
 
         private Worker(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBClusterSpaceSummaryResponseBody</p>
  */
 public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBClusterSpaceSummaryResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The queried storage overview information.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +57,7 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,19 +71,19 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
     } 
 
     public static class ColdData extends TeaModel {
-        @NameInMap("DataSize")
+        @com.aliyun.core.annotation.NameInMap("DataSize")
         private Long dataSize;
 
-        @NameInMap("IndexSize")
+        @com.aliyun.core.annotation.NameInMap("IndexSize")
         private Long indexSize;
 
-        @NameInMap("OtherSize")
+        @com.aliyun.core.annotation.NameInMap("OtherSize")
         private Long otherSize;
 
-        @NameInMap("PrimaryKeyIndexSize")
+        @com.aliyun.core.annotation.NameInMap("PrimaryKeyIndexSize")
         private Long primaryKeyIndexSize;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Long totalSize;
 
         private ColdData(Builder builder) {
@@ -146,7 +145,7 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
             private Long totalSize; 
 
             /**
-             * DataSize.
+             * The data size of table records. Unit: bytes.
              */
             public Builder dataSize(Long dataSize) {
                 this.dataSize = dataSize;
@@ -154,7 +153,7 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * IndexSize.
+             * The data size of regular indexes. Unit: bytes.
              */
             public Builder indexSize(Long indexSize) {
                 this.indexSize = indexSize;
@@ -162,7 +161,7 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * OtherSize.
+             * The data size of other data. Unit: bytes.
              */
             public Builder otherSize(Long otherSize) {
                 this.otherSize = otherSize;
@@ -170,7 +169,7 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryKeyIndexSize.
+             * The data size of primary key indexes. Unit: bytes.
              */
             public Builder primaryKeyIndexSize(Long primaryKeyIndexSize) {
                 this.primaryKeyIndexSize = primaryKeyIndexSize;
@@ -178,7 +177,10 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSize.
+             * The cold data size. Unit: bytes.
+             * <p>
+             * 
+             * >  Formula: Cold data size = Data size of table records + Data size of regular indexes + Data size of primary key indexes + Data size of other data.
              */
             public Builder totalSize(Long totalSize) {
                 this.totalSize = totalSize;
@@ -193,10 +195,10 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
 
     }
     public static class DataGrowth extends TeaModel {
-        @NameInMap("DayGrowth")
+        @com.aliyun.core.annotation.NameInMap("DayGrowth")
         private Long dayGrowth;
 
-        @NameInMap("WeekGrowth")
+        @com.aliyun.core.annotation.NameInMap("WeekGrowth")
         private Long weekGrowth;
 
         private DataGrowth(Builder builder) {
@@ -231,7 +233,10 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
             private Long weekGrowth; 
 
             /**
-             * DayGrowth.
+             * The data growth within the last day. Unit: bytes.
+             * <p>
+             * 
+             * >  Formula: Data growth within the last day = Current data size - Data size one day ago.
              */
             public Builder dayGrowth(Long dayGrowth) {
                 this.dayGrowth = dayGrowth;
@@ -239,7 +244,10 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * WeekGrowth.
+             * The daily data growth within the last seven days. Unit: bytes.
+             * <p>
+             * 
+             * >  Formula: Daily data growth within the last seven days = (Current data size - Data size seven days ago)/7.
              */
             public Builder weekGrowth(Long weekGrowth) {
                 this.weekGrowth = weekGrowth;
@@ -254,19 +262,19 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
 
     }
     public static class HotData extends TeaModel {
-        @NameInMap("DataSize")
+        @com.aliyun.core.annotation.NameInMap("DataSize")
         private Long dataSize;
 
-        @NameInMap("IndexSize")
+        @com.aliyun.core.annotation.NameInMap("IndexSize")
         private Long indexSize;
 
-        @NameInMap("OtherSize")
+        @com.aliyun.core.annotation.NameInMap("OtherSize")
         private Long otherSize;
 
-        @NameInMap("PrimaryKeyIndexSize")
+        @com.aliyun.core.annotation.NameInMap("PrimaryKeyIndexSize")
         private Long primaryKeyIndexSize;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Long totalSize;
 
         private HotData(Builder builder) {
@@ -328,7 +336,7 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
             private Long totalSize; 
 
             /**
-             * DataSize.
+             * The data size of table records. Unit: bytes.
              */
             public Builder dataSize(Long dataSize) {
                 this.dataSize = dataSize;
@@ -336,7 +344,7 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * IndexSize.
+             * The data size of regular indexes. Unit: bytes.
              */
             public Builder indexSize(Long indexSize) {
                 this.indexSize = indexSize;
@@ -344,7 +352,7 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * OtherSize.
+             * The data size of other data. Unit: bytes.
              */
             public Builder otherSize(Long otherSize) {
                 this.otherSize = otherSize;
@@ -352,7 +360,7 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryKeyIndexSize.
+             * The data size of primary key indexes. Unit: bytes.
              */
             public Builder primaryKeyIndexSize(Long primaryKeyIndexSize) {
                 this.primaryKeyIndexSize = primaryKeyIndexSize;
@@ -360,7 +368,10 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSize.
+             * The hot data size. Unit: bytes.
+             * <p>
+             * 
+             * >  Formula: Hot data size = Data size of table records + Data size of regular indexes + Data size of primary key indexes + Data size of other data.
              */
             public Builder totalSize(Long totalSize) {
                 this.totalSize = totalSize;
@@ -375,16 +386,16 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("ColdData")
+        @com.aliyun.core.annotation.NameInMap("ColdData")
         private ColdData coldData;
 
-        @NameInMap("DataGrowth")
+        @com.aliyun.core.annotation.NameInMap("DataGrowth")
         private DataGrowth dataGrowth;
 
-        @NameInMap("HotData")
+        @com.aliyun.core.annotation.NameInMap("HotData")
         private HotData hotData;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private String totalSize;
 
         private Data(Builder builder) {
@@ -437,7 +448,7 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
             private String totalSize; 
 
             /**
-             * ColdData.
+             * The cold data.
              */
             public Builder coldData(ColdData coldData) {
                 this.coldData = coldData;
@@ -445,7 +456,7 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * DataGrowth.
+             * The data growth.
              */
             public Builder dataGrowth(DataGrowth dataGrowth) {
                 this.dataGrowth = dataGrowth;
@@ -453,7 +464,7 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * HotData.
+             * The hot data.
              */
             public Builder hotData(HotData hotData) {
                 this.hotData = hotData;
@@ -461,7 +472,10 @@ public class DescribeDBClusterSpaceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSize.
+             * The total data size. Unit: bytes.
+             * <p>
+             * 
+             * >  Formula: Total data size = Hot data size+ Cold data size.
              */
             public Builder totalSize(String totalSize) {
                 this.totalSize = totalSize;

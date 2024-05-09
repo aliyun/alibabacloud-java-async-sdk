@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,43 +11,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Detail</p>
  */
 public class Detail extends TeaModel {
-    @NameInMap("AppType")
+    @com.aliyun.core.annotation.NameInMap("AppType")
     private String appType;
 
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @NameInMap("DurationInMillis")
+    @com.aliyun.core.annotation.NameInMap("DurationInMillis")
     private Long durationInMillis;
 
-    @NameInMap("EstimateExecutionCpuTimeInSeconds")
+    @com.aliyun.core.annotation.NameInMap("EstimateExecutionCpuTimeInSeconds")
     private Long estimateExecutionCpuTimeInSeconds;
 
-    @NameInMap("LastAttemptId")
+    @com.aliyun.core.annotation.NameInMap("LastAttemptId")
     private String lastAttemptId;
 
-    @NameInMap("LastUpdatedTimeInMillis")
+    @com.aliyun.core.annotation.NameInMap("LastUpdatedTimeInMillis")
     private Long lastUpdatedTimeInMillis;
 
-    @NameInMap("LogRootPath")
+    @com.aliyun.core.annotation.NameInMap("LogRootPath")
     private String logRootPath;
 
-    @NameInMap("ResourceGroupName")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupName")
     private String resourceGroupName;
 
-    @NameInMap("StartedTimeInMillis")
+    @com.aliyun.core.annotation.NameInMap("StartedTimeInMillis")
     private Long startedTimeInMillis;
 
-    @NameInMap("SubmittedTimeInMillis")
+    @com.aliyun.core.annotation.NameInMap("SubmittedTimeInMillis")
     private Long submittedTimeInMillis;
 
-    @NameInMap("TerminatedTimeInMillis")
+    @com.aliyun.core.annotation.NameInMap("TerminatedTimeInMillis")
     private Long terminatedTimeInMillis;
 
-    @NameInMap("WebUiAddress")
+    @com.aliyun.core.annotation.NameInMap("WebUiAddress")
     private String webUiAddress;
 
     private Detail(Builder builder) {

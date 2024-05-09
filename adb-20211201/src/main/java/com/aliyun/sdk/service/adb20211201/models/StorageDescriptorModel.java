@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StorageDescriptorModel</p>
  */
 public class StorageDescriptorModel extends TeaModel {
-    @NameInMap("Compressed")
+    @com.aliyun.core.annotation.NameInMap("Compressed")
     private Boolean compressed;
 
-    @NameInMap("InputFormat")
+    @com.aliyun.core.annotation.NameInMap("InputFormat")
     private String inputFormat;
 
-    @NameInMap("Location")
+    @com.aliyun.core.annotation.NameInMap("Location")
     private String location;
 
-    @NameInMap("NumBuckets")
+    @com.aliyun.core.annotation.NameInMap("NumBuckets")
     private Long numBuckets;
 
-    @NameInMap("OutputFormat")
+    @com.aliyun.core.annotation.NameInMap("OutputFormat")
     private String outputFormat;
 
-    @NameInMap("Parameters")
+    @com.aliyun.core.annotation.NameInMap("Parameters")
     private java.util.Map < String, String > parameters;
 
-    @NameInMap("SdId")
+    @com.aliyun.core.annotation.NameInMap("SdId")
     private Long sdId;
 
-    @NameInMap("SerDeInfo")
+    @com.aliyun.core.annotation.NameInMap("SerDeInfo")
     private SerDeInfoModel serDeInfo;
 
-    @NameInMap("StoredAsSubDirectories")
+    @com.aliyun.core.annotation.NameInMap("StoredAsSubDirectories")
     private Boolean storedAsSubDirectories;
 
     private StorageDescriptorModel(Builder builder) {

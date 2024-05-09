@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeElasticPlanAttributeResponseBody</p>
  */
 public class DescribeElasticPlanAttributeResponseBody extends TeaModel {
-    @NameInMap("ElasticPlan")
+    @com.aliyun.core.annotation.NameInMap("ElasticPlan")
     private ElasticPlan elasticPlan;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeElasticPlanAttributeResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class DescribeElasticPlanAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details of the scaling plan.
+         * The queried scaling plan.
          */
         public Builder elasticPlan(ElasticPlan elasticPlan) {
             this.elasticPlan = elasticPlan;
@@ -58,7 +57,7 @@ public class DescribeElasticPlanAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,31 +71,31 @@ public class DescribeElasticPlanAttributeResponseBody extends TeaModel {
     } 
 
     public static class ElasticPlan extends TeaModel {
-        @NameInMap("AutoScale")
+        @com.aliyun.core.annotation.NameInMap("AutoScale")
         private Boolean autoScale;
 
-        @NameInMap("CronExpression")
+        @com.aliyun.core.annotation.NameInMap("CronExpression")
         private String cronExpression;
 
-        @NameInMap("ElasticPlanName")
+        @com.aliyun.core.annotation.NameInMap("ElasticPlanName")
         private String elasticPlanName;
 
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("ResourceGroupName")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupName")
         private String resourceGroupName;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("TargetSize")
+        @com.aliyun.core.annotation.NameInMap("TargetSize")
         private String targetSize;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private ElasticPlan(Builder builder) {
@@ -194,16 +193,10 @@ public class DescribeElasticPlanAttributeResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Indicates whether **Proportional Default Scaling for EIUs** is enabled.
+             * Indicates whether **Default Proportional Scaling for EIUs** is enabled. Valid values: true: Default Proportional Scaling for EIUs is enabled. If you set this parameter to true, storage resources are scaled along with computing resources. false: Default Proportional Scaling for EIUs is not enabled.
              * <p>
              * 
-             * Valid values:
-             * 
-             * true: Proportional Default Scaling for EIUs is enabled. If you set this parameter to true, the amount of storage resources scales along with the computing resources.
-             * 
-             * false: Proportional Default Scaling for EIUs is not enabled.
-             * 
-             * >  You can enable Proportional Default Scaling for EIUs for only a single scaling plan of a cluster.
+             * >  You can enable Default Proportional Scaling for EIUs for only a single scaling plan of a cluster. After you enable a scaling plan of the Default Proportional Scaling for EIUs type, you cannot enable scaling plans of other types.
              */
             public Builder autoScale(Boolean autoScale) {
                 this.autoScale = autoScale;
@@ -227,7 +220,7 @@ public class DescribeElasticPlanAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the scaling plan was enabled.
+             * Indicates whether the scaling plan is enabled.
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -246,7 +239,7 @@ public class DescribeElasticPlanAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource group.
+             * The name of the resource group used by the scaling plan.
              */
             public Builder resourceGroupName(String resourceGroupName) {
                 this.resourceGroupName = resourceGroupName;

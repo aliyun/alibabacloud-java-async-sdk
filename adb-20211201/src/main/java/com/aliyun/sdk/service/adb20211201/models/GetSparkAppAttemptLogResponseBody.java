@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSparkAppAttemptLogResponseBody</p>
  */
 public class GetSparkAppAttemptLogResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetSparkAppAttemptLogResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class GetSparkAppAttemptLogResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("DBClusterId")
+        @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
 
-        @NameInMap("LogContent")
+        @com.aliyun.core.annotation.NameInMap("LogContent")
         private String logContent;
 
-        @NameInMap("LogSize")
+        @com.aliyun.core.annotation.NameInMap("LogSize")
         private Integer logSize;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
         private Data(Builder builder) {

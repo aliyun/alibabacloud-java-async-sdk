@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSparkAppStateRequest</p>
  */
 public class GetSparkAppStateRequest extends Request {
-    @Body
-    @NameInMap("AppId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String appId;
 
-    @Query
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
     private GetSparkAppStateRequest(Builder builder) {

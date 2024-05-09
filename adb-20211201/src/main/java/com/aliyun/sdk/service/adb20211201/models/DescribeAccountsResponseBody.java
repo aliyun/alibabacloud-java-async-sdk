@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAccountsResponseBody</p>
  */
 public class DescribeAccountsResponseBody extends TeaModel {
-    @NameInMap("AccountList")
+    @com.aliyun.core.annotation.NameInMap("AccountList")
     private AccountList accountList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAccountsResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribeAccountsResponseBody extends TeaModel {
     } 
 
     public static class DBAccount extends TeaModel {
-        @NameInMap("AccountDescription")
+        @com.aliyun.core.annotation.NameInMap("AccountDescription")
         private String accountDescription;
 
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("AccountStatus")
+        @com.aliyun.core.annotation.NameInMap("AccountStatus")
         private String accountStatus;
 
-        @NameInMap("AccountType")
+        @com.aliyun.core.annotation.NameInMap("AccountType")
         private String accountType;
 
-        @NameInMap("RamUsers")
+        @com.aliyun.core.annotation.NameInMap("RamUsers")
         private String ramUsers;
 
         private DBAccount(Builder builder) {
@@ -202,7 +201,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
 
     }
     public static class AccountList extends TeaModel {
-        @NameInMap("DBAccount")
+        @com.aliyun.core.annotation.NameInMap("DBAccount")
         private java.util.List < DBAccount> DBAccount;
 
         private AccountList(Builder builder) {

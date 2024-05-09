@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeComputeResourceUsageResponseBody</p>
  */
 public class DescribeComputeResourceUsageResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeComputeResourceUsageResponseBody(Builder builder) {
@@ -92,10 +91,10 @@ public class DescribeComputeResourceUsageResponseBody extends TeaModel {
     } 
 
     public static class AcuInfo extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Values")
+        @com.aliyun.core.annotation.NameInMap("Values")
         private java.util.List < String > values;
 
         private AcuInfo(Builder builder) {
@@ -158,22 +157,22 @@ public class DescribeComputeResourceUsageResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AcuInfo")
+        @com.aliyun.core.annotation.NameInMap("AcuInfo")
         private java.util.List < AcuInfo> acuInfo;
 
-        @NameInMap("DBClusterId")
+        @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("ResourceGroupName")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupName")
         private String resourceGroupName;
 
-        @NameInMap("ResourceGroupType")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupType")
         private String resourceGroupType;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private Data(Builder builder) {

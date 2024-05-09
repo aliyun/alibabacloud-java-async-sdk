@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeJobResourceUsageResponseBody</p>
  */
 public class DescribeJobResourceUsageResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeJobResourceUsageResponseBody(Builder builder) {
@@ -92,13 +91,13 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
     } 
 
     public static class AcuUsageDetail extends TeaModel {
-        @NameInMap("ElasticAcuNumber")
+        @com.aliyun.core.annotation.NameInMap("ElasticAcuNumber")
         private Float elasticAcuNumber;
 
-        @NameInMap("ReservedAcuNumber")
+        @com.aliyun.core.annotation.NameInMap("ReservedAcuNumber")
         private Float reservedAcuNumber;
 
-        @NameInMap("TotalAcuNumber")
+        @com.aliyun.core.annotation.NameInMap("TotalAcuNumber")
         private Float totalAcuNumber;
 
         private AcuUsageDetail(Builder builder) {
@@ -173,19 +172,19 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
 
     }
     public static class JobAcuUsage extends TeaModel {
-        @NameInMap("AcuUsageDetail")
+        @com.aliyun.core.annotation.NameInMap("AcuUsageDetail")
         private AcuUsageDetail acuUsageDetail;
 
-        @NameInMap("JobEndTime")
+        @com.aliyun.core.annotation.NameInMap("JobEndTime")
         private String jobEndTime;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("JobStartTime")
+        @com.aliyun.core.annotation.NameInMap("JobStartTime")
         private String jobStartTime;
 
-        @NameInMap("ResourceGroupName")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupName")
         private String resourceGroupName;
 
         private JobAcuUsage(Builder builder) {
@@ -294,16 +293,16 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("DBClusterId")
+        @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("JobAcuUsage")
+        @com.aliyun.core.annotation.NameInMap("JobAcuUsage")
         private java.util.List < JobAcuUsage> jobAcuUsage;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private Data(Builder builder) {

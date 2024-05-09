@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSparkAppAttemptLogRequest</p>
  */
 public class GetSparkAppAttemptLogRequest extends Request {
-    @Body
-    @NameInMap("AttemptId")
-    @Validation(required = true, maxLength = 72)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AttemptId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 72)
     private String attemptId;
 
-    @Body
-    @NameInMap("LogLength")
-    @Validation(maximum = 500)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LogLength")
+    @com.aliyun.core.annotation.Validation(maximum = 500)
     private Long logLength;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
     private GetSparkAppAttemptLogRequest(Builder builder) {

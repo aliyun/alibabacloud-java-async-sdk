@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Adb4MysqlSparkDiagnosisInfo</p>
  */
 public class Adb4MysqlSparkDiagnosisInfo extends TeaModel {
-    @NameInMap("DiagnosisCode")
+    @com.aliyun.core.annotation.NameInMap("DiagnosisCode")
     private String diagnosisCode;
 
-    @NameInMap("DiagnosisCodeLabel")
+    @com.aliyun.core.annotation.NameInMap("DiagnosisCodeLabel")
     private String diagnosisCodeLabel;
 
-    @NameInMap("DiagnosisMsg")
+    @com.aliyun.core.annotation.NameInMap("DiagnosisMsg")
     private String diagnosisMsg;
 
-    @NameInMap("DiagnosisType")
+    @com.aliyun.core.annotation.NameInMap("DiagnosisType")
     private String diagnosisType;
 
     private Adb4MysqlSparkDiagnosisInfo(Builder builder) {

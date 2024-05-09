@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,88 +11,98 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDBClusterRequest</p>
  */
 public class CreateDBClusterRequest extends Request {
-    @Query
-    @NameInMap("BackupSetId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupSetId")
     private String backupSetId;
 
-    @Query
-    @NameInMap("ComputeResource")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComputeResource")
     private String computeResource;
 
-    @Query
-    @NameInMap("DBClusterDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterDescription")
     private String DBClusterDescription;
 
-    @Query
-    @NameInMap("DBClusterNetworkType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterNetworkType")
     private String DBClusterNetworkType;
 
-    @Query
-    @NameInMap("DBClusterVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterVersion;
 
-    @Query
-    @NameInMap("EnableDefaultResourcePool")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableDefaultResourcePool")
     private Boolean enableDefaultResourcePool;
 
-    @Query
-    @NameInMap("PayType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PayType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String payType;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private String period;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductForm")
+    private String productForm;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReservedNodeCount")
+    private Integer reservedNodeCount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReservedNodeSize")
+    private String reservedNodeSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("RestoreToTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreToTime")
     private String restoreToTime;
 
-    @Query
-    @NameInMap("RestoreType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreType")
     private String restoreType;
 
-    @Query
-    @NameInMap("SourceDbClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceDbClusterId")
     private String sourceDbClusterId;
 
-    @Query
-    @NameInMap("StorageResource")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageResource")
     private String storageResource;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("UsedTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UsedTime")
     private String usedTime;
 
-    @Query
-    @NameInMap("VPCId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VPCId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String VPCId;
 
-    @Query
-    @NameInMap("VSwitchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
 
-    @Query
-    @NameInMap("ZoneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String zoneId;
 
     private CreateDBClusterRequest(Builder builder) {
@@ -106,7 +115,10 @@ public class CreateDBClusterRequest extends Request {
         this.enableDefaultResourcePool = builder.enableDefaultResourcePool;
         this.payType = builder.payType;
         this.period = builder.period;
+        this.productForm = builder.productForm;
         this.regionId = builder.regionId;
+        this.reservedNodeCount = builder.reservedNodeCount;
+        this.reservedNodeSize = builder.reservedNodeSize;
         this.resourceGroupId = builder.resourceGroupId;
         this.restoreToTime = builder.restoreToTime;
         this.restoreType = builder.restoreType;
@@ -189,10 +201,31 @@ public class CreateDBClusterRequest extends Request {
     }
 
     /**
+     * @return productForm
+     */
+    public String getProductForm() {
+        return this.productForm;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return reservedNodeCount
+     */
+    public Integer getReservedNodeCount() {
+        return this.reservedNodeCount;
+    }
+
+    /**
+     * @return reservedNodeSize
+     */
+    public String getReservedNodeSize() {
+        return this.reservedNodeSize;
     }
 
     /**
@@ -274,7 +307,10 @@ public class CreateDBClusterRequest extends Request {
         private Boolean enableDefaultResourcePool; 
         private String payType; 
         private String period; 
+        private String productForm; 
         private String regionId; 
+        private Integer reservedNodeCount; 
+        private String reservedNodeSize; 
         private String resourceGroupId; 
         private String restoreToTime; 
         private String restoreType; 
@@ -300,7 +336,10 @@ public class CreateDBClusterRequest extends Request {
             this.enableDefaultResourcePool = request.enableDefaultResourcePool;
             this.payType = request.payType;
             this.period = request.period;
+            this.productForm = request.productForm;
             this.regionId = request.regionId;
+            this.reservedNodeCount = request.reservedNodeCount;
+            this.reservedNodeSize = request.reservedNodeSize;
             this.resourceGroupId = request.resourceGroupId;
             this.restoreToTime = request.restoreToTime;
             this.restoreType = request.restoreType;
@@ -410,6 +449,15 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
+         * ProductForm.
+         */
+        public Builder productForm(String productForm) {
+            this.putQueryParameter("ProductForm", productForm);
+            this.productForm = productForm;
+            return this;
+        }
+
+        /**
          * The region ID.
          * <p>
          * 
@@ -418,6 +466,24 @@ public class CreateDBClusterRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ReservedNodeCount.
+         */
+        public Builder reservedNodeCount(Integer reservedNodeCount) {
+            this.putQueryParameter("ReservedNodeCount", reservedNodeCount);
+            this.reservedNodeCount = reservedNodeCount;
+            return this;
+        }
+
+        /**
+         * ReservedNodeSize.
+         */
+        public Builder reservedNodeSize(String reservedNodeSize) {
+            this.putQueryParameter("ReservedNodeSize", reservedNodeSize);
+            this.reservedNodeSize = reservedNodeSize;
             return this;
         }
 
@@ -535,10 +601,10 @@ public class CreateDBClusterRequest extends Request {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

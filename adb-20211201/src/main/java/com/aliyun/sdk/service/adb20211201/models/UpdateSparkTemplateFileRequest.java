@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateSparkTemplateFileRequest</p>
  */
 public class UpdateSparkTemplateFileRequest extends Request {
-    @Body
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Content")
     private String content;
 
-    @Body
-    @NameInMap("DBClusterId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String DBClusterId;
 
-    @Body
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long id;
 
-    @Body
-    @NameInMap("ResourceGroupName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupName")
     private String resourceGroupName;
 
     private UpdateSparkTemplateFileRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDiagnosisRecordsResponseBody</p>
  */
 public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("Querys")
+    @com.aliyun.core.annotation.NameInMap("Querys")
     private java.util.List < Querys> querys;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDiagnosisRecordsResponseBody(Builder builder) {
@@ -137,73 +136,73 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
     } 
 
     public static class Querys extends TeaModel {
-        @NameInMap("ClientIp")
+        @com.aliyun.core.annotation.NameInMap("ClientIp")
         private String clientIp;
 
-        @NameInMap("Cost")
+        @com.aliyun.core.annotation.NameInMap("Cost")
         private Long cost;
 
-        @NameInMap("Database")
+        @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
 
-        @NameInMap("EtlWriteRows")
+        @com.aliyun.core.annotation.NameInMap("EtlWriteRows")
         private Long etlWriteRows;
 
-        @NameInMap("ExecutionTime")
+        @com.aliyun.core.annotation.NameInMap("ExecutionTime")
         private Long executionTime;
 
-        @NameInMap("OutputDataSize")
+        @com.aliyun.core.annotation.NameInMap("OutputDataSize")
         private Long outputDataSize;
 
-        @NameInMap("OutputRows")
+        @com.aliyun.core.annotation.NameInMap("OutputRows")
         private Long outputRows;
 
-        @NameInMap("PeakMemory")
+        @com.aliyun.core.annotation.NameInMap("PeakMemory")
         private Long peakMemory;
 
-        @NameInMap("ProcessId")
+        @com.aliyun.core.annotation.NameInMap("ProcessId")
         private String processId;
 
-        @NameInMap("QueueTime")
+        @com.aliyun.core.annotation.NameInMap("QueueTime")
         private Long queueTime;
 
-        @NameInMap("RcHost")
+        @com.aliyun.core.annotation.NameInMap("RcHost")
         private String rcHost;
 
-        @NameInMap("ResourceCostRank")
+        @com.aliyun.core.annotation.NameInMap("ResourceCostRank")
         private Integer resourceCostRank;
 
-        @NameInMap("ResourceGroup")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroup")
         private String resourceGroup;
 
-        @NameInMap("SQL")
+        @com.aliyun.core.annotation.NameInMap("SQL")
         private String SQL;
 
-        @NameInMap("SQLTruncated")
+        @com.aliyun.core.annotation.NameInMap("SQLTruncated")
         private Boolean SQLTruncated;
 
-        @NameInMap("SQLTruncatedThreshold")
+        @com.aliyun.core.annotation.NameInMap("SQLTruncatedThreshold")
         private Long SQLTruncatedThreshold;
 
-        @NameInMap("ScanRows")
+        @com.aliyun.core.annotation.NameInMap("ScanRows")
         private Long scanRows;
 
-        @NameInMap("ScanSize")
+        @com.aliyun.core.annotation.NameInMap("ScanSize")
         private Long scanSize;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TotalPlanningTime")
+        @com.aliyun.core.annotation.NameInMap("TotalPlanningTime")
         private Long totalPlanningTime;
 
-        @NameInMap("TotalStages")
+        @com.aliyun.core.annotation.NameInMap("TotalStages")
         private Integer totalStages;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private Querys(Builder builder) {

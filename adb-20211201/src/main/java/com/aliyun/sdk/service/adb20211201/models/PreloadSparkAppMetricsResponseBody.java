@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PreloadSparkAppMetricsResponseBody</p>
  */
 public class PreloadSparkAppMetricsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private PreloadSparkAppMetricsResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class PreloadSparkAppMetricsResponseBody extends TeaModel {
     } 
 
     public static class ScanMetrics extends TeaModel {
-        @NameInMap("OutputRowsCount")
+        @com.aliyun.core.annotation.NameInMap("OutputRowsCount")
         private Long outputRowsCount;
 
-        @NameInMap("TotalReadFileSizeInByte")
+        @com.aliyun.core.annotation.NameInMap("TotalReadFileSizeInByte")
         private Long totalReadFileSizeInByte;
 
         private ScanMetrics(Builder builder) {
@@ -133,19 +132,19 @@ public class PreloadSparkAppMetricsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AttemptId")
+        @com.aliyun.core.annotation.NameInMap("AttemptId")
         private String attemptId;
 
-        @NameInMap("EventLogPath")
+        @com.aliyun.core.annotation.NameInMap("EventLogPath")
         private String eventLogPath;
 
-        @NameInMap("Finished")
+        @com.aliyun.core.annotation.NameInMap("Finished")
         private Boolean finished;
 
-        @NameInMap("ScanMetrics")
+        @com.aliyun.core.annotation.NameInMap("ScanMetrics")
         private ScanMetrics scanMetrics;
 
         private Data(Builder builder) {

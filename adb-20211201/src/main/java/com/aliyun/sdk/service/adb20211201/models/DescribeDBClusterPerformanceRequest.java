@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBClusterPerformanceRequest</p>
  */
 public class DescribeDBClusterPerformanceRequest extends Request {
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("Key")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Key")
     private String key;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourcePools")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourcePools")
     private String resourcePools;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeDBClusterPerformanceRequest(Builder builder) {
@@ -181,10 +180,10 @@ public class DescribeDBClusterPerformanceRequest extends Request {
          *     *   **AnalyticDB_IOPS**: the disk IOPS.
          *     *   **AnalyticDB_Disk_Usage**: the disk space that is used.
          *     *   **AnalyticDB_Disk_Usage_Percentage**: the disk usage.
-         *     *   **AnalyticDB_HotDataDiskUsage**: the disk space that is used by hot data.
-         *     *   **AnalyticDB_ColdDataDiskUsage**: the disk space that is used by hot data.
+         *     *   **AnalyticDB_Hot_Data_Usage**: the disk space that is used by hot data.
+         *     *   **AnalyticDB_Cold_Data_Usage**: the disk space that is used by code data.
          * 
-         * > This parameter must be specified.
+         * >  This parameter must be specified.
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);

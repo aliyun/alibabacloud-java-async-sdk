@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUserQuotaResponseBody</p>
  */
 public class DescribeUserQuotaResponseBody extends TeaModel {
-    @NameInMap("ElasticACU")
+    @com.aliyun.core.annotation.NameInMap("ElasticACU")
     private String elasticACU;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ReserverdCompteACU")
+    @com.aliyun.core.annotation.NameInMap("ReserverdCompteACU")
     private String reserverdCompteACU;
 
-    @NameInMap("ReserverdStorageACU")
+    @com.aliyun.core.annotation.NameInMap("ReserverdStorageACU")
     private String reserverdStorageACU;
 
-    @NameInMap("ResourceGroupCount")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupCount")
     private String resourceGroupCount;
 
     private DescribeUserQuotaResponseBody(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBClusterAttributeResponseBody</p>
  */
 public class DescribeDBClusterAttributeResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBClusterAttributeResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -136,7 +135,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -177,100 +176,109 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
     }
     public static class DBCluster extends TeaModel {
-        @NameInMap("CommodityCode")
+        @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
 
-        @NameInMap("ComputeResource")
+        @com.aliyun.core.annotation.NameInMap("ComputeResource")
         private String computeResource;
 
-        @NameInMap("ComputeResourceTotal")
+        @com.aliyun.core.annotation.NameInMap("ComputeResourceTotal")
         private String computeResourceTotal;
 
-        @NameInMap("ConnectionString")
+        @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DBClusterDescription")
+        @com.aliyun.core.annotation.NameInMap("DBClusterDescription")
         private String DBClusterDescription;
 
-        @NameInMap("DBClusterId")
+        @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
 
-        @NameInMap("DBClusterNetworkType")
+        @com.aliyun.core.annotation.NameInMap("DBClusterNetworkType")
         private String DBClusterNetworkType;
 
-        @NameInMap("DBClusterStatus")
+        @com.aliyun.core.annotation.NameInMap("DBClusterStatus")
         private String DBClusterStatus;
 
-        @NameInMap("DBClusterType")
+        @com.aliyun.core.annotation.NameInMap("DBClusterType")
         private String DBClusterType;
 
-        @NameInMap("DBVersion")
+        @com.aliyun.core.annotation.NameInMap("DBVersion")
         private String DBVersion;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("EngineVersion")
+        @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private String engineVersion;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("Expired")
+        @com.aliyun.core.annotation.NameInMap("Expired")
         private String expired;
 
-        @NameInMap("LockMode")
+        @com.aliyun.core.annotation.NameInMap("LockMode")
         private String lockMode;
 
-        @NameInMap("LockReason")
+        @com.aliyun.core.annotation.NameInMap("LockReason")
         private String lockReason;
 
-        @NameInMap("MaintainTime")
+        @com.aliyun.core.annotation.NameInMap("MaintainTime")
         private String maintainTime;
 
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("ProductForm")
+        private String productForm;
+
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ReservedACU")
+        @com.aliyun.core.annotation.NameInMap("ReservedACU")
         private String reservedACU;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ReservedNodeCount")
+        private Integer reservedNodeCount;
+
+        @com.aliyun.core.annotation.NameInMap("ReservedNodeSize")
+        private String reservedNodeSize;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("StorageResource")
+        @com.aliyun.core.annotation.NameInMap("StorageResource")
         private String storageResource;
 
-        @NameInMap("StorageResourceTotal")
+        @com.aliyun.core.annotation.NameInMap("StorageResourceTotal")
         private String storageResourceTotal;
 
-        @NameInMap("SupportedFeatures")
+        @com.aliyun.core.annotation.NameInMap("SupportedFeatures")
         private java.util.Map < String, String > supportedFeatures;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("UserENIStatus")
+        @com.aliyun.core.annotation.NameInMap("UserENIStatus")
         private Boolean userENIStatus;
 
-        @NameInMap("VPCId")
+        @com.aliyun.core.annotation.NameInMap("VPCId")
         private String VPCId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private DBCluster(Builder builder) {
@@ -295,8 +303,11 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             this.mode = builder.mode;
             this.payType = builder.payType;
             this.port = builder.port;
+            this.productForm = builder.productForm;
             this.regionId = builder.regionId;
             this.reservedACU = builder.reservedACU;
+            this.reservedNodeCount = builder.reservedNodeCount;
+            this.reservedNodeSize = builder.reservedNodeSize;
             this.resourceGroupId = builder.resourceGroupId;
             this.storageResource = builder.storageResource;
             this.storageResourceTotal = builder.storageResourceTotal;
@@ -464,6 +475,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return productForm
+         */
+        public String getProductForm() {
+            return this.productForm;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -475,6 +493,20 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          */
         public String getReservedACU() {
             return this.reservedACU;
+        }
+
+        /**
+         * @return reservedNodeCount
+         */
+        public Integer getReservedNodeCount() {
+            return this.reservedNodeCount;
+        }
+
+        /**
+         * @return reservedNodeSize
+         */
+        public String getReservedNodeSize() {
+            return this.reservedNodeSize;
         }
 
         /**
@@ -562,8 +594,11 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             private String mode; 
             private String payType; 
             private Integer port; 
+            private String productForm; 
             private String regionId; 
             private String reservedACU; 
+            private Integer reservedNodeCount; 
+            private String reservedNodeSize; 
             private String resourceGroupId; 
             private String storageResource; 
             private String storageResourceTotal; 
@@ -712,11 +747,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
              * *   **true**
              * *   **false**
              * 
-             * > 
              * 
-             * *   If the cluster has expired, the system locks or releases the cluster within a period of time. We recommend that you renew the expired cluster. For more information, see [Renewal policy](~~135248~~).
-             * 
-             * *   This parameter is not returned for pay-as-you-go clusters.
+             * > - If the cluster has expired, the system locks or releases the cluster within a period of time. We recommend that you renew the expired cluster. For more information, see [Renewal policy](~~135248~~).
+             * > - This parameter is not returned for pay-as-you-go clusters.
              */
             public Builder expired(String expired) {
                 this.expired = expired;
@@ -787,6 +820,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * ProductForm.
+             */
+            public Builder productForm(String productForm) {
+                this.productForm = productForm;
+                return this;
+            }
+
+            /**
              * The region ID of the cluster.
              */
             public Builder regionId(String regionId) {
@@ -799,6 +840,22 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
              */
             public Builder reservedACU(String reservedACU) {
                 this.reservedACU = reservedACU;
+                return this;
+            }
+
+            /**
+             * ReservedNodeCount.
+             */
+            public Builder reservedNodeCount(Integer reservedNodeCount) {
+                this.reservedNodeCount = reservedNodeCount;
+                return this;
+            }
+
+            /**
+             * ReservedNodeSize.
+             */
+            public Builder reservedNodeSize(String reservedNodeSize) {
+                this.reservedNodeSize = reservedNodeSize;
                 return this;
             }
 
@@ -886,7 +943,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("DBCluster")
+        @com.aliyun.core.annotation.NameInMap("DBCluster")
         private java.util.List < DBCluster> DBCluster;
 
         private Items(Builder builder) {

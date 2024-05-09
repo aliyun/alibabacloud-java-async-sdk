@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,39 +11,39 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubmitSparkAppRequest</p>
  */
 public class SubmitSparkAppRequest extends Request {
-    @Body
-    @NameInMap("AgentSource")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AgentSource")
     private String agentSource;
 
-    @Body
-    @NameInMap("AgentVersion")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AgentVersion")
     private String agentVersion;
 
-    @Body
-    @NameInMap("AppName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppName")
     private String appName;
 
-    @Body
-    @NameInMap("AppType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppType")
     private String appType;
 
-    @Body
-    @NameInMap("DBClusterId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String DBClusterId;
 
-    @Body
-    @NameInMap("Data")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Data")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String data;
 
-    @Body
-    @NameInMap("ResourceGroupName")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String resourceGroupName;
 
-    @Body
-    @NameInMap("TemplateFileId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateFileId")
     private Long templateFileId;
 
     private SubmitSparkAppRequest(Builder builder) {

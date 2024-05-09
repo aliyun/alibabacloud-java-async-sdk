@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SparkAnalyzeLogTask</p>
  */
 public class SparkAnalyzeLogTask extends TeaModel {
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private LogAnalyzeResult result;
 
-    @NameInMap("RuleMatched")
+    @com.aliyun.core.annotation.NameInMap("RuleMatched")
     private Boolean ruleMatched;
 
-    @NameInMap("StartedTimeInMillis")
+    @com.aliyun.core.annotation.NameInMap("StartedTimeInMillis")
     private Long startedTimeInMillis;
 
-    @NameInMap("SubmittedTimeInMillis")
+    @com.aliyun.core.annotation.NameInMap("SubmittedTimeInMillis")
     private Long submittedTimeInMillis;
 
-    @NameInMap("TaskErrMsg")
+    @com.aliyun.core.annotation.NameInMap("TaskErrMsg")
     private String taskErrMsg;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private Long taskId;
 
-    @NameInMap("TaskState")
+    @com.aliyun.core.annotation.NameInMap("TaskState")
     private String taskState;
 
-    @NameInMap("TerminatedTimeInMillis")
+    @com.aliyun.core.annotation.NameInMap("TerminatedTimeInMillis")
     private Long terminatedTimeInMillis;
 
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private Long userId;
 
     private SparkAnalyzeLogTask(Builder builder) {

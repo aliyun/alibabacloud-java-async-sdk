@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAuditLogRecordsResponseBody</p>
  */
 public class DescribeAuditLogRecordsResponseBody extends TeaModel {
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private DescribeAuditLogRecordsResponseBody(Builder builder) {
@@ -152,34 +151,34 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("ConnId")
+        @com.aliyun.core.annotation.NameInMap("ConnId")
         private String connId;
 
-        @NameInMap("DBName")
+        @com.aliyun.core.annotation.NameInMap("DBName")
         private String DBName;
 
-        @NameInMap("ExecuteTime")
+        @com.aliyun.core.annotation.NameInMap("ExecuteTime")
         private String executeTime;
 
-        @NameInMap("HostAddress")
+        @com.aliyun.core.annotation.NameInMap("HostAddress")
         private String hostAddress;
 
-        @NameInMap("ProcessID")
+        @com.aliyun.core.annotation.NameInMap("ProcessID")
         private String processID;
 
-        @NameInMap("SQLText")
+        @com.aliyun.core.annotation.NameInMap("SQLText")
         private String SQLText;
 
-        @NameInMap("SQLType")
+        @com.aliyun.core.annotation.NameInMap("SQLType")
         private String SQLType;
 
-        @NameInMap("Succeed")
+        @com.aliyun.core.annotation.NameInMap("Succeed")
         private String succeed;
 
-        @NameInMap("TotalTime")
+        @com.aliyun.core.annotation.NameInMap("TotalTime")
         private String totalTime;
 
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private String user;
 
         private Items(Builder builder) {

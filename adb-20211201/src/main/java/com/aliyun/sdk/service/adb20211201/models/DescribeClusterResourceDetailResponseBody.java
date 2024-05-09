@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeClusterResourceDetailResponseBody</p>
  */
 public class DescribeClusterResourceDetailResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeClusterResourceDetailResponseBody(Builder builder) {
@@ -92,44 +91,44 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
     } 
 
     public static class ResourceGroupList extends TeaModel {
-        @NameInMap("ClusterMode")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ClusterMode")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String clusterMode;
 
-        @NameInMap("ClusterSizeResource")
+        @com.aliyun.core.annotation.NameInMap("ClusterSizeResource")
         private String clusterSizeResource;
 
-        @NameInMap("EnableSpot")
+        @com.aliyun.core.annotation.NameInMap("EnableSpot")
         private Boolean enableSpot;
 
-        @NameInMap("MaxClusterCount")
+        @com.aliyun.core.annotation.NameInMap("MaxClusterCount")
         private Integer maxClusterCount;
 
-        @NameInMap("MaxComputeResource")
+        @com.aliyun.core.annotation.NameInMap("MaxComputeResource")
         private String maxComputeResource;
 
-        @NameInMap("MinClusterCount")
+        @com.aliyun.core.annotation.NameInMap("MinClusterCount")
         private Integer minClusterCount;
 
-        @NameInMap("MinComputeResource")
+        @com.aliyun.core.annotation.NameInMap("MinComputeResource")
         private String minComputeResource;
 
-        @NameInMap("PoolId")
+        @com.aliyun.core.annotation.NameInMap("PoolId")
         private Long poolId;
 
-        @NameInMap("PoolName")
+        @com.aliyun.core.annotation.NameInMap("PoolName")
         private String poolName;
 
-        @NameInMap("PoolType")
+        @com.aliyun.core.annotation.NameInMap("PoolType")
         private String poolType;
 
-        @NameInMap("PoolUsers")
+        @com.aliyun.core.annotation.NameInMap("PoolUsers")
         private String poolUsers;
 
-        @NameInMap("RunningClusterCount")
+        @com.aliyun.core.annotation.NameInMap("RunningClusterCount")
         private Integer runningClusterCount;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ResourceGroupList(Builder builder) {
@@ -385,19 +384,19 @@ public class DescribeClusterResourceDetailResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("ComputeResource")
+        @com.aliyun.core.annotation.NameInMap("ComputeResource")
         private String computeResource;
 
-        @NameInMap("DBClusterId")
+        @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
 
-        @NameInMap("FreeComputeResource")
+        @com.aliyun.core.annotation.NameInMap("FreeComputeResource")
         private String freeComputeResource;
 
-        @NameInMap("ResourceGroupList")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupList")
         private java.util.List < ResourceGroupList> resourceGroupList;
 
-        @NameInMap("StorageResource")
+        @com.aliyun.core.annotation.NameInMap("StorageResource")
         private String storageResource;
 
         private Data(Builder builder) {

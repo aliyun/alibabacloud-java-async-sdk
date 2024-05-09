@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeApsResourceGroupsRequest</p>
  */
 public class DescribeApsResourceGroupsRequest extends Request {
-    @Body
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("WorkloadId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkloadId")
     private String workloadId;
 
     private DescribeApsResourceGroupsRequest(Builder builder) {
@@ -104,7 +103,7 @@ public class DescribeApsResourceGroupsRequest extends Request {
         }
 
         /**
-         * WorkloadId.
+         * The ID of the data synchronization job.
          */
         public Builder workloadId(String workloadId) {
             this.putBodyParameter("WorkloadId", workloadId);

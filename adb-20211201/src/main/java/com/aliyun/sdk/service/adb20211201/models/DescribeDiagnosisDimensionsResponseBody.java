@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDiagnosisDimensionsResponseBody</p>
  */
 public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
-    @NameInMap("ClientIps")
+    @com.aliyun.core.annotation.NameInMap("ClientIps")
     private java.util.List < String > clientIps;
 
-    @NameInMap("Databases")
+    @com.aliyun.core.annotation.NameInMap("Databases")
     private java.util.List < String > databases;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroups")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroups")
     private java.util.List < String > resourceGroups;
 
-    @NameInMap("UserNames")
+    @com.aliyun.core.annotation.NameInMap("UserNames")
     private java.util.List < String > userNames;
 
     private DescribeDiagnosisDimensionsResponseBody(Builder builder) {

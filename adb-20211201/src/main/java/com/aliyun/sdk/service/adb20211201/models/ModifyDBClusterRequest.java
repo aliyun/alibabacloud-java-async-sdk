@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,39 +11,45 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDBClusterRequest</p>
  */
 public class ModifyDBClusterRequest extends Request {
-    @Query
-    @NameInMap("ComputeResource")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComputeResource")
     private String computeResource;
 
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("EnableDefaultResourcePool")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableDefaultResourcePool")
     private Boolean enableDefaultResourcePool;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReservedNodeCount")
+    private Integer reservedNodeCount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReservedNodeSize")
+    private String reservedNodeSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("StorageResource")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageResource")
     private String storageResource;
 
     private ModifyDBClusterRequest(Builder builder) {
@@ -55,6 +60,8 @@ public class ModifyDBClusterRequest extends Request {
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.reservedNodeCount = builder.reservedNodeCount;
+        this.reservedNodeSize = builder.reservedNodeSize;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.storageResource = builder.storageResource;
     }
@@ -115,6 +122,20 @@ public class ModifyDBClusterRequest extends Request {
     }
 
     /**
+     * @return reservedNodeCount
+     */
+    public Integer getReservedNodeCount() {
+        return this.reservedNodeCount;
+    }
+
+    /**
+     * @return reservedNodeSize
+     */
+    public String getReservedNodeSize() {
+        return this.reservedNodeSize;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -135,6 +156,8 @@ public class ModifyDBClusterRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
+        private Integer reservedNodeCount; 
+        private String reservedNodeSize; 
         private String resourceOwnerAccount; 
         private String storageResource; 
 
@@ -150,6 +173,8 @@ public class ModifyDBClusterRequest extends Request {
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
+            this.reservedNodeCount = request.reservedNodeCount;
+            this.reservedNodeSize = request.reservedNodeSize;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.storageResource = request.storageResource;
         } 
@@ -218,6 +243,24 @@ public class ModifyDBClusterRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ReservedNodeCount.
+         */
+        public Builder reservedNodeCount(Integer reservedNodeCount) {
+            this.putQueryParameter("ReservedNodeCount", reservedNodeCount);
+            this.reservedNodeCount = reservedNodeCount;
+            return this;
+        }
+
+        /**
+         * ReservedNodeSize.
+         */
+        public Builder reservedNodeSize(String reservedNodeSize) {
+            this.putQueryParameter("ReservedNodeSize", reservedNodeSize);
+            this.reservedNodeSize = reservedNodeSize;
             return this;
         }
 

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAdbMySqlColumnsResponseBody</p>
  */
 public class DescribeAdbMySqlColumnsResponseBody extends TeaModel {
-    @NameInMap("ColumnCount")
+    @com.aliyun.core.annotation.NameInMap("ColumnCount")
     private Integer columnCount;
 
-    @NameInMap("Columns")
+    @com.aliyun.core.annotation.NameInMap("Columns")
     private java.util.List < Columns> columns;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Schema")
+    @com.aliyun.core.annotation.NameInMap("Schema")
     private String schema;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TableName")
+    @com.aliyun.core.annotation.NameInMap("TableName")
     private String tableName;
 
     private DescribeAdbMySqlColumnsResponseBody(Builder builder) {
@@ -180,13 +179,13 @@ public class DescribeAdbMySqlColumnsResponseBody extends TeaModel {
     } 
 
     public static class Columns extends TeaModel {
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Columns(Builder builder) {

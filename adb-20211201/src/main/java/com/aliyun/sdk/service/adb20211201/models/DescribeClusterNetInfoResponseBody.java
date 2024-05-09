@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeClusterNetInfoResponseBody</p>
  */
 public class DescribeClusterNetInfoResponseBody extends TeaModel {
-    @NameInMap("ClusterNetworkType")
+    @com.aliyun.core.annotation.NameInMap("ClusterNetworkType")
     private String clusterNetworkType;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeClusterNetInfoResponseBody(Builder builder) {
@@ -92,25 +91,25 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
     } 
 
     public static class Address extends TeaModel {
-        @NameInMap("ConnectionString")
+        @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
 
-        @NameInMap("ConnectionStringPrefix")
+        @com.aliyun.core.annotation.NameInMap("ConnectionStringPrefix")
         private String connectionStringPrefix;
 
-        @NameInMap("IPAddress")
+        @com.aliyun.core.annotation.NameInMap("IPAddress")
         private String IPAddress;
 
-        @NameInMap("NetType")
+        @com.aliyun.core.annotation.NameInMap("NetType")
         private String netType;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("VPCId")
+        @com.aliyun.core.annotation.NameInMap("VPCId")
         private String VPCId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
         private Address(Builder builder) {
@@ -275,7 +274,7 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private java.util.List < Address> address;
 
         private Items(Builder builder) {

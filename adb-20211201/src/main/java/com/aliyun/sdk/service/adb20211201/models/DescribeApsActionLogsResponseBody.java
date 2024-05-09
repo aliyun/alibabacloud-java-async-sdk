@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeApsActionLogsResponseBody</p>
  */
 public class DescribeApsActionLogsResponseBody extends TeaModel {
-    @NameInMap("ActionLogs")
+    @com.aliyun.core.annotation.NameInMap("ActionLogs")
     private java.util.List < ActionLogs> actionLogs;
 
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
-    @NameInMap("WorkloadId")
+    @com.aliyun.core.annotation.NameInMap("WorkloadId")
     private String workloadId;
 
     private DescribeApsActionLogsResponseBody(Builder builder) {
@@ -172,16 +171,16 @@ public class DescribeApsActionLogsResponseBody extends TeaModel {
     } 
 
     public static class ActionLogs extends TeaModel {
-        @NameInMap("Context")
+        @com.aliyun.core.annotation.NameInMap("Context")
         private String context;
 
-        @NameInMap("Stage")
+        @com.aliyun.core.annotation.NameInMap("Stage")
         private String stage;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
         private ActionLogs(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSparkSQLEngineStateResponseBody</p>
  */
 public class GetSparkSQLEngineStateResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetSparkSQLEngineStateResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class GetSparkSQLEngineStateResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("Config")
+        @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
 
-        @NameInMap("Jars")
+        @com.aliyun.core.annotation.NameInMap("Jars")
         private String jars;
 
-        @NameInMap("MaxExecutor")
+        @com.aliyun.core.annotation.NameInMap("MaxExecutor")
         private String maxExecutor;
 
-        @NameInMap("MinExecutor")
+        @com.aliyun.core.annotation.NameInMap("MinExecutor")
         private String minExecutor;
 
-        @NameInMap("SlotNum")
+        @com.aliyun.core.annotation.NameInMap("SlotNum")
         private String slotNum;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("SubmittedTimeInMillis")
+        @com.aliyun.core.annotation.NameInMap("SubmittedTimeInMillis")
         private String submittedTimeInMillis;
 
         private Data(Builder builder) {

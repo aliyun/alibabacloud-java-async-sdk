@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTablesResponseBody</p>
  */
 public class DescribeTablesResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeTablesResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeTablesResponseBody extends TeaModel {
     } 
 
     public static class Table extends TeaModel {
-        @NameInMap("DBClusterId")
+        @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
 
-        @NameInMap("SchemaName")
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
         private String schemaName;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private Table(Builder builder) {
@@ -153,7 +152,7 @@ public class DescribeTablesResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("Table")
+        @com.aliyun.core.annotation.NameInMap("Table")
         private java.util.List < Table> table;
 
         private Items(Builder builder) {

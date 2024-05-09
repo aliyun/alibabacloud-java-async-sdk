@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDiagnosisSQLInfoRequest</p>
  */
 public class DescribeDiagnosisSQLInfoRequest extends Request {
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("ProcessId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProcessId")
     private String processId;
 
-    @Query
-    @NameInMap("ProcessRcHost")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProcessRcHost")
     private String processRcHost;
 
-    @Query
-    @NameInMap("ProcessStartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProcessStartTime")
     private Long processStartTime;
 
-    @Query
-    @NameInMap("ProcessState")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProcessState")
     private String processState;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private DescribeDiagnosisSQLInfoRequest(Builder builder) {
@@ -203,7 +202,7 @@ public class DescribeDiagnosisSQLInfoRequest extends Request {
         }
 
         /**
-         * The state of the SQL statement. Valid values:
+         * The status of the SQL statement. Valid values:
          * <p>
          * 
          * *   **running**

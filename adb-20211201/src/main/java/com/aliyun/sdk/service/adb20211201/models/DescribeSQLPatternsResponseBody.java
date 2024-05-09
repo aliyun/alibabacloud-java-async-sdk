@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSQLPatternsResponseBody</p>
  */
 public class DescribeSQLPatternsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("PatternDetails")
+    @com.aliyun.core.annotation.NameInMap("PatternDetails")
     private java.util.List < PatternDetails> patternDetails;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeSQLPatternsResponseBody(Builder builder) {
@@ -132,55 +131,55 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
     } 
 
     public static class PatternDetails extends TeaModel {
-        @NameInMap("AccessIp")
+        @com.aliyun.core.annotation.NameInMap("AccessIp")
         private String accessIp;
 
-        @NameInMap("AverageExecutionTime")
+        @com.aliyun.core.annotation.NameInMap("AverageExecutionTime")
         private Double averageExecutionTime;
 
-        @NameInMap("AveragePeakMemory")
+        @com.aliyun.core.annotation.NameInMap("AveragePeakMemory")
         private Double averagePeakMemory;
 
-        @NameInMap("AverageQueryTime")
+        @com.aliyun.core.annotation.NameInMap("AverageQueryTime")
         private Double averageQueryTime;
 
-        @NameInMap("AverageScanSize")
+        @com.aliyun.core.annotation.NameInMap("AverageScanSize")
         private Double averageScanSize;
 
-        @NameInMap("Blockable")
+        @com.aliyun.core.annotation.NameInMap("Blockable")
         private Boolean blockable;
 
-        @NameInMap("FailedCount")
+        @com.aliyun.core.annotation.NameInMap("FailedCount")
         private Long failedCount;
 
-        @NameInMap("MaxExecutionTime")
+        @com.aliyun.core.annotation.NameInMap("MaxExecutionTime")
         private Long maxExecutionTime;
 
-        @NameInMap("MaxPeakMemory")
+        @com.aliyun.core.annotation.NameInMap("MaxPeakMemory")
         private Long maxPeakMemory;
 
-        @NameInMap("MaxQueryTime")
+        @com.aliyun.core.annotation.NameInMap("MaxQueryTime")
         private Long maxQueryTime;
 
-        @NameInMap("MaxScanSize")
+        @com.aliyun.core.annotation.NameInMap("MaxScanSize")
         private Long maxScanSize;
 
-        @NameInMap("PatternCreationTime")
+        @com.aliyun.core.annotation.NameInMap("PatternCreationTime")
         private String patternCreationTime;
 
-        @NameInMap("PatternId")
+        @com.aliyun.core.annotation.NameInMap("PatternId")
         private String patternId;
 
-        @NameInMap("QueryCount")
+        @com.aliyun.core.annotation.NameInMap("QueryCount")
         private Long queryCount;
 
-        @NameInMap("SQLPattern")
+        @com.aliyun.core.annotation.NameInMap("SQLPattern")
         private String SQLPattern;
 
-        @NameInMap("Tables")
+        @com.aliyun.core.annotation.NameInMap("Tables")
         private String tables;
 
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private String user;
 
         private PatternDetails(Builder builder) {

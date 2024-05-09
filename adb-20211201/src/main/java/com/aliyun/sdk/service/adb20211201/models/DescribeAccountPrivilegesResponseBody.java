@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAccountPrivilegesResponseBody</p>
  */
 public class DescribeAccountPrivilegesResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeAccountPrivilegesResponseBody(Builder builder) {
@@ -132,16 +131,16 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
     } 
 
     public static class PrivilegeObject extends TeaModel {
-        @NameInMap("Column")
+        @com.aliyun.core.annotation.NameInMap("Column")
         private String column;
 
-        @NameInMap("Database")
+        @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Table")
+        @com.aliyun.core.annotation.NameInMap("Table")
         private String table;
 
         private PrivilegeObject(Builder builder) {
@@ -233,13 +232,13 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("PrivilegeObject")
+        @com.aliyun.core.annotation.NameInMap("PrivilegeObject")
         private PrivilegeObject privilegeObject;
 
-        @NameInMap("PrivilegeType")
+        @com.aliyun.core.annotation.NameInMap("PrivilegeType")
         private String privilegeType;
 
-        @NameInMap("Privileges")
+        @com.aliyun.core.annotation.NameInMap("Privileges")
         private java.util.List < String > privileges;
 
         private Data(Builder builder) {

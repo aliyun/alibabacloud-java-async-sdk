@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,43 +11,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Statement</p>
  */
 public class Statement extends TeaModel {
-    @NameInMap("AliyunUid")
+    @com.aliyun.core.annotation.NameInMap("AliyunUid")
     private Long aliyunUid;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("CodeState")
+    @com.aliyun.core.annotation.NameInMap("CodeState")
     private String codeState;
 
-    @NameInMap("CodeType")
+    @com.aliyun.core.annotation.NameInMap("CodeType")
     private String codeType;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @NameInMap("Error")
+    @com.aliyun.core.annotation.NameInMap("Error")
     private String error;
 
-    @NameInMap("HaveRows")
+    @com.aliyun.core.annotation.NameInMap("HaveRows")
     private Boolean haveRows;
 
-    @NameInMap("Output")
+    @com.aliyun.core.annotation.NameInMap("Output")
     private String output;
 
-    @NameInMap("ResourceGroup")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroup")
     private String resourceGroup;
 
-    @NameInMap("SessionId")
+    @com.aliyun.core.annotation.NameInMap("SessionId")
     private Long sessionId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
-    @NameInMap("StatementId")
+    @com.aliyun.core.annotation.NameInMap("StatementId")
     private Long statementId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private Statement(Builder builder) {

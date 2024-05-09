@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeElasticPlanJobsResponseBody</p>
  */
 public class DescribeElasticPlanJobsResponseBody extends TeaModel {
-    @NameInMap("Jobs")
+    @com.aliyun.core.annotation.NameInMap("Jobs")
     private java.util.List < Jobs> jobs;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeElasticPlanJobsResponseBody(Builder builder) {
@@ -132,37 +131,37 @@ public class DescribeElasticPlanJobsResponseBody extends TeaModel {
     } 
 
     public static class Jobs extends TeaModel {
-        @NameInMap("ElasticAcu")
+        @com.aliyun.core.annotation.NameInMap("ElasticAcu")
         private String elasticAcu;
 
-        @NameInMap("ElasticPlanName")
+        @com.aliyun.core.annotation.NameInMap("ElasticPlanName")
         private String elasticPlanName;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("InstanceSize")
+        @com.aliyun.core.annotation.NameInMap("InstanceSize")
         private Integer instanceSize;
 
-        @NameInMap("ReserveAcu")
+        @com.aliyun.core.annotation.NameInMap("ReserveAcu")
         private String reserveAcu;
 
-        @NameInMap("ResourceGroupName")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupName")
         private String resourceGroupName;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TargetSize")
+        @com.aliyun.core.annotation.NameInMap("TargetSize")
         private String targetSize;
 
-        @NameInMap("TotalAcu")
+        @com.aliyun.core.annotation.NameInMap("TotalAcu")
         private String totalAcu;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Jobs(Builder builder) {

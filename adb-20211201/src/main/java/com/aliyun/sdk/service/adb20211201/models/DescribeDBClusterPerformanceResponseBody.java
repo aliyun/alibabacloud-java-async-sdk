@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBClusterPerformanceResponseBody</p>
  */
 public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("Performances")
+    @com.aliyun.core.annotation.NameInMap("Performances")
     private java.util.List < Performances> performances;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeDBClusterPerformanceResponseBody(Builder builder) {
@@ -135,13 +134,13 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     } 
 
     public static class Series extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private String tags;
 
-        @NameInMap("Values")
+        @com.aliyun.core.annotation.NameInMap("Values")
         private java.util.List < String > values;
 
         private Series(Builder builder) {
@@ -216,13 +215,13 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
 
     }
     public static class Performances extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Series")
+        @com.aliyun.core.annotation.NameInMap("Series")
         private java.util.List < Series> series;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
         private Performances(Builder builder) {

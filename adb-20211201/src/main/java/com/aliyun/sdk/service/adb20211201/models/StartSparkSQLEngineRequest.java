@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StartSparkSQLEngineRequest</p>
  */
 public class StartSparkSQLEngineRequest extends Request {
-    @Body
-    @NameInMap("Config")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Config")
     private String config;
 
-    @Body
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Body
-    @NameInMap("Jars")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Jars")
     private String jars;
 
-    @Body
-    @NameInMap("MaxExecutor")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxExecutor")
     private Long maxExecutor;
 
-    @Body
-    @NameInMap("MinExecutor")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MinExecutor")
     private Long minExecutor;
 
-    @Body
-    @NameInMap("ResourceGroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceGroupName;
 
-    @Body
-    @NameInMap("SlotNum")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SlotNum")
     private Long slotNum;
 
     private StartSparkSQLEngineRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetSparkAppLogRootPathResponseBody</p>
  */
 public class SetSparkAppLogRootPathResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SetSparkAppLogRootPathResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class SetSparkAppLogRootPathResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("DefaultLogPath")
+        @com.aliyun.core.annotation.NameInMap("DefaultLogPath")
         private String defaultLogPath;
 
-        @NameInMap("IsLogPathExists")
+        @com.aliyun.core.annotation.NameInMap("IsLogPathExists")
         private Boolean isLogPathExists;
 
-        @NameInMap("ModifiedTimestamp")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTimestamp")
         private String modifiedTimestamp;
 
-        @NameInMap("ModifiedUid")
+        @com.aliyun.core.annotation.NameInMap("ModifiedUid")
         private String modifiedUid;
 
-        @NameInMap("RecordedLogPath")
+        @com.aliyun.core.annotation.NameInMap("RecordedLogPath")
         private String recordedLogPath;
 
         private Data(Builder builder) {

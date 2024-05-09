@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeElasticPlansResponseBody</p>
  */
 public class DescribeElasticPlansResponseBody extends TeaModel {
-    @NameInMap("ElasticPlans")
+    @com.aliyun.core.annotation.NameInMap("ElasticPlans")
     private java.util.List < ElasticPlans> elasticPlans;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeElasticPlansResponseBody(Builder builder) {
@@ -132,25 +131,25 @@ public class DescribeElasticPlansResponseBody extends TeaModel {
     } 
 
     public static class ElasticPlans extends TeaModel {
-        @NameInMap("AutoScale")
+        @com.aliyun.core.annotation.NameInMap("AutoScale")
         private Boolean autoScale;
 
-        @NameInMap("ElasticPlanName")
+        @com.aliyun.core.annotation.NameInMap("ElasticPlanName")
         private String elasticPlanName;
 
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("NextScheduleTime")
+        @com.aliyun.core.annotation.NameInMap("NextScheduleTime")
         private String nextScheduleTime;
 
-        @NameInMap("ResourceGroupName")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupName")
         private String resourceGroupName;
 
-        @NameInMap("TargetSize")
+        @com.aliyun.core.annotation.NameInMap("TargetSize")
         private String targetSize;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private ElasticPlans(Builder builder) {

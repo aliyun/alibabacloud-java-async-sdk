@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adb20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBClustersResponseBody</p>
  */
 public class DescribeDBClustersResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDBClustersResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeDBClustersResponseBody extends TeaModel {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -196,7 +195,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -236,86 +235,418 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         } 
 
     }
+    public static class StepList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EndTime")
+        private String endTime;
+
+        @com.aliyun.core.annotation.NameInMap("StartTime")
+        private String startTime;
+
+        @com.aliyun.core.annotation.NameInMap("StepDesc")
+        private String stepDesc;
+
+        @com.aliyun.core.annotation.NameInMap("StepName")
+        private String stepName;
+
+        @com.aliyun.core.annotation.NameInMap("StepProgress")
+        private String stepProgress;
+
+        @com.aliyun.core.annotation.NameInMap("StepStatus")
+        private String stepStatus;
+
+        private StepList(Builder builder) {
+            this.endTime = builder.endTime;
+            this.startTime = builder.startTime;
+            this.stepDesc = builder.stepDesc;
+            this.stepName = builder.stepName;
+            this.stepProgress = builder.stepProgress;
+            this.stepStatus = builder.stepStatus;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static StepList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endTime
+         */
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        /**
+         * @return startTime
+         */
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        /**
+         * @return stepDesc
+         */
+        public String getStepDesc() {
+            return this.stepDesc;
+        }
+
+        /**
+         * @return stepName
+         */
+        public String getStepName() {
+            return this.stepName;
+        }
+
+        /**
+         * @return stepProgress
+         */
+        public String getStepProgress() {
+            return this.stepProgress;
+        }
+
+        /**
+         * @return stepStatus
+         */
+        public String getStepStatus() {
+            return this.stepStatus;
+        }
+
+        public static final class Builder {
+            private String endTime; 
+            private String startTime; 
+            private String stepDesc; 
+            private String stepName; 
+            private String stepProgress; 
+            private String stepStatus; 
+
+            /**
+             * EndTime.
+             */
+            public Builder endTime(String endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * StepDesc.
+             */
+            public Builder stepDesc(String stepDesc) {
+                this.stepDesc = stepDesc;
+                return this;
+            }
+
+            /**
+             * StepName.
+             */
+            public Builder stepName(String stepName) {
+                this.stepName = stepName;
+                return this;
+            }
+
+            /**
+             * StepProgress.
+             */
+            public Builder stepProgress(String stepProgress) {
+                this.stepProgress = stepProgress;
+                return this;
+            }
+
+            /**
+             * StepStatus.
+             */
+            public Builder stepStatus(String stepStatus) {
+                this.stepStatus = stepStatus;
+                return this;
+            }
+
+            public StepList build() {
+                return new StepList(this);
+            } 
+
+        } 
+
+    }
+    public static class TaskInfoStepList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("StepList")
+        private java.util.List < StepList> stepList;
+
+        private TaskInfoStepList(Builder builder) {
+            this.stepList = builder.stepList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TaskInfoStepList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return stepList
+         */
+        public java.util.List < StepList> getStepList() {
+            return this.stepList;
+        }
+
+        public static final class Builder {
+            private java.util.List < StepList> stepList; 
+
+            /**
+             * StepList.
+             */
+            public Builder stepList(java.util.List < StepList> stepList) {
+                this.stepList = stepList;
+                return this;
+            }
+
+            public TaskInfoStepList build() {
+                return new TaskInfoStepList(this);
+            } 
+
+        } 
+
+    }
+    public static class TaskInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Progress")
+        private String progress;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("StepList")
+        private TaskInfoStepList stepList;
+
+        private TaskInfo(Builder builder) {
+            this.name = builder.name;
+            this.progress = builder.progress;
+            this.status = builder.status;
+            this.stepList = builder.stepList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TaskInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return progress
+         */
+        public String getProgress() {
+            return this.progress;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return stepList
+         */
+        public TaskInfoStepList getStepList() {
+            return this.stepList;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String progress; 
+            private String status; 
+            private TaskInfoStepList stepList; 
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Progress.
+             */
+            public Builder progress(String progress) {
+                this.progress = progress;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * StepList.
+             */
+            public Builder stepList(TaskInfoStepList stepList) {
+                this.stepList = stepList;
+                return this;
+            }
+
+            public TaskInfo build() {
+                return new TaskInfo(this);
+            } 
+
+        } 
+
+    }
     public static class DBCluster extends TeaModel {
-        @NameInMap("CommodityCode")
+        @com.aliyun.core.annotation.NameInMap("Category")
+        private String category;
+
+        @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
 
-        @NameInMap("ComputeResource")
+        @com.aliyun.core.annotation.NameInMap("ComputeResource")
         private String computeResource;
 
-        @NameInMap("ConnectionString")
+        @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DBClusterDescription")
+        @com.aliyun.core.annotation.NameInMap("DBClusterDescription")
         private String DBClusterDescription;
 
-        @NameInMap("DBClusterId")
+        @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
 
-        @NameInMap("DBClusterNetworkType")
+        @com.aliyun.core.annotation.NameInMap("DBClusterNetworkType")
         private String DBClusterNetworkType;
 
-        @NameInMap("DBClusterStatus")
+        @com.aliyun.core.annotation.NameInMap("DBClusterStatus")
         private String DBClusterStatus;
 
-        @NameInMap("DBClusterType")
+        @com.aliyun.core.annotation.NameInMap("DBClusterType")
         private String DBClusterType;
 
-        @NameInMap("DBVersion")
+        @com.aliyun.core.annotation.NameInMap("DBNodeClass")
+        private String DBNodeClass;
+
+        @com.aliyun.core.annotation.NameInMap("DBNodeCount")
+        private Long DBNodeCount;
+
+        @com.aliyun.core.annotation.NameInMap("DBNodeStorage")
+        private Long DBNodeStorage;
+
+        @com.aliyun.core.annotation.NameInMap("DBVersion")
         private String DBVersion;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("DiskType")
+        private String diskType;
+
+        @com.aliyun.core.annotation.NameInMap("DtsJobId")
+        private String dtsJobId;
+
+        @com.aliyun.core.annotation.NameInMap("ElasticIOResource")
+        private Integer elasticIOResource;
+
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExecutorCount")
+        private String executorCount;
+
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("Expired")
+        @com.aliyun.core.annotation.NameInMap("Expired")
         private String expired;
 
-        @NameInMap("LockMode")
+        @com.aliyun.core.annotation.NameInMap("InnerIp")
+        private String innerIp;
+
+        @com.aliyun.core.annotation.NameInMap("InnerPort")
+        private String innerPort;
+
+        @com.aliyun.core.annotation.NameInMap("LockMode")
         private String lockMode;
 
-        @NameInMap("LockReason")
+        @com.aliyun.core.annotation.NameInMap("LockReason")
         private String lockReason;
 
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("ProductForm")
+        private String productForm;
+
+        @com.aliyun.core.annotation.NameInMap("RdsInstanceId")
+        private String rdsInstanceId;
+
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ReservedACU")
+        @com.aliyun.core.annotation.NameInMap("ReservedACU")
         private String reservedACU;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ReservedNodeCount")
+        private Integer reservedNodeCount;
+
+        @com.aliyun.core.annotation.NameInMap("ReservedNodeSize")
+        private String reservedNodeSize;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("StorageResource")
+        @com.aliyun.core.annotation.NameInMap("StorageResource")
         private String storageResource;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("VPCId")
+        @com.aliyun.core.annotation.NameInMap("TaskInfo")
+        private TaskInfo taskInfo;
+
+        @com.aliyun.core.annotation.NameInMap("VPCCloudInstanceId")
+        private String VPCCloudInstanceId;
+
+        @com.aliyun.core.annotation.NameInMap("VPCId")
         private String VPCId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private DBCluster(Builder builder) {
+            this.category = builder.category;
             this.commodityCode = builder.commodityCode;
             this.computeResource = builder.computeResource;
             this.connectionString = builder.connectionString;
@@ -325,20 +656,35 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             this.DBClusterNetworkType = builder.DBClusterNetworkType;
             this.DBClusterStatus = builder.DBClusterStatus;
             this.DBClusterType = builder.DBClusterType;
+            this.DBNodeClass = builder.DBNodeClass;
+            this.DBNodeCount = builder.DBNodeCount;
+            this.DBNodeStorage = builder.DBNodeStorage;
             this.DBVersion = builder.DBVersion;
+            this.diskType = builder.diskType;
+            this.dtsJobId = builder.dtsJobId;
+            this.elasticIOResource = builder.elasticIOResource;
             this.engine = builder.engine;
+            this.executorCount = builder.executorCount;
             this.expireTime = builder.expireTime;
             this.expired = builder.expired;
+            this.innerIp = builder.innerIp;
+            this.innerPort = builder.innerPort;
             this.lockMode = builder.lockMode;
             this.lockReason = builder.lockReason;
             this.mode = builder.mode;
             this.payType = builder.payType;
             this.port = builder.port;
+            this.productForm = builder.productForm;
+            this.rdsInstanceId = builder.rdsInstanceId;
             this.regionId = builder.regionId;
             this.reservedACU = builder.reservedACU;
+            this.reservedNodeCount = builder.reservedNodeCount;
+            this.reservedNodeSize = builder.reservedNodeSize;
             this.resourceGroupId = builder.resourceGroupId;
             this.storageResource = builder.storageResource;
             this.tags = builder.tags;
+            this.taskInfo = builder.taskInfo;
+            this.VPCCloudInstanceId = builder.VPCCloudInstanceId;
             this.VPCId = builder.VPCId;
             this.vSwitchId = builder.vSwitchId;
             this.zoneId = builder.zoneId;
@@ -350,6 +696,13 @@ public class DescribeDBClustersResponseBody extends TeaModel {
 
         public static DBCluster create() {
             return builder().build();
+        }
+
+        /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
         }
 
         /**
@@ -416,6 +769,27 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         }
 
         /**
+         * @return DBNodeClass
+         */
+        public String getDBNodeClass() {
+            return this.DBNodeClass;
+        }
+
+        /**
+         * @return DBNodeCount
+         */
+        public Long getDBNodeCount() {
+            return this.DBNodeCount;
+        }
+
+        /**
+         * @return DBNodeStorage
+         */
+        public Long getDBNodeStorage() {
+            return this.DBNodeStorage;
+        }
+
+        /**
          * @return DBVersion
          */
         public String getDBVersion() {
@@ -423,10 +797,38 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         }
 
         /**
+         * @return diskType
+         */
+        public String getDiskType() {
+            return this.diskType;
+        }
+
+        /**
+         * @return dtsJobId
+         */
+        public String getDtsJobId() {
+            return this.dtsJobId;
+        }
+
+        /**
+         * @return elasticIOResource
+         */
+        public Integer getElasticIOResource() {
+            return this.elasticIOResource;
+        }
+
+        /**
          * @return engine
          */
         public String getEngine() {
             return this.engine;
+        }
+
+        /**
+         * @return executorCount
+         */
+        public String getExecutorCount() {
+            return this.executorCount;
         }
 
         /**
@@ -441,6 +843,20 @@ public class DescribeDBClustersResponseBody extends TeaModel {
          */
         public String getExpired() {
             return this.expired;
+        }
+
+        /**
+         * @return innerIp
+         */
+        public String getInnerIp() {
+            return this.innerIp;
+        }
+
+        /**
+         * @return innerPort
+         */
+        public String getInnerPort() {
+            return this.innerPort;
         }
 
         /**
@@ -479,6 +895,20 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         }
 
         /**
+         * @return productForm
+         */
+        public String getProductForm() {
+            return this.productForm;
+        }
+
+        /**
+         * @return rdsInstanceId
+         */
+        public String getRdsInstanceId() {
+            return this.rdsInstanceId;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -490,6 +920,20 @@ public class DescribeDBClustersResponseBody extends TeaModel {
          */
         public String getReservedACU() {
             return this.reservedACU;
+        }
+
+        /**
+         * @return reservedNodeCount
+         */
+        public Integer getReservedNodeCount() {
+            return this.reservedNodeCount;
+        }
+
+        /**
+         * @return reservedNodeSize
+         */
+        public String getReservedNodeSize() {
+            return this.reservedNodeSize;
         }
 
         /**
@@ -514,6 +958,20 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         }
 
         /**
+         * @return taskInfo
+         */
+        public TaskInfo getTaskInfo() {
+            return this.taskInfo;
+        }
+
+        /**
+         * @return VPCCloudInstanceId
+         */
+        public String getVPCCloudInstanceId() {
+            return this.VPCCloudInstanceId;
+        }
+
+        /**
          * @return VPCId
          */
         public String getVPCId() {
@@ -535,6 +993,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String category; 
             private String commodityCode; 
             private String computeResource; 
             private String connectionString; 
@@ -544,23 +1003,46 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             private String DBClusterNetworkType; 
             private String DBClusterStatus; 
             private String DBClusterType; 
+            private String DBNodeClass; 
+            private Long DBNodeCount; 
+            private Long DBNodeStorage; 
             private String DBVersion; 
+            private String diskType; 
+            private String dtsJobId; 
+            private Integer elasticIOResource; 
             private String engine; 
+            private String executorCount; 
             private String expireTime; 
             private String expired; 
+            private String innerIp; 
+            private String innerPort; 
             private String lockMode; 
             private String lockReason; 
             private String mode; 
             private String payType; 
             private String port; 
+            private String productForm; 
+            private String rdsInstanceId; 
             private String regionId; 
             private String reservedACU; 
+            private Integer reservedNodeCount; 
+            private String reservedNodeSize; 
             private String resourceGroupId; 
             private String storageResource; 
             private Tags tags; 
+            private TaskInfo taskInfo; 
+            private String VPCCloudInstanceId; 
             private String VPCId; 
             private String vSwitchId; 
             private String zoneId; 
+
+            /**
+             * Category.
+             */
+            public Builder category(String category) {
+                this.category = category;
+                return this;
+            }
 
             /**
              * The billing method of the cluster. Valid values:
@@ -659,6 +1141,30 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
+             * DBNodeClass.
+             */
+            public Builder DBNodeClass(String DBNodeClass) {
+                this.DBNodeClass = DBNodeClass;
+                return this;
+            }
+
+            /**
+             * DBNodeCount.
+             */
+            public Builder DBNodeCount(Long DBNodeCount) {
+                this.DBNodeCount = DBNodeCount;
+                return this;
+            }
+
+            /**
+             * DBNodeStorage.
+             */
+            public Builder DBNodeStorage(Long DBNodeStorage) {
+                this.DBNodeStorage = DBNodeStorage;
+                return this;
+            }
+
+            /**
              * The version of AnalyticDB for MySQL Data Lakehouse Edition. **5.0** is returned.
              */
             public Builder DBVersion(String DBVersion) {
@@ -667,10 +1173,42 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
+             * DiskType.
+             */
+            public Builder diskType(String diskType) {
+                this.diskType = diskType;
+                return this;
+            }
+
+            /**
+             * DtsJobId.
+             */
+            public Builder dtsJobId(String dtsJobId) {
+                this.dtsJobId = dtsJobId;
+                return this;
+            }
+
+            /**
+             * ElasticIOResource.
+             */
+            public Builder elasticIOResource(Integer elasticIOResource) {
+                this.elasticIOResource = elasticIOResource;
+                return this;
+            }
+
+            /**
              * The database engine of the cluster. **AnalyticDB** is returned.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
+                return this;
+            }
+
+            /**
+             * ExecutorCount.
+             */
+            public Builder executorCount(String executorCount) {
+                this.executorCount = executorCount;
                 return this;
             }
 
@@ -698,6 +1236,22 @@ public class DescribeDBClustersResponseBody extends TeaModel {
              */
             public Builder expired(String expired) {
                 this.expired = expired;
+                return this;
+            }
+
+            /**
+             * InnerIp.
+             */
+            public Builder innerIp(String innerIp) {
+                this.innerIp = innerIp;
+                return this;
+            }
+
+            /**
+             * InnerPort.
+             */
+            public Builder innerPort(String innerPort) {
+                this.innerPort = innerPort;
                 return this;
             }
 
@@ -754,6 +1308,22 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
+             * ProductForm.
+             */
+            public Builder productForm(String productForm) {
+                this.productForm = productForm;
+                return this;
+            }
+
+            /**
+             * RdsInstanceId.
+             */
+            public Builder rdsInstanceId(String rdsInstanceId) {
+                this.rdsInstanceId = rdsInstanceId;
+                return this;
+            }
+
+            /**
              * The region ID of the cluster.
              */
             public Builder regionId(String regionId) {
@@ -766,6 +1336,22 @@ public class DescribeDBClustersResponseBody extends TeaModel {
              */
             public Builder reservedACU(String reservedACU) {
                 this.reservedACU = reservedACU;
+                return this;
+            }
+
+            /**
+             * ReservedNodeCount.
+             */
+            public Builder reservedNodeCount(Integer reservedNodeCount) {
+                this.reservedNodeCount = reservedNodeCount;
+                return this;
+            }
+
+            /**
+             * ReservedNodeSize.
+             */
+            public Builder reservedNodeSize(String reservedNodeSize) {
+                this.reservedNodeSize = reservedNodeSize;
                 return this;
             }
 
@@ -790,6 +1376,22 @@ public class DescribeDBClustersResponseBody extends TeaModel {
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * TaskInfo.
+             */
+            public Builder taskInfo(TaskInfo taskInfo) {
+                this.taskInfo = taskInfo;
+                return this;
+            }
+
+            /**
+             * VPCCloudInstanceId.
+             */
+            public Builder VPCCloudInstanceId(String VPCCloudInstanceId) {
+                this.VPCCloudInstanceId = VPCCloudInstanceId;
                 return this;
             }
 
@@ -825,7 +1427,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("DBCluster")
+        @com.aliyun.core.annotation.NameInMap("DBCluster")
         private java.util.List < DBCluster> DBCluster;
 
         private Items(Builder builder) {
