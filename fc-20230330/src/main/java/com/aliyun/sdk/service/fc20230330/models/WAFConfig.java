@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,7 +11,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>WAFConfig</p>
  */
 public class WAFConfig extends TeaModel {
-    @NameInMap("enableWAF")
+    @com.aliyun.core.annotation.NameInMap("enableWAF")
     private Boolean enableWAF;
 
     private WAFConfig(Builder builder) {

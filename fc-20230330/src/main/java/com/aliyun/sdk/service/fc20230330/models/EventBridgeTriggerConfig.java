@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>EventBridgeTriggerConfig</p>
  */
 public class EventBridgeTriggerConfig extends TeaModel {
-    @NameInMap("asyncInvocationType")
+    @com.aliyun.core.annotation.NameInMap("asyncInvocationType")
     private Boolean asyncInvocationType;
 
-    @NameInMap("eventRuleFilterPattern")
+    @com.aliyun.core.annotation.NameInMap("eventRuleFilterPattern")
     private String eventRuleFilterPattern;
 
-    @NameInMap("eventSinkConfig")
+    @com.aliyun.core.annotation.NameInMap("eventSinkConfig")
     private EventSinkConfig eventSinkConfig;
 
-    @NameInMap("eventSourceConfig")
+    @com.aliyun.core.annotation.NameInMap("eventSourceConfig")
     private EventSourceConfig eventSourceConfig;
 
-    @NameInMap("runOptions")
+    @com.aliyun.core.annotation.NameInMap("runOptions")
     private RunOptions runOptions;
 
-    @NameInMap("triggerEnable")
+    @com.aliyun.core.annotation.NameInMap("triggerEnable")
     private Boolean triggerEnable;
 
     private EventBridgeTriggerConfig(Builder builder) {

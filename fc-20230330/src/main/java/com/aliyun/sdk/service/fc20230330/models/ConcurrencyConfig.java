@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ConcurrencyConfig</p>
  */
 public class ConcurrencyConfig extends TeaModel {
-    @NameInMap("functionArn")
+    @com.aliyun.core.annotation.NameInMap("functionArn")
     private String functionArn;
 
-    @NameInMap("reservedConcurrency")
+    @com.aliyun.core.annotation.NameInMap("reservedConcurrency")
     private Long reservedConcurrency;
 
     private ConcurrencyConfig(Builder builder) {

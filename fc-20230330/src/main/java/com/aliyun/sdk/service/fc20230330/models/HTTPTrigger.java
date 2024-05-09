@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>HTTPTrigger</p>
  */
 public class HTTPTrigger extends TeaModel {
-    @NameInMap("urlInternet")
+    @com.aliyun.core.annotation.NameInMap("urlInternet")
     private String urlInternet;
 
-    @NameInMap("urlIntranet")
+    @com.aliyun.core.annotation.NameInMap("urlIntranet")
     private String urlIntranet;
 
     private HTTPTrigger(Builder builder) {

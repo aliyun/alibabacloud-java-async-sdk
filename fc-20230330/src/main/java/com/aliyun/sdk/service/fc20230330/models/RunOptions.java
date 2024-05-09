@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RunOptions</p>
  */
 public class RunOptions extends TeaModel {
-    @NameInMap("batchWindow")
+    @com.aliyun.core.annotation.NameInMap("batchWindow")
     private BatchWindow batchWindow;
 
-    @NameInMap("deadLetterQueue")
+    @com.aliyun.core.annotation.NameInMap("deadLetterQueue")
     private DeadLetterQueue deadLetterQueue;
 
-    @NameInMap("errorsTolerance")
+    @com.aliyun.core.annotation.NameInMap("errorsTolerance")
     private String errorsTolerance;
 
-    @NameInMap("mode")
+    @com.aliyun.core.annotation.NameInMap("mode")
     private String mode;
 
-    @NameInMap("retryStrategy")
+    @com.aliyun.core.annotation.NameInMap("retryStrategy")
     private RetryStrategy retryStrategy;
 
     private RunOptions(Builder builder) {

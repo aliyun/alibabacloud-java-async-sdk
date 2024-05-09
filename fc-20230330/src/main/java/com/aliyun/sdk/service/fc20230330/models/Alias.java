@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Alias</p>
  */
 public class Alias extends TeaModel {
-    @NameInMap("additionalVersionWeight")
+    @com.aliyun.core.annotation.NameInMap("additionalVersionWeight")
     private java.util.Map < String, Float > additionalVersionWeight;
 
-    @NameInMap("aliasName")
+    @com.aliyun.core.annotation.NameInMap("aliasName")
     private String aliasName;
 
-    @NameInMap("createdTime")
+    @com.aliyun.core.annotation.NameInMap("createdTime")
     private String createdTime;
 
-    @NameInMap("description")
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @NameInMap("lastModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("lastModifiedTime")
     private String lastModifiedTime;
 
-    @NameInMap("versionId")
+    @com.aliyun.core.annotation.NameInMap("versionId")
     private String versionId;
 
     private Alias(Builder builder) {

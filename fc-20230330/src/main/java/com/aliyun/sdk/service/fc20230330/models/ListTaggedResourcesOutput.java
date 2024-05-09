@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTaggedResourcesOutput</p>
  */
 public class ListTaggedResourcesOutput extends TeaModel {
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @NameInMap("resources")
+    @com.aliyun.core.annotation.NameInMap("resources")
     private java.util.List < Resource > resources;
 
     private ListTaggedResourcesOutput(Builder builder) {

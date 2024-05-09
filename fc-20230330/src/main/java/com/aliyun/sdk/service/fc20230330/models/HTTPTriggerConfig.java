@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>HTTPTriggerConfig</p>
  */
 public class HTTPTriggerConfig extends TeaModel {
-    @NameInMap("authConfig")
+    @com.aliyun.core.annotation.NameInMap("authConfig")
     private String authConfig;
 
-    @NameInMap("authType")
+    @com.aliyun.core.annotation.NameInMap("authType")
     private String authType;
 
-    @NameInMap("disableURLInternet")
+    @com.aliyun.core.annotation.NameInMap("disableURLInternet")
     private Boolean disableURLInternet;
 
-    @NameInMap("methods")
+    @com.aliyun.core.annotation.NameInMap("methods")
     private java.util.List < String > methods;
 
     private HTTPTriggerConfig(Builder builder) {

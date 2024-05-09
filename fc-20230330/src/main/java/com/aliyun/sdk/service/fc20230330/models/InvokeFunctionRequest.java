@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InvokeFunctionRequest</p>
  */
 public class InvokeFunctionRequest extends Request {
-    @Path
-    @NameInMap("functionName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("functionName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String functionName;
 
-    @Body
-    @NameInMap("body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
     private java.io.InputStream body;
 
-    @Query
-    @NameInMap("qualifier")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("qualifier")
     private String qualifier;
 
-    @Header
-    @NameInMap("x-fc-async-task-id")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-fc-async-task-id")
     private String xFcAsyncTaskId;
 
-    @Header
-    @NameInMap("x-fc-invocation-type")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-fc-invocation-type")
     private String xFcInvocationType;
 
-    @Header
-    @NameInMap("x-fc-log-type")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-fc-log-type")
     private String xFcLogType;
 
     private InvokeFunctionRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PutProvisionConfigInput</p>
  */
 public class PutProvisionConfigInput extends TeaModel {
-    @NameInMap("alwaysAllocateCPU")
+    @com.aliyun.core.annotation.NameInMap("alwaysAllocateCPU")
     private Boolean alwaysAllocateCPU;
 
-    @NameInMap("scheduledActions")
+    @com.aliyun.core.annotation.NameInMap("scheduledActions")
     private java.util.List < ScheduledAction > scheduledActions;
 
-    @NameInMap("target")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("target")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long target;
 
-    @NameInMap("targetTrackingPolicies")
+    @com.aliyun.core.annotation.NameInMap("targetTrackingPolicies")
     private java.util.List < TargetTrackingPolicy > targetTrackingPolicies;
 
     private PutProvisionConfigInput(Builder builder) {

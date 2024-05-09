@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BatchWindow</p>
  */
 public class BatchWindow extends TeaModel {
-    @NameInMap("CountBasedWindow")
+    @com.aliyun.core.annotation.NameInMap("CountBasedWindow")
     private Integer countBasedWindow;
 
-    @NameInMap("TimeBasedWindow")
+    @com.aliyun.core.annotation.NameInMap("TimeBasedWindow")
     private Integer timeBasedWindow;
 
     private BatchWindow(Builder builder) {

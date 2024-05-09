@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RewriteConfig</p>
  */
 public class RewriteConfig extends TeaModel {
-    @NameInMap("equalRules")
+    @com.aliyun.core.annotation.NameInMap("equalRules")
     private java.util.List < EqualRule > equalRules;
 
-    @NameInMap("regexRules")
+    @com.aliyun.core.annotation.NameInMap("regexRules")
     private java.util.List < RegexRule > regexRules;
 
-    @NameInMap("wildcardRules")
+    @com.aliyun.core.annotation.NameInMap("wildcardRules")
     private java.util.List < WildcardRule > wildcardRules;
 
     private RewriteConfig(Builder builder) {

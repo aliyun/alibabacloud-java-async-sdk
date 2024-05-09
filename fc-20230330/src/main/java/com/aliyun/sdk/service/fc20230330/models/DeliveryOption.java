@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeliveryOption</p>
  */
 public class DeliveryOption extends TeaModel {
-    @NameInMap("concurrency")
+    @com.aliyun.core.annotation.NameInMap("concurrency")
     private Long concurrency;
 
-    @NameInMap("eventSchema")
+    @com.aliyun.core.annotation.NameInMap("eventSchema")
     private String eventSchema;
 
     private DeliveryOption(Builder builder) {

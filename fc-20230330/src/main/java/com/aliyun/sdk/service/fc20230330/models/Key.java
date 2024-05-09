@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Key</p>
  */
 public class Key extends TeaModel {
-    @NameInMap("prefix")
+    @com.aliyun.core.annotation.NameInMap("prefix")
     private String prefix;
 
-    @NameInMap("suffix")
+    @com.aliyun.core.annotation.NameInMap("suffix")
     private String suffix;
 
     private Key(Builder builder) {

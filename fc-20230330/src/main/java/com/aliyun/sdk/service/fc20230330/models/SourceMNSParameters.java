@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SourceMNSParameters</p>
  */
 public class SourceMNSParameters extends TeaModel {
-    @NameInMap("IsBase64Decode")
+    @com.aliyun.core.annotation.NameInMap("IsBase64Decode")
     private Boolean isBase64Decode;
 
-    @NameInMap("QueueName")
+    @com.aliyun.core.annotation.NameInMap("QueueName")
     private String queueName;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private SourceMNSParameters(Builder builder) {

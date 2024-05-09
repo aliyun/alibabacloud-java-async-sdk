@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CustomContainerConfig</p>
  */
 public class CustomContainerConfig extends TeaModel {
-    @NameInMap("accelerationInfo")
+    @com.aliyun.core.annotation.NameInMap("accelerationInfo")
     private AccelerationInfo accelerationInfo;
 
-    @NameInMap("accelerationType")
+    @com.aliyun.core.annotation.NameInMap("accelerationType")
     private String accelerationType;
 
-    @NameInMap("acrInstanceId")
+    @com.aliyun.core.annotation.NameInMap("acrInstanceId")
     private String acrInstanceId;
 
-    @NameInMap("command")
+    @com.aliyun.core.annotation.NameInMap("command")
     private java.util.List < String > command;
 
-    @NameInMap("entrypoint")
+    @com.aliyun.core.annotation.NameInMap("entrypoint")
     private java.util.List < String > entrypoint;
 
-    @NameInMap("healthCheckConfig")
+    @com.aliyun.core.annotation.NameInMap("healthCheckConfig")
     private CustomHealthCheckConfig healthCheckConfig;
 
-    @NameInMap("image")
+    @com.aliyun.core.annotation.NameInMap("image")
     private String image;
 
-    @NameInMap("port")
+    @com.aliyun.core.annotation.NameInMap("port")
     private Integer port;
 
-    @NameInMap("resolvedImageUri")
+    @com.aliyun.core.annotation.NameInMap("resolvedImageUri")
     private String resolvedImageUri;
 
     private CustomContainerConfig(Builder builder) {

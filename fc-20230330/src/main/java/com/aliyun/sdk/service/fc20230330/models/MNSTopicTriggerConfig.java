@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>MNSTopicTriggerConfig</p>
  */
 public class MNSTopicTriggerConfig extends TeaModel {
-    @NameInMap("filterTag")
+    @com.aliyun.core.annotation.NameInMap("filterTag")
     private String filterTag;
 
-    @NameInMap("notifyContentFormat")
+    @com.aliyun.core.annotation.NameInMap("notifyContentFormat")
     private String notifyContentFormat;
 
-    @NameInMap("notifyStrategy")
+    @com.aliyun.core.annotation.NameInMap("notifyStrategy")
     private String notifyStrategy;
 
     private MNSTopicTriggerConfig(Builder builder) {

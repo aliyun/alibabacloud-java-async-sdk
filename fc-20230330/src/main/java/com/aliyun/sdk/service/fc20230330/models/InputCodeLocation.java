@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InputCodeLocation</p>
  */
 public class InputCodeLocation extends TeaModel {
-    @NameInMap("checksum")
+    @com.aliyun.core.annotation.NameInMap("checksum")
     private String checksum;
 
-    @NameInMap("ossBucketName")
-    @Validation(maxLength = 63, minLength = 3)
+    @com.aliyun.core.annotation.NameInMap("ossBucketName")
+    @com.aliyun.core.annotation.Validation(maxLength = 63, minLength = 3)
     private String ossBucketName;
 
-    @NameInMap("ossObjectName")
+    @com.aliyun.core.annotation.NameInMap("ossObjectName")
     private String ossObjectName;
 
-    @NameInMap("zipFile")
+    @com.aliyun.core.annotation.NameInMap("zipFile")
     private String zipFile;
 
     private InputCodeLocation(Builder builder) {

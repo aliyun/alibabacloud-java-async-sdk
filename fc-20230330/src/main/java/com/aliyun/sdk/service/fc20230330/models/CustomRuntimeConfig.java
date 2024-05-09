@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CustomRuntimeConfig</p>
  */
 public class CustomRuntimeConfig extends TeaModel {
-    @NameInMap("args")
+    @com.aliyun.core.annotation.NameInMap("args")
     private java.util.List < String > args;
 
-    @NameInMap("command")
+    @com.aliyun.core.annotation.NameInMap("command")
     private java.util.List < String > command;
 
-    @NameInMap("healthCheckConfig")
+    @com.aliyun.core.annotation.NameInMap("healthCheckConfig")
     private CustomHealthCheckConfig healthCheckConfig;
 
-    @NameInMap("port")
+    @com.aliyun.core.annotation.NameInMap("port")
     private Integer port;
 
     private CustomRuntimeConfig(Builder builder) {

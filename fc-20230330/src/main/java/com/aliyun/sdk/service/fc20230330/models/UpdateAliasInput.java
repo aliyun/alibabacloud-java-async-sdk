@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,15 +11,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateAliasInput</p>
  */
 public class UpdateAliasInput extends TeaModel {
-    @NameInMap("additionalVersionWeight")
+    @com.aliyun.core.annotation.NameInMap("additionalVersionWeight")
     private java.util.Map < String, Float > additionalVersionWeight;
 
-    @NameInMap("description")
-    @Validation(maxLength = 256)
+    @com.aliyun.core.annotation.NameInMap("description")
+    @com.aliyun.core.annotation.Validation(maxLength = 256)
     private String description;
 
-    @NameInMap("versionId")
-    @Validation(maxLength = 10, minLength = 1)
+    @com.aliyun.core.annotation.NameInMap("versionId")
+    @com.aliyun.core.annotation.Validation(maxLength = 10, minLength = 1)
     private String versionId;
 
     private UpdateAliasInput(Builder builder) {

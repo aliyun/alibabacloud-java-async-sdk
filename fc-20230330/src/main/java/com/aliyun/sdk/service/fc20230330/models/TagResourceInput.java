@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TagResourceInput</p>
  */
 public class TagResourceInput extends TeaModel {
-    @NameInMap("resourceArn")
-    @Validation(required = true, minLength = 1)
+    @com.aliyun.core.annotation.NameInMap("resourceArn")
+    @com.aliyun.core.annotation.Validation(required = true, minLength = 1)
     private String resourceArn;
 
-    @NameInMap("tags")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("tags")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.Map < String, String > tags;
 
     private TagResourceInput(Builder builder) {

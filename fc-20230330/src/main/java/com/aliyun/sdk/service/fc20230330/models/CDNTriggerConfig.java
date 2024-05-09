@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CDNTriggerConfig</p>
  */
 public class CDNTriggerConfig extends TeaModel {
-    @NameInMap("eventName")
+    @com.aliyun.core.annotation.NameInMap("eventName")
     private String eventName;
 
-    @NameInMap("eventVersion")
+    @com.aliyun.core.annotation.NameInMap("eventVersion")
     private String eventVersion;
 
-    @NameInMap("filter")
+    @com.aliyun.core.annotation.NameInMap("filter")
     private java.util.Map < String, java.util.List<String>> filter;
 
-    @NameInMap("notes")
+    @com.aliyun.core.annotation.NameInMap("notes")
     private String notes;
 
     private CDNTriggerConfig(Builder builder) {

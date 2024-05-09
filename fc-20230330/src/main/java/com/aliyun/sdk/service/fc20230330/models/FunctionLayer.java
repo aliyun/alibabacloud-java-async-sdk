@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>FunctionLayer</p>
  */
 public class FunctionLayer extends TeaModel {
-    @NameInMap("arn")
+    @com.aliyun.core.annotation.NameInMap("arn")
     private String arn;
 
-    @NameInMap("size")
+    @com.aliyun.core.annotation.NameInMap("size")
     private Long size;
 
     private FunctionLayer(Builder builder) {

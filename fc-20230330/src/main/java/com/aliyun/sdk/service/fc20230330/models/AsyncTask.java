@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,49 +11,49 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AsyncTask</p>
  */
 public class AsyncTask extends TeaModel {
-    @NameInMap("alreadyRetriedTimes")
+    @com.aliyun.core.annotation.NameInMap("alreadyRetriedTimes")
     private Long alreadyRetriedTimes;
 
-    @NameInMap("destinationStatus")
+    @com.aliyun.core.annotation.NameInMap("destinationStatus")
     private String destinationStatus;
 
-    @NameInMap("durationMs")
+    @com.aliyun.core.annotation.NameInMap("durationMs")
     private Long durationMs;
 
-    @NameInMap("endTime")
+    @com.aliyun.core.annotation.NameInMap("endTime")
     private Long endTime;
 
-    @NameInMap("events")
+    @com.aliyun.core.annotation.NameInMap("events")
     private java.util.List < AsyncTaskEvent > events;
 
-    @NameInMap("functionArn")
+    @com.aliyun.core.annotation.NameInMap("functionArn")
     private String functionArn;
 
-    @NameInMap("instanceId")
+    @com.aliyun.core.annotation.NameInMap("instanceId")
     private String instanceId;
 
-    @NameInMap("qualifier")
+    @com.aliyun.core.annotation.NameInMap("qualifier")
     private String qualifier;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("returnPayload")
+    @com.aliyun.core.annotation.NameInMap("returnPayload")
     private String returnPayload;
 
-    @NameInMap("startedTime")
+    @com.aliyun.core.annotation.NameInMap("startedTime")
     private Long startedTime;
 
-    @NameInMap("status")
+    @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
-    @NameInMap("taskErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("taskErrorMessage")
     private String taskErrorMessage;
 
-    @NameInMap("taskId")
+    @com.aliyun.core.annotation.NameInMap("taskId")
     private String taskId;
 
-    @NameInMap("taskPayload")
+    @com.aliyun.core.annotation.NameInMap("taskPayload")
     private String taskPayload;
 
     private AsyncTask(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>EqualRule</p>
  */
 public class EqualRule extends TeaModel {
-    @NameInMap("match")
-    @Validation(required = true, maxLength = 256)
+    @com.aliyun.core.annotation.NameInMap("match")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 256)
     private String match;
 
-    @NameInMap("replacement")
-    @Validation(required = true, maxLength = 256)
+    @com.aliyun.core.annotation.NameInMap("replacement")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 256)
     private String replacement;
 
     private EqualRule(Builder builder) {

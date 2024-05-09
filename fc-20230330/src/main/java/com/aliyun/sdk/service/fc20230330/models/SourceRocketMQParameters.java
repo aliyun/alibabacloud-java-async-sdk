@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,55 +11,55 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SourceRocketMQParameters</p>
  */
 public class SourceRocketMQParameters extends TeaModel {
-    @NameInMap("AuthType")
+    @com.aliyun.core.annotation.NameInMap("AuthType")
     private String authType;
 
-    @NameInMap("FilterType")
+    @com.aliyun.core.annotation.NameInMap("FilterType")
     private String filterType;
 
-    @NameInMap("GroupID")
+    @com.aliyun.core.annotation.NameInMap("GroupID")
     private String groupID;
 
-    @NameInMap("InstanceEndpoint")
+    @com.aliyun.core.annotation.NameInMap("InstanceEndpoint")
     private String instanceEndpoint;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("InstanceNetwork")
+    @com.aliyun.core.annotation.NameInMap("InstanceNetwork")
     private String instanceNetwork;
 
-    @NameInMap("InstancePassword")
+    @com.aliyun.core.annotation.NameInMap("InstancePassword")
     private String instancePassword;
 
-    @NameInMap("InstanceSecurityGroupId")
+    @com.aliyun.core.annotation.NameInMap("InstanceSecurityGroupId")
     private String instanceSecurityGroupId;
 
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
-    @NameInMap("InstanceUsername")
+    @com.aliyun.core.annotation.NameInMap("InstanceUsername")
     private String instanceUsername;
 
-    @NameInMap("InstanceVSwitchIds")
+    @com.aliyun.core.annotation.NameInMap("InstanceVSwitchIds")
     private String instanceVSwitchIds;
 
-    @NameInMap("InstanceVpcId")
+    @com.aliyun.core.annotation.NameInMap("InstanceVpcId")
     private String instanceVpcId;
 
-    @NameInMap("Offset")
+    @com.aliyun.core.annotation.NameInMap("Offset")
     private String offset;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private String tag;
 
-    @NameInMap("Timestamp")
+    @com.aliyun.core.annotation.NameInMap("Timestamp")
     private Integer timestamp;
 
-    @NameInMap("Topic")
+    @com.aliyun.core.annotation.NameInMap("Topic")
     private String topic;
 
     private SourceRocketMQParameters(Builder builder) {

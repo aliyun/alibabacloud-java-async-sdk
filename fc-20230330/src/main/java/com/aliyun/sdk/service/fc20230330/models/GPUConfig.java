@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,11 +11,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GPUConfig</p>
  */
 public class GPUConfig extends TeaModel {
-    @NameInMap("gpuMemorySize")
+    @com.aliyun.core.annotation.NameInMap("gpuMemorySize")
     private Integer gpuMemorySize;
 
-    @NameInMap("gpuType")
-    @Validation(maxLength = 128)
+    @com.aliyun.core.annotation.NameInMap("gpuType")
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String gpuType;
 
     private GPUConfig(Builder builder) {

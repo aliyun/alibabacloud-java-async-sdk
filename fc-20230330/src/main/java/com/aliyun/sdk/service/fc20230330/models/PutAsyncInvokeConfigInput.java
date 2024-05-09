@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PutAsyncInvokeConfigInput</p>
  */
 public class PutAsyncInvokeConfigInput extends TeaModel {
-    @NameInMap("asyncTask")
+    @com.aliyun.core.annotation.NameInMap("asyncTask")
     private Boolean asyncTask;
 
-    @NameInMap("destinationConfig")
+    @com.aliyun.core.annotation.NameInMap("destinationConfig")
     private DestinationConfig destinationConfig;
 
-    @NameInMap("maxAsyncEventAgeInSeconds")
+    @com.aliyun.core.annotation.NameInMap("maxAsyncEventAgeInSeconds")
     private Long maxAsyncEventAgeInSeconds;
 
-    @NameInMap("maxAsyncRetryAttempts")
+    @com.aliyun.core.annotation.NameInMap("maxAsyncRetryAttempts")
     private Long maxAsyncRetryAttempts;
 
     private PutAsyncInvokeConfigInput(Builder builder) {

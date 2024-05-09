@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>EventSourceParameters</p>
  */
 public class EventSourceParameters extends TeaModel {
-    @NameInMap("sourceDTSParameters")
+    @com.aliyun.core.annotation.NameInMap("sourceDTSParameters")
     private SourceDTSParameters sourceDTSParameters;
 
-    @NameInMap("sourceKafkaParameters")
+    @com.aliyun.core.annotation.NameInMap("sourceKafkaParameters")
     private SourceKafkaParameters sourceKafkaParameters;
 
-    @NameInMap("sourceMNSParameters")
+    @com.aliyun.core.annotation.NameInMap("sourceMNSParameters")
     private SourceMNSParameters sourceMNSParameters;
 
-    @NameInMap("sourceMQTTParameters")
+    @com.aliyun.core.annotation.NameInMap("sourceMQTTParameters")
     private SourceMQTTParameters sourceMQTTParameters;
 
-    @NameInMap("sourceRabbitMQParameters")
+    @com.aliyun.core.annotation.NameInMap("sourceRabbitMQParameters")
     private SourceRabbitMQParameters sourceRabbitMQParameters;
 
-    @NameInMap("sourceRocketMQParameters")
+    @com.aliyun.core.annotation.NameInMap("sourceRocketMQParameters")
     private SourceRocketMQParameters sourceRocketMQParameters;
 
     private EventSourceParameters(Builder builder) {

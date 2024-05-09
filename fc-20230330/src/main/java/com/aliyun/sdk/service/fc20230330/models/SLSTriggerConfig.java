@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SLSTriggerConfig</p>
  */
 public class SLSTriggerConfig extends TeaModel {
-    @NameInMap("enable")
+    @com.aliyun.core.annotation.NameInMap("enable")
     private Boolean enable;
 
-    @NameInMap("functionParameter")
+    @com.aliyun.core.annotation.NameInMap("functionParameter")
     private java.util.Map < String, String > functionParameter;
 
-    @NameInMap("jobConfig")
+    @com.aliyun.core.annotation.NameInMap("jobConfig")
     private JobConfig jobConfig;
 
-    @NameInMap("logConfig")
+    @com.aliyun.core.annotation.NameInMap("logConfig")
     private SLSTriggerLogConfig logConfig;
 
-    @NameInMap("sourceConfig")
+    @com.aliyun.core.annotation.NameInMap("sourceConfig")
     private SourceConfig sourceConfig;
 
     private SLSTriggerConfig(Builder builder) {

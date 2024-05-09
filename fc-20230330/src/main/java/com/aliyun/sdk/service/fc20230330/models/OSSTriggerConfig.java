@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>OSSTriggerConfig</p>
  */
 public class OSSTriggerConfig extends TeaModel {
-    @NameInMap("events")
+    @com.aliyun.core.annotation.NameInMap("events")
     private java.util.List < String > events;
 
-    @NameInMap("filter")
+    @com.aliyun.core.annotation.NameInMap("filter")
     private Filter filter;
 
     private OSSTriggerConfig(Builder builder) {

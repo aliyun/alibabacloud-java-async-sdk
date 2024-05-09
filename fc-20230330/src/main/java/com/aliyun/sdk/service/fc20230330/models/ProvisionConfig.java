@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ProvisionConfig</p>
  */
 public class ProvisionConfig extends TeaModel {
-    @NameInMap("alwaysAllocateCPU")
+    @com.aliyun.core.annotation.NameInMap("alwaysAllocateCPU")
     private Boolean alwaysAllocateCPU;
 
-    @NameInMap("current")
+    @com.aliyun.core.annotation.NameInMap("current")
     private Long current;
 
-    @NameInMap("currentError")
+    @com.aliyun.core.annotation.NameInMap("currentError")
     private String currentError;
 
-    @NameInMap("functionArn")
+    @com.aliyun.core.annotation.NameInMap("functionArn")
     private String functionArn;
 
-    @NameInMap("scheduledActions")
+    @com.aliyun.core.annotation.NameInMap("scheduledActions")
     private java.util.List < ScheduledAction > scheduledActions;
 
-    @NameInMap("target")
+    @com.aliyun.core.annotation.NameInMap("target")
     private Long target;
 
-    @NameInMap("targetTrackingPolicies")
+    @com.aliyun.core.annotation.NameInMap("targetTrackingPolicies")
     private java.util.List < TargetTrackingPolicy > targetTrackingPolicies;
 
     private ProvisionConfig(Builder builder) {

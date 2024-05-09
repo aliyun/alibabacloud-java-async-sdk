@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CustomDomain</p>
  */
 public class CustomDomain extends TeaModel {
-    @NameInMap("accountId")
+    @com.aliyun.core.annotation.NameInMap("accountId")
     private String accountId;
 
-    @NameInMap("apiVersion")
+    @com.aliyun.core.annotation.NameInMap("apiVersion")
     private String apiVersion;
 
-    @NameInMap("authConfig")
+    @com.aliyun.core.annotation.NameInMap("authConfig")
     private AuthConfig authConfig;
 
-    @NameInMap("certConfig")
+    @com.aliyun.core.annotation.NameInMap("certConfig")
     private CertConfig certConfig;
 
-    @NameInMap("createdTime")
+    @com.aliyun.core.annotation.NameInMap("createdTime")
     private String createdTime;
 
-    @NameInMap("domainName")
+    @com.aliyun.core.annotation.NameInMap("domainName")
     private String domainName;
 
-    @NameInMap("lastModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("lastModifiedTime")
     private String lastModifiedTime;
 
-    @NameInMap("protocol")
+    @com.aliyun.core.annotation.NameInMap("protocol")
     private String protocol;
 
-    @NameInMap("routeConfig")
+    @com.aliyun.core.annotation.NameInMap("routeConfig")
     private RouteConfig routeConfig;
 
-    @NameInMap("subdomainCount")
+    @com.aliyun.core.annotation.NameInMap("subdomainCount")
     private String subdomainCount;
 
-    @NameInMap("tlsConfig")
+    @com.aliyun.core.annotation.NameInMap("tlsConfig")
     private TLSConfig tlsConfig;
 
-    @NameInMap("wafConfig")
+    @com.aliyun.core.annotation.NameInMap("wafConfig")
     private WAFConfig wafConfig;
 
     private CustomDomain(Builder builder) {

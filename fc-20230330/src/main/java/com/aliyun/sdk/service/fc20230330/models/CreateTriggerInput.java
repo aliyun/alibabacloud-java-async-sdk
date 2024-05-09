@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateTriggerInput</p>
  */
 public class CreateTriggerInput extends TeaModel {
-    @NameInMap("description")
-    @Validation(maxLength = 256)
+    @com.aliyun.core.annotation.NameInMap("description")
+    @com.aliyun.core.annotation.Validation(maxLength = 256)
     private String description;
 
-    @NameInMap("invocationRole")
-    @Validation(maxLength = 300)
+    @com.aliyun.core.annotation.NameInMap("invocationRole")
+    @com.aliyun.core.annotation.Validation(maxLength = 300)
     private String invocationRole;
 
-    @NameInMap("qualifier")
+    @com.aliyun.core.annotation.NameInMap("qualifier")
     private String qualifier;
 
-    @NameInMap("sourceArn")
-    @Validation(maxLength = 300, minLength = 1)
+    @com.aliyun.core.annotation.NameInMap("sourceArn")
+    @com.aliyun.core.annotation.Validation(maxLength = 300, minLength = 1)
     private String sourceArn;
 
-    @NameInMap("triggerConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("triggerConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String triggerConfig;
 
-    @NameInMap("triggerName")
-    @Validation(required = true, maxLength = 128, minLength = 1)
+    @com.aliyun.core.annotation.NameInMap("triggerName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128, minLength = 1)
     private String triggerName;
 
-    @NameInMap("triggerType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("triggerType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String triggerType;
 
     private CreateTriggerInput(Builder builder) {

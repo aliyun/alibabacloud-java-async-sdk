@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,39 +11,39 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Layer</p>
  */
 public class Layer extends TeaModel {
-    @NameInMap("acl")
+    @com.aliyun.core.annotation.NameInMap("acl")
     private String acl;
 
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private OutputCodeLocation code;
 
-    @NameInMap("codeChecksum")
+    @com.aliyun.core.annotation.NameInMap("codeChecksum")
     private String codeChecksum;
 
-    @NameInMap("codeSize")
+    @com.aliyun.core.annotation.NameInMap("codeSize")
     private Long codeSize;
 
-    @NameInMap("compatibleRuntime")
+    @com.aliyun.core.annotation.NameInMap("compatibleRuntime")
     private java.util.List < String > compatibleRuntime;
 
-    @NameInMap("createTime")
+    @com.aliyun.core.annotation.NameInMap("createTime")
     private String createTime;
 
-    @NameInMap("description")
-    @Validation(maxLength = 256)
+    @com.aliyun.core.annotation.NameInMap("description")
+    @com.aliyun.core.annotation.Validation(maxLength = 256)
     private String description;
 
-    @NameInMap("layerName")
-    @Validation(required = true, maxLength = 128, minLength = 1)
+    @com.aliyun.core.annotation.NameInMap("layerName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128, minLength = 1)
     private String layerName;
 
-    @NameInMap("layerVersionArn")
+    @com.aliyun.core.annotation.NameInMap("layerVersionArn")
     private String layerVersionArn;
 
-    @NameInMap("license")
+    @com.aliyun.core.annotation.NameInMap("license")
     private String license;
 
-    @NameInMap("version")
+    @com.aliyun.core.annotation.NameInMap("version")
     private Integer version;
 
     private Layer(Builder builder) {

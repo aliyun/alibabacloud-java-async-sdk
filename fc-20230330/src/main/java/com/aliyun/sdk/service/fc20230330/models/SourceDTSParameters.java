@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SourceDTSParameters</p>
  */
 public class SourceDTSParameters extends TeaModel {
-    @NameInMap("BrokerUrl")
+    @com.aliyun.core.annotation.NameInMap("BrokerUrl")
     private String brokerUrl;
 
-    @NameInMap("InitCheckPoint")
+    @com.aliyun.core.annotation.NameInMap("InitCheckPoint")
     private Integer initCheckPoint;
 
-    @NameInMap("Password")
+    @com.aliyun.core.annotation.NameInMap("Password")
     private String password;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("Sid")
+    @com.aliyun.core.annotation.NameInMap("Sid")
     private String sid;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
-    @NameInMap("Topic")
+    @com.aliyun.core.annotation.NameInMap("Topic")
     private String topic;
 
-    @NameInMap("Username")
+    @com.aliyun.core.annotation.NameInMap("Username")
     private String username;
 
     private SourceDTSParameters(Builder builder) {

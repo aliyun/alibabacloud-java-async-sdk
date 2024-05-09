@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,15 +11,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TLSConfig</p>
  */
 public class TLSConfig extends TeaModel {
-    @NameInMap("cipherSuites")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("cipherSuites")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > cipherSuites;
 
-    @NameInMap("maxVersion")
+    @com.aliyun.core.annotation.NameInMap("maxVersion")
     private String maxVersion;
 
-    @NameInMap("minVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("minVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String minVersion;
 
     private TLSConfig(Builder builder) {

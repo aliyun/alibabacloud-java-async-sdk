@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListLayerVersionOutput</p>
  */
 public class ListLayerVersionOutput extends TeaModel {
-    @NameInMap("layers")
+    @com.aliyun.core.annotation.NameInMap("layers")
     private java.util.List < Layer > layers;
 
-    @NameInMap("nextVersion")
+    @com.aliyun.core.annotation.NameInMap("nextVersion")
     private Integer nextVersion;
 
     private ListLayerVersionOutput(Builder builder) {

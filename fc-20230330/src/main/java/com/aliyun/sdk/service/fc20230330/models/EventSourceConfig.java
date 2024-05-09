@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>EventSourceConfig</p>
  */
 public class EventSourceConfig extends TeaModel {
-    @NameInMap("eventSourceParameters")
+    @com.aliyun.core.annotation.NameInMap("eventSourceParameters")
     private EventSourceParameters eventSourceParameters;
 
-    @NameInMap("eventSourceType")
+    @com.aliyun.core.annotation.NameInMap("eventSourceType")
     private String eventSourceType;
 
     private EventSourceConfig(Builder builder) {

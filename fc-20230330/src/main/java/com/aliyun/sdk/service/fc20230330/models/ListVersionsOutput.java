@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListVersionsOutput</p>
  */
 public class ListVersionsOutput extends TeaModel {
-    @NameInMap("direction")
+    @com.aliyun.core.annotation.NameInMap("direction")
     private String direction;
 
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @NameInMap("versions")
+    @com.aliyun.core.annotation.NameInMap("versions")
     private java.util.List < Version > versions;
 
     private ListVersionsOutput(Builder builder) {

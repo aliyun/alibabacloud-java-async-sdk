@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,8 +11,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Destination</p>
  */
 public class Destination extends TeaModel {
-    @NameInMap("destination")
-    @Validation(maxLength = 512)
+    @com.aliyun.core.annotation.NameInMap("destination")
+    @com.aliyun.core.annotation.Validation(maxLength = 512)
     private String destination;
 
     private Destination(Builder builder) {

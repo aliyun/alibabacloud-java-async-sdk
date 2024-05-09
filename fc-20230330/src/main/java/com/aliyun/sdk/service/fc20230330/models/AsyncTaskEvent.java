@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AsyncTaskEvent</p>
  */
 public class AsyncTaskEvent extends TeaModel {
-    @NameInMap("eventDetail")
+    @com.aliyun.core.annotation.NameInMap("eventDetail")
     private String eventDetail;
 
-    @NameInMap("eventId")
+    @com.aliyun.core.annotation.NameInMap("eventId")
     private Long eventId;
 
-    @NameInMap("status")
+    @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
-    @NameInMap("timestamp")
+    @com.aliyun.core.annotation.NameInMap("timestamp")
     private Long timestamp;
 
     private AsyncTaskEvent(Builder builder) {

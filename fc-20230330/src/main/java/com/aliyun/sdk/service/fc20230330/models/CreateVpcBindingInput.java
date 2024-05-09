@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,8 +11,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateVpcBindingInput</p>
  */
 public class CreateVpcBindingInput extends TeaModel {
-    @NameInMap("vpcId")
-    @Validation(required = true, minLength = 1)
+    @com.aliyun.core.annotation.NameInMap("vpcId")
+    @com.aliyun.core.annotation.Validation(required = true, minLength = 1)
     private String vpcId;
 
     private CreateVpcBindingInput(Builder builder) {

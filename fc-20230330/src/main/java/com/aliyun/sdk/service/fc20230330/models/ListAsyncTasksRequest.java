@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,45 +11,45 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAsyncTasksRequest</p>
  */
 public class ListAsyncTasksRequest extends Request {
-    @Path
-    @NameInMap("functionName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("functionName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String functionName;
 
-    @Query
-    @NameInMap("includePayload")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("includePayload")
     private Boolean includePayload;
 
-    @Query
-    @NameInMap("limit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("limit")
     private Integer limit;
 
-    @Query
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("prefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("prefix")
     private String prefix;
 
-    @Query
-    @NameInMap("qualifier")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("qualifier")
     private String qualifier;
 
-    @Query
-    @NameInMap("sortOrderByTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("sortOrderByTime")
     private String sortOrderByTime;
 
-    @Query
-    @NameInMap("startedTimeBegin")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("startedTimeBegin")
     private Long startedTimeBegin;
 
-    @Query
-    @NameInMap("startedTimeEnd")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("startedTimeEnd")
     private Long startedTimeEnd;
 
-    @Query
-    @NameInMap("status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
     private ListAsyncTasksRequest(Builder builder) {

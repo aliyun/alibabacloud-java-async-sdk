@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.fc20230330.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AuthConfig</p>
  */
 public class AuthConfig extends TeaModel {
-    @NameInMap("authInfo")
+    @com.aliyun.core.annotation.NameInMap("authInfo")
     private String authInfo;
 
-    @NameInMap("authType")
+    @com.aliyun.core.annotation.NameInMap("authType")
     private String authType;
 
     private AuthConfig(Builder builder) {
