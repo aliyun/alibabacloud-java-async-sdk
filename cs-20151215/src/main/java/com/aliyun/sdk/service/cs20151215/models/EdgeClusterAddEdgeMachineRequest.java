@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>EdgeClusterAddEdgeMachineRequest</p>
  */
 public class EdgeClusterAddEdgeMachineRequest extends Request {
-    @Path
-    @NameInMap("clusterid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("clusterid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterid;
 
-    @Path
-    @NameInMap("edge_machineid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("edge_machineid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String edgeMachineid;
 
-    @Body
-    @NameInMap("expired")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("expired")
     private Long expired;
 
-    @Body
-    @NameInMap("nodepool_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("nodepool_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodepoolId;
 
-    @Body
-    @NameInMap("options")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("options")
     private String options;
 
     private EdgeClusterAddEdgeMachineRequest(Builder builder) {

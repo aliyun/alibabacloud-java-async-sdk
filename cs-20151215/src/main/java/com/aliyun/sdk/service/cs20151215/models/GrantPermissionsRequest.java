@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GrantPermissionsRequest</p>
  */
 public class GrantPermissionsRequest extends Request {
-    @Path
-    @NameInMap("uid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("uid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String uid;
 
-    @Body
-    @NameInMap("body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
     private java.util.List < GrantPermissionsRequestBody> body;
 
     private GrantPermissionsRequest(Builder builder) {
@@ -94,25 +93,25 @@ public class GrantPermissionsRequest extends Request {
     } 
 
     public static class GrantPermissionsRequestBody extends TeaModel {
-        @NameInMap("cluster")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("cluster")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String cluster;
 
-        @NameInMap("is_custom")
+        @com.aliyun.core.annotation.NameInMap("is_custom")
         private Boolean isCustom;
 
-        @NameInMap("is_ram_role")
+        @com.aliyun.core.annotation.NameInMap("is_ram_role")
         private Boolean isRamRole;
 
-        @NameInMap("namespace")
+        @com.aliyun.core.annotation.NameInMap("namespace")
         private String namespace;
 
-        @NameInMap("role_name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("role_name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String roleName;
 
-        @NameInMap("role_type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("role_type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String roleType;
 
         private GrantPermissionsRequestBody(Builder builder) {

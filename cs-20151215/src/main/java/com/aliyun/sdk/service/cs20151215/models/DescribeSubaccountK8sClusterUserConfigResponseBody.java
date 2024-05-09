@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,11 +11,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSubaccountK8sClusterUserConfigResponseBody</p>
  */
 public class DescribeSubaccountK8sClusterUserConfigResponseBody extends TeaModel {
-    @NameInMap("config")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("config")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String config;
 
-    @NameInMap("expiration")
+    @com.aliyun.core.annotation.NameInMap("expiration")
     private String expiration;
 
     private DescribeSubaccountK8sClusterUserConfigResponseBody(Builder builder) {

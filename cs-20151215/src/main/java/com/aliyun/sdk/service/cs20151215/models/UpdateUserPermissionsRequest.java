@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateUserPermissionsRequest</p>
  */
 public class UpdateUserPermissionsRequest extends Request {
-    @Path
-    @NameInMap("uid")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("uid")
     private String uid;
 
-    @Body
-    @NameInMap("body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
     private java.util.List < UpdateUserPermissionsRequestBody> body;
 
-    @Query
-    @NameInMap("mode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("mode")
     private String mode;
 
     private UpdateUserPermissionsRequest(Builder builder) {
@@ -116,22 +115,22 @@ public class UpdateUserPermissionsRequest extends Request {
     } 
 
     public static class UpdateUserPermissionsRequestBody extends TeaModel {
-        @NameInMap("cluster")
+        @com.aliyun.core.annotation.NameInMap("cluster")
         private String cluster;
 
-        @NameInMap("is_custom")
+        @com.aliyun.core.annotation.NameInMap("is_custom")
         private Boolean isCustom;
 
-        @NameInMap("is_ram_role")
+        @com.aliyun.core.annotation.NameInMap("is_ram_role")
         private Boolean isRamRole;
 
-        @NameInMap("namespace")
+        @com.aliyun.core.annotation.NameInMap("namespace")
         private String namespace;
 
-        @NameInMap("role_name")
+        @com.aliyun.core.annotation.NameInMap("role_name")
         private String roleName;
 
-        @NameInMap("role_type")
+        @com.aliyun.core.annotation.NameInMap("role_type")
         private String roleType;
 
         private UpdateUserPermissionsRequestBody(Builder builder) {

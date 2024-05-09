@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetUpgradeStatusResponseBody</p>
  */
 public class GetUpgradeStatusResponseBody extends TeaModel {
-    @NameInMap("error_message")
+    @com.aliyun.core.annotation.NameInMap("error_message")
     private String errorMessage;
 
-    @NameInMap("precheck_report_id")
+    @com.aliyun.core.annotation.NameInMap("precheck_report_id")
     private String precheckReportId;
 
-    @NameInMap("status")
+    @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
-    @NameInMap("upgrade_step")
+    @com.aliyun.core.annotation.NameInMap("upgrade_step")
     private String upgradeStep;
 
-    @NameInMap("upgrade_task")
+    @com.aliyun.core.annotation.NameInMap("upgrade_task")
     private UpgradeTask upgradeTask;
 
     private GetUpgradeStatusResponseBody(Builder builder) {
@@ -145,10 +144,10 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
     } 
 
     public static class UpgradeTask extends TeaModel {
-        @NameInMap("message")
+        @com.aliyun.core.annotation.NameInMap("message")
         private String message;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
         private UpgradeTask(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,389 +11,389 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateClusterRequest</p>
  */
 public class CreateClusterRequest extends Request {
-    @Body
-    @NameInMap("access_control_list")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("access_control_list")
     private java.util.List < String > accessControlList;
 
-    @Body
-    @NameInMap("addons")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("addons")
     private java.util.List < Addon > addons;
 
-    @Body
-    @NameInMap("api_audiences")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("api_audiences")
     private String apiAudiences;
 
-    @Body
-    @NameInMap("charge_type")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("charge_type")
     private String chargeType;
 
-    @Body
-    @NameInMap("cis_enabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("cis_enabled")
     @Deprecated
     private Boolean cisEnabled;
 
-    @Body
-    @NameInMap("cloud_monitor_flags")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("cloud_monitor_flags")
     private Boolean cloudMonitorFlags;
 
-    @Body
-    @NameInMap("cluster_domain")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("cluster_domain")
     private String clusterDomain;
 
-    @Body
-    @NameInMap("cluster_spec")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("cluster_spec")
     private String clusterSpec;
 
-    @Body
-    @NameInMap("cluster_type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("cluster_type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterType;
 
-    @Body
-    @NameInMap("container_cidr")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("container_cidr")
     private String containerCidr;
 
-    @Body
-    @NameInMap("controlplane_log_components")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("controlplane_log_components")
     private java.util.List < String > controlplaneLogComponents;
 
-    @Body
-    @NameInMap("controlplane_log_project")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("controlplane_log_project")
     private String controlplaneLogProject;
 
-    @Body
-    @NameInMap("controlplane_log_ttl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("controlplane_log_ttl")
     private String controlplaneLogTtl;
 
-    @Body
-    @NameInMap("cpu_policy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("cpu_policy")
     private String cpuPolicy;
 
-    @Body
-    @NameInMap("custom_san")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("custom_san")
     private String customSan;
 
-    @Body
-    @NameInMap("deletion_protection")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("deletion_protection")
     private Boolean deletionProtection;
 
-    @Body
-    @NameInMap("disable_rollback")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("disable_rollback")
     @Deprecated
     private Boolean disableRollback;
 
-    @Body
-    @NameInMap("enable_rrsa")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("enable_rrsa")
     private Boolean enableRrsa;
 
-    @Body
-    @NameInMap("encryption_provider_key")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("encryption_provider_key")
     private String encryptionProviderKey;
 
-    @Body
-    @NameInMap("endpoint_public_access")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("endpoint_public_access")
     private Boolean endpointPublicAccess;
 
-    @Body
-    @NameInMap("format_disk")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("format_disk")
     private Boolean formatDisk;
 
-    @Body
-    @NameInMap("image_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("image_id")
     private String imageId;
 
-    @Body
-    @NameInMap("image_type")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("image_type")
     private String imageType;
 
-    @Body
-    @NameInMap("instances")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("instances")
     private java.util.List < String > instances;
 
-    @Body
-    @NameInMap("ip_stack")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ip_stack")
     private String ipStack;
 
-    @Body
-    @NameInMap("is_enterprise_security_group")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("is_enterprise_security_group")
     private Boolean isEnterpriseSecurityGroup;
 
-    @Body
-    @NameInMap("keep_instance_name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("keep_instance_name")
     private Boolean keepInstanceName;
 
-    @Body
-    @NameInMap("key_pair")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("key_pair")
     private String keyPair;
 
-    @Body
-    @NameInMap("kubernetes_version")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("kubernetes_version")
     private String kubernetesVersion;
 
-    @Body
-    @NameInMap("load_balancer_spec")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("load_balancer_spec")
     private String loadBalancerSpec;
 
-    @Body
-    @NameInMap("logging_type")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("logging_type")
     private String loggingType;
 
-    @Body
-    @NameInMap("login_password")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("login_password")
     private String loginPassword;
 
-    @Body
-    @NameInMap("master_auto_renew")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("master_auto_renew")
     private Boolean masterAutoRenew;
 
-    @Body
-    @NameInMap("master_auto_renew_period")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("master_auto_renew_period")
     private Long masterAutoRenewPeriod;
 
-    @Body
-    @NameInMap("master_count")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("master_count")
     private Long masterCount;
 
-    @Body
-    @NameInMap("master_instance_charge_type")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("master_instance_charge_type")
     private String masterInstanceChargeType;
 
-    @Body
-    @NameInMap("master_instance_types")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("master_instance_types")
     private java.util.List < String > masterInstanceTypes;
 
-    @Body
-    @NameInMap("master_period")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("master_period")
     private Long masterPeriod;
 
-    @Body
-    @NameInMap("master_period_unit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("master_period_unit")
     private String masterPeriodUnit;
 
-    @Body
-    @NameInMap("master_system_disk_category")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("master_system_disk_category")
     private String masterSystemDiskCategory;
 
-    @Body
-    @NameInMap("master_system_disk_performance_level")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("master_system_disk_performance_level")
     private String masterSystemDiskPerformanceLevel;
 
-    @Body
-    @NameInMap("master_system_disk_size")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("master_system_disk_size")
     private Long masterSystemDiskSize;
 
-    @Body
-    @NameInMap("master_system_disk_snapshot_policy_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("master_system_disk_snapshot_policy_id")
     private String masterSystemDiskSnapshotPolicyId;
 
-    @Body
-    @NameInMap("master_vswitch_ids")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("master_vswitch_ids")
     private java.util.List < String > masterVswitchIds;
 
-    @Body
-    @NameInMap("name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("nat_gateway")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("nat_gateway")
     private Boolean natGateway;
 
-    @Body
-    @NameInMap("node_cidr_mask")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("node_cidr_mask")
     private String nodeCidrMask;
 
-    @Body
-    @NameInMap("node_name_mode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("node_name_mode")
     private String nodeNameMode;
 
-    @Body
-    @NameInMap("node_port_range")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("node_port_range")
     private String nodePortRange;
 
-    @Body
-    @NameInMap("nodepools")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("nodepools")
     private java.util.List < Nodepool > nodepools;
 
-    @Body
-    @NameInMap("num_of_nodes")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("num_of_nodes")
     @Deprecated
     private Long numOfNodes;
 
-    @Body
-    @NameInMap("os_type")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("os_type")
     private String osType;
 
-    @Body
-    @NameInMap("period")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("period")
     private Long period;
 
-    @Body
-    @NameInMap("period_unit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("period_unit")
     private String periodUnit;
 
-    @Body
-    @NameInMap("platform")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("platform")
     private String platform;
 
-    @Body
-    @NameInMap("pod_vswitch_ids")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("pod_vswitch_ids")
     private java.util.List < String > podVswitchIds;
 
-    @Body
-    @NameInMap("profile")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("profile")
     private String profile;
 
-    @Body
-    @NameInMap("proxy_mode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("proxy_mode")
     private String proxyMode;
 
-    @Body
-    @NameInMap("rds_instances")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("rds_instances")
     private java.util.List < String > rdsInstances;
 
-    @Body
-    @NameInMap("region_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("region_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Body
-    @NameInMap("resource_group_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("resource_group_id")
     private String resourceGroupId;
 
-    @Body
-    @NameInMap("runtime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("runtime")
     private Runtime runtime;
 
-    @Body
-    @NameInMap("security_group_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("security_group_id")
     private String securityGroupId;
 
-    @Body
-    @NameInMap("security_hardening_os")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("security_hardening_os")
     private Boolean securityHardeningOs;
 
-    @Body
-    @NameInMap("service_account_issuer")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("service_account_issuer")
     private String serviceAccountIssuer;
 
-    @Body
-    @NameInMap("service_cidr")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("service_cidr")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceCidr;
 
-    @Body
-    @NameInMap("service_discovery_types")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("service_discovery_types")
     private java.util.List < String > serviceDiscoveryTypes;
 
-    @Body
-    @NameInMap("snat_entry")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("snat_entry")
     private Boolean snatEntry;
 
-    @Body
-    @NameInMap("soc_enabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("soc_enabled")
     private Boolean socEnabled;
 
-    @Body
-    @NameInMap("ssh_flags")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ssh_flags")
     private Boolean sshFlags;
 
-    @Body
-    @NameInMap("tags")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("tags")
     private java.util.List < Tag > tags;
 
-    @Body
-    @NameInMap("taints")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("taints")
     private java.util.List < Taint > taints;
 
-    @Body
-    @NameInMap("timeout_mins")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("timeout_mins")
     private Long timeoutMins;
 
-    @Body
-    @NameInMap("timezone")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("timezone")
     private String timezone;
 
-    @Body
-    @NameInMap("user_ca")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("user_ca")
     private String userCa;
 
-    @Body
-    @NameInMap("user_data")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("user_data")
     private String userData;
 
-    @Body
-    @NameInMap("vpcid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("vpcid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcid;
 
-    @Body
-    @NameInMap("vswitch_ids")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("vswitch_ids")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > vswitchIds;
 
-    @Body
-    @NameInMap("worker_auto_renew")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_auto_renew")
     @Deprecated
     private Boolean workerAutoRenew;
 
-    @Body
-    @NameInMap("worker_auto_renew_period")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_auto_renew_period")
     @Deprecated
     private Long workerAutoRenewPeriod;
 
-    @Body
-    @NameInMap("worker_data_disks")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_data_disks")
     @Deprecated
     private java.util.List < WorkerDataDisks> workerDataDisks;
 
-    @Body
-    @NameInMap("worker_instance_charge_type")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_instance_charge_type")
     @Deprecated
     private String workerInstanceChargeType;
 
-    @Body
-    @NameInMap("worker_instance_types")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_instance_types")
     @Deprecated
     private java.util.List < String > workerInstanceTypes;
 
-    @Body
-    @NameInMap("worker_period")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_period")
     @Deprecated
     private Long workerPeriod;
 
-    @Body
-    @NameInMap("worker_period_unit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_period_unit")
     @Deprecated
     private String workerPeriodUnit;
 
-    @Body
-    @NameInMap("worker_system_disk_category")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_system_disk_category")
     @Deprecated
     private String workerSystemDiskCategory;
 
-    @Body
-    @NameInMap("worker_system_disk_performance_level")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_system_disk_performance_level")
     @Deprecated
     private String workerSystemDiskPerformanceLevel;
 
-    @Body
-    @NameInMap("worker_system_disk_size")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_system_disk_size")
     @Deprecated
     private Long workerSystemDiskSize;
 
-    @Body
-    @NameInMap("worker_system_disk_snapshot_policy_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_system_disk_snapshot_policy_id")
     @Deprecated
     private String workerSystemDiskSnapshotPolicyId;
 
-    @Body
-    @NameInMap("worker_vswitch_ids")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_vswitch_ids")
     @Deprecated
     private java.util.List < String > workerVswitchIds;
 
-    @Body
-    @NameInMap("zone_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("zone_id")
     private String zoneId;
 
     private CreateClusterRequest(Builder builder) {
@@ -1335,7 +1334,7 @@ public class CreateClusterRequest extends Request {
         } 
 
         /**
-         * The network access control list (ACL) of the SLB instance associated with the API server if the cluster is a registered cluster.
+         * The access control list (ACL) rule of the SLB instance associated with the API server if the cluster is a registered cluster.
          */
         public Builder accessControlList(java.util.List < String > accessControlList) {
             this.putBodyParameter("access_control_list", accessControlList);
@@ -1344,34 +1343,33 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The components that you want to install in the cluster. When you create a cluster, you can set the `addons` parameter to install specific components.
+         * The components that you want to install in the cluster. When you create a cluster, you can configure the `addons` parameter to install specific components.
          * <p>
          * 
          * **Network plug-in**: required. The Flannel and Terway plug-ins are supported. Select one of the plug-ins for the cluster.
          * 
          * *   Specify the Flannel plug-in in the following format: \[{"name":"flannel","config":""}].
-         * *   If you want to use the Terway component, specify the value in the \[{"Name": "terway-eniip","Config": ""}] format.
+         * *   Specify the Flannel plug-in in the following format: \[{"name": "terway-eniip","config": ""}].
          * 
-         * **Volume plug-in**: required. The `CSI` and `FlexVolume` volume plug-ins are supported.
+         * **Volume plug-in**: optional. Only the `CSI` plug-in is supported.
          * 
-         * *   Specify the `CSI` plug-in in the following format: \[{"name":"csi-plugin","config": ""},{"name": "csi-provisioner","config": ""}].
-         * *   Specify the `FlexVolume` plug-in in the following format: \[{"name": "flexvolume","config": ""}].
+         * Specify the `CSI` plug-in in the following format: \[{"name":"csi-plugin","config": ""},{"name": "csi-provisioner","config": ""}].
          * 
          * **Simple Log Service component**: optional. We recommend that you enable Simple Log Service. If Simple Log Service is disabled, you cannot use the cluster auditing feature.
          * 
-         * *   Use an existing `Simple Log Service project`: \[{"name": "logtail-ds","config": "{"IngressDashboardEnabled":"true","sls_project_name":"your_sls_project_name"}"}].
-         * *   To create a `Simple Log Service project`, specify the component in the following format: \[{"name": "logtail-ds","config": "{"IngressDashboardEnabled":"true"}"}].
+         * *   To use an existing `Simple Log Service project`, specify the value in the following format: \[{"name": "logtail-ds","config": "{"IngressDashboardEnabled":"true","sls_project_name":"your_sls_project_name"}"}].
+         * *   To create a `Simple Log Service project`, specify the value in the following format: \[{"name": "logtail-ds","config": "{"IngressDashboardEnabled":"true"}"}].
          * 
-         * **Ingress controller**`: optional. By default, the nginx-ingress-controller component is installed in ACK dedicated clusters.`
+         * **Ingress controller**: optional. By default, the `nginx-ingress-controller` component is installed in ACK dedicated clusters.
          * 
-         * *   To install nginx-ingress-controller and enable Internet access, specify the Ingress controller in the following format: \[{"name":"nginx-ingress-controller","config":"{"IngressSlbNetworkType":"internet"}"}].
-         * *   To disable the system to automatically install nginx-ingress-controller, specify the component in the following format: \[{"name": "nginx-ingress-controller","config": "","disabled": true}].
+         * *   To install nginx-ingress-controller and enable Internet access, specify the value in the following format: \[{"name":"nginx-ingress-controller","config":"{"IngressSlbNetworkType":"internet"}"}].
+         * *   To disable the system to automatically install nginx-ingress-controller, specify the value in the following format: \[{"name": "nginx-ingress-controller","config": "","disabled": true}].
          * 
          * **Event center**: optional. By default, the event center feature is enabled.
          * 
          * You can use Kubernetes event centers to store and query events and configure alerts. You can use the Logstores that are associated with Kubernetes event centers free of charge within 90 days. For more information, see [Create and use a Kubernetes event center](~~150476~~).
          * 
-         * Enable the ack-node-problem-detector component in the following format: \[{"name":"ack-node-problem-detector","config":"{"sls_project_name":"your_sls_project_name"}"}].
+         * To enable the ack-node-problem-detector component, specify the value in the following format: \[{"name":"ack-node-problem-detector","config":"{"sls_project_name":"your_sls_project_name"}"}].
          */
         public Builder addons(java.util.List < Addon > addons) {
             this.putBodyParameter("addons", addons);
@@ -1395,7 +1393,7 @@ public class CreateClusterRequest extends Request {
          * The billing method of the cluster. The following resources are billed on a subscription basis:
          * <p>
          * 
-         * Elastic Compute Service (ECS) instances in node pools.
+         * ECS instances in node pools.
          * 
          * The internal-facing SLB instance used by the API server.
          * 
@@ -1414,15 +1412,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Center for Internet Security (CIS) reinforcement. For more information, see [CIS reinforcement](~~223744~~).
+         * [This parameter is deprecated]
          * <p>
          * 
-         * Valid values:
-         * 
-         * *   `true`: enables CIS reinforcement.
-         * *   `false`: disables CIS reinforcement.
-         * 
-         * Default value: `false`.
+         * Please replace this parameter with security_hardening_os.
          */
         public Builder cisEnabled(Boolean cisEnabled) {
             this.putBodyParameter("cis_enabled", cisEnabled);
@@ -1488,7 +1481,7 @@ public class CreateClusterRequest extends Request {
          * 
          * For more information about subnetting for ACK clusters, see [Plan CIDR blocks for an ACK cluster that is deployed in a VPC](~~86500~~).
          * 
-         * >  This parameter is required if the cluster uses the Flannel plug-in.
+         * >  This parameter is required if the cluster uses Flannel as the network plug-in.
          */
         public Builder containerCidr(String containerCidr) {
             this.putBodyParameter("container_cidr", containerCidr);
@@ -1542,7 +1535,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies custom subject alternative names (SANs) for the API server certificate to accept requests from specified IP addresses or domain names. Multiple IP addresses and domain names are separated by commas (,).
+         * Specifies custom subject alternative names (SANs) for the API server certificate to accept requests from specified IP addresses or domain names. Separate multiple IP addresses or domain names with commas (,).
          */
         public Builder customSan(String customSan) {
             this.putBodyParameter("custom_san", customSan);
@@ -1625,7 +1618,7 @@ public class CreateClusterRequest extends Request {
          * 
          * Default value: `false`.
          * 
-         * How to mount a data disk:
+         * How data disks are mounted:
          * 
          * *   If an ECS instance has data disks mounted and the file system of the last data disk is not initialized, the system automatically formats the data disk to ext4. Then, the system mounts the data disk to /var/lib/docker and /var/lib/kubelet.
          * *   If no data disk is mounted to the ECS instance, the system does not purchase a new data disk.
@@ -1668,10 +1661,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The list of existing ECS instances that are specified as worker nodes for the cluster.
+         * The list of existing Elastic Compute Service (ECS) instances that are specified as worker nodes for the cluster.
          * <p>
          * 
-         * >  This parameter is required when you create worker nodes on existing ECS instances.
+         * >  This parameter is required when you create worker nodes based on existing ECS instances.
          */
         public Builder instances(java.util.List < String > instances) {
             this.putBodyParameter("instances", instances);
@@ -1680,7 +1673,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The cluster ip_stack.
+         * The IP stack of the cluster.
          */
         public Builder ipStack(String ipStack) {
             this.putBodyParameter("ip_stack", ipStack);
@@ -1710,7 +1703,7 @@ public class CreateClusterRequest extends Request {
          * <p>
          * 
          * *   `true`: retains the names.
-         * *   `false`: does not retain the names. The new names are assigned by the system.
+         * *   `false`: does not retain the names. The system assigns new names.
          * 
          * Default value: `true`.
          */
@@ -1721,7 +1714,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The name of the key pair. You must set this parameter or the `login_password` parameter.
+         * The name of the key pair. You must configure this parameter or the `login_password` parameter.
          */
         public Builder keyPair(String keyPair) {
             this.putBodyParameter("key_pair", keyPair);
@@ -1730,7 +1723,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The Kubernetes version of the cluster. The Kubernetes versions supported by ACK are the same as the Kubernetes versions supported by open source Kubernetes. We recommend that you specify the latest Kubernetes version. If you do not specify this parameter, the latest Kubernetes version is used.
+         * The Kubernetes version of the cluster. The Kubernetes versions supported by ACK are the same as the Kubernetes versions supported by open source Kubernetes. We recommend that you specify the latest Kubernetes version. If you do not configure this parameter, the latest Kubernetes version is used.
          * <p>
          * 
          * You can create clusters of the latest two Kubernetes versions in the ACK console. If you want to create clusters that run earlier Kubernetes versions, use the API. For more information about the Kubernetes versions supported by ACK, see [Release notes on Kubernetes versions](~~185269~~).
@@ -1770,7 +1763,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The password for SSH logon. You must set this parameter or `key_pair`. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
+         * The password for SSH logon. You must configure this parameter or the `key_pair` parameter. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
          */
         public Builder loginPassword(String loginPassword) {
             this.putBodyParameter("login_password", loginPassword);
@@ -1928,10 +1921,10 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The cluster name.
+         * The name of the cluster.
          * <p>
          * 
-         * The cluster name must be 1 to 63 characters in length, and can contain digits, letters, and underscores (\_). The cluster name must not start with a hyphen (-).
+         * The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -2029,7 +2022,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The subscription duration. This parameter takes effect and is required only when you set charge_type to PrePaid.
+         * The subscription duration. This parameter takes effect and is required only if you set charge_type to PrePaid.
          * <p>
          * 
          * Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.
@@ -2055,7 +2048,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The OS distribution that is used. Valid values:
+         * The OS distribution. Valid values:
          * <p>
          * 
          * *   CentOS
@@ -2074,7 +2067,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The list of pod vSwitches. You need to specify at least one pod vSwitch for each node vSwitch and the pod vSwitches must not be the same as the node vSwitches (`vswitch`). We recommend that you specify pod vSwitches whose mask lengths are no longer than 19.
+         * The list of pod vSwitches. You need to specify at least one pod vSwitch for each node vSwitch, and the pod vSwitches must be different from the node vSwitches (`vswitch`). We recommend that you specify pod vSwitches whose mask lengths are no longer than 19.
          * <p>
          * 
          * >  The `pod_vswitch_ids` parameter is required if the cluster uses Terway as the network plug-in.
@@ -2089,7 +2082,7 @@ public class CreateClusterRequest extends Request {
          * If you set `cluster_type` to `ManagedKubernetes`, an ACK managed cluster is created. In this case, you can further specify the cluster edition. Valid values:
          * <p>
          * 
-         * *   `Default`. ACK managed cluster. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.
+         * *   `Default`: ACK managed cluster. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.
          * *   `Edge`: ACK Edge cluster. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.
          * *   `Serverless`: ACK Serverless cluster. ACK Serverless clusters include ACK Serverless Basic clusters and ACK Serverless Pro clusters.
          * *   `Lingjun`: ACK Lingjun Pro cluster.
@@ -2125,7 +2118,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the cluster is deployed.
+         * The ID of the region in which you want to deploy the cluster.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("region_id", regionId);
@@ -2164,7 +2157,15 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * security_hardening_os.
+         * Specifies whether to enable Alibaba Cloud Linux Security Hardening. 
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * - true: enables Alibaba Cloud Linux Security Hardening.
+         * - false: disables Alibaba Cloud Linux Security Hardening.
+         * 
+         * Default value: false
          */
         public Builder securityHardeningOs(Boolean securityHardeningOs) {
             this.putBodyParameter("security_hardening_os", securityHardeningOs);
@@ -2212,13 +2213,13 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to configure Source Network Address Translation (SNAT) rules for the VPC where your cluster is deployed. Valid values:
+         * Specifies whether to configure Source Network Address Translation (SNAT) rules for the VPC in which the cluster is deployed. Valid values:
          * <p>
          * 
          * *   `true`: automatically creates a NAT gateway and configures SNAT rules. Set this parameter to `true` if nodes and applications in the cluster need to access the Internet.
          * *   `false`: does not create a NAT gateway or configure SNAT rules. In this case, nodes and applications in the cluster cannot access the Internet.
          * 
-         * >  If this feature is disabled when you create the cluster, you can also manually enable this feature after you create the cluster. For more information, see [Manually create a NAT gateway and configure SNAT rules](~~178480~~).
+         * >  If this feature is disabled when you create the cluster, you can manually enable this feature after you create the cluster. For more information, see [Manually create a NAT gateway and configure SNAT rules](~~178480~~).
          * 
          * Default value: `true`.
          */
@@ -2246,7 +2247,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable SSH logon. If this parameter is set to true, you can log on to master nodes in an ACK dedicated cluster over the Internet. This parameter does not take effect in ACK managed clusters. Valid values:
+         * Specifies whether to enable SSH logon. If this parameter is set to true, you can log on to master nodes in an ACK dedicated cluster over the Internet. This parameter does not take effect for ACK managed clusters. Valid values:
          * <p>
          * 
          * *   `true`: enables SSH logon.
@@ -2261,11 +2262,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The tags to be added to nodes. You must add tags based on the following rules:
+         * The labels that you want to add to nodes. You must add labels based on the following rules:
          * <p>
          * 
-         * *   A tag is a case-sensitive key-value pair. You can add up to 20 tags.
-         * *   When you add a tag, you must specify a unique key but you can leave the value empty. A key cannot exceed 64 characters in length and a value cannot exceed 128 characters in length. Keys and values cannot start with aliyun, acs:, https://, or http://. For more information, see [Labels and Selectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set).
+         * *   A label is a case-sensitive key-value pair. You can add up to 20 labels.
+         * *   When you add a label, you must specify a unique key but you can leave the value empty. A key cannot exceed 64 characters in length and a value cannot exceed 128 characters in length. Keys and values cannot start with aliyun, acs:, https://, or http://. For more information, see [Labels and Selectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set).
          */
         public Builder tags(java.util.List < Tag > tags) {
             this.putBodyParameter("tags", tags);
@@ -2322,7 +2323,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The virtual private cloud (VPC) in which you want to deploy the cluster. This parameter is required.
+         * The ID of the virtual private cloud (VPC) in which you want to deploy the cluster. This parameter is required.
          */
         public Builder vpcid(String vpcid) {
             this.putBodyParameter("vpcid", vpcid);
@@ -2340,7 +2341,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto renewal for worker nodes. This parameter takes effect and is required only if `worker_instance_charge_type` is set to `PrePaid`. Valid values:
+         * Specifies whether to enable auto-renewal for worker nodes. This parameter takes effect and is required only if `worker_instance_charge_type` is set to `PrePaid`. Valid values:
          * <p>
          * 
          * *   `true`: enables auto-renewal.
@@ -2443,7 +2444,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * If the system disk is an ESSD, you can set the PL of the ESSD. For more information, see [Enhanced SSDs](~~122389~~).
+         * If the system disk is an ESSD, you can set the PL of the ESSD. For more information, see [ESSDs](~~122389~~).
          * <p>
          * 
          * Valid values:
@@ -2497,7 +2498,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The ID of the zone to which the cluster belongs. This parameter takes effect in only ACK Serverless clusters.
+         * The ID of the zone to which the cluster belongs. This parameter takes effect for only ACK Serverless clusters.
          * <p>
          * 
          * When you create an ACK Serverless cluster, you must configure `zone_id` if `vpc_id` and `vswitch_ids` are not configured. This way, the system automatically creates a VPC in the specified zone.
@@ -2516,18 +2517,18 @@ public class CreateClusterRequest extends Request {
     } 
 
     public static class WorkerDataDisks extends TeaModel {
-        @NameInMap("category")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("category")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String category;
 
-        @NameInMap("encrypted")
+        @com.aliyun.core.annotation.NameInMap("encrypted")
         private String encrypted;
 
-        @NameInMap("performance_level")
+        @com.aliyun.core.annotation.NameInMap("performance_level")
         private String performanceLevel;
 
-        @NameInMap("size")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("size")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String size;
 
         private WorkerDataDisks(Builder builder) {
@@ -2580,7 +2581,7 @@ public class CreateClusterRequest extends Request {
             private String size; 
 
             /**
-             * The data disk type.
+             * The type of a data disk.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -2588,11 +2589,11 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * Specifies whether to encrypt a data disk. Valid values:
+             * Specifies whether to encrypt the data disk. Valid values:
              * <p>
              * 
-             * *   `true`: encrypts a data disk.
-             * *   `false`: does not encrypt a data disk.
+             * *   `true`: encrypts the data disk.
+             * *   `false`: does not encrypt the data disk.
              * 
              * Default value: `false`.
              */
@@ -2602,7 +2603,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * The PL of a data disk. This parameter takes effect only for ESSDs. You can specify a higher PL if you increase the size of the system disk. For more information, see [Enhanced SSDs](~~122389~~).
+             * The PL of the data disk. This parameter takes effect only for ESSDs. You can specify a higher PL if you increase the size of a data disk. For more information, see [ESSDs](~~122389~~).
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -2610,7 +2611,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * The size of the data disk. Valid values: 40 to 32767.
+             * The size of the data disk. Valid values: 40 to 32767. Unit: GiB.
              */
             public Builder size(String size) {
                 this.size = size;

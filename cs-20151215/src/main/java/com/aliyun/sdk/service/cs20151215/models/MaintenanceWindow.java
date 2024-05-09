@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>MaintenanceWindow</p>
  */
 public class MaintenanceWindow extends TeaModel {
-    @NameInMap("duration")
+    @com.aliyun.core.annotation.NameInMap("duration")
     private String duration;
 
-    @NameInMap("enable")
+    @com.aliyun.core.annotation.NameInMap("enable")
     private Boolean enable;
 
-    @NameInMap("maintenance_time")
+    @com.aliyun.core.annotation.NameInMap("maintenance_time")
     private String maintenanceTime;
 
-    @NameInMap("weekly_period")
+    @com.aliyun.core.annotation.NameInMap("weekly_period")
     private String weeklyPeriod;
 
     private MaintenanceWindow(Builder builder) {

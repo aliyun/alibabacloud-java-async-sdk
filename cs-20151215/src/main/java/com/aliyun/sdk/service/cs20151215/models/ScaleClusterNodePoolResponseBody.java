@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,7 +11,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ScaleClusterNodePoolResponseBody</p>
  */
 public class ScaleClusterNodePoolResponseBody extends TeaModel {
-    @NameInMap("task_id")
+    @com.aliyun.core.annotation.NameInMap("task_id")
     private String taskId;
 
     private ScaleClusterNodePoolResponseBody(Builder builder) {

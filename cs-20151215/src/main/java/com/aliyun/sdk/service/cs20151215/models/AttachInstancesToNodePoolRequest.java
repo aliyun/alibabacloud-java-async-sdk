@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AttachInstancesToNodePoolRequest</p>
  */
 public class AttachInstancesToNodePoolRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("NodepoolId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("NodepoolId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodepoolId;
 
-    @Body
-    @NameInMap("format_disk")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("format_disk")
     private Boolean formatDisk;
 
-    @Body
-    @NameInMap("instances")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("instances")
     private java.util.List < String > instances;
 
-    @Body
-    @NameInMap("keep_instance_name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("keep_instance_name")
     private Boolean keepInstanceName;
 
-    @Body
-    @NameInMap("password")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("password")
     private String password;
 
     private AttachInstancesToNodePoolRequest(Builder builder) {

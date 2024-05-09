@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,7 +11,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeWorkflowsResponseBody</p>
  */
 public class DescribeWorkflowsResponseBody extends TeaModel {
-    @NameInMap("jobs")
+    @com.aliyun.core.annotation.NameInMap("jobs")
     private java.util.List < Jobs> jobs;
 
     private DescribeWorkflowsResponseBody(Builder builder) {
@@ -52,13 +51,13 @@ public class DescribeWorkflowsResponseBody extends TeaModel {
     } 
 
     public static class Jobs extends TeaModel {
-        @NameInMap("cluster_id")
+        @com.aliyun.core.annotation.NameInMap("cluster_id")
         private String clusterId;
 
-        @NameInMap("create_time")
+        @com.aliyun.core.annotation.NameInMap("create_time")
         private String createTime;
 
-        @NameInMap("job_name")
+        @com.aliyun.core.annotation.NameInMap("job_name")
         private String jobName;
 
         private Jobs(Builder builder) {

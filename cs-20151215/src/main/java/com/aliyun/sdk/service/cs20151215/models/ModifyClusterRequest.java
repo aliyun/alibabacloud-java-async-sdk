@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,65 +11,65 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyClusterRequest</p>
  */
 public class ModifyClusterRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Body
-    @NameInMap("access_control_list")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("access_control_list")
     private java.util.List < String > accessControlList;
 
-    @Body
-    @NameInMap("api_server_custom_cert_sans")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("api_server_custom_cert_sans")
     private ApiServerCustomCertSans apiServerCustomCertSans;
 
-    @Body
-    @NameInMap("api_server_eip")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("api_server_eip")
     private Boolean apiServerEip;
 
-    @Body
-    @NameInMap("api_server_eip_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("api_server_eip_id")
     private String apiServerEipId;
 
-    @Body
-    @NameInMap("cluster_name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("cluster_name")
     private String clusterName;
 
-    @Body
-    @NameInMap("deletion_protection")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("deletion_protection")
     private Boolean deletionProtection;
 
-    @Body
-    @NameInMap("enable_rrsa")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("enable_rrsa")
     private Boolean enableRrsa;
 
-    @Body
-    @NameInMap("ingress_domain_rebinding")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ingress_domain_rebinding")
     private Boolean ingressDomainRebinding;
 
-    @Body
-    @NameInMap("ingress_loadbalancer_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ingress_loadbalancer_id")
     private String ingressLoadbalancerId;
 
-    @Body
-    @NameInMap("instance_deletion_protection")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("instance_deletion_protection")
     private Boolean instanceDeletionProtection;
 
-    @Body
-    @NameInMap("maintenance_window")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("maintenance_window")
     private MaintenanceWindow maintenanceWindow;
 
-    @Body
-    @NameInMap("operation_policy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("operation_policy")
     private OperationPolicy operationPolicy;
 
-    @Body
-    @NameInMap("resource_group_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("resource_group_id")
     private String resourceGroupId;
 
-    @Body
-    @NameInMap("system_events_logging")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("system_events_logging")
     private SystemEventsLogging systemEventsLogging;
 
     private ModifyClusterRequest(Builder builder) {
@@ -422,10 +421,10 @@ public class ModifyClusterRequest extends Request {
     } 
 
     public static class ApiServerCustomCertSans extends TeaModel {
-        @NameInMap("action")
+        @com.aliyun.core.annotation.NameInMap("action")
         private String action;
 
-        @NameInMap("subject_alternative_names")
+        @com.aliyun.core.annotation.NameInMap("subject_alternative_names")
         private java.util.List < String > subjectAlternativeNames;
 
         private ApiServerCustomCertSans(Builder builder) {
@@ -483,10 +482,10 @@ public class ModifyClusterRequest extends Request {
 
     }
     public static class ClusterAutoUpgrade extends TeaModel {
-        @NameInMap("channel")
+        @com.aliyun.core.annotation.NameInMap("channel")
         private String channel;
 
-        @NameInMap("enabled")
+        @com.aliyun.core.annotation.NameInMap("enabled")
         private Boolean enabled;
 
         private ClusterAutoUpgrade(Builder builder) {
@@ -544,7 +543,7 @@ public class ModifyClusterRequest extends Request {
 
     }
     public static class OperationPolicy extends TeaModel {
-        @NameInMap("cluster_auto_upgrade")
+        @com.aliyun.core.annotation.NameInMap("cluster_auto_upgrade")
         private ClusterAutoUpgrade clusterAutoUpgrade;
 
         private OperationPolicy(Builder builder) {
@@ -585,10 +584,10 @@ public class ModifyClusterRequest extends Request {
 
     }
     public static class SystemEventsLogging extends TeaModel {
-        @NameInMap("enabled")
+        @com.aliyun.core.annotation.NameInMap("enabled")
         private Boolean enabled;
 
-        @NameInMap("logging_project")
+        @com.aliyun.core.annotation.NameInMap("logging_project")
         private String loggingProject;
 
         private SystemEventsLogging(Builder builder) {

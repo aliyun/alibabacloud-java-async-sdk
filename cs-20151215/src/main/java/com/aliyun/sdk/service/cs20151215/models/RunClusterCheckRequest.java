@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RunClusterCheckRequest</p>
  */
 public class RunClusterCheckRequest extends Request {
-    @Path
-    @NameInMap("cluster_id")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("cluster_id")
     private String clusterId;
 
-    @Body
-    @NameInMap("options")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("options")
     private java.util.Map < String, String > options;
 
-    @Body
-    @NameInMap("target")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("target")
     private String target;
 
-    @Body
-    @NameInMap("type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private RunClusterCheckRequest(Builder builder) {

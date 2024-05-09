@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,43 +11,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTaskInfoResponseBody</p>
  */
 public class DescribeTaskInfoResponseBody extends TeaModel {
-    @NameInMap("cluster_id")
+    @com.aliyun.core.annotation.NameInMap("cluster_id")
     private String clusterId;
 
-    @NameInMap("created")
+    @com.aliyun.core.annotation.NameInMap("created")
     private String created;
 
-    @NameInMap("current_stage")
+    @com.aliyun.core.annotation.NameInMap("current_stage")
     private String currentStage;
 
-    @NameInMap("error")
+    @com.aliyun.core.annotation.NameInMap("error")
     private Error error;
 
-    @NameInMap("events")
+    @com.aliyun.core.annotation.NameInMap("events")
     private java.util.List < Events> events;
 
-    @NameInMap("parameters")
+    @com.aliyun.core.annotation.NameInMap("parameters")
     private java.util.Map < String, ? > parameters;
 
-    @NameInMap("stages")
+    @com.aliyun.core.annotation.NameInMap("stages")
     private java.util.List < Stages> stages;
 
-    @NameInMap("state")
+    @com.aliyun.core.annotation.NameInMap("state")
     private String state;
 
-    @NameInMap("target")
+    @com.aliyun.core.annotation.NameInMap("target")
     private Target target;
 
-    @NameInMap("task_id")
+    @com.aliyun.core.annotation.NameInMap("task_id")
     private String taskId;
 
-    @NameInMap("task_result")
+    @com.aliyun.core.annotation.NameInMap("task_result")
     private java.util.List < TaskResult> taskResult;
 
-    @NameInMap("task_type")
+    @com.aliyun.core.annotation.NameInMap("task_type")
     private String taskType;
 
-    @NameInMap("updated")
+    @com.aliyun.core.annotation.NameInMap("updated")
     private String updated;
 
     private DescribeTaskInfoResponseBody(Builder builder) {
@@ -297,10 +296,10 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
     } 
 
     public static class Error extends TeaModel {
-        @NameInMap("code")
+        @com.aliyun.core.annotation.NameInMap("code")
         private String code;
 
-        @NameInMap("message")
+        @com.aliyun.core.annotation.NameInMap("message")
         private String message;
 
         private Error(Builder builder) {
@@ -358,22 +357,22 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
 
     }
     public static class Events extends TeaModel {
-        @NameInMap("action")
+        @com.aliyun.core.annotation.NameInMap("action")
         private String action;
 
-        @NameInMap("level")
+        @com.aliyun.core.annotation.NameInMap("level")
         private String level;
 
-        @NameInMap("message")
+        @com.aliyun.core.annotation.NameInMap("message")
         private String message;
 
-        @NameInMap("reason")
+        @com.aliyun.core.annotation.NameInMap("reason")
         private String reason;
 
-        @NameInMap("source")
+        @com.aliyun.core.annotation.NameInMap("source")
         private String source;
 
-        @NameInMap("timestamp")
+        @com.aliyun.core.annotation.NameInMap("timestamp")
         private String timestamp;
 
         private Events(Builder builder) {
@@ -499,19 +498,19 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
 
     }
     public static class Stages extends TeaModel {
-        @NameInMap("end_time")
+        @com.aliyun.core.annotation.NameInMap("end_time")
         private String endTime;
 
-        @NameInMap("message")
+        @com.aliyun.core.annotation.NameInMap("message")
         private String message;
 
-        @NameInMap("outputs")
+        @com.aliyun.core.annotation.NameInMap("outputs")
         private java.util.Map < String, ? > outputs;
 
-        @NameInMap("start_time")
+        @com.aliyun.core.annotation.NameInMap("start_time")
         private String startTime;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
         private Stages(Builder builder) {
@@ -620,10 +619,10 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
 
     }
     public static class Target extends TeaModel {
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Target(Builder builder) {
@@ -681,10 +680,10 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
 
     }
     public static class TaskResult extends TeaModel {
-        @NameInMap("data")
+        @com.aliyun.core.annotation.NameInMap("data")
         private String data;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
         private TaskResult(Builder builder) {

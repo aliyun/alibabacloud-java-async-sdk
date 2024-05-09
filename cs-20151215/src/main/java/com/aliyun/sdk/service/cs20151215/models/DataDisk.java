@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,46 +11,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DataDisk</p>
  */
 public class DataDisk extends TeaModel {
-    @NameInMap("auto_format")
+    @com.aliyun.core.annotation.NameInMap("auto_format")
     private Boolean autoFormat;
 
-    @NameInMap("auto_snapshot_policy_id")
+    @com.aliyun.core.annotation.NameInMap("auto_snapshot_policy_id")
     private String autoSnapshotPolicyId;
 
-    @NameInMap("bursting_enabled")
+    @com.aliyun.core.annotation.NameInMap("bursting_enabled")
     private Boolean burstingEnabled;
 
-    @NameInMap("category")
+    @com.aliyun.core.annotation.NameInMap("category")
     private String category;
 
-    @NameInMap("device")
+    @com.aliyun.core.annotation.NameInMap("device")
     private String device;
 
-    @NameInMap("disk_name")
+    @com.aliyun.core.annotation.NameInMap("disk_name")
     private String diskName;
 
-    @NameInMap("encrypted")
+    @com.aliyun.core.annotation.NameInMap("encrypted")
     private String encrypted;
 
-    @NameInMap("file_system")
+    @com.aliyun.core.annotation.NameInMap("file_system")
     private String fileSystem;
 
-    @NameInMap("kms_key_id")
+    @com.aliyun.core.annotation.NameInMap("kms_key_id")
     private String kmsKeyId;
 
-    @NameInMap("mount_target")
+    @com.aliyun.core.annotation.NameInMap("mount_target")
     private String mountTarget;
 
-    @NameInMap("performance_level")
+    @com.aliyun.core.annotation.NameInMap("performance_level")
     private String performanceLevel;
 
-    @NameInMap("provisioned_iops")
+    @com.aliyun.core.annotation.NameInMap("provisioned_iops")
     private Long provisionedIops;
 
-    @NameInMap("size")
+    @com.aliyun.core.annotation.NameInMap("size")
     private Long size;
 
-    @NameInMap("snapshot_id")
+    @com.aliyun.core.annotation.NameInMap("snapshot_id")
     private String snapshotId;
 
     private DataDisk(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTemplateAttributeResponse</p>
  */
 public class DescribeTemplateAttributeResponse extends Response {
-    @NameInMap("headers")
+    @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
-    @NameInMap("statusCode")
+    @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    @NameInMap("body")
+    @com.aliyun.core.annotation.NameInMap("body")
     private java.util.List < DescribeTemplateAttributeResponseBody> body;
 
     private DescribeTemplateAttributeResponse(BuilderImpl builder) {
@@ -124,34 +123,34 @@ public class DescribeTemplateAttributeResponse extends Response {
     } 
 
     public static class DescribeTemplateAttributeResponseBody extends TeaModel {
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("acl")
+        @com.aliyun.core.annotation.NameInMap("acl")
         private String acl;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("template")
+        @com.aliyun.core.annotation.NameInMap("template")
         private String template;
 
-        @NameInMap("template_type")
+        @com.aliyun.core.annotation.NameInMap("template_type")
         private String templateType;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("tags")
+        @com.aliyun.core.annotation.NameInMap("tags")
         private String tags;
 
-        @NameInMap("template_with_hist_id")
+        @com.aliyun.core.annotation.NameInMap("template_with_hist_id")
         private String templateWithHistId;
 
-        @NameInMap("created")
+        @com.aliyun.core.annotation.NameInMap("created")
         private String created;
 
-        @NameInMap("updated")
+        @com.aliyun.core.annotation.NameInMap("updated")
         private String updated;
 
         private DescribeTemplateAttributeResponseBody(Builder builder) {

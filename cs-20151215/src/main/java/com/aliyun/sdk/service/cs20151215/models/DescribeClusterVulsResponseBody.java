@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,7 +11,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeClusterVulsResponseBody</p>
  */
 public class DescribeClusterVulsResponseBody extends TeaModel {
-    @NameInMap("vul_records")
+    @com.aliyun.core.annotation.NameInMap("vul_records")
     private java.util.List < VulRecords> vulRecords;
 
     private DescribeClusterVulsResponseBody(Builder builder) {
@@ -52,28 +51,28 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
     } 
 
     public static class VulRecords extends TeaModel {
-        @NameInMap("cve_list")
+        @com.aliyun.core.annotation.NameInMap("cve_list")
         private java.util.List < String > cveList;
 
-        @NameInMap("necessity")
+        @com.aliyun.core.annotation.NameInMap("necessity")
         private String necessity;
 
-        @NameInMap("node_count")
+        @com.aliyun.core.annotation.NameInMap("node_count")
         private Integer nodeCount;
 
-        @NameInMap("nodepool_id")
+        @com.aliyun.core.annotation.NameInMap("nodepool_id")
         private String nodepoolId;
 
-        @NameInMap("nodepool_name")
+        @com.aliyun.core.annotation.NameInMap("nodepool_name")
         private String nodepoolName;
 
-        @NameInMap("vul_alias_name")
+        @com.aliyun.core.annotation.NameInMap("vul_alias_name")
         private String vulAliasName;
 
-        @NameInMap("vul_name")
+        @com.aliyun.core.annotation.NameInMap("vul_name")
         private String vulName;
 
-        @NameInMap("vul_type")
+        @com.aliyun.core.annotation.NameInMap("vul_type")
         private String vulType;
 
         private VulRecords(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,7 +11,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAddonsResponseBody</p>
  */
 public class ListAddonsResponseBody extends TeaModel {
-    @NameInMap("addons")
+    @com.aliyun.core.annotation.NameInMap("addons")
     private java.util.List < Addons> addons;
 
     private ListAddonsResponseBody(Builder builder) {
@@ -52,28 +51,28 @@ public class ListAddonsResponseBody extends TeaModel {
     } 
 
     public static class Addons extends TeaModel {
-        @NameInMap("architecture")
+        @com.aliyun.core.annotation.NameInMap("architecture")
         private java.util.List < String > architecture;
 
-        @NameInMap("category")
+        @com.aliyun.core.annotation.NameInMap("category")
         private String category;
 
-        @NameInMap("config_schema")
+        @com.aliyun.core.annotation.NameInMap("config_schema")
         private String configSchema;
 
-        @NameInMap("install_by_default")
+        @com.aliyun.core.annotation.NameInMap("install_by_default")
         private Boolean installByDefault;
 
-        @NameInMap("managed")
+        @com.aliyun.core.annotation.NameInMap("managed")
         private Boolean managed;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("supported_actions")
+        @com.aliyun.core.annotation.NameInMap("supported_actions")
         private java.util.List < String > supportedActions;
 
-        @NameInMap("version")
+        @com.aliyun.core.annotation.NameInMap("version")
         private String version;
 
         private Addons(Builder builder) {

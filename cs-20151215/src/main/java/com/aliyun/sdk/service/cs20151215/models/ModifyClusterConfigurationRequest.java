@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyClusterConfigurationRequest</p>
  */
 public class ModifyClusterConfigurationRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Body
-    @NameInMap("customize_config")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("customize_config")
     private java.util.List < CustomizeConfig> customizeConfig;
 
     private ModifyClusterConfigurationRequest(Builder builder) {
@@ -94,10 +93,10 @@ public class ModifyClusterConfigurationRequest extends Request {
     } 
 
     public static class Configs extends TeaModel {
-        @NameInMap("key")
+        @com.aliyun.core.annotation.NameInMap("key")
         private String key;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private Configs(Builder builder) {
@@ -155,10 +154,10 @@ public class ModifyClusterConfigurationRequest extends Request {
 
     }
     public static class CustomizeConfig extends TeaModel {
-        @NameInMap("configs")
+        @com.aliyun.core.annotation.NameInMap("configs")
         private java.util.List < Configs> configs;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private CustomizeConfig(Builder builder) {

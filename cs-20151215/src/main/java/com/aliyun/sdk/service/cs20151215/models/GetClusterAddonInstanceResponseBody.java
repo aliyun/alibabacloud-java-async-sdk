@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetClusterAddonInstanceResponseBody</p>
  */
 public class GetClusterAddonInstanceResponseBody extends TeaModel {
-    @NameInMap("config")
+    @com.aliyun.core.annotation.NameInMap("config")
     private String config;
 
-    @NameInMap("logging")
+    @com.aliyun.core.annotation.NameInMap("logging")
     private Logging logging;
 
-    @NameInMap("name")
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @NameInMap("state")
+    @com.aliyun.core.annotation.NameInMap("state")
     private String state;
 
-    @NameInMap("version")
+    @com.aliyun.core.annotation.NameInMap("version")
     private String version;
 
     private GetClusterAddonInstanceResponseBody(Builder builder) {
@@ -138,16 +137,16 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
     } 
 
     public static class Logging extends TeaModel {
-        @NameInMap("capable")
+        @com.aliyun.core.annotation.NameInMap("capable")
         private Boolean capable;
 
-        @NameInMap("enabled")
+        @com.aliyun.core.annotation.NameInMap("enabled")
         private Boolean enabled;
 
-        @NameInMap("log_project")
+        @com.aliyun.core.annotation.NameInMap("log_project")
         private String logProject;
 
-        @NameInMap("logstore")
+        @com.aliyun.core.annotation.NameInMap("logstore")
         private String logstore;
 
         private Logging(Builder builder) {

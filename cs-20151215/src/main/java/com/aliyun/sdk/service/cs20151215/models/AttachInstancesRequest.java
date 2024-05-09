@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,62 +11,62 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AttachInstancesRequest</p>
  */
 public class AttachInstancesRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Body
-    @NameInMap("cpu_policy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("cpu_policy")
     private String cpuPolicy;
 
-    @Body
-    @NameInMap("format_disk")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("format_disk")
     private Boolean formatDisk;
 
-    @Body
-    @NameInMap("image_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("image_id")
     private String imageId;
 
-    @Body
-    @NameInMap("instances")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("instances")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > instances;
 
-    @Body
-    @NameInMap("is_edge_worker")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("is_edge_worker")
     private Boolean isEdgeWorker;
 
-    @Body
-    @NameInMap("keep_instance_name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("keep_instance_name")
     private Boolean keepInstanceName;
 
-    @Body
-    @NameInMap("key_pair")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("key_pair")
     private String keyPair;
 
-    @Body
-    @NameInMap("nodepool_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("nodepool_id")
     private String nodepoolId;
 
-    @Body
-    @NameInMap("password")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("password")
     private String password;
 
-    @Body
-    @NameInMap("rds_instances")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("rds_instances")
     private java.util.List < String > rdsInstances;
 
-    @Body
-    @NameInMap("runtime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("runtime")
     private Runtime runtime;
 
-    @Body
-    @NameInMap("tags")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("tags")
     private java.util.List < Tag > tags;
 
-    @Body
-    @NameInMap("user_data")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("user_data")
     private String userData;
 
     private AttachInstancesRequest(Builder builder) {

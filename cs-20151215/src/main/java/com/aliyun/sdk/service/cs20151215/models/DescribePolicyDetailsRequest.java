@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePolicyDetailsRequest</p>
  */
 public class DescribePolicyDetailsRequest extends Request {
-    @Path
-    @NameInMap("policy_name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("policy_name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyName;
 
     private DescribePolicyDetailsRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateControlPlaneLogRequest</p>
  */
 public class UpdateControlPlaneLogRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Body
-    @NameInMap("aliuid")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("aliuid")
     private String aliuid;
 
-    @Body
-    @NameInMap("components")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("components")
     private java.util.List < String > components;
 
-    @Body
-    @NameInMap("log_project")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("log_project")
     private String logProject;
 
-    @Body
-    @NameInMap("log_ttl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("log_ttl")
     private String logTtl;
 
     private UpdateControlPlaneLogRequest(Builder builder) {

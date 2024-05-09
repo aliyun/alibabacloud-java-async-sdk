@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,8 +11,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteAlertContactGroupRequest</p>
  */
 public class DeleteAlertContactGroupRequest extends Request {
-    @Query
-    @NameInMap("contact_group_ids")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("contact_group_ids")
     private java.util.List < Long > contactGroupIds;
 
     private DeleteAlertContactGroupRequest(Builder builder) {

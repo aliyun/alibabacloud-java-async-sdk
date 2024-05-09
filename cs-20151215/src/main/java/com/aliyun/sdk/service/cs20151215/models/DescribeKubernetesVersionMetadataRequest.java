@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeKubernetesVersionMetadataRequest</p>
  */
 public class DescribeKubernetesVersionMetadataRequest extends Request {
-    @Query
-    @NameInMap("ClusterType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterType;
 
-    @Query
-    @NameInMap("KubernetesVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KubernetesVersion")
     private String kubernetesVersion;
 
-    @Query
-    @NameInMap("Mode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mode")
     private String mode;
 
-    @Query
-    @NameInMap("Profile")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Profile")
     private String profile;
 
-    @Query
-    @NameInMap("Region")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String region;
 
-    @Query
-    @NameInMap("runtime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("runtime")
     private String runtime;
 
     private DescribeKubernetesVersionMetadataRequest(Builder builder) {

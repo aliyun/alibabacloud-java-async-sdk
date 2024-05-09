@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,81 +11,81 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StartWorkflowRequest</p>
  */
 public class StartWorkflowRequest extends Request {
-    @Body
-    @NameInMap("mapping_bam_out_filename")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("mapping_bam_out_filename")
     private String mappingBamOutFilename;
 
-    @Body
-    @NameInMap("mapping_bam_out_path")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("mapping_bam_out_path")
     private String mappingBamOutPath;
 
-    @Body
-    @NameInMap("mapping_bucket_name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("mapping_bucket_name")
     private String mappingBucketName;
 
-    @Body
-    @NameInMap("mapping_fastq_first_filename")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("mapping_fastq_first_filename")
     private String mappingFastqFirstFilename;
 
-    @Body
-    @NameInMap("mapping_fastq_path")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("mapping_fastq_path")
     private String mappingFastqPath;
 
-    @Body
-    @NameInMap("mapping_fastq_second_filename")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("mapping_fastq_second_filename")
     private String mappingFastqSecondFilename;
 
-    @Body
-    @NameInMap("mapping_is_mark_dup")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("mapping_is_mark_dup")
     private String mappingIsMarkDup;
 
-    @Body
-    @NameInMap("mapping_oss_region")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("mapping_oss_region")
     private String mappingOssRegion;
 
-    @Body
-    @NameInMap("mapping_reference_path")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("mapping_reference_path")
     private String mappingReferencePath;
 
-    @Body
-    @NameInMap("service")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("service")
     private String service;
 
-    @Body
-    @NameInMap("wgs_bucket_name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("wgs_bucket_name")
     private String wgsBucketName;
 
-    @Body
-    @NameInMap("wgs_fastq_first_filename")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("wgs_fastq_first_filename")
     private String wgsFastqFirstFilename;
 
-    @Body
-    @NameInMap("wgs_fastq_path")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("wgs_fastq_path")
     private String wgsFastqPath;
 
-    @Body
-    @NameInMap("wgs_fastq_second_filename")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("wgs_fastq_second_filename")
     private String wgsFastqSecondFilename;
 
-    @Body
-    @NameInMap("wgs_oss_region")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("wgs_oss_region")
     private String wgsOssRegion;
 
-    @Body
-    @NameInMap("wgs_reference_path")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("wgs_reference_path")
     private String wgsReferencePath;
 
-    @Body
-    @NameInMap("wgs_vcf_out_filename")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("wgs_vcf_out_filename")
     private String wgsVcfOutFilename;
 
-    @Body
-    @NameInMap("wgs_vcf_out_path")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("wgs_vcf_out_path")
     private String wgsVcfOutPath;
 
-    @Body
-    @NameInMap("workflow_type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("workflow_type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workflowType;
 
     private StartWorkflowRequest(Builder builder) {

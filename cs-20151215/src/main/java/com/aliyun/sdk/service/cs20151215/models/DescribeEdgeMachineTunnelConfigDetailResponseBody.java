@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEdgeMachineTunnelConfigDetailResponseBody</p>
  */
 public class DescribeEdgeMachineTunnelConfigDetailResponseBody extends TeaModel {
-    @NameInMap("device_name")
+    @com.aliyun.core.annotation.NameInMap("device_name")
     private String deviceName;
 
-    @NameInMap("model")
+    @com.aliyun.core.annotation.NameInMap("model")
     private String model;
 
-    @NameInMap("product_key")
+    @com.aliyun.core.annotation.NameInMap("product_key")
     private String productKey;
 
-    @NameInMap("request_id")
+    @com.aliyun.core.annotation.NameInMap("request_id")
     private String requestId;
 
-    @NameInMap("sn")
+    @com.aliyun.core.annotation.NameInMap("sn")
     private String sn;
 
-    @NameInMap("token")
+    @com.aliyun.core.annotation.NameInMap("token")
     private String token;
 
-    @NameInMap("tunnel_endpoint")
+    @com.aliyun.core.annotation.NameInMap("tunnel_endpoint")
     private String tunnelEndpoint;
 
     private DescribeEdgeMachineTunnelConfigDetailResponseBody(Builder builder) {

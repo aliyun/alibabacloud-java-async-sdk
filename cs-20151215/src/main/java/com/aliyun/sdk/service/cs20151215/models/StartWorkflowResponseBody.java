@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,7 +11,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StartWorkflowResponseBody</p>
  */
 public class StartWorkflowResponseBody extends TeaModel {
-    @NameInMap("JobName")
+    @com.aliyun.core.annotation.NameInMap("JobName")
     private String jobName;
 
     private StartWorkflowResponseBody(Builder builder) {

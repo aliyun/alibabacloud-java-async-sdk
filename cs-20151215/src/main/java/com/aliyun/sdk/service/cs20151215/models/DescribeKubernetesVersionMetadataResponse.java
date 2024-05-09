@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeKubernetesVersionMetadataResponse</p>
  */
 public class DescribeKubernetesVersionMetadataResponse extends Response {
-    @NameInMap("headers")
+    @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
-    @NameInMap("statusCode")
+    @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    @NameInMap("body")
+    @com.aliyun.core.annotation.NameInMap("body")
     private java.util.List < DescribeKubernetesVersionMetadataResponseBody> body;
 
     private DescribeKubernetesVersionMetadataResponse(BuilderImpl builder) {
@@ -124,28 +123,28 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
     } 
 
     public static class Images extends TeaModel {
-        @NameInMap("image_id")
+        @com.aliyun.core.annotation.NameInMap("image_id")
         private String imageId;
 
-        @NameInMap("image_name")
+        @com.aliyun.core.annotation.NameInMap("image_name")
         private String imageName;
 
-        @NameInMap("platform")
+        @com.aliyun.core.annotation.NameInMap("platform")
         private String platform;
 
-        @NameInMap("os_version")
+        @com.aliyun.core.annotation.NameInMap("os_version")
         private String osVersion;
 
-        @NameInMap("image_type")
+        @com.aliyun.core.annotation.NameInMap("image_type")
         private String imageType;
 
-        @NameInMap("os_type")
+        @com.aliyun.core.annotation.NameInMap("os_type")
         private String osType;
 
-        @NameInMap("image_category")
+        @com.aliyun.core.annotation.NameInMap("image_category")
         private String imageCategory;
 
-        @NameInMap("architecture")
+        @com.aliyun.core.annotation.NameInMap("architecture")
         private String architecture;
 
         private Images(Builder builder) {
@@ -332,28 +331,28 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
 
     }
     public static class DescribeKubernetesVersionMetadataResponseBody extends TeaModel {
-        @NameInMap("capabilities")
+        @com.aliyun.core.annotation.NameInMap("capabilities")
         private java.util.Map < String, ? > capabilities;
 
-        @NameInMap("images")
+        @com.aliyun.core.annotation.NameInMap("images")
         private java.util.List < Images> images;
 
-        @NameInMap("meta_data")
+        @com.aliyun.core.annotation.NameInMap("meta_data")
         private java.util.Map < String, ? > metaData;
 
-        @NameInMap("runtimes")
+        @com.aliyun.core.annotation.NameInMap("runtimes")
         private java.util.List < Runtime > runtimes;
 
-        @NameInMap("version")
+        @com.aliyun.core.annotation.NameInMap("version")
         private String version;
 
-        @NameInMap("release_date")
+        @com.aliyun.core.annotation.NameInMap("release_date")
         private String releaseDate;
 
-        @NameInMap("expiration_date")
+        @com.aliyun.core.annotation.NameInMap("expiration_date")
         private String expirationDate;
 
-        @NameInMap("creatable")
+        @com.aliyun.core.annotation.NameInMap("creatable")
         private Boolean creatable;
 
         private DescribeKubernetesVersionMetadataResponseBody(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAddonsRequest</p>
  */
 public class DescribeAddonsRequest extends Request {
-    @Query
-    @NameInMap("cluster_profile")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("cluster_profile")
     private String clusterProfile;
 
-    @Query
-    @NameInMap("cluster_spec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("cluster_spec")
     private String clusterSpec;
 
-    @Query
-    @NameInMap("cluster_type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("cluster_type")
     private String clusterType;
 
-    @Query
-    @NameInMap("cluster_version")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("cluster_version")
     private String clusterVersion;
 
-    @Query
-    @NameInMap("region")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("region")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String region;
 
     private DescribeAddonsRequest(Builder builder) {
@@ -111,7 +110,7 @@ public class DescribeAddonsRequest extends Request {
         } 
 
         /**
-         * The type of cluster. Valid values:
+         * The cluster type. Valid values:
          * <p>
          * 
          * *   `Default`: ACK managed cluster

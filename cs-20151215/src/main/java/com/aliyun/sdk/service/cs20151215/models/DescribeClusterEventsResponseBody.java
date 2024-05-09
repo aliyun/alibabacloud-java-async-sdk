@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeClusterEventsResponseBody</p>
  */
 public class DescribeClusterEventsResponseBody extends TeaModel {
-    @NameInMap("events")
+    @com.aliyun.core.annotation.NameInMap("events")
     private java.util.List < Events> events;
 
-    @NameInMap("page_info")
+    @com.aliyun.core.annotation.NameInMap("page_info")
     private PageInfo pageInfo;
 
     private DescribeClusterEventsResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("level")
+        @com.aliyun.core.annotation.NameInMap("level")
         private String level;
 
-        @NameInMap("message")
+        @com.aliyun.core.annotation.NameInMap("message")
         private String message;
 
-        @NameInMap("reason")
+        @com.aliyun.core.annotation.NameInMap("reason")
         private String reason;
 
         private Data(Builder builder) {
@@ -180,25 +179,25 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
 
     }
     public static class Events extends TeaModel {
-        @NameInMap("cluster_id")
+        @com.aliyun.core.annotation.NameInMap("cluster_id")
         private String clusterId;
 
-        @NameInMap("data")
+        @com.aliyun.core.annotation.NameInMap("data")
         private Data data;
 
-        @NameInMap("event_id")
+        @com.aliyun.core.annotation.NameInMap("event_id")
         private String eventId;
 
-        @NameInMap("source")
+        @com.aliyun.core.annotation.NameInMap("source")
         private String source;
 
-        @NameInMap("subject")
+        @com.aliyun.core.annotation.NameInMap("subject")
         private String subject;
 
-        @NameInMap("time")
+        @com.aliyun.core.annotation.NameInMap("time")
         private String time;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Events(Builder builder) {
@@ -341,13 +340,13 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("page_number")
+        @com.aliyun.core.annotation.NameInMap("page_number")
         private Long pageNumber;
 
-        @NameInMap("page_size")
+        @com.aliyun.core.annotation.NameInMap("page_size")
         private Long pageSize;
 
-        @NameInMap("total_count")
+        @com.aliyun.core.annotation.NameInMap("total_count")
         private Long totalCount;
 
         private PageInfo(Builder builder) {

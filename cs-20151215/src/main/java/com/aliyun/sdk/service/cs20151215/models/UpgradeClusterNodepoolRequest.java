@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,42 +11,42 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpgradeClusterNodepoolRequest</p>
  */
 public class UpgradeClusterNodepoolRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("NodepoolId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("NodepoolId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodepoolId;
 
-    @Body
-    @NameInMap("image_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("image_id")
     private String imageId;
 
-    @Body
-    @NameInMap("kubernetes_version")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("kubernetes_version")
     private String kubernetesVersion;
 
-    @Body
-    @NameInMap("node_names")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("node_names")
     private java.util.List < String > nodeNames;
 
-    @Body
-    @NameInMap("rolling_policy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("rolling_policy")
     private RollingPolicy rollingPolicy;
 
-    @Body
-    @NameInMap("runtime_type")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("runtime_type")
     private String runtimeType;
 
-    @Body
-    @NameInMap("runtime_version")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("runtime_version")
     private String runtimeVersion;
 
-    @Body
-    @NameInMap("use_replace")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("use_replace")
     private Boolean useReplace;
 
     private UpgradeClusterNodepoolRequest(Builder builder) {
@@ -256,13 +255,13 @@ public class UpgradeClusterNodepoolRequest extends Request {
     } 
 
     public static class RollingPolicy extends TeaModel {
-        @NameInMap("batch_interval")
+        @com.aliyun.core.annotation.NameInMap("batch_interval")
         private Integer batchInterval;
 
-        @NameInMap("max_parallelism")
+        @com.aliyun.core.annotation.NameInMap("max_parallelism")
         private Integer maxParallelism;
 
-        @NameInMap("pause_policy")
+        @com.aliyun.core.annotation.NameInMap("pause_policy")
         private String pausePolicy;
 
         private RollingPolicy(Builder builder) {

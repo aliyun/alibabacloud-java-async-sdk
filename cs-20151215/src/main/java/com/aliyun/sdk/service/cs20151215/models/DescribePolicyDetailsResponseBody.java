@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePolicyDetailsResponseBody</p>
  */
 public class DescribePolicyDetailsResponseBody extends TeaModel {
-    @NameInMap("action")
+    @com.aliyun.core.annotation.NameInMap("action")
     private String action;
 
-    @NameInMap("category")
+    @com.aliyun.core.annotation.NameInMap("category")
     private String category;
 
-    @NameInMap("description")
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @NameInMap("is_deleted")
+    @com.aliyun.core.annotation.NameInMap("is_deleted")
     private Integer isDeleted;
 
-    @NameInMap("name")
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @NameInMap("no_config")
+    @com.aliyun.core.annotation.NameInMap("no_config")
     private Integer noConfig;
 
-    @NameInMap("severity")
+    @com.aliyun.core.annotation.NameInMap("severity")
     private String severity;
 
-    @NameInMap("template")
+    @com.aliyun.core.annotation.NameInMap("template")
     private String template;
 
     private DescribePolicyDetailsResponseBody(Builder builder) {

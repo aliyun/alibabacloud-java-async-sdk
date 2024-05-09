@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEdgeMachinesResponseBody</p>
  */
 public class DescribeEdgeMachinesResponseBody extends TeaModel {
-    @NameInMap("edge_machines")
+    @com.aliyun.core.annotation.NameInMap("edge_machines")
     private java.util.List < EdgeMachines> edgeMachines;
 
-    @NameInMap("page_info")
+    @com.aliyun.core.annotation.NameInMap("page_info")
     private PageInfo pageInfo;
 
     private DescribeEdgeMachinesResponseBody(Builder builder) {
@@ -72,34 +71,34 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
     } 
 
     public static class EdgeMachines extends TeaModel {
-        @NameInMap("active_time")
+        @com.aliyun.core.annotation.NameInMap("active_time")
         private String activeTime;
 
-        @NameInMap("created")
+        @com.aliyun.core.annotation.NameInMap("created")
         private String created;
 
-        @NameInMap("edge_machine_id")
+        @com.aliyun.core.annotation.NameInMap("edge_machine_id")
         private String edgeMachineId;
 
-        @NameInMap("hostname")
+        @com.aliyun.core.annotation.NameInMap("hostname")
         private String hostname;
 
-        @NameInMap("life_state")
+        @com.aliyun.core.annotation.NameInMap("life_state")
         private String lifeState;
 
-        @NameInMap("model")
+        @com.aliyun.core.annotation.NameInMap("model")
         private String model;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("online_state")
+        @com.aliyun.core.annotation.NameInMap("online_state")
         private String onlineState;
 
-        @NameInMap("sn")
+        @com.aliyun.core.annotation.NameInMap("sn")
         private String sn;
 
-        @NameInMap("updated")
+        @com.aliyun.core.annotation.NameInMap("updated")
         private String updated;
 
         private EdgeMachines(Builder builder) {
@@ -293,13 +292,13 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("page_number")
+        @com.aliyun.core.annotation.NameInMap("page_number")
         private Integer pageNumber;
 
-        @NameInMap("page_size")
+        @com.aliyun.core.annotation.NameInMap("page_size")
         private Integer pageSize;
 
-        @NameInMap("total_count")
+        @com.aliyun.core.annotation.NameInMap("total_count")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {

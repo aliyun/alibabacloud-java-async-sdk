@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetClusterCheckResponseBody</p>
  */
 public class GetClusterCheckResponseBody extends TeaModel {
-    @NameInMap("check_id")
+    @com.aliyun.core.annotation.NameInMap("check_id")
     private String checkId;
 
-    @NameInMap("check_items")
+    @com.aliyun.core.annotation.NameInMap("check_items")
     private java.util.Map < String, java.util.List<java.util.Map<String, ?>>> checkItems;
 
-    @NameInMap("created_at")
+    @com.aliyun.core.annotation.NameInMap("created_at")
     private String createdAt;
 
-    @NameInMap("finished_at")
+    @com.aliyun.core.annotation.NameInMap("finished_at")
     private String finishedAt;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("status")
+    @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
-    @NameInMap("type")
+    @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
     private GetClusterCheckResponseBody(Builder builder) {

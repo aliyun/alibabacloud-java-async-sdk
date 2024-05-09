@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,26 +11,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyNodePoolNodeConfigRequest</p>
  */
 public class ModifyNodePoolNodeConfigRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("NodepoolId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("NodepoolId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodepoolId;
 
-    @Body
-    @NameInMap("kubelet_config")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("kubelet_config")
     private KubeletConfig kubeletConfig;
 
-    @Body
-    @NameInMap("os_config")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("os_config")
     private OsConfig osConfig;
 
-    @Body
-    @NameInMap("rolling_policy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("rolling_policy")
     private RollingPolicy rollingPolicy;
 
     private ModifyNodePoolNodeConfigRequest(Builder builder) {
@@ -164,7 +163,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
     } 
 
     public static class OsConfig extends TeaModel {
-        @NameInMap("sysctl")
+        @com.aliyun.core.annotation.NameInMap("sysctl")
         private java.util.Map < String, ? > sysctl;
 
         private OsConfig(Builder builder) {
@@ -205,7 +204,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
 
     }
     public static class RollingPolicy extends TeaModel {
-        @NameInMap("max_parallelism")
+        @com.aliyun.core.annotation.NameInMap("max_parallelism")
         private Long maxParallelism;
 
         private RollingPolicy(Builder builder) {

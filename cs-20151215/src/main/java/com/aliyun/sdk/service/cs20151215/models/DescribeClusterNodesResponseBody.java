@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeClusterNodesResponseBody</p>
  */
 public class DescribeClusterNodesResponseBody extends TeaModel {
-    @NameInMap("nodes")
+    @com.aliyun.core.annotation.NameInMap("nodes")
     private java.util.List < Nodes> nodes;
 
-    @NameInMap("page")
+    @com.aliyun.core.annotation.NameInMap("page")
     private Page page;
 
     private DescribeClusterNodesResponseBody(Builder builder) {
@@ -72,64 +71,64 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
     } 
 
     public static class Nodes extends TeaModel {
-        @NameInMap("creation_time")
+        @com.aliyun.core.annotation.NameInMap("creation_time")
         private String creationTime;
 
-        @NameInMap("error_message")
+        @com.aliyun.core.annotation.NameInMap("error_message")
         private String errorMessage;
 
-        @NameInMap("expired_time")
+        @com.aliyun.core.annotation.NameInMap("expired_time")
         private String expiredTime;
 
-        @NameInMap("host_name")
+        @com.aliyun.core.annotation.NameInMap("host_name")
         private String hostName;
 
-        @NameInMap("image_id")
+        @com.aliyun.core.annotation.NameInMap("image_id")
         private String imageId;
 
-        @NameInMap("instance_charge_type")
+        @com.aliyun.core.annotation.NameInMap("instance_charge_type")
         private String instanceChargeType;
 
-        @NameInMap("instance_id")
+        @com.aliyun.core.annotation.NameInMap("instance_id")
         private String instanceId;
 
-        @NameInMap("instance_name")
+        @com.aliyun.core.annotation.NameInMap("instance_name")
         private String instanceName;
 
-        @NameInMap("instance_role")
+        @com.aliyun.core.annotation.NameInMap("instance_role")
         private String instanceRole;
 
-        @NameInMap("instance_status")
+        @com.aliyun.core.annotation.NameInMap("instance_status")
         private String instanceStatus;
 
-        @NameInMap("instance_type")
+        @com.aliyun.core.annotation.NameInMap("instance_type")
         private String instanceType;
 
-        @NameInMap("instance_type_family")
+        @com.aliyun.core.annotation.NameInMap("instance_type_family")
         private String instanceTypeFamily;
 
-        @NameInMap("ip_address")
+        @com.aliyun.core.annotation.NameInMap("ip_address")
         private java.util.List < String > ipAddress;
 
-        @NameInMap("is_aliyun_node")
+        @com.aliyun.core.annotation.NameInMap("is_aliyun_node")
         private Boolean isAliyunNode;
 
-        @NameInMap("node_name")
+        @com.aliyun.core.annotation.NameInMap("node_name")
         private String nodeName;
 
-        @NameInMap("node_status")
+        @com.aliyun.core.annotation.NameInMap("node_status")
         private String nodeStatus;
 
-        @NameInMap("nodepool_id")
+        @com.aliyun.core.annotation.NameInMap("nodepool_id")
         private String nodepoolId;
 
-        @NameInMap("source")
+        @com.aliyun.core.annotation.NameInMap("source")
         private String source;
 
-        @NameInMap("spot_strategy")
+        @com.aliyun.core.annotation.NameInMap("spot_strategy")
         private String spotStrategy;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
         private Nodes(Builder builder) {
@@ -523,13 +522,13 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
 
     }
     public static class Page extends TeaModel {
-        @NameInMap("page_number")
+        @com.aliyun.core.annotation.NameInMap("page_number")
         private Integer pageNumber;
 
-        @NameInMap("page_size")
+        @com.aliyun.core.annotation.NameInMap("page_size")
         private Integer pageSize;
 
-        @NameInMap("total_count")
+        @com.aliyun.core.annotation.NameInMap("total_count")
         private Integer totalCount;
 
         private Page(Builder builder) {

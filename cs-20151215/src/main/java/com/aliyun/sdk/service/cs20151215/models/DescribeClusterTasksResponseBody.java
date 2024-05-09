@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeClusterTasksResponseBody</p>
  */
 public class DescribeClusterTasksResponseBody extends TeaModel {
-    @NameInMap("page_info")
+    @com.aliyun.core.annotation.NameInMap("page_info")
     private PageInfo pageInfo;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("tasks")
+    @com.aliyun.core.annotation.NameInMap("tasks")
     private java.util.List < Tasks> tasks;
 
     private DescribeClusterTasksResponseBody(Builder builder) {
@@ -92,13 +91,13 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
     } 
 
     public static class PageInfo extends TeaModel {
-        @NameInMap("page_number")
+        @com.aliyun.core.annotation.NameInMap("page_number")
         private Long pageNumber;
 
-        @NameInMap("page_size")
+        @com.aliyun.core.annotation.NameInMap("page_size")
         private Long pageSize;
 
-        @NameInMap("total_count")
+        @com.aliyun.core.annotation.NameInMap("total_count")
         private Long totalCount;
 
         private PageInfo(Builder builder) {
@@ -173,10 +172,10 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
 
     }
     public static class Error extends TeaModel {
-        @NameInMap("code")
+        @com.aliyun.core.annotation.NameInMap("code")
         private String code;
 
-        @NameInMap("message")
+        @com.aliyun.core.annotation.NameInMap("message")
         private String message;
 
         private Error(Builder builder) {
@@ -234,22 +233,22 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
 
     }
     public static class Tasks extends TeaModel {
-        @NameInMap("created")
+        @com.aliyun.core.annotation.NameInMap("created")
         private String created;
 
-        @NameInMap("error")
+        @com.aliyun.core.annotation.NameInMap("error")
         private Error error;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
-        @NameInMap("task_id")
+        @com.aliyun.core.annotation.NameInMap("task_id")
         private String taskId;
 
-        @NameInMap("task_type")
+        @com.aliyun.core.annotation.NameInMap("task_type")
         private String taskType;
 
-        @NameInMap("updated")
+        @com.aliyun.core.annotation.NameInMap("updated")
         private String updated;
 
         private Tasks(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeClusterTasksRequest</p>
  */
 public class DescribeClusterTasksRequest extends Request {
-    @Path
-    @NameInMap("cluster_id")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("cluster_id")
     private String clusterId;
 
-    @Query
-    @NameInMap("page_number")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page_number")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("page_size")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page_size")
     private Integer pageSize;
 
     private DescribeClusterTasksRequest(Builder builder) {

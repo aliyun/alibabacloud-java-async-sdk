@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeClusterAddonInstanceRequest</p>
  */
 public class DescribeClusterAddonInstanceRequest extends Request {
-    @Path
-    @NameInMap("ClusterID")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterID")
     private String clusterID;
 
-    @Path
-    @NameInMap("AddonName")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("AddonName")
     private String addonName;
 
     private DescribeClusterAddonInstanceRequest(Builder builder) {

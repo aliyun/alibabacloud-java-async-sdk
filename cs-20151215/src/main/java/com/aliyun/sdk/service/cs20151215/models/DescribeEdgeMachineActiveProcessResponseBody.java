@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEdgeMachineActiveProcessResponseBody</p>
  */
 public class DescribeEdgeMachineActiveProcessResponseBody extends TeaModel {
-    @NameInMap("logs")
+    @com.aliyun.core.annotation.NameInMap("logs")
     private String logs;
 
-    @NameInMap("progress")
+    @com.aliyun.core.annotation.NameInMap("progress")
     private Long progress;
 
-    @NameInMap("request_id")
+    @com.aliyun.core.annotation.NameInMap("request_id")
     private String requestId;
 
-    @NameInMap("state")
+    @com.aliyun.core.annotation.NameInMap("state")
     private String state;
 
-    @NameInMap("step")
+    @com.aliyun.core.annotation.NameInMap("step")
     private String step;
 
     private DescribeEdgeMachineActiveProcessResponseBody(Builder builder) {

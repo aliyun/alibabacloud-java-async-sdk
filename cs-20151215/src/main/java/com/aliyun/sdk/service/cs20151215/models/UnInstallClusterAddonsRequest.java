@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UnInstallClusterAddonsRequest</p>
  */
 public class UnInstallClusterAddonsRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Body
-    @NameInMap("addons")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("addons")
     private java.util.List < Addons> addons;
 
     private UnInstallClusterAddonsRequest(Builder builder) {
@@ -94,10 +93,10 @@ public class UnInstallClusterAddonsRequest extends Request {
     } 
 
     public static class Addons extends TeaModel {
-        @NameInMap("cleanup_cloud_resources")
+        @com.aliyun.core.annotation.NameInMap("cleanup_cloud_resources")
         private Boolean cleanupCloudResources;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private Addons(Builder builder) {

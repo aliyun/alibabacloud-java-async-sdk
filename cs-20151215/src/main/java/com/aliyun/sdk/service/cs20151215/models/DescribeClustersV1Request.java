@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeClustersV1Request</p>
  */
 public class DescribeClustersV1Request extends Request {
-    @Query
-    @NameInMap("cluster_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("cluster_id")
     private String clusterId;
 
-    @Query
-    @NameInMap("cluster_spec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("cluster_spec")
     private String clusterSpec;
 
-    @Query
-    @NameInMap("cluster_type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("cluster_type")
     private String clusterType;
 
-    @Query
-    @NameInMap("name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @Query
-    @NameInMap("page_number")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page_number")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("page_size")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page_size")
     private Long pageSize;
 
-    @Query
-    @NameInMap("profile")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("profile")
     private String profile;
 
-    @Query
-    @NameInMap("region_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("region_id")
     private String regionId;
 
     private DescribeClustersV1Request(Builder builder) {

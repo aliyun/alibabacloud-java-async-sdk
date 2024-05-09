@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeClusterResourcesResponse</p>
  */
 public class DescribeClusterResourcesResponse extends Response {
-    @NameInMap("headers")
+    @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
-    @NameInMap("statusCode")
+    @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    @NameInMap("body")
+    @com.aliyun.core.annotation.NameInMap("body")
     private java.util.List < DescribeClusterResourcesResponseBody> body;
 
     private DescribeClusterResourcesResponse(BuilderImpl builder) {
@@ -124,13 +123,13 @@ public class DescribeClusterResourcesResponse extends Response {
     } 
 
     public static class Dependencies extends TeaModel {
-        @NameInMap("cluster_id")
+        @com.aliyun.core.annotation.NameInMap("cluster_id")
         private String clusterId;
 
-        @NameInMap("resource_type")
+        @com.aliyun.core.annotation.NameInMap("resource_type")
         private String resourceType;
 
-        @NameInMap("instance_id")
+        @com.aliyun.core.annotation.NameInMap("instance_id")
         private String instanceId;
 
         private Dependencies(Builder builder) {
@@ -205,13 +204,13 @@ public class DescribeClusterResourcesResponse extends Response {
 
     }
     public static class AssociatedObject extends TeaModel {
-        @NameInMap("kind")
+        @com.aliyun.core.annotation.NameInMap("kind")
         private String kind;
 
-        @NameInMap("namespace")
+        @com.aliyun.core.annotation.NameInMap("namespace")
         private String namespace;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private AssociatedObject(Builder builder) {
@@ -286,10 +285,10 @@ public class DescribeClusterResourcesResponse extends Response {
 
     }
     public static class DeleteBehavior extends TeaModel {
-        @NameInMap("delete_by_default")
+        @com.aliyun.core.annotation.NameInMap("delete_by_default")
         private Boolean deleteByDefault;
 
-        @NameInMap("changeable")
+        @com.aliyun.core.annotation.NameInMap("changeable")
         private Boolean changeable;
 
         private DeleteBehavior(Builder builder) {
@@ -347,40 +346,40 @@ public class DescribeClusterResourcesResponse extends Response {
 
     }
     public static class DescribeClusterResourcesResponseBody extends TeaModel {
-        @NameInMap("cluster_id")
+        @com.aliyun.core.annotation.NameInMap("cluster_id")
         private String clusterId;
 
-        @NameInMap("created")
+        @com.aliyun.core.annotation.NameInMap("created")
         private String created;
 
-        @NameInMap("instance_id")
+        @com.aliyun.core.annotation.NameInMap("instance_id")
         private String instanceId;
 
-        @NameInMap("resource_info")
+        @com.aliyun.core.annotation.NameInMap("resource_info")
         private String resourceInfo;
 
-        @NameInMap("resource_type")
+        @com.aliyun.core.annotation.NameInMap("resource_type")
         private String resourceType;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
-        @NameInMap("auto_create")
+        @com.aliyun.core.annotation.NameInMap("auto_create")
         private Long autoCreate;
 
-        @NameInMap("dependencies")
+        @com.aliyun.core.annotation.NameInMap("dependencies")
         private java.util.List < Dependencies> dependencies;
 
-        @NameInMap("associated_object")
+        @com.aliyun.core.annotation.NameInMap("associated_object")
         private AssociatedObject associatedObject;
 
-        @NameInMap("delete_behavior")
+        @com.aliyun.core.annotation.NameInMap("delete_behavior")
         private DeleteBehavior deleteBehavior;
 
-        @NameInMap("creator_type")
+        @com.aliyun.core.annotation.NameInMap("creator_type")
         private String creatorType;
 
-        @NameInMap("extra_info")
+        @com.aliyun.core.annotation.NameInMap("extra_info")
         private java.util.Map < String, ? > extraInfo;
 
         private DescribeClusterResourcesResponseBody(Builder builder) {

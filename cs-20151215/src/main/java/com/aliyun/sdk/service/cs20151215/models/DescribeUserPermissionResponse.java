@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUserPermissionResponse</p>
  */
 public class DescribeUserPermissionResponse extends Response {
-    @NameInMap("headers")
+    @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
-    @NameInMap("statusCode")
+    @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    @NameInMap("body")
+    @com.aliyun.core.annotation.NameInMap("body")
     private java.util.List < DescribeUserPermissionResponseBody> body;
 
     private DescribeUserPermissionResponse(BuilderImpl builder) {
@@ -124,22 +123,22 @@ public class DescribeUserPermissionResponse extends Response {
     } 
 
     public static class DescribeUserPermissionResponseBody extends TeaModel {
-        @NameInMap("resource_id")
+        @com.aliyun.core.annotation.NameInMap("resource_id")
         private String resourceId;
 
-        @NameInMap("resource_type")
+        @com.aliyun.core.annotation.NameInMap("resource_type")
         private String resourceType;
 
-        @NameInMap("role_name")
+        @com.aliyun.core.annotation.NameInMap("role_name")
         private String roleName;
 
-        @NameInMap("role_type")
+        @com.aliyun.core.annotation.NameInMap("role_type")
         private String roleType;
 
-        @NameInMap("is_owner")
+        @com.aliyun.core.annotation.NameInMap("is_owner")
         private Long isOwner;
 
-        @NameInMap("is_ram_role")
+        @com.aliyun.core.annotation.NameInMap("is_ram_role")
         private Long isRamRole;
 
         private DescribeUserPermissionResponseBody(Builder builder) {

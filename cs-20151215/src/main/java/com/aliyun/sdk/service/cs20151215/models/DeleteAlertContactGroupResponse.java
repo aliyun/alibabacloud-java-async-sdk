@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteAlertContactGroupResponse</p>
  */
 public class DeleteAlertContactGroupResponse extends Response {
-    @NameInMap("headers")
+    @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
-    @NameInMap("statusCode")
+    @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    @NameInMap("body")
+    @com.aliyun.core.annotation.NameInMap("body")
     private java.util.List < DeleteAlertContactGroupResponseBody> body;
 
     private DeleteAlertContactGroupResponse(BuilderImpl builder) {
@@ -124,13 +123,13 @@ public class DeleteAlertContactGroupResponse extends Response {
     } 
 
     public static class DeleteAlertContactGroupResponseBody extends TeaModel {
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Boolean status;
 
-        @NameInMap("msg")
+        @com.aliyun.core.annotation.NameInMap("msg")
         private String msg;
 
-        @NameInMap("contact_group_id")
+        @com.aliyun.core.annotation.NameInMap("contact_group_id")
         private String contactGroupId;
 
         private DeleteAlertContactGroupResponseBody(Builder builder) {

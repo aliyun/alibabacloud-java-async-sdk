@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeClusterNodePoolDetailResponseBody</p>
  */
 public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
-    @NameInMap("auto_scaling")
+    @com.aliyun.core.annotation.NameInMap("auto_scaling")
     private AutoScaling autoScaling;
 
-    @NameInMap("interconnect_config")
+    @com.aliyun.core.annotation.NameInMap("interconnect_config")
     private InterconnectConfig interconnectConfig;
 
-    @NameInMap("interconnect_mode")
+    @com.aliyun.core.annotation.NameInMap("interconnect_mode")
     private String interconnectMode;
 
-    @NameInMap("kubernetes_config")
+    @com.aliyun.core.annotation.NameInMap("kubernetes_config")
     private KubernetesConfig kubernetesConfig;
 
-    @NameInMap("management")
+    @com.aliyun.core.annotation.NameInMap("management")
     private Management management;
 
-    @NameInMap("max_nodes")
+    @com.aliyun.core.annotation.NameInMap("max_nodes")
     private Long maxNodes;
 
-    @NameInMap("node_config")
+    @com.aliyun.core.annotation.NameInMap("node_config")
     private NodeConfig nodeConfig;
 
-    @NameInMap("nodepool_info")
+    @com.aliyun.core.annotation.NameInMap("nodepool_info")
     private NodepoolInfo nodepoolInfo;
 
-    @NameInMap("scaling_group")
+    @com.aliyun.core.annotation.NameInMap("scaling_group")
     private ScalingGroup scalingGroup;
 
-    @NameInMap("status")
+    @com.aliyun.core.annotation.NameInMap("status")
     private Status status;
 
-    @NameInMap("tee_config")
+    @com.aliyun.core.annotation.NameInMap("tee_config")
     private TeeConfig teeConfig;
 
     private DescribeClusterNodePoolDetailResponseBody(Builder builder) {
@@ -252,25 +251,25 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     } 
 
     public static class AutoScaling extends TeaModel {
-        @NameInMap("eip_bandwidth")
+        @com.aliyun.core.annotation.NameInMap("eip_bandwidth")
         private Long eipBandwidth;
 
-        @NameInMap("eip_internet_charge_type")
+        @com.aliyun.core.annotation.NameInMap("eip_internet_charge_type")
         private String eipInternetChargeType;
 
-        @NameInMap("enable")
+        @com.aliyun.core.annotation.NameInMap("enable")
         private Boolean enable;
 
-        @NameInMap("is_bond_eip")
+        @com.aliyun.core.annotation.NameInMap("is_bond_eip")
         private Boolean isBondEip;
 
-        @NameInMap("max_instances")
+        @com.aliyun.core.annotation.NameInMap("max_instances")
         private Long maxInstances;
 
-        @NameInMap("min_instances")
+        @com.aliyun.core.annotation.NameInMap("min_instances")
         private Long minInstances;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private AutoScaling(Builder builder) {
@@ -431,19 +430,19 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
     }
     public static class InterconnectConfig extends TeaModel {
-        @NameInMap("bandwidth")
+        @com.aliyun.core.annotation.NameInMap("bandwidth")
         private Long bandwidth;
 
-        @NameInMap("ccn_id")
+        @com.aliyun.core.annotation.NameInMap("ccn_id")
         private String ccnId;
 
-        @NameInMap("ccn_region_id")
+        @com.aliyun.core.annotation.NameInMap("ccn_region_id")
         private String ccnRegionId;
 
-        @NameInMap("cen_id")
+        @com.aliyun.core.annotation.NameInMap("cen_id")
         private String cenId;
 
-        @NameInMap("improved_period")
+        @com.aliyun.core.annotation.NameInMap("improved_period")
         private String improvedPeriod;
 
         private InterconnectConfig(Builder builder) {
@@ -552,31 +551,31 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
     }
     public static class KubernetesConfig extends TeaModel {
-        @NameInMap("cms_enabled")
+        @com.aliyun.core.annotation.NameInMap("cms_enabled")
         private Boolean cmsEnabled;
 
-        @NameInMap("cpu_policy")
+        @com.aliyun.core.annotation.NameInMap("cpu_policy")
         private String cpuPolicy;
 
-        @NameInMap("labels")
+        @com.aliyun.core.annotation.NameInMap("labels")
         private java.util.List < Tag > labels;
 
-        @NameInMap("node_name_mode")
+        @com.aliyun.core.annotation.NameInMap("node_name_mode")
         private String nodeNameMode;
 
-        @NameInMap("runtime")
+        @com.aliyun.core.annotation.NameInMap("runtime")
         private String runtime;
 
-        @NameInMap("runtime_version")
+        @com.aliyun.core.annotation.NameInMap("runtime_version")
         private String runtimeVersion;
 
-        @NameInMap("taints")
+        @com.aliyun.core.annotation.NameInMap("taints")
         private java.util.List < Taint > taints;
 
-        @NameInMap("unschedulable")
+        @com.aliyun.core.annotation.NameInMap("unschedulable")
         private Boolean unschedulable;
 
-        @NameInMap("user_data")
+        @com.aliyun.core.annotation.NameInMap("user_data")
         private String userData;
 
         private KubernetesConfig(Builder builder) {
@@ -771,7 +770,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
     }
     public static class AutoRepairPolicy extends TeaModel {
-        @NameInMap("restart_node")
+        @com.aliyun.core.annotation.NameInMap("restart_node")
         private Boolean restartNode;
 
         private AutoRepairPolicy(Builder builder) {
@@ -812,7 +811,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
     }
     public static class AutoUpgradePolicy extends TeaModel {
-        @NameInMap("auto_upgrade_kubelet")
+        @com.aliyun.core.annotation.NameInMap("auto_upgrade_kubelet")
         private Boolean autoUpgradeKubelet;
 
         private AutoUpgradePolicy(Builder builder) {
@@ -853,10 +852,10 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
     }
     public static class AutoVulFixPolicy extends TeaModel {
-        @NameInMap("restart_node")
+        @com.aliyun.core.annotation.NameInMap("restart_node")
         private Boolean restartNode;
 
-        @NameInMap("vul_level")
+        @com.aliyun.core.annotation.NameInMap("vul_level")
         private String vulLevel;
 
         private AutoVulFixPolicy(Builder builder) {
@@ -914,16 +913,16 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
     }
     public static class UpgradeConfig extends TeaModel {
-        @NameInMap("auto_upgrade")
+        @com.aliyun.core.annotation.NameInMap("auto_upgrade")
         private Boolean autoUpgrade;
 
-        @NameInMap("max_unavailable")
+        @com.aliyun.core.annotation.NameInMap("max_unavailable")
         private Long maxUnavailable;
 
-        @NameInMap("surge")
+        @com.aliyun.core.annotation.NameInMap("surge")
         private Long surge;
 
-        @NameInMap("surge_percentage")
+        @com.aliyun.core.annotation.NameInMap("surge_percentage")
         private Long surgePercentage;
 
         private UpgradeConfig(Builder builder) {
@@ -1022,28 +1021,28 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
     }
     public static class Management extends TeaModel {
-        @NameInMap("auto_repair")
+        @com.aliyun.core.annotation.NameInMap("auto_repair")
         private Boolean autoRepair;
 
-        @NameInMap("auto_repair_policy")
+        @com.aliyun.core.annotation.NameInMap("auto_repair_policy")
         private AutoRepairPolicy autoRepairPolicy;
 
-        @NameInMap("auto_upgrade")
+        @com.aliyun.core.annotation.NameInMap("auto_upgrade")
         private Boolean autoUpgrade;
 
-        @NameInMap("auto_upgrade_policy")
+        @com.aliyun.core.annotation.NameInMap("auto_upgrade_policy")
         private AutoUpgradePolicy autoUpgradePolicy;
 
-        @NameInMap("auto_vul_fix")
+        @com.aliyun.core.annotation.NameInMap("auto_vul_fix")
         private Boolean autoVulFix;
 
-        @NameInMap("auto_vul_fix_policy")
+        @com.aliyun.core.annotation.NameInMap("auto_vul_fix_policy")
         private AutoVulFixPolicy autoVulFixPolicy;
 
-        @NameInMap("enable")
+        @com.aliyun.core.annotation.NameInMap("enable")
         private Boolean enable;
 
-        @NameInMap("upgrade_config")
+        @com.aliyun.core.annotation.NameInMap("upgrade_config")
         private UpgradeConfig upgradeConfig;
 
         private Management(Builder builder) {
@@ -1211,7 +1210,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
     }
     public static class NodeConfig extends TeaModel {
-        @NameInMap("kubelet_configuration")
+        @com.aliyun.core.annotation.NameInMap("kubelet_configuration")
         private KubeletConfig kubeletConfiguration;
 
         private NodeConfig(Builder builder) {
@@ -1252,28 +1251,28 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
     }
     public static class NodepoolInfo extends TeaModel {
-        @NameInMap("created")
+        @com.aliyun.core.annotation.NameInMap("created")
         private String created;
 
-        @NameInMap("is_default")
+        @com.aliyun.core.annotation.NameInMap("is_default")
         private Boolean isDefault;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("nodepool_id")
+        @com.aliyun.core.annotation.NameInMap("nodepool_id")
         private String nodepoolId;
 
-        @NameInMap("region_id")
+        @com.aliyun.core.annotation.NameInMap("region_id")
         private String regionId;
 
-        @NameInMap("resource_group_id")
+        @com.aliyun.core.annotation.NameInMap("resource_group_id")
         private String resourceGroupId;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("updated")
+        @com.aliyun.core.annotation.NameInMap("updated")
         private String updated;
 
         private NodepoolInfo(Builder builder) {
@@ -1436,10 +1435,10 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
     }
     public static class PrivatePoolOptions extends TeaModel {
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("match_criteria")
+        @com.aliyun.core.annotation.NameInMap("match_criteria")
         private String matchCriteria;
 
         private PrivatePoolOptions(Builder builder) {
@@ -1502,10 +1501,10 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
     }
     public static class SpotPriceLimit extends TeaModel {
-        @NameInMap("instance_type")
+        @com.aliyun.core.annotation.NameInMap("instance_type")
         private String instanceType;
 
-        @NameInMap("price_limit")
+        @com.aliyun.core.annotation.NameInMap("price_limit")
         private String priceLimit;
 
         private SpotPriceLimit(Builder builder) {
@@ -1566,143 +1565,143 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
     }
     public static class ScalingGroup extends TeaModel {
-        @NameInMap("auto_renew")
+        @com.aliyun.core.annotation.NameInMap("auto_renew")
         private Boolean autoRenew;
 
-        @NameInMap("auto_renew_period")
+        @com.aliyun.core.annotation.NameInMap("auto_renew_period")
         private Long autoRenewPeriod;
 
-        @NameInMap("cis_enabled")
+        @com.aliyun.core.annotation.NameInMap("cis_enabled")
         @Deprecated
         private Boolean cisEnabled;
 
-        @NameInMap("compensate_with_on_demand")
+        @com.aliyun.core.annotation.NameInMap("compensate_with_on_demand")
         private Boolean compensateWithOnDemand;
 
-        @NameInMap("data_disks")
+        @com.aliyun.core.annotation.NameInMap("data_disks")
         private java.util.List < DataDisk > dataDisks;
 
-        @NameInMap("deploymentset_id")
+        @com.aliyun.core.annotation.NameInMap("deploymentset_id")
         private String deploymentsetId;
 
-        @NameInMap("desired_size")
+        @com.aliyun.core.annotation.NameInMap("desired_size")
         private Long desiredSize;
 
-        @NameInMap("image_id")
+        @com.aliyun.core.annotation.NameInMap("image_id")
         private String imageId;
 
-        @NameInMap("image_type")
+        @com.aliyun.core.annotation.NameInMap("image_type")
         private String imageType;
 
-        @NameInMap("instance_charge_type")
+        @com.aliyun.core.annotation.NameInMap("instance_charge_type")
         private String instanceChargeType;
 
-        @NameInMap("instance_types")
+        @com.aliyun.core.annotation.NameInMap("instance_types")
         private java.util.List < String > instanceTypes;
 
-        @NameInMap("internet_charge_type")
+        @com.aliyun.core.annotation.NameInMap("internet_charge_type")
         private String internetChargeType;
 
-        @NameInMap("internet_max_bandwidth_out")
+        @com.aliyun.core.annotation.NameInMap("internet_max_bandwidth_out")
         private Long internetMaxBandwidthOut;
 
-        @NameInMap("key_pair")
+        @com.aliyun.core.annotation.NameInMap("key_pair")
         private String keyPair;
 
-        @NameInMap("login_as_non_root")
+        @com.aliyun.core.annotation.NameInMap("login_as_non_root")
         private Boolean loginAsNonRoot;
 
-        @NameInMap("login_password")
+        @com.aliyun.core.annotation.NameInMap("login_password")
         private String loginPassword;
 
-        @NameInMap("multi_az_policy")
+        @com.aliyun.core.annotation.NameInMap("multi_az_policy")
         private String multiAzPolicy;
 
-        @NameInMap("on_demand_base_capacity")
+        @com.aliyun.core.annotation.NameInMap("on_demand_base_capacity")
         private Long onDemandBaseCapacity;
 
-        @NameInMap("on_demand_percentage_above_base_capacity")
+        @com.aliyun.core.annotation.NameInMap("on_demand_percentage_above_base_capacity")
         private Long onDemandPercentageAboveBaseCapacity;
 
-        @NameInMap("period")
+        @com.aliyun.core.annotation.NameInMap("period")
         private Long period;
 
-        @NameInMap("period_unit")
+        @com.aliyun.core.annotation.NameInMap("period_unit")
         private String periodUnit;
 
-        @NameInMap("platform")
+        @com.aliyun.core.annotation.NameInMap("platform")
         private String platform;
 
-        @NameInMap("private_pool_options")
+        @com.aliyun.core.annotation.NameInMap("private_pool_options")
         private PrivatePoolOptions privatePoolOptions;
 
-        @NameInMap("ram_policy")
+        @com.aliyun.core.annotation.NameInMap("ram_policy")
         private String ramPolicy;
 
-        @NameInMap("rds_instances")
+        @com.aliyun.core.annotation.NameInMap("rds_instances")
         private java.util.List < String > rdsInstances;
 
-        @NameInMap("scaling_group_id")
+        @com.aliyun.core.annotation.NameInMap("scaling_group_id")
         private String scalingGroupId;
 
-        @NameInMap("scaling_policy")
+        @com.aliyun.core.annotation.NameInMap("scaling_policy")
         private String scalingPolicy;
 
-        @NameInMap("security_group_id")
+        @com.aliyun.core.annotation.NameInMap("security_group_id")
         private String securityGroupId;
 
-        @NameInMap("security_group_ids")
+        @com.aliyun.core.annotation.NameInMap("security_group_ids")
         private java.util.List < String > securityGroupIds;
 
-        @NameInMap("security_hardening_os")
+        @com.aliyun.core.annotation.NameInMap("security_hardening_os")
         private Boolean securityHardeningOs;
 
-        @NameInMap("soc_enabled")
+        @com.aliyun.core.annotation.NameInMap("soc_enabled")
         private Boolean socEnabled;
 
-        @NameInMap("spot_instance_pools")
+        @com.aliyun.core.annotation.NameInMap("spot_instance_pools")
         private Long spotInstancePools;
 
-        @NameInMap("spot_instance_remedy")
+        @com.aliyun.core.annotation.NameInMap("spot_instance_remedy")
         private Boolean spotInstanceRemedy;
 
-        @NameInMap("spot_price_limit")
+        @com.aliyun.core.annotation.NameInMap("spot_price_limit")
         private java.util.List < SpotPriceLimit> spotPriceLimit;
 
-        @NameInMap("spot_strategy")
+        @com.aliyun.core.annotation.NameInMap("spot_strategy")
         private String spotStrategy;
 
-        @NameInMap("system_disk_bursting_enabled")
+        @com.aliyun.core.annotation.NameInMap("system_disk_bursting_enabled")
         private Boolean systemDiskBurstingEnabled;
 
-        @NameInMap("system_disk_categories")
+        @com.aliyun.core.annotation.NameInMap("system_disk_categories")
         private java.util.List < String > systemDiskCategories;
 
-        @NameInMap("system_disk_category")
+        @com.aliyun.core.annotation.NameInMap("system_disk_category")
         private String systemDiskCategory;
 
-        @NameInMap("system_disk_encrypt_algorithm")
+        @com.aliyun.core.annotation.NameInMap("system_disk_encrypt_algorithm")
         private String systemDiskEncryptAlgorithm;
 
-        @NameInMap("system_disk_encrypted")
+        @com.aliyun.core.annotation.NameInMap("system_disk_encrypted")
         private Boolean systemDiskEncrypted;
 
-        @NameInMap("system_disk_kms_key_id")
+        @com.aliyun.core.annotation.NameInMap("system_disk_kms_key_id")
         private String systemDiskKmsKeyId;
 
-        @NameInMap("system_disk_performance_level")
+        @com.aliyun.core.annotation.NameInMap("system_disk_performance_level")
         private String systemDiskPerformanceLevel;
 
-        @NameInMap("system_disk_provisioned_iops")
+        @com.aliyun.core.annotation.NameInMap("system_disk_provisioned_iops")
         private Long systemDiskProvisionedIops;
 
-        @NameInMap("system_disk_size")
+        @com.aliyun.core.annotation.NameInMap("system_disk_size")
         private Long systemDiskSize;
 
-        @NameInMap("tags")
+        @com.aliyun.core.annotation.NameInMap("tags")
         private java.util.List < Tag > tags;
 
-        @NameInMap("vswitch_ids")
+        @com.aliyun.core.annotation.NameInMap("vswitch_ids")
         private java.util.List < String > vswitchIds;
 
         private ScalingGroup(Builder builder) {
@@ -2579,28 +2578,28 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
     }
     public static class Status extends TeaModel {
-        @NameInMap("failed_nodes")
+        @com.aliyun.core.annotation.NameInMap("failed_nodes")
         private Long failedNodes;
 
-        @NameInMap("healthy_nodes")
+        @com.aliyun.core.annotation.NameInMap("healthy_nodes")
         private Long healthyNodes;
 
-        @NameInMap("initial_nodes")
+        @com.aliyun.core.annotation.NameInMap("initial_nodes")
         private Long initialNodes;
 
-        @NameInMap("offline_nodes")
+        @com.aliyun.core.annotation.NameInMap("offline_nodes")
         private Long offlineNodes;
 
-        @NameInMap("removing_nodes")
+        @com.aliyun.core.annotation.NameInMap("removing_nodes")
         private Long removingNodes;
 
-        @NameInMap("serving_nodes")
+        @com.aliyun.core.annotation.NameInMap("serving_nodes")
         private Long servingNodes;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
-        @NameInMap("total_nodes")
+        @com.aliyun.core.annotation.NameInMap("total_nodes")
         private Long totalNodes;
 
         private Status(Builder builder) {
@@ -2767,7 +2766,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
     }
     public static class TeeConfig extends TeaModel {
-        @NameInMap("tee_enable")
+        @com.aliyun.core.annotation.NameInMap("tee_enable")
         private Boolean teeEnable;
 
         private TeeConfig(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QuotasValue</p>
  */
 public class QuotasValue extends TeaModel {
-    @NameInMap("quota")
+    @com.aliyun.core.annotation.NameInMap("quota")
     private String quota;
 
-    @NameInMap("operation_code")
+    @com.aliyun.core.annotation.NameInMap("operation_code")
     private String operationCode;
 
-    @NameInMap("adjustable")
+    @com.aliyun.core.annotation.NameInMap("adjustable")
     private Boolean adjustable;
 
-    @NameInMap("unit")
+    @com.aliyun.core.annotation.NameInMap("unit")
     private String unit;
 
     private QuotasValue(Builder builder) {

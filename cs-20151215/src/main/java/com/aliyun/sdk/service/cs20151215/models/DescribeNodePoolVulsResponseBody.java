@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeNodePoolVulsResponseBody</p>
  */
 public class DescribeNodePoolVulsResponseBody extends TeaModel {
-    @NameInMap("vul_records")
+    @com.aliyun.core.annotation.NameInMap("vul_records")
     private java.util.List < VulRecords> vulRecords;
 
-    @NameInMap("vuls_fix_service_purchased")
+    @com.aliyun.core.annotation.NameInMap("vuls_fix_service_purchased")
     private Boolean vulsFixServicePurchased;
 
     private DescribeNodePoolVulsResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
     } 
 
     public static class VulList extends TeaModel {
-        @NameInMap("alias_name")
+        @com.aliyun.core.annotation.NameInMap("alias_name")
         private String aliasName;
 
-        @NameInMap("cve_list")
+        @com.aliyun.core.annotation.NameInMap("cve_list")
         private java.util.List < String > cveList;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("necessity")
+        @com.aliyun.core.annotation.NameInMap("necessity")
         private String necessity;
 
         private VulList(Builder builder) {
@@ -180,13 +179,13 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
 
     }
     public static class VulRecords extends TeaModel {
-        @NameInMap("instance_id")
+        @com.aliyun.core.annotation.NameInMap("instance_id")
         private String instanceId;
 
-        @NameInMap("node_name")
+        @com.aliyun.core.annotation.NameInMap("node_name")
         private String nodeName;
 
-        @NameInMap("vul_list")
+        @com.aliyun.core.annotation.NameInMap("vul_list")
         private java.util.List < VulList> vulList;
 
         private VulRecords(Builder builder) {

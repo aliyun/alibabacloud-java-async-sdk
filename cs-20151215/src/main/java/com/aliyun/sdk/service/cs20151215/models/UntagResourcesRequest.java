@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UntagResourcesRequest</p>
  */
 public class UntagResourcesRequest extends Request {
-    @Query
-    @NameInMap("all")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("all")
     private Boolean all;
 
-    @Query
-    @NameInMap("region_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("region_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("resource_ids")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("resource_ids")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > resourceIds;
 
-    @Query
-    @NameInMap("resource_type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("resource_type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
-    @Query
-    @NameInMap("tag_keys")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("tag_keys")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > tagKeys;
 
     private UntagResourcesRequest(Builder builder) {

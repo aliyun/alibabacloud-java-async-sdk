@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,7 +11,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListOperationPlansResponseBody</p>
  */
 public class ListOperationPlansResponseBody extends TeaModel {
-    @NameInMap("plans")
+    @com.aliyun.core.annotation.NameInMap("plans")
     private java.util.List < Plans> plans;
 
     private ListOperationPlansResponseBody(Builder builder) {
@@ -52,31 +51,31 @@ public class ListOperationPlansResponseBody extends TeaModel {
     } 
 
     public static class Plans extends TeaModel {
-        @NameInMap("cluster_id")
+        @com.aliyun.core.annotation.NameInMap("cluster_id")
         private String clusterId;
 
-        @NameInMap("created")
+        @com.aliyun.core.annotation.NameInMap("created")
         private String created;
 
-        @NameInMap("end_time")
+        @com.aliyun.core.annotation.NameInMap("end_time")
         private String endTime;
 
-        @NameInMap("plan_id")
+        @com.aliyun.core.annotation.NameInMap("plan_id")
         private String planId;
 
-        @NameInMap("start_time")
+        @com.aliyun.core.annotation.NameInMap("start_time")
         private String startTime;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
-        @NameInMap("target_id")
+        @com.aliyun.core.annotation.NameInMap("target_id")
         private String targetId;
 
-        @NameInMap("target_type")
+        @com.aliyun.core.annotation.NameInMap("target_type")
         private String targetType;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Plans(Builder builder) {

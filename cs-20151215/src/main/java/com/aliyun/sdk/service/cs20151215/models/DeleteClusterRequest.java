@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteClusterRequest</p>
  */
 public class DeleteClusterRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("keep_slb")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("delete_options")
+    private java.util.List < DeleteOptions> deleteOptions;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("keep_slb")
     @Deprecated
     private Boolean keepSlb;
 
-    @Query
-    @NameInMap("retain_all_resources")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("retain_all_resources")
     private Boolean retainAllResources;
 
-    @Query
-    @NameInMap("retain_resources")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("retain_resources")
     private java.util.List < String > retainResources;
 
     private DeleteClusterRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
+        this.deleteOptions = builder.deleteOptions;
         this.keepSlb = builder.keepSlb;
         this.retainAllResources = builder.retainAllResources;
         this.retainResources = builder.retainResources;
@@ -59,6 +63,13 @@ public class DeleteClusterRequest extends Request {
     }
 
     /**
+     * @return deleteOptions
+     */
+    public java.util.List < DeleteOptions> getDeleteOptions() {
+        return this.deleteOptions;
+    }
+
+    /**
      * @return keepSlb
      */
     public Boolean getKeepSlb() {
@@ -81,6 +92,7 @@ public class DeleteClusterRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteClusterRequest, Builder> {
         private String clusterId; 
+        private java.util.List < DeleteOptions> deleteOptions; 
         private Boolean keepSlb; 
         private Boolean retainAllResources; 
         private java.util.List < String > retainResources; 
@@ -92,6 +104,7 @@ public class DeleteClusterRequest extends Request {
         private Builder(DeleteClusterRequest request) {
             super(request);
             this.clusterId = request.clusterId;
+            this.deleteOptions = request.deleteOptions;
             this.keepSlb = request.keepSlb;
             this.retainAllResources = request.retainAllResources;
             this.retainResources = request.retainResources;
@@ -103,6 +116,16 @@ public class DeleteClusterRequest extends Request {
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * delete_options.
+         */
+        public Builder deleteOptions(java.util.List < DeleteOptions> deleteOptions) {
+            String deleteOptionsShrink = shrink(deleteOptions, "delete_options", "json");
+            this.putQueryParameter("delete_options", deleteOptionsShrink);
+            this.deleteOptions = deleteOptions;
             return this;
         }
 
@@ -153,4 +176,65 @@ public class DeleteClusterRequest extends Request {
 
     } 
 
+    public static class DeleteOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("delete_mode")
+        private String deleteMode;
+
+        @com.aliyun.core.annotation.NameInMap("resource_type")
+        private String resourceType;
+
+        private DeleteOptions(Builder builder) {
+            this.deleteMode = builder.deleteMode;
+            this.resourceType = builder.resourceType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DeleteOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return deleteMode
+         */
+        public String getDeleteMode() {
+            return this.deleteMode;
+        }
+
+        /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public static final class Builder {
+            private String deleteMode; 
+            private String resourceType; 
+
+            /**
+             * delete_mode.
+             */
+            public Builder deleteMode(String deleteMode) {
+                this.deleteMode = deleteMode;
+                return this;
+            }
+
+            /**
+             * resource_type.
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
+                return this;
+            }
+
+            public DeleteOptions build() {
+                return new DeleteOptions(this);
+            } 
+
+        } 
+
+    }
 }

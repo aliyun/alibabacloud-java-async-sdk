@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,65 +11,65 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAutoscalingConfigRequest</p>
  */
 public class CreateAutoscalingConfigRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Body
-    @NameInMap("cool_down_duration")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("cool_down_duration")
     private String coolDownDuration;
 
-    @Body
-    @NameInMap("daemonset_eviction_for_nodes")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("daemonset_eviction_for_nodes")
     private Boolean daemonsetEvictionForNodes;
 
-    @Body
-    @NameInMap("expander")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("expander")
     private String expander;
 
-    @Body
-    @NameInMap("gpu_utilization_threshold")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("gpu_utilization_threshold")
     private String gpuUtilizationThreshold;
 
-    @Body
-    @NameInMap("max_graceful_termination_sec")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("max_graceful_termination_sec")
     private Integer maxGracefulTerminationSec;
 
-    @Body
-    @NameInMap("min_replica_count")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("min_replica_count")
     private Integer minReplicaCount;
 
-    @Body
-    @NameInMap("recycle_node_deletion_enabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("recycle_node_deletion_enabled")
     private Boolean recycleNodeDeletionEnabled;
 
-    @Body
-    @NameInMap("scale_down_enabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("scale_down_enabled")
     private Boolean scaleDownEnabled;
 
-    @Body
-    @NameInMap("scale_up_from_zero")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("scale_up_from_zero")
     private Boolean scaleUpFromZero;
 
-    @Body
-    @NameInMap("scan_interval")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("scan_interval")
     private String scanInterval;
 
-    @Body
-    @NameInMap("skip_nodes_with_local_storage")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("skip_nodes_with_local_storage")
     private Boolean skipNodesWithLocalStorage;
 
-    @Body
-    @NameInMap("skip_nodes_with_system_pods")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("skip_nodes_with_system_pods")
     private Boolean skipNodesWithSystemPods;
 
-    @Body
-    @NameInMap("unneeded_duration")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("unneeded_duration")
     private String unneededDuration;
 
-    @Body
-    @NameInMap("utilization_threshold")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("utilization_threshold")
     private String utilizationThreshold;
 
     private CreateAutoscalingConfigRequest(Builder builder) {

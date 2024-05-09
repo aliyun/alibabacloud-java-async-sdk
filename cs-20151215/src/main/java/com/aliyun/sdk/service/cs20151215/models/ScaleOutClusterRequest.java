@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,100 +11,100 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ScaleOutClusterRequest</p>
  */
 public class ScaleOutClusterRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Body
-    @NameInMap("cloud_monitor_flags")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("cloud_monitor_flags")
     private Boolean cloudMonitorFlags;
 
-    @Body
-    @NameInMap("count")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("count")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long count;
 
-    @Body
-    @NameInMap("cpu_policy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("cpu_policy")
     private String cpuPolicy;
 
-    @Body
-    @NameInMap("image_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("image_id")
     private String imageId;
 
-    @Body
-    @NameInMap("key_pair")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("key_pair")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String keyPair;
 
-    @Body
-    @NameInMap("login_password")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("login_password")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loginPassword;
 
-    @Body
-    @NameInMap("rds_instances")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("rds_instances")
     private java.util.List < String > rdsInstances;
 
-    @Body
-    @NameInMap("runtime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("runtime")
     private Runtime runtime;
 
-    @Body
-    @NameInMap("tags")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("tags")
     private java.util.List < Tag > tags;
 
-    @Body
-    @NameInMap("taints")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("taints")
     private java.util.List < Taint > taints;
 
-    @Body
-    @NameInMap("user_data")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("user_data")
     private String userData;
 
-    @Body
-    @NameInMap("vswitch_ids")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("vswitch_ids")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > vswitchIds;
 
-    @Body
-    @NameInMap("worker_auto_renew")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_auto_renew")
     private Boolean workerAutoRenew;
 
-    @Body
-    @NameInMap("worker_auto_renew_period")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_auto_renew_period")
     private Long workerAutoRenewPeriod;
 
-    @Body
-    @NameInMap("worker_data_disks")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_data_disks")
     private java.util.List < WorkerDataDisks> workerDataDisks;
 
-    @Body
-    @NameInMap("worker_instance_charge_type")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_instance_charge_type")
     private String workerInstanceChargeType;
 
-    @Body
-    @NameInMap("worker_instance_types")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_instance_types")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > workerInstanceTypes;
 
-    @Body
-    @NameInMap("worker_period")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_period")
     private Long workerPeriod;
 
-    @Body
-    @NameInMap("worker_period_unit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_period_unit")
     private String workerPeriodUnit;
 
-    @Body
-    @NameInMap("worker_system_disk_category")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_system_disk_category")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workerSystemDiskCategory;
 
-    @Body
-    @NameInMap("worker_system_disk_size")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("worker_system_disk_size")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long workerSystemDiskSize;
 
     private ScaleOutClusterRequest(Builder builder) {
@@ -614,16 +613,16 @@ public class ScaleOutClusterRequest extends Request {
     } 
 
     public static class WorkerDataDisks extends TeaModel {
-        @NameInMap("auto_snapshot_policy_id")
+        @com.aliyun.core.annotation.NameInMap("auto_snapshot_policy_id")
         private String autoSnapshotPolicyId;
 
-        @NameInMap("category")
+        @com.aliyun.core.annotation.NameInMap("category")
         private String category;
 
-        @NameInMap("encrypted")
+        @com.aliyun.core.annotation.NameInMap("encrypted")
         private String encrypted;
 
-        @NameInMap("size")
+        @com.aliyun.core.annotation.NameInMap("size")
         private String size;
 
         private WorkerDataDisks(Builder builder) {

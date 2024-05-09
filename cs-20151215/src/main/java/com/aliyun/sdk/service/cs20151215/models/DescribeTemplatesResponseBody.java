@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTemplatesResponseBody</p>
  */
 public class DescribeTemplatesResponseBody extends TeaModel {
-    @NameInMap("page_info")
+    @com.aliyun.core.annotation.NameInMap("page_info")
     private PageInfo pageInfo;
 
-    @NameInMap("templates")
+    @com.aliyun.core.annotation.NameInMap("templates")
     private java.util.List < Templates> templates;
 
     private DescribeTemplatesResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeTemplatesResponseBody extends TeaModel {
     } 
 
     public static class PageInfo extends TeaModel {
-        @NameInMap("page_number")
+        @com.aliyun.core.annotation.NameInMap("page_number")
         private Long pageNumber;
 
-        @NameInMap("page_size")
+        @com.aliyun.core.annotation.NameInMap("page_size")
         private Long pageSize;
 
-        @NameInMap("total_count")
+        @com.aliyun.core.annotation.NameInMap("total_count")
         private Long totalCount;
 
         private PageInfo(Builder builder) {
@@ -153,34 +152,34 @@ public class DescribeTemplatesResponseBody extends TeaModel {
 
     }
     public static class Templates extends TeaModel {
-        @NameInMap("acl")
+        @com.aliyun.core.annotation.NameInMap("acl")
         private String acl;
 
-        @NameInMap("created")
+        @com.aliyun.core.annotation.NameInMap("created")
         private String created;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("tags")
+        @com.aliyun.core.annotation.NameInMap("tags")
         private String tags;
 
-        @NameInMap("template")
+        @com.aliyun.core.annotation.NameInMap("template")
         private String template;
 
-        @NameInMap("template_type")
+        @com.aliyun.core.annotation.NameInMap("template_type")
         private String templateType;
 
-        @NameInMap("template_with_hist_id")
+        @com.aliyun.core.annotation.NameInMap("template_with_hist_id")
         private String templateWithHistId;
 
-        @NameInMap("updated")
+        @com.aliyun.core.annotation.NameInMap("updated")
         private String updated;
 
         private Templates(Builder builder) {

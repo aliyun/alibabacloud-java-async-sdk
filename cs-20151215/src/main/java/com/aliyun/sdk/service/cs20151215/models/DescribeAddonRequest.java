@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAddonRequest</p>
  */
 public class DescribeAddonRequest extends Request {
-    @Path
-    @NameInMap("addon_name")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("addon_name")
     private String addonName;
 
-    @Query
-    @NameInMap("cluster_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("cluster_id")
     private String clusterId;
 
-    @Query
-    @NameInMap("cluster_spec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("cluster_spec")
     private String clusterSpec;
 
-    @Query
-    @NameInMap("cluster_type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("cluster_type")
     private String clusterType;
 
-    @Query
-    @NameInMap("cluster_version")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("cluster_version")
     private String clusterVersion;
 
-    @Query
-    @NameInMap("profile")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("profile")
     private String profile;
 
-    @Query
-    @NameInMap("region_id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("region_id")
     private String regionId;
 
-    @Query
-    @NameInMap("version")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("version")
     private String version;
 
     private DescribeAddonRequest(Builder builder) {

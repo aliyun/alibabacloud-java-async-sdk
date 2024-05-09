@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InstallClusterAddonsRequest</p>
  */
 public class InstallClusterAddonsRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Body
-    @NameInMap("body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
     private java.util.List < InstallClusterAddonsRequestBody> body;
 
     private InstallClusterAddonsRequest(Builder builder) {
@@ -94,15 +93,15 @@ public class InstallClusterAddonsRequest extends Request {
     } 
 
     public static class InstallClusterAddonsRequestBody extends TeaModel {
-        @NameInMap("config")
+        @com.aliyun.core.annotation.NameInMap("config")
         private String config;
 
-        @NameInMap("name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
-        @NameInMap("version")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("version")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String version;
 
         private InstallClusterAddonsRequestBody(Builder builder) {

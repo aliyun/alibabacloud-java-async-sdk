@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyClusterAddonRequest</p>
  */
 public class ModifyClusterAddonRequest extends Request {
-    @Path
-    @NameInMap("cluster_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("cluster_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("component_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("component_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String componentId;
 
-    @Body
-    @NameInMap("config")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("config")
     private String config;
 
     private ModifyClusterAddonRequest(Builder builder) {

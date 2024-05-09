@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUserQuotaResponseBody</p>
  */
 public class DescribeUserQuotaResponseBody extends TeaModel {
-    @NameInMap("amk_cluster_quota")
+    @com.aliyun.core.annotation.NameInMap("amk_cluster_quota")
     private Long amkClusterQuota;
 
-    @NameInMap("ask_cluster_quota")
+    @com.aliyun.core.annotation.NameInMap("ask_cluster_quota")
     private Long askClusterQuota;
 
-    @NameInMap("cluster_nodepool_quota")
+    @com.aliyun.core.annotation.NameInMap("cluster_nodepool_quota")
     private Long clusterNodepoolQuota;
 
-    @NameInMap("cluster_quota")
+    @com.aliyun.core.annotation.NameInMap("cluster_quota")
     private Long clusterQuota;
 
-    @NameInMap("edge_improved_nodepool_quota")
+    @com.aliyun.core.annotation.NameInMap("edge_improved_nodepool_quota")
     private EdgeImprovedNodepoolQuota edgeImprovedNodepoolQuota;
 
-    @NameInMap("node_quota")
+    @com.aliyun.core.annotation.NameInMap("node_quota")
     private Long nodeQuota;
 
-    @NameInMap("quotas")
+    @com.aliyun.core.annotation.NameInMap("quotas")
     private java.util.Map < String, QuotasValue > quotas;
 
     private DescribeUserQuotaResponseBody(Builder builder) {
@@ -172,13 +171,13 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
     } 
 
     public static class EdgeImprovedNodepoolQuota extends TeaModel {
-        @NameInMap("bandwidth")
+        @com.aliyun.core.annotation.NameInMap("bandwidth")
         private Integer bandwidth;
 
-        @NameInMap("count")
+        @com.aliyun.core.annotation.NameInMap("count")
         private Integer count;
 
-        @NameInMap("period")
+        @com.aliyun.core.annotation.NameInMap("period")
         private Integer period;
 
         private EdgeImprovedNodepoolQuota(Builder builder) {

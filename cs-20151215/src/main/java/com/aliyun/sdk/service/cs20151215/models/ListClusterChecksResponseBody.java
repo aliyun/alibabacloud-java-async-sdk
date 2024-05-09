@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,7 +11,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListClusterChecksResponseBody</p>
  */
 public class ListClusterChecksResponseBody extends TeaModel {
-    @NameInMap("checks")
+    @com.aliyun.core.annotation.NameInMap("checks")
     private java.util.List < Checks> checks;
 
     private ListClusterChecksResponseBody(Builder builder) {
@@ -52,22 +51,22 @@ public class ListClusterChecksResponseBody extends TeaModel {
     } 
 
     public static class Checks extends TeaModel {
-        @NameInMap("check_id")
+        @com.aliyun.core.annotation.NameInMap("check_id")
         private String checkId;
 
-        @NameInMap("created_at")
+        @com.aliyun.core.annotation.NameInMap("created_at")
         private String createdAt;
 
-        @NameInMap("finished_at")
+        @com.aliyun.core.annotation.NameInMap("finished_at")
         private String finishedAt;
 
-        @NameInMap("message")
+        @com.aliyun.core.annotation.NameInMap("message")
         private String message;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Checks(Builder builder) {

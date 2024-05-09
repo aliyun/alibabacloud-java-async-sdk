@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePolicyInstancesResponse</p>
  */
 public class DescribePolicyInstancesResponse extends Response {
-    @NameInMap("headers")
+    @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
-    @NameInMap("statusCode")
+    @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    @NameInMap("body")
+    @com.aliyun.core.annotation.NameInMap("body")
     private java.util.List < DescribePolicyInstancesResponseBody> body;
 
     private DescribePolicyInstancesResponse(BuilderImpl builder) {
@@ -124,34 +123,34 @@ public class DescribePolicyInstancesResponse extends Response {
     } 
 
     public static class DescribePolicyInstancesResponseBody extends TeaModel {
-        @NameInMap("ali_uid")
+        @com.aliyun.core.annotation.NameInMap("ali_uid")
         private String aliUid;
 
-        @NameInMap("cluster_id")
+        @com.aliyun.core.annotation.NameInMap("cluster_id")
         private String clusterId;
 
-        @NameInMap("instance_name")
+        @com.aliyun.core.annotation.NameInMap("instance_name")
         private String instanceName;
 
-        @NameInMap("policy_name")
+        @com.aliyun.core.annotation.NameInMap("policy_name")
         private String policyName;
 
-        @NameInMap("policy_category")
+        @com.aliyun.core.annotation.NameInMap("policy_category")
         private String policyCategory;
 
-        @NameInMap("policy_description")
+        @com.aliyun.core.annotation.NameInMap("policy_description")
         private String policyDescription;
 
-        @NameInMap("policy_parameters")
+        @com.aliyun.core.annotation.NameInMap("policy_parameters")
         private String policyParameters;
 
-        @NameInMap("policy_severity")
+        @com.aliyun.core.annotation.NameInMap("policy_severity")
         private String policySeverity;
 
-        @NameInMap("policy_scope")
+        @com.aliyun.core.annotation.NameInMap("policy_scope")
         private String policyScope;
 
-        @NameInMap("policy_action")
+        @com.aliyun.core.annotation.NameInMap("policy_action")
         private String policyAction;
 
         private DescribePolicyInstancesResponseBody(Builder builder) {

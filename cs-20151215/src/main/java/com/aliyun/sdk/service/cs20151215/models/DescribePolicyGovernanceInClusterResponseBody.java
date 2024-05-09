@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePolicyGovernanceInClusterResponseBody</p>
  */
 public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
-    @NameInMap("admit_log")
+    @com.aliyun.core.annotation.NameInMap("admit_log")
     private AdmitLog admitLog;
 
-    @NameInMap("on_state")
+    @com.aliyun.core.annotation.NameInMap("on_state")
     private java.util.List < OnState> onState;
 
-    @NameInMap("totalViolations")
+    @com.aliyun.core.annotation.NameInMap("totalViolations")
     private TotalViolations totalViolations;
 
-    @NameInMap("violations")
+    @com.aliyun.core.annotation.NameInMap("violations")
     private Violations violations;
 
     private DescribePolicyGovernanceInClusterResponseBody(Builder builder) {
@@ -112,22 +111,22 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     } 
 
     public static class Log extends TeaModel {
-        @NameInMap("cluster_id")
+        @com.aliyun.core.annotation.NameInMap("cluster_id")
         private String clusterId;
 
-        @NameInMap("constraint_kind")
+        @com.aliyun.core.annotation.NameInMap("constraint_kind")
         private String constraintKind;
 
-        @NameInMap("msg")
+        @com.aliyun.core.annotation.NameInMap("msg")
         private String msg;
 
-        @NameInMap("resource_kind")
+        @com.aliyun.core.annotation.NameInMap("resource_kind")
         private String resourceKind;
 
-        @NameInMap("resource_name")
+        @com.aliyun.core.annotation.NameInMap("resource_name")
         private String resourceName;
 
-        @NameInMap("resource_namespace")
+        @com.aliyun.core.annotation.NameInMap("resource_namespace")
         private String resourceNamespace;
 
         private Log(Builder builder) {
@@ -253,13 +252,13 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
 
     }
     public static class AdmitLog extends TeaModel {
-        @NameInMap("count")
+        @com.aliyun.core.annotation.NameInMap("count")
         private Long count;
 
-        @NameInMap("log")
+        @com.aliyun.core.annotation.NameInMap("log")
         private Log log;
 
-        @NameInMap("progress")
+        @com.aliyun.core.annotation.NameInMap("progress")
         private String progress;
 
         private AdmitLog(Builder builder) {
@@ -338,13 +337,13 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
 
     }
     public static class OnState extends TeaModel {
-        @NameInMap("enabled_count")
+        @com.aliyun.core.annotation.NameInMap("enabled_count")
         private Integer enabledCount;
 
-        @NameInMap("severity")
+        @com.aliyun.core.annotation.NameInMap("severity")
         private String severity;
 
-        @NameInMap("total")
+        @com.aliyun.core.annotation.NameInMap("total")
         private Integer total;
 
         private OnState(Builder builder) {
@@ -419,10 +418,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
 
     }
     public static class Deny extends TeaModel {
-        @NameInMap("severity")
+        @com.aliyun.core.annotation.NameInMap("severity")
         private String severity;
 
-        @NameInMap("violations")
+        @com.aliyun.core.annotation.NameInMap("violations")
         private Long violations;
 
         private Deny(Builder builder) {
@@ -480,10 +479,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
 
     }
     public static class Warn extends TeaModel {
-        @NameInMap("severity")
+        @com.aliyun.core.annotation.NameInMap("severity")
         private String severity;
 
-        @NameInMap("violations")
+        @com.aliyun.core.annotation.NameInMap("violations")
         private Long violations;
 
         private Warn(Builder builder) {
@@ -541,10 +540,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
 
     }
     public static class TotalViolations extends TeaModel {
-        @NameInMap("deny")
+        @com.aliyun.core.annotation.NameInMap("deny")
         private Deny deny;
 
-        @NameInMap("warn")
+        @com.aliyun.core.annotation.NameInMap("warn")
         private Warn warn;
 
         private TotalViolations(Builder builder) {
@@ -602,16 +601,16 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
 
     }
     public static class ViolationsDeny extends TeaModel {
-        @NameInMap("policyDescription")
+        @com.aliyun.core.annotation.NameInMap("policyDescription")
         private String policyDescription;
 
-        @NameInMap("policyName")
+        @com.aliyun.core.annotation.NameInMap("policyName")
         private String policyName;
 
-        @NameInMap("severity")
+        @com.aliyun.core.annotation.NameInMap("severity")
         private String severity;
 
-        @NameInMap("violations")
+        @com.aliyun.core.annotation.NameInMap("violations")
         private Long violations;
 
         private ViolationsDeny(Builder builder) {
@@ -703,16 +702,16 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
 
     }
     public static class ViolationsWarn extends TeaModel {
-        @NameInMap("policyDescription")
+        @com.aliyun.core.annotation.NameInMap("policyDescription")
         private String policyDescription;
 
-        @NameInMap("policyName")
+        @com.aliyun.core.annotation.NameInMap("policyName")
         private String policyName;
 
-        @NameInMap("severity")
+        @com.aliyun.core.annotation.NameInMap("severity")
         private String severity;
 
-        @NameInMap("violations")
+        @com.aliyun.core.annotation.NameInMap("violations")
         private Long violations;
 
         private ViolationsWarn(Builder builder) {
@@ -804,10 +803,10 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
 
     }
     public static class Violations extends TeaModel {
-        @NameInMap("deny")
+        @com.aliyun.core.annotation.NameInMap("deny")
         private ViolationsDeny deny;
 
-        @NameInMap("warn")
+        @com.aliyun.core.annotation.NameInMap("warn")
         private ViolationsWarn warn;
 
         private Violations(Builder builder) {

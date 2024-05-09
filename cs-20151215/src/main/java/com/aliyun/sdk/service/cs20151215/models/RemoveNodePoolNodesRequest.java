@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,35 +11,35 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RemoveNodePoolNodesRequest</p>
  */
 public class RemoveNodePoolNodesRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("NodepoolId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("NodepoolId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodepoolId;
 
-    @Query
-    @NameInMap("concurrency")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("concurrency")
     private Boolean concurrency;
 
-    @Query
-    @NameInMap("drain_node")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("drain_node")
     private Boolean drainNode;
 
-    @Query
-    @NameInMap("instance_ids")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("instance_ids")
     private java.util.List < String > instanceIds;
 
-    @Query
-    @NameInMap("nodes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("nodes")
     @Deprecated
     private java.util.List < String > nodes;
 
-    @Query
-    @NameInMap("release_node")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("release_node")
     private Boolean releaseNode;
 
     private RemoveNodePoolNodesRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,7 +11,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEdgeMachineModelsResponseBody</p>
  */
 public class DescribeEdgeMachineModelsResponseBody extends TeaModel {
-    @NameInMap("models")
+    @com.aliyun.core.annotation.NameInMap("models")
     private java.util.List < Models> models;
 
     private DescribeEdgeMachineModelsResponseBody(Builder builder) {
@@ -52,28 +51,28 @@ public class DescribeEdgeMachineModelsResponseBody extends TeaModel {
     } 
 
     public static class Models extends TeaModel {
-        @NameInMap("cpu")
+        @com.aliyun.core.annotation.NameInMap("cpu")
         private Integer cpu;
 
-        @NameInMap("cpu_arch")
+        @com.aliyun.core.annotation.NameInMap("cpu_arch")
         private String cpuArch;
 
-        @NameInMap("created")
+        @com.aliyun.core.annotation.NameInMap("created")
         private String created;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("manage_runtime")
+        @com.aliyun.core.annotation.NameInMap("manage_runtime")
         private Integer manageRuntime;
 
-        @NameInMap("memory")
+        @com.aliyun.core.annotation.NameInMap("memory")
         private Integer memory;
 
-        @NameInMap("model")
+        @com.aliyun.core.annotation.NameInMap("model")
         private String model;
 
-        @NameInMap("model_id")
+        @com.aliyun.core.annotation.NameInMap("model_id")
         private String modelId;
 
         private Models(Builder builder) {

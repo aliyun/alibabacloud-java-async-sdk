@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,61 +11,61 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>KubeletConfig</p>
  */
 public class KubeletConfig extends TeaModel {
-    @NameInMap("allowedUnsafeSysctls")
+    @com.aliyun.core.annotation.NameInMap("allowedUnsafeSysctls")
     private java.util.List < String > allowedUnsafeSysctls;
 
-    @NameInMap("containerLogMaxFiles")
+    @com.aliyun.core.annotation.NameInMap("containerLogMaxFiles")
     private Long containerLogMaxFiles;
 
-    @NameInMap("containerLogMaxSize")
+    @com.aliyun.core.annotation.NameInMap("containerLogMaxSize")
     private String containerLogMaxSize;
 
-    @NameInMap("cpuManagerPolicy")
+    @com.aliyun.core.annotation.NameInMap("cpuManagerPolicy")
     private String cpuManagerPolicy;
 
-    @NameInMap("eventBurst")
+    @com.aliyun.core.annotation.NameInMap("eventBurst")
     private Long eventBurst;
 
-    @NameInMap("eventRecordQPS")
+    @com.aliyun.core.annotation.NameInMap("eventRecordQPS")
     private Long eventRecordQPS;
 
-    @NameInMap("evictionHard")
+    @com.aliyun.core.annotation.NameInMap("evictionHard")
     private java.util.Map < String, ? > evictionHard;
 
-    @NameInMap("evictionSoft")
+    @com.aliyun.core.annotation.NameInMap("evictionSoft")
     private java.util.Map < String, ? > evictionSoft;
 
-    @NameInMap("evictionSoftGracePeriod")
+    @com.aliyun.core.annotation.NameInMap("evictionSoftGracePeriod")
     private java.util.Map < String, ? > evictionSoftGracePeriod;
 
-    @NameInMap("featureGates")
+    @com.aliyun.core.annotation.NameInMap("featureGates")
     private java.util.Map < String, ? > featureGates;
 
-    @NameInMap("kubeAPIBurst")
+    @com.aliyun.core.annotation.NameInMap("kubeAPIBurst")
     private Long kubeAPIBurst;
 
-    @NameInMap("kubeAPIQPS")
+    @com.aliyun.core.annotation.NameInMap("kubeAPIQPS")
     private Long kubeAPIQPS;
 
-    @NameInMap("kubeReserved")
+    @com.aliyun.core.annotation.NameInMap("kubeReserved")
     private java.util.Map < String, ? > kubeReserved;
 
-    @NameInMap("maxPods")
+    @com.aliyun.core.annotation.NameInMap("maxPods")
     private Long maxPods;
 
-    @NameInMap("readOnlyPort")
+    @com.aliyun.core.annotation.NameInMap("readOnlyPort")
     private Long readOnlyPort;
 
-    @NameInMap("registryBurst")
+    @com.aliyun.core.annotation.NameInMap("registryBurst")
     private Long registryBurst;
 
-    @NameInMap("registryPullQPS")
+    @com.aliyun.core.annotation.NameInMap("registryPullQPS")
     private Long registryPullQPS;
 
-    @NameInMap("serializeImagePulls")
+    @com.aliyun.core.annotation.NameInMap("serializeImagePulls")
     private Boolean serializeImagePulls;
 
-    @NameInMap("systemReserved")
+    @com.aliyun.core.annotation.NameInMap("systemReserved")
     private java.util.Map < String, ? > systemReserved;
 
     private KubeletConfig(Builder builder) {

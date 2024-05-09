@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeClusterAddonMetadataResponseBody</p>
  */
 public class DescribeClusterAddonMetadataResponseBody extends TeaModel {
-    @NameInMap("config_schema")
+    @com.aliyun.core.annotation.NameInMap("config_schema")
     private String configSchema;
 
-    @NameInMap("name")
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @NameInMap("version")
+    @com.aliyun.core.annotation.NameInMap("version")
     private String version;
 
     private DescribeClusterAddonMetadataResponseBody(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEdgeMachinesRequest</p>
  */
 public class DescribeEdgeMachinesRequest extends Request {
-    @Query
-    @NameInMap("hostname")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("hostname")
     private String hostname;
 
-    @Query
-    @NameInMap("life_state")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("life_state")
     private String lifeState;
 
-    @Query
-    @NameInMap("model")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("model")
     private String model;
 
-    @Query
-    @NameInMap("online_state")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("online_state")
     private String onlineState;
 
-    @Query
-    @NameInMap("page_number")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page_number")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("page_size")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page_size")
     private Long pageSize;
 
     private DescribeEdgeMachinesRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeClusterLogsResponse</p>
  */
 public class DescribeClusterLogsResponse extends Response {
-    @NameInMap("headers")
+    @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
-    @NameInMap("statusCode")
+    @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    @NameInMap("body")
+    @com.aliyun.core.annotation.NameInMap("body")
     private java.util.List < DescribeClusterLogsResponseBody> body;
 
     private DescribeClusterLogsResponse(BuilderImpl builder) {
@@ -124,19 +123,19 @@ public class DescribeClusterLogsResponse extends Response {
     } 
 
     public static class DescribeClusterLogsResponseBody extends TeaModel {
-        @NameInMap("ID")
+        @com.aliyun.core.annotation.NameInMap("ID")
         private Long id;
 
-        @NameInMap("cluster_id")
+        @com.aliyun.core.annotation.NameInMap("cluster_id")
         private String clusterId;
 
-        @NameInMap("cluster_log")
+        @com.aliyun.core.annotation.NameInMap("cluster_log")
         private String clusterLog;
 
-        @NameInMap("created")
+        @com.aliyun.core.annotation.NameInMap("created")
         private String created;
 
-        @NameInMap("updated")
+        @com.aliyun.core.annotation.NameInMap("updated")
         private String updated;
 
         private DescribeClusterLogsResponseBody(Builder builder) {

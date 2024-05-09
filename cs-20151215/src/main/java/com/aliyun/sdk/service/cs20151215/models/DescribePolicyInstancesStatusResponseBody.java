@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePolicyInstancesStatusResponseBody</p>
  */
 public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
-    @NameInMap("instances_severity_count")
+    @com.aliyun.core.annotation.NameInMap("instances_severity_count")
     private java.util.Map < String, ? > instancesSeverityCount;
 
-    @NameInMap("policy_instances")
+    @com.aliyun.core.annotation.NameInMap("policy_instances")
     private java.util.List < PolicyInstances> policyInstances;
 
     private DescribePolicyInstancesStatusResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
     } 
 
     public static class PolicyInstances extends TeaModel {
-        @NameInMap("policy_category")
+        @com.aliyun.core.annotation.NameInMap("policy_category")
         private String policyCategory;
 
-        @NameInMap("policy_description")
+        @com.aliyun.core.annotation.NameInMap("policy_description")
         private String policyDescription;
 
-        @NameInMap("policy_instances_count")
+        @com.aliyun.core.annotation.NameInMap("policy_instances_count")
         private Long policyInstancesCount;
 
-        @NameInMap("policy_name")
+        @com.aliyun.core.annotation.NameInMap("policy_name")
         private String policyName;
 
-        @NameInMap("policy_severity")
+        @com.aliyun.core.annotation.NameInMap("policy_severity")
         private String policySeverity;
 
         private PolicyInstances(Builder builder) {

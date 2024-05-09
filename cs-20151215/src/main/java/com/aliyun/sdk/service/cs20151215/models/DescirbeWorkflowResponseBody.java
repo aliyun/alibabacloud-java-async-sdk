@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescirbeWorkflowResponseBody</p>
  */
 public class DescirbeWorkflowResponseBody extends TeaModel {
-    @NameInMap("create_time")
+    @com.aliyun.core.annotation.NameInMap("create_time")
     private String createTime;
 
-    @NameInMap("duration")
+    @com.aliyun.core.annotation.NameInMap("duration")
     private String duration;
 
-    @NameInMap("finish_time")
+    @com.aliyun.core.annotation.NameInMap("finish_time")
     private String finishTime;
 
-    @NameInMap("input_data_size")
+    @com.aliyun.core.annotation.NameInMap("input_data_size")
     private String inputDataSize;
 
-    @NameInMap("job_name")
+    @com.aliyun.core.annotation.NameInMap("job_name")
     private String jobName;
 
-    @NameInMap("job_namespace")
+    @com.aliyun.core.annotation.NameInMap("job_namespace")
     private String jobNamespace;
 
-    @NameInMap("output_data_size")
+    @com.aliyun.core.annotation.NameInMap("output_data_size")
     private String outputDataSize;
 
-    @NameInMap("status")
+    @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
-    @NameInMap("total_bases")
+    @com.aliyun.core.annotation.NameInMap("total_bases")
     private String totalBases;
 
-    @NameInMap("total_reads")
+    @com.aliyun.core.annotation.NameInMap("total_reads")
     private String totalReads;
 
-    @NameInMap("user_input_data")
+    @com.aliyun.core.annotation.NameInMap("user_input_data")
     private String userInputData;
 
     private DescirbeWorkflowResponseBody(Builder builder) {

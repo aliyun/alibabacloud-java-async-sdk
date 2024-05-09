@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAddonsResponseBody</p>
  */
 public class DescribeAddonsResponseBody extends TeaModel {
-    @NameInMap("ComponentGroups")
+    @com.aliyun.core.annotation.NameInMap("ComponentGroups")
     private java.util.List < ComponentGroups> componentGroups;
 
-    @NameInMap("StandardComponents")
+    @com.aliyun.core.annotation.NameInMap("StandardComponents")
     private java.util.Map < String, StandardComponentsValue > standardComponents;
 
     private DescribeAddonsResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class DescribeAddonsResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private Items(Builder builder) {
@@ -113,10 +112,10 @@ public class DescribeAddonsResponseBody extends TeaModel {
 
     }
     public static class ComponentGroups extends TeaModel {
-        @NameInMap("group_name")
+        @com.aliyun.core.annotation.NameInMap("group_name")
         private String groupName;
 
-        @NameInMap("items")
+        @com.aliyun.core.annotation.NameInMap("items")
         private java.util.List < Items> items;
 
         private ComponentGroups(Builder builder) {

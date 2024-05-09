@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cs20151215.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,94 +11,94 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeClusterDetailResponseBody</p>
  */
 public class DescribeClusterDetailResponseBody extends TeaModel {
-    @NameInMap("cluster_id")
+    @com.aliyun.core.annotation.NameInMap("cluster_id")
     private String clusterId;
 
-    @NameInMap("cluster_spec")
+    @com.aliyun.core.annotation.NameInMap("cluster_spec")
     private String clusterSpec;
 
-    @NameInMap("cluster_type")
+    @com.aliyun.core.annotation.NameInMap("cluster_type")
     private String clusterType;
 
-    @NameInMap("created")
+    @com.aliyun.core.annotation.NameInMap("created")
     private String created;
 
-    @NameInMap("current_version")
+    @com.aliyun.core.annotation.NameInMap("current_version")
     private String currentVersion;
 
-    @NameInMap("deletion_protection")
+    @com.aliyun.core.annotation.NameInMap("deletion_protection")
     private Boolean deletionProtection;
 
-    @NameInMap("docker_version")
+    @com.aliyun.core.annotation.NameInMap("docker_version")
     private String dockerVersion;
 
-    @NameInMap("external_loadbalancer_id")
+    @com.aliyun.core.annotation.NameInMap("external_loadbalancer_id")
     private String externalLoadbalancerId;
 
-    @NameInMap("init_version")
+    @com.aliyun.core.annotation.NameInMap("init_version")
     private String initVersion;
 
-    @NameInMap("maintenance_window")
+    @com.aliyun.core.annotation.NameInMap("maintenance_window")
     private MaintenanceWindow maintenanceWindow;
 
-    @NameInMap("master_url")
+    @com.aliyun.core.annotation.NameInMap("master_url")
     private String masterUrl;
 
-    @NameInMap("meta_data")
+    @com.aliyun.core.annotation.NameInMap("meta_data")
     private String metaData;
 
-    @NameInMap("name")
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @NameInMap("network_mode")
+    @com.aliyun.core.annotation.NameInMap("network_mode")
     private String networkMode;
 
-    @NameInMap("next_version")
+    @com.aliyun.core.annotation.NameInMap("next_version")
     private String nextVersion;
 
-    @NameInMap("parameters")
+    @com.aliyun.core.annotation.NameInMap("parameters")
     private java.util.Map < String, String > parameters;
 
-    @NameInMap("private_zone")
+    @com.aliyun.core.annotation.NameInMap("private_zone")
     private Boolean privateZone;
 
-    @NameInMap("profile")
+    @com.aliyun.core.annotation.NameInMap("profile")
     private String profile;
 
-    @NameInMap("region_id")
+    @com.aliyun.core.annotation.NameInMap("region_id")
     private String regionId;
 
-    @NameInMap("resource_group_id")
+    @com.aliyun.core.annotation.NameInMap("resource_group_id")
     private String resourceGroupId;
 
-    @NameInMap("security_group_id")
+    @com.aliyun.core.annotation.NameInMap("security_group_id")
     private String securityGroupId;
 
-    @NameInMap("size")
+    @com.aliyun.core.annotation.NameInMap("size")
     private Long size;
 
-    @NameInMap("state")
+    @com.aliyun.core.annotation.NameInMap("state")
     private String state;
 
-    @NameInMap("subnet_cidr")
+    @com.aliyun.core.annotation.NameInMap("subnet_cidr")
     private String subnetCidr;
 
-    @NameInMap("tags")
+    @com.aliyun.core.annotation.NameInMap("tags")
     private java.util.List < Tag > tags;
 
-    @NameInMap("updated")
+    @com.aliyun.core.annotation.NameInMap("updated")
     private String updated;
 
-    @NameInMap("vpc_id")
+    @com.aliyun.core.annotation.NameInMap("vpc_id")
     private String vpcId;
 
-    @NameInMap("vswitch_id")
+    @com.aliyun.core.annotation.NameInMap("vswitch_id")
     private String vswitchId;
 
-    @NameInMap("worker_ram_role_name")
+    @com.aliyun.core.annotation.NameInMap("worker_ram_role_name")
     private String workerRamRoleName;
 
-    @NameInMap("zone_id")
+    @com.aliyun.core.annotation.NameInMap("zone_id")
     private String zoneId;
 
     private DescribeClusterDetailResponseBody(Builder builder) {
