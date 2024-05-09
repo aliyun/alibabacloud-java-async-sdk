@@ -61,6 +61,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateInstanceResponse> createInstance(CreateInstanceRequest request);
 
+    CompletableFuture<CreateTableResponse> createTable(CreateTableRequest request);
+
     /**
       * ## Method
       *     DELETE
@@ -105,6 +107,10 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<DeleteInstanceResponse> deleteInstance(DeleteInstanceRequest request);
+
+    CompletableFuture<DeleteTableResponse> deleteTable(DeleteTableRequest request);
+
+    CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
 
     /**
       * \\### Method
@@ -207,6 +213,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetInstanceResponse> getInstance(GetInstanceRequest request);
 
     CompletableFuture<GetNodeConfigResponse> getNodeConfig(GetNodeConfigRequest request);
+
+    CompletableFuture<GetTableResponse> getTable(GetTableRequest request);
+
+    CompletableFuture<GetTableGenerationResponse> getTableGeneration(GetTableGenerationRequest request);
 
     /**
       * ## Method
@@ -348,6 +358,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ListQueryResultResponse> listQueryResult(ListQueryResultRequest request);
 
+    CompletableFuture<ListTableGenerationsResponse> listTableGenerations(ListTableGenerationsRequest request);
+
+    CompletableFuture<ListTablesResponse> listTables(ListTablesRequest request);
+
     /**
       * ## Method
       *     put
@@ -453,6 +467,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ModifyPasswordResponse> modifyPassword(ModifyPasswordRequest request);
 
+    CompletableFuture<ModifyTableResponse> modifyTable(ModifyTableRequest request);
+
     /**
       * ## Method
       * ~~~
@@ -483,6 +499,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<RecoverIndexResponse> recoverIndex(RecoverIndexRequest request);
+
+    CompletableFuture<ReindexResponse> reindex(ReindexRequest request);
 
     /**
       * ### Method
