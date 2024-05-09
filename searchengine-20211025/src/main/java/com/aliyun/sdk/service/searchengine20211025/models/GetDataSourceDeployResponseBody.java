@@ -49,7 +49,7 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * requestId.
+         * requestId
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +57,7 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * Deploy
          */
         public Builder result(Result result) {
             this.result = result;
@@ -551,7 +551,7 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
             private String table; 
 
             /**
-             * accessKey.
+             * AK
              */
             public Builder accessKey(String accessKey) {
                 this.accessKey = accessKey;
@@ -559,7 +559,7 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
             }
 
             /**
-             * accessSecret.
+             * AS
              */
             public Builder accessSecret(String accessSecret) {
                 this.accessSecret = accessSecret;
@@ -567,7 +567,7 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
             }
 
             /**
-             * bucket.
+             * oss bucket
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -575,7 +575,7 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
             }
 
             /**
-             * endpoint.
+             * odps endpoint
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -676,7 +676,7 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
             private String zk; 
 
             /**
-             * topic.
+             * topic
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -684,7 +684,7 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
             }
 
             /**
-             * zk.
+             * zk
              */
             public Builder zk(String zk) {
                 this.zk = zk;

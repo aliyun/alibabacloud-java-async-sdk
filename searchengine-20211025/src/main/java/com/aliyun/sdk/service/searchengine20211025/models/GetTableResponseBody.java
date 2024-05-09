@@ -982,6 +982,9 @@ public class GetTableResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("rawSchema")
         private String rawSchema;
 
+        @com.aliyun.core.annotation.NameInMap("status")
+        private String status;
+
         @com.aliyun.core.annotation.NameInMap("vectorIndex")
         private java.util.List < VectorIndex> vectorIndex;
 
@@ -994,6 +997,7 @@ public class GetTableResponseBody extends TeaModel {
             this.partitionCount = builder.partitionCount;
             this.primaryKey = builder.primaryKey;
             this.rawSchema = builder.rawSchema;
+            this.status = builder.status;
             this.vectorIndex = builder.vectorIndex;
         }
 
@@ -1062,6 +1066,13 @@ public class GetTableResponseBody extends TeaModel {
         }
 
         /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
          * @return vectorIndex
          */
         public java.util.List < VectorIndex> getVectorIndex() {
@@ -1077,6 +1088,7 @@ public class GetTableResponseBody extends TeaModel {
             private Integer partitionCount; 
             private String primaryKey; 
             private String rawSchema; 
+            private String status; 
             private java.util.List < VectorIndex> vectorIndex; 
 
             /**
@@ -1140,6 +1152,14 @@ public class GetTableResponseBody extends TeaModel {
              */
             public Builder rawSchema(String rawSchema) {
                 this.rawSchema = rawSchema;
+                return this;
+            }
+
+            /**
+             * status.
+             */
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 

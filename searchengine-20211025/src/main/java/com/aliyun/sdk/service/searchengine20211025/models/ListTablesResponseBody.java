@@ -77,9 +77,13 @@ public class ListTablesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("status")
+        private String status;
+
         private Result(Builder builder) {
             this.indexStatus = builder.indexStatus;
             this.name = builder.name;
+            this.status = builder.status;
         }
 
         public static Builder builder() {
@@ -104,9 +108,17 @@ public class ListTablesResponseBody extends TeaModel {
             return this.name;
         }
 
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
         public static final class Builder {
             private String indexStatus; 
             private String name; 
+            private String status; 
 
             /**
              * indexStatus.
@@ -121,6 +133,14 @@ public class ListTablesResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * status.
+             */
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 
