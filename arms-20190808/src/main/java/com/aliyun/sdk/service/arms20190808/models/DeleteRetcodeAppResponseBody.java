@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteRetcodeAppResponseBody</p>
  */
 public class DeleteRetcodeAppResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DeleteRetcodeAppResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class DeleteRetcodeAppResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.
+         * 状态码。200为成功，其他状态码为异常。
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,11 +105,7 @@ public class DeleteRetcodeAppResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned for the operation. Valid values:
-         * <p>
-         * 
-         * *   **Success** is returned if the operation is successful.
-         * *   An error message is returned if the operation fails.
+         * 附加信息。取值说明如下：请求正常，返回success。请求异常，返回具体异常信息。
          */
         public Builder message(String message) {
             this.message = message;
@@ -126,12 +121,11 @@ public class DeleteRetcodeAppResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
+         * 操作是否成功：
          * <p>
          * 
-         * true: The request was successful.
-         * 
-         * false: The request failed.
+         * - `true`：操作成功
+         * - `false`：操作失败
          */
         public Builder success(Boolean success) {
             this.success = success;

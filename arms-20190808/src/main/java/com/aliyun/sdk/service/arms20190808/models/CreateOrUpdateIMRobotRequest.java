@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,46 +11,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateOrUpdateIMRobotRequest</p>
  */
 public class CreateOrUpdateIMRobotRequest extends Request {
-    @Body
-    @NameInMap("CardTemplate")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CardTemplate")
     private String cardTemplate;
 
-    @Body
-    @NameInMap("DailyNoc")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DailyNoc")
     private Boolean dailyNoc;
 
-    @Body
-    @NameInMap("DailyNocTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DailyNocTime")
     private String dailyNocTime;
 
-    @Body
-    @NameInMap("DingSignKey")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DingSignKey")
     private String dingSignKey;
 
-    @Body
-    @NameInMap("EnableOutgoing")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableOutgoing")
     private Boolean enableOutgoing;
 
-    @Body
-    @NameInMap("RobotAddress")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RobotAddress")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String robotAddress;
 
-    @Body
-    @NameInMap("RobotId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RobotId")
     private Long robotId;
 
-    @Body
-    @NameInMap("RobotName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RobotName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String robotName;
 
-    @Body
-    @NameInMap("Token")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Token")
     private String token;
 
-    @Body
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private CreateOrUpdateIMRobotRequest(Builder builder) {

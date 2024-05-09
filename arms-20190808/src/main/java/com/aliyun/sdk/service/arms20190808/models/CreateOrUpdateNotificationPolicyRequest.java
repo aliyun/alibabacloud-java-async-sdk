@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,58 +11,58 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateOrUpdateNotificationPolicyRequest</p>
  */
 public class CreateOrUpdateNotificationPolicyRequest extends Request {
-    @Body
-    @NameInMap("DirectedMode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DirectedMode")
     private Boolean directedMode;
 
-    @Body
-    @NameInMap("EscalationPolicyId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EscalationPolicyId")
     private Long escalationPolicyId;
 
-    @Body
-    @NameInMap("GroupRule")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GroupRule")
     private String groupRule;
 
-    @Body
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @Body
-    @NameInMap("IntegrationId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IntegrationId")
     private Long integrationId;
 
-    @Body
-    @NameInMap("MatchingRules")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MatchingRules")
     private String matchingRules;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("NotifyRule")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NotifyRule")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String notifyRule;
 
-    @Body
-    @NameInMap("NotifyTemplate")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NotifyTemplate")
     private String notifyTemplate;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("Repeat")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Repeat")
     private Boolean repeat;
 
-    @Body
-    @NameInMap("RepeatInterval")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RepeatInterval")
     private Long repeatInterval;
 
-    @Body
-    @NameInMap("SendRecoverMessage")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SendRecoverMessage")
     private Boolean sendRecoverMessage;
 
     private CreateOrUpdateNotificationPolicyRequest(Builder builder) {

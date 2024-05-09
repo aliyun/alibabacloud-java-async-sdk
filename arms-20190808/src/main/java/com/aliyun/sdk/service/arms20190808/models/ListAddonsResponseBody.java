@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAddonsResponseBody</p>
  */
 public class ListAddonsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListAddonsResponseBody(Builder builder) {
@@ -136,13 +135,13 @@ public class ListAddonsResponseBody extends TeaModel {
     } 
 
     public static class Dashboards extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private Dashboards(Builder builder) {
@@ -217,10 +216,10 @@ public class ListAddonsResponseBody extends TeaModel {
 
     }
     public static class Dependencies extends TeaModel {
-        @NameInMap("Features")
+        @com.aliyun.core.annotation.NameInMap("Features")
         private java.util.Map < String, Boolean > features;
 
-        @NameInMap("Services")
+        @com.aliyun.core.annotation.NameInMap("Services")
         private java.util.List < String > services;
 
         private Dependencies(Builder builder) {
@@ -278,7 +277,7 @@ public class ListAddonsResponseBody extends TeaModel {
 
     }
     public static class MetricCheckRule extends TeaModel {
-        @NameInMap("PromQL")
+        @com.aliyun.core.annotation.NameInMap("PromQL")
         private java.util.List < String > promQL;
 
         private MetricCheckRule(Builder builder) {
@@ -319,16 +318,16 @@ public class ListAddonsResponseBody extends TeaModel {
 
     }
     public static class Protocols extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Icon")
+        @com.aliyun.core.annotation.NameInMap("Icon")
         private String icon;
 
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Protocols(Builder builder) {
@@ -420,25 +419,25 @@ public class ListAddonsResponseBody extends TeaModel {
 
     }
     public static class Policies extends TeaModel {
-        @NameInMap("AlertDefaultStatus")
+        @com.aliyun.core.annotation.NameInMap("AlertDefaultStatus")
         private String alertDefaultStatus;
 
-        @NameInMap("DefaultInstall")
+        @com.aliyun.core.annotation.NameInMap("DefaultInstall")
         private Boolean defaultInstall;
 
-        @NameInMap("EnableServiceAccount")
+        @com.aliyun.core.annotation.NameInMap("EnableServiceAccount")
         private Boolean enableServiceAccount;
 
-        @NameInMap("MetricCheckRule")
+        @com.aliyun.core.annotation.NameInMap("MetricCheckRule")
         private MetricCheckRule metricCheckRule;
 
-        @NameInMap("NeedRestartAfterIntegration")
+        @com.aliyun.core.annotation.NameInMap("NeedRestartAfterIntegration")
         private Boolean needRestartAfterIntegration;
 
-        @NameInMap("Protocols")
+        @com.aliyun.core.annotation.NameInMap("Protocols")
         private java.util.List < Protocols> protocols;
 
-        @NameInMap("TargetAddonName")
+        @com.aliyun.core.annotation.NameInMap("TargetAddonName")
         private String targetAddonName;
 
         private Policies(Builder builder) {
@@ -581,22 +580,22 @@ public class ListAddonsResponseBody extends TeaModel {
 
     }
     public static class Environments extends TeaModel {
-        @NameInMap("Dependencies")
+        @com.aliyun.core.annotation.NameInMap("Dependencies")
         private Dependencies dependencies;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
 
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Policies")
+        @com.aliyun.core.annotation.NameInMap("Policies")
         private Policies policies;
 
         private Environments(Builder builder) {
@@ -722,46 +721,46 @@ public class ListAddonsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Alias")
+        @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
 
-        @NameInMap("Categories")
+        @com.aliyun.core.annotation.NameInMap("Categories")
         private java.util.List < String > categories;
 
-        @NameInMap("Dashboards")
+        @com.aliyun.core.annotation.NameInMap("Dashboards")
         private java.util.List < Dashboards> dashboards;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Environments")
+        @com.aliyun.core.annotation.NameInMap("Environments")
         private java.util.List < Environments> environments;
 
-        @NameInMap("Icon")
+        @com.aliyun.core.annotation.NameInMap("Icon")
         private String icon;
 
-        @NameInMap("Keywords")
+        @com.aliyun.core.annotation.NameInMap("Keywords")
         private java.util.List < String > keywords;
 
-        @NameInMap("Language")
+        @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
 
-        @NameInMap("LatestReleaseCreateTime")
+        @com.aliyun.core.annotation.NameInMap("LatestReleaseCreateTime")
         private String latestReleaseCreateTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Once")
+        @com.aliyun.core.annotation.NameInMap("Once")
         private Boolean once;
 
-        @NameInMap("Scene")
+        @com.aliyun.core.annotation.NameInMap("Scene")
         private String scene;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private String weight;
 
         private Data(Builder builder) {

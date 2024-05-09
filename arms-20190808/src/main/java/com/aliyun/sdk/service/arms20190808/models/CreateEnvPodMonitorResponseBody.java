@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateEnvPodMonitorResponseBody</p>
  */
 public class CreateEnvPodMonitorResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateEnvPodMonitorResponseBody(Builder builder) {
@@ -112,16 +111,16 @@ public class CreateEnvPodMonitorResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("MatchedMsg")
+        @com.aliyun.core.annotation.NameInMap("MatchedMsg")
         private String matchedMsg;
 
-        @NameInMap("MatchedTargetCount")
+        @com.aliyun.core.annotation.NameInMap("MatchedTargetCount")
         private String matchedTargetCount;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("PodMonitorName")
+        @com.aliyun.core.annotation.NameInMap("PodMonitorName")
         private String podMonitorName;
 
         private Data(Builder builder) {

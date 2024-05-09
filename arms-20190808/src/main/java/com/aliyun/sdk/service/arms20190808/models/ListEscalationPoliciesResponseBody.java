@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListEscalationPoliciesResponseBody</p>
  */
 public class ListEscalationPoliciesResponseBody extends TeaModel {
-    @NameInMap("PageBean")
+    @com.aliyun.core.annotation.NameInMap("PageBean")
     private PageBean pageBean;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListEscalationPoliciesResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class ListEscalationPoliciesResponseBody extends TeaModel {
     } 
 
     public static class EscalationPolicies extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private EscalationPolicies(Builder builder) {
@@ -133,16 +132,16 @@ public class ListEscalationPoliciesResponseBody extends TeaModel {
 
     }
     public static class PageBean extends TeaModel {
-        @NameInMap("EscalationPolicies")
+        @com.aliyun.core.annotation.NameInMap("EscalationPolicies")
         private java.util.List < EscalationPolicies> escalationPolicies;
 
-        @NameInMap("Page")
+        @com.aliyun.core.annotation.NameInMap("Page")
         private Long page;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private PageBean(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCmsInstancesResponseBody</p>
  */
 public class ListCmsInstancesResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListCmsInstancesResponseBody(Builder builder) {
@@ -72,34 +71,34 @@ public class ListCmsInstancesResponseBody extends TeaModel {
     } 
 
     public static class Products extends TeaModel {
-        @NameInMap("Descr")
+        @com.aliyun.core.annotation.NameInMap("Descr")
         private String descr;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Instance")
+        @com.aliyun.core.annotation.NameInMap("Instance")
         private String instance;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Prod")
+        @com.aliyun.core.annotation.NameInMap("Prod")
         private String prod;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private Products(Builder builder) {
@@ -293,10 +292,10 @@ public class ListCmsInstancesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("EnableTag")
+        @com.aliyun.core.annotation.NameInMap("EnableTag")
         private Boolean enableTag;
 
-        @NameInMap("Products")
+        @com.aliyun.core.annotation.NameInMap("Products")
         private java.util.List < Products> products;
 
         private Data(Builder builder) {

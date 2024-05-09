@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListEnvironmentsRequest</p>
  */
 public class ListEnvironmentsRequest extends Request {
-    @Query
-    @NameInMap("AddonName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddonName")
     private String addonName;
 
-    @Query
-    @NameInMap("BindResourceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BindResourceId")
     private String bindResourceId;
 
-    @Query
-    @NameInMap("EnvironmentType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnvironmentType")
     private String environmentType;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FeePackage")
+    private String feePackage;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
     private ListEnvironmentsRequest(Builder builder) {
@@ -41,6 +44,7 @@ public class ListEnvironmentsRequest extends Request {
         this.addonName = builder.addonName;
         this.bindResourceId = builder.bindResourceId;
         this.environmentType = builder.environmentType;
+        this.feePackage = builder.feePackage;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.tag = builder.tag;
@@ -81,6 +85,13 @@ public class ListEnvironmentsRequest extends Request {
     }
 
     /**
+     * @return feePackage
+     */
+    public String getFeePackage() {
+        return this.feePackage;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -105,6 +116,7 @@ public class ListEnvironmentsRequest extends Request {
         private String addonName; 
         private String bindResourceId; 
         private String environmentType; 
+        private String feePackage; 
         private String regionId; 
         private String resourceGroupId; 
         private java.util.List < Tag> tag; 
@@ -118,6 +130,7 @@ public class ListEnvironmentsRequest extends Request {
             this.addonName = request.addonName;
             this.bindResourceId = request.bindResourceId;
             this.environmentType = request.environmentType;
+            this.feePackage = request.feePackage;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.tag = request.tag;
@@ -133,7 +146,7 @@ public class ListEnvironmentsRequest extends Request {
         }
 
         /**
-         * 绑定的资源ID。
+         * The ID of the resource.
          */
         public Builder bindResourceId(String bindResourceId) {
             this.putQueryParameter("BindResourceId", bindResourceId);
@@ -190,6 +203,15 @@ public class ListEnvironmentsRequest extends Request {
         }
 
         /**
+         * FeePackage.
+         */
+        public Builder feePackage(String feePackage) {
+            this.putQueryParameter("FeePackage", feePackage);
+            this.feePackage = feePackage;
+            return this;
+        }
+
+        /**
          * The region ID.
          */
         public Builder regionId(String regionId) {
@@ -225,10 +247,10 @@ public class ListEnvironmentsRequest extends Request {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

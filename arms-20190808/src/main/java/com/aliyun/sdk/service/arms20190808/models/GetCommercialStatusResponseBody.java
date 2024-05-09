@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetCommercialStatusResponseBody</p>
  */
 public class GetCommercialStatusResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UserAndCommodityStatus")
+    @com.aliyun.core.annotation.NameInMap("UserAndCommodityStatus")
     private UserAndCommodityStatus userAndCommodityStatus;
 
     private GetCommercialStatusResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class GetCommercialStatusResponseBody extends TeaModel {
     } 
 
     public static class UserAndCommodityStatus extends TeaModel {
-        @NameInMap("Basic")
+        @com.aliyun.core.annotation.NameInMap("Basic")
         private Boolean basic;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
 
-        @NameInMap("ExtraInfo")
+        @com.aliyun.core.annotation.NameInMap("ExtraInfo")
         private java.util.Map < String, ? > extraInfo;
 
-        @NameInMap("FreeDays")
+        @com.aliyun.core.annotation.NameInMap("FreeDays")
         private Long freeDays;
 
-        @NameInMap("Lable")
+        @com.aliyun.core.annotation.NameInMap("Lable")
         private String lable;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private UserAndCommodityStatus(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeContactsResponseBody</p>
  */
 public class DescribeContactsResponseBody extends TeaModel {
-    @NameInMap("PageBean")
+    @com.aliyun.core.annotation.NameInMap("PageBean")
     private PageBean pageBean;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeContactsResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class DescribeContactsResponseBody extends TeaModel {
     } 
 
     public static class AlertContacts extends TeaModel {
-        @NameInMap("ArmsContactId")
+        @com.aliyun.core.annotation.NameInMap("ArmsContactId")
         private Long armsContactId;
 
-        @NameInMap("ContactId")
+        @com.aliyun.core.annotation.NameInMap("ContactId")
         private Float contactId;
 
-        @NameInMap("ContactName")
+        @com.aliyun.core.annotation.NameInMap("ContactName")
         private String contactName;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("IsEmailVerify")
+        @com.aliyun.core.annotation.NameInMap("IsEmailVerify")
         private Boolean isEmailVerify;
 
-        @NameInMap("IsVerify")
+        @com.aliyun.core.annotation.NameInMap("IsVerify")
         private Boolean isVerify;
 
-        @NameInMap("Phone")
+        @com.aliyun.core.annotation.NameInMap("Phone")
         private String phone;
 
-        @NameInMap("ReissueSendNotice")
+        @com.aliyun.core.annotation.NameInMap("ReissueSendNotice")
         private Long reissueSendNotice;
 
         private AlertContacts(Builder builder) {
@@ -263,16 +262,16 @@ public class DescribeContactsResponseBody extends TeaModel {
 
     }
     public static class PageBean extends TeaModel {
-        @NameInMap("AlertContacts")
+        @com.aliyun.core.annotation.NameInMap("AlertContacts")
         private java.util.List < AlertContacts> alertContacts;
 
-        @NameInMap("Page")
+        @com.aliyun.core.annotation.NameInMap("Page")
         private Long page;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private PageBean(Builder builder) {

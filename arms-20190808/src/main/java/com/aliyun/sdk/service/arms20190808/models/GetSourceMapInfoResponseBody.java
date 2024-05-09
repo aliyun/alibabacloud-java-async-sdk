@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSourceMapInfoResponseBody</p>
  */
 public class GetSourceMapInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SourceMapList")
+    @com.aliyun.core.annotation.NameInMap("SourceMapList")
     private java.util.List < SourceMapList> sourceMapList;
 
     private GetSourceMapInfoResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class GetSourceMapInfoResponseBody extends TeaModel {
     } 
 
     public static class SourceMapList extends TeaModel {
-        @NameInMap("Fid")
+        @com.aliyun.core.annotation.NameInMap("Fid")
         private String fid;
 
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private String size;
 
-        @NameInMap("UploadTime")
+        @com.aliyun.core.annotation.NameInMap("UploadTime")
         private String uploadTime;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private SourceMapList(Builder builder) {

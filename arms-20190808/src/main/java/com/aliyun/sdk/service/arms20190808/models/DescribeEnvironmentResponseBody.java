@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEnvironmentResponseBody</p>
  */
 public class DescribeEnvironmentResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeEnvironmentResponseBody(Builder builder) {
@@ -112,10 +111,10 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -173,79 +172,79 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("BindResourceId")
+        @com.aliyun.core.annotation.NameInMap("BindResourceId")
         private String bindResourceId;
 
-        @NameInMap("BindResourceProfile")
+        @com.aliyun.core.annotation.NameInMap("BindResourceProfile")
         private String bindResourceProfile;
 
-        @NameInMap("BindResourceStatus")
+        @com.aliyun.core.annotation.NameInMap("BindResourceStatus")
         private String bindResourceStatus;
 
-        @NameInMap("BindResourceStoreDuration")
+        @com.aliyun.core.annotation.NameInMap("BindResourceStoreDuration")
         private String bindResourceStoreDuration;
 
-        @NameInMap("BindResourceType")
+        @com.aliyun.core.annotation.NameInMap("BindResourceType")
         private String bindResourceType;
 
-        @NameInMap("BindVpcCidr")
+        @com.aliyun.core.annotation.NameInMap("BindVpcCidr")
         private String bindVpcCidr;
 
-        @NameInMap("DbInstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("DbInstanceStatus")
         private String dbInstanceStatus;
 
-        @NameInMap("EnvironmentId")
+        @com.aliyun.core.annotation.NameInMap("EnvironmentId")
         private String environmentId;
 
-        @NameInMap("EnvironmentName")
+        @com.aliyun.core.annotation.NameInMap("EnvironmentName")
         private String environmentName;
 
-        @NameInMap("EnvironmentSubType")
+        @com.aliyun.core.annotation.NameInMap("EnvironmentSubType")
         private String environmentSubType;
 
-        @NameInMap("EnvironmentType")
+        @com.aliyun.core.annotation.NameInMap("EnvironmentType")
         private String environmentType;
 
-        @NameInMap("FeePackage")
+        @com.aliyun.core.annotation.NameInMap("FeePackage")
         private String feePackage;
 
-        @NameInMap("GrafaDataSourceName")
+        @com.aliyun.core.annotation.NameInMap("GrafaDataSourceName")
         private String grafaDataSourceName;
 
-        @NameInMap("GrafanaDatasourceUid")
+        @com.aliyun.core.annotation.NameInMap("GrafanaDatasourceUid")
         private String grafanaDatasourceUid;
 
-        @NameInMap("GrafanaFolderTitle")
+        @com.aliyun.core.annotation.NameInMap("GrafanaFolderTitle")
         private String grafanaFolderTitle;
 
-        @NameInMap("GrafanaFolderUid")
+        @com.aliyun.core.annotation.NameInMap("GrafanaFolderUid")
         private String grafanaFolderUid;
 
-        @NameInMap("GrafanaFolderUrl")
+        @com.aliyun.core.annotation.NameInMap("GrafanaFolderUrl")
         private String grafanaFolderUrl;
 
-        @NameInMap("ManagedType")
+        @com.aliyun.core.annotation.NameInMap("ManagedType")
         private String managedType;
 
-        @NameInMap("PrometheusInstanceId")
+        @com.aliyun.core.annotation.NameInMap("PrometheusInstanceId")
         private String prometheusInstanceId;
 
-        @NameInMap("PrometheusInstanceName")
+        @com.aliyun.core.annotation.NameInMap("PrometheusInstanceName")
         private String prometheusInstanceName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private Data(Builder builder) {

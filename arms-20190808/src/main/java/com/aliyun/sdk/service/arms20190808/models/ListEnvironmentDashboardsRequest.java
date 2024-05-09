@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListEnvironmentDashboardsRequest</p>
  */
 public class ListEnvironmentDashboardsRequest extends Request {
-    @Query
-    @NameInMap("AddonName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddonName")
     private String addonName;
 
-    @Query
-    @NameInMap("EnvironmentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnvironmentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String environmentId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Scene")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scene")
     private String scene;
 
     private ListEnvironmentDashboardsRequest(Builder builder) {
@@ -97,7 +96,7 @@ public class ListEnvironmentDashboardsRequest extends Request {
         } 
 
         /**
-         * Name of Addon.AddonName and Scene are required.
+         * Name of Addon,One of AddonName and Scene must be filled in.
          */
         public Builder addonName(String addonName) {
             this.putQueryParameter("AddonName", addonName);
@@ -115,7 +114,7 @@ public class ListEnvironmentDashboardsRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -124,7 +123,7 @@ public class ListEnvironmentDashboardsRequest extends Request {
         }
 
         /**
-         * Scene of Addon.AddonName and Scene are required
+         * The scenario of Addon. Either AddonName or Scene is required.
          */
         public Builder scene(String scene) {
             this.putQueryParameter("Scene", scene);

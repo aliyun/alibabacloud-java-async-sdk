@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddPrometheusGlobalViewByAliClusterIdsRequest</p>
  */
 public class AddPrometheusGlobalViewByAliClusterIdsRequest extends Request {
-    @Query
-    @NameInMap("ClusterIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterIds;
 
-    @Query
-    @NameInMap("GroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupName;
 
-    @Query
-    @NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private AddPrometheusGlobalViewByAliClusterIdsRequest(Builder builder) {
@@ -99,7 +98,7 @@ public class AddPrometheusGlobalViewByAliClusterIdsRequest extends Request {
         } 
 
         /**
-         * ClusterIds.
+         * The IDs of clusters. Separate multiple IDs with commas (,).
          */
         public Builder clusterIds(String clusterIds) {
             this.putQueryParameter("ClusterIds", clusterIds);
@@ -108,7 +107,7 @@ public class AddPrometheusGlobalViewByAliClusterIdsRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * The name of the global aggregation instance.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -117,7 +116,7 @@ public class AddPrometheusGlobalViewByAliClusterIdsRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The identifier to identify the service if custom dashboards are created for the specified clusters.
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -126,7 +125,7 @@ public class AddPrometheusGlobalViewByAliClusterIdsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

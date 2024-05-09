@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListEnvironmentsResponseBody</p>
  */
 public class ListEnvironmentsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListEnvironmentsResponseBody(Builder builder) {
@@ -132,16 +131,16 @@ public class ListEnvironmentsResponseBody extends TeaModel {
     } 
 
     public static class Addons extends TeaModel {
-        @NameInMap("Alias")
+        @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Icon")
+        @com.aliyun.core.annotation.NameInMap("Icon")
         private String icon;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Addons(Builder builder) {
@@ -233,16 +232,16 @@ public class ListEnvironmentsResponseBody extends TeaModel {
 
     }
     public static class Features extends TeaModel {
-        @NameInMap("Alias")
+        @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Icon")
+        @com.aliyun.core.annotation.NameInMap("Icon")
         private String icon;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Features(Builder builder) {
@@ -311,7 +310,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the feature icon.
+             * The URL of the icon.
              */
             public Builder icon(String icon) {
                 this.icon = icon;
@@ -334,10 +333,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -395,73 +394,76 @@ public class ListEnvironmentsResponseBody extends TeaModel {
 
     }
     public static class Environments extends TeaModel {
-        @NameInMap("Addons")
+        @com.aliyun.core.annotation.NameInMap("Addons")
         private java.util.List < Addons> addons;
 
-        @NameInMap("BindResourceId")
+        @com.aliyun.core.annotation.NameInMap("BindResourceId")
         private String bindResourceId;
 
-        @NameInMap("BindResourceProfile")
+        @com.aliyun.core.annotation.NameInMap("BindResourceProfile")
         private String bindResourceProfile;
 
-        @NameInMap("BindResourceType")
+        @com.aliyun.core.annotation.NameInMap("BindResourceType")
         private String bindResourceType;
 
-        @NameInMap("BindVpcCidr")
+        @com.aliyun.core.annotation.NameInMap("BindVpcCidr")
         private String bindVpcCidr;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreatedUserId")
+        @com.aliyun.core.annotation.NameInMap("CreatedUserId")
         private String createdUserId;
 
-        @NameInMap("EnvironmentId")
+        @com.aliyun.core.annotation.NameInMap("EnvironmentId")
         private String environmentId;
 
-        @NameInMap("EnvironmentName")
+        @com.aliyun.core.annotation.NameInMap("EnvironmentName")
         private String environmentName;
 
-        @NameInMap("EnvironmentType")
+        @com.aliyun.core.annotation.NameInMap("EnvironmentType")
         private String environmentType;
 
-        @NameInMap("Features")
+        @com.aliyun.core.annotation.NameInMap("Features")
         private java.util.List < Features> features;
 
-        @NameInMap("GrafanaDatasourceUid")
+        @com.aliyun.core.annotation.NameInMap("FeePackage")
+        private String feePackage;
+
+        @com.aliyun.core.annotation.NameInMap("GrafanaDatasourceUid")
         private String grafanaDatasourceUid;
 
-        @NameInMap("GrafanaFolderTitle")
+        @com.aliyun.core.annotation.NameInMap("GrafanaFolderTitle")
         private String grafanaFolderTitle;
 
-        @NameInMap("GrafanaFolderUid")
+        @com.aliyun.core.annotation.NameInMap("GrafanaFolderUid")
         private String grafanaFolderUid;
 
-        @NameInMap("LatestReleaseCreateTime")
+        @com.aliyun.core.annotation.NameInMap("LatestReleaseCreateTime")
         private String latestReleaseCreateTime;
 
-        @NameInMap("ManagedType")
+        @com.aliyun.core.annotation.NameInMap("ManagedType")
         private String managedType;
 
-        @NameInMap("PrometheusId")
+        @com.aliyun.core.annotation.NameInMap("PrometheusId")
         private Long prometheusId;
 
-        @NameInMap("PrometheusInstanceId")
+        @com.aliyun.core.annotation.NameInMap("PrometheusInstanceId")
         private String prometheusInstanceId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ReleaseCount")
+        @com.aliyun.core.annotation.NameInMap("ReleaseCount")
         private Integer releaseCount;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private Environments(Builder builder) {
@@ -476,6 +478,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             this.environmentName = builder.environmentName;
             this.environmentType = builder.environmentType;
             this.features = builder.features;
+            this.feePackage = builder.feePackage;
             this.grafanaDatasourceUid = builder.grafanaDatasourceUid;
             this.grafanaFolderTitle = builder.grafanaFolderTitle;
             this.grafanaFolderUid = builder.grafanaFolderUid;
@@ -576,6 +579,13 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         }
 
         /**
+         * @return feePackage
+         */
+        public String getFeePackage() {
+            return this.feePackage;
+        }
+
+        /**
          * @return grafanaDatasourceUid
          */
         public String getGrafanaDatasourceUid() {
@@ -671,6 +681,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             private String environmentName; 
             private String environmentType; 
             private java.util.List < Features> features; 
+            private String feePackage; 
             private String grafanaDatasourceUid; 
             private String grafanaFolderTitle; 
             private String grafanaFolderUid; 
@@ -685,7 +696,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * The queried add-ons.
+             * The add-ons.
              */
             public Builder addons(java.util.List < Addons> addons) {
                 this.addons = addons;
@@ -693,7 +704,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource associated with the environment, such as the ACK cluster ID or VPC ID.
+             * The ID of the resource bound to the environment instance. The resource can be a Kubernetes cluster or a VPC.
              */
             public Builder bindResourceId(String bindResourceId) {
                 this.bindResourceId = bindResourceId;
@@ -701,7 +712,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The profile of the resource.
+             * The profile that is bound to the resource.
              */
             public Builder bindResourceProfile(String bindResourceProfile) {
                 this.bindResourceProfile = bindResourceProfile;
@@ -725,7 +736,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the VPC was created.
+             * The time when the environment instance was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -733,7 +744,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user that created the VPC.
+             * The user ID.
              */
             public Builder createdUserId(String createdUserId) {
                 this.createdUserId = createdUserId;
@@ -749,7 +760,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the environment.
+             * The name of the environment instance.
              */
             public Builder environmentName(String environmentName) {
                 this.environmentName = environmentName;
@@ -757,10 +768,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the environment. Valid values:
+             * The type of the environment instance. Valid values:
              * <p>
              * 
-             * *   CS: Container Service for Kubernetes (ACK)
+             * *   CS: Container Service
              * *   ECS: Elastic Compute Service (ECS)
              * *   Cloud: cloud service
              */
@@ -770,10 +781,18 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The features.
+             * The parameters of the feature.
              */
             public Builder features(java.util.List < Features> features) {
                 this.features = features;
+                return this;
+            }
+
+            /**
+             * FeePackage.
+             */
+            public Builder feePackage(String feePackage) {
+                this.feePackage = feePackage;
                 return this;
             }
 
@@ -802,7 +821,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the add-on was last created.
+             * The time when the last add-on was created.
              */
             public Builder latestReleaseCreateTime(String latestReleaseCreateTime) {
                 this.latestReleaseCreateTime = latestReleaseCreateTime;
@@ -810,11 +829,14 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * type of managed: 
+             * type of managed:
              * <p>
+             * 
              * - none: not managed. default value of prometheus for ACK.
-             * - agent: managed agent. default value of  promehtues for ASK/ACS/AckOne.
-             * - agent-exproter: maanged agent and exporter. default of prometheus for Cloud.
+             * 
+             * - agent: managed agent. default value of promehtues for ASK/ACS/AckOne.
+             * 
+             * - agent-exproter: managed agent and exporter. default of prometheus for Cloud.
              */
             public Builder managedType(String managedType) {
                 this.managedType = managedType;
@@ -822,7 +844,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Prometheus service.
+             * The Prometheus ID.
              */
             public Builder prometheusId(Long prometheusId) {
                 this.prometheusId = prometheusId;
@@ -885,10 +907,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Environments")
+        @com.aliyun.core.annotation.NameInMap("Environments")
         private java.util.List < Environments> environments;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private Data(Builder builder) {
@@ -923,7 +945,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * The queried environments.
+             * The parameters of the environment instance.
              */
             public Builder environments(java.util.List < Environments> environments) {
                 this.environments = environments;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,39 +11,39 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateOrUpdateWebhookContactRequest</p>
  */
 public class CreateOrUpdateWebhookContactRequest extends Request {
-    @Body
-    @NameInMap("BizHeaders")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizHeaders")
     private String bizHeaders;
 
-    @Body
-    @NameInMap("BizParams")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizParams")
     private String bizParams;
 
-    @Body
-    @NameInMap("Body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Body")
     private String body;
 
-    @Body
-    @NameInMap("Method")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Method")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String method;
 
-    @Body
-    @NameInMap("RecoverBody")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RecoverBody")
     private String recoverBody;
 
-    @Body
-    @NameInMap("Url")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Url")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String url;
 
-    @Body
-    @NameInMap("WebhookId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WebhookId")
     private Long webhookId;
 
-    @Body
-    @NameInMap("WebhookName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WebhookName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String webhookName;
 
     private CreateOrUpdateWebhookContactRequest(Builder builder) {

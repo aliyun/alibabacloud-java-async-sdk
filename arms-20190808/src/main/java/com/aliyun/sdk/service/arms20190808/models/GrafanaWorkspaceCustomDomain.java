@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GrafanaWorkspaceCustomDomain</p>
  */
 public class GrafanaWorkspaceCustomDomain extends TeaModel {
-    @NameInMap("cert")
+    @com.aliyun.core.annotation.NameInMap("cert")
     private String cert;
 
-    @NameInMap("date")
+    @com.aliyun.core.annotation.NameInMap("date")
     private Long date;
 
-    @NameInMap("domain")
+    @com.aliyun.core.annotation.NameInMap("domain")
     private String domain;
 
-    @NameInMap("grafanaWorkspaceId")
+    @com.aliyun.core.annotation.NameInMap("grafanaWorkspaceId")
     private String grafanaWorkspaceId;
 
-    @NameInMap("id")
+    @com.aliyun.core.annotation.NameInMap("id")
     private Long id;
 
-    @NameInMap("key")
+    @com.aliyun.core.annotation.NameInMap("key")
     private String key;
 
-    @NameInMap("privateZone")
+    @com.aliyun.core.annotation.NameInMap("privateZone")
     private String privateZone;
 
-    @NameInMap("protocol")
+    @com.aliyun.core.annotation.NameInMap("protocol")
     private String protocol;
 
-    @NameInMap("status")
+    @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
-    @NameInMap("uri")
+    @com.aliyun.core.annotation.NameInMap("uri")
     private String uri;
 
     private GrafanaWorkspaceCustomDomain(Builder builder) {

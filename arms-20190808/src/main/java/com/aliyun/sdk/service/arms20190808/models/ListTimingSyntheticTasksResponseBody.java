@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTimingSyntheticTasksResponseBody</p>
  */
 public class ListTimingSyntheticTasksResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListTimingSyntheticTasksResponseBody(Builder builder) {
@@ -112,13 +111,13 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
     } 
 
     public static class Hosts extends TeaModel {
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("IpType")
+        @com.aliyun.core.annotation.NameInMap("IpType")
         private Integer ipType;
 
-        @NameInMap("Ips")
+        @com.aliyun.core.annotation.NameInMap("Ips")
         private java.util.List < String > ips;
 
         private Hosts(Builder builder) {
@@ -193,10 +192,10 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
 
     }
     public static class CustomHost extends TeaModel {
-        @NameInMap("Hosts")
+        @com.aliyun.core.annotation.NameInMap("Hosts")
         private java.util.List < Hosts> hosts;
 
-        @NameInMap("SelectType")
+        @com.aliyun.core.annotation.NameInMap("SelectType")
         private Integer selectType;
 
         private CustomHost(Builder builder) {
@@ -254,13 +253,13 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
 
     }
     public static class CustomPrometheusSetting extends TeaModel {
-        @NameInMap("PrometheusClusterId")
+        @com.aliyun.core.annotation.NameInMap("PrometheusClusterId")
         private String prometheusClusterId;
 
-        @NameInMap("PrometheusClusterRegion")
+        @com.aliyun.core.annotation.NameInMap("PrometheusClusterRegion")
         private String prometheusClusterRegion;
 
-        @NameInMap("PrometheusLabels")
+        @com.aliyun.core.annotation.NameInMap("PrometheusLabels")
         private java.util.Map < String, String > prometheusLabels;
 
         private CustomPrometheusSetting(Builder builder) {
@@ -335,16 +334,16 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
 
     }
     public static class CustomVPCSetting extends TeaModel {
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SecureGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecureGroupId")
         private String secureGroupId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private CustomVPCSetting(Builder builder) {
@@ -436,28 +435,28 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
 
     }
     public static class CommonSetting extends TeaModel {
-        @NameInMap("CustomHost")
+        @com.aliyun.core.annotation.NameInMap("CustomHost")
         private CustomHost customHost;
 
-        @NameInMap("CustomPrometheusSetting")
+        @com.aliyun.core.annotation.NameInMap("CustomPrometheusSetting")
         private CustomPrometheusSetting customPrometheusSetting;
 
-        @NameInMap("CustomVPCSetting")
+        @com.aliyun.core.annotation.NameInMap("CustomVPCSetting")
         private CustomVPCSetting customVPCSetting;
 
-        @NameInMap("IpType")
+        @com.aliyun.core.annotation.NameInMap("IpType")
         private Integer ipType;
 
-        @NameInMap("IsOpenTrace")
+        @com.aliyun.core.annotation.NameInMap("IsOpenTrace")
         private Boolean isOpenTrace;
 
-        @NameInMap("MonitorSamples")
+        @com.aliyun.core.annotation.NameInMap("MonitorSamples")
         private Integer monitorSamples;
 
-        @NameInMap("TraceClientType")
+        @com.aliyun.core.annotation.NameInMap("TraceClientType")
         private Integer traceClientType;
 
-        @NameInMap("XtraceRegion")
+        @com.aliyun.core.annotation.NameInMap("XtraceRegion")
         private String xtraceRegion;
 
         private CommonSetting(Builder builder) {
@@ -617,10 +616,10 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -678,46 +677,46 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("CommonSetting")
+        @com.aliyun.core.annotation.NameInMap("CommonSetting")
         private CommonSetting commonSetting;
 
-        @NameInMap("Frequency")
+        @com.aliyun.core.annotation.NameInMap("Frequency")
         private String frequency;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("MonitorCategory")
+        @com.aliyun.core.annotation.NameInMap("MonitorCategory")
         private Integer monitorCategory;
 
-        @NameInMap("MonitorNum")
+        @com.aliyun.core.annotation.NameInMap("MonitorNum")
         private String monitorNum;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private Integer taskType;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private Items(Builder builder) {
@@ -982,16 +981,16 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Items")
+        @com.aliyun.core.annotation.NameInMap("Items")
         private java.util.List < Items> items;
 
-        @NameInMap("Page")
+        @com.aliyun.core.annotation.NameInMap("Page")
         private Integer page;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Data(Builder builder) {

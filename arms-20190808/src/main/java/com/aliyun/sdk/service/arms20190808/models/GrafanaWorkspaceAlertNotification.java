@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GrafanaWorkspaceAlertNotification</p>
  */
 public class GrafanaWorkspaceAlertNotification extends TeaModel {
-    @NameInMap("id")
+    @com.aliyun.core.annotation.NameInMap("id")
     private Long id;
 
-    @NameInMap("isArms")
+    @com.aliyun.core.annotation.NameInMap("isArms")
     private Boolean isArms;
 
-    @NameInMap("isDefault")
+    @com.aliyun.core.annotation.NameInMap("isDefault")
     private Boolean isDefault;
 
-    @NameInMap("name")
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @NameInMap("sendReminder")
+    @com.aliyun.core.annotation.NameInMap("sendReminder")
     private Boolean sendReminder;
 
-    @NameInMap("settings")
+    @com.aliyun.core.annotation.NameInMap("settings")
     private String settings;
 
-    @NameInMap("type")
+    @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
-    @NameInMap("uid")
+    @com.aliyun.core.annotation.NameInMap("uid")
     private String uid;
 
     private GrafanaWorkspaceAlertNotification(Builder builder) {

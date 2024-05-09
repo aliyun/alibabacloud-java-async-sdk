@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAlertEventsResponseBody</p>
  */
 public class ListAlertEventsResponseBody extends TeaModel {
-    @NameInMap("PageBean")
+    @com.aliyun.core.annotation.NameInMap("PageBean")
     private PageBean pageBean;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListAlertEventsResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class ListAlertEventsResponseBody extends TeaModel {
     } 
 
     public static class Alarms extends TeaModel {
-        @NameInMap("AlarmId")
+        @com.aliyun.core.annotation.NameInMap("AlarmId")
         private Long alarmId;
 
-        @NameInMap("AlarmName")
+        @com.aliyun.core.annotation.NameInMap("AlarmName")
         private String alarmName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private Integer state;
 
         private Alarms(Builder builder) {
@@ -178,46 +177,46 @@ public class ListAlertEventsResponseBody extends TeaModel {
 
     }
     public static class Events extends TeaModel {
-        @NameInMap("Alarms")
+        @com.aliyun.core.annotation.NameInMap("Alarms")
         private java.util.List < Alarms> alarms;
 
-        @NameInMap("AlertName")
+        @com.aliyun.core.annotation.NameInMap("AlertName")
         private String alertName;
 
-        @NameInMap("Annotations")
+        @com.aliyun.core.annotation.NameInMap("Annotations")
         private String annotations;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("GeneratorURL")
+        @com.aliyun.core.annotation.NameInMap("GeneratorURL")
         private String generatorURL;
 
-        @NameInMap("HandlerName")
+        @com.aliyun.core.annotation.NameInMap("HandlerName")
         private String handlerName;
 
-        @NameInMap("IntegrationName")
+        @com.aliyun.core.annotation.NameInMap("IntegrationName")
         private String integrationName;
 
-        @NameInMap("IntegrationType")
+        @com.aliyun.core.annotation.NameInMap("IntegrationType")
         private String integrationType;
 
-        @NameInMap("Labels")
+        @com.aliyun.core.annotation.NameInMap("Labels")
         private String labels;
 
-        @NameInMap("ReceiveTime")
+        @com.aliyun.core.annotation.NameInMap("ReceiveTime")
         private String receiveTime;
 
-        @NameInMap("Severity")
+        @com.aliyun.core.annotation.NameInMap("Severity")
         private String severity;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Events(Builder builder) {
@@ -491,16 +490,16 @@ public class ListAlertEventsResponseBody extends TeaModel {
 
     }
     public static class PageBean extends TeaModel {
-        @NameInMap("Events")
+        @com.aliyun.core.annotation.NameInMap("Events")
         private java.util.List < Events> events;
 
-        @NameInMap("Page")
+        @com.aliyun.core.annotation.NameInMap("Page")
         private Long page;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private PageBean(Builder builder) {

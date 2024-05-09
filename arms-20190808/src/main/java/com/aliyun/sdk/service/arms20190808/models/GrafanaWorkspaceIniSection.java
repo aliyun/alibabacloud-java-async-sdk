@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GrafanaWorkspaceIniSection</p>
  */
 public class GrafanaWorkspaceIniSection extends TeaModel {
-    @NameInMap("propertys")
+    @com.aliyun.core.annotation.NameInMap("propertys")
     private java.util.List < GrafanaWorkspaceIniProperty > propertys;
 
-    @NameInMap("section")
+    @com.aliyun.core.annotation.NameInMap("section")
     private String section;
 
     private GrafanaWorkspaceIniSection(Builder builder) {

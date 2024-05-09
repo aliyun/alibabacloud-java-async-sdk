@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListOnCallSchedulesResponseBody</p>
  */
 public class ListOnCallSchedulesResponseBody extends TeaModel {
-    @NameInMap("PageBean")
+    @com.aliyun.core.annotation.NameInMap("PageBean")
     private PageBean pageBean;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListOnCallSchedulesResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class ListOnCallSchedulesResponseBody extends TeaModel {
     } 
 
     public static class OnCallSchedules extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private OnCallSchedules(Builder builder) {
@@ -153,16 +152,16 @@ public class ListOnCallSchedulesResponseBody extends TeaModel {
 
     }
     public static class PageBean extends TeaModel {
-        @NameInMap("OnCallSchedules")
+        @com.aliyun.core.annotation.NameInMap("OnCallSchedules")
         private java.util.List < OnCallSchedules> onCallSchedules;
 
-        @NameInMap("Page")
+        @com.aliyun.core.annotation.NameInMap("Page")
         private Long page;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private PageBean(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetRecordingRuleResponseBody</p>
  */
 public class GetRecordingRuleResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetRecordingRuleResponseBody(Builder builder) {
@@ -74,7 +73,7 @@ public class GetRecordingRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * Status code. 200 is success, other status codes are exceptions.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -90,7 +89,7 @@ public class GetRecordingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * Returns a hint message for the result.
          */
         public Builder message(String message) {
             this.message = message;

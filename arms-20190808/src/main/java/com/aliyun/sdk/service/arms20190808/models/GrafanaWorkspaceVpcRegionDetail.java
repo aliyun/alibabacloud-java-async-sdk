@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GrafanaWorkspaceVpcRegionDetail</p>
  */
 public class GrafanaWorkspaceVpcRegionDetail extends TeaModel {
-    @NameInMap("fcConfig")
+    @com.aliyun.core.annotation.NameInMap("fcConfig")
     private String fcConfig;
 
-    @NameInMap("id")
+    @com.aliyun.core.annotation.NameInMap("id")
     private Long id;
 
-    @NameInMap("installStatus")
+    @com.aliyun.core.annotation.NameInMap("installStatus")
     private String installStatus;
 
-    @NameInMap("name")
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @NameInMap("regionId")
+    @com.aliyun.core.annotation.NameInMap("regionId")
     private String regionId;
 
-    @NameInMap("securityGroupId")
+    @com.aliyun.core.annotation.NameInMap("securityGroupId")
     private String securityGroupId;
 
-    @NameInMap("securityGroupIds")
+    @com.aliyun.core.annotation.NameInMap("securityGroupIds")
     private java.util.List < String > securityGroupIds;
 
-    @NameInMap("userId")
+    @com.aliyun.core.annotation.NameInMap("userId")
     private String userId;
 
-    @NameInMap("vSwitchId")
+    @com.aliyun.core.annotation.NameInMap("vSwitchId")
     private String vSwitchId;
 
-    @NameInMap("vSwitchIds")
+    @com.aliyun.core.annotation.NameInMap("vSwitchIds")
     private java.util.List < String > vSwitchIds;
 
-    @NameInMap("vpcId")
+    @com.aliyun.core.annotation.NameInMap("vpcId")
     private String vpcId;
 
     private GrafanaWorkspaceVpcRegionDetail(Builder builder) {

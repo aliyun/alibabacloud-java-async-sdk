@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateOrUpdateContactGroupResponseBody</p>
  */
 public class CreateOrUpdateContactGroupResponseBody extends TeaModel {
-    @NameInMap("AlertContactGroup")
+    @com.aliyun.core.annotation.NameInMap("AlertContactGroup")
     private AlertContactGroup alertContactGroup;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateOrUpdateContactGroupResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class CreateOrUpdateContactGroupResponseBody extends TeaModel {
     } 
 
     public static class AlertContactGroup extends TeaModel {
-        @NameInMap("ContactGroupId")
+        @com.aliyun.core.annotation.NameInMap("ContactGroupId")
         private Float contactGroupId;
 
-        @NameInMap("ContactGroupName")
+        @com.aliyun.core.annotation.NameInMap("ContactGroupName")
         private String contactGroupName;
 
-        @NameInMap("ContactIds")
+        @com.aliyun.core.annotation.NameInMap("ContactIds")
         private String contactIds;
 
         private AlertContactGroup(Builder builder) {

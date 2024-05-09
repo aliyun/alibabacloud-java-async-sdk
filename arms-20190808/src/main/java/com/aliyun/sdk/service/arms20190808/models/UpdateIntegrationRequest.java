@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,63 +11,63 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateIntegrationRequest</p>
  */
 public class UpdateIntegrationRequest extends Request {
-    @Body
-    @NameInMap("AutoRecover")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoRecover")
     private Boolean autoRecover;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("DuplicateKey")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DuplicateKey")
     private String duplicateKey;
 
-    @Body
-    @NameInMap("ExtendedFieldRedefineRules")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExtendedFieldRedefineRules")
     private String extendedFieldRedefineRules;
 
-    @Body
-    @NameInMap("FieldRedefineRules")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FieldRedefineRules")
     private String fieldRedefineRules;
 
-    @Body
-    @NameInMap("InitiativeRecoverField")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InitiativeRecoverField")
     private String initiativeRecoverField;
 
-    @Body
-    @NameInMap("InitiativeRecoverValue")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InitiativeRecoverValue")
     private String initiativeRecoverValue;
 
-    @Body
-    @NameInMap("IntegrationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IntegrationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long integrationId;
 
-    @Body
-    @NameInMap("IntegrationName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IntegrationName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String integrationName;
 
-    @Body
-    @NameInMap("IntegrationProductType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IntegrationProductType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String integrationProductType;
 
-    @Body
-    @NameInMap("Liveness")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Liveness")
     private String liveness;
 
-    @Body
-    @NameInMap("RecoverTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RecoverTime")
     private Long recoverTime;
 
-    @Body
-    @NameInMap("Stat")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Stat")
     private String stat;
 
-    @Body
-    @NameInMap("State")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("State")
     private Boolean state;
 
     private UpdateIntegrationRequest(Builder builder) {

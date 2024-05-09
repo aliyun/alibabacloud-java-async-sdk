@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,39 +11,39 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InstallAddonRequest</p>
  */
 public class InstallAddonRequest extends Request {
-    @Query
-    @NameInMap("AddonVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddonVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String addonVersion;
 
-    @Query
-    @NameInMap("AliyunLang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AliyunLang")
     private String aliyunLang;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("EnvironmentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnvironmentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String environmentId;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ReleaseName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReleaseName")
     private String releaseName;
 
-    @Query
-    @NameInMap("Values")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Values")
     private String values;
 
     private InstallAddonRequest(Builder builder) {
@@ -155,7 +154,7 @@ public class InstallAddonRequest extends Request {
         } 
 
         /**
-         * Version of Addon.
+         * The version of the add-on.
          */
         public Builder addonVersion(String addonVersion) {
             this.putQueryParameter("AddonVersion", addonVersion);
@@ -164,7 +163,7 @@ public class InstallAddonRequest extends Request {
         }
 
         /**
-         * Locale, the default is Chinese zh.
+         * The language. Valid values: zh and en. Default value: zh.
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -173,7 +172,7 @@ public class InstallAddonRequest extends Request {
         }
 
         /**
-         * Whether to test run. The default value is false.
+         * Specifies whether to perform only a dry run, without performing the actual request. Default value: false.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -182,7 +181,7 @@ public class InstallAddonRequest extends Request {
         }
 
         /**
-         * Environment ID.
+         * The environment ID.
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -191,7 +190,7 @@ public class InstallAddonRequest extends Request {
         }
 
         /**
-         * Name of Addon.
+         * The name of the add-on.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -209,7 +208,7 @@ public class InstallAddonRequest extends Request {
         }
 
         /**
-         * The release name after installation, if not specified, generates the default rule name.
+         * The name of the add-on after it is installed. If you do not specify this parameter, a default rule name is generated.
          */
         public Builder releaseName(String releaseName) {
             this.putQueryParameter("ReleaseName", releaseName);
@@ -218,7 +217,7 @@ public class InstallAddonRequest extends Request {
         }
 
         /**
-         * Config information.
+         * The metadata.
          */
         public Builder values(String values) {
             this.putQueryParameter("Values", values);

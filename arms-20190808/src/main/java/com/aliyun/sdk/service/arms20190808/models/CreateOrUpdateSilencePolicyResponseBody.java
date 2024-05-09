@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateOrUpdateSilencePolicyResponseBody</p>
  */
 public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SilencePolicy")
+    @com.aliyun.core.annotation.NameInMap("SilencePolicy")
     private SilencePolicy silencePolicy;
 
     private CreateOrUpdateSilencePolicyResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
     } 
 
     public static class MatchingConditions extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private MatchingConditions(Builder builder) {
@@ -161,7 +160,7 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
 
     }
     public static class MatchingRules extends TeaModel {
-        @NameInMap("MatchingConditions")
+        @com.aliyun.core.annotation.NameInMap("MatchingConditions")
         private java.util.List < MatchingConditions> matchingConditions;
 
         private MatchingRules(Builder builder) {
@@ -202,13 +201,13 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
 
     }
     public static class SilencePolicy extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("MatchingRules")
+        @com.aliyun.core.annotation.NameInMap("MatchingRules")
         private java.util.List < MatchingRules> matchingRules;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private SilencePolicy(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateRetcodeAppResponseBody</p>
  */
 public class CreateRetcodeAppResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RetcodeAppDataBean")
+    @com.aliyun.core.annotation.NameInMap("RetcodeAppDataBean")
     private RetcodeAppDataBean retcodeAppDataBean;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateRetcodeAppResponseBody(Builder builder) {
@@ -156,10 +155,10 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -217,7 +216,7 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
 
     }
     public static class RetcodeAppDataBeanTags extends TeaModel {
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
         private RetcodeAppDataBeanTags(Builder builder) {
@@ -258,16 +257,16 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
 
     }
     public static class RetcodeAppDataBean extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private Long appId;
 
-        @NameInMap("Pid")
+        @com.aliyun.core.annotation.NameInMap("Pid")
         private String pid;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private RetcodeAppDataBeanTags tags;
 
         private RetcodeAppDataBean(Builder builder) {

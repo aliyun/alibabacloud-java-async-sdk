@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,41 +11,41 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDashboardsByNameRequest</p>
  */
 public class ListDashboardsByNameRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Query
-    @NameInMap("ClusterType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterType")
     private String clusterType;
 
-    @Query
-    @NameInMap("DashBoardName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DashBoardName")
     private String dashBoardName;
 
-    @Query
-    @NameInMap("DashBoardVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DashBoardVersion")
     private String dashBoardVersion;
 
-    @Query
-    @NameInMap("DataSourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataSourceType")
     private String dataSourceType;
 
-    @Query
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
-    @Query
-    @NameInMap("OnlyQuery")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OnlyQuery")
     private Boolean onlyQuery;
 
-    @Query
-    @NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private ListDashboardsByNameRequest(Builder builder) {
@@ -167,7 +166,7 @@ public class ListDashboardsByNameRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster. If the ClusterType parameter is not set to `cloud-product-prometheus` or `cms-enterprise-prometheus`, you must specify the ClusterId parameter.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -176,7 +175,18 @@ public class ListDashboardsByNameRequest extends Request {
         }
 
         /**
-         * ClusterType.
+         * The cluster type. Valid values:
+         * <p>
+         * 
+         * *   vpc-prometheus
+         * *   cloud-product-prometheus
+         * *   cms-enterprise-prometheus
+         * *   ExternalKubernetes
+         * *   Ask
+         * *   Kubernetes
+         * *   ManagedKubernetes
+         * *   remote-write-prometheus
+         * *   GlobalViewV2
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -185,7 +195,7 @@ public class ListDashboardsByNameRequest extends Request {
         }
 
         /**
-         * DashBoardName.
+         * The name of the dashboard.
          */
         public Builder dashBoardName(String dashBoardName) {
             this.putQueryParameter("DashBoardName", dashBoardName);
@@ -194,7 +204,7 @@ public class ListDashboardsByNameRequest extends Request {
         }
 
         /**
-         * DashBoardVersion.
+         * The version of the dashboard.
          */
         public Builder dashBoardVersion(String dashBoardVersion) {
             this.putQueryParameter("DashBoardVersion", dashBoardVersion);
@@ -203,7 +213,11 @@ public class ListDashboardsByNameRequest extends Request {
         }
 
         /**
-         * DataSourceType.
+         * The type of the data source. Valid values:
+         * <p>
+         * 
+         * *   loki
+         * *   prometheus
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);
@@ -212,7 +226,7 @@ public class ListDashboardsByNameRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * The name of the dashboard group.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -221,7 +235,7 @@ public class ListDashboardsByNameRequest extends Request {
         }
 
         /**
-         * OnlyQuery.
+         * Specifies whether to display the Grafana dashboard only in the Application Real-Time Monitoring Service (ARMS) console.
          */
         public Builder onlyQuery(Boolean onlyQuery) {
             this.putQueryParameter("OnlyQuery", onlyQuery);
@@ -230,7 +244,7 @@ public class ListDashboardsByNameRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The abbreviation of the Alibaba Cloud service name.
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -239,7 +253,7 @@ public class ListDashboardsByNameRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

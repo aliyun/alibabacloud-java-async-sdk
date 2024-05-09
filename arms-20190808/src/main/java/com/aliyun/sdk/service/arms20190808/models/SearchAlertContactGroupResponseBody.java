@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SearchAlertContactGroupResponseBody</p>
  */
 public class SearchAlertContactGroupResponseBody extends TeaModel {
-    @NameInMap("ContactGroups")
+    @com.aliyun.core.annotation.NameInMap("ContactGroups")
     private java.util.List < ContactGroups> contactGroups;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SearchAlertContactGroupResponseBody(Builder builder) {
@@ -72,31 +71,31 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
     } 
 
     public static class Contacts extends TeaModel {
-        @NameInMap("ContactId")
+        @com.aliyun.core.annotation.NameInMap("ContactId")
         private Long contactId;
 
-        @NameInMap("ContactName")
+        @com.aliyun.core.annotation.NameInMap("ContactName")
         private String contactName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("DingRobot")
+        @com.aliyun.core.annotation.NameInMap("DingRobot")
         private String dingRobot;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("Phone")
+        @com.aliyun.core.annotation.NameInMap("Phone")
         private String phone;
 
-        @NameInMap("SystemNoc")
+        @com.aliyun.core.annotation.NameInMap("SystemNoc")
         private Boolean systemNoc;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private Contacts(Builder builder) {
@@ -277,22 +276,22 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
 
     }
     public static class ContactGroups extends TeaModel {
-        @NameInMap("ContactGroupId")
+        @com.aliyun.core.annotation.NameInMap("ContactGroupId")
         private Long contactGroupId;
 
-        @NameInMap("ContactGroupName")
+        @com.aliyun.core.annotation.NameInMap("ContactGroupName")
         private String contactGroupName;
 
-        @NameInMap("Contacts")
+        @com.aliyun.core.annotation.NameInMap("Contacts")
         private java.util.List < Contacts> contacts;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private ContactGroups(Builder builder) {

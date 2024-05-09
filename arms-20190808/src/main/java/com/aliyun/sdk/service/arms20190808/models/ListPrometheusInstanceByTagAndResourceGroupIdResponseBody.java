@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPrometheusInstanceByTagAndResourceGroupIdResponseBody</p>
  */
 public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListPrometheusInstanceByTagAndResourceGroupIdResponseBody(Builder builder) {
@@ -112,10 +111,10 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tags(Builder builder) {
@@ -173,73 +172,73 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
 
     }
     public static class PrometheusInstances extends TeaModel {
-        @NameInMap("AuthToken")
+        @com.aliyun.core.annotation.NameInMap("AuthToken")
         private String authToken;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("ClusterType")
+        @com.aliyun.core.annotation.NameInMap("ClusterType")
         private String clusterType;
 
-        @NameInMap("GrafanaInstanceId")
+        @com.aliyun.core.annotation.NameInMap("GrafanaInstanceId")
         private String grafanaInstanceId;
 
-        @NameInMap("HttpApiInterUrl")
+        @com.aliyun.core.annotation.NameInMap("HttpApiInterUrl")
         private String httpApiInterUrl;
 
-        @NameInMap("HttpApiIntraUrl")
+        @com.aliyun.core.annotation.NameInMap("HttpApiIntraUrl")
         private String httpApiIntraUrl;
 
-        @NameInMap("PaymentType")
+        @com.aliyun.core.annotation.NameInMap("PaymentType")
         private String paymentType;
 
-        @NameInMap("PushGatewayInterUrl")
+        @com.aliyun.core.annotation.NameInMap("PushGatewayInterUrl")
         private String pushGatewayInterUrl;
 
-        @NameInMap("PushGatewayIntraUrl")
+        @com.aliyun.core.annotation.NameInMap("PushGatewayIntraUrl")
         private String pushGatewayIntraUrl;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RemoteReadInterUrl")
+        @com.aliyun.core.annotation.NameInMap("RemoteReadInterUrl")
         private String remoteReadInterUrl;
 
-        @NameInMap("RemoteReadIntraUrl")
+        @com.aliyun.core.annotation.NameInMap("RemoteReadIntraUrl")
         private String remoteReadIntraUrl;
 
-        @NameInMap("RemoteWriteInterUrl")
+        @com.aliyun.core.annotation.NameInMap("RemoteWriteInterUrl")
         private String remoteWriteInterUrl;
 
-        @NameInMap("RemoteWriteIntraUrl")
+        @com.aliyun.core.annotation.NameInMap("RemoteWriteIntraUrl")
         private String remoteWriteIntraUrl;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("SubClustersJson")
+        @com.aliyun.core.annotation.NameInMap("SubClustersJson")
         private String subClustersJson;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private PrometheusInstances(Builder builder) {
@@ -665,7 +664,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("PrometheusInstances")
+        @com.aliyun.core.annotation.NameInMap("PrometheusInstances")
         private java.util.List < PrometheusInstances> prometheusInstances;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetRetcodeLogstoreResponseBody</p>
  */
 public class GetRetcodeLogstoreResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetRetcodeLogstoreResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class GetRetcodeLogstoreResponseBody extends TeaModel {
     } 
 
     public static class RetcodeSLSConfig extends TeaModel {
-        @NameInMap("Logstore")
+        @com.aliyun.core.annotation.NameInMap("Logstore")
         private String logstore;
 
-        @NameInMap("Project")
+        @com.aliyun.core.annotation.NameInMap("Project")
         private String project;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private RetcodeSLSConfig(Builder builder) {
@@ -153,13 +152,13 @@ public class GetRetcodeLogstoreResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("RetcodeSLSConfig")
+        @com.aliyun.core.annotation.NameInMap("RetcodeSLSConfig")
         private RetcodeSLSConfig retcodeSLSConfig;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Data(Builder builder) {

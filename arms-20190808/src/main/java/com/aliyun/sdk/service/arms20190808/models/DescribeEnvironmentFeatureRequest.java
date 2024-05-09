@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEnvironmentFeatureRequest</p>
  */
 public class DescribeEnvironmentFeatureRequest extends Request {
-    @Query
-    @NameInMap("EnvironmentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AliyunLang")
+    private String aliyunLang;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnvironmentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String environmentId;
 
-    @Query
-    @NameInMap("FeatureName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FeatureName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String featureName;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private DescribeEnvironmentFeatureRequest(Builder builder) {
         super(builder);
+        this.aliyunLang = builder.aliyunLang;
         this.environmentId = builder.environmentId;
         this.featureName = builder.featureName;
         this.regionId = builder.regionId;
@@ -44,6 +48,13 @@ public class DescribeEnvironmentFeatureRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return aliyunLang
+     */
+    public String getAliyunLang() {
+        return this.aliyunLang;
     }
 
     /**
@@ -68,6 +79,7 @@ public class DescribeEnvironmentFeatureRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeEnvironmentFeatureRequest, Builder> {
+        private String aliyunLang; 
         private String environmentId; 
         private String featureName; 
         private String regionId; 
@@ -78,10 +90,20 @@ public class DescribeEnvironmentFeatureRequest extends Request {
 
         private Builder(DescribeEnvironmentFeatureRequest request) {
             super(request);
+            this.aliyunLang = request.aliyunLang;
             this.environmentId = request.environmentId;
             this.featureName = request.featureName;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * AliyunLang.
+         */
+        public Builder aliyunLang(String aliyunLang) {
+            this.putQueryParameter("AliyunLang", aliyunLang);
+            this.aliyunLang = aliyunLang;
+            return this;
+        }
 
         /**
          * The environment ID.

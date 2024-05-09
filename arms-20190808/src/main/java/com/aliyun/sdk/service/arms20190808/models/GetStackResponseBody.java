@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetStackResponseBody</p>
  */
 public class GetStackResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StackInfo")
+    @com.aliyun.core.annotation.NameInMap("StackInfo")
     private java.util.List < StackInfo> stackInfo;
 
     private GetStackResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class GetStackResponseBody extends TeaModel {
     } 
 
     public static class ExtInfo extends TeaModel {
-        @NameInMap("Info")
+        @com.aliyun.core.annotation.NameInMap("Info")
         private String info;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private ExtInfo(Builder builder) {
@@ -133,28 +132,28 @@ public class GetStackResponseBody extends TeaModel {
 
     }
     public static class StackInfo extends TeaModel {
-        @NameInMap("Api")
+        @com.aliyun.core.annotation.NameInMap("Api")
         private String api;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
 
-        @NameInMap("Exception")
+        @com.aliyun.core.annotation.NameInMap("Exception")
         private String exception;
 
-        @NameInMap("ExtInfo")
+        @com.aliyun.core.annotation.NameInMap("ExtInfo")
         private ExtInfo extInfo;
 
-        @NameInMap("Line")
+        @com.aliyun.core.annotation.NameInMap("Line")
         private String line;
 
-        @NameInMap("RpcId")
+        @com.aliyun.core.annotation.NameInMap("RpcId")
         private String rpcId;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
         private StackInfo(Builder builder) {

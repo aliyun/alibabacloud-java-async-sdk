@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RemoveAliClusterIdsFromPrometheusGlobalViewRequest</p>
  */
 public class RemoveAliClusterIdsFromPrometheusGlobalViewRequest extends Request {
-    @Query
-    @NameInMap("ClusterIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterIds;
 
-    @Query
-    @NameInMap("GlobalViewClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GlobalViewClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String globalViewClusterId;
 
-    @Query
-    @NameInMap("GroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupName;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private RemoveAliClusterIdsFromPrometheusGlobalViewRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpgradeEnvironmentFeatureRequest</p>
  */
 public class UpgradeEnvironmentFeatureRequest extends Request {
-    @Query
-    @NameInMap("AliyunLang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AliyunLang")
     private String aliyunLang;
 
-    @Query
-    @NameInMap("EnvironmentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnvironmentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String environmentId;
 
-    @Query
-    @NameInMap("FeatureName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FeatureName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String featureName;
 
-    @Query
-    @NameInMap("FeatureVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FeatureVersion")
     private String featureVersion;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Values")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Values")
     private String values;
 
     private UpgradeEnvironmentFeatureRequest(Builder builder) {

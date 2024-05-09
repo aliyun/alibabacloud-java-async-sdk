@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,7 +11,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryDataResponse</p>
  */
 public class QueryDataResponse extends Response {
-    @NameInMap("results")
+    @com.aliyun.core.annotation.NameInMap("results")
     private String results;
 
     private QueryDataResponse(BuilderImpl builder) {

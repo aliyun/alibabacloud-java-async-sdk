@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdatePrometheusGlobalViewResponseBody</p>
  */
 public class UpdatePrometheusGlobalViewResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdatePrometheusGlobalViewResponseBody(Builder builder) {
@@ -112,16 +111,16 @@ public class UpdatePrometheusGlobalViewResponseBody extends TeaModel {
     } 
 
     public static class FailedInstances extends TeaModel {
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("SourceName")
+        @com.aliyun.core.annotation.NameInMap("SourceName")
         private String sourceName;
 
-        @NameInMap("SourceType")
+        @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private FailedInstances(Builder builder) {
@@ -213,10 +212,10 @@ public class UpdatePrometheusGlobalViewResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("FailedInstances")
+        @com.aliyun.core.annotation.NameInMap("FailedInstances")
         private java.util.List < FailedInstances> failedInstances;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private Data(Builder builder) {

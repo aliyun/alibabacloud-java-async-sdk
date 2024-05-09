@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSyntheticTaskListResponseBody</p>
  */
 public class GetSyntheticTaskListResponseBody extends TeaModel {
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetSyntheticTaskListResponseBody(Builder builder) {
@@ -72,31 +71,31 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
     } 
 
     public static class List extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("MonitorNumber")
+        @com.aliyun.core.annotation.NameInMap("MonitorNumber")
         private Long monitorNumber;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
-        @NameInMap("TaskStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private String taskStatus;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private Long taskType;
 
-        @NameInMap("TaskTypeName")
+        @com.aliyun.core.annotation.NameInMap("TaskTypeName")
         private String taskTypeName;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
-        @NameInMap("Usable")
+        @com.aliyun.core.annotation.NameInMap("Usable")
         private Float usable;
 
         private List(Builder builder) {
@@ -273,43 +272,43 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("HasNextPage")
+        @com.aliyun.core.annotation.NameInMap("HasNextPage")
         private String hasNextPage;
 
-        @NameInMap("HasPreviousPage")
+        @com.aliyun.core.annotation.NameInMap("HasPreviousPage")
         private Boolean hasPreviousPage;
 
-        @NameInMap("IsFirstPage")
+        @com.aliyun.core.annotation.NameInMap("IsFirstPage")
         private Boolean isFirstPage;
 
-        @NameInMap("IsLastPage")
+        @com.aliyun.core.annotation.NameInMap("IsLastPage")
         private Boolean isLastPage;
 
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;
 
-        @NameInMap("NavigateFirstPage")
+        @com.aliyun.core.annotation.NameInMap("NavigateFirstPage")
         private String navigateFirstPage;
 
-        @NameInMap("NavigateLastPage")
+        @com.aliyun.core.annotation.NameInMap("NavigateLastPage")
         private String navigateLastPage;
 
-        @NameInMap("NavigatePageNums")
+        @com.aliyun.core.annotation.NameInMap("NavigatePageNums")
         private String navigatePageNums;
 
-        @NameInMap("NextPage")
+        @com.aliyun.core.annotation.NameInMap("NextPage")
         private String nextPage;
 
-        @NameInMap("Pages")
+        @com.aliyun.core.annotation.NameInMap("Pages")
         private String pages;
 
-        @NameInMap("Prepage")
+        @com.aliyun.core.annotation.NameInMap("Prepage")
         private String prepage;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private PageInfo(Builder builder) {

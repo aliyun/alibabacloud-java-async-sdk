@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSilencePoliciesResponseBody</p>
  */
 public class ListSilencePoliciesResponseBody extends TeaModel {
-    @NameInMap("PageBean")
+    @com.aliyun.core.annotation.NameInMap("PageBean")
     private PageBean pageBean;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListSilencePoliciesResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
     } 
 
     public static class MatchingConditions extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private MatchingConditions(Builder builder) {
@@ -161,7 +160,7 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
 
     }
     public static class MatchingRules extends TeaModel {
-        @NameInMap("MatchingConditions")
+        @com.aliyun.core.annotation.NameInMap("MatchingConditions")
         private java.util.List < MatchingConditions> matchingConditions;
 
         private MatchingRules(Builder builder) {
@@ -202,13 +201,13 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
 
     }
     public static class SilencePolicies extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("MatchingRules")
+        @com.aliyun.core.annotation.NameInMap("MatchingRules")
         private java.util.List < MatchingRules> matchingRules;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private SilencePolicies(Builder builder) {
@@ -283,16 +282,16 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
 
     }
     public static class PageBean extends TeaModel {
-        @NameInMap("Page")
+        @com.aliyun.core.annotation.NameInMap("Page")
         private Long page;
 
-        @NameInMap("SilencePolicies")
+        @com.aliyun.core.annotation.NameInMap("SilencePolicies")
         private java.util.List < SilencePolicies> silencePolicies;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private PageBean(Builder builder) {

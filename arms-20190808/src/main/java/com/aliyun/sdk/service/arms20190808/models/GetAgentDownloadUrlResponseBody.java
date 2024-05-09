@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAgentDownloadUrlResponseBody</p>
  */
 public class GetAgentDownloadUrlResponseBody extends TeaModel {
-    @NameInMap("ArmsAgentDownloadUrl")
+    @com.aliyun.core.annotation.NameInMap("ArmsAgentDownloadUrl")
     private String armsAgentDownloadUrl;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetAgentDownloadUrlResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class GetAgentDownloadUrlResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * The download URL of the ARMS agent.
          */
         public Builder armsAgentDownloadUrl(String armsAgentDownloadUrl) {
             this.armsAgentDownloadUrl = armsAgentDownloadUrl;
@@ -58,7 +57,7 @@ public class GetAgentDownloadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Obtains the download URL of the Application Real-Time Monitoring Service (ARMS) agent.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPrometheusInstanceResponseBody</p>
  */
 public class GetPrometheusInstanceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetPrometheusInstanceResponseBody(Builder builder) {
@@ -82,7 +81,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The returned information.
+         * The returned message.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,10 +111,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tags(Builder builder) {
@@ -150,7 +149,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key of the instance.
+             * The tag key.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -158,7 +157,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the instance.
+             * The tag value.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -173,79 +172,79 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("ArchiveDuration")
+        @com.aliyun.core.annotation.NameInMap("ArchiveDuration")
         private Integer archiveDuration;
 
-        @NameInMap("AuthToken")
+        @com.aliyun.core.annotation.NameInMap("AuthToken")
         private String authToken;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("ClusterType")
+        @com.aliyun.core.annotation.NameInMap("ClusterType")
         private String clusterType;
 
-        @NameInMap("GrafanaInstanceId")
+        @com.aliyun.core.annotation.NameInMap("GrafanaInstanceId")
         private String grafanaInstanceId;
 
-        @NameInMap("HttpApiInterUrl")
+        @com.aliyun.core.annotation.NameInMap("HttpApiInterUrl")
         private String httpApiInterUrl;
 
-        @NameInMap("HttpApiIntraUrl")
+        @com.aliyun.core.annotation.NameInMap("HttpApiIntraUrl")
         private String httpApiIntraUrl;
 
-        @NameInMap("PaymentType")
+        @com.aliyun.core.annotation.NameInMap("PaymentType")
         private String paymentType;
 
-        @NameInMap("PushGatewayInterUrl")
+        @com.aliyun.core.annotation.NameInMap("PushGatewayInterUrl")
         private String pushGatewayInterUrl;
 
-        @NameInMap("PushGatewayIntraUrl")
+        @com.aliyun.core.annotation.NameInMap("PushGatewayIntraUrl")
         private String pushGatewayIntraUrl;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RemoteReadInterUrl")
+        @com.aliyun.core.annotation.NameInMap("RemoteReadInterUrl")
         private String remoteReadInterUrl;
 
-        @NameInMap("RemoteReadIntraUrl")
+        @com.aliyun.core.annotation.NameInMap("RemoteReadIntraUrl")
         private String remoteReadIntraUrl;
 
-        @NameInMap("RemoteWriteInterUrl")
+        @com.aliyun.core.annotation.NameInMap("RemoteWriteInterUrl")
         private String remoteWriteInterUrl;
 
-        @NameInMap("RemoteWriteIntraUrl")
+        @com.aliyun.core.annotation.NameInMap("RemoteWriteIntraUrl")
         private String remoteWriteIntraUrl;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("StorageDuration")
+        @com.aliyun.core.annotation.NameInMap("StorageDuration")
         private Integer storageDuration;
 
-        @NameInMap("SubClustersJson")
+        @com.aliyun.core.annotation.NameInMap("SubClustersJson")
         private String subClustersJson;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private Data(Builder builder) {
@@ -487,7 +486,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * ArchiveDuration.
+             * The number of days for automatic archiving after storage expiration (optional values: 60, 90, 180, 365). 0 means not archive.
              */
             public Builder archiveDuration(Integer archiveDuration) {
                 this.archiveDuration = archiveDuration;
@@ -495,7 +494,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * auth token string.
+             * Authorization token.
              */
             public Builder authToken(String authToken) {
                 this.authToken = authToken;
@@ -541,7 +540,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * http api internet url.
+             * Http API internet address.
              */
             public Builder httpApiInterUrl(String httpApiInterUrl) {
                 this.httpApiInterUrl = httpApiInterUrl;
@@ -549,7 +548,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * http api intranet url.
+             * Http API intranet address.
              */
             public Builder httpApiIntraUrl(String httpApiIntraUrl) {
                 this.httpApiIntraUrl = httpApiIntraUrl;
@@ -569,7 +568,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * push gateway internet url.
+             * Push gateway internet address.
              */
             public Builder pushGatewayInterUrl(String pushGatewayInterUrl) {
                 this.pushGatewayInterUrl = pushGatewayInterUrl;
@@ -577,7 +576,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * push gateway intranet url.
+             * Push gateway intranet address.
              */
             public Builder pushGatewayIntraUrl(String pushGatewayIntraUrl) {
                 this.pushGatewayIntraUrl = pushGatewayIntraUrl;
@@ -593,7 +592,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * remote read internet url.
+             * Remote read internet address.
              */
             public Builder remoteReadInterUrl(String remoteReadInterUrl) {
                 this.remoteReadInterUrl = remoteReadInterUrl;
@@ -601,7 +600,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * remote read intranet url.
+             * Remote read intranet address.
              */
             public Builder remoteReadIntraUrl(String remoteReadIntraUrl) {
                 this.remoteReadIntraUrl = remoteReadIntraUrl;
@@ -609,7 +608,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * remote write internet url.
+             * Remote write internet address.
              */
             public Builder remoteWriteInterUrl(String remoteWriteInterUrl) {
                 this.remoteWriteInterUrl = remoteWriteInterUrl;
@@ -617,7 +616,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * remote write intranet url.
+             * Remote write intranet address.
              */
             public Builder remoteWriteIntraUrl(String remoteWriteIntraUrl) {
                 this.remoteWriteIntraUrl = remoteWriteIntraUrl;
@@ -641,7 +640,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security group.
+             * The ID of the security group. This parameter is returned only for Prometheus instances for ECS.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -649,7 +648,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * StorageDuration.
+             * Storage duration (days).
              */
             public Builder storageDuration(Integer storageDuration) {
                 this.storageDuration = storageDuration;
@@ -681,7 +680,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * The vSwitch ID. This parameter is returned only for Prometheus instances for ECS.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -689,7 +688,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The virtual private cloud (VPC) where the monitoring object resides.
+             * The VPC ID. This parameter is returned only for Prometheus instances for ECS.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

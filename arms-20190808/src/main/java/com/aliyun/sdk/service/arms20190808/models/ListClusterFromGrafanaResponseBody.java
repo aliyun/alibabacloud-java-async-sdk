@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListClusterFromGrafanaResponseBody</p>
  */
 public class ListClusterFromGrafanaResponseBody extends TeaModel {
-    @NameInMap("PromClusterList")
+    @com.aliyun.core.annotation.NameInMap("PromClusterList")
     private java.util.List < PromClusterList> promClusterList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListClusterFromGrafanaResponseBody(Builder builder) {
@@ -72,58 +71,58 @@ public class ListClusterFromGrafanaResponseBody extends TeaModel {
     } 
 
     public static class PromClusterList extends TeaModel {
-        @NameInMap("AgentStatus")
+        @com.aliyun.core.annotation.NameInMap("AgentStatus")
         private String agentStatus;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("ClusterType")
+        @com.aliyun.core.annotation.NameInMap("ClusterType")
         private String clusterType;
 
-        @NameInMap("ControllerId")
+        @com.aliyun.core.annotation.NameInMap("ControllerId")
         private String controllerId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Extra")
+        @com.aliyun.core.annotation.NameInMap("Extra")
         private String extra;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("InstallTime")
+        @com.aliyun.core.annotation.NameInMap("InstallTime")
         private Long installTime;
 
-        @NameInMap("IsControllerInstalled")
+        @com.aliyun.core.annotation.NameInMap("IsControllerInstalled")
         private Boolean isControllerInstalled;
 
-        @NameInMap("LastHeartBeatTime")
+        @com.aliyun.core.annotation.NameInMap("LastHeartBeatTime")
         private Long lastHeartBeatTime;
 
-        @NameInMap("NodeNum")
+        @com.aliyun.core.annotation.NameInMap("NodeNum")
         private Integer nodeNum;
 
-        @NameInMap("Options")
+        @com.aliyun.core.annotation.NameInMap("Options")
         private String options;
 
-        @NameInMap("PluginsJsonArray")
+        @com.aliyun.core.annotation.NameInMap("PluginsJsonArray")
         private String pluginsJsonArray;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("StateJson")
+        @com.aliyun.core.annotation.NameInMap("StateJson")
         private String stateJson;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private PromClusterList(Builder builder) {

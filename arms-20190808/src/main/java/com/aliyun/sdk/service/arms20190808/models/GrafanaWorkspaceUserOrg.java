@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GrafanaWorkspaceUserOrg</p>
  */
 public class GrafanaWorkspaceUserOrg extends TeaModel {
-    @NameInMap("orgId")
+    @com.aliyun.core.annotation.NameInMap("orgId")
     private Long orgId;
 
-    @NameInMap("orgName")
+    @com.aliyun.core.annotation.NameInMap("orgName")
     private String orgName;
 
-    @NameInMap("role")
+    @com.aliyun.core.annotation.NameInMap("role")
     private String role;
 
     private GrafanaWorkspaceUserOrg(Builder builder) {

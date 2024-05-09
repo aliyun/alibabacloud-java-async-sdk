@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,115 +11,123 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateOrUpdateAlertRuleRequest</p>
  */
 public class CreateOrUpdateAlertRuleRequest extends Request {
-    @Body
-    @NameInMap("AlertCheckType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertCheckType")
     private String alertCheckType;
 
-    @Body
-    @NameInMap("AlertGroup")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertGroup")
     private Long alertGroup;
 
-    @Body
-    @NameInMap("AlertId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertId")
     private Long alertId;
 
-    @Body
-    @NameInMap("AlertName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String alertName;
 
-    @Body
-    @NameInMap("AlertPiplines")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertPiplines")
     private String alertPiplines;
 
-    @Body
-    @NameInMap("AlertRuleContent")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertRuleContent")
     private String alertRuleContent;
 
-    @Body
-    @NameInMap("AlertStatus")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertStatus")
     private String alertStatus;
 
-    @Body
-    @NameInMap("AlertType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String alertType;
 
-    @Body
-    @NameInMap("Annotations")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Annotations")
     private String annotations;
 
-    @Body
-    @NameInMap("AutoAddNewApplication")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoAddNewApplication")
     private Boolean autoAddNewApplication;
 
-    @Body
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoAddTargetConfig")
+    private String autoAddTargetConfig;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Body
-    @NameInMap("DataConfig")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DataConfig")
     private String dataConfig;
 
-    @Body
-    @NameInMap("Duration")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Duration")
     private Long duration;
 
-    @Body
-    @NameInMap("Filters")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Filters")
     private String filters;
 
-    @Body
-    @NameInMap("Labels")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Labels")
     private String labels;
 
-    @Body
-    @NameInMap("Level")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Level")
     private String level;
 
-    @Body
-    @NameInMap("MarkTags")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MarkTags")
     private java.util.List < MarkTags> markTags;
 
-    @Body
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @Body
-    @NameInMap("MetricsKey")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MetricsKey")
     private String metricsKey;
 
-    @Body
-    @NameInMap("MetricsType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MetricsType")
     private String metricsType;
 
-    @Body
-    @NameInMap("Notice")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Notice")
     private String notice;
 
-    @Body
-    @NameInMap("NotifyMode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NotifyMode")
     private String notifyMode;
 
-    @Body
-    @NameInMap("NotifyStrategy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NotifyStrategy")
     private String notifyStrategy;
 
-    @Body
-    @NameInMap("Pids")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Pids")
     private String pids;
 
-    @Body
-    @NameInMap("PromQL")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Product")
+    private String product;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PromQL")
     private String promQL;
 
-    @Body
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Body
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List < Tags> tags;
 
     private CreateOrUpdateAlertRuleRequest(Builder builder) {
@@ -135,6 +142,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         this.alertType = builder.alertType;
         this.annotations = builder.annotations;
         this.autoAddNewApplication = builder.autoAddNewApplication;
+        this.autoAddTargetConfig = builder.autoAddTargetConfig;
         this.clusterId = builder.clusterId;
         this.dataConfig = builder.dataConfig;
         this.duration = builder.duration;
@@ -149,6 +157,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         this.notifyMode = builder.notifyMode;
         this.notifyStrategy = builder.notifyStrategy;
         this.pids = builder.pids;
+        this.product = builder.product;
         this.promQL = builder.promQL;
         this.regionId = builder.regionId;
         this.tags = builder.tags;
@@ -235,6 +244,13 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
      */
     public Boolean getAutoAddNewApplication() {
         return this.autoAddNewApplication;
+    }
+
+    /**
+     * @return autoAddTargetConfig
+     */
+    public String getAutoAddTargetConfig() {
+        return this.autoAddTargetConfig;
     }
 
     /**
@@ -336,6 +352,13 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
     }
 
     /**
+     * @return product
+     */
+    public String getProduct() {
+        return this.product;
+    }
+
+    /**
      * @return promQL
      */
     public String getPromQL() {
@@ -367,6 +390,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         private String alertType; 
         private String annotations; 
         private Boolean autoAddNewApplication; 
+        private String autoAddTargetConfig; 
         private String clusterId; 
         private String dataConfig; 
         private Long duration; 
@@ -381,6 +405,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         private String notifyMode; 
         private String notifyStrategy; 
         private String pids; 
+        private String product; 
         private String promQL; 
         private String regionId; 
         private java.util.List < Tags> tags; 
@@ -401,6 +426,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
             this.alertType = request.alertType;
             this.annotations = request.annotations;
             this.autoAddNewApplication = request.autoAddNewApplication;
+            this.autoAddTargetConfig = request.autoAddTargetConfig;
             this.clusterId = request.clusterId;
             this.dataConfig = request.dataConfig;
             this.duration = request.duration;
@@ -415,6 +441,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
             this.notifyMode = request.notifyMode;
             this.notifyStrategy = request.notifyStrategy;
             this.pids = request.pids;
+            this.product = request.product;
             this.promQL = request.promQL;
             this.regionId = request.regionId;
             this.tags = request.tags;
@@ -559,6 +586,15 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         public Builder autoAddNewApplication(Boolean autoAddNewApplication) {
             this.putBodyParameter("AutoAddNewApplication", autoAddNewApplication);
             this.autoAddNewApplication = autoAddNewApplication;
+            return this;
+        }
+
+        /**
+         * AutoAddTargetConfig.
+         */
+        public Builder autoAddTargetConfig(String autoAddTargetConfig) {
+            this.putBodyParameter("AutoAddTargetConfig", autoAddTargetConfig);
+            this.autoAddTargetConfig = autoAddTargetConfig;
             return this;
         }
 
@@ -723,6 +759,15 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
+         * Product.
+         */
+        public Builder product(String product) {
+            this.putBodyParameter("Product", product);
+            this.product = product;
+            return this;
+        }
+
+        /**
          * The PromQL statement of the Prometheus alert rule.
          */
         public Builder promQL(String promQL) {
@@ -757,10 +802,10 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
     } 
 
     public static class MarkTags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private MarkTags(Builder builder) {
@@ -818,10 +863,10 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {

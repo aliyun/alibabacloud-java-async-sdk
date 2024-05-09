@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePrometheusAlertRuleResponseBody</p>
  */
 public class DescribePrometheusAlertRuleResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PrometheusAlertRule")
+    @com.aliyun.core.annotation.NameInMap("PrometheusAlertRule")
     private PrometheusAlertRule prometheusAlertRule;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribePrometheusAlertRuleResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribePrometheusAlertRuleResponseBody extends TeaModel {
     } 
 
     public static class Annotations extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Annotations(Builder builder) {
@@ -193,10 +192,10 @@ public class DescribePrometheusAlertRuleResponseBody extends TeaModel {
 
     }
     public static class Labels extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Labels(Builder builder) {
@@ -254,40 +253,40 @@ public class DescribePrometheusAlertRuleResponseBody extends TeaModel {
 
     }
     public static class PrometheusAlertRule extends TeaModel {
-        @NameInMap("AlertId")
+        @com.aliyun.core.annotation.NameInMap("AlertId")
         private Long alertId;
 
-        @NameInMap("AlertName")
+        @com.aliyun.core.annotation.NameInMap("AlertName")
         private String alertName;
 
-        @NameInMap("Annotations")
+        @com.aliyun.core.annotation.NameInMap("Annotations")
         private java.util.List < Annotations> annotations;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("DispatchRuleId")
+        @com.aliyun.core.annotation.NameInMap("DispatchRuleId")
         private Long dispatchRuleId;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("Expression")
+        @com.aliyun.core.annotation.NameInMap("Expression")
         private String expression;
 
-        @NameInMap("Labels")
+        @com.aliyun.core.annotation.NameInMap("Labels")
         private java.util.List < Labels> labels;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("NotifyType")
+        @com.aliyun.core.annotation.NameInMap("NotifyType")
         private String notifyType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private PrometheusAlertRule(Builder builder) {

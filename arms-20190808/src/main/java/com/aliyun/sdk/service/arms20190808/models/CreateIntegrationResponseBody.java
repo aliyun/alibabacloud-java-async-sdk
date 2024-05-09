@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateIntegrationResponseBody</p>
  */
 public class CreateIntegrationResponseBody extends TeaModel {
-    @NameInMap("Integration")
+    @com.aliyun.core.annotation.NameInMap("Integration")
     private Integration integration;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateIntegrationResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class CreateIntegrationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Integration.
+         * The returned information about the alert integration.
          */
         public Builder integration(Integration integration) {
             this.integration = integration;
@@ -58,7 +57,7 @@ public class CreateIntegrationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,22 +71,22 @@ public class CreateIntegrationResponseBody extends TeaModel {
     } 
 
     public static class Integration extends TeaModel {
-        @NameInMap("AutoRecover")
+        @com.aliyun.core.annotation.NameInMap("AutoRecover")
         private Boolean autoRecover;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("IntegrationId")
+        @com.aliyun.core.annotation.NameInMap("IntegrationId")
         private Long integrationId;
 
-        @NameInMap("IntegrationName")
+        @com.aliyun.core.annotation.NameInMap("IntegrationName")
         private String integrationName;
 
-        @NameInMap("IntegrationProductType")
+        @com.aliyun.core.annotation.NameInMap("IntegrationProductType")
         private String integrationProductType;
 
-        @NameInMap("RecoverTime")
+        @com.aliyun.core.annotation.NameInMap("RecoverTime")
         private Long recoverTime;
 
         private Integration(Builder builder) {
@@ -158,7 +157,11 @@ public class CreateIntegrationResponseBody extends TeaModel {
             private Long recoverTime; 
 
             /**
-             * AutoRecover.
+             * Indicates whether alert events are automatically cleared. Default value: true. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder autoRecover(Boolean autoRecover) {
                 this.autoRecover = autoRecover;
@@ -166,7 +169,7 @@ public class CreateIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the alert integration.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -174,7 +177,7 @@ public class CreateIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * IntegrationId.
+             * The ID of the alert integration.
              */
             public Builder integrationId(Long integrationId) {
                 this.integrationId = integrationId;
@@ -182,7 +185,7 @@ public class CreateIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * IntegrationName.
+             * The name of the alert integration.
              */
             public Builder integrationName(String integrationName) {
                 this.integrationName = integrationName;
@@ -190,7 +193,11 @@ public class CreateIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * IntegrationProductType.
+             * The service of the alert integration. Valid values:
+             * <p>
+             * 
+             * *   CLOUD_MONITOR: CloudMonitor
+             * *   LOG_SERVICE: Log Service
              */
             public Builder integrationProductType(String integrationProductType) {
                 this.integrationProductType = integrationProductType;
@@ -198,7 +205,7 @@ public class CreateIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * RecoverTime.
+             * The period of time within which alert events are automatically cleared. Unit: seconds. Default value: 300.
              */
             public Builder recoverTime(Long recoverTime) {
                 this.recoverTime = recoverTime;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInsightsEventsRequest</p>
  */
 public class ListInsightsEventsRequest extends Request {
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("InsightsTypes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InsightsTypes")
     private String insightsTypes;
 
-    @Query
-    @NameInMap("Pid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Pid")
     private String pid;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
     private ListInsightsEventsRequest(Builder builder) {
@@ -113,20 +112,11 @@ public class ListInsightsEventsRequest extends Request {
         } 
 
         /**
-         * The details of the event.
+         * The end of the time range to query. The value is a timestamp.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
-            return this;
-        }
-
-        /**
-         * Average response-time spikes of application services.
-         */
-        public Builder insightsTypes(String insightsTypes) {
-            this.putQueryParameter("InsightsTypes", insightsTypes);
-            this.insightsTypes = insightsTypes;
             return this;
         }
 
@@ -139,6 +129,15 @@ public class ListInsightsEventsRequest extends Request {
          * *   topRtIncrease: API response-time spike events. Examples: HTTP API response-time spike events and Dubbo API response-time spike events.
          * *   rtIncrease: the top five API response-time spike events with the highest traffic.
          */
+        public Builder insightsTypes(String insightsTypes) {
+            this.putQueryParameter("InsightsTypes", insightsTypes);
+            this.insightsTypes = insightsTypes;
+            return this;
+        }
+
+        /**
+         * The ID of the application.
+         */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
             this.pid = pid;
@@ -146,7 +145,7 @@ public class ListInsightsEventsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The value is a timestamp.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -155,7 +154,7 @@ public class ListInsightsEventsRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The start of the time range to query. The value is a timestamp.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

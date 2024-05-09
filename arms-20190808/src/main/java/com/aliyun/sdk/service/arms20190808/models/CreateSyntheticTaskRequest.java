@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,72 +11,72 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSyntheticTaskRequest</p>
  */
 public class CreateSyntheticTaskRequest extends Request {
-    @Query
-    @NameInMap("CommonParam")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommonParam")
     private CommonParam commonParam;
 
-    @Query
-    @NameInMap("Download")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Download")
     private Download download;
 
-    @Query
-    @NameInMap("ExtendInterval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtendInterval")
     private ExtendInterval extendInterval;
 
-    @Query
-    @NameInMap("IntervalTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntervalTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String intervalTime;
 
-    @Query
-    @NameInMap("IntervalType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntervalType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String intervalType;
 
-    @Query
-    @NameInMap("IpType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long ipType;
 
-    @Query
-    @NameInMap("MonitorList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MonitorList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < MonitorList> monitorList;
 
-    @Query
-    @NameInMap("Navigation")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Navigation")
     private Navigation navigation;
 
-    @Query
-    @NameInMap("Net")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Net")
     private Net net;
 
-    @Query
-    @NameInMap("Protocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Protocol")
     private Protocol protocol;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("TaskName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskName;
 
-    @Query
-    @NameInMap("TaskType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long taskType;
 
-    @Query
-    @NameInMap("UpdateTask")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UpdateTask")
     private Boolean updateTask;
 
-    @Query
-    @NameInMap("Url")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Url")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String url;
 
     private CreateSyntheticTaskRequest(Builder builder) {
@@ -407,13 +406,13 @@ public class CreateSyntheticTaskRequest extends Request {
     } 
 
     public static class AlertList extends TeaModel {
-        @NameInMap("IsCritical")
+        @com.aliyun.core.annotation.NameInMap("IsCritical")
         private Long isCritical;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Symbols")
+        @com.aliyun.core.annotation.NameInMap("Symbols")
         private Long symbols;
 
         private AlertList(Builder builder) {
@@ -488,22 +487,22 @@ public class CreateSyntheticTaskRequest extends Request {
 
     }
     public static class CommonParam extends TeaModel {
-        @NameInMap("AlarmFlag")
+        @com.aliyun.core.annotation.NameInMap("AlarmFlag")
         private String alarmFlag;
 
-        @NameInMap("AlertList")
+        @com.aliyun.core.annotation.NameInMap("AlertList")
         private java.util.List < AlertList> alertList;
 
-        @NameInMap("AlertNotifierId")
+        @com.aliyun.core.annotation.NameInMap("AlertNotifierId")
         private String alertNotifierId;
 
-        @NameInMap("AlertPolicyId")
+        @com.aliyun.core.annotation.NameInMap("AlertPolicyId")
         private String alertPolicyId;
 
-        @NameInMap("MonitorSamples")
+        @com.aliyun.core.annotation.NameInMap("MonitorSamples")
         private Long monitorSamples;
 
-        @NameInMap("StartExecutionTime")
+        @com.aliyun.core.annotation.NameInMap("StartExecutionTime")
         private Long startExecutionTime;
 
         private CommonParam(Builder builder) {
@@ -629,43 +628,43 @@ public class CreateSyntheticTaskRequest extends Request {
 
     }
     public static class Download extends TeaModel {
-        @NameInMap("ConnectionTimeout")
+        @com.aliyun.core.annotation.NameInMap("ConnectionTimeout")
         private Double connectionTimeout;
 
-        @NameInMap("DownloadCustomHeaderContent")
+        @com.aliyun.core.annotation.NameInMap("DownloadCustomHeaderContent")
         private String downloadCustomHeaderContent;
 
-        @NameInMap("DownloadCustomHost")
+        @com.aliyun.core.annotation.NameInMap("DownloadCustomHost")
         private Long downloadCustomHost;
 
-        @NameInMap("DownloadCustomHostIp")
+        @com.aliyun.core.annotation.NameInMap("DownloadCustomHostIp")
         private String downloadCustomHostIp;
 
-        @NameInMap("DownloadIgnoreCertificateError")
+        @com.aliyun.core.annotation.NameInMap("DownloadIgnoreCertificateError")
         private String downloadIgnoreCertificateError;
 
-        @NameInMap("DownloadKernel")
+        @com.aliyun.core.annotation.NameInMap("DownloadKernel")
         private Long downloadKernel;
 
-        @NameInMap("DownloadRedirection")
+        @com.aliyun.core.annotation.NameInMap("DownloadRedirection")
         private Long downloadRedirection;
 
-        @NameInMap("DownloadTransmissionSize")
+        @com.aliyun.core.annotation.NameInMap("DownloadTransmissionSize")
         private Long downloadTransmissionSize;
 
-        @NameInMap("MonitorTimeout")
+        @com.aliyun.core.annotation.NameInMap("MonitorTimeout")
         private Long monitorTimeout;
 
-        @NameInMap("QuickProtocol")
+        @com.aliyun.core.annotation.NameInMap("QuickProtocol")
         private String quickProtocol;
 
-        @NameInMap("ValidateKeywords")
+        @com.aliyun.core.annotation.NameInMap("ValidateKeywords")
         private String validateKeywords;
 
-        @NameInMap("VerifyWay")
+        @com.aliyun.core.annotation.NameInMap("VerifyWay")
         private Long verifyWay;
 
-        @NameInMap("WhiteList")
+        @com.aliyun.core.annotation.NameInMap("WhiteList")
         private String whiteList;
 
         private Download(Builder builder) {
@@ -910,25 +909,25 @@ public class CreateSyntheticTaskRequest extends Request {
 
     }
     public static class ExtendInterval extends TeaModel {
-        @NameInMap("Days")
+        @com.aliyun.core.annotation.NameInMap("Days")
         private java.util.List < Long > days;
 
-        @NameInMap("EndHour")
+        @com.aliyun.core.annotation.NameInMap("EndHour")
         private Long endHour;
 
-        @NameInMap("EndMinute")
+        @com.aliyun.core.annotation.NameInMap("EndMinute")
         private Long endMinute;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("StartHour")
+        @com.aliyun.core.annotation.NameInMap("StartHour")
         private Long startHour;
 
-        @NameInMap("StartMinute")
+        @com.aliyun.core.annotation.NameInMap("StartMinute")
         private Long startMinute;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private ExtendInterval(Builder builder) {
@@ -1071,16 +1070,16 @@ public class CreateSyntheticTaskRequest extends Request {
 
     }
     public static class MonitorList extends TeaModel {
-        @NameInMap("CityCode")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("CityCode")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long cityCode;
 
-        @NameInMap("MonitorType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("MonitorType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long monitorType;
 
-        @NameInMap("NetServiceId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("NetServiceId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long netServiceId;
 
         private MonitorList(Builder builder) {
@@ -1155,91 +1154,91 @@ public class CreateSyntheticTaskRequest extends Request {
 
     }
     public static class Navigation extends TeaModel {
-        @NameInMap("DNSHijackWhiteList")
+        @com.aliyun.core.annotation.NameInMap("DNSHijackWhiteList")
         private String DNSHijackWhiteList;
 
-        @NameInMap("ElementBlacklist")
+        @com.aliyun.core.annotation.NameInMap("ElementBlacklist")
         private String elementBlacklist;
 
-        @NameInMap("ExecuteActiveX")
+        @com.aliyun.core.annotation.NameInMap("ExecuteActiveX")
         private Long executeActiveX;
 
-        @NameInMap("ExecuteApplication")
+        @com.aliyun.core.annotation.NameInMap("ExecuteApplication")
         private Long executeApplication;
 
-        @NameInMap("ExecuteScript")
+        @com.aliyun.core.annotation.NameInMap("ExecuteScript")
         private Long executeScript;
 
-        @NameInMap("FilterInvalidIP")
+        @com.aliyun.core.annotation.NameInMap("FilterInvalidIP")
         private Long filterInvalidIP;
 
-        @NameInMap("FlowHijackJumpTimes")
+        @com.aliyun.core.annotation.NameInMap("FlowHijackJumpTimes")
         private Long flowHijackJumpTimes;
 
-        @NameInMap("FlowHijackLogo")
+        @com.aliyun.core.annotation.NameInMap("FlowHijackLogo")
         private String flowHijackLogo;
 
-        @NameInMap("MonitorTimeout")
+        @com.aliyun.core.annotation.NameInMap("MonitorTimeout")
         private String monitorTimeout;
 
-        @NameInMap("NavAutomaticScrolling")
+        @com.aliyun.core.annotation.NameInMap("NavAutomaticScrolling")
         private String navAutomaticScrolling;
 
-        @NameInMap("NavCustomHeader")
+        @com.aliyun.core.annotation.NameInMap("NavCustomHeader")
         private String navCustomHeader;
 
-        @NameInMap("NavCustomHeaderContent")
+        @com.aliyun.core.annotation.NameInMap("NavCustomHeaderContent")
         private String navCustomHeaderContent;
 
-        @NameInMap("NavCustomHost")
+        @com.aliyun.core.annotation.NameInMap("NavCustomHost")
         private Long navCustomHost;
 
-        @NameInMap("NavCustomHostIp")
+        @com.aliyun.core.annotation.NameInMap("NavCustomHostIp")
         private String navCustomHostIp;
 
-        @NameInMap("NavDisableCache")
+        @com.aliyun.core.annotation.NameInMap("NavDisableCache")
         private Long navDisableCache;
 
-        @NameInMap("NavDisableCompression")
+        @com.aliyun.core.annotation.NameInMap("NavDisableCompression")
         private String navDisableCompression;
 
-        @NameInMap("NavIgnoreCertificateError")
+        @com.aliyun.core.annotation.NameInMap("NavIgnoreCertificateError")
         private Long navIgnoreCertificateError;
 
-        @NameInMap("NavRedirection")
+        @com.aliyun.core.annotation.NameInMap("NavRedirection")
         private Long navRedirection;
 
-        @NameInMap("NavReturnElement")
+        @com.aliyun.core.annotation.NameInMap("NavReturnElement")
         private Long navReturnElement;
 
-        @NameInMap("PageTamper")
+        @com.aliyun.core.annotation.NameInMap("PageTamper")
         private String pageTamper;
 
-        @NameInMap("ProcessName")
+        @com.aliyun.core.annotation.NameInMap("ProcessName")
         private String processName;
 
-        @NameInMap("QUICDomain")
+        @com.aliyun.core.annotation.NameInMap("QUICDomain")
         private String QUICDomain;
 
-        @NameInMap("QUICVersion")
+        @com.aliyun.core.annotation.NameInMap("QUICVersion")
         private Long QUICVersion;
 
-        @NameInMap("RequestHeader")
+        @com.aliyun.core.annotation.NameInMap("RequestHeader")
         private Long requestHeader;
 
-        @NameInMap("ResponseHeader")
+        @com.aliyun.core.annotation.NameInMap("ResponseHeader")
         private Long responseHeader;
 
-        @NameInMap("SlowElementThreshold")
+        @com.aliyun.core.annotation.NameInMap("SlowElementThreshold")
         private Double slowElementThreshold;
 
-        @NameInMap("VerifyStringBlacklist")
+        @com.aliyun.core.annotation.NameInMap("VerifyStringBlacklist")
         private String verifyStringBlacklist;
 
-        @NameInMap("VerifyStringWhiteList")
+        @com.aliyun.core.annotation.NameInMap("VerifyStringWhiteList")
         private String verifyStringWhiteList;
 
-        @NameInMap("WaitCompletionTime")
+        @com.aliyun.core.annotation.NameInMap("WaitCompletionTime")
         private Double waitCompletionTime;
 
         private Navigation(Builder builder) {
@@ -1756,55 +1755,55 @@ public class CreateSyntheticTaskRequest extends Request {
 
     }
     public static class Net extends TeaModel {
-        @NameInMap("NetDNSNs")
+        @com.aliyun.core.annotation.NameInMap("NetDNSNs")
         private String netDNSNs;
 
-        @NameInMap("NetDNSQueryMethod")
+        @com.aliyun.core.annotation.NameInMap("NetDNSQueryMethod")
         private Long netDNSQueryMethod;
 
-        @NameInMap("NetDNSServer")
+        @com.aliyun.core.annotation.NameInMap("NetDNSServer")
         private Long netDNSServer;
 
-        @NameInMap("NetDNSSwitch")
+        @com.aliyun.core.annotation.NameInMap("NetDNSSwitch")
         private Long netDNSSwitch;
 
-        @NameInMap("NetDNSTimeout")
+        @com.aliyun.core.annotation.NameInMap("NetDNSTimeout")
         private Long netDNSTimeout;
 
-        @NameInMap("NetDigSwitch")
+        @com.aliyun.core.annotation.NameInMap("NetDigSwitch")
         private Long netDigSwitch;
 
-        @NameInMap("NetICMPActive")
+        @com.aliyun.core.annotation.NameInMap("NetICMPActive")
         private Long netICMPActive;
 
-        @NameInMap("NetICMPDataCut")
+        @com.aliyun.core.annotation.NameInMap("NetICMPDataCut")
         private Long netICMPDataCut;
 
-        @NameInMap("NetICMPInterval")
+        @com.aliyun.core.annotation.NameInMap("NetICMPInterval")
         private Long netICMPInterval;
 
-        @NameInMap("NetICMPNum")
+        @com.aliyun.core.annotation.NameInMap("NetICMPNum")
         private Long netICMPNum;
 
-        @NameInMap("NetICMPSize")
+        @com.aliyun.core.annotation.NameInMap("NetICMPSize")
         private Long netICMPSize;
 
-        @NameInMap("NetICMPSwitch")
+        @com.aliyun.core.annotation.NameInMap("NetICMPSwitch")
         private Long netICMPSwitch;
 
-        @NameInMap("NetICMPTimeout")
+        @com.aliyun.core.annotation.NameInMap("NetICMPTimeout")
         private Long netICMPTimeout;
 
-        @NameInMap("NetTraceRouteNum")
+        @com.aliyun.core.annotation.NameInMap("NetTraceRouteNum")
         private Long netTraceRouteNum;
 
-        @NameInMap("NetTraceRouteSwitch")
+        @com.aliyun.core.annotation.NameInMap("NetTraceRouteSwitch")
         private Long netTraceRouteSwitch;
 
-        @NameInMap("NetTraceRouteTimeout")
+        @com.aliyun.core.annotation.NameInMap("NetTraceRouteTimeout")
         private Long netTraceRouteTimeout;
 
-        @NameInMap("WhiteList")
+        @com.aliyun.core.annotation.NameInMap("WhiteList")
         private String whiteList;
 
         private Net(Builder builder) {
@@ -2117,10 +2116,10 @@ public class CreateSyntheticTaskRequest extends Request {
 
     }
     public static class FormData extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private FormData(Builder builder) {
@@ -2178,10 +2177,10 @@ public class CreateSyntheticTaskRequest extends Request {
 
     }
     public static class UrlEncoding extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private UrlEncoding(Builder builder) {
@@ -2239,19 +2238,19 @@ public class CreateSyntheticTaskRequest extends Request {
 
     }
     public static class RequestContentBody extends TeaModel {
-        @NameInMap("FormData")
+        @com.aliyun.core.annotation.NameInMap("FormData")
         private java.util.List < FormData> formData;
 
-        @NameInMap("Language")
+        @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
 
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
-        @NameInMap("Raw")
+        @com.aliyun.core.annotation.NameInMap("Raw")
         private String raw;
 
-        @NameInMap("UrlEncoding")
+        @com.aliyun.core.annotation.NameInMap("UrlEncoding")
         private java.util.List < UrlEncoding> urlEncoding;
 
         private RequestContentBody(Builder builder) {
@@ -2360,10 +2359,10 @@ public class CreateSyntheticTaskRequest extends Request {
 
     }
     public static class RequestContentHeader extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private RequestContentHeader(Builder builder) {
@@ -2421,13 +2420,13 @@ public class CreateSyntheticTaskRequest extends Request {
 
     }
     public static class RequestContent extends TeaModel {
-        @NameInMap("Body")
+        @com.aliyun.core.annotation.NameInMap("Body")
         private RequestContentBody body;
 
-        @NameInMap("Header")
+        @com.aliyun.core.annotation.NameInMap("Header")
         private java.util.List < RequestContentHeader> header;
 
-        @NameInMap("Method")
+        @com.aliyun.core.annotation.NameInMap("Method")
         private String method;
 
         private RequestContent(Builder builder) {
@@ -2502,31 +2501,31 @@ public class CreateSyntheticTaskRequest extends Request {
 
     }
     public static class Protocol extends TeaModel {
-        @NameInMap("CharacterEncoding")
+        @com.aliyun.core.annotation.NameInMap("CharacterEncoding")
         private Long characterEncoding;
 
-        @NameInMap("CustomHost")
+        @com.aliyun.core.annotation.NameInMap("CustomHost")
         private Long customHost;
 
-        @NameInMap("CustomHostIp")
+        @com.aliyun.core.annotation.NameInMap("CustomHostIp")
         private String customHostIp;
 
-        @NameInMap("ProtocolConnectionTime")
+        @com.aliyun.core.annotation.NameInMap("ProtocolConnectionTime")
         private Long protocolConnectionTime;
 
-        @NameInMap("ProtocolMonitorTimeout")
+        @com.aliyun.core.annotation.NameInMap("ProtocolMonitorTimeout")
         private String protocolMonitorTimeout;
 
-        @NameInMap("ReceivedDataSize")
+        @com.aliyun.core.annotation.NameInMap("ReceivedDataSize")
         private Long receivedDataSize;
 
-        @NameInMap("RequestContent")
+        @com.aliyun.core.annotation.NameInMap("RequestContent")
         private RequestContent requestContent;
 
-        @NameInMap("VerifyContent")
+        @com.aliyun.core.annotation.NameInMap("VerifyContent")
         private String verifyContent;
 
-        @NameInMap("VerifyWay")
+        @com.aliyun.core.annotation.NameInMap("VerifyWay")
         private Long verifyWay;
 
         private Protocol(Builder builder) {

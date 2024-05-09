@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SearchEventsResponseBody</p>
  */
 public class SearchEventsResponseBody extends TeaModel {
-    @NameInMap("IsTrigger")
+    @com.aliyun.core.annotation.NameInMap("IsTrigger")
     private Integer isTrigger;
 
-    @NameInMap("PageBean")
+    @com.aliyun.core.annotation.NameInMap("PageBean")
     private PageBean pageBean;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SearchEventsResponseBody(Builder builder) {
@@ -96,31 +95,31 @@ public class SearchEventsResponseBody extends TeaModel {
     } 
 
     public static class Event extends TeaModel {
-        @NameInMap("AlertId")
+        @com.aliyun.core.annotation.NameInMap("AlertId")
         private Long alertId;
 
-        @NameInMap("AlertName")
+        @com.aliyun.core.annotation.NameInMap("AlertName")
         private String alertName;
 
-        @NameInMap("AlertRule")
+        @com.aliyun.core.annotation.NameInMap("AlertRule")
         private String alertRule;
 
-        @NameInMap("AlertType")
+        @com.aliyun.core.annotation.NameInMap("AlertType")
         private Integer alertType;
 
-        @NameInMap("EventLevel")
+        @com.aliyun.core.annotation.NameInMap("EventLevel")
         private String eventLevel;
 
-        @NameInMap("EventTime")
+        @com.aliyun.core.annotation.NameInMap("EventTime")
         private Long eventTime;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Links")
+        @com.aliyun.core.annotation.NameInMap("Links")
         private java.util.List < String > links;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
         private Event(Builder builder) {
@@ -307,16 +306,16 @@ public class SearchEventsResponseBody extends TeaModel {
 
     }
     public static class PageBean extends TeaModel {
-        @NameInMap("Event")
+        @com.aliyun.core.annotation.NameInMap("Event")
         private java.util.List < Event> event;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageBean(Builder builder) {

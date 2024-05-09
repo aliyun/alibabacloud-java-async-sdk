@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SearchAlertHistoriesResponseBody</p>
  */
 public class SearchAlertHistoriesResponseBody extends TeaModel {
-    @NameInMap("PageBean")
+    @com.aliyun.core.annotation.NameInMap("PageBean")
     private PageBean pageBean;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SearchAlertHistoriesResponseBody(Builder builder) {
@@ -72,37 +71,37 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
     } 
 
     public static class AlarmHistories extends TeaModel {
-        @NameInMap("AlarmContent")
+        @com.aliyun.core.annotation.NameInMap("AlarmContent")
         private String alarmContent;
 
-        @NameInMap("AlarmResponseCode")
+        @com.aliyun.core.annotation.NameInMap("AlarmResponseCode")
         private Integer alarmResponseCode;
 
-        @NameInMap("AlarmSources")
+        @com.aliyun.core.annotation.NameInMap("AlarmSources")
         private String alarmSources;
 
-        @NameInMap("AlarmTime")
+        @com.aliyun.core.annotation.NameInMap("AlarmTime")
         private Long alarmTime;
 
-        @NameInMap("AlarmType")
+        @com.aliyun.core.annotation.NameInMap("AlarmType")
         private Integer alarmType;
 
-        @NameInMap("Emails")
+        @com.aliyun.core.annotation.NameInMap("Emails")
         private String emails;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Phones")
+        @com.aliyun.core.annotation.NameInMap("Phones")
         private String phones;
 
-        @NameInMap("StrategyId")
+        @com.aliyun.core.annotation.NameInMap("StrategyId")
         private String strategyId;
 
-        @NameInMap("Target")
+        @com.aliyun.core.annotation.NameInMap("Target")
         private String target;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private AlarmHistories(Builder builder) {
@@ -323,16 +322,16 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
 
     }
     public static class PageBean extends TeaModel {
-        @NameInMap("AlarmHistories")
+        @com.aliyun.core.annotation.NameInMap("AlarmHistories")
         private java.util.List < AlarmHistories> alarmHistories;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageBean(Builder builder) {

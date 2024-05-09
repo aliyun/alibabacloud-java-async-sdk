@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SearchTracesResponseBody</p>
  */
 public class SearchTracesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TraceInfos")
+    @com.aliyun.core.annotation.NameInMap("TraceInfos")
     private java.util.List < TraceInfos> traceInfos;
 
     private SearchTracesResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class SearchTracesResponseBody extends TeaModel {
     } 
 
     public static class TraceInfos extends TeaModel {
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
 
-        @NameInMap("OperationName")
+        @com.aliyun.core.annotation.NameInMap("OperationName")
         private String operationName;
 
-        @NameInMap("ServiceIp")
+        @com.aliyun.core.annotation.NameInMap("ServiceIp")
         private String serviceIp;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
-        @NameInMap("TraceID")
+        @com.aliyun.core.annotation.NameInMap("TraceID")
         private String traceID;
 
         private TraceInfos(Builder builder) {

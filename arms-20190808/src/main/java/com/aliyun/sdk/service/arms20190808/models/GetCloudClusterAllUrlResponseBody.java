@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetCloudClusterAllUrlResponseBody</p>
  */
 public class GetCloudClusterAllUrlResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetCloudClusterAllUrlResponseBody(Builder builder) {
@@ -132,34 +131,34 @@ public class GetCloudClusterAllUrlResponseBody extends TeaModel {
     } 
 
     public static class RemoteUrl extends TeaModel {
-        @NameInMap("AuthToken")
+        @com.aliyun.core.annotation.NameInMap("AuthToken")
         private Boolean authToken;
 
-        @NameInMap("GrafanaUrl")
+        @com.aliyun.core.annotation.NameInMap("GrafanaUrl")
         private String grafanaUrl;
 
-        @NameInMap("InternetGrafanaUrl")
+        @com.aliyun.core.annotation.NameInMap("InternetGrafanaUrl")
         private String internetGrafanaUrl;
 
-        @NameInMap("InternetPushGatewayUrl")
+        @com.aliyun.core.annotation.NameInMap("InternetPushGatewayUrl")
         private String internetPushGatewayUrl;
 
-        @NameInMap("InternetRemoteReadUrl")
+        @com.aliyun.core.annotation.NameInMap("InternetRemoteReadUrl")
         private String internetRemoteReadUrl;
 
-        @NameInMap("InternetRemoteWriteUrl")
+        @com.aliyun.core.annotation.NameInMap("InternetRemoteWriteUrl")
         private String internetRemoteWriteUrl;
 
-        @NameInMap("PushGatewayUrl")
+        @com.aliyun.core.annotation.NameInMap("PushGatewayUrl")
         private String pushGatewayUrl;
 
-        @NameInMap("RemoteReadUrl")
+        @com.aliyun.core.annotation.NameInMap("RemoteReadUrl")
         private String remoteReadUrl;
 
-        @NameInMap("RemoteWriteUrl")
+        @com.aliyun.core.annotation.NameInMap("RemoteWriteUrl")
         private String remoteWriteUrl;
 
-        @NameInMap("Token")
+        @com.aliyun.core.annotation.NameInMap("Token")
         private String token;
 
         private RemoteUrl(Builder builder) {
@@ -353,13 +352,13 @@ public class GetCloudClusterAllUrlResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("RemoteUrl")
+        @com.aliyun.core.annotation.NameInMap("RemoteUrl")
         private RemoteUrl remoteUrl;
 
         private Data(Builder builder) {

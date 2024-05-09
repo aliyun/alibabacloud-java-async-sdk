@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateOrUpdateContactResponseBody</p>
  */
 public class CreateOrUpdateContactResponseBody extends TeaModel {
-    @NameInMap("AlertContact")
+    @com.aliyun.core.annotation.NameInMap("AlertContact")
     private AlertContact alertContact;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateOrUpdateContactResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
     } 
 
     public static class AlertContact extends TeaModel {
-        @NameInMap("ContactId")
+        @com.aliyun.core.annotation.NameInMap("ContactId")
         private Float contactId;
 
-        @NameInMap("ContactName")
+        @com.aliyun.core.annotation.NameInMap("ContactName")
         private String contactName;
 
-        @NameInMap("DingRobotUrl")
+        @com.aliyun.core.annotation.NameInMap("DingRobotUrl")
         private String dingRobotUrl;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("IsVerify")
+        @com.aliyun.core.annotation.NameInMap("IsVerify")
         private Boolean isVerify;
 
-        @NameInMap("Phone")
+        @com.aliyun.core.annotation.NameInMap("Phone")
         private String phone;
 
-        @NameInMap("ReissueSendNotice")
+        @com.aliyun.core.annotation.NameInMap("ReissueSendNotice")
         private Long reissueSendNotice;
 
-        @NameInMap("isEmailVerify")
+        @com.aliyun.core.annotation.NameInMap("isEmailVerify")
         private Boolean isEmailVerify;
 
         private AlertContact(Builder builder) {

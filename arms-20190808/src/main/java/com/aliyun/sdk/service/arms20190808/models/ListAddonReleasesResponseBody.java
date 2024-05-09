@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAddonReleasesResponseBody</p>
  */
 public class ListAddonReleasesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListAddonReleasesResponseBody(Builder builder) {
@@ -136,22 +135,22 @@ public class ListAddonReleasesResponseBody extends TeaModel {
     } 
 
     public static class Conditions extends TeaModel {
-        @NameInMap("FirstTransitionTime")
+        @com.aliyun.core.annotation.NameInMap("FirstTransitionTime")
         private String firstTransitionTime;
 
-        @NameInMap("LastTransitionTime")
+        @com.aliyun.core.annotation.NameInMap("LastTransitionTime")
         private String lastTransitionTime;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Conditions(Builder builder) {
@@ -277,61 +276,61 @@ public class ListAddonReleasesResponseBody extends TeaModel {
 
     }
     public static class Releases extends TeaModel {
-        @NameInMap("AddonName")
+        @com.aliyun.core.annotation.NameInMap("AddonName")
         private String addonName;
 
-        @NameInMap("AlertRuleCount")
+        @com.aliyun.core.annotation.NameInMap("AlertRuleCount")
         private Long alertRuleCount;
 
-        @NameInMap("Conditions")
+        @com.aliyun.core.annotation.NameInMap("Conditions")
         private java.util.List < Conditions> conditions;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DashboardCount")
+        @com.aliyun.core.annotation.NameInMap("DashboardCount")
         private Long dashboardCount;
 
-        @NameInMap("EnvironmentId")
+        @com.aliyun.core.annotation.NameInMap("EnvironmentId")
         private String environmentId;
 
-        @NameInMap("ExporterCount")
+        @com.aliyun.core.annotation.NameInMap("ExporterCount")
         private Long exporterCount;
 
-        @NameInMap("HaveConfig")
+        @com.aliyun.core.annotation.NameInMap("HaveConfig")
         private Boolean haveConfig;
 
-        @NameInMap("InstallUserId")
+        @com.aliyun.core.annotation.NameInMap("InstallUserId")
         private String installUserId;
 
-        @NameInMap("Language")
+        @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
 
-        @NameInMap("Managed")
+        @com.aliyun.core.annotation.NameInMap("Managed")
         private Boolean managed;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ReleaseId")
+        @com.aliyun.core.annotation.NameInMap("ReleaseId")
         private String releaseId;
 
-        @NameInMap("ReleaseName")
+        @com.aliyun.core.annotation.NameInMap("ReleaseName")
         private String releaseName;
 
-        @NameInMap("Scene")
+        @com.aliyun.core.annotation.NameInMap("Scene")
         private String scene;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private Releases(Builder builder) {
@@ -678,10 +677,10 @@ public class ListAddonReleasesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Releases")
+        @com.aliyun.core.annotation.NameInMap("Releases")
         private java.util.List < Releases> releases;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private Data(Builder builder) {

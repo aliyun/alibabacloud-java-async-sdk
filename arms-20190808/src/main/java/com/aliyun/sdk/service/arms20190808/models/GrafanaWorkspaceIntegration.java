@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GrafanaWorkspaceIntegration</p>
  */
 public class GrafanaWorkspaceIntegration extends TeaModel {
-    @NameInMap("datasourceAmount")
+    @com.aliyun.core.annotation.NameInMap("datasourceAmount")
     private Long datasourceAmount;
 
-    @NameInMap("integrationId")
+    @com.aliyun.core.annotation.NameInMap("integrationId")
     private String integrationId;
 
-    @NameInMap("integrationName")
+    @com.aliyun.core.annotation.NameInMap("integrationName")
     private String integrationName;
 
-    @NameInMap("previews")
+    @com.aliyun.core.annotation.NameInMap("previews")
     private java.util.List < GrafanaWorkspaceIntegrationPreview > previews;
 
-    @NameInMap("status")
+    @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
-    @NameInMap("supportRegions")
+    @com.aliyun.core.annotation.NameInMap("supportRegions")
     private java.util.List < String > supportRegions;
 
     private GrafanaWorkspaceIntegration(Builder builder) {

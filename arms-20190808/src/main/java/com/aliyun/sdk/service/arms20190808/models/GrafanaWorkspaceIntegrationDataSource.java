@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GrafanaWorkspaceIntegrationDataSource</p>
  */
 public class GrafanaWorkspaceIntegrationDataSource extends TeaModel {
-    @NameInMap("clusterType")
+    @com.aliyun.core.annotation.NameInMap("clusterType")
     private String clusterType;
 
-    @NameInMap("datasourceId")
+    @com.aliyun.core.annotation.NameInMap("datasourceId")
     private String datasourceId;
 
-    @NameInMap("datasourceName")
+    @com.aliyun.core.annotation.NameInMap("datasourceName")
     private String datasourceName;
 
-    @NameInMap("datasourceUrl")
+    @com.aliyun.core.annotation.NameInMap("datasourceUrl")
     private String datasourceUrl;
 
-    @NameInMap("description")
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @NameInMap("exploreUrl")
+    @com.aliyun.core.annotation.NameInMap("exploreUrl")
     private String exploreUrl;
 
-    @NameInMap("extra")
+    @com.aliyun.core.annotation.NameInMap("extra")
     private java.util.Map < String, String > extra;
 
-    @NameInMap("folderUrl")
+    @com.aliyun.core.annotation.NameInMap("folderUrl")
     private String folderUrl;
 
-    @NameInMap("regionId")
+    @com.aliyun.core.annotation.NameInMap("regionId")
     private String regionId;
 
-    @NameInMap("status")
+    @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
-    @NameInMap("type")
+    @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
     private GrafanaWorkspaceIntegrationDataSource(Builder builder) {

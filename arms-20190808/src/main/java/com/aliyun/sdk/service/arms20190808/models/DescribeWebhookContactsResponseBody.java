@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeWebhookContactsResponseBody</p>
  */
 public class DescribeWebhookContactsResponseBody extends TeaModel {
-    @NameInMap("PageBean")
+    @com.aliyun.core.annotation.NameInMap("PageBean")
     private PageBean pageBean;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeWebhookContactsResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
     } 
 
     public static class Webhook extends TeaModel {
-        @NameInMap("BizHeaders")
+        @com.aliyun.core.annotation.NameInMap("BizHeaders")
         private java.util.Map < String, ? > bizHeaders;
 
-        @NameInMap("BizParams")
+        @com.aliyun.core.annotation.NameInMap("BizParams")
         private java.util.Map < String, ? > bizParams;
 
-        @NameInMap("Body")
+        @com.aliyun.core.annotation.NameInMap("Body")
         private String body;
 
-        @NameInMap("Method")
+        @com.aliyun.core.annotation.NameInMap("Method")
         private String method;
 
-        @NameInMap("RecoverBody")
+        @com.aliyun.core.annotation.NameInMap("RecoverBody")
         private String recoverBody;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private Webhook(Builder builder) {
@@ -217,13 +216,13 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
 
     }
     public static class WebhookContacts extends TeaModel {
-        @NameInMap("Webhook")
+        @com.aliyun.core.annotation.NameInMap("Webhook")
         private Webhook webhook;
 
-        @NameInMap("WebhookId")
+        @com.aliyun.core.annotation.NameInMap("WebhookId")
         private Float webhookId;
 
-        @NameInMap("WebhookName")
+        @com.aliyun.core.annotation.NameInMap("WebhookName")
         private String webhookName;
 
         private WebhookContacts(Builder builder) {
@@ -298,16 +297,16 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
 
     }
     public static class PageBean extends TeaModel {
-        @NameInMap("Page")
+        @com.aliyun.core.annotation.NameInMap("Page")
         private Long page;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
-        @NameInMap("WebhookContacts")
+        @com.aliyun.core.annotation.NameInMap("WebhookContacts")
         private java.util.List < WebhookContacts> webhookContacts;
 
         private PageBean(Builder builder) {

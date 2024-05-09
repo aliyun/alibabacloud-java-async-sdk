@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListEnvironmentDashboardsResponseBody</p>
  */
 public class ListEnvironmentDashboardsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListEnvironmentDashboardsResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Status code: 200 indicates success.
+         * The HTTP status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +93,7 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned struct.
+         * The result of the operation.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -118,11 +117,11 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   `true`: The call was successful.
-         * *   `false`: The call failed.
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -136,22 +135,22 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
     } 
 
     public static class Dashboards extends TeaModel {
-        @NameInMap("FolderUid")
+        @com.aliyun.core.annotation.NameInMap("FolderUid")
         private String folderUid;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < String > tags;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("Uid")
+        @com.aliyun.core.annotation.NameInMap("Uid")
         private String uid;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private Dashboards(Builder builder) {
@@ -222,7 +221,7 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * Dashboard folder UID.
+             * The UID of the folder.
              */
             public Builder folderUid(String folderUid) {
                 this.folderUid = folderUid;
@@ -238,7 +237,7 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * List of tabs on the dashboard.
+             * The keyword.
              */
             public Builder tags(java.util.List < String > tags) {
                 this.tags = tags;
@@ -246,7 +245,7 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The title on the dashboard.
+             * The title of the Grafana dashboard.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -254,7 +253,7 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The UID on the dashboard.
+             * The unique identifier of the dashboard.
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -262,7 +261,7 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The URL on the dashboard.
+             * The complete URL of the dashboard.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -277,10 +276,10 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Dashboards")
+        @com.aliyun.core.annotation.NameInMap("Dashboards")
         private java.util.List < Dashboards> dashboards;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private Data(Builder builder) {
@@ -315,7 +314,7 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * List of dashboard.
+             * The dashboards.
              */
             public Builder dashboards(java.util.List < Dashboards> dashboards) {
                 this.dashboards = dashboards;
@@ -323,7 +322,7 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * Total of the dashboards.
+             * The total number of entries returned.
              */
             public Builder total(Long total) {
                 this.total = total;

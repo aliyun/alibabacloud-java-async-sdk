@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDispatchRuleResponseBody</p>
  */
 public class DescribeDispatchRuleResponseBody extends TeaModel {
-    @NameInMap("DispatchRule")
+    @com.aliyun.core.annotation.NameInMap("DispatchRule")
     private DispatchRule dispatchRule;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDispatchRuleResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
     } 
 
     public static class GroupRules extends TeaModel {
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private Long groupId;
 
-        @NameInMap("GroupInterval")
+        @com.aliyun.core.annotation.NameInMap("GroupInterval")
         private Long groupInterval;
 
-        @NameInMap("GroupWaitTime")
+        @com.aliyun.core.annotation.NameInMap("GroupWaitTime")
         private Long groupWaitTime;
 
-        @NameInMap("GroupingFields")
+        @com.aliyun.core.annotation.NameInMap("GroupingFields")
         private java.util.List < String > groupingFields;
 
-        @NameInMap("RepeatInterval")
+        @com.aliyun.core.annotation.NameInMap("RepeatInterval")
         private Long repeatInterval;
 
         private GroupRules(Builder builder) {
@@ -193,13 +192,13 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
 
     }
     public static class LabelMatchExpressions extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private LabelMatchExpressions(Builder builder) {
@@ -288,7 +287,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
 
     }
     public static class LabelMatchExpressionGroups extends TeaModel {
-        @NameInMap("LabelMatchExpressions")
+        @com.aliyun.core.annotation.NameInMap("LabelMatchExpressions")
         private java.util.List < LabelMatchExpressions> labelMatchExpressions;
 
         private LabelMatchExpressionGroups(Builder builder) {
@@ -329,7 +328,7 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
 
     }
     public static class LabelMatchExpressionGrid extends TeaModel {
-        @NameInMap("LabelMatchExpressionGroups")
+        @com.aliyun.core.annotation.NameInMap("LabelMatchExpressionGroups")
         private java.util.List < LabelMatchExpressionGroups> labelMatchExpressionGroups;
 
         private LabelMatchExpressionGrid(Builder builder) {
@@ -370,13 +369,13 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
 
     }
     public static class NotifyObjects extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NotifyObjectId")
+        @com.aliyun.core.annotation.NameInMap("NotifyObjectId")
         private String notifyObjectId;
 
-        @NameInMap("NotifyType")
+        @com.aliyun.core.annotation.NameInMap("NotifyType")
         private String notifyType;
 
         private NotifyObjects(Builder builder) {
@@ -455,10 +454,10 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
 
     }
     public static class NotifyRules extends TeaModel {
-        @NameInMap("NotifyChannels")
+        @com.aliyun.core.annotation.NameInMap("NotifyChannels")
         private java.util.List < String > notifyChannels;
 
-        @NameInMap("NotifyObjects")
+        @com.aliyun.core.annotation.NameInMap("NotifyObjects")
         private java.util.List < NotifyObjects> notifyObjects;
 
         private NotifyRules(Builder builder) {
@@ -516,28 +515,28 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
 
     }
     public static class DispatchRule extends TeaModel {
-        @NameInMap("DispatchType")
+        @com.aliyun.core.annotation.NameInMap("DispatchType")
         private String dispatchType;
 
-        @NameInMap("GroupRules")
+        @com.aliyun.core.annotation.NameInMap("GroupRules")
         private java.util.List < GroupRules> groupRules;
 
-        @NameInMap("IsRecover")
+        @com.aliyun.core.annotation.NameInMap("IsRecover")
         private Boolean isRecover;
 
-        @NameInMap("LabelMatchExpressionGrid")
+        @com.aliyun.core.annotation.NameInMap("LabelMatchExpressionGrid")
         private LabelMatchExpressionGrid labelMatchExpressionGrid;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NotifyRules")
+        @com.aliyun.core.annotation.NameInMap("NotifyRules")
         private java.util.List < NotifyRules> notifyRules;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private DispatchRule(Builder builder) {

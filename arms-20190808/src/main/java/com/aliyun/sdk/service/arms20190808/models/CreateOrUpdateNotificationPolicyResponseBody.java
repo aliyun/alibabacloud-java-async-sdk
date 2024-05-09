@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateOrUpdateNotificationPolicyResponseBody</p>
  */
 public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
-    @NameInMap("NotificationPolicy")
+    @com.aliyun.core.annotation.NameInMap("NotificationPolicy")
     private NotificationPolicy notificationPolicy;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateOrUpdateNotificationPolicyResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
     } 
 
     public static class GroupRule extends TeaModel {
-        @NameInMap("GroupInterval")
+        @com.aliyun.core.annotation.NameInMap("GroupInterval")
         private Long groupInterval;
 
-        @NameInMap("GroupWait")
+        @com.aliyun.core.annotation.NameInMap("GroupWait")
         private Long groupWait;
 
-        @NameInMap("GroupingFields")
+        @com.aliyun.core.annotation.NameInMap("GroupingFields")
         private java.util.List < String > groupingFields;
 
         private GroupRule(Builder builder) {
@@ -153,13 +152,13 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
 
     }
     public static class MatchingConditions extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private MatchingConditions(Builder builder) {
@@ -242,7 +241,7 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
 
     }
     public static class MatchingRules extends TeaModel {
-        @NameInMap("MatchingConditions")
+        @com.aliyun.core.annotation.NameInMap("MatchingConditions")
         private java.util.List < MatchingConditions> matchingConditions;
 
         private MatchingRules(Builder builder) {
@@ -283,16 +282,16 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
 
     }
     public static class NotifyObjects extends TeaModel {
-        @NameInMap("NotifyChannels")
+        @com.aliyun.core.annotation.NameInMap("NotifyChannels")
         private java.util.List < String > notifyChannels;
 
-        @NameInMap("NotifyObjectId")
+        @com.aliyun.core.annotation.NameInMap("NotifyObjectId")
         private Long notifyObjectId;
 
-        @NameInMap("NotifyObjectName")
+        @com.aliyun.core.annotation.NameInMap("NotifyObjectName")
         private String notifyObjectName;
 
-        @NameInMap("NotifyObjectType")
+        @com.aliyun.core.annotation.NameInMap("NotifyObjectType")
         private String notifyObjectType;
 
         private NotifyObjects(Builder builder) {
@@ -390,16 +389,16 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
 
     }
     public static class NotifyRule extends TeaModel {
-        @NameInMap("NotifyChannels")
+        @com.aliyun.core.annotation.NameInMap("NotifyChannels")
         private java.util.List < String > notifyChannels;
 
-        @NameInMap("NotifyEndTime")
+        @com.aliyun.core.annotation.NameInMap("NotifyEndTime")
         private String notifyEndTime;
 
-        @NameInMap("NotifyObjects")
+        @com.aliyun.core.annotation.NameInMap("NotifyObjects")
         private java.util.List < NotifyObjects> notifyObjects;
 
-        @NameInMap("NotifyStartTime")
+        @com.aliyun.core.annotation.NameInMap("NotifyStartTime")
         private String notifyStartTime;
 
         private NotifyRule(Builder builder) {
@@ -498,31 +497,31 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
 
     }
     public static class NotifyTemplate extends TeaModel {
-        @NameInMap("EmailContent")
+        @com.aliyun.core.annotation.NameInMap("EmailContent")
         private String emailContent;
 
-        @NameInMap("EmailRecoverContent")
+        @com.aliyun.core.annotation.NameInMap("EmailRecoverContent")
         private String emailRecoverContent;
 
-        @NameInMap("EmailRecoverTitle")
+        @com.aliyun.core.annotation.NameInMap("EmailRecoverTitle")
         private String emailRecoverTitle;
 
-        @NameInMap("EmailTitle")
+        @com.aliyun.core.annotation.NameInMap("EmailTitle")
         private String emailTitle;
 
-        @NameInMap("RobotContent")
+        @com.aliyun.core.annotation.NameInMap("RobotContent")
         private String robotContent;
 
-        @NameInMap("SmsContent")
+        @com.aliyun.core.annotation.NameInMap("SmsContent")
         private String smsContent;
 
-        @NameInMap("SmsRecoverContent")
+        @com.aliyun.core.annotation.NameInMap("SmsRecoverContent")
         private String smsRecoverContent;
 
-        @NameInMap("TtsContent")
+        @com.aliyun.core.annotation.NameInMap("TtsContent")
         private String ttsContent;
 
-        @NameInMap("TtsRecoverContent")
+        @com.aliyun.core.annotation.NameInMap("TtsRecoverContent")
         private String ttsRecoverContent;
 
         private NotifyTemplate(Builder builder) {
@@ -699,40 +698,40 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
 
     }
     public static class NotificationPolicy extends TeaModel {
-        @NameInMap("DirectedMode")
+        @com.aliyun.core.annotation.NameInMap("DirectedMode")
         private Boolean directedMode;
 
-        @NameInMap("EscalationPolicyId")
+        @com.aliyun.core.annotation.NameInMap("EscalationPolicyId")
         private Long escalationPolicyId;
 
-        @NameInMap("GroupRule")
+        @com.aliyun.core.annotation.NameInMap("GroupRule")
         private GroupRule groupRule;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("IntegrationId")
+        @com.aliyun.core.annotation.NameInMap("IntegrationId")
         private Long integrationId;
 
-        @NameInMap("MatchingRules")
+        @com.aliyun.core.annotation.NameInMap("MatchingRules")
         private java.util.List < MatchingRules> matchingRules;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NotifyRule")
+        @com.aliyun.core.annotation.NameInMap("NotifyRule")
         private NotifyRule notifyRule;
 
-        @NameInMap("NotifyTemplate")
+        @com.aliyun.core.annotation.NameInMap("NotifyTemplate")
         private NotifyTemplate notifyTemplate;
 
-        @NameInMap("Repeat")
+        @com.aliyun.core.annotation.NameInMap("Repeat")
         private Boolean repeat;
 
-        @NameInMap("RepeatInterval")
+        @com.aliyun.core.annotation.NameInMap("RepeatInterval")
         private Long repeatInterval;
 
-        @NameInMap("SendRecoverMessage")
+        @com.aliyun.core.annotation.NameInMap("SendRecoverMessage")
         private Boolean sendRecoverMessage;
 
         private NotificationPolicy(Builder builder) {

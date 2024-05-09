@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GrafanaWorkspaceIniBackup</p>
  */
 public class GrafanaWorkspaceIniBackup extends TeaModel {
-    @NameInMap("ext")
+    @com.aliyun.core.annotation.NameInMap("ext")
     private String ext;
 
-    @NameInMap("gmtCreate")
+    @com.aliyun.core.annotation.NameInMap("gmtCreate")
     private Long gmtCreate;
 
-    @NameInMap("gmtModified")
+    @com.aliyun.core.annotation.NameInMap("gmtModified")
     private Long gmtModified;
 
-    @NameInMap("grafanaWorkspaceId")
+    @com.aliyun.core.annotation.NameInMap("grafanaWorkspaceId")
     private String grafanaWorkspaceId;
 
-    @NameInMap("id")
+    @com.aliyun.core.annotation.NameInMap("id")
     private Long id;
 
-    @NameInMap("msg")
+    @com.aliyun.core.annotation.NameInMap("msg")
     private String msg;
 
-    @NameInMap("processName")
+    @com.aliyun.core.annotation.NameInMap("processName")
     private String processName;
 
-    @NameInMap("processStatus")
+    @com.aliyun.core.annotation.NameInMap("processStatus")
     private String processStatus;
 
-    @NameInMap("subType")
+    @com.aliyun.core.annotation.NameInMap("subType")
     private String subType;
 
-    @NameInMap("userId")
+    @com.aliyun.core.annotation.NameInMap("userId")
     private String userId;
 
     private GrafanaWorkspaceIniBackup(Builder builder) {

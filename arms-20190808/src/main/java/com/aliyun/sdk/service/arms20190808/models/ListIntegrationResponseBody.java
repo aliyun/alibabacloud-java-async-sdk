@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListIntegrationResponseBody</p>
  */
 public class ListIntegrationResponseBody extends TeaModel {
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListIntegrationResponseBody(Builder builder) {
@@ -72,31 +71,31 @@ public class ListIntegrationResponseBody extends TeaModel {
     } 
 
     public static class IntegrationDetail extends TeaModel {
-        @NameInMap("AutoRecover")
+        @com.aliyun.core.annotation.NameInMap("AutoRecover")
         private Boolean autoRecover;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DuplicateKey")
+        @com.aliyun.core.annotation.NameInMap("DuplicateKey")
         private String duplicateKey;
 
-        @NameInMap("ExtendedFieldRedefineRules")
+        @com.aliyun.core.annotation.NameInMap("ExtendedFieldRedefineRules")
         private java.util.List < java.util.Map<String, ?>> extendedFieldRedefineRules;
 
-        @NameInMap("FieldRedefineRules")
+        @com.aliyun.core.annotation.NameInMap("FieldRedefineRules")
         private java.util.List < java.util.Map<String, ?>> fieldRedefineRules;
 
-        @NameInMap("InitiativeRecoverField")
+        @com.aliyun.core.annotation.NameInMap("InitiativeRecoverField")
         private String initiativeRecoverField;
 
-        @NameInMap("InitiativeRecoverValue")
+        @com.aliyun.core.annotation.NameInMap("InitiativeRecoverValue")
         private String initiativeRecoverValue;
 
-        @NameInMap("RecoverTime")
+        @com.aliyun.core.annotation.NameInMap("RecoverTime")
         private Long recoverTime;
 
-        @NameInMap("Stat")
+        @com.aliyun.core.annotation.NameInMap("Stat")
         private java.util.List < Long > stat;
 
         private IntegrationDetail(Builder builder) {
@@ -273,31 +272,31 @@ public class ListIntegrationResponseBody extends TeaModel {
 
     }
     public static class Integrations extends TeaModel {
-        @NameInMap("ApiEndpoint")
+        @com.aliyun.core.annotation.NameInMap("ApiEndpoint")
         private String apiEndpoint;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("IntegrationDetail")
+        @com.aliyun.core.annotation.NameInMap("IntegrationDetail")
         private IntegrationDetail integrationDetail;
 
-        @NameInMap("IntegrationId")
+        @com.aliyun.core.annotation.NameInMap("IntegrationId")
         private Long integrationId;
 
-        @NameInMap("IntegrationName")
+        @com.aliyun.core.annotation.NameInMap("IntegrationName")
         private String integrationName;
 
-        @NameInMap("IntegrationProductType")
+        @com.aliyun.core.annotation.NameInMap("IntegrationProductType")
         private String integrationProductType;
 
-        @NameInMap("Liveness")
+        @com.aliyun.core.annotation.NameInMap("Liveness")
         private String liveness;
 
-        @NameInMap("ShortToken")
+        @com.aliyun.core.annotation.NameInMap("ShortToken")
         private String shortToken;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private Boolean state;
 
         private Integrations(Builder builder) {
@@ -474,16 +473,16 @@ public class ListIntegrationResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("Integrations")
+        @com.aliyun.core.annotation.NameInMap("Integrations")
         private java.util.List < Integrations> integrations;
 
-        @NameInMap("Page")
+        @com.aliyun.core.annotation.NameInMap("Page")
         private Long page;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private PageInfo(Builder builder) {

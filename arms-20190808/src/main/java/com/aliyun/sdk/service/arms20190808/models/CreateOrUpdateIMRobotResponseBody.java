@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateOrUpdateIMRobotResponseBody</p>
  */
 public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
-    @NameInMap("AlertRobot")
+    @com.aliyun.core.annotation.NameInMap("AlertRobot")
     private AlertRobot alertRobot;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateOrUpdateIMRobotResponseBody(Builder builder) {
@@ -72,31 +71,31 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
     } 
 
     public static class AlertRobot extends TeaModel {
-        @NameInMap("CardTemplate")
+        @com.aliyun.core.annotation.NameInMap("CardTemplate")
         private String cardTemplate;
 
-        @NameInMap("DailyNoc")
+        @com.aliyun.core.annotation.NameInMap("DailyNoc")
         private Boolean dailyNoc;
 
-        @NameInMap("DailyNocTime")
+        @com.aliyun.core.annotation.NameInMap("DailyNocTime")
         private String dailyNocTime;
 
-        @NameInMap("EnableOutgoing")
+        @com.aliyun.core.annotation.NameInMap("EnableOutgoing")
         private Boolean enableOutgoing;
 
-        @NameInMap("RobotAddress")
+        @com.aliyun.core.annotation.NameInMap("RobotAddress")
         private String robotAddress;
 
-        @NameInMap("RobotId")
+        @com.aliyun.core.annotation.NameInMap("RobotId")
         private Float robotId;
 
-        @NameInMap("RobotName")
+        @com.aliyun.core.annotation.NameInMap("RobotName")
         private String robotName;
 
-        @NameInMap("Token")
+        @com.aliyun.core.annotation.NameInMap("Token")
         private String token;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private AlertRobot(Builder builder) {

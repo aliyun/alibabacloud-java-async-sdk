@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UploadResponseBody</p>
  */
 public class UploadResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UploadResult")
+    @com.aliyun.core.annotation.NameInMap("UploadResult")
     private UploadResult uploadResult;
 
     private UploadResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class UploadResponseBody extends TeaModel {
     } 
 
     public static class UploadResult extends TeaModel {
-        @NameInMap("Fid")
+        @com.aliyun.core.annotation.NameInMap("Fid")
         private String fid;
 
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("UploadTime")
+        @com.aliyun.core.annotation.NameInMap("UploadTime")
         private String uploadTime;
 
         private UploadResult(Builder builder) {

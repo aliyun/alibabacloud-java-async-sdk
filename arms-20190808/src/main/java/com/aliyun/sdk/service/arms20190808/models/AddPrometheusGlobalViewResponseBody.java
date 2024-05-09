@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddPrometheusGlobalViewResponseBody</p>
  */
 public class AddPrometheusGlobalViewResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AddPrometheusGlobalViewResponseBody(Builder builder) {
@@ -74,7 +73,7 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * 状态码。说明 200表示成功。
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -90,7 +89,7 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * 返回结果的提示信息。
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,13 +111,13 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
     } 
 
     public static class Info extends TeaModel {
-        @NameInMap("FailedInstances")
+        @com.aliyun.core.annotation.NameInMap("FailedInstances")
         private String failedInstances;
 
-        @NameInMap("GlobalViewClusterId")
+        @com.aliyun.core.annotation.NameInMap("GlobalViewClusterId")
         private String globalViewClusterId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private Info(Builder builder) {
@@ -193,13 +192,13 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Info")
+        @com.aliyun.core.annotation.NameInMap("Info")
         private Info info;
 
-        @NameInMap("Msg")
+        @com.aliyun.core.annotation.NameInMap("Msg")
         private String msg;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private Data(Builder builder) {

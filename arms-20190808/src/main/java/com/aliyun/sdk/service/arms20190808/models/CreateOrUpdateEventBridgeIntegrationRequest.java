@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateOrUpdateEventBridgeIntegrationRequest</p>
  */
 public class CreateOrUpdateEventBridgeIntegrationRequest extends Request {
-    @Body
-    @NameInMap("AccessKey")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccessKey")
     private String accessKey;
 
-    @Body
-    @NameInMap("AccessSecret")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccessSecret")
     private String accessSecret;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("Endpoint")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Endpoint")
     private String endpoint;
 
-    @Body
-    @NameInMap("EventBusName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EventBusName")
     private String eventBusName;
 
-    @Body
-    @NameInMap("EventBusRegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EventBusRegionId")
     private String eventBusRegionId;
 
-    @Body
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @Body
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Body
-    @NameInMap("Source")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
 
     private CreateOrUpdateEventBridgeIntegrationRequest(Builder builder) {

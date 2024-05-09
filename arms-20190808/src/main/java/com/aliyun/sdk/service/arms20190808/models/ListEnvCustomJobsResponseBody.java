@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListEnvCustomJobsResponseBody</p>
  */
 public class ListEnvCustomJobsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListEnvCustomJobsResponseBody(Builder builder) {
@@ -112,16 +111,16 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
     } 
 
     public static class ScrapeConfigs extends TeaModel {
-        @NameInMap("JobName")
+        @com.aliyun.core.annotation.NameInMap("JobName")
         private String jobName;
 
-        @NameInMap("MetricsPath")
+        @com.aliyun.core.annotation.NameInMap("MetricsPath")
         private String metricsPath;
 
-        @NameInMap("ScrapeDiscoverys")
+        @com.aliyun.core.annotation.NameInMap("ScrapeDiscoverys")
         private java.util.List < String > scrapeDiscoverys;
 
-        @NameInMap("ScrapeInterval")
+        @com.aliyun.core.annotation.NameInMap("ScrapeInterval")
         private String scrapeInterval;
 
         private ScrapeConfigs(Builder builder) {
@@ -213,34 +212,34 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AddonName")
+        @com.aliyun.core.annotation.NameInMap("AddonName")
         private String addonName;
 
-        @NameInMap("AddonReleaseName")
+        @com.aliyun.core.annotation.NameInMap("AddonReleaseName")
         private String addonReleaseName;
 
-        @NameInMap("AddonVersion")
+        @com.aliyun.core.annotation.NameInMap("AddonVersion")
         private String addonVersion;
 
-        @NameInMap("ConfigYaml")
+        @com.aliyun.core.annotation.NameInMap("ConfigYaml")
         private String configYaml;
 
-        @NameInMap("CreationTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreationTimestamp")
         private String creationTimestamp;
 
-        @NameInMap("CustomJobName")
+        @com.aliyun.core.annotation.NameInMap("CustomJobName")
         private String customJobName;
 
-        @NameInMap("EnvironmentId")
+        @com.aliyun.core.annotation.NameInMap("EnvironmentId")
         private String environmentId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ScrapeConfigs")
+        @com.aliyun.core.annotation.NameInMap("ScrapeConfigs")
         private java.util.List < ScrapeConfigs> scrapeConfigs;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Data(Builder builder) {

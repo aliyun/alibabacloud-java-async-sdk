@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateOrUpdateEventBridgeIntegrationResponseBody</p>
  */
 public class CreateOrUpdateEventBridgeIntegrationResponseBody extends TeaModel {
-    @NameInMap("EventBridgeIntegration")
+    @com.aliyun.core.annotation.NameInMap("EventBridgeIntegration")
     private EventBridgeIntegration eventBridgeIntegration;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateOrUpdateEventBridgeIntegrationResponseBody(Builder builder) {
@@ -72,31 +71,31 @@ public class CreateOrUpdateEventBridgeIntegrationResponseBody extends TeaModel {
     } 
 
     public static class EventBridgeIntegration extends TeaModel {
-        @NameInMap("AccessKey")
+        @com.aliyun.core.annotation.NameInMap("AccessKey")
         private String accessKey;
 
-        @NameInMap("AccessSecret")
+        @com.aliyun.core.annotation.NameInMap("AccessSecret")
         private String accessSecret;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Endpoint")
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
 
-        @NameInMap("EventBusName")
+        @com.aliyun.core.annotation.NameInMap("EventBusName")
         private String eventBusName;
 
-        @NameInMap("EventBusRegionId")
+        @com.aliyun.core.annotation.NameInMap("EventBusRegionId")
         private String eventBusRegionId;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
         private EventBridgeIntegration(Builder builder) {

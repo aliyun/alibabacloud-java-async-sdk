@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPrometheusIntegrationResponseBody</p>
  */
 public class GetPrometheusIntegrationResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetPrometheusIntegrationResponseBody(Builder builder) {
@@ -112,55 +111,55 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("CanDelete")
+        @com.aliyun.core.annotation.NameInMap("CanDelete")
         private Boolean canDelete;
 
-        @NameInMap("CanEditor")
+        @com.aliyun.core.annotation.NameInMap("CanEditor")
         private Boolean canEditor;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ContainerName")
+        @com.aliyun.core.annotation.NameInMap("ContainerName")
         private String containerName;
 
-        @NameInMap("Describe")
+        @com.aliyun.core.annotation.NameInMap("Describe")
         private String describe;
 
-        @NameInMap("ExporterType")
+        @com.aliyun.core.annotation.NameInMap("ExporterType")
         private String exporterType;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("IntegrationType")
+        @com.aliyun.core.annotation.NameInMap("IntegrationType")
         private String integrationType;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("NeedUpgrade")
+        @com.aliyun.core.annotation.NameInMap("NeedUpgrade")
         private Boolean needUpgrade;
 
-        @NameInMap("Param")
+        @com.aliyun.core.annotation.NameInMap("Param")
         private String param;
 
-        @NameInMap("ShowDescribe")
+        @com.aliyun.core.annotation.NameInMap("ShowDescribe")
         private Boolean showDescribe;
 
-        @NameInMap("ShowLog")
+        @com.aliyun.core.annotation.NameInMap("ShowLog")
         private String showLog;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Target")
+        @com.aliyun.core.annotation.NameInMap("Target")
         private String target;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private Data(Builder builder) {

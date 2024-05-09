@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SearchAlertRulesResponseBody</p>
  */
 public class SearchAlertRulesResponseBody extends TeaModel {
-    @NameInMap("PageBean")
+    @com.aliyun.core.annotation.NameInMap("PageBean")
     private PageBean pageBean;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SearchAlertRulesResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class SearchAlertRulesResponseBody extends TeaModel {
     } 
 
     public static class AlarmContext extends TeaModel {
-        @NameInMap("AlarmContentSubTitle")
+        @com.aliyun.core.annotation.NameInMap("AlarmContentSubTitle")
         private String alarmContentSubTitle;
 
-        @NameInMap("AlarmContentTemplate")
+        @com.aliyun.core.annotation.NameInMap("AlarmContentTemplate")
         private String alarmContentTemplate;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("SubTitle")
+        @com.aliyun.core.annotation.NameInMap("SubTitle")
         private String subTitle;
 
         private AlarmContext(Builder builder) {
@@ -173,22 +172,22 @@ public class SearchAlertRulesResponseBody extends TeaModel {
 
     }
     public static class Rules extends TeaModel {
-        @NameInMap("Aggregates")
+        @com.aliyun.core.annotation.NameInMap("Aggregates")
         private String aggregates;
 
-        @NameInMap("Alias")
+        @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
 
-        @NameInMap("Measure")
+        @com.aliyun.core.annotation.NameInMap("Measure")
         private String measure;
 
-        @NameInMap("NValue")
+        @com.aliyun.core.annotation.NameInMap("NValue")
         private Integer nValue;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private Rules(Builder builder) {
@@ -330,10 +329,10 @@ public class SearchAlertRulesResponseBody extends TeaModel {
 
     }
     public static class AlertRule extends TeaModel {
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("Rules")
+        @com.aliyun.core.annotation.NameInMap("Rules")
         private java.util.List < Rules> rules;
 
         private AlertRule(Builder builder) {
@@ -391,13 +390,13 @@ public class SearchAlertRulesResponseBody extends TeaModel {
 
     }
     public static class Dimensions extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Dimensions(Builder builder) {
@@ -483,19 +482,19 @@ public class SearchAlertRulesResponseBody extends TeaModel {
 
     }
     public static class MetricParam extends TeaModel {
-        @NameInMap("AppGroupId")
+        @com.aliyun.core.annotation.NameInMap("AppGroupId")
         private String appGroupId;
 
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("Dimensions")
+        @com.aliyun.core.annotation.NameInMap("Dimensions")
         private java.util.List < Dimensions> dimensions;
 
-        @NameInMap("Pid")
+        @com.aliyun.core.annotation.NameInMap("Pid")
         private String pid;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private MetricParam(Builder builder) {
@@ -612,16 +611,16 @@ public class SearchAlertRulesResponseBody extends TeaModel {
 
     }
     public static class Notice extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("NoticeEndTime")
+        @com.aliyun.core.annotation.NameInMap("NoticeEndTime")
         private Long noticeEndTime;
 
-        @NameInMap("NoticeStartTime")
+        @com.aliyun.core.annotation.NameInMap("NoticeStartTime")
         private Long noticeStartTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
         private Notice(Builder builder) {
@@ -713,73 +712,73 @@ public class SearchAlertRulesResponseBody extends TeaModel {
 
     }
     public static class AlertRules extends TeaModel {
-        @NameInMap("AlarmContext")
+        @com.aliyun.core.annotation.NameInMap("AlarmContext")
         private AlarmContext alarmContext;
 
-        @NameInMap("AlertLevel")
+        @com.aliyun.core.annotation.NameInMap("AlertLevel")
         private String alertLevel;
 
-        @NameInMap("AlertRule")
+        @com.aliyun.core.annotation.NameInMap("AlertRule")
         private AlertRule alertRule;
 
-        @NameInMap("AlertTitle")
+        @com.aliyun.core.annotation.NameInMap("AlertTitle")
         private String alertTitle;
 
-        @NameInMap("AlertType")
+        @com.aliyun.core.annotation.NameInMap("AlertType")
         private Integer alertType;
 
-        @NameInMap("AlertVersion")
+        @com.aliyun.core.annotation.NameInMap("AlertVersion")
         private Integer alertVersion;
 
-        @NameInMap("AlertWays")
+        @com.aliyun.core.annotation.NameInMap("AlertWays")
         private java.util.List < String > alertWays;
 
-        @NameInMap("Config")
+        @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
 
-        @NameInMap("ContactGroupIdList")
+        @com.aliyun.core.annotation.NameInMap("ContactGroupIdList")
         private String contactGroupIdList;
 
-        @NameInMap("ContactGroupIds")
+        @com.aliyun.core.annotation.NameInMap("ContactGroupIds")
         private String contactGroupIds;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("HostByAlertManager")
+        @com.aliyun.core.annotation.NameInMap("HostByAlertManager")
         private Boolean hostByAlertManager;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("MetricParam")
+        @com.aliyun.core.annotation.NameInMap("MetricParam")
         private MetricParam metricParam;
 
-        @NameInMap("Notice")
+        @com.aliyun.core.annotation.NameInMap("Notice")
         private Notice notice;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private Long taskId;
 
-        @NameInMap("TaskStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private String taskStatus;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private AlertRules(Builder builder) {
@@ -1220,16 +1219,16 @@ public class SearchAlertRulesResponseBody extends TeaModel {
 
     }
     public static class PageBean extends TeaModel {
-        @NameInMap("AlertRules")
+        @com.aliyun.core.annotation.NameInMap("AlertRules")
         private java.util.List < AlertRules> alertRules;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageBean(Builder builder) {

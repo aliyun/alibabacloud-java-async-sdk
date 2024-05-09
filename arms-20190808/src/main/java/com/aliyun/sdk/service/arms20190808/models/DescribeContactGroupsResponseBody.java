@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeContactGroupsResponseBody</p>
  */
 public class DescribeContactGroupsResponseBody extends TeaModel {
-    @NameInMap("PageBean")
+    @com.aliyun.core.annotation.NameInMap("PageBean")
     private PageBean pageBean;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeContactGroupsResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
     } 
 
     public static class Contacts extends TeaModel {
-        @NameInMap("ArmsContactId")
+        @com.aliyun.core.annotation.NameInMap("ArmsContactId")
         private Long armsContactId;
 
-        @NameInMap("ContactId")
+        @com.aliyun.core.annotation.NameInMap("ContactId")
         private Float contactId;
 
-        @NameInMap("ContactName")
+        @com.aliyun.core.annotation.NameInMap("ContactName")
         private String contactName;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("Phone")
+        @com.aliyun.core.annotation.NameInMap("Phone")
         private String phone;
 
         private Contacts(Builder builder) {
@@ -193,16 +192,16 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
 
     }
     public static class AlertContactGroups extends TeaModel {
-        @NameInMap("ArmsContactGroupId")
+        @com.aliyun.core.annotation.NameInMap("ArmsContactGroupId")
         private Long armsContactGroupId;
 
-        @NameInMap("ContactGroupId")
+        @com.aliyun.core.annotation.NameInMap("ContactGroupId")
         private Float contactGroupId;
 
-        @NameInMap("ContactGroupName")
+        @com.aliyun.core.annotation.NameInMap("ContactGroupName")
         private String contactGroupName;
 
-        @NameInMap("Contacts")
+        @com.aliyun.core.annotation.NameInMap("Contacts")
         private java.util.List < Contacts> contacts;
 
         private AlertContactGroups(Builder builder) {
@@ -294,16 +293,16 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
 
     }
     public static class PageBean extends TeaModel {
-        @NameInMap("AlertContactGroups")
+        @com.aliyun.core.annotation.NameInMap("AlertContactGroups")
         private java.util.List < AlertContactGroups> alertContactGroups;
 
-        @NameInMap("Page")
+        @com.aliyun.core.annotation.NameInMap("Page")
         private Long page;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private PageBean(Builder builder) {

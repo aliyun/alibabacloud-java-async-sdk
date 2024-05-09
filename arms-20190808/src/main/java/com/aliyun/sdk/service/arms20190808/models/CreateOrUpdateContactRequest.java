@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,43 +11,48 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateOrUpdateContactRequest</p>
  */
 public class CreateOrUpdateContactRequest extends Request {
-    @Body
-    @NameInMap("ContactId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ContactId")
     private Long contactId;
 
-    @Body
-    @NameInMap("ContactName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ContactName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String contactName;
 
-    @Query
-    @NameInMap("DingRobotUrl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CorpUserId")
+    private String corpUserId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DingRobotUrl")
     private String dingRobotUrl;
 
-    @Body
-    @NameInMap("Email")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Email")
     private String email;
 
-    @Body
-    @NameInMap("IsEmailVerify")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IsEmailVerify")
     private Boolean isEmailVerify;
 
-    @Body
-    @NameInMap("Phone")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Phone")
     private String phone;
 
-    @Body
-    @NameInMap("ReissueSendNotice")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ReissueSendNotice")
     private Long reissueSendNotice;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private CreateOrUpdateContactRequest(Builder builder) {
         super(builder);
         this.contactId = builder.contactId;
         this.contactName = builder.contactName;
+        this.corpUserId = builder.corpUserId;
         this.dingRobotUrl = builder.dingRobotUrl;
         this.email = builder.email;
         this.isEmailVerify = builder.isEmailVerify;
@@ -82,6 +86,13 @@ public class CreateOrUpdateContactRequest extends Request {
      */
     public String getContactName() {
         return this.contactName;
+    }
+
+    /**
+     * @return corpUserId
+     */
+    public String getCorpUserId() {
+        return this.corpUserId;
     }
 
     /**
@@ -129,6 +140,7 @@ public class CreateOrUpdateContactRequest extends Request {
     public static final class Builder extends Request.Builder<CreateOrUpdateContactRequest, Builder> {
         private Long contactId; 
         private String contactName; 
+        private String corpUserId; 
         private String dingRobotUrl; 
         private String email; 
         private Boolean isEmailVerify; 
@@ -144,6 +156,7 @@ public class CreateOrUpdateContactRequest extends Request {
             super(request);
             this.contactId = request.contactId;
             this.contactName = request.contactName;
+            this.corpUserId = request.corpUserId;
             this.dingRobotUrl = request.dingRobotUrl;
             this.email = request.email;
             this.isEmailVerify = request.isEmailVerify;
@@ -171,6 +184,15 @@ public class CreateOrUpdateContactRequest extends Request {
         public Builder contactName(String contactName) {
             this.putBodyParameter("ContactName", contactName);
             this.contactName = contactName;
+            return this;
+        }
+
+        /**
+         * CorpUserId.
+         */
+        public Builder corpUserId(String corpUserId) {
+            this.putBodyParameter("CorpUserId", corpUserId);
+            this.corpUserId = corpUserId;
             return this;
         }
 

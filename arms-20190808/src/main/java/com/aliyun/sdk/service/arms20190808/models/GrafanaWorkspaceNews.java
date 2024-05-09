@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GrafanaWorkspaceNews</p>
  */
 public class GrafanaWorkspaceNews extends TeaModel {
-    @NameInMap("date")
+    @com.aliyun.core.annotation.NameInMap("date")
     private Long date;
 
-    @NameInMap("description")
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @NameInMap("image")
+    @com.aliyun.core.annotation.NameInMap("image")
     private String image;
 
-    @NameInMap("link")
+    @com.aliyun.core.annotation.NameInMap("link")
     private String link;
 
-    @NameInMap("title")
+    @com.aliyun.core.annotation.NameInMap("title")
     private String title;
 
     private GrafanaWorkspaceNews(Builder builder) {

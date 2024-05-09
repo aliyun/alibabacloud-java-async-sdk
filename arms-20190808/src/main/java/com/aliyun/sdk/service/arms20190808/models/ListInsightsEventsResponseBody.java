@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInsightsEventsResponseBody</p>
  */
 public class ListInsightsEventsResponseBody extends TeaModel {
-    @NameInMap("InsightsEvents")
+    @com.aliyun.core.annotation.NameInMap("InsightsEvents")
     private java.util.List < InsightsEvents> insightsEvents;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListInsightsEventsResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class ListInsightsEventsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The event details.
+         * The details of the event.
          */
         public Builder insightsEvents(java.util.List < InsightsEvents> insightsEvents) {
             this.insightsEvents = insightsEvents;
@@ -58,7 +57,7 @@ public class ListInsightsEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The title of the event.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,25 +71,25 @@ public class ListInsightsEventsResponseBody extends TeaModel {
     } 
 
     public static class InsightsEvents extends TeaModel {
-        @NameInMap("Date")
+        @com.aliyun.core.annotation.NameInMap("Date")
         private Long date;
 
-        @NameInMap("Desc")
+        @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("Pid")
+        @com.aliyun.core.annotation.NameInMap("Pid")
         private String pid;
 
-        @NameInMap("ProblemId")
+        @com.aliyun.core.annotation.NameInMap("ProblemId")
         private String problemId;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private InsightsEvents(Builder builder) {
@@ -170,7 +169,7 @@ public class ListInsightsEventsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The time when the event occurred. The value is a timestamp.
+             * The time at which the event occurred. The value is a timestamp.
              */
             public Builder date(Long date) {
                 this.date = date;
@@ -178,7 +177,7 @@ public class ListInsightsEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the event.
+             * The description of the alert event.
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -202,7 +201,7 @@ public class ListInsightsEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Problem identification.
+             * 问题标识。
              */
             public Builder problemId(String problemId) {
                 this.problemId = problemId;

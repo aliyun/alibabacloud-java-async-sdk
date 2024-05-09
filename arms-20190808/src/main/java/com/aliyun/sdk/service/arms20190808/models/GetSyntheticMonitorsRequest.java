@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSyntheticMonitorsRequest</p>
  */
 public class GetSyntheticMonitorsRequest extends Request {
-    @Query
-    @NameInMap("Filter")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Filter filter;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private GetSyntheticMonitorsRequest(Builder builder) {
@@ -95,16 +94,16 @@ public class GetSyntheticMonitorsRequest extends Request {
     } 
 
     public static class Filter extends TeaModel {
-        @NameInMap("MonitorCategory")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("MonitorCategory")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer monitorCategory;
 
-        @NameInMap("Network")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Network")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer network;
 
-        @NameInMap("TaskType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TaskType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer taskType;
 
         private Filter(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GrafanaWorkspaceVpcRegion</p>
  */
 public class GrafanaWorkspaceVpcRegion extends TeaModel {
-    @NameInMap("regionId")
+    @com.aliyun.core.annotation.NameInMap("regionId")
     private String regionId;
 
-    @NameInMap("regionName")
+    @com.aliyun.core.annotation.NameInMap("regionName")
     private String regionName;
 
     private GrafanaWorkspaceVpcRegion(Builder builder) {

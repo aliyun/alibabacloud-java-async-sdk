@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListEnvPodMonitorsResponseBody</p>
  */
 public class ListEnvPodMonitorsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListEnvPodMonitorsResponseBody(Builder builder) {
@@ -112,19 +111,19 @@ public class ListEnvPodMonitorsResponseBody extends TeaModel {
     } 
 
     public static class Endpoints extends TeaModel {
-        @NameInMap("Interval")
+        @com.aliyun.core.annotation.NameInMap("Interval")
         private String interval;
 
-        @NameInMap("MatchedTargetCount")
+        @com.aliyun.core.annotation.NameInMap("MatchedTargetCount")
         private Integer matchedTargetCount;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("TargetPort")
+        @com.aliyun.core.annotation.NameInMap("TargetPort")
         private Integer targetPort;
 
         private Endpoints(Builder builder) {
@@ -233,37 +232,37 @@ public class ListEnvPodMonitorsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AddonName")
+        @com.aliyun.core.annotation.NameInMap("AddonName")
         private String addonName;
 
-        @NameInMap("AddonReleaseName")
+        @com.aliyun.core.annotation.NameInMap("AddonReleaseName")
         private String addonReleaseName;
 
-        @NameInMap("AddonVersion")
+        @com.aliyun.core.annotation.NameInMap("AddonVersion")
         private String addonVersion;
 
-        @NameInMap("ConfigYaml")
+        @com.aliyun.core.annotation.NameInMap("ConfigYaml")
         private String configYaml;
 
-        @NameInMap("CreationTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreationTimestamp")
         private String creationTimestamp;
 
-        @NameInMap("Endpoints")
+        @com.aliyun.core.annotation.NameInMap("Endpoints")
         private java.util.List < Endpoints> endpoints;
 
-        @NameInMap("EnvironmentId")
+        @com.aliyun.core.annotation.NameInMap("EnvironmentId")
         private String environmentId;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("PodMonitorName")
+        @com.aliyun.core.annotation.NameInMap("PodMonitorName")
         private String podMonitorName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Data(Builder builder) {

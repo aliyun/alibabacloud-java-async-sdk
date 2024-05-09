@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTraceLicenseKeyResponseBody</p>
  */
 public class DescribeTraceLicenseKeyResponseBody extends TeaModel {
-    @NameInMap("LicenseKey")
+    @com.aliyun.core.annotation.NameInMap("LicenseKey")
     private String licenseKey;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeTraceLicenseKeyResponseBody(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAppJVMConfigResponseBody</p>
  */
 public class GetAppJVMConfigResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("JvmInfoList")
+    @com.aliyun.core.annotation.NameInMap("JvmInfoList")
     private java.util.List < JvmInfoList> jvmInfoList;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetAppJVMConfigResponseBody(Builder builder) {
@@ -136,22 +135,22 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
     } 
 
     public static class JvmInfoList extends TeaModel {
-        @NameInMap("AgentVersion")
+        @com.aliyun.core.annotation.NameInMap("AgentVersion")
         private String agentVersion;
 
-        @NameInMap("HostName")
+        @com.aliyun.core.annotation.NameInMap("HostName")
         private String hostName;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("Pid")
+        @com.aliyun.core.annotation.NameInMap("Pid")
         private String pid;
 
-        @NameInMap("ProcId")
+        @com.aliyun.core.annotation.NameInMap("ProcId")
         private String procId;
 
-        @NameInMap("VmArgs")
+        @com.aliyun.core.annotation.NameInMap("VmArgs")
         private String vmArgs;
 
         private JvmInfoList(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAddonReleaseResponseBody</p>
  */
 public class DescribeAddonReleaseResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private DescribeAddonReleaseResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class DescribeAddonReleaseResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Status code: 200 indicates success.
+         * The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +93,7 @@ public class DescribeAddonReleaseResponseBody extends TeaModel {
         }
 
         /**
-         * The struct returned.
+         * The release information.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -110,7 +109,7 @@ public class DescribeAddonReleaseResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +117,7 @@ public class DescribeAddonReleaseResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the alert rule was deleted. Valid values:
-         * <p>
-         * 
-         * *   `true`: The alert rule was deleted.
-         * *   `false`: The alert rule failed to be deleted.
+         * Indicates whether the request was successful. Valid values: true and false.
          */
         public Builder success(String success) {
             this.success = success;
@@ -136,22 +131,22 @@ public class DescribeAddonReleaseResponseBody extends TeaModel {
     } 
 
     public static class Conditions extends TeaModel {
-        @NameInMap("FirstTransitionTime")
+        @com.aliyun.core.annotation.NameInMap("FirstTransitionTime")
         private String firstTransitionTime;
 
-        @NameInMap("LastTransitionTime")
+        @com.aliyun.core.annotation.NameInMap("LastTransitionTime")
         private String lastTransitionTime;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Conditions(Builder builder) {
@@ -222,7 +217,7 @@ public class DescribeAddonReleaseResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * First transition time.
+             * The first transition time.
              */
             public Builder firstTransitionTime(String firstTransitionTime) {
                 this.firstTransitionTime = firstTransitionTime;
@@ -230,7 +225,7 @@ public class DescribeAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * Last transition time.
+             * The last transition time.
              */
             public Builder lastTransitionTime(String lastTransitionTime) {
                 this.lastTransitionTime = lastTransitionTime;
@@ -238,7 +233,7 @@ public class DescribeAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * COndition details.
+             * The detailed information.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -246,7 +241,7 @@ public class DescribeAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * Reason of failure.
+             * The reason for the failure.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -254,7 +249,7 @@ public class DescribeAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * Condition status.
+             * The status of the phase.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -262,7 +257,7 @@ public class DescribeAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * Condition type.
+             * The type of the phase.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -277,61 +272,61 @@ public class DescribeAddonReleaseResponseBody extends TeaModel {
 
     }
     public static class Release extends TeaModel {
-        @NameInMap("AddonName")
+        @com.aliyun.core.annotation.NameInMap("AddonName")
         private String addonName;
 
-        @NameInMap("AlertRuleCount")
+        @com.aliyun.core.annotation.NameInMap("AlertRuleCount")
         private Long alertRuleCount;
 
-        @NameInMap("Conditions")
+        @com.aliyun.core.annotation.NameInMap("Conditions")
         private java.util.List < Conditions> conditions;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DashboardCount")
+        @com.aliyun.core.annotation.NameInMap("DashboardCount")
         private Long dashboardCount;
 
-        @NameInMap("EnvironmentId")
+        @com.aliyun.core.annotation.NameInMap("EnvironmentId")
         private String environmentId;
 
-        @NameInMap("ExporterCount")
+        @com.aliyun.core.annotation.NameInMap("ExporterCount")
         private Long exporterCount;
 
-        @NameInMap("HaveConfig")
+        @com.aliyun.core.annotation.NameInMap("HaveConfig")
         private Boolean haveConfig;
 
-        @NameInMap("InstallUserId")
+        @com.aliyun.core.annotation.NameInMap("InstallUserId")
         private String installUserId;
 
-        @NameInMap("Language")
+        @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
 
-        @NameInMap("Managed")
+        @com.aliyun.core.annotation.NameInMap("Managed")
         private Boolean managed;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ReleaseId")
+        @com.aliyun.core.annotation.NameInMap("ReleaseId")
         private String releaseId;
 
-        @NameInMap("ReleaseName")
+        @com.aliyun.core.annotation.NameInMap("ReleaseName")
         private String releaseName;
 
-        @NameInMap("Scene")
+        @com.aliyun.core.annotation.NameInMap("Scene")
         private String scene;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("UserID")
+        @com.aliyun.core.annotation.NameInMap("UserID")
         private String userID;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private Release(Builder builder) {
@@ -519,7 +514,7 @@ public class DescribeAddonReleaseResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * Name of Addon.
+             * The name of the add-on.
              */
             public Builder addonName(String addonName) {
                 this.addonName = addonName;
@@ -527,7 +522,7 @@ public class DescribeAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * Number of alarm groups.
+             * The number of alert rules.
              */
             public Builder alertRuleCount(Long alertRuleCount) {
                 this.alertRuleCount = alertRuleCount;
@@ -535,7 +530,7 @@ public class DescribeAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * Condition list.
+             * The installation phase.
              */
             public Builder conditions(java.util.List < Conditions> conditions) {
                 this.conditions = conditions;
@@ -543,7 +538,7 @@ public class DescribeAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * Create time.
+             * The time when the add-on was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -551,7 +546,7 @@ public class DescribeAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * Number of dashboard.
+             * The number of dashboards.
              */
             public Builder dashboardCount(Long dashboardCount) {
                 this.dashboardCount = dashboardCount;
@@ -559,7 +554,7 @@ public class DescribeAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * Environment ID.
+             * The environment ID.
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -567,7 +562,7 @@ public class DescribeAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * Number of Exporter.
+             * The number of exporters.
              */
             public Builder exporterCount(Long exporterCount) {
                 this.exporterCount = exporterCount;
@@ -575,7 +570,7 @@ public class DescribeAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * Whether there is configuration.
+             * Indicates whether the configuration is available.
              */
             public Builder haveConfig(Boolean haveConfig) {
                 this.haveConfig = haveConfig;
@@ -583,7 +578,7 @@ public class DescribeAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * User ID of the installation.
+             * The user ID.
              */
             public Builder installUserId(String installUserId) {
                 this.installUserId = installUserId;
@@ -591,7 +586,7 @@ public class DescribeAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * Language.
+             * The language.
              */
             public Builder language(String language) {
                 this.language = language;
@@ -599,7 +594,7 @@ public class DescribeAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * Managed.
+             * Whether or not it is a managed component.
              */
             public Builder managed(Boolean managed) {
                 this.managed = managed;
@@ -615,7 +610,7 @@ public class DescribeAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * Release ID.
+             * The release ID after installation.
              */
             public Builder releaseId(String releaseId) {
                 this.releaseId = releaseId;
@@ -623,7 +618,7 @@ public class DescribeAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * Name of Release.
+             * The name of the release.
              */
             public Builder releaseName(String releaseName) {
                 this.releaseName = releaseName;
@@ -631,7 +626,7 @@ public class DescribeAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * Scene.
+             * The scenario.
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -639,7 +634,7 @@ public class DescribeAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * Status of Release.
+             * The status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -647,7 +642,7 @@ public class DescribeAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * Update time.
+             * The time when the add-on was updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -655,7 +650,7 @@ public class DescribeAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * User ID.
+             * The user ID.
              */
             public Builder userID(String userID) {
                 this.userID = userID;
@@ -663,7 +658,7 @@ public class DescribeAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * Version of Addon.
+             * The version of the add-on.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -678,10 +673,10 @@ public class DescribeAddonReleaseResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Config")
+        @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
 
-        @NameInMap("Release")
+        @com.aliyun.core.annotation.NameInMap("Release")
         private Release release;
 
         private Data(Builder builder) {
@@ -716,7 +711,7 @@ public class DescribeAddonReleaseResponseBody extends TeaModel {
             private Release release; 
 
             /**
-             * Config of the Release.
+             * The configuration information of the add-on release.
              */
             public Builder config(String config) {
                 this.config = config;
@@ -724,7 +719,7 @@ public class DescribeAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * Release Detail.
+             * The release information.
              */
             public Builder release(Release release) {
                 this.release = release;

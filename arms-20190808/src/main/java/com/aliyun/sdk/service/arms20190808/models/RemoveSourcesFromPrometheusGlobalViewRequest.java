@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RemoveSourcesFromPrometheusGlobalViewRequest</p>
  */
 public class RemoveSourcesFromPrometheusGlobalViewRequest extends Request {
-    @Query
-    @NameInMap("GlobalViewClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GlobalViewClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String globalViewClusterId;
 
-    @Query
-    @NameInMap("GroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupName;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("SourceNames")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceNames")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceNames;
 
     private RemoveSourcesFromPrometheusGlobalViewRequest(Builder builder) {
@@ -100,7 +99,7 @@ public class RemoveSourcesFromPrometheusGlobalViewRequest extends Request {
         } 
 
         /**
-         * GlobalViewClusterId.
+         * The ID of the global aggregation instance.
          */
         public Builder globalViewClusterId(String globalViewClusterId) {
             this.putQueryParameter("GlobalViewClusterId", globalViewClusterId);
@@ -109,7 +108,7 @@ public class RemoveSourcesFromPrometheusGlobalViewRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * The name of the global aggregation instance.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -118,7 +117,7 @@ public class RemoveSourcesFromPrometheusGlobalViewRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -127,7 +126,7 @@ public class RemoveSourcesFromPrometheusGlobalViewRequest extends Request {
         }
 
         /**
-         * SourceNames.
+         * The list of custom data sources. You can specify multiple data sources and separate them with commas (,).
          */
         public Builder sourceNames(String sourceNames) {
             this.putQueryParameter("SourceNames", sourceNames);

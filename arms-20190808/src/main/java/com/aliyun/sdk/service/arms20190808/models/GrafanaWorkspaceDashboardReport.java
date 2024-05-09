@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,52 +11,52 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GrafanaWorkspaceDashboardReport</p>
  */
 public class GrafanaWorkspaceDashboardReport extends TeaModel {
-    @NameInMap("gmtCreate")
+    @com.aliyun.core.annotation.NameInMap("gmtCreate")
     private Long gmtCreate;
 
-    @NameInMap("grafanaWorkspaceId")
+    @com.aliyun.core.annotation.NameInMap("grafanaWorkspaceId")
     private String grafanaWorkspaceId;
 
-    @NameInMap("id")
+    @com.aliyun.core.annotation.NameInMap("id")
     private Long id;
 
-    @NameInMap("lastSendTime")
+    @com.aliyun.core.annotation.NameInMap("lastSendTime")
     private Long lastSendTime;
 
-    @NameInMap("msg")
+    @com.aliyun.core.annotation.NameInMap("msg")
     private String msg;
 
-    @NameInMap("name")
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @NameInMap("reportChannelTarget")
+    @com.aliyun.core.annotation.NameInMap("reportChannelTarget")
     private String reportChannelTarget;
 
-    @NameInMap("reportChannelType")
+    @com.aliyun.core.annotation.NameInMap("reportChannelType")
     private String reportChannelType;
 
-    @NameInMap("reportStyle")
+    @com.aliyun.core.annotation.NameInMap("reportStyle")
     private String reportStyle;
 
-    @NameInMap("reportType")
+    @com.aliyun.core.annotation.NameInMap("reportType")
     private String reportType;
 
-    @NameInMap("status")
+    @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
-    @NameInMap("triggerDay")
+    @com.aliyun.core.annotation.NameInMap("triggerDay")
     private String triggerDay;
 
-    @NameInMap("triggerTime")
+    @com.aliyun.core.annotation.NameInMap("triggerTime")
     private String triggerTime;
 
-    @NameInMap("triggerType")
+    @com.aliyun.core.annotation.NameInMap("triggerType")
     private String triggerType;
 
-    @NameInMap("url")
+    @com.aliyun.core.annotation.NameInMap("url")
     private String url;
 
-    @NameInMap("userId")
+    @com.aliyun.core.annotation.NameInMap("userId")
     private String userId;
 
     private GrafanaWorkspaceDashboardReport(Builder builder) {

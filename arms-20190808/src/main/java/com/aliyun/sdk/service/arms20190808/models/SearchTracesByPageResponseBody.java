@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SearchTracesByPageResponseBody</p>
  */
 public class SearchTracesByPageResponseBody extends TeaModel {
-    @NameInMap("PageBean")
+    @com.aliyun.core.annotation.NameInMap("PageBean")
     private PageBean pageBean;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SearchTracesByPageResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class SearchTracesByPageResponseBody extends TeaModel {
     } 
 
     public static class TraceInfos extends TeaModel {
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
 
-        @NameInMap("OperationName")
+        @com.aliyun.core.annotation.NameInMap("OperationName")
         private String operationName;
 
-        @NameInMap("ServiceIp")
+        @com.aliyun.core.annotation.NameInMap("ServiceIp")
         private String serviceIp;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
-        @NameInMap("TraceID")
+        @com.aliyun.core.annotation.NameInMap("TraceID")
         private String traceID;
 
         private TraceInfos(Builder builder) {
@@ -213,16 +212,16 @@ public class SearchTracesByPageResponseBody extends TeaModel {
 
     }
     public static class PageBean extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
-        @NameInMap("TraceInfos")
+        @com.aliyun.core.annotation.NameInMap("TraceInfos")
         private java.util.List < TraceInfos> traceInfos;
 
         private PageBean(Builder builder) {

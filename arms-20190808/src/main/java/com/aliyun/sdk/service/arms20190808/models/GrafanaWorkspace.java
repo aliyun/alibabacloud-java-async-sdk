@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,82 +11,82 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GrafanaWorkspace</p>
  */
 public class GrafanaWorkspace extends TeaModel {
-    @NameInMap("commercial")
+    @com.aliyun.core.annotation.NameInMap("commercial")
     private Boolean commercial;
 
-    @NameInMap("deployType")
+    @com.aliyun.core.annotation.NameInMap("deployType")
     private String deployType;
 
-    @NameInMap("description")
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @NameInMap("endTime")
+    @com.aliyun.core.annotation.NameInMap("endTime")
     private Float endTime;
 
-    @NameInMap("gmtCreate")
+    @com.aliyun.core.annotation.NameInMap("gmtCreate")
     private Float gmtCreate;
 
-    @NameInMap("grafanaVersion")
+    @com.aliyun.core.annotation.NameInMap("grafanaVersion")
     private String grafanaVersion;
 
-    @NameInMap("grafanaWorkspaceDomain")
+    @com.aliyun.core.annotation.NameInMap("grafanaWorkspaceDomain")
     private String grafanaWorkspaceDomain;
 
-    @NameInMap("grafanaWorkspaceEdition")
+    @com.aliyun.core.annotation.NameInMap("grafanaWorkspaceEdition")
     private String grafanaWorkspaceEdition;
 
-    @NameInMap("grafanaWorkspaceId")
+    @com.aliyun.core.annotation.NameInMap("grafanaWorkspaceId")
     private String grafanaWorkspaceId;
 
-    @NameInMap("grafanaWorkspaceIp")
+    @com.aliyun.core.annotation.NameInMap("grafanaWorkspaceIp")
     private String grafanaWorkspaceIp;
 
-    @NameInMap("grafanaWorkspaceName")
+    @com.aliyun.core.annotation.NameInMap("grafanaWorkspaceName")
     private String grafanaWorkspaceName;
 
-    @NameInMap("maxAccount")
+    @com.aliyun.core.annotation.NameInMap("maxAccount")
     private String maxAccount;
 
-    @NameInMap("ntmId")
+    @com.aliyun.core.annotation.NameInMap("ntmId")
     private String ntmId;
 
-    @NameInMap("personalDomain")
+    @com.aliyun.core.annotation.NameInMap("personalDomain")
     private String personalDomain;
 
-    @NameInMap("personalDomainPrefix")
+    @com.aliyun.core.annotation.NameInMap("personalDomainPrefix")
     private String personalDomainPrefix;
 
-    @NameInMap("privateDomain")
+    @com.aliyun.core.annotation.NameInMap("privateDomain")
     private String privateDomain;
 
-    @NameInMap("privateIp")
+    @com.aliyun.core.annotation.NameInMap("privateIp")
     private String privateIp;
 
-    @NameInMap("protocol")
+    @com.aliyun.core.annotation.NameInMap("protocol")
     private String protocol;
 
-    @NameInMap("regionId")
+    @com.aliyun.core.annotation.NameInMap("regionId")
     private String regionId;
 
-    @NameInMap("resourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("shareSynced")
+    @com.aliyun.core.annotation.NameInMap("shareSynced")
     private Boolean shareSynced;
 
-    @NameInMap("snatIp")
+    @com.aliyun.core.annotation.NameInMap("snatIp")
     private String snatIp;
 
-    @NameInMap("status")
+    @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
-    @NameInMap("tags")
+    @com.aliyun.core.annotation.NameInMap("tags")
     private java.util.List < Tags> tags;
 
-    @NameInMap("upgradeVersion")
+    @com.aliyun.core.annotation.NameInMap("upgradeVersion")
     private java.util.List < String > upgradeVersion;
 
-    @NameInMap("userId")
+    @com.aliyun.core.annotation.NameInMap("userId")
     private String userId;
 
     private GrafanaWorkspace(Builder builder) {
@@ -552,10 +551,10 @@ public class GrafanaWorkspace extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("key")
+        @com.aliyun.core.annotation.NameInMap("key")
         private String key;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private Tags(Builder builder) {

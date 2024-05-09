@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListActivatedAlertsResponseBody</p>
  */
 public class ListActivatedAlertsResponseBody extends TeaModel {
-    @NameInMap("Page")
+    @com.aliyun.core.annotation.NameInMap("Page")
     private Page page;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListActivatedAlertsResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
     } 
 
     public static class DispatchRules extends TeaModel {
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Integer ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
         private DispatchRules(Builder builder) {
@@ -133,52 +132,52 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
 
     }
     public static class Alerts extends TeaModel {
-        @NameInMap("AlertId")
+        @com.aliyun.core.annotation.NameInMap("AlertId")
         private String alertId;
 
-        @NameInMap("AlertName")
+        @com.aliyun.core.annotation.NameInMap("AlertName")
         private String alertName;
 
-        @NameInMap("AlertType")
+        @com.aliyun.core.annotation.NameInMap("AlertType")
         private String alertType;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("DispatchRules")
+        @com.aliyun.core.annotation.NameInMap("DispatchRules")
         private java.util.List < DispatchRules> dispatchRules;
 
-        @NameInMap("EndsAt")
+        @com.aliyun.core.annotation.NameInMap("EndsAt")
         private Long endsAt;
 
-        @NameInMap("ExpandFields")
+        @com.aliyun.core.annotation.NameInMap("ExpandFields")
         private java.util.Map < String, ? > expandFields;
 
-        @NameInMap("IntegrationName")
+        @com.aliyun.core.annotation.NameInMap("IntegrationName")
         private String integrationName;
 
-        @NameInMap("IntegrationType")
+        @com.aliyun.core.annotation.NameInMap("IntegrationType")
         private String integrationType;
 
-        @NameInMap("InvolvedObjectKind")
+        @com.aliyun.core.annotation.NameInMap("InvolvedObjectKind")
         private String involvedObjectKind;
 
-        @NameInMap("InvolvedObjectName")
+        @com.aliyun.core.annotation.NameInMap("InvolvedObjectName")
         private String involvedObjectName;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Severity")
+        @com.aliyun.core.annotation.NameInMap("Severity")
         private String severity;
 
-        @NameInMap("StartsAt")
+        @com.aliyun.core.annotation.NameInMap("StartsAt")
         private Long startsAt;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Alerts(Builder builder) {
@@ -491,16 +490,16 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
 
     }
     public static class Page extends TeaModel {
-        @NameInMap("Alerts")
+        @com.aliyun.core.annotation.NameInMap("Alerts")
         private java.util.List < Alerts> alerts;
 
-        @NameInMap("Page")
+        @com.aliyun.core.annotation.NameInMap("Page")
         private Integer page;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Page(Builder builder) {

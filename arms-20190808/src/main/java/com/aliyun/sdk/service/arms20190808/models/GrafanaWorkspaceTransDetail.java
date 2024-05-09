@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GrafanaWorkspaceTransDetail</p>
  */
 public class GrafanaWorkspaceTransDetail extends TeaModel {
-    @NameInMap("dashboardAmount")
+    @com.aliyun.core.annotation.NameInMap("dashboardAmount")
     private Integer dashboardAmount;
 
-    @NameInMap("dataSourceAmount")
+    @com.aliyun.core.annotation.NameInMap("dataSourceAmount")
     private Integer dataSourceAmount;
 
-    @NameInMap("original")
+    @com.aliyun.core.annotation.NameInMap("original")
     private Long original;
 
-    @NameInMap("originalName")
+    @com.aliyun.core.annotation.NameInMap("originalName")
     private String originalName;
 
-    @NameInMap("target")
+    @com.aliyun.core.annotation.NameInMap("target")
     private Long target;
 
-    @NameInMap("targetName")
+    @com.aliyun.core.annotation.NameInMap("targetName")
     private String targetName;
 
     private GrafanaWorkspaceTransDetail(Builder builder) {

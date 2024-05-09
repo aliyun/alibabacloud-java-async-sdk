@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDispatchRuleResponseBody</p>
  */
 public class ListDispatchRuleResponseBody extends TeaModel {
-    @NameInMap("DispatchRules")
+    @com.aliyun.core.annotation.NameInMap("DispatchRules")
     private java.util.List < DispatchRules> dispatchRules;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListDispatchRuleResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class ListDispatchRuleResponseBody extends TeaModel {
     } 
 
     public static class DispatchRules extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private DispatchRules(Builder builder) {

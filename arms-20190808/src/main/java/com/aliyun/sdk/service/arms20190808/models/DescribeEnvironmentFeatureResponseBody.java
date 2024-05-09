@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEnvironmentFeatureResponseBody</p>
  */
 public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeEnvironmentFeatureResponseBody(Builder builder) {
@@ -132,37 +131,37 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
     } 
 
     public static class Feature extends TeaModel {
-        @NameInMap("Alias")
+        @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
 
-        @NameInMap("Config")
+        @com.aliyun.core.annotation.NameInMap("Config")
         private java.util.Map < String, String > config;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EnvironmentId")
+        @com.aliyun.core.annotation.NameInMap("EnvironmentId")
         private String environmentId;
 
-        @NameInMap("Icon")
+        @com.aliyun.core.annotation.NameInMap("Icon")
         private String icon;
 
-        @NameInMap("Language")
+        @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
 
-        @NameInMap("LatestVersion")
+        @com.aliyun.core.annotation.NameInMap("LatestVersion")
         private String latestVersion;
 
-        @NameInMap("Managed")
+        @com.aliyun.core.annotation.NameInMap("Managed")
         private Boolean managed;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private Feature(Builder builder) {
@@ -334,7 +333,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * Managed.
+             * Whether or not it is a managed component.
              */
             public Builder managed(Boolean managed) {
                 this.managed = managed;
@@ -373,13 +372,13 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
 
     }
     public static class FeatureContainers extends TeaModel {
-        @NameInMap("Args")
+        @com.aliyun.core.annotation.NameInMap("Args")
         private java.util.List < String > args;
 
-        @NameInMap("Image")
+        @com.aliyun.core.annotation.NameInMap("Image")
         private String image;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private FeatureContainers(Builder builder) {
@@ -454,23 +453,35 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
 
     }
     public static class FeatureStatus extends TeaModel {
-        @NameInMap("FeatureContainers")
+        @com.aliyun.core.annotation.NameInMap("BindResourceId")
+        private String bindResourceId;
+
+        @com.aliyun.core.annotation.NameInMap("FeatureContainers")
         private java.util.List < FeatureContainers> featureContainers;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+        private String securityGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
+        private String vSwitchId;
+
         private FeatureStatus(Builder builder) {
+            this.bindResourceId = builder.bindResourceId;
             this.featureContainers = builder.featureContainers;
             this.name = builder.name;
             this.namespace = builder.namespace;
+            this.securityGroupId = builder.securityGroupId;
             this.status = builder.status;
+            this.vSwitchId = builder.vSwitchId;
         }
 
         public static Builder builder() {
@@ -479,6 +490,13 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
 
         public static FeatureStatus create() {
             return builder().build();
+        }
+
+        /**
+         * @return bindResourceId
+         */
+        public String getBindResourceId() {
+            return this.bindResourceId;
         }
 
         /**
@@ -503,17 +521,42 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         }
 
         /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
             return this.status;
         }
 
+        /**
+         * @return vSwitchId
+         */
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
         public static final class Builder {
+            private String bindResourceId; 
             private java.util.List < FeatureContainers> featureContainers; 
             private String name; 
             private String namespace; 
+            private String securityGroupId; 
             private String status; 
+            private String vSwitchId; 
+
+            /**
+             * BindResourceId.
+             */
+            public Builder bindResourceId(String bindResourceId) {
+                this.bindResourceId = bindResourceId;
+                return this;
+            }
 
             /**
              * The containers of the feature.
@@ -540,6 +583,14 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
+             * SecurityGroupId.
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
              * The status of the agent. Valid values:
              * <p>
              * 
@@ -552,6 +603,14 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * VSwitchId.
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
+                return this;
+            }
+
             public FeatureStatus build() {
                 return new FeatureStatus(this);
             } 
@@ -560,10 +619,10 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Feature")
+        @com.aliyun.core.annotation.NameInMap("Feature")
         private Feature feature;
 
-        @NameInMap("FeatureStatus")
+        @com.aliyun.core.annotation.NameInMap("FeatureStatus")
         private FeatureStatus featureStatus;
 
         private Data(Builder builder) {

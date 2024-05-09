@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,44 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryReleaseMetricRequest</p>
  */
 public class QueryReleaseMetricRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ChangeOrderId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChangeOrderId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String changeOrderId;
 
-    @Query
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private Long createTime;
 
-    @Query
-    @NameInMap("MetricType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricType")
     private String metricType;
 
-    @Query
-    @NameInMap("Pid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Pid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pid;
 
-    @Query
-    @NameInMap("ProxyUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProxyUserId")
     private String proxyUserId;
 
-    @Query
-    @NameInMap("ReleaseEndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReleaseEndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long releaseEndTime;
 
-    @Query
-    @NameInMap("ReleaseStartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReleaseStartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long releaseStartTime;
 
-    @Query
-    @NameInMap("Service")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Service")
     private String service;
 
     private QueryReleaseMetricRequest(Builder builder) {

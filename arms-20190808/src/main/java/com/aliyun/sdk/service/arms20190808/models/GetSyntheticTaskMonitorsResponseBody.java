@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSyntheticTaskMonitorsResponseBody</p>
  */
 public class GetSyntheticTaskMonitorsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("Msg")
+    @com.aliyun.core.annotation.NameInMap("Msg")
     private String msg;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetSyntheticTaskMonitorsResponseBody(Builder builder) {
@@ -112,25 +111,25 @@ public class GetSyntheticTaskMonitorsResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("Busy")
+        @com.aliyun.core.annotation.NameInMap("Busy")
         private Long busy;
 
-        @NameInMap("City")
+        @com.aliyun.core.annotation.NameInMap("City")
         private String city;
 
-        @NameInMap("CityCode")
+        @com.aliyun.core.annotation.NameInMap("CityCode")
         private Long cityCode;
 
-        @NameInMap("ClientType")
+        @com.aliyun.core.annotation.NameInMap("ClientType")
         private Long clientType;
 
-        @NameInMap("District")
+        @com.aliyun.core.annotation.NameInMap("District")
         private String district;
 
-        @NameInMap("NetServiceId")
+        @com.aliyun.core.annotation.NameInMap("NetServiceId")
         private Long netServiceId;
 
-        @NameInMap("NetServiceName")
+        @com.aliyun.core.annotation.NameInMap("NetServiceName")
         private String netServiceName;
 
         private Data(Builder builder) {

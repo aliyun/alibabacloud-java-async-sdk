@@ -119,6 +119,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateRetcodeAppResponse> createRetcodeApp(CreateRetcodeAppRequest request);
 
+    CompletableFuture<CreateRumAppResponse> createRumApp(CreateRumAppRequest request);
+
+    CompletableFuture<CreateRumUploadFileUrlResponse> createRumUploadFileUrl(CreateRumUploadFileUrlRequest request);
+
     CompletableFuture<CreateSyntheticTaskResponse> createSyntheticTask(CreateSyntheticTaskRequest request);
 
     CompletableFuture<CreateTimingSyntheticTaskResponse> createTimingSyntheticTask(CreateTimingSyntheticTaskRequest request);
@@ -194,6 +198,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeletePrometheusRemoteWriteResponse> deletePrometheusRemoteWrite(DeletePrometheusRemoteWriteRequest request);
 
     CompletableFuture<DeleteRetcodeAppResponse> deleteRetcodeApp(DeleteRetcodeAppRequest request);
+
+    CompletableFuture<DeleteRumAppResponse> deleteRumApp(DeleteRumAppRequest request);
+
+    CompletableFuture<DeleteRumUploadFileResponse> deleteRumUploadFile(DeleteRumUploadFileRequest request);
 
     CompletableFuture<DeleteScenarioResponse> deleteScenario(DeleteScenarioRequest request);
 
@@ -298,6 +306,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetRetcodeLogstoreResponse> getRetcodeLogstore(GetRetcodeLogstoreRequest request);
 
     CompletableFuture<GetRetcodeShareUrlResponse> getRetcodeShareUrl(GetRetcodeShareUrlRequest request);
+
+    CompletableFuture<GetRumAppInfoResponse> getRumAppInfo(GetRumAppInfoRequest request);
+
+    CompletableFuture<GetRumAppsResponse> getRumApps(GetRumAppsRequest request);
+
+    CompletableFuture<GetRumDataForPageResponse> getRumDataForPage(GetRumDataForPageRequest request);
+
+    CompletableFuture<GetRumExceptionStackResponse> getRumExceptionStack(GetRumExceptionStackRequest request);
+
+    CompletableFuture<GetRumUploadFilesResponse> getRumUploadFiles(GetRumUploadFilesRequest request);
 
     CompletableFuture<GetSourceMapInfoResponse> getSourceMapInfo(GetSourceMapInfoRequest request);
 
@@ -588,6 +606,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdatePrometheusMonitoringStatusResponse> updatePrometheusMonitoringStatus(UpdatePrometheusMonitoringStatusRequest request);
 
     CompletableFuture<UpdatePrometheusRemoteWriteResponse> updatePrometheusRemoteWrite(UpdatePrometheusRemoteWriteRequest request);
+
+    CompletableFuture<UpdateRumAppResponse> updateRumApp(UpdateRumAppRequest request);
+
+    CompletableFuture<UpdateRumFileStatusResponse> updateRumFileStatus(UpdateRumFileStatusRequest request);
 
     CompletableFuture<UpdateTimingSyntheticTaskResponse> updateTimingSyntheticTask(UpdateTimingSyntheticTaskRequest request);
 

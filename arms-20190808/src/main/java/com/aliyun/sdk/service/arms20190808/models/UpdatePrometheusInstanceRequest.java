@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,26 +11,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdatePrometheusInstanceRequest</p>
  */
 public class UpdatePrometheusInstanceRequest extends Request {
-    @Query
-    @NameInMap("ArchiveDuration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArchiveDuration")
     private Integer archiveDuration;
 
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("StorageDuration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageDuration")
     private Integer storageDuration;
 
     private UpdatePrometheusInstanceRequest(Builder builder) {
@@ -112,7 +111,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
         } 
 
         /**
-         * ArchiveDuration.
+         * The number of days for automatic archiving after storage expiration (optional values: 60, 90, 180, 365). 0 means not archive.
          */
         public Builder archiveDuration(Integer archiveDuration) {
             this.putQueryParameter("ArchiveDuration", archiveDuration);
@@ -121,7 +120,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the Prometheus instance.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -130,7 +129,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -139,7 +138,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -148,7 +147,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * StorageDuration.
+         * Storage duration (days).
          */
         public Builder storageDuration(Integer storageDuration) {
             this.putQueryParameter("StorageDuration", storageDuration);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeIMRobotsResponseBody</p>
  */
 public class DescribeIMRobotsResponseBody extends TeaModel {
-    @NameInMap("PageBean")
+    @com.aliyun.core.annotation.NameInMap("PageBean")
     private PageBean pageBean;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeIMRobotsResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
     } 
 
     public static class DispatchRules extends TeaModel {
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private DispatchRules(Builder builder) {
@@ -133,31 +132,31 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
 
     }
     public static class AlertIMRobots extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DailyNoc")
+        @com.aliyun.core.annotation.NameInMap("DailyNoc")
         private Boolean dailyNoc;
 
-        @NameInMap("DailyNocTime")
+        @com.aliyun.core.annotation.NameInMap("DailyNocTime")
         private String dailyNocTime;
 
-        @NameInMap("DingSignKey")
+        @com.aliyun.core.annotation.NameInMap("DingSignKey")
         private String dingSignKey;
 
-        @NameInMap("DispatchRules")
+        @com.aliyun.core.annotation.NameInMap("DispatchRules")
         private java.util.List < DispatchRules> dispatchRules;
 
-        @NameInMap("RobotAddr")
+        @com.aliyun.core.annotation.NameInMap("RobotAddr")
         private String robotAddr;
 
-        @NameInMap("RobotId")
+        @com.aliyun.core.annotation.NameInMap("RobotId")
         private Float robotId;
 
-        @NameInMap("RobotName")
+        @com.aliyun.core.annotation.NameInMap("RobotName")
         private String robotName;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private AlertIMRobots(Builder builder) {
@@ -342,16 +341,16 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
 
     }
     public static class PageBean extends TeaModel {
-        @NameInMap("AlertIMRobots")
+        @com.aliyun.core.annotation.NameInMap("AlertIMRobots")
         private java.util.List < AlertIMRobots> alertIMRobots;
 
-        @NameInMap("Page")
+        @com.aliyun.core.annotation.NameInMap("Page")
         private Long page;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private PageBean(Builder builder) {

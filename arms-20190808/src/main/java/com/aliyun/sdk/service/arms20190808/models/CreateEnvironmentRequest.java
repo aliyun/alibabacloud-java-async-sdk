@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,53 +11,53 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateEnvironmentRequest</p>
  */
 public class CreateEnvironmentRequest extends Request {
-    @Query
-    @NameInMap("AliyunLang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AliyunLang")
     private String aliyunLang;
 
-    @Query
-    @NameInMap("BindResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BindResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bindResourceId;
 
-    @Query
-    @NameInMap("EnvironmentName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnvironmentName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String environmentName;
 
-    @Query
-    @NameInMap("EnvironmentSubType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnvironmentSubType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String environmentSubType;
 
-    @Query
-    @NameInMap("EnvironmentType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnvironmentType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String environmentType;
 
-    @Query
-    @NameInMap("FeePackage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FeePackage")
     private String feePackage;
 
-    @Query
-    @NameInMap("ManagedType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ManagedType")
     private String managedType;
 
-    @Query
-    @NameInMap("PrometheusInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrometheusInstanceId")
     private String prometheusInstanceId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List < Tags> tags;
 
     private CreateEnvironmentRequest(Builder builder) {
@@ -199,7 +198,38 @@ public class CreateEnvironmentRequest extends Request {
         } 
 
         /**
-         * The language. Valid values: zh and en. Default value: zh.
+         * The language. Default value: zh.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   en
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     English
+         * 
+         *     <!-- -->
+         * 
+         *     .
+         * 
+         * *   zh
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     Chinese
+         * 
+         *     <!-- -->
+         * 
+         *     .
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -229,8 +259,8 @@ public class CreateEnvironmentRequest extends Request {
          * The subtype of the environment. Valid values:
          * <p>
          * 
-         * *   CS: Container Service for Kubernetes (ACK)
-         * *   ECS: Elastic Compute Service (ECS)
+         * *   CS: ACK, One
+         * *   ECS: ECS
          * *   Cloud: cloud service
          */
         public Builder environmentSubType(String environmentSubType) {
@@ -243,8 +273,8 @@ public class CreateEnvironmentRequest extends Request {
          * The type of the environment. Valid values:
          * <p>
          * 
-         * *   CS: Container Service
-         * *   ECS: Elastic Compute Service
+         * *   CS: ACK
+         * *   ECS: ECS
          * *   Cloud: cloud service
          */
         public Builder environmentType(String environmentType) {
@@ -254,7 +284,11 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * FeePackage.
+         * The payable resource plan. Valid values:
+         * <p>
+         * 
+         * *   If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro. Default value: CS_Basic.
+         * *   Otherwise, leave the parameter empty.
          */
         public Builder feePackage(String feePackage) {
             this.putQueryParameter("FeePackage", feePackage);
@@ -263,11 +297,12 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * type of managed: 
+         * Specifies whether agents or exporters are managed. Valid values:
          * <p>
-         * - none: not managed. default value of prometheus for ACK.
-         * - agent: managed agent. default value of  promehtues for ASK/ACS/AckOne.
-         * - agent-exproter: maanged agent and exporter. default of prometheus for Cloud.
+         * 
+         * *   none: No. By default, no managed agents or exporters are provided for ACK clusters.
+         * *   agent: Agents are managed. By default, managed agents are provided for ASK clusters, ACS clusters, and ACK One clusters.
+         * *   agent-exproter: Agents and exporters are managed. By default, managed agents and exporters are provided for cloud services.
          */
         public Builder managedType(String managedType) {
             this.putQueryParameter("ManagedType", managedType);
@@ -276,7 +311,7 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * the ID of prometheus instance bound to the environment. If not provided, please call the InitEnvironment interface to complete the initialization of the storage instance.
+         * The ID of the Prometheus instance. If no Prometheus instance is created, call the InitEnvironment operation to initialize a storage instance.
          */
         public Builder prometheusInstanceId(String prometheusInstanceId) {
             this.putQueryParameter("PrometheusInstanceId", prometheusInstanceId);
@@ -319,10 +354,10 @@ public class CreateEnvironmentRequest extends Request {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {

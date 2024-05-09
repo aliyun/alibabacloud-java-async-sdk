@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GrafanaWorkspaceTrans</p>
  */
 public class GrafanaWorkspaceTrans extends TeaModel {
-    @NameInMap("apiUrl")
+    @com.aliyun.core.annotation.NameInMap("apiUrl")
     private String apiUrl;
 
-    @NameInMap("authType")
+    @com.aliyun.core.annotation.NameInMap("authType")
     private String authType;
 
-    @NameInMap("gmtCreate")
+    @com.aliyun.core.annotation.NameInMap("gmtCreate")
     private Float gmtCreate;
 
-    @NameInMap("gmtModified")
+    @com.aliyun.core.annotation.NameInMap("gmtModified")
     private Float gmtModified;
 
-    @NameInMap("grafanaWorkspaceId")
+    @com.aliyun.core.annotation.NameInMap("grafanaWorkspaceId")
     private String grafanaWorkspaceId;
 
-    @NameInMap("id")
+    @com.aliyun.core.annotation.NameInMap("id")
     private Long id;
 
-    @NameInMap("msg")
+    @com.aliyun.core.annotation.NameInMap("msg")
     private String msg;
 
-    @NameInMap("processStatus")
+    @com.aliyun.core.annotation.NameInMap("processStatus")
     private String processStatus;
 
-    @NameInMap("transDetails")
+    @com.aliyun.core.annotation.NameInMap("transDetails")
     private java.util.List < GrafanaWorkspaceTransDetail > transDetails;
 
-    @NameInMap("userId")
+    @com.aliyun.core.annotation.NameInMap("userId")
     private String userId;
 
     private GrafanaWorkspaceTrans(Builder builder) {

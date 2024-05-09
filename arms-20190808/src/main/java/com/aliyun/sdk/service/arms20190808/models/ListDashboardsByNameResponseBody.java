@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDashboardsByNameResponseBody</p>
  */
 public class ListDashboardsByNameResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListDashboardsByNameResponseBody(Builder builder) {
@@ -74,7 +73,7 @@ public class ListDashboardsByNameResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 状态码。说明 200表示成功。
+         * Status Code. Description 200 indicates success.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +81,7 @@ public class ListDashboardsByNameResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned struct.
          */
         public Builder data(String data) {
             this.data = data;
@@ -90,7 +89,7 @@ public class ListDashboardsByNameResponseBody extends TeaModel {
         }
 
         /**
-         * 返回结果的提示信息。
+         * Returns a hint message for the result.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +97,7 @@ public class ListDashboardsByNameResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, You can use the ID to locate logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateIntegrationResponseBody</p>
  */
 public class UpdateIntegrationResponseBody extends TeaModel {
-    @NameInMap("Integration")
+    @com.aliyun.core.annotation.NameInMap("Integration")
     private Integration integration;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateIntegrationResponseBody(Builder builder) {
@@ -72,52 +71,52 @@ public class UpdateIntegrationResponseBody extends TeaModel {
     } 
 
     public static class Integration extends TeaModel {
-        @NameInMap("ApiEndpoint")
+        @com.aliyun.core.annotation.NameInMap("ApiEndpoint")
         private String apiEndpoint;
 
-        @NameInMap("AutoRecover")
+        @com.aliyun.core.annotation.NameInMap("AutoRecover")
         private Boolean autoRecover;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DuplicateKey")
+        @com.aliyun.core.annotation.NameInMap("DuplicateKey")
         private String duplicateKey;
 
-        @NameInMap("ExtendedFieldRedefineRules")
+        @com.aliyun.core.annotation.NameInMap("ExtendedFieldRedefineRules")
         private java.util.List < java.util.Map<String, ?>> extendedFieldRedefineRules;
 
-        @NameInMap("FieldRedefineRules")
+        @com.aliyun.core.annotation.NameInMap("FieldRedefineRules")
         private java.util.List < java.util.Map<String, ?>> fieldRedefineRules;
 
-        @NameInMap("InitiativeRecoverField")
+        @com.aliyun.core.annotation.NameInMap("InitiativeRecoverField")
         private String initiativeRecoverField;
 
-        @NameInMap("InitiativeRecoverValue")
+        @com.aliyun.core.annotation.NameInMap("InitiativeRecoverValue")
         private String initiativeRecoverValue;
 
-        @NameInMap("IntegrationId")
+        @com.aliyun.core.annotation.NameInMap("IntegrationId")
         private Long integrationId;
 
-        @NameInMap("IntegrationName")
+        @com.aliyun.core.annotation.NameInMap("IntegrationName")
         private String integrationName;
 
-        @NameInMap("IntegrationProductType")
+        @com.aliyun.core.annotation.NameInMap("IntegrationProductType")
         private String integrationProductType;
 
-        @NameInMap("Liveness")
+        @com.aliyun.core.annotation.NameInMap("Liveness")
         private String liveness;
 
-        @NameInMap("RecoverTime")
+        @com.aliyun.core.annotation.NameInMap("RecoverTime")
         private Long recoverTime;
 
-        @NameInMap("ShortToken")
+        @com.aliyun.core.annotation.NameInMap("ShortToken")
         private String shortToken;
 
-        @NameInMap("Stat")
+        @com.aliyun.core.annotation.NameInMap("Stat")
         private java.util.List < Long > stat;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private Boolean state;
 
         private Integration(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDashboardsResponseBody</p>
  */
 public class ListDashboardsResponseBody extends TeaModel {
-    @NameInMap("DashboardVos")
+    @com.aliyun.core.annotation.NameInMap("DashboardVos")
     private java.util.List < DashboardVos> dashboardVos;
 
-    @NameInMap("EnvironmentId")
+    @com.aliyun.core.annotation.NameInMap("EnvironmentId")
     private String environmentId;
 
-    @NameInMap("GrafanaServiceOpened")
+    @com.aliyun.core.annotation.NameInMap("GrafanaServiceOpened")
     private String grafanaServiceOpened;
 
-    @NameInMap("PrometheusServiceOpened")
+    @com.aliyun.core.annotation.NameInMap("PrometheusServiceOpened")
     private String prometheusServiceOpened;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListDashboardsResponseBody(Builder builder) {
@@ -94,7 +93,7 @@ public class ListDashboardsResponseBody extends TeaModel {
         }
 
         /**
-         * EnvironmentId.
+         * The environment ID.
          */
         public Builder environmentId(String environmentId) {
             this.environmentId = environmentId;
@@ -102,7 +101,7 @@ public class ListDashboardsResponseBody extends TeaModel {
         }
 
         /**
-         * GrafanaServiceOpened.
+         * Whether to enable Grafana service.
          */
         public Builder grafanaServiceOpened(String grafanaServiceOpened) {
             this.grafanaServiceOpened = grafanaServiceOpened;
@@ -110,7 +109,7 @@ public class ListDashboardsResponseBody extends TeaModel {
         }
 
         /**
-         * The indicators of whether the Prometheus service has been activated.
+         * Whether or not to turn on Prometheus service.
          */
         public Builder prometheusServiceOpened(String prometheusServiceOpened) {
             this.prometheusServiceOpened = prometheusServiceOpened;
@@ -132,55 +131,55 @@ public class ListDashboardsResponseBody extends TeaModel {
     } 
 
     public static class I18nChild extends TeaModel {
-        @NameInMap("DashboardType")
+        @com.aliyun.core.annotation.NameInMap("DashboardType")
         private String dashboardType;
 
-        @NameInMap("Exporter")
+        @com.aliyun.core.annotation.NameInMap("Exporter")
         private String exporter;
 
-        @NameInMap("HttpUrl")
+        @com.aliyun.core.annotation.NameInMap("HttpUrl")
         private String httpUrl;
 
-        @NameInMap("HttpsUrl")
+        @com.aliyun.core.annotation.NameInMap("HttpsUrl")
         private String httpsUrl;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("IsArmsExporter")
+        @com.aliyun.core.annotation.NameInMap("IsArmsExporter")
         private Boolean isArmsExporter;
 
-        @NameInMap("Kind")
+        @com.aliyun.core.annotation.NameInMap("Kind")
         private String kind;
 
-        @NameInMap("Language")
+        @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NeedUpdate")
+        @com.aliyun.core.annotation.NameInMap("NeedUpdate")
         private Boolean needUpdate;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < String > tags;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Uid")
+        @com.aliyun.core.annotation.NameInMap("Uid")
         private String uid;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private I18nChild(Builder builder) {
@@ -519,58 +518,58 @@ public class ListDashboardsResponseBody extends TeaModel {
 
     }
     public static class DashboardVos extends TeaModel {
-        @NameInMap("DashboardType")
+        @com.aliyun.core.annotation.NameInMap("DashboardType")
         private String dashboardType;
 
-        @NameInMap("Exporter")
+        @com.aliyun.core.annotation.NameInMap("Exporter")
         private String exporter;
 
-        @NameInMap("HttpUrl")
+        @com.aliyun.core.annotation.NameInMap("HttpUrl")
         private String httpUrl;
 
-        @NameInMap("HttpsUrl")
+        @com.aliyun.core.annotation.NameInMap("HttpsUrl")
         private String httpsUrl;
 
-        @NameInMap("I18nChild")
+        @com.aliyun.core.annotation.NameInMap("I18nChild")
         private I18nChild i18nChild;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("IsArmsExporter")
+        @com.aliyun.core.annotation.NameInMap("IsArmsExporter")
         private Boolean isArmsExporter;
 
-        @NameInMap("Kind")
+        @com.aliyun.core.annotation.NameInMap("Kind")
         private String kind;
 
-        @NameInMap("Language")
+        @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NeedUpdate")
+        @com.aliyun.core.annotation.NameInMap("NeedUpdate")
         private Boolean needUpdate;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < String > tags;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Uid")
+        @com.aliyun.core.annotation.NameInMap("Uid")
         private String uid;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private DashboardVos(Builder builder) {
@@ -799,7 +798,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the Grafana dashboard.
+             * The information about the Grafana dashboards.
              */
             public Builder i18nChild(I18nChild i18nChild) {
                 this.i18nChild = i18nChild;
@@ -867,7 +866,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the Grafana dashboard was created. Unit: seconds.
+             * The timestamp generated when the Grafana dashboard was created. Unit: seconds
              */
             public Builder time(String time) {
                 this.time = time;

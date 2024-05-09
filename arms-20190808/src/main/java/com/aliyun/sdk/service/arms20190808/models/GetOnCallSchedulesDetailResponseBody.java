@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetOnCallSchedulesDetailResponseBody</p>
  */
 public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetOnCallSchedulesDetailResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
     } 
 
     public static class SimpleContact extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private SimpleContact(Builder builder) {
@@ -133,13 +132,13 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
 
     }
     public static class RenderedFinnalEntries extends TeaModel {
-        @NameInMap("End")
+        @com.aliyun.core.annotation.NameInMap("End")
         private String end;
 
-        @NameInMap("SimpleContact")
+        @com.aliyun.core.annotation.NameInMap("SimpleContact")
         private SimpleContact simpleContact;
 
-        @NameInMap("Start")
+        @com.aliyun.core.annotation.NameInMap("Start")
         private String start;
 
         private RenderedFinnalEntries(Builder builder) {
@@ -214,10 +213,10 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
 
     }
     public static class RenderedLayerEntriesSimpleContact extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private RenderedLayerEntriesSimpleContact(Builder builder) {
@@ -275,13 +274,13 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
 
     }
     public static class RenderedLayerEntries extends TeaModel {
-        @NameInMap("Start")
+        @com.aliyun.core.annotation.NameInMap("Start")
         private String start;
 
-        @NameInMap("End")
+        @com.aliyun.core.annotation.NameInMap("End")
         private String end;
 
-        @NameInMap("SimpleContact")
+        @com.aliyun.core.annotation.NameInMap("SimpleContact")
         private RenderedLayerEntriesSimpleContact simpleContact;
 
         private RenderedLayerEntries(Builder builder) {
@@ -356,10 +355,10 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
 
     }
     public static class RenderedSubstitudeEntriesSimpleContact extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private RenderedSubstitudeEntriesSimpleContact(Builder builder) {
@@ -417,13 +416,13 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
 
     }
     public static class RenderedSubstitudeEntries extends TeaModel {
-        @NameInMap("End")
+        @com.aliyun.core.annotation.NameInMap("End")
         private String end;
 
-        @NameInMap("SimpleContact")
+        @com.aliyun.core.annotation.NameInMap("SimpleContact")
         private RenderedSubstitudeEntriesSimpleContact simpleContact;
 
-        @NameInMap("Start")
+        @com.aliyun.core.annotation.NameInMap("Start")
         private String start;
 
         private RenderedSubstitudeEntries(Builder builder) {
@@ -498,13 +497,13 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
 
     }
     public static class Restrictions extends TeaModel {
-        @NameInMap("EndTimeOfDay")
+        @com.aliyun.core.annotation.NameInMap("EndTimeOfDay")
         private String endTimeOfDay;
 
-        @NameInMap("RestrictionType")
+        @com.aliyun.core.annotation.NameInMap("RestrictionType")
         private String restrictionType;
 
-        @NameInMap("StartTimeOfDay")
+        @com.aliyun.core.annotation.NameInMap("StartTimeOfDay")
         private String startTimeOfDay;
 
         private Restrictions(Builder builder) {
@@ -583,19 +582,19 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
 
     }
     public static class ScheduleLayers extends TeaModel {
-        @NameInMap("ContactIds")
+        @com.aliyun.core.annotation.NameInMap("ContactIds")
         private java.util.List < Long > contactIds;
 
-        @NameInMap("Restrictions")
+        @com.aliyun.core.annotation.NameInMap("Restrictions")
         private java.util.List < Restrictions> restrictions;
 
-        @NameInMap("RotationType")
+        @com.aliyun.core.annotation.NameInMap("RotationType")
         private String rotationType;
 
-        @NameInMap("ShiftLength")
+        @com.aliyun.core.annotation.NameInMap("ShiftLength")
         private Long shiftLength;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private ScheduleLayers(Builder builder) {
@@ -709,28 +708,28 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AlertRobotId")
+        @com.aliyun.core.annotation.NameInMap("AlertRobotId")
         private Long alertRobotId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RenderedFinnalEntries")
+        @com.aliyun.core.annotation.NameInMap("RenderedFinnalEntries")
         private java.util.List < RenderedFinnalEntries> renderedFinnalEntries;
 
-        @NameInMap("RenderedLayerEntries")
+        @com.aliyun.core.annotation.NameInMap("RenderedLayerEntries")
         private java.util.List < java.util.List < RenderedLayerEntries> > renderedLayerEntries;
 
-        @NameInMap("RenderedSubstitudeEntries")
+        @com.aliyun.core.annotation.NameInMap("RenderedSubstitudeEntries")
         private java.util.List < RenderedSubstitudeEntries> renderedSubstitudeEntries;
 
-        @NameInMap("ScheduleLayers")
+        @com.aliyun.core.annotation.NameInMap("ScheduleLayers")
         private java.util.List < ScheduleLayers> scheduleLayers;
 
         private Data(Builder builder) {

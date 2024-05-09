@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.arms20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,46 +11,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateWebhookRequest</p>
  */
 public class UpdateWebhookRequest extends Request {
-    @Query
-    @NameInMap("Body")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Body")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String body;
 
-    @Query
-    @NameInMap("ContactId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long contactId;
 
-    @Query
-    @NameInMap("ContactName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String contactName;
 
-    @Query
-    @NameInMap("HttpHeaders")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpHeaders")
     private String httpHeaders;
 
-    @Query
-    @NameInMap("HttpParams")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpParams")
     private String httpParams;
 
-    @Query
-    @NameInMap("Method")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Method")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String method;
 
-    @Query
-    @NameInMap("RecoverBody")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecoverBody")
     private String recoverBody;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Url")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Url")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String url;
 
     private UpdateWebhookRequest(Builder builder) {
