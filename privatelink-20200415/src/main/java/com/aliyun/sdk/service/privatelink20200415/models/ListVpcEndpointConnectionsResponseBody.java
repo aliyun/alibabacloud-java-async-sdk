@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.privatelink20200415.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListVpcEndpointConnectionsResponseBody</p>
  */
 public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
-    @NameInMap("Connections")
+    @com.aliyun.core.annotation.NameInMap("Connections")
     private java.util.List < Connections> connections;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private ListVpcEndpointConnectionsResponseBody(Builder builder) {
@@ -136,28 +135,28 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
     } 
 
     public static class Zones extends TeaModel {
-        @NameInMap("EniId")
+        @com.aliyun.core.annotation.NameInMap("EniId")
         private String eniId;
 
-        @NameInMap("ReplacedEniId")
+        @com.aliyun.core.annotation.NameInMap("ReplacedEniId")
         private String replacedEniId;
 
-        @NameInMap("ReplacedResourceId")
+        @com.aliyun.core.annotation.NameInMap("ReplacedResourceId")
         private String replacedResourceId;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("ZoneDomain")
+        @com.aliyun.core.annotation.NameInMap("ZoneDomain")
         private String zoneDomain;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
-        @NameInMap("ZoneStatus")
+        @com.aliyun.core.annotation.NameInMap("ZoneStatus")
         private String zoneStatus;
 
         private Zones(Builder builder) {
@@ -328,34 +327,34 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
 
     }
     public static class Connections extends TeaModel {
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Integer bandwidth;
 
-        @NameInMap("ConnectionStatus")
+        @com.aliyun.core.annotation.NameInMap("ConnectionStatus")
         private String connectionStatus;
 
-        @NameInMap("EndpointId")
+        @com.aliyun.core.annotation.NameInMap("EndpointId")
         private String endpointId;
 
-        @NameInMap("EndpointOwnerId")
+        @com.aliyun.core.annotation.NameInMap("EndpointOwnerId")
         private Long endpointOwnerId;
 
-        @NameInMap("EndpointVpcId")
+        @com.aliyun.core.annotation.NameInMap("EndpointVpcId")
         private String endpointVpcId;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ResourceOwner")
+        @com.aliyun.core.annotation.NameInMap("ResourceOwner")
         private Boolean resourceOwner;
 
-        @NameInMap("ServiceId")
+        @com.aliyun.core.annotation.NameInMap("ServiceId")
         private String serviceId;
 
-        @NameInMap("Zones")
+        @com.aliyun.core.annotation.NameInMap("Zones")
         private java.util.List < Zones> zones;
 
         private Connections(Builder builder) {

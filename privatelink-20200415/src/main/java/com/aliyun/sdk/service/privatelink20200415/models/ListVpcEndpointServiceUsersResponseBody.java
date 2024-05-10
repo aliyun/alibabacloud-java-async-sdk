@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.privatelink20200415.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListVpcEndpointServiceUsersResponseBody</p>
  */
 public class ListVpcEndpointServiceUsersResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
-    @NameInMap("UserARNs")
+    @com.aliyun.core.annotation.NameInMap("UserARNs")
     private java.util.List < UserARNs> userARNs;
 
-    @NameInMap("Users")
+    @com.aliyun.core.annotation.NameInMap("Users")
     private java.util.List < Users> users;
 
     private ListVpcEndpointServiceUsersResponseBody(Builder builder) {
@@ -156,7 +155,7 @@ public class ListVpcEndpointServiceUsersResponseBody extends TeaModel {
     } 
 
     public static class UserARNs extends TeaModel {
-        @NameInMap("UserARN")
+        @com.aliyun.core.annotation.NameInMap("UserARN")
         private String userARN;
 
         private UserARNs(Builder builder) {
@@ -197,7 +196,7 @@ public class ListVpcEndpointServiceUsersResponseBody extends TeaModel {
 
     }
     public static class Users extends TeaModel {
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
 
         private Users(Builder builder) {

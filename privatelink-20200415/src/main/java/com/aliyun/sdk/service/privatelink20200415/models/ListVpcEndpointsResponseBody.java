@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.privatelink20200415.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListVpcEndpointsResponseBody</p>
  */
 public class ListVpcEndpointsResponseBody extends TeaModel {
-    @NameInMap("Endpoints")
+    @com.aliyun.core.annotation.NameInMap("Endpoints")
     private java.util.List < Endpoints> endpoints;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListVpcEndpointsResponseBody(Builder builder) {
@@ -136,10 +135,10 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -197,58 +196,61 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
 
     }
     public static class Endpoints extends TeaModel {
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Long bandwidth;
 
-        @NameInMap("ConnectionStatus")
+        @com.aliyun.core.annotation.NameInMap("ConnectionStatus")
         private String connectionStatus;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("EndpointBusinessStatus")
+        @com.aliyun.core.annotation.NameInMap("EndpointBusinessStatus")
         private String endpointBusinessStatus;
 
-        @NameInMap("EndpointDescription")
+        @com.aliyun.core.annotation.NameInMap("EndpointDescription")
         private String endpointDescription;
 
-        @NameInMap("EndpointDomain")
+        @com.aliyun.core.annotation.NameInMap("EndpointDomain")
         private String endpointDomain;
 
-        @NameInMap("EndpointId")
+        @com.aliyun.core.annotation.NameInMap("EndpointId")
         private String endpointId;
 
-        @NameInMap("EndpointName")
+        @com.aliyun.core.annotation.NameInMap("EndpointName")
         private String endpointName;
 
-        @NameInMap("EndpointStatus")
+        @com.aliyun.core.annotation.NameInMap("EndpointStatus")
         private String endpointStatus;
 
-        @NameInMap("EndpointType")
+        @com.aliyun.core.annotation.NameInMap("EndpointType")
         private String endpointType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("PolicyDocument")
+        private String policyDocument;
+
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ResourceOwner")
+        @com.aliyun.core.annotation.NameInMap("ResourceOwner")
         private Boolean resourceOwner;
 
-        @NameInMap("ServiceId")
+        @com.aliyun.core.annotation.NameInMap("ServiceId")
         private String serviceId;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("ZoneAffinityEnabled")
+        @com.aliyun.core.annotation.NameInMap("ZoneAffinityEnabled")
         private Boolean zoneAffinityEnabled;
 
         private Endpoints(Builder builder) {
@@ -262,6 +264,7 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
             this.endpointName = builder.endpointName;
             this.endpointStatus = builder.endpointStatus;
             this.endpointType = builder.endpointType;
+            this.policyDocument = builder.policyDocument;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
             this.resourceOwner = builder.resourceOwner;
@@ -351,6 +354,13 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
         }
 
         /**
+         * @return policyDocument
+         */
+        public String getPolicyDocument() {
+            return this.policyDocument;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -417,6 +427,7 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
             private String endpointName; 
             private String endpointStatus; 
             private String endpointType; 
+            private String policyDocument; 
             private String regionId; 
             private String resourceGroupId; 
             private Boolean resourceOwner; 
@@ -525,6 +536,14 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;
+                return this;
+            }
+
+            /**
+             * PolicyDocument.
+             */
+            public Builder policyDocument(String policyDocument) {
+                this.policyDocument = policyDocument;
                 return this;
             }
 

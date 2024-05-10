@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.privatelink20200415.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateVpcEndpointServiceResponseBody</p>
  */
 public class CreateVpcEndpointServiceResponseBody extends TeaModel {
-    @NameInMap("AutoAcceptEnabled")
+    @com.aliyun.core.annotation.NameInMap("AutoAcceptEnabled")
     private Boolean autoAcceptEnabled;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("ServiceBusinessStatus")
+    @com.aliyun.core.annotation.NameInMap("ServiceBusinessStatus")
     private String serviceBusinessStatus;
 
-    @NameInMap("ServiceDescription")
+    @com.aliyun.core.annotation.NameInMap("ServiceDescription")
     private String serviceDescription;
 
-    @NameInMap("ServiceDomain")
+    @com.aliyun.core.annotation.NameInMap("ServiceDomain")
     private String serviceDomain;
 
-    @NameInMap("ServiceId")
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
     private String serviceId;
 
-    @NameInMap("ServiceName")
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
 
-    @NameInMap("ServiceStatus")
+    @com.aliyun.core.annotation.NameInMap("ServiceStatus")
     private String serviceStatus;
 
-    @NameInMap("ServiceSupportIPv6")
+    @com.aliyun.core.annotation.NameInMap("ServiceSupportIPv6")
     private Boolean serviceSupportIPv6;
 
-    @NameInMap("ZoneAffinityEnabled")
+    @com.aliyun.core.annotation.NameInMap("ZoneAffinityEnabled")
     private Boolean zoneAffinityEnabled;
 
     private CreateVpcEndpointServiceResponseBody(Builder builder) {

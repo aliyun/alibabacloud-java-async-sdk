@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.privatelink20200415.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,51 +11,51 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListVpcEndpointConnectionsRequest</p>
  */
 public class ListVpcEndpointConnectionsRequest extends Request {
-    @Query
-    @NameInMap("ConnectionStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectionStatus")
     private String connectionStatus;
 
-    @Query
-    @NameInMap("EndpointId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointId")
     private String endpointId;
 
-    @Query
-    @NameInMap("EndpointOwnerId")
-    @Validation()
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointOwnerId")
+    @com.aliyun.core.annotation.Validation()
     private Long endpointOwnerId;
 
-    @Query
-    @NameInMap("EniId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EniId")
     private String eniId;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 1000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 1)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ReplacedResourceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReplacedResourceId")
     private String replacedResourceId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
-    @Query
-    @NameInMap("ServiceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
     private String serviceId;
 
     private ListVpcEndpointConnectionsRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.privatelink20200415.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListVpcEndpointZonesResponseBody</p>
  */
 public class ListVpcEndpointZonesResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Zones")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
+    private Integer totalCount;
+
+    @com.aliyun.core.annotation.NameInMap("Zones")
     private java.util.List < Zones> zones;
 
     private ListVpcEndpointZonesResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
+        this.totalCount = builder.totalCount;
         this.zones = builder.zones;
     }
 
@@ -61,6 +64,13 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
     }
 
     /**
+     * @return totalCount
+     */
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    /**
      * @return zones
      */
     public java.util.List < Zones> getZones() {
@@ -71,6 +81,7 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
+        private Integer totalCount; 
         private java.util.List < Zones> zones; 
 
         /**
@@ -102,6 +113,14 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
         }
 
         /**
+         * The total number of entries returned.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+
+        /**
          * The information about the zones.
          */
         public Builder zones(java.util.List < Zones> zones) {
@@ -116,28 +135,28 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
     } 
 
     public static class Zones extends TeaModel {
-        @NameInMap("EniId")
+        @com.aliyun.core.annotation.NameInMap("EniId")
         private String eniId;
 
-        @NameInMap("EniIp")
+        @com.aliyun.core.annotation.NameInMap("EniIp")
         private String eniIp;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("ZoneDomain")
+        @com.aliyun.core.annotation.NameInMap("ZoneDomain")
         private String zoneDomain;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
-        @NameInMap("ZoneIpv6Address")
+        @com.aliyun.core.annotation.NameInMap("ZoneIpv6Address")
         private String zoneIpv6Address;
 
-        @NameInMap("ZoneStatus")
+        @com.aliyun.core.annotation.NameInMap("ZoneStatus")
         private String zoneStatus;
 
         private Zones(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.privatelink20200415.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListVpcEndpointServicesByEndUserResponseBody</p>
  */
 public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Services")
+    @com.aliyun.core.annotation.NameInMap("Services")
     private java.util.List < Services> services;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private ListVpcEndpointServicesByEndUserResponseBody(Builder builder) {
@@ -136,10 +135,10 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -197,34 +196,34 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
 
     }
     public static class Services extends TeaModel {
-        @NameInMap("Payer")
+        @com.aliyun.core.annotation.NameInMap("Payer")
         private String payer;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ServiceDomain")
+        @com.aliyun.core.annotation.NameInMap("ServiceDomain")
         private String serviceDomain;
 
-        @NameInMap("ServiceId")
+        @com.aliyun.core.annotation.NameInMap("ServiceId")
         private String serviceId;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
-        @NameInMap("ServiceResourceType")
+        @com.aliyun.core.annotation.NameInMap("ServiceResourceType")
         private String serviceResourceType;
 
-        @NameInMap("ServiceSupportIPv6")
+        @com.aliyun.core.annotation.NameInMap("ServiceSupportIPv6")
         private Boolean serviceSupportIPv6;
 
-        @NameInMap("ServiceType")
+        @com.aliyun.core.annotation.NameInMap("ServiceType")
         private String serviceType;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("Zones")
+        @com.aliyun.core.annotation.NameInMap("Zones")
         private java.util.List < String > zones;
 
         private Services(Builder builder) {

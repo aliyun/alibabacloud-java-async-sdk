@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.privatelink20200415.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,43 +11,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateVpcEndpointResponseBody</p>
  */
 public class CreateVpcEndpointResponseBody extends TeaModel {
-    @NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
     private Long bandwidth;
 
-    @NameInMap("ConnectionStatus")
+    @com.aliyun.core.annotation.NameInMap("ConnectionStatus")
     private String connectionStatus;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("EndpointBusinessStatus")
+    @com.aliyun.core.annotation.NameInMap("EndpointBusinessStatus")
     private String endpointBusinessStatus;
 
-    @NameInMap("EndpointDescription")
+    @com.aliyun.core.annotation.NameInMap("EndpointDescription")
     private String endpointDescription;
 
-    @NameInMap("EndpointDomain")
+    @com.aliyun.core.annotation.NameInMap("EndpointDomain")
     private String endpointDomain;
 
-    @NameInMap("EndpointId")
+    @com.aliyun.core.annotation.NameInMap("EndpointId")
     private String endpointId;
 
-    @NameInMap("EndpointName")
+    @com.aliyun.core.annotation.NameInMap("EndpointName")
     private String endpointName;
 
-    @NameInMap("EndpointStatus")
+    @com.aliyun.core.annotation.NameInMap("EndpointStatus")
     private String endpointStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServiceId")
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
     private String serviceId;
 
-    @NameInMap("ServiceName")
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
 
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     private CreateVpcEndpointResponseBody(Builder builder) {

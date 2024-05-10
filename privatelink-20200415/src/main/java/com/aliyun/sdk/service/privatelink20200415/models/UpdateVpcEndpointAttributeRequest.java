@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.privatelink20200415.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateVpcEndpointAttributeRequest</p>
  */
 public class UpdateVpcEndpointAttributeRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("EndpointDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointDescription")
     private String endpointDescription;
 
-    @Query
-    @NameInMap("EndpointId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endpointId;
 
-    @Query
-    @NameInMap("EndpointName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointName")
     private String endpointName;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyDocument")
+    private String policyDocument;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private UpdateVpcEndpointAttributeRequest(Builder builder) {
@@ -45,6 +48,7 @@ public class UpdateVpcEndpointAttributeRequest extends Request {
         this.endpointDescription = builder.endpointDescription;
         this.endpointId = builder.endpointId;
         this.endpointName = builder.endpointName;
+        this.policyDocument = builder.policyDocument;
         this.regionId = builder.regionId;
     }
 
@@ -97,6 +101,13 @@ public class UpdateVpcEndpointAttributeRequest extends Request {
     }
 
     /**
+     * @return policyDocument
+     */
+    public String getPolicyDocument() {
+        return this.policyDocument;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -109,6 +120,7 @@ public class UpdateVpcEndpointAttributeRequest extends Request {
         private String endpointDescription; 
         private String endpointId; 
         private String endpointName; 
+        private String policyDocument; 
         private String regionId; 
 
         private Builder() {
@@ -122,6 +134,7 @@ public class UpdateVpcEndpointAttributeRequest extends Request {
             this.endpointDescription = request.endpointDescription;
             this.endpointId = request.endpointId;
             this.endpointName = request.endpointName;
+            this.policyDocument = request.policyDocument;
             this.regionId = request.regionId;
         } 
 
@@ -180,6 +193,15 @@ public class UpdateVpcEndpointAttributeRequest extends Request {
         public Builder endpointName(String endpointName) {
             this.putQueryParameter("EndpointName", endpointName);
             this.endpointName = endpointName;
+            return this;
+        }
+
+        /**
+         * PolicyDocument.
+         */
+        public Builder policyDocument(String policyDocument) {
+            this.putQueryParameter("PolicyDocument", policyDocument);
+            this.policyDocument = policyDocument;
             return this;
         }
 

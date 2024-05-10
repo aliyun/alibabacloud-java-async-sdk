@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.privatelink20200415.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,66 +11,70 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateVpcEndpointRequest</p>
  */
 public class CreateVpcEndpointRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("EndpointDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointDescription")
     private String endpointDescription;
 
-    @Query
-    @NameInMap("EndpointName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointName")
     private String endpointName;
 
-    @Query
-    @NameInMap("EndpointType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointType")
     private String endpointType;
 
-    @Query
-    @NameInMap("ProtectedEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyDocument")
+    private String policyDocument;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProtectedEnabled")
     private Boolean protectedEnabled;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("SecurityGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
     private java.util.List < String > securityGroupId;
 
-    @Query
-    @NameInMap("ServiceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
     private String serviceId;
 
-    @Query
-    @NameInMap("ServiceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("VpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
-    @Query
-    @NameInMap("Zone")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Zone")
     private java.util.List < Zone> zone;
 
-    @Query
-    @NameInMap("ZonePrivateIpAddressCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZonePrivateIpAddressCount")
     private Long zonePrivateIpAddressCount;
 
     private CreateVpcEndpointRequest(Builder builder) {
@@ -81,6 +84,7 @@ public class CreateVpcEndpointRequest extends Request {
         this.endpointDescription = builder.endpointDescription;
         this.endpointName = builder.endpointName;
         this.endpointType = builder.endpointType;
+        this.policyDocument = builder.policyDocument;
         this.protectedEnabled = builder.protectedEnabled;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
@@ -139,6 +143,13 @@ public class CreateVpcEndpointRequest extends Request {
      */
     public String getEndpointType() {
         return this.endpointType;
+    }
+
+    /**
+     * @return policyDocument
+     */
+    public String getPolicyDocument() {
+        return this.policyDocument;
     }
 
     /**
@@ -217,6 +228,7 @@ public class CreateVpcEndpointRequest extends Request {
         private String endpointDescription; 
         private String endpointName; 
         private String endpointType; 
+        private String policyDocument; 
         private Boolean protectedEnabled; 
         private String regionId; 
         private String resourceGroupId; 
@@ -239,6 +251,7 @@ public class CreateVpcEndpointRequest extends Request {
             this.endpointDescription = request.endpointDescription;
             this.endpointName = request.endpointName;
             this.endpointType = request.endpointType;
+            this.policyDocument = request.policyDocument;
             this.protectedEnabled = request.protectedEnabled;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
@@ -309,6 +322,15 @@ public class CreateVpcEndpointRequest extends Request {
         public Builder endpointType(String endpointType) {
             this.putQueryParameter("EndpointType", endpointType);
             this.endpointType = endpointType;
+            return this;
+        }
+
+        /**
+         * PolicyDocument.
+         */
+        public Builder policyDocument(String policyDocument) {
+            this.putQueryParameter("PolicyDocument", policyDocument);
+            this.policyDocument = policyDocument;
             return this;
         }
 
@@ -417,10 +439,10 @@ public class CreateVpcEndpointRequest extends Request {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -478,13 +500,13 @@ public class CreateVpcEndpointRequest extends Request {
 
     }
     public static class Zone extends TeaModel {
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
-        @NameInMap("ip")
+        @com.aliyun.core.annotation.NameInMap("ip")
         private String ip;
 
         private Zone(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.privatelink20200415.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListVpcEndpointServiceResourcesResponseBody</p>
  */
 public class ListVpcEndpointServiceResourcesResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Resources")
+    @com.aliyun.core.annotation.NameInMap("Resources")
     private java.util.List < Resources> resources;
 
     private ListVpcEndpointServiceResourcesResponseBody(Builder builder) {
@@ -116,37 +115,37 @@ public class ListVpcEndpointServiceResourcesResponseBody extends TeaModel {
     } 
 
     public static class Resources extends TeaModel {
-        @NameInMap("AutoAllocatedEnabled")
+        @com.aliyun.core.annotation.NameInMap("AutoAllocatedEnabled")
         private Boolean autoAllocatedEnabled;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RelatedDeprecatedEndpointCount")
+        @com.aliyun.core.annotation.NameInMap("RelatedDeprecatedEndpointCount")
         private Long relatedDeprecatedEndpointCount;
 
-        @NameInMap("RelatedEndpointCount")
+        @com.aliyun.core.annotation.NameInMap("RelatedEndpointCount")
         private Long relatedEndpointCount;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceSupportIPv6")
+        @com.aliyun.core.annotation.NameInMap("ResourceSupportIPv6")
         private Boolean resourceSupportIPv6;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Resources(Builder builder) {

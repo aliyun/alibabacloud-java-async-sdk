@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.privatelink20200415.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,64 +11,64 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetVpcEndpointServiceAttributeResponseBody</p>
  */
 public class GetVpcEndpointServiceAttributeResponseBody extends TeaModel {
-    @NameInMap("AutoAcceptEnabled")
+    @com.aliyun.core.annotation.NameInMap("AutoAcceptEnabled")
     private Boolean autoAcceptEnabled;
 
-    @NameInMap("ConnectBandwidth")
+    @com.aliyun.core.annotation.NameInMap("ConnectBandwidth")
     private Integer connectBandwidth;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("MaxBandwidth")
+    @com.aliyun.core.annotation.NameInMap("MaxBandwidth")
     private Integer maxBandwidth;
 
-    @NameInMap("MinBandwidth")
+    @com.aliyun.core.annotation.NameInMap("MinBandwidth")
     private Integer minBandwidth;
 
-    @NameInMap("Payer")
+    @com.aliyun.core.annotation.NameInMap("Payer")
     private String payer;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("ServiceBusinessStatus")
+    @com.aliyun.core.annotation.NameInMap("ServiceBusinessStatus")
     private String serviceBusinessStatus;
 
-    @NameInMap("ServiceDescription")
+    @com.aliyun.core.annotation.NameInMap("ServiceDescription")
     private String serviceDescription;
 
-    @NameInMap("ServiceDomain")
+    @com.aliyun.core.annotation.NameInMap("ServiceDomain")
     private String serviceDomain;
 
-    @NameInMap("ServiceId")
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
     private String serviceId;
 
-    @NameInMap("ServiceName")
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
 
-    @NameInMap("ServiceResourceType")
+    @com.aliyun.core.annotation.NameInMap("ServiceResourceType")
     private String serviceResourceType;
 
-    @NameInMap("ServiceStatus")
+    @com.aliyun.core.annotation.NameInMap("ServiceStatus")
     private String serviceStatus;
 
-    @NameInMap("ServiceSupportIPv6")
+    @com.aliyun.core.annotation.NameInMap("ServiceSupportIPv6")
     private Boolean serviceSupportIPv6;
 
-    @NameInMap("ServiceType")
+    @com.aliyun.core.annotation.NameInMap("ServiceType")
     private String serviceType;
 
-    @NameInMap("ZoneAffinityEnabled")
+    @com.aliyun.core.annotation.NameInMap("ZoneAffinityEnabled")
     private Boolean zoneAffinityEnabled;
 
-    @NameInMap("Zones")
+    @com.aliyun.core.annotation.NameInMap("Zones")
     private java.util.List < String > zones;
 
     private GetVpcEndpointServiceAttributeResponseBody(Builder builder) {
