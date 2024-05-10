@@ -383,6 +383,9 @@ public class ListServicesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ArtifactVersion")
         private String artifactVersion;
 
+        @com.aliyun.core.annotation.NameInMap("BuildInfo")
+        private String buildInfo;
+
         @com.aliyun.core.annotation.NameInMap("Categories")
         private String categories;
 
@@ -486,6 +489,7 @@ public class ListServicesResponseBody extends TeaModel {
             this.approvalType = builder.approvalType;
             this.artifactId = builder.artifactId;
             this.artifactVersion = builder.artifactVersion;
+            this.buildInfo = builder.buildInfo;
             this.categories = builder.categories;
             this.commodity = builder.commodity;
             this.commodityCode = builder.commodityCode;
@@ -548,6 +552,13 @@ public class ListServicesResponseBody extends TeaModel {
          */
         public String getArtifactVersion() {
             return this.artifactVersion;
+        }
+
+        /**
+         * @return buildInfo
+         */
+        public String getBuildInfo() {
+            return this.buildInfo;
         }
 
         /**
@@ -785,6 +796,7 @@ public class ListServicesResponseBody extends TeaModel {
             private String approvalType; 
             private String artifactId; 
             private String artifactVersion; 
+            private String buildInfo; 
             private String categories; 
             private Commodity commodity; 
             private String commodityCode; 
@@ -840,6 +852,14 @@ public class ListServicesResponseBody extends TeaModel {
              */
             public Builder artifactVersion(String artifactVersion) {
                 this.artifactVersion = artifactVersion;
+                return this;
+            }
+
+            /**
+             * BuildInfo.
+             */
+            public Builder buildInfo(String buildInfo) {
+                this.buildInfo = buildInfo;
                 return this;
             }
 

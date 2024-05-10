@@ -20,6 +20,9 @@ public class GetServiceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("BillEntityMappings")
     private BillEntityMappings billEntityMappings;
 
+    @com.aliyun.core.annotation.NameInMap("BuildInfo")
+    private String buildInfo;
+
     @com.aliyun.core.annotation.NameInMap("Categories")
     private String categories;
 
@@ -192,6 +195,7 @@ public class GetServiceResponseBody extends TeaModel {
         this.alarmMetadata = builder.alarmMetadata;
         this.approvalType = builder.approvalType;
         this.billEntityMappings = builder.billEntityMappings;
+        this.buildInfo = builder.buildInfo;
         this.categories = builder.categories;
         this.commodity = builder.commodity;
         this.commodityCode = builder.commodityCode;
@@ -277,6 +281,13 @@ public class GetServiceResponseBody extends TeaModel {
      */
     public BillEntityMappings getBillEntityMappings() {
         return this.billEntityMappings;
+    }
+
+    /**
+     * @return buildInfo
+     */
+    public String getBuildInfo() {
+        return this.buildInfo;
     }
 
     /**
@@ -675,6 +686,7 @@ public class GetServiceResponseBody extends TeaModel {
         private String alarmMetadata; 
         private String approvalType; 
         private BillEntityMappings billEntityMappings; 
+        private String buildInfo; 
         private String categories; 
         private Commodity commodity; 
         private String commodityCode; 
@@ -753,6 +765,14 @@ public class GetServiceResponseBody extends TeaModel {
          */
         public Builder billEntityMappings(BillEntityMappings billEntityMappings) {
             this.billEntityMappings = billEntityMappings;
+            return this;
+        }
+
+        /**
+         * BuildInfo.
+         */
+        public Builder buildInfo(String buildInfo) {
+            this.buildInfo = buildInfo;
             return this;
         }
 

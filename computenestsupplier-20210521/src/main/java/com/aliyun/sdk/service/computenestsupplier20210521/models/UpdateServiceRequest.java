@@ -86,6 +86,10 @@ public class UpdateServiceRequest extends Request {
     private Integer trialDuration;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UpdateOption")
+    private UpdateOption updateOption;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UpgradeMetadata")
     private String upgradeMetadata;
 
@@ -113,6 +117,7 @@ public class UpdateServiceRequest extends Request {
         this.serviceVersion = builder.serviceVersion;
         this.tenantType = builder.tenantType;
         this.trialDuration = builder.trialDuration;
+        this.updateOption = builder.updateOption;
         this.upgradeMetadata = builder.upgradeMetadata;
         this.versionName = builder.versionName;
     }
@@ -257,6 +262,13 @@ public class UpdateServiceRequest extends Request {
     }
 
     /**
+     * @return updateOption
+     */
+    public UpdateOption getUpdateOption() {
+        return this.updateOption;
+    }
+
+    /**
      * @return upgradeMetadata
      */
     public String getUpgradeMetadata() {
@@ -289,6 +301,7 @@ public class UpdateServiceRequest extends Request {
         private String serviceVersion; 
         private String tenantType; 
         private Integer trialDuration; 
+        private UpdateOption updateOption; 
         private String upgradeMetadata; 
         private String versionName; 
 
@@ -316,6 +329,7 @@ public class UpdateServiceRequest extends Request {
             this.serviceVersion = request.serviceVersion;
             this.tenantType = request.tenantType;
             this.trialDuration = request.trialDuration;
+            this.updateOption = request.updateOption;
             this.upgradeMetadata = request.upgradeMetadata;
             this.versionName = request.versionName;
         } 
@@ -479,6 +493,16 @@ public class UpdateServiceRequest extends Request {
         public Builder trialDuration(Integer trialDuration) {
             this.putQueryParameter("TrialDuration", trialDuration);
             this.trialDuration = trialDuration;
+            return this;
+        }
+
+        /**
+         * UpdateOption.
+         */
+        public Builder updateOption(UpdateOption updateOption) {
+            String updateOptionShrink = shrink(updateOption, "UpdateOption", "json");
+            this.putQueryParameter("UpdateOption", updateOptionShrink);
+            this.updateOption = updateOption;
             return this;
         }
 
@@ -704,6 +728,47 @@ public class UpdateServiceRequest extends Request {
 
             public ServiceInfo build() {
                 return new ServiceInfo(this);
+            } 
+
+        } 
+
+    }
+    public static class UpdateOption extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("UpdateFrom")
+        private String updateFrom;
+
+        private UpdateOption(Builder builder) {
+            this.updateFrom = builder.updateFrom;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UpdateOption create() {
+            return builder().build();
+        }
+
+        /**
+         * @return updateFrom
+         */
+        public String getUpdateFrom() {
+            return this.updateFrom;
+        }
+
+        public static final class Builder {
+            private String updateFrom; 
+
+            /**
+             * UpdateFrom.
+             */
+            public Builder updateFrom(String updateFrom) {
+                this.updateFrom = updateFrom;
+                return this;
+            }
+
+            public UpdateOption build() {
+                return new UpdateOption(this);
             } 
 
         } 
