@@ -29,8 +29,14 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EnableMultiFactorAuth")
     private Boolean enableMultiFactorAuth;
 
+    @com.aliyun.core.annotation.NameInMap("IDaaSApplicationId")
+    private String iDaaSApplicationId;
+
     @com.aliyun.core.annotation.NameInMap("IDaaSInstanceId")
     private String iDaaSInstanceId;
+
+    @com.aliyun.core.annotation.NameInMap("IDaaSInstanceVersion")
+    private String iDaaSInstanceVersion;
 
     @com.aliyun.core.annotation.NameInMap("InternetIp")
     private String internetIp;
@@ -72,7 +78,9 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
         this.connections = builder.connections;
         this.createTime = builder.createTime;
         this.enableMultiFactorAuth = builder.enableMultiFactorAuth;
+        this.iDaaSApplicationId = builder.iDaaSApplicationId;
         this.iDaaSInstanceId = builder.iDaaSInstanceId;
+        this.iDaaSInstanceVersion = builder.iDaaSInstanceVersion;
         this.internetIp = builder.internetIp;
         this.localSubnet = builder.localSubnet;
         this.maxConnections = builder.maxConnections;
@@ -137,10 +145,24 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
     }
 
     /**
+     * @return iDaaSApplicationId
+     */
+    public String getIDaaSApplicationId() {
+        return this.iDaaSApplicationId;
+    }
+
+    /**
      * @return iDaaSInstanceId
      */
     public String getIDaaSInstanceId() {
         return this.iDaaSInstanceId;
+    }
+
+    /**
+     * @return iDaaSInstanceVersion
+     */
+    public String getIDaaSInstanceVersion() {
+        return this.iDaaSInstanceVersion;
     }
 
     /**
@@ -227,7 +249,9 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
         private Integer connections; 
         private Long createTime; 
         private Boolean enableMultiFactorAuth; 
+        private String iDaaSApplicationId; 
         private String iDaaSInstanceId; 
+        private String iDaaSInstanceVersion; 
         private String internetIp; 
         private String localSubnet; 
         private Integer maxConnections; 
@@ -293,10 +317,26 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
         }
 
         /**
+         * IDaaSApplicationId.
+         */
+        public Builder iDaaSApplicationId(String iDaaSApplicationId) {
+            this.iDaaSApplicationId = iDaaSApplicationId;
+            return this;
+        }
+
+        /**
          * The ID of the IDaaS instance.
          */
         public Builder iDaaSInstanceId(String iDaaSInstanceId) {
             this.iDaaSInstanceId = iDaaSInstanceId;
+            return this;
+        }
+
+        /**
+         * IDaaSInstanceVersion.
+         */
+        public Builder iDaaSInstanceVersion(String iDaaSInstanceVersion) {
+            this.iDaaSInstanceVersion = iDaaSInstanceVersion;
             return this;
         }
 

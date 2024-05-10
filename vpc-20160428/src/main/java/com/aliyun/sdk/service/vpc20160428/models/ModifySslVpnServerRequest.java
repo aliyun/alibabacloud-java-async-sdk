@@ -32,6 +32,10 @@ public class ModifySslVpnServerRequest extends Request {
     private Boolean enableMultiFactorAuth;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IDaaSApplicationId")
+    private String iDaaSApplicationId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IDaaSInstanceId")
     private String iDaaSInstanceId;
 
@@ -88,6 +92,7 @@ public class ModifySslVpnServerRequest extends Request {
         this.clientToken = builder.clientToken;
         this.compress = builder.compress;
         this.enableMultiFactorAuth = builder.enableMultiFactorAuth;
+        this.iDaaSApplicationId = builder.iDaaSApplicationId;
         this.iDaaSInstanceId = builder.iDaaSInstanceId;
         this.iDaaSRegionId = builder.iDaaSRegionId;
         this.localSubnet = builder.localSubnet;
@@ -148,6 +153,13 @@ public class ModifySslVpnServerRequest extends Request {
      */
     public Boolean getEnableMultiFactorAuth() {
         return this.enableMultiFactorAuth;
+    }
+
+    /**
+     * @return iDaaSApplicationId
+     */
+    public String getIDaaSApplicationId() {
+        return this.iDaaSApplicationId;
     }
 
     /**
@@ -240,6 +252,7 @@ public class ModifySslVpnServerRequest extends Request {
         private String clientToken; 
         private Boolean compress; 
         private Boolean enableMultiFactorAuth; 
+        private String iDaaSApplicationId; 
         private String iDaaSInstanceId; 
         private String iDaaSRegionId; 
         private String localSubnet; 
@@ -264,6 +277,7 @@ public class ModifySslVpnServerRequest extends Request {
             this.clientToken = request.clientToken;
             this.compress = request.compress;
             this.enableMultiFactorAuth = request.enableMultiFactorAuth;
+            this.iDaaSApplicationId = request.iDaaSApplicationId;
             this.iDaaSInstanceId = request.iDaaSInstanceId;
             this.iDaaSRegionId = request.iDaaSRegionId;
             this.localSubnet = request.localSubnet;
@@ -342,6 +356,15 @@ public class ModifySslVpnServerRequest extends Request {
         public Builder enableMultiFactorAuth(Boolean enableMultiFactorAuth) {
             this.putQueryParameter("EnableMultiFactorAuth", enableMultiFactorAuth);
             this.enableMultiFactorAuth = enableMultiFactorAuth;
+            return this;
+        }
+
+        /**
+         * IDaaSApplicationId.
+         */
+        public Builder iDaaSApplicationId(String iDaaSApplicationId) {
+            this.putQueryParameter("IDaaSApplicationId", iDaaSApplicationId);
+            this.iDaaSApplicationId = iDaaSApplicationId;
             return this;
         }
 

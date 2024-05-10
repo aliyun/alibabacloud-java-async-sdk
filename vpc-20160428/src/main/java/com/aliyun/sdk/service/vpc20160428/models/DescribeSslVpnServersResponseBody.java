@@ -149,8 +149,14 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableMultiFactorAuth")
         private Boolean enableMultiFactorAuth;
 
+        @com.aliyun.core.annotation.NameInMap("IDaaSApplicationId")
+        private String iDaaSApplicationId;
+
         @com.aliyun.core.annotation.NameInMap("IDaaSInstanceId")
         private String iDaaSInstanceId;
+
+        @com.aliyun.core.annotation.NameInMap("IDaaSInstanceVersion")
+        private String iDaaSInstanceVersion;
 
         @com.aliyun.core.annotation.NameInMap("IDaaSRegionId")
         private String iDaaSRegionId;
@@ -192,7 +198,9 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             this.connections = builder.connections;
             this.createTime = builder.createTime;
             this.enableMultiFactorAuth = builder.enableMultiFactorAuth;
+            this.iDaaSApplicationId = builder.iDaaSApplicationId;
             this.iDaaSInstanceId = builder.iDaaSInstanceId;
+            this.iDaaSInstanceVersion = builder.iDaaSInstanceVersion;
             this.iDaaSRegionId = builder.iDaaSRegionId;
             this.internetIp = builder.internetIp;
             this.localSubnet = builder.localSubnet;
@@ -257,10 +265,24 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
         }
 
         /**
+         * @return iDaaSApplicationId
+         */
+        public String getIDaaSApplicationId() {
+            return this.iDaaSApplicationId;
+        }
+
+        /**
          * @return iDaaSInstanceId
          */
         public String getIDaaSInstanceId() {
             return this.iDaaSInstanceId;
+        }
+
+        /**
+         * @return iDaaSInstanceVersion
+         */
+        public String getIDaaSInstanceVersion() {
+            return this.iDaaSInstanceVersion;
         }
 
         /**
@@ -347,7 +369,9 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             private Integer connections; 
             private Long createTime; 
             private Boolean enableMultiFactorAuth; 
+            private String iDaaSApplicationId; 
             private String iDaaSInstanceId; 
+            private String iDaaSInstanceVersion; 
             private String iDaaSRegionId; 
             private String internetIp; 
             private String localSubnet; 
@@ -417,10 +441,26 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             }
 
             /**
+             * IDaaSApplicationId.
+             */
+            public Builder iDaaSApplicationId(String iDaaSApplicationId) {
+                this.iDaaSApplicationId = iDaaSApplicationId;
+                return this;
+            }
+
+            /**
              * The ID of the IDaaS instance.
              */
             public Builder iDaaSInstanceId(String iDaaSInstanceId) {
                 this.iDaaSInstanceId = iDaaSInstanceId;
+                return this;
+            }
+
+            /**
+             * IDaaSInstanceVersion.
+             */
+            public Builder iDaaSInstanceVersion(String iDaaSInstanceVersion) {
+                this.iDaaSInstanceVersion = iDaaSInstanceVersion;
                 return this;
             }
 
