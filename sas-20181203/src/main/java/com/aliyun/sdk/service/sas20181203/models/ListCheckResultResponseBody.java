@@ -238,6 +238,9 @@ public class ListCheckResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckPolicies")
         private java.util.List < CheckPolicies> checkPolicies;
 
+        @com.aliyun.core.annotation.NameInMap("CheckSaleType")
+        private Integer checkSaleType;
+
         @com.aliyun.core.annotation.NameInMap("CheckShowName")
         private String checkShowName;
 
@@ -274,6 +277,7 @@ public class ListCheckResultResponseBody extends TeaModel {
         private Checks(Builder builder) {
             this.checkId = builder.checkId;
             this.checkPolicies = builder.checkPolicies;
+            this.checkSaleType = builder.checkSaleType;
             this.checkShowName = builder.checkShowName;
             this.instanceSubType = builder.instanceSubType;
             this.instanceType = builder.instanceType;
@@ -307,6 +311,13 @@ public class ListCheckResultResponseBody extends TeaModel {
          */
         public java.util.List < CheckPolicies> getCheckPolicies() {
             return this.checkPolicies;
+        }
+
+        /**
+         * @return checkSaleType
+         */
+        public Integer getCheckSaleType() {
+            return this.checkSaleType;
         }
 
         /**
@@ -389,6 +400,7 @@ public class ListCheckResultResponseBody extends TeaModel {
         public static final class Builder {
             private Long checkId; 
             private java.util.List < CheckPolicies> checkPolicies; 
+            private Integer checkSaleType; 
             private String checkShowName; 
             private String instanceSubType; 
             private String instanceType; 
@@ -414,6 +426,14 @@ public class ListCheckResultResponseBody extends TeaModel {
              */
             public Builder checkPolicies(java.util.List < CheckPolicies> checkPolicies) {
                 this.checkPolicies = checkPolicies;
+                return this;
+            }
+
+            /**
+             * CheckSaleType.
+             */
+            public Builder checkSaleType(Integer checkSaleType) {
+                this.checkSaleType = checkSaleType;
                 return this;
             }
 
