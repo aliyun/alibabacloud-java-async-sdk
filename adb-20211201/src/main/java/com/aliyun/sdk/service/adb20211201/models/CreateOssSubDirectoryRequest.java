@@ -13,6 +13,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateOssSubDirectoryRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
     @com.aliyun.core.annotation.Body
