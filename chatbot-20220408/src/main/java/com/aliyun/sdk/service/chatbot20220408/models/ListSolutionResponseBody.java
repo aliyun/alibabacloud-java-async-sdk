@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSolutionResponseBody</p>
  */
 public class ListSolutionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Solutions")
+    @com.aliyun.core.annotation.NameInMap("Solutions")
     private java.util.List < Solutions> solutions;
 
     private ListSolutionResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class ListSolutionResponseBody extends TeaModel {
     } 
 
     public static class Solutions extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("ContentType")
+        @com.aliyun.core.annotation.NameInMap("ContentType")
         private Integer contentType;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("PerspectiveCodes")
+        @com.aliyun.core.annotation.NameInMap("PerspectiveCodes")
         private java.util.List < String > perspectiveCodes;
 
-        @NameInMap("PlainText")
+        @com.aliyun.core.annotation.NameInMap("PlainText")
         private String plainText;
 
-        @NameInMap("SolutionId")
+        @com.aliyun.core.annotation.NameInMap("SolutionId")
         private Long solutionId;
 
         private Solutions(Builder builder) {

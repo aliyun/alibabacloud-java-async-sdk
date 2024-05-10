@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteInstanceResponseBody</p>
  */
 public class DeleteInstanceResponseBody extends TeaModel {
-    @NameInMap("BizTypeList")
+    @com.aliyun.core.annotation.NameInMap("BizTypeList")
     private java.util.List < String > bizTypeList;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("CreateUserId")
+    @com.aliyun.core.annotation.NameInMap("CreateUserId")
     private Long createUserId;
 
-    @NameInMap("CreateUserName")
+    @com.aliyun.core.annotation.NameInMap("CreateUserName")
     private String createUserName;
 
-    @NameInMap("Error")
+    @com.aliyun.core.annotation.NameInMap("Error")
     private String error;
 
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Response")
+    @com.aliyun.core.annotation.NameInMap("Response")
     private Long response;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DeleteInstanceResponseBody(Builder builder) {

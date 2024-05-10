@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateIntentRequest</p>
  */
 public class CreateIntentRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AgentKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentKey")
     private String agentKey;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("IntentDefinition")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntentDefinition")
     private IntentDefinition intentDefinition;
 
     private CreateIntentRequest(Builder builder) {
@@ -141,25 +140,25 @@ public class CreateIntentRequest extends Request {
     } 
 
     public static class SlotInfos extends TeaModel {
-        @NameInMap("Array")
+        @com.aliyun.core.annotation.NameInMap("Array")
         private Boolean array;
 
-        @NameInMap("Encrypt")
+        @com.aliyun.core.annotation.NameInMap("Encrypt")
         private Boolean encrypt;
 
-        @NameInMap("Interactive")
+        @com.aliyun.core.annotation.NameInMap("Interactive")
         private Boolean interactive;
 
-        @NameInMap("Name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
-        @NameInMap("SlotId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("SlotId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String slotId;
 
-        @NameInMap("Value")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Value")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String value;
 
         private SlotInfos(Builder builder) {
@@ -285,14 +284,14 @@ public class CreateIntentRequest extends Request {
 
     }
     public static class IntentDefinition extends TeaModel {
-        @NameInMap("AliasName")
+        @com.aliyun.core.annotation.NameInMap("AliasName")
         private String aliasName;
 
-        @NameInMap("IntentName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("IntentName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String intentName;
 
-        @NameInMap("SlotInfos")
+        @com.aliyun.core.annotation.NameInMap("SlotInfos")
         private java.util.List < SlotInfos> slotInfos;
 
         private IntentDefinition(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListIntentResponseBody</p>
  */
 public class ListIntentResponseBody extends TeaModel {
-    @NameInMap("Intents")
+    @com.aliyun.core.annotation.NameInMap("Intents")
     private java.util.List < Intents> intents;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListIntentResponseBody(Builder builder) {
@@ -132,22 +131,22 @@ public class ListIntentResponseBody extends TeaModel {
     } 
 
     public static class SlotInfos extends TeaModel {
-        @NameInMap("Array")
+        @com.aliyun.core.annotation.NameInMap("Array")
         private Boolean array;
 
-        @NameInMap("Encrypt")
+        @com.aliyun.core.annotation.NameInMap("Encrypt")
         private Boolean encrypt;
 
-        @NameInMap("Interactive")
+        @com.aliyun.core.annotation.NameInMap("Interactive")
         private Boolean interactive;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("SlotId")
+        @com.aliyun.core.annotation.NameInMap("SlotId")
         private String slotId;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SlotInfos(Builder builder) {
@@ -273,34 +272,34 @@ public class ListIntentResponseBody extends TeaModel {
 
     }
     public static class Intents extends TeaModel {
-        @NameInMap("AliasName")
+        @com.aliyun.core.annotation.NameInMap("AliasName")
         private String aliasName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateUserId")
+        @com.aliyun.core.annotation.NameInMap("CreateUserId")
         private String createUserId;
 
-        @NameInMap("CreateUserName")
+        @com.aliyun.core.annotation.NameInMap("CreateUserName")
         private String createUserName;
 
-        @NameInMap("IntentId")
+        @com.aliyun.core.annotation.NameInMap("IntentId")
         private Long intentId;
 
-        @NameInMap("IntentName")
+        @com.aliyun.core.annotation.NameInMap("IntentName")
         private String intentName;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("ModifyUserId")
+        @com.aliyun.core.annotation.NameInMap("ModifyUserId")
         private String modifyUserId;
 
-        @NameInMap("ModifyUserName")
+        @com.aliyun.core.annotation.NameInMap("ModifyUserName")
         private String modifyUserName;
 
-        @NameInMap("SlotInfos")
+        @com.aliyun.core.annotation.NameInMap("SlotInfos")
         private java.util.List < SlotInfos> slotInfos;
 
         private Intents(Builder builder) {

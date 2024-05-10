@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePerspectiveResponseBody</p>
  */
 public class DescribePerspectiveResponseBody extends TeaModel {
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("ModifyTime")
+    @com.aliyun.core.annotation.NameInMap("ModifyTime")
     private String modifyTime;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("PerspectiveCode")
+    @com.aliyun.core.annotation.NameInMap("PerspectiveCode")
     private String perspectiveCode;
 
-    @NameInMap("PerspectiveId")
+    @com.aliyun.core.annotation.NameInMap("PerspectiveId")
     private String perspectiveId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SelfDefine")
+    @com.aliyun.core.annotation.NameInMap("SelfDefine")
     private Boolean selfDefine;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
     private DescribePerspectiveResponseBody(Builder builder) {

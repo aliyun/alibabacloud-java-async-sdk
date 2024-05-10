@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListConnQuestionResponseBody</p>
  */
 public class ListConnQuestionResponseBody extends TeaModel {
-    @NameInMap("Outlines")
+    @com.aliyun.core.annotation.NameInMap("Outlines")
     private java.util.List < Outlines> outlines;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListConnQuestionResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class ListConnQuestionResponseBody extends TeaModel {
     } 
 
     public static class Outlines extends TeaModel {
-        @NameInMap("ConnQuestionId")
+        @com.aliyun.core.annotation.NameInMap("ConnQuestionId")
         private Long connQuestionId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("OutlineId")
+        @com.aliyun.core.annotation.NameInMap("OutlineId")
         private Long outlineId;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private Outlines(Builder builder) {

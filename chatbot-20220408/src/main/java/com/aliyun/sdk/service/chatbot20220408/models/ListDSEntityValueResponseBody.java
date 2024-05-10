@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDSEntityValueResponseBody</p>
  */
 public class ListDSEntityValueResponseBody extends TeaModel {
-    @NameInMap("EntityValues")
+    @com.aliyun.core.annotation.NameInMap("EntityValues")
     private java.util.List < EntityValues> entityValues;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListDSEntityValueResponseBody(Builder builder) {
@@ -132,22 +131,22 @@ public class ListDSEntityValueResponseBody extends TeaModel {
     } 
 
     public static class EntityValues extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("EntityId")
+        @com.aliyun.core.annotation.NameInMap("EntityId")
         private Long entityId;
 
-        @NameInMap("EntityValueId")
+        @com.aliyun.core.annotation.NameInMap("EntityValueId")
         private Long entityValueId;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("Synonyms")
+        @com.aliyun.core.annotation.NameInMap("Synonyms")
         private java.util.List < String > synonyms;
 
         private EntityValues(Builder builder) {

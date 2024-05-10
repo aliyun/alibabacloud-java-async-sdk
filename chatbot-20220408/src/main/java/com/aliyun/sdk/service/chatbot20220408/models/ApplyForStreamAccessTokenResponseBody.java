@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ApplyForStreamAccessTokenResponseBody</p>
  */
 public class ApplyForStreamAccessTokenResponseBody extends TeaModel {
-    @NameInMap("AccessToken")
+    @com.aliyun.core.annotation.NameInMap("AccessToken")
     private String accessToken;
 
-    @NameInMap("ChannelId")
+    @com.aliyun.core.annotation.NameInMap("ChannelId")
     private String channelId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StreamSecret")
+    @com.aliyun.core.annotation.NameInMap("StreamSecret")
     private String streamSecret;
 
     private ApplyForStreamAccessTokenResponseBody(Builder builder) {

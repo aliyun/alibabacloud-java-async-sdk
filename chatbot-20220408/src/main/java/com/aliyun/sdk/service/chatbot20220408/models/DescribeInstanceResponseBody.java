@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceResponseBody</p>
  */
 public class DescribeInstanceResponseBody extends TeaModel {
-    @NameInMap("Avatar")
+    @com.aliyun.core.annotation.NameInMap("Avatar")
     private String avatar;
 
-    @NameInMap("Categories")
+    @com.aliyun.core.annotation.NameInMap("Categories")
     private java.util.List < Categories> categories;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("EditStatus")
+    @com.aliyun.core.annotation.NameInMap("EditStatus")
     private String editStatus;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("Introduction")
+    @com.aliyun.core.annotation.NameInMap("Introduction")
     private String introduction;
 
-    @NameInMap("LanguageCode")
+    @com.aliyun.core.annotation.NameInMap("LanguageCode")
     private String languageCode;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RobotType")
+    @com.aliyun.core.annotation.NameInMap("RobotType")
     private String robotType;
 
-    @NameInMap("TimeZone")
+    @com.aliyun.core.annotation.NameInMap("TimeZone")
     private String timeZone;
 
     private DescribeInstanceResponseBody(Builder builder) {
@@ -252,13 +251,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
     } 
 
     public static class Categories extends TeaModel {
-        @NameInMap("CategoryId")
+        @com.aliyun.core.annotation.NameInMap("CategoryId")
         private Long categoryId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ParentCategoryId")
+        @com.aliyun.core.annotation.NameInMap("ParentCategoryId")
         private Long parentCategoryId;
 
         private Categories(Builder builder) {

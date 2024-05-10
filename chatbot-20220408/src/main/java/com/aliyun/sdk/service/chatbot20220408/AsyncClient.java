@@ -143,6 +143,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListSolutionResponse> listSolution(ListSolutionRequest request);
 
+    CompletableFuture<ListTongyiChatHistorysResponse> listTongyiChatHistorys(ListTongyiChatHistorysRequest request);
+
     CompletableFuture<ListUserSayResponse> listUserSay(ListUserSayRequest request);
 
     CompletableFuture<NluResponse> nlu(NluRequest request);

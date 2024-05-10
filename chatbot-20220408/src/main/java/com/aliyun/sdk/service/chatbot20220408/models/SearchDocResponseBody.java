@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SearchDocResponseBody</p>
  */
 public class SearchDocResponseBody extends TeaModel {
-    @NameInMap("DocHits")
+    @com.aliyun.core.annotation.NameInMap("DocHits")
     private java.util.List < DocHits> docHits;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private SearchDocResponseBody(Builder builder) {
@@ -132,64 +131,64 @@ public class SearchDocResponseBody extends TeaModel {
     } 
 
     public static class DocHits extends TeaModel {
-        @NameInMap("BizCode")
+        @com.aliyun.core.annotation.NameInMap("BizCode")
         private String bizCode;
 
-        @NameInMap("CategoryId")
+        @com.aliyun.core.annotation.NameInMap("CategoryId")
         private Long categoryId;
 
-        @NameInMap("Config")
+        @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateUserId")
+        @com.aliyun.core.annotation.NameInMap("CreateUserId")
         private Long createUserId;
 
-        @NameInMap("CreateUserName")
+        @com.aliyun.core.annotation.NameInMap("CreateUserName")
         private String createUserName;
 
-        @NameInMap("DocName")
+        @com.aliyun.core.annotation.NameInMap("DocName")
         private String docName;
 
-        @NameInMap("EffectStatus")
+        @com.aliyun.core.annotation.NameInMap("EffectStatus")
         private Integer effectStatus;
 
-        @NameInMap("EndDate")
+        @com.aliyun.core.annotation.NameInMap("EndDate")
         private String endDate;
 
-        @NameInMap("KnowledgeId")
+        @com.aliyun.core.annotation.NameInMap("KnowledgeId")
         private Long knowledgeId;
 
-        @NameInMap("Meta")
+        @com.aliyun.core.annotation.NameInMap("Meta")
         private String meta;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("ModifyUserId")
+        @com.aliyun.core.annotation.NameInMap("ModifyUserId")
         private Long modifyUserId;
 
-        @NameInMap("ModifyUserName")
+        @com.aliyun.core.annotation.NameInMap("ModifyUserName")
         private String modifyUserName;
 
-        @NameInMap("ProcessCanRetry")
+        @com.aliyun.core.annotation.NameInMap("ProcessCanRetry")
         private Boolean processCanRetry;
 
-        @NameInMap("ProcessMessage")
+        @com.aliyun.core.annotation.NameInMap("ProcessMessage")
         private String processMessage;
 
-        @NameInMap("ProcessStatus")
+        @com.aliyun.core.annotation.NameInMap("ProcessStatus")
         private Integer processStatus;
 
-        @NameInMap("StartDate")
+        @com.aliyun.core.annotation.NameInMap("StartDate")
         private String startDate;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private DocHits(Builder builder) {

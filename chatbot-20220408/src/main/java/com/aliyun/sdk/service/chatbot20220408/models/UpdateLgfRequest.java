@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateLgfRequest</p>
  */
 public class UpdateLgfRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AgentKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentKey")
     private String agentKey;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("LgfDefinition")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LgfDefinition")
+    @com.aliyun.core.annotation.Validation(required = true)
     private LgfDefinition lgfDefinition;
 
-    @Query
-    @NameInMap("LgfId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LgfId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long lgfId;
 
     private UpdateLgfRequest(Builder builder) {
@@ -166,12 +165,12 @@ public class UpdateLgfRequest extends Request {
     } 
 
     public static class LgfDefinition extends TeaModel {
-        @NameInMap("IntentId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("IntentId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long intentId;
 
-        @NameInMap("RuleText")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("RuleText")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String ruleText;
 
         private LgfDefinition(Builder builder) {

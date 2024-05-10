@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCategoryResponseBody</p>
  */
 public class ListCategoryResponseBody extends TeaModel {
-    @NameInMap("Categories")
+    @com.aliyun.core.annotation.NameInMap("Categories")
     private java.util.List < Categories> categories;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListCategoryResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class ListCategoryResponseBody extends TeaModel {
     } 
 
     public static class Categories extends TeaModel {
-        @NameInMap("BizCode")
+        @com.aliyun.core.annotation.NameInMap("BizCode")
         private String bizCode;
 
-        @NameInMap("CategoryId")
+        @com.aliyun.core.annotation.NameInMap("CategoryId")
         private Long categoryId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ParentCategoryId")
+        @com.aliyun.core.annotation.NameInMap("ParentCategoryId")
         private Long parentCategoryId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private Categories(Builder builder) {

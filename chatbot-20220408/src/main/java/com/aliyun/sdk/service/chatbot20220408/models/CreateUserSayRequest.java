@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateUserSayRequest</p>
  */
 public class CreateUserSayRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AgentKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentKey")
     private String agentKey;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("UserSayDefinition")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserSayDefinition")
     private UserSayDefinition userSayDefinition;
 
     private CreateUserSayRequest(Builder builder) {
@@ -141,13 +140,13 @@ public class CreateUserSayRequest extends Request {
     } 
 
     public static class SlotInfos extends TeaModel {
-        @NameInMap("EndIndex")
+        @com.aliyun.core.annotation.NameInMap("EndIndex")
         private Integer endIndex;
 
-        @NameInMap("SlotId")
+        @com.aliyun.core.annotation.NameInMap("SlotId")
         private String slotId;
 
-        @NameInMap("StartIndex")
+        @com.aliyun.core.annotation.NameInMap("StartIndex")
         private Integer startIndex;
 
         private SlotInfos(Builder builder) {
@@ -222,15 +221,15 @@ public class CreateUserSayRequest extends Request {
 
     }
     public static class UserSayDefinition extends TeaModel {
-        @NameInMap("Content")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Content")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String content;
 
-        @NameInMap("IntentId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("IntentId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long intentId;
 
-        @NameInMap("SlotInfos")
+        @com.aliyun.core.annotation.NameInMap("SlotInfos")
         private java.util.List < SlotInfos> slotInfos;
 
         private UserSayDefinition(Builder builder) {

@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListSaasInfoResponse} extends {@link TeaModel}
+ * {@link ListTongyiChatHistorysResponse} extends {@link TeaModel}
  *
- * <p>ListSaasInfoResponse</p>
+ * <p>ListTongyiChatHistorysResponse</p>
  */
-public class ListSaasInfoResponse extends Response {
+public class ListTongyiChatHistorysResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +18,16 @@ public class ListSaasInfoResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private ListSaasInfoResponseBody body;
+    private ListTongyiChatHistorysResponseBody body;
 
-    private ListSaasInfoResponse(BuilderImpl builder) {
+    private ListTongyiChatHistorysResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ListSaasInfoResponse create() {
+    public static ListTongyiChatHistorysResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +53,35 @@ public class ListSaasInfoResponse extends Response {
     /**
      * @return body
      */
-    public ListSaasInfoResponseBody getBody() {
+    public ListTongyiChatHistorysResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListSaasInfoResponse, Builder> {
+    public interface Builder extends Response.Builder<ListTongyiChatHistorysResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ListSaasInfoResponseBody body);
+        Builder body(ListTongyiChatHistorysResponseBody body);
 
         @Override
-        ListSaasInfoResponse build();
+        ListTongyiChatHistorysResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListSaasInfoResponse, Builder>
+            extends Response.BuilderImpl<ListTongyiChatHistorysResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private ListSaasInfoResponseBody body; 
+        private ListTongyiChatHistorysResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListSaasInfoResponse response) {
+        private BuilderImpl(ListTongyiChatHistorysResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +110,14 @@ public class ListSaasInfoResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListSaasInfoResponseBody body) {
+        public Builder body(ListTongyiChatHistorysResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListSaasInfoResponse build() {
-            return new ListSaasInfoResponse(this);
+        public ListTongyiChatHistorysResponse build() {
+            return new ListTongyiChatHistorysResponse(this);
         } 
 
     } 

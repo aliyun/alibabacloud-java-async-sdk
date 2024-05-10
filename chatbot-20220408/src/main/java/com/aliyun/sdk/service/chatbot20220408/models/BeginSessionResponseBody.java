@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BeginSessionResponseBody</p>
  */
 public class BeginSessionResponseBody extends TeaModel {
-    @NameInMap("AsrMaxEndSilence")
+    @com.aliyun.core.annotation.NameInMap("AsrMaxEndSilence")
     private Integer asrMaxEndSilence;
 
-    @NameInMap("Interruptible")
+    @com.aliyun.core.annotation.NameInMap("Interruptible")
     private Boolean interruptible;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SilenceReplyTimeout")
+    @com.aliyun.core.annotation.NameInMap("SilenceReplyTimeout")
     private Integer silenceReplyTimeout;
 
-    @NameInMap("WelcomeMessage")
+    @com.aliyun.core.annotation.NameInMap("WelcomeMessage")
     private String welcomeMessage;
 
     private BeginSessionResponseBody(Builder builder) {

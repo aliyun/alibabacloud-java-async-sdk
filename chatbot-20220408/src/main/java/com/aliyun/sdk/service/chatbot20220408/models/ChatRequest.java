@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.chatbot20220408.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,48 +11,48 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ChatRequest</p>
  */
 public class ChatRequest extends Request {
-    @Query
-    @NameInMap("AgentKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentKey")
     private String agentKey;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("IntentName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntentName")
     private String intentName;
 
-    @Query
-    @NameInMap("KnowledgeId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KnowledgeId")
     private String knowledgeId;
 
-    @Query
-    @NameInMap("Perspective")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Perspective")
     private java.util.List < String > perspective;
 
-    @Query
-    @NameInMap("SandBox")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SandBox")
     private Boolean sandBox;
 
-    @Query
-    @NameInMap("SenderId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SenderId")
     private String senderId;
 
-    @Query
-    @NameInMap("SenderNick")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SenderNick")
     private String senderNick;
 
-    @Query
-    @NameInMap("SessionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SessionId")
     private String sessionId;
 
-    @Query
-    @NameInMap("Utterance")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Utterance")
     private String utterance;
 
-    @Query
-    @NameInMap("VendorParam")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VendorParam")
     private String vendorParam;
 
     private ChatRequest(Builder builder) {
