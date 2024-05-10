@@ -137,6 +137,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetDocContentResponse> getDocContent(GetDocContentRequest request);
 
+    CompletableFuture<GetDocContentTakIdResponse> getDocContentTakId(GetDocContentTakIdRequest request);
+
     CompletableFuture<GetEventResponse> getEvent(GetEventRequest request);
 
     CompletableFuture<GetFieldDefByUuidResponse> getFieldDefByUuid(GetFieldDefByUuidRequest request);
