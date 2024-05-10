@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetRegionalInstanceConfigResponseBody</p>
  */
 public class GetRegionalInstanceConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private GetRegionalInstanceConfigResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class GetRegionalInstanceConfigResponseBody extends TeaModel {
     } 
 
     public static class ClientNodeAmountRange extends TeaModel {
-        @NameInMap("maxAmount")
+        @com.aliyun.core.annotation.NameInMap("maxAmount")
         private Integer maxAmount;
 
-        @NameInMap("minAmount")
+        @com.aliyun.core.annotation.NameInMap("minAmount")
         private Integer minAmount;
 
         private ClientNodeAmountRange(Builder builder) {
@@ -133,16 +132,16 @@ public class GetRegionalInstanceConfigResponseBody extends TeaModel {
 
     }
     public static class ClientNodeDiskList extends TeaModel {
-        @NameInMap("diskType")
+        @com.aliyun.core.annotation.NameInMap("diskType")
         private String diskType;
 
-        @NameInMap("maxSize")
+        @com.aliyun.core.annotation.NameInMap("maxSize")
         private Integer maxSize;
 
-        @NameInMap("minSize")
+        @com.aliyun.core.annotation.NameInMap("minSize")
         private Integer minSize;
 
-        @NameInMap("scaleLimit")
+        @com.aliyun.core.annotation.NameInMap("scaleLimit")
         private Integer scaleLimit;
 
         private ClientNodeDiskList(Builder builder) {
@@ -234,10 +233,10 @@ public class GetRegionalInstanceConfigResponseBody extends TeaModel {
 
     }
     public static class DataNodeAmountRange extends TeaModel {
-        @NameInMap("maxAmount")
+        @com.aliyun.core.annotation.NameInMap("maxAmount")
         private Integer maxAmount;
 
-        @NameInMap("minAmount")
+        @com.aliyun.core.annotation.NameInMap("minAmount")
         private Integer minAmount;
 
         private DataNodeAmountRange(Builder builder) {
@@ -295,13 +294,13 @@ public class GetRegionalInstanceConfigResponseBody extends TeaModel {
 
     }
     public static class SubClassificationConfines extends TeaModel {
-        @NameInMap("maxSize")
+        @com.aliyun.core.annotation.NameInMap("maxSize")
         private Integer maxSize;
 
-        @NameInMap("minSize")
+        @com.aliyun.core.annotation.NameInMap("minSize")
         private Integer minSize;
 
-        @NameInMap("performanceLevel")
+        @com.aliyun.core.annotation.NameInMap("performanceLevel")
         private String performanceLevel;
 
         private SubClassificationConfines(Builder builder) {
@@ -376,22 +375,22 @@ public class GetRegionalInstanceConfigResponseBody extends TeaModel {
 
     }
     public static class DataNodeDiskList extends TeaModel {
-        @NameInMap("diskType")
+        @com.aliyun.core.annotation.NameInMap("diskType")
         private String diskType;
 
-        @NameInMap("maxSize")
+        @com.aliyun.core.annotation.NameInMap("maxSize")
         private Integer maxSize;
 
-        @NameInMap("minSize")
+        @com.aliyun.core.annotation.NameInMap("minSize")
         private Integer minSize;
 
-        @NameInMap("scaleLimit")
+        @com.aliyun.core.annotation.NameInMap("scaleLimit")
         private Integer scaleLimit;
 
-        @NameInMap("subClassificationConfines")
+        @com.aliyun.core.annotation.NameInMap("subClassificationConfines")
         private java.util.List < SubClassificationConfines> subClassificationConfines;
 
-        @NameInMap("valueLimitSet")
+        @com.aliyun.core.annotation.NameInMap("valueLimitSet")
         private java.util.List < Integer > valueLimitSet;
 
         private DataNodeDiskList(Builder builder) {
@@ -517,13 +516,13 @@ public class GetRegionalInstanceConfigResponseBody extends TeaModel {
 
     }
     public static class MasterDiskListSubClassificationConfines extends TeaModel {
-        @NameInMap("maxSize")
+        @com.aliyun.core.annotation.NameInMap("maxSize")
         private Integer maxSize;
 
-        @NameInMap("minSize")
+        @com.aliyun.core.annotation.NameInMap("minSize")
         private Integer minSize;
 
-        @NameInMap("performanceLevel")
+        @com.aliyun.core.annotation.NameInMap("performanceLevel")
         private String performanceLevel;
 
         private MasterDiskListSubClassificationConfines(Builder builder) {
@@ -598,19 +597,19 @@ public class GetRegionalInstanceConfigResponseBody extends TeaModel {
 
     }
     public static class MasterDiskList extends TeaModel {
-        @NameInMap("diskType")
+        @com.aliyun.core.annotation.NameInMap("diskType")
         private String diskType;
 
-        @NameInMap("maxSize")
+        @com.aliyun.core.annotation.NameInMap("maxSize")
         private Integer maxSize;
 
-        @NameInMap("minSize")
+        @com.aliyun.core.annotation.NameInMap("minSize")
         private Integer minSize;
 
-        @NameInMap("scaleLimit")
+        @com.aliyun.core.annotation.NameInMap("scaleLimit")
         private Integer scaleLimit;
 
-        @NameInMap("subClassificationConfines")
+        @com.aliyun.core.annotation.NameInMap("subClassificationConfines")
         private java.util.List < MasterDiskListSubClassificationConfines> subClassificationConfines;
 
         private MasterDiskList(Builder builder) {
@@ -719,40 +718,40 @@ public class GetRegionalInstanceConfigResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("clientNodeAmountRange")
+        @com.aliyun.core.annotation.NameInMap("clientNodeAmountRange")
         private ClientNodeAmountRange clientNodeAmountRange;
 
-        @NameInMap("clientNodeDiskList")
+        @com.aliyun.core.annotation.NameInMap("clientNodeDiskList")
         private java.util.List < ClientNodeDiskList> clientNodeDiskList;
 
-        @NameInMap("clientSpecs")
+        @com.aliyun.core.annotation.NameInMap("clientSpecs")
         private java.util.List < String > clientSpecs;
 
-        @NameInMap("dataNodeAmountRange")
+        @com.aliyun.core.annotation.NameInMap("dataNodeAmountRange")
         private DataNodeAmountRange dataNodeAmountRange;
 
-        @NameInMap("dataNodeDiskList")
+        @com.aliyun.core.annotation.NameInMap("dataNodeDiskList")
         private java.util.List < DataNodeDiskList> dataNodeDiskList;
 
-        @NameInMap("dataNodeSpecs")
+        @com.aliyun.core.annotation.NameInMap("dataNodeSpecs")
         private java.util.List < String > dataNodeSpecs;
 
-        @NameInMap("kibanaSpecs")
+        @com.aliyun.core.annotation.NameInMap("kibanaSpecs")
         private java.util.List < String > kibanaSpecs;
 
-        @NameInMap("masterAmountRange")
+        @com.aliyun.core.annotation.NameInMap("masterAmountRange")
         private java.util.List < String > masterAmountRange;
 
-        @NameInMap("masterDiskList")
+        @com.aliyun.core.annotation.NameInMap("masterDiskList")
         private java.util.List < MasterDiskList> masterDiskList;
 
-        @NameInMap("masterSpecs")
+        @com.aliyun.core.annotation.NameInMap("masterSpecs")
         private java.util.List < String > masterSpecs;
 
-        @NameInMap("specInfoMap")
+        @com.aliyun.core.annotation.NameInMap("specInfoMap")
         private java.util.Map < String, ResultSpecInfoMapValue > specInfoMap;
 
-        @NameInMap("versions")
+        @com.aliyun.core.annotation.NameInMap("versions")
         private java.util.List < String > versions;
 
         private Result(Builder builder) {

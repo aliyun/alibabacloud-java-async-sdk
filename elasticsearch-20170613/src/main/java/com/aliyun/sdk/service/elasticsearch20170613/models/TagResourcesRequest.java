@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TagResourcesRequest</p>
  */
 public class TagResourcesRequest extends Request {
-    @Body
-    @NameInMap("ResourceIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > resourceIds;
 
-    @Body
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
-    @Body
-    @NameInMap("Tags")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Tags> tags;
 
     private TagResourcesRequest(Builder builder) {
@@ -119,12 +118,12 @@ public class TagResourcesRequest extends Request {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("key")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("key")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String key;
 
-        @NameInMap("value")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("value")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String value;
 
         private Tags(Builder builder) {

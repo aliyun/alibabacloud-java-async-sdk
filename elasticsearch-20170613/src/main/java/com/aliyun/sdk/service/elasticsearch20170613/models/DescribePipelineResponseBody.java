@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePipelineResponseBody</p>
  */
 public class DescribePipelineResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private DescribePipelineResponseBody(Builder builder) {
@@ -76,40 +75,40 @@ public class DescribePipelineResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("batchDelay")
+        @com.aliyun.core.annotation.NameInMap("batchDelay")
         private Integer batchDelay;
 
-        @NameInMap("batchSize")
+        @com.aliyun.core.annotation.NameInMap("batchSize")
         private Integer batchSize;
 
-        @NameInMap("config")
+        @com.aliyun.core.annotation.NameInMap("config")
         private String config;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("gmtCreatedTime")
+        @com.aliyun.core.annotation.NameInMap("gmtCreatedTime")
         private String gmtCreatedTime;
 
-        @NameInMap("gmtUpdateTime")
+        @com.aliyun.core.annotation.NameInMap("gmtUpdateTime")
         private String gmtUpdateTime;
 
-        @NameInMap("pipelineId")
+        @com.aliyun.core.annotation.NameInMap("pipelineId")
         private String pipelineId;
 
-        @NameInMap("pipelineStatus")
+        @com.aliyun.core.annotation.NameInMap("pipelineStatus")
         private String pipelineStatus;
 
-        @NameInMap("queueCheckPointWrites")
+        @com.aliyun.core.annotation.NameInMap("queueCheckPointWrites")
         private Integer queueCheckPointWrites;
 
-        @NameInMap("queueMaxBytes")
+        @com.aliyun.core.annotation.NameInMap("queueMaxBytes")
         private Integer queueMaxBytes;
 
-        @NameInMap("queueType")
+        @com.aliyun.core.annotation.NameInMap("queueType")
         private String queueType;
 
-        @NameInMap("workers")
+        @com.aliyun.core.annotation.NameInMap("workers")
         private Integer workers;
 
         private Result(Builder builder) {

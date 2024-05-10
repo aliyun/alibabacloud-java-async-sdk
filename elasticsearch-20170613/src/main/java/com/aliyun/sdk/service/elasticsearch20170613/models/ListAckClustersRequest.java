@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAckClustersRequest</p>
  */
 public class ListAckClustersRequest extends Request {
-    @Query
-    @NameInMap("page")
-    @Validation(maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page")
+    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
     private Integer page;
 
-    @Query
-    @NameInMap("size")
-    @Validation(maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("size")
+    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
     private Integer size;
 
-    @Query
-    @NameInMap("vpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("vpcId")
     private String vpcId;
 
     private ListAckClustersRequest(Builder builder) {

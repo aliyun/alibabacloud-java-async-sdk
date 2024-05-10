@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateApmRequest</p>
  */
 public class UpdateApmRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @Body
-    @NameInMap("outputES")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("outputES")
     private String outputES;
 
-    @Body
-    @NameInMap("outputESPassword")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("outputESPassword")
     private String outputESPassword;
 
-    @Body
-    @NameInMap("outputESUserName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("outputESUserName")
     private String outputESUserName;
 
-    @Body
-    @NameInMap("token")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("token")
     private String token;
 
     private UpdateApmRequest(Builder builder) {

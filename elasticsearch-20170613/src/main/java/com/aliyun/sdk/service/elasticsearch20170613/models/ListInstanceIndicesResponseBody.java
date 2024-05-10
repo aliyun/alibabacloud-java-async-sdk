@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstanceIndicesResponseBody</p>
  */
 public class ListInstanceIndicesResponseBody extends TeaModel {
-    @NameInMap("Headers")
+    @com.aliyun.core.annotation.NameInMap("Headers")
     private Headers headers;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private ListInstanceIndicesResponseBody(Builder builder) {
@@ -92,16 +91,16 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
     } 
 
     public static class Headers extends TeaModel {
-        @NameInMap("X-Managed-Count")
+        @com.aliyun.core.annotation.NameInMap("X-Managed-Count")
         private Integer xManagedCount;
 
-        @NameInMap("X-Managed-StorageSize")
+        @com.aliyun.core.annotation.NameInMap("X-Managed-StorageSize")
         private Long xManagedStorageSize;
 
-        @NameInMap("X-OSS-Count")
+        @com.aliyun.core.annotation.NameInMap("X-OSS-Count")
         private Integer xOSSCount;
 
-        @NameInMap("X-OSS-StorageSize")
+        @com.aliyun.core.annotation.NameInMap("X-OSS-StorageSize")
         private Long xOSSStorageSize;
 
         private Headers(Builder builder) {
@@ -193,28 +192,28 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
 
-        @NameInMap("health")
+        @com.aliyun.core.annotation.NameInMap("health")
         private String health;
 
-        @NameInMap("ilmExplain")
+        @com.aliyun.core.annotation.NameInMap("ilmExplain")
         private String ilmExplain;
 
-        @NameInMap("isManaged")
+        @com.aliyun.core.annotation.NameInMap("isManaged")
         private String isManaged;
 
-        @NameInMap("managedStatus")
+        @com.aliyun.core.annotation.NameInMap("managedStatus")
         private String managedStatus;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("phase")
+        @com.aliyun.core.annotation.NameInMap("phase")
         private String phase;
 
-        @NameInMap("size")
+        @com.aliyun.core.annotation.NameInMap("size")
         private Long size;
 
         private Result(Builder builder) {

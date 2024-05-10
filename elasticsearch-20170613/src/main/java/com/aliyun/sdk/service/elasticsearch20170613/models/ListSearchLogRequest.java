@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSearchLogRequest</p>
  */
 public class ListSearchLogRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("beginTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("beginTime")
     private Long beginTime;
 
-    @Query
-    @NameInMap("endTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("endTime")
     private Long endTime;
 
-    @Query
-    @NameInMap("page")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page")
     private Integer page;
 
-    @Query
-    @NameInMap("query")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("query")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String query;
 
-    @Query
-    @NameInMap("size")
-    @Validation(maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("size")
+    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
     private Integer size;
 
-    @Query
-    @NameInMap("type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private ListSearchLogRequest(Builder builder) {

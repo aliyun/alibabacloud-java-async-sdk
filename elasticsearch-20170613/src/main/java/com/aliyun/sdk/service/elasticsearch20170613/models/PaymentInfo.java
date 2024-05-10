@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PaymentInfo</p>
  */
 public class PaymentInfo extends TeaModel {
-    @NameInMap("autoRenewDuration")
+    @com.aliyun.core.annotation.NameInMap("autoRenewDuration")
     private Long autoRenewDuration;
 
-    @NameInMap("duration")
+    @com.aliyun.core.annotation.NameInMap("duration")
     private Long duration;
 
-    @NameInMap("isAutoRenew")
+    @com.aliyun.core.annotation.NameInMap("isAutoRenew")
     private Boolean isAutoRenew;
 
-    @NameInMap("pricingCycle")
+    @com.aliyun.core.annotation.NameInMap("pricingCycle")
     private String pricingCycle;
 
     private PaymentInfo(Builder builder) {

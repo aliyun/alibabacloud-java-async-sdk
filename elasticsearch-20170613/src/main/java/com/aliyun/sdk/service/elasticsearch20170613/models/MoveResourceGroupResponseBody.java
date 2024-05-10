@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>MoveResourceGroupResponseBody</p>
  */
 public class MoveResourceGroupResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private MoveResourceGroupResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class MoveResourceGroupResponseBody extends TeaModel {
     } 
 
     public static class DictList extends TeaModel {
-        @NameInMap("fileSize")
+        @com.aliyun.core.annotation.NameInMap("fileSize")
         private Long fileSize;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("sourceType")
+        @com.aliyun.core.annotation.NameInMap("sourceType")
         private String sourceType;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private DictList(Builder builder) {
@@ -183,16 +182,16 @@ public class MoveResourceGroupResponseBody extends TeaModel {
 
     }
     public static class KibanaConfiguration extends TeaModel {
-        @NameInMap("amount")
+        @com.aliyun.core.annotation.NameInMap("amount")
         private Integer amount;
 
-        @NameInMap("disk")
+        @com.aliyun.core.annotation.NameInMap("disk")
         private Integer disk;
 
-        @NameInMap("diskType")
+        @com.aliyun.core.annotation.NameInMap("diskType")
         private String diskType;
 
-        @NameInMap("spec")
+        @com.aliyun.core.annotation.NameInMap("spec")
         private String spec;
 
         private KibanaConfiguration(Builder builder) {
@@ -284,16 +283,16 @@ public class MoveResourceGroupResponseBody extends TeaModel {
 
     }
     public static class MasterConfiguration extends TeaModel {
-        @NameInMap("amount")
+        @com.aliyun.core.annotation.NameInMap("amount")
         private Integer amount;
 
-        @NameInMap("disk")
+        @com.aliyun.core.annotation.NameInMap("disk")
         private Integer disk;
 
-        @NameInMap("diskType")
+        @com.aliyun.core.annotation.NameInMap("diskType")
         private String diskType;
 
-        @NameInMap("spec")
+        @com.aliyun.core.annotation.NameInMap("spec")
         private String spec;
 
         private MasterConfiguration(Builder builder) {
@@ -385,16 +384,16 @@ public class MoveResourceGroupResponseBody extends TeaModel {
 
     }
     public static class NetworkConfig extends TeaModel {
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("vpcId")
+        @com.aliyun.core.annotation.NameInMap("vpcId")
         private String vpcId;
 
-        @NameInMap("vsArea")
+        @com.aliyun.core.annotation.NameInMap("vsArea")
         private String vsArea;
 
-        @NameInMap("vswitchId")
+        @com.aliyun.core.annotation.NameInMap("vswitchId")
         private String vswitchId;
 
         private NetworkConfig(Builder builder) {
@@ -486,13 +485,13 @@ public class MoveResourceGroupResponseBody extends TeaModel {
 
     }
     public static class NodeSpec extends TeaModel {
-        @NameInMap("disk")
+        @com.aliyun.core.annotation.NameInMap("disk")
         private Integer disk;
 
-        @NameInMap("diskType")
+        @com.aliyun.core.annotation.NameInMap("diskType")
         private String diskType;
 
-        @NameInMap("spec")
+        @com.aliyun.core.annotation.NameInMap("spec")
         private String spec;
 
         private NodeSpec(Builder builder) {
@@ -567,16 +566,16 @@ public class MoveResourceGroupResponseBody extends TeaModel {
 
     }
     public static class SynonymsDicts extends TeaModel {
-        @NameInMap("fileSize")
+        @com.aliyun.core.annotation.NameInMap("fileSize")
         private Long fileSize;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("sourceType")
+        @com.aliyun.core.annotation.NameInMap("sourceType")
         private String sourceType;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private SynonymsDicts(Builder builder) {
@@ -678,61 +677,61 @@ public class MoveResourceGroupResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("createdAt")
+        @com.aliyun.core.annotation.NameInMap("createdAt")
         private String createdAt;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("dictList")
+        @com.aliyun.core.annotation.NameInMap("dictList")
         private java.util.List < DictList> dictList;
 
-        @NameInMap("domain")
+        @com.aliyun.core.annotation.NameInMap("domain")
         private String domain;
 
-        @NameInMap("esVersion")
+        @com.aliyun.core.annotation.NameInMap("esVersion")
         private String esVersion;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
-        @NameInMap("kibanaConfiguration")
+        @com.aliyun.core.annotation.NameInMap("kibanaConfiguration")
         private KibanaConfiguration kibanaConfiguration;
 
-        @NameInMap("kibanaDomain")
+        @com.aliyun.core.annotation.NameInMap("kibanaDomain")
         private String kibanaDomain;
 
-        @NameInMap("kibanaPort")
+        @com.aliyun.core.annotation.NameInMap("kibanaPort")
         private Integer kibanaPort;
 
-        @NameInMap("masterConfiguration")
+        @com.aliyun.core.annotation.NameInMap("masterConfiguration")
         private MasterConfiguration masterConfiguration;
 
-        @NameInMap("networkConfig")
+        @com.aliyun.core.annotation.NameInMap("networkConfig")
         private NetworkConfig networkConfig;
 
-        @NameInMap("nodeAmount")
+        @com.aliyun.core.annotation.NameInMap("nodeAmount")
         private Integer nodeAmount;
 
-        @NameInMap("nodeSpec")
+        @com.aliyun.core.annotation.NameInMap("nodeSpec")
         private NodeSpec nodeSpec;
 
-        @NameInMap("paymentType")
+        @com.aliyun.core.annotation.NameInMap("paymentType")
         private String paymentType;
 
-        @NameInMap("publicDomain")
+        @com.aliyun.core.annotation.NameInMap("publicDomain")
         private String publicDomain;
 
-        @NameInMap("publicPort")
+        @com.aliyun.core.annotation.NameInMap("publicPort")
         private Integer publicPort;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("synonymsDicts")
+        @com.aliyun.core.annotation.NameInMap("synonymsDicts")
         private java.util.List < SynonymsDicts> synonymsDicts;
 
-        @NameInMap("updatedAt")
+        @com.aliyun.core.annotation.NameInMap("updatedAt")
         private String updatedAt;
 
         private Result(Builder builder) {

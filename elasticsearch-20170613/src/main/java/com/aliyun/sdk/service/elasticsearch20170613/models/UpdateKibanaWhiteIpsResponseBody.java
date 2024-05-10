@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateKibanaWhiteIpsResponseBody</p>
  */
 public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private UpdateKibanaWhiteIpsResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
     } 
 
     public static class WhiteIpGroupList extends TeaModel {
-        @NameInMap("groupName")
+        @com.aliyun.core.annotation.NameInMap("groupName")
         private String groupName;
 
-        @NameInMap("ips")
+        @com.aliyun.core.annotation.NameInMap("ips")
         private java.util.List < String > ips;
 
-        @NameInMap("whiteIpType")
+        @com.aliyun.core.annotation.NameInMap("whiteIpType")
         private String whiteIpType;
 
         private WhiteIpGroupList(Builder builder) {
@@ -153,19 +152,19 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
 
     }
     public static class NetworkConfig extends TeaModel {
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("vpcId")
+        @com.aliyun.core.annotation.NameInMap("vpcId")
         private String vpcId;
 
-        @NameInMap("vsArea")
+        @com.aliyun.core.annotation.NameInMap("vsArea")
         private String vsArea;
 
-        @NameInMap("vswitchId")
+        @com.aliyun.core.annotation.NameInMap("vswitchId")
         private String vswitchId;
 
-        @NameInMap("whiteIpGroupList")
+        @com.aliyun.core.annotation.NameInMap("whiteIpGroupList")
         private java.util.List < WhiteIpGroupList> whiteIpGroupList;
 
         private NetworkConfig(Builder builder) {
@@ -274,13 +273,13 @@ public class UpdateKibanaWhiteIpsResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("kibanaIPWhitelist")
+        @com.aliyun.core.annotation.NameInMap("kibanaIPWhitelist")
         private java.util.List < String > kibanaIPWhitelist;
 
-        @NameInMap("kibanaPrivateIPWhitelist")
+        @com.aliyun.core.annotation.NameInMap("kibanaPrivateIPWhitelist")
         private java.util.List < String > kibanaPrivateIPWhitelist;
 
-        @NameInMap("networkConfig")
+        @com.aliyun.core.annotation.NameInMap("networkConfig")
         private NetworkConfig networkConfig;
 
         private Result(Builder builder) {

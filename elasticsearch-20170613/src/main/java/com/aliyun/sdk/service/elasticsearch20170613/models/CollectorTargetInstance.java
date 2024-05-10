@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,35 +11,35 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CollectorTargetInstance</p>
  */
 public class CollectorTargetInstance extends TeaModel {
-    @NameInMap("configType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("configType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String configType;
 
-    @NameInMap("enableMonitoring")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("enableMonitoring")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean enableMonitoring;
 
-    @NameInMap("hosts")
+    @com.aliyun.core.annotation.NameInMap("hosts")
     private java.util.List < String > hosts;
 
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @NameInMap("instanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("instanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceType;
 
-    @NameInMap("password")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("password")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String password;
 
-    @NameInMap("protocol")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("protocol")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String protocol;
 
-    @NameInMap("userName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("userName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userName;
 
     private CollectorTargetInstance(Builder builder) {

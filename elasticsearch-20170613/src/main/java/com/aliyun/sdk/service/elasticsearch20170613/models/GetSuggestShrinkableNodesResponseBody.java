@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSuggestShrinkableNodesResponseBody</p>
  */
 public class GetSuggestShrinkableNodesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private GetSuggestShrinkableNodesResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class GetSuggestShrinkableNodesResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("host")
+        @com.aliyun.core.annotation.NameInMap("host")
         private String host;
 
-        @NameInMap("port")
+        @com.aliyun.core.annotation.NameInMap("port")
         private Integer port;
 
         private Result(Builder builder) {

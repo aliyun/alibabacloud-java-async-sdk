@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpgradeEngineVersionResponseBody</p>
  */
 public class UpgradeEngineVersionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private UpgradeEngineVersionResponseBody(Builder builder) {
@@ -79,13 +78,13 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
     } 
 
     public static class ValidateResult extends TeaModel {
-        @NameInMap("errorCode")
+        @com.aliyun.core.annotation.NameInMap("errorCode")
         private String errorCode;
 
-        @NameInMap("errorMsg")
+        @com.aliyun.core.annotation.NameInMap("errorMsg")
         private String errorMsg;
 
-        @NameInMap("errorType")
+        @com.aliyun.core.annotation.NameInMap("errorType")
         private String errorType;
 
         private ValidateResult(Builder builder) {
@@ -164,13 +163,13 @@ public class UpgradeEngineVersionResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("validateResult")
+        @com.aliyun.core.annotation.NameInMap("validateResult")
         private java.util.List < ValidateResult> validateResult;
 
-        @NameInMap("validateType")
+        @com.aliyun.core.annotation.NameInMap("validateType")
         private String validateType;
 
         private Result(Builder builder) {

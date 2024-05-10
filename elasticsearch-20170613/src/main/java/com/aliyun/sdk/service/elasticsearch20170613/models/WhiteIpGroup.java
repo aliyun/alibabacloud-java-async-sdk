@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>WhiteIpGroup</p>
  */
 public class WhiteIpGroup extends TeaModel {
-    @NameInMap("WhiteIpType")
+    @com.aliyun.core.annotation.NameInMap("WhiteIpType")
     private String whiteIpType;
 
-    @NameInMap("groupName")
+    @com.aliyun.core.annotation.NameInMap("groupName")
     private String groupName;
 
-    @NameInMap("ips")
+    @com.aliyun.core.annotation.NameInMap("ips")
     private java.util.List < String > ips;
 
     private WhiteIpGroup(Builder builder) {

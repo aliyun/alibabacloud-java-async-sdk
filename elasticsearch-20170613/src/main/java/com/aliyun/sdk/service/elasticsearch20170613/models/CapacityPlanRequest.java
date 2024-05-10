@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CapacityPlanRequest</p>
  */
 public class CapacityPlanRequest extends Request {
-    @Body
-    @NameInMap("complexQueryAvailable")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("complexQueryAvailable")
     private Boolean complexQueryAvailable;
 
-    @Body
-    @NameInMap("dataInfo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dataInfo")
     private java.util.List < DataInfo> dataInfo;
 
-    @Body
-    @NameInMap("metric")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("metric")
     private java.util.List < Metric> metric;
 
-    @Body
-    @NameInMap("usageScenario")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("usageScenario")
     private String usageScenario;
 
     private CapacityPlanRequest(Builder builder) {
@@ -139,19 +138,19 @@ public class CapacityPlanRequest extends Request {
     } 
 
     public static class DataInfo extends TeaModel {
-        @NameInMap("code")
+        @com.aliyun.core.annotation.NameInMap("code")
         private String code;
 
-        @NameInMap("size")
+        @com.aliyun.core.annotation.NameInMap("size")
         private Long size;
 
-        @NameInMap("totalCount")
+        @com.aliyun.core.annotation.NameInMap("totalCount")
         private Integer totalCount;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("unit")
+        @com.aliyun.core.annotation.NameInMap("unit")
         private String unit;
 
         private DataInfo(Builder builder) {
@@ -260,25 +259,25 @@ public class CapacityPlanRequest extends Request {
 
     }
     public static class Metric extends TeaModel {
-        @NameInMap("averageQps")
+        @com.aliyun.core.annotation.NameInMap("averageQps")
         private Integer averageQps;
 
-        @NameInMap("code")
+        @com.aliyun.core.annotation.NameInMap("code")
         private String code;
 
-        @NameInMap("concurrent")
+        @com.aliyun.core.annotation.NameInMap("concurrent")
         private Long concurrent;
 
-        @NameInMap("peakQps")
+        @com.aliyun.core.annotation.NameInMap("peakQps")
         private Integer peakQps;
 
-        @NameInMap("responseTime")
+        @com.aliyun.core.annotation.NameInMap("responseTime")
         private Integer responseTime;
 
-        @NameInMap("throughput")
+        @com.aliyun.core.annotation.NameInMap("throughput")
         private Long throughput;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Metric(Builder builder) {

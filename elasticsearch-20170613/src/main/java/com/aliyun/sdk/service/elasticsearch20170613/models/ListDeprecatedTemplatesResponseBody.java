@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDeprecatedTemplatesResponseBody</p>
  */
 public class ListDeprecatedTemplatesResponseBody extends TeaModel {
-    @NameInMap("Headers")
+    @com.aliyun.core.annotation.NameInMap("Headers")
     private Headers headers;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private ListDeprecatedTemplatesResponseBody(Builder builder) {
@@ -92,7 +91,7 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
     } 
 
     public static class Headers extends TeaModel {
-        @NameInMap("X-Total-Count")
+        @com.aliyun.core.annotation.NameInMap("X-Total-Count")
         private Long xTotalCount;
 
         private Headers(Builder builder) {
@@ -133,13 +132,13 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
 
     }
     public static class Template extends TeaModel {
-        @NameInMap("aliases")
+        @com.aliyun.core.annotation.NameInMap("aliases")
         private String aliases;
 
-        @NameInMap("mappings")
+        @com.aliyun.core.annotation.NameInMap("mappings")
         private String mappings;
 
-        @NameInMap("settings")
+        @com.aliyun.core.annotation.NameInMap("settings")
         private String settings;
 
         private Template(Builder builder) {
@@ -214,22 +213,22 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("dataStream")
+        @com.aliyun.core.annotation.NameInMap("dataStream")
         private Boolean dataStream;
 
-        @NameInMap("indexPatterns")
+        @com.aliyun.core.annotation.NameInMap("indexPatterns")
         private java.util.List < String > indexPatterns;
 
-        @NameInMap("indexTemplate")
+        @com.aliyun.core.annotation.NameInMap("indexTemplate")
         private String indexTemplate;
 
-        @NameInMap("order")
+        @com.aliyun.core.annotation.NameInMap("order")
         private Long order;
 
-        @NameInMap("template")
+        @com.aliyun.core.annotation.NameInMap("template")
         private Template template;
 
-        @NameInMap("version")
+        @com.aliyun.core.annotation.NameInMap("version")
         private String version;
 
         private Result(Builder builder) {

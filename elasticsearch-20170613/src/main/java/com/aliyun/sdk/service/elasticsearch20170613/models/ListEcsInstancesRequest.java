@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListEcsInstancesRequest</p>
  */
 public class ListEcsInstancesRequest extends Request {
-    @Query
-    @NameInMap("ecsInstanceIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ecsInstanceIds")
     private String ecsInstanceIds;
 
-    @Query
-    @NameInMap("ecsInstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ecsInstanceName")
     private String ecsInstanceName;
 
-    @Query
-    @NameInMap("page")
-    @Validation(maximum = 200, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page")
+    @com.aliyun.core.annotation.Validation(maximum = 200, minimum = 1)
     private Integer page;
 
-    @Query
-    @NameInMap("size")
-    @Validation(maximum = 500, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("size")
+    @com.aliyun.core.annotation.Validation(maximum = 500, minimum = 1)
     private Integer size;
 
-    @Query
-    @NameInMap("tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("tags")
     private String tags;
 
-    @Query
-    @NameInMap("vpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("vpcId")
     private String vpcId;
 
     private ListEcsInstancesRequest(Builder builder) {

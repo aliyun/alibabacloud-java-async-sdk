@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>MigrationJob</p>
  */
 public class MigrationJob extends TeaModel {
-    @NameInMap("currentState")
+    @com.aliyun.core.annotation.NameInMap("currentState")
     private String currentState;
 
-    @NameInMap("disableSourceClusterAuth")
+    @com.aliyun.core.annotation.NameInMap("disableSourceClusterAuth")
     private Boolean disableSourceClusterAuth;
 
-    @NameInMap("disableTargetClusterAuth")
+    @com.aliyun.core.annotation.NameInMap("disableTargetClusterAuth")
     private Boolean disableTargetClusterAuth;
 
-    @NameInMap("endTime")
+    @com.aliyun.core.annotation.NameInMap("endTime")
     private Long endTime;
 
-    @NameInMap("migrationJobId")
+    @com.aliyun.core.annotation.NameInMap("migrationJobId")
     private String migrationJobId;
 
-    @NameInMap("phase")
+    @com.aliyun.core.annotation.NameInMap("phase")
     private String phase;
 
-    @NameInMap("sourceCluster")
+    @com.aliyun.core.annotation.NameInMap("sourceCluster")
     private SourceCluster sourceCluster;
 
-    @NameInMap("startTime")
+    @com.aliyun.core.annotation.NameInMap("startTime")
     private Long startTime;
 
-    @NameInMap("statusResult")
+    @com.aliyun.core.annotation.NameInMap("statusResult")
     private java.util.List < StatusResult> statusResult;
 
-    @NameInMap("targetCluster")
+    @com.aliyun.core.annotation.NameInMap("targetCluster")
     private TargetCluster targetCluster;
 
-    @NameInMap("updateTime")
+    @com.aliyun.core.annotation.NameInMap("updateTime")
     private Long updateTime;
 
     private MigrationJob(Builder builder) {
@@ -252,10 +251,10 @@ public class MigrationJob extends TeaModel {
     } 
 
     public static class SourceCluster extends TeaModel {
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private SourceCluster(Builder builder) {
@@ -313,10 +312,10 @@ public class MigrationJob extends TeaModel {
 
     }
     public static class StatusResult extends TeaModel {
-        @NameInMap("code")
+        @com.aliyun.core.annotation.NameInMap("code")
         private String code;
 
-        @NameInMap("success")
+        @com.aliyun.core.annotation.NameInMap("success")
         private Boolean success;
 
         private StatusResult(Builder builder) {
@@ -374,10 +373,10 @@ public class MigrationJob extends TeaModel {
 
     }
     public static class TargetCluster extends TeaModel {
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private TargetCluster(Builder builder) {

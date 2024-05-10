@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRegionsResponseBody</p>
  */
 public class DescribeRegionsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private DescribeRegionsResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribeRegionsResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("consoleEndpoint")
+        @com.aliyun.core.annotation.NameInMap("consoleEndpoint")
         private String consoleEndpoint;
 
-        @NameInMap("localName")
+        @com.aliyun.core.annotation.NameInMap("localName")
         private String localName;
 
-        @NameInMap("regionEndpoint")
+        @com.aliyun.core.annotation.NameInMap("regionEndpoint")
         private String regionEndpoint;
 
-        @NameInMap("regionId")
+        @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
         private Result(Builder builder) {

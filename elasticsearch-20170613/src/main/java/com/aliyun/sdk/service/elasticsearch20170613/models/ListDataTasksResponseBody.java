@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDataTasksResponseBody</p>
  */
 public class ListDataTasksResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private ListDataTasksResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class ListDataTasksResponseBody extends TeaModel {
     } 
 
     public static class SinkCluster extends TeaModel {
-        @NameInMap("dataSourceType")
+        @com.aliyun.core.annotation.NameInMap("dataSourceType")
         private String dataSourceType;
 
-        @NameInMap("endpoint")
+        @com.aliyun.core.annotation.NameInMap("endpoint")
         private String endpoint;
 
-        @NameInMap("index")
+        @com.aliyun.core.annotation.NameInMap("index")
         private String index;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("vpcId")
+        @com.aliyun.core.annotation.NameInMap("vpcId")
         private String vpcId;
 
-        @NameInMap("vpcInstanceId")
+        @com.aliyun.core.annotation.NameInMap("vpcInstanceId")
         private String vpcInstanceId;
 
-        @NameInMap("vpcInstancePort")
+        @com.aliyun.core.annotation.NameInMap("vpcInstancePort")
         private String vpcInstancePort;
 
         private SinkCluster(Builder builder) {
@@ -233,22 +232,22 @@ public class ListDataTasksResponseBody extends TeaModel {
 
     }
     public static class SourceCluster extends TeaModel {
-        @NameInMap("dataSourceType")
+        @com.aliyun.core.annotation.NameInMap("dataSourceType")
         private String dataSourceType;
 
-        @NameInMap("index")
+        @com.aliyun.core.annotation.NameInMap("index")
         private String index;
 
-        @NameInMap("mapping")
+        @com.aliyun.core.annotation.NameInMap("mapping")
         private String mapping;
 
-        @NameInMap("routing")
+        @com.aliyun.core.annotation.NameInMap("routing")
         private String routing;
 
-        @NameInMap("settings")
+        @com.aliyun.core.annotation.NameInMap("settings")
         private String settings;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private SourceCluster(Builder builder) {
@@ -374,19 +373,19 @@ public class ListDataTasksResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
 
-        @NameInMap("sinkCluster")
+        @com.aliyun.core.annotation.NameInMap("sinkCluster")
         private SinkCluster sinkCluster;
 
-        @NameInMap("sourceCluster")
+        @com.aliyun.core.annotation.NameInMap("sourceCluster")
         private SourceCluster sourceCluster;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("taskId")
+        @com.aliyun.core.annotation.NameInMap("taskId")
         private String taskId;
 
         private Result(Builder builder) {

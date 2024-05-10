@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListKibanaPvlNetworkResponseBody</p>
  */
 public class ListKibanaPvlNetworkResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private ListKibanaPvlNetworkResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
     } 
 
     public static class VSwitchIdsZone extends TeaModel {
-        @NameInMap("vswitchId")
+        @com.aliyun.core.annotation.NameInMap("vswitchId")
         private String vswitchId;
 
-        @NameInMap("zoneId")
+        @com.aliyun.core.annotation.NameInMap("zoneId")
         private String zoneId;
 
         private VSwitchIdsZone(Builder builder) {
@@ -133,28 +132,28 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
 
-        @NameInMap("endpointId")
+        @com.aliyun.core.annotation.NameInMap("endpointId")
         private String endpointId;
 
-        @NameInMap("endpointName")
+        @com.aliyun.core.annotation.NameInMap("endpointName")
         private String endpointName;
 
-        @NameInMap("endpointStatus")
+        @com.aliyun.core.annotation.NameInMap("endpointStatus")
         private String endpointStatus;
 
-        @NameInMap("pvlId")
+        @com.aliyun.core.annotation.NameInMap("pvlId")
         private String pvlId;
 
-        @NameInMap("securityGroups")
+        @com.aliyun.core.annotation.NameInMap("securityGroups")
         private java.util.List < String > securityGroups;
 
-        @NameInMap("vSwitchIdsZone")
+        @com.aliyun.core.annotation.NameInMap("vSwitchIdsZone")
         private java.util.List < VSwitchIdsZone> vSwitchIdsZone;
 
-        @NameInMap("vpcId")
+        @com.aliyun.core.annotation.NameInMap("vpcId")
         private String vpcId;
 
         private Result(Builder builder) {

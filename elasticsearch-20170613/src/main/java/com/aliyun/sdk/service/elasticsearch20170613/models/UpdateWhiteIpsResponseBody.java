@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateWhiteIpsResponseBody</p>
  */
 public class UpdateWhiteIpsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private UpdateWhiteIpsResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
     } 
 
     public static class WhiteIpGroupList extends TeaModel {
-        @NameInMap("groupName")
+        @com.aliyun.core.annotation.NameInMap("groupName")
         private String groupName;
 
-        @NameInMap("ips")
+        @com.aliyun.core.annotation.NameInMap("ips")
         private java.util.List < String > ips;
 
-        @NameInMap("whiteIpType")
+        @com.aliyun.core.annotation.NameInMap("whiteIpType")
         private String whiteIpType;
 
         private WhiteIpGroupList(Builder builder) {
@@ -153,7 +152,7 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
 
     }
     public static class NetworkConfig extends TeaModel {
-        @NameInMap("whiteIpGroupList")
+        @com.aliyun.core.annotation.NameInMap("whiteIpGroupList")
         private java.util.List < WhiteIpGroupList> whiteIpGroupList;
 
         private NetworkConfig(Builder builder) {
@@ -194,10 +193,10 @@ public class UpdateWhiteIpsResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("esIPWhitelist")
+        @com.aliyun.core.annotation.NameInMap("esIPWhitelist")
         private java.util.List < String > esIPWhitelist;
 
-        @NameInMap("networkConfig")
+        @com.aliyun.core.annotation.NameInMap("networkConfig")
         private NetworkConfig networkConfig;
 
         private Result(Builder builder) {

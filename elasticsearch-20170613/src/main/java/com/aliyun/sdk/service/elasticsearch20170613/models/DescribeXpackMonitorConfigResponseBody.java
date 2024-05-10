@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeXpackMonitorConfigResponseBody</p>
  */
 public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private DescribeXpackMonitorConfigResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribeXpackMonitorConfigResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("enable")
+        @com.aliyun.core.annotation.NameInMap("enable")
         private Boolean enable;
 
-        @NameInMap("endpoints")
+        @com.aliyun.core.annotation.NameInMap("endpoints")
         private java.util.List < String > endpoints;
 
-        @NameInMap("esInstanceId")
+        @com.aliyun.core.annotation.NameInMap("esInstanceId")
         private String esInstanceId;
 
-        @NameInMap("pipelineIds")
+        @com.aliyun.core.annotation.NameInMap("pipelineIds")
         private java.util.List < String > pipelineIds;
 
-        @NameInMap("userName")
+        @com.aliyun.core.annotation.NameInMap("userName")
         private String userName;
 
         private Result(Builder builder) {

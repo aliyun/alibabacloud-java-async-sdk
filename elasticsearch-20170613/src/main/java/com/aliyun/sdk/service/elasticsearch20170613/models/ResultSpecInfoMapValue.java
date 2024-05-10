@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ResultSpecInfoMapValue</p>
  */
 public class ResultSpecInfoMapValue extends TeaModel {
-    @NameInMap("cpuCount")
+    @com.aliyun.core.annotation.NameInMap("cpuCount")
     private String cpuCount;
 
-    @NameInMap("memorySize")
+    @com.aliyun.core.annotation.NameInMap("memorySize")
     private String memorySize;
 
-    @NameInMap("enable")
+    @com.aliyun.core.annotation.NameInMap("enable")
     private String enable;
 
-    @NameInMap("spec")
+    @com.aliyun.core.annotation.NameInMap("spec")
     private String spec;
 
-    @NameInMap("specGroupType")
+    @com.aliyun.core.annotation.NameInMap("specGroupType")
     private String specGroupType;
 
-    @NameInMap("disk")
+    @com.aliyun.core.annotation.NameInMap("disk")
     private String disk;
 
-    @NameInMap("diskType")
+    @com.aliyun.core.annotation.NameInMap("diskType")
     private String diskType;
 
     private ResultSpecInfoMapValue(Builder builder) {

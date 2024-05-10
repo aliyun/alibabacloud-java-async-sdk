@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDiagnoseReportIdsRequest</p>
  */
 public class ListDiagnoseReportIdsRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("endTime")
-    @Validation(required = true, maximum = 2000000000000D, minimum = 1000000000000D)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("endTime")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 2000000000000D, minimum = 1000000000000D)
     private Long endTime;
 
-    @Query
-    @NameInMap("lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("lang")
     private String lang;
 
-    @Query
-    @NameInMap("page")
-    @Validation(maximum = 200, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page")
+    @com.aliyun.core.annotation.Validation(maximum = 200, minimum = 1)
     private Integer page;
 
-    @Query
-    @NameInMap("size")
-    @Validation(maximum = 500, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("size")
+    @com.aliyun.core.annotation.Validation(maximum = 500, minimum = 1)
     private Integer size;
 
-    @Query
-    @NameInMap("startTime")
-    @Validation(required = true, maximum = 2000000000000D, minimum = 1000000000000D)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("startTime")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 2000000000000D, minimum = 1000000000000D)
     private Long startTime;
 
-    @Query
-    @NameInMap("trigger")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("trigger")
     private String trigger;
 
     private ListDiagnoseReportIdsRequest(Builder builder) {

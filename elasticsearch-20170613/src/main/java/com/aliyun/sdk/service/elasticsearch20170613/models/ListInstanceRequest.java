@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,48 +11,48 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstanceRequest</p>
  */
 public class ListInstanceRequest extends Request {
-    @Query
-    @NameInMap("description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @Query
-    @NameInMap("esVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("esVersion")
     private String esVersion;
 
-    @Query
-    @NameInMap("instanceCategory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("instanceCategory")
     private String instanceCategory;
 
-    @Query
-    @NameInMap("instanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("instanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("page")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page")
     private Integer page;
 
-    @Query
-    @NameInMap("paymentType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("paymentType")
     private String paymentType;
 
-    @Query
-    @NameInMap("resourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("size")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("size")
     private Integer size;
 
-    @Query
-    @NameInMap("tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("tags")
     private String tags;
 
-    @Query
-    @NameInMap("vpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("vpcId")
     private String vpcId;
 
-    @Query
-    @NameInMap("zoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("zoneId")
     private String zoneId;
 
     private ListInstanceRequest(Builder builder) {

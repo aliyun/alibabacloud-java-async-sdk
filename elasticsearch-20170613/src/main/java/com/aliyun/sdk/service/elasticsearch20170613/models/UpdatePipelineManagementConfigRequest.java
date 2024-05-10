@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdatePipelineManagementConfigRequest</p>
  */
 public class UpdatePipelineManagementConfigRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("endpoints")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("endpoints")
     private java.util.List < String > endpoints;
 
-    @Body
-    @NameInMap("password")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("password")
     private String password;
 
-    @Body
-    @NameInMap("pipelineIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("pipelineIds")
     private java.util.List < String > pipelineIds;
 
-    @Body
-    @NameInMap("pipelineManagementType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("pipelineManagementType")
     private String pipelineManagementType;
 
-    @Body
-    @NameInMap("userName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("userName")
     private String userName;
 
-    @Query
-    @NameInMap("clientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
     private UpdatePipelineManagementConfigRequest(Builder builder) {

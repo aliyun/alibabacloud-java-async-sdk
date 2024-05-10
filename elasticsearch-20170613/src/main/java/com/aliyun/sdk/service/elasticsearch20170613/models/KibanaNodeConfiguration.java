@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,15 +11,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>KibanaNodeConfiguration</p>
  */
 public class KibanaNodeConfiguration extends TeaModel {
-    @NameInMap("amount")
-    @Validation(maximum = 1, minimum = 1)
+    @com.aliyun.core.annotation.NameInMap("amount")
+    @com.aliyun.core.annotation.Validation(maximum = 1, minimum = 1)
     private Long amount;
 
-    @NameInMap("disk")
+    @com.aliyun.core.annotation.NameInMap("disk")
     private Long disk;
 
-    @NameInMap("spec")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("spec")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String spec;
 
     private KibanaNodeConfiguration(Builder builder) {

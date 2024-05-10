@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>EnableKibanaPvlNetworkRequest</p>
  */
 public class EnableKibanaPvlNetworkRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("endpointName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("endpointName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endpointName;
 
-    @Body
-    @NameInMap("securityGroups")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("securityGroups")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > securityGroups;
 
-    @Body
-    @NameInMap("vSwitchIdsZone")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("vSwitchIdsZone")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < VSwitchIdsZone> vSwitchIdsZone;
 
-    @Body
-    @NameInMap("vpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("vpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
     private EnableKibanaPvlNetworkRequest(Builder builder) {
@@ -167,12 +166,12 @@ public class EnableKibanaPvlNetworkRequest extends Request {
     } 
 
     public static class VSwitchIdsZone extends TeaModel {
-        @NameInMap("vswitchId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("vswitchId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String vswitchId;
 
-        @NameInMap("zoneId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("zoneId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String zoneId;
 
         private VSwitchIdsZone(Builder builder) {

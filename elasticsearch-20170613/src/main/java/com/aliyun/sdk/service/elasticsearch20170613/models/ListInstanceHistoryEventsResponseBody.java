@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstanceHistoryEventsResponseBody</p>
  */
 public class ListInstanceHistoryEventsResponseBody extends TeaModel {
-    @NameInMap("Headers")
+    @com.aliyun.core.annotation.NameInMap("Headers")
     private Headers headers;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private ListInstanceHistoryEventsResponseBody(Builder builder) {
@@ -92,13 +91,13 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
     } 
 
     public static class Headers extends TeaModel {
-        @NameInMap("X-Total-Count")
+        @com.aliyun.core.annotation.NameInMap("X-Total-Count")
         private Long xTotalCount;
 
-        @NameInMap("X-Total-Failed")
+        @com.aliyun.core.annotation.NameInMap("X-Total-Failed")
         private Long xTotalFailed;
 
-        @NameInMap("X-Total-Success")
+        @com.aliyun.core.annotation.NameInMap("X-Total-Success")
         private Long xTotalSuccess;
 
         private Headers(Builder builder) {
@@ -173,34 +172,34 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("ecsId")
+        @com.aliyun.core.annotation.NameInMap("ecsId")
         private String ecsId;
 
-        @NameInMap("eventCreateTime")
+        @com.aliyun.core.annotation.NameInMap("eventCreateTime")
         private String eventCreateTime;
 
-        @NameInMap("eventCycleStatus")
+        @com.aliyun.core.annotation.NameInMap("eventCycleStatus")
         private String eventCycleStatus;
 
-        @NameInMap("eventExecuteTime")
+        @com.aliyun.core.annotation.NameInMap("eventExecuteTime")
         private String eventExecuteTime;
 
-        @NameInMap("eventFinashTime")
+        @com.aliyun.core.annotation.NameInMap("eventFinashTime")
         private String eventFinashTime;
 
-        @NameInMap("eventLevel")
+        @com.aliyun.core.annotation.NameInMap("eventLevel")
         private String eventLevel;
 
-        @NameInMap("eventType")
+        @com.aliyun.core.annotation.NameInMap("eventType")
         private String eventType;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
-        @NameInMap("nodeIP")
+        @com.aliyun.core.annotation.NameInMap("nodeIP")
         private String nodeIP;
 
-        @NameInMap("regionId")
+        @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
 
         private Result(Builder builder) {

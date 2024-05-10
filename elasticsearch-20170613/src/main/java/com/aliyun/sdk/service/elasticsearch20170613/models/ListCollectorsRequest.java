@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCollectorsRequest</p>
  */
 public class ListCollectorsRequest extends Request {
-    @Query
-    @NameInMap("instanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("instanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @Query
-    @NameInMap("page")
-    @Validation(maximum = 200, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page")
+    @com.aliyun.core.annotation.Validation(maximum = 200, minimum = 1)
     private Integer page;
 
-    @Query
-    @NameInMap("resId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("resId")
     private String resId;
 
-    @Query
-    @NameInMap("size")
-    @Validation(maximum = 500, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("size")
+    @com.aliyun.core.annotation.Validation(maximum = 500, minimum = 1)
     private Integer size;
 
-    @Query
-    @NameInMap("sourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("sourceType")
     private String sourceType;
 
     private ListCollectorsRequest(Builder builder) {

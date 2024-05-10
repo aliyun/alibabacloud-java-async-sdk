@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,41 +11,41 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateIndexTemplateRequest</p>
  */
 public class CreateIndexTemplateRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("dataStream")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dataStream")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean dataStream;
 
-    @Body
-    @NameInMap("ilmPolicy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ilmPolicy")
     private String ilmPolicy;
 
-    @Body
-    @NameInMap("indexPatterns")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("indexPatterns")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > indexPatterns;
 
-    @Body
-    @NameInMap("indexTemplate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("indexTemplate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String indexTemplate;
 
-    @Body
-    @NameInMap("priority")
-    @Validation(maximum = 2147483647)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("priority")
+    @com.aliyun.core.annotation.Validation(maximum = 2147483647)
     private Integer priority;
 
-    @Body
-    @NameInMap("template")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("template")
     private Template template;
 
     private CreateIndexTemplateRequest(Builder builder) {
@@ -236,13 +235,13 @@ public class CreateIndexTemplateRequest extends Request {
     } 
 
     public static class Template extends TeaModel {
-        @NameInMap("aliases")
+        @com.aliyun.core.annotation.NameInMap("aliases")
         private String aliases;
 
-        @NameInMap("mappings")
+        @com.aliyun.core.annotation.NameInMap("mappings")
         private String mappings;
 
-        @NameInMap("settings")
+        @com.aliyun.core.annotation.NameInMap("settings")
         private String settings;
 
         private Template(Builder builder) {

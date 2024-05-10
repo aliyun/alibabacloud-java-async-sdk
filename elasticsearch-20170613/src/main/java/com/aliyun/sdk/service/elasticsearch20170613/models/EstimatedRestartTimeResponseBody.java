@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>EstimatedRestartTimeResponseBody</p>
  */
 public class EstimatedRestartTimeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private EstimatedRestartTimeResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class EstimatedRestartTimeResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("unit")
+        @com.aliyun.core.annotation.NameInMap("unit")
         private String unit;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private Long value;
 
         private Result(Builder builder) {

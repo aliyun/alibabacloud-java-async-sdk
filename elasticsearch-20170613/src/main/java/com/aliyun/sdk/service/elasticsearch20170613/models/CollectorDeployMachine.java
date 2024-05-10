@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CollectorDeployMachine</p>
  */
 public class CollectorDeployMachine extends TeaModel {
-    @NameInMap("configType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("configType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String configType;
 
-    @NameInMap("groupId")
+    @com.aliyun.core.annotation.NameInMap("groupId")
     private String groupId;
 
-    @NameInMap("instanceId")
+    @com.aliyun.core.annotation.NameInMap("instanceId")
     private String instanceId;
 
-    @NameInMap("machines")
+    @com.aliyun.core.annotation.NameInMap("machines")
     private java.util.List < Machines> machines;
 
-    @NameInMap("successPodsCount")
+    @com.aliyun.core.annotation.NameInMap("successPodsCount")
     private String successPodsCount;
 
-    @NameInMap("totalPodsCount")
+    @com.aliyun.core.annotation.NameInMap("totalPodsCount")
     private String totalPodsCount;
 
-    @NameInMap("type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private CollectorDeployMachine(Builder builder) {
@@ -174,10 +173,10 @@ public class CollectorDeployMachine extends TeaModel {
     } 
 
     public static class Machines extends TeaModel {
-        @NameInMap("agentStatus")
+        @com.aliyun.core.annotation.NameInMap("agentStatus")
         private String agentStatus;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
         private Machines(Builder builder) {

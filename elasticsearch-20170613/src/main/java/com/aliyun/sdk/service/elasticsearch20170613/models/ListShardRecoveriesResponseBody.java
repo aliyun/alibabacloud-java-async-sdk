@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListShardRecoveriesResponseBody</p>
  */
 public class ListShardRecoveriesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private ListShardRecoveriesResponseBody(Builder builder) {
@@ -72,40 +71,40 @@ public class ListShardRecoveriesResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("bytesPercent")
+        @com.aliyun.core.annotation.NameInMap("bytesPercent")
         private String bytesPercent;
 
-        @NameInMap("bytesTotal")
+        @com.aliyun.core.annotation.NameInMap("bytesTotal")
         private Long bytesTotal;
 
-        @NameInMap("filesPercent")
+        @com.aliyun.core.annotation.NameInMap("filesPercent")
         private String filesPercent;
 
-        @NameInMap("filesTotal")
+        @com.aliyun.core.annotation.NameInMap("filesTotal")
         private Long filesTotal;
 
-        @NameInMap("index")
+        @com.aliyun.core.annotation.NameInMap("index")
         private String index;
 
-        @NameInMap("sourceHost")
+        @com.aliyun.core.annotation.NameInMap("sourceHost")
         private String sourceHost;
 
-        @NameInMap("sourceNode")
+        @com.aliyun.core.annotation.NameInMap("sourceNode")
         private String sourceNode;
 
-        @NameInMap("stage")
+        @com.aliyun.core.annotation.NameInMap("stage")
         private String stage;
 
-        @NameInMap("targetHost")
+        @com.aliyun.core.annotation.NameInMap("targetHost")
         private String targetHost;
 
-        @NameInMap("targetNode")
+        @com.aliyun.core.annotation.NameInMap("targetNode")
         private String targetNode;
 
-        @NameInMap("translogOps")
+        @com.aliyun.core.annotation.NameInMap("translogOps")
         private Long translogOps;
 
-        @NameInMap("translogOpsPercent")
+        @com.aliyun.core.annotation.NameInMap("translogOpsPercent")
         private String translogOpsPercent;
 
         private Result(Builder builder) {

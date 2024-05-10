@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSuggestShrinkableNodesRequest</p>
  */
 public class GetSuggestShrinkableNodesRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("count")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("count")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer count;
 
-    @Query
-    @NameInMap("ignoreStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ignoreStatus")
     private Boolean ignoreStatus;
 
-    @Query
-    @NameInMap("nodeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("nodeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodeType;
 
     private GetSuggestShrinkableNodesRequest(Builder builder) {

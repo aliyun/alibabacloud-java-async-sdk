@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListExtendfilesResponseBody</p>
  */
 public class ListExtendfilesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private ListExtendfilesResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class ListExtendfilesResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("filePath")
+        @com.aliyun.core.annotation.NameInMap("filePath")
         private String filePath;
 
-        @NameInMap("fileSize")
+        @com.aliyun.core.annotation.NameInMap("fileSize")
         private Long fileSize;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("sourceType")
+        @com.aliyun.core.annotation.NameInMap("sourceType")
         private String sourceType;
 
         private Result(Builder builder) {

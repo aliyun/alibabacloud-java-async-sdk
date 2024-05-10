@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListLogstashPluginsRequest</p>
  */
 public class ListLogstashPluginsRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @Query
-    @NameInMap("page")
-    @Validation(maximum = 200, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page")
+    @com.aliyun.core.annotation.Validation(maximum = 200, minimum = 1)
     private Integer page;
 
-    @Query
-    @NameInMap("size")
-    @Validation(maximum = 200, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("size")
+    @com.aliyun.core.annotation.Validation(maximum = 200, minimum = 1)
     private Integer size;
 
-    @Query
-    @NameInMap("source")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("source")
     private String source;
 
     private ListLogstashPluginsRequest(Builder builder) {

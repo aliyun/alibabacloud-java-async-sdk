@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateVpcEndpointResponseBody</p>
  */
 public class CreateVpcEndpointResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private CreateVpcEndpointResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("endpointDomain")
+        @com.aliyun.core.annotation.NameInMap("endpointDomain")
         private String endpointDomain;
 
-        @NameInMap("endpointId")
+        @com.aliyun.core.annotation.NameInMap("endpointId")
         private String endpointId;
 
-        @NameInMap("endpointName")
+        @com.aliyun.core.annotation.NameInMap("endpointName")
         private String endpointName;
 
-        @NameInMap("serviceId")
+        @com.aliyun.core.annotation.NameInMap("serviceId")
         private String serviceId;
 
         private Result(Builder builder) {

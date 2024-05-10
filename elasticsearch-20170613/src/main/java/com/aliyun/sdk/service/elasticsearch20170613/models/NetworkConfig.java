@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>NetworkConfig</p>
  */
 public class NetworkConfig extends TeaModel {
-    @NameInMap("type")
+    @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
-    @NameInMap("vpcId")
+    @com.aliyun.core.annotation.NameInMap("vpcId")
     private String vpcId;
 
-    @NameInMap("vsArea")
+    @com.aliyun.core.annotation.NameInMap("vsArea")
     private String vsArea;
 
-    @NameInMap("vswitchId")
+    @com.aliyun.core.annotation.NameInMap("vswitchId")
     private String vswitchId;
 
-    @NameInMap("whiteIpGroupList")
+    @com.aliyun.core.annotation.NameInMap("whiteIpGroupList")
     private java.util.List < WhiteIpGroup > whiteIpGroupList;
 
     private NetworkConfig(Builder builder) {

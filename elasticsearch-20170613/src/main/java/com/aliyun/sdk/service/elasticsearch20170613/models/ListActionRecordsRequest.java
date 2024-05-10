@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListActionRecordsRequest</p>
  */
 public class ListActionRecordsRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("actionNames")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("actionNames")
     private String actionNames;
 
-    @Query
-    @NameInMap("endTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("endTime")
     private Long endTime;
 
-    @Query
-    @NameInMap("filter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("filter")
     private String filter;
 
-    @Query
-    @NameInMap("page")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page")
     private Integer page;
 
-    @Query
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @Query
-    @NameInMap("size")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("size")
     private Integer size;
 
-    @Query
-    @NameInMap("startTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("startTime")
     private Long startTime;
 
-    @Query
-    @NameInMap("userId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("userId")
     private String userId;
 
     private ListActionRecordsRequest(Builder builder) {

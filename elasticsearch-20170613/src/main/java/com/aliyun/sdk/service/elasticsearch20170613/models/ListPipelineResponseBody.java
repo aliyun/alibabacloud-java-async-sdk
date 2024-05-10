@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPipelineResponseBody</p>
  */
 public class ListPipelineResponseBody extends TeaModel {
-    @NameInMap("Headers")
+    @com.aliyun.core.annotation.NameInMap("Headers")
     private Headers headers;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private ListPipelineResponseBody(Builder builder) {
@@ -92,7 +91,7 @@ public class ListPipelineResponseBody extends TeaModel {
     } 
 
     public static class Headers extends TeaModel {
-        @NameInMap("X-Total-Count")
+        @com.aliyun.core.annotation.NameInMap("X-Total-Count")
         private Integer xTotalCount;
 
         private Headers(Builder builder) {
@@ -133,16 +132,16 @@ public class ListPipelineResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("gmtCreatedTime")
+        @com.aliyun.core.annotation.NameInMap("gmtCreatedTime")
         private String gmtCreatedTime;
 
-        @NameInMap("gmtUpdateTime")
+        @com.aliyun.core.annotation.NameInMap("gmtUpdateTime")
         private String gmtUpdateTime;
 
-        @NameInMap("pipelineId")
+        @com.aliyun.core.annotation.NameInMap("pipelineId")
         private String pipelineId;
 
-        @NameInMap("pipelineStatus")
+        @com.aliyun.core.annotation.NameInMap("pipelineStatus")
         private String pipelineStatus;
 
         private Result(Builder builder) {

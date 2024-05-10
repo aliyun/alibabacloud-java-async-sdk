@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListLogstashPluginsResponseBody</p>
  */
 public class ListLogstashPluginsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private ListLogstashPluginsResponseBody(Builder builder) {
@@ -81,19 +80,19 @@ public class ListLogstashPluginsResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("source")
+        @com.aliyun.core.annotation.NameInMap("source")
         private String source;
 
-        @NameInMap("specificationUrl")
+        @com.aliyun.core.annotation.NameInMap("specificationUrl")
         private String specificationUrl;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
         private Result(Builder builder) {

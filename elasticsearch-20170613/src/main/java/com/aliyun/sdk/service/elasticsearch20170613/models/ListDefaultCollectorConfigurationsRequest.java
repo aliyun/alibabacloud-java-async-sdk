@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDefaultCollectorConfigurationsRequest</p>
  */
 public class ListDefaultCollectorConfigurationsRequest extends Request {
-    @Query
-    @NameInMap("resType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("resType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resType;
 
-    @Query
-    @NameInMap("resVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("resVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resVersion;
 
-    @Query
-    @NameInMap("sourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("sourceType")
     private String sourceType;
 
     private ListDefaultCollectorConfigurationsRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAllNodeResponseBody</p>
  */
 public class ListAllNodeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private ListAllNodeResponseBody(Builder builder) {
@@ -75,31 +74,31 @@ public class ListAllNodeResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("cpuPercent")
+        @com.aliyun.core.annotation.NameInMap("cpuPercent")
         private String cpuPercent;
 
-        @NameInMap("diskUsedPercent")
+        @com.aliyun.core.annotation.NameInMap("diskUsedPercent")
         private String diskUsedPercent;
 
-        @NameInMap("health")
+        @com.aliyun.core.annotation.NameInMap("health")
         private String health;
 
-        @NameInMap("heapPercent")
+        @com.aliyun.core.annotation.NameInMap("heapPercent")
         private String heapPercent;
 
-        @NameInMap("host")
+        @com.aliyun.core.annotation.NameInMap("host")
         private String host;
 
-        @NameInMap("loadOneM")
+        @com.aliyun.core.annotation.NameInMap("loadOneM")
         private String loadOneM;
 
-        @NameInMap("nodeType")
+        @com.aliyun.core.annotation.NameInMap("nodeType")
         private String nodeType;
 
-        @NameInMap("port")
+        @com.aliyun.core.annotation.NameInMap("port")
         private Integer port;
 
-        @NameInMap("zoneId")
+        @com.aliyun.core.annotation.NameInMap("zoneId")
         private String zoneId;
 
         private Result(Builder builder) {

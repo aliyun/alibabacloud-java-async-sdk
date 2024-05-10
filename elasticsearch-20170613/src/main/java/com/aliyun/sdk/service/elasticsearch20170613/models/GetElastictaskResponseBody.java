@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetElastictaskResponseBody</p>
  */
 public class GetElastictaskResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private GetElastictaskResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class GetElastictaskResponseBody extends TeaModel {
     } 
 
     public static class ElasticExpansionTask extends TeaModel {
-        @NameInMap("cronExpression")
+        @com.aliyun.core.annotation.NameInMap("cronExpression")
         private String cronExpression;
 
-        @NameInMap("elasticNodeCount")
+        @com.aliyun.core.annotation.NameInMap("elasticNodeCount")
         private Integer elasticNodeCount;
 
-        @NameInMap("replicaCount")
+        @com.aliyun.core.annotation.NameInMap("replicaCount")
         private Integer replicaCount;
 
-        @NameInMap("targetIndices")
+        @com.aliyun.core.annotation.NameInMap("targetIndices")
         private java.util.List < String > targetIndices;
 
-        @NameInMap("triggerType")
+        @com.aliyun.core.annotation.NameInMap("triggerType")
         private String triggerType;
 
         private ElasticExpansionTask(Builder builder) {
@@ -193,19 +192,19 @@ public class GetElastictaskResponseBody extends TeaModel {
 
     }
     public static class ElasticShrinkTask extends TeaModel {
-        @NameInMap("cronExpression")
+        @com.aliyun.core.annotation.NameInMap("cronExpression")
         private String cronExpression;
 
-        @NameInMap("elasticNodeCount")
+        @com.aliyun.core.annotation.NameInMap("elasticNodeCount")
         private Integer elasticNodeCount;
 
-        @NameInMap("replicaCount")
+        @com.aliyun.core.annotation.NameInMap("replicaCount")
         private Integer replicaCount;
 
-        @NameInMap("targetIndices")
+        @com.aliyun.core.annotation.NameInMap("targetIndices")
         private java.util.List < String > targetIndices;
 
-        @NameInMap("triggerType")
+        @com.aliyun.core.annotation.NameInMap("triggerType")
         private String triggerType;
 
         private ElasticShrinkTask(Builder builder) {
@@ -314,10 +313,10 @@ public class GetElastictaskResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("elasticExpansionTask")
+        @com.aliyun.core.annotation.NameInMap("elasticExpansionTask")
         private ElasticExpansionTask elasticExpansionTask;
 
-        @NameInMap("elasticShrinkTask")
+        @com.aliyun.core.annotation.NameInMap("elasticShrinkTask")
         private ElasticShrinkTask elasticShrinkTask;
 
         private Result(Builder builder) {

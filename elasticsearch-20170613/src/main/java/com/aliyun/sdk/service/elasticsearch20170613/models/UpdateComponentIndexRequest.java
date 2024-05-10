@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateComponentIndexRequest</p>
  */
 public class UpdateComponentIndexRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("_meta")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("_meta")
     private java.util.Map < String, ? > meta;
 
-    @Body
-    @NameInMap("template")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("template")
     private Template template;
 
     private UpdateComponentIndexRequest(Builder builder) {
@@ -141,13 +140,13 @@ public class UpdateComponentIndexRequest extends Request {
     } 
 
     public static class Template extends TeaModel {
-        @NameInMap("aliases")
+        @com.aliyun.core.annotation.NameInMap("aliases")
         private java.util.Map < String, ? > aliases;
 
-        @NameInMap("mappings")
+        @com.aliyun.core.annotation.NameInMap("mappings")
         private java.util.Map < String, ? > mappings;
 
-        @NameInMap("settings")
+        @com.aliyun.core.annotation.NameInMap("settings")
         private java.util.Map < String, ? > settings;
 
         private Template(Builder builder) {

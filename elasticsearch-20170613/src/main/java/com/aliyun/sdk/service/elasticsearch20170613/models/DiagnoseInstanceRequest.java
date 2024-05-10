@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DiagnoseInstanceRequest</p>
  */
 public class DiagnoseInstanceRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("diagnoseItems")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("diagnoseItems")
     private java.util.List < String > diagnoseItems;
 
-    @Body
-    @NameInMap("indices")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("indices")
     private java.util.List < String > indices;
 
-    @Body
-    @NameInMap("type")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
-    @Query
-    @NameInMap("lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("lang")
     private String lang;
 
     private DiagnoseInstanceRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListNodesResponseBody</p>
  */
 public class ListNodesResponseBody extends TeaModel {
-    @NameInMap("Headers")
+    @com.aliyun.core.annotation.NameInMap("Headers")
     private Headers headers;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private ListNodesResponseBody(Builder builder) {
@@ -92,7 +91,7 @@ public class ListNodesResponseBody extends TeaModel {
     } 
 
     public static class Headers extends TeaModel {
-        @NameInMap("X-Total-Count")
+        @com.aliyun.core.annotation.NameInMap("X-Total-Count")
         private Integer xTotalCount;
 
         private Headers(Builder builder) {
@@ -133,10 +132,10 @@ public class ListNodesResponseBody extends TeaModel {
 
     }
     public static class IpAddress extends TeaModel {
-        @NameInMap("host")
+        @com.aliyun.core.annotation.NameInMap("host")
         private String host;
 
-        @NameInMap("ipType")
+        @com.aliyun.core.annotation.NameInMap("ipType")
         private String ipType;
 
         private IpAddress(Builder builder) {
@@ -198,10 +197,10 @@ public class ListNodesResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("tagKey")
+        @com.aliyun.core.annotation.NameInMap("tagKey")
         private String tagKey;
 
-        @NameInMap("tagValue")
+        @com.aliyun.core.annotation.NameInMap("tagValue")
         private String tagValue;
 
         private Tags(Builder builder) {
@@ -259,28 +258,28 @@ public class ListNodesResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("agentStatus")
+        @com.aliyun.core.annotation.NameInMap("agentStatus")
         private String agentStatus;
 
-        @NameInMap("cloudAssistantStatus")
+        @com.aliyun.core.annotation.NameInMap("cloudAssistantStatus")
         private String cloudAssistantStatus;
 
-        @NameInMap("ecsInstanceId")
+        @com.aliyun.core.annotation.NameInMap("ecsInstanceId")
         private String ecsInstanceId;
 
-        @NameInMap("ecsInstanceName")
+        @com.aliyun.core.annotation.NameInMap("ecsInstanceName")
         private String ecsInstanceName;
 
-        @NameInMap("ipAddress")
+        @com.aliyun.core.annotation.NameInMap("ipAddress")
         private java.util.List < IpAddress> ipAddress;
 
-        @NameInMap("osType")
+        @com.aliyun.core.annotation.NameInMap("osType")
         private String osType;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("tags")
+        @com.aliyun.core.annotation.NameInMap("tags")
         private java.util.List < Tags> tags;
 
         private Result(Builder builder) {

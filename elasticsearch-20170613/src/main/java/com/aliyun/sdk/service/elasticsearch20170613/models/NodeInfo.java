@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>NodeInfo</p>
  */
 public class NodeInfo extends TeaModel {
-    @NameInMap("host")
+    @com.aliyun.core.annotation.NameInMap("host")
     private String host;
 
-    @NameInMap("hostName")
+    @com.aliyun.core.annotation.NameInMap("hostName")
     private String hostName;
 
-    @NameInMap("port")
+    @com.aliyun.core.annotation.NameInMap("port")
     private Long port;
 
-    @NameInMap("zoneId")
+    @com.aliyun.core.annotation.NameInMap("zoneId")
     private String zoneId;
 
     private NodeInfo(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DictInfo</p>
  */
 public class DictInfo extends TeaModel {
-    @NameInMap("fileSize")
+    @com.aliyun.core.annotation.NameInMap("fileSize")
     private Long fileSize;
 
-    @NameInMap("name")
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @NameInMap("sourceType")
+    @com.aliyun.core.annotation.NameInMap("sourceType")
     private String sourceType;
 
-    @NameInMap("type")
+    @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
     private DictInfo(Builder builder) {

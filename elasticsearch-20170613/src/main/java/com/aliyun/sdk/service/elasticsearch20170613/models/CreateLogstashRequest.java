@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,44 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateLogstashRequest</p>
  */
 public class CreateLogstashRequest extends Request {
-    @Body
-    @NameInMap("description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @Body
-    @NameInMap("networkConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("networkConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private NetworkConfig networkConfig;
 
-    @Body
-    @NameInMap("nodeAmount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("nodeAmount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer nodeAmount;
 
-    @Body
-    @NameInMap("nodeSpec")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("nodeSpec")
+    @com.aliyun.core.annotation.Validation(required = true)
     private NodeSpec nodeSpec;
 
-    @Body
-    @NameInMap("paymentInfo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("paymentInfo")
     private PaymentInfo paymentInfo;
 
-    @Body
-    @NameInMap("paymentType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("paymentType")
     private String paymentType;
 
-    @Body
-    @NameInMap("resourceGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
     private String resourceGroupId;
 
-    @Body
-    @NameInMap("version")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("version")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String version;
 
-    @Query
-    @NameInMap("clientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
     private CreateLogstashRequest(Builder builder) {
@@ -258,19 +257,19 @@ public class CreateLogstashRequest extends Request {
     } 
 
     public static class NetworkConfig extends TeaModel {
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("vpcId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("vpcId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String vpcId;
 
-        @NameInMap("vsArea")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("vsArea")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String vsArea;
 
-        @NameInMap("vswitchId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("vswitchId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String vswitchId;
 
         private NetworkConfig(Builder builder) {
@@ -362,14 +361,14 @@ public class CreateLogstashRequest extends Request {
 
     }
     public static class NodeSpec extends TeaModel {
-        @NameInMap("disk")
+        @com.aliyun.core.annotation.NameInMap("disk")
         private Long disk;
 
-        @NameInMap("diskType")
+        @com.aliyun.core.annotation.NameInMap("diskType")
         private String diskType;
 
-        @NameInMap("spec")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("spec")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String spec;
 
         private NodeSpec(Builder builder) {
@@ -444,16 +443,16 @@ public class CreateLogstashRequest extends Request {
 
     }
     public static class PaymentInfo extends TeaModel {
-        @NameInMap("autoRenewDuration")
+        @com.aliyun.core.annotation.NameInMap("autoRenewDuration")
         private Long autoRenewDuration;
 
-        @NameInMap("duration")
+        @com.aliyun.core.annotation.NameInMap("duration")
         private Long duration;
 
-        @NameInMap("isAutoRenew")
+        @com.aliyun.core.annotation.NameInMap("isAutoRenew")
         private Boolean isAutoRenew;
 
-        @NameInMap("pricingCycle")
+        @com.aliyun.core.annotation.NameInMap("pricingCycle")
         private String pricingCycle;
 
         private PaymentInfo(Builder builder) {

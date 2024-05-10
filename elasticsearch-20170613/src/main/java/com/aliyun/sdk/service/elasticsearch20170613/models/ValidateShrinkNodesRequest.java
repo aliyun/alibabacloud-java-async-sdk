@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,26 +11,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ValidateShrinkNodesRequest</p>
  */
 public class ValidateShrinkNodesRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
     private java.util.List < ValidateShrinkNodesRequestBody> body;
 
-    @Query
-    @NameInMap("count")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("count")
     private Integer count;
 
-    @Query
-    @NameInMap("ignoreStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ignoreStatus")
     private Boolean ignoreStatus;
 
-    @Query
-    @NameInMap("nodeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("nodeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodeType;
 
     private ValidateShrinkNodesRequest(Builder builder) {
@@ -168,19 +167,19 @@ public class ValidateShrinkNodesRequest extends Request {
     } 
 
     public static class ValidateShrinkNodesRequestBody extends TeaModel {
-        @NameInMap("host")
+        @com.aliyun.core.annotation.NameInMap("host")
         private String host;
 
-        @NameInMap("hostName")
+        @com.aliyun.core.annotation.NameInMap("hostName")
         private String hostName;
 
-        @NameInMap("nodeType")
+        @com.aliyun.core.annotation.NameInMap("nodeType")
         private String nodeType;
 
-        @NameInMap("port")
+        @com.aliyun.core.annotation.NameInMap("port")
         private Integer port;
 
-        @NameInMap("zoneId")
+        @com.aliyun.core.annotation.NameInMap("zoneId")
         private String zoneId;
 
         private ValidateShrinkNodesRequestBody(Builder builder) {

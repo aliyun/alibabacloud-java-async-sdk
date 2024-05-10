@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListLogstashResponseBody</p>
  */
 public class ListLogstashResponseBody extends TeaModel {
-    @NameInMap("Headers")
+    @com.aliyun.core.annotation.NameInMap("Headers")
     private Headers headers;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private ListLogstashResponseBody(Builder builder) {
@@ -92,7 +91,7 @@ public class ListLogstashResponseBody extends TeaModel {
     } 
 
     public static class Headers extends TeaModel {
-        @NameInMap("X-Total-Count")
+        @com.aliyun.core.annotation.NameInMap("X-Total-Count")
         private Integer xTotalCount;
 
         private Headers(Builder builder) {
@@ -133,10 +132,10 @@ public class ListLogstashResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tags(Builder builder) {
@@ -194,16 +193,16 @@ public class ListLogstashResponseBody extends TeaModel {
 
     }
     public static class NetworkConfig extends TeaModel {
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("vpcId")
+        @com.aliyun.core.annotation.NameInMap("vpcId")
         private String vpcId;
 
-        @NameInMap("vsArea")
+        @com.aliyun.core.annotation.NameInMap("vsArea")
         private String vsArea;
 
-        @NameInMap("vswitchId")
+        @com.aliyun.core.annotation.NameInMap("vswitchId")
         private String vswitchId;
 
         private NetworkConfig(Builder builder) {
@@ -295,16 +294,16 @@ public class ListLogstashResponseBody extends TeaModel {
 
     }
     public static class NodeSpec extends TeaModel {
-        @NameInMap("disk")
+        @com.aliyun.core.annotation.NameInMap("disk")
         private Integer disk;
 
-        @NameInMap("diskEncryption")
+        @com.aliyun.core.annotation.NameInMap("diskEncryption")
         private Boolean diskEncryption;
 
-        @NameInMap("diskType")
+        @com.aliyun.core.annotation.NameInMap("diskType")
         private String diskType;
 
-        @NameInMap("spec")
+        @com.aliyun.core.annotation.NameInMap("spec")
         private String spec;
 
         private NodeSpec(Builder builder) {
@@ -396,40 +395,40 @@ public class ListLogstashResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("createdAt")
+        @com.aliyun.core.annotation.NameInMap("createdAt")
         private String createdAt;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
-        @NameInMap("networkConfig")
+        @com.aliyun.core.annotation.NameInMap("networkConfig")
         private NetworkConfig networkConfig;
 
-        @NameInMap("nodeAmount")
+        @com.aliyun.core.annotation.NameInMap("nodeAmount")
         private Integer nodeAmount;
 
-        @NameInMap("nodeSpec")
+        @com.aliyun.core.annotation.NameInMap("nodeSpec")
         private NodeSpec nodeSpec;
 
-        @NameInMap("paymentType")
+        @com.aliyun.core.annotation.NameInMap("paymentType")
         private String paymentType;
 
-        @NameInMap("resourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("resourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("updatedAt")
+        @com.aliyun.core.annotation.NameInMap("updatedAt")
         private String updatedAt;
 
-        @NameInMap("version")
+        @com.aliyun.core.annotation.NameInMap("version")
         private String version;
 
         private Result(Builder builder) {

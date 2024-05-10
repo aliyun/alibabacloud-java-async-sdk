@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeApmResponseBody</p>
  */
 public class DescribeApmResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private DescribeApmResponseBody(Builder builder) {
@@ -72,61 +71,61 @@ public class DescribeApmResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("apmServerDomain")
+        @com.aliyun.core.annotation.NameInMap("apmServerDomain")
         private String apmServerDomain;
 
-        @NameInMap("createdAt")
+        @com.aliyun.core.annotation.NameInMap("createdAt")
         private String createdAt;
 
-        @NameInMap("deployedReplica")
+        @com.aliyun.core.annotation.NameInMap("deployedReplica")
         private Long deployedReplica;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("endTime")
+        @com.aliyun.core.annotation.NameInMap("endTime")
         private Long endTime;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
-        @NameInMap("nodeAmount")
+        @com.aliyun.core.annotation.NameInMap("nodeAmount")
         private Long nodeAmount;
 
-        @NameInMap("outputES")
+        @com.aliyun.core.annotation.NameInMap("outputES")
         private String outputES;
 
-        @NameInMap("outputESUserName")
+        @com.aliyun.core.annotation.NameInMap("outputESUserName")
         private String outputESUserName;
 
-        @NameInMap("ownerId")
+        @com.aliyun.core.annotation.NameInMap("ownerId")
         private String ownerId;
 
-        @NameInMap("paymentType")
+        @com.aliyun.core.annotation.NameInMap("paymentType")
         private String paymentType;
 
-        @NameInMap("region")
+        @com.aliyun.core.annotation.NameInMap("region")
         private String region;
 
-        @NameInMap("replica")
+        @com.aliyun.core.annotation.NameInMap("replica")
         private Integer replica;
 
-        @NameInMap("resourceSpec")
+        @com.aliyun.core.annotation.NameInMap("resourceSpec")
         private String resourceSpec;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("version")
+        @com.aliyun.core.annotation.NameInMap("version")
         private String version;
 
-        @NameInMap("vpcId")
+        @com.aliyun.core.annotation.NameInMap("vpcId")
         private String vpcId;
 
-        @NameInMap("vsArea")
+        @com.aliyun.core.annotation.NameInMap("vsArea")
         private String vsArea;
 
-        @NameInMap("vswitchId")
+        @com.aliyun.core.annotation.NameInMap("vswitchId")
         private String vswitchId;
 
         private Result(Builder builder) {

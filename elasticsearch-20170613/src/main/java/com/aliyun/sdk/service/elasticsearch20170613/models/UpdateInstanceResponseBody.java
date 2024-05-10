@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateInstanceResponseBody</p>
  */
 public class UpdateInstanceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private UpdateInstanceResponseBody(Builder builder) {
@@ -118,16 +117,16 @@ public class UpdateInstanceResponseBody extends TeaModel {
     } 
 
     public static class KibanaConfiguration extends TeaModel {
-        @NameInMap("amount")
+        @com.aliyun.core.annotation.NameInMap("amount")
         private Integer amount;
 
-        @NameInMap("disk")
+        @com.aliyun.core.annotation.NameInMap("disk")
         private Integer disk;
 
-        @NameInMap("diskType")
+        @com.aliyun.core.annotation.NameInMap("diskType")
         private String diskType;
 
-        @NameInMap("spec")
+        @com.aliyun.core.annotation.NameInMap("spec")
         private String spec;
 
         private KibanaConfiguration(Builder builder) {
@@ -219,16 +218,16 @@ public class UpdateInstanceResponseBody extends TeaModel {
 
     }
     public static class MasterConfiguration extends TeaModel {
-        @NameInMap("amount")
+        @com.aliyun.core.annotation.NameInMap("amount")
         private Integer amount;
 
-        @NameInMap("disk")
+        @com.aliyun.core.annotation.NameInMap("disk")
         private Integer disk;
 
-        @NameInMap("diskType")
+        @com.aliyun.core.annotation.NameInMap("diskType")
         private String diskType;
 
-        @NameInMap("spec")
+        @com.aliyun.core.annotation.NameInMap("spec")
         private String spec;
 
         private MasterConfiguration(Builder builder) {
@@ -320,13 +319,13 @@ public class UpdateInstanceResponseBody extends TeaModel {
 
     }
     public static class NodeSpec extends TeaModel {
-        @NameInMap("disk")
+        @com.aliyun.core.annotation.NameInMap("disk")
         private Integer disk;
 
-        @NameInMap("diskType")
+        @com.aliyun.core.annotation.NameInMap("diskType")
         private String diskType;
 
-        @NameInMap("spec")
+        @com.aliyun.core.annotation.NameInMap("spec")
         private String spec;
 
         private NodeSpec(Builder builder) {
@@ -401,37 +400,37 @@ public class UpdateInstanceResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("createdAt")
+        @com.aliyun.core.annotation.NameInMap("createdAt")
         private String createdAt;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("domain")
+        @com.aliyun.core.annotation.NameInMap("domain")
         private String domain;
 
-        @NameInMap("esVersion")
+        @com.aliyun.core.annotation.NameInMap("esVersion")
         private String esVersion;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
-        @NameInMap("kibanaConfiguration")
+        @com.aliyun.core.annotation.NameInMap("kibanaConfiguration")
         private KibanaConfiguration kibanaConfiguration;
 
-        @NameInMap("masterConfiguration")
+        @com.aliyun.core.annotation.NameInMap("masterConfiguration")
         private MasterConfiguration masterConfiguration;
 
-        @NameInMap("nodeAmount")
+        @com.aliyun.core.annotation.NameInMap("nodeAmount")
         private Integer nodeAmount;
 
-        @NameInMap("nodeSpec")
+        @com.aliyun.core.annotation.NameInMap("nodeSpec")
         private NodeSpec nodeSpec;
 
-        @NameInMap("paymentType")
+        @com.aliyun.core.annotation.NameInMap("paymentType")
         private String paymentType;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
         private Result(Builder builder) {

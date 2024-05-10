@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Tag</p>
  */
 public class Tag extends TeaModel {
-    @NameInMap("tagKey")
+    @com.aliyun.core.annotation.NameInMap("tagKey")
     private String tagKey;
 
-    @NameInMap("tagValue")
+    @com.aliyun.core.annotation.NameInMap("tagValue")
     private String tagValue;
 
     private Tag(Builder builder) {

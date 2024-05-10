@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDictInformationResponseBody</p>
  */
 public class ListDictInformationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private ListDictInformationResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class ListDictInformationResponseBody extends TeaModel {
     } 
 
     public static class OssObject extends TeaModel {
-        @NameInMap("bucketName")
+        @com.aliyun.core.annotation.NameInMap("bucketName")
         private String bucketName;
 
-        @NameInMap("etag")
+        @com.aliyun.core.annotation.NameInMap("etag")
         private String etag;
 
-        @NameInMap("key")
+        @com.aliyun.core.annotation.NameInMap("key")
         private String key;
 
         private OssObject(Builder builder) {
@@ -153,13 +152,13 @@ public class ListDictInformationResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("fileSize")
+        @com.aliyun.core.annotation.NameInMap("fileSize")
         private Long fileSize;
 
-        @NameInMap("ossObject")
+        @com.aliyun.core.annotation.NameInMap("ossObject")
         private OssObject ossObject;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Result(Builder builder) {

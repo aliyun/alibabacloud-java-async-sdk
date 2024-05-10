@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListVpcEndpointsResponseBody</p>
  */
 public class ListVpcEndpointsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private ListVpcEndpointsResponseBody(Builder builder) {
@@ -72,31 +71,31 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("connectionStatus")
+        @com.aliyun.core.annotation.NameInMap("connectionStatus")
         private String connectionStatus;
 
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
 
-        @NameInMap("endpointBusinessStatus")
+        @com.aliyun.core.annotation.NameInMap("endpointBusinessStatus")
         private String endpointBusinessStatus;
 
-        @NameInMap("endpointDomain")
+        @com.aliyun.core.annotation.NameInMap("endpointDomain")
         private String endpointDomain;
 
-        @NameInMap("endpointId")
+        @com.aliyun.core.annotation.NameInMap("endpointId")
         private String endpointId;
 
-        @NameInMap("endpointName")
+        @com.aliyun.core.annotation.NameInMap("endpointName")
         private String endpointName;
 
-        @NameInMap("endpointStatus")
+        @com.aliyun.core.annotation.NameInMap("endpointStatus")
         private String endpointStatus;
 
-        @NameInMap("serviceId")
+        @com.aliyun.core.annotation.NameInMap("serviceId")
         private String serviceId;
 
-        @NameInMap("serviceName")
+        @com.aliyun.core.annotation.NameInMap("serviceName")
         private String serviceName;
 
         private Result(Builder builder) {

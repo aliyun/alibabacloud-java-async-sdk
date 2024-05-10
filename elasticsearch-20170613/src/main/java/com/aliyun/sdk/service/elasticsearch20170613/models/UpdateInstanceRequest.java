@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,53 +11,53 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateInstanceRequest</p>
  */
 public class UpdateInstanceRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("clientNodeConfiguration")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("clientNodeConfiguration")
     private ClientNodeConfiguration clientNodeConfiguration;
 
-    @Body
-    @NameInMap("elasticDataNodeConfiguration")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("elasticDataNodeConfiguration")
     private ElasticDataNodeConfiguration elasticDataNodeConfiguration;
 
-    @Body
-    @NameInMap("instanceCategory")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("instanceCategory")
     private String instanceCategory;
 
-    @Body
-    @NameInMap("kibanaConfiguration")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("kibanaConfiguration")
     private KibanaNodeConfiguration kibanaConfiguration;
 
-    @Body
-    @NameInMap("masterConfiguration")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("masterConfiguration")
     private MasterNodeConfiguration masterConfiguration;
 
-    @Body
-    @NameInMap("nodeAmount")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("nodeAmount")
     private Integer nodeAmount;
 
-    @Body
-    @NameInMap("nodeSpec")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("nodeSpec")
     private NodeSpec nodeSpec;
 
-    @Body
-    @NameInMap("warmNodeConfiguration")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("warmNodeConfiguration")
     private WarmNodeConfiguration warmNodeConfiguration;
 
-    @Query
-    @NameInMap("clientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("force")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("force")
     private Boolean force;
 
-    @Query
-    @NameInMap("orderActionType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("orderActionType")
     private String orderActionType;
 
     private UpdateInstanceRequest(Builder builder) {

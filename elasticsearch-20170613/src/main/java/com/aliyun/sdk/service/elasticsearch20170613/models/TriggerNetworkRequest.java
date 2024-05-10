@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TriggerNetworkRequest</p>
  */
 public class TriggerNetworkRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("actionType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("actionType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String actionType;
 
-    @Body
-    @NameInMap("networkType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("networkType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String networkType;
 
-    @Body
-    @NameInMap("nodeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("nodeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodeType;
 
-    @Query
-    @NameInMap("clientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
     private TriggerNetworkRequest(Builder builder) {

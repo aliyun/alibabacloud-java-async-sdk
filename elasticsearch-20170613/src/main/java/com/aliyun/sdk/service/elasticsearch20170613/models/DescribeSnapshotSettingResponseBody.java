@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSnapshotSettingResponseBody</p>
  */
 public class DescribeSnapshotSettingResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private DescribeSnapshotSettingResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeSnapshotSettingResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
 
-        @NameInMap("QuartzRegex")
+        @com.aliyun.core.annotation.NameInMap("QuartzRegex")
         private String quartzRegex;
 
         private Result(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAckClustersResponseBody</p>
  */
 public class ListAckClustersResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private ListAckClustersResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class ListAckClustersResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("clusterId")
+        @com.aliyun.core.annotation.NameInMap("clusterId")
         private String clusterId;
 
-        @NameInMap("clusterType")
+        @com.aliyun.core.annotation.NameInMap("clusterType")
         private String clusterType;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("vpcId")
+        @com.aliyun.core.annotation.NameInMap("vpcId")
         private String vpcId;
 
         private Result(Builder builder) {

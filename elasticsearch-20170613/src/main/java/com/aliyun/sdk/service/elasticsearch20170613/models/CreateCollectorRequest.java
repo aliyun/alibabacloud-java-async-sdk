@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,47 +11,47 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCollectorRequest</p>
  */
 public class CreateCollectorRequest extends Request {
-    @Body
-    @NameInMap("collectorPaths")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("collectorPaths")
     private java.util.List < String > collectorPaths;
 
-    @Body
-    @NameInMap("configs")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("configs")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Configs> configs;
 
-    @Body
-    @NameInMap("dryRun")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("dryRun")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean dryRun;
 
-    @Body
-    @NameInMap("extendConfigs")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("extendConfigs")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < java.util.Map<String, ?>> extendConfigs;
 
-    @Body
-    @NameInMap("name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("resType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("resType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resType;
 
-    @Body
-    @NameInMap("resVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("resVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resVersion;
 
-    @Body
-    @NameInMap("vpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("vpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
-    @Query
-    @NameInMap("clientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
     private CreateCollectorRequest(Builder builder) {
@@ -261,12 +260,12 @@ public class CreateCollectorRequest extends Request {
     } 
 
     public static class Configs extends TeaModel {
-        @NameInMap("content")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("content")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String content;
 
-        @NameInMap("fileName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("fileName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String fileName;
 
         private Configs(Builder builder) {

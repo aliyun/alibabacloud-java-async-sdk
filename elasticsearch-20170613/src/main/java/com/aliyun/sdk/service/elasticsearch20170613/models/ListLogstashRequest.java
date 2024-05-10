@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListLogstashRequest</p>
  */
 public class ListLogstashRequest extends Request {
-    @Query
-    @NameInMap("description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @Query
-    @NameInMap("instanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("instanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("page")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page")
     private Integer page;
 
-    @Query
-    @NameInMap("resourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("size")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("size")
     private Integer size;
 
-    @Query
-    @NameInMap("tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("tags")
     private String tags;
 
-    @Query
-    @NameInMap("version")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("version")
     private String version;
 
     private ListLogstashRequest(Builder builder) {

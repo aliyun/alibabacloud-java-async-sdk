@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetClusterDataInformationResponseBody</p>
  */
 public class GetClusterDataInformationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private GetClusterDataInformationResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
     } 
 
     public static class MetaInfo extends TeaModel {
-        @NameInMap("fields")
+        @com.aliyun.core.annotation.NameInMap("fields")
         private java.util.List < String > fields;
 
-        @NameInMap("indices")
+        @com.aliyun.core.annotation.NameInMap("indices")
         private java.util.List < String > indices;
 
-        @NameInMap("mapping")
+        @com.aliyun.core.annotation.NameInMap("mapping")
         private String mapping;
 
-        @NameInMap("settings")
+        @com.aliyun.core.annotation.NameInMap("settings")
         private String settings;
 
-        @NameInMap("typeName")
+        @com.aliyun.core.annotation.NameInMap("typeName")
         private java.util.List < String > typeName;
 
         private MetaInfo(Builder builder) {
@@ -193,10 +192,10 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("connectable")
+        @com.aliyun.core.annotation.NameInMap("connectable")
         private Boolean connectable;
 
-        @NameInMap("metaInfo")
+        @com.aliyun.core.annotation.NameInMap("metaInfo")
         private MetaInfo metaInfo;
 
         private Result(Builder builder) {

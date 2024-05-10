@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ZoneInfo</p>
  */
 public class ZoneInfo extends TeaModel {
-    @NameInMap("status")
+    @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
-    @NameInMap("zoneId")
+    @com.aliyun.core.annotation.NameInMap("zoneId")
     private String zoneId;
 
     private ZoneInfo(Builder builder) {

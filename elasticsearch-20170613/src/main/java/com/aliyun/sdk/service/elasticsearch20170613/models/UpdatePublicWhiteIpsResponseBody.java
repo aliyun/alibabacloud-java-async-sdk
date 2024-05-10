@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdatePublicWhiteIpsResponseBody</p>
  */
 public class UpdatePublicWhiteIpsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private UpdatePublicWhiteIpsResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class UpdatePublicWhiteIpsResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("publicIpWhitelist")
+        @com.aliyun.core.annotation.NameInMap("publicIpWhitelist")
         private java.util.List < String > publicIpWhitelist;
 
         private Result(Builder builder) {

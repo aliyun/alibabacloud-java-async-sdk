@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListKibanaPluginsResponseBody</p>
  */
 public class ListKibanaPluginsResponseBody extends TeaModel {
-    @NameInMap("Headers")
+    @com.aliyun.core.annotation.NameInMap("Headers")
     private Headers headers;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private ListKibanaPluginsResponseBody(Builder builder) {
@@ -92,7 +91,7 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
     } 
 
     public static class Headers extends TeaModel {
-        @NameInMap("X-Total-Count")
+        @com.aliyun.core.annotation.NameInMap("X-Total-Count")
         private Integer xTotalCount;
 
         private Headers(Builder builder) {
@@ -133,19 +132,19 @@ public class ListKibanaPluginsResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("source")
+        @com.aliyun.core.annotation.NameInMap("source")
         private String source;
 
-        @NameInMap("specificationUrl")
+        @com.aliyun.core.annotation.NameInMap("specificationUrl")
         private String specificationUrl;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
         private Result(Builder builder) {

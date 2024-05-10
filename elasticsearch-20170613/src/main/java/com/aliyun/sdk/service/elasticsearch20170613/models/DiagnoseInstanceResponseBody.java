@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DiagnoseInstanceResponseBody</p>
  */
 public class DiagnoseInstanceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private DiagnoseInstanceResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private Long createTime;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
-        @NameInMap("reportId")
+        @com.aliyun.core.annotation.NameInMap("reportId")
         private String reportId;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
         private Result(Builder builder) {

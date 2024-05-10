@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateCollectorNameResponseBody</p>
  */
 public class UpdateCollectorNameResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private UpdateCollectorNameResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
     } 
 
     public static class Configs extends TeaModel {
-        @NameInMap("content")
+        @com.aliyun.core.annotation.NameInMap("content")
         private String content;
 
-        @NameInMap("fileName")
+        @com.aliyun.core.annotation.NameInMap("fileName")
         private String fileName;
 
         private Configs(Builder builder) {
@@ -133,10 +132,10 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
 
     }
     public static class Machines extends TeaModel {
-        @NameInMap("agentStatus")
+        @com.aliyun.core.annotation.NameInMap("agentStatus")
         private String agentStatus;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
         private Machines(Builder builder) {
@@ -194,46 +193,46 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
 
     }
     public static class ExtendConfigs extends TeaModel {
-        @NameInMap("configType")
+        @com.aliyun.core.annotation.NameInMap("configType")
         private String configType;
 
-        @NameInMap("enableMonitoring")
+        @com.aliyun.core.annotation.NameInMap("enableMonitoring")
         private Boolean enableMonitoring;
 
-        @NameInMap("groupId")
+        @com.aliyun.core.annotation.NameInMap("groupId")
         private String groupId;
 
-        @NameInMap("host")
+        @com.aliyun.core.annotation.NameInMap("host")
         private String host;
 
-        @NameInMap("hosts")
+        @com.aliyun.core.annotation.NameInMap("hosts")
         private java.util.List < String > hosts;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
-        @NameInMap("instanceType")
+        @com.aliyun.core.annotation.NameInMap("instanceType")
         private String instanceType;
 
-        @NameInMap("kibanaHost")
+        @com.aliyun.core.annotation.NameInMap("kibanaHost")
         private String kibanaHost;
 
-        @NameInMap("machines")
+        @com.aliyun.core.annotation.NameInMap("machines")
         private java.util.List < Machines> machines;
 
-        @NameInMap("protocol")
+        @com.aliyun.core.annotation.NameInMap("protocol")
         private String protocol;
 
-        @NameInMap("successPodsCount")
+        @com.aliyun.core.annotation.NameInMap("successPodsCount")
         private String successPodsCount;
 
-        @NameInMap("totalPodsCount")
+        @com.aliyun.core.annotation.NameInMap("totalPodsCount")
         private String totalPodsCount;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("userName")
+        @com.aliyun.core.annotation.NameInMap("userName")
         private String userName;
 
         private ExtendConfigs(Builder builder) {
@@ -508,43 +507,43 @@ public class UpdateCollectorNameResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("collectorPaths")
+        @com.aliyun.core.annotation.NameInMap("collectorPaths")
         private java.util.List < String > collectorPaths;
 
-        @NameInMap("configs")
+        @com.aliyun.core.annotation.NameInMap("configs")
         private java.util.List < Configs> configs;
 
-        @NameInMap("dryRun")
+        @com.aliyun.core.annotation.NameInMap("dryRun")
         private Boolean dryRun;
 
-        @NameInMap("extendConfigs")
+        @com.aliyun.core.annotation.NameInMap("extendConfigs")
         private java.util.List < ExtendConfigs> extendConfigs;
 
-        @NameInMap("gmtCreatedTime")
+        @com.aliyun.core.annotation.NameInMap("gmtCreatedTime")
         private String gmtCreatedTime;
 
-        @NameInMap("gmtUpdateTime")
+        @com.aliyun.core.annotation.NameInMap("gmtUpdateTime")
         private String gmtUpdateTime;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("ownerId")
+        @com.aliyun.core.annotation.NameInMap("ownerId")
         private String ownerId;
 
-        @NameInMap("resId")
+        @com.aliyun.core.annotation.NameInMap("resId")
         private String resId;
 
-        @NameInMap("resType")
+        @com.aliyun.core.annotation.NameInMap("resType")
         private String resType;
 
-        @NameInMap("resVersion")
+        @com.aliyun.core.annotation.NameInMap("resVersion")
         private String resVersion;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("vpcId")
+        @com.aliyun.core.annotation.NameInMap("vpcId")
         private String vpcId;
 
         private Result(Builder builder) {

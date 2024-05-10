@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CapacityPlanResponseBody</p>
  */
 public class CapacityPlanResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private CapacityPlanResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class CapacityPlanResponseBody extends TeaModel {
     } 
 
     public static class ExtendConfigs extends TeaModel {
-        @NameInMap("ConfigType")
+        @com.aliyun.core.annotation.NameInMap("ConfigType")
         private String configType;
 
-        @NameInMap("Disk")
+        @com.aliyun.core.annotation.NameInMap("Disk")
         private Long disk;
 
-        @NameInMap("DiskType")
+        @com.aliyun.core.annotation.NameInMap("DiskType")
         private String diskType;
 
         private ExtendConfigs(Builder builder) {
@@ -161,22 +160,22 @@ public class CapacityPlanResponseBody extends TeaModel {
 
     }
     public static class NodeConfigurations extends TeaModel {
-        @NameInMap("Amount")
+        @com.aliyun.core.annotation.NameInMap("Amount")
         private Long amount;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Long cpu;
 
-        @NameInMap("Disk")
+        @com.aliyun.core.annotation.NameInMap("Disk")
         private Long disk;
 
-        @NameInMap("DiskType")
+        @com.aliyun.core.annotation.NameInMap("DiskType")
         private String diskType;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Long memory;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
         private NodeConfigurations(Builder builder) {
@@ -321,16 +320,16 @@ public class CapacityPlanResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("ExtendConfigs")
+        @com.aliyun.core.annotation.NameInMap("ExtendConfigs")
         private java.util.List < ExtendConfigs> extendConfigs;
 
-        @NameInMap("InstanceCategory")
+        @com.aliyun.core.annotation.NameInMap("InstanceCategory")
         private String instanceCategory;
 
-        @NameInMap("NodeConfigurations")
+        @com.aliyun.core.annotation.NameInMap("NodeConfigurations")
         private java.util.List < NodeConfigurations> nodeConfigurations;
 
-        @NameInMap("OversizedCluster")
+        @com.aliyun.core.annotation.NameInMap("OversizedCluster")
         private Boolean oversizedCluster;
 
         private Result(Builder builder) {

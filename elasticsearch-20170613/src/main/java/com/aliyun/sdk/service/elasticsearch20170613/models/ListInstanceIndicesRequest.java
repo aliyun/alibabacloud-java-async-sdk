@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstanceIndicesRequest</p>
  */
 public class ListInstanceIndicesRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("all")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("all")
     private Boolean all;
 
-    @Query
-    @NameInMap("isManaged")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("isManaged")
     private Boolean isManaged;
 
-    @Query
-    @NameInMap("isOpenstore")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("isOpenstore")
     private Boolean isOpenstore;
 
-    @Query
-    @NameInMap("name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @Query
-    @NameInMap("page")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page")
     private Integer page;
 
-    @Query
-    @NameInMap("size")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("size")
     private Integer size;
 
     private ListInstanceIndicesRequest(Builder builder) {

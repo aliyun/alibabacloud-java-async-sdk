@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateKibanaWhiteIpsRequest</p>
  */
 public class UpdateKibanaWhiteIpsRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("kibanaIPWhitelist")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("kibanaIPWhitelist")
     private java.util.List < String > kibanaIPWhitelist;
 
-    @Body
-    @NameInMap("whiteIpGroup")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("whiteIpGroup")
     private WhiteIpGroup whiteIpGroup;
 
-    @Query
-    @NameInMap("clientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("modifyMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("modifyMode")
     private String modifyMode;
 
     private UpdateKibanaWhiteIpsRequest(Builder builder) {
@@ -171,13 +170,13 @@ public class UpdateKibanaWhiteIpsRequest extends Request {
     } 
 
     public static class WhiteIpGroup extends TeaModel {
-        @NameInMap("groupName")
+        @com.aliyun.core.annotation.NameInMap("groupName")
         private String groupName;
 
-        @NameInMap("ips")
+        @com.aliyun.core.annotation.NameInMap("ips")
         private java.util.List < String > ips;
 
-        @NameInMap("whiteIpType")
+        @com.aliyun.core.annotation.NameInMap("whiteIpType")
         private String whiteIpType;
 
         private WhiteIpGroup(Builder builder) {

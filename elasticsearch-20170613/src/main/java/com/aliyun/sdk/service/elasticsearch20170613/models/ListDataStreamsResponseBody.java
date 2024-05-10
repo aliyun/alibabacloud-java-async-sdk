@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.elasticsearch20170613.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDataStreamsResponseBody</p>
  */
 public class ListDataStreamsResponseBody extends TeaModel {
-    @NameInMap("Headers")
+    @com.aliyun.core.annotation.NameInMap("Headers")
     private Headers headers;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private ListDataStreamsResponseBody(Builder builder) {
@@ -92,10 +91,10 @@ public class ListDataStreamsResponseBody extends TeaModel {
     } 
 
     public static class Headers extends TeaModel {
-        @NameInMap("X-Managed-Count")
+        @com.aliyun.core.annotation.NameInMap("X-Managed-Count")
         private Integer xManagedCount;
 
-        @NameInMap("X-Managed-StorageSize")
+        @com.aliyun.core.annotation.NameInMap("X-Managed-StorageSize")
         private Long xManagedStorageSize;
 
         private Headers(Builder builder) {
@@ -153,22 +152,22 @@ public class ListDataStreamsResponseBody extends TeaModel {
 
     }
     public static class Indices extends TeaModel {
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
 
-        @NameInMap("health")
+        @com.aliyun.core.annotation.NameInMap("health")
         private String health;
 
-        @NameInMap("isManaged")
+        @com.aliyun.core.annotation.NameInMap("isManaged")
         private Boolean isManaged;
 
-        @NameInMap("managedStatus")
+        @com.aliyun.core.annotation.NameInMap("managedStatus")
         private String managedStatus;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("size")
+        @com.aliyun.core.annotation.NameInMap("size")
         private Long size;
 
         private Indices(Builder builder) {
@@ -294,25 +293,25 @@ public class ListDataStreamsResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("health")
+        @com.aliyun.core.annotation.NameInMap("health")
         private String health;
 
-        @NameInMap("ilmPolicyName")
+        @com.aliyun.core.annotation.NameInMap("ilmPolicyName")
         private String ilmPolicyName;
 
-        @NameInMap("indexTemplateName")
+        @com.aliyun.core.annotation.NameInMap("indexTemplateName")
         private String indexTemplateName;
 
-        @NameInMap("indices")
+        @com.aliyun.core.annotation.NameInMap("indices")
         private java.util.List < Indices> indices;
 
-        @NameInMap("managedStorageSize")
+        @com.aliyun.core.annotation.NameInMap("managedStorageSize")
         private Long managedStorageSize;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("totalStorageSize")
+        @com.aliyun.core.annotation.NameInMap("totalStorageSize")
         private Long totalStorageSize;
 
         private Result(Builder builder) {
