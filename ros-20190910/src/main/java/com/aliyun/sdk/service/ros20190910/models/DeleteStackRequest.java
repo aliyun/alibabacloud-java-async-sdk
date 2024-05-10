@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteStackRequest</p>
  */
 public class DeleteStackRequest extends Request {
-    @Query
-    @NameInMap("DeleteOptions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeleteOptions")
     private java.util.List < String > deleteOptions;
 
-    @Query
-    @NameInMap("RamRoleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RamRoleName")
     private String ramRoleName;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("RetainAllResources")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RetainAllResources")
     private Boolean retainAllResources;
 
-    @Query
-    @NameInMap("RetainResources")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RetainResources")
     private java.util.List < String > retainResources;
 
-    @Query
-    @NameInMap("StackId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String stackId;
 
     private DeleteStackRequest(Builder builder) {

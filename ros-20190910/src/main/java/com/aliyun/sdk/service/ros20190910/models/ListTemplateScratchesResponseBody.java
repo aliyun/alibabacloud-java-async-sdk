@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTemplateScratchesResponseBody</p>
  */
 public class ListTemplateScratchesResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TemplateScratches")
+    @com.aliyun.core.annotation.NameInMap("TemplateScratches")
     private java.util.List < TemplateScratches> templateScratches;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListTemplateScratchesResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
     } 
 
     public static class PreferenceParameters extends TeaModel {
-        @NameInMap("ParameterKey")
+        @com.aliyun.core.annotation.NameInMap("ParameterKey")
         private String parameterKey;
 
-        @NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
         private String parameterValue;
 
         private PreferenceParameters(Builder builder) {
@@ -193,10 +192,10 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
 
     }
     public static class SourceResourceGroup extends TeaModel {
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ResourceTypeFilter")
+        @com.aliyun.core.annotation.NameInMap("ResourceTypeFilter")
         private java.util.List < String > resourceTypeFilter;
 
         private SourceResourceGroup(Builder builder) {
@@ -254,10 +253,10 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
 
     }
     public static class SourceResources extends TeaModel {
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
         private SourceResources(Builder builder) {
@@ -315,10 +314,10 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
 
     }
     public static class SourceTag extends TeaModel {
-        @NameInMap("ResourceTags")
+        @com.aliyun.core.annotation.NameInMap("ResourceTags")
         private java.util.Map < String, ? > resourceTags;
 
-        @NameInMap("ResourceTypeFilter")
+        @com.aliyun.core.annotation.NameInMap("ResourceTypeFilter")
         private java.util.List < String > resourceTypeFilter;
 
         private SourceTag(Builder builder) {
@@ -376,10 +375,10 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -437,49 +436,49 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
 
     }
     public static class TemplateScratches extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("FailedCode")
+        @com.aliyun.core.annotation.NameInMap("FailedCode")
         private String failedCode;
 
-        @NameInMap("LogicalIdStrategy")
+        @com.aliyun.core.annotation.NameInMap("LogicalIdStrategy")
         private String logicalIdStrategy;
 
-        @NameInMap("PreferenceParameters")
+        @com.aliyun.core.annotation.NameInMap("PreferenceParameters")
         private java.util.List < PreferenceParameters> preferenceParameters;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SourceResourceGroup")
+        @com.aliyun.core.annotation.NameInMap("SourceResourceGroup")
         private SourceResourceGroup sourceResourceGroup;
 
-        @NameInMap("SourceResources")
+        @com.aliyun.core.annotation.NameInMap("SourceResources")
         private java.util.List < SourceResources> sourceResources;
 
-        @NameInMap("SourceTag")
+        @com.aliyun.core.annotation.NameInMap("SourceTag")
         private SourceTag sourceTag;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusReason")
+        @com.aliyun.core.annotation.NameInMap("StatusReason")
         private String statusReason;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("TemplateScratchId")
+        @com.aliyun.core.annotation.NameInMap("TemplateScratchId")
         private String templateScratchId;
 
-        @NameInMap("TemplateScratchType")
+        @com.aliyun.core.annotation.NameInMap("TemplateScratchType")
         private String templateScratchType;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private TemplateScratches(Builder builder) {

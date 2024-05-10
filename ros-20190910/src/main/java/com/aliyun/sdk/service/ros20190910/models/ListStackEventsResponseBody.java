@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListStackEventsResponseBody</p>
  */
 public class ListStackEventsResponseBody extends TeaModel {
-    @NameInMap("Events")
+    @com.aliyun.core.annotation.NameInMap("Events")
     private java.util.List < Events> events;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListStackEventsResponseBody(Builder builder) {
@@ -138,31 +137,31 @@ public class ListStackEventsResponseBody extends TeaModel {
     } 
 
     public static class Events extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("EventId")
+        @com.aliyun.core.annotation.NameInMap("EventId")
         private String eventId;
 
-        @NameInMap("LogicalResourceId")
+        @com.aliyun.core.annotation.NameInMap("LogicalResourceId")
         private String logicalResourceId;
 
-        @NameInMap("PhysicalResourceId")
+        @com.aliyun.core.annotation.NameInMap("PhysicalResourceId")
         private String physicalResourceId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("StackId")
+        @com.aliyun.core.annotation.NameInMap("StackId")
         private String stackId;
 
-        @NameInMap("StackName")
+        @com.aliyun.core.annotation.NameInMap("StackName")
         private String stackName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusReason")
+        @com.aliyun.core.annotation.NameInMap("StatusReason")
         private String statusReason;
 
         private Events(Builder builder) {

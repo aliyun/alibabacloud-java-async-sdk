@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListStackGroupsResponseBody</p>
  */
 public class ListStackGroupsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StackGroups")
+    @com.aliyun.core.annotation.NameInMap("StackGroups")
     private java.util.List < StackGroups> stackGroups;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListStackGroupsResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class ListStackGroupsResponseBody extends TeaModel {
     } 
 
     public static class AutoDeployment extends TeaModel {
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("RetainStacksOnAccountRemoval")
+        @com.aliyun.core.annotation.NameInMap("RetainStacksOnAccountRemoval")
         private Boolean retainStacksOnAccountRemoval;
 
         private AutoDeployment(Builder builder) {
@@ -207,10 +206,10 @@ public class ListStackGroupsResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -268,38 +267,45 @@ public class ListStackGroupsResponseBody extends TeaModel {
 
     }
     public static class StackGroups extends TeaModel {
-        @NameInMap("AutoDeployment")
+        @com.aliyun.core.annotation.NameInMap("AutoDeployment")
         private AutoDeployment autoDeployment;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
+        private String createTime;
+
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DriftDetectionTime")
+        @com.aliyun.core.annotation.NameInMap("DriftDetectionTime")
         private String driftDetectionTime;
 
-        @NameInMap("PermissionModel")
+        @com.aliyun.core.annotation.NameInMap("PermissionModel")
         private String permissionModel;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("StackGroupDriftStatus")
+        @com.aliyun.core.annotation.NameInMap("StackGroupDriftStatus")
         private String stackGroupDriftStatus;
 
-        @NameInMap("StackGroupId")
+        @com.aliyun.core.annotation.NameInMap("StackGroupId")
         private String stackGroupId;
 
-        @NameInMap("StackGroupName")
+        @com.aliyun.core.annotation.NameInMap("StackGroupName")
         private String stackGroupName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
+
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
+        private String updateTime;
 
         private StackGroups(Builder builder) {
             this.autoDeployment = builder.autoDeployment;
+            this.createTime = builder.createTime;
             this.description = builder.description;
             this.driftDetectionTime = builder.driftDetectionTime;
             this.permissionModel = builder.permissionModel;
@@ -309,6 +315,7 @@ public class ListStackGroupsResponseBody extends TeaModel {
             this.stackGroupName = builder.stackGroupName;
             this.status = builder.status;
             this.tags = builder.tags;
+            this.updateTime = builder.updateTime;
         }
 
         public static Builder builder() {
@@ -324,6 +331,13 @@ public class ListStackGroupsResponseBody extends TeaModel {
          */
         public AutoDeployment getAutoDeployment() {
             return this.autoDeployment;
+        }
+
+        /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         /**
@@ -389,8 +403,16 @@ public class ListStackGroupsResponseBody extends TeaModel {
             return this.tags;
         }
 
+        /**
+         * @return updateTime
+         */
+        public String getUpdateTime() {
+            return this.updateTime;
+        }
+
         public static final class Builder {
             private AutoDeployment autoDeployment; 
+            private String createTime; 
             private String description; 
             private String driftDetectionTime; 
             private String permissionModel; 
@@ -400,12 +422,21 @@ public class ListStackGroupsResponseBody extends TeaModel {
             private String stackGroupName; 
             private String status; 
             private java.util.List < Tags> tags; 
+            private String updateTime; 
 
             /**
              * The information about automatic deployment settings.
              */
             public Builder autoDeployment(AutoDeployment autoDeployment) {
                 this.autoDeployment = autoDeployment;
+                return this;
+            }
+
+            /**
+             * CreateTime.
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
                 return this;
             }
 
@@ -499,6 +530,14 @@ public class ListStackGroupsResponseBody extends TeaModel {
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * UpdateTime.
+             */
+            public Builder updateTime(String updateTime) {
+                this.updateTime = updateTime;
                 return this;
             }
 

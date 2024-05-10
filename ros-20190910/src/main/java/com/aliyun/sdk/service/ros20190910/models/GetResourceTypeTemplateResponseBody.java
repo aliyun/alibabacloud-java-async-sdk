@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetResourceTypeTemplateResponseBody</p>
  */
 public class GetResourceTypeTemplateResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TemplateBody")
+    @com.aliyun.core.annotation.NameInMap("TemplateBody")
     private java.util.Map < String, ? > templateBody;
 
-    @NameInMap("TemplateContent")
+    @com.aliyun.core.annotation.NameInMap("TemplateContent")
     private String templateContent;
 
     private GetResourceTypeTemplateResponseBody(Builder builder) {

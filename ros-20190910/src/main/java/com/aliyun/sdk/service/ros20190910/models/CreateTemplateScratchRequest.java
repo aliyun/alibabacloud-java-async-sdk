@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,54 +11,54 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateTemplateScratchRequest</p>
  */
 public class CreateTemplateScratchRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("ExecutionMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExecutionMode")
     private String executionMode;
 
-    @Query
-    @NameInMap("LogicalIdStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogicalIdStrategy")
     private String logicalIdStrategy;
 
-    @Query
-    @NameInMap("PreferenceParameters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreferenceParameters")
     private java.util.List < PreferenceParameters> preferenceParameters;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("SourceResourceGroup")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceResourceGroup")
     private SourceResourceGroup sourceResourceGroup;
 
-    @Query
-    @NameInMap("SourceResources")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceResources")
     private java.util.List < SourceResources> sourceResources;
 
-    @Query
-    @NameInMap("SourceTag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceTag")
     private SourceTag sourceTag;
 
-    @Query
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List < Tags> tags;
 
-    @Query
-    @NameInMap("TemplateScratchType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateScratchType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateScratchType;
 
     private CreateTemplateScratchRequest(Builder builder) {
@@ -351,12 +350,12 @@ public class CreateTemplateScratchRequest extends Request {
     } 
 
     public static class PreferenceParameters extends TeaModel {
-        @NameInMap("ParameterKey")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ParameterKey")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String parameterKey;
 
-        @NameInMap("ParameterValue")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String parameterValue;
 
         private PreferenceParameters(Builder builder) {
@@ -424,11 +423,11 @@ public class CreateTemplateScratchRequest extends Request {
 
     }
     public static class SourceResourceGroup extends TeaModel {
-        @NameInMap("ResourceGroupId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String resourceGroupId;
 
-        @NameInMap("ResourceTypeFilter")
+        @com.aliyun.core.annotation.NameInMap("ResourceTypeFilter")
         private java.util.List < String > resourceTypeFilter;
 
         private SourceResourceGroup(Builder builder) {
@@ -486,18 +485,18 @@ public class CreateTemplateScratchRequest extends Request {
 
     }
     public static class SourceResources extends TeaModel {
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RelatedResourceTypeFilter")
+        @com.aliyun.core.annotation.NameInMap("RelatedResourceTypeFilter")
         private java.util.List < String > relatedResourceTypeFilter;
 
-        @NameInMap("ResourceId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String resourceId;
 
-        @NameInMap("ResourceType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String resourceType;
 
         private SourceResources(Builder builder) {
@@ -589,11 +588,11 @@ public class CreateTemplateScratchRequest extends Request {
 
     }
     public static class SourceTag extends TeaModel {
-        @NameInMap("ResourceTags")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ResourceTags")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.Map < String, ? > resourceTags;
 
-        @NameInMap("ResourceTypeFilter")
+        @com.aliyun.core.annotation.NameInMap("ResourceTypeFilter")
         private java.util.List < String > resourceTypeFilter;
 
         private SourceTag(Builder builder) {
@@ -654,11 +653,11 @@ public class CreateTemplateScratchRequest extends Request {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Key")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {

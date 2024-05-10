@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDiagnosticRequest</p>
  */
 public class CreateDiagnosticRequest extends Request {
-    @Query
-    @NameInMap("DiagnosticKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiagnosticKey")
     private String diagnosticKey;
 
-    @Query
-    @NameInMap("DiagnosticType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiagnosticType")
     private String diagnosticType;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Product")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Product")
     private String product;
 
     private CreateDiagnosticRequest(Builder builder) {

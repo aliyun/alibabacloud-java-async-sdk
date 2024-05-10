@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetStackDriftDetectionStatusResponseBody</p>
  */
 public class GetStackDriftDetectionStatusResponseBody extends TeaModel {
-    @NameInMap("DriftDetectionId")
+    @com.aliyun.core.annotation.NameInMap("DriftDetectionId")
     private String driftDetectionId;
 
-    @NameInMap("DriftDetectionStatus")
+    @com.aliyun.core.annotation.NameInMap("DriftDetectionStatus")
     private String driftDetectionStatus;
 
-    @NameInMap("DriftDetectionStatusReason")
+    @com.aliyun.core.annotation.NameInMap("DriftDetectionStatusReason")
     private String driftDetectionStatusReason;
 
-    @NameInMap("DriftDetectionTime")
+    @com.aliyun.core.annotation.NameInMap("DriftDetectionTime")
     private String driftDetectionTime;
 
-    @NameInMap("DriftedStackResourceCount")
+    @com.aliyun.core.annotation.NameInMap("DriftedStackResourceCount")
     private Integer driftedStackResourceCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StackDriftStatus")
+    @com.aliyun.core.annotation.NameInMap("StackDriftStatus")
     private String stackDriftStatus;
 
-    @NameInMap("StackId")
+    @com.aliyun.core.annotation.NameInMap("StackId")
     private String stackId;
 
     private GetStackDriftDetectionStatusResponseBody(Builder builder) {

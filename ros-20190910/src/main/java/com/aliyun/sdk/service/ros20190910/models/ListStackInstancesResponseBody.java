@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListStackInstancesResponseBody</p>
  */
 public class ListStackInstancesResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StackInstances")
+    @com.aliyun.core.annotation.NameInMap("StackInstances")
     private java.util.List < StackInstances> stackInstances;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListStackInstancesResponseBody(Builder builder) {
@@ -132,34 +131,34 @@ public class ListStackInstancesResponseBody extends TeaModel {
     } 
 
     public static class StackInstances extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("DriftDetectionTime")
+        @com.aliyun.core.annotation.NameInMap("DriftDetectionTime")
         private String driftDetectionTime;
 
-        @NameInMap("RdFolderId")
+        @com.aliyun.core.annotation.NameInMap("RdFolderId")
         private String rdFolderId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("StackDriftStatus")
+        @com.aliyun.core.annotation.NameInMap("StackDriftStatus")
         private String stackDriftStatus;
 
-        @NameInMap("StackGroupId")
+        @com.aliyun.core.annotation.NameInMap("StackGroupId")
         private String stackGroupId;
 
-        @NameInMap("StackGroupName")
+        @com.aliyun.core.annotation.NameInMap("StackGroupName")
         private String stackGroupName;
 
-        @NameInMap("StackId")
+        @com.aliyun.core.annotation.NameInMap("StackId")
         private String stackId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusReason")
+        @com.aliyun.core.annotation.NameInMap("StatusReason")
         private String statusReason;
 
         private StackInstances(Builder builder) {

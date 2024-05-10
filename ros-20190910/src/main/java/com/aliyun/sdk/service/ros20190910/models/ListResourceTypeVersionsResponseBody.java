@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListResourceTypeVersionsResponseBody</p>
  */
 public class ListResourceTypeVersionsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceTypeVersions")
+    @com.aliyun.core.annotation.NameInMap("ResourceTypeVersions")
     private java.util.List < ResourceTypeVersions> resourceTypeVersions;
 
     private ListResourceTypeVersionsResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class ListResourceTypeVersionsResponseBody extends TeaModel {
     } 
 
     public static class ResourceTypeVersions extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EntityType")
+        @com.aliyun.core.annotation.NameInMap("EntityType")
         private String entityType;
 
-        @NameInMap("IsDefaultVersion")
+        @com.aliyun.core.annotation.NameInMap("IsDefaultVersion")
         private Boolean isDefaultVersion;
 
-        @NameInMap("Provider")
+        @com.aliyun.core.annotation.NameInMap("Provider")
         private String provider;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("VersionId")
+        @com.aliyun.core.annotation.NameInMap("VersionId")
         private String versionId;
 
         private ResourceTypeVersions(Builder builder) {

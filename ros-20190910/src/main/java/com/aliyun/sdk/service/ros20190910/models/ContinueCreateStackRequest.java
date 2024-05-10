@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,58 +11,58 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ContinueCreateStackRequest</p>
  */
 public class ContinueCreateStackRequest extends Request {
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("Mode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mode")
     private String mode;
 
-    @Query
-    @NameInMap("Parallelism")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Parallelism")
     private Long parallelism;
 
-    @Query
-    @NameInMap("Parameters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Parameters")
     private java.util.List < Parameters> parameters;
 
-    @Query
-    @NameInMap("RamRoleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RamRoleName")
     private String ramRoleName;
 
-    @Query
-    @NameInMap("RecreatingOptions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecreatingOptions")
     private java.util.List < String > recreatingOptions;
 
-    @Query
-    @NameInMap("RecreatingResources")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecreatingResources")
     private java.util.List < String > recreatingResources;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("StackId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String stackId;
 
-    @Query
-    @NameInMap("TemplateBody")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateBody")
     private String templateBody;
 
-    @Query
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
-    @Query
-    @NameInMap("TemplateURL")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateURL")
     private String templateURL;
 
-    @Query
-    @NameInMap("TemplateVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateVersion")
     private String templateVersion;
 
     private ContinueCreateStackRequest(Builder builder) {
@@ -415,12 +414,12 @@ public class ContinueCreateStackRequest extends Request {
     } 
 
     public static class Parameters extends TeaModel {
-        @NameInMap("ParameterKey")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ParameterKey")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String parameterKey;
 
-        @NameInMap("ParameterValue")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String parameterValue;
 
         private Parameters(Builder builder) {

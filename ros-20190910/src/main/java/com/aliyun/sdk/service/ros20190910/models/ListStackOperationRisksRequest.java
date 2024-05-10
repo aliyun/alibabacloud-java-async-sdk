@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,49 +11,49 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListStackOperationRisksRequest</p>
  */
 public class ListStackOperationRisksRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("OperationType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationType")
     private String operationType;
 
-    @Query
-    @NameInMap("RamRoleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RamRoleName")
     private String ramRoleName;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("RetainAllResources")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RetainAllResources")
     private Boolean retainAllResources;
 
-    @Query
-    @NameInMap("RetainResources")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RetainResources")
     private java.util.List < String > retainResources;
 
-    @Query
-    @NameInMap("StackId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackId")
     private String stackId;
 
-    @Body
-    @NameInMap("TemplateBody")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateBody")
     private String templateBody;
 
-    @Query
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
-    @Query
-    @NameInMap("TemplateURL")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateURL")
     private String templateURL;
 
-    @Query
-    @NameInMap("TemplateVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateVersion")
     private String templateVersion;
 
     private ListStackOperationRisksRequest(Builder builder) {

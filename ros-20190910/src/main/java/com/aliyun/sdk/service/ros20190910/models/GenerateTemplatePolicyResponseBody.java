@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GenerateTemplatePolicyResponseBody</p>
  */
 public class GenerateTemplatePolicyResponseBody extends TeaModel {
-    @NameInMap("Policy")
+    @com.aliyun.core.annotation.NameInMap("Policy")
     private Policy policy;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GenerateTemplatePolicyResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
     } 
 
     public static class Statement extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private java.util.List < String > action;
 
-        @NameInMap("Condition")
+        @com.aliyun.core.annotation.NameInMap("Condition")
         private java.util.Map < String, ? > condition;
 
-        @NameInMap("Effect")
+        @com.aliyun.core.annotation.NameInMap("Effect")
         private String effect;
 
-        @NameInMap("Resource")
+        @com.aliyun.core.annotation.NameInMap("Resource")
         private String resource;
 
         private Statement(Builder builder) {
@@ -177,10 +176,10 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
 
     }
     public static class Policy extends TeaModel {
-        @NameInMap("Statement")
+        @com.aliyun.core.annotation.NameInMap("Statement")
         private java.util.List < Statement> statement;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private Policy(Builder builder) {

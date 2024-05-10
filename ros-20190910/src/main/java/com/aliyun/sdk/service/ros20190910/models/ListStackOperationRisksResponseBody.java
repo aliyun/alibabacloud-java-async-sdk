@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListStackOperationRisksResponseBody</p>
  */
 public class ListStackOperationRisksResponseBody extends TeaModel {
-    @NameInMap("MissingPolicyActions")
+    @com.aliyun.core.annotation.NameInMap("MissingPolicyActions")
     private java.util.List < String > missingPolicyActions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RiskResources")
+    @com.aliyun.core.annotation.NameInMap("RiskResources")
     private java.util.List < RiskResources> riskResources;
 
     private ListStackOperationRisksResponseBody(Builder builder) {
@@ -92,28 +91,28 @@ public class ListStackOperationRisksResponseBody extends TeaModel {
     } 
 
     public static class RiskResources extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("LogicalResourceId")
+        @com.aliyun.core.annotation.NameInMap("LogicalResourceId")
         private String logicalResourceId;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("PhysicalResourceId")
+        @com.aliyun.core.annotation.NameInMap("PhysicalResourceId")
         private String physicalResourceId;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("RequestId")
+        @com.aliyun.core.annotation.NameInMap("RequestId")
         private String requestId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("RiskType")
+        @com.aliyun.core.annotation.NameInMap("RiskType")
         private String riskType;
 
         private RiskResources(Builder builder) {

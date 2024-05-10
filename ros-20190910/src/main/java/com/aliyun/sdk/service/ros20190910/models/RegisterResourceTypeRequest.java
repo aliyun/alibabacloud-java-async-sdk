@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RegisterResourceTypeRequest</p>
  */
 public class RegisterResourceTypeRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("EntityType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EntityType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String entityType;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
-    @Body
-    @NameInMap("TemplateBody")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateBody")
     private String templateBody;
 
-    @Query
-    @NameInMap("TemplateURL")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateURL")
     private String templateURL;
 
     private RegisterResourceTypeRequest(Builder builder) {

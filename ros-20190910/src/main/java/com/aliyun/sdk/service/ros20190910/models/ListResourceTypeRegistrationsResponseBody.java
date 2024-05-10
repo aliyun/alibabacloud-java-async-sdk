@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListResourceTypeRegistrationsResponseBody</p>
  */
 public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("Registrations")
+    @com.aliyun.core.annotation.NameInMap("Registrations")
     private java.util.List < Registrations> registrations;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListResourceTypeRegistrationsResponseBody(Builder builder) {
@@ -112,25 +111,25 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
     } 
 
     public static class Registrations extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("EntityType")
+        @com.aliyun.core.annotation.NameInMap("EntityType")
         private String entityType;
 
-        @NameInMap("RegistrationId")
+        @com.aliyun.core.annotation.NameInMap("RegistrationId")
         private String registrationId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusReason")
+        @com.aliyun.core.annotation.NameInMap("StatusReason")
         private String statusReason;
 
-        @NameInMap("VersionId")
+        @com.aliyun.core.annotation.NameInMap("VersionId")
         private String versionId;
 
         private Registrations(Builder builder) {

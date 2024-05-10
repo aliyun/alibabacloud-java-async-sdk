@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetStackInstanceRequest</p>
  */
 public class GetStackInstanceRequest extends Request {
-    @Query
-    @NameInMap("OutputOption")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutputOption")
     private String outputOption;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("StackGroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackGroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String stackGroupName;
 
-    @Query
-    @NameInMap("StackInstanceAccountId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackInstanceAccountId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String stackInstanceAccountId;
 
-    @Query
-    @NameInMap("StackInstanceRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackInstanceRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String stackInstanceRegionId;
 
     private GetStackInstanceRequest(Builder builder) {

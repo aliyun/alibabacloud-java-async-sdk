@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,95 +11,95 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateStackRequest</p>
  */
 public class UpdateStackRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DisableRollback")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisableRollback")
     @Deprecated
     private Boolean disableRollback;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("DryRunOptions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRunOptions")
     private java.util.List < String > dryRunOptions;
 
-    @Query
-    @NameInMap("Parallelism")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Parallelism")
     private Long parallelism;
 
-    @Query
-    @NameInMap("Parameters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Parameters")
     private java.util.List < Parameters> parameters;
 
-    @Query
-    @NameInMap("RamRoleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RamRoleName")
     private String ramRoleName;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ReplacementOption")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReplacementOption")
     private String replacementOption;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("StackId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String stackId;
 
-    @Query
-    @NameInMap("StackPolicyBody")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackPolicyBody")
     private String stackPolicyBody;
 
-    @Query
-    @NameInMap("StackPolicyDuringUpdateBody")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackPolicyDuringUpdateBody")
     private String stackPolicyDuringUpdateBody;
 
-    @Query
-    @NameInMap("StackPolicyDuringUpdateURL")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackPolicyDuringUpdateURL")
     private String stackPolicyDuringUpdateURL;
 
-    @Query
-    @NameInMap("StackPolicyURL")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackPolicyURL")
     private String stackPolicyURL;
 
-    @Query
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List < Tags> tags;
 
-    @Body
-    @NameInMap("TemplateBody")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateBody")
     private String templateBody;
 
-    @Query
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
-    @Query
-    @NameInMap("TemplateURL")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateURL")
     private String templateURL;
 
-    @Query
-    @NameInMap("TemplateVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateVersion")
     private String templateVersion;
 
-    @Query
-    @NameInMap("TimeoutInMinutes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeoutInMinutes")
     private Long timeoutInMinutes;
 
-    @Query
-    @NameInMap("UsePreviousParameters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UsePreviousParameters")
     private Boolean usePreviousParameters;
 
     private UpdateStackRequest(Builder builder) {
@@ -645,12 +644,12 @@ public class UpdateStackRequest extends Request {
     } 
 
     public static class Parameters extends TeaModel {
-        @NameInMap("ParameterKey")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ParameterKey")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String parameterKey;
 
-        @NameInMap("ParameterValue")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String parameterValue;
 
         private Parameters(Builder builder) {
@@ -716,11 +715,11 @@ public class UpdateStackRequest extends Request {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Key")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTemplateRequest</p>
  */
 public class GetTemplateRequest extends Request {
-    @Query
-    @NameInMap("ChangeSetId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChangeSetId")
     private String changeSetId;
 
-    @Query
-    @NameInMap("IncludePermission")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludePermission")
     private String includePermission;
 
-    @Query
-    @NameInMap("IncludeTags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeTags")
     private String includeTags;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("StackGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackGroupName")
     private String stackGroupName;
 
-    @Query
-    @NameInMap("StackId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackId")
     private String stackId;
 
-    @Query
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
-    @Query
-    @NameInMap("TemplateStage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateStage")
     private String templateStage;
 
-    @Query
-    @NameInMap("TemplateVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateVersion")
     private String templateVersion;
 
     private GetTemplateRequest(Builder builder) {

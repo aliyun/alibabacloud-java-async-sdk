@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DetectStackDriftResponseBody</p>
  */
 public class DetectStackDriftResponseBody extends TeaModel {
-    @NameInMap("DriftDetectionId")
+    @com.aliyun.core.annotation.NameInMap("DriftDetectionId")
     private String driftDetectionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DetectStackDriftResponseBody(Builder builder) {

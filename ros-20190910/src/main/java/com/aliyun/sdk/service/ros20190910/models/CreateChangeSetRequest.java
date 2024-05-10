@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,106 +11,106 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateChangeSetRequest</p>
  */
 public class CreateChangeSetRequest extends Request {
-    @Query
-    @NameInMap("ChangeSetName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChangeSetName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String changeSetName;
 
-    @Query
-    @NameInMap("ChangeSetType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChangeSetType")
     private String changeSetType;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DisableRollback")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisableRollback")
     private Boolean disableRollback;
 
-    @Query
-    @NameInMap("NotificationURLs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NotificationURLs")
     private java.util.List < String > notificationURLs;
 
-    @Query
-    @NameInMap("Parallelism")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Parallelism")
     private Long parallelism;
 
-    @Query
-    @NameInMap("Parameters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Parameters")
     private java.util.List < Parameters> parameters;
 
-    @Query
-    @NameInMap("RamRoleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RamRoleName")
     private String ramRoleName;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ReplacementOption")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReplacementOption")
     private String replacementOption;
 
-    @Query
-    @NameInMap("ResourcesToImport")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourcesToImport")
     private java.util.List < ResourcesToImport> resourcesToImport;
 
-    @Query
-    @NameInMap("StackId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackId")
     private String stackId;
 
-    @Query
-    @NameInMap("StackName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackName")
     private String stackName;
 
-    @Query
-    @NameInMap("StackPolicyBody")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackPolicyBody")
     private String stackPolicyBody;
 
-    @Query
-    @NameInMap("StackPolicyDuringUpdateBody")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackPolicyDuringUpdateBody")
     private String stackPolicyDuringUpdateBody;
 
-    @Query
-    @NameInMap("StackPolicyDuringUpdateURL")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackPolicyDuringUpdateURL")
     private String stackPolicyDuringUpdateURL;
 
-    @Query
-    @NameInMap("StackPolicyURL")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackPolicyURL")
     private String stackPolicyURL;
 
-    @Body
-    @NameInMap("TemplateBody")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateBody")
     private String templateBody;
 
-    @Query
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
-    @Query
-    @NameInMap("TemplateScratchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateScratchId")
     private String templateScratchId;
 
-    @Query
-    @NameInMap("TemplateURL")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateURL")
     private String templateURL;
 
-    @Query
-    @NameInMap("TemplateVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateVersion")
     private String templateVersion;
 
-    @Query
-    @NameInMap("TimeoutInMinutes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeoutInMinutes")
     private Long timeoutInMinutes;
 
-    @Query
-    @NameInMap("UsePreviousParameters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UsePreviousParameters")
     private Boolean usePreviousParameters;
 
     private CreateChangeSetRequest(Builder builder) {
@@ -412,8 +411,13 @@ public class CreateChangeSetRequest extends Request {
          * *   UPDATE (default): creates a change set for an existing stack.
          * *   IMPORT: creates a change set for a new stack or an existing stack to import resources that are not managed by ROS.
          * 
-         * If you create a change set for a new stack, ROS generates a unique stack ID for the stack. The stack remains in the REVIEW_IN_PROGRESS state until you execute the change set.\
-         * If you want to create a change set for a new stack, do not set ChangeSetType to UPDATE. If you want to create a change set for an existing stack, do not set ChangeSetType to CREATE.
+         * If you set ChangeSetType to CREATE, ROS creates a stack. The stack remains in the `REVIEW_IN_PROGRESS` state until you execute the change set.
+         * 
+         * > 
+         * 
+         * *   You cannot set ChangeSetType to UPDATE when you create a change set for a new stack. You cannot set ChangeSetType to CREATE when you create a change set for an existing stack.
+         * 
+         * *   If you set ChangeSetType to Import, you cannot configure a stack policy. You can specify ChangeSetType only when you create or update a stack.
          */
         public Builder changeSetType(String changeSetType) {
             this.putQueryParameter("ChangeSetType", changeSetType);
@@ -500,11 +504,13 @@ public class CreateChangeSetRequest extends Request {
         }
 
         /**
-         * The name of the Resource Access Management (RAM) role. Resource Orchestration Service (ROS) assumes the RAM role to create the stack and uses the credentials of the role to call the APIs of Alibaba Cloud services.\
+         * The name of the Resource Access Management (RAM) role. ROS assumes the RAM role to create the stack and uses the credentials of the role to call the APIs of Alibaba Cloud services.\
          * <p>
-         * ROS assumes the role to perform operations on the stack. If you have permissions to perform operations on the stack but do not have permissions to use the RAM role, ROS still assumes the RAM role. You must make sure that the least privileges are granted to the RAM role.\
-         * If you do not specify this parameter, ROS uses the existing role that is associated with the stack. If no roles are available for ROS to assume, ROS uses a temporary credential that is generated from the credentials of your Alibaba Cloud account.\
-         * The name of the RAM role can be up to 64 bytes in length.
+         * ROS assumes the RAM role to perform operations on the stack. If you have permissions to perform operations on the stack, ROS assumes the RAM role even if you do not have permissions to use the RAM role. You must make sure that permissions are granted to the RAM role based on the principle of least privilege.\
+         * If you do not specify this parameter, ROS assumes the existing role of the stack. If no roles are available, ROS uses a temporary credential that is generated from the credentials of your account.\
+         * The RAM role name can be up to 64 characters in length.
+         * 
+         * For more information about RAM roles, see [Use a stack role](~~2568025~~).
          */
         public Builder ramRoleName(String ramRoleName) {
             this.putQueryParameter("RamRoleName", ramRoleName);
@@ -513,7 +519,10 @@ public class CreateChangeSetRequest extends Request {
         }
 
         /**
-         * The region ID of the change set. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         * The region ID of the change set.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -537,7 +546,7 @@ public class CreateChangeSetRequest extends Request {
         }
 
         /**
-         * The resources that you want to import into the stack.
+         * The resources that you want to import to the stack.
          */
         public Builder resourcesToImport(java.util.List < ResourcesToImport> resourcesToImport) {
             this.putQueryParameter("ResourcesToImport", resourcesToImport);
@@ -546,10 +555,11 @@ public class CreateChangeSetRequest extends Request {
         }
 
         /**
-         * The ID of the stack for which you want to create a change set. ROS compares the stack information with the information that you submit, such as a modified template or a changed parameter value, to generate the change set.
+         * The ID of the stack for which you want to create the change set. ROS compares the stack information with the information that you submit, such as an updated template or parameter value, to generate the change set.\
          * <p>
+         * You can call the [ListStacks](~~610818~~) operation to query the stack ID.
          * 
-         * > This parameter takes effect only for change sets of the UPDATE or IMPORT.
+         * >  This parameter takes effect only when ChangeSetType is set to UPDATE or IMPORT.
          */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);
@@ -571,8 +581,12 @@ public class CreateChangeSetRequest extends Request {
         }
 
         /**
-         * The structure of the stack policy body. The policy body must be 1 to 16,384 bytes in length. If you set ChangeSetType to CREATE, you can specify StackPolicyBody or StackPolicyURL. If you set ChangeSetType to UPDATE, you can specify only one of the following parameters:
+         * The structure that contains the stack policy body. The policy body must be 1 to 16,384 bytes in length.
          * <p>
+         * 
+         * If you set ChangeSetType to **CREATE**, you can specify StackPolicyBody or StackPolicyURL.
+         * 
+         * If you set ChangeSetType to **UPDATE**, you can specify only one of the following parameters:
          * 
          * *   StackPolicyBody
          * *   StackPolicyURL
@@ -623,15 +637,16 @@ public class CreateChangeSetRequest extends Request {
         }
 
         /**
-         * The URL of the file that contains the stack policy. The URL must point to a policy that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/stack-policy/demo and oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The policy file can be up to 16,384 bytes in length.
+         * The URL of the file that contains the stack policy. The URL must point to a policy that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/stack-policy/demo or oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The policy file can be up to 16,384 bytes in length.
          * <p>
          * 
-         * > If you do not specify the region of the OSS bucket, the value of RegionId is used.
-         * 
-         * You can specify only one of the following parameters: StackPolicyBody and StackPolicyURL.\
          * The URL can be up to 1,350 bytes in length.
          * 
-         * If you set ChangeSetType to CREATE, you can specify StackPolicyBody or StackPolicyURL. If you set ChangeSetType to UPDATE, you can specify only one of the following parameters:
+         * >  If you do not specify the region ID of the OSS bucket, the value of RegionId is used.
+         * 
+         * If you set ChangeSetType to **CREATE**, you can specify StackPolicyBody or StackPolicyURL.
+         * 
+         * If you set ChangeSetType to **UPDATE**, you can specify only one of the following parameters:
          * 
          * *   StackPolicyBody
          * *   StackPolicyURL
@@ -654,10 +669,12 @@ public class CreateChangeSetRequest extends Request {
         }
 
         /**
-         * The ID of the template. This parameter applies to shared and private templates.
+         * The template ID. This parameter applies to shared templates and private templates.
          * <p>
          * 
-         * You can specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.
+         * You can call the [ListTemplates](~~610842~~) operation to query the template ID.
+         * 
+         * >  You can specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -666,7 +683,14 @@ public class CreateChangeSetRequest extends Request {
         }
 
         /**
-         * The ID of the scenario template.
+         * The ID of the resource scenario. In this example, this parameter specifies the ID of a resource management scenario.
+         * <p>
+         * 
+         * This parameter takes effect only when ChangeSetType is set to IMPORT. TemplateScratchId is supported only when you import resources to create a new stack.
+         * 
+         * If you want to use a resource management scenario to import resources, you can specify only TemplateScratchId rather than configuring parameters related to templates.
+         * 
+         * You can call the [ListTemplateScratches](~~610832~~) operation to query the ID of the resource management scenario.
          */
         public Builder templateScratchId(String templateScratchId) {
             this.putQueryParameter("TemplateScratchId", templateScratchId);
@@ -740,12 +764,12 @@ public class CreateChangeSetRequest extends Request {
     } 
 
     public static class Parameters extends TeaModel {
-        @NameInMap("ParameterKey")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ParameterKey")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String parameterKey;
 
-        @NameInMap("ParameterValue")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String parameterValue;
 
         private Parameters(Builder builder) {
@@ -809,13 +833,13 @@ public class CreateChangeSetRequest extends Request {
 
     }
     public static class ResourcesToImport extends TeaModel {
-        @NameInMap("LogicalResourceId")
+        @com.aliyun.core.annotation.NameInMap("LogicalResourceId")
         private String logicalResourceId;
 
-        @NameInMap("ResourceIdentifier")
+        @com.aliyun.core.annotation.NameInMap("ResourceIdentifier")
         private String resourceIdentifier;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
         private ResourcesToImport(Builder builder) {
@@ -859,10 +883,10 @@ public class CreateChangeSetRequest extends Request {
             private String resourceType; 
 
             /**
-             * The logical ID of resource N that you want to import. The logical ID specifies the name of resource N that is defined in the template.
+             * The logical ID of resource N. The logical ID is the name of the resource defined in the template.
              * <p>
              * 
-             * > This parameter takes effect only if you set ChangeSetType to IMPORT. ResourcesToImport is optional. If you specify ResourcesToImport, you must also specify ResourcesToImport.N.LogicalResourceId.
+             * >  This parameter takes effect only when ChangeSetType is set to IMPORT. ResourcesToImport is optional. If you specify ResourcesToImport, you must specify ResourcesToImport.N.LogicalResourceId.
              */
             public Builder logicalResourceId(String logicalResourceId) {
                 this.logicalResourceId = logicalResourceId;
@@ -870,11 +894,13 @@ public class CreateChangeSetRequest extends Request {
             }
 
             /**
-             * The key-value mapping between strings. The value is a JSON string that identifies resource N that you want to import.\
+             * The key-value mapping between strings. The key-value mapping is used to identify resource N that you want to import. The key-value mapping must be a JSON string.\
              * <p>
-             * A key is an identifier for a resource and a value is an assignment of data to the key. For example, VpcId is a key that indicates the ID of a virtual private cloud (VPC), and `vpc-2zevx9ios****` is a value that is assigned to VpcId. You can call the [GetTemplateSummary](~~172485~~) operation to obtain the key of a resource.
+             * A key is an identifier property of a resource and a value is the property value. For example, the key of the ALIYUN::ECS::VPC resource is VpcId and the value is `vpc-2zevx9ios****`.
              * 
-             * > This parameter takes effect only if you set ChangeSetType to IMPORT. ResourcesToImport is optional. If you specify ResourcesToImport, you must also specify ResourcesToImport.N.ResourceIdentifier.
+             * You can call the [GetTemplateSummary](~~172485~~) operation to query the identifier property of the resource.
+             * 
+             * >  This parameter takes effect only when ChangeSetType is set to IMPORT. ResourcesToImport is optional. If you specify ResourcesToImport, you must specify ResourcesToImport.N.ResourceIdentifier.
              */
             public Builder resourceIdentifier(String resourceIdentifier) {
                 this.resourceIdentifier = resourceIdentifier;
@@ -882,10 +908,10 @@ public class CreateChangeSetRequest extends Request {
             }
 
             /**
-             * The type of resource N that you want to import. The resource type must be the same as the resource type that is defined in the template.
+             * The type of resource N. The resource type must be the same as the resource type that is defined in the template.
              * <p>
              * 
-             * > This parameter takes effect only if you set ChangeSetType to IMPORT. ResourcesToImport is optional. If you specify ResourcesToImport, you must also specify ResourcesToImport.N.ResourceType.
+             * >  This parameter takes effect only when ChangeSetType is set to IMPORT. ResourcesToImport is optional. If you specify ResourcesToImport, you must specify ResourcesToImport.N.ResourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

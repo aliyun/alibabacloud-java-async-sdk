@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateStackTemplateByResourcesResponseBody</p>
  */
 public class UpdateStackTemplateByResourcesResponseBody extends TeaModel {
-    @NameInMap("NewTemplateBody")
+    @com.aliyun.core.annotation.NameInMap("NewTemplateBody")
     private String newTemplateBody;
 
-    @NameInMap("OldTemplateBody")
+    @com.aliyun.core.annotation.NameInMap("OldTemplateBody")
     private String oldTemplateBody;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateStackTemplateByResourcesResponseBody(Builder builder) {

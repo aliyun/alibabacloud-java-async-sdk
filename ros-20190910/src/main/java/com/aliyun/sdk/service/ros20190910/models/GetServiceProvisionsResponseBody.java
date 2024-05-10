@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetServiceProvisionsResponseBody</p>
  */
 public class GetServiceProvisionsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServiceProvisions")
+    @com.aliyun.core.annotation.NameInMap("ServiceProvisions")
     private java.util.List < ServiceProvisions> serviceProvisions;
 
     private GetServiceProvisionsResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
     } 
 
     public static class ApiForCreation extends TeaModel {
-        @NameInMap("ApiName")
+        @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
 
-        @NameInMap("ApiProductId")
+        @com.aliyun.core.annotation.NameInMap("ApiProductId")
         private String apiProductId;
 
-        @NameInMap("ApiType")
+        @com.aliyun.core.annotation.NameInMap("ApiType")
         private String apiType;
 
-        @NameInMap("Parameters")
+        @com.aliyun.core.annotation.NameInMap("Parameters")
         private java.util.Map < String, ? > parameters;
 
         private ApiForCreation(Builder builder) {
@@ -177,16 +176,16 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
 
     }
     public static class Roles extends TeaModel {
-        @NameInMap("ApiForCreation")
+        @com.aliyun.core.annotation.NameInMap("ApiForCreation")
         private ApiForCreation apiForCreation;
 
-        @NameInMap("Created")
+        @com.aliyun.core.annotation.NameInMap("Created")
         private Boolean created;
 
-        @NameInMap("Function")
+        @com.aliyun.core.annotation.NameInMap("Function")
         private String function;
 
-        @NameInMap("RoleName")
+        @com.aliyun.core.annotation.NameInMap("RoleName")
         private String roleName;
 
         private Roles(Builder builder) {
@@ -282,10 +281,10 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
 
     }
     public static class RoleProvision extends TeaModel {
-        @NameInMap("AuthorizationURL")
+        @com.aliyun.core.annotation.NameInMap("AuthorizationURL")
         private String authorizationURL;
 
-        @NameInMap("Roles")
+        @com.aliyun.core.annotation.NameInMap("Roles")
         private java.util.List < Roles> roles;
 
         private RoleProvision(Builder builder) {
@@ -346,25 +345,25 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
 
     }
     public static class ServiceProvisions extends TeaModel {
-        @NameInMap("AutoEnableService")
+        @com.aliyun.core.annotation.NameInMap("AutoEnableService")
         private Boolean autoEnableService;
 
-        @NameInMap("DependentServiceNames")
+        @com.aliyun.core.annotation.NameInMap("DependentServiceNames")
         private java.util.List < String > dependentServiceNames;
 
-        @NameInMap("EnableURL")
+        @com.aliyun.core.annotation.NameInMap("EnableURL")
         private String enableURL;
 
-        @NameInMap("RoleProvision")
+        @com.aliyun.core.annotation.NameInMap("RoleProvision")
         private RoleProvision roleProvision;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusReason")
+        @com.aliyun.core.annotation.NameInMap("StatusReason")
         private String statusReason;
 
         private ServiceProvisions(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,73 +11,73 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PreviewStackRequest</p>
  */
 public class PreviewStackRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DisableRollback")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisableRollback")
     private Boolean disableRollback;
 
-    @Query
-    @NameInMap("EnablePreConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnablePreConfig")
     private Boolean enablePreConfig;
 
-    @Query
-    @NameInMap("Parallelism")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Parallelism")
     private Long parallelism;
 
-    @Query
-    @NameInMap("Parameters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Parameters")
     private java.util.List < Parameters> parameters;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("StackId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackId")
     private String stackId;
 
-    @Query
-    @NameInMap("StackName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackName")
     private String stackName;
 
-    @Query
-    @NameInMap("StackPolicyBody")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackPolicyBody")
     private String stackPolicyBody;
 
-    @Query
-    @NameInMap("StackPolicyURL")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackPolicyURL")
     private String stackPolicyURL;
 
-    @Body
-    @NameInMap("TemplateBody")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateBody")
     private String templateBody;
 
-    @Query
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
-    @Query
-    @NameInMap("TemplateScratchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateScratchId")
     private String templateScratchId;
 
-    @Query
-    @NameInMap("TemplateScratchRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateScratchRegionId")
     private String templateScratchRegionId;
 
-    @Query
-    @NameInMap("TemplateURL")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateURL")
     private String templateURL;
 
-    @Query
-    @NameInMap("TemplateVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateVersion")
     private String templateVersion;
 
-    @Query
-    @NameInMap("TimeoutInMinutes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeoutInMinutes")
     private Long timeoutInMinutes;
 
     private PreviewStackRequest(Builder builder) {
@@ -493,12 +492,12 @@ public class PreviewStackRequest extends Request {
     } 
 
     public static class Parameters extends TeaModel {
-        @NameInMap("ParameterKey")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ParameterKey")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String parameterKey;
 
-        @NameInMap("ParameterValue")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String parameterValue;
 
         private Parameters(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListStackGroupOperationsResponseBody</p>
  */
 public class ListStackGroupOperationsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StackGroupOperations")
+    @com.aliyun.core.annotation.NameInMap("StackGroupOperations")
     private java.util.List < StackGroupOperations> stackGroupOperations;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListStackGroupOperationsResponseBody(Builder builder) {
@@ -132,28 +131,28 @@ public class ListStackGroupOperationsResponseBody extends TeaModel {
     } 
 
     public static class StackGroupOperations extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("OperationDescription")
+        @com.aliyun.core.annotation.NameInMap("OperationDescription")
         private String operationDescription;
 
-        @NameInMap("OperationId")
+        @com.aliyun.core.annotation.NameInMap("OperationId")
         private String operationId;
 
-        @NameInMap("StackGroupId")
+        @com.aliyun.core.annotation.NameInMap("StackGroupId")
         private String stackGroupId;
 
-        @NameInMap("StackGroupName")
+        @com.aliyun.core.annotation.NameInMap("StackGroupName")
         private String stackGroupName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private StackGroupOperations(Builder builder) {

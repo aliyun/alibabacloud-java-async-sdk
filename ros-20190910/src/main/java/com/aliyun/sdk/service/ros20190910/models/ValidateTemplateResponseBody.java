@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ValidateTemplateResponseBody</p>
  */
 public class ValidateTemplateResponseBody extends TeaModel {
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("Outputs")
+    @com.aliyun.core.annotation.NameInMap("Outputs")
     private java.util.List < Outputs> outputs;
 
-    @NameInMap("Parameters")
+    @com.aliyun.core.annotation.NameInMap("Parameters")
     private java.util.List < java.util.Map<String, ?>> parameters;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceTypes")
+    @com.aliyun.core.annotation.NameInMap("ResourceTypes")
     private ResourceTypes resourceTypes;
 
-    @NameInMap("Resources")
+    @com.aliyun.core.annotation.NameInMap("Resources")
     private java.util.List < Resources> resources;
 
-    @NameInMap("UpdateInfo")
+    @com.aliyun.core.annotation.NameInMap("UpdateInfo")
     private UpdateInfo updateInfo;
 
     private ValidateTemplateResponseBody(Builder builder) {
@@ -176,13 +175,13 @@ public class ValidateTemplateResponseBody extends TeaModel {
     } 
 
     public static class Outputs extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("OutputKey")
+        @com.aliyun.core.annotation.NameInMap("OutputKey")
         private String outputKey;
 
         private Outputs(Builder builder) {
@@ -257,10 +256,10 @@ public class ValidateTemplateResponseBody extends TeaModel {
 
     }
     public static class ResourceTypes extends TeaModel {
-        @NameInMap("DataSources")
+        @com.aliyun.core.annotation.NameInMap("DataSources")
         private java.util.List < String > dataSources;
 
-        @NameInMap("Resources")
+        @com.aliyun.core.annotation.NameInMap("Resources")
         private java.util.List < String > resources;
 
         private ResourceTypes(Builder builder) {
@@ -318,13 +317,13 @@ public class ValidateTemplateResponseBody extends TeaModel {
 
     }
     public static class Resources extends TeaModel {
-        @NameInMap("LogicalResourceIdPattern")
+        @com.aliyun.core.annotation.NameInMap("LogicalResourceIdPattern")
         private String logicalResourceIdPattern;
 
-        @NameInMap("ResourcePath")
+        @com.aliyun.core.annotation.NameInMap("ResourcePath")
         private String resourcePath;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
         private Resources(Builder builder) {
@@ -425,34 +424,34 @@ public class ValidateTemplateResponseBody extends TeaModel {
 
     }
     public static class UpdateInfo extends TeaModel {
-        @NameInMap("ParametersAllowedToBeModified")
+        @com.aliyun.core.annotation.NameInMap("ParametersAllowedToBeModified")
         private java.util.List < String > parametersAllowedToBeModified;
 
-        @NameInMap("ParametersCauseInterruptionIfModified")
+        @com.aliyun.core.annotation.NameInMap("ParametersCauseInterruptionIfModified")
         private java.util.List < String > parametersCauseInterruptionIfModified;
 
-        @NameInMap("ParametersCauseReplacementIfModified")
+        @com.aliyun.core.annotation.NameInMap("ParametersCauseReplacementIfModified")
         private java.util.List < String > parametersCauseReplacementIfModified;
 
-        @NameInMap("ParametersConditionallyAllowedToBeModified")
+        @com.aliyun.core.annotation.NameInMap("ParametersConditionallyAllowedToBeModified")
         private java.util.List < String > parametersConditionallyAllowedToBeModified;
 
-        @NameInMap("ParametersConditionallyCauseInterruptionIfModified")
+        @com.aliyun.core.annotation.NameInMap("ParametersConditionallyCauseInterruptionIfModified")
         private java.util.List < String > parametersConditionallyCauseInterruptionIfModified;
 
-        @NameInMap("ParametersConditionallyCauseReplacementIfModified")
+        @com.aliyun.core.annotation.NameInMap("ParametersConditionallyCauseReplacementIfModified")
         private java.util.List < String > parametersConditionallyCauseReplacementIfModified;
 
-        @NameInMap("ParametersNotAllowedToBeModified")
+        @com.aliyun.core.annotation.NameInMap("ParametersNotAllowedToBeModified")
         private java.util.List < String > parametersNotAllowedToBeModified;
 
-        @NameInMap("ParametersUncertainlyAllowedToBeModified")
+        @com.aliyun.core.annotation.NameInMap("ParametersUncertainlyAllowedToBeModified")
         private java.util.List < String > parametersUncertainlyAllowedToBeModified;
 
-        @NameInMap("ParametersUncertainlyCauseInterruptionIfModified")
+        @com.aliyun.core.annotation.NameInMap("ParametersUncertainlyCauseInterruptionIfModified")
         private java.util.List < String > parametersUncertainlyCauseInterruptionIfModified;
 
-        @NameInMap("ParametersUncertainlyCauseReplacementIfModified")
+        @com.aliyun.core.annotation.NameInMap("ParametersUncertainlyCauseReplacementIfModified")
         private java.util.List < String > parametersUncertainlyCauseReplacementIfModified;
 
         private UpdateInfo(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PreviewStackResponseBody</p>
  */
 public class PreviewStackResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Stack")
+    @com.aliyun.core.annotation.NameInMap("Stack")
     private Stack stack;
 
     private PreviewStackResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class PreviewStackResponseBody extends TeaModel {
     } 
 
     public static class TerraformLogs extends TeaModel {
-        @NameInMap("Command")
+        @com.aliyun.core.annotation.NameInMap("Command")
         private String command;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("Stream")
+        @com.aliyun.core.annotation.NameInMap("Stream")
         private String stream;
 
         private TerraformLogs(Builder builder) {
@@ -165,7 +164,7 @@ public class PreviewStackResponseBody extends TeaModel {
 
     }
     public static class Log extends TeaModel {
-        @NameInMap("TerraformLogs")
+        @com.aliyun.core.annotation.NameInMap("TerraformLogs")
         private java.util.List < TerraformLogs> terraformLogs;
 
         private Log(Builder builder) {
@@ -209,10 +208,10 @@ public class PreviewStackResponseBody extends TeaModel {
 
     }
     public static class Parameters extends TeaModel {
-        @NameInMap("ParameterKey")
+        @com.aliyun.core.annotation.NameInMap("ParameterKey")
         private String parameterKey;
 
-        @NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
         private String parameterValue;
 
         private Parameters(Builder builder) {
@@ -270,34 +269,34 @@ public class PreviewStackResponseBody extends TeaModel {
 
     }
     public static class Resources extends TeaModel {
-        @NameInMap("AcsResourceType")
+        @com.aliyun.core.annotation.NameInMap("AcsResourceType")
         private String acsResourceType;
 
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("LogicalResourceId")
+        @com.aliyun.core.annotation.NameInMap("LogicalResourceId")
         private String logicalResourceId;
 
-        @NameInMap("PhysicalResourceId")
+        @com.aliyun.core.annotation.NameInMap("PhysicalResourceId")
         private String physicalResourceId;
 
-        @NameInMap("Properties")
+        @com.aliyun.core.annotation.NameInMap("Properties")
         private java.util.Map < String, ? > properties;
 
-        @NameInMap("Replacement")
+        @com.aliyun.core.annotation.NameInMap("Replacement")
         private String replacement;
 
-        @NameInMap("RequiredBy")
+        @com.aliyun.core.annotation.NameInMap("RequiredBy")
         private java.util.List < String > requiredBy;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("Stack")
+        @com.aliyun.core.annotation.NameInMap("Stack")
         private java.util.Map < String, ? > stack;
 
         private Resources(Builder builder) {
@@ -507,34 +506,34 @@ public class PreviewStackResponseBody extends TeaModel {
 
     }
     public static class Stack extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DisableRollback")
+        @com.aliyun.core.annotation.NameInMap("DisableRollback")
         private Boolean disableRollback;
 
-        @NameInMap("Log")
+        @com.aliyun.core.annotation.NameInMap("Log")
         private Log log;
 
-        @NameInMap("Parameters")
+        @com.aliyun.core.annotation.NameInMap("Parameters")
         private java.util.List < Parameters> parameters;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Resources")
+        @com.aliyun.core.annotation.NameInMap("Resources")
         private java.util.List < Resources> resources;
 
-        @NameInMap("StackName")
+        @com.aliyun.core.annotation.NameInMap("StackName")
         private String stackName;
 
-        @NameInMap("StackPolicyBody")
+        @com.aliyun.core.annotation.NameInMap("StackPolicyBody")
         private java.util.Map < String, ? > stackPolicyBody;
 
-        @NameInMap("TemplateDescription")
+        @com.aliyun.core.annotation.NameInMap("TemplateDescription")
         private String templateDescription;
 
-        @NameInMap("TimeoutInMinutes")
+        @com.aliyun.core.annotation.NameInMap("TimeoutInMinutes")
         private Integer timeoutInMinutes;
 
         private Stack(Builder builder) {

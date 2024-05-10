@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetStackGroupOperationResponseBody</p>
  */
 public class GetStackGroupOperationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StackGroupOperation")
+    @com.aliyun.core.annotation.NameInMap("StackGroupOperation")
     private StackGroupOperation stackGroupOperation;
 
     private GetStackGroupOperationResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
     } 
 
     public static class DeploymentTargets extends TeaModel {
-        @NameInMap("AccountIds")
+        @com.aliyun.core.annotation.NameInMap("AccountIds")
         private java.util.List < String > accountIds;
 
-        @NameInMap("RdFolderIds")
+        @com.aliyun.core.annotation.NameInMap("RdFolderIds")
         private java.util.List < String > rdFolderIds;
 
         private DeploymentTargets(Builder builder) {
@@ -136,19 +135,19 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
 
     }
     public static class OperationPreferences extends TeaModel {
-        @NameInMap("FailureToleranceCount")
+        @com.aliyun.core.annotation.NameInMap("FailureToleranceCount")
         private Integer failureToleranceCount;
 
-        @NameInMap("FailureTolerancePercentage")
+        @com.aliyun.core.annotation.NameInMap("FailureTolerancePercentage")
         private Integer failureTolerancePercentage;
 
-        @NameInMap("MaxConcurrentCount")
+        @com.aliyun.core.annotation.NameInMap("MaxConcurrentCount")
         private Integer maxConcurrentCount;
 
-        @NameInMap("MaxConcurrentPercentage")
+        @com.aliyun.core.annotation.NameInMap("MaxConcurrentPercentage")
         private Integer maxConcurrentPercentage;
 
-        @NameInMap("RegionIdsOrder")
+        @com.aliyun.core.annotation.NameInMap("RegionIdsOrder")
         private java.util.List < String > regionIdsOrder;
 
         private OperationPreferences(Builder builder) {
@@ -277,31 +276,31 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
 
     }
     public static class StackGroupDriftDetectionDetail extends TeaModel {
-        @NameInMap("CancelledStackInstancesCount")
+        @com.aliyun.core.annotation.NameInMap("CancelledStackInstancesCount")
         private Integer cancelledStackInstancesCount;
 
-        @NameInMap("DriftDetectionStatus")
+        @com.aliyun.core.annotation.NameInMap("DriftDetectionStatus")
         private String driftDetectionStatus;
 
-        @NameInMap("DriftDetectionTime")
+        @com.aliyun.core.annotation.NameInMap("DriftDetectionTime")
         private String driftDetectionTime;
 
-        @NameInMap("DriftedStackInstancesCount")
+        @com.aliyun.core.annotation.NameInMap("DriftedStackInstancesCount")
         private Integer driftedStackInstancesCount;
 
-        @NameInMap("FailedStackInstancesCount")
+        @com.aliyun.core.annotation.NameInMap("FailedStackInstancesCount")
         private Integer failedStackInstancesCount;
 
-        @NameInMap("InProgressStackInstancesCount")
+        @com.aliyun.core.annotation.NameInMap("InProgressStackInstancesCount")
         private Integer inProgressStackInstancesCount;
 
-        @NameInMap("InSyncStackInstancesCount")
+        @com.aliyun.core.annotation.NameInMap("InSyncStackInstancesCount")
         private Integer inSyncStackInstancesCount;
 
-        @NameInMap("StackGroupDriftStatus")
+        @com.aliyun.core.annotation.NameInMap("StackGroupDriftStatus")
         private String stackGroupDriftStatus;
 
-        @NameInMap("TotalStackInstancesCount")
+        @com.aliyun.core.annotation.NameInMap("TotalStackInstancesCount")
         private Integer totalStackInstancesCount;
 
         private StackGroupDriftDetectionDetail(Builder builder) {
@@ -494,46 +493,46 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
 
     }
     public static class StackGroupOperation extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("AdministrationRoleName")
+        @com.aliyun.core.annotation.NameInMap("AdministrationRoleName")
         private String administrationRoleName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DeploymentTargets")
+        @com.aliyun.core.annotation.NameInMap("DeploymentTargets")
         private DeploymentTargets deploymentTargets;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("ExecutionRoleName")
+        @com.aliyun.core.annotation.NameInMap("ExecutionRoleName")
         private String executionRoleName;
 
-        @NameInMap("OperationDescription")
+        @com.aliyun.core.annotation.NameInMap("OperationDescription")
         private String operationDescription;
 
-        @NameInMap("OperationId")
+        @com.aliyun.core.annotation.NameInMap("OperationId")
         private String operationId;
 
-        @NameInMap("OperationPreferences")
+        @com.aliyun.core.annotation.NameInMap("OperationPreferences")
         private OperationPreferences operationPreferences;
 
-        @NameInMap("RetainStacks")
+        @com.aliyun.core.annotation.NameInMap("RetainStacks")
         private Boolean retainStacks;
 
-        @NameInMap("StackGroupDriftDetectionDetail")
+        @com.aliyun.core.annotation.NameInMap("StackGroupDriftDetectionDetail")
         private StackGroupDriftDetectionDetail stackGroupDriftDetectionDetail;
 
-        @NameInMap("StackGroupId")
+        @com.aliyun.core.annotation.NameInMap("StackGroupId")
         private String stackGroupId;
 
-        @NameInMap("StackGroupName")
+        @com.aliyun.core.annotation.NameInMap("StackGroupName")
         private String stackGroupName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private StackGroupOperation(Builder builder) {

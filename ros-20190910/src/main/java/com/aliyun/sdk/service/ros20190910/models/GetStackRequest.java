@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetStackRequest</p>
  */
 public class GetStackRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("LogOption")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogOption")
     private String logOption;
 
-    @Query
-    @NameInMap("OutputOption")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutputOption")
     private String outputOption;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ShowResourceProgress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShowResourceProgress")
     private String showResourceProgress;
 
-    @Query
-    @NameInMap("StackId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String stackId;
 
     private GetStackRequest(Builder builder) {

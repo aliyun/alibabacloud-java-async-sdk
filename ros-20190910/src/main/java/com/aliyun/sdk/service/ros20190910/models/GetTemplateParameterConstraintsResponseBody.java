@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTemplateParameterConstraintsResponseBody</p>
  */
 public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
-    @NameInMap("ParameterConstraints")
+    @com.aliyun.core.annotation.NameInMap("ParameterConstraints")
     private java.util.List < ParameterConstraints> parameterConstraints;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetTemplateParameterConstraintsResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
     } 
 
     public static class NotSupportResources extends TeaModel {
-        @NameInMap("PropertyName")
+        @com.aliyun.core.annotation.NameInMap("PropertyName")
         private String propertyName;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
         private NotSupportResources(Builder builder) {
@@ -133,16 +132,16 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
 
     }
     public static class OriginalConstraints extends TeaModel {
-        @NameInMap("AllowedValues")
+        @com.aliyun.core.annotation.NameInMap("AllowedValues")
         private java.util.List < ? > allowedValues;
 
-        @NameInMap("PropertyName")
+        @com.aliyun.core.annotation.NameInMap("PropertyName")
         private String propertyName;
 
-        @NameInMap("ResourceName")
+        @com.aliyun.core.annotation.NameInMap("ResourceName")
         private String resourceName;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
         private OriginalConstraints(Builder builder) {
@@ -234,13 +233,13 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
 
     }
     public static class QueryErrors extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("ResourceName")
+        @com.aliyun.core.annotation.NameInMap("ResourceName")
         private String resourceName;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
         private QueryErrors(Builder builder) {
@@ -315,37 +314,37 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
 
     }
     public static class ParameterConstraints extends TeaModel {
-        @NameInMap("AllowedValues")
+        @com.aliyun.core.annotation.NameInMap("AllowedValues")
         private java.util.List < String > allowedValues;
 
-        @NameInMap("AssociationParameterNames")
+        @com.aliyun.core.annotation.NameInMap("AssociationParameterNames")
         private java.util.List < String > associationParameterNames;
 
-        @NameInMap("Behavior")
+        @com.aliyun.core.annotation.NameInMap("Behavior")
         private String behavior;
 
-        @NameInMap("BehaviorReason")
+        @com.aliyun.core.annotation.NameInMap("BehaviorReason")
         private String behaviorReason;
 
-        @NameInMap("IllegalValueByParameterConstraints")
+        @com.aliyun.core.annotation.NameInMap("IllegalValueByParameterConstraints")
         private java.util.List < ? > illegalValueByParameterConstraints;
 
-        @NameInMap("IllegalValueByRules")
+        @com.aliyun.core.annotation.NameInMap("IllegalValueByRules")
         private java.util.List < ? > illegalValueByRules;
 
-        @NameInMap("NotSupportResources")
+        @com.aliyun.core.annotation.NameInMap("NotSupportResources")
         private java.util.List < NotSupportResources> notSupportResources;
 
-        @NameInMap("OriginalConstraints")
+        @com.aliyun.core.annotation.NameInMap("OriginalConstraints")
         private java.util.List < OriginalConstraints> originalConstraints;
 
-        @NameInMap("ParameterKey")
+        @com.aliyun.core.annotation.NameInMap("ParameterKey")
         private String parameterKey;
 
-        @NameInMap("QueryErrors")
+        @com.aliyun.core.annotation.NameInMap("QueryErrors")
         private java.util.List < QueryErrors> queryErrors;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private ParameterConstraints(Builder builder) {

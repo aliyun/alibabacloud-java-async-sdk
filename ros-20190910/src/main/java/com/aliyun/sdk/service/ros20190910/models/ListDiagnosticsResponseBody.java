@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDiagnosticsResponseBody</p>
  */
 public class ListDiagnosticsResponseBody extends TeaModel {
-    @NameInMap("Diagnostics")
+    @com.aliyun.core.annotation.NameInMap("Diagnostics")
     private java.util.List < Diagnostics> diagnostics;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private ListDiagnosticsResponseBody(Builder builder) {
@@ -156,19 +155,19 @@ public class ListDiagnosticsResponseBody extends TeaModel {
     } 
 
     public static class Diagnostics extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DiagnosticKey")
+        @com.aliyun.core.annotation.NameInMap("DiagnosticKey")
         private String diagnosticKey;
 
-        @NameInMap("DiagnosticProduct")
+        @com.aliyun.core.annotation.NameInMap("DiagnosticProduct")
         private String diagnosticProduct;
 
-        @NameInMap("ReportId")
+        @com.aliyun.core.annotation.NameInMap("ReportId")
         private String reportId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Diagnostics(Builder builder) {

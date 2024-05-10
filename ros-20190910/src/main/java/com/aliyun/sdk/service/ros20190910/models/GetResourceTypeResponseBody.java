@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,52 +11,52 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetResourceTypeResponseBody</p>
  */
 public class GetResourceTypeResponseBody extends TeaModel {
-    @NameInMap("Attributes")
+    @com.aliyun.core.annotation.NameInMap("Attributes")
     private java.util.Map < String, ? > attributes;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("DefaultVersionId")
+    @com.aliyun.core.annotation.NameInMap("DefaultVersionId")
     private String defaultVersionId;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("EntityType")
+    @com.aliyun.core.annotation.NameInMap("EntityType")
     private String entityType;
 
-    @NameInMap("IsDefaultVersion")
+    @com.aliyun.core.annotation.NameInMap("IsDefaultVersion")
     private Boolean isDefaultVersion;
 
-    @NameInMap("LatestVersionId")
+    @com.aliyun.core.annotation.NameInMap("LatestVersionId")
     private String latestVersionId;
 
-    @NameInMap("Properties")
+    @com.aliyun.core.annotation.NameInMap("Properties")
     private java.util.Map < String, ? > properties;
 
-    @NameInMap("Provider")
+    @com.aliyun.core.annotation.NameInMap("Provider")
     private String provider;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
-    @NameInMap("SupportDriftDetection")
+    @com.aliyun.core.annotation.NameInMap("SupportDriftDetection")
     private Boolean supportDriftDetection;
 
-    @NameInMap("SupportScratchDetection")
+    @com.aliyun.core.annotation.NameInMap("SupportScratchDetection")
     private Boolean supportScratchDetection;
 
-    @NameInMap("TemplateBody")
+    @com.aliyun.core.annotation.NameInMap("TemplateBody")
     private String templateBody;
 
-    @NameInMap("TotalVersionCount")
+    @com.aliyun.core.annotation.NameInMap("TotalVersionCount")
     private Integer totalVersionCount;
 
-    @NameInMap("UpdateTime")
+    @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
     private GetResourceTypeResponseBody(Builder builder) {

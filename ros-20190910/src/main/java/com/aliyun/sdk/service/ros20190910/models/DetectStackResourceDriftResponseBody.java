@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DetectStackResourceDriftResponseBody</p>
  */
 public class DetectStackResourceDriftResponseBody extends TeaModel {
-    @NameInMap("ActualProperties")
+    @com.aliyun.core.annotation.NameInMap("ActualProperties")
     private String actualProperties;
 
-    @NameInMap("DriftDetectionTime")
+    @com.aliyun.core.annotation.NameInMap("DriftDetectionTime")
     private String driftDetectionTime;
 
-    @NameInMap("ExpectedProperties")
+    @com.aliyun.core.annotation.NameInMap("ExpectedProperties")
     private String expectedProperties;
 
-    @NameInMap("LogicalResourceId")
+    @com.aliyun.core.annotation.NameInMap("LogicalResourceId")
     private String logicalResourceId;
 
-    @NameInMap("PhysicalResourceId")
+    @com.aliyun.core.annotation.NameInMap("PhysicalResourceId")
     private String physicalResourceId;
 
-    @NameInMap("PropertyDifferences")
+    @com.aliyun.core.annotation.NameInMap("PropertyDifferences")
     private java.util.List < PropertyDifferences> propertyDifferences;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceDriftStatus")
+    @com.aliyun.core.annotation.NameInMap("ResourceDriftStatus")
     private String resourceDriftStatus;
 
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
-    @NameInMap("StackId")
+    @com.aliyun.core.annotation.NameInMap("StackId")
     private String stackId;
 
     private DetectStackResourceDriftResponseBody(Builder builder) {
@@ -238,16 +237,16 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
     } 
 
     public static class PropertyDifferences extends TeaModel {
-        @NameInMap("ActualValue")
+        @com.aliyun.core.annotation.NameInMap("ActualValue")
         private String actualValue;
 
-        @NameInMap("DifferenceType")
+        @com.aliyun.core.annotation.NameInMap("DifferenceType")
         private String differenceType;
 
-        @NameInMap("ExpectedValue")
+        @com.aliyun.core.annotation.NameInMap("ExpectedValue")
         private String expectedValue;
 
-        @NameInMap("PropertyPath")
+        @com.aliyun.core.annotation.NameInMap("PropertyPath")
         private String propertyPath;
 
         private PropertyDifferences(Builder builder) {

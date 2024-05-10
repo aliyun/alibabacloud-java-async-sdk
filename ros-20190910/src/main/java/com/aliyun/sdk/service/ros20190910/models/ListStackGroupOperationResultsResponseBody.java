@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListStackGroupOperationResultsResponseBody</p>
  */
 public class ListStackGroupOperationResultsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StackGroupOperationResults")
+    @com.aliyun.core.annotation.NameInMap("StackGroupOperationResults")
     private java.util.List < StackGroupOperationResults> stackGroupOperationResults;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListStackGroupOperationResultsResponseBody(Builder builder) {
@@ -132,19 +131,19 @@ public class ListStackGroupOperationResultsResponseBody extends TeaModel {
     } 
 
     public static class StackGroupOperationResults extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("RdFolderId")
+        @com.aliyun.core.annotation.NameInMap("RdFolderId")
         private String rdFolderId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusReason")
+        @com.aliyun.core.annotation.NameInMap("StatusReason")
         private String statusReason;
 
         private StackGroupOperationResults(Builder builder) {

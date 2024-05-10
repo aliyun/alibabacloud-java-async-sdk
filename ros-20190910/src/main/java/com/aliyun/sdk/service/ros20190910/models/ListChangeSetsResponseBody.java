@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListChangeSetsResponseBody</p>
  */
 public class ListChangeSetsResponseBody extends TeaModel {
-    @NameInMap("ChangeSets")
+    @com.aliyun.core.annotation.NameInMap("ChangeSets")
     private java.util.List < ChangeSets> changeSets;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListChangeSetsResponseBody(Builder builder) {
@@ -132,37 +131,37 @@ public class ListChangeSetsResponseBody extends TeaModel {
     } 
 
     public static class ChangeSets extends TeaModel {
-        @NameInMap("ChangeSetId")
+        @com.aliyun.core.annotation.NameInMap("ChangeSetId")
         private String changeSetId;
 
-        @NameInMap("ChangeSetName")
+        @com.aliyun.core.annotation.NameInMap("ChangeSetName")
         private String changeSetName;
 
-        @NameInMap("ChangeSetType")
+        @com.aliyun.core.annotation.NameInMap("ChangeSetType")
         private String changeSetType;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ExecutionStatus")
+        @com.aliyun.core.annotation.NameInMap("ExecutionStatus")
         private String executionStatus;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("StackId")
+        @com.aliyun.core.annotation.NameInMap("StackId")
         private String stackId;
 
-        @NameInMap("StackName")
+        @com.aliyun.core.annotation.NameInMap("StackName")
         private String stackName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusReason")
+        @com.aliyun.core.annotation.NameInMap("StatusReason")
         private String statusReason;
 
         private ChangeSets(Builder builder) {

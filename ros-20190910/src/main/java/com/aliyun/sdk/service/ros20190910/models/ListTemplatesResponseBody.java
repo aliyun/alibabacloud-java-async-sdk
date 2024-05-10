@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTemplatesResponseBody</p>
  */
 public class ListTemplatesResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Templates")
+    @com.aliyun.core.annotation.NameInMap("Templates")
     private java.util.List < Templates> templates;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListTemplatesResponseBody(Builder builder) {
@@ -134,10 +133,10 @@ public class ListTemplatesResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -195,37 +194,37 @@ public class ListTemplatesResponseBody extends TeaModel {
 
     }
     public static class Templates extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ShareType")
+        @com.aliyun.core.annotation.NameInMap("ShareType")
         private String shareType;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("TemplateARN")
+        @com.aliyun.core.annotation.NameInMap("TemplateARN")
         private String templateARN;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
-        @NameInMap("TemplateVersion")
+        @com.aliyun.core.annotation.NameInMap("TemplateVersion")
         private String templateVersion;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private Templates(Builder builder) {

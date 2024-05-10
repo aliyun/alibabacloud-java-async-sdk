@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GenerateTemplateByScratchResponseBody</p>
  */
 public class GenerateTemplateByScratchResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourcesToImport")
+    @com.aliyun.core.annotation.NameInMap("ResourcesToImport")
     private java.util.List < ResourcesToImport> resourcesToImport;
 
-    @NameInMap("TemplateBody")
+    @com.aliyun.core.annotation.NameInMap("TemplateBody")
     private String templateBody;
 
     private GenerateTemplateByScratchResponseBody(Builder builder) {
@@ -95,13 +94,13 @@ public class GenerateTemplateByScratchResponseBody extends TeaModel {
     } 
 
     public static class ResourcesToImport extends TeaModel {
-        @NameInMap("LogicalResourceId")
+        @com.aliyun.core.annotation.NameInMap("LogicalResourceId")
         private String logicalResourceId;
 
-        @NameInMap("ResourceIdentifier")
+        @com.aliyun.core.annotation.NameInMap("ResourceIdentifier")
         private java.util.Map < String, ? > resourceIdentifier;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
         private ResourcesToImport(Builder builder) {

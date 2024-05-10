@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,58 +11,58 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetChangeSetResponseBody</p>
  */
 public class GetChangeSetResponseBody extends TeaModel {
-    @NameInMap("ChangeSetId")
+    @com.aliyun.core.annotation.NameInMap("ChangeSetId")
     private String changeSetId;
 
-    @NameInMap("ChangeSetName")
+    @com.aliyun.core.annotation.NameInMap("ChangeSetName")
     private String changeSetName;
 
-    @NameInMap("ChangeSetType")
+    @com.aliyun.core.annotation.NameInMap("ChangeSetType")
     private String changeSetType;
 
-    @NameInMap("Changes")
+    @com.aliyun.core.annotation.NameInMap("Changes")
     private java.util.List < java.util.Map<String, ?>> changes;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("DisableRollback")
+    @com.aliyun.core.annotation.NameInMap("DisableRollback")
     private Boolean disableRollback;
 
-    @NameInMap("ExecutionStatus")
+    @com.aliyun.core.annotation.NameInMap("ExecutionStatus")
     private String executionStatus;
 
-    @NameInMap("Log")
+    @com.aliyun.core.annotation.NameInMap("Log")
     private Log log;
 
-    @NameInMap("Parameters")
+    @com.aliyun.core.annotation.NameInMap("Parameters")
     private java.util.List < Parameters> parameters;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StackId")
+    @com.aliyun.core.annotation.NameInMap("StackId")
     private String stackId;
 
-    @NameInMap("StackName")
+    @com.aliyun.core.annotation.NameInMap("StackName")
     private String stackName;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("StatusReason")
+    @com.aliyun.core.annotation.NameInMap("StatusReason")
     private String statusReason;
 
-    @NameInMap("TemplateBody")
+    @com.aliyun.core.annotation.NameInMap("TemplateBody")
     private String templateBody;
 
-    @NameInMap("TimeoutInMinutes")
+    @com.aliyun.core.annotation.NameInMap("TimeoutInMinutes")
     private Integer timeoutInMinutes;
 
     private GetChangeSetResponseBody(Builder builder) {
@@ -395,13 +394,13 @@ public class GetChangeSetResponseBody extends TeaModel {
     } 
 
     public static class TerraformLogs extends TeaModel {
-        @NameInMap("Command")
+        @com.aliyun.core.annotation.NameInMap("Command")
         private String command;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("Stream")
+        @com.aliyun.core.annotation.NameInMap("Stream")
         private String stream;
 
         private TerraformLogs(Builder builder) {
@@ -488,7 +487,7 @@ public class GetChangeSetResponseBody extends TeaModel {
 
     }
     public static class Log extends TeaModel {
-        @NameInMap("TerraformLogs")
+        @com.aliyun.core.annotation.NameInMap("TerraformLogs")
         private java.util.List < TerraformLogs> terraformLogs;
 
         private Log(Builder builder) {
@@ -532,10 +531,10 @@ public class GetChangeSetResponseBody extends TeaModel {
 
     }
     public static class Parameters extends TeaModel {
-        @NameInMap("ParameterKey")
+        @com.aliyun.core.annotation.NameInMap("ParameterKey")
         private String parameterKey;
 
-        @NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
         private String parameterValue;
 
         private Parameters(Builder builder) {

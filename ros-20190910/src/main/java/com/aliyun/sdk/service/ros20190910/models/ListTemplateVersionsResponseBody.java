@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTemplateVersionsResponseBody</p>
  */
 public class ListTemplateVersionsResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Versions")
+    @com.aliyun.core.annotation.NameInMap("Versions")
     private java.util.List < Versions> versions;
 
     private ListTemplateVersionsResponseBody(Builder builder) {
@@ -92,22 +91,22 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
     } 
 
     public static class Versions extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
-        @NameInMap("TemplateVersion")
+        @com.aliyun.core.annotation.NameInMap("TemplateVersion")
         private String templateVersion;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private Versions(Builder builder) {

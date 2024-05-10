@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListResourceTypesResponseBody</p>
  */
 public class ListResourceTypesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceTypeSummaries")
+    @com.aliyun.core.annotation.NameInMap("ResourceTypeSummaries")
     private java.util.List < ResourceTypeSummaries> resourceTypeSummaries;
 
-    @NameInMap("ResourceTypes")
+    @com.aliyun.core.annotation.NameInMap("ResourceTypes")
     private java.util.List < String > resourceTypes;
 
     private ListResourceTypesResponseBody(Builder builder) {
@@ -92,31 +91,31 @@ public class ListResourceTypesResponseBody extends TeaModel {
     } 
 
     public static class ResourceTypeSummaries extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DefaultVersionId")
+        @com.aliyun.core.annotation.NameInMap("DefaultVersionId")
         private String defaultVersionId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EntityType")
+        @com.aliyun.core.annotation.NameInMap("EntityType")
         private String entityType;
 
-        @NameInMap("LatestVersionId")
+        @com.aliyun.core.annotation.NameInMap("LatestVersionId")
         private String latestVersionId;
 
-        @NameInMap("Provider")
+        @com.aliyun.core.annotation.NameInMap("Provider")
         private String provider;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("TotalVersionCount")
+        @com.aliyun.core.annotation.NameInMap("TotalVersionCount")
         private Integer totalVersionCount;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private ResourceTypeSummaries(Builder builder) {

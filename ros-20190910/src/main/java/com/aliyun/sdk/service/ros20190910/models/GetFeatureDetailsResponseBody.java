@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetFeatureDetailsResponseBody</p>
  */
 public class GetFeatureDetailsResponseBody extends TeaModel {
-    @NameInMap("DriftDetection")
+    @com.aliyun.core.annotation.NameInMap("DriftDetection")
     private DriftDetection driftDetection;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceCleaner")
+    @com.aliyun.core.annotation.NameInMap("ResourceCleaner")
     private ResourceCleaner resourceCleaner;
 
-    @NameInMap("ResourceImport")
+    @com.aliyun.core.annotation.NameInMap("ResourceImport")
     private ResourceImport resourceImport;
 
-    @NameInMap("TemplateParameterConstraints")
+    @com.aliyun.core.annotation.NameInMap("TemplateParameterConstraints")
     private TemplateParameterConstraints templateParameterConstraints;
 
-    @NameInMap("TemplateScratch")
+    @com.aliyun.core.annotation.NameInMap("TemplateScratch")
     private TemplateScratch templateScratch;
 
-    @NameInMap("Terraform")
+    @com.aliyun.core.annotation.NameInMap("Terraform")
     private Terraform terraform;
 
     private GetFeatureDetailsResponseBody(Builder builder) {
@@ -172,7 +171,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
     } 
 
     public static class DriftDetection extends TeaModel {
-        @NameInMap("SupportedResourceTypes")
+        @com.aliyun.core.annotation.NameInMap("SupportedResourceTypes")
         private java.util.List < String > supportedResourceTypes;
 
         private DriftDetection(Builder builder) {
@@ -213,13 +212,13 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
 
     }
     public static class SupportedResourceTypes extends TeaModel {
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("SideEffects")
+        @com.aliyun.core.annotation.NameInMap("SideEffects")
         private java.util.List < String > sideEffects;
 
-        @NameInMap("SupportedFilters")
+        @com.aliyun.core.annotation.NameInMap("SupportedFilters")
         private java.util.List < String > supportedFilters;
 
         private SupportedResourceTypes(Builder builder) {
@@ -294,7 +293,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
 
     }
     public static class ResourceCleaner extends TeaModel {
-        @NameInMap("SupportedResourceTypes")
+        @com.aliyun.core.annotation.NameInMap("SupportedResourceTypes")
         private java.util.List < SupportedResourceTypes> supportedResourceTypes;
 
         private ResourceCleaner(Builder builder) {
@@ -335,10 +334,10 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
 
     }
     public static class ResourceImportSupportedResourceTypes extends TeaModel {
-        @NameInMap("ResourceIdentifiers")
+        @com.aliyun.core.annotation.NameInMap("ResourceIdentifiers")
         private java.util.List < String > resourceIdentifiers;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
         private ResourceImportSupportedResourceTypes(Builder builder) {
@@ -396,7 +395,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
 
     }
     public static class ResourceImport extends TeaModel {
-        @NameInMap("SupportedResourceTypes")
+        @com.aliyun.core.annotation.NameInMap("SupportedResourceTypes")
         private java.util.List < ResourceImportSupportedResourceTypes> supportedResourceTypes;
 
         private ResourceImport(Builder builder) {
@@ -437,10 +436,10 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
 
     }
     public static class TemplateParameterConstraintsSupportedResourceTypes extends TeaModel {
-        @NameInMap("Properties")
+        @com.aliyun.core.annotation.NameInMap("Properties")
         private java.util.List < String > properties;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
         private TemplateParameterConstraintsSupportedResourceTypes(Builder builder) {
@@ -498,7 +497,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
 
     }
     public static class TemplateParameterConstraints extends TeaModel {
-        @NameInMap("SupportedResourceTypes")
+        @com.aliyun.core.annotation.NameInMap("SupportedResourceTypes")
         private java.util.List < TemplateParameterConstraintsSupportedResourceTypes> supportedResourceTypes;
 
         private TemplateParameterConstraints(Builder builder) {
@@ -539,22 +538,22 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
 
     }
     public static class TemplateScratchSupportedResourceTypes extends TeaModel {
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("SourceResourceGroupSupported")
+        @com.aliyun.core.annotation.NameInMap("SourceResourceGroupSupported")
         private Boolean sourceResourceGroupSupported;
 
-        @NameInMap("SourceResourcesSupported")
+        @com.aliyun.core.annotation.NameInMap("SourceResourcesSupported")
         private Boolean sourceResourcesSupported;
 
-        @NameInMap("SourceSupported")
+        @com.aliyun.core.annotation.NameInMap("SourceSupported")
         private Boolean sourceSupported;
 
-        @NameInMap("SourceTagSupported")
+        @com.aliyun.core.annotation.NameInMap("SourceTagSupported")
         private Boolean sourceTagSupported;
 
-        @NameInMap("SupportedTemplateScratchTypes")
+        @com.aliyun.core.annotation.NameInMap("SupportedTemplateScratchTypes")
         private java.util.List < String > supportedTemplateScratchTypes;
 
         private TemplateScratchSupportedResourceTypes(Builder builder) {
@@ -696,7 +695,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
 
     }
     public static class TemplateScratch extends TeaModel {
-        @NameInMap("SupportedResourceTypes")
+        @com.aliyun.core.annotation.NameInMap("SupportedResourceTypes")
         private java.util.List < TemplateScratchSupportedResourceTypes> supportedResourceTypes;
 
         private TemplateScratch(Builder builder) {
@@ -737,7 +736,7 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
 
     }
     public static class StackOperationRisk extends TeaModel {
-        @NameInMap("DeleteStack")
+        @com.aliyun.core.annotation.NameInMap("DeleteStack")
         private java.util.List < String > deleteStack;
 
         private StackOperationRisk(Builder builder) {
@@ -778,19 +777,19 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
 
     }
     public static class TerraformSupportedResourceTypes extends TeaModel {
-        @NameInMap("CustomTag")
+        @com.aliyun.core.annotation.NameInMap("CustomTag")
         private java.util.List < String > customTag;
 
-        @NameInMap("EstimateCost")
+        @com.aliyun.core.annotation.NameInMap("EstimateCost")
         private java.util.List < String > estimateCost;
 
-        @NameInMap("ResourceGroup")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroup")
         private java.util.List < String > resourceGroup;
 
-        @NameInMap("StackOperationRisk")
+        @com.aliyun.core.annotation.NameInMap("StackOperationRisk")
         private StackOperationRisk stackOperationRisk;
 
-        @NameInMap("SystemTag")
+        @com.aliyun.core.annotation.NameInMap("SystemTag")
         private java.util.List < String > systemTag;
 
         private TerraformSupportedResourceTypes(Builder builder) {
@@ -899,10 +898,10 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
 
     }
     public static class ProviderVersions extends TeaModel {
-        @NameInMap("ProviderName")
+        @com.aliyun.core.annotation.NameInMap("ProviderName")
         private String providerName;
 
-        @NameInMap("SupportedVersions")
+        @com.aliyun.core.annotation.NameInMap("SupportedVersions")
         private java.util.List < String > supportedVersions;
 
         private ProviderVersions(Builder builder) {
@@ -960,16 +959,16 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
 
     }
     public static class SupportedVersions extends TeaModel {
-        @NameInMap("ProviderVersions")
+        @com.aliyun.core.annotation.NameInMap("ProviderVersions")
         private java.util.List < ProviderVersions> providerVersions;
 
-        @NameInMap("TerraformVersion")
+        @com.aliyun.core.annotation.NameInMap("TerraformVersion")
         private String terraformVersion;
 
-        @NameInMap("Transform")
+        @com.aliyun.core.annotation.NameInMap("Transform")
         private String transform;
 
-        @NameInMap("UpdateAllowedTransforms")
+        @com.aliyun.core.annotation.NameInMap("UpdateAllowedTransforms")
         private java.util.List < String > updateAllowedTransforms;
 
         private SupportedVersions(Builder builder) {
@@ -1061,10 +1060,10 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
 
     }
     public static class Terraform extends TeaModel {
-        @NameInMap("SupportedResourceTypes")
+        @com.aliyun.core.annotation.NameInMap("SupportedResourceTypes")
         private TerraformSupportedResourceTypes supportedResourceTypes;
 
-        @NameInMap("SupportedVersions")
+        @com.aliyun.core.annotation.NameInMap("SupportedVersions")
         private java.util.List < SupportedVersions> supportedVersions;
 
         private Terraform(Builder builder) {

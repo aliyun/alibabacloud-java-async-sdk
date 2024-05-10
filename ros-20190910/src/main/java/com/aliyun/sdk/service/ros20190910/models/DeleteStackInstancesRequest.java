@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,44 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteStackInstancesRequest</p>
  */
 public class DeleteStackInstancesRequest extends Request {
-    @Query
-    @NameInMap("AccountIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountIds")
     private java.util.List < String > accountIds;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DeploymentTargets")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeploymentTargets")
     private DeploymentTargets deploymentTargets;
 
-    @Query
-    @NameInMap("OperationDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationDescription")
     private String operationDescription;
 
-    @Query
-    @NameInMap("OperationPreferences")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationPreferences")
     private java.util.Map < String, ? > operationPreferences;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("RegionIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > regionIds;
 
-    @Query
-    @NameInMap("RetainStacks")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RetainStacks")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean retainStacks;
 
-    @Query
-    @NameInMap("StackGroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackGroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String stackGroupName;
 
     private DeleteStackInstancesRequest(Builder builder) {
@@ -323,10 +322,10 @@ public class DeleteStackInstancesRequest extends Request {
     } 
 
     public static class DeploymentTargets extends TeaModel {
-        @NameInMap("AccountIds")
+        @com.aliyun.core.annotation.NameInMap("AccountIds")
         private java.util.List < String > accountIds;
 
-        @NameInMap("RdFolderIds")
+        @com.aliyun.core.annotation.NameInMap("RdFolderIds")
         private java.util.List < String > rdFolderIds;
 
         private DeploymentTargets(Builder builder) {

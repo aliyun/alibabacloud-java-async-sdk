@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,61 +11,61 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTemplateResponseBody</p>
  */
 public class GetTemplateResponseBody extends TeaModel {
-    @NameInMap("ChangeSetId")
+    @com.aliyun.core.annotation.NameInMap("ChangeSetId")
     private String changeSetId;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("Interface")
+    @com.aliyun.core.annotation.NameInMap("Interface")
     private String _interface;
 
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
-    @NameInMap("Permissions")
+    @com.aliyun.core.annotation.NameInMap("Permissions")
     private java.util.List < Permissions> permissions;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("ShareType")
+    @com.aliyun.core.annotation.NameInMap("ShareType")
     private String shareType;
 
-    @NameInMap("StackGroupName")
+    @com.aliyun.core.annotation.NameInMap("StackGroupName")
     private String stackGroupName;
 
-    @NameInMap("StackId")
+    @com.aliyun.core.annotation.NameInMap("StackId")
     private String stackId;
 
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List < Tags> tags;
 
-    @NameInMap("TemplateARN")
+    @com.aliyun.core.annotation.NameInMap("TemplateARN")
     private String templateARN;
 
-    @NameInMap("TemplateBody")
+    @com.aliyun.core.annotation.NameInMap("TemplateBody")
     private String templateBody;
 
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
-    @NameInMap("TemplateName")
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
     private String templateName;
 
-    @NameInMap("TemplateVersion")
+    @com.aliyun.core.annotation.NameInMap("TemplateVersion")
     private String templateVersion;
 
-    @NameInMap("UpdateTime")
+    @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
     private GetTemplateResponseBody(Builder builder) {
@@ -441,19 +440,19 @@ public class GetTemplateResponseBody extends TeaModel {
     } 
 
     public static class Permissions extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("ShareOption")
+        @com.aliyun.core.annotation.NameInMap("ShareOption")
         private String shareOption;
 
-        @NameInMap("ShareSource")
+        @com.aliyun.core.annotation.NameInMap("ShareSource")
         private String shareSource;
 
-        @NameInMap("TemplateVersion")
+        @com.aliyun.core.annotation.NameInMap("TemplateVersion")
         private String templateVersion;
 
-        @NameInMap("VersionOption")
+        @com.aliyun.core.annotation.NameInMap("VersionOption")
         private String versionOption;
 
         private Permissions(Builder builder) {
@@ -583,10 +582,10 @@ public class GetTemplateResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,46 +11,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDiagnosticResponseBody</p>
  */
 public class GetDiagnosticResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("DiagnosticKey")
+    @com.aliyun.core.annotation.NameInMap("DiagnosticKey")
     private String diagnosticKey;
 
-    @NameInMap("DiagnosticProduct")
+    @com.aliyun.core.annotation.NameInMap("DiagnosticProduct")
     private String diagnosticProduct;
 
-    @NameInMap("DiagnosticResult")
+    @com.aliyun.core.annotation.NameInMap("DiagnosticResult")
     private DiagnosticResult diagnosticResult;
 
-    @NameInMap("DiagnosticTime")
+    @com.aliyun.core.annotation.NameInMap("DiagnosticTime")
     private String diagnosticTime;
 
-    @NameInMap("HttpCode")
+    @com.aliyun.core.annotation.NameInMap("HttpCode")
     private String httpCode;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Recommends")
+    @com.aliyun.core.annotation.NameInMap("Recommends")
     private java.util.Map < String, ? > recommends;
 
-    @NameInMap("ReportId")
+    @com.aliyun.core.annotation.NameInMap("ReportId")
     private String reportId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("StatusReason")
+    @com.aliyun.core.annotation.NameInMap("StatusReason")
     private String statusReason;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private GetDiagnosticResponseBody(Builder builder) {
@@ -321,13 +320,13 @@ public class GetDiagnosticResponseBody extends TeaModel {
     } 
 
     public static class DiagnosticResult extends TeaModel {
-        @NameInMap("FailedResources")
+        @com.aliyun.core.annotation.NameInMap("FailedResources")
         private java.util.Map < String, ? > failedResources;
 
-        @NameInMap("RosActionMessages")
+        @com.aliyun.core.annotation.NameInMap("RosActionMessages")
         private java.util.Map < String, ? > rosActionMessages;
 
-        @NameInMap("StackMessages")
+        @com.aliyun.core.annotation.NameInMap("StackMessages")
         private java.util.Map < String, ? > stackMessages;
 
         private DiagnosticResult(Builder builder) {

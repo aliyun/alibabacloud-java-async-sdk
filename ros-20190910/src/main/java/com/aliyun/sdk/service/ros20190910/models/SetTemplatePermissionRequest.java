@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetTemplatePermissionRequest</p>
  */
 public class SetTemplatePermissionRequest extends Request {
-    @Query
-    @NameInMap("AccountIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > accountIds;
 
-    @Query
-    @NameInMap("ShareOption")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShareOption")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String shareOption;
 
-    @Query
-    @NameInMap("TemplateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateId;
 
-    @Query
-    @NameInMap("TemplateVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateVersion")
     private String templateVersion;
 
-    @Query
-    @NameInMap("VersionOption")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VersionOption")
     private String versionOption;
 
     private SetTemplatePermissionRequest(Builder builder) {

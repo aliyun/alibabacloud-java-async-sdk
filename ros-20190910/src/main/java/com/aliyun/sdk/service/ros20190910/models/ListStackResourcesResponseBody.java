@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListStackResourcesResponseBody</p>
  */
 public class ListStackResourcesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Resources")
+    @com.aliyun.core.annotation.NameInMap("Resources")
     private java.util.List < Resources> resources;
 
     private ListStackResourcesResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class ListStackResourcesResponseBody extends TeaModel {
     } 
 
     public static class ModuleInfo extends TeaModel {
-        @NameInMap("LogicalIdHierarchy")
+        @com.aliyun.core.annotation.NameInMap("LogicalIdHierarchy")
         private String logicalIdHierarchy;
 
-        @NameInMap("TypeHierarchy")
+        @com.aliyun.core.annotation.NameInMap("TypeHierarchy")
         private String typeHierarchy;
 
         private ModuleInfo(Builder builder) {
@@ -143,40 +142,40 @@ public class ListStackResourcesResponseBody extends TeaModel {
 
     }
     public static class Resources extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DriftDetectionTime")
+        @com.aliyun.core.annotation.NameInMap("DriftDetectionTime")
         private String driftDetectionTime;
 
-        @NameInMap("LogicalResourceId")
+        @com.aliyun.core.annotation.NameInMap("LogicalResourceId")
         private String logicalResourceId;
 
-        @NameInMap("ModuleInfo")
+        @com.aliyun.core.annotation.NameInMap("ModuleInfo")
         private ModuleInfo moduleInfo;
 
-        @NameInMap("PhysicalResourceId")
+        @com.aliyun.core.annotation.NameInMap("PhysicalResourceId")
         private String physicalResourceId;
 
-        @NameInMap("ResourceDriftStatus")
+        @com.aliyun.core.annotation.NameInMap("ResourceDriftStatus")
         private String resourceDriftStatus;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("StackId")
+        @com.aliyun.core.annotation.NameInMap("StackId")
         private String stackId;
 
-        @NameInMap("StackName")
+        @com.aliyun.core.annotation.NameInMap("StackName")
         private String stackName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusReason")
+        @com.aliyun.core.annotation.NameInMap("StatusReason")
         private String statusReason;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private Resources(Builder builder) {

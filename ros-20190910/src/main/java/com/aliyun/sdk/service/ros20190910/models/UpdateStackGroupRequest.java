@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,82 +11,82 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateStackGroupRequest</p>
  */
 public class UpdateStackGroupRequest extends Request {
-    @Query
-    @NameInMap("AccountIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountIds")
     private java.util.List < String > accountIds;
 
-    @Query
-    @NameInMap("AdministrationRoleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdministrationRoleName")
     private String administrationRoleName;
 
-    @Query
-    @NameInMap("AutoDeployment")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoDeployment")
     private AutoDeployment autoDeployment;
 
-    @Query
-    @NameInMap("Capabilities")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Capabilities")
     private java.util.List < String > capabilities;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DeploymentTargets")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeploymentTargets")
     private DeploymentTargets deploymentTargets;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("ExecutionRoleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExecutionRoleName")
     private String executionRoleName;
 
-    @Query
-    @NameInMap("OperationDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationDescription")
     private String operationDescription;
 
-    @Query
-    @NameInMap("OperationPreferences")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationPreferences")
     private java.util.Map < String, ? > operationPreferences;
 
-    @Query
-    @NameInMap("Parameters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Parameters")
     private java.util.List < Parameters> parameters;
 
-    @Query
-    @NameInMap("PermissionModel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PermissionModel")
     private String permissionModel;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("RegionIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionIds")
     private java.util.List < String > regionIds;
 
-    @Query
-    @NameInMap("StackGroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StackGroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String stackGroupName;
 
-    @Body
-    @NameInMap("TemplateBody")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateBody")
     private String templateBody;
 
-    @Query
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
-    @Query
-    @NameInMap("TemplateURL")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateURL")
     private String templateURL;
 
-    @Query
-    @NameInMap("TemplateVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateVersion")
     private String templateVersion;
 
     private UpdateStackGroupRequest(Builder builder) {
@@ -548,10 +547,10 @@ public class UpdateStackGroupRequest extends Request {
     } 
 
     public static class AutoDeployment extends TeaModel {
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("RetainStacksOnAccountRemoval")
+        @com.aliyun.core.annotation.NameInMap("RetainStacksOnAccountRemoval")
         private Boolean retainStacksOnAccountRemoval;
 
         private AutoDeployment(Builder builder) {
@@ -615,10 +614,10 @@ public class UpdateStackGroupRequest extends Request {
 
     }
     public static class DeploymentTargets extends TeaModel {
-        @NameInMap("AccountIds")
+        @com.aliyun.core.annotation.NameInMap("AccountIds")
         private java.util.List < String > accountIds;
 
-        @NameInMap("RdFolderIds")
+        @com.aliyun.core.annotation.NameInMap("RdFolderIds")
         private java.util.List < String > rdFolderIds;
 
         private DeploymentTargets(Builder builder) {
@@ -676,12 +675,12 @@ public class UpdateStackGroupRequest extends Request {
 
     }
     public static class Parameters extends TeaModel {
-        @NameInMap("ParameterKey")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ParameterKey")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String parameterKey;
 
-        @NameInMap("ParameterValue")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String parameterValue;
 
         private Parameters(Builder builder) {

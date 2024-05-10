@@ -30,13 +30,21 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ContinueCreateStackResponse> continueCreateStack(ContinueCreateStackRequest request);
 
     /**
-      * ### Limits
-      * You can create and execute change sets to update running stacks. For more information about change sets, see [Overview](~~156038~~).
-      * ### Usage notes
-      * *   A stack can contain up to 20 change sets.
-      * *   Change sets reflect only the changes of stacks. Change sets do not reflect whether stacks are updated.
-      * *   You cannot use change sets to check the following items: whether the upper limit of your Alibaba Cloud account is reached, whether resources that cannot be updated are updated, and whether your Alibaba Cloud account has permissions to modify resources. These items may cause stack updates to fail. If stacks fail to be updated, Resource Orchestration Service (ROS) rolls back the resources to the original status.
-      * In this topic, a change set named `MyChangeSet` is created in the `China (Hangzhou)` region. In this example, the template of the stack whose ID is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****` is updated to `{"ROSTemplateFormatVersion":"2015-09-01"}`.
+      * ### [](#)Scenarios
+      * #### [](#)Use a change set to create a stack
+      * If you want to manage a large number of cloud resources and preview the creation effect of the resources before a stack that contains the resources is created, you can create the stack by using a change set. In this case, you must set `ChangeSetType` to CREATE and configure the relevant parameters. For more information about change sets, see [Change set](~~155649~~).
+      * #### [](#)Use a change set to update a stack
+      * If you want to preview the impacts of changes to an existing stack before you update the stack resources, you can create a change set for the stack. In this case, you must set ChangeSetType to UPDATE and configure the relevant parameters. For more information about change sets, see [Change set](~~155649~~).
+      * #### [](#)Use a change set and existing resources to create a stack
+      * If you want to add existing cloud resources to a new stack for centralized management, you can use a change set to create a stack and import the resources to the stack. In this case, you must set ChangeSetType to IMPORT and configure the relevant parameters. For more information about the resource import feature, see [Overview](~~193454~~).
+      * #### [](#)Use a change set and existing resources to update a stack
+      * If you want to import existing resources to an existing stack for centralized management, you can use a change set to update the stack. In this case, you must set ChangeSetType to IMPORT and configure the relevant parameters. For more information about the resource import feature, see [Overview](~~193454~~).
+      * ### [](#)Limits
+      * *   You can use change sets to update only stacks that are in specific states. For more information, see [Use a change set to update a stack](~~155873~~).
+      * *   A stack can have up to 20 change sets.
+      * *   Change sets reflect only the changes to stacks. Change sets do not reflect whether stacks can be successfully updated.
+      * *   A change set does not check if you exceed an account limit, if you update resources that cannot be updated, or if you have insufficient permissions to modify resources, all of which can cause a stack update to fail. If a stack update fails, Resource Orchestration Service (ROS) attempts to roll back your resources to their original status.
+      * This topic provides an example on how to use a change set to update a stack. In this example, a change set named `MyChangeSet` is created in the `China (Hangzhou)` region. The template of a stack whose ID is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****` is updated to `{"ROSTemplateFormatVersion":"2015-09-01"}`.
       *
      */
     CompletableFuture<CreateChangeSetResponse> createChangeSet(CreateChangeSetRequest request);

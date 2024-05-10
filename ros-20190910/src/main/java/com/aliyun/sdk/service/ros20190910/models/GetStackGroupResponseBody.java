@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetStackGroupResponseBody</p>
  */
 public class GetStackGroupResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StackGroup")
+    @com.aliyun.core.annotation.NameInMap("StackGroup")
     private StackGroup stackGroup;
 
     private GetStackGroupResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class GetStackGroupResponseBody extends TeaModel {
     } 
 
     public static class AutoDeployment extends TeaModel {
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("RetainStacksOnAccountRemoval")
+        @com.aliyun.core.annotation.NameInMap("RetainStacksOnAccountRemoval")
         private Boolean retainStacksOnAccountRemoval;
 
         private AutoDeployment(Builder builder) {
@@ -144,10 +143,10 @@ public class GetStackGroupResponseBody extends TeaModel {
 
     }
     public static class Parameters extends TeaModel {
-        @NameInMap("ParameterKey")
+        @com.aliyun.core.annotation.NameInMap("ParameterKey")
         private String parameterKey;
 
-        @NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
         private String parameterValue;
 
         private Parameters(Builder builder) {
@@ -205,31 +204,31 @@ public class GetStackGroupResponseBody extends TeaModel {
 
     }
     public static class StackGroupDriftDetectionDetail extends TeaModel {
-        @NameInMap("CancelledStackInstancesCount")
+        @com.aliyun.core.annotation.NameInMap("CancelledStackInstancesCount")
         private Integer cancelledStackInstancesCount;
 
-        @NameInMap("DriftDetectionStatus")
+        @com.aliyun.core.annotation.NameInMap("DriftDetectionStatus")
         private String driftDetectionStatus;
 
-        @NameInMap("DriftDetectionTime")
+        @com.aliyun.core.annotation.NameInMap("DriftDetectionTime")
         private String driftDetectionTime;
 
-        @NameInMap("DriftedStackInstancesCount")
+        @com.aliyun.core.annotation.NameInMap("DriftedStackInstancesCount")
         private Integer driftedStackInstancesCount;
 
-        @NameInMap("FailedStackInstancesCount")
+        @com.aliyun.core.annotation.NameInMap("FailedStackInstancesCount")
         private Integer failedStackInstancesCount;
 
-        @NameInMap("InProgressStackInstancesCount")
+        @com.aliyun.core.annotation.NameInMap("InProgressStackInstancesCount")
         private Integer inProgressStackInstancesCount;
 
-        @NameInMap("InSyncStackInstancesCount")
+        @com.aliyun.core.annotation.NameInMap("InSyncStackInstancesCount")
         private Integer inSyncStackInstancesCount;
 
-        @NameInMap("StackGroupDriftStatus")
+        @com.aliyun.core.annotation.NameInMap("StackGroupDriftStatus")
         private String stackGroupDriftStatus;
 
-        @NameInMap("TotalStackInstancesCount")
+        @com.aliyun.core.annotation.NameInMap("TotalStackInstancesCount")
         private Integer totalStackInstancesCount;
 
         private StackGroupDriftDetectionDetail(Builder builder) {
@@ -422,51 +421,58 @@ public class GetStackGroupResponseBody extends TeaModel {
 
     }
     public static class StackGroup extends TeaModel {
-        @NameInMap("AdministrationRoleName")
+        @com.aliyun.core.annotation.NameInMap("AdministrationRoleName")
         private String administrationRoleName;
 
-        @NameInMap("AutoDeployment")
+        @com.aliyun.core.annotation.NameInMap("AutoDeployment")
         private AutoDeployment autoDeployment;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
+        private String createTime;
+
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ExecutionRoleName")
+        @com.aliyun.core.annotation.NameInMap("ExecutionRoleName")
         private String executionRoleName;
 
-        @NameInMap("Parameters")
+        @com.aliyun.core.annotation.NameInMap("Parameters")
         private java.util.List < Parameters> parameters;
 
-        @NameInMap("PermissionModel")
+        @com.aliyun.core.annotation.NameInMap("PermissionModel")
         private String permissionModel;
 
-        @NameInMap("RdFolderIds")
+        @com.aliyun.core.annotation.NameInMap("RdFolderIds")
         private java.util.List < String > rdFolderIds;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("StackGroupDriftDetectionDetail")
+        @com.aliyun.core.annotation.NameInMap("StackGroupDriftDetectionDetail")
         private StackGroupDriftDetectionDetail stackGroupDriftDetectionDetail;
 
-        @NameInMap("StackGroupId")
+        @com.aliyun.core.annotation.NameInMap("StackGroupId")
         private String stackGroupId;
 
-        @NameInMap("StackGroupName")
+        @com.aliyun.core.annotation.NameInMap("StackGroupName")
         private String stackGroupName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TemplateBody")
+        @com.aliyun.core.annotation.NameInMap("TemplateBody")
         private String templateBody;
 
-        @NameInMap("TemplateContent")
+        @com.aliyun.core.annotation.NameInMap("TemplateContent")
         private String templateContent;
+
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
+        private String updateTime;
 
         private StackGroup(Builder builder) {
             this.administrationRoleName = builder.administrationRoleName;
             this.autoDeployment = builder.autoDeployment;
+            this.createTime = builder.createTime;
             this.description = builder.description;
             this.executionRoleName = builder.executionRoleName;
             this.parameters = builder.parameters;
@@ -479,6 +485,7 @@ public class GetStackGroupResponseBody extends TeaModel {
             this.status = builder.status;
             this.templateBody = builder.templateBody;
             this.templateContent = builder.templateContent;
+            this.updateTime = builder.updateTime;
         }
 
         public static Builder builder() {
@@ -501,6 +508,13 @@ public class GetStackGroupResponseBody extends TeaModel {
          */
         public AutoDeployment getAutoDeployment() {
             return this.autoDeployment;
+        }
+
+        /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         /**
@@ -587,9 +601,17 @@ public class GetStackGroupResponseBody extends TeaModel {
             return this.templateContent;
         }
 
+        /**
+         * @return updateTime
+         */
+        public String getUpdateTime() {
+            return this.updateTime;
+        }
+
         public static final class Builder {
             private String administrationRoleName; 
             private AutoDeployment autoDeployment; 
+            private String createTime; 
             private String description; 
             private String executionRoleName; 
             private java.util.List < Parameters> parameters; 
@@ -602,6 +624,7 @@ public class GetStackGroupResponseBody extends TeaModel {
             private String status; 
             private String templateBody; 
             private String templateContent; 
+            private String updateTime; 
 
             /**
              * The parameters of the stack group.
@@ -622,6 +645,14 @@ public class GetStackGroupResponseBody extends TeaModel {
              */
             public Builder autoDeployment(AutoDeployment autoDeployment) {
                 this.autoDeployment = autoDeployment;
+                return this;
+            }
+
+            /**
+             * CreateTime.
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
                 return this;
             }
 
@@ -741,6 +772,14 @@ public class GetStackGroupResponseBody extends TeaModel {
              */
             public Builder templateContent(String templateContent) {
                 this.templateContent = templateContent;
+                return this;
+            }
+
+            /**
+             * UpdateTime.
+             */
+            public Builder updateTime(String updateTime) {
+                this.updateTime = updateTime;
                 return this;
             }
 

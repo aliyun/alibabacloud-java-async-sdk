@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ros20190910.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetChangeSetRequest</p>
  */
 public class GetChangeSetRequest extends Request {
-    @Query
-    @NameInMap("ChangeSetId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChangeSetId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String changeSetId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ShowTemplate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShowTemplate")
     private Boolean showTemplate;
 
     private GetChangeSetRequest(Builder builder) {
