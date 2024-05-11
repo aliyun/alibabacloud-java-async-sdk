@@ -1,0 +1,74 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.imm20200930.models;
+
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DetectImageCodesResponseBody} extends {@link TeaModel}
+ *
+ * <p>DetectImageCodesResponseBody</p>
+ */
+public class DetectImageCodesResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Codes")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List < Codes > codes;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    private String requestId;
+
+    private DetectImageCodesResponseBody(Builder builder) {
+        this.codes = builder.codes;
+        this.requestId = builder.requestId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DetectImageCodesResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return codes
+     */
+    public java.util.List < Codes > getCodes() {
+        return this.codes;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static final class Builder {
+        private java.util.List < Codes > codes; 
+        private String requestId; 
+
+        /**
+         * Codes.
+         */
+        public Builder codes(java.util.List < Codes > codes) {
+            this.codes = codes;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        public DetectImageCodesResponseBody build() {
+            return new DetectImageCodesResponseBody(this);
+        } 
+
+    } 
+
+}
