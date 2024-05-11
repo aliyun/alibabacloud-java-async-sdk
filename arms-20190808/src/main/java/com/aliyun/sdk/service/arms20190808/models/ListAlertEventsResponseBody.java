@@ -176,6 +176,67 @@ public class ListAlertEventsResponseBody extends TeaModel {
         } 
 
     }
+    public static class NotificationPolicies extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private Long id;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        private NotificationPolicies(Builder builder) {
+            this.id = builder.id;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NotificationPolicies create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private Long id; 
+            private String name; 
+
+            /**
+             * Id.
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public NotificationPolicies build() {
+                return new NotificationPolicies(this);
+            } 
+
+        } 
+
+    }
     public static class Events extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alarms")
         private java.util.List < Alarms> alarms;
@@ -207,6 +268,9 @@ public class ListAlertEventsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Labels")
         private String labels;
 
+        @com.aliyun.core.annotation.NameInMap("NotificationPolicies")
+        private java.util.List < NotificationPolicies> notificationPolicies;
+
         @com.aliyun.core.annotation.NameInMap("ReceiveTime")
         private String receiveTime;
 
@@ -219,6 +283,9 @@ public class ListAlertEventsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("TriggerCount")
+        private Long triggerCount;
+
         private Events(Builder builder) {
             this.alarms = builder.alarms;
             this.alertName = builder.alertName;
@@ -230,10 +297,12 @@ public class ListAlertEventsResponseBody extends TeaModel {
             this.integrationName = builder.integrationName;
             this.integrationType = builder.integrationType;
             this.labels = builder.labels;
+            this.notificationPolicies = builder.notificationPolicies;
             this.receiveTime = builder.receiveTime;
             this.severity = builder.severity;
             this.startTime = builder.startTime;
             this.status = builder.status;
+            this.triggerCount = builder.triggerCount;
         }
 
         public static Builder builder() {
@@ -315,6 +384,13 @@ public class ListAlertEventsResponseBody extends TeaModel {
         }
 
         /**
+         * @return notificationPolicies
+         */
+        public java.util.List < NotificationPolicies> getNotificationPolicies() {
+            return this.notificationPolicies;
+        }
+
+        /**
          * @return receiveTime
          */
         public String getReceiveTime() {
@@ -342,6 +418,13 @@ public class ListAlertEventsResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return triggerCount
+         */
+        public Long getTriggerCount() {
+            return this.triggerCount;
+        }
+
         public static final class Builder {
             private java.util.List < Alarms> alarms; 
             private String alertName; 
@@ -353,10 +436,12 @@ public class ListAlertEventsResponseBody extends TeaModel {
             private String integrationName; 
             private String integrationType; 
             private String labels; 
+            private java.util.List < NotificationPolicies> notificationPolicies; 
             private String receiveTime; 
             private String severity; 
             private String startTime; 
             private String status; 
+            private Long triggerCount; 
 
             /**
              * The list of associated alerts.
@@ -439,6 +524,14 @@ public class ListAlertEventsResponseBody extends TeaModel {
             }
 
             /**
+             * NotificationPolicies.
+             */
+            public Builder notificationPolicies(java.util.List < NotificationPolicies> notificationPolicies) {
+                this.notificationPolicies = notificationPolicies;
+                return this;
+            }
+
+            /**
              * The time when the alert event was received.
              */
             public Builder receiveTime(String receiveTime) {
@@ -479,6 +572,14 @@ public class ListAlertEventsResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * TriggerCount.
+             */
+            public Builder triggerCount(Long triggerCount) {
+                this.triggerCount = triggerCount;
                 return this;
             }
 

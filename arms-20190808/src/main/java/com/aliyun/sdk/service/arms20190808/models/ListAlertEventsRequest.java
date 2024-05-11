@@ -29,6 +29,10 @@ public class ListAlertEventsRequest extends Request {
     private Long page;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShowNotificationPolicies")
+    private Boolean showNotificationPolicies;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Size")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long size;
@@ -47,6 +51,7 @@ public class ListAlertEventsRequest extends Request {
         this.endTime = builder.endTime;
         this.matchingConditions = builder.matchingConditions;
         this.page = builder.page;
+        this.showNotificationPolicies = builder.showNotificationPolicies;
         this.size = builder.size;
         this.startTime = builder.startTime;
         this.status = builder.status;
@@ -94,6 +99,13 @@ public class ListAlertEventsRequest extends Request {
     }
 
     /**
+     * @return showNotificationPolicies
+     */
+    public Boolean getShowNotificationPolicies() {
+        return this.showNotificationPolicies;
+    }
+
+    /**
      * @return size
      */
     public Long getSize() {
@@ -119,6 +131,7 @@ public class ListAlertEventsRequest extends Request {
         private String endTime; 
         private String matchingConditions; 
         private Long page; 
+        private Boolean showNotificationPolicies; 
         private Long size; 
         private String startTime; 
         private String status; 
@@ -133,6 +146,7 @@ public class ListAlertEventsRequest extends Request {
             this.endTime = request.endTime;
             this.matchingConditions = request.matchingConditions;
             this.page = request.page;
+            this.showNotificationPolicies = request.showNotificationPolicies;
             this.size = request.size;
             this.startTime = request.startTime;
             this.status = request.status;
@@ -171,6 +185,15 @@ public class ListAlertEventsRequest extends Request {
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
             this.page = page;
+            return this;
+        }
+
+        /**
+         * ShowNotificationPolicies.
+         */
+        public Builder showNotificationPolicies(Boolean showNotificationPolicies) {
+            this.putQueryParameter("ShowNotificationPolicies", showNotificationPolicies);
+            this.showNotificationPolicies = showNotificationPolicies;
             return this;
         }
 
