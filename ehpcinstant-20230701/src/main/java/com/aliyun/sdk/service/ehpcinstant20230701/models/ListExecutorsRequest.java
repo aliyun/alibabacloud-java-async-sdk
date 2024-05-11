@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpcinstant20230701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListExecutorsRequest</p>
  */
 public class ListExecutorsRequest extends Request {
-    @Query
-    @NameInMap("Filter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
     private Filter filter;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
     private ListExecutorsRequest(Builder builder) {
@@ -117,19 +116,19 @@ public class ListExecutorsRequest extends Request {
     } 
 
     public static class Filter extends TeaModel {
-        @NameInMap("ExecutorIds")
+        @com.aliyun.core.annotation.NameInMap("ExecutorIds")
         private java.util.List < String > executorIds;
 
-        @NameInMap("IpAddresses")
+        @com.aliyun.core.annotation.NameInMap("IpAddresses")
         private java.util.List < String > ipAddresses;
 
-        @NameInMap("JobName")
+        @com.aliyun.core.annotation.NameInMap("JobName")
         private String jobName;
 
-        @NameInMap("TimeCreatedAfter")
+        @com.aliyun.core.annotation.NameInMap("TimeCreatedAfter")
         private Integer timeCreatedAfter;
 
-        @NameInMap("TimeCreatedBefore")
+        @com.aliyun.core.annotation.NameInMap("TimeCreatedBefore")
         private Integer timeCreatedBefore;
 
         private Filter(Builder builder) {

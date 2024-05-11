@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpcinstant20230701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetImageResponseBody</p>
  */
 public class GetImageResponseBody extends TeaModel {
-    @NameInMap("Image")
+    @com.aliyun.core.annotation.NameInMap("Image")
     private Image image;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private GetImageResponseBody(Builder builder) {
@@ -112,13 +111,13 @@ public class GetImageResponseBody extends TeaModel {
     } 
 
     public static class RegistryCredential extends TeaModel {
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
 
-        @NameInMap("Server")
+        @com.aliyun.core.annotation.NameInMap("Server")
         private String server;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private RegistryCredential(Builder builder) {
@@ -193,19 +192,19 @@ public class GetImageResponseBody extends TeaModel {
 
     }
     public static class ContainerImageSpec extends TeaModel {
-        @NameInMap("IsACREnterprise")
+        @com.aliyun.core.annotation.NameInMap("IsACREnterprise")
         private Boolean isACREnterprise;
 
-        @NameInMap("IsACRRegistry")
+        @com.aliyun.core.annotation.NameInMap("IsACRRegistry")
         private Boolean isACRRegistry;
 
-        @NameInMap("RegistryCredential")
+        @com.aliyun.core.annotation.NameInMap("RegistryCredential")
         private RegistryCredential registryCredential;
 
-        @NameInMap("RegistryCriId")
+        @com.aliyun.core.annotation.NameInMap("RegistryCriId")
         private String registryCriId;
 
-        @NameInMap("RegistryUrl")
+        @com.aliyun.core.annotation.NameInMap("RegistryUrl")
         private String registryUrl;
 
         private ContainerImageSpec(Builder builder) {
@@ -314,16 +313,16 @@ public class GetImageResponseBody extends TeaModel {
 
     }
     public static class VMImageSpec extends TeaModel {
-        @NameInMap("Architecture")
+        @com.aliyun.core.annotation.NameInMap("Architecture")
         private String architecture;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("OsTag")
+        @com.aliyun.core.annotation.NameInMap("OsTag")
         private String osTag;
 
-        @NameInMap("Platform")
+        @com.aliyun.core.annotation.NameInMap("Platform")
         private String platform;
 
         private VMImageSpec(Builder builder) {
@@ -415,29 +414,29 @@ public class GetImageResponseBody extends TeaModel {
 
     }
     public static class Image extends TeaModel {
-        @NameInMap("ContainerImageSpec")
+        @com.aliyun.core.annotation.NameInMap("ContainerImageSpec")
         private ContainerImageSpec containerImageSpec;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ImageType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ImageType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String imageType;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private String size;
 
-        @NameInMap("VMImageSpec")
+        @com.aliyun.core.annotation.NameInMap("VMImageSpec")
         private VMImageSpec VMImageSpec;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private Image(Builder builder) {

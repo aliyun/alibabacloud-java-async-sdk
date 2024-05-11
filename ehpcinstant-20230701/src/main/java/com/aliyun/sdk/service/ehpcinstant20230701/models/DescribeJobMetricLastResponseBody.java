@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpcinstant20230701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeJobMetricLastResponseBody</p>
  */
 public class DescribeJobMetricLastResponseBody extends TeaModel {
-    @NameInMap("Metrics")
+    @com.aliyun.core.annotation.NameInMap("Metrics")
     private java.util.List < Metrics> metrics;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeJobMetricLastResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeJobMetricLastResponseBody extends TeaModel {
     } 
 
     public static class Metrics extends TeaModel {
-        @NameInMap("ArrayIndex")
+        @com.aliyun.core.annotation.NameInMap("ArrayIndex")
         private Integer arrayIndex;
 
-        @NameInMap("Metric")
+        @com.aliyun.core.annotation.NameInMap("Metric")
         private String metric;
 
         private Metrics(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpcinstant20230701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddImageRequest</p>
  */
 public class AddImageRequest extends Request {
-    @Query
-    @NameInMap("ContainerImageSpec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerImageSpec")
     private ContainerImageSpec containerImageSpec;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("ImageVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageVersion")
     private String imageVersion;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("VMImageSpec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VMImageSpec")
     private VMImageSpec VMImageSpec;
 
     private AddImageRequest(Builder builder) {
@@ -165,13 +164,13 @@ public class AddImageRequest extends Request {
     } 
 
     public static class RegistryCredential extends TeaModel {
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
 
-        @NameInMap("Server")
+        @com.aliyun.core.annotation.NameInMap("Server")
         private String server;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private RegistryCredential(Builder builder) {
@@ -246,19 +245,19 @@ public class AddImageRequest extends Request {
 
     }
     public static class ContainerImageSpec extends TeaModel {
-        @NameInMap("IsACREnterprise")
+        @com.aliyun.core.annotation.NameInMap("IsACREnterprise")
         private Boolean isACREnterprise;
 
-        @NameInMap("IsACRRegistry")
+        @com.aliyun.core.annotation.NameInMap("IsACRRegistry")
         private Boolean isACRRegistry;
 
-        @NameInMap("RegistryCredential")
+        @com.aliyun.core.annotation.NameInMap("RegistryCredential")
         private RegistryCredential registryCredential;
 
-        @NameInMap("RegistryCriId")
+        @com.aliyun.core.annotation.NameInMap("RegistryCriId")
         private String registryCriId;
 
-        @NameInMap("RegistryUrl")
+        @com.aliyun.core.annotation.NameInMap("RegistryUrl")
         private String registryUrl;
 
         private ContainerImageSpec(Builder builder) {
@@ -367,7 +366,7 @@ public class AddImageRequest extends Request {
 
     }
     public static class VMImageSpec extends TeaModel {
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
         private VMImageSpec(Builder builder) {
