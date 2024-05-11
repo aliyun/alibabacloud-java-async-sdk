@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220302.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUrlModerationResultResponseBody</p>
  */
 public class DescribeUrlModerationResultResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Msg")
+    @com.aliyun.core.annotation.NameInMap("Msg")
     private String msg;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeUrlModerationResultResponseBody(Builder builder) {
@@ -112,10 +111,10 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
     } 
 
     public static class ExtraInfo extends TeaModel {
-        @NameInMap("IcpNo")
+        @com.aliyun.core.annotation.NameInMap("IcpNo")
         private String icpNo;
 
-        @NameInMap("IcpType")
+        @com.aliyun.core.annotation.NameInMap("IcpType")
         private String icpType;
 
         private ExtraInfo(Builder builder) {
@@ -173,10 +172,10 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("Confidence")
+        @com.aliyun.core.annotation.NameInMap("Confidence")
         private Float confidence;
 
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
         private Result(Builder builder) {
@@ -234,16 +233,16 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("DataId")
+        @com.aliyun.core.annotation.NameInMap("DataId")
         private String dataId;
 
-        @NameInMap("ExtraInfo")
+        @com.aliyun.core.annotation.NameInMap("ExtraInfo")
         private ExtraInfo extraInfo;
 
-        @NameInMap("ReqId")
+        @com.aliyun.core.annotation.NameInMap("ReqId")
         private String reqId;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private java.util.List < Result> result;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220302.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TextModerationPlusResponseBody</p>
  */
 public class TextModerationPlusResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private TextModerationPlusResponseBody(Builder builder) {
@@ -112,7 +111,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
     } 
 
     public static class Advice extends TeaModel {
-        @NameInMap("Answer")
+        @com.aliyun.core.annotation.NameInMap("Answer")
         private String answer;
 
         private Advice(Builder builder) {
@@ -153,10 +152,10 @@ public class TextModerationPlusResponseBody extends TeaModel {
 
     }
     public static class CustomizedHit extends TeaModel {
-        @NameInMap("KeyWords")
+        @com.aliyun.core.annotation.NameInMap("KeyWords")
         private String keyWords;
 
-        @NameInMap("LibName")
+        @com.aliyun.core.annotation.NameInMap("LibName")
         private String libName;
 
         private CustomizedHit(Builder builder) {
@@ -214,16 +213,16 @@ public class TextModerationPlusResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("Confidence")
+        @com.aliyun.core.annotation.NameInMap("Confidence")
         private Float confidence;
 
-        @NameInMap("CustomizedHit")
+        @com.aliyun.core.annotation.NameInMap("CustomizedHit")
         private java.util.List < CustomizedHit> customizedHit;
 
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("RiskWords")
+        @com.aliyun.core.annotation.NameInMap("RiskWords")
         private String riskWords;
 
         private Result(Builder builder) {
@@ -315,13 +314,13 @@ public class TextModerationPlusResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Advice")
+        @com.aliyun.core.annotation.NameInMap("Advice")
         private java.util.List < Advice> advice;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private java.util.List < Result> result;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private Float score;
 
         private Data(Builder builder) {

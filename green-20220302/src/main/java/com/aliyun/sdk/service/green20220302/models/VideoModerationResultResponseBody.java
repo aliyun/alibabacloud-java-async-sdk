@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220302.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>VideoModerationResultResponseBody</p>
  */
 public class VideoModerationResultResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private VideoModerationResultResponseBody(Builder builder) {
@@ -112,10 +111,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
     } 
 
     public static class AudioSummarys extends TeaModel {
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("LabelSum")
+        @com.aliyun.core.annotation.NameInMap("LabelSum")
         private Integer labelSum;
 
         private AudioSummarys(Builder builder) {
@@ -173,37 +172,37 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     }
     public static class SliceDetails extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("EndTimestamp")
+        @com.aliyun.core.annotation.NameInMap("EndTimestamp")
         private Long endTimestamp;
 
-        @NameInMap("Extend")
+        @com.aliyun.core.annotation.NameInMap("Extend")
         private String extend;
 
-        @NameInMap("Labels")
+        @com.aliyun.core.annotation.NameInMap("Labels")
         private String labels;
 
-        @NameInMap("RiskTips")
+        @com.aliyun.core.annotation.NameInMap("RiskTips")
         private String riskTips;
 
-        @NameInMap("RiskWords")
+        @com.aliyun.core.annotation.NameInMap("RiskWords")
         private String riskWords;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private Float score;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("StartTimestamp")
+        @com.aliyun.core.annotation.NameInMap("StartTimestamp")
         private Long startTimestamp;
 
-        @NameInMap("Text")
+        @com.aliyun.core.annotation.NameInMap("Text")
         private String text;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private SliceDetails(Builder builder) {
@@ -414,10 +413,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     }
     public static class AudioResult extends TeaModel {
-        @NameInMap("AudioSummarys")
+        @com.aliyun.core.annotation.NameInMap("AudioSummarys")
         private java.util.List < AudioSummarys> audioSummarys;
 
-        @NameInMap("SliceDetails")
+        @com.aliyun.core.annotation.NameInMap("SliceDetails")
         private java.util.List < SliceDetails> sliceDetails;
 
         private AudioResult(Builder builder) {
@@ -475,10 +474,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     }
     public static class FrameSummarys extends TeaModel {
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("LabelSum")
+        @com.aliyun.core.annotation.NameInMap("LabelSum")
         private Integer labelSum;
 
         private FrameSummarys(Builder builder) {
@@ -536,10 +535,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     }
     public static class CustomImage extends TeaModel {
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("LibId")
+        @com.aliyun.core.annotation.NameInMap("LibId")
         private String libId;
 
         private CustomImage(Builder builder) {
@@ -597,7 +596,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     }
     public static class PublicFigure extends TeaModel {
-        @NameInMap("FigureId")
+        @com.aliyun.core.annotation.NameInMap("FigureId")
         private String figureId;
 
         private PublicFigure(Builder builder) {
@@ -638,10 +637,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("Confidence")
+        @com.aliyun.core.annotation.NameInMap("Confidence")
         private Float confidence;
 
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
         private Result(Builder builder) {
@@ -699,19 +698,19 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     }
     public static class Results extends TeaModel {
-        @NameInMap("CustomImage")
+        @com.aliyun.core.annotation.NameInMap("CustomImage")
         private java.util.List < CustomImage> customImage;
 
-        @NameInMap("PublicFigure")
+        @com.aliyun.core.annotation.NameInMap("PublicFigure")
         private java.util.List < PublicFigure> publicFigure;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private java.util.List < Result> result;
 
-        @NameInMap("Service")
+        @com.aliyun.core.annotation.NameInMap("Service")
         private String service;
 
-        @NameInMap("TextInImage")
+        @com.aliyun.core.annotation.NameInMap("TextInImage")
         private java.util.Map < String, ? > textInImage;
 
         private Results(Builder builder) {
@@ -820,16 +819,16 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     }
     public static class Frames extends TeaModel {
-        @NameInMap("Offset")
+        @com.aliyun.core.annotation.NameInMap("Offset")
         private Float offset;
 
-        @NameInMap("Results")
+        @com.aliyun.core.annotation.NameInMap("Results")
         private java.util.List < Results> results;
 
-        @NameInMap("TempUrl")
+        @com.aliyun.core.annotation.NameInMap("TempUrl")
         private String tempUrl;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
         private Frames(Builder builder) {
@@ -921,13 +920,13 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     }
     public static class FrameResult extends TeaModel {
-        @NameInMap("FrameNum")
+        @com.aliyun.core.annotation.NameInMap("FrameNum")
         private Integer frameNum;
 
-        @NameInMap("FrameSummarys")
+        @com.aliyun.core.annotation.NameInMap("FrameSummarys")
         private java.util.List < FrameSummarys> frameSummarys;
 
-        @NameInMap("Frames")
+        @com.aliyun.core.annotation.NameInMap("Frames")
         private java.util.List < Frames> frames;
 
         private FrameResult(Builder builder) {
@@ -1002,19 +1001,19 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AudioResult")
+        @com.aliyun.core.annotation.NameInMap("AudioResult")
         private AudioResult audioResult;
 
-        @NameInMap("DataId")
+        @com.aliyun.core.annotation.NameInMap("DataId")
         private String dataId;
 
-        @NameInMap("FrameResult")
+        @com.aliyun.core.annotation.NameInMap("FrameResult")
         private FrameResult frameResult;
 
-        @NameInMap("LiveId")
+        @com.aliyun.core.annotation.NameInMap("LiveId")
         private String liveId;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
         private Data(Builder builder) {

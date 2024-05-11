@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220302.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeFileModerationResultResponseBody</p>
  */
 public class DescribeFileModerationResultResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeFileModerationResultResponseBody(Builder builder) {
@@ -112,10 +111,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
     } 
 
     public static class LabelResult extends TeaModel {
-        @NameInMap("Confidence")
+        @com.aliyun.core.annotation.NameInMap("Confidence")
         private Float confidence;
 
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
         private LabelResult(Builder builder) {
@@ -173,16 +172,16 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
 
     }
     public static class Location extends TeaModel {
-        @NameInMap("H")
+        @com.aliyun.core.annotation.NameInMap("H")
         private Integer h;
 
-        @NameInMap("W")
+        @com.aliyun.core.annotation.NameInMap("W")
         private Integer w;
 
-        @NameInMap("X")
+        @com.aliyun.core.annotation.NameInMap("X")
         private Integer x;
 
-        @NameInMap("Y")
+        @com.aliyun.core.annotation.NameInMap("Y")
         private Integer y;
 
         private Location(Builder builder) {
@@ -274,16 +273,16 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
 
     }
     public static class ImageResult extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("LabelResult")
+        @com.aliyun.core.annotation.NameInMap("LabelResult")
         private java.util.List < LabelResult> labelResult;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private Location location;
 
-        @NameInMap("Service")
+        @com.aliyun.core.annotation.NameInMap("Service")
         private String service;
 
         private ImageResult(Builder builder) {
@@ -375,25 +374,25 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
 
     }
     public static class TextResult extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Labels")
+        @com.aliyun.core.annotation.NameInMap("Labels")
         private String labels;
 
-        @NameInMap("RiskTips")
+        @com.aliyun.core.annotation.NameInMap("RiskTips")
         private String riskTips;
 
-        @NameInMap("RiskWords")
+        @com.aliyun.core.annotation.NameInMap("RiskWords")
         private String riskWords;
 
-        @NameInMap("Service")
+        @com.aliyun.core.annotation.NameInMap("Service")
         private String service;
 
-        @NameInMap("Text")
+        @com.aliyun.core.annotation.NameInMap("Text")
         private String text;
 
-        @NameInMap("TextSegment")
+        @com.aliyun.core.annotation.NameInMap("TextSegment")
         private String textSegment;
 
         private TextResult(Builder builder) {
@@ -536,19 +535,19 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
 
     }
     public static class PageResult extends TeaModel {
-        @NameInMap("ImageResult")
+        @com.aliyun.core.annotation.NameInMap("ImageResult")
         private java.util.List < ImageResult> imageResult;
 
-        @NameInMap("ImageUrl")
+        @com.aliyun.core.annotation.NameInMap("ImageUrl")
         private String imageUrl;
 
-        @NameInMap("PageNum")
+        @com.aliyun.core.annotation.NameInMap("PageNum")
         private Integer pageNum;
 
-        @NameInMap("TextResult")
+        @com.aliyun.core.annotation.NameInMap("TextResult")
         private java.util.List < TextResult> textResult;
 
-        @NameInMap("TextUrl")
+        @com.aliyun.core.annotation.NameInMap("TextUrl")
         private String textUrl;
 
         private PageResult(Builder builder) {
@@ -657,16 +656,16 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("DataId")
+        @com.aliyun.core.annotation.NameInMap("DataId")
         private String dataId;
 
-        @NameInMap("DocType")
+        @com.aliyun.core.annotation.NameInMap("DocType")
         private String docType;
 
-        @NameInMap("PageResult")
+        @com.aliyun.core.annotation.NameInMap("PageResult")
         private java.util.List < PageResult> pageResult;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private Data(Builder builder) {

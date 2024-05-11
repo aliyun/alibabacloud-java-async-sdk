@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220302.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImageResultExtResponseBody</p>
  */
 public class DescribeImageResultExtResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Msg")
+    @com.aliyun.core.annotation.NameInMap("Msg")
     private String msg;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeImageResultExtResponseBody(Builder builder) {
@@ -112,13 +111,13 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
     } 
 
     public static class CustomImage extends TeaModel {
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("LibId")
+        @com.aliyun.core.annotation.NameInMap("LibId")
         private String libId;
 
-        @NameInMap("LibName")
+        @com.aliyun.core.annotation.NameInMap("LibName")
         private String libName;
 
         private CustomImage(Builder builder) {
@@ -193,7 +192,7 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
 
     }
     public static class PublicFigure extends TeaModel {
-        @NameInMap("FigureId")
+        @com.aliyun.core.annotation.NameInMap("FigureId")
         private String figureId;
 
         private PublicFigure(Builder builder) {
@@ -234,13 +233,13 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
 
     }
     public static class CustomTexts extends TeaModel {
-        @NameInMap("KeyWords")
+        @com.aliyun.core.annotation.NameInMap("KeyWords")
         private String keyWords;
 
-        @NameInMap("LibId")
+        @com.aliyun.core.annotation.NameInMap("LibId")
         private String libId;
 
-        @NameInMap("LibName")
+        @com.aliyun.core.annotation.NameInMap("LibName")
         private String libName;
 
         private CustomTexts(Builder builder) {
@@ -315,13 +314,13 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
 
     }
     public static class TextInImage extends TeaModel {
-        @NameInMap("CustomTexts")
+        @com.aliyun.core.annotation.NameInMap("CustomTexts")
         private java.util.List < CustomTexts> customTexts;
 
-        @NameInMap("OcrDatas")
+        @com.aliyun.core.annotation.NameInMap("OcrDatas")
         private java.util.List < String > ocrDatas;
 
-        @NameInMap("RiskWords")
+        @com.aliyun.core.annotation.NameInMap("RiskWords")
         private java.util.List < String > riskWords;
 
         private TextInImage(Builder builder) {
@@ -396,13 +395,13 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("CustomImage")
+        @com.aliyun.core.annotation.NameInMap("CustomImage")
         private java.util.List < CustomImage> customImage;
 
-        @NameInMap("PublicFigure")
+        @com.aliyun.core.annotation.NameInMap("PublicFigure")
         private java.util.List < PublicFigure> publicFigure;
 
-        @NameInMap("TextInImage")
+        @com.aliyun.core.annotation.NameInMap("TextInImage")
         private TextInImage textInImage;
 
         private Data(Builder builder) {

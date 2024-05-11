@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220302.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>VoiceModerationResultResponseBody</p>
  */
 public class VoiceModerationResultResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private VoiceModerationResultResponseBody(Builder builder) {
@@ -112,40 +111,40 @@ public class VoiceModerationResultResponseBody extends TeaModel {
     } 
 
     public static class SliceDetails extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("EndTimestamp")
+        @com.aliyun.core.annotation.NameInMap("EndTimestamp")
         private Long endTimestamp;
 
-        @NameInMap("Extend")
+        @com.aliyun.core.annotation.NameInMap("Extend")
         private String extend;
 
-        @NameInMap("Labels")
+        @com.aliyun.core.annotation.NameInMap("Labels")
         private String labels;
 
-        @NameInMap("OriginAlgoResult")
+        @com.aliyun.core.annotation.NameInMap("OriginAlgoResult")
         private java.util.Map < String, ? > originAlgoResult;
 
-        @NameInMap("RiskTips")
+        @com.aliyun.core.annotation.NameInMap("RiskTips")
         private String riskTips;
 
-        @NameInMap("RiskWords")
+        @com.aliyun.core.annotation.NameInMap("RiskWords")
         private String riskWords;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private Float score;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("StartTimestamp")
+        @com.aliyun.core.annotation.NameInMap("StartTimestamp")
         private Long startTimestamp;
 
-        @NameInMap("Text")
+        @com.aliyun.core.annotation.NameInMap("Text")
         private String text;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private SliceDetails(Builder builder) {
@@ -373,19 +372,19 @@ public class VoiceModerationResultResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("DataId")
+        @com.aliyun.core.annotation.NameInMap("DataId")
         private String dataId;
 
-        @NameInMap("LiveId")
+        @com.aliyun.core.annotation.NameInMap("LiveId")
         private String liveId;
 
-        @NameInMap("SliceDetails")
+        @com.aliyun.core.annotation.NameInMap("SliceDetails")
         private java.util.List < SliceDetails> sliceDetails;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private Data(Builder builder) {

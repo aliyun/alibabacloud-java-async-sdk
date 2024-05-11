@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220302.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ImageModerationResponseBody</p>
  */
 public class ImageModerationResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Msg")
+    @com.aliyun.core.annotation.NameInMap("Msg")
     private String msg;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ImageModerationResponseBody(Builder builder) {
@@ -111,11 +110,173 @@ public class ImageModerationResponseBody extends TeaModel {
 
     } 
 
+    public static class Location extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("H")
+        private Integer h;
+
+        @com.aliyun.core.annotation.NameInMap("W")
+        private Integer w;
+
+        @com.aliyun.core.annotation.NameInMap("X")
+        private Integer x;
+
+        @com.aliyun.core.annotation.NameInMap("Y")
+        private Integer y;
+
+        private Location(Builder builder) {
+            this.h = builder.h;
+            this.w = builder.w;
+            this.x = builder.x;
+            this.y = builder.y;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Location create() {
+            return builder().build();
+        }
+
+        /**
+         * @return h
+         */
+        public Integer getH() {
+            return this.h;
+        }
+
+        /**
+         * @return w
+         */
+        public Integer getW() {
+            return this.w;
+        }
+
+        /**
+         * @return x
+         */
+        public Integer getX() {
+            return this.x;
+        }
+
+        /**
+         * @return y
+         */
+        public Integer getY() {
+            return this.y;
+        }
+
+        public static final class Builder {
+            private Integer h; 
+            private Integer w; 
+            private Integer x; 
+            private Integer y; 
+
+            /**
+             * H.
+             */
+            public Builder h(Integer h) {
+                this.h = h;
+                return this;
+            }
+
+            /**
+             * W.
+             */
+            public Builder w(Integer w) {
+                this.w = w;
+                return this;
+            }
+
+            /**
+             * X.
+             */
+            public Builder x(Integer x) {
+                this.x = x;
+                return this;
+            }
+
+            /**
+             * Y.
+             */
+            public Builder y(Integer y) {
+                this.y = y;
+                return this;
+            }
+
+            public Location build() {
+                return new Location(this);
+            } 
+
+        } 
+
+    }
+    public static class OcrResult extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Location")
+        private Location location;
+
+        @com.aliyun.core.annotation.NameInMap("Text")
+        private String text;
+
+        private OcrResult(Builder builder) {
+            this.location = builder.location;
+            this.text = builder.text;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OcrResult create() {
+            return builder().build();
+        }
+
+        /**
+         * @return location
+         */
+        public Location getLocation() {
+            return this.location;
+        }
+
+        /**
+         * @return text
+         */
+        public String getText() {
+            return this.text;
+        }
+
+        public static final class Builder {
+            private Location location; 
+            private String text; 
+
+            /**
+             * Location.
+             */
+            public Builder location(Location location) {
+                this.location = location;
+                return this;
+            }
+
+            /**
+             * Text.
+             */
+            public Builder text(String text) {
+                this.text = text;
+                return this;
+            }
+
+            public OcrResult build() {
+                return new OcrResult(this);
+            } 
+
+        } 
+
+    }
     public static class Recognition extends TeaModel {
-        @NameInMap("Classification")
+        @com.aliyun.core.annotation.NameInMap("Classification")
         private String classification;
 
-        @NameInMap("Confidence")
+        @com.aliyun.core.annotation.NameInMap("Confidence")
         private Float confidence;
 
         private Recognition(Builder builder) {
@@ -173,10 +334,14 @@ public class ImageModerationResponseBody extends TeaModel {
 
     }
     public static class Ext extends TeaModel {
-        @NameInMap("Recognition")
+        @com.aliyun.core.annotation.NameInMap("OcrResult")
+        private java.util.List < OcrResult> ocrResult;
+
+        @com.aliyun.core.annotation.NameInMap("Recognition")
         private java.util.List < Recognition> recognition;
 
         private Ext(Builder builder) {
+            this.ocrResult = builder.ocrResult;
             this.recognition = builder.recognition;
         }
 
@@ -189,6 +354,13 @@ public class ImageModerationResponseBody extends TeaModel {
         }
 
         /**
+         * @return ocrResult
+         */
+        public java.util.List < OcrResult> getOcrResult() {
+            return this.ocrResult;
+        }
+
+        /**
          * @return recognition
          */
         public java.util.List < Recognition> getRecognition() {
@@ -196,7 +368,16 @@ public class ImageModerationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List < OcrResult> ocrResult; 
             private java.util.List < Recognition> recognition; 
+
+            /**
+             * OcrResult.
+             */
+            public Builder ocrResult(java.util.List < OcrResult> ocrResult) {
+                this.ocrResult = ocrResult;
+                return this;
+            }
 
             /**
              * Recognition.
@@ -214,10 +395,10 @@ public class ImageModerationResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("Confidence")
+        @com.aliyun.core.annotation.NameInMap("Confidence")
         private Float confidence;
 
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
         private Result(Builder builder) {
@@ -275,13 +456,13 @@ public class ImageModerationResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("DataId")
+        @com.aliyun.core.annotation.NameInMap("DataId")
         private String dataId;
 
-        @NameInMap("Ext")
+        @com.aliyun.core.annotation.NameInMap("Ext")
         private Ext ext;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private java.util.List < Result> result;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220302.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUploadTokenResponseBody</p>
  */
 public class DescribeUploadTokenResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Msg")
+    @com.aliyun.core.annotation.NameInMap("Msg")
     private String msg;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeUploadTokenResponseBody(Builder builder) {
@@ -112,28 +111,28 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AccessKeyId")
+        @com.aliyun.core.annotation.NameInMap("AccessKeyId")
         private String accessKeyId;
 
-        @NameInMap("AccessKeySecret")
+        @com.aliyun.core.annotation.NameInMap("AccessKeySecret")
         private String accessKeySecret;
 
-        @NameInMap("BucketName")
+        @com.aliyun.core.annotation.NameInMap("BucketName")
         private String bucketName;
 
-        @NameInMap("Expiration")
+        @com.aliyun.core.annotation.NameInMap("Expiration")
         private Integer expiration;
 
-        @NameInMap("FileNamePrefix")
+        @com.aliyun.core.annotation.NameInMap("FileNamePrefix")
         private String fileNamePrefix;
 
-        @NameInMap("OssInternalEndPoint")
+        @com.aliyun.core.annotation.NameInMap("OssInternalEndPoint")
         private String ossInternalEndPoint;
 
-        @NameInMap("OssInternetEndPoint")
+        @com.aliyun.core.annotation.NameInMap("OssInternetEndPoint")
         private String ossInternetEndPoint;
 
-        @NameInMap("SecurityToken")
+        @com.aliyun.core.annotation.NameInMap("SecurityToken")
         private String securityToken;
 
         private Data(Builder builder) {

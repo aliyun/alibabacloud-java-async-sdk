@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.green20220302.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>VoiceModerationRequest</p>
  */
 public class VoiceModerationRequest extends Request {
-    @Body
-    @NameInMap("Service")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Service")
     private String service;
 
-    @Body
-    @NameInMap("ServiceParameters")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceParameters")
     private String serviceParameters;
 
     private VoiceModerationRequest(Builder builder) {
