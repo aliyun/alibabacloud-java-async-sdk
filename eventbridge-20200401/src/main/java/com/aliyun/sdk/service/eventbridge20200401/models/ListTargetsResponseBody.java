@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.eventbridge.models.*;
  * <p>ListTargetsResponseBody</p>
  */
 public class ListTargetsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListTargetsResponseBody(Builder builder) {
@@ -140,16 +139,16 @@ public class ListTargetsResponseBody extends TeaModel {
     } 
 
     public static class ParamList extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("ResourceKey")
+        @com.aliyun.core.annotation.NameInMap("ResourceKey")
         private String resourceKey;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private ParamList(Builder builder) {
@@ -241,25 +240,25 @@ public class ListTargetsResponseBody extends TeaModel {
 
     }
     public static class Targets extends TeaModel {
-        @NameInMap("Endpoint")
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
 
-        @NameInMap("ErrorsTolerance")
+        @com.aliyun.core.annotation.NameInMap("ErrorsTolerance")
         private String errorsTolerance;
 
-        @NameInMap("EventBusName")
+        @com.aliyun.core.annotation.NameInMap("EventBusName")
         private String eventBusName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("ParamList")
+        @com.aliyun.core.annotation.NameInMap("ParamList")
         private java.util.List < ParamList> paramList;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Targets(Builder builder) {
@@ -402,13 +401,13 @@ public class ListTargetsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
-        @NameInMap("Targets")
+        @com.aliyun.core.annotation.NameInMap("Targets")
         private java.util.List < Targets> targets;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Data(Builder builder) {

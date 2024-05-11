@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
@@ -12,36 +11,36 @@ import com.aliyun.sdk.gateway.eventbridge.models.*;
  * <p>UpdateEventStreamingRequest</p>
  */
 public class UpdateEventStreamingRequest extends Request {
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("EventStreamingName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EventStreamingName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String eventStreamingName;
 
-    @Body
-    @NameInMap("FilterPattern")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FilterPattern")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String filterPattern;
 
-    @Body
-    @NameInMap("RunOptions")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RunOptions")
     private RunOptions runOptions;
 
-    @Body
-    @NameInMap("Sink")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Sink")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Sink sink;
 
-    @Body
-    @NameInMap("Source")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Source")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Source source;
 
-    @Body
-    @NameInMap("Transforms")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Transforms")
     private java.util.List < Transforms> transforms;
 
     private UpdateEventStreamingRequest(Builder builder) {
@@ -189,7 +188,7 @@ public class UpdateEventStreamingRequest extends Request {
         }
 
         /**
-         * The event source, which is also known as the event source. You must and can specify only one event source.
+         * The event provider, which is also known as the event source. You must and can specify only one event source.
          */
         public Builder source(Source source) {
             String sourceShrink = shrink(source, "Source", "json");
@@ -216,10 +215,10 @@ public class UpdateEventStreamingRequest extends Request {
     } 
 
     public static class BatchWindow extends TeaModel {
-        @NameInMap("CountBasedWindow")
+        @com.aliyun.core.annotation.NameInMap("CountBasedWindow")
         private Integer countBasedWindow;
 
-        @NameInMap("TimeBasedWindow")
+        @com.aliyun.core.annotation.NameInMap("TimeBasedWindow")
         private Integer timeBasedWindow;
 
         private BatchWindow(Builder builder) {
@@ -254,7 +253,7 @@ public class UpdateEventStreamingRequest extends Request {
             private Integer timeBasedWindow; 
 
             /**
-             * The maximum number of events that is allowed in the batch window. If the value specified by this parameter is reached, the data in the batch window is pushed to the downstream application. If multiple batch windows exist, data is pushed if triggering conditions are met in one of the windows.
+             * The maximum number of events that are allowed in the batch window. When this threshold is reached, data in the window is pushed to the downstream service. If multiple batch windows exist, data is pushed if triggering conditions are met in one of the windows.
              */
             public Builder countBasedWindow(Integer countBasedWindow) {
                 this.countBasedWindow = countBasedWindow;
@@ -262,7 +261,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The maximum period of time during which events are allowed in the batch window. Unit: seconds. If the value specified by this parameter is reached, the data in the batch window is pushed to the downstream application. If multiple batch windows exist, data is pushed if triggering conditions are met in one of the windows.
+             * The maximum period of time during which events are allowed in the batch window. Unit: seconds. When this threshold is reached, data in the window is pushed to the downstream service. If multiple batch windows exist, data is pushed if triggering conditions are met in one of the windows.
              */
             public Builder timeBasedWindow(Integer timeBasedWindow) {
                 this.timeBasedWindow = timeBasedWindow;
@@ -277,7 +276,7 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class DeadLetterQueue extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
         private DeadLetterQueue(Builder builder) {
@@ -318,13 +317,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class RetryStrategy extends TeaModel {
-        @NameInMap("MaximumEventAgeInSeconds")
+        @com.aliyun.core.annotation.NameInMap("MaximumEventAgeInSeconds")
         private Long maximumEventAgeInSeconds;
 
-        @NameInMap("MaximumRetryAttempts")
+        @com.aliyun.core.annotation.NameInMap("MaximumRetryAttempts")
         private Long maximumRetryAttempts;
 
-        @NameInMap("PushRetryStrategy")
+        @com.aliyun.core.annotation.NameInMap("PushRetryStrategy")
         private String pushRetryStrategy;
 
         private RetryStrategy(Builder builder) {
@@ -368,7 +367,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String pushRetryStrategy; 
 
             /**
-             * The maximum period of time during which retries are performed.
+             * The maximum timeout period for a retry.
              */
             public Builder maximumEventAgeInSeconds(Long maximumEventAgeInSeconds) {
                 this.maximumEventAgeInSeconds = maximumEventAgeInSeconds;
@@ -384,7 +383,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The retry policy that is used if an event failed to be pushed. Valid values: BACKOFF_RETRY and EXPONENTIAL_DECAY_RETRY.
+             * The retry policy. Valid values: BACKOFF_RETRY and EXPONENTIAL_DECAY_RETRY.
              */
             public Builder pushRetryStrategy(String pushRetryStrategy) {
                 this.pushRetryStrategy = pushRetryStrategy;
@@ -399,19 +398,19 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class RunOptions extends TeaModel {
-        @NameInMap("BatchWindow")
+        @com.aliyun.core.annotation.NameInMap("BatchWindow")
         private BatchWindow batchWindow;
 
-        @NameInMap("DeadLetterQueue")
+        @com.aliyun.core.annotation.NameInMap("DeadLetterQueue")
         private DeadLetterQueue deadLetterQueue;
 
-        @NameInMap("ErrorsTolerance")
+        @com.aliyun.core.annotation.NameInMap("ErrorsTolerance")
         private String errorsTolerance;
 
-        @NameInMap("MaximumTasks")
+        @com.aliyun.core.annotation.NameInMap("MaximumTasks")
         private Long maximumTasks;
 
-        @NameInMap("RetryStrategy")
+        @com.aliyun.core.annotation.NameInMap("RetryStrategy")
         private RetryStrategy retryStrategy;
 
         private RunOptions(Builder builder) {
@@ -473,7 +472,7 @@ public class UpdateEventStreamingRequest extends Request {
             private RetryStrategy retryStrategy; 
 
             /**
-             * The information about the batch window.
+             * The batch window.
              */
             public Builder batchWindow(BatchWindow batchWindow) {
                 this.batchWindow = batchWindow;
@@ -481,7 +480,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable dead-letter queues. By default, dead-letter queues are disabled. Messages that fail to be pushed are discarded after the maximum number of retries specified by the retry policy is reached.
+             * Specifies whether to enable dead-letter queues. By default, dead-letter queues are disabled. Events that fail to be pushed are discarded after the maximum number of retries that is specified by the retry policy is reached.
              */
             public Builder deadLetterQueue(DeadLetterQueue deadLetterQueue) {
                 this.deadLetterQueue = deadLetterQueue;
@@ -489,7 +488,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The fault tolerance policy. The value NONE specifies that faults are not tolerated, and the value All specifies that all faults are tolerated.
+             * The exception tolerance policy. Valid values: NONE and ALL.
              */
             public Builder errorsTolerance(String errorsTolerance) {
                 this.errorsTolerance = errorsTolerance;
@@ -497,7 +496,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The concurrency level.
+             * The maximum number of concurrent tasks.
              */
             public Builder maximumTasks(Long maximumTasks) {
                 this.maximumTasks = maximumTasks;
@@ -505,7 +504,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The information about the retry policy that is used if the event fails to be pushed.
+             * The retry policy that you want to use if events fail to be pushed.
              */
             public Builder retryStrategy(RetryStrategy retryStrategy) {
                 this.retryStrategy = retryStrategy;
@@ -520,13 +519,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class SinkFcParametersBody extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SinkFcParametersBody(Builder builder) {
@@ -570,7 +569,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events.
+             * The method that you want to use to transform events.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -578,7 +577,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The template based on which events are transformed.
+             * The template based on which you want to transform events.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -586,7 +585,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The value before event transformation.
+             * The value before transformation.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -601,13 +600,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class Concurrency extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Concurrency(Builder builder) {
@@ -651,7 +650,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events. Default value: CONSTANT.
+             * The method that you want to use to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -682,13 +681,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class FunctionName extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private FunctionName(Builder builder) {
@@ -732,7 +731,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events. Default value: CONSTANT.
+             * The method that you want to use to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -748,7 +747,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The name of the Function Compute function.
+             * The function name.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -763,13 +762,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class InvocationType extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private InvocationType(Builder builder) {
@@ -813,7 +812,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events. Default value: CONSTANT.
+             * The method that you want to use to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -829,7 +828,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The invocation type. Valid values: Sync and Async.
+             * The invocation mode.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -844,13 +843,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class Qualifier extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Qualifier(Builder builder) {
@@ -894,7 +893,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events. Default value: CONSTANT.
+             * The method that you want to use to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -925,13 +924,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class ServiceName extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private ServiceName(Builder builder) {
@@ -975,7 +974,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events. Default value: CONSTANT.
+             * The method that you want to use to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -991,7 +990,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The name of the Function Compute service.
+             * The service name.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1006,22 +1005,22 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class SinkFcParameters extends TeaModel {
-        @NameInMap("Body")
+        @com.aliyun.core.annotation.NameInMap("Body")
         private SinkFcParametersBody body;
 
-        @NameInMap("Concurrency")
+        @com.aliyun.core.annotation.NameInMap("Concurrency")
         private Concurrency concurrency;
 
-        @NameInMap("FunctionName")
+        @com.aliyun.core.annotation.NameInMap("FunctionName")
         private FunctionName functionName;
 
-        @NameInMap("InvocationType")
+        @com.aliyun.core.annotation.NameInMap("InvocationType")
         private InvocationType invocationType;
 
-        @NameInMap("Qualifier")
+        @com.aliyun.core.annotation.NameInMap("Qualifier")
         private Qualifier qualifier;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private ServiceName serviceName;
 
         private SinkFcParameters(Builder builder) {
@@ -1092,7 +1091,7 @@ public class UpdateEventStreamingRequest extends Request {
             private ServiceName serviceName; 
 
             /**
-             * The message body that is sent to the function.
+             * The message body that you want to deliver to the function.
              */
             public Builder body(SinkFcParametersBody body) {
                 this.body = body;
@@ -1100,7 +1099,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The information about the delivery concurrency.
+             * The delivery concurrency. Minimum value: 1.
              */
             public Builder concurrency(Concurrency concurrency) {
                 this.concurrency = concurrency;
@@ -1108,7 +1107,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The information about the Function Compute function.
+             * The function name.
              */
             public Builder functionName(FunctionName functionName) {
                 this.functionName = functionName;
@@ -1116,7 +1115,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The information about the invocation type.
+             * The invocation mode. Valid values: Sync and Async.
              */
             public Builder invocationType(InvocationType invocationType) {
                 this.invocationType = invocationType;
@@ -1124,7 +1123,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The information about the service to which the function belongs.
+             * The alias of the service to which the function belongs.
              */
             public Builder qualifier(Qualifier qualifier) {
                 this.qualifier = qualifier;
@@ -1132,7 +1131,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The information about the Function Compute service.
+             * The service name.
              */
             public Builder serviceName(ServiceName serviceName) {
                 this.serviceName = serviceName;
@@ -1147,13 +1146,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class ExecutionName extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private ExecutionName(Builder builder) {
@@ -1197,7 +1196,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events. Default value: CONSTANT.
+             * The method that you want to use to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -1205,7 +1204,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * None.
+             * The template based on which you want to transform events.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -1213,7 +1212,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The name of the Function Compute service.
+             * The execution name.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1228,13 +1227,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class FlowName extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private FlowName(Builder builder) {
@@ -1278,7 +1277,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events. Default value: CONSTANT.
+             * The method that you want to use to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -1286,7 +1285,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * None.
+             * The template based on which you want to transform events.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -1294,7 +1293,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The name of the Function Compute service.
+             * The flow name.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1309,13 +1308,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class Input extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Input(Builder builder) {
@@ -1359,7 +1358,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events. Default value: CONSTANT.
+             * The method that you want to use to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -1367,7 +1366,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * None.
+             * The template based on which you want to transform events.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -1375,7 +1374,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The name of the Function Compute service.
+             * The input information of the execution.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1390,13 +1389,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class RoleName extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private RoleName(Builder builder) {
@@ -1440,7 +1439,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events. Default value: CONSTANT.
+             * The method that you want to use to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -1448,7 +1447,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * None.
+             * The template based on which you want to transform events.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -1456,7 +1455,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The name of the Function Compute service.
+             * The role name.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1471,16 +1470,16 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class SinkFnfParameters extends TeaModel {
-        @NameInMap("ExecutionName")
+        @com.aliyun.core.annotation.NameInMap("ExecutionName")
         private ExecutionName executionName;
 
-        @NameInMap("FlowName")
+        @com.aliyun.core.annotation.NameInMap("FlowName")
         private FlowName flowName;
 
-        @NameInMap("Input")
+        @com.aliyun.core.annotation.NameInMap("Input")
         private Input input;
 
-        @NameInMap("RoleName")
+        @com.aliyun.core.annotation.NameInMap("RoleName")
         private RoleName roleName;
 
         private SinkFnfParameters(Builder builder) {
@@ -1533,7 +1532,7 @@ public class UpdateEventStreamingRequest extends Request {
             private RoleName roleName; 
 
             /**
-             * ExecutionName.
+             * The execution name.
              */
             public Builder executionName(ExecutionName executionName) {
                 this.executionName = executionName;
@@ -1541,7 +1540,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * FlowName.
+             * The flow name.
              */
             public Builder flowName(FlowName flowName) {
                 this.flowName = flowName;
@@ -1549,7 +1548,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Input.
+             * The input information of the execution.
              */
             public Builder input(Input input) {
                 this.input = input;
@@ -1557,7 +1556,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * RoleName.
+             * The role name.
              */
             public Builder roleName(RoleName roleName) {
                 this.roleName = roleName;
@@ -1572,13 +1571,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class Acks extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Acks(Builder builder) {
@@ -1622,7 +1621,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events. Default value: CONSTANT.
+             * The method that you want to use to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -1638,7 +1637,12 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The ACK mode. If you set this parameter to 0, no response is returned from the broker. In this mode, the performance is high, but the risk of data loss is also high. If you set this parameter to 1, a response is returned when data is written to the leader. In this mode, the performance and the risk of data loss are moderate. Data loss may occur if a failure occurs on the leader. If you set this parameter to all, a response is returned when data is written to the leader and synchronized to the followers. In this mode, the performance is low, but the risk of data loss is also low. Data loss occurs if the leader and the followers fail at the same time.
+             * The ACK mode.
+             * <p>
+             * 
+             * *   If you set this parameter to 0, no response is returned from the broker. In this mode, the performance is high, but the risk of data loss is also high.
+             * *   If you set this parameter to 1, a response is returned when data is written to the leader. In this mode, the performance and the risk of data loss are moderate. Data loss may occur if a failure occurs on the leader.
+             * *   If you set this parameter to all, a response is returned when data is written to the leader and synchronized to the followers. In this mode, the performance is low, but the risk of data loss is also low. Data loss occurs if the leader and the followers fail at the same time.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1653,13 +1657,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class InstanceId extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private InstanceId(Builder builder) {
@@ -1703,7 +1707,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events. Default value: CONSTANT.
+             * The method that you want to use to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -1719,7 +1723,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The ID of the Message Queue for Apache Kafka instance.
+             * The ID of the ApsaraMQ for Kafka instance.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1734,13 +1738,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class Key extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Key(Builder builder) {
@@ -1784,7 +1788,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events. Default value: CONSTANT.
+             * The method that you want to use to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -1815,13 +1819,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class Topic extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Topic(Builder builder) {
@@ -1865,7 +1869,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events. Default value: CONSTANT.
+             * The method that you want to use to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -1881,7 +1885,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The name of the topic in Message Queue for Apache Kafka instance.
+             * The name of the topic on the ApsaraMQ for Kafka instance.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1896,13 +1900,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class Value extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Value(Builder builder) {
@@ -1946,7 +1950,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events.
+             * The method that you want to use to transform events.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -1954,7 +1958,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The template based on which events are transformed.
+             * The template based on which you want to transform events.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -1962,7 +1966,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The value before event transformation.
+             * The value before transformation.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1977,19 +1981,19 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class SinkKafkaParameters extends TeaModel {
-        @NameInMap("Acks")
+        @com.aliyun.core.annotation.NameInMap("Acks")
         private Acks acks;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private InstanceId instanceId;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private Key key;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private Topic topic;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Value value;
 
         private SinkKafkaParameters(Builder builder) {
@@ -2051,7 +2055,12 @@ public class UpdateEventStreamingRequest extends Request {
             private Value value; 
 
             /**
-             * The information about the acknowledgment (ACK) mode. If you set this parameter to 0, no response is returned from the broker. In this mode, the performance is high, but the risk of data loss is also high. If you set this parameter to 1, a response is returned when data is written to the leader. In this mode, the performance and the risk of data loss are moderate. Data loss may occur if a failure occurs on the leader. If you set this parameter to all, a response is returned when data is written to the leader and synchronized to the followers. In this mode, the performance is low, but the risk of data loss is also low. Data loss occurs if the leader and the followers fail at the same time.
+             * The acknowledgment (ACK) mode.
+             * <p>
+             * 
+             * *   If you set this parameter to 0, no response is returned from the broker. In this mode, the performance is high, but the risk of data loss is also high.
+             * *   If you set this parameter to 1, a response is returned when data is written to the leader. In this mode, the performance and the risk of data loss are moderate. Data loss may occur if a failure occurs on the leader.
+             * *   If you set this parameter to all, a response is returned when data is written to the leader and synchronized to the followers. In this mode, the performance is low, but the risk of data loss is also low. Data loss occurs if the leader and the followers fail at the same time.
              */
             public Builder acks(Acks acks) {
                 this.acks = acks;
@@ -2059,7 +2068,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The information about the Message Queue for Apache Kafka instance.
+             * The ID of the ApsaraMQ for Kafka instance.
              */
             public Builder instanceId(InstanceId instanceId) {
                 this.instanceId = instanceId;
@@ -2067,7 +2076,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The information about the message key.
+             * The message key.
              */
             public Builder key(Key key) {
                 this.key = key;
@@ -2075,7 +2084,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The information about the topic in Message Queue for Apache Kafka instance.
+             * The name of the topic on the ApsaraMQ for Kafka instance.
              */
             public Builder topic(Topic topic) {
                 this.topic = topic;
@@ -2083,7 +2092,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The information about the message value.
+             * The message body.
              */
             public Builder value(Value value) {
                 this.value = value;
@@ -2098,13 +2107,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class SinkMNSParametersBody extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SinkMNSParametersBody(Builder builder) {
@@ -2148,7 +2157,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events.
+             * The method that you want to use to transform events.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -2156,7 +2165,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The template based on which events are transformed.
+             * The template based on which you want to transform events.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -2164,7 +2173,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The value before event transformation.
+             * The value before transformation.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2179,13 +2188,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class IsBase64Encode extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private IsBase64Encode(Builder builder) {
@@ -2229,7 +2238,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events. Default value: CONSTANT.
+             * The method that you want to use to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -2245,7 +2254,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Specifies that Base64 encoding is enabled.
+             * Specifies whether to enable Base64 encoding.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2260,13 +2269,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class QueueName extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private QueueName(Builder builder) {
@@ -2310,7 +2319,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events. Default value: CONSTANT.
+             * The method that you want to use to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -2326,7 +2335,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The name of the queue in MNS.
+             * The name of the MNS queue.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2341,13 +2350,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class SinkMNSParameters extends TeaModel {
-        @NameInMap("Body")
+        @com.aliyun.core.annotation.NameInMap("Body")
         private SinkMNSParametersBody body;
 
-        @NameInMap("IsBase64Encode")
+        @com.aliyun.core.annotation.NameInMap("IsBase64Encode")
         private IsBase64Encode isBase64Encode;
 
-        @NameInMap("QueueName")
+        @com.aliyun.core.annotation.NameInMap("QueueName")
         private QueueName queueName;
 
         private SinkMNSParameters(Builder builder) {
@@ -2407,7 +2416,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The information about the MNS queue.
+             * The name of the MNS queue.
              */
             public Builder queueName(QueueName queueName) {
                 this.queueName = queueName;
@@ -2422,13 +2431,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class AuthorizationType extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private AuthorizationType(Builder builder) {
@@ -2472,7 +2481,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events. Default value: CONSTANT.
+             * The method that you want to use to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -2488,7 +2497,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The name of the queue in MNS.
+             * The authentication method.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2503,13 +2512,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Data(Builder builder) {
@@ -2553,7 +2562,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events. Default value: CONSTANT.
+             * The method that you want to use to transform events. Default value: JSONPATH.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -2569,7 +2578,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The name of the queue in MNS.
+             * The metric data.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2584,13 +2593,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class NetworkType extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private NetworkType(Builder builder) {
@@ -2634,7 +2643,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events. Default value: CONSTANT.
+             * The method that you want to use to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -2650,7 +2659,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The name of the queue in MNS.
+             * The network type.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2665,13 +2674,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class Password extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Password(Builder builder) {
@@ -2715,7 +2724,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events. Default value: CONSTANT.
+             * The method that you want to use to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -2731,7 +2740,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The name of the queue in MNS.
+             * The password.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2746,13 +2755,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class SecurityGroupId extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SecurityGroupId(Builder builder) {
@@ -2796,7 +2805,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events. Default value: CONSTANT.
+             * The method that you want to use to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -2812,7 +2821,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The name of the queue in MNS.
+             * The ID of the security group to which the Managed Service for Prometheus instance belongs.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2827,13 +2836,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class URL extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private URL(Builder builder) {
@@ -2877,7 +2886,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events. Default value: CONSTANT.
+             * The method that you want to use to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -2893,7 +2902,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The name of the queue in MNS.
+             * The URL for the remote write configuration item of the Managed Service for Prometheus instance.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2908,13 +2917,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class Username extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Username(Builder builder) {
@@ -2958,7 +2967,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events. Default value: CONSTANT.
+             * The method that you want to use to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -2974,7 +2983,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The name of the queue in MNS.
+             * The username.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2989,13 +2998,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class VSwitchId extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private VSwitchId(Builder builder) {
@@ -3039,7 +3048,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events. Default value: CONSTANT.
+             * The method that you want to use to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -3055,7 +3064,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The name of the queue in MNS.
+             * The ID of the vSwitch with which the Managed Service for Prometheus instance is associated.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -3070,13 +3079,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class VpcId extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private VpcId(Builder builder) {
@@ -3120,7 +3129,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events. Default value: CONSTANT.
+             * The method that you want to use to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -3136,7 +3145,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The name of the queue in MNS.
+             * The ID of the VPC to which the Managed Service for Prometheus instance belongs.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -3151,31 +3160,31 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class SinkPrometheusParameters extends TeaModel {
-        @NameInMap("AuthorizationType")
+        @com.aliyun.core.annotation.NameInMap("AuthorizationType")
         private AuthorizationType authorizationType;
 
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private Data data;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private NetworkType networkType;
 
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Password")
         private Password password;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private SecurityGroupId securityGroupId;
 
-        @NameInMap("URL")
+        @com.aliyun.core.annotation.NameInMap("URL")
         private URL URL;
 
-        @NameInMap("Username")
+        @com.aliyun.core.annotation.NameInMap("Username")
         private Username username;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private VSwitchId vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private VpcId vpcId;
 
         private SinkPrometheusParameters(Builder builder) {
@@ -3273,7 +3282,7 @@ public class UpdateEventStreamingRequest extends Request {
             private VpcId vpcId; 
 
             /**
-             * AuthorizationType.
+             * The authentication method.
              */
             public Builder authorizationType(AuthorizationType authorizationType) {
                 this.authorizationType = authorizationType;
@@ -3281,7 +3290,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Data.
+             * The metric data.
              */
             public Builder data(Data data) {
                 this.data = data;
@@ -3289,7 +3298,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * NetworkType.
+             * The network type.
              */
             public Builder networkType(NetworkType networkType) {
                 this.networkType = networkType;
@@ -3297,7 +3306,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Password.
+             * The password.
              */
             public Builder password(Password password) {
                 this.password = password;
@@ -3305,7 +3314,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * SecurityGroupId.
+             * The ID of the security group to which the Managed Service for Prometheus instance belongs.
              */
             public Builder securityGroupId(SecurityGroupId securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -3313,7 +3322,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * URL.
+             * The URL for the remote write configuration item of the Managed Service for Prometheus instance.
              */
             public Builder URL(URL URL) {
                 this.URL = URL;
@@ -3321,7 +3330,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Username.
+             * The username.
              */
             public Builder username(Username username) {
                 this.username = username;
@@ -3329,7 +3338,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * VSwitchId.
+             * The ID of the vSwitch with which the Managed Service for Prometheus instance is associated.
              */
             public Builder vSwitchId(VSwitchId vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -3337,7 +3346,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * VpcId.
+             * The ID of the VPC to which the Managed Service for Prometheus instance belongs.
              */
             public Builder vpcId(VpcId vpcId) {
                 this.vpcId = vpcId;
@@ -3352,13 +3361,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class SinkRabbitMQParametersBody extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SinkRabbitMQParametersBody(Builder builder) {
@@ -3402,7 +3411,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events.
+             * The method that you want to use to transform events.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -3410,7 +3419,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The template based on which events are transformed.
+             * The template based on which you want to transform events.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -3418,7 +3427,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The value before event transformation.
+             * The value before transformation.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -3433,13 +3442,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class Exchange extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Exchange(Builder builder) {
@@ -3483,7 +3492,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events. Default value: CONSTANT.
+             * The method that you want to use to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -3499,7 +3508,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The name of the exchange in the Message Queue for RabbitMQ instance.
+             * The name of the exchange on the ApsaraMQ for RabbitMQ instance.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -3514,13 +3523,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class SinkRabbitMQParametersInstanceId extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SinkRabbitMQParametersInstanceId(Builder builder) {
@@ -3564,7 +3573,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events. Default value: CONSTANT.
+             * The method that you want to use to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -3580,7 +3589,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The ID of the Message Queue for RabbitMQ instance.
+             * The ID of the ApsaraMQ for RabbitMQ instance.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -3595,13 +3604,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class MessageId extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private MessageId(Builder builder) {
@@ -3645,7 +3654,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events.
+             * The method that you want to use to transform events.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -3653,7 +3662,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The template based on which events are transformed.
+             * The template based on which you want to transform events.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -3661,7 +3670,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The value before event transformation.
+             * The value before transformation.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -3676,13 +3685,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class Properties extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Properties(Builder builder) {
@@ -3726,7 +3735,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events.
+             * The method that you want to use to transform events.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -3734,7 +3743,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The template based on which events are transformed.
+             * The template based on which you want to transform events.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -3742,7 +3751,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The value before event transformation.
+             * The value before transformation.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -3757,13 +3766,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class SinkRabbitMQParametersQueueName extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SinkRabbitMQParametersQueueName(Builder builder) {
@@ -3807,7 +3816,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events. Default value: CONSTANT.
+             * The method that you want to use to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -3823,7 +3832,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The name of the queue in the Message Queue for RabbitMQ instance.
+             * The name of the queue on the ApsaraMQ for RabbitMQ instance.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -3838,13 +3847,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class RoutingKey extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private RoutingKey(Builder builder) {
@@ -3888,7 +3897,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events. Default value: CONSTANT.
+             * The method that you want to use to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -3904,7 +3913,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The routing rule of the message.
+             * The rule that you want to use to route messages.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -3919,13 +3928,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class TargetType extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private TargetType(Builder builder) {
@@ -3969,7 +3978,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events. Default value: CONSTANT.
+             * The method that you want to use to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -3985,7 +3994,11 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The type of the resource to which events are delivered. Valid values: Exchange: exchanges. Queue: queues.
+             * The type of the resource to which you want to deliver events. Valid values:
+             * <p>
+             * 
+             * *   Exchange
+             * *   Queue
              */
             public Builder value(String value) {
                 this.value = value;
@@ -4000,13 +4013,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class VirtualHostName extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private VirtualHostName(Builder builder) {
@@ -4050,7 +4063,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events. Default value: CONSTANT.
+             * The method that you want to use to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -4066,7 +4079,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The vhost name of the Message Queue for RabbitMQ instance.
+             * The name of the vhost to which the ApsaraMQ for RabbitMQ instance belongs.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -4081,31 +4094,31 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class SinkRabbitMQParameters extends TeaModel {
-        @NameInMap("Body")
+        @com.aliyun.core.annotation.NameInMap("Body")
         private SinkRabbitMQParametersBody body;
 
-        @NameInMap("Exchange")
+        @com.aliyun.core.annotation.NameInMap("Exchange")
         private Exchange exchange;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private SinkRabbitMQParametersInstanceId instanceId;
 
-        @NameInMap("MessageId")
+        @com.aliyun.core.annotation.NameInMap("MessageId")
         private MessageId messageId;
 
-        @NameInMap("Properties")
+        @com.aliyun.core.annotation.NameInMap("Properties")
         private Properties properties;
 
-        @NameInMap("QueueName")
+        @com.aliyun.core.annotation.NameInMap("QueueName")
         private SinkRabbitMQParametersQueueName queueName;
 
-        @NameInMap("RoutingKey")
+        @com.aliyun.core.annotation.NameInMap("RoutingKey")
         private RoutingKey routingKey;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private TargetType targetType;
 
-        @NameInMap("VirtualHostName")
+        @com.aliyun.core.annotation.NameInMap("VirtualHostName")
         private VirtualHostName virtualHostName;
 
         private SinkRabbitMQParameters(Builder builder) {
@@ -4211,7 +4224,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The information about the exchange to which events are delivered. This parameter is available only if you set TargetType to Exchange.
+             * The exchange mode. This parameter is required only if you set TargetType to Exchange.
              */
             public Builder exchange(Exchange exchange) {
                 this.exchange = exchange;
@@ -4219,7 +4232,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The information about the Message Queue for RabbitMQ instance.
+             * The ID of the ApsaraMQ for RabbitMQ instance.
              */
             public Builder instanceId(SinkRabbitMQParametersInstanceId instanceId) {
                 this.instanceId = instanceId;
@@ -4235,7 +4248,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The properties that are used to filter messages.
+             * The attributes that you want to use to filter messages.
              */
             public Builder properties(Properties properties) {
                 this.properties = properties;
@@ -4243,7 +4256,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The information about the queue to which events are delivered. This parameter is available only if you set TargetType to Queue.
+             * The queue mode. This parameter is required only if you set TargetType to Queue.
              */
             public Builder queueName(SinkRabbitMQParametersQueueName queueName) {
                 this.queueName = queueName;
@@ -4251,7 +4264,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The information about the routing rule of the message. This parameter is available only if you set TargetType to Exchange.
+             * The rule that you want to use to route messages. This parameter is required only if you set TargetType to Exchange.
              */
             public Builder routingKey(RoutingKey routingKey) {
                 this.routingKey = routingKey;
@@ -4259,7 +4272,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The information about the type of the resource to which events are delivered.
+             * The type of the resource to which you want to deliver events.
              */
             public Builder targetType(TargetType targetType) {
                 this.targetType = targetType;
@@ -4267,7 +4280,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The information about the vhost of the Message Queue for RabbitMQ instance.
+             * The name of the vhost to which the ApsaraMQ for RabbitMQ instance belongs.
              */
             public Builder virtualHostName(VirtualHostName virtualHostName) {
                 this.virtualHostName = virtualHostName;
@@ -4282,13 +4295,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class SinkRocketMQParametersBody extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SinkRocketMQParametersBody(Builder builder) {
@@ -4332,7 +4345,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events.
+             * The method that you want to use to transform events.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -4340,7 +4353,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The template based on which events are transformed.
+             * The template based on which you want to transform events.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -4348,7 +4361,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The value before event transformation.
+             * The value before transformation.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -4363,13 +4376,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class SinkRocketMQParametersInstanceId extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SinkRocketMQParametersInstanceId(Builder builder) {
@@ -4413,7 +4426,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events. Default value: CONSTANT.
+             * The method that you want to use to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -4429,7 +4442,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The ID of the Message Queue for Apache RocketMQ instance.
+             * The ID of the ApsaraMQ for RocketMQ instance.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -4444,13 +4457,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class Keys extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Keys(Builder builder) {
@@ -4494,7 +4507,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events.
+             * The method that you want to use to transform events.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -4502,7 +4515,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The template based on which events are transformed.
+             * The template based on which you want to transform events.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -4510,7 +4523,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The value before event transformation.
+             * The value before transformation.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -4525,13 +4538,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class SinkRocketMQParametersProperties extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SinkRocketMQParametersProperties(Builder builder) {
@@ -4575,7 +4588,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events.
+             * The method that you want to use to transform events.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -4583,7 +4596,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The template based on which events are transformed.
+             * The template based on which you want to transform events.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -4591,7 +4604,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The value before event transformation.
+             * The value before transformation.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -4606,13 +4619,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -4656,7 +4669,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events.
+             * The method that you want to use to transform events.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -4664,7 +4677,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The template based on which events are transformed.
+             * The template based on which you want to transform events.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -4672,7 +4685,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The value before event transformation.
+             * The value before transformation.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -4687,13 +4700,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class SinkRocketMQParametersTopic extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SinkRocketMQParametersTopic(Builder builder) {
@@ -4737,7 +4750,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events. Default value: CONSTANT.
+             * The method that you want to use to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -4753,7 +4766,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The name of the topic in the Message Queue for Apache RocketMQ instance.
+             * The topic on the ApsaraMQ for RocketMQ instance.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -4768,22 +4781,22 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class SinkRocketMQParameters extends TeaModel {
-        @NameInMap("Body")
+        @com.aliyun.core.annotation.NameInMap("Body")
         private SinkRocketMQParametersBody body;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private SinkRocketMQParametersInstanceId instanceId;
 
-        @NameInMap("Keys")
+        @com.aliyun.core.annotation.NameInMap("Keys")
         private Keys keys;
 
-        @NameInMap("Properties")
+        @com.aliyun.core.annotation.NameInMap("Properties")
         private SinkRocketMQParametersProperties properties;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private SinkRocketMQParametersTopic topic;
 
         private SinkRocketMQParameters(Builder builder) {
@@ -4862,7 +4875,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The parameters that are configured if the event target is Message Queue for Apache RocketMQ.
+             * The ID of the ApsaraMQ for RocketMQ instance.
              */
             public Builder instanceId(SinkRocketMQParametersInstanceId instanceId) {
                 this.instanceId = instanceId;
@@ -4870,7 +4883,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The properties that are used to filter messages.
+             * The attributes that you want to use to filter messages.
              */
             public Builder keys(Keys keys) {
                 this.keys = keys;
@@ -4878,7 +4891,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The properties that are used to filter messages.
+             * The attributes that you want to use to filter messages.
              */
             public Builder properties(SinkRocketMQParametersProperties properties) {
                 this.properties = properties;
@@ -4886,7 +4899,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The properties that are used to filter messages.
+             * The attributes that you want to use to filter messages.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -4894,7 +4907,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The information about the topic in the Message Queue for Apache RocketMQ instance.
+             * The topic on the ApsaraMQ for RocketMQ instance.
              */
             public Builder topic(SinkRocketMQParametersTopic topic) {
                 this.topic = topic;
@@ -4909,13 +4922,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class SinkSLSParametersBody extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SinkSLSParametersBody(Builder builder) {
@@ -4959,7 +4972,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events.
+             * The method that you want to use to transform events.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -4967,7 +4980,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The template based on which events are transformed.
+             * The template based on which you want to transform events.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -4975,7 +4988,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The value before event transformation.
+             * The value before transformation.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -4990,13 +5003,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class LogStore extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private LogStore(Builder builder) {
@@ -5040,7 +5053,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events. Default value: CONSTANT.
+             * The method that you want to use to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -5056,7 +5069,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The Log Service Logstore.
+             * The Simple Log Service Logstore.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -5071,13 +5084,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class Project extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Project(Builder builder) {
@@ -5121,7 +5134,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events. Default value: CONSTANT.
+             * The method that you want to use to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -5137,7 +5150,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The Log Service project.
+             * The Simple Log Service project.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -5152,13 +5165,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class SinkSLSParametersRoleName extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SinkSLSParametersRoleName(Builder builder) {
@@ -5202,7 +5215,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events. Default value: CONSTANT.
+             * The method that you want to use to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -5218,7 +5231,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The role name. If you want to authorize EventBridge to use this role to read logs in Log Service, you must select Alibaba Cloud Service for Selected Trusted Entity and EventBridge for Select Trusted Service when you create the role in the RAM console.
+             * The role name. If you want to authorize EventBridge to use this role to read logs in Simple Log Service, you must select Alibaba Cloud Service for Selected Trusted Entity and EventBridge for Select Trusted Service when you create the role in the RAM console.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -5233,13 +5246,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class SinkSLSParametersTopic extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SinkSLSParametersTopic(Builder builder) {
@@ -5283,7 +5296,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String value; 
 
             /**
-             * The method that is used to transform events. Default value: CONSTANT.
+             * The method that you want to use to transform events. Default value: CONSTANT.
              */
             public Builder form(String form) {
                 this.form = form;
@@ -5299,7 +5312,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The name of the topic in which logs are stored. The topic corresponds to the topic reserved field in Log Service.
+             * The topic that you want to use to store logs. This parameter corresponds to the reserved field topic in Simple Log Service.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -5314,19 +5327,19 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class SinkSLSParameters extends TeaModel {
-        @NameInMap("Body")
+        @com.aliyun.core.annotation.NameInMap("Body")
         private SinkSLSParametersBody body;
 
-        @NameInMap("LogStore")
+        @com.aliyun.core.annotation.NameInMap("LogStore")
         private LogStore logStore;
 
-        @NameInMap("Project")
+        @com.aliyun.core.annotation.NameInMap("Project")
         private Project project;
 
-        @NameInMap("RoleName")
+        @com.aliyun.core.annotation.NameInMap("RoleName")
         private SinkSLSParametersRoleName roleName;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private SinkSLSParametersTopic topic;
 
         private SinkSLSParameters(Builder builder) {
@@ -5396,7 +5409,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The information about the Log Service Logstore.
+             * The Simple Log Service Logstore.
              */
             public Builder logStore(LogStore logStore) {
                 this.logStore = logStore;
@@ -5404,7 +5417,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The information about the Log Service project.
+             * The Simple Log Service project.
              */
             public Builder project(Project project) {
                 this.project = project;
@@ -5412,7 +5425,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The information about the role. If you want to authorize EventBridge to use this role to read logs in Log Service, you must select Alibaba Cloud Service for Selected Trusted Entity and EventBridge for Select Trusted Service when you create the role in the RAM console.
+             * The role name. If you want to authorize EventBridge to use this role to read logs in Simple Log Service, you must select Alibaba Cloud Service for Selected Trusted Entity and EventBridge for Select Trusted Service when you create the role in the RAM console.
              */
             public Builder roleName(SinkSLSParametersRoleName roleName) {
                 this.roleName = roleName;
@@ -5420,7 +5433,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The information about the topic in which logs are stored. The topic corresponds to the topic reserved field in Log Service.
+             * The topic that you want to use to store logs. This parameter corresponds to the reserved field topic in Simple Log Service.
              */
             public Builder topic(SinkSLSParametersTopic topic) {
                 this.topic = topic;
@@ -5435,28 +5448,28 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class Sink extends TeaModel {
-        @NameInMap("SinkFcParameters")
+        @com.aliyun.core.annotation.NameInMap("SinkFcParameters")
         private SinkFcParameters sinkFcParameters;
 
-        @NameInMap("SinkFnfParameters")
+        @com.aliyun.core.annotation.NameInMap("SinkFnfParameters")
         private SinkFnfParameters sinkFnfParameters;
 
-        @NameInMap("SinkKafkaParameters")
+        @com.aliyun.core.annotation.NameInMap("SinkKafkaParameters")
         private SinkKafkaParameters sinkKafkaParameters;
 
-        @NameInMap("SinkMNSParameters")
+        @com.aliyun.core.annotation.NameInMap("SinkMNSParameters")
         private SinkMNSParameters sinkMNSParameters;
 
-        @NameInMap("SinkPrometheusParameters")
+        @com.aliyun.core.annotation.NameInMap("SinkPrometheusParameters")
         private SinkPrometheusParameters sinkPrometheusParameters;
 
-        @NameInMap("SinkRabbitMQParameters")
+        @com.aliyun.core.annotation.NameInMap("SinkRabbitMQParameters")
         private SinkRabbitMQParameters sinkRabbitMQParameters;
 
-        @NameInMap("SinkRocketMQParameters")
+        @com.aliyun.core.annotation.NameInMap("SinkRocketMQParameters")
         private SinkRocketMQParameters sinkRocketMQParameters;
 
-        @NameInMap("SinkSLSParameters")
+        @com.aliyun.core.annotation.NameInMap("SinkSLSParameters")
         private SinkSLSParameters sinkSLSParameters;
 
         private Sink(Builder builder) {
@@ -5545,7 +5558,7 @@ public class UpdateEventStreamingRequest extends Request {
             private SinkSLSParameters sinkSLSParameters; 
 
             /**
-             * The parameters that are configured if the event target is Function Compute.
+             * The parameters that are configured if you specify Function Compute as the event target.
              */
             public Builder sinkFcParameters(SinkFcParameters sinkFcParameters) {
                 this.sinkFcParameters = sinkFcParameters;
@@ -5553,7 +5566,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * SinkFnfParameters.
+             * The parameters that are configured if you specify CloudFlow as the event target.
              */
             public Builder sinkFnfParameters(SinkFnfParameters sinkFnfParameters) {
                 this.sinkFnfParameters = sinkFnfParameters;
@@ -5561,7 +5574,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The parameters that are configured if the event target is Message Queue for Apache Kafka.
+             * The parameters that are configured if you specify ApsaraMQ for Kafka as the event target.
              */
             public Builder sinkKafkaParameters(SinkKafkaParameters sinkKafkaParameters) {
                 this.sinkKafkaParameters = sinkKafkaParameters;
@@ -5569,7 +5582,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The parameters that are configured if the event target is MNS.
+             * The parameters that are configured if you specify MNS as the event target.
              */
             public Builder sinkMNSParameters(SinkMNSParameters sinkMNSParameters) {
                 this.sinkMNSParameters = sinkMNSParameters;
@@ -5577,7 +5590,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * SinkPrometheusParameters.
+             * The parameters that are configured if you specify Managed Service for Prometheus as the event target.
              */
             public Builder sinkPrometheusParameters(SinkPrometheusParameters sinkPrometheusParameters) {
                 this.sinkPrometheusParameters = sinkPrometheusParameters;
@@ -5585,7 +5598,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The parameters that are configured if the event target is Message Queue for RabbitMQ.
+             * The parameters that are configured if you specify ApsaraMQ for RabbitMQ as the event target.
              */
             public Builder sinkRabbitMQParameters(SinkRabbitMQParameters sinkRabbitMQParameters) {
                 this.sinkRabbitMQParameters = sinkRabbitMQParameters;
@@ -5593,7 +5606,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Sink RocketMQ Parameters
+             * The parameters that are configured if you specify ApsaraMQ for RocketMQ as the event target.
              */
             public Builder sinkRocketMQParameters(SinkRocketMQParameters sinkRocketMQParameters) {
                 this.sinkRocketMQParameters = sinkRocketMQParameters;
@@ -5601,7 +5614,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Sink SLS Parameters
+             * The parameters that are configured if you specify Simple Log Service as the event target.
              */
             public Builder sinkSLSParameters(SinkSLSParameters sinkSLSParameters) {
                 this.sinkSLSParameters = sinkSLSParameters;
@@ -5616,25 +5629,25 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class SourceDTSParameters extends TeaModel {
-        @NameInMap("BrokerUrl")
+        @com.aliyun.core.annotation.NameInMap("BrokerUrl")
         private String brokerUrl;
 
-        @NameInMap("InitCheckPoint")
+        @com.aliyun.core.annotation.NameInMap("InitCheckPoint")
         private Long initCheckPoint;
 
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
 
-        @NameInMap("Sid")
+        @com.aliyun.core.annotation.NameInMap("Sid")
         private String sid;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
-        @NameInMap("Username")
+        @com.aliyun.core.annotation.NameInMap("Username")
         private String username;
 
         private SourceDTSParameters(Builder builder) {
@@ -5777,34 +5790,34 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class SourceKafkaParameters extends TeaModel {
-        @NameInMap("ConsumerGroup")
+        @com.aliyun.core.annotation.NameInMap("ConsumerGroup")
         private String consumerGroup;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Network")
+        @com.aliyun.core.annotation.NameInMap("Network")
         private String network;
 
-        @NameInMap("OffsetReset")
+        @com.aliyun.core.annotation.NameInMap("OffsetReset")
         private String offsetReset;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
-        @NameInMap("VSwitchIds")
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
         private String vSwitchIds;
 
-        @NameInMap("ValueDataType")
+        @com.aliyun.core.annotation.NameInMap("ValueDataType")
         private String valueDataType;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private SourceKafkaParameters(Builder builder) {
@@ -5919,7 +5932,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The ID of the Message Queue for Apache Kafka instance.
+             * The ID of the ApsaraMQ for Kafka instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -5935,7 +5948,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The offset.
+             * The offset from which messages are consumed.
              */
             public Builder offsetReset(String offsetReset) {
                 this.offsetReset = offsetReset;
@@ -5943,7 +5956,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The ID of the region where the Message Queue for Apache Kafka instance resides.
+             * The ID of the region where the ApsaraMQ for Kafka instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -5951,7 +5964,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The security group ID.
+             * The ID of the security group to which the ApsaraMQ for Kafka instance belongs.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -5959,7 +5972,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The topic name.
+             * The name of the topic on the ApsaraMQ for Kafka instance.
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -5967,7 +5980,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The vSwitch ID.
+             * The ID of the vSwitch with which the ApsaraMQ for Kafka instance is associated.
              */
             public Builder vSwitchIds(String vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -5975,7 +5988,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * ValueDataType.
+             * The encoding or decoding method. Valid values: Json, Text, and Binary. The value Json specifies that binary data is decoded into strings based on UTF-8 encoding and then parsed into the JSON format. The value Text specifies that binary data is decoded into strings based on UTF-8 encoding and then put into the payload. The value Binary specifies that binary data is encoded into strings based on Base64 encoding and then put into the payload.
              */
             public Builder valueDataType(String valueDataType) {
                 this.valueDataType = valueDataType;
@@ -5983,7 +5996,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The VPC ID.
+             * The ID of the VPC to which the ApsaraMQ for Kafka instance belongs.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -5998,13 +6011,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class SourceMNSParameters extends TeaModel {
-        @NameInMap("IsBase64Decode")
+        @com.aliyun.core.annotation.NameInMap("IsBase64Decode")
         private Boolean isBase64Decode;
 
-        @NameInMap("QueueName")
+        @com.aliyun.core.annotation.NameInMap("QueueName")
         private String queueName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private SourceMNSParameters(Builder builder) {
@@ -6079,13 +6092,13 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class SourceMQTTParameters extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
         private SourceMQTTParameters(Builder builder) {
@@ -6129,7 +6142,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String topic; 
 
             /**
-             * The ID of the Message Queue for MQTT instance.
+             * The ID of the ApsaraMQ for MQTT instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -6137,7 +6150,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The ID of the region where the Message Queue for MQTT instance resides.
+             * The ID of the region where the ApsaraMQ for MQTT instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -6145,7 +6158,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The topic name.
+             * The name of the topic on the ApsaraMQ for MQTT instance.
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -6160,16 +6173,16 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class SourcePrometheusParameters extends TeaModel {
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("DataType")
+        @com.aliyun.core.annotation.NameInMap("DataType")
         private String dataType;
 
-        @NameInMap("Labels")
+        @com.aliyun.core.annotation.NameInMap("Labels")
         private String labels;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private SourcePrometheusParameters(Builder builder) {
@@ -6222,7 +6235,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String regionId; 
 
             /**
-             * ClusterId.
+             * The cluster ID.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -6230,7 +6243,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * DataType.
+             * The data type.
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -6238,7 +6251,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Labels.
+             * The labels.
              */
             public Builder labels(String labels) {
                 this.labels = labels;
@@ -6246,7 +6259,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The ID of the region where the Message Queue for MQTT instance resides.
+             * The ID of the region where the ApsaraMQ for MQTT instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -6261,16 +6274,16 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class SourceRabbitMQParameters extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("QueueName")
+        @com.aliyun.core.annotation.NameInMap("QueueName")
         private String queueName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("VirtualHostName")
+        @com.aliyun.core.annotation.NameInMap("VirtualHostName")
         private String virtualHostName;
 
         private SourceRabbitMQParameters(Builder builder) {
@@ -6323,7 +6336,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String virtualHostName; 
 
             /**
-             * The ID of the Message Queue for RabbitMQ instance.
+             * The ID of the ApsaraMQ for RabbitMQ instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -6331,7 +6344,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The name of the queue on the Message Queue for RabbitMQ instance.
+             * The name of the queue on the ApsaraMQ for RabbitMQ instance.
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -6339,7 +6352,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The ID of the region where the Message Queue for RabbitMQ instance resides.
+             * The ID of the region where the ApsaraMQ for RabbitMQ instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -6347,7 +6360,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The name of the vhost of the Message Queue for RabbitMQ instance.
+             * The name of the vhost to which the ApsaraMQ for RabbitMQ instance belongs.
              */
             public Builder virtualHostName(String virtualHostName) {
                 this.virtualHostName = virtualHostName;
@@ -6362,52 +6375,52 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class SourceRocketMQParameters extends TeaModel {
-        @NameInMap("AuthType")
+        @com.aliyun.core.annotation.NameInMap("AuthType")
         private String authType;
 
-        @NameInMap("GroupID")
+        @com.aliyun.core.annotation.NameInMap("GroupID")
         private String groupID;
 
-        @NameInMap("InstanceEndpoint")
+        @com.aliyun.core.annotation.NameInMap("InstanceEndpoint")
         private String instanceEndpoint;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceNetwork")
+        @com.aliyun.core.annotation.NameInMap("InstanceNetwork")
         private String instanceNetwork;
 
-        @NameInMap("InstancePassword")
+        @com.aliyun.core.annotation.NameInMap("InstancePassword")
         private String instancePassword;
 
-        @NameInMap("InstanceSecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("InstanceSecurityGroupId")
         private String instanceSecurityGroupId;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("InstanceUsername")
+        @com.aliyun.core.annotation.NameInMap("InstanceUsername")
         private String instanceUsername;
 
-        @NameInMap("InstanceVSwitchIds")
+        @com.aliyun.core.annotation.NameInMap("InstanceVSwitchIds")
         private String instanceVSwitchIds;
 
-        @NameInMap("InstanceVpcId")
+        @com.aliyun.core.annotation.NameInMap("InstanceVpcId")
         private String instanceVpcId;
 
-        @NameInMap("Offset")
+        @com.aliyun.core.annotation.NameInMap("Offset")
         private String offset;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
         private SourceRocketMQParameters(Builder builder) {
@@ -6576,7 +6589,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The ID of the consumer group on the Message Queue for Apache RocketMQ instance.
+             * The ID of the consumer group on the ApsaraMQ for RocketMQ instance.
              */
             public Builder groupID(String groupID) {
                 this.groupID = groupID;
@@ -6584,7 +6597,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The instance endpoint.
+             * The endpoint that is used to access the ApsaraMQ for RocketMQ instance.
              */
             public Builder instanceEndpoint(String instanceEndpoint) {
                 this.instanceEndpoint = instanceEndpoint;
@@ -6592,7 +6605,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The ID of the Message Queue for Apache RocketMQ instance.
+             * The ID of the ApsaraMQ for RocketMQ instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -6600,7 +6613,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The network type of the instance. Valid values:
+             * The network type of the ApsaraMQ for RocketMQ instance. Valid values:
              * <p>
              * 
              * PublicNetwork and PrivateNetwork.
@@ -6611,7 +6624,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The instance password.
+             * The password that is used to access the ApsaraMQ for RocketMQ instance.
              */
             public Builder instancePassword(String instancePassword) {
                 this.instancePassword = instancePassword;
@@ -6619,7 +6632,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The security group ID of the instance.
+             * The ID of the security group to which the ApsaraMQ for RocketMQ instance belongs.
              */
             public Builder instanceSecurityGroupId(String instanceSecurityGroupId) {
                 this.instanceSecurityGroupId = instanceSecurityGroupId;
@@ -6627,7 +6640,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The instance type.
+             * The type of the ApsaraMQ for RocketMQ instance.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -6635,7 +6648,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The instance username.
+             * The username that is used to access the ApsaraMQ for RocketMQ instance.
              */
             public Builder instanceUsername(String instanceUsername) {
                 this.instanceUsername = instanceUsername;
@@ -6643,7 +6656,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The vSwitch ID of the instance.
+             * The ID of the vSwitch with which the ApsaraMQ for RocketMQ instance is associated.
              */
             public Builder instanceVSwitchIds(String instanceVSwitchIds) {
                 this.instanceVSwitchIds = instanceVSwitchIds;
@@ -6651,7 +6664,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The VPC ID of the instance.
+             * The ID of the VPC to which the ApsaraMQ for RocketMQ instance belongs.
              */
             public Builder instanceVpcId(String instanceVpcId) {
                 this.instanceVpcId = instanceVpcId;
@@ -6674,7 +6687,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The ID of the region where the Message Queue for Apache RocketMQ instance resides.
+             * The ID of the region where the ApsaraMQ for RocketMQ instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -6698,7 +6711,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The topic name.
+             * The name of the topic on the ApsaraMQ for RocketMQ instance.
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -6713,7 +6726,7 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class SourceSLSParameters extends TeaModel {
-        @NameInMap("RoleName")
+        @com.aliyun.core.annotation.NameInMap("RoleName")
         private String roleName;
 
         private SourceSLSParameters(Builder builder) {
@@ -6739,7 +6752,7 @@ public class UpdateEventStreamingRequest extends Request {
             private String roleName; 
 
             /**
-             * The role name. If you want to authorize EventBridge to use this role to read logs in Log Service, you must select Alibaba Cloud Service for Selected Trusted Entity and EventBridge for Select Trusted Service when you create the role in the Resource Access Management (RAM) console.
+             * The role name. If you want to authorize EventBridge to use this role to read logs in Simple Log Service, you must select Alibaba Cloud Service for Selected Trusted Entity and EventBridge for Select Trusted Service when you create the role in the Resource Access Management (RAM) console.
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -6754,28 +6767,28 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class Source extends TeaModel {
-        @NameInMap("SourceDTSParameters")
+        @com.aliyun.core.annotation.NameInMap("SourceDTSParameters")
         private SourceDTSParameters sourceDTSParameters;
 
-        @NameInMap("SourceKafkaParameters")
+        @com.aliyun.core.annotation.NameInMap("SourceKafkaParameters")
         private SourceKafkaParameters sourceKafkaParameters;
 
-        @NameInMap("SourceMNSParameters")
+        @com.aliyun.core.annotation.NameInMap("SourceMNSParameters")
         private SourceMNSParameters sourceMNSParameters;
 
-        @NameInMap("SourceMQTTParameters")
+        @com.aliyun.core.annotation.NameInMap("SourceMQTTParameters")
         private SourceMQTTParameters sourceMQTTParameters;
 
-        @NameInMap("SourcePrometheusParameters")
+        @com.aliyun.core.annotation.NameInMap("SourcePrometheusParameters")
         private SourcePrometheusParameters sourcePrometheusParameters;
 
-        @NameInMap("SourceRabbitMQParameters")
+        @com.aliyun.core.annotation.NameInMap("SourceRabbitMQParameters")
         private SourceRabbitMQParameters sourceRabbitMQParameters;
 
-        @NameInMap("SourceRocketMQParameters")
+        @com.aliyun.core.annotation.NameInMap("SourceRocketMQParameters")
         private SourceRocketMQParameters sourceRocketMQParameters;
 
-        @NameInMap("SourceSLSParameters")
+        @com.aliyun.core.annotation.NameInMap("SourceSLSParameters")
         private SourceSLSParameters sourceSLSParameters;
 
         private Source(Builder builder) {
@@ -6872,7 +6885,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The parameters that are configured if you specify Message Queue for Apache Kafka as the event source.
+             * The parameters that are configured if you specify ApsaraMQ for Kafka as the event source.
              */
             public Builder sourceKafkaParameters(SourceKafkaParameters sourceKafkaParameters) {
                 this.sourceKafkaParameters = sourceKafkaParameters;
@@ -6888,7 +6901,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The parameters that are configured if you specify Message Queue for MQTT as the event source.
+             * The parameters that are configured if you specify ApsaraMQ for MQTT as the event source.
              */
             public Builder sourceMQTTParameters(SourceMQTTParameters sourceMQTTParameters) {
                 this.sourceMQTTParameters = sourceMQTTParameters;
@@ -6896,7 +6909,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * SourcePrometheusParameters.
+             * The parameters that are configured if you specify Managed Service for Prometheus as the event source.
              */
             public Builder sourcePrometheusParameters(SourcePrometheusParameters sourcePrometheusParameters) {
                 this.sourcePrometheusParameters = sourcePrometheusParameters;
@@ -6904,7 +6917,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The parameters that are configured if you specify Message Queue for RabbitMQ as the event source.
+             * The parameters that are configured if you specify ApsaraMQ for RabbitMQ as the event source.
              */
             public Builder sourceRabbitMQParameters(SourceRabbitMQParameters sourceRabbitMQParameters) {
                 this.sourceRabbitMQParameters = sourceRabbitMQParameters;
@@ -6912,7 +6925,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The parameters that are configured if you specify Message Queue for Apache RocketMQ as the event source.
+             * The parameters that are configured if you specify ApsaraMQ for RocketMQ as the event source.
              */
             public Builder sourceRocketMQParameters(SourceRocketMQParameters sourceRocketMQParameters) {
                 this.sourceRocketMQParameters = sourceRocketMQParameters;
@@ -6920,7 +6933,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * The parameters that are configured if you specify Log Service as the event source.
+             * The parameters that are configured if you specify Simple Log Service as the event source.
              */
             public Builder sourceSLSParameters(SourceSLSParameters sourceSLSParameters) {
                 this.sourceSLSParameters = sourceSLSParameters;
@@ -6935,7 +6948,7 @@ public class UpdateEventStreamingRequest extends Request {
 
     }
     public static class Transforms extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
         private Transforms(Builder builder) {

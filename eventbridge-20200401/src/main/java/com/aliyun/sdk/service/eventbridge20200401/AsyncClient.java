@@ -115,6 +115,14 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<EnableRuleResponse> enableRule(EnableRuleRequest request);
 
+    CompletableFuture<EventCenterCheckEnabledOnDefaultBusResponse> eventCenterCheckEnabledOnDefaultBus(EventCenterCheckEnabledOnDefaultBusRequest request);
+
+    CompletableFuture<EventCenterDisableOnDefaultBusResponse> eventCenterDisableOnDefaultBus(EventCenterDisableOnDefaultBusRequest request);
+
+    CompletableFuture<EventCenterEnableOnDefaultBusResponse> eventCenterEnableOnDefaultBus(EventCenterEnableOnDefaultBusRequest request);
+
+    CompletableFuture<EventCenterQueryEventsResponse> eventCenterQueryEvents(EventCenterQueryEventsRequest request);
+
     /**
       * You can call this API operation to query the information about an API destination.
       *

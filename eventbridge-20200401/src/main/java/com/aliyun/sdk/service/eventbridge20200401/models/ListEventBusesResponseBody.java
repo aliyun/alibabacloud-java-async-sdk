@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.eventbridge.models.*;
  * <p>ListEventBusesResponseBody</p>
  */
 public class ListEventBusesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListEventBusesResponseBody(Builder builder) {
@@ -132,16 +131,16 @@ public class ListEventBusesResponseBody extends TeaModel {
     } 
 
     public static class EventBuses extends TeaModel {
-        @NameInMap("CreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EventBusARN")
+        @com.aliyun.core.annotation.NameInMap("EventBusARN")
         private String eventBusARN;
 
-        @NameInMap("EventBusName")
+        @com.aliyun.core.annotation.NameInMap("EventBusName")
         private String eventBusName;
 
         private EventBuses(Builder builder) {
@@ -233,13 +232,13 @@ public class ListEventBusesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("EventBuses")
+        @com.aliyun.core.annotation.NameInMap("EventBuses")
         private java.util.List < EventBuses> eventBuses;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Data(Builder builder) {

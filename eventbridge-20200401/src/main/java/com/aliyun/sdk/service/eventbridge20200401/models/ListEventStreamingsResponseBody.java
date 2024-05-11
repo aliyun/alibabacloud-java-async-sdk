@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.eventbridge.models.*;
  * <p>ListEventStreamingsResponseBody</p>
  */
 public class ListEventStreamingsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListEventStreamingsResponseBody(Builder builder) {
@@ -137,10 +136,10 @@ public class ListEventStreamingsResponseBody extends TeaModel {
     } 
 
     public static class BatchWindow extends TeaModel {
-        @NameInMap("CountBasedWindow")
+        @com.aliyun.core.annotation.NameInMap("CountBasedWindow")
         private Integer countBasedWindow;
 
-        @NameInMap("TimeBasedWindow")
+        @com.aliyun.core.annotation.NameInMap("TimeBasedWindow")
         private Integer timeBasedWindow;
 
         private BatchWindow(Builder builder) {
@@ -198,7 +197,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class DeadLetterQueue extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
         private DeadLetterQueue(Builder builder) {
@@ -239,13 +238,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class RetryStrategy extends TeaModel {
-        @NameInMap("MaximumEventAgeInSeconds")
+        @com.aliyun.core.annotation.NameInMap("MaximumEventAgeInSeconds")
         private Float maximumEventAgeInSeconds;
 
-        @NameInMap("MaximumRetryAttempts")
+        @com.aliyun.core.annotation.NameInMap("MaximumRetryAttempts")
         private Float maximumRetryAttempts;
 
-        @NameInMap("PushRetryStrategy")
+        @com.aliyun.core.annotation.NameInMap("PushRetryStrategy")
         private String pushRetryStrategy;
 
         private RetryStrategy(Builder builder) {
@@ -320,19 +319,19 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class RunOptions extends TeaModel {
-        @NameInMap("BatchWindow")
+        @com.aliyun.core.annotation.NameInMap("BatchWindow")
         private BatchWindow batchWindow;
 
-        @NameInMap("DeadLetterQueue")
+        @com.aliyun.core.annotation.NameInMap("DeadLetterQueue")
         private DeadLetterQueue deadLetterQueue;
 
-        @NameInMap("ErrorsTolerance")
+        @com.aliyun.core.annotation.NameInMap("ErrorsTolerance")
         private String errorsTolerance;
 
-        @NameInMap("MaximumTasks")
+        @com.aliyun.core.annotation.NameInMap("MaximumTasks")
         private Integer maximumTasks;
 
-        @NameInMap("RetryStrategy")
+        @com.aliyun.core.annotation.NameInMap("RetryStrategy")
         private RetryStrategy retryStrategy;
 
         private RunOptions(Builder builder) {
@@ -441,13 +440,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SinkFcParametersBody extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SinkFcParametersBody(Builder builder) {
@@ -522,13 +521,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class Concurrency extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Concurrency(Builder builder) {
@@ -603,13 +602,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class FunctionName extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private FunctionName(Builder builder) {
@@ -684,13 +683,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class InvocationType extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private InvocationType(Builder builder) {
@@ -769,13 +768,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class Qualifier extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Qualifier(Builder builder) {
@@ -850,13 +849,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class ServiceName extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private ServiceName(Builder builder) {
@@ -931,22 +930,22 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SinkFcParameters extends TeaModel {
-        @NameInMap("Body")
+        @com.aliyun.core.annotation.NameInMap("Body")
         private SinkFcParametersBody body;
 
-        @NameInMap("Concurrency")
+        @com.aliyun.core.annotation.NameInMap("Concurrency")
         private Concurrency concurrency;
 
-        @NameInMap("FunctionName")
+        @com.aliyun.core.annotation.NameInMap("FunctionName")
         private FunctionName functionName;
 
-        @NameInMap("InvocationType")
+        @com.aliyun.core.annotation.NameInMap("InvocationType")
         private InvocationType invocationType;
 
-        @NameInMap("Qualifier")
+        @com.aliyun.core.annotation.NameInMap("Qualifier")
         private Qualifier qualifier;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private ServiceName serviceName;
 
         private SinkFcParameters(Builder builder) {
@@ -1076,13 +1075,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class ExecutionName extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private ExecutionName(Builder builder) {
@@ -1157,13 +1156,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class FlowName extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private FlowName(Builder builder) {
@@ -1238,13 +1237,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class Input extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Input(Builder builder) {
@@ -1319,13 +1318,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class RoleName extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private RoleName(Builder builder) {
@@ -1400,16 +1399,16 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SinkFnfParameters extends TeaModel {
-        @NameInMap("ExecutionName")
+        @com.aliyun.core.annotation.NameInMap("ExecutionName")
         private ExecutionName executionName;
 
-        @NameInMap("FlowName")
+        @com.aliyun.core.annotation.NameInMap("FlowName")
         private FlowName flowName;
 
-        @NameInMap("Input")
+        @com.aliyun.core.annotation.NameInMap("Input")
         private Input input;
 
-        @NameInMap("RoleName")
+        @com.aliyun.core.annotation.NameInMap("RoleName")
         private RoleName roleName;
 
         private SinkFnfParameters(Builder builder) {
@@ -1501,13 +1500,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class Acks extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Acks(Builder builder) {
@@ -1587,13 +1586,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class InstanceId extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private InstanceId(Builder builder) {
@@ -1668,13 +1667,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class Key extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Key(Builder builder) {
@@ -1749,13 +1748,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class Topic extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Topic(Builder builder) {
@@ -1830,13 +1829,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class Value extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Value(Builder builder) {
@@ -1911,19 +1910,19 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SinkKafkaParameters extends TeaModel {
-        @NameInMap("Acks")
+        @com.aliyun.core.annotation.NameInMap("Acks")
         private Acks acks;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private InstanceId instanceId;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private Key key;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private Topic topic;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Value value;
 
         private SinkKafkaParameters(Builder builder) {
@@ -2037,13 +2036,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SinkMNSParametersBody extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SinkMNSParametersBody(Builder builder) {
@@ -2118,13 +2117,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class IsBase64Encode extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private IsBase64Encode(Builder builder) {
@@ -2199,13 +2198,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class QueueName extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private QueueName(Builder builder) {
@@ -2280,13 +2279,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SinkMNSParameters extends TeaModel {
-        @NameInMap("Body")
+        @com.aliyun.core.annotation.NameInMap("Body")
         private SinkMNSParametersBody body;
 
-        @NameInMap("IsBase64Encode")
+        @com.aliyun.core.annotation.NameInMap("IsBase64Encode")
         private IsBase64Encode isBase64Encode;
 
-        @NameInMap("QueueName")
+        @com.aliyun.core.annotation.NameInMap("QueueName")
         private QueueName queueName;
 
         private SinkMNSParameters(Builder builder) {
@@ -2361,13 +2360,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SinkRabbitMQParametersBody extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SinkRabbitMQParametersBody(Builder builder) {
@@ -2442,13 +2441,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class Exchange extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Exchange(Builder builder) {
@@ -2523,13 +2522,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SinkRabbitMQParametersInstanceId extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SinkRabbitMQParametersInstanceId(Builder builder) {
@@ -2604,13 +2603,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class MessageId extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private MessageId(Builder builder) {
@@ -2685,13 +2684,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class Properties extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Properties(Builder builder) {
@@ -2766,13 +2765,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SinkRabbitMQParametersQueueName extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SinkRabbitMQParametersQueueName(Builder builder) {
@@ -2847,13 +2846,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class RoutingKey extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private RoutingKey(Builder builder) {
@@ -2928,13 +2927,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class TargetType extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private TargetType(Builder builder) {
@@ -3009,13 +3008,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class VirtualHostName extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private VirtualHostName(Builder builder) {
@@ -3090,31 +3089,31 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SinkRabbitMQParameters extends TeaModel {
-        @NameInMap("Body")
+        @com.aliyun.core.annotation.NameInMap("Body")
         private SinkRabbitMQParametersBody body;
 
-        @NameInMap("Exchange")
+        @com.aliyun.core.annotation.NameInMap("Exchange")
         private Exchange exchange;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private SinkRabbitMQParametersInstanceId instanceId;
 
-        @NameInMap("MessageId")
+        @com.aliyun.core.annotation.NameInMap("MessageId")
         private MessageId messageId;
 
-        @NameInMap("Properties")
+        @com.aliyun.core.annotation.NameInMap("Properties")
         private Properties properties;
 
-        @NameInMap("QueueName")
+        @com.aliyun.core.annotation.NameInMap("QueueName")
         private SinkRabbitMQParametersQueueName queueName;
 
-        @NameInMap("RoutingKey")
+        @com.aliyun.core.annotation.NameInMap("RoutingKey")
         private RoutingKey routingKey;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private TargetType targetType;
 
-        @NameInMap("VirtualHostName")
+        @com.aliyun.core.annotation.NameInMap("VirtualHostName")
         private VirtualHostName virtualHostName;
 
         private SinkRabbitMQParameters(Builder builder) {
@@ -3291,13 +3290,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SinkRocketMQParametersBody extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SinkRocketMQParametersBody(Builder builder) {
@@ -3372,13 +3371,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SinkRocketMQParametersInstanceId extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SinkRocketMQParametersInstanceId(Builder builder) {
@@ -3453,13 +3452,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class Keys extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Keys(Builder builder) {
@@ -3534,13 +3533,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SinkRocketMQParametersProperties extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SinkRocketMQParametersProperties(Builder builder) {
@@ -3615,13 +3614,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -3696,13 +3695,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SinkRocketMQParametersTopic extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SinkRocketMQParametersTopic(Builder builder) {
@@ -3777,22 +3776,22 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SinkRocketMQParameters extends TeaModel {
-        @NameInMap("Body")
+        @com.aliyun.core.annotation.NameInMap("Body")
         private SinkRocketMQParametersBody body;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private SinkRocketMQParametersInstanceId instanceId;
 
-        @NameInMap("Keys")
+        @com.aliyun.core.annotation.NameInMap("Keys")
         private Keys keys;
 
-        @NameInMap("Properties")
+        @com.aliyun.core.annotation.NameInMap("Properties")
         private SinkRocketMQParametersProperties properties;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private SinkRocketMQParametersTopic topic;
 
         private SinkRocketMQParameters(Builder builder) {
@@ -3918,13 +3917,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SinkSLSParametersBody extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SinkSLSParametersBody(Builder builder) {
@@ -3999,13 +3998,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class LogStore extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private LogStore(Builder builder) {
@@ -4080,13 +4079,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class Project extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Project(Builder builder) {
@@ -4161,13 +4160,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SinkSLSParametersRoleName extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SinkSLSParametersRoleName(Builder builder) {
@@ -4242,13 +4241,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SinkSLSParametersTopic extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SinkSLSParametersTopic(Builder builder) {
@@ -4323,19 +4322,19 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SinkSLSParameters extends TeaModel {
-        @NameInMap("Body")
+        @com.aliyun.core.annotation.NameInMap("Body")
         private SinkSLSParametersBody body;
 
-        @NameInMap("LogStore")
+        @com.aliyun.core.annotation.NameInMap("LogStore")
         private LogStore logStore;
 
-        @NameInMap("Project")
+        @com.aliyun.core.annotation.NameInMap("Project")
         private Project project;
 
-        @NameInMap("RoleName")
+        @com.aliyun.core.annotation.NameInMap("RoleName")
         private SinkSLSParametersRoleName roleName;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private SinkSLSParametersTopic topic;
 
         private SinkSLSParameters(Builder builder) {
@@ -4444,25 +4443,25 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class Sink extends TeaModel {
-        @NameInMap("SinkFcParameters")
+        @com.aliyun.core.annotation.NameInMap("SinkFcParameters")
         private SinkFcParameters sinkFcParameters;
 
-        @NameInMap("SinkFnfParameters")
+        @com.aliyun.core.annotation.NameInMap("SinkFnfParameters")
         private SinkFnfParameters sinkFnfParameters;
 
-        @NameInMap("SinkKafkaParameters")
+        @com.aliyun.core.annotation.NameInMap("SinkKafkaParameters")
         private SinkKafkaParameters sinkKafkaParameters;
 
-        @NameInMap("SinkMNSParameters")
+        @com.aliyun.core.annotation.NameInMap("SinkMNSParameters")
         private SinkMNSParameters sinkMNSParameters;
 
-        @NameInMap("SinkRabbitMQParameters")
+        @com.aliyun.core.annotation.NameInMap("SinkRabbitMQParameters")
         private SinkRabbitMQParameters sinkRabbitMQParameters;
 
-        @NameInMap("SinkRocketMQParameters")
+        @com.aliyun.core.annotation.NameInMap("SinkRocketMQParameters")
         private SinkRocketMQParameters sinkRocketMQParameters;
 
-        @NameInMap("SinkSLSParameters")
+        @com.aliyun.core.annotation.NameInMap("SinkSLSParameters")
         private SinkSLSParameters sinkSLSParameters;
 
         private Sink(Builder builder) {
@@ -4605,25 +4604,25 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SourceDTSParameters extends TeaModel {
-        @NameInMap("BrokerUrl")
+        @com.aliyun.core.annotation.NameInMap("BrokerUrl")
         private String brokerUrl;
 
-        @NameInMap("InitCheckPoint")
+        @com.aliyun.core.annotation.NameInMap("InitCheckPoint")
         private String initCheckPoint;
 
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
 
-        @NameInMap("Sid")
+        @com.aliyun.core.annotation.NameInMap("Sid")
         private String sid;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
-        @NameInMap("Username")
+        @com.aliyun.core.annotation.NameInMap("Username")
         private String username;
 
         private SourceDTSParameters(Builder builder) {
@@ -4766,31 +4765,31 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SourceKafkaParameters extends TeaModel {
-        @NameInMap("ConsumerGroup")
+        @com.aliyun.core.annotation.NameInMap("ConsumerGroup")
         private String consumerGroup;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Network")
+        @com.aliyun.core.annotation.NameInMap("Network")
         private String network;
 
-        @NameInMap("OffsetReset")
+        @com.aliyun.core.annotation.NameInMap("OffsetReset")
         private String offsetReset;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
-        @NameInMap("VSwitchIds")
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
         private String vSwitchIds;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private SourceKafkaParameters(Builder builder) {
@@ -4967,13 +4966,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SourceMNSParameters extends TeaModel {
-        @NameInMap("IsBase64Decode")
+        @com.aliyun.core.annotation.NameInMap("IsBase64Decode")
         private Boolean isBase64Decode;
 
-        @NameInMap("QueueName")
+        @com.aliyun.core.annotation.NameInMap("QueueName")
         private String queueName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private SourceMNSParameters(Builder builder) {
@@ -5048,13 +5047,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SourceMQTTParameters extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
         private SourceMQTTParameters(Builder builder) {
@@ -5129,16 +5128,16 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SourcePrometheusParameters extends TeaModel {
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("DataType")
+        @com.aliyun.core.annotation.NameInMap("DataType")
         private String dataType;
 
-        @NameInMap("Labels")
+        @com.aliyun.core.annotation.NameInMap("Labels")
         private String labels;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private SourcePrometheusParameters(Builder builder) {
@@ -5230,16 +5229,16 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SourceRabbitMQParameters extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("QueueName")
+        @com.aliyun.core.annotation.NameInMap("QueueName")
         private String queueName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("VirtualHostName")
+        @com.aliyun.core.annotation.NameInMap("VirtualHostName")
         private String virtualHostName;
 
         private SourceRabbitMQParameters(Builder builder) {
@@ -5331,52 +5330,52 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SourceRocketMQParameters extends TeaModel {
-        @NameInMap("AuthType")
+        @com.aliyun.core.annotation.NameInMap("AuthType")
         private String authType;
 
-        @NameInMap("GroupID")
+        @com.aliyun.core.annotation.NameInMap("GroupID")
         private String groupID;
 
-        @NameInMap("InstanceEndpoint")
+        @com.aliyun.core.annotation.NameInMap("InstanceEndpoint")
         private String instanceEndpoint;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceNetwork")
+        @com.aliyun.core.annotation.NameInMap("InstanceNetwork")
         private String instanceNetwork;
 
-        @NameInMap("InstancePassword")
+        @com.aliyun.core.annotation.NameInMap("InstancePassword")
         private String instancePassword;
 
-        @NameInMap("InstanceSecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("InstanceSecurityGroupId")
         private String instanceSecurityGroupId;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("InstanceUsername")
+        @com.aliyun.core.annotation.NameInMap("InstanceUsername")
         private String instanceUsername;
 
-        @NameInMap("InstanceVSwitchIds")
+        @com.aliyun.core.annotation.NameInMap("InstanceVSwitchIds")
         private String instanceVSwitchIds;
 
-        @NameInMap("InstanceVpcId")
+        @com.aliyun.core.annotation.NameInMap("InstanceVpcId")
         private String instanceVpcId;
 
-        @NameInMap("Offset")
+        @com.aliyun.core.annotation.NameInMap("Offset")
         private String offset;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
         private SourceRocketMQParameters(Builder builder) {
@@ -5676,19 +5675,19 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class SourceSLSParameters extends TeaModel {
-        @NameInMap("ConsumePosition")
+        @com.aliyun.core.annotation.NameInMap("ConsumePosition")
         private String consumePosition;
 
-        @NameInMap("ConsumerGroup")
+        @com.aliyun.core.annotation.NameInMap("ConsumerGroup")
         private String consumerGroup;
 
-        @NameInMap("LogStore")
+        @com.aliyun.core.annotation.NameInMap("LogStore")
         private String logStore;
 
-        @NameInMap("Project")
+        @com.aliyun.core.annotation.NameInMap("Project")
         private String project;
 
-        @NameInMap("RoleName")
+        @com.aliyun.core.annotation.NameInMap("RoleName")
         private String roleName;
 
         private SourceSLSParameters(Builder builder) {
@@ -5797,28 +5796,28 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class Source extends TeaModel {
-        @NameInMap("SourceDTSParameters")
+        @com.aliyun.core.annotation.NameInMap("SourceDTSParameters")
         private SourceDTSParameters sourceDTSParameters;
 
-        @NameInMap("SourceKafkaParameters")
+        @com.aliyun.core.annotation.NameInMap("SourceKafkaParameters")
         private SourceKafkaParameters sourceKafkaParameters;
 
-        @NameInMap("SourceMNSParameters")
+        @com.aliyun.core.annotation.NameInMap("SourceMNSParameters")
         private SourceMNSParameters sourceMNSParameters;
 
-        @NameInMap("SourceMQTTParameters")
+        @com.aliyun.core.annotation.NameInMap("SourceMQTTParameters")
         private SourceMQTTParameters sourceMQTTParameters;
 
-        @NameInMap("SourcePrometheusParameters")
+        @com.aliyun.core.annotation.NameInMap("SourcePrometheusParameters")
         private SourcePrometheusParameters sourcePrometheusParameters;
 
-        @NameInMap("SourceRabbitMQParameters")
+        @com.aliyun.core.annotation.NameInMap("SourceRabbitMQParameters")
         private SourceRabbitMQParameters sourceRabbitMQParameters;
 
-        @NameInMap("SourceRocketMQParameters")
+        @com.aliyun.core.annotation.NameInMap("SourceRocketMQParameters")
         private SourceRocketMQParameters sourceRocketMQParameters;
 
-        @NameInMap("SourceSLSParameters")
+        @com.aliyun.core.annotation.NameInMap("SourceSLSParameters")
         private SourceSLSParameters sourceSLSParameters;
 
         private Source(Builder builder) {
@@ -5978,7 +5977,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class Transforms extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
         private Transforms(Builder builder) {
@@ -6019,28 +6018,28 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class EventStreamings extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EventStreamingName")
+        @com.aliyun.core.annotation.NameInMap("EventStreamingName")
         private String eventStreamingName;
 
-        @NameInMap("FilterPattern")
+        @com.aliyun.core.annotation.NameInMap("FilterPattern")
         private String filterPattern;
 
-        @NameInMap("RunOptions")
+        @com.aliyun.core.annotation.NameInMap("RunOptions")
         private RunOptions runOptions;
 
-        @NameInMap("Sink")
+        @com.aliyun.core.annotation.NameInMap("Sink")
         private Sink sink;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private Source source;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Transforms")
+        @com.aliyun.core.annotation.NameInMap("Transforms")
         private java.util.List < Transforms> transforms;
 
         private EventStreamings(Builder builder) {
@@ -6200,13 +6199,13 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("EventStreamings")
+        @com.aliyun.core.annotation.NameInMap("EventStreamings")
         private java.util.List < EventStreamings> eventStreamings;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Data(Builder builder) {

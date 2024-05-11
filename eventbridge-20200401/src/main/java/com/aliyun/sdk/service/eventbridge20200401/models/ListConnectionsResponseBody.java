@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.eventbridge.models.*;
  * <p>ListConnectionsResponseBody</p>
  */
 public class ListConnectionsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListConnectionsResponseBody(Builder builder) {
@@ -112,10 +111,10 @@ public class ListConnectionsResponseBody extends TeaModel {
     } 
 
     public static class ApiKeyAuthParameters extends TeaModel {
-        @NameInMap("ApiKeyName")
+        @com.aliyun.core.annotation.NameInMap("ApiKeyName")
         private String apiKeyName;
 
-        @NameInMap("ApiKeyValue")
+        @com.aliyun.core.annotation.NameInMap("ApiKeyValue")
         private String apiKeyValue;
 
         private ApiKeyAuthParameters(Builder builder) {
@@ -173,10 +172,10 @@ public class ListConnectionsResponseBody extends TeaModel {
 
     }
     public static class BasicAuthParameters extends TeaModel {
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
 
-        @NameInMap("Username")
+        @com.aliyun.core.annotation.NameInMap("Username")
         private String username;
 
         private BasicAuthParameters(Builder builder) {
@@ -234,10 +233,10 @@ public class ListConnectionsResponseBody extends TeaModel {
 
     }
     public static class ClientParameters extends TeaModel {
-        @NameInMap("ClientID")
+        @com.aliyun.core.annotation.NameInMap("ClientID")
         private String clientID;
 
-        @NameInMap("ClientSecret")
+        @com.aliyun.core.annotation.NameInMap("ClientSecret")
         private String clientSecret;
 
         private ClientParameters(Builder builder) {
@@ -295,13 +294,13 @@ public class ListConnectionsResponseBody extends TeaModel {
 
     }
     public static class BodyParameters extends TeaModel {
-        @NameInMap("IsValueSecret")
+        @com.aliyun.core.annotation.NameInMap("IsValueSecret")
         private String isValueSecret;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private BodyParameters(Builder builder) {
@@ -376,13 +375,13 @@ public class ListConnectionsResponseBody extends TeaModel {
 
     }
     public static class HeaderParameters extends TeaModel {
-        @NameInMap("IsValueSecret")
+        @com.aliyun.core.annotation.NameInMap("IsValueSecret")
         private String isValueSecret;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private HeaderParameters(Builder builder) {
@@ -457,13 +456,13 @@ public class ListConnectionsResponseBody extends TeaModel {
 
     }
     public static class QueryStringParameters extends TeaModel {
-        @NameInMap("IsValueSecret")
+        @com.aliyun.core.annotation.NameInMap("IsValueSecret")
         private String isValueSecret;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private QueryStringParameters(Builder builder) {
@@ -538,13 +537,13 @@ public class ListConnectionsResponseBody extends TeaModel {
 
     }
     public static class OAuthHttpParameters extends TeaModel {
-        @NameInMap("BodyParameters")
+        @com.aliyun.core.annotation.NameInMap("BodyParameters")
         private java.util.List < BodyParameters> bodyParameters;
 
-        @NameInMap("HeaderParameters")
+        @com.aliyun.core.annotation.NameInMap("HeaderParameters")
         private java.util.List < HeaderParameters> headerParameters;
 
-        @NameInMap("QueryStringParameters")
+        @com.aliyun.core.annotation.NameInMap("QueryStringParameters")
         private java.util.List < QueryStringParameters> queryStringParameters;
 
         private OAuthHttpParameters(Builder builder) {
@@ -619,16 +618,16 @@ public class ListConnectionsResponseBody extends TeaModel {
 
     }
     public static class OAuthParameters extends TeaModel {
-        @NameInMap("AuthorizationEndpoint")
+        @com.aliyun.core.annotation.NameInMap("AuthorizationEndpoint")
         private String authorizationEndpoint;
 
-        @NameInMap("ClientParameters")
+        @com.aliyun.core.annotation.NameInMap("ClientParameters")
         private ClientParameters clientParameters;
 
-        @NameInMap("HttpMethod")
+        @com.aliyun.core.annotation.NameInMap("HttpMethod")
         private String httpMethod;
 
-        @NameInMap("OAuthHttpParameters")
+        @com.aliyun.core.annotation.NameInMap("OAuthHttpParameters")
         private OAuthHttpParameters oAuthHttpParameters;
 
         private OAuthParameters(Builder builder) {
@@ -727,16 +726,16 @@ public class ListConnectionsResponseBody extends TeaModel {
 
     }
     public static class AuthParameters extends TeaModel {
-        @NameInMap("ApiKeyAuthParameters")
+        @com.aliyun.core.annotation.NameInMap("ApiKeyAuthParameters")
         private ApiKeyAuthParameters apiKeyAuthParameters;
 
-        @NameInMap("AuthorizationType")
+        @com.aliyun.core.annotation.NameInMap("AuthorizationType")
         private String authorizationType;
 
-        @NameInMap("BasicAuthParameters")
+        @com.aliyun.core.annotation.NameInMap("BasicAuthParameters")
         private BasicAuthParameters basicAuthParameters;
 
-        @NameInMap("OAuthParameters")
+        @com.aliyun.core.annotation.NameInMap("OAuthParameters")
         private OAuthParameters oAuthParameters;
 
         private AuthParameters(Builder builder) {
@@ -835,16 +834,16 @@ public class ListConnectionsResponseBody extends TeaModel {
 
     }
     public static class NetworkParameters extends TeaModel {
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VswitcheId")
+        @com.aliyun.core.annotation.NameInMap("VswitcheId")
         private String vswitcheId;
 
         private NetworkParameters(Builder builder) {
@@ -936,22 +935,22 @@ public class ListConnectionsResponseBody extends TeaModel {
 
     }
     public static class Connections extends TeaModel {
-        @NameInMap("AuthParameters")
+        @com.aliyun.core.annotation.NameInMap("AuthParameters")
         private AuthParameters authParameters;
 
-        @NameInMap("ConnectionName")
+        @com.aliyun.core.annotation.NameInMap("ConnectionName")
         private String connectionName;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("NetworkParameters")
+        @com.aliyun.core.annotation.NameInMap("NetworkParameters")
         private NetworkParameters networkParameters;
 
         private Connections(Builder builder) {
@@ -1077,16 +1076,16 @@ public class ListConnectionsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Connections")
+        @com.aliyun.core.annotation.NameInMap("Connections")
         private java.util.List < Connections> connections;
 
-        @NameInMap("MaxResults")
+        @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Float maxResults;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Float total;
 
         private Data(Builder builder) {

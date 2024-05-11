@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.eventbridge.models.*;
  * <p>CreateEventBusRequest</p>
  */
 public class CreateEventBusRequest extends Request {
-    @Query
-    @NameInMap("Description")
-    @Validation(maxLength = 255)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(maxLength = 255)
     private String description;
 
-    @Query
-    @NameInMap("EventBusName")
-    @Validation(required = true, maxLength = 127, minLength = 2)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventBusName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 127, minLength = 2)
     private String eventBusName;
 
     private CreateEventBusRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.eventbridge.models.*;
  * <p>DeleteEventSourceRequest</p>
  */
 public class DeleteEventSourceRequest extends Request {
-    @Body
-    @NameInMap("EventBusName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EventBusName")
     private String eventBusName;
 
-    @Body
-    @NameInMap("EventSourceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EventSourceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String eventSourceName;
 
     private DeleteEventSourceRequest(Builder builder) {

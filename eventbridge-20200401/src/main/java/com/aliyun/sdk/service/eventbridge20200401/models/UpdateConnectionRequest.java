@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.eventbridge.models.*;
  * <p>UpdateConnectionRequest</p>
  */
 public class UpdateConnectionRequest extends Request {
-    @Query
-    @NameInMap("AuthParameters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthParameters")
     private AuthParameters authParameters;
 
-    @Query
-    @NameInMap("ConnectionName")
-    @Validation(required = true, maxLength = 127, minLength = 2)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectionName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 127, minLength = 2)
     private String connectionName;
 
-    @Query
-    @NameInMap("Description")
-    @Validation(maxLength = 255)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(maxLength = 255)
     private String description;
 
-    @Query
-    @NameInMap("NetworkParameters")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkParameters")
+    @com.aliyun.core.annotation.Validation(required = true)
     private NetworkParameters networkParameters;
 
     private UpdateConnectionRequest(Builder builder) {
@@ -144,12 +143,12 @@ public class UpdateConnectionRequest extends Request {
     } 
 
     public static class ApiKeyAuthParameters extends TeaModel {
-        @NameInMap("ApiKeyName")
-        @Validation(maxLength = 127)
+        @com.aliyun.core.annotation.NameInMap("ApiKeyName")
+        @com.aliyun.core.annotation.Validation(maxLength = 127)
         private String apiKeyName;
 
-        @NameInMap("ApiKeyValue")
-        @Validation(maxLength = 127)
+        @com.aliyun.core.annotation.NameInMap("ApiKeyValue")
+        @com.aliyun.core.annotation.Validation(maxLength = 127)
         private String apiKeyValue;
 
         private ApiKeyAuthParameters(Builder builder) {
@@ -207,12 +206,12 @@ public class UpdateConnectionRequest extends Request {
 
     }
     public static class BasicAuthParameters extends TeaModel {
-        @NameInMap("Password")
-        @Validation(maxLength = 127)
+        @com.aliyun.core.annotation.NameInMap("Password")
+        @com.aliyun.core.annotation.Validation(maxLength = 127)
         private String password;
 
-        @NameInMap("Username")
-        @Validation(maxLength = 127)
+        @com.aliyun.core.annotation.NameInMap("Username")
+        @com.aliyun.core.annotation.Validation(maxLength = 127)
         private String username;
 
         private BasicAuthParameters(Builder builder) {
@@ -270,12 +269,12 @@ public class UpdateConnectionRequest extends Request {
 
     }
     public static class ClientParameters extends TeaModel {
-        @NameInMap("ClientID")
-        @Validation(maxLength = 127)
+        @com.aliyun.core.annotation.NameInMap("ClientID")
+        @com.aliyun.core.annotation.Validation(maxLength = 127)
         private String clientID;
 
-        @NameInMap("ClientSecret")
-        @Validation(maxLength = 127)
+        @com.aliyun.core.annotation.NameInMap("ClientSecret")
+        @com.aliyun.core.annotation.Validation(maxLength = 127)
         private String clientSecret;
 
         private ClientParameters(Builder builder) {
@@ -333,13 +332,13 @@ public class UpdateConnectionRequest extends Request {
 
     }
     public static class BodyParameters extends TeaModel {
-        @NameInMap("IsValueSecret")
+        @com.aliyun.core.annotation.NameInMap("IsValueSecret")
         private String isValueSecret;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private BodyParameters(Builder builder) {
@@ -414,13 +413,13 @@ public class UpdateConnectionRequest extends Request {
 
     }
     public static class HeaderParameters extends TeaModel {
-        @NameInMap("IsValueSecret")
+        @com.aliyun.core.annotation.NameInMap("IsValueSecret")
         private String isValueSecret;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private HeaderParameters(Builder builder) {
@@ -495,13 +494,13 @@ public class UpdateConnectionRequest extends Request {
 
     }
     public static class QueryStringParameters extends TeaModel {
-        @NameInMap("IsValueSecret")
+        @com.aliyun.core.annotation.NameInMap("IsValueSecret")
         private String isValueSecret;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private QueryStringParameters(Builder builder) {
@@ -576,13 +575,13 @@ public class UpdateConnectionRequest extends Request {
 
     }
     public static class OAuthHttpParameters extends TeaModel {
-        @NameInMap("BodyParameters")
+        @com.aliyun.core.annotation.NameInMap("BodyParameters")
         private java.util.List < BodyParameters> bodyParameters;
 
-        @NameInMap("HeaderParameters")
+        @com.aliyun.core.annotation.NameInMap("HeaderParameters")
         private java.util.List < HeaderParameters> headerParameters;
 
-        @NameInMap("QueryStringParameters")
+        @com.aliyun.core.annotation.NameInMap("QueryStringParameters")
         private java.util.List < QueryStringParameters> queryStringParameters;
 
         private OAuthHttpParameters(Builder builder) {
@@ -657,17 +656,17 @@ public class UpdateConnectionRequest extends Request {
 
     }
     public static class OAuthParameters extends TeaModel {
-        @NameInMap("AuthorizationEndpoint")
-        @Validation(maxLength = 127)
+        @com.aliyun.core.annotation.NameInMap("AuthorizationEndpoint")
+        @com.aliyun.core.annotation.Validation(maxLength = 127)
         private String authorizationEndpoint;
 
-        @NameInMap("ClientParameters")
+        @com.aliyun.core.annotation.NameInMap("ClientParameters")
         private ClientParameters clientParameters;
 
-        @NameInMap("HttpMethod")
+        @com.aliyun.core.annotation.NameInMap("HttpMethod")
         private String httpMethod;
 
-        @NameInMap("OAuthHttpParameters")
+        @com.aliyun.core.annotation.NameInMap("OAuthHttpParameters")
         private OAuthHttpParameters oAuthHttpParameters;
 
         private OAuthParameters(Builder builder) {
@@ -767,16 +766,16 @@ public class UpdateConnectionRequest extends Request {
 
     }
     public static class AuthParameters extends TeaModel {
-        @NameInMap("ApiKeyAuthParameters")
+        @com.aliyun.core.annotation.NameInMap("ApiKeyAuthParameters")
         private ApiKeyAuthParameters apiKeyAuthParameters;
 
-        @NameInMap("AuthorizationType")
+        @com.aliyun.core.annotation.NameInMap("AuthorizationType")
         private String authorizationType;
 
-        @NameInMap("BasicAuthParameters")
+        @com.aliyun.core.annotation.NameInMap("BasicAuthParameters")
         private BasicAuthParameters basicAuthParameters;
 
-        @NameInMap("OAuthParameters")
+        @com.aliyun.core.annotation.NameInMap("OAuthParameters")
         private OAuthParameters oAuthParameters;
 
         private AuthParameters(Builder builder) {
@@ -887,17 +886,17 @@ public class UpdateConnectionRequest extends Request {
 
     }
     public static class NetworkParameters extends TeaModel {
-        @NameInMap("NetworkType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String networkType;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VswitcheId")
+        @com.aliyun.core.annotation.NameInMap("VswitcheId")
         private String vswitcheId;
 
         private NetworkParameters(Builder builder) {

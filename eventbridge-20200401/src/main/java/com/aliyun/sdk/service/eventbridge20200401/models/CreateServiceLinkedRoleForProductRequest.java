@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.eventbridge.models.*;
  * <p>CreateServiceLinkedRoleForProductRequest</p>
  */
 public class CreateServiceLinkedRoleForProductRequest extends Request {
-    @Query
-    @NameInMap("ProductName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productName;
 
     private CreateServiceLinkedRoleForProductRequest(Builder builder) {

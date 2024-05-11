@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.eventbridge.models.*;
  * <p>ListApiDestinationsRequest</p>
  */
 public class ListApiDestinationsRequest extends Request {
-    @Query
-    @NameInMap("ApiDestinationNamePrefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApiDestinationNamePrefix")
     private String apiDestinationNamePrefix;
 
-    @Query
-    @NameInMap("ConnectionName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectionName")
     private String connectionName;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Long maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
     private ListApiDestinationsRequest(Builder builder) {

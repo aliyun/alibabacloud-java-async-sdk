@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.eventbridge.models.*;
  * <p>GetRuleResponseBody</p>
  */
 public class GetRuleResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetRuleResponseBody(Builder builder) {
@@ -132,7 +131,7 @@ public class GetRuleResponseBody extends TeaModel {
     } 
 
     public static class DeadLetterQueue extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
         private DeadLetterQueue(Builder builder) {
@@ -173,16 +172,16 @@ public class GetRuleResponseBody extends TeaModel {
 
     }
     public static class ParamList extends TeaModel {
-        @NameInMap("Form")
+        @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
-        @NameInMap("ResourceKey")
+        @com.aliyun.core.annotation.NameInMap("ResourceKey")
         private String resourceKey;
 
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private String template;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private ParamList(Builder builder) {
@@ -274,31 +273,31 @@ public class GetRuleResponseBody extends TeaModel {
 
     }
     public static class Targets extends TeaModel {
-        @NameInMap("DeadLetterQueue")
+        @com.aliyun.core.annotation.NameInMap("DeadLetterQueue")
         private DeadLetterQueue deadLetterQueue;
 
-        @NameInMap("DetailMap")
+        @com.aliyun.core.annotation.NameInMap("DetailMap")
         private java.util.Map < String, ? > detailMap;
 
-        @NameInMap("Endpoint")
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
 
-        @NameInMap("ErrorsTolerance")
+        @com.aliyun.core.annotation.NameInMap("ErrorsTolerance")
         private String errorsTolerance;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("ParamList")
+        @com.aliyun.core.annotation.NameInMap("ParamList")
         private java.util.List < ParamList> paramList;
 
-        @NameInMap("PushRetryStrategy")
+        @com.aliyun.core.annotation.NameInMap("PushRetryStrategy")
         private String pushRetryStrategy;
 
-        @NameInMap("PushSelector")
+        @com.aliyun.core.annotation.NameInMap("PushSelector")
         private String pushSelector;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Targets(Builder builder) {
@@ -475,28 +474,28 @@ public class GetRuleResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("CreatedTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreatedTimestamp")
         private Long createdTimestamp;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EventBusName")
+        @com.aliyun.core.annotation.NameInMap("EventBusName")
         private String eventBusName;
 
-        @NameInMap("FilterPattern")
+        @com.aliyun.core.annotation.NameInMap("FilterPattern")
         private String filterPattern;
 
-        @NameInMap("RuleARN")
+        @com.aliyun.core.annotation.NameInMap("RuleARN")
         private String ruleARN;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Targets")
+        @com.aliyun.core.annotation.NameInMap("Targets")
         private java.util.List < Targets> targets;
 
         private Data(Builder builder) {

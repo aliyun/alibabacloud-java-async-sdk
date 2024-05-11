@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.eventbridge.models.*;
  * <p>DeleteRuleRequest</p>
  */
 public class DeleteRuleRequest extends Request {
-    @Query
-    @NameInMap("EventBusName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventBusName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String eventBusName;
 
-    @Query
-    @NameInMap("RuleName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleName;
 
     private DeleteRuleRequest(Builder builder) {

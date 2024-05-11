@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.eventbridge.models.*;
  * <p>ListEventStreamingsRequest</p>
  */
 public class ListEventStreamingsRequest extends Request {
-    @Body
-    @NameInMap("Limit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Limit")
     private Integer limit;
 
-    @Body
-    @NameInMap("NamePrefix")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NamePrefix")
     private String namePrefix;
 
-    @Body
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Body
-    @NameInMap("SinkArn")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SinkArn")
     private String sinkArn;
 
-    @Body
-    @NameInMap("SourceArn")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceArn")
     private String sourceArn;
 
     private ListEventStreamingsRequest(Builder builder) {

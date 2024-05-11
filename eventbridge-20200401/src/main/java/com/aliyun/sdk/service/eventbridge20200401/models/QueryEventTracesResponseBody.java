@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eventbridge20200401.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.eventbridge.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.eventbridge.models.*;
  * <p>QueryEventTracesResponseBody</p>
  */
 public class QueryEventTracesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryEventTracesResponseBody(Builder builder) {
@@ -132,40 +131,40 @@ public class QueryEventTracesResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("ActionTime")
+        @com.aliyun.core.annotation.NameInMap("ActionTime")
         private Long actionTime;
 
-        @NameInMap("Endpoint")
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
 
-        @NameInMap("EventBusName")
+        @com.aliyun.core.annotation.NameInMap("EventBusName")
         private String eventBusName;
 
-        @NameInMap("EventId")
+        @com.aliyun.core.annotation.NameInMap("EventId")
         private String eventId;
 
-        @NameInMap("EventSource")
+        @com.aliyun.core.annotation.NameInMap("EventSource")
         private String eventSource;
 
-        @NameInMap("NotifyLatency")
+        @com.aliyun.core.annotation.NameInMap("NotifyLatency")
         private String notifyLatency;
 
-        @NameInMap("NotifyStatus")
+        @com.aliyun.core.annotation.NameInMap("NotifyStatus")
         private String notifyStatus;
 
-        @NameInMap("NotifyTime")
+        @com.aliyun.core.annotation.NameInMap("NotifyTime")
         private Long notifyTime;
 
-        @NameInMap("ReceivedTime")
+        @com.aliyun.core.annotation.NameInMap("ReceivedTime")
         private Long receivedTime;
 
-        @NameInMap("RuleMatchingTime")
+        @com.aliyun.core.annotation.NameInMap("RuleMatchingTime")
         private String ruleMatchingTime;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
         private Data(Builder builder) {
