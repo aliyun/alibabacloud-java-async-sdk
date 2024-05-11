@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeVpcAccessesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccurateQuery")
+    private Boolean accurateQuery;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
@@ -49,6 +53,7 @@ public class DescribeVpcAccessesRequest extends Request {
 
     private DescribeVpcAccessesRequest(Builder builder) {
         super(builder);
+        this.accurateQuery = builder.accurateQuery;
         this.instanceId = builder.instanceId;
         this.name = builder.name;
         this.pageNumber = builder.pageNumber;
@@ -71,6 +76,13 @@ public class DescribeVpcAccessesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accurateQuery
+     */
+    public Boolean getAccurateQuery() {
+        return this.accurateQuery;
     }
 
     /**
@@ -137,6 +149,7 @@ public class DescribeVpcAccessesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeVpcAccessesRequest, Builder> {
+        private Boolean accurateQuery; 
         private String instanceId; 
         private String name; 
         private Integer pageNumber; 
@@ -153,6 +166,7 @@ public class DescribeVpcAccessesRequest extends Request {
 
         private Builder(DescribeVpcAccessesRequest request) {
             super(request);
+            this.accurateQuery = request.accurateQuery;
             this.instanceId = request.instanceId;
             this.name = request.name;
             this.pageNumber = request.pageNumber;
@@ -163,6 +177,15 @@ public class DescribeVpcAccessesRequest extends Request {
             this.vpcAccessId = request.vpcAccessId;
             this.vpcId = request.vpcId;
         } 
+
+        /**
+         * AccurateQuery.
+         */
+        public Builder accurateQuery(Boolean accurateQuery) {
+            this.putQueryParameter("AccurateQuery", accurateQuery);
+            this.accurateQuery = accurateQuery;
+            return this;
+        }
 
         /**
          * The ID of the instance.
