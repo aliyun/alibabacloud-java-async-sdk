@@ -1,21 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.antiddos_public20170518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ModifyDdosStatusResponseBody} extends {@link TeaModel}
+ * {@link ModifyIpDefenseThresholdResponseBody} extends {@link TeaModel}
  *
- * <p>ModifyDdosStatusResponseBody</p>
+ * <p>ModifyIpDefenseThresholdResponseBody</p>
  */
-public class ModifyDdosStatusResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+public class ModifyIpDefenseThresholdResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private ModifyDdosStatusResponseBody(Builder builder) {
+    private ModifyIpDefenseThresholdResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -23,7 +22,7 @@ public class ModifyDdosStatusResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ModifyDdosStatusResponseBody create() {
+    public static ModifyIpDefenseThresholdResponseBody create() {
         return builder().build();
     }
 
@@ -38,15 +37,15 @@ public class ModifyDdosStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public ModifyDdosStatusResponseBody build() {
-            return new ModifyDdosStatusResponseBody(this);
+        public ModifyIpDefenseThresholdResponseBody build() {
+            return new ModifyIpDefenseThresholdResponseBody(this);
         } 
 
     } 

@@ -6,14 +6,14 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeDdosEventListRequest} extends {@link RequestModel}
+ * {@link ModifyIpDefenseThresholdRequest} extends {@link RequestModel}
  *
- * <p>DescribeDdosEventListRequest</p>
+ * <p>ModifyIpDefenseThresholdRequest</p>
  */
-public class DescribeDdosEventListRequest extends Request {
+public class ModifyIpDefenseThresholdRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("CurrentPage")
-    private Integer currentPage;
+    @com.aliyun.core.annotation.NameInMap("Bps")
+    private Integer bps;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DdosRegionId")
@@ -32,28 +32,33 @@ public class DescribeDdosEventListRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InternetIp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String internetIp;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("PageSize")
-    @com.aliyun.core.annotation.Validation(maximum = 50)
-    private Integer pageSize;
+    @com.aliyun.core.annotation.NameInMap("IsAuto")
+    private Boolean isAuto;
 
-    private DescribeDdosEventListRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Pps")
+    private Integer pps;
+
+    private ModifyIpDefenseThresholdRequest(Builder builder) {
         super(builder);
-        this.currentPage = builder.currentPage;
+        this.bps = builder.bps;
         this.ddosRegionId = builder.ddosRegionId;
         this.instanceId = builder.instanceId;
         this.instanceType = builder.instanceType;
         this.internetIp = builder.internetIp;
-        this.pageSize = builder.pageSize;
+        this.isAuto = builder.isAuto;
+        this.pps = builder.pps;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DescribeDdosEventListRequest create() {
+    public static ModifyIpDefenseThresholdRequest create() {
         return builder().build();
     }
 
@@ -63,10 +68,10 @@ public class DescribeDdosEventListRequest extends Request {
     }
 
     /**
-     * @return currentPage
+     * @return bps
      */
-    public Integer getCurrentPage() {
-        return this.currentPage;
+    public Integer getBps() {
+        return this.bps;
     }
 
     /**
@@ -98,45 +103,60 @@ public class DescribeDdosEventListRequest extends Request {
     }
 
     /**
-     * @return pageSize
+     * @return isAuto
      */
-    public Integer getPageSize() {
-        return this.pageSize;
+    public Boolean getIsAuto() {
+        return this.isAuto;
     }
 
-    public static final class Builder extends Request.Builder<DescribeDdosEventListRequest, Builder> {
-        private Integer currentPage; 
+    /**
+     * @return pps
+     */
+    public Integer getPps() {
+        return this.pps;
+    }
+
+    public static final class Builder extends Request.Builder<ModifyIpDefenseThresholdRequest, Builder> {
+        private Integer bps; 
         private String ddosRegionId; 
         private String instanceId; 
         private String instanceType; 
         private String internetIp; 
-        private Integer pageSize; 
+        private Boolean isAuto; 
+        private Integer pps; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeDdosEventListRequest request) {
+        private Builder(ModifyIpDefenseThresholdRequest request) {
             super(request);
-            this.currentPage = request.currentPage;
+            this.bps = request.bps;
             this.ddosRegionId = request.ddosRegionId;
             this.instanceId = request.instanceId;
             this.instanceType = request.instanceType;
             this.internetIp = request.internetIp;
-            this.pageSize = request.pageSize;
+            this.isAuto = request.isAuto;
+            this.pps = request.pps;
         } 
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * Specifies the traffic scrubbing threshold. Unit: Mbit/s. The traffic scrubbing threshold cannot exceed the peak inbound or outbound Internet traffic, whichever is larger, of the asset.
+         * <p>
+         * 
+         * You can use the monitoring tool that is provided by the asset to query the Internet traffic of the asset:
+         * 
+         * *   For more information about how to query the Internet traffic of an ECS instance, see [Query monitoring information of an instance](~~25482~~).
+         * *   For more information about how to query the number of packets of an SLB instance, see [View monitoring data in the console](~~85982~~).
          */
-        public Builder currentPage(Integer currentPage) {
-            this.putQueryParameter("CurrentPage", currentPage);
-            this.currentPage = currentPage;
+        public Builder bps(Integer bps) {
+            this.putQueryParameter("Bps", bps);
+            this.bps = bps;
             return this;
         }
 
         /**
-         * The region ID of the asset to query.
+         * The region ID of the asset.
          * <p>
          * 
          * > You can call the [DescribeRegions](~~353250~~) operation to query the most recent region list.
@@ -148,7 +168,7 @@ public class DescribeDdosEventListRequest extends Request {
         }
 
         /**
-         * The ID of asset to query.
+         * The ID of the asset.
          * <p>
          * 
          * > You can call the [DescribeInstance](~~354191~~) operation to query the IDs of ECS instances, SLB instances, and EIPs within the current Alibaba Cloud account.
@@ -160,7 +180,7 @@ public class DescribeDdosEventListRequest extends Request {
         }
 
         /**
-         * The type of the asset to query. Valid values:
+         * The type of the asset. Valid values:
          * <p>
          * 
          * *   **ecs**: ECS instance
@@ -174,7 +194,7 @@ public class DescribeDdosEventListRequest extends Request {
         }
 
         /**
-         * The IP address of the asset to query.
+         * The IP address of the asset.
          */
         public Builder internetIp(String internetIp) {
             this.putQueryParameter("InternetIp", internetIp);
@@ -183,17 +203,36 @@ public class DescribeDdosEventListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**.
+         * Specifies whether to automatically adjust the scrubbing threshold based on the traffic load on the asset. Valid values:
+         * <p>
+         * 
+         * *   **true**: automatically adjusts the scrubbing threshold. You do not need to configure the **Bps** and **Pps** parameters.
+         * *   **false**: The scrubbing threshold is not automatically adjusted. You must configure the **Bps** and **Pps** parameters. This is the default value.
          */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
+        public Builder isAuto(Boolean isAuto) {
+            this.putQueryParameter("IsAuto", isAuto);
+            this.isAuto = isAuto;
+            return this;
+        }
+
+        /**
+         * Specifies the packet scrubbing threshold. Unit: packets per second (pps).
+         * <p>
+         * 
+         * The packet scrubbing threshold cannot exceed the peak number of inbound or outbound packets, whichever is larger, of the asset. You can use the monitoring tool that is provided by the asset to query the number of packets of the asset:
+         * 
+         * *   For more information about how to query the number of packets of an ECS instance, see [Query monitoring information of an instance](~~25482~~).
+         * *   For more information about how to query the number of packets of an SLB instance, see [View monitoring data in the console](~~85982~~).
+         */
+        public Builder pps(Integer pps) {
+            this.putQueryParameter("Pps", pps);
+            this.pps = pps;
             return this;
         }
 
         @Override
-        public DescribeDdosEventListRequest build() {
-            return new DescribeDdosEventListRequest(this);
+        public ModifyIpDefenseThresholdRequest build() {
+            return new ModifyIpDefenseThresholdRequest(this);
         } 
 
     } 

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.antiddos_public20170518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDdosCreditRequest</p>
  */
 public class DescribeDdosCreditRequest extends Request {
-    @Query
-    @NameInMap("DdosRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DdosRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ddosRegionId;
 
     private DescribeDdosCreditRequest(Builder builder) {
@@ -55,7 +54,10 @@ public class DescribeDdosCreditRequest extends Request {
         } 
 
         /**
-         * DdosRegionId.
+         * The ID of the region.
+         * <p>
+         * 
+         * > You can call the [DescribeRegions](~~353250~~) operation to query the most recent region list.
          */
         public Builder ddosRegionId(String ddosRegionId) {
             this.putQueryParameter("DdosRegionId", ddosRegionId);

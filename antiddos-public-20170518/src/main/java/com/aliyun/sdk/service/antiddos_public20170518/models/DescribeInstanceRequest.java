@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.antiddos_public20170518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,39 +11,39 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceRequest</p>
  */
 public class DescribeInstanceRequest extends Request {
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("DdosRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DdosRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ddosRegionId;
 
-    @Query
-    @NameInMap("DdosStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DdosStatus")
     private String ddosStatus;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("InstanceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIp")
     private String instanceIp;
 
-    @Query
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @Query
-    @NameInMap("InstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceType;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 50)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 50)
     private Integer pageSize;
 
     private DescribeInstanceRequest(Builder builder) {
@@ -155,7 +154,7 @@ public class DescribeInstanceRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -164,7 +163,10 @@ public class DescribeInstanceRequest extends Request {
         }
 
         /**
-         * DdosRegionId.
+         * The region ID of the asset.
+         * <p>
+         * 
+         * > You can call the [DescribeRegions](~~353250~~) operation to query the most recent region list.
          */
         public Builder ddosRegionId(String ddosRegionId) {
             this.putQueryParameter("DdosRegionId", ddosRegionId);
@@ -173,7 +175,12 @@ public class DescribeInstanceRequest extends Request {
         }
 
         /**
-         * DdosStatus.
+         * The DDoS mitigation status of the asset. Valid values:
+         * <p>
+         * 
+         * *   **mitigating**: queries assets for which traffic scrubbing is triggered.
+         * *   **blackholed**: queries assets for which blackhole filtering is triggered.
+         * *   **normal**: queries assets that are not under DDoS attacks.
          */
         public Builder ddosStatus(String ddosStatus) {
             this.putQueryParameter("DdosStatus", ddosStatus);
@@ -182,7 +189,12 @@ public class DescribeInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the asset. The formats of asset IDs vary based on the value of the **InstanceType**. parameter.
+         * <p>
+         * 
+         * *   If you set **InstanceType** to **ecs**, specify the ID of the ECS instance. For example, you can specify i-bp1cb6x80tfgocid\*\*\*\*.
+         * *   If you set **InstanceType** to **slb**, specify the ID of the SLB instance. For example, you can specify alb-vn2dqg3v31y2vd\*\*\*\*.
+         * *   If you set **InstanceType** to **eip**, specify the ID of the EIP. For example, you can specify eip-j6ce6dcx9epi7rs46\*\*\*\*.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -191,7 +203,7 @@ public class DescribeInstanceRequest extends Request {
         }
 
         /**
-         * InstanceIp.
+         * The IP address of the asset.
          */
         public Builder instanceIp(String instanceIp) {
             this.putQueryParameter("InstanceIp", instanceIp);
@@ -200,7 +212,7 @@ public class DescribeInstanceRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * The name of the asset.
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -209,7 +221,12 @@ public class DescribeInstanceRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The type of the asset. Valid values:
+         * <p>
+         * 
+         * *   **ecs**: ECS instance
+         * *   **slb**: SLB instance
+         * *   **eip**: EIP
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -218,7 +235,7 @@ public class DescribeInstanceRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

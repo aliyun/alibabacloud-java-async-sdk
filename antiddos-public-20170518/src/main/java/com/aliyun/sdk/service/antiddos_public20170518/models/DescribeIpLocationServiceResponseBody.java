@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.antiddos_public20170518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeIpLocationServiceResponseBody</p>
  */
 public class DescribeIpLocationServiceResponseBody extends TeaModel {
-    @NameInMap("Instance")
+    @com.aliyun.core.annotation.NameInMap("Instance")
     private Instance instance;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeIpLocationServiceResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class DescribeIpLocationServiceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * instance model
+         * The details of the asset.
          */
         public Builder instance(Instance instance) {
             this.instance = instance;
@@ -58,7 +57,7 @@ public class DescribeIpLocationServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,19 +71,19 @@ public class DescribeIpLocationServiceResponseBody extends TeaModel {
     } 
 
     public static class Instance extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
         private Instance(Builder builder) {
@@ -146,7 +145,7 @@ public class DescribeIpLocationServiceResponseBody extends TeaModel {
             private String region; 
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -154,7 +153,7 @@ public class DescribeIpLocationServiceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -162,7 +161,12 @@ public class DescribeIpLocationServiceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The type of the asset. Valid values:
+             * <p>
+             * 
+             * *   ecs: ECS instance
+             * *   slb: SLB instance
+             * *   EIP: EIP
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -170,7 +174,7 @@ public class DescribeIpLocationServiceResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * The IP address of the asset.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -178,7 +182,7 @@ public class DescribeIpLocationServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The region to which the public IP address of the asset belongs.
              */
             public Builder region(String region) {
                 this.region = region;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.antiddos_public20170518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDdosThresholdResponseBody</p>
  */
 public class DescribeDdosThresholdResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Thresholds")
+    @com.aliyun.core.annotation.NameInMap("Thresholds")
     private Thresholds thresholds;
 
     private DescribeDdosThresholdResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class DescribeDdosThresholdResponseBody extends TeaModel {
         private Thresholds thresholds; 
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +57,7 @@ public class DescribeDdosThresholdResponseBody extends TeaModel {
         }
 
         /**
-         * Thresholds.
+         * An array that consists of the details of the threshold.
          */
         public Builder thresholds(Thresholds thresholds) {
             this.thresholds = thresholds;
@@ -72,31 +71,31 @@ public class DescribeDdosThresholdResponseBody extends TeaModel {
     } 
 
     public static class Threshold extends TeaModel {
-        @NameInMap("Bps")
+        @com.aliyun.core.annotation.NameInMap("Bps")
         private Integer bps;
 
-        @NameInMap("DdosType")
+        @com.aliyun.core.annotation.NameInMap("DdosType")
         private String ddosType;
 
-        @NameInMap("ElasticBps")
+        @com.aliyun.core.annotation.NameInMap("ElasticBps")
         private Integer elasticBps;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IsAuto")
+        @com.aliyun.core.annotation.NameInMap("IsAuto")
         private Boolean isAuto;
 
-        @NameInMap("MaxBps")
+        @com.aliyun.core.annotation.NameInMap("MaxBps")
         private Integer maxBps;
 
-        @NameInMap("MaxPps")
+        @com.aliyun.core.annotation.NameInMap("MaxPps")
         private Integer maxPps;
 
-        @NameInMap("Pps")
+        @com.aliyun.core.annotation.NameInMap("Pps")
         private Integer pps;
 
         private Threshold(Builder builder) {
@@ -194,7 +193,10 @@ public class DescribeDdosThresholdResponseBody extends TeaModel {
             private Integer pps; 
 
             /**
-             * Bps.
+             * If the value of the **DdosType** parameter is **defense**, the Bps parameter indicates the current traffic scrubbing threshold. Unit: Mbit/s.
+             * <p>
+             * 
+             * If the value of the **DdosType** parameter is **blackhole**, the Bps parameter indicates the basic protection threshold. Unit: Mbit/s.
              */
             public Builder bps(Integer bps) {
                 this.bps = bps;
@@ -202,7 +204,11 @@ public class DescribeDdosThresholdResponseBody extends TeaModel {
             }
 
             /**
-             * DdosType.
+             * The type of the threshold. Valid values:
+             * <p>
+             * 
+             * *   **defense**: traffic scrubbing threshold
+             * *   **blackhole**: DDoS mitigation threshold
              */
             public Builder ddosType(String ddosType) {
                 this.ddosType = ddosType;
@@ -210,7 +216,10 @@ public class DescribeDdosThresholdResponseBody extends TeaModel {
             }
 
             /**
-             * ElasticBps.
+             * The burstable protection threshold (the maximum DDoS mitigation threshold). Unit: Mbit/s.
+             * <p>
+             * 
+             * > This parameter is returned only when the value of the **DdosType** parameter is **blackhole**.
              */
             public Builder elasticBps(Integer elasticBps) {
                 this.elasticBps = elasticBps;
@@ -218,7 +227,7 @@ public class DescribeDdosThresholdResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -226,7 +235,7 @@ public class DescribeDdosThresholdResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * The IP address of the asset.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -234,7 +243,11 @@ public class DescribeDdosThresholdResponseBody extends TeaModel {
             }
 
             /**
-             * IsAuto.
+             * Indicates whether the threshold is automatically adjusted. Valid values:
+             * <p>
+             * 
+             * *   **true**: The scrubbing thresholds are automatically adjusted based on the traffic load on the asset.
+             * *   **false**: The scrubbing thresholds are not automatically adjusted. You must manually specify the scrubbing thresholds.
              */
             public Builder isAuto(Boolean isAuto) {
                 this.isAuto = isAuto;
@@ -242,7 +255,7 @@ public class DescribeDdosThresholdResponseBody extends TeaModel {
             }
 
             /**
-             * MaxBps.
+             * The maximum traffic scrubbing threshold. Unit: Mbit/s.
              */
             public Builder maxBps(Integer maxBps) {
                 this.maxBps = maxBps;
@@ -250,7 +263,7 @@ public class DescribeDdosThresholdResponseBody extends TeaModel {
             }
 
             /**
-             * MaxPps.
+             * The maximum packet scrubbing threshold. Unit: pps.
              */
             public Builder maxPps(Integer maxPps) {
                 this.maxPps = maxPps;
@@ -258,7 +271,10 @@ public class DescribeDdosThresholdResponseBody extends TeaModel {
             }
 
             /**
-             * Pps.
+             * The packet scrubbing threshold. Unit: pps.
+             * <p>
+             * 
+             * > This parameter is returned only when the value of the **DdosType** parameter is **defense**.
              */
             public Builder pps(Integer pps) {
                 this.pps = pps;
@@ -273,7 +289,7 @@ public class DescribeDdosThresholdResponseBody extends TeaModel {
 
     }
     public static class Thresholds extends TeaModel {
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private java.util.List < Threshold> threshold;
 
         private Thresholds(Builder builder) {
