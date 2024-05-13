@@ -115,6 +115,10 @@ public class DescribeSuspEventsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrictMode")
+    private String strictMode;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TacticId")
     private String tacticId;
@@ -167,6 +171,7 @@ public class DescribeSuspEventsRequest extends Request {
         this.source = builder.source;
         this.sourceIp = builder.sourceIp;
         this.status = builder.status;
+        this.strictMode = builder.strictMode;
         this.tacticId = builder.tacticId;
         this.targetType = builder.targetType;
         this.timeEnd = builder.timeEnd;
@@ -371,6 +376,13 @@ public class DescribeSuspEventsRequest extends Request {
     }
 
     /**
+     * @return strictMode
+     */
+    public String getStrictMode() {
+        return this.strictMode;
+    }
+
+    /**
      * @return tacticId
      */
     public String getTacticId() {
@@ -439,6 +451,7 @@ public class DescribeSuspEventsRequest extends Request {
         private String source; 
         private String sourceIp; 
         private String status; 
+        private String strictMode; 
         private String tacticId; 
         private String targetType; 
         private String timeEnd; 
@@ -478,6 +491,7 @@ public class DescribeSuspEventsRequest extends Request {
             this.source = request.source;
             this.sourceIp = request.sourceIp;
             this.status = request.status;
+            this.strictMode = request.strictMode;
             this.tacticId = request.tacticId;
             this.targetType = request.targetType;
             this.timeEnd = request.timeEnd;
@@ -803,6 +817,15 @@ public class DescribeSuspEventsRequest extends Request {
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * StrictMode.
+         */
+        public Builder strictMode(String strictMode) {
+            this.putQueryParameter("StrictMode", strictMode);
+            this.strictMode = strictMode;
             return this;
         }
 
