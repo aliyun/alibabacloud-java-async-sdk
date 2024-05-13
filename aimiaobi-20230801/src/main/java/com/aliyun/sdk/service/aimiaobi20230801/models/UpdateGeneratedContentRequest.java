@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,35 +11,35 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateGeneratedContentRequest</p>
  */
 public class UpdateGeneratedContentRequest extends Request {
-    @Query
-    @NameInMap("AgentKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String agentKey;
 
-    @Body
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Content")
     private String content;
 
-    @Body
-    @NameInMap("ContentText")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ContentText")
     private String contentText;
 
-    @Body
-    @NameInMap("Id")
-    @Validation(required = true, minLength = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true, minLength = 1)
     private Long id;
 
-    @Body
-    @NameInMap("Keywords")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Keywords")
     private java.util.List < String > keywords;
 
-    @Body
-    @NameInMap("Prompt")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Prompt")
     private String prompt;
 
-    @Body
-    @NameInMap("Title")
-    @Validation(maxLength = 200, minLength = 2)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Title")
+    @com.aliyun.core.annotation.Validation(maxLength = 200, minLength = 2)
     private String title;
 
     private UpdateGeneratedContentRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,44 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateGeneratedContentRequest</p>
  */
 public class CreateGeneratedContentRequest extends Request {
-    @Query
-    @NameInMap("AgentKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String agentKey;
 
-    @Body
-    @NameInMap("Content")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Content")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String content;
 
-    @Body
-    @NameInMap("ContentDomain")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ContentDomain")
     private String contentDomain;
 
-    @Body
-    @NameInMap("ContentText")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ContentText")
     private String contentText;
 
-    @Body
-    @NameInMap("Keywords")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Keywords")
     private java.util.List < String > keywords;
 
-    @Body
-    @NameInMap("Prompt")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Prompt")
     private String prompt;
 
-    @Body
-    @NameInMap("TaskId")
-    @Validation(required = true, maxLength = 64, minLength = 6)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64, minLength = 6)
     private String taskId;
 
-    @Body
-    @NameInMap("Title")
-    @Validation(required = true, maxLength = 200, minLength = 2)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Title")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 200, minLength = 2)
     private String title;
 
-    @Body
-    @NameInMap("Uuid")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Uuid")
     private String uuid;
 
     private CreateGeneratedContentRequest(Builder builder) {

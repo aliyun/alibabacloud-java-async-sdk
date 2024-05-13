@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InsertInterveneGlobalReplyRequest</p>
  */
 public class InsertInterveneGlobalReplyRequest extends Request {
-    @Query
-    @NameInMap("AgentKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String agentKey;
 
-    @Body
-    @NameInMap("ReplyMessagList")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ReplyMessagList")
     private java.util.List < ReplyMessagList> replyMessagList;
 
     private InsertInterveneGlobalReplyRequest(Builder builder) {
@@ -95,10 +94,10 @@ public class InsertInterveneGlobalReplyRequest extends Request {
     } 
 
     public static class ReplyMessagList extends TeaModel {
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("ReplyType")
+        @com.aliyun.core.annotation.NameInMap("ReplyType")
         private String replyType;
 
         private ReplyMessagList(Builder builder) {

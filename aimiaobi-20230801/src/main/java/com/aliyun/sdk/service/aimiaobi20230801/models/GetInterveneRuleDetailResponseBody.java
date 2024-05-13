@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInterveneRuleDetailResponseBody</p>
  */
 public class GetInterveneRuleDetailResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetInterveneRuleDetailResponseBody(Builder builder) {
@@ -152,13 +151,13 @@ public class GetInterveneRuleDetailResponseBody extends TeaModel {
     } 
 
     public static class AnswerConfig extends TeaModel {
-        @NameInMap("AnswerType")
+        @com.aliyun.core.annotation.NameInMap("AnswerType")
         private Integer answerType;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
         private AnswerConfig(Builder builder) {
@@ -233,13 +232,13 @@ public class GetInterveneRuleDetailResponseBody extends TeaModel {
 
     }
     public static class EffectConfig extends TeaModel {
-        @NameInMap("EffectType")
+        @com.aliyun.core.annotation.NameInMap("EffectType")
         private Integer effectType;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private EffectConfig(Builder builder) {
@@ -314,22 +313,22 @@ public class GetInterveneRuleDetailResponseBody extends TeaModel {
 
     }
     public static class InterveneRuleDetail extends TeaModel {
-        @NameInMap("AnswerConfig")
+        @com.aliyun.core.annotation.NameInMap("AnswerConfig")
         private java.util.List < AnswerConfig> answerConfig;
 
-        @NameInMap("EffectConfig")
+        @com.aliyun.core.annotation.NameInMap("EffectConfig")
         private EffectConfig effectConfig;
 
-        @NameInMap("InterveneType")
+        @com.aliyun.core.annotation.NameInMap("InterveneType")
         private Integer interveneType;
 
-        @NameInMap("NamespaceList")
+        @com.aliyun.core.annotation.NameInMap("NamespaceList")
         private java.util.List < String > namespaceList;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
         private InterveneRuleDetail(Builder builder) {
@@ -455,7 +454,7 @@ public class GetInterveneRuleDetailResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("InterveneRuleDetail")
+        @com.aliyun.core.annotation.NameInMap("InterveneRuleDetail")
         private InterveneRuleDetail interveneRuleDetail;
 
         private Data(Builder builder) {

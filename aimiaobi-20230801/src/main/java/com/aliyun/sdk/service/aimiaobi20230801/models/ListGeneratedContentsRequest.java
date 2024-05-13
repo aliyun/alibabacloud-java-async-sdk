@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListGeneratedContentsRequest</p>
  */
 public class ListGeneratedContentsRequest extends Request {
-    @Query
-    @NameInMap("AgentKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String agentKey;
 
-    @Body
-    @NameInMap("ContentDomain")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ContentDomain")
     private String contentDomain;
 
-    @Body
-    @NameInMap("Current")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Current")
     private Integer current;
 
-    @Body
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Body
-    @NameInMap("Size")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Size")
     private Integer size;
 
-    @Body
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @Body
-    @NameInMap("Title")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Title")
     private String title;
 
     private ListGeneratedContentsRequest(Builder builder) {

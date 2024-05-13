@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GenerateUploadConfigResponseBody</p>
  */
 public class GenerateUploadConfigResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GenerateUploadConfigResponseBody(Builder builder) {
@@ -152,13 +151,13 @@ public class GenerateUploadConfigResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("FileKey")
+        @com.aliyun.core.annotation.NameInMap("FileKey")
         private String fileKey;
 
-        @NameInMap("FormDatas")
+        @com.aliyun.core.annotation.NameInMap("FormDatas")
         private java.util.Map < String, ? > formDatas;
 
-        @NameInMap("PostUrl")
+        @com.aliyun.core.annotation.NameInMap("PostUrl")
         private String postUrl;
 
         private Data(Builder builder) {

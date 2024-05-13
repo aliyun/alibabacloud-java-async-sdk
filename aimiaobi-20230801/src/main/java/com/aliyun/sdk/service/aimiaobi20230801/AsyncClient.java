@@ -27,6 +27,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateTokenResponse> createToken(CreateTokenRequest request);
 
+    CompletableFuture<DeleteCustomTextResponse> deleteCustomText(DeleteCustomTextRequest request);
+
     CompletableFuture<DeleteGeneratedContentResponse> deleteGeneratedContent(DeleteGeneratedContentRequest request);
 
     CompletableFuture<DeleteInterveneRuleResponse> deleteInterveneRule(DeleteInterveneRuleRequest request);
@@ -48,6 +50,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GenerateUploadConfigResponse> generateUploadConfig(GenerateUploadConfigRequest request);
 
     CompletableFuture<GenerateViewPointResponse> generateViewPoint(GenerateViewPointRequest request);
+
+    CompletableFuture<GetCustomTextResponse> getCustomText(GetCustomTextRequest request);
 
     CompletableFuture<GetDataSourceOrderConfigResponse> getDataSourceOrderConfig(GetDataSourceOrderConfigRequest request);
 
@@ -77,6 +81,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListBuildConfigsResponse> listBuildConfigs(ListBuildConfigsRequest request);
 
+    CompletableFuture<ListCustomTextResponse> listCustomText(ListCustomTextRequest request);
+
     CompletableFuture<ListDialoguesResponse> listDialogues(ListDialoguesRequest request);
 
     CompletableFuture<ListGeneratedContentsResponse> listGeneratedContents(ListGeneratedContentsRequest request);
@@ -97,6 +103,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryAsyncTaskResponse> queryAsyncTask(QueryAsyncTaskRequest request);
 
+    CompletableFuture<SaveCustomTextResponse> saveCustomText(SaveCustomTextRequest request);
+
     CompletableFuture<SaveDataSourceOrderConfigResponse> saveDataSourceOrderConfig(SaveDataSourceOrderConfigRequest request);
 
     CompletableFuture<SaveMaterialDocumentResponse> saveMaterialDocument(SaveMaterialDocumentRequest request);
@@ -104,6 +112,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SearchNewsResponse> searchNews(SearchNewsRequest request);
 
     CompletableFuture<SubmitAsyncTaskResponse> submitAsyncTask(SubmitAsyncTaskRequest request);
+
+    CompletableFuture<UpdateCustomTextResponse> updateCustomText(UpdateCustomTextRequest request);
 
     CompletableFuture<UpdateGeneratedContentResponse> updateGeneratedContent(UpdateGeneratedContentRequest request);
 

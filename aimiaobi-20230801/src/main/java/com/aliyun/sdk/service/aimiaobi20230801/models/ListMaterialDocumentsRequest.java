@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,69 +11,69 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListMaterialDocumentsRequest</p>
  */
 public class ListMaterialDocumentsRequest extends Request {
-    @Query
-    @NameInMap("AgentKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String agentKey;
 
-    @Body
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Content")
     private String content;
 
-    @Body
-    @NameInMap("CreateTimeEnd")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CreateTimeEnd")
     private String createTimeEnd;
 
-    @Body
-    @NameInMap("CreateTimeStart")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CreateTimeStart")
     private String createTimeStart;
 
-    @Body
-    @NameInMap("Current")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Current")
     private Integer current;
 
-    @Body
-    @NameInMap("DocType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DocType")
     private String docType;
 
-    @Body
-    @NameInMap("DocTypeList")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DocTypeList")
     private java.util.List < String > docTypeList;
 
-    @Body
-    @NameInMap("GeneratePublicUrl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GeneratePublicUrl")
     private Boolean generatePublicUrl;
 
-    @Body
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @Body
-    @NameInMap("Keywords")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Keywords")
     private java.util.List < String > keywords;
 
-    @Body
-    @NameInMap("Query")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Query")
     private String query;
 
-    @Body
-    @NameInMap("ShareAttr")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ShareAttr")
     private Integer shareAttr;
 
-    @Body
-    @NameInMap("Size")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Size")
     private Integer size;
 
-    @Body
-    @NameInMap("Title")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Title")
     private String title;
 
-    @Body
-    @NameInMap("UpdateTimeEnd")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UpdateTimeEnd")
     private String updateTimeEnd;
 
-    @Body
-    @NameInMap("UpdateTimeStart")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UpdateTimeStart")
     private String updateTimeStart;
 
     private ListMaterialDocumentsRequest(Builder builder) {

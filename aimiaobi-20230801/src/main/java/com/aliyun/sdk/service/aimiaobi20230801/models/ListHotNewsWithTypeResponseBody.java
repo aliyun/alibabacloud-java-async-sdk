@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListHotNewsWithTypeResponseBody</p>
  */
 public class ListHotNewsWithTypeResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListHotNewsWithTypeResponseBody(Builder builder) {
@@ -152,43 +151,43 @@ public class ListHotNewsWithTypeResponseBody extends TeaModel {
     } 
 
     public static class News extends TeaModel {
-        @NameInMap("Author")
+        @com.aliyun.core.annotation.NameInMap("Author")
         private String author;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("DocUuid")
+        @com.aliyun.core.annotation.NameInMap("DocUuid")
         private String docUuid;
 
-        @NameInMap("ImageUrls")
+        @com.aliyun.core.annotation.NameInMap("ImageUrls")
         private java.util.List < String > imageUrls;
 
-        @NameInMap("PubTime")
+        @com.aliyun.core.annotation.NameInMap("PubTime")
         private String pubTime;
 
-        @NameInMap("SearchSource")
+        @com.aliyun.core.annotation.NameInMap("SearchSource")
         private String searchSource;
 
-        @NameInMap("SearchSourceName")
+        @com.aliyun.core.annotation.NameInMap("SearchSourceName")
         private String searchSourceName;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("Summary")
+        @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private News(Builder builder) {
@@ -433,16 +432,16 @@ public class ListHotNewsWithTypeResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("News")
+        @com.aliyun.core.annotation.NameInMap("News")
         private java.util.List < News> news;
 
-        @NameInMap("NewsType")
+        @com.aliyun.core.annotation.NameInMap("NewsType")
         private String newsType;
 
-        @NameInMap("NewsTypeName")
+        @com.aliyun.core.annotation.NameInMap("NewsTypeName")
         private String newsTypeName;
 
-        @NameInMap("TotalPages")
+        @com.aliyun.core.annotation.NameInMap("TotalPages")
         private Integer totalPages;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,38 +11,38 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>FeedbackDialogueRequest</p>
  */
 public class FeedbackDialogueRequest extends Request {
-    @Query
-    @NameInMap("AgentKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String agentKey;
 
-    @Body
-    @NameInMap("CustomerResponse")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustomerResponse")
     private String customerResponse;
 
-    @Body
-    @NameInMap("GoodText")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GoodText")
     private String goodText;
 
-    @Body
-    @NameInMap("ModifiedResponse")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ModifiedResponse")
     private String modifiedResponse;
 
-    @Body
-    @NameInMap("Rating")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Rating")
     private String rating;
 
-    @Body
-    @NameInMap("RatingTags")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RatingTags")
     private java.util.List < String > ratingTags;
 
-    @Body
-    @NameInMap("SessionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SessionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sessionId;
 
-    @Body
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
     private FeedbackDialogueRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SearchNewsResponseBody</p>
  */
 public class SearchNewsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Current")
+    @com.aliyun.core.annotation.NameInMap("Current")
     private Integer current;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Size")
+    @com.aliyun.core.annotation.NameInMap("Size")
     private Integer size;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private SearchNewsResponseBody(Builder builder) {
@@ -212,43 +211,43 @@ public class SearchNewsResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("Author")
+        @com.aliyun.core.annotation.NameInMap("Author")
         private String author;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("DocUuid")
+        @com.aliyun.core.annotation.NameInMap("DocUuid")
         private String docUuid;
 
-        @NameInMap("ImageUrls")
+        @com.aliyun.core.annotation.NameInMap("ImageUrls")
         private java.util.List < String > imageUrls;
 
-        @NameInMap("PubTime")
+        @com.aliyun.core.annotation.NameInMap("PubTime")
         private String pubTime;
 
-        @NameInMap("SearchSource")
+        @com.aliyun.core.annotation.NameInMap("SearchSource")
         private String searchSource;
 
-        @NameInMap("SearchSourceName")
+        @com.aliyun.core.annotation.NameInMap("SearchSourceName")
         private String searchSourceName;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("Summary")
+        @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private Data(Builder builder) {

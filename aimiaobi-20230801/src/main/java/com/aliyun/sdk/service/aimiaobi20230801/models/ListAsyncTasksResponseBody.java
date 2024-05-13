@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAsyncTasksResponseBody</p>
  */
 public class ListAsyncTasksResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Current")
+    @com.aliyun.core.annotation.NameInMap("Current")
     private Integer current;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Size")
+    @com.aliyun.core.annotation.NameInMap("Size")
     private Integer size;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private ListAsyncTasksResponseBody(Builder builder) {
@@ -212,67 +211,67 @@ public class ListAsyncTasksResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateUser")
+        @com.aliyun.core.annotation.NameInMap("CreateUser")
         private String createUser;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("TaskCode")
+        @com.aliyun.core.annotation.NameInMap("TaskCode")
         private String taskCode;
 
-        @NameInMap("TaskDefinition")
+        @com.aliyun.core.annotation.NameInMap("TaskDefinition")
         private String taskDefinition;
 
-        @NameInMap("TaskEndTime")
+        @com.aliyun.core.annotation.NameInMap("TaskEndTime")
         private String taskEndTime;
 
-        @NameInMap("TaskErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("TaskErrorMessage")
         private String taskErrorMessage;
 
-        @NameInMap("TaskExecuteTime")
+        @com.aliyun.core.annotation.NameInMap("TaskExecuteTime")
         private String taskExecuteTime;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TaskInnerErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("TaskInnerErrorMessage")
         private String taskInnerErrorMessage;
 
-        @NameInMap("TaskIntermediateResult")
+        @com.aliyun.core.annotation.NameInMap("TaskIntermediateResult")
         private String taskIntermediateResult;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
-        @NameInMap("TaskParam")
+        @com.aliyun.core.annotation.NameInMap("TaskParam")
         private String taskParam;
 
-        @NameInMap("TaskProgressMessage")
+        @com.aliyun.core.annotation.NameInMap("TaskProgressMessage")
         private String taskProgressMessage;
 
-        @NameInMap("TaskResult")
+        @com.aliyun.core.annotation.NameInMap("TaskResult")
         private String taskResult;
 
-        @NameInMap("TaskRetryCount")
+        @com.aliyun.core.annotation.NameInMap("TaskRetryCount")
         private String taskRetryCount;
 
-        @NameInMap("TaskStartTime")
+        @com.aliyun.core.annotation.NameInMap("TaskStartTime")
         private String taskStartTime;
 
-        @NameInMap("TaskStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private Integer taskStatus;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("UpdateUser")
+        @com.aliyun.core.annotation.NameInMap("UpdateUser")
         private String updateUser;
 
         private Data(Builder builder) {

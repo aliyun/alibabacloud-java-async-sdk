@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,62 +11,62 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SaveMaterialDocumentRequest</p>
  */
 public class SaveMaterialDocumentRequest extends Request {
-    @Query
-    @NameInMap("AgentKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String agentKey;
 
-    @Body
-    @NameInMap("Author")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Author")
     private String author;
 
-    @Body
-    @NameInMap("BothSavePrivateAndShare")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BothSavePrivateAndShare")
     private Boolean bothSavePrivateAndShare;
 
-    @Body
-    @NameInMap("DocKeywords")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DocKeywords")
     private java.util.List < String > docKeywords;
 
-    @Body
-    @NameInMap("DocType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DocType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String docType;
 
-    @Body
-    @NameInMap("ExternalUrl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExternalUrl")
     private String externalUrl;
 
-    @Body
-    @NameInMap("HtmlContent")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HtmlContent")
     private String htmlContent;
 
-    @Body
-    @NameInMap("PubTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PubTime")
     private String pubTime;
 
-    @Body
-    @NameInMap("ShareAttr")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ShareAttr")
     private Integer shareAttr;
 
-    @Body
-    @NameInMap("SrcFrom")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SrcFrom")
     private String srcFrom;
 
-    @Body
-    @NameInMap("Summary")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Summary")
     private String summary;
 
-    @Body
-    @NameInMap("TextContent")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TextContent")
     private String textContent;
 
-    @Body
-    @NameInMap("Title")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Title")
     private String title;
 
-    @Body
-    @NameInMap("Url")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Url")
     private String url;
 
     private SaveMaterialDocumentRequest(Builder builder) {

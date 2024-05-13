@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMaterialByIdResponseBody</p>
  */
 public class GetMaterialByIdResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetMaterialByIdResponseBody(Builder builder) {
@@ -152,61 +151,61 @@ public class GetMaterialByIdResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("Author")
+        @com.aliyun.core.annotation.NameInMap("Author")
         private String author;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateUser")
+        @com.aliyun.core.annotation.NameInMap("CreateUser")
         private String createUser;
 
-        @NameInMap("DocKeywords")
+        @com.aliyun.core.annotation.NameInMap("DocKeywords")
         private java.util.List < String > docKeywords;
 
-        @NameInMap("DocType")
+        @com.aliyun.core.annotation.NameInMap("DocType")
         private String docType;
 
-        @NameInMap("ExternalUrl")
+        @com.aliyun.core.annotation.NameInMap("ExternalUrl")
         private String externalUrl;
 
-        @NameInMap("HtmlContent")
+        @com.aliyun.core.annotation.NameInMap("HtmlContent")
         private String htmlContent;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("PubTime")
+        @com.aliyun.core.annotation.NameInMap("PubTime")
         private String pubTime;
 
-        @NameInMap("PublicUrl")
+        @com.aliyun.core.annotation.NameInMap("PublicUrl")
         private String publicUrl;
 
-        @NameInMap("ShareAttr")
+        @com.aliyun.core.annotation.NameInMap("ShareAttr")
         private Integer shareAttr;
 
-        @NameInMap("SrcFrom")
+        @com.aliyun.core.annotation.NameInMap("SrcFrom")
         private String srcFrom;
 
-        @NameInMap("Summary")
+        @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
 
-        @NameInMap("TextContent")
+        @com.aliyun.core.annotation.NameInMap("TextContent")
         private String textContent;
 
-        @NameInMap("ThumbnailInBase64")
+        @com.aliyun.core.annotation.NameInMap("ThumbnailInBase64")
         private String thumbnailInBase64;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("UpdateUser")
+        @com.aliyun.core.annotation.NameInMap("UpdateUser")
         private String updateUser;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private Data(Builder builder) {

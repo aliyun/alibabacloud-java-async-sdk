@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPropertiesResponseBody</p>
  */
 public class GetPropertiesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetPropertiesResponseBody(Builder builder) {
@@ -152,10 +151,10 @@ public class GetPropertiesResponseBody extends TeaModel {
     } 
 
     public static class ConsoleConfig extends TeaModel {
-        @NameInMap("TipContent")
+        @com.aliyun.core.annotation.NameInMap("TipContent")
         private String tipContent;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private ConsoleConfig(Builder builder) {
@@ -213,16 +212,16 @@ public class GetPropertiesResponseBody extends TeaModel {
 
     }
     public static class Articles extends TeaModel {
-        @NameInMap("Select")
+        @com.aliyun.core.annotation.NameInMap("Select")
         private Boolean select;
 
-        @NameInMap("Stared")
+        @com.aliyun.core.annotation.NameInMap("Stared")
         private Boolean stared;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private Articles(Builder builder) {
@@ -314,13 +313,13 @@ public class GetPropertiesResponseBody extends TeaModel {
 
     }
     public static class SearchSamples extends TeaModel {
-        @NameInMap("Articles")
+        @com.aliyun.core.annotation.NameInMap("Articles")
         private java.util.List < Articles> articles;
 
-        @NameInMap("Prompt")
+        @com.aliyun.core.annotation.NameInMap("Prompt")
         private String prompt;
 
-        @NameInMap("Text")
+        @com.aliyun.core.annotation.NameInMap("Text")
         private String text;
 
         private SearchSamples(Builder builder) {
@@ -395,13 +394,13 @@ public class GetPropertiesResponseBody extends TeaModel {
 
     }
     public static class SearchSources extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("DatasetName")
+        @com.aliyun.core.annotation.NameInMap("DatasetName")
         private String datasetName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private SearchSources(Builder builder) {
@@ -476,13 +475,13 @@ public class GetPropertiesResponseBody extends TeaModel {
 
     }
     public static class IntelligentSearchConfig extends TeaModel {
-        @NameInMap("ProductDescription")
+        @com.aliyun.core.annotation.NameInMap("ProductDescription")
         private String productDescription;
 
-        @NameInMap("SearchSamples")
+        @com.aliyun.core.annotation.NameInMap("SearchSamples")
         private java.util.List < SearchSamples> searchSamples;
 
-        @NameInMap("SearchSources")
+        @com.aliyun.core.annotation.NameInMap("SearchSources")
         private java.util.List < SearchSources> searchSources;
 
         private IntelligentSearchConfig(Builder builder) {
@@ -557,10 +556,10 @@ public class GetPropertiesResponseBody extends TeaModel {
 
     }
     public static class DataSearchSources extends TeaModel {
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private DataSearchSources(Builder builder) {
@@ -618,16 +617,16 @@ public class GetPropertiesResponseBody extends TeaModel {
 
     }
     public static class UserInfo extends TeaModel {
-        @NameInMap("AgentId")
+        @com.aliyun.core.annotation.NameInMap("AgentId")
         private String agentId;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("Username")
+        @com.aliyun.core.annotation.NameInMap("Username")
         private String username;
 
         private UserInfo(Builder builder) {
@@ -719,10 +718,10 @@ public class GetPropertiesResponseBody extends TeaModel {
 
     }
     public static class WanxiangImageSizeConfig extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private WanxiangImageSizeConfig(Builder builder) {
@@ -780,13 +779,13 @@ public class GetPropertiesResponseBody extends TeaModel {
 
     }
     public static class WanxiangImageStyleConfig extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Pic")
+        @com.aliyun.core.annotation.NameInMap("Pic")
         private String pic;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private WanxiangImageStyleConfig(Builder builder) {
@@ -861,31 +860,31 @@ public class GetPropertiesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("ChatConfig")
+        @com.aliyun.core.annotation.NameInMap("ChatConfig")
         private java.util.Map < String, ? > chatConfig;
 
-        @NameInMap("ConsoleConfig")
+        @com.aliyun.core.annotation.NameInMap("ConsoleConfig")
         private ConsoleConfig consoleConfig;
 
-        @NameInMap("GeneralConfigMap")
+        @com.aliyun.core.annotation.NameInMap("GeneralConfigMap")
         private java.util.Map < String, ? > generalConfigMap;
 
-        @NameInMap("IntelligentSearchConfig")
+        @com.aliyun.core.annotation.NameInMap("IntelligentSearchConfig")
         private IntelligentSearchConfig intelligentSearchConfig;
 
-        @NameInMap("SearchSources")
+        @com.aliyun.core.annotation.NameInMap("SearchSources")
         private java.util.List < DataSearchSources> searchSources;
 
-        @NameInMap("SlrAuthorized")
+        @com.aliyun.core.annotation.NameInMap("SlrAuthorized")
         private Boolean slrAuthorized;
 
-        @NameInMap("UserInfo")
+        @com.aliyun.core.annotation.NameInMap("UserInfo")
         private UserInfo userInfo;
 
-        @NameInMap("WanxiangImageSizeConfig")
+        @com.aliyun.core.annotation.NameInMap("WanxiangImageSizeConfig")
         private java.util.List < WanxiangImageSizeConfig> wanxiangImageSizeConfig;
 
-        @NameInMap("WanxiangImageStyleConfig")
+        @com.aliyun.core.annotation.NameInMap("WanxiangImageStyleConfig")
         private java.util.List < WanxiangImageStyleConfig> wanxiangImageStyleConfig;
 
         private Data(Builder builder) {

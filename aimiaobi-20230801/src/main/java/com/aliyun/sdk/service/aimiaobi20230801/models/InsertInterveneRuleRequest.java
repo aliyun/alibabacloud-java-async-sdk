@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aimiaobi20230801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InsertInterveneRuleRequest</p>
  */
 public class InsertInterveneRuleRequest extends Request {
-    @Query
-    @NameInMap("AgentKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String agentKey;
 
-    @Body
-    @NameInMap("InterveneRuleConfig")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InterveneRuleConfig")
     private InterveneRuleConfig interveneRuleConfig;
 
     private InsertInterveneRuleRequest(Builder builder) {
@@ -95,13 +94,13 @@ public class InsertInterveneRuleRequest extends Request {
     } 
 
     public static class AnswerConfig extends TeaModel {
-        @NameInMap("AnswerType")
+        @com.aliyun.core.annotation.NameInMap("AnswerType")
         private Integer answerType;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
         private AnswerConfig(Builder builder) {
@@ -176,13 +175,13 @@ public class InsertInterveneRuleRequest extends Request {
 
     }
     public static class EffectConfig extends TeaModel {
-        @NameInMap("EffectType")
+        @com.aliyun.core.annotation.NameInMap("EffectType")
         private Integer effectType;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private EffectConfig(Builder builder) {
@@ -257,13 +256,13 @@ public class InsertInterveneRuleRequest extends Request {
 
     }
     public static class InterveneConfigList extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("OperationType")
+        @com.aliyun.core.annotation.NameInMap("OperationType")
         private Integer operationType;
 
-        @NameInMap("Query")
+        @com.aliyun.core.annotation.NameInMap("Query")
         private String query;
 
         private InterveneConfigList(Builder builder) {
@@ -338,25 +337,25 @@ public class InsertInterveneRuleRequest extends Request {
 
     }
     public static class InterveneRuleConfig extends TeaModel {
-        @NameInMap("AnswerConfig")
+        @com.aliyun.core.annotation.NameInMap("AnswerConfig")
         private java.util.List < AnswerConfig> answerConfig;
 
-        @NameInMap("EffectConfig")
+        @com.aliyun.core.annotation.NameInMap("EffectConfig")
         private EffectConfig effectConfig;
 
-        @NameInMap("InterveneConfigList")
+        @com.aliyun.core.annotation.NameInMap("InterveneConfigList")
         private java.util.List < InterveneConfigList> interveneConfigList;
 
-        @NameInMap("InterveneType")
+        @com.aliyun.core.annotation.NameInMap("InterveneType")
         private Integer interveneType;
 
-        @NameInMap("NamespaceList")
+        @com.aliyun.core.annotation.NameInMap("NamespaceList")
         private java.util.List < String > namespaceList;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
         private InterveneRuleConfig(Builder builder) {
