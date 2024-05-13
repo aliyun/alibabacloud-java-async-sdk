@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateUserResponseBody</p>
  */
 public class CreateUserResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Params")
+    @com.aliyun.core.annotation.NameInMap("Params")
     private java.util.List < String > params;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateUserResponseBody(Builder builder) {
@@ -152,31 +151,31 @@ public class CreateUserResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AvatarUrl")
+        @com.aliyun.core.annotation.NameInMap("AvatarUrl")
         private String avatarUrl;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("Extension")
+        @com.aliyun.core.annotation.NameInMap("Extension")
         private String extension;
 
-        @NameInMap("LoginName")
+        @com.aliyun.core.annotation.NameInMap("LoginName")
         private String loginName;
 
-        @NameInMap("Mobile")
+        @com.aliyun.core.annotation.NameInMap("Mobile")
         private String mobile;
 
-        @NameInMap("Nickname")
+        @com.aliyun.core.annotation.NameInMap("Nickname")
         private String nickname;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("WorkMode")
+        @com.aliyun.core.annotation.NameInMap("WorkMode")
         private String workMode;
 
         private Data(Builder builder) {

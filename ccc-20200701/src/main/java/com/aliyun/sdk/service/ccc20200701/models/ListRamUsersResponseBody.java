@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRamUsersResponseBody</p>
  */
 public class ListRamUsersResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Params")
+    @com.aliyun.core.annotation.NameInMap("Params")
     private java.util.List < String > params;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListRamUsersResponseBody(Builder builder) {
@@ -152,25 +151,25 @@ public class ListRamUsersResponseBody extends TeaModel {
     } 
 
     public static class List extends TeaModel {
-        @NameInMap("AliyunUid")
+        @com.aliyun.core.annotation.NameInMap("AliyunUid")
         private Long aliyunUid;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("LoginName")
+        @com.aliyun.core.annotation.NameInMap("LoginName")
         private String loginName;
 
-        @NameInMap("Mobile")
+        @com.aliyun.core.annotation.NameInMap("Mobile")
         private String mobile;
 
-        @NameInMap("Primary")
+        @com.aliyun.core.annotation.NameInMap("Primary")
         private Boolean primary;
 
-        @NameInMap("RamId")
+        @com.aliyun.core.annotation.NameInMap("RamId")
         private String ramId;
 
         private List(Builder builder) {
@@ -313,16 +312,16 @@ public class ListRamUsersResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {

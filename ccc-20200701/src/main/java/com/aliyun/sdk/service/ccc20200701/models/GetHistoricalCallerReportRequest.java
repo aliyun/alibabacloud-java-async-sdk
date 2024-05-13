@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetHistoricalCallerReportRequest</p>
  */
 public class GetHistoricalCallerReportRequest extends Request {
-    @Query
-    @NameInMap("CallingNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallingNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String callingNumber;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true, maximum = 4102416000000D)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 4102416000000D)
     private Long startTime;
 
-    @Query
-    @NameInMap("StopTime")
-    @Validation(required = true, maximum = 4102416000000D)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StopTime")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 4102416000000D)
     private Long stopTime;
 
     private GetHistoricalCallerReportRequest(Builder builder) {

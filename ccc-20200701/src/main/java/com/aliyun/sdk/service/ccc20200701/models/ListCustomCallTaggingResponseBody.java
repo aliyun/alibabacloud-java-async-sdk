@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCustomCallTaggingResponseBody</p>
  */
 public class ListCustomCallTaggingResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListCustomCallTaggingResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class ListCustomCallTaggingResponseBody extends TeaModel {
     } 
 
     public static class CallTagList extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("TagName")
+        @com.aliyun.core.annotation.NameInMap("TagName")
         private String tagName;
 
         private CallTagList(Builder builder) {
@@ -193,22 +192,22 @@ public class ListCustomCallTaggingResponseBody extends TeaModel {
 
     }
     public static class List extends TeaModel {
-        @NameInMap("CallTagList")
+        @com.aliyun.core.annotation.NameInMap("CallTagList")
         private java.util.List < CallTagList> callTagList;
 
-        @NameInMap("Creator")
+        @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Number")
+        @com.aliyun.core.annotation.NameInMap("Number")
         private String number;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private List(Builder builder) {
@@ -334,16 +333,16 @@ public class ListCustomCallTaggingResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {

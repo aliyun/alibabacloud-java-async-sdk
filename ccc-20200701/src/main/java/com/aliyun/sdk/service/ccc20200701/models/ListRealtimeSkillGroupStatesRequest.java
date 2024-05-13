@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRealtimeSkillGroupStatesRequest</p>
  */
 public class ListRealtimeSkillGroupStatesRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @Body
-    @NameInMap("SkillGroupIdList")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SkillGroupIdList")
     private String skillGroupIdList;
 
     private ListRealtimeSkillGroupStatesRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUserLevelsOfSkillGroupResponseBody</p>
  */
 public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListUserLevelsOfSkillGroupResponseBody(Builder builder) {
@@ -132,31 +131,31 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
     } 
 
     public static class List extends TeaModel {
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("LoginName")
+        @com.aliyun.core.annotation.NameInMap("LoginName")
         private String loginName;
 
-        @NameInMap("RamId")
+        @com.aliyun.core.annotation.NameInMap("RamId")
         private String ramId;
 
-        @NameInMap("RoleId")
+        @com.aliyun.core.annotation.NameInMap("RoleId")
         private String roleId;
 
-        @NameInMap("RoleName")
+        @com.aliyun.core.annotation.NameInMap("RoleName")
         private String roleName;
 
-        @NameInMap("SkillGroupId")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupId")
         private String skillGroupId;
 
-        @NameInMap("SkillGroupName")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupName")
         private String skillGroupName;
 
-        @NameInMap("SkillLevel")
+        @com.aliyun.core.annotation.NameInMap("SkillLevel")
         private Integer skillLevel;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private List(Builder builder) {
@@ -333,16 +332,16 @@ public class ListUserLevelsOfSkillGroupResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {

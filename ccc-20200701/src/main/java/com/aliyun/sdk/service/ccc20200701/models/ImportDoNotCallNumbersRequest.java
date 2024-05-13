@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ImportDoNotCallNumbersRequest</p>
  */
 public class ImportDoNotCallNumbersRequest extends Request {
-    @Query
-    @NameInMap("FilePath")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FilePath")
     private String filePath;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("NumberList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NumberList")
     private String numberList;
 
-    @Query
-    @NameInMap("Remark")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
     private ImportDoNotCallNumbersRequest(Builder builder) {

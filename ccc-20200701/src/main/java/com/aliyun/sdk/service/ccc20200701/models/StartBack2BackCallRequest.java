@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StartBack2BackCallRequest</p>
  */
 public class StartBack2BackCallRequest extends Request {
-    @Query
-    @NameInMap("AdditionalBroker")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdditionalBroker")
     private String additionalBroker;
 
-    @Query
-    @NameInMap("Broker")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Broker")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String broker;
 
-    @Query
-    @NameInMap("Callee")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Callee")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String callee;
 
-    @Query
-    @NameInMap("Caller")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Caller")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String caller;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private String tags;
 
-    @Query
-    @NameInMap("TimeoutSeconds")
-    @Validation(maximum = 3600)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeoutSeconds")
+    @com.aliyun.core.annotation.Validation(maximum = 3600)
     private Integer timeoutSeconds;
 
     private StartBack2BackCallRequest(Builder builder) {

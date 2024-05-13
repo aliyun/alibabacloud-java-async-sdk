@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRamUsersRequest</p>
  */
 public class ListRamUsersRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(required = true, maximum = 100000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100000, minimum = 1)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true, maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SearchPattern")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchPattern")
     private String searchPattern;
 
     private ListRamUsersRequest(Builder builder) {

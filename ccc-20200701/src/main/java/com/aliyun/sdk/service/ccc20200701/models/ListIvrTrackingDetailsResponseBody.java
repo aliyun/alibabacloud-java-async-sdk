@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListIvrTrackingDetailsResponseBody</p>
  */
 public class ListIvrTrackingDetailsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListIvrTrackingDetailsResponseBody(Builder builder) {
@@ -132,52 +131,52 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
     } 
 
     public static class List extends TeaModel {
-        @NameInMap("Callee")
+        @com.aliyun.core.annotation.NameInMap("Callee")
         private String callee;
 
-        @NameInMap("Caller")
+        @com.aliyun.core.annotation.NameInMap("Caller")
         private String caller;
 
-        @NameInMap("ChannelId")
+        @com.aliyun.core.annotation.NameInMap("ChannelId")
         private String channelId;
 
-        @NameInMap("ChannelVariables")
+        @com.aliyun.core.annotation.NameInMap("ChannelVariables")
         private String channelVariables;
 
-        @NameInMap("ContactId")
+        @com.aliyun.core.annotation.NameInMap("ContactId")
         private String contactId;
 
-        @NameInMap("EnterTime")
+        @com.aliyun.core.annotation.NameInMap("EnterTime")
         private Long enterTime;
 
-        @NameInMap("FlowId")
+        @com.aliyun.core.annotation.NameInMap("FlowId")
         private String flowId;
 
-        @NameInMap("FlowName")
+        @com.aliyun.core.annotation.NameInMap("FlowName")
         private String flowName;
 
-        @NameInMap("Instance")
+        @com.aliyun.core.annotation.NameInMap("Instance")
         private String instance;
 
-        @NameInMap("LeaveTime")
+        @com.aliyun.core.annotation.NameInMap("LeaveTime")
         private Long leaveTime;
 
-        @NameInMap("NodeExitCode")
+        @com.aliyun.core.annotation.NameInMap("NodeExitCode")
         private String nodeExitCode;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("NodeProperties")
+        @com.aliyun.core.annotation.NameInMap("NodeProperties")
         private java.util.Map < String, ? > nodeProperties;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
-        @NameInMap("NodeVariables")
+        @com.aliyun.core.annotation.NameInMap("NodeVariables")
         private java.util.Map < String, ? > nodeVariables;
 
         private List(Builder builder) {
@@ -473,16 +472,16 @@ public class ListIvrTrackingDetailsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {

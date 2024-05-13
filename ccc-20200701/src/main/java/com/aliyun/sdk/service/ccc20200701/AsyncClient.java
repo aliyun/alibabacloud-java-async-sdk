@@ -37,6 +37,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddUsersToSkillGroupResponse> addUsersToSkillGroup(AddUsersToSkillGroupRequest request);
 
+    CompletableFuture<AnalyzeConversationResponse> analyzeConversation(AnalyzeConversationRequest request);
+
     CompletableFuture<AnswerCallResponse> answerCall(AnswerCallRequest request);
 
     CompletableFuture<AppendCasesResponse> appendCases(AppendCasesRequest request);
@@ -89,9 +91,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteCustomCallTaggingResponse> deleteCustomCallTagging(DeleteCustomCallTaggingRequest request);
 
+    CompletableFuture<DeleteSchemaPropertyResponse> deleteSchemaProperty(DeleteSchemaPropertyRequest request);
+
     CompletableFuture<DeleteSkillGroupResponse> deleteSkillGroup(DeleteSkillGroupRequest request);
 
+    CompletableFuture<DisableSchemaPropertyResponse> disableSchemaProperty(DisableSchemaPropertyRequest request);
+
     CompletableFuture<DiscardEditingContactFlowResponse> discardEditingContactFlow(DiscardEditingContactFlowRequest request);
+
+    CompletableFuture<EnableSchemaPropertyResponse> enableSchemaProperty(EnableSchemaPropertyRequest request);
 
     CompletableFuture<EndConferenceResponse> endConference(EndConferenceRequest request);
 
@@ -148,6 +156,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetRealtimeCampaignStatsResponse> getRealtimeCampaignStats(GetRealtimeCampaignStatsRequest request);
 
     CompletableFuture<GetRealtimeInstanceStatesResponse> getRealtimeInstanceStates(GetRealtimeInstanceStatesRequest request);
+
+    CompletableFuture<GetSchemaResponse> getSchema(GetSchemaRequest request);
 
     CompletableFuture<GetSkillGroupResponse> getSkillGroup(GetSkillGroupRequest request);
 

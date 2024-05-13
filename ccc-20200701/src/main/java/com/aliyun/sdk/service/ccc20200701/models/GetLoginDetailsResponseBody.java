@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetLoginDetailsResponseBody</p>
  */
 public class GetLoginDetailsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Params")
+    @com.aliyun.core.annotation.NameInMap("Params")
     private java.util.List < String > params;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetLoginDetailsResponseBody(Builder builder) {
@@ -152,67 +151,67 @@ public class GetLoginDetailsResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AgentServerUrl")
+        @com.aliyun.core.annotation.NameInMap("AgentServerUrl")
         private String agentServerUrl;
 
-        @NameInMap("AvatarUrl")
+        @com.aliyun.core.annotation.NameInMap("AvatarUrl")
         private String avatarUrl;
 
-        @NameInMap("ChatAppId")
+        @com.aliyun.core.annotation.NameInMap("ChatAppId")
         private String chatAppId;
 
-        @NameInMap("ChatAppKey")
+        @com.aliyun.core.annotation.NameInMap("ChatAppKey")
         private String chatAppKey;
 
-        @NameInMap("ChatDeviceId")
+        @com.aliyun.core.annotation.NameInMap("ChatDeviceId")
         private String chatDeviceId;
 
-        @NameInMap("ChatLoginToken")
+        @com.aliyun.core.annotation.NameInMap("ChatLoginToken")
         private String chatLoginToken;
 
-        @NameInMap("ChatServerUrl")
+        @com.aliyun.core.annotation.NameInMap("ChatServerUrl")
         private String chatServerUrl;
 
-        @NameInMap("ChatUserId")
+        @com.aliyun.core.annotation.NameInMap("ChatUserId")
         private String chatUserId;
 
-        @NameInMap("DeviceExt")
+        @com.aliyun.core.annotation.NameInMap("DeviceExt")
         private String deviceExt;
 
-        @NameInMap("DeviceId")
+        @com.aliyun.core.annotation.NameInMap("DeviceId")
         private String deviceId;
 
-        @NameInMap("DeviceState")
+        @com.aliyun.core.annotation.NameInMap("DeviceState")
         private String deviceState;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("Extension")
+        @com.aliyun.core.annotation.NameInMap("Extension")
         private String extension;
 
-        @NameInMap("Nickname")
+        @com.aliyun.core.annotation.NameInMap("Nickname")
         private String nickname;
 
-        @NameInMap("Signature")
+        @com.aliyun.core.annotation.NameInMap("Signature")
         private String signature;
 
-        @NameInMap("Signature2")
+        @com.aliyun.core.annotation.NameInMap("Signature2")
         private String signature2;
 
-        @NameInMap("SipServerUrl")
+        @com.aliyun.core.annotation.NameInMap("SipServerUrl")
         private String sipServerUrl;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserKey")
+        @com.aliyun.core.annotation.NameInMap("UserKey")
         private String userKey;
 
-        @NameInMap("UserKey2")
+        @com.aliyun.core.annotation.NameInMap("UserKey2")
         private String userKey2;
 
-        @NameInMap("WorkMode")
+        @com.aliyun.core.annotation.NameInMap("WorkMode")
         private String workMode;
 
         private Data(Builder builder) {

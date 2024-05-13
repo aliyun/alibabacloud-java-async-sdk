@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InitiateAttendedTransferResponseBody</p>
  */
 public class InitiateAttendedTransferResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Params")
+    @com.aliyun.core.annotation.NameInMap("Params")
     private java.util.List < String > params;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private InitiateAttendedTransferResponseBody(Builder builder) {
@@ -152,46 +151,46 @@ public class InitiateAttendedTransferResponseBody extends TeaModel {
     } 
 
     public static class ChannelContexts extends TeaModel {
-        @NameInMap("CallType")
+        @com.aliyun.core.annotation.NameInMap("CallType")
         private String callType;
 
-        @NameInMap("ChannelFlags")
+        @com.aliyun.core.annotation.NameInMap("ChannelFlags")
         private String channelFlags;
 
-        @NameInMap("ChannelId")
+        @com.aliyun.core.annotation.NameInMap("ChannelId")
         private String channelId;
 
-        @NameInMap("ChannelState")
+        @com.aliyun.core.annotation.NameInMap("ChannelState")
         private String channelState;
 
-        @NameInMap("Destination")
+        @com.aliyun.core.annotation.NameInMap("Destination")
         private String destination;
 
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private Integer index;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("Originator")
+        @com.aliyun.core.annotation.NameInMap("Originator")
         private String originator;
 
-        @NameInMap("ReleaseInitiator")
+        @com.aliyun.core.annotation.NameInMap("ReleaseInitiator")
         private String releaseInitiator;
 
-        @NameInMap("ReleaseReason")
+        @com.aliyun.core.annotation.NameInMap("ReleaseReason")
         private String releaseReason;
 
-        @NameInMap("SkillGroupId")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupId")
         private String skillGroupId;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
-        @NameInMap("UserExtension")
+        @com.aliyun.core.annotation.NameInMap("UserExtension")
         private String userExtension;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private ChannelContexts(Builder builder) {
@@ -453,16 +452,16 @@ public class InitiateAttendedTransferResponseBody extends TeaModel {
 
     }
     public static class CallContext extends TeaModel {
-        @NameInMap("CallType")
+        @com.aliyun.core.annotation.NameInMap("CallType")
         private String callType;
 
-        @NameInMap("ChannelContexts")
+        @com.aliyun.core.annotation.NameInMap("ChannelContexts")
         private java.util.List < ChannelContexts> channelContexts;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
         private CallContext(Builder builder) {
@@ -554,43 +553,43 @@ public class InitiateAttendedTransferResponseBody extends TeaModel {
 
     }
     public static class UserContext extends TeaModel {
-        @NameInMap("BreakCode")
+        @com.aliyun.core.annotation.NameInMap("BreakCode")
         private String breakCode;
 
-        @NameInMap("DeviceId")
+        @com.aliyun.core.annotation.NameInMap("DeviceId")
         private String deviceId;
 
-        @NameInMap("Extension")
+        @com.aliyun.core.annotation.NameInMap("Extension")
         private String extension;
 
-        @NameInMap("Heartbeat")
+        @com.aliyun.core.annotation.NameInMap("Heartbeat")
         private Long heartbeat;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("Mobile")
+        @com.aliyun.core.annotation.NameInMap("Mobile")
         private String mobile;
 
-        @NameInMap("OutboundScenario")
+        @com.aliyun.core.annotation.NameInMap("OutboundScenario")
         private Boolean outboundScenario;
 
-        @NameInMap("Reserved")
+        @com.aliyun.core.annotation.NameInMap("Reserved")
         private Long reserved;
 
-        @NameInMap("SignedSkillGroupIdList")
+        @com.aliyun.core.annotation.NameInMap("SignedSkillGroupIdList")
         private java.util.List < String > signedSkillGroupIdList;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserState")
+        @com.aliyun.core.annotation.NameInMap("UserState")
         private String userState;
 
-        @NameInMap("WorkMode")
+        @com.aliyun.core.annotation.NameInMap("WorkMode")
         private String workMode;
 
         private UserContext(Builder builder) {
@@ -835,13 +834,13 @@ public class InitiateAttendedTransferResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("CallContext")
+        @com.aliyun.core.annotation.NameInMap("CallContext")
         private CallContext callContext;
 
-        @NameInMap("ContextId")
+        @com.aliyun.core.annotation.NameInMap("ContextId")
         private Long contextId;
 
-        @NameInMap("UserContext")
+        @com.aliyun.core.annotation.NameInMap("UserContext")
         private UserContext userContext;
 
         private Data(Builder builder) {

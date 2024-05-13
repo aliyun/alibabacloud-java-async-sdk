@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,41 +11,41 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListHistoricalAgentReportRequest</p>
  */
 public class ListHistoricalAgentReportRequest extends Request {
-    @Body
-    @NameInMap("AgentIdList")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AgentIdList")
     private String agentIdList;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("MediaType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaType")
     private String mediaType;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SkillGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkillGroupId")
     private String skillGroupId;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(maximum = 4133952000000D)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(maximum = 4133952000000D)
     private Long startTime;
 
-    @Query
-    @NameInMap("StopTime")
-    @Validation(maximum = 4133952000000D)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StopTime")
+    @com.aliyun.core.annotation.Validation(maximum = 4133952000000D)
     private Long stopTime;
 
     private ListHistoricalAgentReportRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,51 +11,51 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRealtimeAgentStatesRequest</p>
  */
 public class ListRealtimeAgentStatesRequest extends Request {
-    @Body
-    @NameInMap("AgentIdList")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AgentIdList")
     private String agentIdList;
 
-    @Query
-    @NameInMap("AgentName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentName")
     private String agentName;
 
-    @Query
-    @NameInMap("CallTypeList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallTypeList")
     private String callTypeList;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("OutboundScenario")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutboundScenario")
     private Boolean outboundScenario;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Query")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Query")
     private String query;
 
-    @Query
-    @NameInMap("SkillGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkillGroupId")
     private String skillGroupId;
 
-    @Body
-    @NameInMap("StateList")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StateList")
     private String stateList;
 
-    @Query
-    @NameInMap("WorkModeList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkModeList")
     private String workModeList;
 
     private ListRealtimeAgentStatesRequest(Builder builder) {

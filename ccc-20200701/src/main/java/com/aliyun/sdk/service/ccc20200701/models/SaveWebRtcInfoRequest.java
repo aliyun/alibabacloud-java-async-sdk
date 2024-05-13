@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SaveWebRtcInfoRequest</p>
  */
 public class SaveWebRtcInfoRequest extends Request {
-    @Query
-    @NameInMap("CallId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String callId;
 
-    @Query
-    @NameInMap("Content")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Content")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String content;
 
-    @Query
-    @NameInMap("ContentType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContentType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String contentType;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("JobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobId;
 
     private SaveWebRtcInfoRequest(Builder builder) {

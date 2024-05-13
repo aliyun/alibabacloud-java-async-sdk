@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCallDetailRecordsResponseBody</p>
  */
 public class ListCallDetailRecordsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListCallDetailRecordsResponseBody(Builder builder) {
@@ -132,106 +131,106 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
     } 
 
     public static class List extends TeaModel {
-        @NameInMap("AdditionalBroker")
+        @com.aliyun.core.annotation.NameInMap("AdditionalBroker")
         private String additionalBroker;
 
-        @NameInMap("AgentIds")
+        @com.aliyun.core.annotation.NameInMap("AgentIds")
         private String agentIds;
 
-        @NameInMap("AgentNames")
+        @com.aliyun.core.annotation.NameInMap("AgentNames")
         private String agentNames;
 
-        @NameInMap("Broker")
+        @com.aliyun.core.annotation.NameInMap("Broker")
         private String broker;
 
-        @NameInMap("CallDuration")
+        @com.aliyun.core.annotation.NameInMap("CallDuration")
         private String callDuration;
 
-        @NameInMap("CalledNumber")
+        @com.aliyun.core.annotation.NameInMap("CalledNumber")
         private String calledNumber;
 
-        @NameInMap("CalleeLocation")
+        @com.aliyun.core.annotation.NameInMap("CalleeLocation")
         private String calleeLocation;
 
-        @NameInMap("CallerLocation")
+        @com.aliyun.core.annotation.NameInMap("CallerLocation")
         private String callerLocation;
 
-        @NameInMap("CallingNumber")
+        @com.aliyun.core.annotation.NameInMap("CallingNumber")
         private String callingNumber;
 
-        @NameInMap("ContactDisposition")
+        @com.aliyun.core.annotation.NameInMap("ContactDisposition")
         private String contactDisposition;
 
-        @NameInMap("ContactId")
+        @com.aliyun.core.annotation.NameInMap("ContactId")
         private String contactId;
 
-        @NameInMap("ContactType")
+        @com.aliyun.core.annotation.NameInMap("ContactType")
         private String contactType;
 
-        @NameInMap("DialingTime")
+        @com.aliyun.core.annotation.NameInMap("DialingTime")
         private Long dialingTime;
 
-        @NameInMap("EarlyMediaState")
+        @com.aliyun.core.annotation.NameInMap("EarlyMediaState")
         private String earlyMediaState;
 
-        @NameInMap("EstablishedTime")
+        @com.aliyun.core.annotation.NameInMap("EstablishedTime")
         private Long establishedTime;
 
-        @NameInMap("HeldTime")
+        @com.aliyun.core.annotation.NameInMap("HeldTime")
         private Long heldTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("IvrTime")
+        @com.aliyun.core.annotation.NameInMap("IvrTime")
         private Long ivrTime;
 
-        @NameInMap("QueueTime")
+        @com.aliyun.core.annotation.NameInMap("QueueTime")
         private Long queueTime;
 
-        @NameInMap("RecordingDuration")
+        @com.aliyun.core.annotation.NameInMap("RecordingDuration")
         private Long recordingDuration;
 
-        @NameInMap("RecordingReady")
+        @com.aliyun.core.annotation.NameInMap("RecordingReady")
         private Boolean recordingReady;
 
-        @NameInMap("ReleaseInitiator")
+        @com.aliyun.core.annotation.NameInMap("ReleaseInitiator")
         private String releaseInitiator;
 
-        @NameInMap("ReleaseReason")
+        @com.aliyun.core.annotation.NameInMap("ReleaseReason")
         private String releaseReason;
 
-        @NameInMap("ReleaseTime")
+        @com.aliyun.core.annotation.NameInMap("ReleaseTime")
         private Long releaseTime;
 
-        @NameInMap("RingTime")
+        @com.aliyun.core.annotation.NameInMap("RingTime")
         private Long ringTime;
 
-        @NameInMap("SatisfactionDescription")
+        @com.aliyun.core.annotation.NameInMap("SatisfactionDescription")
         private String satisfactionDescription;
 
-        @NameInMap("SatisfactionIndex")
+        @com.aliyun.core.annotation.NameInMap("SatisfactionIndex")
         private Integer satisfactionIndex;
 
-        @NameInMap("SatisfactionSurveyChannel")
+        @com.aliyun.core.annotation.NameInMap("SatisfactionSurveyChannel")
         private String satisfactionSurveyChannel;
 
-        @NameInMap("SatisfactionSurveyOffered")
+        @com.aliyun.core.annotation.NameInMap("SatisfactionSurveyOffered")
         private Boolean satisfactionSurveyOffered;
 
-        @NameInMap("SkillGroupIds")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupIds")
         private String skillGroupIds;
 
-        @NameInMap("SkillGroupNames")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupNames")
         private String skillGroupNames;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("TalkTime")
+        @com.aliyun.core.annotation.NameInMap("TalkTime")
         private Long talkTime;
 
-        @NameInMap("WaitTime")
+        @com.aliyun.core.annotation.NameInMap("WaitTime")
         private Long waitTime;
 
         private List(Builder builder) {
@@ -833,16 +832,16 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {

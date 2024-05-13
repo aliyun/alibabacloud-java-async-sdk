@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SignInGroupRequest</p>
  */
 public class SignInGroupRequest extends Request {
-    @Query
-    @NameInMap("Additivity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Additivity")
     private Boolean additivity;
 
-    @Query
-    @NameInMap("ChatDeviceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChatDeviceId")
     private String chatDeviceId;
 
-    @Query
-    @NameInMap("DeviceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deviceId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("SignedSkillGroupIdList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SignedSkillGroupIdList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String signedSkillGroupIdList;
 
-    @Query
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
     private SignInGroupRequest(Builder builder) {

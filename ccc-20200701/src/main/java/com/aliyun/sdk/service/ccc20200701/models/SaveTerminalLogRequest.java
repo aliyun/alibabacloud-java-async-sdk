@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,48 +11,48 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SaveTerminalLogRequest</p>
  */
 public class SaveTerminalLogRequest extends Request {
-    @Query
-    @NameInMap("AppName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
-    @Query
-    @NameInMap("CallId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String callId;
 
-    @Query
-    @NameInMap("Content")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Content")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String content;
 
-    @Query
-    @NameInMap("DataType")
-    @Validation(required = true, maximum = 100)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataType")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100)
     private Integer dataType;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("JobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobId;
 
-    @Query
-    @NameInMap("MethodName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MethodName")
     private String methodName;
 
-    @Query
-    @NameInMap("Status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String status;
 
-    @Query
-    @NameInMap("UniqueRequestId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UniqueRequestId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String uniqueRequestId;
 
     private SaveTerminalLogRequest(Builder builder) {

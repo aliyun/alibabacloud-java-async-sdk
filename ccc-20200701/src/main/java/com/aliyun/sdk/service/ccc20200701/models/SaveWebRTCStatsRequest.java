@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SaveWebRTCStatsRequest</p>
  */
 public class SaveWebRTCStatsRequest extends Request {
-    @Query
-    @NameInMap("CallId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String callId;
 
-    @Query
-    @NameInMap("GeneralInfo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GeneralInfo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String generalInfo;
 
-    @Query
-    @NameInMap("GoogAddress")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GoogAddress")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String googAddress;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("ReceiverReport")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReceiverReport")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String receiverReport;
 
-    @Query
-    @NameInMap("SenderReport")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SenderReport")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String senderReport;
 
     private SaveWebRTCStatsRequest(Builder builder) {

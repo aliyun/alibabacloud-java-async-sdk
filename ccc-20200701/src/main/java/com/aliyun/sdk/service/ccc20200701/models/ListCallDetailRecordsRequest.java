@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,93 +11,93 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCallDetailRecordsRequest</p>
  */
 public class ListCallDetailRecordsRequest extends Request {
-    @Query
-    @NameInMap("AgentId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentId")
     private String agentId;
 
-    @Query
-    @NameInMap("CalledNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CalledNumber")
     private String calledNumber;
 
-    @Query
-    @NameInMap("CallingNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallingNumber")
     private String callingNumber;
 
-    @Query
-    @NameInMap("ContactDisposition")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactDisposition")
     private String contactDisposition;
 
-    @Query
-    @NameInMap("ContactDispositionList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactDispositionList")
     private String contactDispositionList;
 
-    @Query
-    @NameInMap("ContactId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactId")
     private String contactId;
 
-    @Query
-    @NameInMap("ContactType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactType")
     private String contactType;
 
-    @Query
-    @NameInMap("ContactTypeList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactTypeList")
     private String contactTypeList;
 
-    @Query
-    @NameInMap("Criteria")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Criteria")
     private String criteria;
 
-    @Query
-    @NameInMap("EarlyMediaStateList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EarlyMediaStateList")
     private String earlyMediaStateList;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(maximum = 4133952000000D)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(maximum = 4133952000000D)
     private Long endTime;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("OrderByField")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderByField")
     private String orderByField;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SatisfactionDescriptionList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SatisfactionDescriptionList")
     private String satisfactionDescriptionList;
 
-    @Query
-    @NameInMap("SatisfactionList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SatisfactionList")
     private String satisfactionList;
 
-    @Query
-    @NameInMap("SatisfactionSurveyChannel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SatisfactionSurveyChannel")
     private String satisfactionSurveyChannel;
 
-    @Query
-    @NameInMap("SkillGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkillGroupId")
     private String skillGroupId;
 
-    @Query
-    @NameInMap("SortOrder")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortOrder")
     private String sortOrder;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(maximum = 4133952000000D)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(maximum = 4133952000000D)
     private Long startTime;
 
     private ListCallDetailRecordsRequest(Builder builder) {

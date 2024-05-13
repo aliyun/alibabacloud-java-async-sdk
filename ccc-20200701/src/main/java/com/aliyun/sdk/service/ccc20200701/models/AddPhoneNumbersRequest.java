@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,26 +11,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddPhoneNumbersRequest</p>
  */
 public class AddPhoneNumbersRequest extends Request {
-    @Query
-    @NameInMap("ContactFlowId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactFlowId")
     private String contactFlowId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("NumberGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NumberGroupId")
     private String numberGroupId;
 
-    @Query
-    @NameInMap("NumberList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NumberList")
     private String numberList;
 
-    @Query
-    @NameInMap("Usage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Usage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String usage;
 
     private AddPhoneNumbersRequest(Builder builder) {

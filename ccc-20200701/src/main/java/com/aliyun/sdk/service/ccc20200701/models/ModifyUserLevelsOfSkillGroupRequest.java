@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyUserLevelsOfSkillGroupRequest</p>
  */
 public class ModifyUserLevelsOfSkillGroupRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("SkillGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkillGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String skillGroupId;
 
-    @Query
-    @NameInMap("UserLevelList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserLevelList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userLevelList;
 
     private ModifyUserLevelsOfSkillGroupRequest(Builder builder) {

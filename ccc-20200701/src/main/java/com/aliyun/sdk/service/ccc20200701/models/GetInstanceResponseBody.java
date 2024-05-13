@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInstanceResponseBody</p>
  */
 public class GetInstanceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetInstanceResponseBody(Builder builder) {
@@ -132,34 +131,34 @@ public class GetInstanceResponseBody extends TeaModel {
     } 
 
     public static class AdminList extends TeaModel {
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("Extension")
+        @com.aliyun.core.annotation.NameInMap("Extension")
         private String extension;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("LoginName")
+        @com.aliyun.core.annotation.NameInMap("LoginName")
         private String loginName;
 
-        @NameInMap("Mobile")
+        @com.aliyun.core.annotation.NameInMap("Mobile")
         private String mobile;
 
-        @NameInMap("RoleId")
+        @com.aliyun.core.annotation.NameInMap("RoleId")
         private String roleId;
 
-        @NameInMap("RoleName")
+        @com.aliyun.core.annotation.NameInMap("RoleName")
         private String roleName;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("WorkMode")
+        @com.aliyun.core.annotation.NameInMap("WorkMode")
         private String workMode;
 
         private AdminList(Builder builder) {
@@ -353,25 +352,25 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
     public static class SkillGroups extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PhoneNumberCount")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumberCount")
         private Integer phoneNumberCount;
 
-        @NameInMap("SkillGroupId")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupId")
         private String skillGroupId;
 
-        @NameInMap("UserCount")
+        @com.aliyun.core.annotation.NameInMap("UserCount")
         private Integer userCount;
 
         private SkillGroups(Builder builder) {
@@ -514,31 +513,31 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
     public static class NumberList extends TeaModel {
-        @NameInMap("Active")
+        @com.aliyun.core.annotation.NameInMap("Active")
         private Boolean active;
 
-        @NameInMap("City")
+        @com.aliyun.core.annotation.NameInMap("City")
         private String city;
 
-        @NameInMap("ContactFlowId")
+        @com.aliyun.core.annotation.NameInMap("ContactFlowId")
         private String contactFlowId;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Number")
+        @com.aliyun.core.annotation.NameInMap("Number")
         private String number;
 
-        @NameInMap("Province")
+        @com.aliyun.core.annotation.NameInMap("Province")
         private String province;
 
-        @NameInMap("SkillGroups")
+        @com.aliyun.core.annotation.NameInMap("SkillGroups")
         private java.util.List < SkillGroups> skillGroups;
 
-        @NameInMap("Usage")
+        @com.aliyun.core.annotation.NameInMap("Usage")
         private String usage;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private NumberList(Builder builder) {
@@ -715,31 +714,31 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AdminList")
+        @com.aliyun.core.annotation.NameInMap("AdminList")
         private java.util.List < AdminList> adminList;
 
-        @NameInMap("AliyunUid")
+        @com.aliyun.core.annotation.NameInMap("AliyunUid")
         private String aliyunUid;
 
-        @NameInMap("ConsoleUrl")
+        @com.aliyun.core.annotation.NameInMap("ConsoleUrl")
         private String consoleUrl;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NumberList")
+        @com.aliyun.core.annotation.NameInMap("NumberList")
         private java.util.List < NumberList> numberList;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Data(Builder builder) {

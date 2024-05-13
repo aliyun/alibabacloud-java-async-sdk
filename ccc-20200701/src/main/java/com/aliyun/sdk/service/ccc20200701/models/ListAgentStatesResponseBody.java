@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAgentStatesResponseBody</p>
  */
 public class ListAgentStatesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListAgentStatesResponseBody(Builder builder) {
@@ -152,31 +151,31 @@ public class ListAgentStatesResponseBody extends TeaModel {
     } 
 
     public static class List extends TeaModel {
-        @NameInMap("AgentId")
+        @com.aliyun.core.annotation.NameInMap("AgentId")
         private String agentId;
 
-        @NameInMap("AgentName")
+        @com.aliyun.core.annotation.NameInMap("AgentName")
         private String agentName;
 
-        @NameInMap("BreakCode")
+        @com.aliyun.core.annotation.NameInMap("BreakCode")
         private String breakCode;
 
-        @NameInMap("Dn")
+        @com.aliyun.core.annotation.NameInMap("Dn")
         private String dn;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("LoginName")
+        @com.aliyun.core.annotation.NameInMap("LoginName")
         private String loginName;
 
-        @NameInMap("OutboundScenario")
+        @com.aliyun.core.annotation.NameInMap("OutboundScenario")
         private Boolean outboundScenario;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("StateDuration")
+        @com.aliyun.core.annotation.NameInMap("StateDuration")
         private String stateDuration;
 
         private List(Builder builder) {
@@ -353,16 +352,16 @@ public class ListAgentStatesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {

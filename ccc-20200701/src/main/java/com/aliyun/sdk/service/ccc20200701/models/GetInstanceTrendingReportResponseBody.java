@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInstanceTrendingReportResponseBody</p>
  */
 public class GetInstanceTrendingReportResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetInstanceTrendingReportResponseBody(Builder builder) {
@@ -132,25 +131,25 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
     } 
 
     public static class Inbound extends TeaModel {
-        @NameInMap("CallsAbandonedInIVR")
+        @com.aliyun.core.annotation.NameInMap("CallsAbandonedInIVR")
         private Long callsAbandonedInIVR;
 
-        @NameInMap("CallsAbandonedInQueue")
+        @com.aliyun.core.annotation.NameInMap("CallsAbandonedInQueue")
         private Long callsAbandonedInQueue;
 
-        @NameInMap("CallsAbandonedInRing")
+        @com.aliyun.core.annotation.NameInMap("CallsAbandonedInRing")
         private Long callsAbandonedInRing;
 
-        @NameInMap("CallsHandled")
+        @com.aliyun.core.annotation.NameInMap("CallsHandled")
         private Long callsHandled;
 
-        @NameInMap("CallsQueued")
+        @com.aliyun.core.annotation.NameInMap("CallsQueued")
         private Long callsQueued;
 
-        @NameInMap("StatsTime")
+        @com.aliyun.core.annotation.NameInMap("StatsTime")
         private Long statsTime;
 
-        @NameInMap("TotalCalls")
+        @com.aliyun.core.annotation.NameInMap("TotalCalls")
         private Long totalCalls;
 
         private Inbound(Builder builder) {
@@ -293,13 +292,13 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
 
     }
     public static class Outbound extends TeaModel {
-        @NameInMap("CallsAnswered")
+        @com.aliyun.core.annotation.NameInMap("CallsAnswered")
         private Long callsAnswered;
 
-        @NameInMap("StatsTime")
+        @com.aliyun.core.annotation.NameInMap("StatsTime")
         private Long statsTime;
 
-        @NameInMap("TotalCalls")
+        @com.aliyun.core.annotation.NameInMap("TotalCalls")
         private Long totalCalls;
 
         private Outbound(Builder builder) {
@@ -374,10 +373,10 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
 
     }
     public static class Overall extends TeaModel {
-        @NameInMap("MaxLoggedInAgents")
+        @com.aliyun.core.annotation.NameInMap("MaxLoggedInAgents")
         private Long maxLoggedInAgents;
 
-        @NameInMap("StatsTime")
+        @com.aliyun.core.annotation.NameInMap("StatsTime")
         private Long statsTime;
 
         private Overall(Builder builder) {
@@ -435,13 +434,13 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Inbound")
+        @com.aliyun.core.annotation.NameInMap("Inbound")
         private java.util.List < Inbound> inbound;
 
-        @NameInMap("Outbound")
+        @com.aliyun.core.annotation.NameInMap("Outbound")
         private java.util.List < Outbound> outbound;
 
-        @NameInMap("Overall")
+        @com.aliyun.core.annotation.NameInMap("Overall")
         private java.util.List < Overall> overall;
 
         private Data(Builder builder) {

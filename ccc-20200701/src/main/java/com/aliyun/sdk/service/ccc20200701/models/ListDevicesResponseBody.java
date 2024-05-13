@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDevicesResponseBody</p>
  */
 public class ListDevicesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Params")
+    @com.aliyun.core.annotation.NameInMap("Params")
     private java.util.List < String > params;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListDevicesResponseBody(Builder builder) {
@@ -152,28 +151,28 @@ public class ListDevicesResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("CallId")
+        @com.aliyun.core.annotation.NameInMap("CallId")
         private String callId;
 
-        @NameInMap("Contact")
+        @com.aliyun.core.annotation.NameInMap("Contact")
         private String contact;
 
-        @NameInMap("DeviceId")
+        @com.aliyun.core.annotation.NameInMap("DeviceId")
         private String deviceId;
 
-        @NameInMap("DeviceType")
+        @com.aliyun.core.annotation.NameInMap("DeviceType")
         private String deviceType;
 
-        @NameInMap("Expires")
+        @com.aliyun.core.annotation.NameInMap("Expires")
         private Long expires;
 
-        @NameInMap("Extension")
+        @com.aliyun.core.annotation.NameInMap("Extension")
         private String extension;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RemoveUsersRequest</p>
  */
 public class RemoveUsersRequest extends Request {
-    @Query
-    @NameInMap("FilePath")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FilePath")
     private String filePath;
 
-    @Query
-    @NameInMap("Force")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Force")
     private Boolean force;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("NotificationEmail")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NotificationEmail")
     private String notificationEmail;
 
-    @Query
-    @NameInMap("UserIdList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserIdList")
     private String userIdList;
 
     private RemoveUsersRequest(Builder builder) {

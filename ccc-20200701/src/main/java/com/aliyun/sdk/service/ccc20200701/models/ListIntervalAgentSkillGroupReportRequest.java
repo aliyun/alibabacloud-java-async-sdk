@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListIntervalAgentSkillGroupReportRequest</p>
  */
 public class ListIntervalAgentSkillGroupReportRequest extends Request {
-    @Query
-    @NameInMap("AgentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String agentId;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(maximum = 4133952000000D)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(maximum = 4133952000000D)
     private Long endTime;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Interval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Interval")
     private String interval;
 
-    @Query
-    @NameInMap("SkillGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkillGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String skillGroupId;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(maximum = 4133952000000D)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(maximum = 4133952000000D)
     private Long startTime;
 
     private ListIntervalAgentSkillGroupReportRequest(Builder builder) {

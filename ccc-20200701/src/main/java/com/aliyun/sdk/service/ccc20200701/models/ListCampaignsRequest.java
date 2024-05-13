@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,47 +11,47 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCampaignsRequest</p>
  */
 public class ListCampaignsRequest extends Request {
-    @Query
-    @NameInMap("ActualStartTimeFrom")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ActualStartTimeFrom")
     private String actualStartTimeFrom;
 
-    @Query
-    @NameInMap("ActualStartTimeTo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ActualStartTimeTo")
     private String actualStartTimeTo;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long pageSize;
 
-    @Query
-    @NameInMap("PlanedStartTimeFrom")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlanedStartTimeFrom")
     private String planedStartTimeFrom;
 
-    @Query
-    @NameInMap("PlanedStartTimeTo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlanedStartTimeTo")
     private String planedStartTimeTo;
 
-    @Query
-    @NameInMap("QueueId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueueId")
     private String queueId;
 
-    @Query
-    @NameInMap("State")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
     private ListCampaignsRequest(Builder builder) {

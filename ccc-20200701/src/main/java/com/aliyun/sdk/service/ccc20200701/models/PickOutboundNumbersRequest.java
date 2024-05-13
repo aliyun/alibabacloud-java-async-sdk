@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PickOutboundNumbersRequest</p>
  */
 public class PickOutboundNumbersRequest extends Request {
-    @Query
-    @NameInMap("CalledNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CalledNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String calledNumber;
 
-    @Query
-    @NameInMap("Count")
-    @Validation(maximum = 3, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Count")
+    @com.aliyun.core.annotation.Validation(maximum = 3, minimum = 1)
     private Integer count;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("SkillGroupIdList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkillGroupIdList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String skillGroupIdList;
 
     private PickOutboundNumbersRequest(Builder builder) {

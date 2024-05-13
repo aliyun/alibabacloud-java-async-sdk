@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,45 +11,45 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StartPredictiveCallRequest</p>
  */
 public class StartPredictiveCallRequest extends Request {
-    @Query
-    @NameInMap("Callee")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Callee")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String callee;
 
-    @Query
-    @NameInMap("Caller")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Caller")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String caller;
 
-    @Query
-    @NameInMap("ContactFlowId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactFlowId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String contactFlowId;
 
-    @Query
-    @NameInMap("ContactFlowVariables")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactFlowVariables")
     private String contactFlowVariables;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("MaskedCallee")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaskedCallee")
     private String maskedCallee;
 
-    @Query
-    @NameInMap("SkillGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkillGroupId")
     private String skillGroupId;
 
-    @Query
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private String tags;
 
-    @Query
-    @NameInMap("TimeoutSeconds")
-    @Validation(maximum = 3600)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeoutSeconds")
+    @com.aliyun.core.annotation.Validation(maximum = 3600)
     private Integer timeoutSeconds;
 
     private StartPredictiveCallRequest(Builder builder) {

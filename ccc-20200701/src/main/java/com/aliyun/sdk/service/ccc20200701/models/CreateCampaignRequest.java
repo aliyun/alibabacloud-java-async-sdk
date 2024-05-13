@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,79 +11,79 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCampaignRequest</p>
  */
 public class CreateCampaignRequest extends Request {
-    @Query
-    @NameInMap("CallableTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallableTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String callableTime;
 
-    @Query
-    @NameInMap("CaseFileKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CaseFileKey")
     private String caseFileKey;
 
-    @Query
-    @NameInMap("CaseList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CaseList")
     private java.util.List < CaseList> caseList;
 
-    @Query
-    @NameInMap("ContactFlowId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactFlowId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String contactFlowId;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("ExecutingUntilTimeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExecutingUntilTimeout")
     private Boolean executingUntilTimeout;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("MaxAttemptCount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxAttemptCount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long maxAttemptCount;
 
-    @Query
-    @NameInMap("MinAttemptInterval")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinAttemptInterval")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long minAttemptInterval;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("QueueId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueueId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String queueId;
 
-    @Query
-    @NameInMap("Simulation")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Simulation")
     private Boolean simulation;
 
-    @Query
-    @NameInMap("SimulationParameters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SimulationParameters")
     private String simulationParameters;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
-    @Query
-    @NameInMap("StrategyParameters")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyParameters")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String strategyParameters;
 
-    @Query
-    @NameInMap("StrategyType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String strategyType;
 
     private CreateCampaignRequest(Builder builder) {
@@ -427,13 +426,13 @@ public class CreateCampaignRequest extends Request {
     } 
 
     public static class CaseList extends TeaModel {
-        @NameInMap("CustomVariables")
+        @com.aliyun.core.annotation.NameInMap("CustomVariables")
         private String customVariables;
 
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
-        @NameInMap("ReferenceId")
+        @com.aliyun.core.annotation.NameInMap("ReferenceId")
         private String referenceId;
 
         private CaseList(Builder builder) {

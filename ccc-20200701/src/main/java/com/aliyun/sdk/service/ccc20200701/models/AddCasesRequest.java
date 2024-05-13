@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddCasesRequest</p>
  */
 public class AddCasesRequest extends Request {
-    @Query
-    @NameInMap("CampaignId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CampaignId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String campaignId;
 
-    @Query
-    @NameInMap("CaseList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CaseList")
     private java.util.List < CaseList> caseList;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private AddCasesRequest(Builder builder) {
@@ -119,19 +118,19 @@ public class AddCasesRequest extends Request {
     } 
 
     public static class CaseList extends TeaModel {
-        @NameInMap("Caller")
+        @com.aliyun.core.annotation.NameInMap("Caller")
         private String caller;
 
-        @NameInMap("CustomVariables")
+        @com.aliyun.core.annotation.NameInMap("CustomVariables")
         private String customVariables;
 
-        @NameInMap("MaskedCallee")
+        @com.aliyun.core.annotation.NameInMap("MaskedCallee")
         private String maskedCallee;
 
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
-        @NameInMap("ReferenceId")
+        @com.aliyun.core.annotation.NameInMap("ReferenceId")
         private String referenceId;
 
         private CaseList(Builder builder) {

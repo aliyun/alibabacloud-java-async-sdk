@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,57 +11,57 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateUserRequest</p>
  */
 public class CreateUserRequest extends Request {
-    @Query
-    @NameInMap("AvatarUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AvatarUrl")
     private String avatarUrl;
 
-    @Query
-    @NameInMap("DisplayId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisplayId")
     private String displayId;
 
-    @Query
-    @NameInMap("DisplayName")
-    @Validation(required = true, maxLength = 500)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 500)
     private String displayName;
 
-    @Query
-    @NameInMap("Email")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Email")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String email;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("LoginName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoginName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loginName;
 
-    @Query
-    @NameInMap("Mobile")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mobile")
     private String mobile;
 
-    @Query
-    @NameInMap("Nickname")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Nickname")
     private String nickname;
 
-    @Query
-    @NameInMap("ResetPassword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResetPassword")
     private Boolean resetPassword;
 
-    @Query
-    @NameInMap("RoleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String roleId;
 
-    @Query
-    @NameInMap("SkillLevelList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkillLevelList")
     private String skillLevelList;
 
-    @Query
-    @NameInMap("WorkMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkMode")
     private String workMode;
 
     private CreateUserRequest(Builder builder) {

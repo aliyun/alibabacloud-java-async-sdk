@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,67 +11,67 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InitiateAttendedTransferRequest</p>
  */
 public class InitiateAttendedTransferRequest extends Request {
-    @Query
-    @NameInMap("CallPriority")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallPriority")
     private Integer callPriority;
 
-    @Query
-    @NameInMap("DeviceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceId")
     private String deviceId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("JobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobId;
 
-    @Query
-    @NameInMap("QueuingOverflowThreshold")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueuingOverflowThreshold")
     private Long queuingOverflowThreshold;
 
-    @Query
-    @NameInMap("QueuingTimeoutSeconds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueuingTimeoutSeconds")
     private Long queuingTimeoutSeconds;
 
-    @Query
-    @NameInMap("RoutingType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoutingType")
     private String routingType;
 
-    @Query
-    @NameInMap("StrategyName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyName")
     private String strategyName;
 
-    @Query
-    @NameInMap("StrategyParams")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyParams")
     private String strategyParams;
 
-    @Query
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private String tags;
 
-    @Query
-    @NameInMap("TimeoutSeconds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeoutSeconds")
     private Integer timeoutSeconds;
 
-    @Query
-    @NameInMap("Transferee")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Transferee")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String transferee;
 
-    @Query
-    @NameInMap("TransfereeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransfereeType")
     private String transfereeType;
 
-    @Query
-    @NameInMap("Transferor")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Transferor")
     private String transferor;
 
-    @Query
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
     private InitiateAttendedTransferRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,8 +11,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAccessChannelOfStagingRequest</p>
  */
 public class GetAccessChannelOfStagingRequest extends Request {
-    @Query
-    @NameInMap("SearchPattern")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchPattern")
     private String searchPattern;
 
     private GetAccessChannelOfStagingRequest(Builder builder) {

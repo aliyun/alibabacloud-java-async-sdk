@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ChangeWorkModeRequest</p>
  */
 public class ChangeWorkModeRequest extends Request {
-    @Query
-    @NameInMap("DeviceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceId")
     private String deviceId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Mobile")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mobile")
     private String mobile;
 
-    @Query
-    @NameInMap("SignedSkillGroupIdList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SignedSkillGroupIdList")
     private String signedSkillGroupIdList;
 
-    @Query
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
-    @Query
-    @NameInMap("WorkMode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workMode;
 
     private ChangeWorkModeRequest(Builder builder) {

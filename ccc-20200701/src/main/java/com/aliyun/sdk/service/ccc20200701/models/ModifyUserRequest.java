@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,47 +11,47 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyUserRequest</p>
  */
 public class ModifyUserRequest extends Request {
-    @Query
-    @NameInMap("AvatarUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AvatarUrl")
     private String avatarUrl;
 
-    @Query
-    @NameInMap("DisplayId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisplayId")
     private String displayId;
 
-    @Query
-    @NameInMap("DisplayName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
     private String displayName;
 
-    @Query
-    @NameInMap("Force")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Force")
     private Boolean force;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Mobile")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mobile")
     private String mobile;
 
-    @Query
-    @NameInMap("Nickname")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Nickname")
     private String nickname;
 
-    @Query
-    @NameInMap("RoleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleId")
     private String roleId;
 
-    @Query
-    @NameInMap("UserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
-    @Query
-    @NameInMap("WorkMode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workMode;
 
     private ModifyUserRequest(Builder builder) {

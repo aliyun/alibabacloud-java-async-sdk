@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCampaignsResponseBody</p>
  */
 public class ListCampaignsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Long httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListCampaignsResponseBody(Builder builder) {
@@ -152,61 +151,61 @@ public class ListCampaignsResponseBody extends TeaModel {
     } 
 
     public static class List extends TeaModel {
-        @NameInMap("ActualEndTime")
+        @com.aliyun.core.annotation.NameInMap("ActualEndTime")
         private Long actualEndTime;
 
-        @NameInMap("ActualStartTime")
+        @com.aliyun.core.annotation.NameInMap("ActualStartTime")
         private Long actualStartTime;
 
-        @NameInMap("CampaignId")
+        @com.aliyun.core.annotation.NameInMap("CampaignId")
         private String campaignId;
 
-        @NameInMap("CasesAborted")
+        @com.aliyun.core.annotation.NameInMap("CasesAborted")
         private Long casesAborted;
 
-        @NameInMap("CasesConnected")
+        @com.aliyun.core.annotation.NameInMap("CasesConnected")
         private Long casesConnected;
 
-        @NameInMap("CasesUncompleted")
+        @com.aliyun.core.annotation.NameInMap("CasesUncompleted")
         private Long casesUncompleted;
 
-        @NameInMap("CompletionRate")
+        @com.aliyun.core.annotation.NameInMap("CompletionRate")
         private Float completionRate;
 
-        @NameInMap("MaxAttemptCount")
+        @com.aliyun.core.annotation.NameInMap("MaxAttemptCount")
         private Long maxAttemptCount;
 
-        @NameInMap("MinAttemptInterval")
+        @com.aliyun.core.annotation.NameInMap("MinAttemptInterval")
         private Long minAttemptInterval;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PlanedEndTime")
+        @com.aliyun.core.annotation.NameInMap("PlanedEndTime")
         private Long planedEndTime;
 
-        @NameInMap("PlanedStartTime")
+        @com.aliyun.core.annotation.NameInMap("PlanedStartTime")
         private Long planedStartTime;
 
-        @NameInMap("QueueId")
+        @com.aliyun.core.annotation.NameInMap("QueueId")
         private String queueId;
 
-        @NameInMap("QueueName")
+        @com.aliyun.core.annotation.NameInMap("QueueName")
         private String queueName;
 
-        @NameInMap("Simulation")
+        @com.aliyun.core.annotation.NameInMap("Simulation")
         private Boolean simulation;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("StrategyParameters")
+        @com.aliyun.core.annotation.NameInMap("StrategyParameters")
         private String strategyParameters;
 
-        @NameInMap("StrategyType")
+        @com.aliyun.core.annotation.NameInMap("StrategyType")
         private String strategyType;
 
-        @NameInMap("TotalCases")
+        @com.aliyun.core.annotation.NameInMap("TotalCases")
         private Long totalCases;
 
         private List(Builder builder) {
@@ -553,16 +552,16 @@ public class ListCampaignsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Long pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Long pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,65 +11,65 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAttemptsRequest</p>
  */
 public class ListAttemptsRequest extends Request {
-    @Query
-    @NameInMap("AgentId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentId")
     private String agentId;
 
-    @Query
-    @NameInMap("AttemptId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AttemptId")
     private String attemptId;
 
-    @Query
-    @NameInMap("Callee")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Callee")
     private String callee;
 
-    @Query
-    @NameInMap("Caller")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Caller")
     private String caller;
 
-    @Query
-    @NameInMap("CampaignId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CampaignId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String campaignId;
 
-    @Query
-    @NameInMap("CaseId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CaseId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String caseId;
 
-    @Query
-    @NameInMap("ContactId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactId")
     private String contactId;
 
-    @Query
-    @NameInMap("Criteria")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Criteria")
     private String criteria;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("QueueId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueueId")
     private String queueId;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
     private ListAttemptsRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ccc20200701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetCallDetailRecordResponseBody</p>
  */
 public class GetCallDetailRecordResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetCallDetailRecordResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
     } 
 
     public static class EventSequence extends TeaModel {
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
 
-        @NameInMap("Event")
+        @com.aliyun.core.annotation.NameInMap("Event")
         private String event;
 
-        @NameInMap("EventTime")
+        @com.aliyun.core.annotation.NameInMap("EventTime")
         private Long eventTime;
 
         private EventSequence(Builder builder) {
@@ -213,16 +212,16 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
 
     }
     public static class AgentEvents extends TeaModel {
-        @NameInMap("AgentId")
+        @com.aliyun.core.annotation.NameInMap("AgentId")
         private String agentId;
 
-        @NameInMap("AgentName")
+        @com.aliyun.core.annotation.NameInMap("AgentName")
         private String agentName;
 
-        @NameInMap("EventSequence")
+        @com.aliyun.core.annotation.NameInMap("EventSequence")
         private java.util.List < EventSequence> eventSequence;
 
-        @NameInMap("SkillGroupId")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupId")
         private String skillGroupId;
 
         private AgentEvents(Builder builder) {
@@ -314,10 +313,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
 
     }
     public static class CustomerEventsEventSequence extends TeaModel {
-        @NameInMap("Event")
+        @com.aliyun.core.annotation.NameInMap("Event")
         private String event;
 
-        @NameInMap("EventTime")
+        @com.aliyun.core.annotation.NameInMap("EventTime")
         private Long eventTime;
 
         private CustomerEventsEventSequence(Builder builder) {
@@ -375,10 +374,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
 
     }
     public static class CustomerEvents extends TeaModel {
-        @NameInMap("CustomerId")
+        @com.aliyun.core.annotation.NameInMap("CustomerId")
         private String customerId;
 
-        @NameInMap("EventSequence")
+        @com.aliyun.core.annotation.NameInMap("EventSequence")
         private java.util.List < CustomerEventsEventSequence> eventSequence;
 
         private CustomerEvents(Builder builder) {
@@ -436,10 +435,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
 
     }
     public static class IvrEventsEventSequence extends TeaModel {
-        @NameInMap("Event")
+        @com.aliyun.core.annotation.NameInMap("Event")
         private String event;
 
-        @NameInMap("EventTime")
+        @com.aliyun.core.annotation.NameInMap("EventTime")
         private Long eventTime;
 
         private IvrEventsEventSequence(Builder builder) {
@@ -497,13 +496,13 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
 
     }
     public static class IvrEvents extends TeaModel {
-        @NameInMap("EventSequence")
+        @com.aliyun.core.annotation.NameInMap("EventSequence")
         private java.util.List < IvrEventsEventSequence> eventSequence;
 
-        @NameInMap("FlowId")
+        @com.aliyun.core.annotation.NameInMap("FlowId")
         private String flowId;
 
-        @NameInMap("FlowType")
+        @com.aliyun.core.annotation.NameInMap("FlowType")
         private String flowType;
 
         private IvrEvents(Builder builder) {
@@ -578,10 +577,10 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
 
     }
     public static class QueueEventsEventSequence extends TeaModel {
-        @NameInMap("Event")
+        @com.aliyun.core.annotation.NameInMap("Event")
         private String event;
 
-        @NameInMap("EventTime")
+        @com.aliyun.core.annotation.NameInMap("EventTime")
         private Long eventTime;
 
         private QueueEventsEventSequence(Builder builder) {
@@ -639,19 +638,19 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
 
     }
     public static class QueueEvents extends TeaModel {
-        @NameInMap("EventSequence")
+        @com.aliyun.core.annotation.NameInMap("EventSequence")
         private java.util.List < QueueEventsEventSequence> eventSequence;
 
-        @NameInMap("FlowId")
+        @com.aliyun.core.annotation.NameInMap("FlowId")
         private String flowId;
 
-        @NameInMap("QueueId")
+        @com.aliyun.core.annotation.NameInMap("QueueId")
         private String queueId;
 
-        @NameInMap("QueueName")
+        @com.aliyun.core.annotation.NameInMap("QueueName")
         private String queueName;
 
-        @NameInMap("QueueType")
+        @com.aliyun.core.annotation.NameInMap("QueueType")
         private Integer queueType;
 
         private QueueEvents(Builder builder) {
@@ -760,85 +759,85 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AgentEvents")
+        @com.aliyun.core.annotation.NameInMap("AgentEvents")
         private java.util.List < AgentEvents> agentEvents;
 
-        @NameInMap("AgentIds")
+        @com.aliyun.core.annotation.NameInMap("AgentIds")
         private String agentIds;
 
-        @NameInMap("AgentNames")
+        @com.aliyun.core.annotation.NameInMap("AgentNames")
         private String agentNames;
 
-        @NameInMap("CallDuration")
+        @com.aliyun.core.annotation.NameInMap("CallDuration")
         private Long callDuration;
 
-        @NameInMap("CalledNumber")
+        @com.aliyun.core.annotation.NameInMap("CalledNumber")
         private String calledNumber;
 
-        @NameInMap("CalleeLocation")
+        @com.aliyun.core.annotation.NameInMap("CalleeLocation")
         private String calleeLocation;
 
-        @NameInMap("CallerLocation")
+        @com.aliyun.core.annotation.NameInMap("CallerLocation")
         private String callerLocation;
 
-        @NameInMap("CallingNumber")
+        @com.aliyun.core.annotation.NameInMap("CallingNumber")
         private String callingNumber;
 
-        @NameInMap("ContactDisposition")
+        @com.aliyun.core.annotation.NameInMap("ContactDisposition")
         private String contactDisposition;
 
-        @NameInMap("ContactId")
+        @com.aliyun.core.annotation.NameInMap("ContactId")
         private String contactId;
 
-        @NameInMap("ContactType")
+        @com.aliyun.core.annotation.NameInMap("ContactType")
         private String contactType;
 
-        @NameInMap("CustomerEvents")
+        @com.aliyun.core.annotation.NameInMap("CustomerEvents")
         private java.util.List < CustomerEvents> customerEvents;
 
-        @NameInMap("EarlyMediaState")
+        @com.aliyun.core.annotation.NameInMap("EarlyMediaState")
         private String earlyMediaState;
 
-        @NameInMap("EstablishedTime")
+        @com.aliyun.core.annotation.NameInMap("EstablishedTime")
         private Long establishedTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("IvrEvents")
+        @com.aliyun.core.annotation.NameInMap("IvrEvents")
         private java.util.List < IvrEvents> ivrEvents;
 
-        @NameInMap("QueueEvents")
+        @com.aliyun.core.annotation.NameInMap("QueueEvents")
         private java.util.List < QueueEvents> queueEvents;
 
-        @NameInMap("RecordingReady")
+        @com.aliyun.core.annotation.NameInMap("RecordingReady")
         private Boolean recordingReady;
 
-        @NameInMap("ReleaseInitiator")
+        @com.aliyun.core.annotation.NameInMap("ReleaseInitiator")
         private String releaseInitiator;
 
-        @NameInMap("ReleaseReason")
+        @com.aliyun.core.annotation.NameInMap("ReleaseReason")
         private String releaseReason;
 
-        @NameInMap("ReleaseTime")
+        @com.aliyun.core.annotation.NameInMap("ReleaseTime")
         private Long releaseTime;
 
-        @NameInMap("Satisfaction")
+        @com.aliyun.core.annotation.NameInMap("Satisfaction")
         private Integer satisfaction;
 
-        @NameInMap("SatisfactionSurveyChannel")
+        @com.aliyun.core.annotation.NameInMap("SatisfactionSurveyChannel")
         private String satisfactionSurveyChannel;
 
-        @NameInMap("SatisfactionSurveyOffered")
+        @com.aliyun.core.annotation.NameInMap("SatisfactionSurveyOffered")
         private Boolean satisfactionSurveyOffered;
 
-        @NameInMap("SkillGroupIds")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupIds")
         private String skillGroupIds;
 
-        @NameInMap("SkillGroupNames")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupNames")
         private String skillGroupNames;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
         private Data(Builder builder) {
