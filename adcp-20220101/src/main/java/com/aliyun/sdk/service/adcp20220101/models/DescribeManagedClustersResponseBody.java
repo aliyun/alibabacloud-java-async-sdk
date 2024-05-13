@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adcp20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeManagedClustersResponseBody</p>
  */
 public class DescribeManagedClustersResponseBody extends TeaModel {
-    @NameInMap("Clusters")
+    @com.aliyun.core.annotation.NameInMap("Clusters")
     private java.util.List < Clusters> clusters;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeManagedClustersResponseBody(Builder builder) {
@@ -72,46 +71,46 @@ public class DescribeManagedClustersResponseBody extends TeaModel {
     } 
 
     public static class Cluster extends TeaModel {
-        @NameInMap("ClusterID")
+        @com.aliyun.core.annotation.NameInMap("ClusterID")
         private String clusterID;
 
-        @NameInMap("ClusterSpec")
+        @com.aliyun.core.annotation.NameInMap("ClusterSpec")
         private String clusterSpec;
 
-        @NameInMap("ClusterType")
+        @com.aliyun.core.annotation.NameInMap("ClusterType")
         private String clusterType;
 
-        @NameInMap("Created")
+        @com.aliyun.core.annotation.NameInMap("Created")
         private String created;
 
-        @NameInMap("CurrentVersion")
+        @com.aliyun.core.annotation.NameInMap("CurrentVersion")
         private String currentVersion;
 
-        @NameInMap("InitVersion")
+        @com.aliyun.core.annotation.NameInMap("InitVersion")
         private String initVersion;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Profile")
+        @com.aliyun.core.annotation.NameInMap("Profile")
         private String profile;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Updated")
+        @com.aliyun.core.annotation.NameInMap("Updated")
         private String updated;
 
-        @NameInMap("VSwitchID")
+        @com.aliyun.core.annotation.NameInMap("VSwitchID")
         private String vSwitchID;
 
-        @NameInMap("VpcID")
+        @com.aliyun.core.annotation.NameInMap("VpcID")
         private String vpcID;
 
         private Cluster(Builder builder) {
@@ -373,7 +372,7 @@ public class DescribeManagedClustersResponseBody extends TeaModel {
 
     }
     public static class MeshStatus extends TeaModel {
-        @NameInMap("InMesh")
+        @com.aliyun.core.annotation.NameInMap("InMesh")
         private Boolean inMesh;
 
         private MeshStatus(Builder builder) {
@@ -414,10 +413,10 @@ public class DescribeManagedClustersResponseBody extends TeaModel {
 
     }
     public static class Status extends TeaModel {
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private Status(Builder builder) {
@@ -475,13 +474,13 @@ public class DescribeManagedClustersResponseBody extends TeaModel {
 
     }
     public static class Clusters extends TeaModel {
-        @NameInMap("Cluster")
+        @com.aliyun.core.annotation.NameInMap("Cluster")
         private Cluster cluster;
 
-        @NameInMap("MeshStatus")
+        @com.aliyun.core.annotation.NameInMap("MeshStatus")
         private MeshStatus meshStatus;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Status status;
 
         private Clusters(Builder builder) {

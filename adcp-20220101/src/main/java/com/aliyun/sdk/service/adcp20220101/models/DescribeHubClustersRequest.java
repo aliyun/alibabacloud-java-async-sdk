@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adcp20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHubClustersRequest</p>
  */
 public class DescribeHubClustersRequest extends Request {
-    @Query
-    @NameInMap("Profile")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Profile")
     private String profile;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List < Tag > tag;
 
     private DescribeHubClustersRequest(Builder builder) {
         super(builder);
         this.profile = builder.profile;
         this.resourceGroupId = builder.resourceGroupId;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -53,9 +57,17 @@ public class DescribeHubClustersRequest extends Request {
         return this.resourceGroupId;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag > getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<DescribeHubClustersRequest, Builder> {
         private String profile; 
         private String resourceGroupId; 
+        private java.util.List < Tag > tag; 
 
         private Builder() {
             super();
@@ -65,6 +77,7 @@ public class DescribeHubClustersRequest extends Request {
             super(request);
             this.profile = request.profile;
             this.resourceGroupId = request.resourceGroupId;
+            this.tag = request.tag;
         } 
 
         /**
@@ -82,6 +95,16 @@ public class DescribeHubClustersRequest extends Request {
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag > tag) {
+            String tagShrink = shrink(tag, "Tag", "json");
+            this.putQueryParameter("Tag", tagShrink);
+            this.tag = tag;
             return this;
         }
 

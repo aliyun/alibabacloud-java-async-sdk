@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adcp20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHubClustersResponseBody</p>
  */
 public class DescribeHubClustersResponseBody extends TeaModel {
-    @NameInMap("Clusters")
+    @com.aliyun.core.annotation.NameInMap("Clusters")
     private java.util.List < Clusters> clusters;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeHubClustersResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeHubClustersResponseBody extends TeaModel {
     } 
 
     public static class ApiServer extends TeaModel {
-        @NameInMap("ApiServerEipId")
+        @com.aliyun.core.annotation.NameInMap("ApiServerEipId")
         private String apiServerEipId;
 
-        @NameInMap("EnabledPublic")
+        @com.aliyun.core.annotation.NameInMap("EnabledPublic")
         private Boolean enabledPublic;
 
-        @NameInMap("LoadBalancerId")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
         private String loadBalancerId;
 
         private ApiServer(Builder builder) {
@@ -156,38 +155,102 @@ public class DescribeHubClustersResponseBody extends TeaModel {
         } 
 
     }
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class ClusterInfo extends TeaModel {
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterSpec")
+        @com.aliyun.core.annotation.NameInMap("ClusterSpec")
         private String clusterSpec;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Profile")
+        @com.aliyun.core.annotation.NameInMap("Profile")
         private String profile;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupID")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupID")
         private String resourceGroupID;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List < Tags> tags;
+
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private ClusterInfo(Builder builder) {
@@ -200,6 +263,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             this.regionId = builder.regionId;
             this.resourceGroupID = builder.resourceGroupID;
             this.state = builder.state;
+            this.tags = builder.tags;
             this.updateTime = builder.updateTime;
             this.version = builder.version;
         }
@@ -276,6 +340,13 @@ public class DescribeHubClustersResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return updateTime
          */
         public String getUpdateTime() {
@@ -299,6 +370,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             private String regionId; 
             private String resourceGroupID; 
             private String state; 
+            private java.util.List < Tags> tags; 
             private String updateTime; 
             private String version; 
 
@@ -387,6 +459,14 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
              * The time when the cluster was last updated.
              */
             public Builder updateTime(String updateTime) {
@@ -410,16 +490,16 @@ public class DescribeHubClustersResponseBody extends TeaModel {
 
     }
     public static class Conditions extends TeaModel {
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Conditions(Builder builder) {
@@ -516,10 +596,10 @@ public class DescribeHubClustersResponseBody extends TeaModel {
 
     }
     public static class Endpoints extends TeaModel {
-        @NameInMap("IntranetApiServerEndpoint")
+        @com.aliyun.core.annotation.NameInMap("IntranetApiServerEndpoint")
         private String intranetApiServerEndpoint;
 
-        @NameInMap("PublicApiServerEndpoint")
+        @com.aliyun.core.annotation.NameInMap("PublicApiServerEndpoint")
         private String publicApiServerEndpoint;
 
         private Endpoints(Builder builder) {
@@ -577,13 +657,13 @@ public class DescribeHubClustersResponseBody extends TeaModel {
 
     }
     public static class LogConfig extends TeaModel {
-        @NameInMap("EnableLog")
+        @com.aliyun.core.annotation.NameInMap("EnableLog")
         private Boolean enableLog;
 
-        @NameInMap("LogProject")
+        @com.aliyun.core.annotation.NameInMap("LogProject")
         private String logProject;
 
-        @NameInMap("LogStoreTTL")
+        @com.aliyun.core.annotation.NameInMap("LogStoreTTL")
         private String logStoreTTL;
 
         private LogConfig(Builder builder) {
@@ -662,10 +742,10 @@ public class DescribeHubClustersResponseBody extends TeaModel {
 
     }
     public static class MeshConfig extends TeaModel {
-        @NameInMap("EnableMesh")
+        @com.aliyun.core.annotation.NameInMap("EnableMesh")
         private Boolean enableMesh;
 
-        @NameInMap("MeshId")
+        @com.aliyun.core.annotation.NameInMap("MeshId")
         private String meshId;
 
         private MeshConfig(Builder builder) {
@@ -727,16 +807,16 @@ public class DescribeHubClustersResponseBody extends TeaModel {
 
     }
     public static class Network extends TeaModel {
-        @NameInMap("ClusterDomain")
+        @com.aliyun.core.annotation.NameInMap("ClusterDomain")
         private String clusterDomain;
 
-        @NameInMap("SecurityGroupIDs")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupIDs")
         private java.util.List < String > securityGroupIDs;
 
-        @NameInMap("VSwitches")
+        @com.aliyun.core.annotation.NameInMap("VSwitches")
         private java.util.List < String > vSwitches;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private Network(Builder builder) {
@@ -828,25 +908,25 @@ public class DescribeHubClustersResponseBody extends TeaModel {
 
     }
     public static class Clusters extends TeaModel {
-        @NameInMap("ApiServer")
+        @com.aliyun.core.annotation.NameInMap("ApiServer")
         private ApiServer apiServer;
 
-        @NameInMap("ClusterInfo")
+        @com.aliyun.core.annotation.NameInMap("ClusterInfo")
         private ClusterInfo clusterInfo;
 
-        @NameInMap("Conditions")
+        @com.aliyun.core.annotation.NameInMap("Conditions")
         private java.util.List < Conditions> conditions;
 
-        @NameInMap("Endpoints")
+        @com.aliyun.core.annotation.NameInMap("Endpoints")
         private Endpoints endpoints;
 
-        @NameInMap("LogConfig")
+        @com.aliyun.core.annotation.NameInMap("LogConfig")
         private LogConfig logConfig;
 
-        @NameInMap("MeshConfig")
+        @com.aliyun.core.annotation.NameInMap("MeshConfig")
         private MeshConfig meshConfig;
 
-        @NameInMap("Network")
+        @com.aliyun.core.annotation.NameInMap("Network")
         private Network network;
 
         private Clusters(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adcp20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,77 +11,77 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateHubClusterFeatureRequest</p>
  */
 public class UpdateHubClusterFeatureRequest extends Request {
-    @Query
-    @NameInMap("AccessControlList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessControlList")
     private java.util.List < String > accessControlList;
 
-    @Query
-    @NameInMap("ApiServerEipId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApiServerEipId")
     private String apiServerEipId;
 
-    @Query
-    @NameInMap("ArgoCDEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArgoCDEnabled")
     private Boolean argoCDEnabled;
 
-    @Query
-    @NameInMap("ArgoCDHAEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArgoCDHAEnabled")
     private Boolean argoCDHAEnabled;
 
-    @Query
-    @NameInMap("ArgoEventsEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArgoEventsEnabled")
     private Boolean argoEventsEnabled;
 
-    @Query
-    @NameInMap("ArgoServerEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArgoServerEnabled")
     private Boolean argoServerEnabled;
 
-    @Query
-    @NameInMap("AuditLogEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuditLogEnabled")
     private Boolean auditLogEnabled;
 
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("DeletionProtection")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeletionProtection")
     private Boolean deletionProtection;
 
-    @Query
-    @NameInMap("EnableMesh")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableMesh")
     private Boolean enableMesh;
 
-    @Query
-    @NameInMap("GatewayEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayEnabled")
     private Boolean gatewayEnabled;
 
-    @Query
-    @NameInMap("MonitorEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MonitorEnabled")
     private Boolean monitorEnabled;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("PriceLimit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PriceLimit")
     private String priceLimit;
 
-    @Query
-    @NameInMap("PublicAccessEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PublicAccessEnabled")
     private Boolean publicAccessEnabled;
 
-    @Query
-    @NameInMap("PublicApiServerEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PublicApiServerEnabled")
     private Boolean publicApiServerEnabled;
 
-    @Query
-    @NameInMap("VSwitches")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitches")
     private java.util.List < String > vSwitches;
 
-    @Query
-    @NameInMap("WorkflowScheduleMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkflowScheduleMode")
     private String workflowScheduleMode;
 
     private UpdateHubClusterFeatureRequest(Builder builder) {

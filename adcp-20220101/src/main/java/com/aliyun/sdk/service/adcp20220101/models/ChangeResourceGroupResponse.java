@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribePoliciesResponse} extends {@link TeaModel}
+ * {@link ChangeResourceGroupResponse} extends {@link TeaModel}
  *
- * <p>DescribePoliciesResponse</p>
+ * <p>ChangeResourceGroupResponse</p>
  */
-public class DescribePoliciesResponse extends Response {
+public class ChangeResourceGroupResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +18,16 @@ public class DescribePoliciesResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DescribePoliciesResponseBody body;
+    private ChangeResourceGroupResponseBody body;
 
-    private DescribePoliciesResponse(BuilderImpl builder) {
+    private ChangeResourceGroupResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribePoliciesResponse create() {
+    public static ChangeResourceGroupResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +53,35 @@ public class DescribePoliciesResponse extends Response {
     /**
      * @return body
      */
-    public DescribePoliciesResponseBody getBody() {
+    public ChangeResourceGroupResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribePoliciesResponse, Builder> {
+    public interface Builder extends Response.Builder<ChangeResourceGroupResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribePoliciesResponseBody body);
+        Builder body(ChangeResourceGroupResponseBody body);
 
         @Override
-        DescribePoliciesResponse build();
+        ChangeResourceGroupResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribePoliciesResponse, Builder>
+            extends Response.BuilderImpl<ChangeResourceGroupResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DescribePoliciesResponseBody body; 
+        private ChangeResourceGroupResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribePoliciesResponse response) {
+        private BuilderImpl(ChangeResourceGroupResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +110,14 @@ public class DescribePoliciesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribePoliciesResponseBody body) {
+        public Builder body(ChangeResourceGroupResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribePoliciesResponse build() {
-            return new DescribePoliciesResponse(this);
+        public ChangeResourceGroupResponse build() {
+            return new ChangeResourceGroupResponse(this);
         } 
 
     } 

@@ -21,6 +21,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AttachClusterToHubResponse> attachClusterToHub(AttachClusterToHubRequest request);
 
+    CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
+
     CompletableFuture<CreateHubClusterResponse> createHubCluster(CreateHubClusterRequest request);
 
     CompletableFuture<DeleteHubClusterResponse> deleteHubCluster(DeleteHubClusterRequest request);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.adcp20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHubClusterLogsResponseBody</p>
  */
 public class DescribeHubClusterLogsResponseBody extends TeaModel {
-    @NameInMap("Logs")
+    @com.aliyun.core.annotation.NameInMap("Logs")
     private java.util.List < Logs> logs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeHubClusterLogsResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribeHubClusterLogsResponseBody extends TeaModel {
     } 
 
     public static class Logs extends TeaModel {
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterLog")
+        @com.aliyun.core.annotation.NameInMap("ClusterLog")
         private String clusterLog;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("LogLevel")
+        @com.aliyun.core.annotation.NameInMap("LogLevel")
         private String logLevel;
 
         private Logs(Builder builder) {
