@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTaskFlowTimeVariablesResponseBody</p>
  */
 public class ListTaskFlowTimeVariablesResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TimeVariables")
+    @com.aliyun.core.annotation.NameInMap("TimeVariables")
     private TimeVariables timeVariables;
 
     private ListTaskFlowTimeVariablesResponseBody(Builder builder) {
@@ -136,10 +135,10 @@ public class ListTaskFlowTimeVariablesResponseBody extends TeaModel {
     } 
 
     public static class TimeVariable extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Pattern")
+        @com.aliyun.core.annotation.NameInMap("Pattern")
         private String pattern;
 
         private TimeVariable(Builder builder) {
@@ -197,7 +196,7 @@ public class ListTaskFlowTimeVariablesResponseBody extends TeaModel {
 
     }
     public static class TimeVariables extends TeaModel {
-        @NameInMap("TimeVariable")
+        @com.aliyun.core.annotation.NameInMap("TimeVariable")
         private java.util.List < TimeVariable> timeVariable;
 
         private TimeVariables(Builder builder) {

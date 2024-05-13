@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUserPermissionsResponseBody</p>
  */
 public class ListUserPermissionsResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
-    @NameInMap("UserPermissions")
+    @com.aliyun.core.annotation.NameInMap("UserPermissions")
     private UserPermissions userPermissions;
 
     private ListUserPermissionsResponseBody(Builder builder) {
@@ -156,22 +155,22 @@ public class ListUserPermissionsResponseBody extends TeaModel {
     } 
 
     public static class PermDetail extends TeaModel {
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("ExpireDate")
+        @com.aliyun.core.annotation.NameInMap("ExpireDate")
         private String expireDate;
 
-        @NameInMap("ExtraData")
+        @com.aliyun.core.annotation.NameInMap("ExtraData")
         private String extraData;
 
-        @NameInMap("OriginFrom")
+        @com.aliyun.core.annotation.NameInMap("OriginFrom")
         private String originFrom;
 
-        @NameInMap("PermType")
+        @com.aliyun.core.annotation.NameInMap("PermType")
         private String permType;
 
-        @NameInMap("UserAccessId")
+        @com.aliyun.core.annotation.NameInMap("UserAccessId")
         private String userAccessId;
 
         private PermDetail(Builder builder) {
@@ -302,7 +301,7 @@ public class ListUserPermissionsResponseBody extends TeaModel {
 
     }
     public static class PermDetails extends TeaModel {
-        @NameInMap("PermDetail")
+        @com.aliyun.core.annotation.NameInMap("PermDetail")
         private java.util.List < PermDetail> permDetail;
 
         private PermDetails(Builder builder) {
@@ -343,55 +342,55 @@ public class ListUserPermissionsResponseBody extends TeaModel {
 
     }
     public static class UserPermission extends TeaModel {
-        @NameInMap("Alias")
+        @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
 
-        @NameInMap("ColumnName")
+        @com.aliyun.core.annotation.NameInMap("ColumnName")
         private String columnName;
 
-        @NameInMap("DbId")
+        @com.aliyun.core.annotation.NameInMap("DbId")
         private String dbId;
 
-        @NameInMap("DbType")
+        @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;
 
-        @NameInMap("DsType")
+        @com.aliyun.core.annotation.NameInMap("DsType")
         private String dsType;
 
-        @NameInMap("EnvType")
+        @com.aliyun.core.annotation.NameInMap("EnvType")
         private String envType;
 
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Logic")
+        @com.aliyun.core.annotation.NameInMap("Logic")
         private Boolean logic;
 
-        @NameInMap("PermDetails")
+        @com.aliyun.core.annotation.NameInMap("PermDetails")
         private PermDetails permDetails;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Long port;
 
-        @NameInMap("SchemaName")
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
         private String schemaName;
 
-        @NameInMap("SearchName")
+        @com.aliyun.core.annotation.NameInMap("SearchName")
         private String searchName;
 
-        @NameInMap("TableId")
+        @com.aliyun.core.annotation.NameInMap("TableId")
         private String tableId;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserNickName")
+        @com.aliyun.core.annotation.NameInMap("UserNickName")
         private String userNickName;
 
         private UserPermission(Builder builder) {
@@ -724,7 +723,7 @@ public class ListUserPermissionsResponseBody extends TeaModel {
 
     }
     public static class UserPermissions extends TeaModel {
-        @NameInMap("UserPermission")
+        @com.aliyun.core.annotation.NameInMap("UserPermission")
         private java.util.List < UserPermission> userPermission;
 
         private UserPermissions(Builder builder) {

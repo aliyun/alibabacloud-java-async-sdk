@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetApprovalDetailResponseBody</p>
  */
 public class GetApprovalDetailResponseBody extends TeaModel {
-    @NameInMap("ApprovalDetail")
+    @com.aliyun.core.annotation.NameInMap("ApprovalDetail")
     private ApprovalDetail approvalDetail;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetApprovalDetailResponseBody(Builder builder) {
@@ -136,10 +135,10 @@ public class GetApprovalDetailResponseBody extends TeaModel {
     } 
 
     public static class CurrentHandler extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("NickName")
+        @com.aliyun.core.annotation.NameInMap("NickName")
         private String nickName;
 
         private CurrentHandler(Builder builder) {
@@ -197,7 +196,7 @@ public class GetApprovalDetailResponseBody extends TeaModel {
 
     }
     public static class CurrentHandlers extends TeaModel {
-        @NameInMap("CurrentHandler")
+        @com.aliyun.core.annotation.NameInMap("CurrentHandler")
         private java.util.List < CurrentHandler> currentHandler;
 
         private CurrentHandlers(Builder builder) {
@@ -238,7 +237,7 @@ public class GetApprovalDetailResponseBody extends TeaModel {
 
     }
     public static class ReasonList extends TeaModel {
-        @NameInMap("Reasons")
+        @com.aliyun.core.annotation.NameInMap("Reasons")
         private java.util.List < String > reasons;
 
         private ReasonList(Builder builder) {
@@ -279,7 +278,7 @@ public class GetApprovalDetailResponseBody extends TeaModel {
 
     }
     public static class AuditUserIdList extends TeaModel {
-        @NameInMap("AuditUserIds")
+        @com.aliyun.core.annotation.NameInMap("AuditUserIds")
         private java.util.List < String > auditUserIds;
 
         private AuditUserIdList(Builder builder) {
@@ -320,22 +319,22 @@ public class GetApprovalDetailResponseBody extends TeaModel {
 
     }
     public static class WorkflowNode extends TeaModel {
-        @NameInMap("AuditUserIdList")
+        @com.aliyun.core.annotation.NameInMap("AuditUserIdList")
         private AuditUserIdList auditUserIdList;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("OperateComment")
+        @com.aliyun.core.annotation.NameInMap("OperateComment")
         private String operateComment;
 
-        @NameInMap("OperateTime")
+        @com.aliyun.core.annotation.NameInMap("OperateTime")
         private String operateTime;
 
-        @NameInMap("OperatorId")
+        @com.aliyun.core.annotation.NameInMap("OperatorId")
         private Long operatorId;
 
-        @NameInMap("WorkflowInsCode")
+        @com.aliyun.core.annotation.NameInMap("WorkflowInsCode")
         private String workflowInsCode;
 
         private WorkflowNode(Builder builder) {
@@ -469,7 +468,7 @@ public class GetApprovalDetailResponseBody extends TeaModel {
 
     }
     public static class WorkflowNodes extends TeaModel {
-        @NameInMap("WorkflowNode")
+        @com.aliyun.core.annotation.NameInMap("WorkflowNode")
         private java.util.List < WorkflowNode> workflowNode;
 
         private WorkflowNodes(Builder builder) {
@@ -510,37 +509,37 @@ public class GetApprovalDetailResponseBody extends TeaModel {
 
     }
     public static class ApprovalDetail extends TeaModel {
-        @NameInMap("AuditId")
+        @com.aliyun.core.annotation.NameInMap("AuditId")
         private Long auditId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CurrentHandlers")
+        @com.aliyun.core.annotation.NameInMap("CurrentHandlers")
         private CurrentHandlers currentHandlers;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("OrderId")
+        @com.aliyun.core.annotation.NameInMap("OrderId")
         private Long orderId;
 
-        @NameInMap("OrderType")
+        @com.aliyun.core.annotation.NameInMap("OrderType")
         private String orderType;
 
-        @NameInMap("ReasonList")
+        @com.aliyun.core.annotation.NameInMap("ReasonList")
         private ReasonList reasonList;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private Long templateId;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("WorkflowInsCode")
+        @com.aliyun.core.annotation.NameInMap("WorkflowInsCode")
         private String workflowInsCode;
 
-        @NameInMap("WorkflowNodes")
+        @com.aliyun.core.annotation.NameInMap("WorkflowNodes")
         private WorkflowNodes workflowNodes;
 
         private ApprovalDetail(Builder builder) {

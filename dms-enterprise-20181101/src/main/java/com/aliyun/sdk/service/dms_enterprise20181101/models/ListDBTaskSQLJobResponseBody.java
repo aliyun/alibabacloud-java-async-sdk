@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDBTaskSQLJobResponseBody</p>
  */
 public class ListDBTaskSQLJobResponseBody extends TeaModel {
-    @NameInMap("DBTaskSQLJobList")
+    @com.aliyun.core.annotation.NameInMap("DBTaskSQLJobList")
     private java.util.List < DBTaskSQLJobList> DBTaskSQLJobList;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListDBTaskSQLJobResponseBody(Builder builder) {
@@ -152,37 +151,37 @@ public class ListDBTaskSQLJobResponseBody extends TeaModel {
     } 
 
     public static class DBTaskSQLJobList extends TeaModel {
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DbId")
+        @com.aliyun.core.annotation.NameInMap("DbId")
         private Long dbId;
 
-        @NameInMap("DbSearchName")
+        @com.aliyun.core.annotation.NameInMap("DbSearchName")
         private String dbSearchName;
 
-        @NameInMap("DbTaskGroupId")
+        @com.aliyun.core.annotation.NameInMap("DbTaskGroupId")
         private Long dbTaskGroupId;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private Long jobId;
 
-        @NameInMap("JobType")
+        @com.aliyun.core.annotation.NameInMap("JobType")
         private String jobType;
 
-        @NameInMap("LastExecTime")
+        @com.aliyun.core.annotation.NameInMap("LastExecTime")
         private String lastExecTime;
 
-        @NameInMap("Logic")
+        @com.aliyun.core.annotation.NameInMap("Logic")
         private Boolean logic;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Transactional")
+        @com.aliyun.core.annotation.NameInMap("Transactional")
         private Boolean transactional;
 
         private DBTaskSQLJobList(Builder builder) {

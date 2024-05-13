@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetOnlineDDLProgressResponseBody</p>
  */
 public class GetOnlineDDLProgressResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("OnlineDDLTaskDetail")
+    @com.aliyun.core.annotation.NameInMap("OnlineDDLTaskDetail")
     private OnlineDDLTaskDetail onlineDDLTaskDetail;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetOnlineDDLProgressResponseBody(Builder builder) {
@@ -136,43 +135,43 @@ public class GetOnlineDDLProgressResponseBody extends TeaModel {
     } 
 
     public static class OnlineDDLTaskDetail extends TeaModel {
-        @NameInMap("CleanStrategy")
+        @com.aliyun.core.annotation.NameInMap("CleanStrategy")
         private String cleanStrategy;
 
-        @NameInMap("CopyChunkMode")
+        @com.aliyun.core.annotation.NameInMap("CopyChunkMode")
         private String copyChunkMode;
 
-        @NameInMap("CopyChunkSize")
+        @com.aliyun.core.annotation.NameInMap("CopyChunkSize")
         private Long copyChunkSize;
 
-        @NameInMap("CopyCount")
+        @com.aliyun.core.annotation.NameInMap("CopyCount")
         private Long copyCount;
 
-        @NameInMap("CopyTotal")
+        @com.aliyun.core.annotation.NameInMap("CopyTotal")
         private Long copyTotal;
 
-        @NameInMap("CutoverFailRetryTimes")
+        @com.aliyun.core.annotation.NameInMap("CutoverFailRetryTimes")
         private Long cutoverFailRetryTimes;
 
-        @NameInMap("CutoverLockTimeSeconds")
+        @com.aliyun.core.annotation.NameInMap("CutoverLockTimeSeconds")
         private Long cutoverLockTimeSeconds;
 
-        @NameInMap("CutoverWindowEndTime")
+        @com.aliyun.core.annotation.NameInMap("CutoverWindowEndTime")
         private String cutoverWindowEndTime;
 
-        @NameInMap("CutoverWindowStartTime")
+        @com.aliyun.core.annotation.NameInMap("CutoverWindowStartTime")
         private String cutoverWindowStartTime;
 
-        @NameInMap("DelaySeconds")
+        @com.aliyun.core.annotation.NameInMap("DelaySeconds")
         private Long delaySeconds;
 
-        @NameInMap("JobStatus")
+        @com.aliyun.core.annotation.NameInMap("JobStatus")
         private String jobStatus;
 
-        @NameInMap("ProgressRatio")
+        @com.aliyun.core.annotation.NameInMap("ProgressRatio")
         private String progressRatio;
 
-        @NameInMap("StatusDesc")
+        @com.aliyun.core.annotation.NameInMap("StatusDesc")
         private String statusDesc;
 
         private OnlineDDLTaskDetail(Builder builder) {

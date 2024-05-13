@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDataImportSQLResponseBody</p>
  */
 public class GetDataImportSQLResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SQLDetail")
+    @com.aliyun.core.annotation.NameInMap("SQLDetail")
     private SQLDetail SQLDetail;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetDataImportSQLResponseBody(Builder builder) {
@@ -136,7 +135,7 @@ public class GetDataImportSQLResponseBody extends TeaModel {
     } 
 
     public static class SQLDetail extends TeaModel {
-        @NameInMap("ExecSql")
+        @com.aliyun.core.annotation.NameInMap("ExecSql")
         private String execSql;
 
         private SQLDetail(Builder builder) {

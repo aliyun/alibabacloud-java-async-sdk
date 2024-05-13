@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDataTrackOrderRequest</p>
  */
 public class CreateDataTrackOrderRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Comment")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comment")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String comment;
 
-    @Query
-    @NameInMap("Param")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Param")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Param param;
 
-    @Query
-    @NameInMap("RelatedUserList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelatedUserList")
     private java.util.List < String > relatedUserList;
 
-    @Query
-    @NameInMap("Tid")
-    @Validation(minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tid")
+    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long tid;
 
     private CreateDataTrackOrderRequest(Builder builder) {
@@ -167,24 +166,24 @@ public class CreateDataTrackOrderRequest extends Request {
     } 
 
     public static class Param extends TeaModel {
-        @NameInMap("DbId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DbId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String dbId;
 
-        @NameInMap("JobEndTime")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("JobEndTime")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String jobEndTime;
 
-        @NameInMap("JobStartTime")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("JobStartTime")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String jobStartTime;
 
-        @NameInMap("TableNames")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TableNames")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List < String > tableNames;
 
-        @NameInMap("TrackTypes")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TrackTypes")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List < String > trackTypes;
 
         private Param(Builder builder) {

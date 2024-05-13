@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTaskFlowConstantsResponseBody</p>
  */
 public class ListTaskFlowConstantsResponseBody extends TeaModel {
-    @NameInMap("DagConstants")
+    @com.aliyun.core.annotation.NameInMap("DagConstants")
     private DagConstants dagConstants;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListTaskFlowConstantsResponseBody(Builder builder) {
@@ -136,10 +135,10 @@ public class ListTaskFlowConstantsResponseBody extends TeaModel {
     } 
 
     public static class DagConstant extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private DagConstant(Builder builder) {
@@ -197,7 +196,7 @@ public class ListTaskFlowConstantsResponseBody extends TeaModel {
 
     }
     public static class DagConstants extends TeaModel {
-        @NameInMap("DagConstant")
+        @com.aliyun.core.annotation.NameInMap("DagConstant")
         private java.util.List < DagConstant> dagConstant;
 
         private DagConstants(Builder builder) {

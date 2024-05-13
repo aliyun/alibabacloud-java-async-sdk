@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMetaTableColumnResponseBody</p>
  */
 public class GetMetaTableColumnResponseBody extends TeaModel {
-    @NameInMap("ColumnList")
+    @com.aliyun.core.annotation.NameInMap("ColumnList")
     private java.util.List < ColumnList> columnList;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetMetaTableColumnResponseBody(Builder builder) {
@@ -136,40 +135,40 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
     } 
 
     public static class ColumnList extends TeaModel {
-        @NameInMap("AutoIncrement")
+        @com.aliyun.core.annotation.NameInMap("AutoIncrement")
         private Boolean autoIncrement;
 
-        @NameInMap("ColumnId")
+        @com.aliyun.core.annotation.NameInMap("ColumnId")
         private String columnId;
 
-        @NameInMap("ColumnName")
+        @com.aliyun.core.annotation.NameInMap("ColumnName")
         private String columnName;
 
-        @NameInMap("ColumnType")
+        @com.aliyun.core.annotation.NameInMap("ColumnType")
         private String columnType;
 
-        @NameInMap("DataLength")
+        @com.aliyun.core.annotation.NameInMap("DataLength")
         private Long dataLength;
 
-        @NameInMap("DataPrecision")
+        @com.aliyun.core.annotation.NameInMap("DataPrecision")
         private Integer dataPrecision;
 
-        @NameInMap("DataScale")
+        @com.aliyun.core.annotation.NameInMap("DataScale")
         private Integer dataScale;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Nullable")
+        @com.aliyun.core.annotation.NameInMap("Nullable")
         private Boolean nullable;
 
-        @NameInMap("Position")
+        @com.aliyun.core.annotation.NameInMap("Position")
         private Integer position;
 
-        @NameInMap("PrimaryKey")
+        @com.aliyun.core.annotation.NameInMap("PrimaryKey")
         private String primaryKey;
 
-        @NameInMap("SecurityLevel")
+        @com.aliyun.core.annotation.NameInMap("SecurityLevel")
         private String securityLevel;
 
         private ColumnList(Builder builder) {

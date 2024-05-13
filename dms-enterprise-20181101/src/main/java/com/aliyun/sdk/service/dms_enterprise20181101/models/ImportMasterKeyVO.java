@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ImportMasterKeyVO</p>
  */
 public class ImportMasterKeyVO extends TeaModel {
-    @NameInMap("EncryptMekDataBase64")
+    @com.aliyun.core.annotation.NameInMap("EncryptMekDataBase64")
     private String encryptMekDataBase64;
 
-    @NameInMap("MekId")
+    @com.aliyun.core.annotation.NameInMap("MekId")
     private Long mekId;
 
-    @NameInMap("ProjectId")
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
     private java.util.List < Long > projectId;
 
     private ImportMasterKeyVO(Builder builder) {

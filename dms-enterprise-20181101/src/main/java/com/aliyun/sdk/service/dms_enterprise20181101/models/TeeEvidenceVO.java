@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TeeEvidenceVO</p>
  */
 public class TeeEvidenceVO extends TeaModel {
-    @NameInMap("CipherSuite")
+    @com.aliyun.core.annotation.NameInMap("CipherSuite")
     private String cipherSuite;
 
-    @NameInMap("EnclaveData")
+    @com.aliyun.core.annotation.NameInMap("EnclaveData")
     private String enclaveData;
 
-    @NameInMap("EncryptPublicKeyPem")
+    @com.aliyun.core.annotation.NameInMap("EncryptPublicKeyPem")
     private String encryptPublicKeyPem;
 
-    @NameInMap("EncryptPublicKeyType")
+    @com.aliyun.core.annotation.NameInMap("EncryptPublicKeyType")
     private String encryptPublicKeyType;
 
-    @NameInMap("ModifiedDate")
+    @com.aliyun.core.annotation.NameInMap("ModifiedDate")
     private String modifiedDate;
 
-    @NameInMap("PublicKey")
+    @com.aliyun.core.annotation.NameInMap("PublicKey")
     private String publicKey;
 
-    @NameInMap("PublicKeyRaBase64")
+    @com.aliyun.core.annotation.NameInMap("PublicKeyRaBase64")
     private String publicKeyRaBase64;
 
-    @NameInMap("PublicKeyRaType")
+    @com.aliyun.core.annotation.NameInMap("PublicKeyRaType")
     private String publicKeyRaType;
 
-    @NameInMap("QuoteReport")
+    @com.aliyun.core.annotation.NameInMap("QuoteReport")
     private String quoteReport;
 
-    @NameInMap("SignPublicKeyPem")
+    @com.aliyun.core.annotation.NameInMap("SignPublicKeyPem")
     private String signPublicKeyPem;
 
-    @NameInMap("SignPublicKeyType")
+    @com.aliyun.core.annotation.NameInMap("SignPublicKeyType")
     private String signPublicKeyType;
 
-    @NameInMap("TrustedMrEnclave")
+    @com.aliyun.core.annotation.NameInMap("TrustedMrEnclave")
     private java.util.List < String > trustedMrEnclave;
 
     private TeeEvidenceVO(Builder builder) {

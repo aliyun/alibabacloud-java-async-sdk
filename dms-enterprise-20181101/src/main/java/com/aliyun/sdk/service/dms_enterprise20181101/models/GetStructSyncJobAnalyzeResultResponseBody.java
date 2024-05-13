@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetStructSyncJobAnalyzeResultResponseBody</p>
  */
 public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StructSyncJobAnalyzeResult")
+    @com.aliyun.core.annotation.NameInMap("StructSyncJobAnalyzeResult")
     private StructSyncJobAnalyzeResult structSyncJobAnalyzeResult;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetStructSyncJobAnalyzeResultResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
     } 
 
     public static class ResultList extends TeaModel {
-        @NameInMap("Script")
+        @com.aliyun.core.annotation.NameInMap("Script")
         private String script;
 
-        @NameInMap("SourceTableName")
+        @com.aliyun.core.annotation.NameInMap("SourceTableName")
         private String sourceTableName;
 
-        @NameInMap("TargetTableName")
+        @com.aliyun.core.annotation.NameInMap("TargetTableName")
         private String targetTableName;
 
         private ResultList(Builder builder) {
@@ -213,10 +212,10 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
 
     }
     public static class SummaryList extends TeaModel {
-        @NameInMap("CompareType")
+        @com.aliyun.core.annotation.NameInMap("CompareType")
         private String compareType;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
         private SummaryList(Builder builder) {
@@ -281,10 +280,10 @@ public class GetStructSyncJobAnalyzeResultResponseBody extends TeaModel {
 
     }
     public static class StructSyncJobAnalyzeResult extends TeaModel {
-        @NameInMap("ResultList")
+        @com.aliyun.core.annotation.NameInMap("ResultList")
         private java.util.List < ResultList> resultList;
 
-        @NameInMap("SummaryList")
+        @com.aliyun.core.annotation.NameInMap("SummaryList")
         private java.util.List < SummaryList> summaryList;
 
         private StructSyncJobAnalyzeResult(Builder builder) {

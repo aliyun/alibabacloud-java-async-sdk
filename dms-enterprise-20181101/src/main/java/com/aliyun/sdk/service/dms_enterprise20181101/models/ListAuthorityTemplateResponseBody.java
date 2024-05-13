@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAuthorityTemplateResponseBody</p>
  */
 public class ListAuthorityTemplateResponseBody extends TeaModel {
-    @NameInMap("AuthorityTemplateViewList")
+    @com.aliyun.core.annotation.NameInMap("AuthorityTemplateViewList")
     private AuthorityTemplateViewList authorityTemplateViewList;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Tid")
+    @com.aliyun.core.annotation.NameInMap("Tid")
     private Long tid;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListAuthorityTemplateResponseBody(Builder builder) {
@@ -172,19 +171,19 @@ public class ListAuthorityTemplateResponseBody extends TeaModel {
     } 
 
     public static class AuthorityTemplateView extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreatorId")
+        @com.aliyun.core.annotation.NameInMap("CreatorId")
         private Long creatorId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private Long templateId;
 
         private AuthorityTemplateView(Builder builder) {
@@ -293,7 +292,7 @@ public class ListAuthorityTemplateResponseBody extends TeaModel {
 
     }
     public static class AuthorityTemplateViewList extends TeaModel {
-        @NameInMap("AuthorityTemplateView")
+        @com.aliyun.core.annotation.NameInMap("AuthorityTemplateView")
         private java.util.List < AuthorityTemplateView> authorityTemplateView;
 
         private AuthorityTemplateViewList(Builder builder) {

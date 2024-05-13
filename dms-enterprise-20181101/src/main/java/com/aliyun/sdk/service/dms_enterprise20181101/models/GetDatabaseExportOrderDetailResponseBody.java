@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDatabaseExportOrderDetailResponseBody</p>
  */
 public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
-    @NameInMap("DatabaseExportOrderDetail")
+    @com.aliyun.core.annotation.NameInMap("DatabaseExportOrderDetail")
     private DatabaseExportOrderDetail databaseExportOrderDetail;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetDatabaseExportOrderDetailResponseBody(Builder builder) {
@@ -136,7 +135,7 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
     } 
 
     public static class ExportTypes extends TeaModel {
-        @NameInMap("ExportTypes")
+        @com.aliyun.core.annotation.NameInMap("ExportTypes")
         private java.util.List < String > exportTypes;
 
         private ExportTypes(Builder builder) {
@@ -177,7 +176,7 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
 
     }
     public static class SQLExtOption extends TeaModel {
-        @NameInMap("SQLExtOption")
+        @com.aliyun.core.annotation.NameInMap("SQLExtOption")
         private java.util.List < String > SQLExtOption;
 
         private SQLExtOption(Builder builder) {
@@ -218,7 +217,7 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
 
     }
     public static class SelectedTables extends TeaModel {
-        @NameInMap("SelectedTables")
+        @com.aliyun.core.annotation.NameInMap("SelectedTables")
         private java.util.List < String > selectedTables;
 
         private SelectedTables(Builder builder) {
@@ -259,22 +258,22 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
 
     }
     public static class Config extends TeaModel {
-        @NameInMap("DbName")
+        @com.aliyun.core.annotation.NameInMap("DbName")
         private String dbName;
 
-        @NameInMap("ExportContent")
+        @com.aliyun.core.annotation.NameInMap("ExportContent")
         private String exportContent;
 
-        @NameInMap("ExportTypes")
+        @com.aliyun.core.annotation.NameInMap("ExportTypes")
         private ExportTypes exportTypes;
 
-        @NameInMap("SQLExtOption")
+        @com.aliyun.core.annotation.NameInMap("SQLExtOption")
         private SQLExtOption SQLExtOption;
 
-        @NameInMap("SelectedTables")
+        @com.aliyun.core.annotation.NameInMap("SelectedTables")
         private SelectedTables selectedTables;
 
-        @NameInMap("TargetOption")
+        @com.aliyun.core.annotation.NameInMap("TargetOption")
         private String targetOption;
 
         private Config(Builder builder) {
@@ -410,16 +409,16 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
 
     }
     public static class KeyInfo extends TeaModel {
-        @NameInMap("AuditDate")
+        @com.aliyun.core.annotation.NameInMap("AuditDate")
         private String auditDate;
 
-        @NameInMap("Config")
+        @com.aliyun.core.annotation.NameInMap("Config")
         private Config config;
 
-        @NameInMap("DbId")
+        @com.aliyun.core.annotation.NameInMap("DbId")
         private Long dbId;
 
-        @NameInMap("DownloadURL")
+        @com.aliyun.core.annotation.NameInMap("DownloadURL")
         private String downloadURL;
 
         private KeyInfo(Builder builder) {
@@ -511,31 +510,31 @@ public class GetDatabaseExportOrderDetailResponseBody extends TeaModel {
 
     }
     public static class DatabaseExportOrderDetail extends TeaModel {
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("Committer")
+        @com.aliyun.core.annotation.NameInMap("Committer")
         private String committer;
 
-        @NameInMap("CommitterId")
+        @com.aliyun.core.annotation.NameInMap("CommitterId")
         private String committerId;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("KeyInfo")
+        @com.aliyun.core.annotation.NameInMap("KeyInfo")
         private KeyInfo keyInfo;
 
-        @NameInMap("Log")
+        @com.aliyun.core.annotation.NameInMap("Log")
         private String log;
 
-        @NameInMap("SearchName")
+        @com.aliyun.core.annotation.NameInMap("SearchName")
         private String searchName;
 
-        @NameInMap("StatusDesc")
+        @com.aliyun.core.annotation.NameInMap("StatusDesc")
         private String statusDesc;
 
-        @NameInMap("WorkflowStatusDesc")
+        @com.aliyun.core.annotation.NameInMap("WorkflowStatusDesc")
         private String workflowStatusDesc;
 
         private DatabaseExportOrderDetail(Builder builder) {

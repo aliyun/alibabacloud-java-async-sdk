@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTaskFlowsByPageResponseBody</p>
  */
 public class ListTaskFlowsByPageResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TaskFlowList")
+    @com.aliyun.core.annotation.NameInMap("TaskFlowList")
     private TaskFlowList taskFlowList;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListTaskFlowsByPageResponseBody(Builder builder) {
@@ -156,64 +155,64 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
     } 
 
     public static class TaskFlow extends TeaModel {
-        @NameInMap("CreatorId")
+        @com.aliyun.core.annotation.NameInMap("CreatorId")
         private String creatorId;
 
-        @NameInMap("CreatorNickName")
+        @com.aliyun.core.annotation.NameInMap("CreatorNickName")
         private String creatorNickName;
 
-        @NameInMap("CronBeginDate")
+        @com.aliyun.core.annotation.NameInMap("CronBeginDate")
         private String cronBeginDate;
 
-        @NameInMap("CronEndDate")
+        @com.aliyun.core.annotation.NameInMap("CronEndDate")
         private String cronEndDate;
 
-        @NameInMap("CronStr")
+        @com.aliyun.core.annotation.NameInMap("CronStr")
         private String cronStr;
 
-        @NameInMap("CronSwitch")
+        @com.aliyun.core.annotation.NameInMap("CronSwitch")
         private Boolean cronSwitch;
 
-        @NameInMap("CronType")
+        @com.aliyun.core.annotation.NameInMap("CronType")
         private Integer cronType;
 
-        @NameInMap("DagName")
+        @com.aliyun.core.annotation.NameInMap("DagName")
         private String dagName;
 
-        @NameInMap("DagOwnerId")
+        @com.aliyun.core.annotation.NameInMap("DagOwnerId")
         private String dagOwnerId;
 
-        @NameInMap("DagOwnerNickName")
+        @com.aliyun.core.annotation.NameInMap("DagOwnerNickName")
         private String dagOwnerNickName;
 
-        @NameInMap("DeployId")
+        @com.aliyun.core.annotation.NameInMap("DeployId")
         private Long deployId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("LatestInstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("LatestInstanceStatus")
         private Integer latestInstanceStatus;
 
-        @NameInMap("LatestInstanceTime")
+        @com.aliyun.core.annotation.NameInMap("LatestInstanceTime")
         private String latestInstanceTime;
 
-        @NameInMap("ScenarioId")
+        @com.aliyun.core.annotation.NameInMap("ScenarioId")
         private String scenarioId;
 
-        @NameInMap("ScheduleParam")
+        @com.aliyun.core.annotation.NameInMap("ScheduleParam")
         private String scheduleParam;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("TimeZoneId")
+        @com.aliyun.core.annotation.NameInMap("TimeZoneId")
         private String timeZoneId;
 
-        @NameInMap("TriggerType")
+        @com.aliyun.core.annotation.NameInMap("TriggerType")
         private Integer triggerType;
 
         private TaskFlow(Builder builder) {
@@ -595,7 +594,7 @@ public class ListTaskFlowsByPageResponseBody extends TeaModel {
 
     }
     public static class TaskFlowList extends TeaModel {
-        @NameInMap("TaskFlow")
+        @com.aliyun.core.annotation.NameInMap("TaskFlow")
         private java.util.List < TaskFlow> taskFlow;
 
         private TaskFlowList(Builder builder) {

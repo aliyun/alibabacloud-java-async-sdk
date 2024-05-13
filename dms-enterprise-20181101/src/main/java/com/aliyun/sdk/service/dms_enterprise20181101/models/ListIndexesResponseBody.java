@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListIndexesResponseBody</p>
  */
 public class ListIndexesResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("IndexList")
+    @com.aliyun.core.annotation.NameInMap("IndexList")
     private IndexList indexList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListIndexesResponseBody(Builder builder) {
@@ -132,19 +131,19 @@ public class ListIndexesResponseBody extends TeaModel {
     } 
 
     public static class Index extends TeaModel {
-        @NameInMap("IndexComment")
+        @com.aliyun.core.annotation.NameInMap("IndexComment")
         private String indexComment;
 
-        @NameInMap("IndexId")
+        @com.aliyun.core.annotation.NameInMap("IndexId")
         private String indexId;
 
-        @NameInMap("IndexName")
+        @com.aliyun.core.annotation.NameInMap("IndexName")
         private String indexName;
 
-        @NameInMap("IndexType")
+        @com.aliyun.core.annotation.NameInMap("IndexType")
         private String indexType;
 
-        @NameInMap("TableId")
+        @com.aliyun.core.annotation.NameInMap("TableId")
         private String tableId;
 
         private Index(Builder builder) {
@@ -260,7 +259,7 @@ public class ListIndexesResponseBody extends TeaModel {
 
     }
     public static class IndexList extends TeaModel {
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private java.util.List < Index> index;
 
         private IndexList(Builder builder) {

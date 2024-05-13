@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDBTaskSQLJobDetailResponseBody</p>
  */
 public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
-    @NameInMap("DBTaskSQLJobDetailList")
+    @com.aliyun.core.annotation.NameInMap("DBTaskSQLJobDetailList")
     private java.util.List < DBTaskSQLJobDetailList> DBTaskSQLJobDetailList;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListDBTaskSQLJobDetailResponseBody(Builder builder) {
@@ -156,46 +155,46 @@ public class ListDBTaskSQLJobDetailResponseBody extends TeaModel {
     } 
 
     public static class DBTaskSQLJobDetailList extends TeaModel {
-        @NameInMap("AffectRows")
+        @com.aliyun.core.annotation.NameInMap("AffectRows")
         private Long affectRows;
 
-        @NameInMap("CurrentSql")
+        @com.aliyun.core.annotation.NameInMap("CurrentSql")
         private String currentSql;
 
-        @NameInMap("DbId")
+        @com.aliyun.core.annotation.NameInMap("DbId")
         private Long dbId;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("ExecuteCount")
+        @com.aliyun.core.annotation.NameInMap("ExecuteCount")
         private Long executeCount;
 
-        @NameInMap("JobDetailId")
+        @com.aliyun.core.annotation.NameInMap("JobDetailId")
         private Long jobDetailId;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private Long jobId;
 
-        @NameInMap("Log")
+        @com.aliyun.core.annotation.NameInMap("Log")
         private String log;
 
-        @NameInMap("Logic")
+        @com.aliyun.core.annotation.NameInMap("Logic")
         private Boolean logic;
 
-        @NameInMap("Skip")
+        @com.aliyun.core.annotation.NameInMap("Skip")
         private Boolean skip;
 
-        @NameInMap("SqlType")
+        @com.aliyun.core.annotation.NameInMap("SqlType")
         private String sqlType;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TimeDelay")
+        @com.aliyun.core.annotation.NameInMap("TimeDelay")
         private Long timeDelay;
 
         private DBTaskSQLJobDetailList(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PreviewWorkflowResponseBody</p>
  */
 public class PreviewWorkflowResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("WorkflowDetail")
+    @com.aliyun.core.annotation.NameInMap("WorkflowDetail")
     private WorkflowDetail workflowDetail;
 
     private PreviewWorkflowResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class PreviewWorkflowResponseBody extends TeaModel {
     } 
 
     public static class AuditUser extends TeaModel {
-        @NameInMap("NickName")
+        @com.aliyun.core.annotation.NameInMap("NickName")
         private String nickName;
 
-        @NameInMap("RealName")
+        @com.aliyun.core.annotation.NameInMap("RealName")
         private String realName;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
 
         private AuditUser(Builder builder) {
@@ -213,7 +212,7 @@ public class PreviewWorkflowResponseBody extends TeaModel {
 
     }
     public static class AuditUserList extends TeaModel {
-        @NameInMap("AuditUser")
+        @com.aliyun.core.annotation.NameInMap("AuditUser")
         private java.util.List < AuditUser> auditUser;
 
         private AuditUserList(Builder builder) {
@@ -254,16 +253,16 @@ public class PreviewWorkflowResponseBody extends TeaModel {
 
     }
     public static class WorkflowNode extends TeaModel {
-        @NameInMap("AuditUserList")
+        @com.aliyun.core.annotation.NameInMap("AuditUserList")
         private AuditUserList auditUserList;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
         private WorkflowNode(Builder builder) {
@@ -355,7 +354,7 @@ public class PreviewWorkflowResponseBody extends TeaModel {
 
     }
     public static class WorkflowNodeList extends TeaModel {
-        @NameInMap("WorkflowNode")
+        @com.aliyun.core.annotation.NameInMap("WorkflowNode")
         private java.util.List < WorkflowNode> workflowNode;
 
         private WorkflowNodeList(Builder builder) {
@@ -396,13 +395,13 @@ public class PreviewWorkflowResponseBody extends TeaModel {
 
     }
     public static class WorkflowDetail extends TeaModel {
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("WfCateName")
+        @com.aliyun.core.annotation.NameInMap("WfCateName")
         private String wfCateName;
 
-        @NameInMap("WorkflowNodeList")
+        @com.aliyun.core.annotation.NameInMap("WorkflowNodeList")
         private WorkflowNodeList workflowNodeList;
 
         private WorkflowDetail(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDDLPublishRecordsResponseBody</p>
  */
 public class ListDDLPublishRecordsResponseBody extends TeaModel {
-    @NameInMap("DDLPublishRecordList")
+    @com.aliyun.core.annotation.NameInMap("DDLPublishRecordList")
     private java.util.List < DDLPublishRecordList> DDLPublishRecordList;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListDDLPublishRecordsResponseBody(Builder builder) {
@@ -132,22 +131,22 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
     } 
 
     public static class PublishJobList extends TeaModel {
-        @NameInMap("DBTaskGroupId")
+        @com.aliyun.core.annotation.NameInMap("DBTaskGroupId")
         private Long DBTaskGroupId;
 
-        @NameInMap("ExecuteCount")
+        @com.aliyun.core.annotation.NameInMap("ExecuteCount")
         private Long executeCount;
 
-        @NameInMap("Scripts")
+        @com.aliyun.core.annotation.NameInMap("Scripts")
         private String scripts;
 
-        @NameInMap("StatusDesc")
+        @com.aliyun.core.annotation.NameInMap("StatusDesc")
         private String statusDesc;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
-        @NameInMap("TaskJobStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskJobStatus")
         private String taskJobStatus;
 
         private PublishJobList(Builder builder) {
@@ -278,25 +277,25 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
 
     }
     public static class PublishTaskInfoList extends TeaModel {
-        @NameInMap("DbId")
+        @com.aliyun.core.annotation.NameInMap("DbId")
         private Long dbId;
 
-        @NameInMap("Logic")
+        @com.aliyun.core.annotation.NameInMap("Logic")
         private Boolean logic;
 
-        @NameInMap("PlanTime")
+        @com.aliyun.core.annotation.NameInMap("PlanTime")
         private String planTime;
 
-        @NameInMap("PublishJobList")
+        @com.aliyun.core.annotation.NameInMap("PublishJobList")
         private java.util.List < PublishJobList> publishJobList;
 
-        @NameInMap("PublishStrategy")
+        @com.aliyun.core.annotation.NameInMap("PublishStrategy")
         private String publishStrategy;
 
-        @NameInMap("StatusDesc")
+        @com.aliyun.core.annotation.NameInMap("StatusDesc")
         private String statusDesc;
 
-        @NameInMap("TaskJobStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskJobStatus")
         private String taskJobStatus;
 
         private PublishTaskInfoList(Builder builder) {
@@ -447,37 +446,37 @@ public class ListDDLPublishRecordsResponseBody extends TeaModel {
 
     }
     public static class DDLPublishRecordList extends TeaModel {
-        @NameInMap("AuditExpireTime")
+        @com.aliyun.core.annotation.NameInMap("AuditExpireTime")
         private String auditExpireTime;
 
-        @NameInMap("AuditStatus")
+        @com.aliyun.core.annotation.NameInMap("AuditStatus")
         private String auditStatus;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("CreatorId")
+        @com.aliyun.core.annotation.NameInMap("CreatorId")
         private Long creatorId;
 
-        @NameInMap("Finality")
+        @com.aliyun.core.annotation.NameInMap("Finality")
         private Boolean finality;
 
-        @NameInMap("FinalityReason")
+        @com.aliyun.core.annotation.NameInMap("FinalityReason")
         private String finalityReason;
 
-        @NameInMap("PublishStatus")
+        @com.aliyun.core.annotation.NameInMap("PublishStatus")
         private String publishStatus;
 
-        @NameInMap("PublishTaskInfoList")
+        @com.aliyun.core.annotation.NameInMap("PublishTaskInfoList")
         private java.util.List < PublishTaskInfoList> publishTaskInfoList;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
 
-        @NameInMap("StatusDesc")
+        @com.aliyun.core.annotation.NameInMap("StatusDesc")
         private String statusDesc;
 
-        @NameInMap("WorkflowInstanceId")
+        @com.aliyun.core.annotation.NameInMap("WorkflowInstanceId")
         private Long workflowInstanceId;
 
         private DDLPublishRecordList(Builder builder) {

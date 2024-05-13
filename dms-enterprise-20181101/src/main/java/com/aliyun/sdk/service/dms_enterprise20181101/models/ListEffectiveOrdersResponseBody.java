@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListEffectiveOrdersResponseBody</p>
  */
 public class ListEffectiveOrdersResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("OrderSummary")
+    @com.aliyun.core.annotation.NameInMap("OrderSummary")
     private java.util.List < OrderSummary> orderSummary;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListEffectiveOrdersResponseBody(Builder builder) {
@@ -136,22 +135,22 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
     } 
 
     public static class OrderList extends TeaModel {
-        @NameInMap("BuyerId")
+        @com.aliyun.core.annotation.NameInMap("BuyerId")
         private String buyerId;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("InsNum")
+        @com.aliyun.core.annotation.NameInMap("InsNum")
         private String insNum;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("OrderId")
+        @com.aliyun.core.annotation.NameInMap("OrderId")
         private String orderId;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private OrderList(Builder builder) {
@@ -277,19 +276,19 @@ public class ListEffectiveOrdersResponseBody extends TeaModel {
 
     }
     public static class OrderSummary extends TeaModel {
-        @NameInMap("CommodityCode")
+        @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
 
-        @NameInMap("CommodityType")
+        @com.aliyun.core.annotation.NameInMap("CommodityType")
         private String commodityType;
 
-        @NameInMap("OrderList")
+        @com.aliyun.core.annotation.NameInMap("OrderList")
         private java.util.List < OrderList> orderList;
 
-        @NameInMap("TotalQuota")
+        @com.aliyun.core.annotation.NameInMap("TotalQuota")
         private Integer totalQuota;
 
-        @NameInMap("VersionType")
+        @com.aliyun.core.annotation.NameInMap("VersionType")
         private String versionType;
 
         private OrderSummary(Builder builder) {

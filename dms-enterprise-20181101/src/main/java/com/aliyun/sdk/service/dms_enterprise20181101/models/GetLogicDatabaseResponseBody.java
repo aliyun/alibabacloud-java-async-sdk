@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetLogicDatabaseResponseBody</p>
  */
 public class GetLogicDatabaseResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("LogicDatabase")
+    @com.aliyun.core.annotation.NameInMap("LogicDatabase")
     private LogicDatabase logicDatabase;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetLogicDatabaseResponseBody(Builder builder) {
@@ -136,7 +135,7 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
     } 
 
     public static class DatabaseIds extends TeaModel {
-        @NameInMap("DatabaseIds")
+        @com.aliyun.core.annotation.NameInMap("DatabaseIds")
         private java.util.List < Long > databaseIds;
 
         private DatabaseIds(Builder builder) {
@@ -177,7 +176,7 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
 
     }
     public static class OwnerIdList extends TeaModel {
-        @NameInMap("OwnerIds")
+        @com.aliyun.core.annotation.NameInMap("OwnerIds")
         private java.util.List < String > ownerIds;
 
         private OwnerIdList(Builder builder) {
@@ -218,7 +217,7 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
 
     }
     public static class OwnerNameList extends TeaModel {
-        @NameInMap("OwnerNames")
+        @com.aliyun.core.annotation.NameInMap("OwnerNames")
         private java.util.List < String > ownerNames;
 
         private OwnerNameList(Builder builder) {
@@ -259,34 +258,34 @@ public class GetLogicDatabaseResponseBody extends TeaModel {
 
     }
     public static class LogicDatabase extends TeaModel {
-        @NameInMap("Alias")
+        @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
 
-        @NameInMap("DatabaseId")
+        @com.aliyun.core.annotation.NameInMap("DatabaseId")
         private String databaseId;
 
-        @NameInMap("DatabaseIds")
+        @com.aliyun.core.annotation.NameInMap("DatabaseIds")
         private DatabaseIds databaseIds;
 
-        @NameInMap("DbType")
+        @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;
 
-        @NameInMap("EnvType")
+        @com.aliyun.core.annotation.NameInMap("EnvType")
         private String envType;
 
-        @NameInMap("Logic")
+        @com.aliyun.core.annotation.NameInMap("Logic")
         private Boolean logic;
 
-        @NameInMap("OwnerIdList")
+        @com.aliyun.core.annotation.NameInMap("OwnerIdList")
         private OwnerIdList ownerIdList;
 
-        @NameInMap("OwnerNameList")
+        @com.aliyun.core.annotation.NameInMap("OwnerNameList")
         private OwnerNameList ownerNameList;
 
-        @NameInMap("SchemaName")
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
         private String schemaName;
 
-        @NameInMap("SearchName")
+        @com.aliyun.core.annotation.NameInMap("SearchName")
         private String searchName;
 
         private LogicDatabase(Builder builder) {

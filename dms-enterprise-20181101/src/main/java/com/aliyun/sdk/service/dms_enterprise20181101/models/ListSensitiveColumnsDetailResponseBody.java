@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSensitiveColumnsDetailResponseBody</p>
  */
 public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SensitiveColumnsDetailList")
+    @com.aliyun.core.annotation.NameInMap("SensitiveColumnsDetailList")
     private SensitiveColumnsDetailList sensitiveColumnsDetailList;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListSensitiveColumnsDetailResponseBody(Builder builder) {
@@ -136,34 +135,34 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
     } 
 
     public static class SensitiveColumnsDetail extends TeaModel {
-        @NameInMap("ColumnDescription")
+        @com.aliyun.core.annotation.NameInMap("ColumnDescription")
         private String columnDescription;
 
-        @NameInMap("ColumnName")
+        @com.aliyun.core.annotation.NameInMap("ColumnName")
         private String columnName;
 
-        @NameInMap("ColumnType")
+        @com.aliyun.core.annotation.NameInMap("ColumnType")
         private String columnType;
 
-        @NameInMap("DbId")
+        @com.aliyun.core.annotation.NameInMap("DbId")
         private Long dbId;
 
-        @NameInMap("DbType")
+        @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;
 
-        @NameInMap("EnvType")
+        @com.aliyun.core.annotation.NameInMap("EnvType")
         private String envType;
 
-        @NameInMap("Logic")
+        @com.aliyun.core.annotation.NameInMap("Logic")
         private Boolean logic;
 
-        @NameInMap("SchemaName")
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
         private String schemaName;
 
-        @NameInMap("SearchName")
+        @com.aliyun.core.annotation.NameInMap("SearchName")
         private String searchName;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private SensitiveColumnsDetail(Builder builder) {
@@ -361,7 +360,7 @@ public class ListSensitiveColumnsDetailResponseBody extends TeaModel {
 
     }
     public static class SensitiveColumnsDetailList extends TeaModel {
-        @NameInMap("SensitiveColumnsDetail")
+        @com.aliyun.core.annotation.NameInMap("SensitiveColumnsDetail")
         private java.util.List < SensitiveColumnsDetail> sensitiveColumnsDetail;
 
         private SensitiveColumnsDetailList(Builder builder) {

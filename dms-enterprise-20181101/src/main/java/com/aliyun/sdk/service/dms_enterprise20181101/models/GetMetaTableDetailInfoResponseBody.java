@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMetaTableDetailInfoResponseBody</p>
  */
 public class GetMetaTableDetailInfoResponseBody extends TeaModel {
-    @NameInMap("DetailInfo")
+    @com.aliyun.core.annotation.NameInMap("DetailInfo")
     private DetailInfo detailInfo;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetMetaTableDetailInfoResponseBody(Builder builder) {
@@ -132,34 +131,34 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
     } 
 
     public static class ColumnList extends TeaModel {
-        @NameInMap("AutoIncrement")
+        @com.aliyun.core.annotation.NameInMap("AutoIncrement")
         private Boolean autoIncrement;
 
-        @NameInMap("ColumnId")
+        @com.aliyun.core.annotation.NameInMap("ColumnId")
         private String columnId;
 
-        @NameInMap("ColumnName")
+        @com.aliyun.core.annotation.NameInMap("ColumnName")
         private String columnName;
 
-        @NameInMap("ColumnType")
+        @com.aliyun.core.annotation.NameInMap("ColumnType")
         private String columnType;
 
-        @NameInMap("DataLength")
+        @com.aliyun.core.annotation.NameInMap("DataLength")
         private Long dataLength;
 
-        @NameInMap("DataPrecision")
+        @com.aliyun.core.annotation.NameInMap("DataPrecision")
         private Integer dataPrecision;
 
-        @NameInMap("DataScale")
+        @com.aliyun.core.annotation.NameInMap("DataScale")
         private Integer dataScale;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Nullable")
+        @com.aliyun.core.annotation.NameInMap("Nullable")
         private Boolean nullable;
 
-        @NameInMap("Position")
+        @com.aliyun.core.annotation.NameInMap("Position")
         private String position;
 
         private ColumnList(Builder builder) {
@@ -361,19 +360,19 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
 
     }
     public static class IndexList extends TeaModel {
-        @NameInMap("IndexColumns")
+        @com.aliyun.core.annotation.NameInMap("IndexColumns")
         private java.util.List < String > indexColumns;
 
-        @NameInMap("IndexId")
+        @com.aliyun.core.annotation.NameInMap("IndexId")
         private String indexId;
 
-        @NameInMap("IndexName")
+        @com.aliyun.core.annotation.NameInMap("IndexName")
         private String indexName;
 
-        @NameInMap("IndexType")
+        @com.aliyun.core.annotation.NameInMap("IndexType")
         private String indexType;
 
-        @NameInMap("Unique")
+        @com.aliyun.core.annotation.NameInMap("Unique")
         private Boolean unique;
 
         private IndexList(Builder builder) {
@@ -486,10 +485,10 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
 
     }
     public static class DetailInfo extends TeaModel {
-        @NameInMap("ColumnList")
+        @com.aliyun.core.annotation.NameInMap("ColumnList")
         private java.util.List < ColumnList> columnList;
 
-        @NameInMap("IndexList")
+        @com.aliyun.core.annotation.NameInMap("IndexList")
         private java.util.List < IndexList> indexList;
 
         private DetailInfo(Builder builder) {

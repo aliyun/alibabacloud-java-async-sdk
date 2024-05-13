@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDataArchiveOrderDetailResponseBody</p>
  */
 public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
-    @NameInMap("DataArchiveOrderDetail")
+    @com.aliyun.core.annotation.NameInMap("DataArchiveOrderDetail")
     private DataArchiveOrderDetail dataArchiveOrderDetail;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TraceId")
+    @com.aliyun.core.annotation.NameInMap("TraceId")
     private String traceId;
 
     private GetDataArchiveOrderDetailResponseBody(Builder builder) {
@@ -156,58 +155,58 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
     } 
 
     public static class DagInfo extends TeaModel {
-        @NameInMap("CreatorId")
+        @com.aliyun.core.annotation.NameInMap("CreatorId")
         private String creatorId;
 
-        @NameInMap("CronBeginDate")
+        @com.aliyun.core.annotation.NameInMap("CronBeginDate")
         private String cronBeginDate;
 
-        @NameInMap("CronEndDate")
+        @com.aliyun.core.annotation.NameInMap("CronEndDate")
         private String cronEndDate;
 
-        @NameInMap("CronTrigger")
+        @com.aliyun.core.annotation.NameInMap("CronTrigger")
         private Boolean cronTrigger;
 
-        @NameInMap("DWDevelop")
+        @com.aliyun.core.annotation.NameInMap("DWDevelop")
         private Boolean DWDevelop;
 
-        @NameInMap("DagName")
+        @com.aliyun.core.annotation.NameInMap("DagName")
         private String dagName;
 
-        @NameInMap("DagOwnerId")
+        @com.aliyun.core.annotation.NameInMap("DagOwnerId")
         private String dagOwnerId;
 
-        @NameInMap("DeployId")
+        @com.aliyun.core.annotation.NameInMap("DeployId")
         private Long deployId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EditDagId")
+        @com.aliyun.core.annotation.NameInMap("EditDagId")
         private Long editDagId;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("IsPublic")
+        @com.aliyun.core.annotation.NameInMap("IsPublic")
         private Long isPublic;
 
-        @NameInMap("Legacy")
+        @com.aliyun.core.annotation.NameInMap("Legacy")
         private Boolean legacy;
 
-        @NameInMap("System")
+        @com.aliyun.core.annotation.NameInMap("System")
         private Boolean system;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
-        @NameInMap("TriggerOnce")
+        @com.aliyun.core.annotation.NameInMap("TriggerOnce")
         private Boolean triggerOnce;
 
         private DagInfo(Builder builder) {
@@ -560,31 +559,31 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
 
     }
     public static class StandardGroup extends TeaModel {
-        @NameInMap("DbType")
+        @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("FreeOrStable")
+        @com.aliyun.core.annotation.NameInMap("FreeOrStable")
         private Boolean freeOrStable;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("GroupMode")
+        @com.aliyun.core.annotation.NameInMap("GroupMode")
         private String groupMode;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("LastMenderId")
+        @com.aliyun.core.annotation.NameInMap("LastMenderId")
         private Long lastMenderId;
 
         private StandardGroup(Builder builder) {
@@ -770,97 +769,97 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
 
     }
     public static class DbBaseInfo extends TeaModel {
-        @NameInMap("Alias")
+        @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
 
-        @NameInMap("AlterTimeout")
+        @com.aliyun.core.annotation.NameInMap("AlterTimeout")
         private Long alterTimeout;
 
-        @NameInMap("AssetControl")
+        @com.aliyun.core.annotation.NameInMap("AssetControl")
         private Boolean assetControl;
 
-        @NameInMap("CatalogName")
+        @com.aliyun.core.annotation.NameInMap("CatalogName")
         private String catalogName;
 
-        @NameInMap("ClusterNode")
+        @com.aliyun.core.annotation.NameInMap("ClusterNode")
         private String clusterNode;
 
-        @NameInMap("DbId")
+        @com.aliyun.core.annotation.NameInMap("DbId")
         private Long dbId;
 
-        @NameInMap("DbType")
+        @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;
 
-        @NameInMap("DbaId")
+        @com.aliyun.core.annotation.NameInMap("DbaId")
         private Long dbaId;
 
-        @NameInMap("DbaName")
+        @com.aliyun.core.annotation.NameInMap("DbaName")
         private String dbaName;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Encoding")
+        @com.aliyun.core.annotation.NameInMap("Encoding")
         private String encoding;
 
-        @NameInMap("EnvType")
+        @com.aliyun.core.annotation.NameInMap("EnvType")
         private String envType;
 
-        @NameInMap("Follow")
+        @com.aliyun.core.annotation.NameInMap("Follow")
         private Boolean follow;
 
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("Idc")
+        @com.aliyun.core.annotation.NameInMap("Idc")
         private String idc;
 
-        @NameInMap("IdcTitle")
+        @com.aliyun.core.annotation.NameInMap("IdcTitle")
         private String idcTitle;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
 
-        @NameInMap("InstanceSource")
+        @com.aliyun.core.annotation.NameInMap("InstanceSource")
         private String instanceSource;
 
-        @NameInMap("LastSyncTime")
+        @com.aliyun.core.annotation.NameInMap("LastSyncTime")
         private String lastSyncTime;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("Logic")
+        @com.aliyun.core.annotation.NameInMap("Logic")
         private Boolean logic;
 
-        @NameInMap("OwnerIds")
+        @com.aliyun.core.annotation.NameInMap("OwnerIds")
         private java.util.List < Long > ownerIds;
 
-        @NameInMap("OwnerNames")
+        @com.aliyun.core.annotation.NameInMap("OwnerNames")
         private java.util.List < String > ownerNames;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Long port;
 
-        @NameInMap("SchemaName")
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
         private String schemaName;
 
-        @NameInMap("SearchName")
+        @com.aliyun.core.annotation.NameInMap("SearchName")
         private String searchName;
 
-        @NameInMap("StandardGroup")
+        @com.aliyun.core.annotation.NameInMap("StandardGroup")
         private StandardGroup standardGroup;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("TableCount")
+        @com.aliyun.core.annotation.NameInMap("TableCount")
         private Long tableCount;
 
-        @NameInMap("TnsName")
+        @com.aliyun.core.annotation.NameInMap("TnsName")
         private String tnsName;
 
-        @NameInMap("UnitType")
+        @com.aliyun.core.annotation.NameInMap("UnitType")
         private String unitType;
 
         private DbBaseInfo(Builder builder) {
@@ -1452,43 +1451,43 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
 
     }
     public static class Instances extends TeaModel {
-        @NameInMap("BusinessTime")
+        @com.aliyun.core.annotation.NameInMap("BusinessTime")
         private String businessTime;
 
-        @NameInMap("DagId")
+        @com.aliyun.core.annotation.NameInMap("DagId")
         private Long dagId;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("HistoryDagId")
+        @com.aliyun.core.annotation.NameInMap("HistoryDagId")
         private Long historyDagId;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("LastRunningContext")
+        @com.aliyun.core.annotation.NameInMap("LastRunningContext")
         private String lastRunningContext;
 
-        @NameInMap("Msg")
+        @com.aliyun.core.annotation.NameInMap("Msg")
         private String msg;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Long status;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
-        @NameInMap("TriggerType")
+        @com.aliyun.core.annotation.NameInMap("TriggerType")
         private Long triggerType;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private Instances(Builder builder) {
@@ -1745,7 +1744,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
 
     }
     public static class NextFireTimeResult extends TeaModel {
-        @NameInMap("CronFireType")
+        @com.aliyun.core.annotation.NameInMap("CronFireType")
         private String cronFireType;
 
         private NextFireTimeResult(Builder builder) {
@@ -1786,28 +1785,28 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
 
     }
     public static class PluginExtraData extends TeaModel {
-        @NameInMap("DagInfo")
+        @com.aliyun.core.annotation.NameInMap("DagInfo")
         private DagInfo dagInfo;
 
-        @NameInMap("DbBaseInfo")
+        @com.aliyun.core.annotation.NameInMap("DbBaseInfo")
         private DbBaseInfo dbBaseInfo;
 
-        @NameInMap("InstanceTotal")
+        @com.aliyun.core.annotation.NameInMap("InstanceTotal")
         private Long instanceTotal;
 
-        @NameInMap("Instances")
+        @com.aliyun.core.annotation.NameInMap("Instances")
         private java.util.List < Instances> instances;
 
-        @NameInMap("NextFireTimeResult")
+        @com.aliyun.core.annotation.NameInMap("NextFireTimeResult")
         private NextFireTimeResult nextFireTimeResult;
 
-        @NameInMap("PageIndex")
+        @com.aliyun.core.annotation.NameInMap("PageIndex")
         private Long pageIndex;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Long pageSize;
 
-        @NameInMap("TempTableNameMap")
+        @com.aliyun.core.annotation.NameInMap("TempTableNameMap")
         private java.util.Map < String, ? > tempTableNameMap;
 
         private PluginExtraData(Builder builder) {
@@ -1967,10 +1966,10 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
 
     }
     public static class TableIncludes extends TeaModel {
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
-        @NameInMap("TableWhere")
+        @com.aliyun.core.annotation.NameInMap("TableWhere")
         private String tableWhere;
 
         private TableIncludes(Builder builder) {
@@ -2028,34 +2027,34 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
 
     }
     public static class PluginParam extends TeaModel {
-        @NameInMap("ArchiveMethod")
+        @com.aliyun.core.annotation.NameInMap("ArchiveMethod")
         private String archiveMethod;
 
-        @NameInMap("DbSchema")
+        @com.aliyun.core.annotation.NameInMap("DbSchema")
         private String dbSchema;
 
-        @NameInMap("Logic")
+        @com.aliyun.core.annotation.NameInMap("Logic")
         private Boolean logic;
 
-        @NameInMap("OrderAfter")
+        @com.aliyun.core.annotation.NameInMap("OrderAfter")
         private java.util.List < String > orderAfter;
 
-        @NameInMap("RunMethod")
+        @com.aliyun.core.annotation.NameInMap("RunMethod")
         private String runMethod;
 
-        @NameInMap("SourceDatabaseId")
+        @com.aliyun.core.annotation.NameInMap("SourceDatabaseId")
         private Long sourceDatabaseId;
 
-        @NameInMap("TableIncludes")
+        @com.aliyun.core.annotation.NameInMap("TableIncludes")
         private java.util.List < TableIncludes> tableIncludes;
 
-        @NameInMap("TableMapping")
+        @com.aliyun.core.annotation.NameInMap("TableMapping")
         private java.util.List < String > tableMapping;
 
-        @NameInMap("TargetInstanceId")
+        @com.aliyun.core.annotation.NameInMap("TargetInstanceId")
         private String targetInstanceId;
 
-        @NameInMap("Variables")
+        @com.aliyun.core.annotation.NameInMap("Variables")
         private java.util.List < String > variables;
 
         private PluginParam(Builder builder) {
@@ -2253,49 +2252,49 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
 
     }
     public static class DataArchiveOrderDetail extends TeaModel {
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("Committer")
+        @com.aliyun.core.annotation.NameInMap("Committer")
         private String committer;
 
-        @NameInMap("CommitterId")
+        @com.aliyun.core.annotation.NameInMap("CommitterId")
         private Long committerId;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("PluginExtraData")
+        @com.aliyun.core.annotation.NameInMap("PluginExtraData")
         private PluginExtraData pluginExtraData;
 
-        @NameInMap("PluginParam")
+        @com.aliyun.core.annotation.NameInMap("PluginParam")
         private PluginParam pluginParam;
 
-        @NameInMap("PluginType")
+        @com.aliyun.core.annotation.NameInMap("PluginType")
         private String pluginType;
 
-        @NameInMap("RelatedUserList")
+        @com.aliyun.core.annotation.NameInMap("RelatedUserList")
         private java.util.List < Long > relatedUserList;
 
-        @NameInMap("RelatedUserNickList")
+        @com.aliyun.core.annotation.NameInMap("RelatedUserNickList")
         private java.util.List < String > relatedUserNickList;
 
-        @NameInMap("StatusCode")
+        @com.aliyun.core.annotation.NameInMap("StatusCode")
         private String statusCode;
 
-        @NameInMap("StatusDesc")
+        @com.aliyun.core.annotation.NameInMap("StatusDesc")
         private String statusDesc;
 
-        @NameInMap("WorkflowInstanceId")
+        @com.aliyun.core.annotation.NameInMap("WorkflowInstanceId")
         private Long workflowInstanceId;
 
-        @NameInMap("WorkflowStatusDesc")
+        @com.aliyun.core.annotation.NameInMap("WorkflowStatusDesc")
         private String workflowStatusDesc;
 
         private DataArchiveOrderDetail(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDataCorrectPreCheckDBResponseBody</p>
  */
 public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("PreCheckDBList")
+    @com.aliyun.core.annotation.NameInMap("PreCheckDBList")
     private java.util.List < PreCheckDBList> preCheckDBList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListDataCorrectPreCheckDBResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class ListDataCorrectPreCheckDBResponseBody extends TeaModel {
     } 
 
     public static class PreCheckDBList extends TeaModel {
-        @NameInMap("DbId")
+        @com.aliyun.core.annotation.NameInMap("DbId")
         private Long dbId;
 
-        @NameInMap("SearchName")
+        @com.aliyun.core.annotation.NameInMap("SearchName")
         private String searchName;
 
-        @NameInMap("SqlNum")
+        @com.aliyun.core.annotation.NameInMap("SqlNum")
         private Long sqlNum;
 
         private PreCheckDBList(Builder builder) {

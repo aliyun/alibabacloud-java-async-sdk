@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,35 +11,35 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDataArchiveOrderRequest</p>
  */
 public class CreateDataArchiveOrderRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Comment")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comment")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String comment;
 
-    @Query
-    @NameInMap("Param")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Param")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Param param;
 
-    @Query
-    @NameInMap("ParentId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentId")
     private Long parentId;
 
-    @Query
-    @NameInMap("PluginType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PluginType")
     private String pluginType;
 
-    @Query
-    @NameInMap("RelatedUserList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelatedUserList")
     private java.util.List < String > relatedUserList;
 
-    @Query
-    @NameInMap("Tid")
-    @Validation(minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tid")
+    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long tid;
 
     private CreateDataArchiveOrderRequest(Builder builder) {
@@ -213,11 +212,11 @@ public class CreateDataArchiveOrderRequest extends Request {
     } 
 
     public static class TableIncludes extends TeaModel {
-        @NameInMap("TableName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TableName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String tableName;
 
-        @NameInMap("TableWhere")
+        @com.aliyun.core.annotation.NameInMap("TableWhere")
         private String tableWhere;
 
         private TableIncludes(Builder builder) {
@@ -275,10 +274,10 @@ public class CreateDataArchiveOrderRequest extends Request {
 
     }
     public static class Variables extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Pattern")
+        @com.aliyun.core.annotation.NameInMap("Pattern")
         private String pattern;
 
         private Variables(Builder builder) {
@@ -336,52 +335,56 @@ public class CreateDataArchiveOrderRequest extends Request {
 
     }
     public static class Param extends TeaModel {
-        @NameInMap("ArchiveMethod")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ArchiveMethod")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String archiveMethod;
 
-        @NameInMap("CronStr")
+        @com.aliyun.core.annotation.NameInMap("CronStr")
         private String cronStr;
 
-        @NameInMap("Logic")
+        @com.aliyun.core.annotation.NameInMap("DatabaseId")
+        private String databaseId;
+
+        @com.aliyun.core.annotation.NameInMap("Logic")
         private Boolean logic;
 
-        @NameInMap("OrderAfter")
+        @com.aliyun.core.annotation.NameInMap("OrderAfter")
         private java.util.List < String > orderAfter;
 
-        @NameInMap("RunMethod")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("RunMethod")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String runMethod;
 
-        @NameInMap("SourceCatalogName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("SourceCatalogName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String sourceCatalogName;
 
-        @NameInMap("SourceInstanceName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("SourceInstanceName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String sourceInstanceName;
 
-        @NameInMap("SourceSchemaName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("SourceSchemaName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String sourceSchemaName;
 
-        @NameInMap("TableIncludes")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TableIncludes")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List < TableIncludes> tableIncludes;
 
-        @NameInMap("TableMapping")
+        @com.aliyun.core.annotation.NameInMap("TableMapping")
         private java.util.List < String > tableMapping;
 
-        @NameInMap("TargetInstanceHost")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TargetInstanceHost")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String targetInstanceHost;
 
-        @NameInMap("Variables")
+        @com.aliyun.core.annotation.NameInMap("Variables")
         private java.util.List < Variables> variables;
 
         private Param(Builder builder) {
             this.archiveMethod = builder.archiveMethod;
             this.cronStr = builder.cronStr;
+            this.databaseId = builder.databaseId;
             this.logic = builder.logic;
             this.orderAfter = builder.orderAfter;
             this.runMethod = builder.runMethod;
@@ -414,6 +417,13 @@ public class CreateDataArchiveOrderRequest extends Request {
          */
         public String getCronStr() {
             return this.cronStr;
+        }
+
+        /**
+         * @return databaseId
+         */
+        public String getDatabaseId() {
+            return this.databaseId;
         }
 
         /**
@@ -489,6 +499,7 @@ public class CreateDataArchiveOrderRequest extends Request {
         public static final class Builder {
             private String archiveMethod; 
             private String cronStr; 
+            private String databaseId; 
             private Boolean logic; 
             private java.util.List < String > orderAfter; 
             private String runMethod; 
@@ -523,6 +534,14 @@ public class CreateDataArchiveOrderRequest extends Request {
              */
             public Builder cronStr(String cronStr) {
                 this.cronStr = cronStr;
+                return this;
+            }
+
+            /**
+             * DatabaseId.
+             */
+            public Builder databaseId(String databaseId) {
+                this.databaseId = databaseId;
                 return this;
             }
 

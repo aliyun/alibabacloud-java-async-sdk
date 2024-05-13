@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSQLReviewOptimizeDetailResponseBody</p>
  */
 public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("OptimizeDetail")
+    @com.aliyun.core.annotation.NameInMap("OptimizeDetail")
     private OptimizeDetail optimizeDetail;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetSQLReviewOptimizeDetailResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
     } 
 
     public static class Scripts extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("OpType")
+        @com.aliyun.core.annotation.NameInMap("OpType")
         private String opType;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private Scripts(Builder builder) {
@@ -213,22 +212,22 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
 
     }
     public static class Results extends TeaModel {
-        @NameInMap("Comments")
+        @com.aliyun.core.annotation.NameInMap("Comments")
         private String comments;
 
-        @NameInMap("Feedback")
+        @com.aliyun.core.annotation.NameInMap("Feedback")
         private String feedback;
 
-        @NameInMap("Messages")
+        @com.aliyun.core.annotation.NameInMap("Messages")
         private java.util.List < String > messages;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("RuleType")
+        @com.aliyun.core.annotation.NameInMap("RuleType")
         private String ruleType;
 
-        @NameInMap("Scripts")
+        @com.aliyun.core.annotation.NameInMap("Scripts")
         private java.util.List < Scripts> scripts;
 
         private Results(Builder builder) {
@@ -366,13 +365,13 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
 
     }
     public static class QualityResult extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("OccurError")
+        @com.aliyun.core.annotation.NameInMap("OccurError")
         private Boolean occurError;
 
-        @NameInMap("Results")
+        @com.aliyun.core.annotation.NameInMap("Results")
         private java.util.List < Results> results;
 
         private QualityResult(Builder builder) {
@@ -451,19 +450,19 @@ public class GetSQLReviewOptimizeDetailResponseBody extends TeaModel {
 
     }
     public static class OptimizeDetail extends TeaModel {
-        @NameInMap("DbId")
+        @com.aliyun.core.annotation.NameInMap("DbId")
         private Integer dbId;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Integer instanceId;
 
-        @NameInMap("QualityResult")
+        @com.aliyun.core.annotation.NameInMap("QualityResult")
         private QualityResult qualityResult;
 
-        @NameInMap("QueryKey")
+        @com.aliyun.core.annotation.NameInMap("QueryKey")
         private String queryKey;
 
-        @NameInMap("SqlType")
+        @com.aliyun.core.annotation.NameInMap("SqlType")
         private String sqlType;
 
         private OptimizeDetail(Builder builder) {

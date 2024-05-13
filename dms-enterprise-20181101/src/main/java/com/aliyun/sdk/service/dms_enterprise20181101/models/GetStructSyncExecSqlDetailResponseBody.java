@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetStructSyncExecSqlDetailResponseBody</p>
  */
 public class GetStructSyncExecSqlDetailResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StructSyncExecSqlDetail")
+    @com.aliyun.core.annotation.NameInMap("StructSyncExecSqlDetail")
     private StructSyncExecSqlDetail structSyncExecSqlDetail;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetStructSyncExecSqlDetailResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class GetStructSyncExecSqlDetailResponseBody extends TeaModel {
     } 
 
     public static class StructSyncExecSqlDetail extends TeaModel {
-        @NameInMap("ExecSql")
+        @com.aliyun.core.annotation.NameInMap("ExecSql")
         private String execSql;
 
-        @NameInMap("TotalSqlCount")
+        @com.aliyun.core.annotation.NameInMap("TotalSqlCount")
         private Long totalSqlCount;
 
         private StructSyncExecSqlDetail(Builder builder) {

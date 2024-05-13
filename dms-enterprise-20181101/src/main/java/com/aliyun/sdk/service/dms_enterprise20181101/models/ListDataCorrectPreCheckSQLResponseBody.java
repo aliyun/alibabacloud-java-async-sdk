@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDataCorrectPreCheckSQLResponseBody</p>
  */
 public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("PreCheckSQLList")
+    @com.aliyun.core.annotation.NameInMap("PreCheckSQLList")
     private java.util.List < PreCheckSQLList> preCheckSQLList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListDataCorrectPreCheckSQLResponseBody(Builder builder) {
@@ -136,25 +135,25 @@ public class ListDataCorrectPreCheckSQLResponseBody extends TeaModel {
     } 
 
     public static class PreCheckSQLList extends TeaModel {
-        @NameInMap("AffectRows")
+        @com.aliyun.core.annotation.NameInMap("AffectRows")
         private Long affectRows;
 
-        @NameInMap("CheckSQL")
+        @com.aliyun.core.annotation.NameInMap("CheckSQL")
         private String checkSQL;
 
-        @NameInMap("DbId")
+        @com.aliyun.core.annotation.NameInMap("DbId")
         private Long dbId;
 
-        @NameInMap("SQLReviewQueryKey")
+        @com.aliyun.core.annotation.NameInMap("SQLReviewQueryKey")
         private String SQLReviewQueryKey;
 
-        @NameInMap("SqlReviewStatus")
+        @com.aliyun.core.annotation.NameInMap("SqlReviewStatus")
         private String sqlReviewStatus;
 
-        @NameInMap("SqlType")
+        @com.aliyun.core.annotation.NameInMap("SqlType")
         private String sqlType;
 
-        @NameInMap("TableNames")
+        @com.aliyun.core.annotation.NameInMap("TableNames")
         private String tableNames;
 
         private PreCheckSQLList(Builder builder) {

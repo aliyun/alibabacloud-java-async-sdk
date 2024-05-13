@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetOrderBaseInfoResponseBody</p>
  */
 public class GetOrderBaseInfoResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("OrderBaseInfo")
+    @com.aliyun.core.annotation.NameInMap("OrderBaseInfo")
     private OrderBaseInfo orderBaseInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetOrderBaseInfoResponseBody(Builder builder) {
@@ -132,7 +131,7 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
     } 
 
     public static class RelatedUserList extends TeaModel {
-        @NameInMap("UserIds")
+        @com.aliyun.core.annotation.NameInMap("UserIds")
         private java.util.List < String > userIds;
 
         private RelatedUserList(Builder builder) {
@@ -173,7 +172,7 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
 
     }
     public static class RelatedUserNickList extends TeaModel {
-        @NameInMap("UserNicks")
+        @com.aliyun.core.annotation.NameInMap("UserNicks")
         private java.util.List < String > userNicks;
 
         private RelatedUserNickList(Builder builder) {
@@ -214,49 +213,49 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
 
     }
     public static class OrderBaseInfo extends TeaModel {
-        @NameInMap("AttachmentKey")
+        @com.aliyun.core.annotation.NameInMap("AttachmentKey")
         private String attachmentKey;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("Committer")
+        @com.aliyun.core.annotation.NameInMap("Committer")
         private String committer;
 
-        @NameInMap("CommitterId")
+        @com.aliyun.core.annotation.NameInMap("CommitterId")
         private Long committerId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("LastModifyTime")
+        @com.aliyun.core.annotation.NameInMap("LastModifyTime")
         private String lastModifyTime;
 
-        @NameInMap("OrderId")
+        @com.aliyun.core.annotation.NameInMap("OrderId")
         private Long orderId;
 
-        @NameInMap("OriginAttachmentName")
+        @com.aliyun.core.annotation.NameInMap("OriginAttachmentName")
         private String originAttachmentName;
 
-        @NameInMap("PluginType")
+        @com.aliyun.core.annotation.NameInMap("PluginType")
         private String pluginType;
 
-        @NameInMap("RelatedUserList")
+        @com.aliyun.core.annotation.NameInMap("RelatedUserList")
         private RelatedUserList relatedUserList;
 
-        @NameInMap("RelatedUserNickList")
+        @com.aliyun.core.annotation.NameInMap("RelatedUserNickList")
         private RelatedUserNickList relatedUserNickList;
 
-        @NameInMap("StatusCode")
+        @com.aliyun.core.annotation.NameInMap("StatusCode")
         private String statusCode;
 
-        @NameInMap("StatusDesc")
+        @com.aliyun.core.annotation.NameInMap("StatusDesc")
         private String statusDesc;
 
-        @NameInMap("WorkflowInstanceId")
+        @com.aliyun.core.annotation.NameInMap("WorkflowInstanceId")
         private Long workflowInstanceId;
 
-        @NameInMap("WorkflowStatusDesc")
+        @com.aliyun.core.annotation.NameInMap("WorkflowStatusDesc")
         private String workflowStatusDesc;
 
         private OrderBaseInfo(Builder builder) {

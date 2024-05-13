@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AnalyzeSQLLineageResponseBody</p>
  */
 public class AnalyzeSQLLineageResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("LineageResult")
+    @com.aliyun.core.annotation.NameInMap("LineageResult")
     private LineageResult lineageResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private AnalyzeSQLLineageResponseBody(Builder builder) {
@@ -136,10 +135,10 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
     } 
 
     public static class ProcessDetail extends TeaModel {
-        @NameInMap("CalWay")
+        @com.aliyun.core.annotation.NameInMap("CalWay")
         private String calWay;
 
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
         private ProcessDetail(Builder builder) {
@@ -201,19 +200,19 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
 
     }
     public static class Lineages extends TeaModel {
-        @NameInMap("Dst")
+        @com.aliyun.core.annotation.NameInMap("Dst")
         private String dst;
 
-        @NameInMap("LineageType")
+        @com.aliyun.core.annotation.NameInMap("LineageType")
         private String lineageType;
 
-        @NameInMap("OperType")
+        @com.aliyun.core.annotation.NameInMap("OperType")
         private String operType;
 
-        @NameInMap("ProcessDetail")
+        @com.aliyun.core.annotation.NameInMap("ProcessDetail")
         private ProcessDetail processDetail;
 
-        @NameInMap("Src")
+        @com.aliyun.core.annotation.NameInMap("Src")
         private String src;
 
         private Lineages(Builder builder) {
@@ -333,7 +332,7 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
 
     }
     public static class Fields extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Fields(Builder builder) {
@@ -374,16 +373,16 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
 
     }
     public static class ObjectMetadata extends TeaModel {
-        @NameInMap("Fields")
+        @com.aliyun.core.annotation.NameInMap("Fields")
         private java.util.List < Fields> fields;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private ObjectMetadata(Builder builder) {
@@ -484,10 +483,10 @@ public class AnalyzeSQLLineageResponseBody extends TeaModel {
 
     }
     public static class LineageResult extends TeaModel {
-        @NameInMap("Lineages")
+        @com.aliyun.core.annotation.NameInMap("Lineages")
         private java.util.List < Lineages> lineages;
 
-        @NameInMap("ObjectMetadata")
+        @com.aliyun.core.annotation.NameInMap("ObjectMetadata")
         private java.util.List < ObjectMetadata> objectMetadata;
 
         private LineageResult(Builder builder) {

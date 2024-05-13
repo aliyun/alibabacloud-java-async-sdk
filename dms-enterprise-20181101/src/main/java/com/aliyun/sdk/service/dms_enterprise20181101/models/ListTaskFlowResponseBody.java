@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTaskFlowResponseBody</p>
  */
 public class ListTaskFlowResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TaskFlowList")
+    @com.aliyun.core.annotation.NameInMap("TaskFlowList")
     private TaskFlowList taskFlowList;
 
     private ListTaskFlowResponseBody(Builder builder) {
@@ -136,28 +135,28 @@ public class ListTaskFlowResponseBody extends TeaModel {
     } 
 
     public static class TaskFlow extends TeaModel {
-        @NameInMap("CreatorId")
+        @com.aliyun.core.annotation.NameInMap("CreatorId")
         private String creatorId;
 
-        @NameInMap("CreatorNickName")
+        @com.aliyun.core.annotation.NameInMap("CreatorNickName")
         private String creatorNickName;
 
-        @NameInMap("DagOwnerNickName")
+        @com.aliyun.core.annotation.NameInMap("DagOwnerNickName")
         private String dagOwnerNickName;
 
-        @NameInMap("DeployId")
+        @com.aliyun.core.annotation.NameInMap("DeployId")
         private Long deployId;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("LatestInstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("LatestInstanceStatus")
         private Integer latestInstanceStatus;
 
-        @NameInMap("LatestInstanceTime")
+        @com.aliyun.core.annotation.NameInMap("LatestInstanceTime")
         private String latestInstanceTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private TaskFlow(Builder builder) {
@@ -327,7 +326,7 @@ public class ListTaskFlowResponseBody extends TeaModel {
 
     }
     public static class TaskFlowList extends TeaModel {
-        @NameInMap("TaskFlow")
+        @com.aliyun.core.annotation.NameInMap("TaskFlow")
         private java.util.List < TaskFlow> taskFlow;
 
         private TaskFlowList(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetStructSyncOrderDetailResponseBody</p>
  */
 public class GetStructSyncOrderDetailResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StructSyncOrderDetail")
+    @com.aliyun.core.annotation.NameInMap("StructSyncOrderDetail")
     private StructSyncOrderDetail structSyncOrderDetail;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetStructSyncOrderDetailResponseBody(Builder builder) {
@@ -132,19 +131,19 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
     } 
 
     public static class SourceDatabaseInfo extends TeaModel {
-        @NameInMap("DbId")
+        @com.aliyun.core.annotation.NameInMap("DbId")
         private Long dbId;
 
-        @NameInMap("DbType")
+        @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;
 
-        @NameInMap("EnvType")
+        @com.aliyun.core.annotation.NameInMap("EnvType")
         private String envType;
 
-        @NameInMap("Logic")
+        @com.aliyun.core.annotation.NameInMap("Logic")
         private Boolean logic;
 
-        @NameInMap("SearchName")
+        @com.aliyun.core.annotation.NameInMap("SearchName")
         private String searchName;
 
         private SourceDatabaseInfo(Builder builder) {
@@ -257,7 +256,7 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
 
     }
     public static class SourceVersionInfo extends TeaModel {
-        @NameInMap("VersionId")
+        @com.aliyun.core.annotation.NameInMap("VersionId")
         private String versionId;
 
         private SourceVersionInfo(Builder builder) {
@@ -298,10 +297,10 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
 
     }
     public static class TableInfoList extends TeaModel {
-        @NameInMap("SourceTableName")
+        @com.aliyun.core.annotation.NameInMap("SourceTableName")
         private String sourceTableName;
 
-        @NameInMap("TargetTableName")
+        @com.aliyun.core.annotation.NameInMap("TargetTableName")
         private String targetTableName;
 
         private TableInfoList(Builder builder) {
@@ -359,19 +358,19 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
 
     }
     public static class TargetDatabaseInfo extends TeaModel {
-        @NameInMap("DbId")
+        @com.aliyun.core.annotation.NameInMap("DbId")
         private Long dbId;
 
-        @NameInMap("DbType")
+        @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;
 
-        @NameInMap("EnvType")
+        @com.aliyun.core.annotation.NameInMap("EnvType")
         private String envType;
 
-        @NameInMap("Logic")
+        @com.aliyun.core.annotation.NameInMap("Logic")
         private Boolean logic;
 
-        @NameInMap("SearchName")
+        @com.aliyun.core.annotation.NameInMap("SearchName")
         private String searchName;
 
         private TargetDatabaseInfo(Builder builder) {
@@ -484,7 +483,7 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
 
     }
     public static class TargetVersionInfo extends TeaModel {
-        @NameInMap("VersionId")
+        @com.aliyun.core.annotation.NameInMap("VersionId")
         private String versionId;
 
         private TargetVersionInfo(Builder builder) {
@@ -525,28 +524,28 @@ public class GetStructSyncOrderDetailResponseBody extends TeaModel {
 
     }
     public static class StructSyncOrderDetail extends TeaModel {
-        @NameInMap("IgnoreError")
+        @com.aliyun.core.annotation.NameInMap("IgnoreError")
         private Boolean ignoreError;
 
-        @NameInMap("SourceDatabaseInfo")
+        @com.aliyun.core.annotation.NameInMap("SourceDatabaseInfo")
         private SourceDatabaseInfo sourceDatabaseInfo;
 
-        @NameInMap("SourceType")
+        @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
 
-        @NameInMap("SourceVersionInfo")
+        @com.aliyun.core.annotation.NameInMap("SourceVersionInfo")
         private SourceVersionInfo sourceVersionInfo;
 
-        @NameInMap("TableInfoList")
+        @com.aliyun.core.annotation.NameInMap("TableInfoList")
         private java.util.List < TableInfoList> tableInfoList;
 
-        @NameInMap("TargetDatabaseInfo")
+        @com.aliyun.core.annotation.NameInMap("TargetDatabaseInfo")
         private TargetDatabaseInfo targetDatabaseInfo;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
-        @NameInMap("TargetVersionInfo")
+        @com.aliyun.core.annotation.NameInMap("TargetVersionInfo")
         private TargetVersionInfo targetVersionInfo;
 
         private StructSyncOrderDetail(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSLARulesResponseBody</p>
  */
 public class ListSLARulesResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SLARuleList")
+    @com.aliyun.core.annotation.NameInMap("SLARuleList")
     private SLARuleList SLARuleList;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListSLARulesResponseBody(Builder builder) {
@@ -136,19 +135,19 @@ public class ListSLARulesResponseBody extends TeaModel {
     } 
 
     public static class SLARule extends TeaModel {
-        @NameInMap("DagId")
+        @com.aliyun.core.annotation.NameInMap("DagId")
         private Long dagId;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("IntervalMinutes")
+        @com.aliyun.core.annotation.NameInMap("IntervalMinutes")
         private Integer intervalMinutes;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
 
-        @NameInMap("RuleType")
+        @com.aliyun.core.annotation.NameInMap("RuleType")
         private Integer ruleType;
 
         private SLARule(Builder builder) {
@@ -261,7 +260,7 @@ public class ListSLARulesResponseBody extends TeaModel {
 
     }
     public static class SLARuleList extends TeaModel {
-        @NameInMap("SLARule")
+        @com.aliyun.core.annotation.NameInMap("SLARule")
         private java.util.List < SLARule> SLARule;
 
         private SLARuleList(Builder builder) {

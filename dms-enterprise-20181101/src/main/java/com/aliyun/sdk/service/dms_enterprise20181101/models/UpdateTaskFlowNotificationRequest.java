@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateTaskFlowNotificationRequest</p>
  */
 public class UpdateTaskFlowNotificationRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("DagId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DagId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long dagId;
 
-    @Query
-    @NameInMap("DagNotificationFail")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DagNotificationFail")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean dagNotificationFail;
 
-    @Query
-    @NameInMap("DagNotificationSla")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DagNotificationSla")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean dagNotificationSla;
 
-    @Query
-    @NameInMap("DagNotificationSuccess")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DagNotificationSuccess")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean dagNotificationSuccess;
 
-    @Query
-    @NameInMap("Tid")
-    @Validation(minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tid")
+    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long tid;
 
     private UpdateTaskFlowNotificationRequest(Builder builder) {

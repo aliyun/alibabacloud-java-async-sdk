@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDataCronClearTaskDetailListResponseBody</p>
  */
 public class GetDataCronClearTaskDetailListResponseBody extends TeaModel {
-    @NameInMap("DataCronClearTaskDetailList")
+    @com.aliyun.core.annotation.NameInMap("DataCronClearTaskDetailList")
     private java.util.List < DataCronClearTaskDetailList> dataCronClearTaskDetailList;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private GetDataCronClearTaskDetailListResponseBody(Builder builder) {
@@ -152,16 +151,16 @@ public class GetDataCronClearTaskDetailListResponseBody extends TeaModel {
     } 
 
     public static class DataCronClearTaskDetailList extends TeaModel {
-        @NameInMap("ActualAffectRows")
+        @com.aliyun.core.annotation.NameInMap("ActualAffectRows")
         private Long actualAffectRows;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DBTaskGroupId")
+        @com.aliyun.core.annotation.NameInMap("DBTaskGroupId")
         private Long DBTaskGroupId;
 
-        @NameInMap("jobStatus")
+        @com.aliyun.core.annotation.NameInMap("jobStatus")
         private String jobStatus;
 
         private DataCronClearTaskDetailList(Builder builder) {

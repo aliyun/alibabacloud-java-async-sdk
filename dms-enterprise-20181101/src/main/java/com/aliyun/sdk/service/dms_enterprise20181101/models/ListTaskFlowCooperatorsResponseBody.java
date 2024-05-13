@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTaskFlowCooperatorsResponseBody</p>
  */
 public class ListTaskFlowCooperatorsResponseBody extends TeaModel {
-    @NameInMap("CooperatorList")
+    @com.aliyun.core.annotation.NameInMap("CooperatorList")
     private CooperatorList cooperatorList;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListTaskFlowCooperatorsResponseBody(Builder builder) {
@@ -136,16 +135,16 @@ public class ListTaskFlowCooperatorsResponseBody extends TeaModel {
     } 
 
     public static class Cooperator extends TeaModel {
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("LoginName")
+        @com.aliyun.core.annotation.NameInMap("LoginName")
         private String loginName;
 
-        @NameInMap("NickName")
+        @com.aliyun.core.annotation.NameInMap("NickName")
         private String nickName;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private Cooperator(Builder builder) {
@@ -237,7 +236,7 @@ public class ListTaskFlowCooperatorsResponseBody extends TeaModel {
 
     }
     public static class CooperatorList extends TeaModel {
-        @NameInMap("Cooperator")
+        @com.aliyun.core.annotation.NameInMap("Cooperator")
         private java.util.List < Cooperator> cooperator;
 
         private CooperatorList(Builder builder) {

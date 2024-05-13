@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDataImportSQLPreCheckDetailResponseBody</p>
  */
 public class ListDataImportSQLPreCheckDetailResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("PreCheckSQLDetailList")
+    @com.aliyun.core.annotation.NameInMap("PreCheckSQLDetailList")
     private java.util.List < PreCheckSQLDetailList> preCheckSQLDetailList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListDataImportSQLPreCheckDetailResponseBody(Builder builder) {
@@ -156,16 +155,16 @@ public class ListDataImportSQLPreCheckDetailResponseBody extends TeaModel {
     } 
 
     public static class PreCheckSQLDetailList extends TeaModel {
-        @NameInMap("Skip")
+        @com.aliyun.core.annotation.NameInMap("Skip")
         private Boolean skip;
 
-        @NameInMap("SqlId")
+        @com.aliyun.core.annotation.NameInMap("SqlId")
         private Long sqlId;
 
-        @NameInMap("SqlType")
+        @com.aliyun.core.annotation.NameInMap("SqlType")
         private String sqlType;
 
-        @NameInMap("StatusCode")
+        @com.aliyun.core.annotation.NameInMap("StatusCode")
         private String statusCode;
 
         private PreCheckSQLDetailList(Builder builder) {

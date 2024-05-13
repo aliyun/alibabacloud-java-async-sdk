@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTableDBTopologyResponseBody</p>
  */
 public class GetTableDBTopologyResponseBody extends TeaModel {
-    @NameInMap("DBTopology")
+    @com.aliyun.core.annotation.NameInMap("DBTopology")
     private DBTopology DBTopology;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetTableDBTopologyResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
     } 
 
     public static class TableList extends TeaModel {
-        @NameInMap("TableId")
+        @com.aliyun.core.annotation.NameInMap("TableId")
         private String tableId;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
-        @NameInMap("TableType")
+        @com.aliyun.core.annotation.NameInMap("TableType")
         private String tableType;
 
         private TableList(Builder builder) {
@@ -213,19 +212,19 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
 
     }
     public static class DatabaseList extends TeaModel {
-        @NameInMap("DbId")
+        @com.aliyun.core.annotation.NameInMap("DbId")
         private String dbId;
 
-        @NameInMap("DbName")
+        @com.aliyun.core.annotation.NameInMap("DbName")
         private String dbName;
 
-        @NameInMap("DbType")
+        @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;
 
-        @NameInMap("EnvType")
+        @com.aliyun.core.annotation.NameInMap("EnvType")
         private String envType;
 
-        @NameInMap("TableList")
+        @com.aliyun.core.annotation.NameInMap("TableList")
         private java.util.List < TableList> tableList;
 
         private DatabaseList(Builder builder) {
@@ -346,19 +345,19 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
 
     }
     public static class DataSourceList extends TeaModel {
-        @NameInMap("DatabaseList")
+        @com.aliyun.core.annotation.NameInMap("DatabaseList")
         private java.util.List < DatabaseList> databaseList;
 
-        @NameInMap("DbType")
+        @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;
 
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Sid")
+        @com.aliyun.core.annotation.NameInMap("Sid")
         private String sid;
 
         private DataSourceList(Builder builder) {
@@ -467,13 +466,13 @@ public class GetTableDBTopologyResponseBody extends TeaModel {
 
     }
     public static class DBTopology extends TeaModel {
-        @NameInMap("DataSourceList")
+        @com.aliyun.core.annotation.NameInMap("DataSourceList")
         private java.util.List < DataSourceList> dataSourceList;
 
-        @NameInMap("TableGuid")
+        @com.aliyun.core.annotation.NameInMap("TableGuid")
         private String tableGuid;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private DBTopology(Builder builder) {

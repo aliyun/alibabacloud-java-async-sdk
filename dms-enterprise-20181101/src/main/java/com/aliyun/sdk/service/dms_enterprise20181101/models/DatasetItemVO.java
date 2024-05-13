@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,49 +11,49 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DatasetItemVO</p>
  */
 public class DatasetItemVO extends TeaModel {
-    @NameInMap("AsyncTaskList")
+    @com.aliyun.core.annotation.NameInMap("AsyncTaskList")
     private java.util.List < AsyncTaskVO > asyncTaskList;
 
-    @NameInMap("DatasetStatus")
+    @com.aliyun.core.annotation.NameInMap("DatasetStatus")
     private Integer datasetStatus;
 
-    @NameInMap("DatasetType")
+    @com.aliyun.core.annotation.NameInMap("DatasetType")
     private Integer datasetType;
 
-    @NameInMap("Digest")
+    @com.aliyun.core.annotation.NameInMap("Digest")
     private String digest;
 
-    @NameInMap("FileSystem")
+    @com.aliyun.core.annotation.NameInMap("FileSystem")
     private String fileSystem;
 
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
 
-    @NameInMap("KeyName")
+    @com.aliyun.core.annotation.NameInMap("KeyName")
     private String keyName;
 
-    @NameInMap("MoreInfo")
+    @com.aliyun.core.annotation.NameInMap("MoreInfo")
     private String moreInfo;
 
-    @NameInMap("Path")
+    @com.aliyun.core.annotation.NameInMap("Path")
     private String path;
 
-    @NameInMap("ProjectsLinked")
+    @com.aliyun.core.annotation.NameInMap("ProjectsLinked")
     private java.util.List < ProjectDetailsLiteVO > projectsLinked;
 
-    @NameInMap("RecentTaskStatus")
+    @com.aliyun.core.annotation.NameInMap("RecentTaskStatus")
     private Integer recentTaskStatus;
 
-    @NameInMap("Remark")
+    @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
-    @NameInMap("Schema")
+    @com.aliyun.core.annotation.NameInMap("Schema")
     private String schema;
 
-    @NameInMap("TableName")
+    @com.aliyun.core.annotation.NameInMap("TableName")
     private String tableName;
 
-    @NameInMap("Url")
+    @com.aliyun.core.annotation.NameInMap("Url")
     private String url;
 
     private DatasetItemVO(Builder builder) {

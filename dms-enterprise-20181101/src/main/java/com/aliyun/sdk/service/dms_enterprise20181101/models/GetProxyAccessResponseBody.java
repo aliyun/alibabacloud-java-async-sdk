@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetProxyAccessResponseBody</p>
  */
 public class GetProxyAccessResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("ProxyAccess")
+    @com.aliyun.core.annotation.NameInMap("ProxyAccess")
     private ProxyAccess proxyAccess;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetProxyAccessResponseBody(Builder builder) {
@@ -136,34 +135,34 @@ public class GetProxyAccessResponseBody extends TeaModel {
     } 
 
     public static class ProxyAccess extends TeaModel {
-        @NameInMap("AccessId")
+        @com.aliyun.core.annotation.NameInMap("AccessId")
         private String accessId;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("IndepAccount")
+        @com.aliyun.core.annotation.NameInMap("IndepAccount")
         private String indepAccount;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
 
-        @NameInMap("OriginInfo")
+        @com.aliyun.core.annotation.NameInMap("OriginInfo")
         private String originInfo;
 
-        @NameInMap("ProxyAccessId")
+        @com.aliyun.core.annotation.NameInMap("ProxyAccessId")
         private Long proxyAccessId;
 
-        @NameInMap("ProxyId")
+        @com.aliyun.core.annotation.NameInMap("ProxyId")
         private Long proxyId;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
-        @NameInMap("UserUid")
+        @com.aliyun.core.annotation.NameInMap("UserUid")
         private String userUid;
 
         private ProxyAccess(Builder builder) {

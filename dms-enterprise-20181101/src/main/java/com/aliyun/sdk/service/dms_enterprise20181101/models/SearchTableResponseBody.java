@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SearchTableResponseBody</p>
  */
 public class SearchTableResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SearchTableList")
+    @com.aliyun.core.annotation.NameInMap("SearchTableList")
     private SearchTableList searchTableList;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private SearchTableResponseBody(Builder builder) {
@@ -152,7 +151,7 @@ public class SearchTableResponseBody extends TeaModel {
     } 
 
     public static class OwnerIdList extends TeaModel {
-        @NameInMap("OwnerIds")
+        @com.aliyun.core.annotation.NameInMap("OwnerIds")
         private java.util.List < String > ownerIds;
 
         private OwnerIdList(Builder builder) {
@@ -193,7 +192,7 @@ public class SearchTableResponseBody extends TeaModel {
 
     }
     public static class OwnerNameList extends TeaModel {
-        @NameInMap("OwnerNames")
+        @com.aliyun.core.annotation.NameInMap("OwnerNames")
         private java.util.List < String > ownerNames;
 
         private OwnerNameList(Builder builder) {
@@ -234,49 +233,49 @@ public class SearchTableResponseBody extends TeaModel {
 
     }
     public static class SearchTable extends TeaModel {
-        @NameInMap("DBSearchName")
+        @com.aliyun.core.annotation.NameInMap("DBSearchName")
         private String DBSearchName;
 
-        @NameInMap("DatabaseId")
+        @com.aliyun.core.annotation.NameInMap("DatabaseId")
         private String databaseId;
 
-        @NameInMap("DbName")
+        @com.aliyun.core.annotation.NameInMap("DbName")
         private String dbName;
 
-        @NameInMap("DbType")
+        @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Encoding")
+        @com.aliyun.core.annotation.NameInMap("Encoding")
         private String encoding;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("EnvType")
+        @com.aliyun.core.annotation.NameInMap("EnvType")
         private String envType;
 
-        @NameInMap("Logic")
+        @com.aliyun.core.annotation.NameInMap("Logic")
         private Boolean logic;
 
-        @NameInMap("OwnerIdList")
+        @com.aliyun.core.annotation.NameInMap("OwnerIdList")
         private OwnerIdList ownerIdList;
 
-        @NameInMap("OwnerNameList")
+        @com.aliyun.core.annotation.NameInMap("OwnerNameList")
         private OwnerNameList ownerNameList;
 
-        @NameInMap("TableGuid")
+        @com.aliyun.core.annotation.NameInMap("TableGuid")
         private String tableGuid;
 
-        @NameInMap("TableId")
+        @com.aliyun.core.annotation.NameInMap("TableId")
         private String tableId;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
-        @NameInMap("TableSchemaName")
+        @com.aliyun.core.annotation.NameInMap("TableSchemaName")
         private String tableSchemaName;
 
         private SearchTable(Builder builder) {
@@ -569,7 +568,7 @@ public class SearchTableResponseBody extends TeaModel {
 
     }
     public static class SearchTableList extends TeaModel {
-        @NameInMap("SearchTable")
+        @com.aliyun.core.annotation.NameInMap("SearchTable")
         private java.util.List < SearchTable> searchTable;
 
         private SearchTableList(Builder builder) {

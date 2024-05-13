@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSensitiveColumnInfoResponseBody</p>
  */
 public class ListSensitiveColumnInfoResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SensitiveColumnList")
+    @com.aliyun.core.annotation.NameInMap("SensitiveColumnList")
     private SensitiveColumnList sensitiveColumnList;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListSensitiveColumnInfoResponseBody(Builder builder) {
@@ -152,10 +151,10 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
     } 
 
     public static class DefaultDesensitizationRule extends TeaModel {
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
         private DefaultDesensitizationRule(Builder builder) {
@@ -213,10 +212,10 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
 
     }
     public static class SemiDesensitizationRule extends TeaModel {
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
         private SemiDesensitizationRule(Builder builder) {
@@ -274,7 +273,7 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
 
     }
     public static class SemiDesensitizationRuleList extends TeaModel {
-        @NameInMap("SemiDesensitizationRule")
+        @com.aliyun.core.annotation.NameInMap("SemiDesensitizationRule")
         private java.util.List < SemiDesensitizationRule> semiDesensitizationRule;
 
         private SemiDesensitizationRuleList(Builder builder) {
@@ -315,37 +314,37 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
 
     }
     public static class SensitiveColumn extends TeaModel {
-        @NameInMap("CategoryName")
+        @com.aliyun.core.annotation.NameInMap("CategoryName")
         private String categoryName;
 
-        @NameInMap("ColumnName")
+        @com.aliyun.core.annotation.NameInMap("ColumnName")
         private String columnName;
 
-        @NameInMap("DefaultDesensitizationRule")
+        @com.aliyun.core.annotation.NameInMap("DefaultDesensitizationRule")
         private DefaultDesensitizationRule defaultDesensitizationRule;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Integer instanceId;
 
-        @NameInMap("IsPlain")
+        @com.aliyun.core.annotation.NameInMap("IsPlain")
         private Boolean isPlain;
 
-        @NameInMap("SampleData")
+        @com.aliyun.core.annotation.NameInMap("SampleData")
         private String sampleData;
 
-        @NameInMap("SchemaName")
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
         private String schemaName;
 
-        @NameInMap("SecurityLevel")
+        @com.aliyun.core.annotation.NameInMap("SecurityLevel")
         private String securityLevel;
 
-        @NameInMap("SemiDesensitizationRuleList")
+        @com.aliyun.core.annotation.NameInMap("SemiDesensitizationRuleList")
         private SemiDesensitizationRuleList semiDesensitizationRuleList;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
-        @NameInMap("UserSensitivityLevel")
+        @com.aliyun.core.annotation.NameInMap("UserSensitivityLevel")
         private String userSensitivityLevel;
 
         private SensitiveColumn(Builder builder) {
@@ -556,7 +555,7 @@ public class ListSensitiveColumnInfoResponseBody extends TeaModel {
 
     }
     public static class SensitiveColumnList extends TeaModel {
-        @NameInMap("SensitiveColumn")
+        @com.aliyun.core.annotation.NameInMap("SensitiveColumn")
         private java.util.List < SensitiveColumn> sensitiveColumn;
 
         private SensitiveColumnList(Builder builder) {

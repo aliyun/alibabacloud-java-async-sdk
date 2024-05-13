@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTaskFlowInstanceResponseBody</p>
  */
 public class ListTaskFlowInstanceResponseBody extends TeaModel {
-    @NameInMap("DAGInstanceList")
+    @com.aliyun.core.annotation.NameInMap("DAGInstanceList")
     private DAGInstanceList DAGInstanceList;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListTaskFlowInstanceResponseBody(Builder builder) {
@@ -156,40 +155,40 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
     } 
 
     public static class DAGInstance extends TeaModel {
-        @NameInMap("BusinessTime")
+        @com.aliyun.core.annotation.NameInMap("BusinessTime")
         private String businessTime;
 
-        @NameInMap("DagId")
+        @com.aliyun.core.annotation.NameInMap("DagId")
         private String dagId;
 
-        @NameInMap("DagName")
+        @com.aliyun.core.annotation.NameInMap("DagName")
         private String dagName;
 
-        @NameInMap("DagVersion")
+        @com.aliyun.core.annotation.NameInMap("DagVersion")
         private String dagVersion;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("HistoryDagId")
+        @com.aliyun.core.annotation.NameInMap("HistoryDagId")
         private Long historyDagId;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("OwnerName")
+        @com.aliyun.core.annotation.NameInMap("OwnerName")
         private String ownerName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("TriggerType")
+        @com.aliyun.core.annotation.NameInMap("TriggerType")
         private Integer triggerType;
 
-        @NameInMap("startTime")
+        @com.aliyun.core.annotation.NameInMap("startTime")
         private String startTime;
 
         private DAGInstance(Builder builder) {
@@ -429,7 +428,7 @@ public class ListTaskFlowInstanceResponseBody extends TeaModel {
 
     }
     public static class DAGInstanceList extends TeaModel {
-        @NameInMap("DAGInstance")
+        @com.aliyun.core.annotation.NameInMap("DAGInstance")
         private java.util.List < DAGInstance> DAGInstance;
 
         private DAGInstanceList(Builder builder) {

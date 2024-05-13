@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDataExportOrderRequest</p>
  */
 public class CreateDataExportOrderRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AttachmentKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AttachmentKey")
     private String attachmentKey;
 
-    @Query
-    @NameInMap("Comment")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comment")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String comment;
 
-    @Query
-    @NameInMap("ParentId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentId")
     private Long parentId;
 
-    @Query
-    @NameInMap("PluginParam")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PluginParam")
+    @com.aliyun.core.annotation.Validation(required = true)
     private PluginParam pluginParam;
 
-    @Query
-    @NameInMap("RelatedUserList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelatedUserList")
     private java.util.List < Long > relatedUserList;
 
-    @Query
-    @NameInMap("Tid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tid")
     private Long tid;
 
     private CreateDataExportOrderRequest(Builder builder) {
@@ -215,19 +214,19 @@ public class CreateDataExportOrderRequest extends Request {
     } 
 
     public static class Watermark extends TeaModel {
-        @NameInMap("ColumnName")
+        @com.aliyun.core.annotation.NameInMap("ColumnName")
         private String columnName;
 
-        @NameInMap("DataWatermark")
+        @com.aliyun.core.annotation.NameInMap("DataWatermark")
         private String dataWatermark;
 
-        @NameInMap("FileWatermark")
+        @com.aliyun.core.annotation.NameInMap("FileWatermark")
         private String fileWatermark;
 
-        @NameInMap("Keys")
+        @com.aliyun.core.annotation.NameInMap("Keys")
         private java.util.List < String > keys;
 
-        @NameInMap("WatermarkTypes")
+        @com.aliyun.core.annotation.NameInMap("WatermarkTypes")
         private java.util.List < String > watermarkTypes;
 
         private Watermark(Builder builder) {
@@ -336,38 +335,38 @@ public class CreateDataExportOrderRequest extends Request {
 
     }
     public static class PluginParam extends TeaModel {
-        @NameInMap("AffectRows")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("AffectRows")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long affectRows;
 
-        @NameInMap("Classify")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Classify")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String classify;
 
-        @NameInMap("DbId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DbId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long dbId;
 
-        @NameInMap("ExeSQL")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ExeSQL")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String exeSQL;
 
-        @NameInMap("IgnoreAffectRows")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("IgnoreAffectRows")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Boolean ignoreAffectRows;
 
-        @NameInMap("IgnoreAffectRowsReason")
+        @com.aliyun.core.annotation.NameInMap("IgnoreAffectRowsReason")
         private String ignoreAffectRowsReason;
 
-        @NameInMap("InstanceId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long instanceId;
 
-        @NameInMap("Logic")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Logic")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Boolean logic;
 
-        @NameInMap("Watermark")
+        @com.aliyun.core.annotation.NameInMap("Watermark")
         private Watermark watermark;
 
         private PluginParam(Builder builder) {

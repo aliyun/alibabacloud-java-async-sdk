@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListLogicTablesResponseBody</p>
  */
 public class ListLogicTablesResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("LogicTableList")
+    @com.aliyun.core.annotation.NameInMap("LogicTableList")
     private LogicTableList logicTableList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListLogicTablesResponseBody(Builder builder) {
@@ -152,7 +151,7 @@ public class ListLogicTablesResponseBody extends TeaModel {
     } 
 
     public static class OwnerIdList extends TeaModel {
-        @NameInMap("OwnerIds")
+        @com.aliyun.core.annotation.NameInMap("OwnerIds")
         private java.util.List < String > ownerIds;
 
         private OwnerIdList(Builder builder) {
@@ -193,7 +192,7 @@ public class ListLogicTablesResponseBody extends TeaModel {
 
     }
     public static class OwnerNameList extends TeaModel {
-        @NameInMap("OwnerNames")
+        @com.aliyun.core.annotation.NameInMap("OwnerNames")
         private java.util.List < String > ownerNames;
 
         private OwnerNameList(Builder builder) {
@@ -234,34 +233,34 @@ public class ListLogicTablesResponseBody extends TeaModel {
 
     }
     public static class LogicTable extends TeaModel {
-        @NameInMap("DatabaseId")
+        @com.aliyun.core.annotation.NameInMap("DatabaseId")
         private String databaseId;
 
-        @NameInMap("Logic")
+        @com.aliyun.core.annotation.NameInMap("Logic")
         private Boolean logic;
 
-        @NameInMap("OwnerIdList")
+        @com.aliyun.core.annotation.NameInMap("OwnerIdList")
         private OwnerIdList ownerIdList;
 
-        @NameInMap("OwnerNameList")
+        @com.aliyun.core.annotation.NameInMap("OwnerNameList")
         private OwnerNameList ownerNameList;
 
-        @NameInMap("SchemaName")
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
         private String schemaName;
 
-        @NameInMap("TableCount")
+        @com.aliyun.core.annotation.NameInMap("TableCount")
         private String tableCount;
 
-        @NameInMap("TableExpr")
+        @com.aliyun.core.annotation.NameInMap("TableExpr")
         private String tableExpr;
 
-        @NameInMap("TableGuid")
+        @com.aliyun.core.annotation.NameInMap("TableGuid")
         private String tableGuid;
 
-        @NameInMap("TableId")
+        @com.aliyun.core.annotation.NameInMap("TableId")
         private String tableId;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private LogicTable(Builder builder) {
@@ -455,7 +454,7 @@ public class ListLogicTablesResponseBody extends TeaModel {
 
     }
     public static class LogicTableList extends TeaModel {
-        @NameInMap("LogicTable")
+        @com.aliyun.core.annotation.NameInMap("LogicTable")
         private java.util.List < LogicTable> logicTable;
 
         private LogicTableList(Builder builder) {

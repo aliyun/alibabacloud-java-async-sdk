@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTaskFlowNotificationResponseBody</p>
  */
 public class GetTaskFlowNotificationResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("Notification")
+    @com.aliyun.core.annotation.NameInMap("Notification")
     private Notification notification;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetTaskFlowNotificationResponseBody(Builder builder) {
@@ -136,13 +135,13 @@ public class GetTaskFlowNotificationResponseBody extends TeaModel {
     } 
 
     public static class Notification extends TeaModel {
-        @NameInMap("DagNotificationFail")
+        @com.aliyun.core.annotation.NameInMap("DagNotificationFail")
         private Boolean dagNotificationFail;
 
-        @NameInMap("DagNotificationSla")
+        @com.aliyun.core.annotation.NameInMap("DagNotificationSla")
         private Boolean dagNotificationSla;
 
-        @NameInMap("DagNotificationSuccess")
+        @com.aliyun.core.annotation.NameInMap("DagNotificationSuccess")
         private Boolean dagNotificationSuccess;
 
         private Notification(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDataCorrectBackupFilesResponseBody</p>
  */
 public class GetDataCorrectBackupFilesResponseBody extends TeaModel {
-    @NameInMap("DataCorrectBackupFiles")
+    @com.aliyun.core.annotation.NameInMap("DataCorrectBackupFiles")
     private DataCorrectBackupFiles dataCorrectBackupFiles;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetDataCorrectBackupFilesResponseBody(Builder builder) {
@@ -132,7 +131,7 @@ public class GetDataCorrectBackupFilesResponseBody extends TeaModel {
     } 
 
     public static class DataCorrectBackupFiles extends TeaModel {
-        @NameInMap("FileUrl")
+        @com.aliyun.core.annotation.NameInMap("FileUrl")
         private java.util.List < String > fileUrl;
 
         private DataCorrectBackupFiles(Builder builder) {

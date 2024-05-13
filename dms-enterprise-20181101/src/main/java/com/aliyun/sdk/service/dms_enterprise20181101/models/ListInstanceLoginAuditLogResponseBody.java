@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstanceLoginAuditLogResponseBody</p>
  */
 public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("InstanceLoginAuditLogList")
+    @com.aliyun.core.annotation.NameInMap("InstanceLoginAuditLogList")
     private InstanceLoginAuditLogList instanceLoginAuditLogList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListInstanceLoginAuditLogResponseBody(Builder builder) {
@@ -156,25 +155,25 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
     } 
 
     public static class InstanceLoginAuditLog extends TeaModel {
-        @NameInMap("DbUser")
+        @com.aliyun.core.annotation.NameInMap("DbUser")
         private String dbUser;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("OpTime")
+        @com.aliyun.core.annotation.NameInMap("OpTime")
         private String opTime;
 
-        @NameInMap("RequestIp")
+        @com.aliyun.core.annotation.NameInMap("RequestIp")
         private String requestIp;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private InstanceLoginAuditLog(Builder builder) {
@@ -317,7 +316,7 @@ public class ListInstanceLoginAuditLogResponseBody extends TeaModel {
 
     }
     public static class InstanceLoginAuditLogList extends TeaModel {
-        @NameInMap("InstanceLoginAuditLog")
+        @com.aliyun.core.annotation.NameInMap("InstanceLoginAuditLog")
         private java.util.List < InstanceLoginAuditLog> instanceLoginAuditLog;
 
         private InstanceLoginAuditLogList(Builder builder) {

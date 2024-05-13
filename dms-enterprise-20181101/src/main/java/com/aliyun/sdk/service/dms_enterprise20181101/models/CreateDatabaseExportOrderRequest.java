@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDatabaseExportOrderRequest</p>
  */
 public class CreateDatabaseExportOrderRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AttachmentKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AttachmentKey")
     private String attachmentKey;
 
-    @Query
-    @NameInMap("Comment")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comment")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String comment;
 
-    @Query
-    @NameInMap("ParentId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentId")
     private Long parentId;
 
-    @Query
-    @NameInMap("PluginParam")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PluginParam")
+    @com.aliyun.core.annotation.Validation(required = true)
     private PluginParam pluginParam;
 
-    @Query
-    @NameInMap("RelatedUserList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelatedUserList")
     private java.util.List < Long > relatedUserList;
 
-    @Query
-    @NameInMap("Tid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tid")
     private Long tid;
 
     private CreateDatabaseExportOrderRequest(Builder builder) {
@@ -215,29 +214,29 @@ public class CreateDatabaseExportOrderRequest extends Request {
     } 
 
     public static class Config extends TeaModel {
-        @NameInMap("DataOption")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DataOption")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List < String > dataOption;
 
-        @NameInMap("ExportContent")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ExportContent")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String exportContent;
 
-        @NameInMap("ExportTypes")
+        @com.aliyun.core.annotation.NameInMap("ExportTypes")
         private java.util.List < String > exportTypes;
 
-        @NameInMap("SQLExtOption")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("SQLExtOption")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List < String > SQLExtOption;
 
-        @NameInMap("SelectedTables")
+        @com.aliyun.core.annotation.NameInMap("SelectedTables")
         private java.util.List < String > selectedTables;
 
-        @NameInMap("Tables")
+        @com.aliyun.core.annotation.NameInMap("Tables")
         private java.util.Map < String, String > tables;
 
-        @NameInMap("TargetOption")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TargetOption")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String targetOption;
 
         private Config(Builder builder) {
@@ -390,28 +389,28 @@ public class CreateDatabaseExportOrderRequest extends Request {
 
     }
     public static class PluginParam extends TeaModel {
-        @NameInMap("Classify")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Classify")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String classify;
 
-        @NameInMap("Config")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Config")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Config config;
 
-        @NameInMap("DbId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DbId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long dbId;
 
-        @NameInMap("InstanceId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long instanceId;
 
-        @NameInMap("Logic")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Logic")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Boolean logic;
 
-        @NameInMap("SearchName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("SearchName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String searchName;
 
         private PluginParam(Builder builder) {

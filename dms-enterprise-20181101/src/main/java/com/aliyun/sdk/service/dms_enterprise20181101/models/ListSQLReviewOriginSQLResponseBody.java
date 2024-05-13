@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSQLReviewOriginSQLResponseBody</p>
  */
 public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("OriginSQLList")
+    @com.aliyun.core.annotation.NameInMap("OriginSQLList")
     private java.util.List < OriginSQLList> originSQLList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListSQLReviewOriginSQLResponseBody(Builder builder) {
@@ -152,37 +151,37 @@ public class ListSQLReviewOriginSQLResponseBody extends TeaModel {
     } 
 
     public static class OriginSQLList extends TeaModel {
-        @NameInMap("CheckStatus")
+        @com.aliyun.core.annotation.NameInMap("CheckStatus")
         private String checkStatus;
 
-        @NameInMap("CheckedTime")
+        @com.aliyun.core.annotation.NameInMap("CheckedTime")
         private String checkedTime;
 
-        @NameInMap("FileId")
+        @com.aliyun.core.annotation.NameInMap("FileId")
         private Long fileId;
 
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("ReviewSummary")
+        @com.aliyun.core.annotation.NameInMap("ReviewSummary")
         private String reviewSummary;
 
-        @NameInMap("SQLContent")
+        @com.aliyun.core.annotation.NameInMap("SQLContent")
         private String SQLContent;
 
-        @NameInMap("SQLId")
+        @com.aliyun.core.annotation.NameInMap("SQLId")
         private Long SQLId;
 
-        @NameInMap("SQLName")
+        @com.aliyun.core.annotation.NameInMap("SQLName")
         private String SQLName;
 
-        @NameInMap("SQLReviewQueryKey")
+        @com.aliyun.core.annotation.NameInMap("SQLReviewQueryKey")
         private String SQLReviewQueryKey;
 
-        @NameInMap("SqlHash")
+        @com.aliyun.core.annotation.NameInMap("SqlHash")
         private String sqlHash;
 
-        @NameInMap("StatusDesc")
+        @com.aliyun.core.annotation.NameInMap("StatusDesc")
         private String statusDesc;
 
         private OriginSQLList(Builder builder) {

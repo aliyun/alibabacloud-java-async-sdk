@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDataCorrectOrderDetailResponseBody</p>
  */
 public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
-    @NameInMap("DataCorrectOrderDetail")
+    @com.aliyun.core.annotation.NameInMap("DataCorrectOrderDetail")
     private DataCorrectOrderDetail dataCorrectOrderDetail;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetDataCorrectOrderDetailResponseBody(Builder builder) {
@@ -136,10 +135,10 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
     } 
 
     public static class CronExtConfig extends TeaModel {
-        @NameInMap("CurrentClearTaskCount")
+        @com.aliyun.core.annotation.NameInMap("CurrentClearTaskCount")
         private Integer currentClearTaskCount;
 
-        @NameInMap("OptimizeTableAfterEveryClearTimes")
+        @com.aliyun.core.annotation.NameInMap("OptimizeTableAfterEveryClearTimes")
         private Integer optimizeTableAfterEveryClearTimes;
 
         private CronExtConfig(Builder builder) {
@@ -197,16 +196,16 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
 
     }
     public static class ImportExtConfig extends TeaModel {
-        @NameInMap("CsvFirstRowIsColumnDef")
+        @com.aliyun.core.annotation.NameInMap("CsvFirstRowIsColumnDef")
         private Boolean csvFirstRowIsColumnDef;
 
-        @NameInMap("IgnoreError")
+        @com.aliyun.core.annotation.NameInMap("IgnoreError")
         private Boolean ignoreError;
 
-        @NameInMap("ImportMode")
+        @com.aliyun.core.annotation.NameInMap("ImportMode")
         private String importMode;
 
-        @NameInMap("InsertType")
+        @com.aliyun.core.annotation.NameInMap("InsertType")
         private String insertType;
 
         private ImportExtConfig(Builder builder) {
@@ -298,46 +297,46 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
 
     }
     public static class ConfigDetail extends TeaModel {
-        @NameInMap("Cron")
+        @com.aliyun.core.annotation.NameInMap("Cron")
         private Boolean cron;
 
-        @NameInMap("CronCallTimes")
+        @com.aliyun.core.annotation.NameInMap("CronCallTimes")
         private Integer cronCallTimes;
 
-        @NameInMap("CronExtConfig")
+        @com.aliyun.core.annotation.NameInMap("CronExtConfig")
         private CronExtConfig cronExtConfig;
 
-        @NameInMap("CronFormat")
+        @com.aliyun.core.annotation.NameInMap("CronFormat")
         private String cronFormat;
 
-        @NameInMap("CronLastCallStartTime")
+        @com.aliyun.core.annotation.NameInMap("CronLastCallStartTime")
         private String cronLastCallStartTime;
 
-        @NameInMap("CronNextCallTime")
+        @com.aliyun.core.annotation.NameInMap("CronNextCallTime")
         private String cronNextCallTime;
 
-        @NameInMap("CronStatus")
+        @com.aliyun.core.annotation.NameInMap("CronStatus")
         private String cronStatus;
 
-        @NameInMap("CsvTableName")
+        @com.aliyun.core.annotation.NameInMap("CsvTableName")
         private String csvTableName;
 
-        @NameInMap("CurrentTaskId")
+        @com.aliyun.core.annotation.NameInMap("CurrentTaskId")
         private Long currentTaskId;
 
-        @NameInMap("DetailType")
+        @com.aliyun.core.annotation.NameInMap("DetailType")
         private String detailType;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Integer duration;
 
-        @NameInMap("FileEncoding")
+        @com.aliyun.core.annotation.NameInMap("FileEncoding")
         private String fileEncoding;
 
-        @NameInMap("FileType")
+        @com.aliyun.core.annotation.NameInMap("FileType")
         private String fileType;
 
-        @NameInMap("ImportExtConfig")
+        @com.aliyun.core.annotation.NameInMap("ImportExtConfig")
         private ImportExtConfig importExtConfig;
 
         private ConfigDetail(Builder builder) {
@@ -599,19 +598,19 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
 
     }
     public static class Database extends TeaModel {
-        @NameInMap("DbId")
+        @com.aliyun.core.annotation.NameInMap("DbId")
         private Integer dbId;
 
-        @NameInMap("DbType")
+        @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;
 
-        @NameInMap("EnvType")
+        @com.aliyun.core.annotation.NameInMap("EnvType")
         private String envType;
 
-        @NameInMap("Logic")
+        @com.aliyun.core.annotation.NameInMap("Logic")
         private Boolean logic;
 
-        @NameInMap("SearchName")
+        @com.aliyun.core.annotation.NameInMap("SearchName")
         private String searchName;
 
         private Database(Builder builder) {
@@ -734,7 +733,7 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
 
     }
     public static class DatabaseList extends TeaModel {
-        @NameInMap("Database")
+        @com.aliyun.core.annotation.NameInMap("Database")
         private java.util.List < Database> database;
 
         private DatabaseList(Builder builder) {
@@ -775,37 +774,37 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
 
     }
     public static class OrderDetail extends TeaModel {
-        @NameInMap("ActualAffectRows")
+        @com.aliyun.core.annotation.NameInMap("ActualAffectRows")
         private Long actualAffectRows;
 
-        @NameInMap("AttachmentName")
+        @com.aliyun.core.annotation.NameInMap("AttachmentName")
         private String attachmentName;
 
-        @NameInMap("Classify")
+        @com.aliyun.core.annotation.NameInMap("Classify")
         private String classify;
 
-        @NameInMap("EstimateAffectRows")
+        @com.aliyun.core.annotation.NameInMap("EstimateAffectRows")
         private Long estimateAffectRows;
 
-        @NameInMap("ExeSQL")
+        @com.aliyun.core.annotation.NameInMap("ExeSQL")
         private String exeSQL;
 
-        @NameInMap("IgnoreAffectRows")
+        @com.aliyun.core.annotation.NameInMap("IgnoreAffectRows")
         private Boolean ignoreAffectRows;
 
-        @NameInMap("IgnoreAffectRowsReason")
+        @com.aliyun.core.annotation.NameInMap("IgnoreAffectRowsReason")
         private String ignoreAffectRowsReason;
 
-        @NameInMap("RbAttachmentName")
+        @com.aliyun.core.annotation.NameInMap("RbAttachmentName")
         private String rbAttachmentName;
 
-        @NameInMap("RbSQL")
+        @com.aliyun.core.annotation.NameInMap("RbSQL")
         private String rbSQL;
 
-        @NameInMap("RbSQLType")
+        @com.aliyun.core.annotation.NameInMap("RbSQLType")
         private String rbSQLType;
 
-        @NameInMap("SqlType")
+        @com.aliyun.core.annotation.NameInMap("SqlType")
         private String sqlType;
 
         private OrderDetail(Builder builder) {
@@ -1028,13 +1027,13 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
 
     }
     public static class TaskCheckDO extends TeaModel {
-        @NameInMap("CheckStatus")
+        @com.aliyun.core.annotation.NameInMap("CheckStatus")
         private String checkStatus;
 
-        @NameInMap("CheckStep")
+        @com.aliyun.core.annotation.NameInMap("CheckStep")
         private String checkStep;
 
-        @NameInMap("UserTip")
+        @com.aliyun.core.annotation.NameInMap("UserTip")
         private String userTip;
 
         private TaskCheckDO(Builder builder) {
@@ -1121,7 +1120,7 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
 
     }
     public static class PreCheckDetail extends TeaModel {
-        @NameInMap("TaskCheckDO")
+        @com.aliyun.core.annotation.NameInMap("TaskCheckDO")
         private java.util.List < TaskCheckDO> taskCheckDO;
 
         private PreCheckDetail(Builder builder) {
@@ -1162,22 +1161,22 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
 
     }
     public static class DataCorrectOrderDetail extends TeaModel {
-        @NameInMap("ConfigDetail")
+        @com.aliyun.core.annotation.NameInMap("ConfigDetail")
         private ConfigDetail configDetail;
 
-        @NameInMap("DatabaseList")
+        @com.aliyun.core.annotation.NameInMap("DatabaseList")
         private DatabaseList databaseList;
 
-        @NameInMap("ExecMode")
+        @com.aliyun.core.annotation.NameInMap("ExecMode")
         private String execMode;
 
-        @NameInMap("OrderDetail")
+        @com.aliyun.core.annotation.NameInMap("OrderDetail")
         private OrderDetail orderDetail;
 
-        @NameInMap("PreCheckDetail")
+        @com.aliyun.core.annotation.NameInMap("PreCheckDetail")
         private PreCheckDetail preCheckDetail;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private DataCorrectOrderDetail(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetStructSyncJobDetailResponseBody</p>
  */
 public class GetStructSyncJobDetailResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StructSyncJobDetail")
+    @com.aliyun.core.annotation.NameInMap("StructSyncJobDetail")
     private StructSyncJobDetail structSyncJobDetail;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetStructSyncJobDetailResponseBody(Builder builder) {
@@ -132,28 +131,28 @@ public class GetStructSyncJobDetailResponseBody extends TeaModel {
     } 
 
     public static class StructSyncJobDetail extends TeaModel {
-        @NameInMap("DBTaskGroupId")
+        @com.aliyun.core.annotation.NameInMap("DBTaskGroupId")
         private Long DBTaskGroupId;
 
-        @NameInMap("ExecuteCount")
+        @com.aliyun.core.annotation.NameInMap("ExecuteCount")
         private Long executeCount;
 
-        @NameInMap("JobStatus")
+        @com.aliyun.core.annotation.NameInMap("JobStatus")
         private String jobStatus;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("SecurityRule")
+        @com.aliyun.core.annotation.NameInMap("SecurityRule")
         private String securityRule;
 
-        @NameInMap("SqlCount")
+        @com.aliyun.core.annotation.NameInMap("SqlCount")
         private Long sqlCount;
 
-        @NameInMap("TableAnalyzed")
+        @com.aliyun.core.annotation.NameInMap("TableAnalyzed")
         private Long tableAnalyzed;
 
-        @NameInMap("TableCount")
+        @com.aliyun.core.annotation.NameInMap("TableCount")
         private Long tableCount;
 
         private StructSyncJobDetail(Builder builder) {

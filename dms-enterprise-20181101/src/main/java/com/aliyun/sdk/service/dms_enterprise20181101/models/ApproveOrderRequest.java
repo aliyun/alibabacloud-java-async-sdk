@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,46 +11,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ApproveOrderRequest</p>
  */
 public class ApproveOrderRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ApprovalNodeId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApprovalNodeId")
     private Long approvalNodeId;
 
-    @Query
-    @NameInMap("ApprovalNodePos")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApprovalNodePos")
     private String approvalNodePos;
 
-    @Query
-    @NameInMap("ApprovalType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApprovalType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String approvalType;
 
-    @Query
-    @NameInMap("Comment")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comment")
     private String comment;
 
-    @Query
-    @NameInMap("NewApprover")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewApprover")
     private Long newApprover;
 
-    @Query
-    @NameInMap("NewApproverList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewApproverList")
     private String newApproverList;
 
-    @Query
-    @NameInMap("OldApprover")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OldApprover")
     private Long oldApprover;
 
-    @Query
-    @NameInMap("Tid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tid")
     private Long tid;
 
-    @Query
-    @NameInMap("WorkflowInstanceId")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkflowInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Long workflowInstanceId;
 
     private ApproveOrderRequest(Builder builder) {

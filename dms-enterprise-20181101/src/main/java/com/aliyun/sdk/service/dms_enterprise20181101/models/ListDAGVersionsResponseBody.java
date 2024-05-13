@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDAGVersionsResponseBody</p>
  */
 public class ListDAGVersionsResponseBody extends TeaModel {
-    @NameInMap("DagVersionList")
+    @com.aliyun.core.annotation.NameInMap("DagVersionList")
     private DagVersionList dagVersionList;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListDAGVersionsResponseBody(Builder builder) {
@@ -156,22 +155,22 @@ public class ListDAGVersionsResponseBody extends TeaModel {
     } 
 
     public static class DagVersion extends TeaModel {
-        @NameInMap("DagName")
+        @com.aliyun.core.annotation.NameInMap("DagName")
         private String dagName;
 
-        @NameInMap("DagOwnerId")
+        @com.aliyun.core.annotation.NameInMap("DagOwnerId")
         private String dagOwnerId;
 
-        @NameInMap("DagOwnerNickName")
+        @com.aliyun.core.annotation.NameInMap("DagOwnerNickName")
         private String dagOwnerNickName;
 
-        @NameInMap("LastVersionId")
+        @com.aliyun.core.annotation.NameInMap("LastVersionId")
         private Long lastVersionId;
 
-        @NameInMap("VersionComments")
+        @com.aliyun.core.annotation.NameInMap("VersionComments")
         private String versionComments;
 
-        @NameInMap("VersionId")
+        @com.aliyun.core.annotation.NameInMap("VersionId")
         private Long versionId;
 
         private DagVersion(Builder builder) {
@@ -297,7 +296,7 @@ public class ListDAGVersionsResponseBody extends TeaModel {
 
     }
     public static class DagVersionList extends TeaModel {
-        @NameInMap("DagVersion")
+        @com.aliyun.core.annotation.NameInMap("DagVersion")
         private java.util.List < DagVersion> dagVersion;
 
         private DagVersionList(Builder builder) {

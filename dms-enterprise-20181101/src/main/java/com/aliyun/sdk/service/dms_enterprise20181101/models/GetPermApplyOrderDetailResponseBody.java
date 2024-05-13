@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPermApplyOrderDetailResponseBody</p>
  */
 public class GetPermApplyOrderDetailResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("PermApplyOrderDetail")
+    @com.aliyun.core.annotation.NameInMap("PermApplyOrderDetail")
     private PermApplyOrderDetail permApplyOrderDetail;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetPermApplyOrderDetailResponseBody(Builder builder) {
@@ -136,10 +135,10 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
     } 
 
     public static class ColumnInfo extends TeaModel {
-        @NameInMap("ColumnName")
+        @com.aliyun.core.annotation.NameInMap("ColumnName")
         private String columnName;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private ColumnInfo(Builder builder) {
@@ -197,25 +196,25 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
 
     }
     public static class DatabaseInfo extends TeaModel {
-        @NameInMap("DbId")
+        @com.aliyun.core.annotation.NameInMap("DbId")
         private Long dbId;
 
-        @NameInMap("DbType")
+        @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;
 
-        @NameInMap("EnvType")
+        @com.aliyun.core.annotation.NameInMap("EnvType")
         private String envType;
 
-        @NameInMap("Logic")
+        @com.aliyun.core.annotation.NameInMap("Logic")
         private Boolean logic;
 
-        @NameInMap("OwnerIds")
+        @com.aliyun.core.annotation.NameInMap("OwnerIds")
         private java.util.List < Long > ownerIds;
 
-        @NameInMap("OwnerNickNames")
+        @com.aliyun.core.annotation.NameInMap("OwnerNickNames")
         private java.util.List < String > ownerNickNames;
 
-        @NameInMap("SearchName")
+        @com.aliyun.core.annotation.NameInMap("SearchName")
         private String searchName;
 
         private DatabaseInfo(Builder builder) {
@@ -362,34 +361,34 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
 
     }
     public static class InstanceInfo extends TeaModel {
-        @NameInMap("DbType")
+        @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;
 
-        @NameInMap("DbaId")
+        @com.aliyun.core.annotation.NameInMap("DbaId")
         private Long dbaId;
 
-        @NameInMap("DbaNickName")
+        @com.aliyun.core.annotation.NameInMap("DbaNickName")
         private String dbaNickName;
 
-        @NameInMap("EnvType")
+        @com.aliyun.core.annotation.NameInMap("EnvType")
         private String envType;
 
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("OwnerIds")
+        @com.aliyun.core.annotation.NameInMap("OwnerIds")
         private java.util.List < Long > ownerIds;
 
-        @NameInMap("OwnerNickName")
+        @com.aliyun.core.annotation.NameInMap("OwnerNickName")
         private java.util.List < String > ownerNickName;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Long port;
 
-        @NameInMap("SearchName")
+        @com.aliyun.core.annotation.NameInMap("SearchName")
         private String searchName;
 
         private InstanceInfo(Builder builder) {
@@ -583,7 +582,7 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
 
     }
     public static class TableInfo extends TeaModel {
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private TableInfo(Builder builder) {
@@ -624,16 +623,16 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
 
     }
     public static class Resources extends TeaModel {
-        @NameInMap("ColumnInfo")
+        @com.aliyun.core.annotation.NameInMap("ColumnInfo")
         private ColumnInfo columnInfo;
 
-        @NameInMap("DatabaseInfo")
+        @com.aliyun.core.annotation.NameInMap("DatabaseInfo")
         private DatabaseInfo databaseInfo;
 
-        @NameInMap("InstanceInfo")
+        @com.aliyun.core.annotation.NameInMap("InstanceInfo")
         private InstanceInfo instanceInfo;
 
-        @NameInMap("TableInfo")
+        @com.aliyun.core.annotation.NameInMap("TableInfo")
         private TableInfo tableInfo;
 
         private Resources(Builder builder) {
@@ -725,16 +724,16 @@ public class GetPermApplyOrderDetailResponseBody extends TeaModel {
 
     }
     public static class PermApplyOrderDetail extends TeaModel {
-        @NameInMap("ApplyType")
+        @com.aliyun.core.annotation.NameInMap("ApplyType")
         private String applyType;
 
-        @NameInMap("PermType")
+        @com.aliyun.core.annotation.NameInMap("PermType")
         private Long permType;
 
-        @NameInMap("Resources")
+        @com.aliyun.core.annotation.NameInMap("Resources")
         private java.util.List < Resources> resources;
 
-        @NameInMap("Seconds")
+        @com.aliyun.core.annotation.NameInMap("Seconds")
         private Long seconds;
 
         private PermApplyOrderDetail(Builder builder) {

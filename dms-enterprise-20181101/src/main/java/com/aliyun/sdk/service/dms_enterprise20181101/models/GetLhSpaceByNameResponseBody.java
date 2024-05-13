@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetLhSpaceByNameResponseBody</p>
  */
 public class GetLhSpaceByNameResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("LakehouseSpace")
+    @com.aliyun.core.annotation.NameInMap("LakehouseSpace")
     private LakehouseSpace lakehouseSpace;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetLhSpaceByNameResponseBody(Builder builder) {
@@ -136,37 +135,37 @@ public class GetLhSpaceByNameResponseBody extends TeaModel {
     } 
 
     public static class LakehouseSpace extends TeaModel {
-        @NameInMap("CreatorId")
+        @com.aliyun.core.annotation.NameInMap("CreatorId")
         private String creatorId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DevDbId")
+        @com.aliyun.core.annotation.NameInMap("DevDbId")
         private Integer devDbId;
 
-        @NameInMap("DwDbType")
+        @com.aliyun.core.annotation.NameInMap("DwDbType")
         private String dwDbType;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("IsDeleted")
+        @com.aliyun.core.annotation.NameInMap("IsDeleted")
         private Boolean isDeleted;
 
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private Integer mode;
 
-        @NameInMap("ProdDbId")
+        @com.aliyun.core.annotation.NameInMap("ProdDbId")
         private Integer prodDbId;
 
-        @NameInMap("SpaceConfig")
+        @com.aliyun.core.annotation.NameInMap("SpaceConfig")
         private String spaceConfig;
 
-        @NameInMap("SpaceName")
+        @com.aliyun.core.annotation.NameInMap("SpaceName")
         private String spaceName;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
         private LakehouseSpace(Builder builder) {

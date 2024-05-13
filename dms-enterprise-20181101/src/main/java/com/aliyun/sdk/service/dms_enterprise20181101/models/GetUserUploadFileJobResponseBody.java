@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetUserUploadFileJobResponseBody</p>
  */
 public class GetUserUploadFileJobResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("UploadFileJobDetail")
+    @com.aliyun.core.annotation.NameInMap("UploadFileJobDetail")
     private UploadFileJobDetail uploadFileJobDetail;
 
     private GetUserUploadFileJobResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
     } 
 
     public static class UploadOSSParam extends TeaModel {
-        @NameInMap("BucketName")
+        @com.aliyun.core.annotation.NameInMap("BucketName")
         private String bucketName;
 
-        @NameInMap("Endpoint")
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
 
-        @NameInMap("ObjectName")
+        @com.aliyun.core.annotation.NameInMap("ObjectName")
         private String objectName;
 
         private UploadOSSParam(Builder builder) {
@@ -213,37 +212,37 @@ public class GetUserUploadFileJobResponseBody extends TeaModel {
 
     }
     public static class UploadFileJobDetail extends TeaModel {
-        @NameInMap("AttachmentKey")
+        @com.aliyun.core.annotation.NameInMap("AttachmentKey")
         private String attachmentKey;
 
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("FileSize")
+        @com.aliyun.core.annotation.NameInMap("FileSize")
         private Long fileSize;
 
-        @NameInMap("FileSource")
+        @com.aliyun.core.annotation.NameInMap("FileSource")
         private String fileSource;
 
-        @NameInMap("JobKey")
+        @com.aliyun.core.annotation.NameInMap("JobKey")
         private String jobKey;
 
-        @NameInMap("JobStatus")
+        @com.aliyun.core.annotation.NameInMap("JobStatus")
         private String jobStatus;
 
-        @NameInMap("JobStatusDesc")
+        @com.aliyun.core.annotation.NameInMap("JobStatusDesc")
         private String jobStatusDesc;
 
-        @NameInMap("UploadOSSParam")
+        @com.aliyun.core.annotation.NameInMap("UploadOSSParam")
         private UploadOSSParam uploadOSSParam;
 
-        @NameInMap("UploadType")
+        @com.aliyun.core.annotation.NameInMap("UploadType")
         private String uploadType;
 
-        @NameInMap("UploadURL")
+        @com.aliyun.core.annotation.NameInMap("UploadURL")
         private String uploadURL;
 
-        @NameInMap("UploadedSize")
+        @com.aliyun.core.annotation.NameInMap("UploadedSize")
         private Long uploadedSize;
 
         private UploadFileJobDetail(Builder builder) {

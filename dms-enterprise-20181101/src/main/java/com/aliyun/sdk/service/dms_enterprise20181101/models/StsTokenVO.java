@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StsTokenVO</p>
  */
 public class StsTokenVO extends TeaModel {
-    @NameInMap("AccessKeyId")
+    @com.aliyun.core.annotation.NameInMap("AccessKeyId")
     private String accessKeyId;
 
-    @NameInMap("AccessKeySecret")
+    @com.aliyun.core.annotation.NameInMap("AccessKeySecret")
     private String accessKeySecret;
 
-    @NameInMap("Expiration")
+    @com.aliyun.core.annotation.NameInMap("Expiration")
     private String expiration;
 
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private StsTokenVO(Builder builder) {

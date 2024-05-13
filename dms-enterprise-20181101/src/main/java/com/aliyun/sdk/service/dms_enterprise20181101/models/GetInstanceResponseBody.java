@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInstanceResponseBody</p>
  */
 public class GetInstanceResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("Instance")
+    @com.aliyun.core.annotation.NameInMap("Instance")
     private Instance instance;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetInstanceResponseBody(Builder builder) {
@@ -136,7 +135,7 @@ public class GetInstanceResponseBody extends TeaModel {
     } 
 
     public static class OwnerIdList extends TeaModel {
-        @NameInMap("OwnerIds")
+        @com.aliyun.core.annotation.NameInMap("OwnerIds")
         private java.util.List < String > ownerIds;
 
         private OwnerIdList(Builder builder) {
@@ -177,7 +176,7 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
     public static class OwnerNameList extends TeaModel {
-        @NameInMap("OwnerNames")
+        @com.aliyun.core.annotation.NameInMap("OwnerNames")
         private java.util.List < String > ownerNames;
 
         private OwnerNameList(Builder builder) {
@@ -218,10 +217,10 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
     public static class StandardGroup extends TeaModel {
-        @NameInMap("GroupMode")
+        @com.aliyun.core.annotation.NameInMap("GroupMode")
         private String groupMode;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
         private StandardGroup(Builder builder) {
@@ -284,82 +283,82 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
     public static class Instance extends TeaModel {
-        @NameInMap("DataLinkName")
+        @com.aliyun.core.annotation.NameInMap("DataLinkName")
         private String dataLinkName;
 
-        @NameInMap("DatabasePassword")
+        @com.aliyun.core.annotation.NameInMap("DatabasePassword")
         private String databasePassword;
 
-        @NameInMap("DatabaseUser")
+        @com.aliyun.core.annotation.NameInMap("DatabaseUser")
         private String databaseUser;
 
-        @NameInMap("DbaId")
+        @com.aliyun.core.annotation.NameInMap("DbaId")
         private String dbaId;
 
-        @NameInMap("DbaNickName")
+        @com.aliyun.core.annotation.NameInMap("DbaNickName")
         private String dbaNickName;
 
-        @NameInMap("DdlOnline")
+        @com.aliyun.core.annotation.NameInMap("DdlOnline")
         private Integer ddlOnline;
 
-        @NameInMap("EcsInstanceId")
+        @com.aliyun.core.annotation.NameInMap("EcsInstanceId")
         private String ecsInstanceId;
 
-        @NameInMap("EcsRegion")
+        @com.aliyun.core.annotation.NameInMap("EcsRegion")
         private String ecsRegion;
 
-        @NameInMap("EnvType")
+        @com.aliyun.core.annotation.NameInMap("EnvType")
         private String envType;
 
-        @NameInMap("ExportTimeout")
+        @com.aliyun.core.annotation.NameInMap("ExportTimeout")
         private Integer exportTimeout;
 
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("InstanceAlias")
+        @com.aliyun.core.annotation.NameInMap("InstanceAlias")
         private String instanceAlias;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceSource")
+        @com.aliyun.core.annotation.NameInMap("InstanceSource")
         private String instanceSource;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("OwnerIdList")
+        @com.aliyun.core.annotation.NameInMap("OwnerIdList")
         private OwnerIdList ownerIdList;
 
-        @NameInMap("OwnerNameList")
+        @com.aliyun.core.annotation.NameInMap("OwnerNameList")
         private OwnerNameList ownerNameList;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("QueryTimeout")
+        @com.aliyun.core.annotation.NameInMap("QueryTimeout")
         private Integer queryTimeout;
 
-        @NameInMap("SafeRuleId")
+        @com.aliyun.core.annotation.NameInMap("SafeRuleId")
         private String safeRuleId;
 
-        @NameInMap("SellSitd")
+        @com.aliyun.core.annotation.NameInMap("SellSitd")
         private String sellSitd;
 
-        @NameInMap("Sid")
+        @com.aliyun.core.annotation.NameInMap("Sid")
         private String sid;
 
-        @NameInMap("StandardGroup")
+        @com.aliyun.core.annotation.NameInMap("StandardGroup")
         private StandardGroup standardGroup;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("UseDsql")
+        @com.aliyun.core.annotation.NameInMap("UseDsql")
         private Integer useDsql;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private Instance(Builder builder) {

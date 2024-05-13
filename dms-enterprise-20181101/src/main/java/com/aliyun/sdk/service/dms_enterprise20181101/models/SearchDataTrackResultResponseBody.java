@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SearchDataTrackResultResponseBody</p>
  */
 public class SearchDataTrackResultResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TrackResult")
+    @com.aliyun.core.annotation.NameInMap("TrackResult")
     private TrackResult trackResult;
 
     private SearchDataTrackResultResponseBody(Builder builder) {
@@ -136,25 +135,25 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
     } 
 
     public static class EventList extends TeaModel {
-        @NameInMap("DataAfter")
+        @com.aliyun.core.annotation.NameInMap("DataAfter")
         private java.util.List < String > dataAfter;
 
-        @NameInMap("DataBefore")
+        @com.aliyun.core.annotation.NameInMap("DataBefore")
         private java.util.List < String > dataBefore;
 
-        @NameInMap("EventId")
+        @com.aliyun.core.annotation.NameInMap("EventId")
         private Long eventId;
 
-        @NameInMap("EventLength")
+        @com.aliyun.core.annotation.NameInMap("EventLength")
         private Long eventLength;
 
-        @NameInMap("EventTimestamp")
+        @com.aliyun.core.annotation.NameInMap("EventTimestamp")
         private String eventTimestamp;
 
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
 
-        @NameInMap("RollSQL")
+        @com.aliyun.core.annotation.NameInMap("RollSQL")
         private String rollSQL;
 
         private EventList(Builder builder) {
@@ -305,16 +304,16 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
 
     }
     public static class Columns extends TeaModel {
-        @NameInMap("ColumnName")
+        @com.aliyun.core.annotation.NameInMap("ColumnName")
         private String columnName;
 
-        @NameInMap("ColumnPosition")
+        @com.aliyun.core.annotation.NameInMap("ColumnPosition")
         private Integer columnPosition;
 
-        @NameInMap("ColumnType")
+        @com.aliyun.core.annotation.NameInMap("ColumnType")
         private String columnType;
 
-        @NameInMap("Fictive")
+        @com.aliyun.core.annotation.NameInMap("Fictive")
         private Boolean fictive;
 
         private Columns(Builder builder) {
@@ -410,16 +409,16 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
 
     }
     public static class TableInfoList extends TeaModel {
-        @NameInMap("Columns")
+        @com.aliyun.core.annotation.NameInMap("Columns")
         private java.util.List < Columns> columns;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("SchemaName")
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
         private String schemaName;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private TableInfoList(Builder builder) {
@@ -511,13 +510,13 @@ public class SearchDataTrackResultResponseBody extends TeaModel {
 
     }
     public static class TrackResult extends TeaModel {
-        @NameInMap("EventList")
+        @com.aliyun.core.annotation.NameInMap("EventList")
         private java.util.List < EventList> eventList;
 
-        @NameInMap("TableInfoList")
+        @com.aliyun.core.annotation.NameInMap("TableInfoList")
         private java.util.List < TableInfoList> tableInfoList;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private TrackResult(Builder builder) {

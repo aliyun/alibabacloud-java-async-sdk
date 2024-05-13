@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListLogicTableRouteConfigResponseBody</p>
  */
 public class ListLogicTableRouteConfigResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("LogicTableRouteConfigList")
+    @com.aliyun.core.annotation.NameInMap("LogicTableRouteConfigList")
     private LogicTableRouteConfigList logicTableRouteConfigList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListLogicTableRouteConfigResponseBody(Builder builder) {
@@ -136,13 +135,13 @@ public class ListLogicTableRouteConfigResponseBody extends TeaModel {
     } 
 
     public static class LogicTableRouteConfig extends TeaModel {
-        @NameInMap("RouteExpr")
+        @com.aliyun.core.annotation.NameInMap("RouteExpr")
         private String routeExpr;
 
-        @NameInMap("RouteKey")
+        @com.aliyun.core.annotation.NameInMap("RouteKey")
         private String routeKey;
 
-        @NameInMap("TableId")
+        @com.aliyun.core.annotation.NameInMap("TableId")
         private Long tableId;
 
         private LogicTableRouteConfig(Builder builder) {
@@ -217,7 +216,7 @@ public class ListLogicTableRouteConfigResponseBody extends TeaModel {
 
     }
     public static class LogicTableRouteConfigList extends TeaModel {
-        @NameInMap("LogicTableRouteConfig")
+        @com.aliyun.core.annotation.NameInMap("LogicTableRouteConfig")
         private java.util.List < LogicTableRouteConfig> logicTableRouteConfig;
 
         private LogicTableRouteConfigList(Builder builder) {

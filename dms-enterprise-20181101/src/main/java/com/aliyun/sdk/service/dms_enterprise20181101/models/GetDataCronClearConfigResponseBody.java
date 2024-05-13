@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDataCronClearConfigResponseBody</p>
  */
 public class GetDataCronClearConfigResponseBody extends TeaModel {
-    @NameInMap("DataCronClearConfig")
+    @com.aliyun.core.annotation.NameInMap("DataCronClearConfig")
     private DataCronClearConfig dataCronClearConfig;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetDataCronClearConfigResponseBody(Builder builder) {
@@ -136,28 +135,28 @@ public class GetDataCronClearConfigResponseBody extends TeaModel {
     } 
 
     public static class DataCronClearConfig extends TeaModel {
-        @NameInMap("CronCallTimes")
+        @com.aliyun.core.annotation.NameInMap("CronCallTimes")
         private String cronCallTimes;
 
-        @NameInMap("CronFormat")
+        @com.aliyun.core.annotation.NameInMap("CronFormat")
         private String cronFormat;
 
-        @NameInMap("CronLastCallStartTime")
+        @com.aliyun.core.annotation.NameInMap("CronLastCallStartTime")
         private String cronLastCallStartTime;
 
-        @NameInMap("CronNextCallTime")
+        @com.aliyun.core.annotation.NameInMap("CronNextCallTime")
         private String cronNextCallTime;
 
-        @NameInMap("CronStatus")
+        @com.aliyun.core.annotation.NameInMap("CronStatus")
         private String cronStatus;
 
-        @NameInMap("CurrentClearTaskCount")
+        @com.aliyun.core.annotation.NameInMap("CurrentClearTaskCount")
         private Long currentClearTaskCount;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("OptimizeTableAfterEveryClearTimes")
+        @com.aliyun.core.annotation.NameInMap("OptimizeTableAfterEveryClearTimes")
         private Long optimizeTableAfterEveryClearTimes;
 
         private DataCronClearConfig(Builder builder) {

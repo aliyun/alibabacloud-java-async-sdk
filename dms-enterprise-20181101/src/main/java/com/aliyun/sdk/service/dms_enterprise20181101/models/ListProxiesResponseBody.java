@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListProxiesResponseBody</p>
  */
 public class ListProxiesResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("ProxyList")
+    @com.aliyun.core.annotation.NameInMap("ProxyList")
     private java.util.List < ProxyList> proxyList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListProxiesResponseBody(Builder builder) {
@@ -136,40 +135,40 @@ public class ListProxiesResponseBody extends TeaModel {
     } 
 
     public static class ProxyList extends TeaModel {
-        @NameInMap("CreatorId")
+        @com.aliyun.core.annotation.NameInMap("CreatorId")
         private Long creatorId;
 
-        @NameInMap("CreatorName")
+        @com.aliyun.core.annotation.NameInMap("CreatorName")
         private String creatorName;
 
-        @NameInMap("HttpsPort")
+        @com.aliyun.core.annotation.NameInMap("HttpsPort")
         private Integer httpsPort;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
 
-        @NameInMap("PrivateEnable")
+        @com.aliyun.core.annotation.NameInMap("PrivateEnable")
         private Boolean privateEnable;
 
-        @NameInMap("PrivateHost")
+        @com.aliyun.core.annotation.NameInMap("PrivateHost")
         private String privateHost;
 
-        @NameInMap("ProtocolPort")
+        @com.aliyun.core.annotation.NameInMap("ProtocolPort")
         private Integer protocolPort;
 
-        @NameInMap("ProtocolType")
+        @com.aliyun.core.annotation.NameInMap("ProtocolType")
         private String protocolType;
 
-        @NameInMap("ProxyId")
+        @com.aliyun.core.annotation.NameInMap("ProxyId")
         private Long proxyId;
 
-        @NameInMap("PublicEnable")
+        @com.aliyun.core.annotation.NameInMap("PublicEnable")
         private Boolean publicEnable;
 
-        @NameInMap("PublicHost")
+        @com.aliyun.core.annotation.NameInMap("PublicHost")
         private String publicHost;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private ProxyList(Builder builder) {

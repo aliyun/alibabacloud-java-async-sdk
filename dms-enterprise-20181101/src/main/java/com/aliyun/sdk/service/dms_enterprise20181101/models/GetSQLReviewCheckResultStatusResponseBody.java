@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSQLReviewCheckResultStatusResponseBody</p>
  */
 public class GetSQLReviewCheckResultStatusResponseBody extends TeaModel {
-    @NameInMap("CheckResultStatus")
+    @com.aliyun.core.annotation.NameInMap("CheckResultStatus")
     private CheckResultStatus checkResultStatus;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetSQLReviewCheckResultStatusResponseBody(Builder builder) {
@@ -132,22 +131,22 @@ public class GetSQLReviewCheckResultStatusResponseBody extends TeaModel {
     } 
 
     public static class CheckStatusResult extends TeaModel {
-        @NameInMap("CheckNotPass")
+        @com.aliyun.core.annotation.NameInMap("CheckNotPass")
         private Long checkNotPass;
 
-        @NameInMap("CheckPass")
+        @com.aliyun.core.annotation.NameInMap("CheckPass")
         private Long checkPass;
 
-        @NameInMap("ForceNotPass")
+        @com.aliyun.core.annotation.NameInMap("ForceNotPass")
         private Long forceNotPass;
 
-        @NameInMap("ForcePass")
+        @com.aliyun.core.annotation.NameInMap("ForcePass")
         private Long forcePass;
 
-        @NameInMap("New")
+        @com.aliyun.core.annotation.NameInMap("New")
         private Long _new;
 
-        @NameInMap("Unknown")
+        @com.aliyun.core.annotation.NameInMap("Unknown")
         private Long unknown;
 
         private CheckStatusResult(Builder builder) {
@@ -273,22 +272,22 @@ public class GetSQLReviewCheckResultStatusResponseBody extends TeaModel {
 
     }
     public static class SQLReviewResult extends TeaModel {
-        @NameInMap("MustImprove")
+        @com.aliyun.core.annotation.NameInMap("MustImprove")
         private Long mustImprove;
 
-        @NameInMap("PotentialIssue")
+        @com.aliyun.core.annotation.NameInMap("PotentialIssue")
         private Long potentialIssue;
 
-        @NameInMap("SuggestImprove")
+        @com.aliyun.core.annotation.NameInMap("SuggestImprove")
         private Long suggestImprove;
 
-        @NameInMap("TableIndexSuggest")
+        @com.aliyun.core.annotation.NameInMap("TableIndexSuggest")
         private Long tableIndexSuggest;
 
-        @NameInMap("UseDmsDmlUnlock")
+        @com.aliyun.core.annotation.NameInMap("UseDmsDmlUnlock")
         private Long useDmsDmlUnlock;
 
-        @NameInMap("UseDmsToolkit")
+        @com.aliyun.core.annotation.NameInMap("UseDmsToolkit")
         private Long useDmsToolkit;
 
         private SQLReviewResult(Builder builder) {
@@ -414,16 +413,16 @@ public class GetSQLReviewCheckResultStatusResponseBody extends TeaModel {
 
     }
     public static class CheckResultStatus extends TeaModel {
-        @NameInMap("CheckStatusResult")
+        @com.aliyun.core.annotation.NameInMap("CheckStatusResult")
         private CheckStatusResult checkStatusResult;
 
-        @NameInMap("CheckedCount")
+        @com.aliyun.core.annotation.NameInMap("CheckedCount")
         private Long checkedCount;
 
-        @NameInMap("SQLReviewResult")
+        @com.aliyun.core.annotation.NameInMap("SQLReviewResult")
         private SQLReviewResult SQLReviewResult;
 
-        @NameInMap("TotalSQLCount")
+        @com.aliyun.core.annotation.NameInMap("TotalSQLCount")
         private Long totalSQLCount;
 
         private CheckResultStatus(Builder builder) {

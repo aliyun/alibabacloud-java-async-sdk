@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateStructSyncOrderRequest</p>
  */
 public class CreateStructSyncOrderRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AttachmentKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AttachmentKey")
     private String attachmentKey;
 
-    @Query
-    @NameInMap("Comment")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comment")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String comment;
 
-    @Query
-    @NameInMap("Param")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Param")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Param param;
 
-    @Query
-    @NameInMap("RelatedUserList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelatedUserList")
     private java.util.List < Long > relatedUserList;
 
-    @Query
-    @NameInMap("Tid")
-    @Validation(minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tid")
+    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long tid;
 
     private CreateStructSyncOrderRequest(Builder builder) {
@@ -193,18 +192,18 @@ public class CreateStructSyncOrderRequest extends Request {
     } 
 
     public static class Source extends TeaModel {
-        @NameInMap("DbId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DbId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long dbId;
 
-        @NameInMap("DbSearchName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DbSearchName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String dbSearchName;
 
-        @NameInMap("Logic")
+        @com.aliyun.core.annotation.NameInMap("Logic")
         private Boolean logic;
 
-        @NameInMap("VersionId")
+        @com.aliyun.core.annotation.NameInMap("VersionId")
         private String versionId;
 
         private Source(Builder builder) {
@@ -300,10 +299,10 @@ public class CreateStructSyncOrderRequest extends Request {
 
     }
     public static class TableInfoList extends TeaModel {
-        @NameInMap("SourceTableName")
+        @com.aliyun.core.annotation.NameInMap("SourceTableName")
         private String sourceTableName;
 
-        @NameInMap("TargetTableName")
+        @com.aliyun.core.annotation.NameInMap("TargetTableName")
         private String targetTableName;
 
         private TableInfoList(Builder builder) {
@@ -361,18 +360,18 @@ public class CreateStructSyncOrderRequest extends Request {
 
     }
     public static class Target extends TeaModel {
-        @NameInMap("DbId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DbId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long dbId;
 
-        @NameInMap("DbSearchName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DbSearchName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String dbSearchName;
 
-        @NameInMap("Logic")
+        @com.aliyun.core.annotation.NameInMap("Logic")
         private Boolean logic;
 
-        @NameInMap("VersionId")
+        @com.aliyun.core.annotation.NameInMap("VersionId")
         private String versionId;
 
         private Target(Builder builder) {
@@ -471,18 +470,18 @@ public class CreateStructSyncOrderRequest extends Request {
 
     }
     public static class Param extends TeaModel {
-        @NameInMap("IgnoreError")
+        @com.aliyun.core.annotation.NameInMap("IgnoreError")
         private Boolean ignoreError;
 
-        @NameInMap("Source")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Source")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Source source;
 
-        @NameInMap("TableInfoList")
+        @com.aliyun.core.annotation.NameInMap("TableInfoList")
         private java.util.List < TableInfoList> tableInfoList;
 
-        @NameInMap("Target")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Target")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Target target;
 
         private Param(Builder builder) {

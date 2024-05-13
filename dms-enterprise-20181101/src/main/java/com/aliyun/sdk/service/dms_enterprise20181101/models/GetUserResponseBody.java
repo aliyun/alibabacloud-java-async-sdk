@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetUserResponseBody</p>
  */
 public class GetUserResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("User")
+    @com.aliyun.core.annotation.NameInMap("User")
     private User user;
 
     private GetUserResponseBody(Builder builder) {
@@ -136,7 +135,7 @@ public class GetUserResponseBody extends TeaModel {
     } 
 
     public static class RoleIdList extends TeaModel {
-        @NameInMap("RoleIds")
+        @com.aliyun.core.annotation.NameInMap("RoleIds")
         private java.util.List < Integer > roleIds;
 
         private RoleIdList(Builder builder) {
@@ -177,7 +176,7 @@ public class GetUserResponseBody extends TeaModel {
 
     }
     public static class RoleNameList extends TeaModel {
-        @NameInMap("RoleNames")
+        @com.aliyun.core.annotation.NameInMap("RoleNames")
         private java.util.List < String > roleNames;
 
         private RoleNameList(Builder builder) {
@@ -218,58 +217,58 @@ public class GetUserResponseBody extends TeaModel {
 
     }
     public static class User extends TeaModel {
-        @NameInMap("CurExecuteCount")
+        @com.aliyun.core.annotation.NameInMap("CurExecuteCount")
         private Long curExecuteCount;
 
-        @NameInMap("CurResultCount")
+        @com.aliyun.core.annotation.NameInMap("CurResultCount")
         private Long curResultCount;
 
-        @NameInMap("DingRobot")
+        @com.aliyun.core.annotation.NameInMap("DingRobot")
         private String dingRobot;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("LastLoginTime")
+        @com.aliyun.core.annotation.NameInMap("LastLoginTime")
         private String lastLoginTime;
 
-        @NameInMap("MaxExecuteCount")
+        @com.aliyun.core.annotation.NameInMap("MaxExecuteCount")
         private Long maxExecuteCount;
 
-        @NameInMap("MaxResultCount")
+        @com.aliyun.core.annotation.NameInMap("MaxResultCount")
         private Long maxResultCount;
 
-        @NameInMap("Mobile")
+        @com.aliyun.core.annotation.NameInMap("Mobile")
         private String mobile;
 
-        @NameInMap("NickName")
+        @com.aliyun.core.annotation.NameInMap("NickName")
         private String nickName;
 
-        @NameInMap("NotificationMode")
+        @com.aliyun.core.annotation.NameInMap("NotificationMode")
         private String notificationMode;
 
-        @NameInMap("ParentUid")
+        @com.aliyun.core.annotation.NameInMap("ParentUid")
         private Long parentUid;
 
-        @NameInMap("RoleIdList")
+        @com.aliyun.core.annotation.NameInMap("RoleIdList")
         private RoleIdList roleIdList;
 
-        @NameInMap("RoleNameList")
+        @com.aliyun.core.annotation.NameInMap("RoleNameList")
         private RoleNameList roleNameList;
 
-        @NameInMap("SignatureMethod")
+        @com.aliyun.core.annotation.NameInMap("SignatureMethod")
         private String signatureMethod;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Uid")
+        @com.aliyun.core.annotation.NameInMap("Uid")
         private String uid;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("Webhook")
+        @com.aliyun.core.annotation.NameInMap("Webhook")
         private String webhook;
 
         private User(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAuthorityTemplateItemResponseBody</p>
  */
 public class GetAuthorityTemplateItemResponseBody extends TeaModel {
-    @NameInMap("AuthorityTemplateItemList")
+    @com.aliyun.core.annotation.NameInMap("AuthorityTemplateItemList")
     private AuthorityTemplateItemList authorityTemplateItemList;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Tid")
+    @com.aliyun.core.annotation.NameInMap("Tid")
     private Long tid;
 
     private GetAuthorityTemplateItemResponseBody(Builder builder) {
@@ -156,28 +155,28 @@ public class GetAuthorityTemplateItemResponseBody extends TeaModel {
     } 
 
     public static class AuthorityTemplateItem extends TeaModel {
-        @NameInMap("Attribute")
+        @com.aliyun.core.annotation.NameInMap("Attribute")
         private String attribute;
 
-        @NameInMap("DbId")
+        @com.aliyun.core.annotation.NameInMap("DbId")
         private Long dbId;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
 
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private Long itemId;
 
-        @NameInMap("ModifierId")
+        @com.aliyun.core.annotation.NameInMap("ModifierId")
         private Long modifierId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private Long templateId;
 
         private AuthorityTemplateItem(Builder builder) {
@@ -344,7 +343,7 @@ public class GetAuthorityTemplateItemResponseBody extends TeaModel {
 
     }
     public static class AuthorityTemplateItemList extends TeaModel {
-        @NameInMap("AuthorityTemplateItem")
+        @com.aliyun.core.annotation.NameInMap("AuthorityTemplateItem")
         private java.util.List < AuthorityTemplateItem> authorityTemplateItem;
 
         private AuthorityTemplateItemList(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetOpLogResponseBody</p>
  */
 public class GetOpLogResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("OpLogDetails")
+    @com.aliyun.core.annotation.NameInMap("OpLogDetails")
     private OpLogDetails opLogDetails;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private GetOpLogResponseBody(Builder builder) {
@@ -156,28 +155,28 @@ public class GetOpLogResponseBody extends TeaModel {
     } 
 
     public static class OpLogDetail extends TeaModel {
-        @NameInMap("Database")
+        @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
 
-        @NameInMap("Module")
+        @com.aliyun.core.annotation.NameInMap("Module")
         private String module;
 
-        @NameInMap("OpContent")
+        @com.aliyun.core.annotation.NameInMap("OpContent")
         private String opContent;
 
-        @NameInMap("OpTime")
+        @com.aliyun.core.annotation.NameInMap("OpTime")
         private String opTime;
 
-        @NameInMap("OpUserId")
+        @com.aliyun.core.annotation.NameInMap("OpUserId")
         private Long opUserId;
 
-        @NameInMap("OrderId")
+        @com.aliyun.core.annotation.NameInMap("OrderId")
         private Long orderId;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserNick")
+        @com.aliyun.core.annotation.NameInMap("UserNick")
         private String userNick;
 
         private OpLogDetail(Builder builder) {
@@ -347,7 +346,7 @@ public class GetOpLogResponseBody extends TeaModel {
 
     }
     public static class OpLogDetails extends TeaModel {
-        @NameInMap("OpLogDetail")
+        @com.aliyun.core.annotation.NameInMap("OpLogDetail")
         private java.util.List < OpLogDetail> opLogDetail;
 
         private OpLogDetails(Builder builder) {

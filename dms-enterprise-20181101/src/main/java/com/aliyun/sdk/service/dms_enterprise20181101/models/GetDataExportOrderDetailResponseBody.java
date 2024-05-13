@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDataExportOrderDetailResponseBody</p>
  */
 public class GetDataExportOrderDetailResponseBody extends TeaModel {
-    @NameInMap("DataExportOrderDetail")
+    @com.aliyun.core.annotation.NameInMap("DataExportOrderDetail")
     private DataExportOrderDetail dataExportOrderDetail;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetDataExportOrderDetailResponseBody(Builder builder) {
@@ -136,10 +135,10 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
     } 
 
     public static class KeyInfo extends TeaModel {
-        @NameInMap("JobStatus")
+        @com.aliyun.core.annotation.NameInMap("JobStatus")
         private String jobStatus;
 
-        @NameInMap("PreCheckId")
+        @com.aliyun.core.annotation.NameInMap("PreCheckId")
         private Long preCheckId;
 
         private KeyInfo(Builder builder) {
@@ -209,31 +208,31 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
 
     }
     public static class OrderDetail extends TeaModel {
-        @NameInMap("ActualAffectRows")
+        @com.aliyun.core.annotation.NameInMap("ActualAffectRows")
         private Long actualAffectRows;
 
-        @NameInMap("Classify")
+        @com.aliyun.core.annotation.NameInMap("Classify")
         private String classify;
 
-        @NameInMap("Database")
+        @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
 
-        @NameInMap("DbId")
+        @com.aliyun.core.annotation.NameInMap("DbId")
         private Integer dbId;
 
-        @NameInMap("EnvType")
+        @com.aliyun.core.annotation.NameInMap("EnvType")
         private String envType;
 
-        @NameInMap("ExeSQL")
+        @com.aliyun.core.annotation.NameInMap("ExeSQL")
         private String exeSQL;
 
-        @NameInMap("IgnoreAffectRows")
+        @com.aliyun.core.annotation.NameInMap("IgnoreAffectRows")
         private Boolean ignoreAffectRows;
 
-        @NameInMap("IgnoreAffectRowsReason")
+        @com.aliyun.core.annotation.NameInMap("IgnoreAffectRowsReason")
         private String ignoreAffectRowsReason;
 
-        @NameInMap("Logic")
+        @com.aliyun.core.annotation.NameInMap("Logic")
         private Boolean logic;
 
         private OrderDetail(Builder builder) {
@@ -410,10 +409,10 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
 
     }
     public static class DataExportOrderDetail extends TeaModel {
-        @NameInMap("KeyInfo")
+        @com.aliyun.core.annotation.NameInMap("KeyInfo")
         private KeyInfo keyInfo;
 
-        @NameInMap("OrderDetail")
+        @com.aliyun.core.annotation.NameInMap("OrderDetail")
         private OrderDetail orderDetail;
 
         private DataExportOrderDetail(Builder builder) {

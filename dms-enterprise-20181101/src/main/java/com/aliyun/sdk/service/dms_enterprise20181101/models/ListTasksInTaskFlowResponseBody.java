@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTasksInTaskFlowResponseBody</p>
  */
 public class ListTasksInTaskFlowResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Tasks")
+    @com.aliyun.core.annotation.NameInMap("Tasks")
     private Tasks tasks;
 
     private ListTasksInTaskFlowResponseBody(Builder builder) {
@@ -136,28 +135,28 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
     } 
 
     public static class Task extends TeaModel {
-        @NameInMap("GraphParam")
+        @com.aliyun.core.annotation.NameInMap("GraphParam")
         private String graphParam;
 
-        @NameInMap("NodeConfig")
+        @com.aliyun.core.annotation.NameInMap("NodeConfig")
         private String nodeConfig;
 
-        @NameInMap("NodeContent")
+        @com.aliyun.core.annotation.NameInMap("NodeContent")
         private String nodeContent;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("NodeOutput")
+        @com.aliyun.core.annotation.NameInMap("NodeOutput")
         private String nodeOutput;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
-        @NameInMap("TimeVariables")
+        @com.aliyun.core.annotation.NameInMap("TimeVariables")
         private String timeVariables;
 
         private Task(Builder builder) {
@@ -317,7 +316,7 @@ public class ListTasksInTaskFlowResponseBody extends TeaModel {
 
     }
     public static class Tasks extends TeaModel {
-        @NameInMap("Task")
+        @com.aliyun.core.annotation.NameInMap("Task")
         private java.util.List < Task> task;
 
         private Tasks(Builder builder) {

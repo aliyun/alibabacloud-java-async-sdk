@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDataTrackOrderDetailResponseBody</p>
  */
 public class GetDataTrackOrderDetailResponseBody extends TeaModel {
-    @NameInMap("DataTrackOrderDetail")
+    @com.aliyun.core.annotation.NameInMap("DataTrackOrderDetail")
     private DataTrackOrderDetail dataTrackOrderDetail;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetDataTrackOrderDetailResponseBody(Builder builder) {
@@ -136,34 +135,34 @@ public class GetDataTrackOrderDetailResponseBody extends TeaModel {
     } 
 
     public static class DataTrackOrderDetail extends TeaModel {
-        @NameInMap("DatabaseSearchName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseSearchName")
         private String databaseSearchName;
 
-        @NameInMap("DbId")
+        @com.aliyun.core.annotation.NameInMap("DbId")
         private Long dbId;
 
-        @NameInMap("JobEndTime")
+        @com.aliyun.core.annotation.NameInMap("JobEndTime")
         private String jobEndTime;
 
-        @NameInMap("JobStartTime")
+        @com.aliyun.core.annotation.NameInMap("JobStartTime")
         private String jobStartTime;
 
-        @NameInMap("JobStatus")
+        @com.aliyun.core.annotation.NameInMap("JobStatus")
         private String jobStatus;
 
-        @NameInMap("Logic")
+        @com.aliyun.core.annotation.NameInMap("Logic")
         private Boolean logic;
 
-        @NameInMap("SchemaName")
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
         private String schemaName;
 
-        @NameInMap("StatusDesc")
+        @com.aliyun.core.annotation.NameInMap("StatusDesc")
         private String statusDesc;
 
-        @NameInMap("TableNames")
+        @com.aliyun.core.annotation.NameInMap("TableNames")
         private java.util.List < String > tableNames;
 
-        @NameInMap("TrackTypes")
+        @com.aliyun.core.annotation.NameInMap("TrackTypes")
         private java.util.List < String > trackTypes;
 
         private DataTrackOrderDetail(Builder builder) {

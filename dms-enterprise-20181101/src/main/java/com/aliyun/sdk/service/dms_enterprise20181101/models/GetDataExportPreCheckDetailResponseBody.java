@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDataExportPreCheckDetailResponseBody</p>
  */
 public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("PreCheckResult")
+    @com.aliyun.core.annotation.NameInMap("PreCheckResult")
     private PreCheckResult preCheckResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetDataExportPreCheckDetailResponseBody(Builder builder) {
@@ -136,10 +135,10 @@ public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
     } 
 
     public static class PreCheckDetailList extends TeaModel {
-        @NameInMap("AffectRows")
+        @com.aliyun.core.annotation.NameInMap("AffectRows")
         private Long affectRows;
 
-        @NameInMap("SQL")
+        @com.aliyun.core.annotation.NameInMap("SQL")
         private String SQL;
 
         private PreCheckDetailList(Builder builder) {
@@ -197,7 +196,7 @@ public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
 
     }
     public static class PreCheckResultPreCheckDetailList extends TeaModel {
-        @NameInMap("PreCheckDetailList")
+        @com.aliyun.core.annotation.NameInMap("PreCheckDetailList")
         private java.util.List < PreCheckDetailList> preCheckDetailList;
 
         private PreCheckResultPreCheckDetailList(Builder builder) {
@@ -238,10 +237,10 @@ public class GetDataExportPreCheckDetailResponseBody extends TeaModel {
 
     }
     public static class PreCheckResult extends TeaModel {
-        @NameInMap("IgnoreAffectRows")
+        @com.aliyun.core.annotation.NameInMap("IgnoreAffectRows")
         private Boolean ignoreAffectRows;
 
-        @NameInMap("PreCheckDetailList")
+        @com.aliyun.core.annotation.NameInMap("PreCheckDetailList")
         private PreCheckResultPreCheckDetailList preCheckDetailList;
 
         private PreCheckResult(Builder builder) {

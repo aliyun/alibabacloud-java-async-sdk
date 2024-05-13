@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTaskFlowGraphResponseBody</p>
  */
 public class GetTaskFlowGraphResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TaskFlowGraph")
+    @com.aliyun.core.annotation.NameInMap("TaskFlowGraph")
     private TaskFlowGraph taskFlowGraph;
 
     private GetTaskFlowGraphResponseBody(Builder builder) {
@@ -136,16 +135,16 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
     } 
 
     public static class Edge extends TeaModel {
-        @NameInMap("DagId")
+        @com.aliyun.core.annotation.NameInMap("DagId")
         private Long dagId;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("NodeEnd")
+        @com.aliyun.core.annotation.NameInMap("NodeEnd")
         private Long nodeEnd;
 
-        @NameInMap("NodeFrom")
+        @com.aliyun.core.annotation.NameInMap("NodeFrom")
         private Long nodeFrom;
 
         private Edge(Builder builder) {
@@ -237,7 +236,7 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
 
     }
     public static class Edges extends TeaModel {
-        @NameInMap("Edge")
+        @com.aliyun.core.annotation.NameInMap("Edge")
         private java.util.List < Edge> edge;
 
         private Edges(Builder builder) {
@@ -278,28 +277,28 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
 
     }
     public static class Node extends TeaModel {
-        @NameInMap("DagId")
+        @com.aliyun.core.annotation.NameInMap("DagId")
         private Long dagId;
 
-        @NameInMap("GraphParam")
+        @com.aliyun.core.annotation.NameInMap("GraphParam")
         private String graphParam;
 
-        @NameInMap("NodeConfig")
+        @com.aliyun.core.annotation.NameInMap("NodeConfig")
         private String nodeConfig;
 
-        @NameInMap("NodeContent")
+        @com.aliyun.core.annotation.NameInMap("NodeContent")
         private String nodeContent;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private Long nodeType;
 
-        @NameInMap("TimeVariables")
+        @com.aliyun.core.annotation.NameInMap("TimeVariables")
         private String timeVariables;
 
         private Node(Builder builder) {
@@ -459,7 +458,7 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
 
     }
     public static class Nodes extends TeaModel {
-        @NameInMap("Node")
+        @com.aliyun.core.annotation.NameInMap("Node")
         private java.util.List < Node> node;
 
         private Nodes(Builder builder) {
@@ -500,19 +499,19 @@ public class GetTaskFlowGraphResponseBody extends TeaModel {
 
     }
     public static class TaskFlowGraph extends TeaModel {
-        @NameInMap("CanEdit")
+        @com.aliyun.core.annotation.NameInMap("CanEdit")
         private Boolean canEdit;
 
-        @NameInMap("DagName")
+        @com.aliyun.core.annotation.NameInMap("DagName")
         private String dagName;
 
-        @NameInMap("Edges")
+        @com.aliyun.core.annotation.NameInMap("Edges")
         private Edges edges;
 
-        @NameInMap("Nodes")
+        @com.aliyun.core.annotation.NameInMap("Nodes")
         private Nodes nodes;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Long status;
 
         private TaskFlowGraph(Builder builder) {

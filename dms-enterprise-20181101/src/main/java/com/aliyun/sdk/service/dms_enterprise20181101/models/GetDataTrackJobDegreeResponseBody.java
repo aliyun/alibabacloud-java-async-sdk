@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDataTrackJobDegreeResponseBody</p>
  */
 public class GetDataTrackJobDegreeResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("JobDegree")
+    @com.aliyun.core.annotation.NameInMap("JobDegree")
     private JobDegree jobDegree;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetDataTrackJobDegreeResponseBody(Builder builder) {
@@ -136,19 +135,19 @@ public class GetDataTrackJobDegreeResponseBody extends TeaModel {
     } 
 
     public static class JobDegree extends TeaModel {
-        @NameInMap("DownloadCompletionDegree")
+        @com.aliyun.core.annotation.NameInMap("DownloadCompletionDegree")
         private Double downloadCompletionDegree;
 
-        @NameInMap("FilterCompletionDegree")
+        @com.aliyun.core.annotation.NameInMap("FilterCompletionDegree")
         private Double filterCompletionDegree;
 
-        @NameInMap("JobStatus")
+        @com.aliyun.core.annotation.NameInMap("JobStatus")
         private String jobStatus;
 
-        @NameInMap("ListCompletionDegree")
+        @com.aliyun.core.annotation.NameInMap("ListCompletionDegree")
         private Double listCompletionDegree;
 
-        @NameInMap("StatusDesc")
+        @com.aliyun.core.annotation.NameInMap("StatusDesc")
         private String statusDesc;
 
         private JobDegree(Builder builder) {

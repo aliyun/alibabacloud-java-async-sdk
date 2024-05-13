@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTableDesignProjectFlowResponseBody</p>
  */
 public class GetTableDesignProjectFlowResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("ProjectFlow")
+    @com.aliyun.core.annotation.NameInMap("ProjectFlow")
     private ProjectFlow projectFlow;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetTableDesignProjectFlowResponseBody(Builder builder) {
@@ -132,25 +131,25 @@ public class GetTableDesignProjectFlowResponseBody extends TeaModel {
     } 
 
     public static class FlowNodeArray extends TeaModel {
-        @NameInMap("BackToDesign")
+        @com.aliyun.core.annotation.NameInMap("BackToDesign")
         private Boolean backToDesign;
 
-        @NameInMap("CanSkip")
+        @com.aliyun.core.annotation.NameInMap("CanSkip")
         private Boolean canSkip;
 
-        @NameInMap("NodeRole")
+        @com.aliyun.core.annotation.NameInMap("NodeRole")
         private String nodeRole;
 
-        @NameInMap("NodeTitle")
+        @com.aliyun.core.annotation.NameInMap("NodeTitle")
         private String nodeTitle;
 
-        @NameInMap("Position")
+        @com.aliyun.core.annotation.NameInMap("Position")
         private Integer position;
 
-        @NameInMap("PublishAnchor")
+        @com.aliyun.core.annotation.NameInMap("PublishAnchor")
         private Boolean publishAnchor;
 
-        @NameInMap("PublishStrategies")
+        @com.aliyun.core.annotation.NameInMap("PublishStrategies")
         private java.util.List < String > publishStrategies;
 
         private FlowNodeArray(Builder builder) {
@@ -293,16 +292,16 @@ public class GetTableDesignProjectFlowResponseBody extends TeaModel {
 
     }
     public static class ProjectFlow extends TeaModel {
-        @NameInMap("CurrentPosition")
+        @com.aliyun.core.annotation.NameInMap("CurrentPosition")
         private Integer currentPosition;
 
-        @NameInMap("FlowNodeArray")
+        @com.aliyun.core.annotation.NameInMap("FlowNodeArray")
         private java.util.List < FlowNodeArray> flowNodeArray;
 
-        @NameInMap("RuleComment")
+        @com.aliyun.core.annotation.NameInMap("RuleComment")
         private String ruleComment;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
         private ProjectFlow(Builder builder) {

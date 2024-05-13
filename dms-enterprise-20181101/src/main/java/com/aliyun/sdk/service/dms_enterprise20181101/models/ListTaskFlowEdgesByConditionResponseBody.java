@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTaskFlowEdgesByConditionResponseBody</p>
  */
 public class ListTaskFlowEdgesByConditionResponseBody extends TeaModel {
-    @NameInMap("Edges")
+    @com.aliyun.core.annotation.NameInMap("Edges")
     private Edges edges;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListTaskFlowEdgesByConditionResponseBody(Builder builder) {
@@ -136,13 +135,13 @@ public class ListTaskFlowEdgesByConditionResponseBody extends TeaModel {
     } 
 
     public static class Edge extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("NodeEnd")
+        @com.aliyun.core.annotation.NameInMap("NodeEnd")
         private Long nodeEnd;
 
-        @NameInMap("NodeFrom")
+        @com.aliyun.core.annotation.NameInMap("NodeFrom")
         private Long nodeFrom;
 
         private Edge(Builder builder) {
@@ -217,7 +216,7 @@ public class ListTaskFlowEdgesByConditionResponseBody extends TeaModel {
 
     }
     public static class Edges extends TeaModel {
-        @NameInMap("Edge")
+        @com.aliyun.core.annotation.NameInMap("Edge")
         private java.util.List < Edge> edge;
 
         private Edges(Builder builder) {

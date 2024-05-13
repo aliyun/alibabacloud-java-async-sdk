@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListLhTaskFlowAndScenarioResponseBody</p>
  */
 public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RawDAGList")
+    @com.aliyun.core.annotation.NameInMap("RawDAGList")
     private RawDAGList rawDAGList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ScenarioDAGList")
+    @com.aliyun.core.annotation.NameInMap("ScenarioDAGList")
     private ScenarioDAGList scenarioDAGList;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListLhTaskFlowAndScenarioResponseBody(Builder builder) {
@@ -156,52 +155,52 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
     } 
 
     public static class Dag extends TeaModel {
-        @NameInMap("CanEdit")
+        @com.aliyun.core.annotation.NameInMap("CanEdit")
         private Boolean canEdit;
 
-        @NameInMap("CreatorId")
+        @com.aliyun.core.annotation.NameInMap("CreatorId")
         private String creatorId;
 
-        @NameInMap("CreatorNickName")
+        @com.aliyun.core.annotation.NameInMap("CreatorNickName")
         private String creatorNickName;
 
-        @NameInMap("DagName")
+        @com.aliyun.core.annotation.NameInMap("DagName")
         private String dagName;
 
-        @NameInMap("DagOwnerId")
+        @com.aliyun.core.annotation.NameInMap("DagOwnerId")
         private String dagOwnerId;
 
-        @NameInMap("DagOwnerNickName")
+        @com.aliyun.core.annotation.NameInMap("DagOwnerNickName")
         private String dagOwnerNickName;
 
-        @NameInMap("DataFlowId")
+        @com.aliyun.core.annotation.NameInMap("DataFlowId")
         private Long dataFlowId;
 
-        @NameInMap("DemoId")
+        @com.aliyun.core.annotation.NameInMap("DemoId")
         private String demoId;
 
-        @NameInMap("DeployId")
+        @com.aliyun.core.annotation.NameInMap("DeployId")
         private Long deployId;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("IsDeleted")
+        @com.aliyun.core.annotation.NameInMap("IsDeleted")
         private Boolean isDeleted;
 
-        @NameInMap("LatestInstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("LatestInstanceStatus")
         private Integer latestInstanceStatus;
 
-        @NameInMap("LatestInstanceTime")
+        @com.aliyun.core.annotation.NameInMap("LatestInstanceTime")
         private Integer latestInstanceTime;
 
-        @NameInMap("ScenarioId")
+        @com.aliyun.core.annotation.NameInMap("ScenarioId")
         private Long scenarioId;
 
-        @NameInMap("SpaceId")
+        @com.aliyun.core.annotation.NameInMap("SpaceId")
         private Long spaceId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private Dag(Builder builder) {
@@ -515,7 +514,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
 
     }
     public static class RawDAGList extends TeaModel {
-        @NameInMap("Dag")
+        @com.aliyun.core.annotation.NameInMap("Dag")
         private java.util.List < Dag> dag;
 
         private RawDAGList(Builder builder) {
@@ -556,52 +555,52 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
 
     }
     public static class DagListDag extends TeaModel {
-        @NameInMap("CanEdit")
+        @com.aliyun.core.annotation.NameInMap("CanEdit")
         private Boolean canEdit;
 
-        @NameInMap("CreatorId")
+        @com.aliyun.core.annotation.NameInMap("CreatorId")
         private String creatorId;
 
-        @NameInMap("CreatorNickName")
+        @com.aliyun.core.annotation.NameInMap("CreatorNickName")
         private String creatorNickName;
 
-        @NameInMap("DagName")
+        @com.aliyun.core.annotation.NameInMap("DagName")
         private String dagName;
 
-        @NameInMap("DagOwnerId")
+        @com.aliyun.core.annotation.NameInMap("DagOwnerId")
         private String dagOwnerId;
 
-        @NameInMap("DagOwnerNickName")
+        @com.aliyun.core.annotation.NameInMap("DagOwnerNickName")
         private String dagOwnerNickName;
 
-        @NameInMap("DataFlowId")
+        @com.aliyun.core.annotation.NameInMap("DataFlowId")
         private Long dataFlowId;
 
-        @NameInMap("DemoId")
+        @com.aliyun.core.annotation.NameInMap("DemoId")
         private String demoId;
 
-        @NameInMap("DeployId")
+        @com.aliyun.core.annotation.NameInMap("DeployId")
         private Long deployId;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("IsDeleted")
+        @com.aliyun.core.annotation.NameInMap("IsDeleted")
         private Boolean isDeleted;
 
-        @NameInMap("LatestInstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("LatestInstanceStatus")
         private Integer latestInstanceStatus;
 
-        @NameInMap("LatestInstanceTime")
+        @com.aliyun.core.annotation.NameInMap("LatestInstanceTime")
         private Integer latestInstanceTime;
 
-        @NameInMap("ScenarioId")
+        @com.aliyun.core.annotation.NameInMap("ScenarioId")
         private Long scenarioId;
 
-        @NameInMap("SpaceId")
+        @com.aliyun.core.annotation.NameInMap("SpaceId")
         private Long spaceId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private DagListDag(Builder builder) {
@@ -915,7 +914,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
 
     }
     public static class DagList extends TeaModel {
-        @NameInMap("Dag")
+        @com.aliyun.core.annotation.NameInMap("Dag")
         private java.util.List < DagListDag> dag;
 
         private DagList(Builder builder) {
@@ -956,13 +955,13 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
 
     }
     public static class Scenario extends TeaModel {
-        @NameInMap("CreatorId")
+        @com.aliyun.core.annotation.NameInMap("CreatorId")
         private String creatorId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ScenarioName")
+        @com.aliyun.core.annotation.NameInMap("ScenarioName")
         private String scenarioName;
 
         private Scenario(Builder builder) {
@@ -1037,10 +1036,10 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
 
     }
     public static class ScenarioDAG extends TeaModel {
-        @NameInMap("DagList")
+        @com.aliyun.core.annotation.NameInMap("DagList")
         private DagList dagList;
 
-        @NameInMap("Scenario")
+        @com.aliyun.core.annotation.NameInMap("Scenario")
         private Scenario scenario;
 
         private ScenarioDAG(Builder builder) {
@@ -1098,7 +1097,7 @@ public class ListLhTaskFlowAndScenarioResponseBody extends TeaModel {
 
     }
     public static class ScenarioDAGList extends TeaModel {
-        @NameInMap("ScenarioDAG")
+        @com.aliyun.core.annotation.NameInMap("ScenarioDAG")
         private java.util.List < ScenarioDAG> scenarioDAG;
 
         private ScenarioDAGList(Builder builder) {

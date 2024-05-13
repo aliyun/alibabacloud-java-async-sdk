@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDataImportOrderRequest</p>
  */
 public class CreateDataImportOrderRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AttachmentKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AttachmentKey")
     private String attachmentKey;
 
-    @Query
-    @NameInMap("Comment")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comment")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String comment;
 
-    @Query
-    @NameInMap("Param")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Param")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Param param;
 
-    @Query
-    @NameInMap("RelatedUserList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelatedUserList")
     private java.util.List < Long > relatedUserList;
 
-    @Query
-    @NameInMap("Tid")
-    @Validation(minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tid")
+    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long tid;
 
     private CreateDataImportOrderRequest(Builder builder) {
@@ -190,12 +189,12 @@ public class CreateDataImportOrderRequest extends Request {
     } 
 
     public static class DbItemList extends TeaModel {
-        @NameInMap("DbId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DbId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long dbId;
 
-        @NameInMap("Logic")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Logic")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Boolean logic;
 
         private DbItemList(Builder builder) {
@@ -263,46 +262,46 @@ public class CreateDataImportOrderRequest extends Request {
 
     }
     public static class Param extends TeaModel {
-        @NameInMap("AttachmentName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("AttachmentName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String attachmentName;
 
-        @NameInMap("Classify")
+        @com.aliyun.core.annotation.NameInMap("Classify")
         private String classify;
 
-        @NameInMap("CsvFirstRowIsColumnDef")
+        @com.aliyun.core.annotation.NameInMap("CsvFirstRowIsColumnDef")
         private Boolean csvFirstRowIsColumnDef;
 
-        @NameInMap("DbItemList")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DbItemList")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List < DbItemList> dbItemList;
 
-        @NameInMap("FileEncoding")
+        @com.aliyun.core.annotation.NameInMap("FileEncoding")
         private String fileEncoding;
 
-        @NameInMap("FileType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("FileType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String fileType;
 
-        @NameInMap("IgnoreError")
+        @com.aliyun.core.annotation.NameInMap("IgnoreError")
         private Boolean ignoreError;
 
-        @NameInMap("ImportMode")
+        @com.aliyun.core.annotation.NameInMap("ImportMode")
         private String importMode;
 
-        @NameInMap("InsertType")
+        @com.aliyun.core.annotation.NameInMap("InsertType")
         private String insertType;
 
-        @NameInMap("RollbackAttachmentName")
+        @com.aliyun.core.annotation.NameInMap("RollbackAttachmentName")
         private String rollbackAttachmentName;
 
-        @NameInMap("RollbackSQL")
+        @com.aliyun.core.annotation.NameInMap("RollbackSQL")
         private String rollbackSQL;
 
-        @NameInMap("RollbackSqlType")
+        @com.aliyun.core.annotation.NameInMap("RollbackSqlType")
         private String rollbackSqlType;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private Param(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetOwnerApplyOrderDetailResponseBody</p>
  */
 public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("OwnerApplyOrderDetail")
+    @com.aliyun.core.annotation.NameInMap("OwnerApplyOrderDetail")
     private OwnerApplyOrderDetail ownerApplyOrderDetail;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetOwnerApplyOrderDetailResponseBody(Builder builder) {
@@ -132,22 +131,22 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
     } 
 
     public static class ResourceDetail extends TeaModel {
-        @NameInMap("DbType")
+        @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;
 
-        @NameInMap("EnvType")
+        @com.aliyun.core.annotation.NameInMap("EnvType")
         private String envType;
 
-        @NameInMap("OwnerIds")
+        @com.aliyun.core.annotation.NameInMap("OwnerIds")
         private java.util.List < Long > ownerIds;
 
-        @NameInMap("OwnerNickNames")
+        @com.aliyun.core.annotation.NameInMap("OwnerNickNames")
         private java.util.List < String > ownerNickNames;
 
-        @NameInMap("SearchName")
+        @com.aliyun.core.annotation.NameInMap("SearchName")
         private String searchName;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private ResourceDetail(Builder builder) {
@@ -276,13 +275,13 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
 
     }
     public static class Resources extends TeaModel {
-        @NameInMap("Logic")
+        @com.aliyun.core.annotation.NameInMap("Logic")
         private Boolean logic;
 
-        @NameInMap("ResourceDetail")
+        @com.aliyun.core.annotation.NameInMap("ResourceDetail")
         private ResourceDetail resourceDetail;
 
-        @NameInMap("TargetId")
+        @com.aliyun.core.annotation.NameInMap("TargetId")
         private String targetId;
 
         private Resources(Builder builder) {
@@ -361,10 +360,10 @@ public class GetOwnerApplyOrderDetailResponseBody extends TeaModel {
 
     }
     public static class OwnerApplyOrderDetail extends TeaModel {
-        @NameInMap("ApplyType")
+        @com.aliyun.core.annotation.NameInMap("ApplyType")
         private String applyType;
 
-        @NameInMap("Resources")
+        @com.aliyun.core.annotation.NameInMap("Resources")
         private java.util.List < Resources> resources;
 
         private OwnerApplyOrderDetail(Builder builder) {

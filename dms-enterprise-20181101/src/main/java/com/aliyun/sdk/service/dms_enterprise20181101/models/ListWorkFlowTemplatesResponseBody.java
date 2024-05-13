@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListWorkFlowTemplatesResponseBody</p>
  */
 public class ListWorkFlowTemplatesResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("WorkFlowTemplates")
+    @com.aliyun.core.annotation.NameInMap("WorkFlowTemplates")
     private WorkFlowTemplates workFlowTemplates;
 
     private ListWorkFlowTemplatesResponseBody(Builder builder) {
@@ -132,25 +131,25 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
     } 
 
     public static class WorkflowNode extends TeaModel {
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("CreateUserId")
+        @com.aliyun.core.annotation.NameInMap("CreateUserId")
         private Long createUserId;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
-        @NameInMap("Position")
+        @com.aliyun.core.annotation.NameInMap("Position")
         private Integer position;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private Long templateId;
 
         private WorkflowNode(Builder builder) {
@@ -297,7 +296,7 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
 
     }
     public static class WorkflowNodes extends TeaModel {
-        @NameInMap("WorkflowNode")
+        @com.aliyun.core.annotation.NameInMap("WorkflowNode")
         private java.util.List < WorkflowNode> workflowNode;
 
         private WorkflowNodes(Builder builder) {
@@ -338,25 +337,25 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
 
     }
     public static class WorkFlowTemplate extends TeaModel {
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("CreateUserId")
+        @com.aliyun.core.annotation.NameInMap("CreateUserId")
         private Long createUserId;
 
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private String enabled;
 
-        @NameInMap("IsSystem")
+        @com.aliyun.core.annotation.NameInMap("IsSystem")
         private Integer isSystem;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private Long templateId;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
-        @NameInMap("WorkflowNodes")
+        @com.aliyun.core.annotation.NameInMap("WorkflowNodes")
         private WorkflowNodes workflowNodes;
 
         private WorkFlowTemplate(Builder builder) {
@@ -507,7 +506,7 @@ public class ListWorkFlowTemplatesResponseBody extends TeaModel {
 
     }
     public static class WorkFlowTemplates extends TeaModel {
-        @NameInMap("WorkFlowTemplate")
+        @com.aliyun.core.annotation.NameInMap("WorkFlowTemplate")
         private java.util.List < WorkFlowTemplate> workFlowTemplate;
 
         private WorkFlowTemplates(Builder builder) {

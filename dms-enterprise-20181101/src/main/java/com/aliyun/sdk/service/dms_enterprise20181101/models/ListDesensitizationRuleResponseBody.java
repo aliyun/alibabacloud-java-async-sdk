@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDesensitizationRuleResponseBody</p>
  */
 public class ListDesensitizationRuleResponseBody extends TeaModel {
-    @NameInMap("DesensitizationRuleList")
+    @com.aliyun.core.annotation.NameInMap("DesensitizationRuleList")
     private java.util.List < DesensitizationRuleList> desensitizationRuleList;
 
-    @NameInMap("ErrorCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListDesensitizationRuleResponseBody(Builder builder) {
@@ -157,34 +156,34 @@ public class ListDesensitizationRuleResponseBody extends TeaModel {
     } 
 
     public static class DesensitizationRuleList extends TeaModel {
-        @NameInMap("FuncParams")
+        @com.aliyun.core.annotation.NameInMap("FuncParams")
         private String funcParams;
 
-        @NameInMap("FuncSample")
+        @com.aliyun.core.annotation.NameInMap("FuncSample")
         private String funcSample;
 
-        @NameInMap("FunctionType")
+        @com.aliyun.core.annotation.NameInMap("FunctionType")
         private String functionType;
 
-        @NameInMap("LastModifierId")
+        @com.aliyun.core.annotation.NameInMap("LastModifierId")
         private String lastModifierId;
 
-        @NameInMap("LastModifierName")
+        @com.aliyun.core.annotation.NameInMap("LastModifierName")
         private String lastModifierName;
 
-        @NameInMap("ReferenceCount")
+        @com.aliyun.core.annotation.NameInMap("ReferenceCount")
         private Integer referenceCount;
 
-        @NameInMap("RuleDesc")
+        @com.aliyun.core.annotation.NameInMap("RuleDesc")
         private String ruleDesc;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Integer ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("RuleType")
+        @com.aliyun.core.annotation.NameInMap("RuleType")
         private String ruleType;
 
         private DesensitizationRuleList(Builder builder) {

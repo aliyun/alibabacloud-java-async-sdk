@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dms_enterprise20181101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSensitiveDataAuditLogResponseBody</p>
  */
 public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SensitiveDataAuditLogList")
+    @com.aliyun.core.annotation.NameInMap("SensitiveDataAuditLogList")
     private java.util.List < SensitiveDataAuditLogList> sensitiveDataAuditLogList;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListSensitiveDataAuditLogResponseBody(Builder builder) {
@@ -156,19 +155,19 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
     } 
 
     public static class SensitiveDataLog extends TeaModel {
-        @NameInMap("ColumnName")
+        @com.aliyun.core.annotation.NameInMap("ColumnName")
         private String columnName;
 
-        @NameInMap("ColumnPermissionType")
+        @com.aliyun.core.annotation.NameInMap("ColumnPermissionType")
         private String columnPermissionType;
 
-        @NameInMap("DesensitizationRule")
+        @com.aliyun.core.annotation.NameInMap("DesensitizationRule")
         private String desensitizationRule;
 
-        @NameInMap("SecurityLevel")
+        @com.aliyun.core.annotation.NameInMap("SecurityLevel")
         private String securityLevel;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private SensitiveDataLog(Builder builder) {
@@ -290,28 +289,28 @@ public class ListSensitiveDataAuditLogResponseBody extends TeaModel {
 
     }
     public static class SensitiveDataAuditLogList extends TeaModel {
-        @NameInMap("DbDisplayName")
+        @com.aliyun.core.annotation.NameInMap("DbDisplayName")
         private String dbDisplayName;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
 
-        @NameInMap("ModuleName")
+        @com.aliyun.core.annotation.NameInMap("ModuleName")
         private String moduleName;
 
-        @NameInMap("OpTime")
+        @com.aliyun.core.annotation.NameInMap("OpTime")
         private String opTime;
 
-        @NameInMap("SensitiveDataLog")
+        @com.aliyun.core.annotation.NameInMap("SensitiveDataLog")
         private java.util.List < SensitiveDataLog> sensitiveDataLog;
 
-        @NameInMap("TargetName")
+        @com.aliyun.core.annotation.NameInMap("TargetName")
         private String targetName;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private SensitiveDataAuditLogList(Builder builder) {
