@@ -752,8 +752,8 @@ public class TrainOrderCreateRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("project_code")
         private String projectCode;
 
-        @com.aliyun.core.annotation.NameInMap("project_name")
-        private String projectName;
+        @com.aliyun.core.annotation.NameInMap("project_title")
+        private String projectTitle;
 
         private CostCenterInfo(Builder builder) {
             this.cascadeDeptName = builder.cascadeDeptName;
@@ -765,7 +765,7 @@ public class TrainOrderCreateRequest extends Request {
             this.invoiceId = builder.invoiceId;
             this.invoiceTitle = builder.invoiceTitle;
             this.projectCode = builder.projectCode;
-            this.projectName = builder.projectName;
+            this.projectTitle = builder.projectTitle;
         }
 
         public static Builder builder() {
@@ -840,10 +840,10 @@ public class TrainOrderCreateRequest extends Request {
         }
 
         /**
-         * @return projectName
+         * @return projectTitle
          */
-        public String getProjectName() {
-            return this.projectName;
+        public String getProjectTitle() {
+            return this.projectTitle;
         }
 
         public static final class Builder {
@@ -856,7 +856,7 @@ public class TrainOrderCreateRequest extends Request {
             private String invoiceId; 
             private String invoiceTitle; 
             private String projectCode; 
-            private String projectName; 
+            private String projectTitle; 
 
             /**
              * cascade_dept_name.
@@ -931,10 +931,10 @@ public class TrainOrderCreateRequest extends Request {
             }
 
             /**
-             * project_name.
+             * project_title.
              */
-            public Builder projectName(String projectName) {
-                this.projectName = projectName;
+            public Builder projectTitle(String projectTitle) {
+                this.projectTitle = projectTitle;
                 return this;
             }
 

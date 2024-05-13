@@ -451,6 +451,9 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("total_amount_in_words")
         private String totalAmountInWords;
 
+        @com.aliyun.core.annotation.NameInMap("xml_oss_url")
+        private String xmlOssUrl;
+
         private Items(Builder builder) {
             this.amountWithTax = builder.amountWithTax;
             this.amountWithoutTax = builder.amountWithoutTax;
@@ -485,6 +488,7 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             this.taxAmount = builder.taxAmount;
             this.taxRate = builder.taxRate;
             this.totalAmountInWords = builder.totalAmountInWords;
+            this.xmlOssUrl = builder.xmlOssUrl;
         }
 
         public static Builder builder() {
@@ -726,6 +730,13 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             return this.totalAmountInWords;
         }
 
+        /**
+         * @return xmlOssUrl
+         */
+        public String getXmlOssUrl() {
+            return this.xmlOssUrl;
+        }
+
         public static final class Builder {
             private String amountWithTax; 
             private String amountWithoutTax; 
@@ -760,6 +771,7 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             private String taxAmount; 
             private String taxRate; 
             private String totalAmountInWords; 
+            private String xmlOssUrl; 
 
             /**
              * amount_with_tax.
@@ -1022,6 +1034,14 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
              */
             public Builder totalAmountInWords(String totalAmountInWords) {
                 this.totalAmountInWords = totalAmountInWords;
+                return this;
+            }
+
+            /**
+             * xml_oss_url.
+             */
+            public Builder xmlOssUrl(String xmlOssUrl) {
+                this.xmlOssUrl = xmlOssUrl;
                 return this;
             }
 
