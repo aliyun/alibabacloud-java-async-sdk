@@ -29,6 +29,9 @@ public class Product extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("divisionCode")
     private String divisionCode;
 
+    @com.aliyun.core.annotation.NameInMap("extendProperties")
+    private java.util.List < ProductExtendProperty > extendProperties;
+
     @com.aliyun.core.annotation.NameInMap("fuzzyQuantity")
     private String fuzzyQuantity;
 
@@ -84,6 +87,7 @@ public class Product extends TeaModel {
         this.categoryLeafId = builder.categoryLeafId;
         this.descPath = builder.descPath;
         this.divisionCode = builder.divisionCode;
+        this.extendProperties = builder.extendProperties;
         this.fuzzyQuantity = builder.fuzzyQuantity;
         this.images = builder.images;
         this.picUrl = builder.picUrl;
@@ -150,6 +154,13 @@ public class Product extends TeaModel {
      */
     public String getDivisionCode() {
         return this.divisionCode;
+    }
+
+    /**
+     * @return extendProperties
+     */
+    public java.util.List < ProductExtendProperty > getExtendProperties() {
+        return this.extendProperties;
     }
 
     /**
@@ -271,6 +282,7 @@ public class Product extends TeaModel {
         private Long categoryLeafId; 
         private String descPath; 
         private String divisionCode; 
+        private java.util.List < ProductExtendProperty > extendProperties; 
         private String fuzzyQuantity; 
         private java.util.List < String > images; 
         private String picUrl; 
@@ -333,6 +345,14 @@ public class Product extends TeaModel {
          */
         public Builder divisionCode(String divisionCode) {
             this.divisionCode = divisionCode;
+            return this;
+        }
+
+        /**
+         * extendProperties.
+         */
+        public Builder extendProperties(java.util.List < ProductExtendProperty > extendProperties) {
+            this.extendProperties = extendProperties;
             return this;
         }
 
