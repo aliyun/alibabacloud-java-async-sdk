@@ -151,6 +151,10 @@ public class ListImagesResponseBody extends TeaModel {
     } 
 
     public static class Images extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AppId")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String appId;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -172,6 +176,7 @@ public class ListImagesResponseBody extends TeaModel {
         private String version;
 
         private Images(Builder builder) {
+            this.appId = builder.appId;
             this.createTime = builder.createTime;
             this.description = builder.description;
             this.imageId = builder.imageId;
@@ -186,6 +191,13 @@ public class ListImagesResponseBody extends TeaModel {
 
         public static Images create() {
             return builder().build();
+        }
+
+        /**
+         * @return appId
+         */
+        public String getAppId() {
+            return this.appId;
         }
 
         /**
@@ -231,12 +243,21 @@ public class ListImagesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String appId; 
             private String createTime; 
             private String description; 
             private String imageId; 
             private String imageType; 
             private String name; 
             private String version; 
+
+            /**
+             * AppId.
+             */
+            public Builder appId(String appId) {
+                this.appId = appId;
+                return this;
+            }
 
             /**
              * CreateTime.

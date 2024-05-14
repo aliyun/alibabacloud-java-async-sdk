@@ -12,12 +12,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListImagesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageCategory")
+    private String imageCategory;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageIds")
     private java.util.List < String > imageIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageNames")
     private java.util.List < String > imageNames;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageType")
+    private String imageType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
@@ -29,8 +37,10 @@ public class ListImagesRequest extends Request {
 
     private ListImagesRequest(Builder builder) {
         super(builder);
+        this.imageCategory = builder.imageCategory;
         this.imageIds = builder.imageIds;
         this.imageNames = builder.imageNames;
+        this.imageType = builder.imageType;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
     }
@@ -49,6 +59,13 @@ public class ListImagesRequest extends Request {
     }
 
     /**
+     * @return imageCategory
+     */
+    public String getImageCategory() {
+        return this.imageCategory;
+    }
+
+    /**
      * @return imageIds
      */
     public java.util.List < String > getImageIds() {
@@ -60,6 +77,13 @@ public class ListImagesRequest extends Request {
      */
     public java.util.List < String > getImageNames() {
         return this.imageNames;
+    }
+
+    /**
+     * @return imageType
+     */
+    public String getImageType() {
+        return this.imageType;
     }
 
     /**
@@ -77,8 +101,10 @@ public class ListImagesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListImagesRequest, Builder> {
+        private String imageCategory; 
         private java.util.List < String > imageIds; 
         private java.util.List < String > imageNames; 
+        private String imageType; 
         private Long pageNumber; 
         private Long pageSize; 
 
@@ -88,11 +114,22 @@ public class ListImagesRequest extends Request {
 
         private Builder(ListImagesRequest request) {
             super(request);
+            this.imageCategory = request.imageCategory;
             this.imageIds = request.imageIds;
             this.imageNames = request.imageNames;
+            this.imageType = request.imageType;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
         } 
+
+        /**
+         * ImageCategory.
+         */
+        public Builder imageCategory(String imageCategory) {
+            this.putQueryParameter("ImageCategory", imageCategory);
+            this.imageCategory = imageCategory;
+            return this;
+        }
 
         /**
          * ImageIds.
@@ -111,6 +148,15 @@ public class ListImagesRequest extends Request {
             String imageNamesShrink = shrink(imageNames, "ImageNames", "json");
             this.putQueryParameter("ImageNames", imageNamesShrink);
             this.imageNames = imageNames;
+            return this;
+        }
+
+        /**
+         * ImageType.
+         */
+        public Builder imageType(String imageType) {
+            this.putQueryParameter("ImageType", imageType);
+            this.imageType = imageType;
             return this;
         }
 

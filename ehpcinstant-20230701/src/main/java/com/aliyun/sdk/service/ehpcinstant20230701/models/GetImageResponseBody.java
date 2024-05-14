@@ -414,6 +414,9 @@ public class GetImageResponseBody extends TeaModel {
 
     }
     public static class Image extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AppId")
+        private String appId;
+
         @com.aliyun.core.annotation.NameInMap("ContainerImageSpec")
         private ContainerImageSpec containerImageSpec;
 
@@ -433,6 +436,9 @@ public class GetImageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Size")
         private String size;
 
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
         @com.aliyun.core.annotation.NameInMap("VMImageSpec")
         private VMImageSpec VMImageSpec;
 
@@ -440,12 +446,14 @@ public class GetImageResponseBody extends TeaModel {
         private String version;
 
         private Image(Builder builder) {
+            this.appId = builder.appId;
             this.containerImageSpec = builder.containerImageSpec;
             this.createTime = builder.createTime;
             this.description = builder.description;
             this.imageType = builder.imageType;
             this.name = builder.name;
             this.size = builder.size;
+            this.status = builder.status;
             this.VMImageSpec = builder.VMImageSpec;
             this.version = builder.version;
         }
@@ -456,6 +464,13 @@ public class GetImageResponseBody extends TeaModel {
 
         public static Image create() {
             return builder().build();
+        }
+
+        /**
+         * @return appId
+         */
+        public String getAppId() {
+            return this.appId;
         }
 
         /**
@@ -501,6 +516,13 @@ public class GetImageResponseBody extends TeaModel {
         }
 
         /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
          * @return VMImageSpec
          */
         public VMImageSpec getVMImageSpec() {
@@ -515,14 +537,24 @@ public class GetImageResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String appId; 
             private ContainerImageSpec containerImageSpec; 
             private String createTime; 
             private String description; 
             private String imageType; 
             private String name; 
             private String size; 
+            private String status; 
             private VMImageSpec VMImageSpec; 
             private String version; 
+
+            /**
+             * AppId.
+             */
+            public Builder appId(String appId) {
+                this.appId = appId;
+                return this;
+            }
 
             /**
              * ContainerImageSpec.
@@ -569,6 +601,14 @@ public class GetImageResponseBody extends TeaModel {
              */
             public Builder size(String size) {
                 this.size = size;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 

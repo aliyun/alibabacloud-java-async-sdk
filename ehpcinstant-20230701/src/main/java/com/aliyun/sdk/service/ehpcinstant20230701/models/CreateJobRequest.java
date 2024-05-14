@@ -589,6 +589,9 @@ public class CreateJobRequest extends Request {
 
     }
     public static class Container extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AppId")
+        private String appId;
+
         @com.aliyun.core.annotation.NameInMap("Command")
         private java.util.List < String > command;
 
@@ -603,6 +606,7 @@ public class CreateJobRequest extends Request {
         private String workingDir;
 
         private Container(Builder builder) {
+            this.appId = builder.appId;
             this.command = builder.command;
             this.environmentVars = builder.environmentVars;
             this.image = builder.image;
@@ -615,6 +619,13 @@ public class CreateJobRequest extends Request {
 
         public static Container create() {
             return builder().build();
+        }
+
+        /**
+         * @return appId
+         */
+        public String getAppId() {
+            return this.appId;
         }
 
         /**
@@ -646,10 +657,19 @@ public class CreateJobRequest extends Request {
         }
 
         public static final class Builder {
+            private String appId; 
             private java.util.List < String > command; 
             private java.util.List < EnvironmentVars> environmentVars; 
             private String image; 
             private String workingDir; 
+
+            /**
+             * AppId.
+             */
+            public Builder appId(String appId) {
+                this.appId = appId;
+                return this;
+            }
 
             /**
              * Command.
@@ -691,6 +711,9 @@ public class CreateJobRequest extends Request {
 
     }
     public static class Vm extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AppId")
+        private String appId;
+
         @com.aliyun.core.annotation.NameInMap("Image")
         @com.aliyun.core.annotation.Validation(required = true)
         private String image;
@@ -702,6 +725,7 @@ public class CreateJobRequest extends Request {
         private String script;
 
         private Vm(Builder builder) {
+            this.appId = builder.appId;
             this.image = builder.image;
             this.prologScript = builder.prologScript;
             this.script = builder.script;
@@ -713,6 +737,13 @@ public class CreateJobRequest extends Request {
 
         public static Vm create() {
             return builder().build();
+        }
+
+        /**
+         * @return appId
+         */
+        public String getAppId() {
+            return this.appId;
         }
 
         /**
@@ -737,9 +768,18 @@ public class CreateJobRequest extends Request {
         }
 
         public static final class Builder {
+            private String appId; 
             private String image; 
             private String prologScript; 
             private String script; 
+
+            /**
+             * AppId.
+             */
+            public Builder appId(String appId) {
+                this.appId = appId;
+                return this;
+            }
 
             /**
              * Image.
