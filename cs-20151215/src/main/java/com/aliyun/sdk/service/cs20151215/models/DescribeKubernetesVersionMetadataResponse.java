@@ -355,6 +355,9 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
         @com.aliyun.core.annotation.NameInMap("creatable")
         private Boolean creatable;
 
+        @com.aliyun.core.annotation.NameInMap("upgradable_versions")
+        private java.util.List < String > upgradableVersions;
+
         private DescribeKubernetesVersionMetadataResponseBody(Builder builder) {
             this.capabilities = builder.capabilities;
             this.images = builder.images;
@@ -364,6 +367,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             this.releaseDate = builder.releaseDate;
             this.expirationDate = builder.expirationDate;
             this.creatable = builder.creatable;
+            this.upgradableVersions = builder.upgradableVersions;
         }
 
         public static Builder builder() {
@@ -430,6 +434,13 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             return this.creatable;
         }
 
+        /**
+         * @return upgradableVersions
+         */
+        public java.util.List < String > getUpgradableVersions() {
+            return this.upgradableVersions;
+        }
+
         public static final class Builder {
             private java.util.Map < String, ? > capabilities; 
             private java.util.List < Images> images; 
@@ -439,6 +450,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             private String releaseDate; 
             private String expirationDate; 
             private Boolean creatable; 
+            private java.util.List < String > upgradableVersions; 
 
             /**
              * Features of the queried Kubernetes version.
@@ -501,6 +513,14 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
              */
             public Builder creatable(Boolean creatable) {
                 this.creatable = creatable;
+                return this;
+            }
+
+            /**
+             * upgradable_versions.
+             */
+            public Builder upgradableVersions(java.util.List < String > upgradableVersions) {
+                this.upgradableVersions = upgradableVersions;
                 return this;
             }
 

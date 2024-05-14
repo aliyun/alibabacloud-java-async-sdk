@@ -29,6 +29,10 @@ public class DescribeKubernetesVersionMetadataRequest extends Request {
     private String profile;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryUpgradableVersion")
+    private Boolean queryUpgradableVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Region")
     @com.aliyun.core.annotation.Validation(required = true)
     private String region;
@@ -43,6 +47,7 @@ public class DescribeKubernetesVersionMetadataRequest extends Request {
         this.kubernetesVersion = builder.kubernetesVersion;
         this.mode = builder.mode;
         this.profile = builder.profile;
+        this.queryUpgradableVersion = builder.queryUpgradableVersion;
         this.region = builder.region;
         this.runtime = builder.runtime;
     }
@@ -89,6 +94,13 @@ public class DescribeKubernetesVersionMetadataRequest extends Request {
     }
 
     /**
+     * @return queryUpgradableVersion
+     */
+    public Boolean getQueryUpgradableVersion() {
+        return this.queryUpgradableVersion;
+    }
+
+    /**
      * @return region
      */
     public String getRegion() {
@@ -107,6 +119,7 @@ public class DescribeKubernetesVersionMetadataRequest extends Request {
         private String kubernetesVersion; 
         private String mode; 
         private String profile; 
+        private Boolean queryUpgradableVersion; 
         private String region; 
         private String runtime; 
 
@@ -120,6 +133,7 @@ public class DescribeKubernetesVersionMetadataRequest extends Request {
             this.kubernetesVersion = request.kubernetesVersion;
             this.mode = request.mode;
             this.profile = request.profile;
+            this.queryUpgradableVersion = request.queryUpgradableVersion;
             this.region = request.region;
             this.runtime = request.runtime;
         } 
@@ -180,6 +194,15 @@ public class DescribeKubernetesVersionMetadataRequest extends Request {
         public Builder profile(String profile) {
             this.putQueryParameter("Profile", profile);
             this.profile = profile;
+            return this;
+        }
+
+        /**
+         * QueryUpgradableVersion.
+         */
+        public Builder queryUpgradableVersion(Boolean queryUpgradableVersion) {
+            this.putQueryParameter("QueryUpgradableVersion", queryUpgradableVersion);
+            this.queryUpgradableVersion = queryUpgradableVersion;
             return this;
         }
 
