@@ -2,10 +2,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
-  <artifactId>alibabacloud-waf_openapi20190910-async</artifactId>
-  <version>0.0.1-beta</version>
+  <artifactId>alibabacloud-waf_openapi20190910</artifactId>
+  <version>0.0.1</version>
   <packaging>jar</packaging>
-  <name>alibabacloud-waf_openapi20190910-async</name>
+  <name>alibabacloud-waf_openapi20190910</name>
   <description>Alibaba Cloud waf-openapi (20190910) Async SDK for Java
     </description>
   <url>https://github.com/aliyun/alibabacloud-java-async-sdk</url>
@@ -41,17 +41,24 @@
     <java.version>1.8</java.version>
     <maven.compiler.source>8</maven.compiler.source>
     <maven.compiler.target>8</maven.compiler.target>
-    <service.version>[0.0.1, 1.0.0)</service.version>
+    <service.version>0.2.8-beta</service.version>
   </properties>
   <dependencies>
     <dependency>
-      <groupId>com.aliyun</groupId>
-      <artifactId>aliyun-gateway-pop</artifactId>
-      <version>${service.version}</version>
+      <groupId>com.github.tomakehurst</groupId>
+      <artifactId>wiremock-standalone</artifactId>
+      <version>2.24.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.1</version>
+      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
-      <artifactId>darabonba-java-core</artifactId>
+      <artifactId>aliyun-gateway-pop</artifactId>
       <version>${service.version}</version>
     </dependency>
   </dependencies>
