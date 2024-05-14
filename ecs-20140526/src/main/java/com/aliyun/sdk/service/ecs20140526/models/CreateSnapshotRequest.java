@@ -433,20 +433,7 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the instant access feature. Valid values:
-         * <p>
-         * 
-         * *   true: enables the instant access feature. This feature can be enabled only for enhanced SSDs (ESSDs).
-         * 
-         *     **
-         * 
-         *     **Note**After the instant access feature is enabled, an instant access (IA) snapshot is created and can be used to roll back disks or create disks across zones even when the snapshot is being created. This feature ensures that a new ESSD snapshot is available for use as soon as possible regardless of its size.
-         * 
-         * *   false: does not enable the instant access feature. If InstantAccess is set to false, a normal snapshot is created.
-         * 
-         * Default value: false.
-         * 
-         * > This parameter and the `Category` parameter cannot be specified at the same time. For more information, see the "Description" section of this topic.
+         * The tags to add to the snapshot.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -500,7 +487,7 @@ public class CreateSnapshotRequest extends Request {
             private String value; 
 
             /**
-             * The tags to add to the snapshot.
+             * The key of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -508,10 +495,7 @@ public class CreateSnapshotRequest extends Request {
             }
 
             /**
-             * The tag key to add to the snapshot.
-             * <p>
-             * 
-             * > This parameter will be deprecated in the future. We recommend that you use the Tag.N.key parameter to ensure future compatibility.
+             * The value of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -317,10 +317,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CopyImageResponse> copyImage(CopyImageRequest request);
 
     /**
-      * When you call this operation, take note of the following items:
-      * - New snapshots (copies) cannot be used to roll back disks from which the source snapshots (originals) were created.
-      * - Encrypted snapshots cannot be copied.
-      * - Local snapshots cannot be copied.
+      * ## [](#)Usage notes
+      * Take note of the following items:
+      * *   New snapshots (snapshot copies) cannot be used to roll back the disks for which source snapshots (copied snapshots) were created.
+      * *   Local snapshots cannot be copied.
       *
      */
     CompletableFuture<CopySnapshotResponse> copySnapshot(CopySnapshotRequest request);
@@ -615,9 +615,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateSavingsPlanResponse> createSavingsPlan(CreateSavingsPlanRequest request);
 
     /**
-      * When you call this operation, take note of the following items:
+      * ## [](#)Usage notes
+      * Take note of the following items:
       * *   You can create up to 100 security groups in a single Alibaba Cloud region.
-      * *   To create a security group of the Virtual Private Cloud (VPC) type, you must specify the VpcId parameter.
+      * *   To create a security group of the Virtual Private Cloud (VPC) type, you must specify VpcId.
       *
      */
     CompletableFuture<CreateSecurityGroupResponse> createSecurityGroup(CreateSecurityGroupRequest request);
@@ -772,8 +773,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteImageComponentResponse> deleteImageComponent(DeleteImageComponentRequest request);
 
     /**
-      * ## Description
-      * If an image build task based on an image template is in the BUILDING, DISTRIBUTING, RELEASING, or CANCELLING state, you cannot delete the template. You can delete the template only when the image build task is in the SUCCESS, FAILED, or CANCELLED state. You can call the DescribeImagePipelineExecutions operation to query the details of an image build task.
+      * If an image build task based on an image template is in the BUILDING, DISTRIBUTING, RELEASING, or CANCELLING state, you cannot delete the image template. You can delete the image template only when the image build task is in the SUCCESS, FAILED, or CANCELLED state. You can call the DescribeImagePipelineExecutions operation to query the details of an image build task.
       *
      */
     CompletableFuture<DeleteImagePipelineResponse> deleteImagePipeline(DeleteImagePipelineRequest request);
@@ -793,14 +793,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteInstanceResponse> deleteInstance(DeleteInstanceRequest request);
 
     /**
-      * *   After an Elastic Compute Service (ECS) instance is released, all the physical resources used by the instance are recycled. Relevant data is erased and cannot be restored.
-      * *   Disks attached to the instance:
-      *     *   The disks for which `DeleteWithInstance` is set to false are retained as pay-as-you-go disks.
-      *     *   The disks for which `DeleteWithInstance` is set to true are released together with the instance.
-      *     *   For disks for which `DeleteAutoSnapshot` is set to false, the automatic snapshots of the disks are retained.
-      *     *   For disks for which `DeleteAutoSnapshot` is set to true, the automatic snapshots of the disks are released.
+      * ## [](#)Usage notes
+      * *   After an ECS instance is released, all the physical resources used by the instance are recycled. Relevant data is erased and cannot be restored.
+      * *   When you release an ECS instance, take note of the following items for the disks attached to the instance:
+      *     *   The disks for which `DeleteWithInstance` is set to false are retained as pay-as-you-go disks after the instance is released.
+      *     *   The disks for which `DeleteWithInstance` is set to true are released along with the instance.
+      *     *   If `DeleteAutoSnapshot` is set to false for a disk attached to the instance, the automatic snapshots of the disk are retained when the instance is released.
+      *     *   If `DeleteAutoSnapshot` is set to true for a disk attached to the instance, the automatic snapshots of the disk are released along with the instance.
       *     *   Manual snapshots of the disks are retained.
-      *     *   If `OperationLocks` in the response contains `"LockReason" : "security"` for an instance, the instance is locked for security reasons. For more information, see [API behavior when an instance is locked for security reasons](~~25695~~). Even if `DeleteWithInstance` is set to `false` for the data disks that are attached to the instance, this parameter is ignored and the data disks are released along with the instance.
+      *     *   If `OperationLocks` in the response contains `"LockReason" : "security"` when you query the information of the instance, the instance is locked for security reasons. In this case, even if `DeleteWithInstance` is set to `false` for the disks that are attached to the instance, the system ignores the DeleteWithInstance value and releases the disks along with the instance. For more information, see [API behavior when an instance is locked for security reasons](~~25695~~).
       *
      */
     CompletableFuture<DeleteInstancesResponse> deleteInstances(DeleteInstancesRequest request);
@@ -1015,9 +1016,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDedicatedHostTypesResponse> describeDedicatedHostTypes(DescribeDedicatedHostTypesRequest request);
 
     /**
+      * ## [](#)Usage notes
       * You can use one of the following methods to query the information about dedicated hosts:
-      * *   Specify `DedicatedHostIds` to query the details of specified dedicated hosts.
-      * *   Specify `DedicatedHostClusterId` to query the details of the dedicated hosts in a dedicated host cluster.
+      * *   Specify `DedicatedHostIds` to query the information about dedicated hosts.
+      * *   Specify `DedicatedHostClusterId` to query the information about the dedicated hosts in a dedicated host cluster.
       *
      */
     CompletableFuture<DescribeDedicatedHostsResponse> describeDedicatedHosts(DescribeDedicatedHostsRequest request);
@@ -1032,8 +1034,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDemandsResponse> describeDemands(DescribeDemandsRequest request);
 
     /**
-      * ## Usage notes
-      * For more information about instance families, see [Overview of instance families](~~25378~~).
+      * ## [](#)Usage notes
+      * For information about instance families, see [Overview of instance families](~~25378~~).
       *
      */
     CompletableFuture<DescribeDeploymentSetSupportedInstanceTypeFamilyResponse> describeDeploymentSetSupportedInstanceTypeFamily(DescribeDeploymentSetSupportedInstanceTypeFamilyRequest request);
@@ -1240,7 +1242,7 @@ public interface AsyncClient extends SdkAutoCloseable {
       * ## [](#)Usage notes
       * Take note of the following items:
       * *   MaxResults specifies the maximum number of entries per page. The maximum value of this parameter is changed from 1600 to 100. As of November 15, 2023, only 100 can be used as the maximum value of MaxResults. If you called the DescribeInstanceTypes operation in 2022, you can use 1600 as the maximum value before November 15, 2023. If you do not specify NextToken when you call the DescribeInstanceTypes operation, only the first page of results that contains up to 100 entries is returned. If you want to retrieve more results, specify NextToken to perform paged queries, or specify filter conditions to filter results.
-      * *   We recommend that you specify MaxResults and NextToken to perform paged queries. The first time you call the DescribeInstanceTypes operation, set MaxResults to specify the maximum number of entries to return in a single call. If the number of entries to return exceeds the specified MaxResults value, the response includes a NextToken value. You can set NextToken to the returned value and specify MaxResults in your next request to DescribeInstanceTypes to retrieve the next page of results.
+      * *   We recommend that you specify MaxResults and NextToken to perform paged queries. The first time you call the DescribeInstanceTypes operation, set MaxResults to limit the maximum number of entries that can be returned in a single call. If the number of entries to return exceeds the specified MaxResults value, the response includes a NextToken value. You can set NextToken to the return value and specify MaxResults in your next request to DescribeInstanceTypes to retrieve the next page of results.
       * *   The DescribeInstanceTypes operation is used to query only the specifications and performance information of instance types. To query instance types that are available in a specific region, call the [DescribeAvailableResource](~~66186~~) operation.
       * *   To use special instance types such as instance types that are unavailable for purchase, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
       *
@@ -1558,9 +1560,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeUserBusinessBehaviorResponse> describeUserBusinessBehavior(DescribeUserBusinessBehaviorRequest request);
 
     /**
-      * ## Description
-      * *   The returned user data is encoded in Base64.
-      * *   If the instance does not have user data configured, an empty result is returned.
+      * *   The returned custom data is encoded in Base64.
+      * *   If no user data is configured for the ECS instance, an empty result is returned.
       *
      */
     CompletableFuture<DescribeUserDataResponse> describeUserData(DescribeUserDataRequest request);
@@ -1817,7 +1818,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ImportKeyPairResponse> importKeyPair(ImportKeyPairRequest request);
 
     /**
-      * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+      * ## [](#)Usage notes
+      * After you call the InstallCloudAssistant operation to install Cloud Assistant Agent on an ECS instance, call the [RebootInstance](~~25502~~) operation to restart the instance to make the installation take effect.
       *
      */
     CompletableFuture<InstallCloudAssistantResponse> installCloudAssistant(InstallCloudAssistantRequest request);
@@ -1843,7 +1845,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<InvokeCommandResponse> invokeCommand(InvokeCommandRequest request);
 
     /**
-      * A resource is a cloud service entity that you create in Alibaba Cloud, such as an ECS instance, elastic network interface (ENI), or image. A resource group is a collection of infrastructure for projects, environments, or stacks. In a resource group, you can manage resources and monitor and run tasks in a centralized manner without switching between Alibaba Cloud services.
+      * ## [](#)Usage notes
+      * A resource is a cloud service entity that you create on Alibaba Cloud, such as an ECS instance, an elastic network interface (ENI), or an image. A resource group is a collection of infrastructure for projects, environments, or stacks. In a resource group, you can manage resources and monitor and run tasks in a centralized manner without the need to switch between Alibaba Cloud services.
       *
      */
     CompletableFuture<JoinResourceGroupResponse> joinResourceGroup(JoinResourceGroupRequest request);
@@ -1969,8 +1972,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDiagnosticMetricSetResponse> modifyDiagnosticMetricSet(ModifyDiagnosticMetricSetRequest request);
 
     /**
-      * *   When you call this operation to modify the attributes of a disk, if you set the DeleteWithInstance parameter to false and the instance to which the disk is attached is locked for security reasons, the DeleteWithInstance parameter of the disk is ignored and the disk is released together with the instance. If `"LockReason" : "security"` is included in the response when you query the information about an instance, the instance is locked for security reasons.
-      * *   You can use the `DiskIds.N` parameter to specify multiple disks. This way, you can modify the attributes of the disks at the same time, including names, descriptions, and whether to release the disks together with the associated instances.
+      * ## [](#)Usage notes
+      * *   When you call this operation to modify the attributes of a disk, if you set DeleteWithInstance to false and the instance to which the disk is attached is locked for security reasons, the DeleteWithInstance settings of the disk are ignored and the disk is released together with the instance. If `"LockReason" : "security"` is displayed in the response when you query the information about an instance, the instance is locked for security reasons.
+      * *   You can use `DiskIds.N` to specify multiple block storage devices and batch modify the attributes of the devices, including the names and descriptions of the devices and whether to release the devices together with the associated instances.
       *
      */
     CompletableFuture<ModifyDiskAttributeResponse> modifyDiskAttribute(ModifyDiskAttributeRequest request);
@@ -2082,30 +2086,30 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyInstanceAttachmentAttributesResponse> modifyInstanceAttachmentAttributes(ModifyInstanceAttachmentAttributesRequest request);
 
     /**
+      * ## [](#)Usage notes
       * If the response contains `{"OperationLocks": {"LockReason" : "security"}}` when you query the information of an instance, the instance is locked for security reasons. No operations are allowed on the instance.
       * Take note of the following items:
-      * *   Modify the hostname (`HostName`): After you modify the hostname, restart the instance in the ECS console or by calling the [RebootInstance](~~25502~~) operation for the new hostname to take effect. For information about how to restart an instance in the ECS console, see [Restart instances](~~25440~~). The new hostname does not take effect if you restart the instance from within the operating system.
-      * *   Reset the password (`Password`):
+      * *   If you change the hostname (`HostName`), restart the instance in the ECS console or by calling the [RebootInstance](~~25502~~) operation for the new hostname to take effect. For information about how to restart an instance in the ECS console, see [Restart an instance](~~25440~~). The new hostname may not take effect if you restart the instance from within the operating system.
+      * *   If you reset the password (`Password`), take note of the following items:
       *     *   The instance cannot be in the **Starting** (`Starting`) state.
-      *     *   After you reset the password, restart the instance in the ECS console or by calling the [RebootInstance](~~25502~~) operation for the new password to take effect. For information about how to restart an instance in the ECS console, see [Restart instances](~~25440~~). The new password does not take effect if you restart the instance from within the operating system.
-      * *   Modify user data (`UserData`):
+      *     *   After you reset the password, restart the instance in the ECS console or by calling the [RebootInstance](~~25502~~) operation for the new password to take effect. For information about how to restart an instance in the ECS console, see [Restart an instance](~~25440~~). The new password does not take effect if you restart the instance from within the operating system.
+      * *   If you modify user data (`UserData`), take note of the following items:
       *     *   The instance must be in the **Stopped** (`Stopped`) state.
-      *     *   The instance must meet the limits for user data. For more information, see [Prepare user data](~~49121~~).
-      * > After you restart the instance, the new user data is displayed but not run as scripts.
-      * *   Change the security groups (`SecurityGroupIds.N`):
-      *     *   You can move an instance to a security group of a different type.
-      *         If you want to move an instance to a security group of a different type, you must familiarize yourself with the differences between the rule configurations of the two security group types to prevent impacts on the instance network.
-      *     *   Security groups of instances in the classic network cannot be changed.
-      *         For more information, see the description of `SecurityGroupIds.N`.
-      * *   Modify the number of queues supported by the primary elastic network interface (ENI) (`NetworkInterfaceQueueNumber`):
+      *     *   The instance must meet the limits for user data. For more information, see [Instance user data](~~49121~~).
+      *     **
+      *     **Note** After you restart the instance, the new user data is displayed but not run as scripts.
+      * *   If you change the security groups (`SecurityGroupIds.N`), take note of the following items:
+      *     *   You can move an instance to a security group of a different type. If you want to move an instance to a security group of a different type, you must familiarize yourself with the differences between the rule configurations of the two security group types to prevent impacts on the instance network.
+      *     *   Security groups of instances in the classic network cannot be changed. For more information, see the description of `SecurityGroupIds.N`.
+      * *   If you change the number of queues supported by the primary elastic network interface (ENI) (`NetworkInterfaceQueueNumber`), take note of the following items:
       *     *   The instance must be in the Stopped (`Stopped`) state.
-      *     *   The value of this parameter cannot exceed the maximum number of queues allowed per ENI. The maximum number of queues varies based on the instance type.
-      *     *   The total number of queues for all ENIs on the instance cannot exceed the queue quota for the instance type. To obtain the maximum number of queues per ENI and the queue quota for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation to query the `MaximumQueueNumberPerEni` and `TotalEniQueueQuantity` values.
-      *     *   If you set this parameter to -1, the value is reset to the default value for the instance type. To obtain the default number of queues supported by the primary ENI for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation to query the `PrimaryEniQueueNumber` value.
-      * *   Enable or disable the Jumbo Frame feature ([EnableJumboFrame](~~200512~~)):
+      *     *   The value of this parameter cannot exceed the maximum number of queues allowed per ENI.
+      *     *   The total number of queues for all ENIs on the instance cannot exceed the queue quota for the instance type. To query the maximum number of queues per ENI and the queue quota for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation and view the values of the `MaximumQueueNumberPerEni` and `TotalEniQueueQuantity` response parameters.
+      *     *   If you set this parameter to -1, the value is reset to the default value for the instance type. To query the default number of queues supported per primary ENI for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation and view the value of the `PrimaryEniQueueNumber` response parameter.
+      * *   If you enable or disable the Jumbo Frames feature (`EnableJumboFrame`), take note of the following items: For more information, see [MTUs](~~200512~~).
       *     *   The instance must be in the Running (`Running`) or Stopped (`Stopped`) state.
       *     *   The instance must reside in a virtual private cloud (VPC).
-      *     *   After the Jumbo Frame feature is enabled, the MTU value of the instance is set to 8500. After the Jumbo Frame feature is disabled, the MTU value of the instance is set to 1500.
+      *     *   After the Jumbo Frames feature is enabled, the MTU value of the instance is set to 8500. After the Jumbo Frames feature is disabled, the MTU value of the instance is set to 1500.
       *
      */
     CompletableFuture<ModifyInstanceAttributeResponse> modifyInstanceAttribute(ModifyInstanceAttributeRequest request);
@@ -2324,12 +2328,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifySecurityGroupAttributeResponse> modifySecurityGroupAttribute(ModifySecurityGroupAttributeRequest request);
 
     /**
+      * ## [](#)Usage notes
       * In security group-related API documents, inbound traffic refers to the traffic that is sent by the source device and received at the destination device.
-      * When you modify the rules of a security group by specifying the rule IDs, take note of the following limits:
-      * *   A security group authorization object can be one of the following types: IP address or CIDR block, security group, and prefix list. The type of an existing security group authorization object cannot be modified. If the original authorization object is an IP address, you can change the authorization object to a different IP address or CIDR block, but you cannot change the authorization object to a security group or a prefix list.
-      * *   The IP address family of the authorization object cannot be changed. For example, if the original authorization object is an IPv4 CIDR block, you cannot change the authorization object to an IPv6 CIDR block. If the original authorization object is a prefix list of an IPv4 address family, you cannot change the authorization object to a prefix list of an IPv6 address family.
+      * Take note of the following items:
+      * *   An authorization object in a security group rule can be of one of the following types: IP address or CIDR block, security group, or prefix list. You cannot call this operation to change the type of an existing authorization object. For example, if an authorization object is an IP address, you can change the authorization object to another IP address or a CIDR block, but you cannot change the authorization object to a security group or prefix list.
+      * *   You cannot change the IP address family of an existing authorization object. For example, if an authorization object is an IPv4 CIDR block, you cannot change the authorization object to an IPv6 CIDR block. If an authorization object is a prefix list of the IPv4 address family, you cannot change the authorization object to a prefix list of the IPv6 address family.
       * *   The modified security group rule cannot be the same as other existing rules.
-      * *   You cannot delete the value of a non-empty parameter. We recommend that you create a new rule and delete the original rule.
+      * *   You cannot delete the value of a non-empty parameter. If you want to delete the values of non-empty parameters, we recommend that you create another rule and delete the original rule.
       *
      */
     CompletableFuture<ModifySecurityGroupEgressRuleResponse> modifySecurityGroupEgressRule(ModifySecurityGroupEgressRuleRequest request);
@@ -2878,7 +2883,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TerminateVirtualBorderRouterResponse> terminateVirtualBorderRouter(TerminateVirtualBorderRouterRequest request);
 
     /**
-      * When you call this operation, take note of the following items:
+      * ## [](#)Usage notes
+      * Take note of the following items:
       * *   The ENI must be in the **Available** (Available) or **InUse** (InUse) state.
       * *   If the ENI is a primary ENI, the Elastic Compute Service (ECS) instance to which the ENI is attached must be in the **Running** (Running) or **Stopped** (Stopped) state.
       *

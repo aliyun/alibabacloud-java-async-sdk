@@ -82,6 +82,10 @@ public class InvokeCommandRequest extends Request {
     private java.util.List < Tag> tag;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TerminationMode")
+    private String terminationMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Timed")
     private Boolean timed;
 
@@ -116,6 +120,7 @@ public class InvokeCommandRequest extends Request {
         this.resourceOwnerId = builder.resourceOwnerId;
         this.resourceTag = builder.resourceTag;
         this.tag = builder.tag;
+        this.terminationMode = builder.terminationMode;
         this.timed = builder.timed;
         this.timeout = builder.timeout;
         this.username = builder.username;
@@ -255,6 +260,13 @@ public class InvokeCommandRequest extends Request {
     }
 
     /**
+     * @return terminationMode
+     */
+    public String getTerminationMode() {
+        return this.terminationMode;
+    }
+
+    /**
      * @return timed
      */
     public Boolean getTimed() {
@@ -300,6 +312,7 @@ public class InvokeCommandRequest extends Request {
         private Long resourceOwnerId; 
         private java.util.List < ResourceTag> resourceTag; 
         private java.util.List < Tag> tag; 
+        private String terminationMode; 
         private Boolean timed; 
         private Long timeout; 
         private String username; 
@@ -328,6 +341,7 @@ public class InvokeCommandRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.resourceTag = request.resourceTag;
             this.tag = request.tag;
+            this.terminationMode = request.terminationMode;
             this.timed = request.timed;
             this.timeout = request.timeout;
             this.username = request.username;
@@ -572,6 +586,15 @@ public class InvokeCommandRequest extends Request {
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
+            return this;
+        }
+
+        /**
+         * TerminationMode.
+         */
+        public Builder terminationMode(String terminationMode) {
+            this.putQueryParameter("TerminationMode", terminationMode);
+            this.terminationMode = terminationMode;
             return this;
         }
 

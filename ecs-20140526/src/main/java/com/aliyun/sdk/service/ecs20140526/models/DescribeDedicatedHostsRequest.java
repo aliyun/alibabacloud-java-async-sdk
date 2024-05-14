@@ -428,7 +428,7 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * The page number.
+         * The number of entries per page.
          * <p>
          * 
          * Valid values: 1 to 100.
@@ -481,7 +481,7 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * Whether to display socket capacity information
+         * Specifies whether to display socket capacity information.
          */
         public Builder socketDetails(String socketDetails) {
             this.putQueryParameter("SocketDetails", socketDetails);

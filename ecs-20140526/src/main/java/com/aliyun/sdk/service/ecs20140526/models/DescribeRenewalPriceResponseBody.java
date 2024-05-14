@@ -271,7 +271,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the pricing rules.
+             * The pricing rules.
              */
             public Builder subRules(SubRules subRules) {
                 this.subRules = subRules;

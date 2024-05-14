@@ -404,10 +404,10 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
         }
 
         /**
-         * The destination IPv4 CIDR block. CIDR blocks and IPv4 addresses are supported.
+         * The destination IPv4 CIDR block. IPv4 CIDR blocks and IPv4 addresses are supported.
          * <p>
          * 
-         * This parameter is empty by default.
+         * By default, this parameter is left empty.
          */
         public Builder destCidrIp(String destCidrIp) {
             this.putQueryParameter("DestCidrIp", destCidrIp);
@@ -460,14 +460,14 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
         }
 
         /**
-         * The transport layer protocol. The values of this parameter are case-insensitive. Valid values:
+         * The transport layer protocol of the security group rule. The value of this parameter is case-insensitive. Valid values:
          * <p>
          * 
          * *   ICMP
          * *   GRE
          * *   TCP
          * *   UDP
-         * *   ALL: all protocols are supported.
+         * *   ALL: All protocols are supported.
          */
         public Builder ipProtocol(String ipProtocol) {
             this.putQueryParameter("IpProtocol", ipProtocol);
@@ -476,12 +476,12 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
         }
 
         /**
-         * The destination IPv6 CIDR block. CIDR blocks and IPv6 addresses are supported.
+         * The destination IPv6 CIDR block. IPv6 CIDR blocks and IPv6 addresses are supported.
          * <p>
          * 
-         * > Only the IP addresses of instances in virtual private clouds (VPCs) are supported. You cannot specify both Ipv6DestCidrIp and `DestCidrIp`.
+         * >  Only the IP addresses of instances in virtual private clouds (VPCs) are supported. You cannot specify both Ipv6DestCidrIp and `DestCidrIp`.
          * 
-         * This parameter is empty by default.
+         * By default, this parameter is left empty.
          */
         public Builder ipv6DestCidrIp(String ipv6DestCidrIp) {
             this.putQueryParameter("Ipv6DestCidrIp", ipv6DestCidrIp);
@@ -490,12 +490,12 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
         }
 
         /**
-         * The source IPv6 CIDR block. IPv6 CIDR blocks and addresses are supported.
+         * The source IPv6 CIDR block. IPv6 CIDR blocks and IPv6 addresses are supported.
          * <p>
          * 
-         * > Only the IP addresses of instances in VPCs are supported. You cannot specify both Ipv6SourceCidrIp and `SourceCidrIp`.
+         * >  Only the IP addresses of instances in VPCs are supported. You cannot specify both Ipv6SourceCidrIp and `SourceCidrIp`.
          * 
-         * This parameter is empty by default.
+         * By default, this parameter is left empty.
          */
         public Builder ipv6SourceCidrIp(String ipv6SourceCidrIp) {
             this.putQueryParameter("Ipv6SourceCidrIp", ipv6SourceCidrIp);
@@ -533,11 +533,11 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
         }
 
         /**
-         * The action of a security group rule that determines whether to allow inbound access. Valid values:
+         * The action of the security group rule. Valid values:
          * <p>
          * 
-         * *   accept: allows inbound access.
-         * *   drop: denies inbound access and does not return responses.
+         * *   accept: allows access.
+         * *   drop: denies access and returns no responses.
          * 
          * Default value: accept.
          */
@@ -548,10 +548,10 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
         }
 
         /**
-         * The range of destination ports that correspond to the transport layer protocol for the security group rule. Valid values:
+         * The range of destination ports that correspond to the transport layer protocol. Valid values:
          * <p>
          * 
-         * *   If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. The start port number and the end port number are separated by a forward slash (/). Example: 1/200.
+         * *   If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.
          * *   If you set IpProtocol to ICMP, the port number range is -1/-1.
          * *   If you set IpProtocol to GRE, the port number range is -1/-1.
          * *   If you set IpProtocol to ALL, the port number range is -1/-1.
@@ -622,10 +622,10 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
         }
 
         /**
-         * The source IPv4 CIDR block. IPv4 CIDR blocks and addresses are supported.
+         * The source IPv4 CIDR block. IPv4 CIDR blocks and IPv4 addresses are supported.
          * <p>
          * 
-         * This parameter is empty by default.
+         * By default, this parameter is left empty.
          */
         public Builder sourceCidrIp(String sourceCidrIp) {
             this.putQueryParameter("SourceCidrIp", sourceCidrIp);
@@ -634,10 +634,10 @@ public class ModifySecurityGroupEgressRuleRequest extends Request {
         }
 
         /**
-         * The range of source ports that correspond to the transport layer protocol for the security group rule. Valid values:
+         * The range of source ports that correspond to the transport layer protocol. Valid values:
          * <p>
          * 
-         * *   If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. The start port number and the end port number are separated by a forward slash (/). Example: 1/200.
+         * *   If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.
          * *   If you set IpProtocol to ICMP, the port number range is -1/-1.
          * *   If you set IpProtocol to GRE, the port number range is -1/-1.
          * *   If you set IpProtocol to ALL, the port number range is -1/-1.

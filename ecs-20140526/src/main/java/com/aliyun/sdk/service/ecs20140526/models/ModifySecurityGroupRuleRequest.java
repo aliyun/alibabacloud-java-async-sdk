@@ -489,7 +489,7 @@ public class ModifySecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * The action of the security group rule that determines whether to allow access. Valid values:
+         * The action of the security group rule. Valid values:
          * <p>
          * 
          * *   accept: allows access.
@@ -522,7 +522,7 @@ public class ModifySecurityGroupRuleRequest extends Request {
          * The priority of the security group rule. Valid values: 1 to 100.
          * <p>
          * 
-         * Default value: 1.
+         * Default value: 1
          */
         public Builder priority(String priority) {
             this.putQueryParameter("Priority", priority);

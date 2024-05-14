@@ -315,14 +315,10 @@ public class ModifyImageAttributeRequest extends Request {
         }
 
         /**
-         * The type of the license used to activate the operating system after the image is imported. Valid values:
+         * The type of the license that is used to activate the operating system after the image is imported. Set the value to BYOL.
          * <p>
          * 
-         * *   Auto: Elastic Compute Service (ECS) checks the OS of the source image and allocates a license to the OS. ECS first checks whether the operating system distribution specified by `Platform` has a license allocated through an official Alibaba Cloud channel. If yes, the allocated license is used. If no, the license that comes with the source operating system is used.
-         * *   Aliyun: The license allocated through an official Alibaba Cloud channel is used for the operating system distribution specified by `Platform`.
-         * *   BYOL: The license that comes with the source operating system is used. In this case, make sure that your license key can be used in Alibaba Cloud.
-         * 
-         * Default value: Auto.
+         * BYOL: The license that comes with the source operating system is used. When you use the BYOL license, make sure that your license key is supported by Alibaba Cloud.
          */
         public Builder licenseType(String licenseType) {
             this.putQueryParameter("LicenseType", licenseType);

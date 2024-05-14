@@ -294,7 +294,7 @@ public class StartTerminalSessionRequest extends Request {
         }
 
         /**
-         * 指定连接时的用户名称。
+         * The username used for connection establishment.
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);

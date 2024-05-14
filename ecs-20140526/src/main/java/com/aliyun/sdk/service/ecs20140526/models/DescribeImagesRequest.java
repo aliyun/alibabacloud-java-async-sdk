@@ -728,7 +728,7 @@ public class DescribeImagesRequest extends Request {
          * *   Available: The image is available.
          * *   UnAvailable: The image is unavailable.
          * *   CreateFailed: The image fails to be created.
-         * *   Deprecated: The image is no longer used.
+         * *   Deprecated: The image is deprecated.
          * 
          * Default value: Available. You can specify multiple values for this parameter. Separate the values with commas (,).
          */

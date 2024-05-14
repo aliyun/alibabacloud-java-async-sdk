@@ -97,7 +97,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The queried dedicated hosts.
+         * Information about the dedicated hosts.
          */
         public Builder dedicatedHosts(DedicatedHosts dedicatedHosts) {
             this.dedicatedHosts = dedicatedHosts;
@@ -225,7 +225,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             private Integer totalVcpu; 
 
             /**
-             * Remaining memory capacity, unit: GiB.
+             * The amount of available memory. Unit: GiB.
              */
             public Builder availableMemory(Float availableMemory) {
                 this.availableMemory = availableMemory;
@@ -233,7 +233,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The remaining number of vCPU cores.
+             * The total number of vCPUs.
              */
             public Builder availableVcpu(Integer availableVcpu) {
                 this.availableVcpu = availableVcpu;
@@ -241,7 +241,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the socket.
+             * The socket ID.
              */
             public Builder socketId(Integer socketId) {
                 this.socketId = socketId;
@@ -249,7 +249,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * Total memory capacity, unit: GiB.
+             * The total amount of memory. Unit: GiB.
              */
             public Builder totalMemory(Float totalMemory) {
                 this.totalMemory = totalMemory;
@@ -257,7 +257,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * Total number of vCPU cores.
+             * The number of available vCPUs.
              */
             public Builder totalVcpu(Integer totalVcpu) {
                 this.totalVcpu = totalVcpu;
@@ -455,7 +455,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of available memory space. Unit: GiB.
+             * The amount of available memory. Unit: GiB.
              */
             public Builder availableMemory(Float availableMemory) {
                 this.availableMemory = availableMemory;
@@ -637,7 +637,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             private String socketId; 
 
             /**
-             * The ID of the ECS instance created on the dedicated host.
+             * The ID of the ECS instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -645,7 +645,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * ECS实例所有者的用户ID。
+             * The ID of the ECS instance owner.
              */
             public Builder instanceOwnerId(Long instanceOwnerId) {
                 this.instanceOwnerId = instanceOwnerId;
@@ -653,7 +653,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the ECS instance created on the dedicated host.
+             * The instance type of the ECS instance.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -661,7 +661,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the socket to which the instance belongs.
+             * The ID of the socket to which the ECS instance belongs.
              */
             public Builder socketId(String socketId) {
                 this.socketId = socketId;
@@ -755,7 +755,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             private Integer udpTimeout; 
 
             /**
-             * The timeout period of the UDP session that was established between Server Load Balancer (SLB) and the dedicated host. Unit: seconds. Valid value: 60.
+             * The timeout period of the UDP session that was established between Server Load Balancer (SLB) and the dedicated host. Unit: Seconds. Valid value: 60.
              */
             public Builder slbUdpTimeout(Integer slbUdpTimeout) {
                 this.slbUdpTimeout = slbUdpTimeout;
@@ -763,7 +763,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period of the UDP session that was established between a user and an Alibaba Cloud service on the dedicated host. Unit: seconds. Valid value: 60.
+             * The timeout period of the UDP session that was established between a user and an Alibaba Cloud service on the dedicated host. Unit: Seconds. Valid value: 60.
              */
             public Builder udpTimeout(Integer udpTimeout) {
                 this.udpTimeout = udpTimeout;
@@ -807,8 +807,8 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
              * The reason why the dedicated host was locked. Valid values:
              * <p>
              * 
-             * *   financial
-             * *   security
+             * *   financial: The instance was locked due to overdue payments.
+             * *   security: The instance was locked due to security reasons.
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -1503,7 +1503,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
              * <p>
              * 
              * *   Migrate: The instances are migrated to another physical server. Instances that are not in the Stopped state when the dedicated host fails are restarted.
-             * *   Stop: The instances are stopped. If the dedicated host cannot be restored, the instances are migrated to another physical server and restarted.
+             * *   Stop: The instances are stopped. If the dedicated host cannot be repaired, the instances are migrated to another physical server and restarted.
              * 
              * If the dedicated host has cloud disks attached, the default value is Migrate. If the dedicated host has local disks attached, the default value is Stop.
              */
@@ -1527,7 +1527,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The automatic release time of the instance. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mmZ` format. The time is displayed in UTC.
+             * The automatic release time of the instances deployed on the dedicated host. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mmZ` format. The time is displayed in UTC.
              */
             public Builder autoReleaseTime(String autoReleaseTime) {
                 this.autoReleaseTime = autoReleaseTime;
@@ -1599,7 +1599,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * 专有宿主机所有者的用户ID。
+             * The ID of the dedicated host owner.
              */
             public Builder dedicatedHostOwnerId(Long dedicatedHostOwnerId) {
                 this.dedicatedHostOwnerId = dedicatedHostOwnerId;
@@ -1731,7 +1731,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the dedicated host. Valid values:
+             * The status of the dedicated host. Valid values:
              * <p>
              * 
              * *   Available: The dedicated host is running normally.

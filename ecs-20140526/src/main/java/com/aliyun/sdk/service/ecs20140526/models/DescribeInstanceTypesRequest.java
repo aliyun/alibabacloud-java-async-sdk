@@ -817,7 +817,7 @@ public class DescribeInstanceTypesRequest extends Request {
          * *   Compute-optimized with FPGA: FPGA-accelerated compute-optimized instance type
          * *   Compute-optimized with NPU: NPU-accelerated compute-optimized instance type
          * *   ECS Bare Metal: ECS Bare Metal Instance type
-         * *   Super Computing Cluster: Super Computing Cluster (SCC) instance type
+         * *   Super Computing Cluster: SCC instance type
          * *   High Performance Compute: high-performance computing instance type
          */
         public Builder instanceCategory(String instanceCategory) {
@@ -890,7 +890,7 @@ public class DescribeInstanceTypesRequest extends Request {
          * *   local_hdd_pro: local Serial Advanced Technology Attachment (SATA) HDDs, which are attached to d1ne or d1 instances.
          * *   local_ssd_pro: local Non-Volatile Memory Express (NVMe) SSDs, which are attached to i2, i2g, i1, ga1, or gn5 instances.
          * 
-         * Enumerated values:
+         * Valid values:
          * 
          * *   local_hdd_pro
          * *   local_ssd_pro

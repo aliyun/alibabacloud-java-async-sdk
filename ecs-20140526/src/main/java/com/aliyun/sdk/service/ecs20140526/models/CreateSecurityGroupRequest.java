@@ -320,10 +320,7 @@ public class CreateSecurityGroupRequest extends Request {
         }
 
         /**
-         * The name of the security group.
-         * <p>
-         * 
-         * The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-). Default value: null.
+         * The name of the security group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain Unicode characters under the Decimal Number category and the categories whose names contain Letter. The name can also contain colons (:), underscores (\_), periods (.), and hyphens (-).
          */
         public Builder securityGroupName(String securityGroupName) {
             this.putQueryParameter("SecurityGroupName", securityGroupName);
@@ -354,7 +351,7 @@ public class CreateSecurityGroupRequest extends Request {
         }
 
         /**
-         * The tags that you want to add to the security group.
+         * The tags to add to the security group.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -420,10 +417,10 @@ public class CreateSecurityGroupRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N.
+             * The key of tag N to add to the security group.
              * <p>
              * 
-             * Valid values of N: 1 to 20. You cannot specify empty strings as tag keys. The tag key must be 1 to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
+             * Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -431,10 +428,10 @@ public class CreateSecurityGroupRequest extends Request {
             }
 
             /**
-             * The value of tag N.
+             * The value of tag N to add to the security group.
              * <p>
              * 
-             * Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or contain `http://` or `https://`.
+             * Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

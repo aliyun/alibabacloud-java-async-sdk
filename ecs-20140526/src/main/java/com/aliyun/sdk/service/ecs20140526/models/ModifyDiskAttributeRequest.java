@@ -314,7 +314,7 @@ public class ModifyDiskAttributeRequest extends Request {
         }
 
         /**
-         * The name of the disk. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * The name of the disk. The name must be 2 to 128 characters in length and can contain Unicode characters under the Decimal Number category and the categories whose names contain Letter. The name can also contain colons (:), underscores (\_), periods (.), and hyphens (-).
          */
         public Builder diskName(String diskName) {
             this.putQueryParameter("DiskName", diskName);
@@ -323,15 +323,15 @@ public class ModifyDiskAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the automatic snapshot policy feature for the cloud disk.
+         * Specifies whether to enable the automatic snapshot policy feature for the cloud disk. Valid values:
          * <p>
          * 
-         * *   true: enables the automatic snapshot policy feature for the cloud disk.
-         * *   false: disables the automatic snapshot policy feature for the cloud disk.
+         * *   true
+         * *   false
          * 
          * This parameter is empty by default, which indicates that the current value remains unchanged.
          * 
-         * > By default, the automatic snapshot policy feature is enabled for new disks. You need to only apply an automatic snapshot policy to a disk for the policy to take effect.
+         * >  By default, the automatic snapshot policy feature is enabled for cloud disks. You only need to associate an automatic snapshot policy with a cloud disk before you can use the policy.
          */
         public Builder enableAutoSnapshot(Boolean enableAutoSnapshot) {
             this.putQueryParameter("EnableAutoSnapshot", enableAutoSnapshot);

@@ -73,7 +73,7 @@ public class DescribeUserDataResponseBody extends TeaModel {
         private String userData; 
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -89,7 +89,7 @@ public class DescribeUserDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

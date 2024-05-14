@@ -794,7 +794,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of ERIs.
+             * The number of elastic RDMA interfaces (ERIs).
              * <p>
              * 
              * >  This parameter is in invitational preview and is not publicly available.
@@ -813,7 +813,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of GPU memory per GPU. Unit: GiB
+             * The amount of GPU memory per GPU. Unit: GiB.
              */
             public Builder GPUMemorySize(Float GPUMemorySize) {
                 this.GPUMemorySize = GPUMemorySize;
@@ -883,8 +883,8 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
              * <p>
              * 
              * *   EntryLevel: entry level (shared).
-             * *   EnterpriseLevel: enterprise level
-             * *   CreditEntryLevel: credit-based entry level For more information, see [Overview](~~59977~~).
+             * *   EnterpriseLevel: enterprise level.
+             * *   CreditEntryLevel: credit-based entry level. For more information, see [Overview](~~59977~~).
              */
             public Builder instanceFamilyLevel(String instanceFamilyLevel) {
                 this.instanceFamilyLevel = instanceFamilyLevel;
@@ -932,7 +932,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The capacity of each local disk. Unit: GiB
+             * The capacity of each local disk attached per instance. Unit: GiB.
              */
             public Builder localStorageCapacity(Long localStorageCapacity) {
                 this.localStorageCapacity = localStorageCapacity;
@@ -943,8 +943,8 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
              * The category of local disks. For more information, see [Local disks](~~63138~~). Valid values:
              * <p>
              * 
-             * *   local_hdd_pro: local SATA HDDs, which are attached to d1ne or d1 instances
-             * *   local_ssd_pro: local NVMe SSDs, which are attached to i2, i2g, i1, ga1, or gn5 instances
+             * *   local_hdd_pro: local SATA HDDs, which are attached to d1ne or d1 instances.
+             * *   local_ssd_pro: local NVMe SSDs, which are attached to i2, i2g, i1, ga1, or gn5 instances.
              */
             public Builder localStorageCategory(String localStorageCategory) {
                 this.localStorageCategory = localStorageCategory;
@@ -960,7 +960,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size. Unit: GiB
+             * The memory size. Unit: GiB.
              */
             public Builder memorySize(Float memorySize) {
                 this.memorySize = memorySize;
@@ -976,7 +976,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The information of the network cards.
+             * The information about the network cards.
              */
             public Builder networkCards(NetworkCards networkCards) {
                 this.networkCards = networkCards;
@@ -1024,7 +1024,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of QPs per ERI.
+             * The maximum number of QP queues per ERI.
              */
             public Builder queuePairNumber(Integer queuePairNumber) {
                 this.queuePairNumber = queuePairNumber;
@@ -1040,7 +1040,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * SupportedBootModes.
+             * 规格支持的启动模式。
              */
             public Builder supportedBootModes(SupportedBootModes supportedBootModes) {
                 this.supportedBootModes = supportedBootModes;

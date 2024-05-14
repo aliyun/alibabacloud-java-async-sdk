@@ -751,6 +751,9 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
+        @com.aliyun.core.annotation.NameInMap("TerminationMode")
+        private String terminationMode;
+
         @com.aliyun.core.annotation.NameInMap("Timed")
         private Boolean timed;
 
@@ -780,6 +783,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             this.parameters = builder.parameters;
             this.repeatMode = builder.repeatMode;
             this.tags = builder.tags;
+            this.terminationMode = builder.terminationMode;
             this.timed = builder.timed;
             this.timeout = builder.timeout;
             this.username = builder.username;
@@ -907,6 +911,13 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return terminationMode
+         */
+        public String getTerminationMode() {
+            return this.terminationMode;
+        }
+
+        /**
          * @return timed
          */
         public Boolean getTimed() {
@@ -951,6 +962,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             private String parameters; 
             private String repeatMode; 
             private Tags tags; 
+            private String terminationMode; 
             private Boolean timed; 
             private Long timeout; 
             private String username; 
@@ -1125,6 +1137,18 @@ public class DescribeInvocationsResponseBody extends TeaModel {
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * Indicates how the task was stopped. Valid values:
+             * <p>
+             * 
+             * *   Process: The process of the command was stopped.
+             * *   ProcessTree: The process tree was stopped. In this case, the process of the command and all subprocesses of the process were stopped.
+             */
+            public Builder terminationMode(String terminationMode) {
+                this.terminationMode = terminationMode;
                 return this;
             }
 

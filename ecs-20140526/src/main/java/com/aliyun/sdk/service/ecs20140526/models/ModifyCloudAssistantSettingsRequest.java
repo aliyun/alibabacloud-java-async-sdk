@@ -335,12 +335,12 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             private String timeZone; 
 
             /**
-             * The time windows during which Cloud Assistant Agent can be upgraded. The time windows can be accurate to minutes. The default time zone is UTC.
+             * The time windows during which Cloud Assistant Agent can be upgraded. The time windows can be accurate to minutes. The Coordinated Universal Time (UTC) time zone is used by default.
              * <p>
              * 
-             * Make sure that the upgrade windows specified by using this parameter are not shorter than 1 hour.
+             * Make sure that the upgrade windows specified by this parameter are not shorter than 1 hour.
              * 
-             * Specify each upgrade window in the following format: \<Start time> (HH:mm)-\<End time> (HH:mm).
+             * Specify each upgrade window in the following format: \<Start time in the HH:mm format>-\<End time in the HH:mm format>.
              * 
              * For example, \[ "02:00-03:00", "05:00-06:00" ] specifies that Cloud Assistant Agent can be upgraded from 2:00:00 to 3:00:00 and from 5:00:00 to 6:00:00 every day in the UTC time zone.
              */
@@ -361,11 +361,11 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             }
 
             /**
-             * The time zone of the time window. Default value: UTC. The following formats are supported:
+             * The time zone of the time windows. Default value: UTC. You can specify a time zone in the following forms:
              * <p>
              * 
              * *   The time zone name. Examples: Asia/Shanghai and America/Los_Angeles.
-             * *   The time offset from GMT. Examples: GMT+8:00 (UTC+8) and GMT-7:00 (UTC-7). Do not add leading zeros to the hour value.
+             * *   The time offset from GMT. Examples: GMT+8:00 (UTC+8) and GMT-7:00 (UTC-7). You cannot add leading zeros to the hour value.
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;

@@ -224,6 +224,9 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
+        @com.aliyun.core.annotation.NameInMap("TerminationMode")
+        private String terminationMode;
+
         @com.aliyun.core.annotation.NameInMap("Username")
         private String username;
 
@@ -245,6 +248,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             this.startTime = builder.startTime;
             this.stopTime = builder.stopTime;
             this.tags = builder.tags;
+            this.terminationMode = builder.terminationMode;
             this.username = builder.username;
         }
 
@@ -376,6 +380,13 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         }
 
         /**
+         * @return terminationMode
+         */
+        public String getTerminationMode() {
+            return this.terminationMode;
+        }
+
+        /**
          * @return username
          */
         public String getUsername() {
@@ -400,6 +411,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             private String startTime; 
             private String stopTime; 
             private Tags tags; 
+            private String terminationMode; 
             private String username; 
 
             /**
@@ -645,6 +657,18 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * Indicates how the task was stopped. Valid values:
+             * <p>
+             * 
+             * *   Process: The process of the command was stopped.
+             * *   ProcessTree: The process tree was stopped. In this case, the process of the command and all subprocesses of the process were stopped.
+             */
+            public Builder terminationMode(String terminationMode) {
+                this.terminationMode = terminationMode;
                 return this;
             }
 

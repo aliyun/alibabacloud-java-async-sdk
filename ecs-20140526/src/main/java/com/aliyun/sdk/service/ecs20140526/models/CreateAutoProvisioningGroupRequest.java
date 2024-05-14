@@ -583,7 +583,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
          * <p>
          * 
          * *   termination: releases the scaled-in instances in the auto provisioning group.
-         * *   no-termination: removes the scaled-in instances from the auto provisioning group but does not release them.
+         * *   no-termination: only removes the scaled-in instances from the auto provisioning group but does not release the instances.
          * 
          * Default value: no-termination.
          */
@@ -1164,8 +1164,8 @@ public class CreateAutoProvisioningGroupRequest extends Request {
              * Specifies whether to release data disk N when the instance to which the data disk is attached is released. Valid values:
              * <p>
              * 
-             * *   true: releases data disk N when the instance is released.
-             * *   false: does not release data disk N when the instance is released.
+             * *   true
+             * *   false
              * 
              * Default value: true.
              * 
@@ -1196,7 +1196,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
              * The name of data disk N. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).
              * <p>
              * 
-             * This parameter is empty by default.
+             * By default, this parameter is left empty.
              * 
              * When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.
              */
@@ -1238,7 +1238,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The performance level of the enhanced SSD (ESSD) to use as data disk N. The value of N in this parameter must be the same as the value of N in `LaunchConfiguration.DataDisk.N.Category`. Valid values:
+             * The performance level of the ESSD to use as data disk N. The value of N in this parameter must be the same as the value of N in `LaunchConfiguration.DataDisk.N.Category`. Valid values:
              * <p>
              * 
              * *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
@@ -1267,18 +1267,18 @@ public class CreateAutoProvisioningGroupRequest extends Request {
              * The size of data disk N. Valid values of N: 1 to 16. Unit: GiB. Valid values:
              * <p>
              * 
-             * *   Valid values when LaunchConfiguration.DataDisk.N.Category is set to cloud_efficiency: 20 to 32768.
+             * *   Valid values if you set LaunchConfiguration.DataDisk.N.Category to cloud_efficiency: 20 to 32768.
              * 
-             * *   Valid values when LaunchConfiguration.DataDisk.N.Category is set to cloud_ssd: 20 to 32768.
+             * *   Valid values if you set LaunchConfiguration.DataDisk.N.Category to cloud_ssd: 20 to 32768.
              * 
-             * *   Valid values when LaunchConfiguration.DataDisk.N.Category is set to cloud_essd: depend on the `LaunchConfiguration.DataDisk.N.PerformanceLevel` value.
+             * *   Valid values if you set LaunchConfiguration.DataDisk.N.Category to cloud_essd: vary based on the `LaunchConfiguration.DataDisk.N.PerformanceLevel` value.
              * 
-             *     *   Valid values when LaunchConfiguration.DataDisk.N.PerformanceLevel is set to PL0: 40 to 32768.
-             *     *   Valid values when LaunchConfiguration.DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.
-             *     *   Valid values when LaunchConfiguration.DataDisk.N.PerformanceLevel is set to PL2: 461 to 32768.
-             *     *   Valid values when LaunchConfiguration.DataDisk.N.PerformanceLevel is set to PL3: 1261 to 32768.
+             *     *   Valid values if you set LaunchConfiguration.DataDisk.N.PerformanceLevel to PL0: 40 to 32768.
+             *     *   Valid values if you set LaunchConfiguration.DataDisk.N.PerformanceLevel to PL1: 20 to 32768.
+             *     *   Valid values if you set LaunchConfiguration.DataDisk.N.PerformanceLevel to PL2: 461 to 32768.
+             *     *   Valid values if you set LaunchConfiguration.DataDisk.N.PerformanceLevel to PL3: 1261 to 32768.
              * 
-             * *   Valid values when LaunchConfiguration.DataDisk.N.Category is set to cloud: 5 to 2000.
+             * *   Valid values if you set LaunchConfiguration.DataDisk.N.Category to cloud: 5 to 2000.
              * 
              * >  The value of this parameter must be greater than or equal to the size of the snapshot specified by `LaunchConfiguration.DataDisk.N.SnapshotId`.
              * 
@@ -1392,7 +1392,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The algorithm to use to encrypt the system disk. Valid values:
+             * The algorithm to use to encrypt system disk N. Valid values:
              * <p>
              * 
              * *   aes-256
@@ -1424,7 +1424,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The ID of the KMS key to use for the system disk.
+             * The ID of the KMS key to use for system disk N.
              * <p>
              * 
              * When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.
@@ -2165,7 +2165,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The information of the system disk on the instance. When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.
+             * The system disk information of instances. When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.
              */
             public Builder systemDisk(SystemDisk systemDisk) {
                 this.systemDisk = systemDisk;
@@ -2254,7 +2254,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The instance user data. The user data must be encoded in Base64. The raw data can be up to 16 KB in size. When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.
+             * The instance user data. The user data must be encoded in Base64. The raw data can be up to 32 KB in size. When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.
              */
             public Builder userData(String userData) {
                 this.userData = userData;

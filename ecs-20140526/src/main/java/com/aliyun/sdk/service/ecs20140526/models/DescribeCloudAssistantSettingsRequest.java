@@ -193,7 +193,7 @@ public class DescribeCloudAssistantSettingsRequest extends Request {
         }
 
         /**
-         * The Cloud Assistant features.
+         * The Cloud Assistant configurations.
          */
         public Builder settingType(java.util.List < String > settingType) {
             this.putQueryParameter("SettingType", settingType);

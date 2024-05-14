@@ -195,9 +195,9 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyRequest extends Req
          * The deployment strategy. Valid values:
          * <p>
          * 
-         * *   Availability: high availability strategy.
-         * *   AvailabilityGroup: high availability group strategy.
-         * *   LowLatency: low latency strategy.
+         * *   Availability: high availability strategy
+         * *   AvailabilityGroup: high availability group strategy
+         * *   LowLatency: low latency strategy
          * 
          * Default value: Availability.
          */

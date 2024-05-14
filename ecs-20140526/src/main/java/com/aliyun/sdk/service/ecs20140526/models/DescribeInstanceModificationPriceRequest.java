@@ -199,7 +199,7 @@ public class DescribeInstanceModificationPriceRequest extends Request {
         }
 
         /**
-         * The information about the data disk.
+         * The information about data disks.
          */
         public Builder dataDisk(java.util.List < DataDisk> dataDisk) {
             this.putQueryParameter("DataDisk", dataDisk);
@@ -383,14 +383,14 @@ public class DescribeInstanceModificationPriceRequest extends Request {
              * The category of data disk N. You can specify this parameter if you want to query the pricing information about newly attached subscription data disks. Valid values of N: 1 to 16. Valid values:
              * <p>
              * 
-             * *   cloud_efficiency: ultra disk
-             * *   cloud_ssd: standard SSD
-             * *   cloud_essd: ESSD
-             * *   cloud: basic disk
+             * *   cloud_efficiency: utra disk.
+             * *   cloud_ssd: standard SSD.
+             * *   cloud_essd: ESSD.
+             * *   cloud: basic disk.
              * 
              * This parameter is empty by default.
              * 
-             * > When you call the DescribeInstanceModificationPrice operation, you must specify at least one of the following parameters: `InstanceType` and `DataDisk.N.*`.
+             * >  When you call the DescribeInstanceModificationPrice operation, you must specify at least one of the following parameters: `InstanceType` and `DataDisk.N.*`.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -423,9 +423,9 @@ public class DescribeInstanceModificationPriceRequest extends Request {
              * 
              * *   Valid values when DataDisk.N.Category is set to cloud_ssd: 20 to 32768.
              * 
-             * *   Valid values when DataDisk.N.Category is set to cloud_essd: depends on the value of `DataDisk.N.PerformanceLevel`.
+             * *   Valid values when DataDisk.N.Category is set to cloud_essd: vary based on the `DataDisk.N.PerformanceLevel` value.
              * 
-             *     *   Valid values when DataDisk.N.PerformanceLevel is set to PL0: 40 to 32768.
+             *     *   Valid values when DataDisk.N.PerformanceLevel is set to PL0: 1 to 32768.
              *     *   Valid values when DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.
              *     *   Valid values when DataDisk.N.PerformanceLevel is set to PL2: 461 to 32768.
              *     *   Valid values when DataDisk.N.PerformanceLevel is set to PL3: 1261 to 32768.

@@ -484,8 +484,8 @@ public class DescribeRecommendInstanceTypeRequest extends Request {
          * <p>
          * 
          * *   InventoryFirst: recommends instance types in descending order of resource availability.
-         * *   PriceFirst: recommends the most cost-effective instance type. Recommended instance types appear based on the hourly prices of vCPUs in ascending order.
-         * *   NewProductFirst: recommends the latest instance types first.
+         * *   PriceFirst: recommends the most cost-effective instance types. Recommended instance types appear based on the hourly prices of vCPUs in ascending order.
+         * *   NewProductFirst: recommends the latest instance types.
          * 
          * Default value: InventoryFirst.
          */
@@ -523,7 +523,7 @@ public class DescribeRecommendInstanceTypeRequest extends Request {
         }
 
         /**
-         * Specifies the scenarios in which the instance type is recommended. Valid values:
+         * Specifies the scenarios in which instance types are recommended. Valid values:
          * <p>
          * 
          * *   UPGRADE: instance type upgrade or downgrade
@@ -538,14 +538,14 @@ public class DescribeRecommendInstanceTypeRequest extends Request {
         }
 
         /**
-         * The bidding policy of preemptible instances. Valid values:
+         * The bidding policy of the preemptible instance. Valid values:
          * <p>
          * 
-         * *   NoSpot: The instance is a pay-as-you-go instance.
+         * *   NoSpot: The instance is a regular pay-as-you-go instance.
          * *   SpotWithPriceLimit: The instance is a preemptible instance for which you can specify the maximum hourly price.
          * *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.
          * 
-         * > If the `SpotStrategy` parameter is specified, the `InstanceChargeType` parameter must be set to `PostPaid`.
+         * >  If you specify `SpotStrategy`, you must set `InstanceChargeType` to `PostPaid`.
          * 
          * Default value: NoSpot.
          */

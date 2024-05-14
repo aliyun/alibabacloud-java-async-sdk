@@ -266,7 +266,7 @@ public class ModifyDiskSpecRequest extends Request {
         }
 
         /**
-         * A collection of disk performance control parameters
+         * The disk performance specifications.
          */
         public Builder performanceControlOptions(PerformanceControlOptions performanceControlOptions) {
             this.putQueryParameter("PerformanceControlOptions", performanceControlOptions);
@@ -381,12 +381,12 @@ public class ModifyDiskSpecRequest extends Request {
             private Integer throughput; 
 
             /**
-             * The new IOPS of the disk. You can modify the IOPS of only disks in dedicated block storage clusters.
+             * The new IOPS rate of the disk. You can modify the IOPS rate of only disks in dedicated block storage clusters.
              * <p>
              * 
              * Valid values: 900 to maximum IOPS per disk (with an increment of 100).
              * 
-             * For more information, see [EBS performance](~~25382~~).
+             * For more information, see [Block storage performance](~~25382~~).
              */
             public Builder IOPS(Integer IOPS) {
                 this.IOPS = IOPS;
@@ -394,12 +394,12 @@ public class ModifyDiskSpecRequest extends Request {
             }
 
             /**
-             * The new IOPS and throughput of the disk. This parameter is valid only when the disk is in a dedicated block storage cluster.
+             * Specifies whether to reset the IOPS rate and throughput of the disk. This parameter takes effect only when the disk belongs to a dedicated block storage cluster.
              * <p>
              * 
              * After you specify this parameter, PerformanceControlOptions.IOPS and PerformanceControlOptions.Throughput do not take effect.
              * 
-             * Set the value to All, which indicates that the IOPS and throughput of the disk is reset to the initial values.
+             * Set the value to All, which indicates that the IOPS rate and throughput of the disk are reset to the initial values.
              */
             public Builder recover(String recover) {
                 this.recover = recover;
@@ -412,7 +412,7 @@ public class ModifyDiskSpecRequest extends Request {
              * 
              * Valid values: 60 to maximum throughput per disk.
              * 
-             * For more information, see [EBS performance](~~25382~~).
+             * For more information, see [Block storage performance](~~25382~~).
              */
             public Builder throughput(Integer throughput) {
                 this.throughput = throughput;

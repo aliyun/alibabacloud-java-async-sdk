@@ -259,7 +259,7 @@ public class DescribeAutoSnapshotPolicyExRequest extends Request {
          * 
          * Pages start from page 1.
          * 
-         * Default value: 1.
+         * Default value: 1
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -273,7 +273,7 @@ public class DescribeAutoSnapshotPolicyExRequest extends Request {
          * 
          * Valid values: 1 to 100.
          * 
-         * Default value: 10.
+         * Default value: 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

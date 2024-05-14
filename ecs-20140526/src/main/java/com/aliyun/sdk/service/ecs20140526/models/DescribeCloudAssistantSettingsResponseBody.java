@@ -218,7 +218,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * The time zone of the time window.
+             * The time zone of the time windows.
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;
@@ -342,8 +342,8 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
              * The type of items to be delivered. Valid values:
              * <p>
              * 
-             * *   SessionManager: session records
-             * *   Invocation: task execution records
+             * *   SessionManager: session records.
+             * *   Invocation: task execution records.
              */
             public Builder deliveryType(String deliveryType) {
                 this.deliveryType = deliveryType;
@@ -371,7 +371,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the customer master key (CMK) when EncryptionType is KMS.
+             * The ID of the customer master key (CMK) when EncryptionType is set to KMS.
              */
             public Builder encryptionKeyId(String encryptionKeyId) {
                 this.encryptionKeyId = encryptionKeyId;
@@ -384,7 +384,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
              * 
              * *   Inherit: the encryption method used by the specified bucket.
              * *   OssManaged: server-side encryption by using OSS-managed keys (SSE-OSS).
-             * *   KMS: server-side encryption by using Key Management Service managed keys (SSE-KMS).
+             * *   KMS: server-side encryption with Key Management Service (SSE-KMS).
              */
             public Builder encryptionType(String encryptionType) {
                 this.encryptionType = encryptionType;
@@ -513,8 +513,8 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
              * The type of items to be delivered. Valid values:
              * <p>
              * 
-             * *   SessionManager: session records
-             * *   Invocation: task execution records
+             * *   SessionManager: session records.
+             * *   Invocation: task execution records.
              */
             public Builder deliveryType(String deliveryType) {
                 this.deliveryType = deliveryType;

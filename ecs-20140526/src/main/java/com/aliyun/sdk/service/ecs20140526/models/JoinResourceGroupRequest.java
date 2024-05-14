@@ -250,8 +250,10 @@ public class JoinResourceGroupRequest extends Request {
          * *   eni: ENI
          * *   keypair: SSH key pair
          * *   launchtemplate: launch template
+         * *   command: Cloud Assistant command
+         * *   activation: activation code of the Cloud Assistant managed instance
          * 
-         * These values are case-sensitive.
+         * The values are case-sensitive.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
