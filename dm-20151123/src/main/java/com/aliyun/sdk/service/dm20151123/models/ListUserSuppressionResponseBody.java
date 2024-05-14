@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20151123.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUserSuppressionResponseBody</p>
  */
 public class ListUserSuppressionResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListUserSuppressionResponseBody(Builder builder) {
@@ -132,19 +131,19 @@ public class ListUserSuppressionResponseBody extends TeaModel {
     } 
 
     public static class UserSuppressions extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Integer createTime;
 
-        @NameInMap("LastBounceTime")
+        @com.aliyun.core.annotation.NameInMap("LastBounceTime")
         private Integer lastBounceTime;
 
-        @NameInMap("SuppressionId")
+        @com.aliyun.core.annotation.NameInMap("SuppressionId")
         private Integer suppressionId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private UserSuppressions(Builder builder) {
@@ -253,7 +252,7 @@ public class ListUserSuppressionResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("UserSuppressions")
+        @com.aliyun.core.annotation.NameInMap("UserSuppressions")
         private java.util.List < UserSuppressions> userSuppressions;
 
         private Data(Builder builder) {

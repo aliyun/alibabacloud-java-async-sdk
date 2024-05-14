@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20151123.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,55 +11,55 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescAccountSummaryResponseBody</p>
  */
 public class DescAccountSummaryResponseBody extends TeaModel {
-    @NameInMap("DailyQuota")
+    @com.aliyun.core.annotation.NameInMap("DailyQuota")
     private Integer dailyQuota;
 
-    @NameInMap("DayuStatus")
+    @com.aliyun.core.annotation.NameInMap("DayuStatus")
     private Integer dayuStatus;
 
-    @NameInMap("Domains")
+    @com.aliyun.core.annotation.NameInMap("Domains")
     private Integer domains;
 
-    @NameInMap("EnableTimes")
+    @com.aliyun.core.annotation.NameInMap("EnableTimes")
     private Integer enableTimes;
 
-    @NameInMap("MailAddresses")
+    @com.aliyun.core.annotation.NameInMap("MailAddresses")
     private Integer mailAddresses;
 
-    @NameInMap("MaxQuotaLevel")
+    @com.aliyun.core.annotation.NameInMap("MaxQuotaLevel")
     private Integer maxQuotaLevel;
 
-    @NameInMap("MonthQuota")
+    @com.aliyun.core.annotation.NameInMap("MonthQuota")
     private Integer monthQuota;
 
-    @NameInMap("QuotaLevel")
+    @com.aliyun.core.annotation.NameInMap("QuotaLevel")
     private Integer quotaLevel;
 
-    @NameInMap("Receivers")
+    @com.aliyun.core.annotation.NameInMap("Receivers")
     private Integer receivers;
 
-    @NameInMap("RemainFreeQuota")
+    @com.aliyun.core.annotation.NameInMap("RemainFreeQuota")
     private Integer remainFreeQuota;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SmsRecord")
+    @com.aliyun.core.annotation.NameInMap("SmsRecord")
     private Integer smsRecord;
 
-    @NameInMap("SmsSign")
+    @com.aliyun.core.annotation.NameInMap("SmsSign")
     private Integer smsSign;
 
-    @NameInMap("SmsTemplates")
+    @com.aliyun.core.annotation.NameInMap("SmsTemplates")
     private Integer smsTemplates;
 
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private Integer tags;
 
-    @NameInMap("Templates")
+    @com.aliyun.core.annotation.NameInMap("Templates")
     private Integer templates;
 
-    @NameInMap("UserStatus")
+    @com.aliyun.core.annotation.NameInMap("UserStatus")
     private Integer userStatus;
 
     private DescAccountSummaryResponseBody(Builder builder) {

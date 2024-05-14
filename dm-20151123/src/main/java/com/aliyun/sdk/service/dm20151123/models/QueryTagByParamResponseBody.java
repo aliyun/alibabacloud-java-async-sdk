@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20151123.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryTagByParamResponseBody</p>
  */
 public class QueryTagByParamResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
     private QueryTagByParamResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class QueryTagByParamResponseBody extends TeaModel {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("TagDescription")
+        @com.aliyun.core.annotation.NameInMap("TagDescription")
         private String tagDescription;
 
-        @NameInMap("TagId")
+        @com.aliyun.core.annotation.NameInMap("TagId")
         private String tagId;
 
-        @NameInMap("TagName")
+        @com.aliyun.core.annotation.NameInMap("TagName")
         private String tagName;
 
         private Tag(Builder builder) {
@@ -213,7 +212,7 @@ public class QueryTagByParamResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("tag")
+        @com.aliyun.core.annotation.NameInMap("tag")
         private java.util.List < Tag> tag;
 
         private Data(Builder builder) {

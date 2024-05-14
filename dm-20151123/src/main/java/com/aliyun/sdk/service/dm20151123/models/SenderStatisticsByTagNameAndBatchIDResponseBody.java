@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20151123.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SenderStatisticsByTagNameAndBatchIDResponseBody</p>
  */
 public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
     private SenderStatisticsByTagNameAndBatchIDResponseBody(Builder builder) {
@@ -92,25 +91,25 @@ public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
     } 
 
     public static class Stat extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("faildCount")
+        @com.aliyun.core.annotation.NameInMap("faildCount")
         private String faildCount;
 
-        @NameInMap("requestCount")
+        @com.aliyun.core.annotation.NameInMap("requestCount")
         private String requestCount;
 
-        @NameInMap("succeededPercent")
+        @com.aliyun.core.annotation.NameInMap("succeededPercent")
         private String succeededPercent;
 
-        @NameInMap("successCount")
+        @com.aliyun.core.annotation.NameInMap("successCount")
         private String successCount;
 
-        @NameInMap("unavailableCount")
+        @com.aliyun.core.annotation.NameInMap("unavailableCount")
         private String unavailableCount;
 
-        @NameInMap("unavailablePercent")
+        @com.aliyun.core.annotation.NameInMap("unavailablePercent")
         private String unavailablePercent;
 
         private Stat(Builder builder) {
@@ -253,7 +252,7 @@ public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("stat")
+        @com.aliyun.core.annotation.NameInMap("stat")
         private java.util.List < Stat> stat;
 
         private Data(Builder builder) {
