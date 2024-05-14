@@ -35,6 +35,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteMaterialByIdResponse> deleteMaterialById(DeleteMaterialByIdRequest request);
 
+    CompletableFuture<DocumentExtractionResponse> documentExtraction(DocumentExtractionRequest request);
+
     CompletableFuture<ExportGeneratedContentResponse> exportGeneratedContent(ExportGeneratedContentRequest request);
 
     CompletableFuture<ExportIntervenesResponse> exportIntervenes(ExportIntervenesRequest request);
