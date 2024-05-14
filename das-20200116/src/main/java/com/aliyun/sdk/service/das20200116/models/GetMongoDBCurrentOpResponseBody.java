@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMongoDBCurrentOpResponseBody</p>
  */
 public class GetMongoDBCurrentOpResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetMongoDBCurrentOpResponseBody(Builder builder) {
@@ -139,58 +138,58 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
     } 
 
     public static class SessionList extends TeaModel {
-        @NameInMap("Active")
+        @com.aliyun.core.annotation.NameInMap("Active")
         private Boolean active;
 
-        @NameInMap("Client")
+        @com.aliyun.core.annotation.NameInMap("Client")
         private String client;
 
-        @NameInMap("Command")
+        @com.aliyun.core.annotation.NameInMap("Command")
         private String command;
 
-        @NameInMap("ConnectionId")
+        @com.aliyun.core.annotation.NameInMap("ConnectionId")
         private Long connectionId;
 
-        @NameInMap("Desc")
+        @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
 
-        @NameInMap("Driver")
+        @com.aliyun.core.annotation.NameInMap("Driver")
         private String driver;
 
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("KillPending")
+        @com.aliyun.core.annotation.NameInMap("KillPending")
         private Boolean killPending;
 
-        @NameInMap("Ns")
+        @com.aliyun.core.annotation.NameInMap("Ns")
         private String ns;
 
-        @NameInMap("Op")
+        @com.aliyun.core.annotation.NameInMap("Op")
         private String op;
 
-        @NameInMap("OpId")
+        @com.aliyun.core.annotation.NameInMap("OpId")
         private String opId;
 
-        @NameInMap("OsArch")
+        @com.aliyun.core.annotation.NameInMap("OsArch")
         private String osArch;
 
-        @NameInMap("OsName")
+        @com.aliyun.core.annotation.NameInMap("OsName")
         private String osName;
 
-        @NameInMap("OsType")
+        @com.aliyun.core.annotation.NameInMap("OsType")
         private String osType;
 
-        @NameInMap("PlanSummary")
+        @com.aliyun.core.annotation.NameInMap("PlanSummary")
         private String planSummary;
 
-        @NameInMap("Platform")
+        @com.aliyun.core.annotation.NameInMap("Platform")
         private String platform;
 
-        @NameInMap("SecsRunning")
+        @com.aliyun.core.annotation.NameInMap("SecsRunning")
         private Long secsRunning;
 
-        @NameInMap("Shard")
+        @com.aliyun.core.annotation.NameInMap("Shard")
         private String shard;
 
         private SessionList(Builder builder) {
@@ -531,19 +530,19 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
 
     }
     public static class SessionStat extends TeaModel {
-        @NameInMap("ActiveCount")
+        @com.aliyun.core.annotation.NameInMap("ActiveCount")
         private Long activeCount;
 
-        @NameInMap("ClientStats")
+        @com.aliyun.core.annotation.NameInMap("ClientStats")
         private java.util.Map < String, DataSessionStatClientStatsValue > clientStats;
 
-        @NameInMap("DbStats")
+        @com.aliyun.core.annotation.NameInMap("DbStats")
         private java.util.Map < String, DataSessionStatDbStatsValue > dbStats;
 
-        @NameInMap("LongestSecsRunning")
+        @com.aliyun.core.annotation.NameInMap("LongestSecsRunning")
         private Long longestSecsRunning;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private SessionStat(Builder builder) {
@@ -652,13 +651,13 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("SessionList")
+        @com.aliyun.core.annotation.NameInMap("SessionList")
         private java.util.List < SessionList> sessionList;
 
-        @NameInMap("SessionStat")
+        @com.aliyun.core.annotation.NameInMap("SessionStat")
         private SessionStat sessionStat;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
         private Data(Builder builder) {

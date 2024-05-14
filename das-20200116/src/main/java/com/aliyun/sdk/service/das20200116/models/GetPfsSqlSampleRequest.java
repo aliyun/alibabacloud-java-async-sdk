@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPfsSqlSampleRequest</p>
  */
 public class GetPfsSqlSampleRequest extends Request {
-    @Body
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("NodeId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeId")
     private String nodeId;
 
-    @Body
-    @NameInMap("SqlId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SqlId")
     private String sqlId;
 
-    @Body
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
     private GetPfsSqlSampleRequest(Builder builder) {
@@ -113,10 +112,10 @@ public class GetPfsSqlSampleRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * The end of the time range to query. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          * <p>
          * 
-         * >  The end time must be later than the start time. You can query the data of up to seven days within the last month.
+         * >  The end time must be later than the start time. You can view the data of up to seven days in the previous 30 days.
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -128,7 +127,7 @@ public class GetPfsSqlSampleRequest extends Request {
          * The instance ID.
          * <p>
          * 
-         * >  Only ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters are supported.
+         * >  Only ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters are supported
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -140,7 +139,7 @@ public class GetPfsSqlSampleRequest extends Request {
          * The node ID.
          * <p>
          * 
-         * >  This parameter must be specified for ApsaraDB RDS for MySQL Cluster Edition instances and PolarDB for MySQL clusters.
+         * >  For ApsaraDB RDS for MySQL Cluster Edition instances or PolarDB for MySQL clusters, you must specify the node ID.
          */
         public Builder nodeId(String nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -158,7 +157,7 @@ public class GetPfsSqlSampleRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * The beginning of the time range to query. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDasSQLLogHotDataResponseBody</p>
  */
 public class GetDasSQLLogHotDataResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private GetDasSQLLogHotDataResponseBody(Builder builder) {
@@ -139,61 +138,61 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
     } 
 
     public static class List extends TeaModel {
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("DBName")
+        @com.aliyun.core.annotation.NameInMap("DBName")
         private String DBName;
 
-        @NameInMap("ExecuteTime")
+        @com.aliyun.core.annotation.NameInMap("ExecuteTime")
         private String executeTime;
 
-        @NameInMap("Ext")
+        @com.aliyun.core.annotation.NameInMap("Ext")
         private String ext;
 
-        @NameInMap("HostAddress")
+        @com.aliyun.core.annotation.NameInMap("HostAddress")
         private String hostAddress;
 
-        @NameInMap("Latancy")
+        @com.aliyun.core.annotation.NameInMap("Latancy")
         private Long latancy;
 
-        @NameInMap("LockTime")
+        @com.aliyun.core.annotation.NameInMap("LockTime")
         private Long lockTime;
 
-        @NameInMap("LogicRead")
+        @com.aliyun.core.annotation.NameInMap("LogicRead")
         private Long logicRead;
 
-        @NameInMap("OriginTime")
+        @com.aliyun.core.annotation.NameInMap("OriginTime")
         private String originTime;
 
-        @NameInMap("PhysicAsyncRead")
+        @com.aliyun.core.annotation.NameInMap("PhysicAsyncRead")
         private Long physicAsyncRead;
 
-        @NameInMap("PhysicSyncRead")
+        @com.aliyun.core.annotation.NameInMap("PhysicSyncRead")
         private Long physicSyncRead;
 
-        @NameInMap("ReturnRows")
+        @com.aliyun.core.annotation.NameInMap("ReturnRows")
         private Long returnRows;
 
-        @NameInMap("SQLText")
+        @com.aliyun.core.annotation.NameInMap("SQLText")
         private String SQLText;
 
-        @NameInMap("ScanRows")
+        @com.aliyun.core.annotation.NameInMap("ScanRows")
         private Long scanRows;
 
-        @NameInMap("SqlType")
+        @com.aliyun.core.annotation.NameInMap("SqlType")
         private String sqlType;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("ThreadID")
+        @com.aliyun.core.annotation.NameInMap("ThreadID")
         private Long threadID;
 
-        @NameInMap("TransactionId")
+        @com.aliyun.core.annotation.NameInMap("TransactionId")
         private String transactionId;
 
-        @NameInMap("UpdateRows")
+        @com.aliyun.core.annotation.NameInMap("UpdateRows")
         private Long updateRows;
 
         private List(Builder builder) {
@@ -545,19 +544,19 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Extra")
+        @com.aliyun.core.annotation.NameInMap("Extra")
         private Object extra;
 
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;
 
-        @NameInMap("PageNo")
+        @com.aliyun.core.annotation.NameInMap("PageNo")
         private Long pageNo;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Long pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private Data(Builder builder) {

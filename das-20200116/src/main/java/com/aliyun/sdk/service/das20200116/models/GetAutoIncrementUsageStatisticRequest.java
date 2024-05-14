@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAutoIncrementUsageStatisticRequest</p>
  */
 public class GetAutoIncrementUsageStatisticRequest extends Request {
-    @Query
-    @NameInMap("DbNames")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbNames")
     private String dbNames;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RatioFilter")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RatioFilter")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Double ratioFilter;
 
-    @Query
-    @NameInMap("RealTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RealTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean realTime;
 
     private GetAutoIncrementUsageStatisticRequest(Builder builder) {

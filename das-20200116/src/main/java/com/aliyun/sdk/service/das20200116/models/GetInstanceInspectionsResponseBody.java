@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInstanceInspectionsResponseBody</p>
  */
 public class GetInstanceInspectionsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private GetInstanceInspectionsResponseBody(Builder builder) {
@@ -94,7 +93,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The inspection and scoring results.
+         * The details.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -139,19 +138,19 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
     } 
 
     public static class AutoFunction extends TeaModel {
-        @NameInMap("AutoIndex")
+        @com.aliyun.core.annotation.NameInMap("AutoIndex")
         private Integer autoIndex;
 
-        @NameInMap("AutoLimitedSql")
+        @com.aliyun.core.annotation.NameInMap("AutoLimitedSql")
         private Integer autoLimitedSql;
 
-        @NameInMap("AutoResourceOptimize")
+        @com.aliyun.core.annotation.NameInMap("AutoResourceOptimize")
         private Integer autoResourceOptimize;
 
-        @NameInMap("AutoScale")
+        @com.aliyun.core.annotation.NameInMap("AutoScale")
         private Integer autoScale;
 
-        @NameInMap("EventSubscription")
+        @com.aliyun.core.annotation.NameInMap("EventSubscription")
         private Integer eventSubscription;
 
         private AutoFunction(Builder builder) {
@@ -216,9 +215,9 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
              * Indicates whether the feature of automatically creating and deleting indexes is enabled. Valid values:
              * <p>
              * 
-             * * **0**: disabled.
-             * * **1**: enabled.
-             * * **2**: not supported.
+             * *   **0**: disabled.
+             * *   **1**: enabled.
+             * *   **2**: not supported.
              */
             public Builder autoIndex(Integer autoIndex) {
                 this.autoIndex = autoIndex;
@@ -229,9 +228,9 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
              * Indicates whether the automatic throttling feature is enabled. Valid values:
              * <p>
              * 
-             * * **0**: disabled.
-             * * **1**: enabled.
-             * * **2**: not supported.
+             * *   **0**: disabled.
+             * *   **1**: enabled.
+             * *   **2**: not supported.
              */
             public Builder autoLimitedSql(Integer autoLimitedSql) {
                 this.autoLimitedSql = autoLimitedSql;
@@ -239,12 +238,12 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether automatic reclamation of fragments is enabled. Valid values:
+             * Indicates whether the automatic fragment recycling feature is enabled. Valid values:
              * <p>
              * 
-             * * **0**: disabled.
-             * * **1**: enabled.
-             * * **2**: not supported.
+             * *   **0**: disabled.
+             * *   **1**: enabled.
+             * *   **2**: not supported.
              */
             public Builder autoResourceOptimize(Integer autoResourceOptimize) {
                 this.autoResourceOptimize = autoResourceOptimize;
@@ -255,9 +254,9 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
              * Indicates whether the auto scaling feature is enabled. Valid values:
              * <p>
              * 
-             * * **0**: disabled.
-             * * **1**: enabled.
-             * * **2**: not supported.
+             * *   **0**: disabled.
+             * *   **1**: enabled.
+             * *   **2**: not supported.
              */
             public Builder autoScale(Integer autoScale) {
                 this.autoScale = autoScale;
@@ -268,9 +267,9 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
              * Indicates whether the event subscription feature is enabled. Valid values:
              * <p>
              * 
-             * * **0**: disabled.
-             * * **1**: enabled.
-             * * **2**: not supported.
+             * *   **0**: disabled.
+             * *   **1**: enabled.
+             * *   **2**: not supported.
              */
             public Builder eventSubscription(Integer eventSubscription) {
                 this.eventSubscription = eventSubscription;
@@ -285,52 +284,52 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
 
     }
     public static class Instance extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private String cpu;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("EngineVersion")
+        @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private String engineVersion;
 
-        @NameInMap("InstanceAlias")
+        @com.aliyun.core.annotation.NameInMap("InstanceAlias")
         private String instanceAlias;
 
-        @NameInMap("InstanceArea")
+        @com.aliyun.core.annotation.NameInMap("InstanceArea")
         private String instanceArea;
 
-        @NameInMap("InstanceClass")
+        @com.aliyun.core.annotation.NameInMap("InstanceClass")
         private String instanceClass;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Integer memory;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Storage")
+        @com.aliyun.core.annotation.NameInMap("Storage")
         private Integer storage;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private Instance(Builder builder) {
@@ -491,7 +490,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The account ID. You can obtain the account ID on the **Security Settings** page in the Alibaba Cloud **account management center**.
+             * The account ID. You can view the ID of the logon account by moving the pointer over the profile in the Alibaba Cloud management console.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -502,8 +501,8 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
              * The connection mode of the instance. Valid values:
              * <p>
              * 
-             * * **standard**: standard mode.
-             * * **safe**: database proxy mode.
+             * *   **standard**: standard mode.
+             * *   **safe**: database proxy mode.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -522,9 +521,9 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
              * The database engine. Valid values:
              * <p>
              * 
-             * * **MySQL**
-             * * **Redis**
-             * * **PolarDBMySQL**
+             * *   **MySQL**
+             * *   **Redis**
+             * *   **PolarDBMySQL**
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -540,7 +539,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * The instance name.
              */
             public Builder instanceAlias(String instanceAlias) {
                 this.instanceAlias = instanceAlias;
@@ -551,11 +550,11 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
              * The type of the instance on which the database is deployed. Valid values:
              * <p>
              * 
-             * * **RDS**: an Alibaba Cloud database instance.
-             * * **ECS**: an ECS instance on which a self-managed database is deployed.
-             * * **IDC**: a self-managed database instance that is not deployed on Alibaba Cloud.
+             * *   **RDS**: an Alibaba Cloud database instance.
+             * *   **ECS**: an Elastic Compute Service (ECS) instance on which a self-managed database is deployed.
+             * *   **IDC**: a self-managed database instance that is not deployed on Alibaba Cloud.
              * 
-             * > The value IDC indicates that the instance is deployed in a data center.
+             * >  The value IDC indicates that the instance is deployed in a data center.
              */
             public Builder instanceArea(String instanceArea) {
                 this.instanceArea = instanceArea;
@@ -603,7 +602,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the instance resides.
+             * The region ID of the instance.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -642,37 +641,37 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
 
     }
     public static class List extends TeaModel {
-        @NameInMap("AutoFunction")
+        @com.aliyun.core.annotation.NameInMap("AutoFunction")
         private AutoFunction autoFunction;
 
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private java.util.Map < String, ? > data;
 
-        @NameInMap("EnableDasPro")
+        @com.aliyun.core.annotation.NameInMap("EnableDasPro")
         private Integer enableDasPro;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("Instance")
+        @com.aliyun.core.annotation.NameInMap("Instance")
         private Instance instance;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private Integer score;
 
-        @NameInMap("ScoreMap")
+        @com.aliyun.core.annotation.NameInMap("ScoreMap")
         private java.util.Map < String, ? > scoreMap;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private Integer state;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private Integer taskType;
 
         private List(Builder builder) {
@@ -796,7 +795,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The returned data.
+             * The data returned.
              */
             public Builder data(java.util.Map < String, ? > data) {
                 this.data = data;
@@ -804,12 +803,12 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether DAS Professional Edition is enabled. Valid values:
+             * Indicates whether DAS Enterprise Edition is enabled. Valid values:
              * <p>
              * 
-             * * **0**: disabled.
-             * * **1**: enabled.
-             * * **2**: not supported.
+             * *   **0**: disabled.
+             * *   **1**: enabled.
+             * *   **2**: not supported.
              */
             public Builder enableDasPro(Integer enableDasPro) {
                 this.enableDasPro = enableDasPro;
@@ -820,7 +819,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
              * The end time of the inspection and scoring task. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              * <p>
              * 
-             * > The end time must be later than the start time.
+             * >  The end time must be later than the start time.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -836,7 +835,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the instance.
+             * The information about the instance.
              */
             public Builder instance(Instance instance) {
                 this.instance = instance;
@@ -844,7 +843,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The inspection scores of the instance.
+             * The inspection score of the instance.
              */
             public Builder score(Integer score) {
                 this.score = score;
@@ -860,7 +859,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the inspection and scoring task. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * The start time of the inspection and scoring task. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -871,9 +870,9 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
              * The state of the inspection and scoring task. Valid values:
              * <p>
              * 
-             * * **0**: The task is waiting for execution.
-             * * **1**: The task is in progress.
-             * * **2**: The task is complete.
+             * *   **0**: The task is waiting for execution.
+             * *   **1**: The task is in progress.
+             * *   **2**: The task is complete.
              */
             public Builder state(Integer state) {
                 this.state = state;
@@ -884,8 +883,8 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
              * The mode in which the inspection and scoring task was initiated. Valid values:
              * <p>
              * 
-             * * **0**: automatic mode
-             * * **1**: manual mode
+             * *   **0**: automatic mode.
+             * *   **1**: manual mode.
              */
             public Builder taskType(Integer taskType) {
                 this.taskType = taskType;
@@ -900,16 +899,16 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;
 
-        @NameInMap("PageNo")
+        @com.aliyun.core.annotation.NameInMap("PageNo")
         private Long pageNo;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Long pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private Data(Builder builder) {
@@ -962,11 +961,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * The mode in which the inspection and scoring task was initiated. Valid values:
-             * <p>
-             * 
-             * *   **0**: automatic mode
-             * *   **1**: manual mode
+             * The detailed information.
              */
             public Builder list(java.util.List < List> list) {
                 this.list = list;

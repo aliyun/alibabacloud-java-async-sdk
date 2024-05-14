@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RunCloudBenchTaskResponseBody</p>
  */
 public class RunCloudBenchTaskResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private RunCloudBenchTaskResponseBody(Builder builder) {
@@ -139,22 +138,22 @@ public class RunCloudBenchTaskResponseBody extends TeaModel {
     } 
 
     public static class PreCheckItem extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private Integer code;
 
-        @NameInMap("Details")
+        @com.aliyun.core.annotation.NameInMap("Details")
         private String details;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Order")
+        @com.aliyun.core.annotation.NameInMap("Order")
         private Integer order;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private PreCheckItem(Builder builder) {
@@ -296,7 +295,7 @@ public class RunCloudBenchTaskResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("PreCheckItem")
+        @com.aliyun.core.annotation.NameInMap("PreCheckItem")
         private java.util.List < PreCheckItem> preCheckItem;
 
         private Data(Builder builder) {

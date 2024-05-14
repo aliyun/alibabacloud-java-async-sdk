@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetRequestDiagnosisPageResponseBody</p>
  */
 public class GetRequestDiagnosisPageResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private GetRequestDiagnosisPageResponseBody(Builder builder) {
@@ -139,37 +138,37 @@ public class GetRequestDiagnosisPageResponseBody extends TeaModel {
     } 
 
     public static class List extends TeaModel {
-        @NameInMap("accountId")
+        @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
 
-        @NameInMap("dbSchema")
+        @com.aliyun.core.annotation.NameInMap("dbSchema")
         private String dbSchema;
 
-        @NameInMap("engine")
+        @com.aliyun.core.annotation.NameInMap("engine")
         private String engine;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private String gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private String gmtModified;
 
-        @NameInMap("messageId")
+        @com.aliyun.core.annotation.NameInMap("messageId")
         private String messageId;
 
-        @NameInMap("param")
+        @com.aliyun.core.annotation.NameInMap("param")
         private String param;
 
-        @NameInMap("result")
+        @com.aliyun.core.annotation.NameInMap("result")
         private String result;
 
-        @NameInMap("sqlId")
+        @com.aliyun.core.annotation.NameInMap("sqlId")
         private String sqlId;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private Integer state;
 
-        @NameInMap("uuid")
+        @com.aliyun.core.annotation.NameInMap("uuid")
         private String uuid;
 
         private List(Builder builder) {
@@ -431,19 +430,19 @@ public class GetRequestDiagnosisPageResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("extra")
+        @com.aliyun.core.annotation.NameInMap("extra")
         private String extra;
 
-        @NameInMap("list")
+        @com.aliyun.core.annotation.NameInMap("list")
         private java.util.List < List> list;
 
-        @NameInMap("pageNo")
+        @com.aliyun.core.annotation.NameInMap("pageNo")
         private Long pageNo;
 
-        @NameInMap("pageSize")
+        @com.aliyun.core.annotation.NameInMap("pageSize")
         private Long pageSize;
 
-        @NameInMap("total")
+        @com.aliyun.core.annotation.NameInMap("total")
         private Long total;
 
         private Data(Builder builder) {

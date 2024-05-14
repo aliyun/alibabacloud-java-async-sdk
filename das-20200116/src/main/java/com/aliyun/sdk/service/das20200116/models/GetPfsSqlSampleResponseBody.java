@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPfsSqlSampleResponseBody</p>
  */
 public class GetPfsSqlSampleResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetPfsSqlSampleResponseBody(Builder builder) {
@@ -94,7 +93,7 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
         }
 
         /**
-         * The queried SQL sample data.
+         * The SQL sample data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -139,100 +138,100 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("CreateTmpDiskTables")
+        @com.aliyun.core.annotation.NameInMap("CreateTmpDiskTables")
         private Integer createTmpDiskTables;
 
-        @NameInMap("CreateTmpTables")
+        @com.aliyun.core.annotation.NameInMap("CreateTmpTables")
         private Integer createTmpTables;
 
-        @NameInMap("Db")
+        @com.aliyun.core.annotation.NameInMap("Db")
         private String db;
 
-        @NameInMap("EndEventId")
+        @com.aliyun.core.annotation.NameInMap("EndEventId")
         private Integer endEventId;
 
-        @NameInMap("Errors")
+        @com.aliyun.core.annotation.NameInMap("Errors")
         private Integer errors;
 
-        @NameInMap("EventId")
+        @com.aliyun.core.annotation.NameInMap("EventId")
         private Integer eventId;
 
-        @NameInMap("EventName")
+        @com.aliyun.core.annotation.NameInMap("EventName")
         private String eventName;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Latency")
+        @com.aliyun.core.annotation.NameInMap("Latency")
         private Double latency;
 
-        @NameInMap("LockLatency")
+        @com.aliyun.core.annotation.NameInMap("LockLatency")
         private Double lockLatency;
 
-        @NameInMap("LogicId")
+        @com.aliyun.core.annotation.NameInMap("LogicId")
         private String logicId;
 
-        @NameInMap("NoGoodIndexUsed")
+        @com.aliyun.core.annotation.NameInMap("NoGoodIndexUsed")
         private Integer noGoodIndexUsed;
 
-        @NameInMap("NoIndexUsed")
+        @com.aliyun.core.annotation.NameInMap("NoIndexUsed")
         private Integer noIndexUsed;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("RowsAffected")
+        @com.aliyun.core.annotation.NameInMap("RowsAffected")
         private Integer rowsAffected;
 
-        @NameInMap("RowsExamined")
+        @com.aliyun.core.annotation.NameInMap("RowsExamined")
         private Integer rowsExamined;
 
-        @NameInMap("RowsSent")
+        @com.aliyun.core.annotation.NameInMap("RowsSent")
         private Integer rowsSent;
 
-        @NameInMap("SelectFullJoin")
+        @com.aliyun.core.annotation.NameInMap("SelectFullJoin")
         private Integer selectFullJoin;
 
-        @NameInMap("SelectFullRangeJoin")
+        @com.aliyun.core.annotation.NameInMap("SelectFullRangeJoin")
         private Integer selectFullRangeJoin;
 
-        @NameInMap("SelectRange")
+        @com.aliyun.core.annotation.NameInMap("SelectRange")
         private Integer selectRange;
 
-        @NameInMap("SelectRangeCheck")
+        @com.aliyun.core.annotation.NameInMap("SelectRangeCheck")
         private Integer selectRangeCheck;
 
-        @NameInMap("SelectScan")
+        @com.aliyun.core.annotation.NameInMap("SelectScan")
         private Integer selectScan;
 
-        @NameInMap("SortMergePasses")
+        @com.aliyun.core.annotation.NameInMap("SortMergePasses")
         private Integer sortMergePasses;
 
-        @NameInMap("SortRange")
+        @com.aliyun.core.annotation.NameInMap("SortRange")
         private Integer sortRange;
 
-        @NameInMap("SortRows")
+        @com.aliyun.core.annotation.NameInMap("SortRows")
         private Integer sortRows;
 
-        @NameInMap("SortScan")
+        @com.aliyun.core.annotation.NameInMap("SortScan")
         private Integer sortScan;
 
-        @NameInMap("Sql")
+        @com.aliyun.core.annotation.NameInMap("Sql")
         private String sql;
 
-        @NameInMap("SqlId")
+        @com.aliyun.core.annotation.NameInMap("SqlId")
         private String sqlId;
 
-        @NameInMap("ThreadId")
+        @com.aliyun.core.annotation.NameInMap("ThreadId")
         private Integer threadId;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("Warnings")
+        @com.aliyun.core.annotation.NameInMap("Warnings")
         private Integer warnings;
 
         private Data(Builder builder) {
@@ -617,7 +616,7 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The logical database ID.
+             * The ID of the logical database.
              */
             public Builder logicId(String logicId) {
                 this.logicId = logicId;
@@ -628,8 +627,8 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
              * Indicates whether the server failed to find an index that can be used for the SQL statement. Valid values:
              * <p>
              * 
-             * * **1:** yes.
-             * * **0:** no.
+             * *   **1**: yes.
+             * *   **0**: no.
              */
             public Builder noGoodIndexUsed(Integer noGoodIndexUsed) {
                 this.noGoodIndexUsed = noGoodIndexUsed;
@@ -640,8 +639,8 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
              * Indicates whether table scans were performed when indexes were not used. Valid values:
              * <p>
              * 
-             * * **1:** yes.
-             * * **0:** no.
+             * *   **1**: yes.
+             * *   **0**: no.
              */
             public Builder noIndexUsed(Integer noIndexUsed) {
                 this.noIndexUsed = noIndexUsed;
@@ -652,7 +651,7 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
              * The node ID.
              * <p>
              * 
-             * > This parameter is returned only for ApsaraDB RDS for MySQL Cluster Edition instances and PolarDB for MySQL clusters.
+             * >  This parameter is returned only for ApsaraDB RDS for MySQL Cluster Edition instances or PolarDB for MySQL clusters.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -687,7 +686,7 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
              * The number of joins that are used to perform table scans without using indexes.
              * <p>
              * 
-             * > This parameter is used to count the number of joins that did not use indexes. If the value of this parameter is not 0, check the table indexes.
+             * > : This parameter is used for the scenario in which indexes are not used in a union query. If the returned value is not 0, check the indexes of tables.
              */
             public Builder selectFullJoin(Integer selectFullJoin) {
                 this.selectFullJoin = selectFullJoin;
@@ -714,7 +713,7 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
              * The number of joins that did not have key values. The keys and values were checked for each row of data.
              * <p>
              * 
-             * >  This parameter is used to count the number of joins that did not use indexes. If the value of this parameter is not 0, check the table indexes.
+             * > : This parameter is used for the scenario in which indexes are not used in a union query. If the returned value is not 0, check the indexes of tables.
              */
             public Builder selectRangeCheck(Integer selectRangeCheck) {
                 this.selectRangeCheck = selectRangeCheck;
@@ -762,7 +761,7 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL sample.
+             * The sample SQL statement.
              */
             public Builder sql(String sql) {
                 this.sql = sql;
@@ -770,7 +769,7 @@ public class GetPfsSqlSampleResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL ID.
+             * The SQL statement ID.
              */
             public Builder sqlId(String sqlId) {
                 this.sqlId = sqlId;

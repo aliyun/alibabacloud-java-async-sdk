@@ -28,12 +28,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddHDMInstanceResponse> addHDMInstance(AddHDMInstanceRequest request);
 
     /**
-      * Database Autonomy Service (DAS) provides the intelligent stress testing feature. You use an ADAM stress testing task to check whether you need to scale up or scale out your database instance to handle workloads during peak hours. For more information, see [Intelligent Stress Testing](~~155068~~).
+      * Database Autonomy Service (DAS) provides the intelligent stress testing feature. You can create an Advanced Database & Application Migration (ADAM) stress testing task to check whether you need to scale up your database instance to handle workloads during peak hours. For more information, see [Intelligent stress testing](~~155068~~).
       * Make sure that your database instances meet the following requirements:
-      * *   The source instance supports the following database engines: ApsaraDB RDS for MySQL on High-availability Edition or Enterprise Edition, and PolarDB for MySQL on Cluster Edition or X-Engine.
-      * *   The destination instance is an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL instance.
-      * *   The database instance is connected to DAS. For information about how to connect database instances to DAS, see [Connect an Alibaba Cloud database instance to DAS](~~65405~~).
-      * *   DAS Professional Edition is activated for the source and destination database instances. For more information, see [DAS Professional Edition](~~190912~~).
+      * *   The source database instance is an ApsaraDB RDS for MySQL High-availability Edition or Enterprise Edition instance, or a PolarDB for MySQL Cluster Edition or X-Engine Edition cluster.
+      * *   The destination instance is an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL cluster.
+      * *   The source and destination database instances are connected to DAS. For information about how to connect database instances to DAS, see [Connect an Alibaba Cloud database instance to DAS](~~65405~~).
+      * *   DAS Enterprise Edition is enabled for the source and destination database instances. For more information, see [Overview](~~190912~~).
       *
      */
     CompletableFuture<CreateAdamBenchTaskResponse> createAdamBenchTask(CreateAdamBenchTaskRequest request);
@@ -49,11 +49,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCacheAnalysisJobResponse> createCacheAnalysisJob(CreateCacheAnalysisJobRequest request);
 
     /**
-      * Database Autonomy Service (DAS) provides the intelligent stress testing feature. This feature helps you check whether your instance needs to be scaled up to handle traffic spikes in an effective manner. For more information, see [Intelligent stress testing](~~155068~~). Before you call this API operation, make sure that your database instances meet the following requirements:
-      * *   The source database instance must be an ApsaraDB RDS for MySQL High-availability Edition or Enterprise Edition instance, or a PolarDB for MySQL Cluster Edition or X-Engine Edition instance.
-      * *   The destination instance is an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL instance.
-      * *   The source instance and the destination instance are connected to DAS. For information about how to connect database instances to DAS, see [Connect an Alibaba Cloud database instance to DAS](~~65405~~).
-      * *   DAS Professional Edition is enabled for the source instance and the destination instance. For more information, see [DAS Professional Edition](~~190912~~).
+      * Database Autonomy Service (DAS) provides the intelligent stress testing feature. This feature helps you check whether your instance needs to be scaled up to effectively handle traffic spikes. For more information, see [Intelligent stress testing](~~155068~~). Before you call this API operation, make sure that your database instances meet the following requirements:
+      * *   The source database instance is an ApsaraDB RDS for MySQL High-availability Edition or Enterprise Edition instance, or a PolarDB for MySQL Cluster Edition or X-Engine Edition cluster.
+      * *   The destination database instance is an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL instance.
+      * *   The source and destination database instances are connected to DAS. For information about how to connect database instances to DAS, see [Connect an Alibaba Cloud database instance to DAS](~~65405~~).
+      * *   DAS Enterprise Edition is enabled for the source and destination database instances. For more information, see [Overview](~~190912~~).
       *
      */
     CompletableFuture<CreateCloudBenchTasksResponse> createCloudBenchTasks(CreateCloudBenchTasksRequest request);
@@ -107,6 +107,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateRequestDiagnosisResponse> createRequestDiagnosis(CreateRequestDiagnosisRequest request);
 
+    CompletableFuture<CreateSqlLogTaskResponse> createSqlLogTask(CreateSqlLogTaskRequest request);
+
     /**
       * *   This operation is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.
       * *   If you use an Alibaba Cloud SDK or Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.
@@ -138,9 +140,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAutoScalingConfigResponse> describeAutoScalingConfig(DescribeAutoScalingConfigRequest request);
 
     /**
-      * *   You can query only the history of automatic performance scaling of ApsaraDB RDS for MySQL instances.
+      * *   You can call this operation to query the history information about the automatic performance scaling only of ApsaraDB RDS for MySQL High-availability Edition instances.
       * *   If you use an Alibaba Cloud SDK or Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.
-      * *   If you use an SDK to call API operations of DAS, you must set the region to cn-shanghai.
+      * *   If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.
       *
      */
     CompletableFuture<DescribeAutoScalingHistoryResponse> describeAutoScalingHistory(DescribeAutoScalingHistoryRequest request);
@@ -220,11 +222,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeHotKeysResponse> describeHotKeys(DescribeHotKeysRequest request);
 
     /**
-      * *   For more information about database instances that support DAS Professional Edition, see [Overview](~~190912~~).
-      * *   If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.
+      * *   For more information about database instances that support DAS Enterprise Edition, see [Overview of DAS Enterprise Edition](~~190912~~).
+      * *   If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.
+      * *   This operation is applicable only to DAS Enterprise Edition V1 and V2.
       *
      */
     CompletableFuture<DescribeInstanceDasProResponse> describeInstanceDasPro(DescribeInstanceDasProRequest request);
+
+    CompletableFuture<DescribeSqlLogConfigResponse> describeSqlLogConfig(DescribeSqlLogConfigRequest request);
+
+    CompletableFuture<DescribeSqlLogRecordsResponse> describeSqlLogRecords(DescribeSqlLogRecordsRequest request);
+
+    CompletableFuture<DescribeSqlLogStatisticResponse> describeSqlLogStatistic(DescribeSqlLogStatisticRequest request);
+
+    CompletableFuture<DescribeSqlLogTaskResponse> describeSqlLogTask(DescribeSqlLogTaskRequest request);
+
+    CompletableFuture<DescribeSqlLogTasksResponse> describeSqlLogTasks(DescribeSqlLogTasksRequest request);
 
     /**
       * The list, hash, set, and zset keys are sorted based on the number of elements in these keys. The top three keys that have the most elements are considered large keys.
@@ -273,8 +286,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DisableAutoThrottleRulesResponse> disableAutoThrottleRules(DisableAutoThrottleRulesRequest request);
 
     /**
-      * *   For information about database instances that support DAS Professional Edition, see [Overview](~~190912~~).
+      * *   For more information about database instances that support DAS Enterprise Edition, see [Overview of DAS Enterprise Edition](~~190912~~).
       * *   If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.
+      * *   This operation is applicable only to DAS Enterprise Edition V1.
       *
      */
     CompletableFuture<DisableDasProResponse> disableDasPro(DisableDasProRequest request);
@@ -297,8 +311,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DisableSqlConcurrencyControlResponse> disableSqlConcurrencyControl(DisableSqlConcurrencyControlRequest request);
 
     /**
-      * *   For more information about database instances that support DAS Professional Edition, see [Overview](~~190912~~).
+      * *   For more information about database instances that support DAS Enterprise Edition, see [Overview of DAS Enterprise Edition](~~190912~~).
       * *   If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.
+      * *   This operation is applicable only to DAS Enterprise Edition V1.
       *
      */
     CompletableFuture<EnableDasProResponse> enableDasPro(EnableDasProRequest request);
@@ -312,24 +327,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnableSqlConcurrencyControlResponse> enableSqlConcurrencyControl(EnableSqlConcurrencyControlRequest request);
 
     /**
-      * >  When an asynchronous call is made, the complete query results are not immediately returned. If the value of **isFinish** is **false** in the response, wait for 1 second and then re-initiate the call. The complete query results are returned until the value of **isFinish** is **true**.
-      * *   This operation is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters for which DAS Professional Edition is enabled. For more information, see [Purchase DAS Professional Edition](~~163298~~).
-      * *   If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.
+      * >  GetAsyncErrorRequestListByCode is an asynchronous operation. After a request is sent, the complete results are not returned immediately. If the value of **isFinish** is **false** in the response, wait for 1 second and then send a request again. If the value of **isFinish** is **true**, the complete results are returned.
+      * *   This API operation supports only ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters for which Database Autonomy Service (DAS) Enterprise Edition is enabled. For more information, see [Purchase DAS Enterprise Edition](~~163298~~).
+      * *   If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.
       *
      */
     CompletableFuture<GetAsyncErrorRequestListByCodeResponse> getAsyncErrorRequestListByCode(GetAsyncErrorRequestListByCodeRequest request);
 
     /**
-      * >  When an asynchronous call is made, the complete query results are not returned immediately. If the value of **isFinish** is **false** in the response, wait for 1 second and then re-initiate the call. The complete query results are returned until the value of **isFinish** is **true**.
-      * *   This API operation supports only ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters for which Database Autonomy Service (DAS) Professional Edition is enabled. For more information, see [Purchase DAS Professional Edition](~~163298~~).
+      * >  GetAsyncErrorRequestStatByCode is an asynchronous operation After a request is sent, the complete results are not returned immediately. If the value of **isFinish** is **false** in the response, wait for 1 second and then send a request again. If the value of **isFinish** is **true**, the complete results are returned.
+      * *   This API operation supports only ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters for which Database Autonomy Service (DAS) Enterprise Edition is enabled. For more information, see [Purchase DAS Enterprise Edition](~~163298~~).
       * *   If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.
       *
      */
     CompletableFuture<GetAsyncErrorRequestStatByCodeResponse> getAsyncErrorRequestStatByCode(GetAsyncErrorRequestStatByCodeRequest request);
 
     /**
-      * >  When an asynchronous call is made, the complete query results are not returned immediately. If the value of **isFinish** is **false** in the response, wait for 1 second and then re-initiate the call. The complete query results are returned until the value of **isFinish** is **true**.
-      * *   This API operation supports only ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters for which Database Autonomy Service (DAS) Professional Edition is enabled. For more information, see [Purchase DAS Professional Edition](~~163298~~).
+      * >  GetAsyncErrorRequestStatResult is an asynchronous operation. After a request is sent, the complete results are not returned immediately. If the value of **isFinish** is **false** in the response, wait for 1 second and then send a request again. If the value of **isFinish** is **true**, the complete results are returned.
+      * *   This API operation supports only ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters for which Database Autonomy Service (DAS) Enterprise Edition is enabled. For more information, see [Purchase DAS Enterprise Edition](~~163298~~).
       * *   If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.
       *
      */
@@ -400,9 +415,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDBInstanceConnectivityDiagnosisResponse> getDBInstanceConnectivityDiagnosis(GetDBInstanceConnectivityDiagnosisRequest request);
 
     /**
-      * *   For information about databases that are supported, see [Overview](~~190912~~).
-      * *   If you use an Alibaba Cloud SDK or a Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.
-      * *   If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.
+      * *   For information about database instances that support this operation, see [Overview of DAS Enterprise Edition](~~190912~~).
+      * *   If you use an Alibaba Cloud SDK or Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.
+      * *   If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.
+      * *   This operation is applicable only to DAS Enterprise Edition V1 and V2.
       *
      */
     CompletableFuture<GetDasProServiceUsageResponse> getDasProServiceUsage(GetDasProServiceUsageRequest request);
@@ -429,9 +445,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetEndpointSwitchTaskResponse> getEndpointSwitchTask(GetEndpointSwitchTaskRequest request);
 
     /**
-      * >  The complete query results are not immediately returned after an asynchronous request is sent. If the value of **isFinish** is **false** in the response, wait for 1 second and send the request again. The complete query results are returned until the value of **isFinish** is **true**.
-      * *   This operation is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters for which Database Autonomy Service (DAS) Professional Edition is enabled. For more information, see [Purchase DAS Professional Edition](~~163298~~).
-      * *   If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.
+      * >  GetErrorRequestSample is an asynchronous operation. After a request is sent, the complete results are not returned immediately. If the value of **isFinish** is **false** in the response, wait for 1 second and then send a request again. If the value of **isFinish** is **true**, the complete results are returned.
+      * *   This API operation supports only ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters for which Database Autonomy Service (DAS) Enterprise Edition is enabled. For more information, see [Purchase DAS Enterprise Edition](~~163298~~).
+      * *   If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.
       *
      */
     CompletableFuture<GetErrorRequestSampleResponse> getErrorRequestSample(GetErrorRequestSampleRequest request);
@@ -447,8 +463,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
       * The SQL Explorer feature allows you to check the health status of SQL statements and troubleshoot performance issues. For more information, see [SQL Explorer](~~204096~~).
-      * *   For information about database instances that support SQL Explorer, see [Overview](~~190912~~).
-      * *   If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.
+      * *   For more information about database instances that support this feature, see [Overview](~~190912~~).
+      * *   If you use an SDK to call API operations of Database Autonomy Service (DAS), you must set the region ID to cn-shanghai.
       *
      */
     CompletableFuture<GetFullRequestOriginStatByInstanceIdResponse> getFullRequestOriginStatByInstanceId(GetFullRequestOriginStatByInstanceIdRequest request);
@@ -768,10 +784,12 @@ public interface AsyncClient extends SdkAutoCloseable {
       * *   You can modify the configurations of the **auto scaling feature for resources** for the following types of database instances:
       *     *   General-purpose ApsaraDB RDS for MySQL Enterprise Edition instances. For more information about the feature and the billing rules, see [Automatic performance scaling](~~169686~~).
       * *   If you use an Alibaba Cloud SDK or Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.
-      * *   If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.
+      * *   If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.
       *
      */
     CompletableFuture<ModifyAutoScalingConfigResponse> modifyAutoScalingConfig(ModifyAutoScalingConfigRequest request);
+
+    CompletableFuture<ModifySqlLogConfigResponse> modifySqlLogConfig(ModifySqlLogConfigRequest request);
 
     /**
       * Database Autonomy Service (DAS) provides the intelligent stress testing feature. This feature helps you check whether your instance needs to be scaled up to effectively handle traffic spikes. For more information, see [Intelligent stress testing](~~155068~~).
@@ -797,24 +815,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SyncHDMAliyunResourceResponse> syncHDMAliyunResource(SyncHDMAliyunResourceRequest request);
 
     /**
-      * >  An asynchronous call does not immediately return complete results. If the value of **isFinish** is **false** in the response, wait for 1 second and then re-initiate the call. If the value of **isFinish** is **true**, the complete results are returned.
+      * >  UpdateAutoResourceOptimizeRulesAsync is an asynchronous operation. After a request is sent, the complete results are not returned immediately. If the value of **isFinish** is **false** in the response, wait for 1 second and then send a request again. If the value of **isFinish** is **true**, the complete results are returned.
       * Before you call this operation, take note of the following items:
-      * *   If you use an SDK to call API operations of Database Autonomy Service (DAS), you must set the region ID to cn-shanghai.
-      * *   The database instance is an ApsaraDB RDS for MySQL instance of High-availability Edition.
-      * *   DAS Professional Edition is enabled for the database instance. You can call the [DescribeInstanceDasPro](~~413866~~) operation to check whether DAS Professional Edition is enabled for a database instance.
-      * *   The database instance has four or more cores, and **innodb_file_per_table** is set to **ON**.
+      * *   If you use an SDK to call the API operations of Database Autonomy Service (DAS), you must set the region ID to cn-shanghai.
+      * *   The database instances must be an ApsaraDB RDS for MySQL High-availability Edition instance.
+      * *   DAS Enterprise Edition must be enabled for the database instance. You can call the call [DescribeInstanceDasPro](~~413866~~) operation to query whether DAS Enterprise Edition is enabled.
+      * *   The database instance has four or more CPU cores, and **innodb_file_per_table** is set to **ON**.
       *
      */
     CompletableFuture<UpdateAutoResourceOptimizeRulesAsyncResponse> updateAutoResourceOptimizeRulesAsync(UpdateAutoResourceOptimizeRulesAsyncRequest request);
 
     /**
       * Before you call this operation, take note of the following items:
-      * *   If you use an SDK to call operations of Database Autonomy Service (DAS), you must set the region ID to cn-shanghai.
-      * *   DAS Professional Edition is enabled for the database instance that you want to manage. To enable DAS Professional Edition for a database instance, you can call the [EnableDasPro](~~411645~~) operation.
-      * *   The autonomy service is enabled for the database instance. For more information, see [Autonomy center](~~152139~~).
+      * *   If you use an SDK to call API operations of Database Autonomy Service (DAS), you must set the region ID to cn-shanghai.
+      * *   DAS Enterprise Edition must be enabled for the database instance that you want to manage. To enable DAS Enterprise Edition for a database instance, you can call the [EnableDasPro](~~411645~~) operation.
+      * *   The autonomy service must be enabled for the database instance that you want to manage. For more information, see [Autonomy center](~~152139~~).
       * *   This operation supports the following database engines:
-      *     *   ApsaraDB RDS for MySQL High-availability Edition and Enterprise Edition
-      *     *   PolarDB for MySQL Cluster Edition and X-Engine Edition
+      *     *   ApsaraDB RDS for MySQL High-availability Edition or Enterprise Edition
+      *     *   PolarDB for MySQL Cluster Edition or X-Engine Edition
       *
      */
     CompletableFuture<UpdateAutoSqlOptimizeStatusResponse> updateAutoSqlOptimizeStatus(UpdateAutoSqlOptimizeStatusRequest request);

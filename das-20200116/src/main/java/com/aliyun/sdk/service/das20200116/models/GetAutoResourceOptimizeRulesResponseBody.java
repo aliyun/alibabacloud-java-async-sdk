@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAutoResourceOptimizeRulesResponseBody</p>
  */
 public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetAutoResourceOptimizeRulesResponseBody(Builder builder) {
@@ -139,22 +138,22 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
     } 
 
     public static class EnableAutoResourceOptimizeList extends TeaModel {
-        @NameInMap("AutoDefragment")
+        @com.aliyun.core.annotation.NameInMap("AutoDefragment")
         private Boolean autoDefragment;
 
-        @NameInMap("DasProOn")
+        @com.aliyun.core.annotation.NameInMap("DasProOn")
         private Boolean dasProOn;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("TableFragmentationRatio")
+        @com.aliyun.core.annotation.NameInMap("TableFragmentationRatio")
         private Double tableFragmentationRatio;
 
-        @NameInMap("TableSpaceSize")
+        @com.aliyun.core.annotation.NameInMap("TableSpaceSize")
         private Double tableSpaceSize;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private EnableAutoResourceOptimizeList(Builder builder) {
@@ -228,8 +227,8 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
              * Indicates whether the automatic fragment recycling feature is enabled. Valid values:
              * <p>
              * 
-             * * **true**
-             * * **false**
+             * *   **true**
+             * *   **false**
              */
             public Builder autoDefragment(Boolean autoDefragment) {
                 this.autoDefragment = autoDefragment;
@@ -237,11 +236,11 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether DAS Professional Edition is enabled. Valid values:
+             * Indicates whether DAS Enterprise Edition is enabled. Valid values:
              * <p>
              * 
-             * * **true**
-             * * **false**
+             * *   **true**
+             * *   **false**
              */
             public Builder dasProOn(Boolean dasProOn) {
                 this.dasProOn = dasProOn;
@@ -288,22 +287,22 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
 
     }
     public static class HasEnableRuleButNotDasProList extends TeaModel {
-        @NameInMap("AutoDefragment")
+        @com.aliyun.core.annotation.NameInMap("AutoDefragment")
         private Boolean autoDefragment;
 
-        @NameInMap("DasProOn")
+        @com.aliyun.core.annotation.NameInMap("DasProOn")
         private Boolean dasProOn;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("TableFragmentationRatio")
+        @com.aliyun.core.annotation.NameInMap("TableFragmentationRatio")
         private Double tableFragmentationRatio;
 
-        @NameInMap("TableSpaceSize")
+        @com.aliyun.core.annotation.NameInMap("TableSpaceSize")
         private Double tableSpaceSize;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private HasEnableRuleButNotDasProList(Builder builder) {
@@ -377,8 +376,8 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
              * Indicates whether the automatic fragment recycling feature is enabled. Valid values:
              * <p>
              * 
-             * * **true**
-             * * **false**
+             * *   **true**
+             * *   **false**
              */
             public Builder autoDefragment(Boolean autoDefragment) {
                 this.autoDefragment = autoDefragment;
@@ -386,11 +385,11 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether DAS Professional Edition is enabled. Valid values:
+             * Indicates whether DAS Enterprise Edition is enabled. Valid values:
              * <p>
              * 
-             * * **true**
-             * * **false**
+             * *   **true**
+             * *   **false**
              */
             public Builder dasProOn(Boolean dasProOn) {
                 this.dasProOn = dasProOn;
@@ -437,22 +436,22 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
 
     }
     public static class TurnOffAutoResourceOptimizeList extends TeaModel {
-        @NameInMap("AutoDefragment")
+        @com.aliyun.core.annotation.NameInMap("AutoDefragment")
         private Boolean autoDefragment;
 
-        @NameInMap("DasProOn")
+        @com.aliyun.core.annotation.NameInMap("DasProOn")
         private Boolean dasProOn;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("TableFragmentationRatio")
+        @com.aliyun.core.annotation.NameInMap("TableFragmentationRatio")
         private Double tableFragmentationRatio;
 
-        @NameInMap("TableSpaceSize")
+        @com.aliyun.core.annotation.NameInMap("TableSpaceSize")
         private Double tableSpaceSize;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private TurnOffAutoResourceOptimizeList(Builder builder) {
@@ -526,8 +525,8 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
              * Indicates whether the automatic fragment recycling feature is enabled. Valid values:
              * <p>
              * 
-             * * **true**
-             * * **false**
+             * *   **true**:
+             * *   **false**
              */
             public Builder autoDefragment(Boolean autoDefragment) {
                 this.autoDefragment = autoDefragment;
@@ -535,11 +534,11 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether DAS Professional Edition is enabled. Valid values:
+             * Indicates whether DAS Enterprise Edition is enabled. Valid values:
              * <p>
              * 
-             * * **true**
-             * * **false**
+             * *   **true**
+             * *   **false**
              */
             public Builder dasProOn(Boolean dasProOn) {
                 this.dasProOn = dasProOn;
@@ -563,11 +562,7 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the automatic fragment recycling feature is enabled. Valid values:
-             * <p>
-             * 
-             * true
-             * false
+             * The minimum storage usage of a single physical table for which the automatic fragment recycling feature is enabled. Unit: GB.
              */
             public Builder tableSpaceSize(Double tableSpaceSize) {
                 this.tableSpaceSize = tableSpaceSize;
@@ -590,31 +585,31 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("EnableAutoResourceOptimizeCount")
+        @com.aliyun.core.annotation.NameInMap("EnableAutoResourceOptimizeCount")
         private Long enableAutoResourceOptimizeCount;
 
-        @NameInMap("EnableAutoResourceOptimizeList")
+        @com.aliyun.core.annotation.NameInMap("EnableAutoResourceOptimizeList")
         private java.util.List < EnableAutoResourceOptimizeList> enableAutoResourceOptimizeList;
 
-        @NameInMap("HasEnableRuleButNotDasProCount")
+        @com.aliyun.core.annotation.NameInMap("HasEnableRuleButNotDasProCount")
         private Long hasEnableRuleButNotDasProCount;
 
-        @NameInMap("HasEnableRuleButNotDasProList")
+        @com.aliyun.core.annotation.NameInMap("HasEnableRuleButNotDasProList")
         private java.util.List < HasEnableRuleButNotDasProList> hasEnableRuleButNotDasProList;
 
-        @NameInMap("NeverEnableAutoResourceOptimizeOrReleasedInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("NeverEnableAutoResourceOptimizeOrReleasedInstanceCount")
         private Long neverEnableAutoResourceOptimizeOrReleasedInstanceCount;
 
-        @NameInMap("NeverEnableAutoResourceOptimizeOrReleasedInstanceIdList")
+        @com.aliyun.core.annotation.NameInMap("NeverEnableAutoResourceOptimizeOrReleasedInstanceIdList")
         private java.util.List < String > neverEnableAutoResourceOptimizeOrReleasedInstanceIdList;
 
-        @NameInMap("TotalAutoResourceOptimizeRulesCount")
+        @com.aliyun.core.annotation.NameInMap("TotalAutoResourceOptimizeRulesCount")
         private Long totalAutoResourceOptimizeRulesCount;
 
-        @NameInMap("TurnOffAutoResourceOptimizeCount")
+        @com.aliyun.core.annotation.NameInMap("TurnOffAutoResourceOptimizeCount")
         private Long turnOffAutoResourceOptimizeCount;
 
-        @NameInMap("TurnOffAutoResourceOptimizeList")
+        @com.aliyun.core.annotation.NameInMap("TurnOffAutoResourceOptimizeList")
         private java.util.List < TurnOffAutoResourceOptimizeList> turnOffAutoResourceOptimizeList;
 
         private Data(Builder builder) {
@@ -728,7 +723,7 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of database instances for which the automatic fragment recycling feature is enabled and DAS Professional Edition is disabled.
+             * The number of database instances for which the automatic fragment recycling feature is enabled and DAS Enterprise Edition is disabled.
              */
             public Builder hasEnableRuleButNotDasProCount(Long hasEnableRuleButNotDasProCount) {
                 this.hasEnableRuleButNotDasProCount = hasEnableRuleButNotDasProCount;
@@ -736,10 +731,10 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The database instances for which the automatic fragment recycling feature is enabled and DAS Professional Edition is disabled.
+             * The database instances for which the automatic fragment recycling feature is enabled and DAS Enterprise Edition is disabled.
              * <p>
              * 
-             * > This type of database instance does not perform automatic fragment recycling tasks until DAS Professional Edition is enabled for the instances again.
+             * >  Automatic fragment recycling tasks are run on this type of database instances only if DAS Enterprise Edition is enabled for the database instances again.
              */
             public Builder hasEnableRuleButNotDasProList(java.util.List < HasEnableRuleButNotDasProList> hasEnableRuleButNotDasProList) {
                 this.hasEnableRuleButNotDasProList = hasEnableRuleButNotDasProList;

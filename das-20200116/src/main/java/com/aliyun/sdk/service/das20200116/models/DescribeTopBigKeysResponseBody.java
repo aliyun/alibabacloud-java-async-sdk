@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTopBigKeysResponseBody</p>
  */
 public class DescribeTopBigKeysResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private DescribeTopBigKeysResponseBody(Builder builder) {
@@ -139,19 +138,19 @@ public class DescribeTopBigKeysResponseBody extends TeaModel {
     } 
 
     public static class BigKey extends TeaModel {
-        @NameInMap("Db")
+        @com.aliyun.core.annotation.NameInMap("Db")
         private Integer db;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("KeyType")
+        @com.aliyun.core.annotation.NameInMap("KeyType")
         private String keyType;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
         private BigKey(Builder builder) {
@@ -260,7 +259,7 @@ public class DescribeTopBigKeysResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("BigKey")
+        @com.aliyun.core.annotation.NameInMap("BigKey")
         private java.util.List < BigKey> bigKey;
 
         private Data(Builder builder) {

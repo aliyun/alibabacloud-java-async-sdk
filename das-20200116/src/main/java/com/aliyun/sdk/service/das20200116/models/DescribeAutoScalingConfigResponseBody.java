@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAutoScalingConfigResponseBody</p>
  */
 public class DescribeAutoScalingConfigResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private DescribeAutoScalingConfigResponseBody(Builder builder) {
@@ -139,19 +138,19 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
     } 
 
     public static class Bandwidth extends TeaModel {
-        @NameInMap("BandwidthUsageLowerThreshold")
+        @com.aliyun.core.annotation.NameInMap("BandwidthUsageLowerThreshold")
         private Integer bandwidthUsageLowerThreshold;
 
-        @NameInMap("BandwidthUsageUpperThreshold")
+        @com.aliyun.core.annotation.NameInMap("BandwidthUsageUpperThreshold")
         private Integer bandwidthUsageUpperThreshold;
 
-        @NameInMap("Downgrade")
+        @com.aliyun.core.annotation.NameInMap("Downgrade")
         private Boolean downgrade;
 
-        @NameInMap("ObservationWindowSize")
+        @com.aliyun.core.annotation.NameInMap("ObservationWindowSize")
         private String observationWindowSize;
 
-        @NameInMap("Upgrade")
+        @com.aliyun.core.annotation.NameInMap("Upgrade")
         private Boolean upgrade;
 
         private Bandwidth(Builder builder) {
@@ -276,19 +275,19 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
 
     }
     public static class Resource extends TeaModel {
-        @NameInMap("CpuStep")
+        @com.aliyun.core.annotation.NameInMap("CpuStep")
         private Integer cpuStep;
 
-        @NameInMap("CpuUsageUpperThreshold")
+        @com.aliyun.core.annotation.NameInMap("CpuUsageUpperThreshold")
         private Integer cpuUsageUpperThreshold;
 
-        @NameInMap("DowngradeObservationWindowSize")
+        @com.aliyun.core.annotation.NameInMap("DowngradeObservationWindowSize")
         private String downgradeObservationWindowSize;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
 
-        @NameInMap("UpgradeObservationWindowSize")
+        @com.aliyun.core.annotation.NameInMap("UpgradeObservationWindowSize")
         private String upgradeObservationWindowSize;
 
         private Resource(Builder builder) {
@@ -417,28 +416,28 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
 
     }
     public static class Shard extends TeaModel {
-        @NameInMap("Downgrade")
+        @com.aliyun.core.annotation.NameInMap("Downgrade")
         private Boolean downgrade;
 
-        @NameInMap("DowngradeObservationWindowSize")
+        @com.aliyun.core.annotation.NameInMap("DowngradeObservationWindowSize")
         private String downgradeObservationWindowSize;
 
-        @NameInMap("MaxShards")
+        @com.aliyun.core.annotation.NameInMap("MaxShards")
         private Integer maxShards;
 
-        @NameInMap("MemUsageLowerThreshold")
+        @com.aliyun.core.annotation.NameInMap("MemUsageLowerThreshold")
         private Integer memUsageLowerThreshold;
 
-        @NameInMap("MemUsageUpperThreshold")
+        @com.aliyun.core.annotation.NameInMap("MemUsageUpperThreshold")
         private Integer memUsageUpperThreshold;
 
-        @NameInMap("MinShards")
+        @com.aliyun.core.annotation.NameInMap("MinShards")
         private Integer minShards;
 
-        @NameInMap("Upgrade")
+        @com.aliyun.core.annotation.NameInMap("Upgrade")
         private Boolean upgrade;
 
-        @NameInMap("UpgradeObservationWindowSize")
+        @com.aliyun.core.annotation.NameInMap("UpgradeObservationWindowSize")
         private String upgradeObservationWindowSize;
 
         private Shard(Builder builder) {
@@ -622,28 +621,28 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
 
     }
     public static class Spec extends TeaModel {
-        @NameInMap("CoolDownTime")
+        @com.aliyun.core.annotation.NameInMap("CoolDownTime")
         private String coolDownTime;
 
-        @NameInMap("CpuUsageUpperThreshold")
+        @com.aliyun.core.annotation.NameInMap("CpuUsageUpperThreshold")
         private Integer cpuUsageUpperThreshold;
 
-        @NameInMap("Downgrade")
+        @com.aliyun.core.annotation.NameInMap("Downgrade")
         private Boolean downgrade;
 
-        @NameInMap("MaxReadOnlyNodes")
+        @com.aliyun.core.annotation.NameInMap("MaxReadOnlyNodes")
         private Integer maxReadOnlyNodes;
 
-        @NameInMap("MaxSpec")
+        @com.aliyun.core.annotation.NameInMap("MaxSpec")
         private String maxSpec;
 
-        @NameInMap("MemUsageUpperThreshold")
+        @com.aliyun.core.annotation.NameInMap("MemUsageUpperThreshold")
         private Integer memUsageUpperThreshold;
 
-        @NameInMap("ObservationWindowSize")
+        @com.aliyun.core.annotation.NameInMap("ObservationWindowSize")
         private String observationWindowSize;
 
-        @NameInMap("Upgrade")
+        @com.aliyun.core.annotation.NameInMap("Upgrade")
         private Boolean upgrade;
 
         private Spec(Builder builder) {
@@ -831,13 +830,13 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
 
     }
     public static class Storage extends TeaModel {
-        @NameInMap("DiskUsageUpperThreshold")
+        @com.aliyun.core.annotation.NameInMap("DiskUsageUpperThreshold")
         private Integer diskUsageUpperThreshold;
 
-        @NameInMap("MaxStorage")
+        @com.aliyun.core.annotation.NameInMap("MaxStorage")
         private Integer maxStorage;
 
-        @NameInMap("Upgrade")
+        @com.aliyun.core.annotation.NameInMap("Upgrade")
         private Boolean upgrade;
 
         private Storage(Builder builder) {
@@ -916,19 +915,19 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Bandwidth bandwidth;
 
-        @NameInMap("Resource")
+        @com.aliyun.core.annotation.NameInMap("Resource")
         private Resource resource;
 
-        @NameInMap("Shard")
+        @com.aliyun.core.annotation.NameInMap("Shard")
         private Shard shard;
 
-        @NameInMap("Spec")
+        @com.aliyun.core.annotation.NameInMap("Spec")
         private Spec spec;
 
-        @NameInMap("Storage")
+        @com.aliyun.core.annotation.NameInMap("Storage")
         private Storage storage;
 
         private Data(Builder builder) {

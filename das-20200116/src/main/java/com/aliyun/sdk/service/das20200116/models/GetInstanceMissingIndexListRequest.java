@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,65 +11,65 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInstanceMissingIndexListRequest</p>
  */
 public class GetInstanceMissingIndexListRequest extends Request {
-    @Query
-    @NameInMap("AvgTotalUserCost")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AvgTotalUserCost")
     private String avgTotalUserCost;
 
-    @Query
-    @NameInMap("AvgUserImpact")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AvgUserImpact")
     private String avgUserImpact;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("IndexCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IndexCount")
     private String indexCount;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("ObjectName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ObjectName")
     private String objectName;
 
-    @Query
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private String pageNo;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @Query
-    @NameInMap("ReservedPages")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReservedPages")
     private String reservedPages;
 
-    @Query
-    @NameInMap("ReservedSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReservedSize")
     private String reservedSize;
 
-    @Query
-    @NameInMap("RowCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RowCount")
     private String rowCount;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @Query
-    @NameInMap("UniqueCompiles")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UniqueCompiles")
     private String uniqueCompiles;
 
-    @Query
-    @NameInMap("UserScans")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserScans")
     private String userScans;
 
-    @Query
-    @NameInMap("UserSeeks")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserSeeks")
     private String userSeeks;
 
     private GetInstanceMissingIndexListRequest(Builder builder) {

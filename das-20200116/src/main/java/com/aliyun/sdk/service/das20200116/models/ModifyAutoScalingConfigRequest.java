@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyAutoScalingConfigRequest</p>
  */
 public class ModifyAutoScalingConfigRequest extends Request {
-    @Query
-    @NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
     private Bandwidth bandwidth;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Resource")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Resource")
     private Resource resource;
 
-    @Query
-    @NameInMap("Shard")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Shard")
     private Shard shard;
 
-    @Query
-    @NameInMap("Spec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Spec")
     private Spec spec;
 
-    @Query
-    @NameInMap("Storage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Storage")
     private Storage storage;
 
     private ModifyAutoScalingConfigRequest(Builder builder) {
@@ -186,24 +185,24 @@ public class ModifyAutoScalingConfigRequest extends Request {
     } 
 
     public static class Bandwidth extends TeaModel {
-        @NameInMap("Apply")
+        @com.aliyun.core.annotation.NameInMap("Apply")
         private Boolean apply;
 
-        @NameInMap("BandwidthUsageLowerThreshold")
-        @Validation(maximum = 70, minimum = 10)
+        @com.aliyun.core.annotation.NameInMap("BandwidthUsageLowerThreshold")
+        @com.aliyun.core.annotation.Validation(maximum = 70, minimum = 10)
         private Integer bandwidthUsageLowerThreshold;
 
-        @NameInMap("BandwidthUsageUpperThreshold")
-        @Validation(maximum = 95, minimum = 50)
+        @com.aliyun.core.annotation.NameInMap("BandwidthUsageUpperThreshold")
+        @com.aliyun.core.annotation.Validation(maximum = 95, minimum = 50)
         private Integer bandwidthUsageUpperThreshold;
 
-        @NameInMap("Downgrade")
+        @com.aliyun.core.annotation.NameInMap("Downgrade")
         private Boolean downgrade;
 
-        @NameInMap("ObservationWindowSize")
+        @com.aliyun.core.annotation.NameInMap("ObservationWindowSize")
         private String observationWindowSize;
 
-        @NameInMap("Upgrade")
+        @com.aliyun.core.annotation.NameInMap("Upgrade")
         private Boolean upgrade;
 
         private Bandwidth(Builder builder) {
@@ -327,7 +326,7 @@ public class ModifyAutoScalingConfigRequest extends Request {
             }
 
             /**
-             * The observation window of the automatic bandwidth upgrade feature. The value of this parameter consists of a numeric value and a time unit suffix. The **m** time unit suffix specifies the minute. Valid values:
+             * The observation window of the automatic bandwidth adjustment feature. The value of this parameter consists of a numeric value and a time unit suffix. The **m** time unit suffix specifies the minute. Valid values:
              * <p>
              * 
              * *   **1m**
@@ -361,19 +360,19 @@ public class ModifyAutoScalingConfigRequest extends Request {
 
     }
     public static class Resource extends TeaModel {
-        @NameInMap("Apply")
+        @com.aliyun.core.annotation.NameInMap("Apply")
         private Boolean apply;
 
-        @NameInMap("CpuUsageUpperThreshold")
+        @com.aliyun.core.annotation.NameInMap("CpuUsageUpperThreshold")
         private Integer cpuUsageUpperThreshold;
 
-        @NameInMap("DowngradeObservationWindowSize")
+        @com.aliyun.core.annotation.NameInMap("DowngradeObservationWindowSize")
         private String downgradeObservationWindowSize;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
 
-        @NameInMap("UpgradeObservationWindowSize")
+        @com.aliyun.core.annotation.NameInMap("UpgradeObservationWindowSize")
         private String upgradeObservationWindowSize;
 
         private Resource(Builder builder) {
@@ -511,33 +510,33 @@ public class ModifyAutoScalingConfigRequest extends Request {
 
     }
     public static class Shard extends TeaModel {
-        @NameInMap("Apply")
+        @com.aliyun.core.annotation.NameInMap("Apply")
         private Boolean apply;
 
-        @NameInMap("Downgrade")
+        @com.aliyun.core.annotation.NameInMap("Downgrade")
         private Boolean downgrade;
 
-        @NameInMap("DowngradeObservationWindowSize")
+        @com.aliyun.core.annotation.NameInMap("DowngradeObservationWindowSize")
         private String downgradeObservationWindowSize;
 
-        @NameInMap("MaxShards")
-        @Validation(maximum = 64, minimum = 2)
+        @com.aliyun.core.annotation.NameInMap("MaxShards")
+        @com.aliyun.core.annotation.Validation(maximum = 64, minimum = 2)
         private Integer maxShards;
 
-        @NameInMap("MemUsageLowerThreshold")
+        @com.aliyun.core.annotation.NameInMap("MemUsageLowerThreshold")
         private Integer memUsageLowerThreshold;
 
-        @NameInMap("MemUsageUpperThreshold")
+        @com.aliyun.core.annotation.NameInMap("MemUsageUpperThreshold")
         private Integer memUsageUpperThreshold;
 
-        @NameInMap("MinShards")
-        @Validation(maximum = 64, minimum = 2)
+        @com.aliyun.core.annotation.NameInMap("MinShards")
+        @com.aliyun.core.annotation.Validation(maximum = 64, minimum = 2)
         private Integer minShards;
 
-        @NameInMap("Upgrade")
+        @com.aliyun.core.annotation.NameInMap("Upgrade")
         private Boolean upgrade;
 
-        @NameInMap("UpgradeObservationWindowSize")
+        @com.aliyun.core.annotation.NameInMap("UpgradeObservationWindowSize")
         private String upgradeObservationWindowSize;
 
         private Shard(Builder builder) {
@@ -641,7 +640,7 @@ public class ModifyAutoScalingConfigRequest extends Request {
              * *   **true**
              * *   **false**
              * 
-             * >  The auto scaling feature for shards is available only for ApsaraDB for Redis Community Edition instances that use cloud disks on the China site (aliyun.com).
+             * > The auto scaling feature for shards is available only for ApsaraDB for Redis Community Edition cloud-native instances on the China site (aliyun.com).
              */
             public Builder apply(Boolean apply) {
                 this.apply = apply;
@@ -755,32 +754,32 @@ public class ModifyAutoScalingConfigRequest extends Request {
 
     }
     public static class Spec extends TeaModel {
-        @NameInMap("Apply")
+        @com.aliyun.core.annotation.NameInMap("Apply")
         private Boolean apply;
 
-        @NameInMap("CoolDownTime")
+        @com.aliyun.core.annotation.NameInMap("CoolDownTime")
         private String coolDownTime;
 
-        @NameInMap("CpuUsageUpperThreshold")
+        @com.aliyun.core.annotation.NameInMap("CpuUsageUpperThreshold")
         private Integer cpuUsageUpperThreshold;
 
-        @NameInMap("Downgrade")
+        @com.aliyun.core.annotation.NameInMap("Downgrade")
         private Boolean downgrade;
 
-        @NameInMap("MaxReadOnlyNodes")
-        @Validation(maximum = 15, minimum = 1)
+        @com.aliyun.core.annotation.NameInMap("MaxReadOnlyNodes")
+        @com.aliyun.core.annotation.Validation(maximum = 15, minimum = 1)
         private Integer maxReadOnlyNodes;
 
-        @NameInMap("MaxSpec")
+        @com.aliyun.core.annotation.NameInMap("MaxSpec")
         private String maxSpec;
 
-        @NameInMap("MemUsageUpperThreshold")
+        @com.aliyun.core.annotation.NameInMap("MemUsageUpperThreshold")
         private Integer memUsageUpperThreshold;
 
-        @NameInMap("ObservationWindowSize")
+        @com.aliyun.core.annotation.NameInMap("ObservationWindowSize")
         private String observationWindowSize;
 
-        @NameInMap("Upgrade")
+        @com.aliyun.core.annotation.NameInMap("Upgrade")
         private Boolean upgrade;
 
         private Spec(Builder builder) {
@@ -911,7 +910,7 @@ public class ModifyAutoScalingConfigRequest extends Request {
              * *   **80**
              * *   **90**
              * 
-             * >  This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance or an ApsaraDB RDS for MySQL High-availability Edition instance that uses standard SSDs or ESSDs.
+             * > This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance or an ApsaraDB RDS for MySQL High-availability Edition instance that uses standard SSDs or ESSDs.
              */
             public Builder cpuUsageUpperThreshold(Integer cpuUsageUpperThreshold) {
                 this.cpuUsageUpperThreshold = cpuUsageUpperThreshold;
@@ -925,7 +924,7 @@ public class ModifyAutoScalingConfigRequest extends Request {
              * *   **true**
              * *   **false**
              * 
-             * >  This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance or an ApsaraDB RDS for MySQL High-availability Edition instance that uses standard SSDs or ESSDs.
+             * > This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance or an ApsaraDB RDS for MySQL High-availability Edition instance that uses standard SSDs or ESSDs.
              */
             public Builder downgrade(Boolean downgrade) {
                 this.downgrade = downgrade;
@@ -936,7 +935,7 @@ public class ModifyAutoScalingConfigRequest extends Request {
              * The maximum number of read-only nodes of the instance.
              * <p>
              * 
-             * >  This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance.
+             * > This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance.
              */
             public Builder maxReadOnlyNodes(Integer maxReadOnlyNodes) {
                 this.maxReadOnlyNodes = maxReadOnlyNodes;
@@ -944,11 +943,11 @@ public class ModifyAutoScalingConfigRequest extends Request {
             }
 
             /**
-             * The maximum specifications to which the database instance can be upgraded. The database instance can be upgraded only to a database instance of the same edition with higher specifications. For information about the specifications of different database instances, refer to the following topics:
+             * The maximum specifications to which the database instance can be scaled up. The database instance can be upgraded only to a database instance of the same edition with higher specifications. For information about the specifications of different database instances, see the following topics:
              * <p>
              * 
-             * *   PolarDB for MySQL Cluster Edition instances: [Specifications of compute nodes](~~102542~~).
-             * *   ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or ESSDs: [Specifications](~~276974~~).
+             * *   PolarDB for MySQL Cluster Edition instances: [Specifications of compute nodes](~~102542~~)
+             * *   ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or ESSDs: [Specifications](~~276974~~)
              */
             public Builder maxSpec(String maxSpec) {
                 this.maxSpec = maxSpec;
@@ -965,7 +964,7 @@ public class ModifyAutoScalingConfigRequest extends Request {
              * *   **80**
              * *   **90**
              * 
-             * >  This parameter must be specified if the database instance is an ApsaraDB for Redis Community Edition instance that uses cloud disks on the China site (aliyun.com).
+             * > This parameter must be specified if the database instance is an ApsaraDB for Redis Community Edition cloud-native instance on the China site (aliyun.com).
              */
             public Builder memUsageUpperThreshold(Integer memUsageUpperThreshold) {
                 this.memUsageUpperThreshold = memUsageUpperThreshold;
@@ -978,7 +977,7 @@ public class ModifyAutoScalingConfigRequest extends Request {
              * 
              * *   Valid values for PolarDB for MySQL Cluster Edition instances: **5m**, **10m**, **15m**, and **30m**.
              * *   Valid values for ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or ESSDs: **5m**, **20m**, **30m**, **40m**, and **1h**.
-             * *   Valid values for ApsaraDB for Redis Community Edition instances that use cloud disks: **5m**, **10m**, **15m**, and **30m**.
+             * *   Valid values for ApsaraDB for Redis Community Edition cloud-native instances: **5m**, **10m**, **15m**, and **30m**.
              */
             public Builder observationWindowSize(String observationWindowSize) {
                 this.observationWindowSize = observationWindowSize;
@@ -1005,17 +1004,17 @@ public class ModifyAutoScalingConfigRequest extends Request {
 
     }
     public static class Storage extends TeaModel {
-        @NameInMap("Apply")
+        @com.aliyun.core.annotation.NameInMap("Apply")
         private Boolean apply;
 
-        @NameInMap("DiskUsageUpperThreshold")
+        @com.aliyun.core.annotation.NameInMap("DiskUsageUpperThreshold")
         private Integer diskUsageUpperThreshold;
 
-        @NameInMap("MaxStorage")
-        @Validation(maximum = 32000, minimum = 20)
+        @com.aliyun.core.annotation.NameInMap("MaxStorage")
+        @com.aliyun.core.annotation.Validation(maximum = 32000, minimum = 20)
         private Integer maxStorage;
 
-        @NameInMap("Upgrade")
+        @com.aliyun.core.annotation.NameInMap("Upgrade")
         private Boolean upgrade;
 
         private Storage(Builder builder) {

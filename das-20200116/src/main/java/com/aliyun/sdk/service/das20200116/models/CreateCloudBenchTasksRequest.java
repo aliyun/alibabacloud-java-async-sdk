@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,116 +11,116 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCloudBenchTasksRequest</p>
  */
 public class CreateCloudBenchTasksRequest extends Request {
-    @Query
-    @NameInMap("Amount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Amount")
     private String amount;
 
-    @Query
-    @NameInMap("BackupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupId")
     private String backupId;
 
-    @Query
-    @NameInMap("BackupTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupTime")
     private String backupTime;
 
-    @Query
-    @NameInMap("ClientType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientType;
 
-    @Query
-    @NameInMap("Description")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String description;
 
-    @Query
-    @NameInMap("DstConnectionString")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DstConnectionString")
     private String dstConnectionString;
 
-    @Query
-    @NameInMap("DstInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DstInstanceId")
     private String dstInstanceId;
 
-    @Query
-    @NameInMap("DstPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DstPort")
     private String dstPort;
 
-    @Query
-    @NameInMap("DstSuperAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DstSuperAccount")
     private String dstSuperAccount;
 
-    @Query
-    @NameInMap("DstSuperPassword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DstSuperPassword")
     private String dstSuperPassword;
 
-    @Query
-    @NameInMap("DstType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DstType")
     private String dstType;
 
-    @Query
-    @NameInMap("DtsJobClass")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DtsJobClass")
     private String dtsJobClass;
 
-    @Query
-    @NameInMap("DtsJobId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DtsJobId")
     private String dtsJobId;
 
-    @Query
-    @NameInMap("EndState")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndState")
     private String endState;
 
-    @Query
-    @NameInMap("GatewayVpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayVpcId")
     private String gatewayVpcId;
 
-    @Query
-    @NameInMap("GatewayVpcIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GatewayVpcIp")
     private String gatewayVpcIp;
 
-    @Query
-    @NameInMap("Rate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Rate")
     private String rate;
 
-    @Query
-    @NameInMap("RequestDuration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestDuration")
     private String requestDuration;
 
-    @Query
-    @NameInMap("RequestEndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestEndTime")
     private String requestEndTime;
 
-    @Query
-    @NameInMap("RequestStartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestStartTime")
     private String requestStartTime;
 
-    @Query
-    @NameInMap("SmartPressureTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SmartPressureTime")
     private String smartPressureTime;
 
-    @Query
-    @NameInMap("SrcInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String srcInstanceId;
 
-    @Query
-    @NameInMap("SrcPublicIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcPublicIp")
     private String srcPublicIp;
 
-    @Query
-    @NameInMap("SrcSuperAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcSuperAccount")
     private String srcSuperAccount;
 
-    @Query
-    @NameInMap("SrcSuperPassword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcSuperPassword")
     private String srcSuperPassword;
 
-    @Query
-    @NameInMap("TaskType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskType;
 
-    @Query
-    @NameInMap("WorkDir")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkDir")
     private String workDir;
 
     private CreateCloudBenchTasksRequest(Builder builder) {

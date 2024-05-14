@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetEventSubscriptionResponseBody</p>
  */
 public class SetEventSubscriptionResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private SetEventSubscriptionResponseBody(Builder builder) {
@@ -139,34 +138,34 @@ public class SetEventSubscriptionResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("active")
+        @com.aliyun.core.annotation.NameInMap("active")
         private Integer active;
 
-        @NameInMap("channelType")
+        @com.aliyun.core.annotation.NameInMap("channelType")
         private String channelType;
 
-        @NameInMap("contactGroupName")
+        @com.aliyun.core.annotation.NameInMap("contactGroupName")
         private String contactGroupName;
 
-        @NameInMap("contactName")
+        @com.aliyun.core.annotation.NameInMap("contactName")
         private String contactName;
 
-        @NameInMap("eventContext")
+        @com.aliyun.core.annotation.NameInMap("eventContext")
         private String eventContext;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
-        @NameInMap("lang")
+        @com.aliyun.core.annotation.NameInMap("lang")
         private String lang;
 
-        @NameInMap("level")
+        @com.aliyun.core.annotation.NameInMap("level")
         private String level;
 
-        @NameInMap("minInterval")
+        @com.aliyun.core.annotation.NameInMap("minInterval")
         private Integer minInterval;
 
-        @NameInMap("userId")
+        @com.aliyun.core.annotation.NameInMap("userId")
         private String userId;
 
         private Data(Builder builder) {

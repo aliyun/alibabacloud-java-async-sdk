@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,35 +11,35 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInstanceSqlOptimizeStatisticRequest</p>
  */
 public class GetInstanceSqlOptimizeStatisticRequest extends Request {
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("FilterEnable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FilterEnable")
     private String filterEnable;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("NodeId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeId")
     private String nodeId;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
-    @Query
-    @NameInMap("Threshold")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Threshold")
     private String threshold;
 
-    @Query
-    @NameInMap("UseMerging")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseMerging")
     private String useMerging;
 
     private GetInstanceSqlOptimizeStatisticRequest(Builder builder) {
@@ -150,13 +149,13 @@ public class GetInstanceSqlOptimizeStatisticRequest extends Request {
         }
 
         /**
-         * Specifies whether to filter instances for which DAS Professional Edition is enabled. Valid values:
+         * Specifies whether to filter instances for which DAS Enterprise Edition is enabled. Valid values:
          * <p>
          * 
-         * *   **true**: filters instances for which DAS Professional Edition is enabled.
-         * *   **false**: does not filter instances for which DAS Professional Edition is enabled.
+         * *   **true**
+         * *   **false**
          * 
-         * >  If you set the value to **true**, only database instances for which DAS Professional Edition is disabled are queried. If you set the value to **false**, all database instances are queried.
+         * >  If you set this parameter to **true**, only database instances for which DAS Enterprise Edition is disabled are queried. If you set this parameter to **false**, all database instances are queried.
          */
         public Builder filterEnable(String filterEnable) {
             this.putQueryParameter("FilterEnable", filterEnable);
@@ -180,7 +179,7 @@ public class GetInstanceSqlOptimizeStatisticRequest extends Request {
          * The node ID.
          * <p>
          * 
-         * >  This parameter must be specified if the database instance is an ApsaraDB RDS for MySQL Cluster Edition instance or a PolarDB for MySQL cluster.
+         * >  For ApsaraDB RDS for MySQL Cluster Edition instances or PolarDB for MySQL clusters, you must specify the node ID.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

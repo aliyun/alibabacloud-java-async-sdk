@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,61 +11,61 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAdamBenchTaskRequest</p>
  */
 public class CreateAdamBenchTaskRequest extends Request {
-    @Query
-    @NameInMap("Description")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String description;
 
-    @Query
-    @NameInMap("DstInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DstInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dstInstanceId;
 
-    @Query
-    @NameInMap("DstSuperAccount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DstSuperAccount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dstSuperAccount;
 
-    @Query
-    @NameInMap("DstSuperPassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DstSuperPassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dstSuperPassword;
 
-    @Query
-    @NameInMap("Rate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Rate")
     private Integer rate;
 
-    @Query
-    @NameInMap("RequestDuration")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestDuration")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long requestDuration;
 
-    @Query
-    @NameInMap("RequestStartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestStartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long requestStartTime;
 
-    @Query
-    @NameInMap("SrcEngine")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcEngine")
     private String srcEngine;
 
-    @Query
-    @NameInMap("SrcEngineVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcEngineVersion")
     private String srcEngineVersion;
 
-    @Query
-    @NameInMap("SrcMaxQps")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcMaxQps")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Double srcMaxQps;
 
-    @Query
-    @NameInMap("SrcMeanQps")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcMeanQps")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Double srcMeanQps;
 
-    @Query
-    @NameInMap("SrcSqlOssAddr")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcSqlOssAddr")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String srcSqlOssAddr;
 
     private CreateAdamBenchTaskRequest(Builder builder) {

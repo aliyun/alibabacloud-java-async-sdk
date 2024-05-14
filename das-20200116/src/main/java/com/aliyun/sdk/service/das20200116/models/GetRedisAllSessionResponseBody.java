@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetRedisAllSessionResponseBody</p>
  */
 public class GetRedisAllSessionResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetRedisAllSessionResponseBody(Builder builder) {
@@ -139,67 +138,67 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
     } 
 
     public static class Sessions extends TeaModel {
-        @NameInMap("Addr")
+        @com.aliyun.core.annotation.NameInMap("Addr")
         private String addr;
 
-        @NameInMap("Age")
+        @com.aliyun.core.annotation.NameInMap("Age")
         private String age;
 
-        @NameInMap("Client")
+        @com.aliyun.core.annotation.NameInMap("Client")
         private String client;
 
-        @NameInMap("ClientDesc")
+        @com.aliyun.core.annotation.NameInMap("ClientDesc")
         private String clientDesc;
 
-        @NameInMap("Cmd")
+        @com.aliyun.core.annotation.NameInMap("Cmd")
         private String cmd;
 
-        @NameInMap("Db")
+        @com.aliyun.core.annotation.NameInMap("Db")
         private Long db;
 
-        @NameInMap("Events")
+        @com.aliyun.core.annotation.NameInMap("Events")
         private String events;
 
-        @NameInMap("Fd")
+        @com.aliyun.core.annotation.NameInMap("Fd")
         private Long fd;
 
-        @NameInMap("Flags")
+        @com.aliyun.core.annotation.NameInMap("Flags")
         private String flags;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Idle")
+        @com.aliyun.core.annotation.NameInMap("Idle")
         private Long idle;
 
-        @NameInMap("Multi")
+        @com.aliyun.core.annotation.NameInMap("Multi")
         private Long multi;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("Obl")
+        @com.aliyun.core.annotation.NameInMap("Obl")
         private Long obl;
 
-        @NameInMap("Oll")
+        @com.aliyun.core.annotation.NameInMap("Oll")
         private Long oll;
 
-        @NameInMap("Omem")
+        @com.aliyun.core.annotation.NameInMap("Omem")
         private Long omem;
 
-        @NameInMap("Psub")
+        @com.aliyun.core.annotation.NameInMap("Psub")
         private Long psub;
 
-        @NameInMap("Qbuf")
+        @com.aliyun.core.annotation.NameInMap("Qbuf")
         private Long qbuf;
 
-        @NameInMap("QbufFree")
+        @com.aliyun.core.annotation.NameInMap("QbufFree")
         private Long qbufFree;
 
-        @NameInMap("Sub")
+        @com.aliyun.core.annotation.NameInMap("Sub")
         private Long sub;
 
         private Sessions(Builder builder) {
@@ -599,13 +598,13 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
 
     }
     public static class SourceStats extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private String count;
 
-        @NameInMap("Ids")
+        @com.aliyun.core.annotation.NameInMap("Ids")
         private java.util.List < Long > ids;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
         private SourceStats(Builder builder) {
@@ -680,16 +679,16 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Sessions")
+        @com.aliyun.core.annotation.NameInMap("Sessions")
         private java.util.List < Sessions> sessions;
 
-        @NameInMap("SourceStats")
+        @com.aliyun.core.annotation.NameInMap("SourceStats")
         private java.util.List < SourceStats> sourceStats;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private Data(Builder builder) {

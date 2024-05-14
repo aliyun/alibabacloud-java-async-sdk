@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTopHotKeysResponseBody</p>
  */
 public class DescribeTopHotKeysResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private DescribeTopHotKeysResponseBody(Builder builder) {
@@ -136,22 +135,22 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
     } 
 
     public static class HotKey extends TeaModel {
-        @NameInMap("Db")
+        @com.aliyun.core.annotation.NameInMap("Db")
         private Integer db;
 
-        @NameInMap("Hot")
+        @com.aliyun.core.annotation.NameInMap("Hot")
         private String hot;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("KeyType")
+        @com.aliyun.core.annotation.NameInMap("KeyType")
         private String keyType;
 
-        @NameInMap("Lfu")
+        @com.aliyun.core.annotation.NameInMap("Lfu")
         private Integer lfu;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
         private HotKey(Builder builder) {
@@ -277,7 +276,7 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("HotKey")
+        @com.aliyun.core.annotation.NameInMap("HotKey")
         private java.util.List < HotKey> hotKey;
 
         private Data(Builder builder) {

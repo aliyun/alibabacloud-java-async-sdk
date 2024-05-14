@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetEventSubscriptionResponseBody</p>
  */
 public class GetEventSubscriptionResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private GetEventSubscriptionResponseBody(Builder builder) {
@@ -139,16 +138,16 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
     } 
 
     public static class ContactGroups extends TeaModel {
-        @NameInMap("contacts")
+        @com.aliyun.core.annotation.NameInMap("contacts")
         private String contacts;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("userId")
+        @com.aliyun.core.annotation.NameInMap("userId")
         private String userId;
 
         private ContactGroups(Builder builder) {
@@ -240,25 +239,25 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
 
     }
     public static class Contacts extends TeaModel {
-        @NameInMap("dingtalkHook")
+        @com.aliyun.core.annotation.NameInMap("dingtalkHook")
         private String dingtalkHook;
 
-        @NameInMap("email")
+        @com.aliyun.core.annotation.NameInMap("email")
         private String email;
 
-        @NameInMap("groups")
+        @com.aliyun.core.annotation.NameInMap("groups")
         private java.util.List < String > groups;
 
-        @NameInMap("isCmsReduplicated")
+        @com.aliyun.core.annotation.NameInMap("isCmsReduplicated")
         private Boolean isCmsReduplicated;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("phone")
+        @com.aliyun.core.annotation.NameInMap("phone")
         private String phone;
 
-        @NameInMap("userId")
+        @com.aliyun.core.annotation.NameInMap("userId")
         private String userId;
 
         private Contacts(Builder builder) {
@@ -405,52 +404,52 @@ public class GetEventSubscriptionResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("active")
+        @com.aliyun.core.annotation.NameInMap("active")
         private Integer active;
 
-        @NameInMap("channelType")
+        @com.aliyun.core.annotation.NameInMap("channelType")
         private String channelType;
 
-        @NameInMap("contactGroupName")
+        @com.aliyun.core.annotation.NameInMap("contactGroupName")
         private String contactGroupName;
 
-        @NameInMap("contactGroups")
+        @com.aliyun.core.annotation.NameInMap("contactGroups")
         private java.util.List < ContactGroups> contactGroups;
 
-        @NameInMap("contactName")
+        @com.aliyun.core.annotation.NameInMap("contactName")
         private String contactName;
 
-        @NameInMap("contacts")
+        @com.aliyun.core.annotation.NameInMap("contacts")
         private java.util.List < Contacts> contacts;
 
-        @NameInMap("eventContext")
+        @com.aliyun.core.annotation.NameInMap("eventContext")
         private String eventContext;
 
-        @NameInMap("eventSendGroup")
+        @com.aliyun.core.annotation.NameInMap("eventSendGroup")
         private java.util.List < String > eventSendGroup;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private Long gmtModified;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
-        @NameInMap("lang")
+        @com.aliyun.core.annotation.NameInMap("lang")
         private String lang;
 
-        @NameInMap("level")
+        @com.aliyun.core.annotation.NameInMap("level")
         private String level;
 
-        @NameInMap("minInterval")
+        @com.aliyun.core.annotation.NameInMap("minInterval")
         private String minInterval;
 
-        @NameInMap("userId")
+        @com.aliyun.core.annotation.NameInMap("userId")
         private String userId;
 
         private Data(Builder builder) {

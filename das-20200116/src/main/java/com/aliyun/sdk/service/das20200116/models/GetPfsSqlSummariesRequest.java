@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,44 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPfsSqlSummariesRequest</p>
  */
 public class GetPfsSqlSummariesRequest extends Request {
-    @Body
-    @NameInMap("Asc")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Asc")
     private Boolean asc;
 
-    @Body
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @Body
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Body
-    @NameInMap("Keywords")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Keywords")
     private String keywords;
 
-    @Body
-    @NameInMap("NodeId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeId")
     private String nodeId;
 
-    @Body
-    @NameInMap("OrderBy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OrderBy")
     private String orderBy;
 
-    @Body
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @Body
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Body
-    @NameInMap("SqlId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SqlId")
     private String sqlId;
 
-    @Body
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
     private GetPfsSqlSummariesRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,26 +11,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateKillInstanceSessionTaskWithMaintainUserRequest</p>
  */
 public class CreateKillInstanceSessionTaskWithMaintainUserRequest extends Request {
-    @Query
-    @NameInMap("IgnoredUsers")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IgnoredUsers")
     private String ignoredUsers;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("KillAllSessions")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KillAllSessions")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean killAllSessions;
 
-    @Query
-    @NameInMap("NodeId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeId")
     private String nodeId;
 
-    @Query
-    @NameInMap("SessionIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SessionIds")
     private String sessionIds;
 
     private CreateKillInstanceSessionTaskWithMaintainUserRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateAutoResourceOptimizeRulesAsyncRequest</p>
  */
 public class UpdateAutoResourceOptimizeRulesAsyncRequest extends Request {
-    @Query
-    @NameInMap("ConsoleContext")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConsoleContext")
     private String consoleContext;
 
-    @Query
-    @NameInMap("InstanceIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceIds;
 
-    @Query
-    @NameInMap("ResultId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResultId")
     private String resultId;
 
-    @Query
-    @NameInMap("TableFragmentationRatio")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableFragmentationRatio")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Double tableFragmentationRatio;
 
-    @Query
-    @NameInMap("TableSpaceSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableSpaceSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Double tableSpaceSize;
 
     private UpdateAutoResourceOptimizeRulesAsyncRequest(Builder builder) {

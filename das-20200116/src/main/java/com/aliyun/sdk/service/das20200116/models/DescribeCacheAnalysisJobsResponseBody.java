@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCacheAnalysisJobsResponseBody</p>
  */
 public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private DescribeCacheAnalysisJobsResponseBody(Builder builder) {
@@ -139,28 +138,28 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
     } 
 
     public static class KeyInfo extends TeaModel {
-        @NameInMap("Bytes")
+        @com.aliyun.core.annotation.NameInMap("Bytes")
         private Long bytes;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("Db")
+        @com.aliyun.core.annotation.NameInMap("Db")
         private Integer db;
 
-        @NameInMap("Encoding")
+        @com.aliyun.core.annotation.NameInMap("Encoding")
         private String encoding;
 
-        @NameInMap("ExpirationTimeMillis")
+        @com.aliyun.core.annotation.NameInMap("ExpirationTimeMillis")
         private Long expirationTimeMillis;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private KeyInfo(Builder builder) {
@@ -320,7 +319,7 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
 
     }
     public static class BigKeys extends TeaModel {
-        @NameInMap("KeyInfo")
+        @com.aliyun.core.annotation.NameInMap("KeyInfo")
         private java.util.List < KeyInfo> keyInfo;
 
         private BigKeys(Builder builder) {
@@ -361,22 +360,22 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
 
     }
     public static class CacheAnalysisJob extends TeaModel {
-        @NameInMap("BigKeys")
+        @com.aliyun.core.annotation.NameInMap("BigKeys")
         private BigKeys bigKeys;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("TaskState")
+        @com.aliyun.core.annotation.NameInMap("TaskState")
         private String taskState;
 
         private CacheAnalysisJob(Builder builder) {
@@ -514,7 +513,7 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
 
     }
     public static class List extends TeaModel {
-        @NameInMap("CacheAnalysisJob")
+        @com.aliyun.core.annotation.NameInMap("CacheAnalysisJob")
         private java.util.List < CacheAnalysisJob> cacheAnalysisJob;
 
         private List(Builder builder) {
@@ -555,19 +554,19 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Extra")
+        @com.aliyun.core.annotation.NameInMap("Extra")
         private String extra;
 
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private List list;
 
-        @NameInMap("PageNo")
+        @com.aliyun.core.annotation.NameInMap("PageNo")
         private Long pageNo;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Long pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private Data(Builder builder) {

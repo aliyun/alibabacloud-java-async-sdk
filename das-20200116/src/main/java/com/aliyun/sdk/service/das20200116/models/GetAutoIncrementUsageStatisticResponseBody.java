@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAutoIncrementUsageStatisticResponseBody</p>
  */
 public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetAutoIncrementUsageStatisticResponseBody(Builder builder) {
@@ -139,22 +138,22 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
     } 
 
     public static class AutoIncrementUsageList extends TeaModel {
-        @NameInMap("AutoIncrementCurrentValue")
+        @com.aliyun.core.annotation.NameInMap("AutoIncrementCurrentValue")
         private Long autoIncrementCurrentValue;
 
-        @NameInMap("AutoIncrementRatio")
+        @com.aliyun.core.annotation.NameInMap("AutoIncrementRatio")
         private Double autoIncrementRatio;
 
-        @NameInMap("ColumnName")
+        @com.aliyun.core.annotation.NameInMap("ColumnName")
         private String columnName;
 
-        @NameInMap("DbName")
+        @com.aliyun.core.annotation.NameInMap("DbName")
         private String dbName;
 
-        @NameInMap("MaximumValue")
+        @com.aliyun.core.annotation.NameInMap("MaximumValue")
         private Long maximumValue;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private AutoIncrementUsageList(Builder builder) {
@@ -280,19 +279,19 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AutoIncrementUsageList")
+        @com.aliyun.core.annotation.NameInMap("AutoIncrementUsageList")
         private java.util.List < AutoIncrementUsageList> autoIncrementUsageList;
 
-        @NameInMap("ErrorInfo")
+        @com.aliyun.core.annotation.NameInMap("ErrorInfo")
         private String errorInfo;
 
-        @NameInMap("Finish")
+        @com.aliyun.core.annotation.NameInMap("Finish")
         private Boolean finish;
 
-        @NameInMap("TaskStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private String taskStatus;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
         private Data(Builder builder) {

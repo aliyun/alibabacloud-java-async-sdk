@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>EnableSqlConcurrencyControlRequest</p>
  */
 public class EnableSqlConcurrencyControlRequest extends Request {
-    @Query
-    @NameInMap("ConcurrencyControlTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConcurrencyControlTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long concurrencyControlTime;
 
-    @Query
-    @NameInMap("ConsoleContext")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConsoleContext")
     private String consoleContext;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("MaxConcurrency")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxConcurrency")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long maxConcurrency;
 
-    @Query
-    @NameInMap("SqlKeywords")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SqlKeywords")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sqlKeywords;
 
-    @Query
-    @NameInMap("SqlType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SqlType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sqlType;
 
     private EnableSqlConcurrencyControlRequest(Builder builder) {

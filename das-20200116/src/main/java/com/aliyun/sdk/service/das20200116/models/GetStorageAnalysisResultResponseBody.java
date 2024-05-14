@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetStorageAnalysisResultResponseBody</p>
  */
 public class GetStorageAnalysisResultResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetStorageAnalysisResultResponseBody(Builder builder) {
@@ -139,19 +138,19 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
     } 
 
     public static class NeedOptimizeItemList extends TeaModel {
-        @NameInMap("AssociatedData")
+        @com.aliyun.core.annotation.NameInMap("AssociatedData")
         private String associatedData;
 
-        @NameInMap("DbName")
+        @com.aliyun.core.annotation.NameInMap("DbName")
         private String dbName;
 
-        @NameInMap("OptimizeAdvice")
+        @com.aliyun.core.annotation.NameInMap("OptimizeAdvice")
         private String optimizeAdvice;
 
-        @NameInMap("OptimizeItemName")
+        @com.aliyun.core.annotation.NameInMap("OptimizeItemName")
         private String optimizeItemName;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private NeedOptimizeItemList(Builder builder) {
@@ -268,40 +267,43 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
 
     }
     public static class TableStats extends TeaModel {
-        @NameInMap("AvgRowLength")
+        @com.aliyun.core.annotation.NameInMap("AvgRowLength")
         private Long avgRowLength;
 
-        @NameInMap("DataFree")
+        @com.aliyun.core.annotation.NameInMap("DataFree")
         private Long dataFree;
 
-        @NameInMap("DataSize")
+        @com.aliyun.core.annotation.NameInMap("DataSize")
         private Long dataSize;
 
-        @NameInMap("DbName")
+        @com.aliyun.core.annotation.NameInMap("DbName")
         private String dbName;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("IndexSize")
+        @com.aliyun.core.annotation.NameInMap("FragmentSize")
+        private Long fragmentSize;
+
+        @com.aliyun.core.annotation.NameInMap("IndexSize")
         private Long indexSize;
 
-        @NameInMap("PhyTotalSize")
+        @com.aliyun.core.annotation.NameInMap("PhyTotalSize")
         private Long phyTotalSize;
 
-        @NameInMap("PhysicalFileSize")
+        @com.aliyun.core.annotation.NameInMap("PhysicalFileSize")
         private Long physicalFileSize;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
-        @NameInMap("TableRows")
+        @com.aliyun.core.annotation.NameInMap("TableRows")
         private Long tableRows;
 
-        @NameInMap("TableType")
+        @com.aliyun.core.annotation.NameInMap("TableType")
         private String tableType;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Long totalSize;
 
         private TableStats(Builder builder) {
@@ -310,6 +312,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             this.dataSize = builder.dataSize;
             this.dbName = builder.dbName;
             this.engine = builder.engine;
+            this.fragmentSize = builder.fragmentSize;
             this.indexSize = builder.indexSize;
             this.phyTotalSize = builder.phyTotalSize;
             this.physicalFileSize = builder.physicalFileSize;
@@ -360,6 +363,13 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
          */
         public String getEngine() {
             return this.engine;
+        }
+
+        /**
+         * @return fragmentSize
+         */
+        public Long getFragmentSize() {
+            return this.fragmentSize;
         }
 
         /**
@@ -417,6 +427,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             private Long dataSize; 
             private String dbName; 
             private String engine; 
+            private Long fragmentSize; 
             private Long indexSize; 
             private Long phyTotalSize; 
             private Long physicalFileSize; 
@@ -471,6 +482,14 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
              */
             public Builder engine(String engine) {
                 this.engine = engine;
+                return this;
+            }
+
+            /**
+             * FragmentSize.
+             */
+            public Builder fragmentSize(Long fragmentSize) {
+                this.fragmentSize = fragmentSize;
                 return this;
             }
 
@@ -550,31 +569,31 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
 
     }
     public static class StorageAnalysisResult extends TeaModel {
-        @NameInMap("AnalysisErrorType")
+        @com.aliyun.core.annotation.NameInMap("AnalysisErrorType")
         private String analysisErrorType;
 
-        @NameInMap("AnalysisSuccess")
+        @com.aliyun.core.annotation.NameInMap("AnalysisSuccess")
         private Boolean analysisSuccess;
 
-        @NameInMap("DailyIncrement")
+        @com.aliyun.core.annotation.NameInMap("DailyIncrement")
         private Long dailyIncrement;
 
-        @NameInMap("EstimateAvailableDays")
+        @com.aliyun.core.annotation.NameInMap("EstimateAvailableDays")
         private Long estimateAvailableDays;
 
-        @NameInMap("NeedOptimizeItemList")
+        @com.aliyun.core.annotation.NameInMap("NeedOptimizeItemList")
         private java.util.List < NeedOptimizeItemList> needOptimizeItemList;
 
-        @NameInMap("TableStats")
+        @com.aliyun.core.annotation.NameInMap("TableStats")
         private java.util.List < TableStats> tableStats;
 
-        @NameInMap("TotalFreeStorageSize")
+        @com.aliyun.core.annotation.NameInMap("TotalFreeStorageSize")
         private Long totalFreeStorageSize;
 
-        @NameInMap("TotalStorageSize")
+        @com.aliyun.core.annotation.NameInMap("TotalStorageSize")
         private Long totalStorageSize;
 
-        @NameInMap("TotalUsedStorageSize")
+        @com.aliyun.core.annotation.NameInMap("TotalUsedStorageSize")
         private Long totalUsedStorageSize;
 
         private StorageAnalysisResult(Builder builder) {
@@ -767,28 +786,28 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AnalyzedDbCount")
+        @com.aliyun.core.annotation.NameInMap("AnalyzedDbCount")
         private Long analyzedDbCount;
 
-        @NameInMap("StorageAnalysisResult")
+        @com.aliyun.core.annotation.NameInMap("StorageAnalysisResult")
         private StorageAnalysisResult storageAnalysisResult;
 
-        @NameInMap("TaskFinish")
+        @com.aliyun.core.annotation.NameInMap("TaskFinish")
         private Boolean taskFinish;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TaskProgress")
+        @com.aliyun.core.annotation.NameInMap("TaskProgress")
         private Long taskProgress;
 
-        @NameInMap("TaskState")
+        @com.aliyun.core.annotation.NameInMap("TaskState")
         private String taskState;
 
-        @NameInMap("TaskSuccess")
+        @com.aliyun.core.annotation.NameInMap("TaskSuccess")
         private Boolean taskSuccess;
 
-        @NameInMap("TotalDbCount")
+        @com.aliyun.core.annotation.NameInMap("TotalDbCount")
         private Long totalDbCount;
 
         private Data(Builder builder) {

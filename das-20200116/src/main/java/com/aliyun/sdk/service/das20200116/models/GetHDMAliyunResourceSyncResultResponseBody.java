@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetHDMAliyunResourceSyncResultResponseBody</p>
  */
 public class GetHDMAliyunResourceSyncResultResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
-    @NameInMap("Synchro")
+    @com.aliyun.core.annotation.NameInMap("Synchro")
     private String synchro;
 
     private GetHDMAliyunResourceSyncResultResponseBody(Builder builder) {
@@ -152,16 +151,16 @@ public class GetHDMAliyunResourceSyncResultResponseBody extends TeaModel {
     } 
 
     public static class ResourceSyncSubResult extends TeaModel {
-        @NameInMap("ErrMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrMsg")
         private String errMsg;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
-        @NameInMap("SyncCount")
+        @com.aliyun.core.annotation.NameInMap("SyncCount")
         private Integer syncCount;
 
         private ResourceSyncSubResult(Builder builder) {
@@ -253,7 +252,7 @@ public class GetHDMAliyunResourceSyncResultResponseBody extends TeaModel {
 
     }
     public static class SubResults extends TeaModel {
-        @NameInMap("ResourceSyncSubResult")
+        @com.aliyun.core.annotation.NameInMap("ResourceSyncSubResult")
         private java.util.List < ResourceSyncSubResult> resourceSyncSubResult;
 
         private SubResults(Builder builder) {
@@ -294,16 +293,16 @@ public class GetHDMAliyunResourceSyncResultResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("ErrorMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
 
-        @NameInMap("Results")
+        @com.aliyun.core.annotation.NameInMap("Results")
         private String results;
 
-        @NameInMap("SubResults")
+        @com.aliyun.core.annotation.NameInMap("SubResults")
         private SubResults subResults;
 
-        @NameInMap("SyncStatus")
+        @com.aliyun.core.annotation.NameInMap("SyncStatus")
         private String syncStatus;
 
         private Data(Builder builder) {

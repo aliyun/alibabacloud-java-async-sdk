@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetFullRequestSampleByInstanceIdResponseBody</p>
  */
 public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetFullRequestSampleByInstanceIdResponseBody(Builder builder) {
@@ -139,61 +138,61 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("Database")
+        @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
 
-        @NameInMap("Frows")
+        @com.aliyun.core.annotation.NameInMap("Frows")
         private Long frows;
 
-        @NameInMap("LockWaitTime")
+        @com.aliyun.core.annotation.NameInMap("LockWaitTime")
         private Double lockWaitTime;
 
-        @NameInMap("LogicalRead")
+        @com.aliyun.core.annotation.NameInMap("LogicalRead")
         private Double logicalRead;
 
-        @NameInMap("OriginHost")
+        @com.aliyun.core.annotation.NameInMap("OriginHost")
         private String originHost;
 
-        @NameInMap("PhysicalAsyncRead")
+        @com.aliyun.core.annotation.NameInMap("PhysicalAsyncRead")
         private Double physicalAsyncRead;
 
-        @NameInMap("PhysicalSyncRead")
+        @com.aliyun.core.annotation.NameInMap("PhysicalSyncRead")
         private Double physicalSyncRead;
 
-        @NameInMap("Rows")
+        @com.aliyun.core.annotation.NameInMap("Rows")
         private Long rows;
 
-        @NameInMap("RowsExamined")
+        @com.aliyun.core.annotation.NameInMap("RowsExamined")
         private Long rowsExamined;
 
-        @NameInMap("RowsReturned")
+        @com.aliyun.core.annotation.NameInMap("RowsReturned")
         private Long rowsReturned;
 
-        @NameInMap("Rt")
+        @com.aliyun.core.annotation.NameInMap("Rt")
         private Double rt;
 
-        @NameInMap("ScanRows")
+        @com.aliyun.core.annotation.NameInMap("ScanRows")
         private Long scanRows;
 
-        @NameInMap("Scnt")
+        @com.aliyun.core.annotation.NameInMap("Scnt")
         private Long scnt;
 
-        @NameInMap("Sql")
+        @com.aliyun.core.annotation.NameInMap("Sql")
         private String sql;
 
-        @NameInMap("SqlId")
+        @com.aliyun.core.annotation.NameInMap("SqlId")
         private String sqlId;
 
-        @NameInMap("SqlType")
+        @com.aliyun.core.annotation.NameInMap("SqlType")
         private String sqlType;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
-        @NameInMap("UpdateRows")
+        @com.aliyun.core.annotation.NameInMap("UpdateRows")
         private Long updateRows;
 
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private String user;
 
         private Data(Builder builder) {

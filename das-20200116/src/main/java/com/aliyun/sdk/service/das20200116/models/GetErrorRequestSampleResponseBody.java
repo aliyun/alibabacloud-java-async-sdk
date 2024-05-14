@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetErrorRequestSampleResponseBody</p>
  */
 public class GetErrorRequestSampleResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetErrorRequestSampleResponseBody(Builder builder) {
@@ -139,31 +138,31 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("database")
+        @com.aliyun.core.annotation.NameInMap("database")
         private String database;
 
-        @NameInMap("errorCode")
+        @com.aliyun.core.annotation.NameInMap("errorCode")
         private String errorCode;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
-        @NameInMap("originHost")
+        @com.aliyun.core.annotation.NameInMap("originHost")
         private String originHost;
 
-        @NameInMap("sql")
+        @com.aliyun.core.annotation.NameInMap("sql")
         private String sql;
 
-        @NameInMap("sqlId")
+        @com.aliyun.core.annotation.NameInMap("sqlId")
         private String sqlId;
 
-        @NameInMap("tables")
+        @com.aliyun.core.annotation.NameInMap("tables")
         private java.util.List < String > tables;
 
-        @NameInMap("timestamp")
+        @com.aliyun.core.annotation.NameInMap("timestamp")
         private Long timestamp;
 
-        @NameInMap("user")
+        @com.aliyun.core.annotation.NameInMap("user")
         private String user;
 
         private Data(Builder builder) {

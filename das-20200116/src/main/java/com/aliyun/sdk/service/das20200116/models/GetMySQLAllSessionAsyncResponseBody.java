@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMySQLAllSessionAsyncResponseBody</p>
  */
 public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetMySQLAllSessionAsyncResponseBody(Builder builder) {
@@ -139,19 +138,19 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
     } 
 
     public static class ClientStats extends TeaModel {
-        @NameInMap("ActiveCount")
+        @com.aliyun.core.annotation.NameInMap("ActiveCount")
         private Long activeCount;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("ThreadIdList")
+        @com.aliyun.core.annotation.NameInMap("ThreadIdList")
         private java.util.List < Long > threadIdList;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
-        @NameInMap("UserList")
+        @com.aliyun.core.annotation.NameInMap("UserList")
         private java.util.List < String > userList;
 
         private ClientStats(Builder builder) {
@@ -263,19 +262,19 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
 
     }
     public static class DbStats extends TeaModel {
-        @NameInMap("ActiveCount")
+        @com.aliyun.core.annotation.NameInMap("ActiveCount")
         private Long activeCount;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("ThreadIdList")
+        @com.aliyun.core.annotation.NameInMap("ThreadIdList")
         private java.util.List < Long > threadIdList;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
-        @NameInMap("UserList")
+        @com.aliyun.core.annotation.NameInMap("UserList")
         private java.util.List < String > userList;
 
         private DbStats(Builder builder) {
@@ -387,40 +386,40 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
 
     }
     public static class SessionList extends TeaModel {
-        @NameInMap("Client")
+        @com.aliyun.core.annotation.NameInMap("Client")
         private String client;
 
-        @NameInMap("Command")
+        @com.aliyun.core.annotation.NameInMap("Command")
         private String command;
 
-        @NameInMap("DbName")
+        @com.aliyun.core.annotation.NameInMap("DbName")
         private String dbName;
 
-        @NameInMap("SessionId")
+        @com.aliyun.core.annotation.NameInMap("SessionId")
         private Long sessionId;
 
-        @NameInMap("SqlTemplateId")
+        @com.aliyun.core.annotation.NameInMap("SqlTemplateId")
         private String sqlTemplateId;
 
-        @NameInMap("SqlText")
+        @com.aliyun.core.annotation.NameInMap("SqlText")
         private String sqlText;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private Long time;
 
-        @NameInMap("TrxDuration")
+        @com.aliyun.core.annotation.NameInMap("TrxDuration")
         private Long trxDuration;
 
-        @NameInMap("TrxId")
+        @com.aliyun.core.annotation.NameInMap("TrxId")
         private String trxId;
 
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private String user;
 
-        @NameInMap("UserClientAlias")
+        @com.aliyun.core.annotation.NameInMap("UserClientAlias")
         private String userClientAlias;
 
         private SessionList(Builder builder) {
@@ -651,19 +650,19 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
 
     }
     public static class UserStats extends TeaModel {
-        @NameInMap("ActiveCount")
+        @com.aliyun.core.annotation.NameInMap("ActiveCount")
         private Long activeCount;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("ThreadIdList")
+        @com.aliyun.core.annotation.NameInMap("ThreadIdList")
         private java.util.List < Long > threadIdList;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
-        @NameInMap("UserList")
+        @com.aliyun.core.annotation.NameInMap("UserList")
         private java.util.List < String > userList;
 
         private UserStats(Builder builder) {
@@ -775,28 +774,28 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
 
     }
     public static class SessionData extends TeaModel {
-        @NameInMap("ActiveSessionCount")
+        @com.aliyun.core.annotation.NameInMap("ActiveSessionCount")
         private Long activeSessionCount;
 
-        @NameInMap("ClientStats")
+        @com.aliyun.core.annotation.NameInMap("ClientStats")
         private java.util.List < ClientStats> clientStats;
 
-        @NameInMap("DbStats")
+        @com.aliyun.core.annotation.NameInMap("DbStats")
         private java.util.List < DbStats> dbStats;
 
-        @NameInMap("MaxActiveTime")
+        @com.aliyun.core.annotation.NameInMap("MaxActiveTime")
         private Long maxActiveTime;
 
-        @NameInMap("SessionList")
+        @com.aliyun.core.annotation.NameInMap("SessionList")
         private java.util.List < SessionList> sessionList;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private Long timeStamp;
 
-        @NameInMap("TotalSessionCount")
+        @com.aliyun.core.annotation.NameInMap("TotalSessionCount")
         private Long totalSessionCount;
 
-        @NameInMap("UserStats")
+        @com.aliyun.core.annotation.NameInMap("UserStats")
         private java.util.List < UserStats> userStats;
 
         private SessionData(Builder builder) {
@@ -956,25 +955,25 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Complete")
+        @com.aliyun.core.annotation.NameInMap("Complete")
         private Boolean complete;
 
-        @NameInMap("Fail")
+        @com.aliyun.core.annotation.NameInMap("Fail")
         private Boolean fail;
 
-        @NameInMap("IsFinish")
+        @com.aliyun.core.annotation.NameInMap("IsFinish")
         private Boolean isFinish;
 
-        @NameInMap("ResultId")
+        @com.aliyun.core.annotation.NameInMap("ResultId")
         private String resultId;
 
-        @NameInMap("SessionData")
+        @com.aliyun.core.annotation.NameInMap("SessionData")
         private SessionData sessionData;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
         private Data(Builder builder) {

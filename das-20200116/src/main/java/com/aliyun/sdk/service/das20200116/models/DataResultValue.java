@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DataResultValue</p>
  */
 public class DataResultValue extends TeaModel {
-    @NameInMap("sqlId")
+    @com.aliyun.core.annotation.NameInMap("sqlId")
     private String sqlId;
 
-    @NameInMap("instanceId")
+    @com.aliyun.core.annotation.NameInMap("instanceId")
     private String instanceId;
 
-    @NameInMap("count")
+    @com.aliyun.core.annotation.NameInMap("count")
     private Integer count;
 
     private DataResultValue(Builder builder) {

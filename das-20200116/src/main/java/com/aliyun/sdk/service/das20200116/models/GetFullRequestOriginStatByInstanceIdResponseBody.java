@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetFullRequestOriginStatByInstanceIdResponseBody</p>
  */
 public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetFullRequestOriginStatByInstanceIdResponseBody(Builder builder) {
@@ -139,100 +138,100 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
     } 
 
     public static class List extends TeaModel {
-        @NameInMap("AvgExaminedRows")
+        @com.aliyun.core.annotation.NameInMap("AvgExaminedRows")
         private Double avgExaminedRows;
 
-        @NameInMap("AvgFetchRows")
+        @com.aliyun.core.annotation.NameInMap("AvgFetchRows")
         private Long avgFetchRows;
 
-        @NameInMap("AvgLockWaitTime")
+        @com.aliyun.core.annotation.NameInMap("AvgLockWaitTime")
         private Double avgLockWaitTime;
 
-        @NameInMap("AvgLogicalRead")
+        @com.aliyun.core.annotation.NameInMap("AvgLogicalRead")
         private Double avgLogicalRead;
 
-        @NameInMap("AvgPhysicalAsyncRead")
+        @com.aliyun.core.annotation.NameInMap("AvgPhysicalAsyncRead")
         private Long avgPhysicalAsyncRead;
 
-        @NameInMap("AvgPhysicalSyncRead")
+        @com.aliyun.core.annotation.NameInMap("AvgPhysicalSyncRead")
         private Double avgPhysicalSyncRead;
 
-        @NameInMap("AvgReturnedRows")
+        @com.aliyun.core.annotation.NameInMap("AvgReturnedRows")
         private Double avgReturnedRows;
 
-        @NameInMap("AvgRows")
+        @com.aliyun.core.annotation.NameInMap("AvgRows")
         private Long avgRows;
 
-        @NameInMap("AvgRt")
+        @com.aliyun.core.annotation.NameInMap("AvgRt")
         private Double avgRt;
 
-        @NameInMap("AvgSqlCount")
+        @com.aliyun.core.annotation.NameInMap("AvgSqlCount")
         private Long avgSqlCount;
 
-        @NameInMap("AvgUpdatedRows")
+        @com.aliyun.core.annotation.NameInMap("AvgUpdatedRows")
         private Double avgUpdatedRows;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("CountRate")
+        @com.aliyun.core.annotation.NameInMap("CountRate")
         private Double countRate;
 
-        @NameInMap("Database")
+        @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
 
-        @NameInMap("ErrorCount")
+        @com.aliyun.core.annotation.NameInMap("ErrorCount")
         private Long errorCount;
 
-        @NameInMap("ExaminedRows")
+        @com.aliyun.core.annotation.NameInMap("ExaminedRows")
         private Long examinedRows;
 
-        @NameInMap("FetchRows")
+        @com.aliyun.core.annotation.NameInMap("FetchRows")
         private Long fetchRows;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("LockWaitTime")
+        @com.aliyun.core.annotation.NameInMap("LockWaitTime")
         private Double lockWaitTime;
 
-        @NameInMap("LogicalRead")
+        @com.aliyun.core.annotation.NameInMap("LogicalRead")
         private Long logicalRead;
 
-        @NameInMap("OriginHost")
+        @com.aliyun.core.annotation.NameInMap("OriginHost")
         private String originHost;
 
-        @NameInMap("PhysicalAsyncRead")
+        @com.aliyun.core.annotation.NameInMap("PhysicalAsyncRead")
         private Long physicalAsyncRead;
 
-        @NameInMap("PhysicalSyncRead")
+        @com.aliyun.core.annotation.NameInMap("PhysicalSyncRead")
         private Long physicalSyncRead;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Long port;
 
-        @NameInMap("Rows")
+        @com.aliyun.core.annotation.NameInMap("Rows")
         private Long rows;
 
-        @NameInMap("RtGreaterThanOneSecondCount")
+        @com.aliyun.core.annotation.NameInMap("RtGreaterThanOneSecondCount")
         private Long rtGreaterThanOneSecondCount;
 
-        @NameInMap("RtRate")
+        @com.aliyun.core.annotation.NameInMap("RtRate")
         private Double rtRate;
 
-        @NameInMap("SqlCount")
+        @com.aliyun.core.annotation.NameInMap("SqlCount")
         private Long sqlCount;
 
-        @NameInMap("SumUpdatedRows")
+        @com.aliyun.core.annotation.NameInMap("SumUpdatedRows")
         private Long sumUpdatedRows;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private Long version;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private List(Builder builder) {
@@ -809,10 +808,10 @@ public class GetFullRequestOriginStatByInstanceIdResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private Data(Builder builder) {

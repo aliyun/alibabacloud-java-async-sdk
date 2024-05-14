@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DataSessionStatClientStatsValue</p>
  */
 public class DataSessionStatClientStatsValue extends TeaModel {
-    @NameInMap("ActiveCount")
+    @com.aliyun.core.annotation.NameInMap("ActiveCount")
     private Long activeCount;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DataSessionStatClientStatsValue(Builder builder) {

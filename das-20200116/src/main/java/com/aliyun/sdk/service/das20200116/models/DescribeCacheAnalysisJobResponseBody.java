@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCacheAnalysisJobResponseBody</p>
  */
 public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private DescribeCacheAnalysisJobResponseBody(Builder builder) {
@@ -139,28 +138,28 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
     } 
 
     public static class KeyInfo extends TeaModel {
-        @NameInMap("Bytes")
+        @com.aliyun.core.annotation.NameInMap("Bytes")
         private Long bytes;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("Db")
+        @com.aliyun.core.annotation.NameInMap("Db")
         private Integer db;
 
-        @NameInMap("Encoding")
+        @com.aliyun.core.annotation.NameInMap("Encoding")
         private String encoding;
 
-        @NameInMap("ExpirationTimeMillis")
+        @com.aliyun.core.annotation.NameInMap("ExpirationTimeMillis")
         private Long expirationTimeMillis;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private KeyInfo(Builder builder) {
@@ -320,7 +319,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
 
     }
     public static class BigKeys extends TeaModel {
-        @NameInMap("KeyInfo")
+        @com.aliyun.core.annotation.NameInMap("KeyInfo")
         private java.util.List < KeyInfo> keyInfo;
 
         private BigKeys(Builder builder) {
@@ -361,28 +360,28 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
 
     }
     public static class BigKeysOfNumKeyInfo extends TeaModel {
-        @NameInMap("Bytes")
+        @com.aliyun.core.annotation.NameInMap("Bytes")
         private Long bytes;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("Db")
+        @com.aliyun.core.annotation.NameInMap("Db")
         private Integer db;
 
-        @NameInMap("Encoding")
+        @com.aliyun.core.annotation.NameInMap("Encoding")
         private String encoding;
 
-        @NameInMap("ExpirationTimeMillis")
+        @com.aliyun.core.annotation.NameInMap("ExpirationTimeMillis")
         private Long expirationTimeMillis;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private BigKeysOfNumKeyInfo(Builder builder) {
@@ -542,7 +541,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
 
     }
     public static class BigKeysOfNum extends TeaModel {
-        @NameInMap("KeyInfo")
+        @com.aliyun.core.annotation.NameInMap("KeyInfo")
         private java.util.List < BigKeysOfNumKeyInfo> keyInfo;
 
         private BigKeysOfNum(Builder builder) {
@@ -583,19 +582,19 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
 
     }
     public static class Prefix extends TeaModel {
-        @NameInMap("Bytes")
+        @com.aliyun.core.annotation.NameInMap("Bytes")
         private Long bytes;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("KeyNum")
+        @com.aliyun.core.annotation.NameInMap("KeyNum")
         private Long keyNum;
 
-        @NameInMap("Prefix")
+        @com.aliyun.core.annotation.NameInMap("Prefix")
         private String prefix;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Prefix(Builder builder) {
@@ -704,7 +703,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
 
     }
     public static class KeyPrefixes extends TeaModel {
-        @NameInMap("Prefix")
+        @com.aliyun.core.annotation.NameInMap("Prefix")
         private java.util.List < Prefix> prefix;
 
         private KeyPrefixes(Builder builder) {
@@ -745,28 +744,28 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
 
     }
     public static class UnexBigKeysOfBytesKeyInfo extends TeaModel {
-        @NameInMap("Bytes")
+        @com.aliyun.core.annotation.NameInMap("Bytes")
         private Long bytes;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("Db")
+        @com.aliyun.core.annotation.NameInMap("Db")
         private Integer db;
 
-        @NameInMap("Encoding")
+        @com.aliyun.core.annotation.NameInMap("Encoding")
         private String encoding;
 
-        @NameInMap("ExpirationTimeMillis")
+        @com.aliyun.core.annotation.NameInMap("ExpirationTimeMillis")
         private Long expirationTimeMillis;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private UnexBigKeysOfBytesKeyInfo(Builder builder) {
@@ -926,7 +925,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
 
     }
     public static class UnexBigKeysOfBytes extends TeaModel {
-        @NameInMap("KeyInfo")
+        @com.aliyun.core.annotation.NameInMap("KeyInfo")
         private java.util.List < UnexBigKeysOfBytesKeyInfo> keyInfo;
 
         private UnexBigKeysOfBytes(Builder builder) {
@@ -967,28 +966,28 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
 
     }
     public static class UnexBigKeysOfNumKeyInfo extends TeaModel {
-        @NameInMap("Bytes")
+        @com.aliyun.core.annotation.NameInMap("Bytes")
         private Long bytes;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("Db")
+        @com.aliyun.core.annotation.NameInMap("Db")
         private Integer db;
 
-        @NameInMap("Encoding")
+        @com.aliyun.core.annotation.NameInMap("Encoding")
         private String encoding;
 
-        @NameInMap("ExpirationTimeMillis")
+        @com.aliyun.core.annotation.NameInMap("ExpirationTimeMillis")
         private Long expirationTimeMillis;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private UnexBigKeysOfNumKeyInfo(Builder builder) {
@@ -1148,7 +1147,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
 
     }
     public static class UnexBigKeysOfNum extends TeaModel {
-        @NameInMap("KeyInfo")
+        @com.aliyun.core.annotation.NameInMap("KeyInfo")
         private java.util.List < UnexBigKeysOfNumKeyInfo> keyInfo;
 
         private UnexBigKeysOfNum(Builder builder) {
@@ -1189,34 +1188,34 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("BigKeys")
+        @com.aliyun.core.annotation.NameInMap("BigKeys")
         private BigKeys bigKeys;
 
-        @NameInMap("BigKeysOfNum")
+        @com.aliyun.core.annotation.NameInMap("BigKeysOfNum")
         private BigKeysOfNum bigKeysOfNum;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("KeyPrefixes")
+        @com.aliyun.core.annotation.NameInMap("KeyPrefixes")
         private KeyPrefixes keyPrefixes;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("TaskState")
+        @com.aliyun.core.annotation.NameInMap("TaskState")
         private String taskState;
 
-        @NameInMap("UnexBigKeysOfBytes")
+        @com.aliyun.core.annotation.NameInMap("UnexBigKeysOfBytes")
         private UnexBigKeysOfBytes unexBigKeysOfBytes;
 
-        @NameInMap("UnexBigKeysOfNum")
+        @com.aliyun.core.annotation.NameInMap("UnexBigKeysOfNum")
         private UnexBigKeysOfNum unexBigKeysOfNum;
 
         private Data(Builder builder) {

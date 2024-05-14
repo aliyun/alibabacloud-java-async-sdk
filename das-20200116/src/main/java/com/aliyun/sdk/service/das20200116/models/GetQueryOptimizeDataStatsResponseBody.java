@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetQueryOptimizeDataStatsResponseBody</p>
  */
 public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private GetQueryOptimizeDataStatsResponseBody(Builder builder) {
@@ -136,10 +135,10 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
     } 
 
     public static class RuleList extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private RuleList(Builder builder) {
@@ -201,61 +200,61 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
 
     }
     public static class List extends TeaModel {
-        @NameInMap("AvgLockTime")
+        @com.aliyun.core.annotation.NameInMap("AvgLockTime")
         private Double avgLockTime;
 
-        @NameInMap("AvgQueryTime")
+        @com.aliyun.core.annotation.NameInMap("AvgQueryTime")
         private Double avgQueryTime;
 
-        @NameInMap("AvgRowsAffected")
+        @com.aliyun.core.annotation.NameInMap("AvgRowsAffected")
         private Double avgRowsAffected;
 
-        @NameInMap("AvgRowsExamined")
+        @com.aliyun.core.annotation.NameInMap("AvgRowsExamined")
         private Double avgRowsExamined;
 
-        @NameInMap("AvgRowsSent")
+        @com.aliyun.core.annotation.NameInMap("AvgRowsSent")
         private Double avgRowsSent;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("Dbname")
+        @com.aliyun.core.annotation.NameInMap("Dbname")
         private String dbname;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("MaxLockTime")
+        @com.aliyun.core.annotation.NameInMap("MaxLockTime")
         private Double maxLockTime;
 
-        @NameInMap("MaxQueryTime")
+        @com.aliyun.core.annotation.NameInMap("MaxQueryTime")
         private Double maxQueryTime;
 
-        @NameInMap("MaxRowsAffected")
+        @com.aliyun.core.annotation.NameInMap("MaxRowsAffected")
         private Long maxRowsAffected;
 
-        @NameInMap("MaxRowsExamined")
+        @com.aliyun.core.annotation.NameInMap("MaxRowsExamined")
         private Long maxRowsExamined;
 
-        @NameInMap("MaxRowsSent")
+        @com.aliyun.core.annotation.NameInMap("MaxRowsSent")
         private Long maxRowsSent;
 
-        @NameInMap("Psql")
+        @com.aliyun.core.annotation.NameInMap("Psql")
         private String psql;
 
-        @NameInMap("RuleList")
+        @com.aliyun.core.annotation.NameInMap("RuleList")
         private java.util.List < RuleList> ruleList;
 
-        @NameInMap("SqlId")
+        @com.aliyun.core.annotation.NameInMap("SqlId")
         private String sqlId;
 
-        @NameInMap("SqlSample")
+        @com.aliyun.core.annotation.NameInMap("SqlSample")
         private String sqlSample;
 
-        @NameInMap("SqlType")
+        @com.aliyun.core.annotation.NameInMap("SqlType")
         private String sqlType;
 
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private String user;
 
         private List(Builder builder) {
@@ -608,19 +607,19 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Extra")
+        @com.aliyun.core.annotation.NameInMap("Extra")
         private String extra;
 
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;
 
-        @NameInMap("PageNo")
+        @com.aliyun.core.annotation.NameInMap("PageNo")
         private Integer pageNo;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private Data(Builder builder) {

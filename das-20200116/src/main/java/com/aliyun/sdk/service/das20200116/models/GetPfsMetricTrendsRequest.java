@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPfsMetricTrendsRequest</p>
  */
 public class GetPfsMetricTrendsRequest extends Request {
-    @Body
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @Body
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Body
-    @NameInMap("Metric")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Metric")
     private String metric;
 
-    @Body
-    @NameInMap("NodeId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeId")
     private String nodeId;
 
-    @Body
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
     private GetPfsMetricTrendsRequest(Builder builder) {

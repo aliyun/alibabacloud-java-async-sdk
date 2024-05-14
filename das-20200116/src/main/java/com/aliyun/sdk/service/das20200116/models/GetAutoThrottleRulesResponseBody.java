@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAutoThrottleRulesResponseBody</p>
  */
 public class GetAutoThrottleRulesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetAutoThrottleRulesResponseBody(Builder builder) {
@@ -139,37 +138,37 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
     } 
 
     public static class EnableAutoThrottleList extends TeaModel {
-        @NameInMap("AbnormalDuration")
+        @com.aliyun.core.annotation.NameInMap("AbnormalDuration")
         private Double abnormalDuration;
 
-        @NameInMap("ActiveSessions")
+        @com.aliyun.core.annotation.NameInMap("ActiveSessions")
         private Long activeSessions;
 
-        @NameInMap("AllowThrottleEndTime")
+        @com.aliyun.core.annotation.NameInMap("AllowThrottleEndTime")
         private String allowThrottleEndTime;
 
-        @NameInMap("AllowThrottleStartTime")
+        @com.aliyun.core.annotation.NameInMap("AllowThrottleStartTime")
         private String allowThrottleStartTime;
 
-        @NameInMap("AutoKillSession")
+        @com.aliyun.core.annotation.NameInMap("AutoKillSession")
         private Boolean autoKillSession;
 
-        @NameInMap("CpuSessionRelation")
+        @com.aliyun.core.annotation.NameInMap("CpuSessionRelation")
         private String cpuSessionRelation;
 
-        @NameInMap("CpuUsage")
+        @com.aliyun.core.annotation.NameInMap("CpuUsage")
         private Double cpuUsage;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("MaxThrottleTime")
+        @com.aliyun.core.annotation.NameInMap("MaxThrottleTime")
         private Double maxThrottleTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("Visible")
+        @com.aliyun.core.annotation.NameInMap("Visible")
         private Boolean visible;
 
         private EnableAutoThrottleList(Builder builder) {
@@ -394,37 +393,37 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
 
     }
     public static class TurnOffAutoThrottleList extends TeaModel {
-        @NameInMap("AbnormalDuration")
+        @com.aliyun.core.annotation.NameInMap("AbnormalDuration")
         private Double abnormalDuration;
 
-        @NameInMap("ActiveSessions")
+        @com.aliyun.core.annotation.NameInMap("ActiveSessions")
         private Long activeSessions;
 
-        @NameInMap("AllowThrottleEndTime")
+        @com.aliyun.core.annotation.NameInMap("AllowThrottleEndTime")
         private String allowThrottleEndTime;
 
-        @NameInMap("AllowThrottleStartTime")
+        @com.aliyun.core.annotation.NameInMap("AllowThrottleStartTime")
         private String allowThrottleStartTime;
 
-        @NameInMap("AutoKillSession")
+        @com.aliyun.core.annotation.NameInMap("AutoKillSession")
         private Boolean autoKillSession;
 
-        @NameInMap("CpuSessionRelation")
+        @com.aliyun.core.annotation.NameInMap("CpuSessionRelation")
         private String cpuSessionRelation;
 
-        @NameInMap("CpuUsage")
+        @com.aliyun.core.annotation.NameInMap("CpuUsage")
         private Double cpuUsage;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("MaxThrottleTime")
+        @com.aliyun.core.annotation.NameInMap("MaxThrottleTime")
         private Double maxThrottleTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("Visible")
+        @com.aliyun.core.annotation.NameInMap("Visible")
         private Boolean visible;
 
         private TurnOffAutoThrottleList(Builder builder) {
@@ -649,25 +648,25 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("EnableAutoThrottleCount")
+        @com.aliyun.core.annotation.NameInMap("EnableAutoThrottleCount")
         private Long enableAutoThrottleCount;
 
-        @NameInMap("EnableAutoThrottleList")
+        @com.aliyun.core.annotation.NameInMap("EnableAutoThrottleList")
         private java.util.List < EnableAutoThrottleList> enableAutoThrottleList;
 
-        @NameInMap("NeverEnableAutoThrottleOrReleasedInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("NeverEnableAutoThrottleOrReleasedInstanceCount")
         private Long neverEnableAutoThrottleOrReleasedInstanceCount;
 
-        @NameInMap("NeverEnableAutoThrottleOrReleasedInstanceIdList")
+        @com.aliyun.core.annotation.NameInMap("NeverEnableAutoThrottleOrReleasedInstanceIdList")
         private java.util.List < String > neverEnableAutoThrottleOrReleasedInstanceIdList;
 
-        @NameInMap("TotalAutoThrottleRulesCount")
+        @com.aliyun.core.annotation.NameInMap("TotalAutoThrottleRulesCount")
         private Long totalAutoThrottleRulesCount;
 
-        @NameInMap("TurnOffAutoThrottleCount")
+        @com.aliyun.core.annotation.NameInMap("TurnOffAutoThrottleCount")
         private Long turnOffAutoThrottleCount;
 
-        @NameInMap("TurnOffAutoThrottleList")
+        @com.aliyun.core.annotation.NameInMap("TurnOffAutoThrottleList")
         private java.util.List < TurnOffAutoThrottleList> turnOffAutoThrottleList;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAsyncErrorRequestStatResultRequest</p>
  */
 public class GetAsyncErrorRequestStatResultRequest extends Request {
-    @Query
-    @NameInMap("DbName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbName")
     private String dbName;
 
-    @Query
-    @NameInMap("End")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("End")
     private Long end;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("NodeId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeId")
     private String nodeId;
 
-    @Query
-    @NameInMap("SqlIdList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SqlIdList")
     private String sqlIdList;
 
-    @Query
-    @NameInMap("Start")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Start")
     private Long start;
 
     private GetAsyncErrorRequestStatResultRequest(Builder builder) {

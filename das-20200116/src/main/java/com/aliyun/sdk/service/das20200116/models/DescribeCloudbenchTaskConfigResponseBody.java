@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCloudbenchTaskConfigResponseBody</p>
  */
 public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private DescribeCloudbenchTaskConfigResponseBody(Builder builder) {
@@ -139,55 +138,55 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("ArchiveFolder")
+        @com.aliyun.core.annotation.NameInMap("ArchiveFolder")
         private String archiveFolder;
 
-        @NameInMap("BenchCmd")
+        @com.aliyun.core.annotation.NameInMap("BenchCmd")
         private String benchCmd;
 
-        @NameInMap("ClientJarPath")
+        @com.aliyun.core.annotation.NameInMap("ClientJarPath")
         private String clientJarPath;
 
-        @NameInMap("JarOnOss")
+        @com.aliyun.core.annotation.NameInMap("JarOnOss")
         private String jarOnOss;
 
-        @NameInMap("LoadCmd")
+        @com.aliyun.core.annotation.NameInMap("LoadCmd")
         private String loadCmd;
 
-        @NameInMap("MetaFileName")
+        @com.aliyun.core.annotation.NameInMap("MetaFileName")
         private String metaFileName;
 
-        @NameInMap("MetaFileOnOss")
+        @com.aliyun.core.annotation.NameInMap("MetaFileOnOss")
         private String metaFileOnOss;
 
-        @NameInMap("MetaFilePath")
+        @com.aliyun.core.annotation.NameInMap("MetaFilePath")
         private String metaFilePath;
 
-        @NameInMap("ParseCmd")
+        @com.aliyun.core.annotation.NameInMap("ParseCmd")
         private String parseCmd;
 
-        @NameInMap("ParseFilePath")
+        @com.aliyun.core.annotation.NameInMap("ParseFilePath")
         private String parseFilePath;
 
-        @NameInMap("RocksDbPath")
+        @com.aliyun.core.annotation.NameInMap("RocksDbPath")
         private String rocksDbPath;
 
-        @NameInMap("SqlFileName")
+        @com.aliyun.core.annotation.NameInMap("SqlFileName")
         private String sqlFileName;
 
-        @NameInMap("SqlFileOnOss")
+        @com.aliyun.core.annotation.NameInMap("SqlFileOnOss")
         private String sqlFileOnOss;
 
-        @NameInMap("SqlFilePath")
+        @com.aliyun.core.annotation.NameInMap("SqlFilePath")
         private String sqlFilePath;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("WorkDir")
+        @com.aliyun.core.annotation.NameInMap("WorkDir")
         private String workDir;
 
         private Data(Builder builder) {

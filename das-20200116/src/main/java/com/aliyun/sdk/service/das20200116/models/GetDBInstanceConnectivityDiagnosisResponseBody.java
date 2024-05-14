@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDBInstanceConnectivityDiagnosisResponseBody</p>
  */
 public class GetDBInstanceConnectivityDiagnosisResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private GetDBInstanceConnectivityDiagnosisResponseBody(Builder builder) {
@@ -139,19 +138,19 @@ public class GetDBInstanceConnectivityDiagnosisResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("connCheckErrorCode")
+        @com.aliyun.core.annotation.NameInMap("connCheckErrorCode")
         private String connCheckErrorCode;
 
-        @NameInMap("connCheckErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("connCheckErrorMessage")
         private String connCheckErrorMessage;
 
-        @NameInMap("failType")
+        @com.aliyun.core.annotation.NameInMap("failType")
         private String failType;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
-        @NameInMap("success")
+        @com.aliyun.core.annotation.NameInMap("success")
         private Boolean success;
 
         private Data(Builder builder) {

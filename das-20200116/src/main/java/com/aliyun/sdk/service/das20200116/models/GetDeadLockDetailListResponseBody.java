@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDeadLockDetailListResponseBody</p>
  */
 public class GetDeadLockDetailListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private GetDeadLockDetailListResponseBody(Builder builder) {
@@ -139,55 +138,55 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
     } 
 
     public static class BlockProcessList extends TeaModel {
-        @NameInMap("ClientApp")
+        @com.aliyun.core.annotation.NameInMap("ClientApp")
         private String clientApp;
 
-        @NameInMap("DatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
-        @NameInMap("HostName")
+        @com.aliyun.core.annotation.NameInMap("HostName")
         private String hostName;
 
-        @NameInMap("LastTranStarted")
+        @com.aliyun.core.annotation.NameInMap("LastTranStarted")
         private Long lastTranStarted;
 
-        @NameInMap("LockMode")
+        @com.aliyun.core.annotation.NameInMap("LockMode")
         private String lockMode;
 
-        @NameInMap("LogUsed")
+        @com.aliyun.core.annotation.NameInMap("LogUsed")
         private Long logUsed;
 
-        @NameInMap("LoginName")
+        @com.aliyun.core.annotation.NameInMap("LoginName")
         private String loginName;
 
-        @NameInMap("ObjectOwned")
+        @com.aliyun.core.annotation.NameInMap("ObjectOwned")
         private String objectOwned;
 
-        @NameInMap("ObjectRequested")
+        @com.aliyun.core.annotation.NameInMap("ObjectRequested")
         private String objectRequested;
 
-        @NameInMap("OwnMode")
+        @com.aliyun.core.annotation.NameInMap("OwnMode")
         private String ownMode;
 
-        @NameInMap("Spid")
+        @com.aliyun.core.annotation.NameInMap("Spid")
         private Long spid;
 
-        @NameInMap("SqlText")
+        @com.aliyun.core.annotation.NameInMap("SqlText")
         private String sqlText;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Victim")
+        @com.aliyun.core.annotation.NameInMap("Victim")
         private Long victim;
 
-        @NameInMap("WaitMode")
+        @com.aliyun.core.annotation.NameInMap("WaitMode")
         private String waitMode;
 
-        @NameInMap("WaitResource")
+        @com.aliyun.core.annotation.NameInMap("WaitResource")
         private String waitResource;
 
-        @NameInMap("WaitResourceDescription")
+        @com.aliyun.core.annotation.NameInMap("WaitResourceDescription")
         private String waitResourceDescription;
 
         private BlockProcessList(Builder builder) {
@@ -500,61 +499,61 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
 
     }
     public static class List extends TeaModel {
-        @NameInMap("BatchId")
+        @com.aliyun.core.annotation.NameInMap("BatchId")
         private Long batchId;
 
-        @NameInMap("BlockProcessList")
+        @com.aliyun.core.annotation.NameInMap("BlockProcessList")
         private java.util.List < BlockProcessList> blockProcessList;
 
-        @NameInMap("ClientApp")
+        @com.aliyun.core.annotation.NameInMap("ClientApp")
         private String clientApp;
 
-        @NameInMap("DatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
-        @NameInMap("HostName")
+        @com.aliyun.core.annotation.NameInMap("HostName")
         private String hostName;
 
-        @NameInMap("LastTranStarted")
+        @com.aliyun.core.annotation.NameInMap("LastTranStarted")
         private Long lastTranStarted;
 
-        @NameInMap("LockMode")
+        @com.aliyun.core.annotation.NameInMap("LockMode")
         private String lockMode;
 
-        @NameInMap("LogUsed")
+        @com.aliyun.core.annotation.NameInMap("LogUsed")
         private Long logUsed;
 
-        @NameInMap("LoginName")
+        @com.aliyun.core.annotation.NameInMap("LoginName")
         private String loginName;
 
-        @NameInMap("ObjectOwned")
+        @com.aliyun.core.annotation.NameInMap("ObjectOwned")
         private String objectOwned;
 
-        @NameInMap("ObjectRequested")
+        @com.aliyun.core.annotation.NameInMap("ObjectRequested")
         private String objectRequested;
 
-        @NameInMap("OwnMode")
+        @com.aliyun.core.annotation.NameInMap("OwnMode")
         private String ownMode;
 
-        @NameInMap("Spid")
+        @com.aliyun.core.annotation.NameInMap("Spid")
         private Long spid;
 
-        @NameInMap("SqlText")
+        @com.aliyun.core.annotation.NameInMap("SqlText")
         private String sqlText;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Victim")
+        @com.aliyun.core.annotation.NameInMap("Victim")
         private Long victim;
 
-        @NameInMap("WaitMode")
+        @com.aliyun.core.annotation.NameInMap("WaitMode")
         private String waitMode;
 
-        @NameInMap("WaitResource")
+        @com.aliyun.core.annotation.NameInMap("WaitResource")
         private String waitResource;
 
-        @NameInMap("WaitResourceDescription")
+        @com.aliyun.core.annotation.NameInMap("WaitResourceDescription")
         private String waitResourceDescription;
 
         private List(Builder builder) {
@@ -901,16 +900,16 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;
 
-        @NameInMap("PageNo")
+        @com.aliyun.core.annotation.NameInMap("PageNo")
         private Long pageNo;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Long pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private Data(Builder builder) {

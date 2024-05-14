@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHotBigKeysResponseBody</p>
  */
 public class DescribeHotBigKeysResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private DescribeHotBigKeysResponseBody(Builder builder) {
@@ -136,19 +135,19 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
     } 
 
     public static class BigKey extends TeaModel {
-        @NameInMap("Db")
+        @com.aliyun.core.annotation.NameInMap("Db")
         private Integer db;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("KeyType")
+        @com.aliyun.core.annotation.NameInMap("KeyType")
         private String keyType;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
         private BigKey(Builder builder) {
@@ -257,7 +256,7 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
 
     }
     public static class BigKeys extends TeaModel {
-        @NameInMap("BigKey")
+        @com.aliyun.core.annotation.NameInMap("BigKey")
         private java.util.List < BigKey> bigKey;
 
         private BigKeys(Builder builder) {
@@ -298,22 +297,22 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
 
     }
     public static class HotKey extends TeaModel {
-        @NameInMap("Db")
+        @com.aliyun.core.annotation.NameInMap("Db")
         private Integer db;
 
-        @NameInMap("Hot")
+        @com.aliyun.core.annotation.NameInMap("Hot")
         private String hot;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("KeyType")
+        @com.aliyun.core.annotation.NameInMap("KeyType")
         private String keyType;
 
-        @NameInMap("Lfu")
+        @com.aliyun.core.annotation.NameInMap("Lfu")
         private Integer lfu;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
         private HotKey(Builder builder) {
@@ -439,7 +438,7 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
 
     }
     public static class HotKeys extends TeaModel {
-        @NameInMap("HotKey")
+        @com.aliyun.core.annotation.NameInMap("HotKey")
         private java.util.List < HotKey> hotKey;
 
         private HotKeys(Builder builder) {
@@ -480,16 +479,16 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("BigKeyMsg")
+        @com.aliyun.core.annotation.NameInMap("BigKeyMsg")
         private String bigKeyMsg;
 
-        @NameInMap("BigKeys")
+        @com.aliyun.core.annotation.NameInMap("BigKeys")
         private BigKeys bigKeys;
 
-        @NameInMap("HotKeyMsg")
+        @com.aliyun.core.annotation.NameInMap("HotKeyMsg")
         private String hotKeyMsg;
 
-        @NameInMap("HotKeys")
+        @com.aliyun.core.annotation.NameInMap("HotKeys")
         private HotKeys hotKeys;
 
         private Data(Builder builder) {

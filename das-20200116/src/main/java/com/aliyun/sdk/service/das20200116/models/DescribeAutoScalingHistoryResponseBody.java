@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAutoScalingHistoryResponseBody</p>
  */
 public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private DescribeAutoScalingHistoryResponseBody(Builder builder) {
@@ -139,34 +138,34 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
     } 
 
     public static class SpecHistory extends TeaModel {
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("OriginCore")
+        @com.aliyun.core.annotation.NameInMap("OriginCore")
         private Integer originCore;
 
-        @NameInMap("OriginInstanceClass")
+        @com.aliyun.core.annotation.NameInMap("OriginInstanceClass")
         private String originInstanceClass;
 
-        @NameInMap("OriginMemory")
+        @com.aliyun.core.annotation.NameInMap("OriginMemory")
         private Double originMemory;
 
-        @NameInMap("ScaleType")
+        @com.aliyun.core.annotation.NameInMap("ScaleType")
         private String scaleType;
 
-        @NameInMap("TargetCore")
+        @com.aliyun.core.annotation.NameInMap("TargetCore")
         private Integer targetCore;
 
-        @NameInMap("TargetInstanceClass")
+        @com.aliyun.core.annotation.NameInMap("TargetInstanceClass")
         private String targetInstanceClass;
 
-        @NameInMap("TargetMemory")
+        @com.aliyun.core.annotation.NameInMap("TargetMemory")
         private Double targetMemory;
 
-        @NameInMap("TaskExcuteStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskExcuteStatus")
         private Boolean taskExcuteStatus;
 
-        @NameInMap("TaskTime")
+        @com.aliyun.core.annotation.NameInMap("TaskTime")
         private Long taskTime;
 
         private SpecHistory(Builder builder) {
@@ -374,22 +373,22 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private java.util.List < java.util.Map<String, ?>> bandwidth;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Resource")
+        @com.aliyun.core.annotation.NameInMap("Resource")
         private java.util.List < java.util.Map<String, ?>> resource;
 
-        @NameInMap("Shard")
+        @com.aliyun.core.annotation.NameInMap("Shard")
         private java.util.List < java.util.Map<String, ?>> shard;
 
-        @NameInMap("SpecHistory")
+        @com.aliyun.core.annotation.NameInMap("SpecHistory")
         private java.util.List < SpecHistory> specHistory;
 
-        @NameInMap("Storage")
+        @com.aliyun.core.annotation.NameInMap("Storage")
         private java.util.List < java.util.Map<String, ?>> storage;
 
         private Data(Builder builder) {

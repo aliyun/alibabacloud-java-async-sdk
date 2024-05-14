@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,57 +11,57 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateAutoThrottleRulesAsyncRequest</p>
  */
 public class UpdateAutoThrottleRulesAsyncRequest extends Request {
-    @Query
-    @NameInMap("AbnormalDuration")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AbnormalDuration")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Double abnormalDuration;
 
-    @Query
-    @NameInMap("ActiveSessions")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ActiveSessions")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long activeSessions;
 
-    @Query
-    @NameInMap("AllowThrottleEndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllowThrottleEndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String allowThrottleEndTime;
 
-    @Query
-    @NameInMap("AllowThrottleStartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllowThrottleStartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String allowThrottleStartTime;
 
-    @Query
-    @NameInMap("AutoKillSession")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoKillSession")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean autoKillSession;
 
-    @Query
-    @NameInMap("ConsoleContext")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConsoleContext")
     private String consoleContext;
 
-    @Query
-    @NameInMap("CpuSessionRelation")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CpuSessionRelation")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cpuSessionRelation;
 
-    @Query
-    @NameInMap("CpuUsage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CpuUsage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Double cpuUsage;
 
-    @Query
-    @NameInMap("InstanceIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceIds;
 
-    @Query
-    @NameInMap("MaxThrottleTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxThrottleTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Double maxThrottleTime;
 
-    @Query
-    @NameInMap("ResultId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResultId")
     private String resultId;
 
     private UpdateAutoThrottleRulesAsyncRequest(Builder builder) {

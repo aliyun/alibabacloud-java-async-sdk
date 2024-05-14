@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCloudBenchTasksResponseBody</p>
  */
 public class DescribeCloudBenchTasksResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private DescribeCloudBenchTasksResponseBody(Builder builder) {
@@ -139,127 +138,127 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
     } 
 
     public static class CloudbenchTasks extends TeaModel {
-        @NameInMap("ArchiveJobId")
+        @com.aliyun.core.annotation.NameInMap("ArchiveJobId")
         private String archiveJobId;
 
-        @NameInMap("ArchiveOssTableName")
+        @com.aliyun.core.annotation.NameInMap("ArchiveOssTableName")
         private String archiveOssTableName;
 
-        @NameInMap("ArchiveState")
+        @com.aliyun.core.annotation.NameInMap("ArchiveState")
         private Integer archiveState;
 
-        @NameInMap("BackupId")
+        @com.aliyun.core.annotation.NameInMap("BackupId")
         private String backupId;
 
-        @NameInMap("BackupType")
+        @com.aliyun.core.annotation.NameInMap("BackupType")
         private String backupType;
 
-        @NameInMap("BenchStep")
+        @com.aliyun.core.annotation.NameInMap("BenchStep")
         private String benchStep;
 
-        @NameInMap("BenchStepStatus")
+        @com.aliyun.core.annotation.NameInMap("BenchStepStatus")
         private String benchStepStatus;
 
-        @NameInMap("ClientGatewayId")
+        @com.aliyun.core.annotation.NameInMap("ClientGatewayId")
         private String clientGatewayId;
 
-        @NameInMap("ClientType")
+        @com.aliyun.core.annotation.NameInMap("ClientType")
         private String clientType;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DstInstanceUuid")
+        @com.aliyun.core.annotation.NameInMap("DstInstanceUuid")
         private String dstInstanceUuid;
 
-        @NameInMap("DstIp")
+        @com.aliyun.core.annotation.NameInMap("DstIp")
         private String dstIp;
 
-        @NameInMap("DstPort")
+        @com.aliyun.core.annotation.NameInMap("DstPort")
         private Integer dstPort;
 
-        @NameInMap("DstType")
+        @com.aliyun.core.annotation.NameInMap("DstType")
         private String dstType;
 
-        @NameInMap("DtsJobClass")
+        @com.aliyun.core.annotation.NameInMap("DtsJobClass")
         private String dtsJobClass;
 
-        @NameInMap("DtsJobId")
+        @com.aliyun.core.annotation.NameInMap("DtsJobId")
         private String dtsJobId;
 
-        @NameInMap("DtsJobName")
+        @com.aliyun.core.annotation.NameInMap("DtsJobName")
         private String dtsJobName;
 
-        @NameInMap("DtsJobState")
+        @com.aliyun.core.annotation.NameInMap("DtsJobState")
         private Integer dtsJobState;
 
-        @NameInMap("DtsJobStatus")
+        @com.aliyun.core.annotation.NameInMap("DtsJobStatus")
         private String dtsJobStatus;
 
-        @NameInMap("EcsInstanceId")
+        @com.aliyun.core.annotation.NameInMap("EcsInstanceId")
         private String ecsInstanceId;
 
-        @NameInMap("EndState")
+        @com.aliyun.core.annotation.NameInMap("EndState")
         private String endState;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("External")
+        @com.aliyun.core.annotation.NameInMap("External")
         private String external;
 
-        @NameInMap("Rate")
+        @com.aliyun.core.annotation.NameInMap("Rate")
         private Integer rate;
 
-        @NameInMap("RequestDuration")
+        @com.aliyun.core.annotation.NameInMap("RequestDuration")
         private Long requestDuration;
 
-        @NameInMap("SmartPressureTime")
+        @com.aliyun.core.annotation.NameInMap("SmartPressureTime")
         private Integer smartPressureTime;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("SqlCompleteReuse")
+        @com.aliyun.core.annotation.NameInMap("SqlCompleteReuse")
         private String sqlCompleteReuse;
 
-        @NameInMap("SrcInstanceArea")
+        @com.aliyun.core.annotation.NameInMap("SrcInstanceArea")
         private String srcInstanceArea;
 
-        @NameInMap("SrcInstanceUuid")
+        @com.aliyun.core.annotation.NameInMap("SrcInstanceUuid")
         private String srcInstanceUuid;
 
-        @NameInMap("SrcPublicIp")
+        @com.aliyun.core.annotation.NameInMap("SrcPublicIp")
         private String srcPublicIp;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TableSchema")
+        @com.aliyun.core.annotation.NameInMap("TableSchema")
         private String tableSchema;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
-        @NameInMap("WorkDir")
+        @com.aliyun.core.annotation.NameInMap("WorkDir")
         private String workDir;
 
         private CloudbenchTasks(Builder builder) {
@@ -705,7 +704,7 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
              * * **WAIT_INSTALL_JDK**: Install the Java Development Kit (JDK).
              * * **WAIT_INSTALL_DBGATEWAY**: Install the database gateway (DBGateway).
              * * **ADD_SECURITY_IPS_STEP**: Configure the whitelist of the security group.
-             * * **ARCHIVIE**: Archive the file that stores the analysis results of full SQL statistics.
+             * * **ARCHIVE**: Archive the file that stores the analysis results of full SQL statistics.
              * * **DOWNLOAD**: Download the file that stores the analysis result of full SQL statistics.
              * * **PROCEED**: Preprocess the file that stores the analysis result of full SQL statistics.
              * * **PRE_LOAD**: Preload the file that stores the analysis result of full SQL statistics.
@@ -1090,7 +1089,7 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
 
     }
     public static class List extends TeaModel {
-        @NameInMap("cloudbenchTasks")
+        @com.aliyun.core.annotation.NameInMap("cloudbenchTasks")
         private java.util.List < CloudbenchTasks> cloudbenchTasks;
 
         private List(Builder builder) {
@@ -1131,19 +1130,19 @@ public class DescribeCloudBenchTasksResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Extra")
+        @com.aliyun.core.annotation.NameInMap("Extra")
         private String extra;
 
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private List list;
 
-        @NameInMap("PageNo")
+        @com.aliyun.core.annotation.NameInMap("PageNo")
         private Integer pageNo;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private Data(Builder builder) {

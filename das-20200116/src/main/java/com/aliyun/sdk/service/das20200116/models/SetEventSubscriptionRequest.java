@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,49 +11,49 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetEventSubscriptionRequest</p>
  */
 public class SetEventSubscriptionRequest extends Request {
-    @Query
-    @NameInMap("Active")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Active")
     private String active;
 
-    @Query
-    @NameInMap("ChannelType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChannelType")
     private String channelType;
 
-    @Query
-    @NameInMap("ContactGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactGroupName")
     private String contactGroupName;
 
-    @Query
-    @NameInMap("ContactName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactName")
     private String contactName;
 
-    @Query
-    @NameInMap("DispatchRule")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DispatchRule")
     private String dispatchRule;
 
-    @Query
-    @NameInMap("EventContext")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventContext")
     private String eventContext;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Level")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Level")
     private String level;
 
-    @Query
-    @NameInMap("MinInterval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinInterval")
     private String minInterval;
 
-    @Query
-    @NameInMap("Severity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Severity")
     private String severity;
 
     private SetEventSubscriptionRequest(Builder builder) {
@@ -300,7 +299,7 @@ public class SetEventSubscriptionRequest extends Request {
          * *   **Notice**: events that trigger notifications, including events at the **Notice**, **Optimization**, **Warn**, and **Critical** levels.
          * *   **Optimization**: events that trigger optimizations, including events at the **Optimization**, **Warn**, and **Critical** levels.
          * *   **Warn**: events that trigger warnings, including events at the **Warn** and **Critical** levels.
-         * *   **Critical**: events that trigger critical warnings.****
+         * *   **Critical**: events that trigger critical warnings.
          * 
          * The following content describes the events at each level in detail:
          * 

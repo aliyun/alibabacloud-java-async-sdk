@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,119 +11,119 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDasSQLLogHotDataRequest</p>
  */
 public class GetDasSQLLogHotDataRequest extends Request {
-    @Body
-    @NameInMap("AccountName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccountName")
     private String accountName;
 
-    @Body
-    @NameInMap("ChildDBInstanceIDs")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChildDBInstanceIDs")
     private String childDBInstanceIDs;
 
-    @Body
-    @NameInMap("DBName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DBName")
     private String DBName;
 
-    @Body
-    @NameInMap("End")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("End")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long end;
 
-    @Body
-    @NameInMap("Fail")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Fail")
     private String fail;
 
-    @Body
-    @NameInMap("HostAddress")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HostAddress")
     private String hostAddress;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("LogicalOperator")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LogicalOperator")
     private String logicalOperator;
 
-    @Body
-    @NameInMap("MaxLatancy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxLatancy")
     private Long maxLatancy;
 
-    @Body
-    @NameInMap("MaxRecordsPerPage")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxRecordsPerPage")
     private Long maxRecordsPerPage;
 
-    @Body
-    @NameInMap("MaxRows")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxRows")
     private Long maxRows;
 
-    @Body
-    @NameInMap("MaxScanRows")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxScanRows")
     private Long maxScanRows;
 
-    @Body
-    @NameInMap("MaxSpillCnt")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxSpillCnt")
     private Long maxSpillCnt;
 
-    @Body
-    @NameInMap("MinLatancy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MinLatancy")
     private Long minLatancy;
 
-    @Body
-    @NameInMap("MinRows")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MinRows")
     private Long minRows;
 
-    @Body
-    @NameInMap("MinScanRows")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MinScanRows")
     private Long minScanRows;
 
-    @Body
-    @NameInMap("MinSpillCnt")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MinSpillCnt")
     private Long minSpillCnt;
 
-    @Body
-    @NameInMap("PageNumbers")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageNumbers")
     private Long pageNumbers;
 
-    @Body
-    @NameInMap("QueryKeyword")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QueryKeyword")
     private String queryKeyword;
 
-    @Body
-    @NameInMap("Role")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Role")
     private String role;
 
-    @Body
-    @NameInMap("SortKey")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SortKey")
     private String sortKey;
 
-    @Body
-    @NameInMap("SortMethod")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SortMethod")
     private String sortMethod;
 
-    @Body
-    @NameInMap("SqlType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SqlType")
     private String sqlType;
 
-    @Body
-    @NameInMap("Start")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Start")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long start;
 
-    @Body
-    @NameInMap("State")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
-    @Body
-    @NameInMap("ThreadID")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ThreadID")
     private String threadID;
 
-    @Body
-    @NameInMap("TraceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TraceId")
     private String traceId;
 
-    @Body
-    @NameInMap("TransactionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TransactionId")
     private String transactionId;
 
     private GetDasSQLLogHotDataRequest(Builder builder) {

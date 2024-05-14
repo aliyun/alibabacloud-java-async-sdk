@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPfsSqlSummariesResponseBody</p>
  */
 public class GetPfsSqlSummariesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetPfsSqlSummariesResponseBody(Builder builder) {
@@ -139,193 +138,193 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
     } 
 
     public static class List extends TeaModel {
-        @NameInMap("AvgLatency")
+        @com.aliyun.core.annotation.NameInMap("AvgLatency")
         private Double avgLatency;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("CountRate")
+        @com.aliyun.core.annotation.NameInMap("CountRate")
         private Double countRate;
 
-        @NameInMap("CpuRate")
+        @com.aliyun.core.annotation.NameInMap("CpuRate")
         private Double cpuRate;
 
-        @NameInMap("CpuTime")
+        @com.aliyun.core.annotation.NameInMap("CpuTime")
         private Double cpuTime;
 
-        @NameInMap("DataReadTime")
+        @com.aliyun.core.annotation.NameInMap("DataReadTime")
         private Double dataReadTime;
 
-        @NameInMap("DataReads")
+        @com.aliyun.core.annotation.NameInMap("DataReads")
         private Integer dataReads;
 
-        @NameInMap("DataWriteTime")
+        @com.aliyun.core.annotation.NameInMap("DataWriteTime")
         private Double dataWriteTime;
 
-        @NameInMap("DataWrites")
+        @com.aliyun.core.annotation.NameInMap("DataWrites")
         private Integer dataWrites;
 
-        @NameInMap("Db")
+        @com.aliyun.core.annotation.NameInMap("Db")
         private String db;
 
-        @NameInMap("ElapsedTime")
+        @com.aliyun.core.annotation.NameInMap("ElapsedTime")
         private Double elapsedTime;
 
-        @NameInMap("ErrCount")
+        @com.aliyun.core.annotation.NameInMap("ErrCount")
         private Long errCount;
 
-        @NameInMap("FirstTime")
+        @com.aliyun.core.annotation.NameInMap("FirstTime")
         private Long firstTime;
 
-        @NameInMap("FullScan")
+        @com.aliyun.core.annotation.NameInMap("FullScan")
         private Boolean fullScan;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("LastTime")
+        @com.aliyun.core.annotation.NameInMap("LastTime")
         private Long lastTime;
 
-        @NameInMap("LockLatencyAvg")
+        @com.aliyun.core.annotation.NameInMap("LockLatencyAvg")
         private Double lockLatencyAvg;
 
-        @NameInMap("LogicId")
+        @com.aliyun.core.annotation.NameInMap("LogicId")
         private Long logicId;
 
-        @NameInMap("LogicReads")
+        @com.aliyun.core.annotation.NameInMap("LogicReads")
         private Long logicReads;
 
-        @NameInMap("MaxLatency")
+        @com.aliyun.core.annotation.NameInMap("MaxLatency")
         private Double maxLatency;
 
-        @NameInMap("MutexSpins")
+        @com.aliyun.core.annotation.NameInMap("MutexSpins")
         private Integer mutexSpins;
 
-        @NameInMap("MutexWaits")
+        @com.aliyun.core.annotation.NameInMap("MutexWaits")
         private Integer mutexWaits;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("PhysicalAsyncReads")
+        @com.aliyun.core.annotation.NameInMap("PhysicalAsyncReads")
         private Long physicalAsyncReads;
 
-        @NameInMap("PhysicalReads")
+        @com.aliyun.core.annotation.NameInMap("PhysicalReads")
         private Long physicalReads;
 
-        @NameInMap("Psql")
+        @com.aliyun.core.annotation.NameInMap("Psql")
         private String psql;
 
-        @NameInMap("RedoWrites")
+        @com.aliyun.core.annotation.NameInMap("RedoWrites")
         private Long redoWrites;
 
-        @NameInMap("RowsAffected")
+        @com.aliyun.core.annotation.NameInMap("RowsAffected")
         private Long rowsAffected;
 
-        @NameInMap("RowsAffectedAvg")
+        @com.aliyun.core.annotation.NameInMap("RowsAffectedAvg")
         private Double rowsAffectedAvg;
 
-        @NameInMap("RowsExamined")
+        @com.aliyun.core.annotation.NameInMap("RowsExamined")
         private Long rowsExamined;
 
-        @NameInMap("RowsExaminedAvg")
+        @com.aliyun.core.annotation.NameInMap("RowsExaminedAvg")
         private Double rowsExaminedAvg;
 
-        @NameInMap("RowsSendAvg")
+        @com.aliyun.core.annotation.NameInMap("RowsSendAvg")
         private Double rowsSendAvg;
 
-        @NameInMap("RowsSent")
+        @com.aliyun.core.annotation.NameInMap("RowsSent")
         private Long rowsSent;
 
-        @NameInMap("RowsSentAvg")
+        @com.aliyun.core.annotation.NameInMap("RowsSentAvg")
         private Double rowsSentAvg;
 
-        @NameInMap("RowsSorted")
+        @com.aliyun.core.annotation.NameInMap("RowsSorted")
         private Long rowsSorted;
 
-        @NameInMap("RtRate")
+        @com.aliyun.core.annotation.NameInMap("RtRate")
         private Double rtRate;
 
-        @NameInMap("RwlockOsWaits")
+        @com.aliyun.core.annotation.NameInMap("RwlockOsWaits")
         private Integer rwlockOsWaits;
 
-        @NameInMap("RwlockSpinRounds")
+        @com.aliyun.core.annotation.NameInMap("RwlockSpinRounds")
         private Integer rwlockSpinRounds;
 
-        @NameInMap("RwlockSpinWaits")
+        @com.aliyun.core.annotation.NameInMap("RwlockSpinWaits")
         private Integer rwlockSpinWaits;
 
-        @NameInMap("SelectFullJoinAvg")
+        @com.aliyun.core.annotation.NameInMap("SelectFullJoinAvg")
         private Double selectFullJoinAvg;
 
-        @NameInMap("SelectFullRangeJoinAvg")
+        @com.aliyun.core.annotation.NameInMap("SelectFullRangeJoinAvg")
         private Double selectFullRangeJoinAvg;
 
-        @NameInMap("SelectRangeAvg")
+        @com.aliyun.core.annotation.NameInMap("SelectRangeAvg")
         private Double selectRangeAvg;
 
-        @NameInMap("SelectScanAvg")
+        @com.aliyun.core.annotation.NameInMap("SelectScanAvg")
         private Double selectScanAvg;
 
-        @NameInMap("SemisyncDelayTime")
+        @com.aliyun.core.annotation.NameInMap("SemisyncDelayTime")
         private Double semisyncDelayTime;
 
-        @NameInMap("ServerLockTime")
+        @com.aliyun.core.annotation.NameInMap("ServerLockTime")
         private Double serverLockTime;
 
-        @NameInMap("SortMergePasses")
+        @com.aliyun.core.annotation.NameInMap("SortMergePasses")
         private Long sortMergePasses;
 
-        @NameInMap("SortRangeAvg")
+        @com.aliyun.core.annotation.NameInMap("SortRangeAvg")
         private Double sortRangeAvg;
 
-        @NameInMap("SortRowsAvg")
+        @com.aliyun.core.annotation.NameInMap("SortRowsAvg")
         private Double sortRowsAvg;
 
-        @NameInMap("SortScanAvg")
+        @com.aliyun.core.annotation.NameInMap("SortScanAvg")
         private Double sortScanAvg;
 
-        @NameInMap("SqlId")
+        @com.aliyun.core.annotation.NameInMap("SqlId")
         private String sqlId;
 
-        @NameInMap("SqlType")
+        @com.aliyun.core.annotation.NameInMap("SqlType")
         private String sqlType;
 
-        @NameInMap("Tables")
+        @com.aliyun.core.annotation.NameInMap("Tables")
         private java.util.List < String > tables;
 
-        @NameInMap("TimerWaitAvg")
+        @com.aliyun.core.annotation.NameInMap("TimerWaitAvg")
         private Double timerWaitAvg;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
-        @NameInMap("TmpDiskTables")
+        @com.aliyun.core.annotation.NameInMap("TmpDiskTables")
         private Long tmpDiskTables;
 
-        @NameInMap("TmpDiskTablesAvg")
+        @com.aliyun.core.annotation.NameInMap("TmpDiskTablesAvg")
         private Double tmpDiskTablesAvg;
 
-        @NameInMap("TmpTables")
+        @com.aliyun.core.annotation.NameInMap("TmpTables")
         private Long tmpTables;
 
-        @NameInMap("TmpTablesAvg")
+        @com.aliyun.core.annotation.NameInMap("TmpTablesAvg")
         private Double tmpTablesAvg;
 
-        @NameInMap("TotalLatency")
+        @com.aliyun.core.annotation.NameInMap("TotalLatency")
         private Double totalLatency;
 
-        @NameInMap("TransactionLockTime")
+        @com.aliyun.core.annotation.NameInMap("TransactionLockTime")
         private Double transactionLockTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("WarnCount")
+        @com.aliyun.core.annotation.NameInMap("WarnCount")
         private Long warnCount;
 
         private List(Builder builder) {
@@ -1443,19 +1442,19 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Extra")
+        @com.aliyun.core.annotation.NameInMap("Extra")
         private Object extra;
 
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;
 
-        @NameInMap("PageNo")
+        @com.aliyun.core.annotation.NameInMap("PageNo")
         private Long pageNo;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Long pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private Data(Builder builder) {

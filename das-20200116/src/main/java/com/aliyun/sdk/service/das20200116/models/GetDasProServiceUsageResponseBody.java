@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.das20200116.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDasProServiceUsageResponseBody</p>
  */
 public class GetDasProServiceUsageResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetDasProServiceUsageResponseBody(Builder builder) {
@@ -139,55 +138,55 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("commodityInstanceId")
+        @com.aliyun.core.annotation.NameInMap("commodityInstanceId")
         private String commodityInstanceId;
 
-        @NameInMap("engine")
+        @com.aliyun.core.annotation.NameInMap("engine")
         private String engine;
 
-        @NameInMap("expireTime")
+        @com.aliyun.core.annotation.NameInMap("expireTime")
         private Long expireTime;
 
-        @NameInMap("instanceAlias")
+        @com.aliyun.core.annotation.NameInMap("instanceAlias")
         private String instanceAlias;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
-        @NameInMap("ip")
+        @com.aliyun.core.annotation.NameInMap("ip")
         private String ip;
 
-        @NameInMap("isSpare")
+        @com.aliyun.core.annotation.NameInMap("isSpare")
         private Boolean isSpare;
 
-        @NameInMap("migrationPredictRemainingTime")
+        @com.aliyun.core.annotation.NameInMap("migrationPredictRemainingTime")
         private Long migrationPredictRemainingTime;
 
-        @NameInMap("port")
+        @com.aliyun.core.annotation.NameInMap("port")
         private Integer port;
 
-        @NameInMap("region")
+        @com.aliyun.core.annotation.NameInMap("region")
         private String region;
 
-        @NameInMap("serviceUnitId")
+        @com.aliyun.core.annotation.NameInMap("serviceUnitId")
         private String serviceUnitId;
 
-        @NameInMap("sqlRetention")
+        @com.aliyun.core.annotation.NameInMap("sqlRetention")
         private String sqlRetention;
 
-        @NameInMap("startTime")
+        @com.aliyun.core.annotation.NameInMap("startTime")
         private Long startTime;
 
-        @NameInMap("storageFreeQuotaInMB")
+        @com.aliyun.core.annotation.NameInMap("storageFreeQuotaInMB")
         private Double storageFreeQuotaInMB;
 
-        @NameInMap("storageUsed")
+        @com.aliyun.core.annotation.NameInMap("storageUsed")
         private Long storageUsed;
 
-        @NameInMap("userId")
+        @com.aliyun.core.annotation.NameInMap("userId")
         private String userId;
 
-        @NameInMap("vpcId")
+        @com.aliyun.core.annotation.NameInMap("vpcId")
         private String vpcId;
 
         private Data(Builder builder) {
@@ -357,7 +356,7 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The ID of the DAS Professional Edition instance.
+             * The ID of the DAS Enterprise Edition instance.
              */
             public Builder commodityInstanceId(String commodityInstanceId) {
                 this.commodityInstanceId = commodityInstanceId;
@@ -373,7 +372,7 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The point of time when DAS Professional Edition for the database instance expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * The point of time when DAS Enterprise Edition for the database instance expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -405,7 +404,7 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether DAS Professional Edition for the database instance has expired. Valid values:
+             * Indicates whether DAS Enterprise Edition for the database instance has expired. Valid values:
              * <p>
              * 
              * *   **true**
@@ -460,7 +459,7 @@ public class GetDasProServiceUsageResponseBody extends TeaModel {
             }
 
             /**
-             * The time when DAS Professional Edition was enabled for the database instance. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * The time when DAS Enterprise Edition was enabled for the database instance. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
