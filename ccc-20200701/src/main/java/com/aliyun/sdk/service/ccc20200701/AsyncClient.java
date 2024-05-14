@@ -33,6 +33,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddPhoneNumbersResponse> addPhoneNumbers(AddPhoneNumbersRequest request);
 
+    CompletableFuture<AddSchemaPropertyResponse> addSchemaProperty(AddSchemaPropertyRequest request);
+
     CompletableFuture<AddSkillGroupsToUserResponse> addSkillGroupsToUser(AddSkillGroupsToUserRequest request);
 
     CompletableFuture<AddUsersToSkillGroupResponse> addUsersToSkillGroup(AddUsersToSkillGroupRequest request);
@@ -79,6 +81,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateInstanceResponse> createInstance(CreateInstanceRequest request);
 
+    CompletableFuture<CreateSchemaResponse> createSchema(CreateSchemaRequest request);
+
     CompletableFuture<CreateSkillGroupResponse> createSkillGroup(CreateSkillGroupRequest request);
 
     CompletableFuture<CreateUserResponse> createUser(CreateUserRequest request);
@@ -90,6 +94,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteContactFlowResponse> deleteContactFlow(DeleteContactFlowRequest request);
 
     CompletableFuture<DeleteCustomCallTaggingResponse> deleteCustomCallTagging(DeleteCustomCallTaggingRequest request);
+
+    CompletableFuture<DeleteDocumentResponse> deleteDocument(DeleteDocumentRequest request);
+
+    CompletableFuture<DeleteDocumentsResponse> deleteDocuments(DeleteDocumentsRequest request);
+
+    CompletableFuture<DeleteSchemaResponse> deleteSchema(DeleteSchemaRequest request);
 
     CompletableFuture<DeleteSchemaPropertyResponse> deleteSchemaProperty(DeleteSchemaPropertyRequest request);
 
@@ -132,6 +142,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDataChannelCredentialsResponse> getDataChannelCredentials(GetDataChannelCredentialsRequest request);
 
     CompletableFuture<GetDoNotCallFileUploadParametersResponse> getDoNotCallFileUploadParameters(GetDoNotCallFileUploadParametersRequest request);
+
+    CompletableFuture<GetDocumentUploadParametersResponse> getDocumentUploadParameters(GetDocumentUploadParametersRequest request);
 
     CompletableFuture<GetEarlyMediaRecordingResponse> getEarlyMediaRecording(GetEarlyMediaRecordingRequest request);
 
@@ -184,6 +196,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ImportCustomCallTaggingResponse> importCustomCallTagging(ImportCustomCallTaggingRequest request);
 
     CompletableFuture<ImportDoNotCallNumbersResponse> importDoNotCallNumbers(ImportDoNotCallNumbersRequest request);
+
+    CompletableFuture<ImportDocumentsResponse> importDocuments(ImportDocumentsRequest request);
 
     CompletableFuture<InitiateAttendedTransferResponse> initiateAttendedTransfer(InitiateAttendedTransferRequest request);
 
@@ -238,6 +252,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDevicesResponse> listDevices(ListDevicesRequest request);
 
     CompletableFuture<ListDoNotCallNumbersResponse> listDoNotCallNumbers(ListDoNotCallNumbersRequest request);
+
+    CompletableFuture<ListDocumentsResponse> listDocuments(ListDocumentsRequest request);
 
     CompletableFuture<ListHistoricalAgentReportResponse> listHistoricalAgentReport(ListHistoricalAgentReportRequest request);
 
@@ -385,6 +401,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RetrieveCallResponse> retrieveCall(RetrieveCallRequest request);
 
+    CompletableFuture<SaveDocumentResponse> saveDocument(SaveDocumentRequest request);
+
     CompletableFuture<SaveRTCStatsV2Response> saveRTCStatsV2(SaveRTCStatsV2Request request);
 
     CompletableFuture<SaveTerminalLogResponse> saveTerminalLog(SaveTerminalLogRequest request);
@@ -422,5 +440,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateCampaignResponse> updateCampaign(UpdateCampaignRequest request);
 
     CompletableFuture<UpdateConfigItemsResponse> updateConfigItems(UpdateConfigItemsRequest request);
+
+    CompletableFuture<UpdateSchemaPropertyResponse> updateSchemaProperty(UpdateSchemaPropertyRequest request);
 
 }
