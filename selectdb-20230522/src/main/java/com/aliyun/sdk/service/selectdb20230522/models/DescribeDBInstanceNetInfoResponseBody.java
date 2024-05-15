@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.selectdb20230522.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBInstanceNetInfoResponseBody</p>
  */
 public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
-    @NameInMap("DBClustersNetInfos")
+    @com.aliyun.core.annotation.NameInMap("DBClustersNetInfos")
     private java.util.List < DBClustersNetInfos> DBClustersNetInfos;
 
-    @NameInMap("DBInstanceNetInfos")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceNetInfos")
     private java.util.List < DBInstanceNetInfos> DBInstanceNetInfos;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBInstanceNetInfoResponseBody(Builder builder) {
@@ -92,10 +91,10 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
     } 
 
     public static class PortList extends TeaModel {
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
         private PortList(Builder builder) {
@@ -153,31 +152,31 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
 
     }
     public static class DBClustersNetInfos extends TeaModel {
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ConnectionString")
+        @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("NetType")
+        @com.aliyun.core.annotation.NameInMap("NetType")
         private String netType;
 
-        @NameInMap("PortList")
+        @com.aliyun.core.annotation.NameInMap("PortList")
         private java.util.List < PortList> portList;
 
-        @NameInMap("UserVisible")
+        @com.aliyun.core.annotation.NameInMap("UserVisible")
         private Boolean userVisible;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcInstanceId")
+        @com.aliyun.core.annotation.NameInMap("VpcInstanceId")
         private String vpcInstanceId;
 
-        @NameInMap("VswitchId")
+        @com.aliyun.core.annotation.NameInMap("VswitchId")
         private String vswitchId;
 
         private DBClustersNetInfos(Builder builder) {
@@ -354,10 +353,10 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
 
     }
     public static class DBInstanceNetInfosPortList extends TeaModel {
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
         private DBInstanceNetInfosPortList(Builder builder) {
@@ -415,31 +414,31 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
 
     }
     public static class DBInstanceNetInfos extends TeaModel {
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ConnectionString")
+        @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("NetType")
+        @com.aliyun.core.annotation.NameInMap("NetType")
         private String netType;
 
-        @NameInMap("PortList")
+        @com.aliyun.core.annotation.NameInMap("PortList")
         private java.util.List < DBInstanceNetInfosPortList> portList;
 
-        @NameInMap("UserVisible")
+        @com.aliyun.core.annotation.NameInMap("UserVisible")
         private Boolean userVisible;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcInstanceId")
+        @com.aliyun.core.annotation.NameInMap("VpcInstanceId")
         private String vpcInstanceId;
 
-        @NameInMap("VswitchId")
+        @com.aliyun.core.annotation.NameInMap("VswitchId")
         private String vswitchId;
 
         private DBInstanceNetInfos(Builder builder) {

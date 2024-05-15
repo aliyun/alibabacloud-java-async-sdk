@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.selectdb20230522.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CheckServiceLinkedRoleResponseBody</p>
  */
 public class CheckServiceLinkedRoleResponseBody extends TeaModel {
-    @NameInMap("HasServiceLinkedRole")
+    @com.aliyun.core.annotation.NameInMap("HasServiceLinkedRole")
     private Boolean hasServiceLinkedRole;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CheckServiceLinkedRoleResponseBody(Builder builder) {

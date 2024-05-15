@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.selectdb20230522.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifySecurityIPListResponseBody</p>
  */
 public class ModifySecurityIPListResponseBody extends TeaModel {
-    @NameInMap("DBInstanceName")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceName")
     private String DBInstanceName;
 
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
-    @NameInMap("GroupTag")
+    @com.aliyun.core.annotation.NameInMap("GroupTag")
     private String groupTag;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecurityIPList")
+    @com.aliyun.core.annotation.NameInMap("SecurityIPList")
     private String securityIPList;
 
-    @NameInMap("SecurityIPType")
+    @com.aliyun.core.annotation.NameInMap("SecurityIPType")
     private String securityIPType;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private Long taskId;
 
-    @NameInMap("WhitelistNetType")
+    @com.aliyun.core.annotation.NameInMap("WhitelistNetType")
     private String whitelistNetType;
 
     private ModifySecurityIPListResponseBody(Builder builder) {

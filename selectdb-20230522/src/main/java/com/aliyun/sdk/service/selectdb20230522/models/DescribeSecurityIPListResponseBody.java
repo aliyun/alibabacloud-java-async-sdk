@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.selectdb20230522.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSecurityIPListResponseBody</p>
  */
 public class DescribeSecurityIPListResponseBody extends TeaModel {
-    @NameInMap("DBInstanceName")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceName")
     private String DBInstanceName;
 
-    @NameInMap("GroupItems")
+    @com.aliyun.core.annotation.NameInMap("GroupItems")
     private java.util.List < GroupItems> groupItems;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeSecurityIPListResponseBody(Builder builder) {
@@ -92,19 +91,19 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
     } 
 
     public static class GroupItems extends TeaModel {
-        @NameInMap("AecurityIPType")
+        @com.aliyun.core.annotation.NameInMap("AecurityIPType")
         private String aecurityIPType;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("GroupTag")
+        @com.aliyun.core.annotation.NameInMap("GroupTag")
         private String groupTag;
 
-        @NameInMap("SecurityIPList")
+        @com.aliyun.core.annotation.NameInMap("SecurityIPList")
         private String securityIPList;
 
-        @NameInMap("WhitelistNetType")
+        @com.aliyun.core.annotation.NameInMap("WhitelistNetType")
         private String whitelistNetType;
 
         private GroupItems(Builder builder) {
