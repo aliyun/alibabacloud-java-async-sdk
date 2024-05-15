@@ -21,6 +21,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddAttendeeResponse> addAttendee(AddAttendeeRequest request);
 
+    CompletableFuture<AddDriveSpaceResponse> addDriveSpace(AddDriveSpaceRequest request);
+
     CompletableFuture<AddMeetingRoomsResponse> addMeetingRooms(AddMeetingRoomsRequest request);
 
     CompletableFuture<AddScenegroupMemberResponse> addScenegroupMember(AddScenegroupMemberRequest request);
@@ -52,6 +54,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CommentListReportResponse> commentListReport(CommentListReportRequest request);
 
     CompletableFuture<CreateDeliveryPlanResponse> createDeliveryPlan(CreateDeliveryPlanRequest request);
+
+    CompletableFuture<CreateDingtalkPersonalTodoTaskResponse> createDingtalkPersonalTodoTask(CreateDingtalkPersonalTodoTaskRequest request);
 
     CompletableFuture<CreateEventResponse> createEvent(CreateEventRequest request);
 
@@ -90,6 +94,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateWorkspaceDocResponse> createWorkspaceDoc(CreateWorkspaceDocRequest request);
 
     CompletableFuture<DeleteColumnsResponse> deleteColumns(DeleteColumnsRequest request);
+
+    CompletableFuture<DeleteDriveSpaceResponse> deleteDriveSpace(DeleteDriveSpaceRequest request);
 
     CompletableFuture<DeleteEventResponse> deleteEvent(DeleteEventRequest request);
 
@@ -226,6 +232,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListCalendarsResponse> listCalendars(ListCalendarsRequest request);
 
     CompletableFuture<ListDentriesResponse> listDentries(ListDentriesRequest request);
+
+    CompletableFuture<ListDriveSpacesResponse> listDriveSpaces(ListDriveSpacesRequest request);
 
     CompletableFuture<ListEventsResponse> listEvents(ListEventsRequest request);
 
