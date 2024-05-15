@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tingwu20230930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTranscriptionPhrasesResponseBody</p>
  */
 public class ListTranscriptionPhrasesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListTranscriptionPhrasesResponseBody(Builder builder) {
@@ -112,13 +111,13 @@ public class ListTranscriptionPhrasesResponseBody extends TeaModel {
     } 
 
     public static class Phrases extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PhraseId")
+        @com.aliyun.core.annotation.NameInMap("PhraseId")
         private String phraseId;
 
         private Phrases(Builder builder) {
@@ -193,16 +192,16 @@ public class ListTranscriptionPhrasesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Phrases")
+        @com.aliyun.core.annotation.NameInMap("Phrases")
         private java.util.List < Phrases> phrases;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Data(Builder builder) {

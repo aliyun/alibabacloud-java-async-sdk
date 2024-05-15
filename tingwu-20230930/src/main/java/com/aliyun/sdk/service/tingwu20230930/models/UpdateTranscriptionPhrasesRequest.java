@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tingwu20230930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateTranscriptionPhrasesRequest</p>
  */
 public class UpdateTranscriptionPhrasesRequest extends Request {
-    @Path
-    @NameInMap("PhraseId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("PhraseId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String phraseId;
 
-    @Body
-    @NameInMap("Description")
-    @Validation(maxLength = 250, minLength = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(maxLength = 250, minLength = 1)
     private String description;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true, maxLength = 50, minLength = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 50, minLength = 1)
     private String name;
 
-    @Body
-    @NameInMap("WordWeights")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WordWeights")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String wordWeights;
 
     private UpdateTranscriptionPhrasesRequest(Builder builder) {

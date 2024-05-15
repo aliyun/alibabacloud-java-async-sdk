@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tingwu20230930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateTaskRequest</p>
  */
 public class CreateTaskRequest extends Request {
-    @Body
-    @NameInMap("AppKey")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppKey")
     private String appKey;
 
-    @Body
-    @NameInMap("Input")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Input")
     private Input input;
 
-    @Body
-    @NameInMap("Parameters")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Parameters")
     private Parameters parameters;
 
-    @Query
-    @NameInMap("operation")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("operation")
     private String operation;
 
-    @Query
-    @NameInMap("type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private CreateTaskRequest(Builder builder) {
@@ -163,29 +162,29 @@ public class CreateTaskRequest extends Request {
     } 
 
     public static class Input extends TeaModel {
-        @NameInMap("FileUrl")
+        @com.aliyun.core.annotation.NameInMap("FileUrl")
         private String fileUrl;
 
-        @NameInMap("Format")
+        @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
 
-        @NameInMap("MultipleStreamsEnabled")
+        @com.aliyun.core.annotation.NameInMap("MultipleStreamsEnabled")
         private Boolean multipleStreamsEnabled;
 
-        @NameInMap("ProgressiveCallbacksEnabled")
+        @com.aliyun.core.annotation.NameInMap("ProgressiveCallbacksEnabled")
         private Boolean progressiveCallbacksEnabled;
 
-        @NameInMap("SampleRate")
+        @com.aliyun.core.annotation.NameInMap("SampleRate")
         private Integer sampleRate;
 
-        @NameInMap("SourceLanguage")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("SourceLanguage")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String sourceLanguage;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TaskKey")
+        @com.aliyun.core.annotation.NameInMap("TaskKey")
         private String taskKey;
 
         private Input(Builder builder) {
@@ -344,8 +343,152 @@ public class CreateTaskRequest extends Request {
         } 
 
     }
+    public static class Contents extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Model")
+        private String model;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Prompt")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String prompt;
+
+        @com.aliyun.core.annotation.NameInMap("TransType")
+        private String transType;
+
+        private Contents(Builder builder) {
+            this.model = builder.model;
+            this.name = builder.name;
+            this.prompt = builder.prompt;
+            this.transType = builder.transType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Contents create() {
+            return builder().build();
+        }
+
+        /**
+         * @return model
+         */
+        public String getModel() {
+            return this.model;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return prompt
+         */
+        public String getPrompt() {
+            return this.prompt;
+        }
+
+        /**
+         * @return transType
+         */
+        public String getTransType() {
+            return this.transType;
+        }
+
+        public static final class Builder {
+            private String model; 
+            private String name; 
+            private String prompt; 
+            private String transType; 
+
+            /**
+             * Model.
+             */
+            public Builder model(String model) {
+                this.model = model;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Prompt.
+             */
+            public Builder prompt(String prompt) {
+                this.prompt = prompt;
+                return this;
+            }
+
+            /**
+             * TransType.
+             */
+            public Builder transType(String transType) {
+                this.transType = transType;
+                return this;
+            }
+
+            public Contents build() {
+                return new Contents(this);
+            } 
+
+        } 
+
+    }
+    public static class CustomPrompt extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Contents")
+        private java.util.List < Contents> contents;
+
+        private CustomPrompt(Builder builder) {
+            this.contents = builder.contents;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CustomPrompt create() {
+            return builder().build();
+        }
+
+        /**
+         * @return contents
+         */
+        public java.util.List < Contents> getContents() {
+            return this.contents;
+        }
+
+        public static final class Builder {
+            private java.util.List < Contents> contents; 
+
+            /**
+             * Contents.
+             */
+            public Builder contents(java.util.List < Contents> contents) {
+                this.contents = contents;
+                return this;
+            }
+
+            public CustomPrompt build() {
+                return new CustomPrompt(this);
+            } 
+
+        } 
+
+    }
     public static class ExtraParams extends TeaModel {
-        @NameInMap("NfixEnabled")
+        @com.aliyun.core.annotation.NameInMap("NfixEnabled")
         private Boolean nfixEnabled;
 
         private ExtraParams(Builder builder) {
@@ -386,7 +529,7 @@ public class CreateTaskRequest extends Request {
 
     }
     public static class MeetingAssistance extends TeaModel {
-        @NameInMap("Types")
+        @com.aliyun.core.annotation.NameInMap("Types")
         private java.util.List < String > types;
 
         private MeetingAssistance(Builder builder) {
@@ -427,7 +570,7 @@ public class CreateTaskRequest extends Request {
 
     }
     public static class Summarization extends TeaModel {
-        @NameInMap("Types")
+        @com.aliyun.core.annotation.NameInMap("Types")
         private java.util.List < String > types;
 
         private Summarization(Builder builder) {
@@ -468,16 +611,16 @@ public class CreateTaskRequest extends Request {
 
     }
     public static class Transcoding extends TeaModel {
-        @NameInMap("SpectrumEnabled")
+        @com.aliyun.core.annotation.NameInMap("SpectrumEnabled")
         private Boolean spectrumEnabled;
 
-        @NameInMap("TargetAudioFormat")
+        @com.aliyun.core.annotation.NameInMap("TargetAudioFormat")
         private String targetAudioFormat;
 
-        @NameInMap("TargetVideoFormat")
+        @com.aliyun.core.annotation.NameInMap("TargetVideoFormat")
         private String targetVideoFormat;
 
-        @NameInMap("VideoThumbnailEnabled")
+        @com.aliyun.core.annotation.NameInMap("VideoThumbnailEnabled")
         private Boolean videoThumbnailEnabled;
 
         private Transcoding(Builder builder) {
@@ -569,7 +712,7 @@ public class CreateTaskRequest extends Request {
 
     }
     public static class Diarization extends TeaModel {
-        @NameInMap("SpeakerCount")
+        @com.aliyun.core.annotation.NameInMap("SpeakerCount")
         private Integer speakerCount;
 
         private Diarization(Builder builder) {
@@ -610,22 +753,22 @@ public class CreateTaskRequest extends Request {
 
     }
     public static class Transcription extends TeaModel {
-        @NameInMap("AdditionalStreamOutputLevel")
+        @com.aliyun.core.annotation.NameInMap("AdditionalStreamOutputLevel")
         private Integer additionalStreamOutputLevel;
 
-        @NameInMap("AudioEventDetectionEnabled")
+        @com.aliyun.core.annotation.NameInMap("AudioEventDetectionEnabled")
         private Boolean audioEventDetectionEnabled;
 
-        @NameInMap("Diarization")
+        @com.aliyun.core.annotation.NameInMap("Diarization")
         private Diarization diarization;
 
-        @NameInMap("DiarizationEnabled")
+        @com.aliyun.core.annotation.NameInMap("DiarizationEnabled")
         private Boolean diarizationEnabled;
 
-        @NameInMap("OutputLevel")
+        @com.aliyun.core.annotation.NameInMap("OutputLevel")
         private Integer outputLevel;
 
-        @NameInMap("PhraseId")
+        @com.aliyun.core.annotation.NameInMap("PhraseId")
         private String phraseId;
 
         private Transcription(Builder builder) {
@@ -751,13 +894,13 @@ public class CreateTaskRequest extends Request {
 
     }
     public static class Translation extends TeaModel {
-        @NameInMap("AdditionalStreamOutputLevel")
+        @com.aliyun.core.annotation.NameInMap("AdditionalStreamOutputLevel")
         private Integer additionalStreamOutputLevel;
 
-        @NameInMap("OutputLevel")
+        @com.aliyun.core.annotation.NameInMap("OutputLevel")
         private Integer outputLevel;
 
-        @NameInMap("TargetLanguages")
+        @com.aliyun.core.annotation.NameInMap("TargetLanguages")
         private java.util.List < String > targetLanguages;
 
         private Translation(Builder builder) {
@@ -832,44 +975,52 @@ public class CreateTaskRequest extends Request {
 
     }
     public static class Parameters extends TeaModel {
-        @NameInMap("AutoChaptersEnabled")
+        @com.aliyun.core.annotation.NameInMap("AutoChaptersEnabled")
         private Boolean autoChaptersEnabled;
 
-        @NameInMap("ExtraParams")
+        @com.aliyun.core.annotation.NameInMap("CustomPrompt")
+        private CustomPrompt customPrompt;
+
+        @com.aliyun.core.annotation.NameInMap("CustomPromptEnabled")
+        private Boolean customPromptEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("ExtraParams")
         private ExtraParams extraParams;
 
-        @NameInMap("MeetingAssistance")
+        @com.aliyun.core.annotation.NameInMap("MeetingAssistance")
         private MeetingAssistance meetingAssistance;
 
-        @NameInMap("MeetingAssistanceEnabled")
+        @com.aliyun.core.annotation.NameInMap("MeetingAssistanceEnabled")
         private Boolean meetingAssistanceEnabled;
 
-        @NameInMap("PptExtractionEnabled")
+        @com.aliyun.core.annotation.NameInMap("PptExtractionEnabled")
         private Boolean pptExtractionEnabled;
 
-        @NameInMap("Summarization")
+        @com.aliyun.core.annotation.NameInMap("Summarization")
         private Summarization summarization;
 
-        @NameInMap("SummarizationEnabled")
+        @com.aliyun.core.annotation.NameInMap("SummarizationEnabled")
         private Boolean summarizationEnabled;
 
-        @NameInMap("TextPolishEnabled")
+        @com.aliyun.core.annotation.NameInMap("TextPolishEnabled")
         private Boolean textPolishEnabled;
 
-        @NameInMap("Transcoding")
+        @com.aliyun.core.annotation.NameInMap("Transcoding")
         private Transcoding transcoding;
 
-        @NameInMap("Transcription")
+        @com.aliyun.core.annotation.NameInMap("Transcription")
         private Transcription transcription;
 
-        @NameInMap("Translation")
+        @com.aliyun.core.annotation.NameInMap("Translation")
         private Translation translation;
 
-        @NameInMap("TranslationEnabled")
+        @com.aliyun.core.annotation.NameInMap("TranslationEnabled")
         private Boolean translationEnabled;
 
         private Parameters(Builder builder) {
             this.autoChaptersEnabled = builder.autoChaptersEnabled;
+            this.customPrompt = builder.customPrompt;
+            this.customPromptEnabled = builder.customPromptEnabled;
             this.extraParams = builder.extraParams;
             this.meetingAssistance = builder.meetingAssistance;
             this.meetingAssistanceEnabled = builder.meetingAssistanceEnabled;
@@ -896,6 +1047,20 @@ public class CreateTaskRequest extends Request {
          */
         public Boolean getAutoChaptersEnabled() {
             return this.autoChaptersEnabled;
+        }
+
+        /**
+         * @return customPrompt
+         */
+        public CustomPrompt getCustomPrompt() {
+            return this.customPrompt;
+        }
+
+        /**
+         * @return customPromptEnabled
+         */
+        public Boolean getCustomPromptEnabled() {
+            return this.customPromptEnabled;
         }
 
         /**
@@ -977,6 +1142,8 @@ public class CreateTaskRequest extends Request {
 
         public static final class Builder {
             private Boolean autoChaptersEnabled; 
+            private CustomPrompt customPrompt; 
+            private Boolean customPromptEnabled; 
             private ExtraParams extraParams; 
             private MeetingAssistance meetingAssistance; 
             private Boolean meetingAssistanceEnabled; 
@@ -994,6 +1161,22 @@ public class CreateTaskRequest extends Request {
              */
             public Builder autoChaptersEnabled(Boolean autoChaptersEnabled) {
                 this.autoChaptersEnabled = autoChaptersEnabled;
+                return this;
+            }
+
+            /**
+             * CustomPrompt.
+             */
+            public Builder customPrompt(CustomPrompt customPrompt) {
+                this.customPrompt = customPrompt;
+                return this;
+            }
+
+            /**
+             * CustomPromptEnabled.
+             */
+            public Builder customPromptEnabled(Boolean customPromptEnabled) {
+                this.customPromptEnabled = customPromptEnabled;
                 return this;
             }
 

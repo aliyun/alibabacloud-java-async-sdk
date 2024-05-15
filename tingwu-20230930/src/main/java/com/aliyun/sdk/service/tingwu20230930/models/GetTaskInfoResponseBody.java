@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tingwu20230930.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTaskInfoResponseBody</p>
  */
 public class GetTaskInfoResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetTaskInfoResponseBody(Builder builder) {
@@ -112,25 +111,25 @@ public class GetTaskInfoResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("AutoChapters")
+        @com.aliyun.core.annotation.NameInMap("AutoChapters")
         private String autoChapters;
 
-        @NameInMap("MeetingAssistance")
+        @com.aliyun.core.annotation.NameInMap("MeetingAssistance")
         private String meetingAssistance;
 
-        @NameInMap("PptExtraction")
+        @com.aliyun.core.annotation.NameInMap("PptExtraction")
         private String pptExtraction;
 
-        @NameInMap("Summarization")
+        @com.aliyun.core.annotation.NameInMap("Summarization")
         private String summarization;
 
-        @NameInMap("TextPolish")
+        @com.aliyun.core.annotation.NameInMap("TextPolish")
         private String textPolish;
 
-        @NameInMap("Transcription")
+        @com.aliyun.core.annotation.NameInMap("Transcription")
         private String transcription;
 
-        @NameInMap("Translation")
+        @com.aliyun.core.annotation.NameInMap("Translation")
         private String translation;
 
         private Result(Builder builder) {
@@ -273,34 +272,34 @@ public class GetTaskInfoResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("OutputMp3Path")
+        @com.aliyun.core.annotation.NameInMap("OutputMp3Path")
         private String outputMp3Path;
 
-        @NameInMap("OutputMp4Path")
+        @com.aliyun.core.annotation.NameInMap("OutputMp4Path")
         private String outputMp4Path;
 
-        @NameInMap("OutputSpectrumPath")
+        @com.aliyun.core.annotation.NameInMap("OutputSpectrumPath")
         private String outputSpectrumPath;
 
-        @NameInMap("OutputThumbnailPath")
+        @com.aliyun.core.annotation.NameInMap("OutputThumbnailPath")
         private String outputThumbnailPath;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private Result result;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TaskKey")
+        @com.aliyun.core.annotation.NameInMap("TaskKey")
         private String taskKey;
 
-        @NameInMap("TaskStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private String taskStatus;
 
         private Data(Builder builder) {
