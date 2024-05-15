@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeControlPolicyResponseBody</p>
  */
 public class DescribeControlPolicyResponseBody extends TeaModel {
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private String pageNo;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @NameInMap("Policys")
+    @com.aliyun.core.annotation.NameInMap("Policys")
     private java.util.List < Policys> policys;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private DescribeControlPolicyResponseBody(Builder builder) {
@@ -132,112 +131,112 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
     } 
 
     public static class Policys extends TeaModel {
-        @NameInMap("AclAction")
+        @com.aliyun.core.annotation.NameInMap("AclAction")
         private String aclAction;
 
-        @NameInMap("AclUuid")
+        @com.aliyun.core.annotation.NameInMap("AclUuid")
         private String aclUuid;
 
-        @NameInMap("ApplicationId")
+        @com.aliyun.core.annotation.NameInMap("ApplicationId")
         private String applicationId;
 
-        @NameInMap("ApplicationName")
+        @com.aliyun.core.annotation.NameInMap("ApplicationName")
         private String applicationName;
 
-        @NameInMap("ApplicationNameList")
+        @com.aliyun.core.annotation.NameInMap("ApplicationNameList")
         private java.util.List < String > applicationNameList;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DestPort")
+        @com.aliyun.core.annotation.NameInMap("DestPort")
         private String destPort;
 
-        @NameInMap("DestPortGroup")
+        @com.aliyun.core.annotation.NameInMap("DestPortGroup")
         private String destPortGroup;
 
-        @NameInMap("DestPortGroupPorts")
+        @com.aliyun.core.annotation.NameInMap("DestPortGroupPorts")
         private java.util.List < String > destPortGroupPorts;
 
-        @NameInMap("DestPortType")
+        @com.aliyun.core.annotation.NameInMap("DestPortType")
         private String destPortType;
 
-        @NameInMap("Destination")
+        @com.aliyun.core.annotation.NameInMap("Destination")
         private String destination;
 
-        @NameInMap("DestinationGroupCidrs")
+        @com.aliyun.core.annotation.NameInMap("DestinationGroupCidrs")
         private java.util.List < String > destinationGroupCidrs;
 
-        @NameInMap("DestinationGroupType")
+        @com.aliyun.core.annotation.NameInMap("DestinationGroupType")
         private String destinationGroupType;
 
-        @NameInMap("DestinationType")
+        @com.aliyun.core.annotation.NameInMap("DestinationType")
         private String destinationType;
 
-        @NameInMap("Direction")
+        @com.aliyun.core.annotation.NameInMap("Direction")
         private String direction;
 
-        @NameInMap("DnsResult")
+        @com.aliyun.core.annotation.NameInMap("DnsResult")
         private String dnsResult;
 
-        @NameInMap("DnsResultTime")
+        @com.aliyun.core.annotation.NameInMap("DnsResultTime")
         private Long dnsResultTime;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("HitLastTime")
+        @com.aliyun.core.annotation.NameInMap("HitLastTime")
         private Long hitLastTime;
 
-        @NameInMap("HitTimes")
+        @com.aliyun.core.annotation.NameInMap("HitTimes")
         private Long hitTimes;
 
-        @NameInMap("IpVersion")
+        @com.aliyun.core.annotation.NameInMap("IpVersion")
         private Integer ipVersion;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private Long modifyTime;
 
-        @NameInMap("Order")
+        @com.aliyun.core.annotation.NameInMap("Order")
         private Integer order;
 
-        @NameInMap("Proto")
+        @com.aliyun.core.annotation.NameInMap("Proto")
         private String proto;
 
-        @NameInMap("Release")
+        @com.aliyun.core.annotation.NameInMap("Release")
         private String release;
 
-        @NameInMap("RepeatDays")
+        @com.aliyun.core.annotation.NameInMap("RepeatDays")
         private java.util.List < Long > repeatDays;
 
-        @NameInMap("RepeatEndTime")
+        @com.aliyun.core.annotation.NameInMap("RepeatEndTime")
         private String repeatEndTime;
 
-        @NameInMap("RepeatStartTime")
+        @com.aliyun.core.annotation.NameInMap("RepeatStartTime")
         private String repeatStartTime;
 
-        @NameInMap("RepeatType")
+        @com.aliyun.core.annotation.NameInMap("RepeatType")
         private String repeatType;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("SourceGroupCidrs")
+        @com.aliyun.core.annotation.NameInMap("SourceGroupCidrs")
         private java.util.List < String > sourceGroupCidrs;
 
-        @NameInMap("SourceGroupType")
+        @com.aliyun.core.annotation.NameInMap("SourceGroupType")
         private String sourceGroupType;
 
-        @NameInMap("SourceType")
+        @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
 
-        @NameInMap("SpreadCnt")
+        @com.aliyun.core.annotation.NameInMap("SpreadCnt")
         private Integer spreadCnt;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
         private Policys(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInvadeEventListResponseBody</p>
  */
 public class DescribeInvadeEventListResponseBody extends TeaModel {
-    @NameInMap("EventList")
+    @com.aliyun.core.annotation.NameInMap("EventList")
     private java.util.List < EventList> eventList;
 
-    @NameInMap("HighLevelPercent")
+    @com.aliyun.core.annotation.NameInMap("HighLevelPercent")
     private Integer highLevelPercent;
 
-    @NameInMap("LowLevelPercent")
+    @com.aliyun.core.annotation.NameInMap("LowLevelPercent")
     private Integer lowLevelPercent;
 
-    @NameInMap("MiddleLevelPercent")
+    @com.aliyun.core.annotation.NameInMap("MiddleLevelPercent")
     private Integer middleLevelPercent;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInvadeEventListResponseBody(Builder builder) {
@@ -152,52 +151,52 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
     } 
 
     public static class EventList extends TeaModel {
-        @NameInMap("AssetsInstanceId")
+        @com.aliyun.core.annotation.NameInMap("AssetsInstanceId")
         private String assetsInstanceId;
 
-        @NameInMap("AssetsInstanceName")
+        @com.aliyun.core.annotation.NameInMap("AssetsInstanceName")
         private String assetsInstanceName;
 
-        @NameInMap("AssetsType")
+        @com.aliyun.core.annotation.NameInMap("AssetsType")
         private String assetsType;
 
-        @NameInMap("EventKey")
+        @com.aliyun.core.annotation.NameInMap("EventKey")
         private String eventKey;
 
-        @NameInMap("EventName")
+        @com.aliyun.core.annotation.NameInMap("EventName")
         private String eventName;
 
-        @NameInMap("EventSrc")
+        @com.aliyun.core.annotation.NameInMap("EventSrc")
         private String eventSrc;
 
-        @NameInMap("EventUuid")
+        @com.aliyun.core.annotation.NameInMap("EventUuid")
         private String eventUuid;
 
-        @NameInMap("FirstTime")
+        @com.aliyun.core.annotation.NameInMap("FirstTime")
         private Integer firstTime;
 
-        @NameInMap("IsIgnore")
+        @com.aliyun.core.annotation.NameInMap("IsIgnore")
         private Boolean isIgnore;
 
-        @NameInMap("LastTime")
+        @com.aliyun.core.annotation.NameInMap("LastTime")
         private Integer lastTime;
 
-        @NameInMap("MemberUid")
+        @com.aliyun.core.annotation.NameInMap("MemberUid")
         private String memberUid;
 
-        @NameInMap("PrivateIP")
+        @com.aliyun.core.annotation.NameInMap("PrivateIP")
         private String privateIP;
 
-        @NameInMap("ProcessStatus")
+        @com.aliyun.core.annotation.NameInMap("ProcessStatus")
         private Integer processStatus;
 
-        @NameInMap("PublicIP")
+        @com.aliyun.core.annotation.NameInMap("PublicIP")
         private String publicIP;
 
-        @NameInMap("PublicIpType")
+        @com.aliyun.core.annotation.NameInMap("PublicIpType")
         private String publicIpType;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private Integer riskLevel;
 
         private EventList(Builder builder) {
@@ -536,13 +535,13 @@ public class DescribeInvadeEventListResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {

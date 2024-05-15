@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,49 +11,49 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInternetTrafficTrendResponseBody</p>
  */
 public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
-    @NameInMap("AvgInBps")
+    @com.aliyun.core.annotation.NameInMap("AvgInBps")
     private Long avgInBps;
 
-    @NameInMap("AvgOutBps")
+    @com.aliyun.core.annotation.NameInMap("AvgOutBps")
     private Long avgOutBps;
 
-    @NameInMap("AvgSession")
+    @com.aliyun.core.annotation.NameInMap("AvgSession")
     private Long avgSession;
 
-    @NameInMap("AvgTotalBps")
+    @com.aliyun.core.annotation.NameInMap("AvgTotalBps")
     private Long avgTotalBps;
 
-    @NameInMap("DataList")
+    @com.aliyun.core.annotation.NameInMap("DataList")
     private java.util.List < DataList> dataList;
 
-    @NameInMap("MaxBandwidthTime")
+    @com.aliyun.core.annotation.NameInMap("MaxBandwidthTime")
     private Long maxBandwidthTime;
 
-    @NameInMap("MaxInBps")
+    @com.aliyun.core.annotation.NameInMap("MaxInBps")
     private Long maxInBps;
 
-    @NameInMap("MaxOutBps")
+    @com.aliyun.core.annotation.NameInMap("MaxOutBps")
     private Long maxOutBps;
 
-    @NameInMap("MaxSession")
+    @com.aliyun.core.annotation.NameInMap("MaxSession")
     private Long maxSession;
 
-    @NameInMap("MaxTotalBps")
+    @com.aliyun.core.annotation.NameInMap("MaxTotalBps")
     private Long maxTotalBps;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalBytes")
+    @com.aliyun.core.annotation.NameInMap("TotalBytes")
     private Long totalBytes;
 
-    @NameInMap("TotalInBytes")
+    @com.aliyun.core.annotation.NameInMap("TotalInBytes")
     private Long totalInBytes;
 
-    @NameInMap("TotalOutBytes")
+    @com.aliyun.core.annotation.NameInMap("TotalOutBytes")
     private Long totalOutBytes;
 
-    @NameInMap("TotalSession")
+    @com.aliyun.core.annotation.NameInMap("TotalSession")
     private Long totalSession;
 
     private DescribeInternetTrafficTrendResponseBody(Builder builder) {
@@ -332,34 +331,34 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
     } 
 
     public static class DataList extends TeaModel {
-        @NameInMap("InBps")
+        @com.aliyun.core.annotation.NameInMap("InBps")
         private Long inBps;
 
-        @NameInMap("InBytes")
+        @com.aliyun.core.annotation.NameInMap("InBytes")
         private Long inBytes;
 
-        @NameInMap("InPps")
+        @com.aliyun.core.annotation.NameInMap("InPps")
         private Long inPps;
 
-        @NameInMap("NewConn")
+        @com.aliyun.core.annotation.NameInMap("NewConn")
         private Long newConn;
 
-        @NameInMap("OutBps")
+        @com.aliyun.core.annotation.NameInMap("OutBps")
         private Long outBps;
 
-        @NameInMap("OutBytes")
+        @com.aliyun.core.annotation.NameInMap("OutBytes")
         private Long outBytes;
 
-        @NameInMap("OutPps")
+        @com.aliyun.core.annotation.NameInMap("OutPps")
         private Long outPps;
 
-        @NameInMap("SessionCount")
+        @com.aliyun.core.annotation.NameInMap("SessionCount")
         private Long sessionCount;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private Integer time;
 
-        @NameInMap("TotalBps")
+        @com.aliyun.core.annotation.NameInMap("TotalBps")
         private Long totalBps;
 
         private DataList(Builder builder) {

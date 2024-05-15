@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePostpayTrafficDetailResponseBody</p>
  */
 public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("TrafficList")
+    @com.aliyun.core.annotation.NameInMap("TrafficList")
     private java.util.List < TrafficList> trafficList;
 
     private DescribePostpayTrafficDetailResponseBody(Builder builder) {
@@ -92,28 +91,28 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
     } 
 
     public static class TrafficList extends TeaModel {
-        @NameInMap("InBytes")
+        @com.aliyun.core.annotation.NameInMap("InBytes")
         private Long inBytes;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("OutBytes")
+        @com.aliyun.core.annotation.NameInMap("OutBytes")
         private Long outBytes;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("TotalBytes")
+        @com.aliyun.core.annotation.NameInMap("TotalBytes")
         private Long totalBytes;
 
-        @NameInMap("TrafficDay")
+        @com.aliyun.core.annotation.NameInMap("TrafficDay")
         private String trafficDay;
 
-        @NameInMap("TrafficType")
+        @com.aliyun.core.annotation.NameInMap("TrafficType")
         private String trafficType;
 
         private TrafficList(Builder builder) {

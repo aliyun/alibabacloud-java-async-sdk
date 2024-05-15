@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVpcFirewallDetailResponseBody</p>
  */
 public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
-    @NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
     private Integer bandwidth;
 
-    @NameInMap("ConnectType")
+    @com.aliyun.core.annotation.NameInMap("ConnectType")
     private String connectType;
 
-    @NameInMap("FirewallSwitchStatus")
+    @com.aliyun.core.annotation.NameInMap("FirewallSwitchStatus")
     private String firewallSwitchStatus;
 
-    @NameInMap("LocalVpc")
+    @com.aliyun.core.annotation.NameInMap("LocalVpc")
     private LocalVpc localVpc;
 
-    @NameInMap("MemberUid")
+    @com.aliyun.core.annotation.NameInMap("MemberUid")
     private String memberUid;
 
-    @NameInMap("PeerVpc")
+    @com.aliyun.core.annotation.NameInMap("PeerVpc")
     private PeerVpc peerVpc;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VpcFirewallId")
+    @com.aliyun.core.annotation.NameInMap("VpcFirewallId")
     private String vpcFirewallId;
 
-    @NameInMap("VpcFirewallName")
+    @com.aliyun.core.annotation.NameInMap("VpcFirewallName")
     private String vpcFirewallName;
 
     private DescribeVpcFirewallDetailResponseBody(Builder builder) {
@@ -218,10 +217,10 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
     } 
 
     public static class RouteEntryList extends TeaModel {
-        @NameInMap("DestinationCidr")
+        @com.aliyun.core.annotation.NameInMap("DestinationCidr")
         private String destinationCidr;
 
-        @NameInMap("NextHopInstanceId")
+        @com.aliyun.core.annotation.NameInMap("NextHopInstanceId")
         private String nextHopInstanceId;
 
         private RouteEntryList(Builder builder) {
@@ -279,10 +278,10 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
 
     }
     public static class VpcCidrTableList extends TeaModel {
-        @NameInMap("RouteEntryList")
+        @com.aliyun.core.annotation.NameInMap("RouteEntryList")
         private java.util.List < RouteEntryList> routeEntryList;
 
-        @NameInMap("RouteTableId")
+        @com.aliyun.core.annotation.NameInMap("RouteTableId")
         private String routeTableId;
 
         private VpcCidrTableList(Builder builder) {
@@ -340,25 +339,25 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
 
     }
     public static class LocalVpc extends TeaModel {
-        @NameInMap("EniId")
+        @com.aliyun.core.annotation.NameInMap("EniId")
         private String eniId;
 
-        @NameInMap("EniPrivateIpAddress")
+        @com.aliyun.core.annotation.NameInMap("EniPrivateIpAddress")
         private String eniPrivateIpAddress;
 
-        @NameInMap("RegionNo")
+        @com.aliyun.core.annotation.NameInMap("RegionNo")
         private String regionNo;
 
-        @NameInMap("RouterInterfaceId")
+        @com.aliyun.core.annotation.NameInMap("RouterInterfaceId")
         private String routerInterfaceId;
 
-        @NameInMap("VpcCidrTableList")
+        @com.aliyun.core.annotation.NameInMap("VpcCidrTableList")
         private java.util.List < VpcCidrTableList> vpcCidrTableList;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcName")
+        @com.aliyun.core.annotation.NameInMap("VpcName")
         private String vpcName;
 
         private LocalVpc(Builder builder) {
@@ -501,10 +500,10 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
 
     }
     public static class VpcCidrTableListRouteEntryList extends TeaModel {
-        @NameInMap("DestinationCidr")
+        @com.aliyun.core.annotation.NameInMap("DestinationCidr")
         private String destinationCidr;
 
-        @NameInMap("NextHopInstanceId")
+        @com.aliyun.core.annotation.NameInMap("NextHopInstanceId")
         private String nextHopInstanceId;
 
         private VpcCidrTableListRouteEntryList(Builder builder) {
@@ -562,10 +561,10 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
 
     }
     public static class PeerVpcVpcCidrTableList extends TeaModel {
-        @NameInMap("RouteEntryList")
+        @com.aliyun.core.annotation.NameInMap("RouteEntryList")
         private java.util.List < VpcCidrTableListRouteEntryList> routeEntryList;
 
-        @NameInMap("RouteTableId")
+        @com.aliyun.core.annotation.NameInMap("RouteTableId")
         private String routeTableId;
 
         private PeerVpcVpcCidrTableList(Builder builder) {
@@ -623,25 +622,25 @@ public class DescribeVpcFirewallDetailResponseBody extends TeaModel {
 
     }
     public static class PeerVpc extends TeaModel {
-        @NameInMap("EniId")
+        @com.aliyun.core.annotation.NameInMap("EniId")
         private String eniId;
 
-        @NameInMap("EniPrivateIpAddress")
+        @com.aliyun.core.annotation.NameInMap("EniPrivateIpAddress")
         private String eniPrivateIpAddress;
 
-        @NameInMap("RegionNo")
+        @com.aliyun.core.annotation.NameInMap("RegionNo")
         private String regionNo;
 
-        @NameInMap("RouterInterfaceId")
+        @com.aliyun.core.annotation.NameInMap("RouterInterfaceId")
         private String routerInterfaceId;
 
-        @NameInMap("VpcCidrTableList")
+        @com.aliyun.core.annotation.NameInMap("VpcCidrTableList")
         private java.util.List < PeerVpcVpcCidrTableList> vpcCidrTableList;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcName")
+        @com.aliyun.core.annotation.NameInMap("VpcName")
         private String vpcName;
 
         private PeerVpc(Builder builder) {

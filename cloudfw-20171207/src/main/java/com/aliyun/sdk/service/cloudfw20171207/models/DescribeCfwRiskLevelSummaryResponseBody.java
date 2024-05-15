@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCfwRiskLevelSummaryResponseBody</p>
  */
 public class DescribeCfwRiskLevelSummaryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RiskList")
+    @com.aliyun.core.annotation.NameInMap("RiskList")
     private java.util.List < RiskList> riskList;
 
     private DescribeCfwRiskLevelSummaryResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeCfwRiskLevelSummaryResponseBody extends TeaModel {
     } 
 
     public static class RiskList extends TeaModel {
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("Num")
+        @com.aliyun.core.annotation.NameInMap("Num")
         private String num;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private RiskList(Builder builder) {

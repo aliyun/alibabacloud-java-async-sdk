@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceRiskLevelsResponseBody</p>
  */
 public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
-    @NameInMap("InstanceRisks")
+    @com.aliyun.core.annotation.NameInMap("InstanceRisks")
     private java.util.List < InstanceRisks> instanceRisks;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceRiskLevelsResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
     } 
 
     public static class Details extends TeaModel {
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Details(Builder builder) {
@@ -156,13 +155,13 @@ public class DescribeInstanceRiskLevelsResponseBody extends TeaModel {
 
     }
     public static class InstanceRisks extends TeaModel {
-        @NameInMap("Details")
+        @com.aliyun.core.annotation.NameInMap("Details")
         private java.util.List < Details> details;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
         private InstanceRisks(Builder builder) {

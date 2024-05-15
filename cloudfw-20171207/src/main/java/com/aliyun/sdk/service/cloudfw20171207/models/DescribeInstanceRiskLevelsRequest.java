@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceRiskLevelsRequest</p>
  */
 public class DescribeInstanceRiskLevelsRequest extends Request {
-    @Query
-    @NameInMap("Instances")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Instances")
     private java.util.List < Instances> instances;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
     private DescribeInstanceRiskLevelsRequest(Builder builder) {
@@ -97,16 +96,16 @@ public class DescribeInstanceRiskLevelsRequest extends Request {
     } 
 
     public static class Instances extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private java.util.List < String > internetIp;
 
-        @NameInMap("IntranetIp")
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private Instances(Builder builder) {

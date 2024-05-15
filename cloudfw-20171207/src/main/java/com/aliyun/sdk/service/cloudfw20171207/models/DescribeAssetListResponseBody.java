@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAssetListResponseBody</p>
  */
 public class DescribeAssetListResponseBody extends TeaModel {
-    @NameInMap("Assets")
+    @com.aliyun.core.annotation.NameInMap("Assets")
     private java.util.List < Assets> assets;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeAssetListResponseBody(Builder builder) {
@@ -92,67 +91,67 @@ public class DescribeAssetListResponseBody extends TeaModel {
     } 
 
     public static class Assets extends TeaModel {
-        @NameInMap("AliUid")
+        @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
 
-        @NameInMap("BindInstanceId")
+        @com.aliyun.core.annotation.NameInMap("BindInstanceId")
         private String bindInstanceId;
 
-        @NameInMap("BindInstanceName")
+        @com.aliyun.core.annotation.NameInMap("BindInstanceName")
         private String bindInstanceName;
 
-        @NameInMap("CreateTimeStamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimeStamp")
         private String createTimeStamp;
 
-        @NameInMap("InternetAddress")
+        @com.aliyun.core.annotation.NameInMap("InternetAddress")
         private String internetAddress;
 
-        @NameInMap("IntranetAddress")
+        @com.aliyun.core.annotation.NameInMap("IntranetAddress")
         private String intranetAddress;
 
-        @NameInMap("IpVersion")
+        @com.aliyun.core.annotation.NameInMap("IpVersion")
         private Integer ipVersion;
 
-        @NameInMap("MemberUid")
+        @com.aliyun.core.annotation.NameInMap("MemberUid")
         private Long memberUid;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NewResourceTag")
+        @com.aliyun.core.annotation.NameInMap("NewResourceTag")
         private String newResourceTag;
 
-        @NameInMap("Note")
+        @com.aliyun.core.annotation.NameInMap("Note")
         private String note;
 
-        @NameInMap("ProtectStatus")
+        @com.aliyun.core.annotation.NameInMap("ProtectStatus")
         private String protectStatus;
 
-        @NameInMap("RegionID")
+        @com.aliyun.core.annotation.NameInMap("RegionID")
         private String regionID;
 
-        @NameInMap("RegionStatus")
+        @com.aliyun.core.annotation.NameInMap("RegionStatus")
         private String regionStatus;
 
-        @NameInMap("ResourceInstanceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceInstanceId")
         private String resourceInstanceId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
 
-        @NameInMap("SgStatus")
+        @com.aliyun.core.annotation.NameInMap("SgStatus")
         private String sgStatus;
 
-        @NameInMap("SgStatusTime")
+        @com.aliyun.core.annotation.NameInMap("SgStatusTime")
         private Long sgStatusTime;
 
-        @NameInMap("SyncStatus")
+        @com.aliyun.core.annotation.NameInMap("SyncStatus")
         private String syncStatus;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Assets(Builder builder) {

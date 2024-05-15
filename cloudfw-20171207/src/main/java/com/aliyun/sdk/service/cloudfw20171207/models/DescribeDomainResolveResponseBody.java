@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainResolveResponseBody</p>
  */
 public class DescribeDomainResolveResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResolveResult")
+    @com.aliyun.core.annotation.NameInMap("ResolveResult")
     private ResolveResult resolveResult;
 
     private DescribeDomainResolveResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeDomainResolveResponseBody extends TeaModel {
     } 
 
     public static class ResolveResult extends TeaModel {
-        @NameInMap("IpAddrs")
+        @com.aliyun.core.annotation.NameInMap("IpAddrs")
         private String ipAddrs;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private ResolveResult(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUserAssetIPTrafficInfoRequest</p>
  */
 public class DescribeUserAssetIPTrafficInfoRequest extends Request {
-    @Query
-    @NameInMap("AssetIP")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssetIP")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String assetIP;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("TrafficTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String trafficTime;
 
     private DescribeUserAssetIPTrafficInfoRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDefaultIPSConfigResponseBody</p>
  */
 public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
-    @NameInMap("AiRules")
+    @com.aliyun.core.annotation.NameInMap("AiRules")
     private Integer aiRules;
 
-    @NameInMap("BasicRules")
+    @com.aliyun.core.annotation.NameInMap("BasicRules")
     private Integer basicRules;
 
-    @NameInMap("CtiRules")
+    @com.aliyun.core.annotation.NameInMap("CtiRules")
     private Integer ctiRules;
 
-    @NameInMap("EnableAllPatch")
+    @com.aliyun.core.annotation.NameInMap("EnableAllPatch")
     private Integer enableAllPatch;
 
-    @NameInMap("EnableDefault")
+    @com.aliyun.core.annotation.NameInMap("EnableDefault")
     private Integer enableDefault;
 
-    @NameInMap("PatchRules")
+    @com.aliyun.core.annotation.NameInMap("PatchRules")
     private Integer patchRules;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RuleClass")
+    @com.aliyun.core.annotation.NameInMap("RuleClass")
     private Integer ruleClass;
 
-    @NameInMap("RunMode")
+    @com.aliyun.core.annotation.NameInMap("RunMode")
     private Integer runMode;
 
     private DescribeDefaultIPSConfigResponseBody(Builder builder) {

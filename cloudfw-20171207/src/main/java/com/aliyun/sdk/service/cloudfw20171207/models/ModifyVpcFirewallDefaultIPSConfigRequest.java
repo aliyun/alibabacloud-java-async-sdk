@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyVpcFirewallDefaultIPSConfigRequest</p>
  */
 public class ModifyVpcFirewallDefaultIPSConfigRequest extends Request {
-    @Query
-    @NameInMap("BasicRules")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BasicRules")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String basicRules;
 
-    @Query
-    @NameInMap("EnableAllPatch")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableAllPatch")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String enableAllPatch;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("MemberUid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MemberUid")
     private String memberUid;
 
-    @Query
-    @NameInMap("RunMode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RunMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String runMode;
 
-    @Query
-    @NameInMap("SourceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceIp")
     @Deprecated
     private String sourceIp;
 
-    @Query
-    @NameInMap("VpcFirewallId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcFirewallId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcFirewallId;
 
     private ModifyVpcFirewallDefaultIPSConfigRequest(Builder builder) {

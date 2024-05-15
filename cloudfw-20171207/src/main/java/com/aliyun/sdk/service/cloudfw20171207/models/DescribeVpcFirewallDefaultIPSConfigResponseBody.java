@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVpcFirewallDefaultIPSConfigResponseBody</p>
  */
 public class DescribeVpcFirewallDefaultIPSConfigResponseBody extends TeaModel {
-    @NameInMap("BasicRules")
+    @com.aliyun.core.annotation.NameInMap("BasicRules")
     private Integer basicRules;
 
-    @NameInMap("EnableAllPatch")
+    @com.aliyun.core.annotation.NameInMap("EnableAllPatch")
     private Integer enableAllPatch;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RunMode")
+    @com.aliyun.core.annotation.NameInMap("RunMode")
     private Integer runMode;
 
     private DescribeVpcFirewallDefaultIPSConfigResponseBody(Builder builder) {

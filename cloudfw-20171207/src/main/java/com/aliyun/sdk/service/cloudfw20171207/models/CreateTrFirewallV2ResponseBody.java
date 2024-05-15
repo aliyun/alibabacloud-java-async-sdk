@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateTrFirewallV2ResponseBody</p>
  */
 public class CreateTrFirewallV2ResponseBody extends TeaModel {
-    @NameInMap("FirewallId")
+    @com.aliyun.core.annotation.NameInMap("FirewallId")
     private String firewallId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateTrFirewallV2ResponseBody(Builder builder) {

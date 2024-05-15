@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRiskEventGroupResponseBody</p>
  */
 public class DescribeRiskEventGroupResponseBody extends TeaModel {
-    @NameInMap("DataList")
+    @com.aliyun.core.annotation.NameInMap("DataList")
     private java.util.List < DataList> dataList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeRiskEventGroupResponseBody(Builder builder) {
@@ -92,16 +91,16 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
     } 
 
     public static class IPLocationInfo extends TeaModel {
-        @NameInMap("CityId")
+        @com.aliyun.core.annotation.NameInMap("CityId")
         private String cityId;
 
-        @NameInMap("CityName")
+        @com.aliyun.core.annotation.NameInMap("CityName")
         private String cityName;
 
-        @NameInMap("CountryId")
+        @com.aliyun.core.annotation.NameInMap("CountryId")
         private String countryId;
 
-        @NameInMap("CountryName")
+        @com.aliyun.core.annotation.NameInMap("CountryName")
         private String countryName;
 
         private IPLocationInfo(Builder builder) {
@@ -193,16 +192,16 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
 
     }
     public static class ResourcePrivateIPList extends TeaModel {
-        @NameInMap("RegionNo")
+        @com.aliyun.core.annotation.NameInMap("RegionNo")
         private String regionNo;
 
-        @NameInMap("ResourceInstanceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceInstanceId")
         private String resourceInstanceId;
 
-        @NameInMap("ResourceInstanceName")
+        @com.aliyun.core.annotation.NameInMap("ResourceInstanceName")
         private String resourceInstanceName;
 
-        @NameInMap("ResourcePrivateIP")
+        @com.aliyun.core.annotation.NameInMap("ResourcePrivateIP")
         private String resourcePrivateIP;
 
         private ResourcePrivateIPList(Builder builder) {
@@ -294,19 +293,19 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
 
     }
     public static class VpcDstInfo extends TeaModel {
-        @NameInMap("EcsInstanceId")
+        @com.aliyun.core.annotation.NameInMap("EcsInstanceId")
         private String ecsInstanceId;
 
-        @NameInMap("EcsInstanceName")
+        @com.aliyun.core.annotation.NameInMap("EcsInstanceName")
         private String ecsInstanceName;
 
-        @NameInMap("NetworkInstanceId")
+        @com.aliyun.core.annotation.NameInMap("NetworkInstanceId")
         private String networkInstanceId;
 
-        @NameInMap("NetworkInstanceName")
+        @com.aliyun.core.annotation.NameInMap("NetworkInstanceName")
         private String networkInstanceName;
 
-        @NameInMap("RegionNo")
+        @com.aliyun.core.annotation.NameInMap("RegionNo")
         private String regionNo;
 
         private VpcDstInfo(Builder builder) {
@@ -415,19 +414,19 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
 
     }
     public static class VpcSrcInfo extends TeaModel {
-        @NameInMap("EcsInstanceId")
+        @com.aliyun.core.annotation.NameInMap("EcsInstanceId")
         private String ecsInstanceId;
 
-        @NameInMap("EcsInstanceName")
+        @com.aliyun.core.annotation.NameInMap("EcsInstanceName")
         private String ecsInstanceName;
 
-        @NameInMap("NetworkInstanceId")
+        @com.aliyun.core.annotation.NameInMap("NetworkInstanceId")
         private String networkInstanceId;
 
-        @NameInMap("NetworkInstanceName")
+        @com.aliyun.core.annotation.NameInMap("NetworkInstanceName")
         private String networkInstanceName;
 
-        @NameInMap("RegionNo")
+        @com.aliyun.core.annotation.NameInMap("RegionNo")
         private String regionNo;
 
         private VpcSrcInfo(Builder builder) {
@@ -536,73 +535,73 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
 
     }
     public static class DataList extends TeaModel {
-        @NameInMap("AttackApp")
+        @com.aliyun.core.annotation.NameInMap("AttackApp")
         private String attackApp;
 
-        @NameInMap("AttackType")
+        @com.aliyun.core.annotation.NameInMap("AttackType")
         private Integer attackType;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Direction")
+        @com.aliyun.core.annotation.NameInMap("Direction")
         private String direction;
 
-        @NameInMap("DstIP")
+        @com.aliyun.core.annotation.NameInMap("DstIP")
         private String dstIP;
 
-        @NameInMap("EventCount")
+        @com.aliyun.core.annotation.NameInMap("EventCount")
         private Integer eventCount;
 
-        @NameInMap("EventId")
+        @com.aliyun.core.annotation.NameInMap("EventId")
         private String eventId;
 
-        @NameInMap("EventName")
+        @com.aliyun.core.annotation.NameInMap("EventName")
         private String eventName;
 
-        @NameInMap("FirstEventTime")
+        @com.aliyun.core.annotation.NameInMap("FirstEventTime")
         private Integer firstEventTime;
 
-        @NameInMap("IPLocationInfo")
+        @com.aliyun.core.annotation.NameInMap("IPLocationInfo")
         private IPLocationInfo IPLocationInfo;
 
-        @NameInMap("LastEventTime")
+        @com.aliyun.core.annotation.NameInMap("LastEventTime")
         private Integer lastEventTime;
 
-        @NameInMap("ResourcePrivateIPList")
+        @com.aliyun.core.annotation.NameInMap("ResourcePrivateIPList")
         private java.util.List < ResourcePrivateIPList> resourcePrivateIPList;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("RuleResult")
+        @com.aliyun.core.annotation.NameInMap("RuleResult")
         private Integer ruleResult;
 
-        @NameInMap("RuleSource")
+        @com.aliyun.core.annotation.NameInMap("RuleSource")
         private Integer ruleSource;
 
-        @NameInMap("SrcIP")
+        @com.aliyun.core.annotation.NameInMap("SrcIP")
         private String srcIP;
 
-        @NameInMap("SrcIPTag")
+        @com.aliyun.core.annotation.NameInMap("SrcIPTag")
         private String srcIPTag;
 
-        @NameInMap("SrcPrivateIPList")
+        @com.aliyun.core.annotation.NameInMap("SrcPrivateIPList")
         private java.util.List < String > srcPrivateIPList;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
-        @NameInMap("VpcDstInfo")
+        @com.aliyun.core.annotation.NameInMap("VpcDstInfo")
         private VpcDstInfo vpcDstInfo;
 
-        @NameInMap("VpcSrcInfo")
+        @com.aliyun.core.annotation.NameInMap("VpcSrcInfo")
         private VpcSrcInfo vpcSrcInfo;
 
-        @NameInMap("VulLevel")
+        @com.aliyun.core.annotation.NameInMap("VulLevel")
         private Integer vulLevel;
 
         private DataList(Builder builder) {

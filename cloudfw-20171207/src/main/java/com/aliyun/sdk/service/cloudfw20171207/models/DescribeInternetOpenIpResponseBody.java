@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInternetOpenIpResponseBody</p>
  */
 public class DescribeInternetOpenIpResponseBody extends TeaModel {
-    @NameInMap("DataList")
+    @com.aliyun.core.annotation.NameInMap("DataList")
     private java.util.List < DataList> dataList;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInternetOpenIpResponseBody(Builder builder) {
@@ -92,49 +91,49 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
     } 
 
     public static class DataList extends TeaModel {
-        @NameInMap("AclRecommendDetail")
+        @com.aliyun.core.annotation.NameInMap("AclRecommendDetail")
         private String aclRecommendDetail;
 
-        @NameInMap("AssetsInstanceId")
+        @com.aliyun.core.annotation.NameInMap("AssetsInstanceId")
         private String assetsInstanceId;
 
-        @NameInMap("AssetsName")
+        @com.aliyun.core.annotation.NameInMap("AssetsName")
         private String assetsName;
 
-        @NameInMap("AssetsType")
+        @com.aliyun.core.annotation.NameInMap("AssetsType")
         private String assetsType;
 
-        @NameInMap("DetailNum")
+        @com.aliyun.core.annotation.NameInMap("DetailNum")
         private Integer detailNum;
 
-        @NameInMap("HasAclRecommend")
+        @com.aliyun.core.annotation.NameInMap("HasAclRecommend")
         private Boolean hasAclRecommend;
 
-        @NameInMap("PortList")
+        @com.aliyun.core.annotation.NameInMap("PortList")
         private java.util.List < String > portList;
 
-        @NameInMap("PublicIp")
+        @com.aliyun.core.annotation.NameInMap("PublicIp")
         private String publicIp;
 
-        @NameInMap("RegionNo")
+        @com.aliyun.core.annotation.NameInMap("RegionNo")
         private String regionNo;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private Integer riskLevel;
 
-        @NameInMap("RiskReason")
+        @com.aliyun.core.annotation.NameInMap("RiskReason")
         private String riskReason;
 
-        @NameInMap("ServiceNameList")
+        @com.aliyun.core.annotation.NameInMap("ServiceNameList")
         private java.util.List < String > serviceNameList;
 
-        @NameInMap("TrafficPercent1Day")
+        @com.aliyun.core.annotation.NameInMap("TrafficPercent1Day")
         private String trafficPercent1Day;
 
-        @NameInMap("TrafficPercent30Day")
+        @com.aliyun.core.annotation.NameInMap("TrafficPercent30Day")
         private String trafficPercent30Day;
 
-        @NameInMap("TrafficPercent7Day")
+        @com.aliyun.core.annotation.NameInMap("TrafficPercent7Day")
         private String trafficPercent7Day;
 
         private DataList(Builder builder) {
@@ -429,13 +428,13 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {

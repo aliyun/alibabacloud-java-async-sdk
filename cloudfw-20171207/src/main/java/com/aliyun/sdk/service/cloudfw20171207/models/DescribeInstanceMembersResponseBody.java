@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceMembersResponseBody</p>
  */
 public class DescribeInstanceMembersResponseBody extends TeaModel {
-    @NameInMap("Members")
+    @com.aliyun.core.annotation.NameInMap("Members")
     private java.util.List < Members> members;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceMembersResponseBody(Builder builder) {
@@ -92,22 +91,22 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
     } 
 
     public static class Members extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Integer createTime;
 
-        @NameInMap("MemberDesc")
+        @com.aliyun.core.annotation.NameInMap("MemberDesc")
         private String memberDesc;
 
-        @NameInMap("MemberDisplayName")
+        @com.aliyun.core.annotation.NameInMap("MemberDisplayName")
         private String memberDisplayName;
 
-        @NameInMap("MemberStatus")
+        @com.aliyun.core.annotation.NameInMap("MemberStatus")
         private String memberStatus;
 
-        @NameInMap("MemberUid")
+        @com.aliyun.core.annotation.NameInMap("MemberUid")
         private Long memberUid;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private Integer modifyTime;
 
         private Members(Builder builder) {
@@ -237,13 +236,13 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageInfo(Builder builder) {

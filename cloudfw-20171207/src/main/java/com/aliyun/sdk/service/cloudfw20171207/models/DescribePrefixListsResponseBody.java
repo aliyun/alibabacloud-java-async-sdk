@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePrefixListsResponseBody</p>
  */
 public class DescribePrefixListsResponseBody extends TeaModel {
-    @NameInMap("PrefixList")
+    @com.aliyun.core.annotation.NameInMap("PrefixList")
     private java.util.List < PrefixList> prefixList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePrefixListsResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class DescribePrefixListsResponseBody extends TeaModel {
     } 
 
     public static class PrefixList extends TeaModel {
-        @NameInMap("AddressFamily")
+        @com.aliyun.core.annotation.NameInMap("AddressFamily")
         private String addressFamily;
 
-        @NameInMap("AssociationCount")
+        @com.aliyun.core.annotation.NameInMap("AssociationCount")
         private Integer associationCount;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("MaxEntries")
+        @com.aliyun.core.annotation.NameInMap("MaxEntries")
         private Integer maxEntries;
 
-        @NameInMap("PrefixListId")
+        @com.aliyun.core.annotation.NameInMap("PrefixListId")
         private String prefixListId;
 
-        @NameInMap("PrefixListName")
+        @com.aliyun.core.annotation.NameInMap("PrefixListName")
         private String prefixListName;
 
         private PrefixList(Builder builder) {

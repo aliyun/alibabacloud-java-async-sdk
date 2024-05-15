@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVpcFirewallAclGroupListResponseBody</p>
  */
 public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
-    @NameInMap("AclGroupList")
+    @com.aliyun.core.annotation.NameInMap("AclGroupList")
     private java.util.List < AclGroupList> aclGroupList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeVpcFirewallAclGroupListResponseBody(Builder builder) {
@@ -92,19 +91,19 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
     } 
 
     public static class AclGroupList extends TeaModel {
-        @NameInMap("AclGroupId")
+        @com.aliyun.core.annotation.NameInMap("AclGroupId")
         private String aclGroupId;
 
-        @NameInMap("AclGroupName")
+        @com.aliyun.core.annotation.NameInMap("AclGroupName")
         private String aclGroupName;
 
-        @NameInMap("AclRuleCount")
+        @com.aliyun.core.annotation.NameInMap("AclRuleCount")
         private Integer aclRuleCount;
 
-        @NameInMap("IsDefault")
+        @com.aliyun.core.annotation.NameInMap("IsDefault")
         private Boolean isDefault;
 
-        @NameInMap("MemberUid")
+        @com.aliyun.core.annotation.NameInMap("MemberUid")
         private String memberUid;
 
         private AclGroupList(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTrFirewallV2RoutePolicyListResponseBody</p>
  */
 public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
-    @NameInMap("TrFirewallRoutePolicies")
+    @com.aliyun.core.annotation.NameInMap("TrFirewallRoutePolicies")
     private java.util.List < TrFirewallRoutePolicies> trFirewallRoutePolicies;
 
     private DescribeTrFirewallV2RoutePolicyListResponseBody(Builder builder) {
@@ -92,10 +91,10 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
     } 
 
     public static class DestCandidateList extends TeaModel {
-        @NameInMap("CandidateId")
+        @com.aliyun.core.annotation.NameInMap("CandidateId")
         private String candidateId;
 
-        @NameInMap("CandidateType")
+        @com.aliyun.core.annotation.NameInMap("CandidateType")
         private String candidateType;
 
         private DestCandidateList(Builder builder) {
@@ -153,10 +152,10 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
 
     }
     public static class SrcCandidateList extends TeaModel {
-        @NameInMap("CandidateId")
+        @com.aliyun.core.annotation.NameInMap("CandidateId")
         private String candidateId;
 
-        @NameInMap("CandidateType")
+        @com.aliyun.core.annotation.NameInMap("CandidateType")
         private String candidateType;
 
         private SrcCandidateList(Builder builder) {
@@ -214,25 +213,25 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
 
     }
     public static class TrFirewallRoutePolicies extends TeaModel {
-        @NameInMap("DestCandidateList")
+        @com.aliyun.core.annotation.NameInMap("DestCandidateList")
         private java.util.List < DestCandidateList> destCandidateList;
 
-        @NameInMap("PolicyDescription")
+        @com.aliyun.core.annotation.NameInMap("PolicyDescription")
         private String policyDescription;
 
-        @NameInMap("PolicyName")
+        @com.aliyun.core.annotation.NameInMap("PolicyName")
         private String policyName;
 
-        @NameInMap("PolicyStatus")
+        @com.aliyun.core.annotation.NameInMap("PolicyStatus")
         private String policyStatus;
 
-        @NameInMap("PolicyType")
+        @com.aliyun.core.annotation.NameInMap("PolicyType")
         private String policyType;
 
-        @NameInMap("SrcCandidateList")
+        @com.aliyun.core.annotation.NameInMap("SrcCandidateList")
         private java.util.List < SrcCandidateList> srcCandidateList;
 
-        @NameInMap("TrFirewallRoutePolicyId")
+        @com.aliyun.core.annotation.NameInMap("TrFirewallRoutePolicyId")
         private String trFirewallRoutePolicyId;
 
         private TrFirewallRoutePolicies(Builder builder) {

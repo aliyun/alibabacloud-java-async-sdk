@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyFirewallV2RoutePolicySwitchRequest</p>
  */
 public class ModifyFirewallV2RoutePolicySwitchRequest extends Request {
-    @Query
-    @NameInMap("FirewallId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirewallId")
     private String firewallId;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("ShouldRecover")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShouldRecover")
     private String shouldRecover;
 
-    @Query
-    @NameInMap("TrFirewallRoutePolicyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrFirewallRoutePolicyId")
     private String trFirewallRoutePolicyId;
 
-    @Query
-    @NameInMap("TrFirewallRoutePolicySwitchStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrFirewallRoutePolicySwitchStatus")
     private String trFirewallRoutePolicySwitchStatus;
 
     private ModifyFirewallV2RoutePolicySwitchRequest(Builder builder) {

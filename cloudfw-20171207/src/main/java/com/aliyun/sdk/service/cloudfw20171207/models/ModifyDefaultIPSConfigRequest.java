@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,47 +11,47 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDefaultIPSConfigRequest</p>
  */
 public class ModifyDefaultIPSConfigRequest extends Request {
-    @Query
-    @NameInMap("AiRules")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AiRules")
     private String aiRules;
 
-    @Query
-    @NameInMap("BasicRules")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BasicRules")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String basicRules;
 
-    @Query
-    @NameInMap("CtiRules")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CtiRules")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ctiRules;
 
-    @Query
-    @NameInMap("EnableAllPatch")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableAllPatch")
     private String enableAllPatch;
 
-    @Query
-    @NameInMap("EnableDefault")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableDefault")
     private String enableDefault;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("PatchRules")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PatchRules")
     private String patchRules;
 
-    @Query
-    @NameInMap("RuleClass")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleClass")
     private String ruleClass;
 
-    @Query
-    @NameInMap("RunMode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RunMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String runMode;
 
-    @Query
-    @NameInMap("SourceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceIp")
     private String sourceIp;
 
     private ModifyDefaultIPSConfigRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeACLProtectTrendResponseBody</p>
  */
 public class DescribeACLProtectTrendResponseBody extends TeaModel {
-    @NameInMap("InProtectCnt")
+    @com.aliyun.core.annotation.NameInMap("InProtectCnt")
     private Long inProtectCnt;
 
-    @NameInMap("InterVPCProtectCnt")
+    @com.aliyun.core.annotation.NameInMap("InterVPCProtectCnt")
     private Long interVPCProtectCnt;
 
-    @NameInMap("Interval")
+    @com.aliyun.core.annotation.NameInMap("Interval")
     private Integer interval;
 
-    @NameInMap("OutProtectCnt")
+    @com.aliyun.core.annotation.NameInMap("OutProtectCnt")
     private Long outProtectCnt;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalProtectCnt")
+    @com.aliyun.core.annotation.NameInMap("TotalProtectCnt")
     private Long totalProtectCnt;
 
-    @NameInMap("TrendList")
+    @com.aliyun.core.annotation.NameInMap("TrendList")
     private java.util.List < TrendList> trendList;
 
     private DescribeACLProtectTrendResponseBody(Builder builder) {
@@ -172,10 +171,10 @@ public class DescribeACLProtectTrendResponseBody extends TeaModel {
     } 
 
     public static class TrendList extends TeaModel {
-        @NameInMap("ProtectCnt")
+        @com.aliyun.core.annotation.NameInMap("ProtectCnt")
         private Integer protectCnt;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private Long time;
 
         private TrendList(Builder builder) {

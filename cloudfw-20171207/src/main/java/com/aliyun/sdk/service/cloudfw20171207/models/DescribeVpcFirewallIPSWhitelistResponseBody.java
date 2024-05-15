@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVpcFirewallIPSWhitelistResponseBody</p>
  */
 public class DescribeVpcFirewallIPSWhitelistResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Whitelists")
+    @com.aliyun.core.annotation.NameInMap("Whitelists")
     private java.util.List < Whitelists> whitelists;
 
     private DescribeVpcFirewallIPSWhitelistResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribeVpcFirewallIPSWhitelistResponseBody extends TeaModel {
     } 
 
     public static class Whitelists extends TeaModel {
-        @NameInMap("ListType")
+        @com.aliyun.core.annotation.NameInMap("ListType")
         private Long listType;
 
-        @NameInMap("ListValue")
+        @com.aliyun.core.annotation.NameInMap("ListValue")
         private String listValue;
 
-        @NameInMap("VpcFirewallId")
+        @com.aliyun.core.annotation.NameInMap("VpcFirewallId")
         private String vpcFirewallId;
 
-        @NameInMap("WhiteListValue")
+        @com.aliyun.core.annotation.NameInMap("WhiteListValue")
         private java.util.List < String > whiteListValue;
 
-        @NameInMap("WhiteType")
+        @com.aliyun.core.annotation.NameInMap("WhiteType")
         private Long whiteType;
 
         private Whitelists(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVpcFirewallCenDetailResponseBody</p>
  */
 public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
-    @NameInMap("ConnectType")
+    @com.aliyun.core.annotation.NameInMap("ConnectType")
     private String connectType;
 
-    @NameInMap("FirewallSwitchStatus")
+    @com.aliyun.core.annotation.NameInMap("FirewallSwitchStatus")
     private String firewallSwitchStatus;
 
-    @NameInMap("FirewallVpc")
+    @com.aliyun.core.annotation.NameInMap("FirewallVpc")
     private FirewallVpc firewallVpc;
 
-    @NameInMap("LocalVpc")
+    @com.aliyun.core.annotation.NameInMap("LocalVpc")
     private LocalVpc localVpc;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VpcFirewallId")
+    @com.aliyun.core.annotation.NameInMap("VpcFirewallId")
     private String vpcFirewallId;
 
-    @NameInMap("VpcFirewallName")
+    @com.aliyun.core.annotation.NameInMap("VpcFirewallName")
     private String vpcFirewallName;
 
     private DescribeVpcFirewallCenDetailResponseBody(Builder builder) {
@@ -177,22 +176,22 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
     } 
 
     public static class FirewallVpc extends TeaModel {
-        @NameInMap("AllowConfiguration")
+        @com.aliyun.core.annotation.NameInMap("AllowConfiguration")
         private Integer allowConfiguration;
 
-        @NameInMap("VpcCidr")
+        @com.aliyun.core.annotation.NameInMap("VpcCidr")
         private String vpcCidr;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VswitchCidr")
+        @com.aliyun.core.annotation.NameInMap("VswitchCidr")
         private String vswitchCidr;
 
-        @NameInMap("VswitchId")
+        @com.aliyun.core.annotation.NameInMap("VswitchId")
         private String vswitchId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private FirewallVpc(Builder builder) {
@@ -322,13 +321,13 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
 
     }
     public static class EniList extends TeaModel {
-        @NameInMap("EniId")
+        @com.aliyun.core.annotation.NameInMap("EniId")
         private String eniId;
 
-        @NameInMap("EniPrivateIpAddress")
+        @com.aliyun.core.annotation.NameInMap("EniPrivateIpAddress")
         private String eniPrivateIpAddress;
 
-        @NameInMap("EniVSwitchId")
+        @com.aliyun.core.annotation.NameInMap("EniVSwitchId")
         private String eniVSwitchId;
 
         private EniList(Builder builder) {
@@ -403,10 +402,10 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
 
     }
     public static class RouteEntryList extends TeaModel {
-        @NameInMap("DestinationCidr")
+        @com.aliyun.core.annotation.NameInMap("DestinationCidr")
         private String destinationCidr;
 
-        @NameInMap("NextHopInstanceId")
+        @com.aliyun.core.annotation.NameInMap("NextHopInstanceId")
         private String nextHopInstanceId;
 
         private RouteEntryList(Builder builder) {
@@ -464,10 +463,10 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
 
     }
     public static class VpcCidrTableList extends TeaModel {
-        @NameInMap("RouteEntryList")
+        @com.aliyun.core.annotation.NameInMap("RouteEntryList")
         private java.util.List < RouteEntryList> routeEntryList;
 
-        @NameInMap("RouteTableId")
+        @com.aliyun.core.annotation.NameInMap("RouteTableId")
         private String routeTableId;
 
         private VpcCidrTableList(Builder builder) {
@@ -525,55 +524,55 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
 
     }
     public static class LocalVpc extends TeaModel {
-        @NameInMap("AttachmentId")
+        @com.aliyun.core.annotation.NameInMap("AttachmentId")
         private String attachmentId;
 
-        @NameInMap("AttachmentName")
+        @com.aliyun.core.annotation.NameInMap("AttachmentName")
         private String attachmentName;
 
-        @NameInMap("DefendCidrList")
+        @com.aliyun.core.annotation.NameInMap("DefendCidrList")
         private java.util.List < String > defendCidrList;
 
-        @NameInMap("EniList")
+        @com.aliyun.core.annotation.NameInMap("EniList")
         private java.util.List < EniList> eniList;
 
-        @NameInMap("ManualVSwitchId")
+        @com.aliyun.core.annotation.NameInMap("ManualVSwitchId")
         private String manualVSwitchId;
 
-        @NameInMap("NetworkInstanceId")
+        @com.aliyun.core.annotation.NameInMap("NetworkInstanceId")
         private String networkInstanceId;
 
-        @NameInMap("NetworkInstanceName")
+        @com.aliyun.core.annotation.NameInMap("NetworkInstanceName")
         private String networkInstanceName;
 
-        @NameInMap("NetworkInstanceType")
+        @com.aliyun.core.annotation.NameInMap("NetworkInstanceType")
         private String networkInstanceType;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
-        @NameInMap("RegionNo")
+        @com.aliyun.core.annotation.NameInMap("RegionNo")
         private String regionNo;
 
-        @NameInMap("RouteMode")
+        @com.aliyun.core.annotation.NameInMap("RouteMode")
         private String routeMode;
 
-        @NameInMap("SupportManualMode")
+        @com.aliyun.core.annotation.NameInMap("SupportManualMode")
         private String supportManualMode;
 
-        @NameInMap("TransitRouterId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterId")
         private String transitRouterId;
 
-        @NameInMap("TransitRouterType")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterType")
         private String transitRouterType;
 
-        @NameInMap("VpcCidrTableList")
+        @com.aliyun.core.annotation.NameInMap("VpcCidrTableList")
         private java.util.List < VpcCidrTableList> vpcCidrTableList;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcName")
+        @com.aliyun.core.annotation.NameInMap("VpcName")
         private String vpcName;
 
         private LocalVpc(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,52 +11,52 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateVpcFirewallConfigureRequest</p>
  */
 public class CreateVpcFirewallConfigureRequest extends Request {
-    @Query
-    @NameInMap("FirewallSwitch")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirewallSwitch")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String firewallSwitch;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("LocalVpcCidrTableList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LocalVpcCidrTableList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String localVpcCidrTableList;
 
-    @Query
-    @NameInMap("LocalVpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LocalVpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String localVpcId;
 
-    @Query
-    @NameInMap("LocalVpcRegion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LocalVpcRegion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String localVpcRegion;
 
-    @Query
-    @NameInMap("MemberUid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MemberUid")
     private String memberUid;
 
-    @Query
-    @NameInMap("PeerVpcCidrTableList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeerVpcCidrTableList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String peerVpcCidrTableList;
 
-    @Query
-    @NameInMap("PeerVpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeerVpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String peerVpcId;
 
-    @Query
-    @NameInMap("PeerVpcRegion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeerVpcRegion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String peerVpcRegion;
 
-    @Query
-    @NameInMap("VpcFirewallName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcFirewallName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcFirewallName;
 
     private CreateVpcFirewallConfigureRequest(Builder builder) {

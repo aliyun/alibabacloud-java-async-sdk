@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddInstanceMembersRequest</p>
  */
 public class AddInstanceMembersRequest extends Request {
-    @Query
-    @NameInMap("Members")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Members")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Members> members;
 
     private AddInstanceMembersRequest(Builder builder) {
@@ -71,11 +70,11 @@ public class AddInstanceMembersRequest extends Request {
     } 
 
     public static class Members extends TeaModel {
-        @NameInMap("MemberDesc")
+        @com.aliyun.core.annotation.NameInMap("MemberDesc")
         private String memberDesc;
 
-        @NameInMap("MemberUid")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("MemberUid")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long memberUid;
 
         private Members(Builder builder) {

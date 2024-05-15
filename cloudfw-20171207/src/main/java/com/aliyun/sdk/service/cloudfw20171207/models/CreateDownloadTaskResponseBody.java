@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDownloadTaskResponseBody</p>
  */
 public class CreateDownloadTaskResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private Long taskId;
 
-    @NameInMap("TaskName")
+    @com.aliyun.core.annotation.NameInMap("TaskName")
     private String taskName;
 
     private CreateDownloadTaskResponseBody(Builder builder) {
@@ -85,11 +84,11 @@ public class CreateDownloadTaskResponseBody extends TeaModel {
          * The status of the task. Valid values:
          * <p>
          * 
-         * finish: You can query the task to obtain the download link of the file.
+         * finish: The task finished. You can query the task to obtain the download link of the file.
          * 
-         * start
+         * start: The task start.
          * 
-         * error
+         * error: An error occurred.
          * 
          * expire: The task file is invalid and cannot be downloaded.
          */

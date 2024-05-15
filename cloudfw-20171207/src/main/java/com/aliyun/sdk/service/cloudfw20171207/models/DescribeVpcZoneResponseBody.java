@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVpcZoneResponseBody</p>
  */
 public class DescribeVpcZoneResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ZoneList")
+    @com.aliyun.core.annotation.NameInMap("ZoneList")
     private java.util.List < ZoneList> zoneList;
 
     private DescribeVpcZoneResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeVpcZoneResponseBody extends TeaModel {
     } 
 
     public static class ZoneList extends TeaModel {
-        @NameInMap("LocalName")
+        @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
-        @NameInMap("ZoneType")
+        @com.aliyun.core.annotation.NameInMap("ZoneType")
         private String zoneType;
 
         private ZoneList(Builder builder) {

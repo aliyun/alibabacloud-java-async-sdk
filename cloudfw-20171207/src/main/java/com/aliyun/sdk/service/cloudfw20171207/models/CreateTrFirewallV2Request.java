@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,64 +11,64 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateTrFirewallV2Request</p>
  */
 public class CreateTrFirewallV2Request extends Request {
-    @Query
-    @NameInMap("CenId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CenId")
     private String cenId;
 
-    @Query
-    @NameInMap("FirewallDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirewallDescription")
     private String firewallDescription;
 
-    @Query
-    @NameInMap("FirewallName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirewallName")
     private String firewallName;
 
-    @Query
-    @NameInMap("FirewallSubnetCidr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirewallSubnetCidr")
     private String firewallSubnetCidr;
 
-    @Query
-    @NameInMap("FirewallVpcCidr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirewallVpcCidr")
     private String firewallVpcCidr;
 
-    @Query
-    @NameInMap("FirewallVpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirewallVpcId")
     private String firewallVpcId;
 
-    @Query
-    @NameInMap("FirewallVswitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirewallVswitchId")
     private String firewallVswitchId;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("RegionNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionNo")
     private String regionNo;
 
-    @Query
-    @NameInMap("RouteMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteMode")
     private String routeMode;
 
-    @Query
-    @NameInMap("TrAttachmentMasterCidr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrAttachmentMasterCidr")
     private String trAttachmentMasterCidr;
 
-    @Query
-    @NameInMap("TrAttachmentMasterZone")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrAttachmentMasterZone")
     private String trAttachmentMasterZone;
 
-    @Query
-    @NameInMap("TrAttachmentSlaveCidr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrAttachmentSlaveCidr")
     private String trAttachmentSlaveCidr;
 
-    @Query
-    @NameInMap("TrAttachmentSlaveZone")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrAttachmentSlaveZone")
     private String trAttachmentSlaveZone;
 
-    @Query
-    @NameInMap("TransitRouterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterId")
     private String transitRouterId;
 
     private CreateTrFirewallV2Request(Builder builder) {

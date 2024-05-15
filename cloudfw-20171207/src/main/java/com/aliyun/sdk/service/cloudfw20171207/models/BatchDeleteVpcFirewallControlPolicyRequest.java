@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BatchDeleteVpcFirewallControlPolicyRequest</p>
  */
 public class BatchDeleteVpcFirewallControlPolicyRequest extends Request {
-    @Query
-    @NameInMap("AclUuidList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclUuidList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > aclUuidList;
 
-    @Query
-    @NameInMap("VpcFirewallId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcFirewallId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcFirewallId;
 
     private BatchDeleteVpcFirewallControlPolicyRequest(Builder builder) {

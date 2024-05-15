@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAddressBookResponseBody</p>
  */
 public class DescribeAddressBookResponseBody extends TeaModel {
-    @NameInMap("Acls")
+    @com.aliyun.core.annotation.NameInMap("Acls")
     private java.util.List < Acls> acls;
 
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private String pageNo;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private DescribeAddressBookResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeAddressBookResponseBody extends TeaModel {
     } 
 
     public static class TagList extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private TagList(Builder builder) {
@@ -193,34 +192,34 @@ public class DescribeAddressBookResponseBody extends TeaModel {
 
     }
     public static class Acls extends TeaModel {
-        @NameInMap("AddressList")
+        @com.aliyun.core.annotation.NameInMap("AddressList")
         private java.util.List < String > addressList;
 
-        @NameInMap("AddressListCount")
+        @com.aliyun.core.annotation.NameInMap("AddressListCount")
         private Integer addressListCount;
 
-        @NameInMap("AutoAddTagEcs")
+        @com.aliyun.core.annotation.NameInMap("AutoAddTagEcs")
         private Integer autoAddTagEcs;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("GroupType")
+        @com.aliyun.core.annotation.NameInMap("GroupType")
         private String groupType;
 
-        @NameInMap("GroupUuid")
+        @com.aliyun.core.annotation.NameInMap("GroupUuid")
         private String groupUuid;
 
-        @NameInMap("ReferenceCount")
+        @com.aliyun.core.annotation.NameInMap("ReferenceCount")
         private Integer referenceCount;
 
-        @NameInMap("TagList")
+        @com.aliyun.core.annotation.NameInMap("TagList")
         private java.util.List < TagList> tagList;
 
-        @NameInMap("TagRelation")
+        @com.aliyun.core.annotation.NameInMap("TagRelation")
         private String tagRelation;
 
         private Acls(Builder builder) {

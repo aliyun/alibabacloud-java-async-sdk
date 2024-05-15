@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVpcFirewallPolicyPriorUsedResponseBody</p>
  */
 public class DescribeVpcFirewallPolicyPriorUsedResponseBody extends TeaModel {
-    @NameInMap("End")
+    @com.aliyun.core.annotation.NameInMap("End")
     private Integer end;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Start")
+    @com.aliyun.core.annotation.NameInMap("Start")
     private Integer start;
 
     private DescribeVpcFirewallPolicyPriorUsedResponseBody(Builder builder) {

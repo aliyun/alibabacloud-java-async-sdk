@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,101 +11,101 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyControlPolicyRequest</p>
  */
 public class ModifyControlPolicyRequest extends Request {
-    @Query
-    @NameInMap("AclAction")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclAction")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aclAction;
 
-    @Query
-    @NameInMap("AclUuid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclUuid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aclUuid;
 
-    @Query
-    @NameInMap("ApplicationName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationName")
     private String applicationName;
 
-    @Query
-    @NameInMap("ApplicationNameList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationNameList")
     private java.util.List < String > applicationNameList;
 
-    @Query
-    @NameInMap("Description")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String description;
 
-    @Query
-    @NameInMap("DestPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestPort")
     private String destPort;
 
-    @Query
-    @NameInMap("DestPortGroup")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestPortGroup")
     private String destPortGroup;
 
-    @Query
-    @NameInMap("DestPortType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestPortType")
     private String destPortType;
 
-    @Query
-    @NameInMap("Destination")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Destination")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String destination;
 
-    @Query
-    @NameInMap("DestinationType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String destinationType;
 
-    @Query
-    @NameInMap("Direction")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Direction")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String direction;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Proto")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Proto")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String proto;
 
-    @Query
-    @NameInMap("Release")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Release")
     private String release;
 
-    @Query
-    @NameInMap("RepeatDays")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepeatDays")
     private java.util.List < Long > repeatDays;
 
-    @Query
-    @NameInMap("RepeatEndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepeatEndTime")
     private String repeatEndTime;
 
-    @Query
-    @NameInMap("RepeatStartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepeatStartTime")
     private String repeatStartTime;
 
-    @Query
-    @NameInMap("RepeatType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepeatType")
     private String repeatType;
 
-    @Query
-    @NameInMap("Source")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String source;
 
-    @Query
-    @NameInMap("SourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceType;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
     private ModifyControlPolicyRequest(Builder builder) {

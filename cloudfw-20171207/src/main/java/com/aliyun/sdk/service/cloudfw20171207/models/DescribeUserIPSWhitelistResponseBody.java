@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUserIPSWhitelistResponseBody</p>
  */
 public class DescribeUserIPSWhitelistResponseBody extends TeaModel {
-    @NameInMap("Ipv6Whitelists")
+    @com.aliyun.core.annotation.NameInMap("Ipv6Whitelists")
     private java.util.List < Ipv6Whitelists> ipv6Whitelists;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Whitelists")
+    @com.aliyun.core.annotation.NameInMap("Whitelists")
     private java.util.List < Whitelists> whitelists;
 
     private DescribeUserIPSWhitelistResponseBody(Builder builder) {
@@ -92,19 +91,19 @@ public class DescribeUserIPSWhitelistResponseBody extends TeaModel {
     } 
 
     public static class Ipv6Whitelists extends TeaModel {
-        @NameInMap("Direction")
+        @com.aliyun.core.annotation.NameInMap("Direction")
         private Long direction;
 
-        @NameInMap("ListType")
+        @com.aliyun.core.annotation.NameInMap("ListType")
         private Long listType;
 
-        @NameInMap("ListValue")
+        @com.aliyun.core.annotation.NameInMap("ListValue")
         private String listValue;
 
-        @NameInMap("WhiteListValue")
+        @com.aliyun.core.annotation.NameInMap("WhiteListValue")
         private java.util.List < String > whiteListValue;
 
-        @NameInMap("WhiteType")
+        @com.aliyun.core.annotation.NameInMap("WhiteType")
         private Long whiteType;
 
         private Ipv6Whitelists(Builder builder) {
@@ -213,19 +212,19 @@ public class DescribeUserIPSWhitelistResponseBody extends TeaModel {
 
     }
     public static class Whitelists extends TeaModel {
-        @NameInMap("Direction")
+        @com.aliyun.core.annotation.NameInMap("Direction")
         private Long direction;
 
-        @NameInMap("ListType")
+        @com.aliyun.core.annotation.NameInMap("ListType")
         private Long listType;
 
-        @NameInMap("ListValue")
+        @com.aliyun.core.annotation.NameInMap("ListValue")
         private String listValue;
 
-        @NameInMap("WhiteListValue")
+        @com.aliyun.core.annotation.NameInMap("WhiteListValue")
         private java.util.List < String > whiteListValue;
 
-        @NameInMap("WhiteType")
+        @com.aliyun.core.annotation.NameInMap("WhiteType")
         private Long whiteType;
 
         private Whitelists(Builder builder) {

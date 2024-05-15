@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTrFirewallPolicyBackUpAssociationListRequest</p>
  */
 public class DescribeTrFirewallPolicyBackUpAssociationListRequest extends Request {
-    @Query
-    @NameInMap("CandidateList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CandidateList")
     private java.util.List < CandidateList> candidateList;
 
-    @Query
-    @NameInMap("FirewallId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirewallId")
     private String firewallId;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("TrFirewallRoutePolicyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrFirewallRoutePolicyId")
     private String trFirewallRoutePolicyId;
 
     private DescribeTrFirewallPolicyBackUpAssociationListRequest(Builder builder) {
@@ -144,10 +143,10 @@ public class DescribeTrFirewallPolicyBackUpAssociationListRequest extends Reques
     } 
 
     public static class CandidateList extends TeaModel {
-        @NameInMap("CandidateId")
+        @com.aliyun.core.annotation.NameInMap("CandidateId")
         private String candidateId;
 
-        @NameInMap("CandidateType")
+        @com.aliyun.core.annotation.NameInMap("CandidateType")
         private String candidateType;
 
         private CandidateList(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PutEnableFwSwitchResponseBody</p>
  */
 public class PutEnableFwSwitchResponseBody extends TeaModel {
-    @NameInMap("AbnormalResourceStatusList")
+    @com.aliyun.core.annotation.NameInMap("AbnormalResourceStatusList")
     private java.util.List < AbnormalResourceStatusList> abnormalResourceStatusList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private PutEnableFwSwitchResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class PutEnableFwSwitchResponseBody extends TeaModel {
     } 
 
     public static class AbnormalResourceStatusList extends TeaModel {
-        @NameInMap("Msg")
+        @com.aliyun.core.annotation.NameInMap("Msg")
         private String msg;
 
-        @NameInMap("Resource")
+        @com.aliyun.core.annotation.NameInMap("Resource")
         private String resource;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private AbnormalResourceStatusList(Builder builder) {

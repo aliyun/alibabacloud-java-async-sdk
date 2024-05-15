@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,53 +11,53 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSecurityProxyRequest</p>
  */
 public class CreateSecurityProxyRequest extends Request {
-    @Query
-    @NameInMap("FirewallSwitch")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirewallSwitch")
     private String firewallSwitch;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("NatGatewayId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NatGatewayId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String natGatewayId;
 
-    @Query
-    @NameInMap("NatRouteEntryList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NatRouteEntryList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < NatRouteEntryList> natRouteEntryList;
 
-    @Query
-    @NameInMap("ProxyName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProxyName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String proxyName;
 
-    @Query
-    @NameInMap("RegionNo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionNo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionNo;
 
-    @Query
-    @NameInMap("StrictMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrictMode")
     private Integer strictMode;
 
-    @Query
-    @NameInMap("VpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
-    @Query
-    @NameInMap("VswitchAuto")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VswitchAuto")
     private String vswitchAuto;
 
-    @Query
-    @NameInMap("VswitchCidr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VswitchCidr")
     private String vswitchCidr;
 
-    @Query
-    @NameInMap("VswitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VswitchId")
     private String vswitchId;
 
     private CreateSecurityProxyRequest(Builder builder) {
@@ -305,20 +304,20 @@ public class CreateSecurityProxyRequest extends Request {
     } 
 
     public static class NatRouteEntryList extends TeaModel {
-        @NameInMap("DestinationCidr")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DestinationCidr")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String destinationCidr;
 
-        @NameInMap("NextHopId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("NextHopId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String nextHopId;
 
-        @NameInMap("NextHopType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("NextHopType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String nextHopType;
 
-        @NameInMap("RouteTableId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("RouteTableId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String routeTableId;
 
         private NatRouteEntryList(Builder builder) {

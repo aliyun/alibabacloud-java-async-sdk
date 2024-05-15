@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTrFirewallsV2ListResponseBody</p>
  */
 public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
-    @NameInMap("VpcTrFirewalls")
+    @com.aliyun.core.annotation.NameInMap("VpcTrFirewalls")
     private java.util.List < VpcTrFirewalls> vpcTrFirewalls;
 
     private DescribeTrFirewallsV2ListResponseBody(Builder builder) {
@@ -92,13 +91,13 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
     } 
 
     public static class IpsConfig extends TeaModel {
-        @NameInMap("BasicRules")
+        @com.aliyun.core.annotation.NameInMap("BasicRules")
         private Integer basicRules;
 
-        @NameInMap("EnableAllPatch")
+        @com.aliyun.core.annotation.NameInMap("EnableAllPatch")
         private Integer enableAllPatch;
 
-        @NameInMap("RunMode")
+        @com.aliyun.core.annotation.NameInMap("RunMode")
         private Integer runMode;
 
         private IpsConfig(Builder builder) {
@@ -185,19 +184,19 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
 
     }
     public static class ProtectedResource extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("PeerTrList")
+        @com.aliyun.core.annotation.NameInMap("PeerTrList")
         private java.util.List < String > peerTrList;
 
-        @NameInMap("VbrList")
+        @com.aliyun.core.annotation.NameInMap("VbrList")
         private java.util.List < String > vbrList;
 
-        @NameInMap("VpcList")
+        @com.aliyun.core.annotation.NameInMap("VpcList")
         private java.util.List < String > vpcList;
 
-        @NameInMap("VpnList")
+        @com.aliyun.core.annotation.NameInMap("VpnList")
         private java.util.List < String > vpnList;
 
         private ProtectedResource(Builder builder) {
@@ -306,19 +305,19 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
 
     }
     public static class UnprotectedResource extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("PeerTrList")
+        @com.aliyun.core.annotation.NameInMap("PeerTrList")
         private java.util.List < String > peerTrList;
 
-        @NameInMap("VbrList")
+        @com.aliyun.core.annotation.NameInMap("VbrList")
         private java.util.List < String > vbrList;
 
-        @NameInMap("VpcList")
+        @com.aliyun.core.annotation.NameInMap("VpcList")
         private java.util.List < String > vpcList;
 
-        @NameInMap("VpnList")
+        @com.aliyun.core.annotation.NameInMap("VpnList")
         private java.util.List < String > vpnList;
 
         private UnprotectedResource(Builder builder) {
@@ -427,49 +426,49 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
 
     }
     public static class VpcTrFirewalls extends TeaModel {
-        @NameInMap("CenId")
+        @com.aliyun.core.annotation.NameInMap("CenId")
         private String cenId;
 
-        @NameInMap("CenName")
+        @com.aliyun.core.annotation.NameInMap("CenName")
         private String cenName;
 
-        @NameInMap("FirewallId")
+        @com.aliyun.core.annotation.NameInMap("FirewallId")
         private String firewallId;
 
-        @NameInMap("FirewallSwitchStatus")
+        @com.aliyun.core.annotation.NameInMap("FirewallSwitchStatus")
         private String firewallSwitchStatus;
 
-        @NameInMap("IpsConfig")
+        @com.aliyun.core.annotation.NameInMap("IpsConfig")
         private IpsConfig ipsConfig;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private Long ownerId;
 
-        @NameInMap("PrecheckStatus")
+        @com.aliyun.core.annotation.NameInMap("PrecheckStatus")
         private String precheckStatus;
 
-        @NameInMap("ProtectedResource")
+        @com.aliyun.core.annotation.NameInMap("ProtectedResource")
         private ProtectedResource protectedResource;
 
-        @NameInMap("RegionNo")
+        @com.aliyun.core.annotation.NameInMap("RegionNo")
         private String regionNo;
 
-        @NameInMap("RegionStatus")
+        @com.aliyun.core.annotation.NameInMap("RegionStatus")
         private String regionStatus;
 
-        @NameInMap("ResultCode")
+        @com.aliyun.core.annotation.NameInMap("ResultCode")
         private String resultCode;
 
-        @NameInMap("RouteMode")
+        @com.aliyun.core.annotation.NameInMap("RouteMode")
         private String routeMode;
 
-        @NameInMap("TransitRouterId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterId")
         private String transitRouterId;
 
-        @NameInMap("UnprotectedResource")
+        @com.aliyun.core.annotation.NameInMap("UnprotectedResource")
         private UnprotectedResource unprotectedResource;
 
-        @NameInMap("VpcFirewallName")
+        @com.aliyun.core.annotation.NameInMap("VpcFirewallName")
         private String vpcFirewallName;
 
         private VpcTrFirewalls(Builder builder) {

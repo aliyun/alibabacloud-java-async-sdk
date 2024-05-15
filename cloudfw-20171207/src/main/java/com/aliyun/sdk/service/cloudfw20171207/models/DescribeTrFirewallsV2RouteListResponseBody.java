@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTrFirewallsV2RouteListResponseBody</p>
  */
 public class DescribeTrFirewallsV2RouteListResponseBody extends TeaModel {
-    @NameInMap("FirewallRouteDetailList")
+    @com.aliyun.core.annotation.NameInMap("FirewallRouteDetailList")
     private java.util.List < FirewallRouteDetailList> firewallRouteDetailList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeTrFirewallsV2RouteListResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribeTrFirewallsV2RouteListResponseBody extends TeaModel {
     } 
 
     public static class FirewallRouteDetailList extends TeaModel {
-        @NameInMap("TrFirewallRouteDestination")
+        @com.aliyun.core.annotation.NameInMap("TrFirewallRouteDestination")
         private String trFirewallRouteDestination;
 
-        @NameInMap("TrFirewallRouteNexthop")
+        @com.aliyun.core.annotation.NameInMap("TrFirewallRouteNexthop")
         private String trFirewallRouteNexthop;
 
-        @NameInMap("TrFirewallRoutePolicyId")
+        @com.aliyun.core.annotation.NameInMap("TrFirewallRoutePolicyId")
         private String trFirewallRoutePolicyId;
 
-        @NameInMap("TrFirewallRouteTableId")
+        @com.aliyun.core.annotation.NameInMap("TrFirewallRouteTableId")
         private String trFirewallRouteTableId;
 
         private FirewallRouteDetailList(Builder builder) {

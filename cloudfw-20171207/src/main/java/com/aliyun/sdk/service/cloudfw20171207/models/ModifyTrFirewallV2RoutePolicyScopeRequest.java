@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyTrFirewallV2RoutePolicyScopeRequest</p>
  */
 public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
-    @Query
-    @NameInMap("DestCandidateList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestCandidateList")
     private java.util.List < DestCandidateList> destCandidateList;
 
-    @Query
-    @NameInMap("FirewallId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirewallId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String firewallId;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("ShouldRecover")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShouldRecover")
     private String shouldRecover;
 
-    @Query
-    @NameInMap("SrcCandidateList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcCandidateList")
     private java.util.List < SrcCandidateList> srcCandidateList;
 
-    @Query
-    @NameInMap("TrFirewallRoutePolicyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrFirewallRoutePolicyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String trFirewallRoutePolicyId;
 
     private ModifyTrFirewallV2RoutePolicyScopeRequest(Builder builder) {
@@ -189,10 +188,10 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
     } 
 
     public static class DestCandidateList extends TeaModel {
-        @NameInMap("CandidateId")
+        @com.aliyun.core.annotation.NameInMap("CandidateId")
         private String candidateId;
 
-        @NameInMap("CandidateType")
+        @com.aliyun.core.annotation.NameInMap("CandidateType")
         private String candidateType;
 
         private DestCandidateList(Builder builder) {
@@ -250,10 +249,10 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
 
     }
     public static class SrcCandidateList extends TeaModel {
-        @NameInMap("CandidateId")
+        @com.aliyun.core.annotation.NameInMap("CandidateId")
         private String candidateId;
 
-        @NameInMap("CandidateType")
+        @com.aliyun.core.annotation.NameInMap("CandidateType")
         private String candidateType;
 
         private SrcCandidateList(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyVpcFirewallIPSWhitelistRequest</p>
  */
 public class ModifyVpcFirewallIPSWhitelistRequest extends Request {
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("ListType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long listType;
 
-    @Query
-    @NameInMap("ListValue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListValue")
     private String listValue;
 
-    @Query
-    @NameInMap("MemberUid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MemberUid")
     private Long memberUid;
 
-    @Query
-    @NameInMap("VpcFirewallId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcFirewallId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcFirewallId;
 
-    @Query
-    @NameInMap("WhiteType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WhiteType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long whiteType;
 
     private ModifyVpcFirewallIPSWhitelistRequest(Builder builder) {

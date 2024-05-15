@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVpcListLiteResponseBody</p>
  */
 public class DescribeVpcListLiteResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VpcList")
+    @com.aliyun.core.annotation.NameInMap("VpcList")
     private java.util.List < VpcList> vpcList;
 
     private DescribeVpcListLiteResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeVpcListLiteResponseBody extends TeaModel {
     } 
 
     public static class VpcList extends TeaModel {
-        @NameInMap("RegionNo")
+        @com.aliyun.core.annotation.NameInMap("RegionNo")
         private String regionNo;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcName")
+        @com.aliyun.core.annotation.NameInMap("VpcName")
         private String vpcName;
 
         private VpcList(Builder builder) {

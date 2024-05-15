@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeOutgoingDestinationIPResponseBody</p>
  */
 public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
-    @NameInMap("DstIPList")
+    @com.aliyun.core.annotation.NameInMap("DstIPList")
     private java.util.List < DstIPList> dstIPList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeOutgoingDestinationIPResponseBody(Builder builder) {
@@ -92,10 +91,10 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
     } 
 
     public static class AddressGroupList extends TeaModel {
-        @NameInMap("AddressGroupName")
+        @com.aliyun.core.annotation.NameInMap("AddressGroupName")
         private String addressGroupName;
 
-        @NameInMap("AddressGroupUUID")
+        @com.aliyun.core.annotation.NameInMap("AddressGroupUUID")
         private String addressGroupUUID;
 
         private AddressGroupList(Builder builder) {
@@ -153,10 +152,10 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
 
     }
     public static class ApplicationPortList extends TeaModel {
-        @NameInMap("ApplicationName")
+        @com.aliyun.core.annotation.NameInMap("ApplicationName")
         private String applicationName;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
         private ApplicationPortList(Builder builder) {
@@ -233,19 +232,19 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
 
     }
     public static class TagList extends TeaModel {
-        @NameInMap("ClassId")
+        @com.aliyun.core.annotation.NameInMap("ClassId")
         private String classId;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private Integer riskLevel;
 
-        @NameInMap("TagDescribe")
+        @com.aliyun.core.annotation.NameInMap("TagDescribe")
         private String tagDescribe;
 
-        @NameInMap("TagId")
+        @com.aliyun.core.annotation.NameInMap("TagId")
         private String tagId;
 
-        @NameInMap("TagName")
+        @com.aliyun.core.annotation.NameInMap("TagName")
         private String tagName;
 
         private TagList(Builder builder) {
@@ -364,70 +363,70 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
 
     }
     public static class DstIPList extends TeaModel {
-        @NameInMap("AclCoverage")
+        @com.aliyun.core.annotation.NameInMap("AclCoverage")
         private String aclCoverage;
 
-        @NameInMap("AclRecommendDetail")
+        @com.aliyun.core.annotation.NameInMap("AclRecommendDetail")
         private String aclRecommendDetail;
 
-        @NameInMap("AclStatus")
+        @com.aliyun.core.annotation.NameInMap("AclStatus")
         private String aclStatus;
 
-        @NameInMap("AddressGroupList")
+        @com.aliyun.core.annotation.NameInMap("AddressGroupList")
         private java.util.List < AddressGroupList> addressGroupList;
 
-        @NameInMap("ApplicationPortList")
+        @com.aliyun.core.annotation.NameInMap("ApplicationPortList")
         private java.util.List < ApplicationPortList> applicationPortList;
 
-        @NameInMap("CategoryClassId")
+        @com.aliyun.core.annotation.NameInMap("CategoryClassId")
         private String categoryClassId;
 
-        @NameInMap("CategoryId")
+        @com.aliyun.core.annotation.NameInMap("CategoryId")
         private String categoryId;
 
-        @NameInMap("CategoryName")
+        @com.aliyun.core.annotation.NameInMap("CategoryName")
         private String categoryName;
 
-        @NameInMap("DstIP")
+        @com.aliyun.core.annotation.NameInMap("DstIP")
         private String dstIP;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("HasAcl")
+        @com.aliyun.core.annotation.NameInMap("HasAcl")
         private String hasAcl;
 
-        @NameInMap("HasAclRecommend")
+        @com.aliyun.core.annotation.NameInMap("HasAclRecommend")
         private Boolean hasAclRecommend;
 
-        @NameInMap("InBytes")
+        @com.aliyun.core.annotation.NameInMap("InBytes")
         private Long inBytes;
 
-        @NameInMap("IsMarkNormal")
+        @com.aliyun.core.annotation.NameInMap("IsMarkNormal")
         private Boolean isMarkNormal;
 
-        @NameInMap("OutBytes")
+        @com.aliyun.core.annotation.NameInMap("OutBytes")
         private Long outBytes;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("SecurityReason")
+        @com.aliyun.core.annotation.NameInMap("SecurityReason")
         private String securityReason;
 
-        @NameInMap("SecuritySuggest")
+        @com.aliyun.core.annotation.NameInMap("SecuritySuggest")
         private String securitySuggest;
 
-        @NameInMap("SessionCount")
+        @com.aliyun.core.annotation.NameInMap("SessionCount")
         private Long sessionCount;
 
-        @NameInMap("TagList")
+        @com.aliyun.core.annotation.NameInMap("TagList")
         private java.util.List < TagList> tagList;
 
-        @NameInMap("TotalBytes")
+        @com.aliyun.core.annotation.NameInMap("TotalBytes")
         private String totalBytes;
 
         private DstIPList(Builder builder) {

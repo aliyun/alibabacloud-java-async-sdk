@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudfw20171207.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRiskEventPayloadResponseBody</p>
  */
 public class DescribeRiskEventPayloadResponseBody extends TeaModel {
-    @NameInMap("DstIP")
+    @com.aliyun.core.annotation.NameInMap("DstIP")
     private String dstIP;
 
-    @NameInMap("DstPort")
+    @com.aliyun.core.annotation.NameInMap("DstPort")
     private Integer dstPort;
 
-    @NameInMap("DstVpcId")
+    @com.aliyun.core.annotation.NameInMap("DstVpcId")
     private String dstVpcId;
 
-    @NameInMap("Payload")
+    @com.aliyun.core.annotation.NameInMap("Payload")
     private String payload;
 
-    @NameInMap("PayloadLen")
+    @com.aliyun.core.annotation.NameInMap("PayloadLen")
     private Integer payloadLen;
 
-    @NameInMap("Proto")
+    @com.aliyun.core.annotation.NameInMap("Proto")
     private String proto;
 
-    @NameInMap("RealIp")
+    @com.aliyun.core.annotation.NameInMap("RealIp")
     private String realIp;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SrcIP")
+    @com.aliyun.core.annotation.NameInMap("SrcIP")
     private String srcIP;
 
-    @NameInMap("SrcPort")
+    @com.aliyun.core.annotation.NameInMap("SrcPort")
     private Integer srcPort;
 
-    @NameInMap("SrcVpcId")
+    @com.aliyun.core.annotation.NameInMap("SrcVpcId")
     private String srcVpcId;
 
-    @NameInMap("XForwardFor")
+    @com.aliyun.core.annotation.NameInMap("XForwardFor")
     private String xForwardFor;
 
     private DescribeRiskEventPayloadResponseBody(Builder builder) {
