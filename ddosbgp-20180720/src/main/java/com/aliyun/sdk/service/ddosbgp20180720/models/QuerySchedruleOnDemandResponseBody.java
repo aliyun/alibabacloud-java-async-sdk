@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QuerySchedruleOnDemandResponseBody</p>
  */
 public class QuerySchedruleOnDemandResponseBody extends TeaModel {
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RuleConfig")
+    @com.aliyun.core.annotation.NameInMap("RuleConfig")
     private java.util.List < RuleConfig> ruleConfig;
 
-    @NameInMap("RuleStatus")
+    @com.aliyun.core.annotation.NameInMap("RuleStatus")
     private java.util.List < RuleStatus> ruleStatus;
 
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
     private QuerySchedruleOnDemandResponseBody(Builder builder) {
@@ -132,34 +131,34 @@ public class QuerySchedruleOnDemandResponseBody extends TeaModel {
     } 
 
     public static class RuleConfig extends TeaModel {
-        @NameInMap("RuleAction")
+        @com.aliyun.core.annotation.NameInMap("RuleAction")
         private String ruleAction;
 
-        @NameInMap("RuleConditionCnt")
+        @com.aliyun.core.annotation.NameInMap("RuleConditionCnt")
         private String ruleConditionCnt;
 
-        @NameInMap("RuleConditionKpps")
+        @com.aliyun.core.annotation.NameInMap("RuleConditionKpps")
         private String ruleConditionKpps;
 
-        @NameInMap("RuleConditionMbps")
+        @com.aliyun.core.annotation.NameInMap("RuleConditionMbps")
         private String ruleConditionMbps;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("RuleSwitch")
+        @com.aliyun.core.annotation.NameInMap("RuleSwitch")
         private String ruleSwitch;
 
-        @NameInMap("RuleUndoBeginTime")
+        @com.aliyun.core.annotation.NameInMap("RuleUndoBeginTime")
         private String ruleUndoBeginTime;
 
-        @NameInMap("RuleUndoEndTime")
+        @com.aliyun.core.annotation.NameInMap("RuleUndoEndTime")
         private String ruleUndoEndTime;
 
-        @NameInMap("RuleUndoMode")
+        @com.aliyun.core.annotation.NameInMap("RuleUndoMode")
         private String ruleUndoMode;
 
-        @NameInMap("TimeZone")
+        @com.aliyun.core.annotation.NameInMap("TimeZone")
         private String timeZone;
 
         private RuleConfig(Builder builder) {
@@ -374,10 +373,10 @@ public class QuerySchedruleOnDemandResponseBody extends TeaModel {
 
     }
     public static class RuleStatus extends TeaModel {
-        @NameInMap("Net")
+        @com.aliyun.core.annotation.NameInMap("Net")
         private String net;
 
-        @NameInMap("RuleSchedStatus")
+        @com.aliyun.core.annotation.NameInMap("RuleSchedStatus")
         private String ruleSchedStatus;
 
         private RuleStatus(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeOpEntitiesResponseBody</p>
  */
 public class DescribeOpEntitiesResponseBody extends TeaModel {
-    @NameInMap("OpEntities")
+    @com.aliyun.core.annotation.NameInMap("OpEntities")
     private java.util.List < OpEntities> opEntities;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeOpEntitiesResponseBody(Builder builder) {
@@ -92,22 +91,22 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
     } 
 
     public static class OpEntities extends TeaModel {
-        @NameInMap("EntityObject")
+        @com.aliyun.core.annotation.NameInMap("EntityObject")
         private String entityObject;
 
-        @NameInMap("EntityType")
+        @com.aliyun.core.annotation.NameInMap("EntityType")
         private Integer entityType;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("OpAccount")
+        @com.aliyun.core.annotation.NameInMap("OpAccount")
         private String opAccount;
 
-        @NameInMap("OpAction")
+        @com.aliyun.core.annotation.NameInMap("OpAction")
         private Integer opAction;
 
-        @NameInMap("OpDesc")
+        @com.aliyun.core.annotation.NameInMap("OpDesc")
         private String opDesc;
 
         private OpEntities(Builder builder) {

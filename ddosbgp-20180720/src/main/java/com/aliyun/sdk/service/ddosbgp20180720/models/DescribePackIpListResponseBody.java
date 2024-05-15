@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePackIpListResponseBody</p>
  */
 public class DescribePackIpListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("IpList")
+    @com.aliyun.core.annotation.NameInMap("IpList")
     private java.util.List < IpList> ipList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private DescribePackIpListResponseBody(Builder builder) {
@@ -139,30 +138,38 @@ public class DescribePackIpListResponseBody extends TeaModel {
     } 
 
     public static class IpList extends TeaModel {
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("MemberUid")
+        @com.aliyun.core.annotation.NameInMap("MemberUid")
         private String memberUid;
 
-        @NameInMap("NsmStatus")
+        @com.aliyun.core.annotation.NameInMap("NsmExpireAt")
+        private Long nsmExpireAt;
+
+        @com.aliyun.core.annotation.NameInMap("NsmStartAt")
+        private Long nsmStartAt;
+
+        @com.aliyun.core.annotation.NameInMap("NsmStatus")
         private Integer nsmStatus;
 
-        @NameInMap("Product")
+        @com.aliyun.core.annotation.NameInMap("Product")
         private String product;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private IpList(Builder builder) {
             this.ip = builder.ip;
             this.memberUid = builder.memberUid;
+            this.nsmExpireAt = builder.nsmExpireAt;
+            this.nsmStartAt = builder.nsmStartAt;
             this.nsmStatus = builder.nsmStatus;
             this.product = builder.product;
             this.region = builder.region;
@@ -190,6 +197,20 @@ public class DescribePackIpListResponseBody extends TeaModel {
          */
         public String getMemberUid() {
             return this.memberUid;
+        }
+
+        /**
+         * @return nsmExpireAt
+         */
+        public Long getNsmExpireAt() {
+            return this.nsmExpireAt;
+        }
+
+        /**
+         * @return nsmStartAt
+         */
+        public Long getNsmStartAt() {
+            return this.nsmStartAt;
         }
 
         /**
@@ -230,6 +251,8 @@ public class DescribePackIpListResponseBody extends TeaModel {
         public static final class Builder {
             private String ip; 
             private String memberUid; 
+            private Long nsmExpireAt; 
+            private Long nsmStartAt; 
             private Integer nsmStatus; 
             private String product; 
             private String region; 
@@ -249,6 +272,22 @@ public class DescribePackIpListResponseBody extends TeaModel {
              */
             public Builder memberUid(String memberUid) {
                 this.memberUid = memberUid;
+                return this;
+            }
+
+            /**
+             * NsmExpireAt.
+             */
+            public Builder nsmExpireAt(Long nsmExpireAt) {
+                this.nsmExpireAt = nsmExpireAt;
+                return this;
+            }
+
+            /**
+             * NsmStartAt.
+             */
+            public Builder nsmStartAt(Long nsmStartAt) {
+                this.nsmStartAt = nsmStartAt;
                 return this;
             }
 

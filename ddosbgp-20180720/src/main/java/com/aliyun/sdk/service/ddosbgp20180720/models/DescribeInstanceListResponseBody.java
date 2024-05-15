@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceListResponseBody</p>
  */
 public class DescribeInstanceListResponseBody extends TeaModel {
-    @NameInMap("InstanceList")
+    @com.aliyun.core.annotation.NameInMap("InstanceList")
     private java.util.List < InstanceList> instanceList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
 
     private DescribeInstanceListResponseBody(Builder builder) {
@@ -92,7 +91,7 @@ public class DescribeInstanceListResponseBody extends TeaModel {
     } 
 
     public static class AutoProtectCondition extends TeaModel {
-        @NameInMap("Events")
+        @com.aliyun.core.annotation.NameInMap("Events")
         private java.util.List < String > events;
 
         private AutoProtectCondition(Builder builder) {
@@ -133,43 +132,43 @@ public class DescribeInstanceListResponseBody extends TeaModel {
 
     }
     public static class InstanceList extends TeaModel {
-        @NameInMap("AutoProtectCondition")
+        @com.aliyun.core.annotation.NameInMap("AutoProtectCondition")
         private AutoProtectCondition autoProtectCondition;
 
-        @NameInMap("AutoRenewal")
+        @com.aliyun.core.annotation.NameInMap("AutoRenewal")
         private Boolean autoRenewal;
 
-        @NameInMap("BlackholdingCount")
+        @com.aliyun.core.annotation.NameInMap("BlackholdingCount")
         private String blackholdingCount;
 
-        @NameInMap("CommodityType")
+        @com.aliyun.core.annotation.NameInMap("CommodityType")
         private String commodityType;
 
-        @NameInMap("CoverageType")
+        @com.aliyun.core.annotation.NameInMap("CoverageType")
         private Integer coverageType;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private Long expireTime;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("IpType")
+        @com.aliyun.core.annotation.NameInMap("IpType")
         private String ipType;
 
-        @NameInMap("Product")
+        @com.aliyun.core.annotation.NameInMap("Product")
         private String product;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private InstanceList(Builder builder) {

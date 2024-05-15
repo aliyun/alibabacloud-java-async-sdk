@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAssetGroupResponseBody</p>
  */
 public class DescribeAssetGroupResponseBody extends TeaModel {
-    @NameInMap("AssetGroupList")
+    @com.aliyun.core.annotation.NameInMap("AssetGroupList")
     private java.util.List < AssetGroupList> assetGroupList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
 
     private DescribeAssetGroupResponseBody(Builder builder) {
@@ -92,13 +91,13 @@ public class DescribeAssetGroupResponseBody extends TeaModel {
     } 
 
     public static class AssetGroupList extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private AssetGroupList(Builder builder) {

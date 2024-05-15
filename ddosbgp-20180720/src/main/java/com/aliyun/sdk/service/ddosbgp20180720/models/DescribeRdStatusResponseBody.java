@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRdStatusResponseBody</p>
  */
 public class DescribeRdStatusResponseBody extends TeaModel {
-    @NameInMap("CurrentUid")
+    @com.aliyun.core.annotation.NameInMap("CurrentUid")
     private String currentUid;
 
-    @NameInMap("CurrentUidType")
+    @com.aliyun.core.annotation.NameInMap("CurrentUidType")
     private String currentUidType;
 
-    @NameInMap("Enabled")
+    @com.aliyun.core.annotation.NameInMap("Enabled")
     private Boolean enabled;
 
-    @NameInMap("LocalEnable")
+    @com.aliyun.core.annotation.NameInMap("LocalEnable")
     private Boolean localEnable;
 
-    @NameInMap("MasterUid")
+    @com.aliyun.core.annotation.NameInMap("MasterUid")
     private String masterUid;
 
-    @NameInMap("RemoteEnable")
+    @com.aliyun.core.annotation.NameInMap("RemoteEnable")
     private Boolean remoteEnable;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RootUid")
+    @com.aliyun.core.annotation.NameInMap("RootUid")
     private String rootUid;
 
-    @NameInMap("ServicePrincipalEnabled")
+    @com.aliyun.core.annotation.NameInMap("ServicePrincipalEnabled")
     private Boolean servicePrincipalEnabled;
 
     private DescribeRdStatusResponseBody(Builder builder) {

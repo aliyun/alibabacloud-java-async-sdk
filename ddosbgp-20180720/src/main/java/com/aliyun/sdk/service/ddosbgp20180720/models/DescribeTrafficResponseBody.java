@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTrafficResponseBody</p>
  */
 public class DescribeTrafficResponseBody extends TeaModel {
-    @NameInMap("FlowList")
+    @com.aliyun.core.annotation.NameInMap("FlowList")
     private java.util.List < FlowList> flowList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeTrafficResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class DescribeTrafficResponseBody extends TeaModel {
     } 
 
     public static class FlowList extends TeaModel {
-        @NameInMap("AttackBps")
+        @com.aliyun.core.annotation.NameInMap("AttackBps")
         private Long attackBps;
 
-        @NameInMap("AttackPps")
+        @com.aliyun.core.annotation.NameInMap("AttackPps")
         private Long attackPps;
 
-        @NameInMap("FlowType")
+        @com.aliyun.core.annotation.NameInMap("FlowType")
         private String flowType;
 
-        @NameInMap("Kbps")
+        @com.aliyun.core.annotation.NameInMap("Kbps")
         private Integer kbps;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Pps")
+        @com.aliyun.core.annotation.NameInMap("Pps")
         private Integer pps;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private Integer time;
 
         private FlowList(Builder builder) {

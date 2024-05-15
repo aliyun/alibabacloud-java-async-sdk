@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,49 +11,49 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDdosOriginInstanceBillResponseBody</p>
  */
 public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
-    @NameInMap("DebtStatus")
+    @com.aliyun.core.annotation.NameInMap("DebtStatus")
     private Long debtStatus;
 
-    @NameInMap("FlowList")
+    @com.aliyun.core.annotation.NameInMap("FlowList")
     private java.util.List < FlowList> flowList;
 
-    @NameInMap("FlowRegion")
+    @com.aliyun.core.annotation.NameInMap("FlowRegion")
     private java.util.Map < String, ? > flowRegion;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("IpCount")
+    @com.aliyun.core.annotation.NameInMap("IpCount")
     private Long ipCount;
 
-    @NameInMap("IpCountOrFunctionList")
+    @com.aliyun.core.annotation.NameInMap("IpCountOrFunctionList")
     private java.util.List < IpCountOrFunctionList> ipCountOrFunctionList;
 
-    @NameInMap("IpInfo")
+    @com.aliyun.core.annotation.NameInMap("IpInfo")
     private String ipInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StandardAssetsFlowList")
+    @com.aliyun.core.annotation.NameInMap("StandardAssetsFlowList")
     private java.util.List < StandardAssetsFlowList> standardAssetsFlowList;
 
-    @NameInMap("StandardAssetsFlowRegion")
+    @com.aliyun.core.annotation.NameInMap("StandardAssetsFlowRegion")
     private java.util.Map < String, ? > standardAssetsFlowRegion;
 
-    @NameInMap("StandardAssetsTotalFlowCn")
+    @com.aliyun.core.annotation.NameInMap("StandardAssetsTotalFlowCn")
     private Long standardAssetsTotalFlowCn;
 
-    @NameInMap("StandardAssetsTotalFlowOv")
+    @com.aliyun.core.annotation.NameInMap("StandardAssetsTotalFlowOv")
     private Long standardAssetsTotalFlowOv;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Long status;
 
-    @NameInMap("TotalFlowCn")
+    @com.aliyun.core.annotation.NameInMap("TotalFlowCn")
     private Long totalFlowCn;
 
-    @NameInMap("TotalFlowOv")
+    @com.aliyun.core.annotation.NameInMap("TotalFlowOv")
     private Long totalFlowOv;
 
     private DescribeDdosOriginInstanceBillResponseBody(Builder builder) {
@@ -332,16 +331,16 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
     } 
 
     public static class FlowList extends TeaModel {
-        @NameInMap("MemberFlow")
+        @com.aliyun.core.annotation.NameInMap("MemberFlow")
         private String memberFlow;
 
-        @NameInMap("RegionFlow")
+        @com.aliyun.core.annotation.NameInMap("RegionFlow")
         private String regionFlow;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private Long time;
 
-        @NameInMap("TotalFlow")
+        @com.aliyun.core.annotation.NameInMap("TotalFlow")
         private Long totalFlow;
 
         private FlowList(Builder builder) {
@@ -433,19 +432,19 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
 
     }
     public static class IpCountOrFunctionList extends TeaModel {
-        @NameInMap("Coverage")
+        @com.aliyun.core.annotation.NameInMap("Coverage")
         private String coverage;
 
-        @NameInMap("IpCntCn")
+        @com.aliyun.core.annotation.NameInMap("IpCntCn")
         private Long ipCntCn;
 
-        @NameInMap("IpCntOv")
+        @com.aliyun.core.annotation.NameInMap("IpCntOv")
         private Long ipCntOv;
 
-        @NameInMap("MemberIpCnt")
+        @com.aliyun.core.annotation.NameInMap("MemberIpCnt")
         private String memberIpCnt;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private Long time;
 
         private IpCountOrFunctionList(Builder builder) {
@@ -554,16 +553,16 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
 
     }
     public static class StandardAssetsFlowList extends TeaModel {
-        @NameInMap("MemberFlow")
+        @com.aliyun.core.annotation.NameInMap("MemberFlow")
         private String memberFlow;
 
-        @NameInMap("RegionFlow")
+        @com.aliyun.core.annotation.NameInMap("RegionFlow")
         private String regionFlow;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private Long time;
 
-        @NameInMap("TotalFlow")
+        @com.aliyun.core.annotation.NameInMap("TotalFlow")
         private Long totalFlow;
 
         private StandardAssetsFlowList(Builder builder) {

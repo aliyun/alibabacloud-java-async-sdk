@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceSpecsResponseBody</p>
  */
 public class DescribeInstanceSpecsResponseBody extends TeaModel {
-    @NameInMap("InstanceSpecs")
+    @com.aliyun.core.annotation.NameInMap("InstanceSpecs")
     private java.util.List < InstanceSpecs> instanceSpecs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceSpecsResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
     } 
 
     public static class PackConfig extends TeaModel {
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Long bandwidth;
 
-        @NameInMap("BindIpCount")
+        @com.aliyun.core.annotation.NameInMap("BindIpCount")
         private Integer bindIpCount;
 
-        @NameInMap("IpAdvanceThre")
+        @com.aliyun.core.annotation.NameInMap("IpAdvanceThre")
         private Integer ipAdvanceThre;
 
-        @NameInMap("IpBasicThre")
+        @com.aliyun.core.annotation.NameInMap("IpBasicThre")
         private Integer ipBasicThre;
 
-        @NameInMap("IpSpec")
+        @com.aliyun.core.annotation.NameInMap("IpSpec")
         private Integer ipSpec;
 
-        @NameInMap("NormalBandwidth")
+        @com.aliyun.core.annotation.NameInMap("NormalBandwidth")
         private Integer normalBandwidth;
 
-        @NameInMap("PackAdvThre")
+        @com.aliyun.core.annotation.NameInMap("PackAdvThre")
         private Integer packAdvThre;
 
-        @NameInMap("PackBasicThre")
+        @com.aliyun.core.annotation.NameInMap("PackBasicThre")
         private Integer packBasicThre;
 
         private PackConfig(Builder builder) {
@@ -253,28 +252,28 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
 
     }
     public static class InstanceSpecs extends TeaModel {
-        @NameInMap("AvailableDefenseTimes")
+        @com.aliyun.core.annotation.NameInMap("AvailableDefenseTimes")
         private Integer availableDefenseTimes;
 
-        @NameInMap("AvailableDeleteBlackholeCount")
+        @com.aliyun.core.annotation.NameInMap("AvailableDeleteBlackholeCount")
         private String availableDeleteBlackholeCount;
 
-        @NameInMap("DefenseTimesPercent")
+        @com.aliyun.core.annotation.NameInMap("DefenseTimesPercent")
         private Integer defenseTimesPercent;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("IsFullDefenseMode")
+        @com.aliyun.core.annotation.NameInMap("IsFullDefenseMode")
         private Integer isFullDefenseMode;
 
-        @NameInMap("PackConfig")
+        @com.aliyun.core.annotation.NameInMap("PackConfig")
         private PackConfig packConfig;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("TotalDefenseTimes")
+        @com.aliyun.core.annotation.NameInMap("TotalDefenseTimes")
         private Integer totalDefenseTimes;
 
         private InstanceSpecs(Builder builder) {

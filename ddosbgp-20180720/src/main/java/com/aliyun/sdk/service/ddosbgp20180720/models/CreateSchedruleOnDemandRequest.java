@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,62 +11,62 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSchedruleOnDemandRequest</p>
  */
 public class CreateSchedruleOnDemandRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("RuleAction")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleAction")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleAction;
 
-    @Query
-    @NameInMap("RuleConditionCnt")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleConditionCnt")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleConditionCnt;
 
-    @Query
-    @NameInMap("RuleConditionKpps")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleConditionKpps")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleConditionKpps;
 
-    @Query
-    @NameInMap("RuleConditionMbps")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleConditionMbps")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleConditionMbps;
 
-    @Query
-    @NameInMap("RuleName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleName;
 
-    @Query
-    @NameInMap("RuleSwitch")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleSwitch")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleSwitch;
 
-    @Query
-    @NameInMap("RuleUndoBeginTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleUndoBeginTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleUndoBeginTime;
 
-    @Query
-    @NameInMap("RuleUndoEndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleUndoEndTime")
     private String ruleUndoEndTime;
 
-    @Query
-    @NameInMap("RuleUndoMode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleUndoMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleUndoMode;
 
-    @Query
-    @NameInMap("TimeZone")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeZone")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String timeZone;
 
     private CreateSchedruleOnDemandRequest(Builder builder) {

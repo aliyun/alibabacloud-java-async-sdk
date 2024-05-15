@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosbgp20180720.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteRdMemberListRequest</p>
  */
 public class DeleteRdMemberListRequest extends Request {
-    @Query
-    @NameInMap("MemberList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MemberList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < MemberList> memberList;
 
     private DeleteRdMemberListRequest(Builder builder) {
@@ -72,7 +71,7 @@ public class DeleteRdMemberListRequest extends Request {
     } 
 
     public static class MemberList extends TeaModel {
-        @NameInMap("Uid")
+        @com.aliyun.core.annotation.NameInMap("Uid")
         private String uid;
 
         private MemberList(Builder builder) {
