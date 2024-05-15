@@ -1916,6 +1916,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<QueryScheduleConferenceInfoResponse> queryScheduleConferenceInfo(QueryScheduleConferenceInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryScheduleConferenceInfo").setMethod(HttpMethod.POST).setPathRegex("/dingtalk/v1/ysp/queryScheduleConferenceInfo").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryScheduleConferenceInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryScheduleConferenceInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<QueryUserHonorsResponse> queryUserHonors(QueryUserHonorsRequest request) {
         try {
             this.handler.validateRequestModel(request);

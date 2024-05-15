@@ -287,6 +287,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryScheduleConferenceResponse> queryScheduleConference(QueryScheduleConferenceRequest request);
 
+    CompletableFuture<QueryScheduleConferenceInfoResponse> queryScheduleConferenceInfo(QueryScheduleConferenceInfoRequest request);
+
     CompletableFuture<QueryUserHonorsResponse> queryUserHonors(QueryUserHonorsRequest request);
 
     CompletableFuture<RecallHonorResponse> recallHonor(RecallHonorRequest request);
