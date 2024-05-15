@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20230701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateJobRequest</p>
  */
 public class CreateJobRequest extends Request {
-    @Query
-    @NameInMap("DeploymentPolicy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeploymentPolicy")
     private DeploymentPolicy deploymentPolicy;
 
-    @Query
-    @NameInMap("JobDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobDescription")
     private String jobDescription;
 
-    @Query
-    @NameInMap("JobName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobName;
 
-    @Query
-    @NameInMap("Tasks")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tasks")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Tasks> tasks;
 
     private CreateJobRequest(Builder builder) {
@@ -143,7 +142,7 @@ public class CreateJobRequest extends Request {
     } 
 
     public static class Network extends TeaModel {
-        @NameInMap("Vswitch")
+        @com.aliyun.core.annotation.NameInMap("Vswitch")
         private java.util.List < String > vswitch;
 
         private Network(Builder builder) {
@@ -184,10 +183,10 @@ public class CreateJobRequest extends Request {
 
     }
     public static class DeploymentPolicy extends TeaModel {
-        @NameInMap("AllocationSpec")
+        @com.aliyun.core.annotation.NameInMap("AllocationSpec")
         private String allocationSpec;
 
-        @NameInMap("Network")
+        @com.aliyun.core.annotation.NameInMap("Network")
         private Network network;
 
         private DeploymentPolicy(Builder builder) {
@@ -245,13 +244,13 @@ public class CreateJobRequest extends Request {
 
     }
     public static class ArraySpec extends TeaModel {
-        @NameInMap("IndexEnd")
+        @com.aliyun.core.annotation.NameInMap("IndexEnd")
         private Integer indexEnd;
 
-        @NameInMap("IndexStart")
+        @com.aliyun.core.annotation.NameInMap("IndexStart")
         private Integer indexStart;
 
-        @NameInMap("IndexStep")
+        @com.aliyun.core.annotation.NameInMap("IndexStep")
         private Integer indexStep;
 
         private ArraySpec(Builder builder) {
@@ -326,10 +325,10 @@ public class CreateJobRequest extends Request {
 
     }
     public static class ExecutorPolicy extends TeaModel {
-        @NameInMap("ArraySpec")
+        @com.aliyun.core.annotation.NameInMap("ArraySpec")
         private ArraySpec arraySpec;
 
-        @NameInMap("MaxCount")
+        @com.aliyun.core.annotation.NameInMap("MaxCount")
         private Integer maxCount;
 
         private ExecutorPolicy(Builder builder) {
@@ -387,10 +386,10 @@ public class CreateJobRequest extends Request {
 
     }
     public static class Disks extends TeaModel {
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Disks(Builder builder) {
@@ -448,13 +447,13 @@ public class CreateJobRequest extends Request {
 
     }
     public static class Resource extends TeaModel {
-        @NameInMap("Cores")
+        @com.aliyun.core.annotation.NameInMap("Cores")
         private Float cores;
 
-        @NameInMap("Disks")
+        @com.aliyun.core.annotation.NameInMap("Disks")
         private java.util.List < Disks> disks;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Float memory;
 
         private Resource(Builder builder) {
@@ -529,10 +528,10 @@ public class CreateJobRequest extends Request {
 
     }
     public static class EnvironmentVars extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private EnvironmentVars(Builder builder) {
@@ -590,17 +589,17 @@ public class CreateJobRequest extends Request {
 
     }
     public static class Container extends TeaModel {
-        @NameInMap("Command")
+        @com.aliyun.core.annotation.NameInMap("Command")
         private java.util.List < String > command;
 
-        @NameInMap("EnvironmentVars")
+        @com.aliyun.core.annotation.NameInMap("EnvironmentVars")
         private java.util.List < EnvironmentVars> environmentVars;
 
-        @NameInMap("Image")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Image")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String image;
 
-        @NameInMap("WorkingDir")
+        @com.aliyun.core.annotation.NameInMap("WorkingDir")
         private String workingDir;
 
         private Container(Builder builder) {
@@ -692,14 +691,14 @@ public class CreateJobRequest extends Request {
 
     }
     public static class Vm extends TeaModel {
-        @NameInMap("Image")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Image")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String image;
 
-        @NameInMap("PrologScript")
+        @com.aliyun.core.annotation.NameInMap("PrologScript")
         private String prologScript;
 
-        @NameInMap("Script")
+        @com.aliyun.core.annotation.NameInMap("Script")
         private String script;
 
         private Vm(Builder builder) {
@@ -774,10 +773,10 @@ public class CreateJobRequest extends Request {
 
     }
     public static class TaskExecutor extends TeaModel {
-        @NameInMap("Container")
+        @com.aliyun.core.annotation.NameInMap("Container")
         private Container container;
 
-        @NameInMap("VM")
+        @com.aliyun.core.annotation.NameInMap("VM")
         private Vm vm;
 
         private TaskExecutor(Builder builder) {
@@ -835,13 +834,13 @@ public class CreateJobRequest extends Request {
 
     }
     public static class VolumeMount extends TeaModel {
-        @NameInMap("MountOptions")
+        @com.aliyun.core.annotation.NameInMap("MountOptions")
         private String mountOptions;
 
-        @NameInMap("MountPath")
+        @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
 
-        @NameInMap("VolumeDriver")
+        @com.aliyun.core.annotation.NameInMap("VolumeDriver")
         private String volumeDriver;
 
         private VolumeMount(Builder builder) {
@@ -916,14 +915,14 @@ public class CreateJobRequest extends Request {
 
     }
     public static class TaskSpec extends TeaModel {
-        @NameInMap("Resource")
+        @com.aliyun.core.annotation.NameInMap("Resource")
         private Resource resource;
 
-        @NameInMap("TaskExecutor")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TaskExecutor")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List < TaskExecutor> taskExecutor;
 
-        @NameInMap("VolumeMount")
+        @com.aliyun.core.annotation.NameInMap("VolumeMount")
         private java.util.List < VolumeMount> volumeMount;
 
         private TaskSpec(Builder builder) {
@@ -998,16 +997,16 @@ public class CreateJobRequest extends Request {
 
     }
     public static class Tasks extends TeaModel {
-        @NameInMap("ExecutorPolicy")
+        @com.aliyun.core.annotation.NameInMap("ExecutorPolicy")
         private ExecutorPolicy executorPolicy;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
-        @NameInMap("TaskSpec")
+        @com.aliyun.core.annotation.NameInMap("TaskSpec")
         private TaskSpec taskSpec;
 
-        @NameInMap("TaskSustainable")
+        @com.aliyun.core.annotation.NameInMap("TaskSustainable")
         private Boolean taskSustainable;
 
         private Tasks(Builder builder) {

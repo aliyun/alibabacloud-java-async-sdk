@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20230701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,50 +11,50 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueueTemplate</p>
  */
 public class QueueTemplate extends TeaModel {
-    @NameInMap("AllocationStrategy")
+    @com.aliyun.core.annotation.NameInMap("AllocationStrategy")
     private String allocationStrategy;
 
-    @NameInMap("ComputeNodes")
+    @com.aliyun.core.annotation.NameInMap("ComputeNodes")
     private java.util.List < NodeTemplate > computeNodes;
 
-    @NameInMap("EnableScaleIn")
+    @com.aliyun.core.annotation.NameInMap("EnableScaleIn")
     private Boolean enableScaleIn;
 
-    @NameInMap("EnableScaleOut")
+    @com.aliyun.core.annotation.NameInMap("EnableScaleOut")
     private Boolean enableScaleOut;
 
-    @NameInMap("HostnamePrefix")
+    @com.aliyun.core.annotation.NameInMap("HostnamePrefix")
     private String hostnamePrefix;
 
-    @NameInMap("HostnameSuffix")
+    @com.aliyun.core.annotation.NameInMap("HostnameSuffix")
     private String hostnameSuffix;
 
-    @NameInMap("InitialCount")
+    @com.aliyun.core.annotation.NameInMap("InitialCount")
     private Integer initialCount;
 
-    @NameInMap("InterConnect")
+    @com.aliyun.core.annotation.NameInMap("InterConnect")
     private String interConnect;
 
-    @NameInMap("KeepAliveNodes")
+    @com.aliyun.core.annotation.NameInMap("KeepAliveNodes")
     private java.util.List < String > keepAliveNodes;
 
-    @NameInMap("MaxCount")
+    @com.aliyun.core.annotation.NameInMap("MaxCount")
     private Integer maxCount;
 
-    @NameInMap("MaxCountPerCycle")
+    @com.aliyun.core.annotation.NameInMap("MaxCountPerCycle")
     private Long maxCountPerCycle;
 
-    @NameInMap("MinCount")
+    @com.aliyun.core.annotation.NameInMap("MinCount")
     private Integer minCount;
 
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @NameInMap("RamRole")
+    @com.aliyun.core.annotation.NameInMap("RamRole")
     private String ramRole;
 
-    @NameInMap("VSwitchIds")
+    @com.aliyun.core.annotation.NameInMap("VSwitchIds")
     private java.util.List < String > vSwitchIds;
 
     private QueueTemplate(Builder builder) {

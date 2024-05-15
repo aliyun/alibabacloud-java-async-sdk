@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20230701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddImageRequest</p>
  */
 public class AddImageRequest extends Request {
-    @Query
-    @NameInMap("ContainerImageSpec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerImageSpec")
     private ContainerImageSpec containerImageSpec;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageVersion")
+    private String imageVersion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("VMImageSpec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VMImageSpec")
     private VMImageSpec VMImageSpec;
-
-    @Query
-    @NameInMap("Version")
-    private String version;
 
     private AddImageRequest(Builder builder) {
         super(builder);
         this.containerImageSpec = builder.containerImageSpec;
         this.description = builder.description;
+        this.imageVersion = builder.imageVersion;
         this.name = builder.name;
         this.VMImageSpec = builder.VMImageSpec;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -70,6 +69,13 @@ public class AddImageRequest extends Request {
     }
 
     /**
+     * @return imageVersion
+     */
+    public String getImageVersion() {
+        return this.imageVersion;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -83,19 +89,12 @@ public class AddImageRequest extends Request {
         return this.VMImageSpec;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<AddImageRequest, Builder> {
         private ContainerImageSpec containerImageSpec; 
         private String description; 
+        private String imageVersion; 
         private String name; 
         private VMImageSpec VMImageSpec; 
-        private String version; 
 
         private Builder() {
             super();
@@ -105,9 +104,9 @@ public class AddImageRequest extends Request {
             super(request);
             this.containerImageSpec = request.containerImageSpec;
             this.description = request.description;
+            this.imageVersion = request.imageVersion;
             this.name = request.name;
             this.VMImageSpec = request.VMImageSpec;
-            this.version = request.version;
         } 
 
         /**
@@ -130,6 +129,15 @@ public class AddImageRequest extends Request {
         }
 
         /**
+         * ImageVersion.
+         */
+        public Builder imageVersion(String imageVersion) {
+            this.putQueryParameter("ImageVersion", imageVersion);
+            this.imageVersion = imageVersion;
+            return this;
+        }
+
+        /**
          * Name.
          */
         public Builder name(String name) {
@@ -148,15 +156,6 @@ public class AddImageRequest extends Request {
             return this;
         }
 
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
-            return this;
-        }
-
         @Override
         public AddImageRequest build() {
             return new AddImageRequest(this);
@@ -165,13 +164,13 @@ public class AddImageRequest extends Request {
     } 
 
     public static class RegistryCredential extends TeaModel {
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
 
-        @NameInMap("Server")
+        @com.aliyun.core.annotation.NameInMap("Server")
         private String server;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private RegistryCredential(Builder builder) {
@@ -246,19 +245,19 @@ public class AddImageRequest extends Request {
 
     }
     public static class ContainerImageSpec extends TeaModel {
-        @NameInMap("IsACREnterprise")
+        @com.aliyun.core.annotation.NameInMap("IsACREnterprise")
         private Boolean isACREnterprise;
 
-        @NameInMap("IsACRRegistry")
+        @com.aliyun.core.annotation.NameInMap("IsACRRegistry")
         private Boolean isACRRegistry;
 
-        @NameInMap("RegistryCredential")
+        @com.aliyun.core.annotation.NameInMap("RegistryCredential")
         private RegistryCredential registryCredential;
 
-        @NameInMap("RegistryCriId")
+        @com.aliyun.core.annotation.NameInMap("RegistryCriId")
         private String registryCriId;
 
-        @NameInMap("RegistryUrl")
+        @com.aliyun.core.annotation.NameInMap("RegistryUrl")
         private String registryUrl;
 
         private ContainerImageSpec(Builder builder) {
@@ -367,7 +366,7 @@ public class AddImageRequest extends Request {
 
     }
     public static class VMImageSpec extends TeaModel {
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
         private VMImageSpec(Builder builder) {

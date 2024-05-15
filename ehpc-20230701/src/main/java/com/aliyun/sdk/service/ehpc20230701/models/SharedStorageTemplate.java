@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20230701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SharedStorageTemplate</p>
  */
 public class SharedStorageTemplate extends TeaModel {
-    @NameInMap("FileSystemId")
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
     private String fileSystemId;
 
-    @NameInMap("MountDirectory")
+    @com.aliyun.core.annotation.NameInMap("MountDirectory")
     private String mountDirectory;
 
-    @NameInMap("MountOptions")
+    @com.aliyun.core.annotation.NameInMap("MountOptions")
     private String mountOptions;
 
-    @NameInMap("MountTargetDomain")
+    @com.aliyun.core.annotation.NameInMap("MountTargetDomain")
     private String mountTargetDomain;
 
-    @NameInMap("NASDirectory")
+    @com.aliyun.core.annotation.NameInMap("NASDirectory")
     private String NASDirectory;
 
-    @NameInMap("ProtocolType")
+    @com.aliyun.core.annotation.NameInMap("ProtocolType")
     private String protocolType;
 
     private SharedStorageTemplate(Builder builder) {

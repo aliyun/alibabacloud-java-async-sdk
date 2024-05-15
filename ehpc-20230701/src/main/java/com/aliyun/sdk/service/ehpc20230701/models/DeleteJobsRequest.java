@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20230701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteJobsRequest</p>
  */
 public class DeleteJobsRequest extends Request {
-    @Query
-    @NameInMap("ExecutorIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExecutorIds")
     private java.util.List < String > executorIds;
 
-    @Query
-    @NameInMap("JobSpec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobSpec")
     private java.util.List < JobSpec> jobSpec;
 
     private DeleteJobsRequest(Builder builder) {
@@ -95,10 +94,10 @@ public class DeleteJobsRequest extends Request {
     } 
 
     public static class TaskSpec extends TeaModel {
-        @NameInMap("ArrayIndex")
+        @com.aliyun.core.annotation.NameInMap("ArrayIndex")
         private java.util.List < Integer > arrayIndex;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
         private TaskSpec(Builder builder) {
@@ -156,10 +155,10 @@ public class DeleteJobsRequest extends Request {
 
     }
     public static class JobSpec extends TeaModel {
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("TaskSpec")
+        @com.aliyun.core.annotation.NameInMap("TaskSpec")
         private java.util.List < TaskSpec> taskSpec;
 
         private JobSpec(Builder builder) {

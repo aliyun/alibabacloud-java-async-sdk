@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20230701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetJobResponseBody</p>
  */
 public class GetJobResponseBody extends TeaModel {
-    @NameInMap("JobInfo")
+    @com.aliyun.core.annotation.NameInMap("JobInfo")
     private JobInfo jobInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetJobResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class GetJobResponseBody extends TeaModel {
     } 
 
     public static class Network extends TeaModel {
-        @NameInMap("Vswitch")
+        @com.aliyun.core.annotation.NameInMap("Vswitch")
         private java.util.List < String > vswitch;
 
         private Network(Builder builder) {
@@ -113,10 +112,10 @@ public class GetJobResponseBody extends TeaModel {
 
     }
     public static class DeploymentPolicy extends TeaModel {
-        @NameInMap("AllocationSpec")
+        @com.aliyun.core.annotation.NameInMap("AllocationSpec")
         private String allocationSpec;
 
-        @NameInMap("Network")
+        @com.aliyun.core.annotation.NameInMap("Network")
         private Network network;
 
         private DeploymentPolicy(Builder builder) {
@@ -174,13 +173,13 @@ public class GetJobResponseBody extends TeaModel {
 
     }
     public static class ArraySpec extends TeaModel {
-        @NameInMap("IndexEnd")
+        @com.aliyun.core.annotation.NameInMap("IndexEnd")
         private Integer indexEnd;
 
-        @NameInMap("IndexStart")
+        @com.aliyun.core.annotation.NameInMap("IndexStart")
         private Integer indexStart;
 
-        @NameInMap("IndexStep")
+        @com.aliyun.core.annotation.NameInMap("IndexStep")
         private Integer indexStep;
 
         private ArraySpec(Builder builder) {
@@ -255,10 +254,10 @@ public class GetJobResponseBody extends TeaModel {
 
     }
     public static class ExecutorPolicy extends TeaModel {
-        @NameInMap("ArraySpec")
+        @com.aliyun.core.annotation.NameInMap("ArraySpec")
         private ArraySpec arraySpec;
 
-        @NameInMap("MaxCount")
+        @com.aliyun.core.annotation.NameInMap("MaxCount")
         private Integer maxCount;
 
         private ExecutorPolicy(Builder builder) {
@@ -316,22 +315,22 @@ public class GetJobResponseBody extends TeaModel {
 
     }
     public static class ExecutorStatus extends TeaModel {
-        @NameInMap("ArrayId")
+        @com.aliyun.core.annotation.NameInMap("ArrayId")
         private Integer arrayId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusReason")
+        @com.aliyun.core.annotation.NameInMap("StatusReason")
         private String statusReason;
 
         private ExecutorStatus(Builder builder) {
@@ -457,10 +456,10 @@ public class GetJobResponseBody extends TeaModel {
 
     }
     public static class Disks extends TeaModel {
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Disks(Builder builder) {
@@ -518,13 +517,13 @@ public class GetJobResponseBody extends TeaModel {
 
     }
     public static class Resource extends TeaModel {
-        @NameInMap("Cores")
+        @com.aliyun.core.annotation.NameInMap("Cores")
         private Float cores;
 
-        @NameInMap("Disks")
+        @com.aliyun.core.annotation.NameInMap("Disks")
         private java.util.List < Disks> disks;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Integer memory;
 
         private Resource(Builder builder) {
@@ -599,13 +598,13 @@ public class GetJobResponseBody extends TeaModel {
 
     }
     public static class Vm extends TeaModel {
-        @NameInMap("Image")
+        @com.aliyun.core.annotation.NameInMap("Image")
         private String image;
 
-        @NameInMap("PrologScript")
+        @com.aliyun.core.annotation.NameInMap("PrologScript")
         private String prologScript;
 
-        @NameInMap("Script")
+        @com.aliyun.core.annotation.NameInMap("Script")
         private String script;
 
         private Vm(Builder builder) {
@@ -680,7 +679,7 @@ public class GetJobResponseBody extends TeaModel {
 
     }
     public static class TaskExecutor extends TeaModel {
-        @NameInMap("VM")
+        @com.aliyun.core.annotation.NameInMap("VM")
         private Vm vm;
 
         private TaskExecutor(Builder builder) {
@@ -721,10 +720,10 @@ public class GetJobResponseBody extends TeaModel {
 
     }
     public static class TaskSpec extends TeaModel {
-        @NameInMap("Resource")
+        @com.aliyun.core.annotation.NameInMap("Resource")
         private Resource resource;
 
-        @NameInMap("TaskExecutor")
+        @com.aliyun.core.annotation.NameInMap("TaskExecutor")
         private java.util.List < TaskExecutor> taskExecutor;
 
         private TaskSpec(Builder builder) {
@@ -782,19 +781,19 @@ public class GetJobResponseBody extends TeaModel {
 
     }
     public static class Tasks extends TeaModel {
-        @NameInMap("ExecutorPolicy")
+        @com.aliyun.core.annotation.NameInMap("ExecutorPolicy")
         private ExecutorPolicy executorPolicy;
 
-        @NameInMap("ExecutorStatus")
+        @com.aliyun.core.annotation.NameInMap("ExecutorStatus")
         private java.util.List < ExecutorStatus> executorStatus;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
-        @NameInMap("TaskSpec")
+        @com.aliyun.core.annotation.NameInMap("TaskSpec")
         private TaskSpec taskSpec;
 
-        @NameInMap("TaskSustainable")
+        @com.aliyun.core.annotation.NameInMap("TaskSustainable")
         private Boolean taskSustainable;
 
         private Tasks(Builder builder) {
@@ -903,31 +902,31 @@ public class GetJobResponseBody extends TeaModel {
 
     }
     public static class JobInfo extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DeploymentPolicy")
+        @com.aliyun.core.annotation.NameInMap("DeploymentPolicy")
         private DeploymentPolicy deploymentPolicy;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("JobDescription")
+        @com.aliyun.core.annotation.NameInMap("JobDescription")
         private String jobDescription;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("JobName")
+        @com.aliyun.core.annotation.NameInMap("JobName")
         private String jobName;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tasks")
+        @com.aliyun.core.annotation.NameInMap("Tasks")
         private java.util.List < Tasks> tasks;
 
         private JobInfo(Builder builder) {

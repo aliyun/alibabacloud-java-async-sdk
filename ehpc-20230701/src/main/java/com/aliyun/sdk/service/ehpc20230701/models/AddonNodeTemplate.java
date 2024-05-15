@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20230701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,53 +11,53 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddonNodeTemplate</p>
  */
 public class AddonNodeTemplate extends TeaModel {
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private Boolean autoRenew;
 
-    @NameInMap("AutoRenewPeriod")
+    @com.aliyun.core.annotation.NameInMap("AutoRenewPeriod")
     private Integer autoRenewPeriod;
 
-    @NameInMap("DataDisks")
+    @com.aliyun.core.annotation.NameInMap("DataDisks")
     private java.util.List < DataDisks> dataDisks;
 
-    @NameInMap("Duration")
+    @com.aliyun.core.annotation.NameInMap("Duration")
     private Integer duration;
 
-    @NameInMap("EnableHT")
+    @com.aliyun.core.annotation.NameInMap("EnableHT")
     private Boolean enableHT;
 
-    @NameInMap("ImageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("ImageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String imageId;
 
-    @NameInMap("InstanceChargeType")
+    @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
     private String instanceChargeType;
 
-    @NameInMap("InstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceType;
 
-    @NameInMap("OsName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("OsName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String osName;
 
-    @NameInMap("OsNameEN")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("OsNameEN")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String osNameEN;
 
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
-    @NameInMap("PeriodUnit")
+    @com.aliyun.core.annotation.NameInMap("PeriodUnit")
     private String periodUnit;
 
-    @NameInMap("SpotPriceLimit")
+    @com.aliyun.core.annotation.NameInMap("SpotPriceLimit")
     private Float spotPriceLimit;
 
-    @NameInMap("SpotStrategy")
+    @com.aliyun.core.annotation.NameInMap("SpotStrategy")
     private String spotStrategy;
 
-    @NameInMap("SystemDisk")
+    @com.aliyun.core.annotation.NameInMap("SystemDisk")
     private SystemDisk systemDisk;
 
     private AddonNodeTemplate(Builder builder) {
@@ -336,16 +335,16 @@ public class AddonNodeTemplate extends TeaModel {
     } 
 
     public static class DataDisks extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("DeleteWithInstance")
+        @com.aliyun.core.annotation.NameInMap("DeleteWithInstance")
         private Boolean deleteWithInstance;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
         private DataDisks(Builder builder) {
@@ -437,13 +436,13 @@ public class AddonNodeTemplate extends TeaModel {
 
     }
     public static class SystemDisk extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
         private SystemDisk(Builder builder) {

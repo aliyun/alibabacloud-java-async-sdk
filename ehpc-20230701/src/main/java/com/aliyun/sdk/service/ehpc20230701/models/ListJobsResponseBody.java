@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ehpc20230701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListJobsResponseBody</p>
  */
 public class ListJobsResponseBody extends TeaModel {
-    @NameInMap("JobList")
+    @com.aliyun.core.annotation.NameInMap("JobList")
     private java.util.List < JobList> jobList;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListJobsResponseBody(Builder builder) {
@@ -132,37 +131,37 @@ public class ListJobsResponseBody extends TeaModel {
     } 
 
     public static class JobList extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("ExecutorCount")
+        @com.aliyun.core.annotation.NameInMap("ExecutorCount")
         private Integer executorCount;
 
-        @NameInMap("JobDescription")
+        @com.aliyun.core.annotation.NameInMap("JobDescription")
         private String jobDescription;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("JobName")
+        @com.aliyun.core.annotation.NameInMap("JobName")
         private String jobName;
 
-        @NameInMap("OwnerUid")
+        @com.aliyun.core.annotation.NameInMap("OwnerUid")
         private String ownerUid;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskCount")
+        @com.aliyun.core.annotation.NameInMap("TaskCount")
         private Integer taskCount;
 
-        @NameInMap("TaskSustainable")
+        @com.aliyun.core.annotation.NameInMap("TaskSustainable")
         private Boolean taskSustainable;
 
         private JobList(Builder builder) {
