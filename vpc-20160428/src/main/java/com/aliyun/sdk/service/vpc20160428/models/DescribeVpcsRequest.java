@@ -20,6 +20,10 @@ public class DescribeVpcsRequest extends Request {
     private Boolean dryRun;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableIpv6")
+    private Boolean enableIpv6;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IsDefault")
     private Boolean isDefault;
 
@@ -77,6 +81,7 @@ public class DescribeVpcsRequest extends Request {
         super(builder);
         this.dhcpOptionsSetId = builder.dhcpOptionsSetId;
         this.dryRun = builder.dryRun;
+        this.enableIpv6 = builder.enableIpv6;
         this.isDefault = builder.isDefault;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -117,6 +122,13 @@ public class DescribeVpcsRequest extends Request {
      */
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    /**
+     * @return enableIpv6
+     */
+    public Boolean getEnableIpv6() {
+        return this.enableIpv6;
     }
 
     /**
@@ -213,6 +225,7 @@ public class DescribeVpcsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeVpcsRequest, Builder> {
         private String dhcpOptionsSetId; 
         private Boolean dryRun; 
+        private Boolean enableIpv6; 
         private Boolean isDefault; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -235,6 +248,7 @@ public class DescribeVpcsRequest extends Request {
             super(request);
             this.dhcpOptionsSetId = request.dhcpOptionsSetId;
             this.dryRun = request.dryRun;
+            this.enableIpv6 = request.enableIpv6;
             this.isDefault = request.isDefault;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -269,6 +283,15 @@ public class DescribeVpcsRequest extends Request {
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
             this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * EnableIpv6.
+         */
+        public Builder enableIpv6(Boolean enableIpv6) {
+            this.putQueryParameter("EnableIpv6", enableIpv6);
+            this.enableIpv6 = enableIpv6;
             return this;
         }
 
