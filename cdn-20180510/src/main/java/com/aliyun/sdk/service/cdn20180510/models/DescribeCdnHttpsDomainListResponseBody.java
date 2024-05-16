@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCdnHttpsDomainListResponseBody</p>
  */
 public class DescribeCdnHttpsDomainListResponseBody extends TeaModel {
-    @NameInMap("CertInfos")
+    @com.aliyun.core.annotation.NameInMap("CertInfos")
     private CertInfos certInfos;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeCdnHttpsDomainListResponseBody(Builder builder) {
@@ -92,28 +91,28 @@ public class DescribeCdnHttpsDomainListResponseBody extends TeaModel {
     } 
 
     public static class CertInfo extends TeaModel {
-        @NameInMap("CertCommonName")
+        @com.aliyun.core.annotation.NameInMap("CertCommonName")
         private String certCommonName;
 
-        @NameInMap("CertExpireTime")
+        @com.aliyun.core.annotation.NameInMap("CertExpireTime")
         private String certExpireTime;
 
-        @NameInMap("CertName")
+        @com.aliyun.core.annotation.NameInMap("CertName")
         private String certName;
 
-        @NameInMap("CertStartTime")
+        @com.aliyun.core.annotation.NameInMap("CertStartTime")
         private String certStartTime;
 
-        @NameInMap("CertStatus")
+        @com.aliyun.core.annotation.NameInMap("CertStatus")
         private String certStatus;
 
-        @NameInMap("CertType")
+        @com.aliyun.core.annotation.NameInMap("CertType")
         private String certType;
 
-        @NameInMap("CertUpdateTime")
+        @com.aliyun.core.annotation.NameInMap("CertUpdateTime")
         private String certUpdateTime;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
         private CertInfo(Builder builder) {
@@ -284,7 +283,7 @@ public class DescribeCdnHttpsDomainListResponseBody extends TeaModel {
 
     }
     public static class CertInfos extends TeaModel {
-        @NameInMap("CertInfo")
+        @com.aliyun.core.annotation.NameInMap("CertInfo")
         private java.util.List < CertInfo> certInfo;
 
         private CertInfos(Builder builder) {

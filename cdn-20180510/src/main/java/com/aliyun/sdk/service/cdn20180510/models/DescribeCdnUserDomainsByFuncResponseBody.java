@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCdnUserDomainsByFuncResponseBody</p>
  */
 public class DescribeCdnUserDomainsByFuncResponseBody extends TeaModel {
-    @NameInMap("Domains")
+    @com.aliyun.core.annotation.NameInMap("Domains")
     private Domains domains;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeCdnUserDomainsByFuncResponseBody(Builder builder) {
@@ -132,19 +131,19 @@ public class DescribeCdnUserDomainsByFuncResponseBody extends TeaModel {
     } 
 
     public static class Source extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private String priority;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private String weight;
 
         private Source(Builder builder) {
@@ -253,7 +252,7 @@ public class DescribeCdnUserDomainsByFuncResponseBody extends TeaModel {
 
     }
     public static class Sources extends TeaModel {
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private java.util.List < Source> source;
 
         private Sources(Builder builder) {
@@ -294,34 +293,34 @@ public class DescribeCdnUserDomainsByFuncResponseBody extends TeaModel {
 
     }
     public static class PageData extends TeaModel {
-        @NameInMap("CdnType")
+        @com.aliyun.core.annotation.NameInMap("CdnType")
         private String cdnType;
 
-        @NameInMap("Cname")
+        @com.aliyun.core.annotation.NameInMap("Cname")
         private String cname;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("DomainStatus")
+        @com.aliyun.core.annotation.NameInMap("DomainStatus")
         private String domainStatus;
 
-        @NameInMap("GmtCreated")
+        @com.aliyun.core.annotation.NameInMap("GmtCreated")
         private String gmtCreated;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Sources")
+        @com.aliyun.core.annotation.NameInMap("Sources")
         private Sources sources;
 
-        @NameInMap("SslProtocol")
+        @com.aliyun.core.annotation.NameInMap("SslProtocol")
         private String sslProtocol;
 
         private PageData(Builder builder) {
@@ -535,7 +534,7 @@ public class DescribeCdnUserDomainsByFuncResponseBody extends TeaModel {
 
     }
     public static class Domains extends TeaModel {
-        @NameInMap("PageData")
+        @com.aliyun.core.annotation.NameInMap("PageData")
         private java.util.List < PageData> pageData;
 
         private Domains(Builder builder) {

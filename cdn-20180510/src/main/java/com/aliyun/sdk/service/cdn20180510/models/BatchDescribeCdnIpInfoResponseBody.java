@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BatchDescribeCdnIpInfoResponseBody</p>
  */
 public class BatchDescribeCdnIpInfoResponseBody extends TeaModel {
-    @NameInMap("IpInfoList")
+    @com.aliyun.core.annotation.NameInMap("IpInfoList")
     private java.util.List < IpInfoList> ipInfoList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private BatchDescribeCdnIpInfoResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class BatchDescribeCdnIpInfoResponseBody extends TeaModel {
     } 
 
     public static class IpInfoList extends TeaModel {
-        @NameInMap("CdnIp")
+        @com.aliyun.core.annotation.NameInMap("CdnIp")
         private String cdnIp;
 
-        @NameInMap("City")
+        @com.aliyun.core.annotation.NameInMap("City")
         private String city;
 
-        @NameInMap("Country")
+        @com.aliyun.core.annotation.NameInMap("Country")
         private String country;
 
-        @NameInMap("IpAddress")
+        @com.aliyun.core.annotation.NameInMap("IpAddress")
         private String ipAddress;
 
-        @NameInMap("IspName")
+        @com.aliyun.core.annotation.NameInMap("IspName")
         private String ispName;
 
-        @NameInMap("Province")
+        @com.aliyun.core.annotation.NameInMap("Province")
         private String province;
 
         private IpInfoList(Builder builder) {

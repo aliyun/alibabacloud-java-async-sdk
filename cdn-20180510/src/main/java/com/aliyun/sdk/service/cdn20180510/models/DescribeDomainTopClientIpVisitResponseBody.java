@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainTopClientIpVisitResponseBody</p>
  */
 public class DescribeDomainTopClientIpVisitResponseBody extends TeaModel {
-    @NameInMap("ClientIpList")
+    @com.aliyun.core.annotation.NameInMap("ClientIpList")
     private java.util.List < ClientIpList> clientIpList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDomainTopClientIpVisitResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribeDomainTopClientIpVisitResponseBody extends TeaModel {
     } 
 
     public static class ClientIpList extends TeaModel {
-        @NameInMap("Acc")
+        @com.aliyun.core.annotation.NameInMap("Acc")
         private Long acc;
 
-        @NameInMap("ClientIp")
+        @com.aliyun.core.annotation.NameInMap("ClientIp")
         private String clientIp;
 
-        @NameInMap("Rank")
+        @com.aliyun.core.annotation.NameInMap("Rank")
         private Integer rank;
 
-        @NameInMap("Traffic")
+        @com.aliyun.core.annotation.NameInMap("Traffic")
         private Long traffic;
 
         private ClientIpList(Builder builder) {

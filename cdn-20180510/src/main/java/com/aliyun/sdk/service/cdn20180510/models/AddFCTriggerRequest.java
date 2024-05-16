@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,38 +11,38 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddFCTriggerRequest</p>
  */
 public class AddFCTriggerRequest extends Request {
-    @Body
-    @NameInMap("EventMetaName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EventMetaName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String eventMetaName;
 
-    @Body
-    @NameInMap("EventMetaVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EventMetaVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String eventMetaVersion;
 
-    @Body
-    @NameInMap("FunctionARN")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FunctionARN")
     private String functionARN;
 
-    @Body
-    @NameInMap("Notes")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Notes")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String notes;
 
-    @Body
-    @NameInMap("RoleARN")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleARN")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String roleARN;
 
-    @Body
-    @NameInMap("SourceARN")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceARN")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceARN;
 
-    @Query
-    @NameInMap("TriggerARN")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TriggerARN")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String triggerARN;
 
     private AddFCTriggerRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainRealTimeBpsDataResponseBody</p>
  */
 public class DescribeDomainRealTimeBpsDataResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDomainRealTimeBpsDataResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeDomainRealTimeBpsDataResponseBody extends TeaModel {
     } 
 
     public static class BpsModel extends TeaModel {
-        @NameInMap("Bps")
+        @com.aliyun.core.annotation.NameInMap("Bps")
         private Float bps;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private BpsModel(Builder builder) {
@@ -133,7 +132,7 @@ public class DescribeDomainRealTimeBpsDataResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("BpsModel")
+        @com.aliyun.core.annotation.NameInMap("BpsModel")
         private java.util.List < BpsModel> bpsModel;
 
         private Data(Builder builder) {

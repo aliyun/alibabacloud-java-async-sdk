@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCdnUserBillPredictionResponseBody</p>
  */
 public class DescribeCdnUserBillPredictionResponseBody extends TeaModel {
-    @NameInMap("BillPredictionData")
+    @com.aliyun.core.annotation.NameInMap("BillPredictionData")
     private BillPredictionData billPredictionData;
 
-    @NameInMap("BillType")
+    @com.aliyun.core.annotation.NameInMap("BillType")
     private String billType;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeCdnUserBillPredictionResponseBody(Builder builder) {
@@ -147,13 +146,13 @@ public class DescribeCdnUserBillPredictionResponseBody extends TeaModel {
     } 
 
     public static class BillPredictionDataItem extends TeaModel {
-        @NameInMap("Area")
+        @com.aliyun.core.annotation.NameInMap("Area")
         private String area;
 
-        @NameInMap("TimeStp")
+        @com.aliyun.core.annotation.NameInMap("TimeStp")
         private String timeStp;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private BillPredictionDataItem(Builder builder) {
@@ -228,7 +227,7 @@ public class DescribeCdnUserBillPredictionResponseBody extends TeaModel {
 
     }
     public static class BillPredictionData extends TeaModel {
-        @NameInMap("BillPredictionDataItem")
+        @com.aliyun.core.annotation.NameInMap("BillPredictionDataItem")
         private java.util.List < BillPredictionDataItem> billPredictionDataItem;
 
         private BillPredictionData(Builder builder) {

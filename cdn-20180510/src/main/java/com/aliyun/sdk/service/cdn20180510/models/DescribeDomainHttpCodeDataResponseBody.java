@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainHttpCodeDataResponseBody</p>
  */
 public class DescribeDomainHttpCodeDataResponseBody extends TeaModel {
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("HttpCodeData")
+    @com.aliyun.core.annotation.NameInMap("HttpCodeData")
     private HttpCodeData httpCodeData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeDomainHttpCodeDataResponseBody(Builder builder) {
@@ -152,13 +151,13 @@ public class DescribeDomainHttpCodeDataResponseBody extends TeaModel {
     } 
 
     public static class CodeProportionData extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private String count;
 
-        @NameInMap("Proportion")
+        @com.aliyun.core.annotation.NameInMap("Proportion")
         private String proportion;
 
         private CodeProportionData(Builder builder) {
@@ -233,7 +232,7 @@ public class DescribeDomainHttpCodeDataResponseBody extends TeaModel {
 
     }
     public static class Value extends TeaModel {
-        @NameInMap("CodeProportionData")
+        @com.aliyun.core.annotation.NameInMap("CodeProportionData")
         private java.util.List < CodeProportionData> codeProportionData;
 
         private Value(Builder builder) {
@@ -274,10 +273,10 @@ public class DescribeDomainHttpCodeDataResponseBody extends TeaModel {
 
     }
     public static class UsageData extends TeaModel {
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Value value;
 
         private UsageData(Builder builder) {
@@ -335,7 +334,7 @@ public class DescribeDomainHttpCodeDataResponseBody extends TeaModel {
 
     }
     public static class HttpCodeData extends TeaModel {
-        @NameInMap("UsageData")
+        @com.aliyun.core.annotation.NameInMap("UsageData")
         private java.util.List < UsageData> usageData;
 
         private HttpCodeData(Builder builder) {

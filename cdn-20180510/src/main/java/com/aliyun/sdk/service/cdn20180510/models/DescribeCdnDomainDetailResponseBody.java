@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCdnDomainDetailResponseBody</p>
  */
 public class DescribeCdnDomainDetailResponseBody extends TeaModel {
-    @NameInMap("GetDomainDetailModel")
+    @com.aliyun.core.annotation.NameInMap("GetDomainDetailModel")
     private GetDomainDetailModel getDomainDetailModel;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCdnDomainDetailResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
     } 
 
     public static class SourceModel extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private String enabled;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private String priority;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private String weight;
 
         private SourceModel(Builder builder) {
@@ -219,7 +218,7 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
 
     }
     public static class SourceModels extends TeaModel {
-        @NameInMap("SourceModel")
+        @com.aliyun.core.annotation.NameInMap("SourceModel")
         private java.util.List < SourceModel> sourceModel;
 
         private SourceModels(Builder builder) {
@@ -260,40 +259,40 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
 
     }
     public static class GetDomainDetailModel extends TeaModel {
-        @NameInMap("CdnType")
+        @com.aliyun.core.annotation.NameInMap("CdnType")
         private String cdnType;
 
-        @NameInMap("Cname")
+        @com.aliyun.core.annotation.NameInMap("Cname")
         private String cname;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("DomainStatus")
+        @com.aliyun.core.annotation.NameInMap("DomainStatus")
         private String domainStatus;
 
-        @NameInMap("GmtCreated")
+        @com.aliyun.core.annotation.NameInMap("GmtCreated")
         private String gmtCreated;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("HttpsCname")
+        @com.aliyun.core.annotation.NameInMap("HttpsCname")
         private String httpsCname;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Scope")
+        @com.aliyun.core.annotation.NameInMap("Scope")
         private String scope;
 
-        @NameInMap("ServerCertificateStatus")
+        @com.aliyun.core.annotation.NameInMap("ServerCertificateStatus")
         private String serverCertificateStatus;
 
-        @NameInMap("SourceModels")
+        @com.aliyun.core.annotation.NameInMap("SourceModels")
         private SourceModels sourceModels;
 
         private GetDomainDetailModel(Builder builder) {

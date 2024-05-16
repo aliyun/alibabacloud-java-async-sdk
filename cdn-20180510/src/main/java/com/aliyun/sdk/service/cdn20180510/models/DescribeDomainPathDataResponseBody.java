@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainPathDataResponseBody</p>
  */
 public class DescribeDomainPathDataResponseBody extends TeaModel {
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("PathDataPerInterval")
+    @com.aliyun.core.annotation.NameInMap("PathDataPerInterval")
     private PathDataPerInterval pathDataPerInterval;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDomainPathDataResponseBody(Builder builder) {
@@ -192,16 +191,16 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
     } 
 
     public static class UsageData extends TeaModel {
-        @NameInMap("Acc")
+        @com.aliyun.core.annotation.NameInMap("Acc")
         private Integer acc;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
-        @NameInMap("Traffic")
+        @com.aliyun.core.annotation.NameInMap("Traffic")
         private Integer traffic;
 
         private UsageData(Builder builder) {
@@ -293,7 +292,7 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
 
     }
     public static class PathDataPerInterval extends TeaModel {
-        @NameInMap("UsageData")
+        @com.aliyun.core.annotation.NameInMap("UsageData")
         private java.util.List < UsageData> usageData;
 
         private PathDataPerInterval(Builder builder) {

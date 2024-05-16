@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetWaitingRoomConfigRequest</p>
  */
 public class SetWaitingRoomConfigRequest extends Request {
-    @Query
-    @NameInMap("AllowPct")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllowPct")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer allowPct;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("GapTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GapTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer gapTime;
 
-    @Query
-    @NameInMap("MaxTimeWait")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxTimeWait")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer maxTimeWait;
 
-    @Query
-    @NameInMap("WaitUri")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WaitUri")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String waitUri;
 
-    @Query
-    @NameInMap("WaitUrl")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WaitUrl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String waitUrl;
 
     private SetWaitingRoomConfigRequest(Builder builder) {

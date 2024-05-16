@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetCdnDomainStagingConfigResponseBody</p>
  */
 public class SetCdnDomainStagingConfigResponseBody extends TeaModel {
-    @NameInMap("DomainConfigList")
+    @com.aliyun.core.annotation.NameInMap("DomainConfigList")
     private java.util.List < DomainConfigList> domainConfigList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SetCdnDomainStagingConfigResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class SetCdnDomainStagingConfigResponseBody extends TeaModel {
     } 
 
     public static class DomainConfigList extends TeaModel {
-        @NameInMap("ConfigId")
+        @com.aliyun.core.annotation.NameInMap("ConfigId")
         private Long configId;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("FunctionName")
+        @com.aliyun.core.annotation.NameInMap("FunctionName")
         private String functionName;
 
         private DomainConfigList(Builder builder) {

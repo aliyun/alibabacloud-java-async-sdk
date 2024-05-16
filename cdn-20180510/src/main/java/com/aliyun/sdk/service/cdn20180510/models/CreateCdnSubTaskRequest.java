@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCdnSubTaskRequest</p>
  */
 public class CreateCdnSubTaskRequest extends Request {
-    @Body
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @Body
-    @NameInMap("ReportIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ReportIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String reportIds;
 
     private CreateCdnSubTaskRequest(Builder builder) {

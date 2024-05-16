@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainBpsDataByTimeStampResponseBody</p>
  */
 public class DescribeDomainBpsDataByTimeStampResponseBody extends TeaModel {
-    @NameInMap("BpsDataList")
+    @com.aliyun.core.annotation.NameInMap("BpsDataList")
     private BpsDataList bpsDataList;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TimeStamp")
+    @com.aliyun.core.annotation.NameInMap("TimeStamp")
     private String timeStamp;
 
     private DescribeDomainBpsDataByTimeStampResponseBody(Builder builder) {
@@ -112,16 +111,16 @@ public class DescribeDomainBpsDataByTimeStampResponseBody extends TeaModel {
     } 
 
     public static class BpsDataModel extends TeaModel {
-        @NameInMap("Bps")
+        @com.aliyun.core.annotation.NameInMap("Bps")
         private Long bps;
 
-        @NameInMap("IspName")
+        @com.aliyun.core.annotation.NameInMap("IspName")
         private String ispName;
 
-        @NameInMap("LocationName")
+        @com.aliyun.core.annotation.NameInMap("LocationName")
         private String locationName;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private BpsDataModel(Builder builder) {
@@ -213,7 +212,7 @@ public class DescribeDomainBpsDataByTimeStampResponseBody extends TeaModel {
 
     }
     public static class BpsDataList extends TeaModel {
-        @NameInMap("BpsDataModel")
+        @com.aliyun.core.annotation.NameInMap("BpsDataModel")
         private java.util.List < BpsDataModel> bpsDataModel;
 
         private BpsDataList(Builder builder) {

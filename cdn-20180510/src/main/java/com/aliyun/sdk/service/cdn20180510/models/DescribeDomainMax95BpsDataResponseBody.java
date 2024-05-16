@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainMax95BpsDataResponseBody</p>
  */
 public class DescribeDomainMax95BpsDataResponseBody extends TeaModel {
-    @NameInMap("DetailData")
+    @com.aliyun.core.annotation.NameInMap("DetailData")
     private DetailData detailData;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("DomesticMax95Bps")
+    @com.aliyun.core.annotation.NameInMap("DomesticMax95Bps")
     private String domesticMax95Bps;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("Max95Bps")
+    @com.aliyun.core.annotation.NameInMap("Max95Bps")
     private String max95Bps;
 
-    @NameInMap("OverseasMax95Bps")
+    @com.aliyun.core.annotation.NameInMap("OverseasMax95Bps")
     private String overseasMax95Bps;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeDomainMax95BpsDataResponseBody(Builder builder) {
@@ -192,16 +191,16 @@ public class DescribeDomainMax95BpsDataResponseBody extends TeaModel {
     } 
 
     public static class Max95Detail extends TeaModel {
-        @NameInMap("Area")
+        @com.aliyun.core.annotation.NameInMap("Area")
         private String area;
 
-        @NameInMap("Max95Bps")
+        @com.aliyun.core.annotation.NameInMap("Max95Bps")
         private Float max95Bps;
 
-        @NameInMap("Max95BpsPeakTime")
+        @com.aliyun.core.annotation.NameInMap("Max95BpsPeakTime")
         private String max95BpsPeakTime;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private Max95Detail(Builder builder) {
@@ -293,7 +292,7 @@ public class DescribeDomainMax95BpsDataResponseBody extends TeaModel {
 
     }
     public static class DetailData extends TeaModel {
-        @NameInMap("Max95Detail")
+        @com.aliyun.core.annotation.NameInMap("Max95Detail")
         private java.util.List < Max95Detail> max95Detail;
 
         private DetailData(Builder builder) {

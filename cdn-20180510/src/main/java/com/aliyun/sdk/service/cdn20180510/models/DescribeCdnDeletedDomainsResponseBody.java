@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCdnDeletedDomainsResponseBody</p>
  */
 public class DescribeCdnDeletedDomainsResponseBody extends TeaModel {
-    @NameInMap("Domains")
+    @com.aliyun.core.annotation.NameInMap("Domains")
     private Domains domains;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeCdnDeletedDomainsResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeCdnDeletedDomainsResponseBody extends TeaModel {
     } 
 
     public static class PageData extends TeaModel {
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
         private PageData(Builder builder) {
@@ -193,7 +192,7 @@ public class DescribeCdnDeletedDomainsResponseBody extends TeaModel {
 
     }
     public static class Domains extends TeaModel {
-        @NameInMap("PageData")
+        @com.aliyun.core.annotation.NameInMap("PageData")
         private java.util.List < PageData> pageData;
 
         private Domains(Builder builder) {

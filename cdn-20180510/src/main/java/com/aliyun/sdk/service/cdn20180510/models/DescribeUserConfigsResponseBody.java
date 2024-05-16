@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUserConfigsResponseBody</p>
  */
 public class DescribeUserConfigsResponseBody extends TeaModel {
-    @NameInMap("Configs")
+    @com.aliyun.core.annotation.NameInMap("Configs")
     private Configs configs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeUserConfigsResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeUserConfigsResponseBody extends TeaModel {
     } 
 
     public static class OssLogConfig extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private String enable;
 
-        @NameInMap("Prefix")
+        @com.aliyun.core.annotation.NameInMap("Prefix")
         private String prefix;
 
         private OssLogConfig(Builder builder) {
@@ -153,7 +152,7 @@ public class DescribeUserConfigsResponseBody extends TeaModel {
 
     }
     public static class WafConfig extends TeaModel {
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private String enable;
 
         private WafConfig(Builder builder) {
@@ -194,10 +193,10 @@ public class DescribeUserConfigsResponseBody extends TeaModel {
 
     }
     public static class Configs extends TeaModel {
-        @NameInMap("OssLogConfig")
+        @com.aliyun.core.annotation.NameInMap("OssLogConfig")
         private OssLogConfig ossLogConfig;
 
-        @NameInMap("WafConfig")
+        @com.aliyun.core.annotation.NameInMap("WafConfig")
         private WafConfig wafConfig;
 
         private Configs(Builder builder) {

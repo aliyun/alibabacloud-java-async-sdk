@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCdnCertificateSigningRequestRequest</p>
  */
 public class CreateCdnCertificateSigningRequestRequest extends Request {
-    @Query
-    @NameInMap("City")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("City")
     private String city;
 
-    @Query
-    @NameInMap("CommonName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommonName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String commonName;
 
-    @Query
-    @NameInMap("Country")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Country")
     private String country;
 
-    @Query
-    @NameInMap("Email")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Email")
     private String email;
 
-    @Query
-    @NameInMap("Organization")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Organization")
     private String organization;
 
-    @Query
-    @NameInMap("OrganizationUnit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrganizationUnit")
     private String organizationUnit;
 
-    @Query
-    @NameInMap("SANs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SANs")
     private String SANs;
 
-    @Query
-    @NameInMap("State")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
     private CreateCdnCertificateSigningRequestRequest(Builder builder) {

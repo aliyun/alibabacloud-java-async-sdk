@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUserCustomLogConfigResponseBody</p>
  */
 public class ListUserCustomLogConfigResponseBody extends TeaModel {
-    @NameInMap("ConfigIds")
+    @com.aliyun.core.annotation.NameInMap("ConfigIds")
     private ConfigIds configIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListUserCustomLogConfigResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class ListUserCustomLogConfigResponseBody extends TeaModel {
     } 
 
     public static class ConfigIds extends TeaModel {
-        @NameInMap("ConfigId")
+        @com.aliyun.core.annotation.NameInMap("ConfigId")
         private java.util.List < String > configId;
 
         private ConfigIds(Builder builder) {

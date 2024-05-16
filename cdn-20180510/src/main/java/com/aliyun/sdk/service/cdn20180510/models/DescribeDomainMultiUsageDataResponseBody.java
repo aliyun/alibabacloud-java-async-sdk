@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainMultiUsageDataResponseBody</p>
  */
 public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RequestPerInterval")
+    @com.aliyun.core.annotation.NameInMap("RequestPerInterval")
     private RequestPerInterval requestPerInterval;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("TrafficPerInterval")
+    @com.aliyun.core.annotation.NameInMap("TrafficPerInterval")
     private TrafficPerInterval trafficPerInterval;
 
     private DescribeDomainMultiUsageDataResponseBody(Builder builder) {
@@ -132,16 +131,16 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
     } 
 
     public static class RequestDataModule extends TeaModel {
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Request")
+        @com.aliyun.core.annotation.NameInMap("Request")
         private Long request;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private RequestDataModule(Builder builder) {
@@ -236,7 +235,7 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
 
     }
     public static class RequestPerInterval extends TeaModel {
-        @NameInMap("RequestDataModule")
+        @com.aliyun.core.annotation.NameInMap("RequestDataModule")
         private java.util.List < RequestDataModule> requestDataModule;
 
         private RequestPerInterval(Builder builder) {
@@ -277,19 +276,19 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
 
     }
     public static class TrafficDataModule extends TeaModel {
-        @NameInMap("Area")
+        @com.aliyun.core.annotation.NameInMap("Area")
         private String area;
 
-        @NameInMap("Bps")
+        @com.aliyun.core.annotation.NameInMap("Bps")
         private Float bps;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private TrafficDataModule(Builder builder) {
@@ -405,7 +404,7 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
 
     }
     public static class TrafficPerInterval extends TeaModel {
-        @NameInMap("TrafficDataModule")
+        @com.aliyun.core.annotation.NameInMap("TrafficDataModule")
         private java.util.List < TrafficDataModule> trafficDataModule;
 
         private TrafficPerInterval(Builder builder) {

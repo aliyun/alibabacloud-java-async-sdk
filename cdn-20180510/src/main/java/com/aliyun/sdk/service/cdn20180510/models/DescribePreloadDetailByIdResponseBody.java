@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePreloadDetailByIdResponseBody</p>
  */
 public class DescribePreloadDetailByIdResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
-    @NameInMap("UrlDetails")
+    @com.aliyun.core.annotation.NameInMap("UrlDetails")
     private java.util.List < UrlDetails> urlDetails;
 
     private DescribePreloadDetailByIdResponseBody(Builder builder) {
@@ -92,13 +91,13 @@ public class DescribePreloadDetailByIdResponseBody extends TeaModel {
     } 
 
     public static class Urls extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private String success;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private Urls(Builder builder) {
@@ -177,28 +176,28 @@ public class DescribePreloadDetailByIdResponseBody extends TeaModel {
 
     }
     public static class UrlDetails extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("Process")
+        @com.aliyun.core.annotation.NameInMap("Process")
         private String process;
 
-        @NameInMap("RetCode")
+        @com.aliyun.core.annotation.NameInMap("RetCode")
         private String retCode;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("Urls")
+        @com.aliyun.core.annotation.NameInMap("Urls")
         private java.util.List < Urls> urls;
 
         private UrlDetails(Builder builder) {

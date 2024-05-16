@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCdnUserBillHistoryResponseBody</p>
  */
 public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
-    @NameInMap("BillHistoryData")
+    @com.aliyun.core.annotation.NameInMap("BillHistoryData")
     private BillHistoryData billHistoryData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCdnUserBillHistoryResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
     } 
 
     public static class BillingDataItem extends TeaModel {
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Float bandwidth;
 
-        @NameInMap("CdnRegion")
+        @com.aliyun.core.annotation.NameInMap("CdnRegion")
         private String cdnRegion;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Float count;
 
-        @NameInMap("Flow")
+        @com.aliyun.core.annotation.NameInMap("Flow")
         private Float flow;
 
         private BillingDataItem(Builder builder) {
@@ -209,7 +208,7 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
 
     }
     public static class BillingData extends TeaModel {
-        @NameInMap("BillingDataItem")
+        @com.aliyun.core.annotation.NameInMap("BillingDataItem")
         private java.util.List < BillingDataItem> billingDataItem;
 
         private BillingData(Builder builder) {
@@ -250,16 +249,16 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
 
     }
     public static class BillHistoryDataItem extends TeaModel {
-        @NameInMap("BillTime")
+        @com.aliyun.core.annotation.NameInMap("BillTime")
         private String billTime;
 
-        @NameInMap("BillType")
+        @com.aliyun.core.annotation.NameInMap("BillType")
         private String billType;
 
-        @NameInMap("BillingData")
+        @com.aliyun.core.annotation.NameInMap("BillingData")
         private BillingData billingData;
 
-        @NameInMap("Dimension")
+        @com.aliyun.core.annotation.NameInMap("Dimension")
         private String dimension;
 
         private BillHistoryDataItem(Builder builder) {
@@ -351,7 +350,7 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
 
     }
     public static class BillHistoryData extends TeaModel {
-        @NameInMap("BillHistoryDataItem")
+        @com.aliyun.core.annotation.NameInMap("BillHistoryDataItem")
         private java.util.List < BillHistoryDataItem> billHistoryDataItem;
 
         private BillHistoryData(Builder builder) {

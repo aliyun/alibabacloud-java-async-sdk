@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateFCTriggerRequest</p>
  */
 public class UpdateFCTriggerRequest extends Request {
-    @Body
-    @NameInMap("FunctionARN")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FunctionARN")
     private String functionARN;
 
-    @Body
-    @NameInMap("Notes")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Notes")
     private String notes;
 
-    @Body
-    @NameInMap("RoleARN")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleARN")
     private String roleARN;
 
-    @Body
-    @NameInMap("SourceARN")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceARN")
     private String sourceARN;
 
-    @Query
-    @NameInMap("TriggerARN")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TriggerARN")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String triggerARN;
 
     private UpdateFCTriggerRequest(Builder builder) {

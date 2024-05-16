@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainRealTimeReqHitRateDataResponseBody</p>
  */
 public class DescribeDomainRealTimeReqHitRateDataResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDomainRealTimeReqHitRateDataResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeDomainRealTimeReqHitRateDataResponseBody extends TeaModel {
     } 
 
     public static class ReqHitRateDataModel extends TeaModel {
-        @NameInMap("ReqHitRate")
+        @com.aliyun.core.annotation.NameInMap("ReqHitRate")
         private Float reqHitRate;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private ReqHitRateDataModel(Builder builder) {
@@ -133,7 +132,7 @@ public class DescribeDomainRealTimeReqHitRateDataResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("ReqHitRateDataModel")
+        @com.aliyun.core.annotation.NameInMap("ReqHitRateDataModel")
         private java.util.List < ReqHitRateDataModel> reqHitRateDataModel;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRealtimeLogDeliveryInfosResponseBody</p>
  */
 public class ListRealtimeLogDeliveryInfosResponseBody extends TeaModel {
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private Content content;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListRealtimeLogDeliveryInfosResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class ListRealtimeLogDeliveryInfosResponseBody extends TeaModel {
     } 
 
     public static class RealtimeLogDeliveryInfos extends TeaModel {
-        @NameInMap("Logstore")
+        @com.aliyun.core.annotation.NameInMap("Logstore")
         private String logstore;
 
-        @NameInMap("Project")
+        @com.aliyun.core.annotation.NameInMap("Project")
         private String project;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
         private RealtimeLogDeliveryInfos(Builder builder) {
@@ -153,7 +152,7 @@ public class ListRealtimeLogDeliveryInfosResponseBody extends TeaModel {
 
     }
     public static class Content extends TeaModel {
-        @NameInMap("RealtimeLogDeliveryInfos")
+        @com.aliyun.core.annotation.NameInMap("RealtimeLogDeliveryInfos")
         private java.util.List < RealtimeLogDeliveryInfos> realtimeLogDeliveryInfos;
 
         private Content(Builder builder) {

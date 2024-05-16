@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListFCTriggerResponseBody</p>
  */
 public class ListFCTriggerResponseBody extends TeaModel {
-    @NameInMap("FCTriggers")
+    @com.aliyun.core.annotation.NameInMap("FCTriggers")
     private java.util.List < FCTriggers> FCTriggers;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListFCTriggerResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class ListFCTriggerResponseBody extends TeaModel {
     } 
 
     public static class FCTriggers extends TeaModel {
-        @NameInMap("EventMetaName")
+        @com.aliyun.core.annotation.NameInMap("EventMetaName")
         private String eventMetaName;
 
-        @NameInMap("EventMetaVersion")
+        @com.aliyun.core.annotation.NameInMap("EventMetaVersion")
         private String eventMetaVersion;
 
-        @NameInMap("Notes")
+        @com.aliyun.core.annotation.NameInMap("Notes")
         private String notes;
 
-        @NameInMap("RoleARN")
+        @com.aliyun.core.annotation.NameInMap("RoleARN")
         private String roleARN;
 
-        @NameInMap("SourceArn")
+        @com.aliyun.core.annotation.NameInMap("SourceArn")
         private String sourceArn;
 
-        @NameInMap("TriggerARN")
+        @com.aliyun.core.annotation.NameInMap("TriggerARN")
         private String triggerARN;
 
         private FCTriggers(Builder builder) {

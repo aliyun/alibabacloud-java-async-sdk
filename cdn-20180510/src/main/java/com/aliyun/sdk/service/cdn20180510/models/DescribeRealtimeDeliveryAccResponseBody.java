@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRealtimeDeliveryAccResponseBody</p>
  */
 public class DescribeRealtimeDeliveryAccResponseBody extends TeaModel {
-    @NameInMap("ReatTimeDeliveryAccData")
+    @com.aliyun.core.annotation.NameInMap("ReatTimeDeliveryAccData")
     private ReatTimeDeliveryAccData reatTimeDeliveryAccData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeRealtimeDeliveryAccResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeRealtimeDeliveryAccResponseBody extends TeaModel {
     } 
 
     public static class AccData extends TeaModel {
-        @NameInMap("FailedNum")
+        @com.aliyun.core.annotation.NameInMap("FailedNum")
         private Integer failedNum;
 
-        @NameInMap("SuccessNum")
+        @com.aliyun.core.annotation.NameInMap("SuccessNum")
         private Integer successNum;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private AccData(Builder builder) {
@@ -153,7 +152,7 @@ public class DescribeRealtimeDeliveryAccResponseBody extends TeaModel {
 
     }
     public static class ReatTimeDeliveryAccData extends TeaModel {
-        @NameInMap("AccData")
+        @com.aliyun.core.annotation.NameInMap("AccData")
         private java.util.List < AccData> accData;
 
         private ReatTimeDeliveryAccData(Builder builder) {

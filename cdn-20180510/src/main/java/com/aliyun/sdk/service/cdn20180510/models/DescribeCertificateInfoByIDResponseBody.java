@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCertificateInfoByIDResponseBody</p>
  */
 public class DescribeCertificateInfoByIDResponseBody extends TeaModel {
-    @NameInMap("CertInfos")
+    @com.aliyun.core.annotation.NameInMap("CertInfos")
     private CertInfos certInfos;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCertificateInfoByIDResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class DescribeCertificateInfoByIDResponseBody extends TeaModel {
     } 
 
     public static class CertInfo extends TeaModel {
-        @NameInMap("CertExpireTime")
+        @com.aliyun.core.annotation.NameInMap("CertExpireTime")
         private String certExpireTime;
 
-        @NameInMap("CertId")
+        @com.aliyun.core.annotation.NameInMap("CertId")
         private String certId;
 
-        @NameInMap("CertName")
+        @com.aliyun.core.annotation.NameInMap("CertName")
         private String certName;
 
-        @NameInMap("CertType")
+        @com.aliyun.core.annotation.NameInMap("CertType")
         private String certType;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DomainList")
+        @com.aliyun.core.annotation.NameInMap("DomainList")
         private String domainList;
 
-        @NameInMap("HttpsCrt")
+        @com.aliyun.core.annotation.NameInMap("HttpsCrt")
         private String httpsCrt;
 
         private CertInfo(Builder builder) {
@@ -238,7 +237,7 @@ public class DescribeCertificateInfoByIDResponseBody extends TeaModel {
 
     }
     public static class CertInfos extends TeaModel {
-        @NameInMap("CertInfo")
+        @com.aliyun.core.annotation.NameInMap("CertInfo")
         private java.util.List < CertInfo> certInfo;
 
         private CertInfos(Builder builder) {

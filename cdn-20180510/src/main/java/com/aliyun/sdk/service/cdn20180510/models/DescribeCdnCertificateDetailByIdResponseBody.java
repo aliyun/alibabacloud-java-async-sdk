@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCdnCertificateDetailByIdResponseBody</p>
  */
 public class DescribeCdnCertificateDetailByIdResponseBody extends TeaModel {
-    @NameInMap("Cert")
+    @com.aliyun.core.annotation.NameInMap("Cert")
     private String cert;
 
-    @NameInMap("CertId")
+    @com.aliyun.core.annotation.NameInMap("CertId")
     private Long certId;
 
-    @NameInMap("CertName")
+    @com.aliyun.core.annotation.NameInMap("CertName")
     private String certName;
 
-    @NameInMap("Key")
+    @com.aliyun.core.annotation.NameInMap("Key")
     private String key;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCdnCertificateDetailByIdResponseBody(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainRealtimeLogDeliveryResponseBody</p>
  */
 public class DescribeDomainRealtimeLogDeliveryResponseBody extends TeaModel {
-    @NameInMap("Logstore")
+    @com.aliyun.core.annotation.NameInMap("Logstore")
     private String logstore;
 
-    @NameInMap("Project")
+    @com.aliyun.core.annotation.NameInMap("Project")
     private String project;
 
-    @NameInMap("Region")
+    @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeDomainRealtimeLogDeliveryResponseBody(Builder builder) {

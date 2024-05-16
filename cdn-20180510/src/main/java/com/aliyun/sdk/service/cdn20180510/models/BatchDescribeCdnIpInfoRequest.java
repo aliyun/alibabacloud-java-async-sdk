@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BatchDescribeCdnIpInfoRequest</p>
  */
 public class BatchDescribeCdnIpInfoRequest extends Request {
-    @Query
-    @NameInMap("IpAddrList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpAddrList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ipAddrList;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Language")
+    private String language;
 
     private BatchDescribeCdnIpInfoRequest(Builder builder) {
         super(builder);
         this.ipAddrList = builder.ipAddrList;
+        this.language = builder.language;
     }
 
     public static Builder builder() {
@@ -42,8 +46,16 @@ public class BatchDescribeCdnIpInfoRequest extends Request {
         return this.ipAddrList;
     }
 
+    /**
+     * @return language
+     */
+    public String getLanguage() {
+        return this.language;
+    }
+
     public static final class Builder extends Request.Builder<BatchDescribeCdnIpInfoRequest, Builder> {
         private String ipAddrList; 
+        private String language; 
 
         private Builder() {
             super();
@@ -52,6 +64,7 @@ public class BatchDescribeCdnIpInfoRequest extends Request {
         private Builder(BatchDescribeCdnIpInfoRequest request) {
             super(request);
             this.ipAddrList = request.ipAddrList;
+            this.language = request.language;
         } 
 
         /**
@@ -64,6 +77,15 @@ public class BatchDescribeCdnIpInfoRequest extends Request {
         public Builder ipAddrList(String ipAddrList) {
             this.putQueryParameter("IpAddrList", ipAddrList);
             this.ipAddrList = ipAddrList;
+            return this;
+        }
+
+        /**
+         * Language.
+         */
+        public Builder language(String language) {
+            this.putQueryParameter("Language", language);
+            this.language = language;
             return this;
         }
 

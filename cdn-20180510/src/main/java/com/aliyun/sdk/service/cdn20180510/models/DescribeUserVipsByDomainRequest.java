@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUserVipsByDomainRequest</p>
  */
 public class DescribeUserVipsByDomainRequest extends Request {
-    @Query
-    @NameInMap("Available")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Available")
     private String available;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
     private DescribeUserVipsByDomainRequest(Builder builder) {

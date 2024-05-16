@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCdnSMCertificateDetailResponseBody</p>
  */
 public class DescribeCdnSMCertificateDetailResponseBody extends TeaModel {
-    @NameInMap("CertExpireTime")
+    @com.aliyun.core.annotation.NameInMap("CertExpireTime")
     private String certExpireTime;
 
-    @NameInMap("CertIdentifier")
+    @com.aliyun.core.annotation.NameInMap("CertIdentifier")
     private String certIdentifier;
 
-    @NameInMap("CertName")
+    @com.aliyun.core.annotation.NameInMap("CertName")
     private String certName;
 
-    @NameInMap("CertOrg")
+    @com.aliyun.core.annotation.NameInMap("CertOrg")
     private String certOrg;
 
-    @NameInMap("CommonName")
+    @com.aliyun.core.annotation.NameInMap("CommonName")
     private String commonName;
 
-    @NameInMap("EncryptCertificate")
+    @com.aliyun.core.annotation.NameInMap("EncryptCertificate")
     private String encryptCertificate;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Sans")
+    @com.aliyun.core.annotation.NameInMap("Sans")
     private String sans;
 
-    @NameInMap("SignCertificate")
+    @com.aliyun.core.annotation.NameInMap("SignCertificate")
     private String signCertificate;
 
     private DescribeCdnSMCertificateDetailResponseBody(Builder builder) {

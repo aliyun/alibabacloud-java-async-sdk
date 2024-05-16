@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCdnDomainLogsExTtlResponseBody</p>
  */
 public class DescribeCdnDomainLogsExTtlResponseBody extends TeaModel {
-    @NameInMap("DomainLogDetails")
+    @com.aliyun.core.annotation.NameInMap("DomainLogDetails")
     private DomainLogDetails domainLogDetails;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCdnDomainLogsExTtlResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribeCdnDomainLogsExTtlResponseBody extends TeaModel {
     } 
 
     public static class LogInfoDetail extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("LogName")
+        @com.aliyun.core.annotation.NameInMap("LogName")
         private String logName;
 
-        @NameInMap("LogPath")
+        @com.aliyun.core.annotation.NameInMap("LogPath")
         private String logPath;
 
-        @NameInMap("LogSize")
+        @com.aliyun.core.annotation.NameInMap("LogSize")
         private Long logSize;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private LogInfoDetail(Builder builder) {
@@ -193,7 +192,7 @@ public class DescribeCdnDomainLogsExTtlResponseBody extends TeaModel {
 
     }
     public static class LogInfos extends TeaModel {
-        @NameInMap("LogInfoDetail")
+        @com.aliyun.core.annotation.NameInMap("LogInfoDetail")
         private java.util.List < LogInfoDetail> logInfoDetail;
 
         private LogInfos(Builder builder) {
@@ -234,13 +233,13 @@ public class DescribeCdnDomainLogsExTtlResponseBody extends TeaModel {
 
     }
     public static class PageInfos extends TeaModel {
-        @NameInMap("PageIndex")
+        @com.aliyun.core.annotation.NameInMap("PageIndex")
         private Long pageIndex;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Long pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private PageInfos(Builder builder) {
@@ -315,16 +314,16 @@ public class DescribeCdnDomainLogsExTtlResponseBody extends TeaModel {
 
     }
     public static class DomainLogDetail extends TeaModel {
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("LogCount")
+        @com.aliyun.core.annotation.NameInMap("LogCount")
         private Long logCount;
 
-        @NameInMap("LogInfos")
+        @com.aliyun.core.annotation.NameInMap("LogInfos")
         private LogInfos logInfos;
 
-        @NameInMap("PageInfos")
+        @com.aliyun.core.annotation.NameInMap("PageInfos")
         private PageInfos pageInfos;
 
         private DomainLogDetail(Builder builder) {
@@ -416,7 +415,7 @@ public class DescribeCdnDomainLogsExTtlResponseBody extends TeaModel {
 
     }
     public static class DomainLogDetails extends TeaModel {
-        @NameInMap("DomainLogDetail")
+        @com.aliyun.core.annotation.NameInMap("DomainLogDetail")
         private java.util.List < DomainLogDetail> domainLogDetail;
 
         private DomainLogDetails(Builder builder) {

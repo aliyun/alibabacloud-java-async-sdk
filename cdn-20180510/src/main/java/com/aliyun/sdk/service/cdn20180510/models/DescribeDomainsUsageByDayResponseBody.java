@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainsUsageByDayResponseBody</p>
  */
 public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("UsageByDays")
+    @com.aliyun.core.annotation.NameInMap("UsageByDays")
     private UsageByDays usageByDays;
 
-    @NameInMap("UsageTotal")
+    @com.aliyun.core.annotation.NameInMap("UsageTotal")
     private UsageTotal usageTotal;
 
     private DescribeDomainsUsageByDayResponseBody(Builder builder) {
@@ -172,34 +171,34 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
     } 
 
     public static class UsageByDay extends TeaModel {
-        @NameInMap("BytesHitRate")
+        @com.aliyun.core.annotation.NameInMap("BytesHitRate")
         private String bytesHitRate;
 
-        @NameInMap("MaxBps")
+        @com.aliyun.core.annotation.NameInMap("MaxBps")
         private String maxBps;
 
-        @NameInMap("MaxBpsTime")
+        @com.aliyun.core.annotation.NameInMap("MaxBpsTime")
         private String maxBpsTime;
 
-        @NameInMap("MaxSrcBps")
+        @com.aliyun.core.annotation.NameInMap("MaxSrcBps")
         private String maxSrcBps;
 
-        @NameInMap("MaxSrcBpsTime")
+        @com.aliyun.core.annotation.NameInMap("MaxSrcBpsTime")
         private String maxSrcBpsTime;
 
-        @NameInMap("Qps")
+        @com.aliyun.core.annotation.NameInMap("Qps")
         private String qps;
 
-        @NameInMap("RequestHitRate")
+        @com.aliyun.core.annotation.NameInMap("RequestHitRate")
         private String requestHitRate;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("TotalAccess")
+        @com.aliyun.core.annotation.NameInMap("TotalAccess")
         private String totalAccess;
 
-        @NameInMap("TotalTraffic")
+        @com.aliyun.core.annotation.NameInMap("TotalTraffic")
         private String totalTraffic;
 
         private UsageByDay(Builder builder) {
@@ -393,7 +392,7 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
 
     }
     public static class UsageByDays extends TeaModel {
-        @NameInMap("UsageByDay")
+        @com.aliyun.core.annotation.NameInMap("UsageByDay")
         private java.util.List < UsageByDay> usageByDay;
 
         private UsageByDays(Builder builder) {
@@ -434,28 +433,28 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
 
     }
     public static class UsageTotal extends TeaModel {
-        @NameInMap("BytesHitRate")
+        @com.aliyun.core.annotation.NameInMap("BytesHitRate")
         private String bytesHitRate;
 
-        @NameInMap("MaxBps")
+        @com.aliyun.core.annotation.NameInMap("MaxBps")
         private String maxBps;
 
-        @NameInMap("MaxBpsTime")
+        @com.aliyun.core.annotation.NameInMap("MaxBpsTime")
         private String maxBpsTime;
 
-        @NameInMap("MaxSrcBps")
+        @com.aliyun.core.annotation.NameInMap("MaxSrcBps")
         private String maxSrcBps;
 
-        @NameInMap("MaxSrcBpsTime")
+        @com.aliyun.core.annotation.NameInMap("MaxSrcBpsTime")
         private String maxSrcBpsTime;
 
-        @NameInMap("RequestHitRate")
+        @com.aliyun.core.annotation.NameInMap("RequestHitRate")
         private String requestHitRate;
 
-        @NameInMap("TotalAccess")
+        @com.aliyun.core.annotation.NameInMap("TotalAccess")
         private String totalAccess;
 
-        @NameInMap("TotalTraffic")
+        @com.aliyun.core.annotation.NameInMap("TotalTraffic")
         private String totalTraffic;
 
         private UsageTotal(Builder builder) {

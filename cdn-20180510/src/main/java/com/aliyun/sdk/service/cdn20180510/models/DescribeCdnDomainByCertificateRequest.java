@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCdnDomainByCertificateRequest</p>
  */
 public class DescribeCdnDomainByCertificateRequest extends Request {
-    @Query
-    @NameInMap("Exact")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Exact")
     private Boolean exact;
 
-    @Query
-    @NameInMap("SSLPub")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SSLPub")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String SSLPub;
 
-    @Query
-    @NameInMap("SSLStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SSLStatus")
     private Boolean SSLStatus;
 
     private DescribeCdnDomainByCertificateRequest(Builder builder) {

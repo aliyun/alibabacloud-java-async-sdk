@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCdnDeliverTaskRequest</p>
  */
 public class CreateCdnDeliverTaskRequest extends Request {
-    @Body
-    @NameInMap("Deliver")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Deliver")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deliver;
 
-    @Body
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("Reports")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Reports")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String reports;
 
-    @Body
-    @NameInMap("Schedule")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Schedule")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String schedule;
 
     private CreateCdnDeliverTaskRequest(Builder builder) {

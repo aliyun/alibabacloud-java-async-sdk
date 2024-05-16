@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeIpStatusResponseBody</p>
  */
 public class DescribeIpStatusResponseBody extends TeaModel {
-    @NameInMap("IpStatus")
+    @com.aliyun.core.annotation.NameInMap("IpStatus")
     private java.util.List < IpStatus> ipStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeIpStatusResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeIpStatusResponseBody extends TeaModel {
     } 
 
     public static class IpStatus extends TeaModel {
-        @NameInMap("ip")
+        @com.aliyun.core.annotation.NameInMap("ip")
         private String ip;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
         private IpStatus(Builder builder) {

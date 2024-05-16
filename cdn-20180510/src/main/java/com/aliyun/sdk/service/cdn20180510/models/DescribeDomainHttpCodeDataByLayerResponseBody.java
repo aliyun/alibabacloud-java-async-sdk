@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainHttpCodeDataByLayerResponseBody</p>
  */
 public class DescribeDomainHttpCodeDataByLayerResponseBody extends TeaModel {
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("HttpCodeDataInterval")
+    @com.aliyun.core.annotation.NameInMap("HttpCodeDataInterval")
     private HttpCodeDataInterval httpCodeDataInterval;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDomainHttpCodeDataByLayerResponseBody(Builder builder) {
@@ -92,13 +91,13 @@ public class DescribeDomainHttpCodeDataByLayerResponseBody extends TeaModel {
     } 
 
     public static class DataModule extends TeaModel {
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("TotalValue")
+        @com.aliyun.core.annotation.NameInMap("TotalValue")
         private String totalValue;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private DataModule(Builder builder) {
@@ -173,7 +172,7 @@ public class DescribeDomainHttpCodeDataByLayerResponseBody extends TeaModel {
 
     }
     public static class HttpCodeDataInterval extends TeaModel {
-        @NameInMap("DataModule")
+        @com.aliyun.core.annotation.NameInMap("DataModule")
         private java.util.List < DataModule> dataModule;
 
         private HttpCodeDataInterval(Builder builder) {

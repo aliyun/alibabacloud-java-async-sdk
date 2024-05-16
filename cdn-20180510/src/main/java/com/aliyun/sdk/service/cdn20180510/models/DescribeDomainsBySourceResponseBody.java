@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainsBySourceResponseBody</p>
  */
 public class DescribeDomainsBySourceResponseBody extends TeaModel {
-    @NameInMap("DomainsList")
+    @com.aliyun.core.annotation.NameInMap("DomainsList")
     private DomainsList domainsList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Sources")
+    @com.aliyun.core.annotation.NameInMap("Sources")
     private String sources;
 
     private DescribeDomainsBySourceResponseBody(Builder builder) {
@@ -92,22 +91,22 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
     } 
 
     public static class DomainInfo extends TeaModel {
-        @NameInMap("CdnType")
+        @com.aliyun.core.annotation.NameInMap("CdnType")
         private String cdnType;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DomainCname")
+        @com.aliyun.core.annotation.NameInMap("DomainCname")
         private String domainCname;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private DomainInfo(Builder builder) {
@@ -246,7 +245,7 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
 
     }
     public static class DomainInfos extends TeaModel {
-        @NameInMap("domainInfo")
+        @com.aliyun.core.annotation.NameInMap("domainInfo")
         private java.util.List < DomainInfo> domainInfo;
 
         private DomainInfos(Builder builder) {
@@ -287,7 +286,7 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
 
     }
     public static class Domains extends TeaModel {
-        @NameInMap("domainNames")
+        @com.aliyun.core.annotation.NameInMap("domainNames")
         private java.util.List < String > domainNames;
 
         private Domains(Builder builder) {
@@ -328,13 +327,13 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
 
     }
     public static class DomainsData extends TeaModel {
-        @NameInMap("DomainInfos")
+        @com.aliyun.core.annotation.NameInMap("DomainInfos")
         private DomainInfos domainInfos;
 
-        @NameInMap("Domains")
+        @com.aliyun.core.annotation.NameInMap("Domains")
         private Domains domains;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
         private DomainsData(Builder builder) {
@@ -409,7 +408,7 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
 
     }
     public static class DomainsList extends TeaModel {
-        @NameInMap("DomainsData")
+        @com.aliyun.core.annotation.NameInMap("DomainsData")
         private java.util.List < DomainsData> domainsData;
 
         private DomainsList(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCdnServiceResponseBody</p>
  */
 public class DescribeCdnServiceResponseBody extends TeaModel {
-    @NameInMap("ChangingAffectTime")
+    @com.aliyun.core.annotation.NameInMap("ChangingAffectTime")
     private String changingAffectTime;
 
-    @NameInMap("ChangingChargeType")
+    @com.aliyun.core.annotation.NameInMap("ChangingChargeType")
     private String changingChargeType;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("InternetChargeType")
+    @com.aliyun.core.annotation.NameInMap("InternetChargeType")
     private String internetChargeType;
 
-    @NameInMap("OpeningTime")
+    @com.aliyun.core.annotation.NameInMap("OpeningTime")
     private String openingTime;
 
-    @NameInMap("OperationLocks")
+    @com.aliyun.core.annotation.NameInMap("OperationLocks")
     private OperationLocks operationLocks;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCdnServiceResponseBody(Builder builder) {
@@ -180,7 +179,7 @@ public class DescribeCdnServiceResponseBody extends TeaModel {
     } 
 
     public static class LockReason extends TeaModel {
-        @NameInMap("LockReason")
+        @com.aliyun.core.annotation.NameInMap("LockReason")
         private String lockReason;
 
         private LockReason(Builder builder) {
@@ -221,7 +220,7 @@ public class DescribeCdnServiceResponseBody extends TeaModel {
 
     }
     public static class OperationLocks extends TeaModel {
-        @NameInMap("LockReason")
+        @com.aliyun.core.annotation.NameInMap("LockReason")
         private java.util.List < LockReason> lockReason;
 
         private OperationLocks(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCdnUserConfigsRequest</p>
  */
 public class DescribeCdnUserConfigsRequest extends Request {
-    @Query
-    @NameInMap("FunctionName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FunctionName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String functionName;
 
     private DescribeCdnUserConfigsRequest(Builder builder) {

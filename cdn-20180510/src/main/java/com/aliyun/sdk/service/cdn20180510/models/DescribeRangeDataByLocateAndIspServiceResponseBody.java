@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRangeDataByLocateAndIspServiceResponseBody</p>
  */
 public class DescribeRangeDataByLocateAndIspServiceResponseBody extends TeaModel {
-    @NameInMap("JsonResult")
+    @com.aliyun.core.annotation.NameInMap("JsonResult")
     private String jsonResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeRangeDataByLocateAndIspServiceResponseBody(Builder builder) {

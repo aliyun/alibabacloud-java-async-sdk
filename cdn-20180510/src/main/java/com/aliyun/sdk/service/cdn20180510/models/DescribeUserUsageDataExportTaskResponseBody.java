@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUserUsageDataExportTaskResponseBody</p>
  */
 public class DescribeUserUsageDataExportTaskResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UsageDataPerPage")
+    @com.aliyun.core.annotation.NameInMap("UsageDataPerPage")
     private UsageDataPerPage usageDataPerPage;
 
     private DescribeUserUsageDataExportTaskResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeUserUsageDataExportTaskResponseBody extends TeaModel {
     } 
 
     public static class TaskConfig extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private TaskConfig(Builder builder) {
@@ -133,25 +132,25 @@ public class DescribeUserUsageDataExportTaskResponseBody extends TeaModel {
 
     }
     public static class DataItem extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DownloadUrl")
+        @com.aliyun.core.annotation.NameInMap("DownloadUrl")
         private String downloadUrl;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskConfig")
+        @com.aliyun.core.annotation.NameInMap("TaskConfig")
         private TaskConfig taskConfig;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private DataItem(Builder builder) {
@@ -299,7 +298,7 @@ public class DescribeUserUsageDataExportTaskResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("DataItem")
+        @com.aliyun.core.annotation.NameInMap("DataItem")
         private java.util.List < DataItem> dataItem;
 
         private Data(Builder builder) {
@@ -340,16 +339,16 @@ public class DescribeUserUsageDataExportTaskResponseBody extends TeaModel {
 
     }
     public static class UsageDataPerPage extends TeaModel {
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private Data data;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private UsageDataPerPage(Builder builder) {

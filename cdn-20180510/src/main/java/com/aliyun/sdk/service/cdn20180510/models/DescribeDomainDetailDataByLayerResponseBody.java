@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainDetailDataByLayerResponseBody</p>
  */
 public class DescribeDomainDetailDataByLayerResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDomainDetailDataByLayerResponseBody(Builder builder) {
@@ -72,37 +71,37 @@ public class DescribeDomainDetailDataByLayerResponseBody extends TeaModel {
     } 
 
     public static class DataModule extends TeaModel {
-        @NameInMap("Acc")
+        @com.aliyun.core.annotation.NameInMap("Acc")
         private Long acc;
 
-        @NameInMap("Bps")
+        @com.aliyun.core.annotation.NameInMap("Bps")
         private Float bps;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("HttpCode")
+        @com.aliyun.core.annotation.NameInMap("HttpCode")
         private String httpCode;
 
-        @NameInMap("Ipv6Acc")
+        @com.aliyun.core.annotation.NameInMap("Ipv6Acc")
         private Long ipv6Acc;
 
-        @NameInMap("Ipv6Bps")
+        @com.aliyun.core.annotation.NameInMap("Ipv6Bps")
         private Float ipv6Bps;
 
-        @NameInMap("Ipv6Qps")
+        @com.aliyun.core.annotation.NameInMap("Ipv6Qps")
         private Float ipv6Qps;
 
-        @NameInMap("Ipv6Traf")
+        @com.aliyun.core.annotation.NameInMap("Ipv6Traf")
         private Long ipv6Traf;
 
-        @NameInMap("Qps")
+        @com.aliyun.core.annotation.NameInMap("Qps")
         private Float qps;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("Traf")
+        @com.aliyun.core.annotation.NameInMap("Traf")
         private Long traf;
 
         private DataModule(Builder builder) {
@@ -325,7 +324,7 @@ public class DescribeDomainDetailDataByLayerResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("DataModule")
+        @com.aliyun.core.annotation.NameInMap("DataModule")
         private java.util.List < DataModule> dataModule;
 
         private Data(Builder builder) {

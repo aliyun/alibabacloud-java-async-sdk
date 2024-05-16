@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cdn20180510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCustomLogConfigResponseBody</p>
  */
 public class DescribeCustomLogConfigResponseBody extends TeaModel {
-    @NameInMap("Remark")
+    @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Sample")
+    @com.aliyun.core.annotation.NameInMap("Sample")
     private String sample;
 
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private String tag;
 
     private DescribeCustomLogConfigResponseBody(Builder builder) {
