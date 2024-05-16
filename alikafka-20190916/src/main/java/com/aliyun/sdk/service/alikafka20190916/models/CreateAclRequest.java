@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,51 +11,51 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAclRequest</p>
  */
 public class CreateAclRequest extends Request {
-    @Query
-    @NameInMap("AclOperationType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclOperationType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aclOperationType;
 
-    @Query
-    @NameInMap("AclOperationTypes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclOperationTypes")
     private String aclOperationTypes;
 
-    @Query
-    @NameInMap("AclPermissionType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclPermissionType")
     private String aclPermissionType;
 
-    @Query
-    @NameInMap("AclResourceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclResourceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aclResourceName;
 
-    @Query
-    @NameInMap("AclResourcePatternType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclResourcePatternType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aclResourcePatternType;
 
-    @Query
-    @NameInMap("AclResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aclResourceType;
 
-    @Query
-    @NameInMap("Host")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Host")
     private String host;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Username")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Username")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String username;
 
     private CreateAclRequest(Builder builder) {
@@ -187,13 +186,15 @@ public class CreateAclRequest extends Request {
         } 
 
         /**
-         * The operation type. Valid values:
+         * The type of the operation allowed by the access control list (ACL). Valid values:
          * <p>
          * 
-         * *   **Write**: data writes
-         * *   **Read**: data reads
-         * *   **Describe**: reads of transaction IDs****
-         * *   **IdempotentWrite**: idempotent data writes to clusters****
+         * *   **Write**
+         * *   **Read**
+         * *   **Describe**: reads of transactional IDs.
+         * *   **IdempotentWrite**: idempotent data writes to clusters.
+         * *   **IDEMPOTENT_WRITE**: idempotent data writes to clusters. This value is available only for ApsaraMQ for Kafka V3 instances.
+         * *   **DESCRIBE_CONFIGS**: queries of configurations. This value is available only for ApsaraMQ for Kafka V3 instances.
          */
         public Builder aclOperationType(String aclOperationType) {
             this.putQueryParameter("AclOperationType", aclOperationType);
@@ -202,7 +203,19 @@ public class CreateAclRequest extends Request {
         }
 
         /**
-         * AclOperationTypes.
+         * The types of operations allowed by the ACL. Separate multiple operation types with commas (,).
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   **Write**
+         * *   **Read**
+         * *   **Describe**: reads of transactional IDs.
+         * *   **IdempotentWrite**: idempotent data writes to clusters.
+         * *   **IDEMPOTENT_WRITE**: idempotent data writes to clusters. This value is available only for ApsaraMQ for Kafka V3 instances.
+         * *   **DESCRIBE_CONFIGS**: queries of configurations. This value is available only for ApsaraMQ for Kafka V3 instances.
+         * 
+         * >  This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.
          */
         public Builder aclOperationTypes(String aclOperationTypes) {
             this.putQueryParameter("AclOperationTypes", aclOperationTypes);
@@ -211,7 +224,13 @@ public class CreateAclRequest extends Request {
         }
 
         /**
-         * AclPermissionType.
+         * The authorization method. Valid values:
+         * <p>
+         * 
+         * *   **DENY**
+         * *   **ALLOW**
+         * 
+         * >  This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.
          */
         public Builder aclPermissionType(String aclPermissionType) {
             this.putQueryParameter("AclPermissionType", aclPermissionType);
@@ -252,7 +271,7 @@ public class CreateAclRequest extends Request {
          * *   **Topic**
          * *   **Group**
          * *   **Cluster**
-         * *   **TransactionalId**: transaction
+         * *   **TransactionalId**: transactional ID
          */
         public Builder aclResourceType(String aclResourceType) {
             this.putQueryParameter("AclResourceType", aclResourceType);
@@ -261,7 +280,14 @@ public class CreateAclRequest extends Request {
         }
 
         /**
-         * Host.
+         * The source IP address.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   You can specify only a specific IP address or use the asterisk (\*) wildcard character to specify all IP addresses. CIDR blocks are not supported.
+         * 
+         * *   This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.
          */
         public Builder host(String host) {
             this.putQueryParameter("Host", host);

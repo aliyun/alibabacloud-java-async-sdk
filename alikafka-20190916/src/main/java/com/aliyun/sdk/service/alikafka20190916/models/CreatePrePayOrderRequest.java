@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,65 +11,65 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreatePrePayOrderRequest</p>
  */
 public class CreatePrePayOrderRequest extends Request {
-    @Query
-    @NameInMap("ConfluentConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfluentConfig")
     private ConfluentConfig confluentConfig;
 
-    @Query
-    @NameInMap("DeployType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeployType")
     private Integer deployType;
 
-    @Query
-    @NameInMap("DiskSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskSize")
     private Integer diskSize;
 
-    @Query
-    @NameInMap("DiskType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskType")
     private String diskType;
 
-    @Query
-    @NameInMap("Duration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Duration")
     private Integer duration;
 
-    @Query
-    @NameInMap("EipMax")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EipMax")
     private Integer eipMax;
 
-    @Query
-    @NameInMap("IoMax")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IoMax")
     private Integer ioMax;
 
-    @Query
-    @NameInMap("IoMaxSpec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IoMaxSpec")
     private String ioMaxSpec;
 
-    @Query
-    @NameInMap("PaidType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PaidType")
     private Integer paidType;
 
-    @Query
-    @NameInMap("PartitionNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PartitionNum")
     private Integer partitionNum;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("SpecType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpecType")
     private String specType;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("TopicQuota")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TopicQuota")
     private Integer topicQuota;
 
     private CreatePrePayOrderRequest(Builder builder) {
@@ -251,7 +250,7 @@ public class CreatePrePayOrderRequest extends Request {
         } 
 
         /**
-         * ConfluentConfig.
+         * The configurations of ApsaraMQ for Confluent components.
          */
         public Builder confluentConfig(ConfluentConfig confluentConfig) {
             String confluentConfigShrink = shrink(confluentConfig, "ConfluentConfig", "json");
@@ -299,7 +298,10 @@ public class CreatePrePayOrderRequest extends Request {
         }
 
         /**
-         * Duration.
+         * The subscription duration. Unit: months. Default value: 1. Valid values:
+         * <p>
+         * 
+         * *   **1 to 12**
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -347,7 +349,11 @@ public class CreatePrePayOrderRequest extends Request {
         }
 
         /**
-         * PaidType.
+         * The billing method of the instance. Valid values:
+         * <p>
+         * 
+         * *   **0**: the subscription billing method
+         * *   **4**: the subscription billing method for ApsaraMQ for Confluent instances
          */
         public Builder paidType(Integer paidType) {
             this.putQueryParameter("PaidType", paidType);
@@ -438,76 +444,58 @@ public class CreatePrePayOrderRequest extends Request {
     } 
 
     public static class ConfluentConfig extends TeaModel {
-        @NameInMap("ConnectCU")
-        @Validation(maximum = 20, minimum = 4)
+        @com.aliyun.core.annotation.NameInMap("ConnectCU")
         private Integer connectCU;
 
-        @NameInMap("ConnectReplica")
-        @Validation(maximum = 20, minimum = 1)
+        @com.aliyun.core.annotation.NameInMap("ConnectReplica")
         private Integer connectReplica;
 
-        @NameInMap("ControlCenterCU")
-        @Validation(maximum = 20, minimum = 4)
+        @com.aliyun.core.annotation.NameInMap("ControlCenterCU")
         private Integer controlCenterCU;
 
-        @NameInMap("ControlCenterReplica")
-        @Validation(maximum = 1, minimum = 1)
+        @com.aliyun.core.annotation.NameInMap("ControlCenterReplica")
         private Integer controlCenterReplica;
 
-        @NameInMap("ControlCenterStorage")
-        @Validation(maximum = 30000, minimum = 300)
+        @com.aliyun.core.annotation.NameInMap("ControlCenterStorage")
         private Integer controlCenterStorage;
 
-        @NameInMap("KafkaCU")
-        @Validation(maximum = 20, minimum = 4)
+        @com.aliyun.core.annotation.NameInMap("KafkaCU")
         private Integer kafkaCU;
 
-        @NameInMap("KafkaReplica")
-        @Validation(maximum = 20, minimum = 3)
+        @com.aliyun.core.annotation.NameInMap("KafkaReplica")
         private Integer kafkaReplica;
 
-        @NameInMap("KafkaRestProxyCU")
-        @Validation(maximum = 20, minimum = 4)
+        @com.aliyun.core.annotation.NameInMap("KafkaRestProxyCU")
         private Integer kafkaRestProxyCU;
 
-        @NameInMap("KafkaRestProxyReplica")
-        @Validation(maximum = 20, minimum = 2)
+        @com.aliyun.core.annotation.NameInMap("KafkaRestProxyReplica")
         private Integer kafkaRestProxyReplica;
 
-        @NameInMap("KafkaStorage")
-        @Validation(maximum = 30000, minimum = 800)
+        @com.aliyun.core.annotation.NameInMap("KafkaStorage")
         private Integer kafkaStorage;
 
-        @NameInMap("KsqlCU")
-        @Validation(maximum = 20, minimum = 1)
+        @com.aliyun.core.annotation.NameInMap("KsqlCU")
         private Integer ksqlCU;
 
-        @NameInMap("KsqlReplica")
-        @Validation(maximum = 20, minimum = 1)
+        @com.aliyun.core.annotation.NameInMap("KsqlReplica")
         private Integer ksqlReplica;
 
-        @NameInMap("KsqlStorage")
-        @Validation(maximum = 30000, minimum = 100)
+        @com.aliyun.core.annotation.NameInMap("KsqlStorage")
         private Integer ksqlStorage;
 
-        @NameInMap("SchemaRegistryCU")
-        @Validation(maximum = 20, minimum = 1)
+        @com.aliyun.core.annotation.NameInMap("SchemaRegistryCU")
         private Integer schemaRegistryCU;
 
-        @NameInMap("SchemaRegistryReplica")
-        @Validation(maximum = 3, minimum = 2)
+        @com.aliyun.core.annotation.NameInMap("SchemaRegistryReplica")
         private Integer schemaRegistryReplica;
 
-        @NameInMap("ZooKeeperCU")
-        @Validation(maximum = 20, minimum = 2)
+        @com.aliyun.core.annotation.NameInMap("ZooKeeperCU")
         private Integer zooKeeperCU;
 
-        @NameInMap("ZooKeeperReplica")
-        @Validation(maximum = 3, minimum = 3)
+        @com.aliyun.core.annotation.NameInMap("ZooKeeperReplica")
         private Integer zooKeeperReplica;
 
-        @NameInMap("ZooKeeperStorage")
-        @Validation(maximum = 30000, minimum = 100)
+        @com.aliyun.core.annotation.NameInMap("ZooKeeperStorage")
         private Integer zooKeeperStorage;
 
         private ConfluentConfig(Builder builder) {
@@ -686,7 +674,7 @@ public class CreatePrePayOrderRequest extends Request {
             private Integer zooKeeperStorage; 
 
             /**
-             * ConnectCU.
+             * The number of CPU cores of Connect.
              */
             public Builder connectCU(Integer connectCU) {
                 this.connectCU = connectCU;
@@ -694,7 +682,7 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * ConnectReplica.
+             * The number of replicas of Connect.
              */
             public Builder connectReplica(Integer connectReplica) {
                 this.connectReplica = connectReplica;
@@ -702,7 +690,7 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * ControlCenterCU.
+             * The number of CPU cores of Control Center.
              */
             public Builder controlCenterCU(Integer controlCenterCU) {
                 this.controlCenterCU = controlCenterCU;
@@ -710,7 +698,7 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * ControlCenterReplica.
+             * The number of replicas of Control Center.
              */
             public Builder controlCenterReplica(Integer controlCenterReplica) {
                 this.controlCenterReplica = controlCenterReplica;
@@ -718,7 +706,7 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * ControlCenterStorage.
+             * The disk capacity of Control Center. Unit: GB
              */
             public Builder controlCenterStorage(Integer controlCenterStorage) {
                 this.controlCenterStorage = controlCenterStorage;
@@ -726,7 +714,7 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * KafkaCU.
+             * The number of CPU cores of the Kafka broker.
              */
             public Builder kafkaCU(Integer kafkaCU) {
                 this.kafkaCU = kafkaCU;
@@ -734,7 +722,7 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * KafkaReplica.
+             * The number of replicas of the Kafka broker.
              */
             public Builder kafkaReplica(Integer kafkaReplica) {
                 this.kafkaReplica = kafkaReplica;
@@ -742,7 +730,7 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * KafkaRestProxyCU.
+             * The number of CPU cores of Kafka Rest Proxy.
              */
             public Builder kafkaRestProxyCU(Integer kafkaRestProxyCU) {
                 this.kafkaRestProxyCU = kafkaRestProxyCU;
@@ -750,7 +738,7 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * KafkaRestProxyReplica.
+             * The number of replicas of Kafka Rest Proxy.
              */
             public Builder kafkaRestProxyReplica(Integer kafkaRestProxyReplica) {
                 this.kafkaRestProxyReplica = kafkaRestProxyReplica;
@@ -758,7 +746,7 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * KafkaStorage.
+             * The disk capacity of the Kafka broker. Unit: GB
              */
             public Builder kafkaStorage(Integer kafkaStorage) {
                 this.kafkaStorage = kafkaStorage;
@@ -766,7 +754,7 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * KsqlCU.
+             * The number of CPU cores of ksqIDB.
              */
             public Builder ksqlCU(Integer ksqlCU) {
                 this.ksqlCU = ksqlCU;
@@ -774,7 +762,7 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * KsqlReplica.
+             * The number of replicas of ksqlDB.
              */
             public Builder ksqlReplica(Integer ksqlReplica) {
                 this.ksqlReplica = ksqlReplica;
@@ -782,7 +770,7 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * KsqlStorage.
+             * The disk capacity of ksqlDB. Unit: GB
              */
             public Builder ksqlStorage(Integer ksqlStorage) {
                 this.ksqlStorage = ksqlStorage;
@@ -790,7 +778,7 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * SchemaRegistryCU.
+             * The number of CPU cores of Schema Registry.
              */
             public Builder schemaRegistryCU(Integer schemaRegistryCU) {
                 this.schemaRegistryCU = schemaRegistryCU;
@@ -798,7 +786,7 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * SchemaRegistryReplica.
+             * The number of replicas of Schema Registry.
              */
             public Builder schemaRegistryReplica(Integer schemaRegistryReplica) {
                 this.schemaRegistryReplica = schemaRegistryReplica;
@@ -806,7 +794,7 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * ZooKeeperCU.
+             * The number of CPU cores of ZooKeeper.
              */
             public Builder zooKeeperCU(Integer zooKeeperCU) {
                 this.zooKeeperCU = zooKeeperCU;
@@ -814,7 +802,7 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * ZooKeeperReplica.
+             * The number of replicas of ZooKeeper.
              */
             public Builder zooKeeperReplica(Integer zooKeeperReplica) {
                 this.zooKeeperReplica = zooKeeperReplica;
@@ -822,7 +810,7 @@ public class CreatePrePayOrderRequest extends Request {
             }
 
             /**
-             * ZooKeeperStorage.
+             * The disk capacity of ZooKeeper. Unit: GB
              */
             public Builder zooKeeperStorage(Integer zooKeeperStorage) {
                 this.zooKeeperStorage = zooKeeperStorage;
@@ -837,11 +825,11 @@ public class CreatePrePayOrderRequest extends Request {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Key")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

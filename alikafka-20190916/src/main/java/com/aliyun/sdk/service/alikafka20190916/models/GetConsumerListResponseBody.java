@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetConsumerListResponseBody</p>
  */
 public class GetConsumerListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("ConsumerList")
+    @com.aliyun.core.annotation.NameInMap("ConsumerList")
     private ConsumerList consumerList;
 
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
 
     private GetConsumerListResponseBody(Builder builder) {
@@ -192,10 +191,10 @@ public class GetConsumerListResponseBody extends TeaModel {
     } 
 
     public static class TagVO extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private TagVO(Builder builder) {
@@ -253,7 +252,7 @@ public class GetConsumerListResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("TagVO")
+        @com.aliyun.core.annotation.NameInMap("TagVO")
         private java.util.List < TagVO> tagVO;
 
         private Tags(Builder builder) {
@@ -294,22 +293,22 @@ public class GetConsumerListResponseBody extends TeaModel {
 
     }
     public static class ConsumerVO extends TeaModel {
-        @NameInMap("AutomaticallyCreatedGroup")
+        @com.aliyun.core.annotation.NameInMap("AutomaticallyCreatedGroup")
         private Boolean automaticallyCreatedGroup;
 
-        @NameInMap("ConsumerId")
+        @com.aliyun.core.annotation.NameInMap("ConsumerId")
         private String consumerId;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
         private ConsumerVO(Builder builder) {
@@ -435,7 +434,7 @@ public class GetConsumerListResponseBody extends TeaModel {
 
     }
     public static class ConsumerList extends TeaModel {
-        @NameInMap("ConsumerVO")
+        @com.aliyun.core.annotation.NameInMap("ConsumerVO")
         private java.util.List < ConsumerVO> consumerVO;
 
         private ConsumerList(Builder builder) {

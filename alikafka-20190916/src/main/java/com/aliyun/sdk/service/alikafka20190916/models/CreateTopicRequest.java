@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,54 +11,54 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateTopicRequest</p>
  */
 public class CreateTopicRequest extends Request {
-    @Query
-    @NameInMap("CompactTopic")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CompactTopic")
     private Boolean compactTopic;
 
-    @Query
-    @NameInMap("Config")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Config")
     private String config;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("LocalTopic")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LocalTopic")
     private Boolean localTopic;
 
-    @Query
-    @NameInMap("MinInsyncReplicas")
-    @Validation(maximum = 3, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinInsyncReplicas")
+    @com.aliyun.core.annotation.Validation(maximum = 3, minimum = 1)
     private Long minInsyncReplicas;
 
-    @Query
-    @NameInMap("PartitionNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PartitionNum")
     private String partitionNum;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Remark")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Remark")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String remark;
 
-    @Query
-    @NameInMap("ReplicationFactor")
-    @Validation(maximum = 3, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReplicationFactor")
+    @com.aliyun.core.annotation.Validation(maximum = 3, minimum = 1)
     private Long replicationFactor;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("Topic")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Topic")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String topic;
 
     private CreateTopicRequest(Builder builder) {
@@ -269,7 +268,12 @@ public class CreateTopicRequest extends Request {
          * <p>
          * 
          * *   Valid values: 1 to 360.
-         * *   The system recommends the number of partitions based on the specification of the instance. You can view the recommended number in the Message Queue for Apache Kafka console. We recommend that you specify the number that is recommended by the system as the value of this parameter to reduce the risk of data skew.
+         * *   In the ApsaraMQ for Kafka console, you can view the number of partitions that the system recommends based on the specifications of the instance. We recommend that you specify the number that is recommended by the system as the value of this parameter to reduce the risk of data skew.
+         * 
+         * Default values:
+         * 
+         * *   ApsaraMQ for Kafka V2 instance: 12
+         * *   ApsaraMQ for Kafka V3 instance: 3
          */
         public Builder partitionNum(String partitionNum) {
             this.putQueryParameter("PartitionNum", partitionNum);
@@ -345,11 +349,11 @@ public class CreateTopicRequest extends Request {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Key")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

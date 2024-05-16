@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,62 +11,62 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreatePostPayOrderRequest</p>
  */
 public class CreatePostPayOrderRequest extends Request {
-    @Query
-    @NameInMap("DeployType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeployType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer deployType;
 
-    @Query
-    @NameInMap("DiskSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskSize")
     private Integer diskSize;
 
-    @Query
-    @NameInMap("DiskType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskType")
     private String diskType;
 
-    @Query
-    @NameInMap("EipMax")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EipMax")
     private Integer eipMax;
 
-    @Query
-    @NameInMap("IoMax")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IoMax")
     private Integer ioMax;
 
-    @Query
-    @NameInMap("IoMaxSpec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IoMaxSpec")
     private String ioMaxSpec;
 
-    @Query
-    @NameInMap("PaidType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PaidType")
     private Integer paidType;
 
-    @Query
-    @NameInMap("PartitionNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PartitionNum")
     private Integer partitionNum;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ServerlessConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerlessConfig")
     private ServerlessConfig serverlessConfig;
 
-    @Query
-    @NameInMap("SpecType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpecType")
     private String specType;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("TopicQuota")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TopicQuota")
     private Integer topicQuota;
 
     private CreatePostPayOrderRequest(Builder builder) {
@@ -254,7 +253,9 @@ public class CreatePostPayOrderRequest extends Request {
          * The disk size.
          * <p>
          * 
-         * For more information about the valid values, see [Billing](~~84737~~).
+         * For information about the valid values of this parameter, see [Billing](~~84737~~).
+         * 
+         * >  If you create a serverless ApsaraMQ for Kafka V3 instance, you do not need to configure this parameter.
          */
         public Builder diskSize(Integer diskSize) {
             this.putQueryParameter("DiskSize", diskSize);
@@ -268,6 +269,8 @@ public class CreatePostPayOrderRequest extends Request {
          * 
          * *   **0**: ultra disk
          * *   **1**: standard SSD
+         * 
+         * >  If you create a serverless ApsaraMQ for Kafka V3 instance, you do not need to configure this parameter.
          */
         public Builder diskType(String diskType) {
             this.putQueryParameter("DiskType", diskType);
@@ -276,11 +279,13 @@ public class CreatePostPayOrderRequest extends Request {
         }
 
         /**
-         * The Internet traffic for the instance.
+         * The maximum Internet traffic in the instance.
          * <p>
          * 
-         * *   This parameter is required if the **DeployType** parameter is set to **4**.
-         * *   For more information about the valid values, see [Billing](~~84737~~).
+         * *   If you set **DeployType** to **4**, you must configure this parameter.
+         * *   For information about the valid values of this parameter, see [Billing](~~84737~~).
+         * 
+         * >  If you create a serverless ApsaraMQ for Kafka V3 instance, you do not need to configure this parameter.
          */
         public Builder eipMax(Integer eipMax) {
             this.putQueryParameter("EipMax", eipMax);
@@ -289,11 +294,13 @@ public class CreatePostPayOrderRequest extends Request {
         }
 
         /**
-         * The maximum traffic for the instance. We recommend that you do not configure this parameter.
+         * The maximum traffic in the instance. We recommend that you do not configure this parameter.
          * <p>
          * 
-         * *   You must specify at least one of the IoMax and IoMaxSpec parameters. If you configure both parameters, the value of the IoMaxSpec parameter takes effect. We recommend that you specify only the IoMaxSpec parameter.
-         * *   For more information about the valid values, see [Billing](~~84737~~).
+         * *   You must configure at least one of IoMax and IoMaxSpec. If you configure both parameters, the value of IoMaxSpec takes effect. We recommend that you configure only IoMaxSpec.
+         * *   For information about the valid values of this parameter, see [Billing](~~84737~~).
+         * 
+         * >  If you create a serverless ApsaraMQ for Kafka V3 instance, you do not need to configure this parameter.
          */
         public Builder ioMax(Integer ioMax) {
             this.putQueryParameter("IoMax", ioMax);
@@ -305,8 +312,10 @@ public class CreatePostPayOrderRequest extends Request {
          * The traffic specification of the instance. We recommend that you configure this parameter.
          * <p>
          * 
-         * *   You must specify at least one of the IoMax and IoMaxSpec parameters. If you configure both parameters, the value of the IoMaxSpec parameter takes effect. We recommend that you specify only the IoMaxSpec parameter.
-         * *   For more information about the valid values, see [Billing](~~84737~~).
+         * *   You must configure at least one of IoMax and IoMaxSpec. If you configure both parameters, the value of IoMaxSpec takes effect. We recommend that you configure only IoMaxSpec.
+         * *   For information about the valid values of this parameter, see [Billing](~~84737~~).
+         * 
+         * >  If you create a serverless ApsaraMQ for Kafka V3 instance, you do not need to configure this parameter.
          */
         public Builder ioMaxSpec(String ioMaxSpec) {
             this.putQueryParameter("IoMaxSpec", ioMaxSpec);
@@ -315,7 +324,11 @@ public class CreatePostPayOrderRequest extends Request {
         }
 
         /**
-         * PaidType.
+         * The billing method of the instance. Valid values:
+         * <p>
+         * 
+         * *   1: the pay-as-you-go billing method for ApsaraMQ for Kafka V2 instances.
+         * *   3: the pay-as-you-go billing method for serverless ApsaraMQ for Kafka V3 instances.
          */
         public Builder paidType(Integer paidType) {
             this.putQueryParameter("PaidType", paidType);
@@ -327,9 +340,11 @@ public class CreatePostPayOrderRequest extends Request {
          * The number of partitions. We recommend that you configure this parameter.
          * <p>
          * 
-         * *   You must specify at least one of the PartitionNum and TopicQuota parameters. We recommend that you configure only the PartitionNum parameter.
-         * *   If you specify both parameters, the topic-based sales model is used to check whether the PartitionNum value and the TopicQuota value are the same. If they are not the same, a failure response is returned. If they are the same, the order is placed based on the PartitionNum value.
-         * *   For more information about the valid values, see [Billing](~~84737~~).
+         * *   You must configure one of PartitionNum and TopicQuota. We recommend that you configure only ParittionNum.
+         * *   If you configure PartitionNum and TopicQuota at the same time, the system verifies whether the price of the partitions equals the price of the topics based on the previous topic-based selling mode. If the price of the partitions does not equal the price of the topics, an error is returned. If the price of the partitions equals the price of the topics, the instance is purchased based on the partition number.
+         * *   For information about the valid values of this parameter, see [Billing](~~84737~~).
+         * 
+         * >  If you create a serverless ApsaraMQ for Kafka V3 instance, you do not need to configure this parameter.
          */
         public Builder partitionNum(Integer partitionNum) {
             this.putQueryParameter("PartitionNum", partitionNum);
@@ -359,7 +374,7 @@ public class CreatePostPayOrderRequest extends Request {
         }
 
         /**
-         * ServerlessConfig.
+         * The parameters configured for the serverless ApsaraMQ for Kafka V3 instance. When you create a Serverless ApsaraMQ for Kafka V3 serverless instance, you must configure these parameters.
          */
         public Builder serverlessConfig(ServerlessConfig serverlessConfig) {
             String serverlessConfigShrink = shrink(serverlessConfig, "ServerlessConfig", "json");
@@ -369,14 +384,21 @@ public class CreatePostPayOrderRequest extends Request {
         }
 
         /**
-         * The edition of the instance. Valid values:
+         * The instance edition.
          * <p>
          * 
-         * *   **normal**: Standard Edition (High Write)
-         * *   **professional**: Professional Edition (High Write)
-         * *   **professionalForHighRead**: Professional Edition (High Read)
+         * Valid values if you set PaidType to 1:
          * 
-         * For more information about these instance editions, see [Billing](~~84737~~).
+         * *   normal: Standard Edition (High Write)
+         * *   professional: Professional Edition (High Write)
+         * *   professionalForHighRead: Professional Edition (High Read)
+         * 
+         * Valid values if you set PaidType to 3:
+         * 
+         * *   normal: Serverless Standard Edition
+         * *   professional: Serverless Professional Edition
+         * 
+         * For more information about the instance editions, see [Billing](~~84737~~).
          */
         public Builder specType(String specType) {
             this.putQueryParameter("SpecType", specType);
@@ -397,10 +419,12 @@ public class CreatePostPayOrderRequest extends Request {
          * The number of topics. We recommend that you do not configure this parameter.
          * <p>
          * 
-         * *   You must specify at least one of the PartitionNum and TopicQuota parameters. We recommend that you configure only the PartitionNum parameter.
-         * *   If you specify both parameters, the topic-based sales model is used to check whether the PartitionNum value and the TopicQuota value are the same. If they are not the same, a failure response is returned. If they are the same, the order is placed based on the PartitionNum value.
-         * *   The default value of the TopicQuota parameter varies based on the value of the IoMaxSpec parameter. If the number of topics that you consume exceeds the default value, you are charged additional fees.
-         * *   For more information about the valid values, see [Billing](~~84737~~).
+         * *   You must configure one of PartitionNum and TopicQuota. We recommend that you configure only ParittionNum.
+         * *   If you configure PartitionNum and TopicQuota at the same time, the system verifies whether the price of the partitions equals the price of the topics based on the previous topic-based selling mode. If the price of the partitions does not equal the price of the topics, an error is returned. If the price of the partitions equals the price of the topics, the instance is purchased based on the partition number.
+         * *   The default value of TopicQuota varies based on the value of IoMaxSpec. If the number of topics that you consume exceeds the default value, you are charged additional fees.
+         * *   For information about the valid values of this parameter, see [Billing](~~84737~~).
+         * 
+         * >  If you create a serverless ApsaraMQ for Kafka V3 instance, you do not need to configure this parameter.
          */
         public Builder topicQuota(Integer topicQuota) {
             this.putQueryParameter("TopicQuota", topicQuota);
@@ -416,10 +440,10 @@ public class CreatePostPayOrderRequest extends Request {
     } 
 
     public static class ServerlessConfig extends TeaModel {
-        @NameInMap("ReservedPublishCapacity")
+        @com.aliyun.core.annotation.NameInMap("ReservedPublishCapacity")
         private Long reservedPublishCapacity;
 
-        @NameInMap("ReservedSubscribeCapacity")
+        @com.aliyun.core.annotation.NameInMap("ReservedSubscribeCapacity")
         private Long reservedSubscribeCapacity;
 
         private ServerlessConfig(Builder builder) {
@@ -454,7 +478,10 @@ public class CreatePostPayOrderRequest extends Request {
             private Long reservedSubscribeCapacity; 
 
             /**
-             * ReservedPublishCapacity.
+             * The reserved capacity for publishing messages. You can specify only an integer for this parameter. Minimum value: 60.
+             * <p>
+             * 
+             * >  The actual maximum reserved capacity for publishing messages varies based on available resources in the region. The actual range displayed on the buy page shall prevail.
              */
             public Builder reservedPublishCapacity(Long reservedPublishCapacity) {
                 this.reservedPublishCapacity = reservedPublishCapacity;
@@ -462,7 +489,10 @@ public class CreatePostPayOrderRequest extends Request {
             }
 
             /**
-             * ReservedSubscribeCapacity.
+             * The reserved capacity for subscribing to messages. You can specify only an integer for this parameter. Minimum value: 20.
+             * <p>
+             * 
+             * >  The actual maximum reserved capacity for subscribing to messages varies based on available resources in the region. The actual range displayed on the buy page shall prevail.
              */
             public Builder reservedSubscribeCapacity(Long reservedSubscribeCapacity) {
                 this.reservedSubscribeCapacity = reservedSubscribeCapacity;
@@ -477,11 +507,11 @@ public class CreatePostPayOrderRequest extends Request {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Key")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

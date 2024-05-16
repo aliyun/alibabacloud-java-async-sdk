@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,54 +11,54 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpgradePrePayOrderRequest</p>
  */
 public class UpgradePrePayOrderRequest extends Request {
-    @Query
-    @NameInMap("ConfluentConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfluentConfig")
     private ConfluentConfig confluentConfig;
 
-    @Query
-    @NameInMap("DiskSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskSize")
     private Integer diskSize;
 
-    @Query
-    @NameInMap("EipMax")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EipMax")
     private Integer eipMax;
 
-    @Query
-    @NameInMap("EipModel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EipModel")
     private Boolean eipModel;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("IoMax")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IoMax")
     private Integer ioMax;
 
-    @Query
-    @NameInMap("IoMaxSpec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IoMaxSpec")
     private String ioMaxSpec;
 
-    @Query
-    @NameInMap("PaidType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PaidType")
     private Integer paidType;
 
-    @Query
-    @NameInMap("PartitionNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PartitionNum")
     private Integer partitionNum;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("SpecType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpecType")
     private String specType;
 
-    @Query
-    @NameInMap("TopicQuota")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TopicQuota")
     private Integer topicQuota;
 
     private UpgradePrePayOrderRequest(Builder builder) {
@@ -368,76 +367,76 @@ public class UpgradePrePayOrderRequest extends Request {
     } 
 
     public static class ConfluentConfig extends TeaModel {
-        @NameInMap("ConnectCU")
-        @Validation(maximum = 20, minimum = 1)
+        @com.aliyun.core.annotation.NameInMap("ConnectCU")
+        @com.aliyun.core.annotation.Validation(maximum = 20, minimum = 1)
         private Integer connectCU;
 
-        @NameInMap("ConnectReplica")
-        @Validation(maximum = 20, minimum = 1)
+        @com.aliyun.core.annotation.NameInMap("ConnectReplica")
+        @com.aliyun.core.annotation.Validation(maximum = 20, minimum = 1)
         private Integer connectReplica;
 
-        @NameInMap("ControlCenterCU")
-        @Validation(maximum = 20, minimum = 4)
+        @com.aliyun.core.annotation.NameInMap("ControlCenterCU")
+        @com.aliyun.core.annotation.Validation(maximum = 20, minimum = 4)
         private Integer controlCenterCU;
 
-        @NameInMap("ControlCenterReplica")
-        @Validation(maximum = 1, minimum = 1)
+        @com.aliyun.core.annotation.NameInMap("ControlCenterReplica")
+        @com.aliyun.core.annotation.Validation(maximum = 1, minimum = 1)
         private Integer controlCenterReplica;
 
-        @NameInMap("ControlCenterStorage")
-        @Validation(maximum = 30000, minimum = 300)
+        @com.aliyun.core.annotation.NameInMap("ControlCenterStorage")
+        @com.aliyun.core.annotation.Validation(maximum = 30000, minimum = 300)
         private Integer controlCenterStorage;
 
-        @NameInMap("KafkaCU")
-        @Validation(maximum = 20, minimum = 4)
+        @com.aliyun.core.annotation.NameInMap("KafkaCU")
+        @com.aliyun.core.annotation.Validation(maximum = 20, minimum = 4)
         private Integer kafkaCU;
 
-        @NameInMap("KafkaReplica")
-        @Validation(maximum = 20, minimum = 3)
+        @com.aliyun.core.annotation.NameInMap("KafkaReplica")
+        @com.aliyun.core.annotation.Validation(maximum = 20, minimum = 3)
         private Integer kafkaReplica;
 
-        @NameInMap("KafkaRestProxyCU")
-        @Validation(maximum = 20, minimum = 4)
+        @com.aliyun.core.annotation.NameInMap("KafkaRestProxyCU")
+        @com.aliyun.core.annotation.Validation(maximum = 20, minimum = 4)
         private Integer kafkaRestProxyCU;
 
-        @NameInMap("KafkaRestProxyReplica")
-        @Validation(maximum = 20, minimum = 2)
+        @com.aliyun.core.annotation.NameInMap("KafkaRestProxyReplica")
+        @com.aliyun.core.annotation.Validation(maximum = 20, minimum = 2)
         private Integer kafkaRestProxyReplica;
 
-        @NameInMap("KafkaStorage")
-        @Validation(maximum = 30000, minimum = 800)
+        @com.aliyun.core.annotation.NameInMap("KafkaStorage")
+        @com.aliyun.core.annotation.Validation(maximum = 30000, minimum = 800)
         private Integer kafkaStorage;
 
-        @NameInMap("KsqlCU")
-        @Validation(maximum = 20, minimum = 1)
+        @com.aliyun.core.annotation.NameInMap("KsqlCU")
+        @com.aliyun.core.annotation.Validation(maximum = 20, minimum = 1)
         private Integer ksqlCU;
 
-        @NameInMap("KsqlReplica")
-        @Validation(maximum = 20, minimum = 1)
+        @com.aliyun.core.annotation.NameInMap("KsqlReplica")
+        @com.aliyun.core.annotation.Validation(maximum = 20, minimum = 1)
         private Integer ksqlReplica;
 
-        @NameInMap("KsqlStorage")
-        @Validation(maximum = 30000, minimum = 100)
+        @com.aliyun.core.annotation.NameInMap("KsqlStorage")
+        @com.aliyun.core.annotation.Validation(maximum = 30000, minimum = 100)
         private Integer ksqlStorage;
 
-        @NameInMap("SchemaRegistryCU")
-        @Validation(maximum = 20, minimum = 1)
+        @com.aliyun.core.annotation.NameInMap("SchemaRegistryCU")
+        @com.aliyun.core.annotation.Validation(maximum = 20, minimum = 1)
         private Integer schemaRegistryCU;
 
-        @NameInMap("SchemaRegistryReplica")
-        @Validation(maximum = 3, minimum = 2)
+        @com.aliyun.core.annotation.NameInMap("SchemaRegistryReplica")
+        @com.aliyun.core.annotation.Validation(maximum = 3, minimum = 2)
         private Integer schemaRegistryReplica;
 
-        @NameInMap("ZooKeeperCU")
-        @Validation(maximum = 20, minimum = 2)
+        @com.aliyun.core.annotation.NameInMap("ZooKeeperCU")
+        @com.aliyun.core.annotation.Validation(maximum = 20, minimum = 2)
         private Integer zooKeeperCU;
 
-        @NameInMap("ZooKeeperReplica")
-        @Validation(maximum = 3, minimum = 3)
+        @com.aliyun.core.annotation.NameInMap("ZooKeeperReplica")
+        @com.aliyun.core.annotation.Validation(maximum = 3, minimum = 3)
         private Integer zooKeeperReplica;
 
-        @NameInMap("ZooKeeperStorage")
-        @Validation(maximum = 30000, minimum = 100)
+        @com.aliyun.core.annotation.NameInMap("ZooKeeperStorage")
+        @com.aliyun.core.annotation.Validation(maximum = 30000, minimum = 100)
         private Integer zooKeeperStorage;
 
         private ConfluentConfig(Builder builder) {

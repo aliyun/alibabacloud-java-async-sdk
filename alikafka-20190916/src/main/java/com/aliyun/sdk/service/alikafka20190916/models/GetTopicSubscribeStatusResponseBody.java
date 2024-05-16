@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTopicSubscribeStatusResponseBody</p>
  */
 public class GetTopicSubscribeStatusResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TopicSubscribeStatus")
+    @com.aliyun.core.annotation.NameInMap("TopicSubscribeStatus")
     private TopicSubscribeStatus topicSubscribeStatus;
 
     private GetTopicSubscribeStatusResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class GetTopicSubscribeStatusResponseBody extends TeaModel {
     } 
 
     public static class TopicSubscribeStatus extends TeaModel {
-        @NameInMap("ConsumerGroups")
+        @com.aliyun.core.annotation.NameInMap("ConsumerGroups")
         private java.util.List < String > consumerGroups;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
         private TopicSubscribeStatus(Builder builder) {

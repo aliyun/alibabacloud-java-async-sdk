@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,92 +11,92 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StartInstanceRequest</p>
  */
 public class StartInstanceRequest extends Request {
-    @Query
-    @NameInMap("Config")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Config")
     private String config;
 
-    @Query
-    @NameInMap("CrossZone")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossZone")
     private Boolean crossZone;
 
-    @Query
-    @NameInMap("DeployModule")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeployModule")
     private String deployModule;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("IsEipInner")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsEipInner")
     private Boolean isEipInner;
 
-    @Query
-    @NameInMap("IsForceSelectedZones")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsForceSelectedZones")
     private Boolean isForceSelectedZones;
 
-    @Query
-    @NameInMap("IsSetUserAndPassword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsSetUserAndPassword")
     private Boolean isSetUserAndPassword;
 
-    @Query
-    @NameInMap("KMSKeyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KMSKeyId")
     private String KMSKeyId;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("Notifier")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Notifier")
     private String notifier;
 
-    @Query
-    @NameInMap("Password")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Password")
     private String password;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("SecurityGroup")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroup")
     private String securityGroup;
 
-    @Query
-    @NameInMap("SelectedZones")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SelectedZones")
     private String selectedZones;
 
-    @Query
-    @NameInMap("ServiceVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceVersion")
     private String serviceVersion;
 
-    @Query
-    @NameInMap("UserPhoneNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserPhoneNum")
     private String userPhoneNum;
 
-    @Query
-    @NameInMap("Username")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Username")
     private String username;
 
-    @Query
-    @NameInMap("VSwitchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
 
-    @Query
-    @NameInMap("VSwitchIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchIds")
     private java.util.List < String > vSwitchIds;
 
-    @Query
-    @NameInMap("VpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private StartInstanceRequest(Builder builder) {
@@ -567,7 +566,7 @@ public class StartInstanceRequest extends Request {
         }
 
         /**
-         * VSwitchIds.
+         * The vSwitch IDs.
          */
         public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
             this.putQueryParameter("VSwitchIds", vSwitchIds);
@@ -585,11 +584,13 @@ public class StartInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the zone in which you want to deploy the instance.
+         * The ID of the zone where you want to deploy the ApsaraMQ for Kafka instance.
          * <p>
          * 
-         * *   The zone ID of the instance must be the same as that of the vSwitch.
-         * *   The value must be in the format of zoneX or Region ID-X. For example, you can set this parameter to zonea or cn-hangzhou-k.
+         * *   The zone ID of the ApsaraMQ for Kafka instance must be the same as that of the vSwitch.
+         * *   The value must be in the zoneX or Region ID-X format. Examples: zonea and cn-hangzhou-k.
+         * 
+         * >  If resources in the specified zone is insufficient, the instance may be deployed in another zone.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

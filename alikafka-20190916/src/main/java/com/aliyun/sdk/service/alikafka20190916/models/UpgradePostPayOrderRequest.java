@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,50 +11,50 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpgradePostPayOrderRequest</p>
  */
 public class UpgradePostPayOrderRequest extends Request {
-    @Query
-    @NameInMap("DiskSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskSize")
     private Integer diskSize;
 
-    @Query
-    @NameInMap("EipMax")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EipMax")
     private Integer eipMax;
 
-    @Query
-    @NameInMap("EipModel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EipModel")
     private Boolean eipModel;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("IoMax")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IoMax")
     private Integer ioMax;
 
-    @Query
-    @NameInMap("IoMaxSpec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IoMaxSpec")
     private String ioMaxSpec;
 
-    @Query
-    @NameInMap("PartitionNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PartitionNum")
     private Integer partitionNum;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ServerlessConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerlessConfig")
     private ServerlessConfig serverlessConfig;
 
-    @Query
-    @NameInMap("SpecType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpecType")
     private String specType;
 
-    @Query
-    @NameInMap("TopicQuota")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TopicQuota")
     private Integer topicQuota;
 
     private UpgradePostPayOrderRequest(Builder builder) {
@@ -311,7 +310,7 @@ public class UpgradePostPayOrderRequest extends Request {
         }
 
         /**
-         * The parameters configured for the Serverless instance. When you create an ApsaraMQ for Kafka V3 serverless instance, you must configure these parameters.
+         * The parameters that are configured for the ApsaraMQ for Kafka serverless instance. When you create a serverless ApsaraMQ for Kafka instance, you must configure these parameters.
          */
         public Builder serverlessConfig(ServerlessConfig serverlessConfig) {
             String serverlessConfigShrink = shrink(serverlessConfig, "ServerlessConfig", "json");
@@ -368,10 +367,10 @@ public class UpgradePostPayOrderRequest extends Request {
     } 
 
     public static class ServerlessConfig extends TeaModel {
-        @NameInMap("ReservedPublishCapacity")
+        @com.aliyun.core.annotation.NameInMap("ReservedPublishCapacity")
         private Long reservedPublishCapacity;
 
-        @NameInMap("ReservedSubscribeCapacity")
+        @com.aliyun.core.annotation.NameInMap("ReservedSubscribeCapacity")
         private Long reservedSubscribeCapacity;
 
         private ServerlessConfig(Builder builder) {
@@ -406,7 +405,10 @@ public class UpgradePostPayOrderRequest extends Request {
             private Long reservedSubscribeCapacity; 
 
             /**
-             * The traffic reserved for message publishing. Unit: MB/s. Valid values: 1 to 31457280. You can specify only integers for this parameter.
+             * The reserved capacity for publishing messages. You can specify only integers for this parameter. Minimum value: 60.
+             * <p>
+             * 
+             * >  The maximum capacity that you can reserve for an instance varies based on available resources in a region. The reserved capacity range displayed on the buy page shall prevail.
              */
             public Builder reservedPublishCapacity(Long reservedPublishCapacity) {
                 this.reservedPublishCapacity = reservedPublishCapacity;
@@ -414,7 +416,10 @@ public class UpgradePostPayOrderRequest extends Request {
             }
 
             /**
-             * The traffic reserved for message subscription. Unit: MB/s. Valid values: 1 to 31457280. You can specify only integers for this parameter.
+             * The reserved capacity for subscribing to messages. You can specify only integers for this parameter. Minimum value: 50.
+             * <p>
+             * 
+             * >  The maximum capacity that you can reserve for an instance varies based on available resources in a region. The reserved capacity range displayed on the buy page shall prevail.
              */
             public Builder reservedSubscribeCapacity(Long reservedSubscribeCapacity) {
                 this.reservedSubscribeCapacity = reservedSubscribeCapacity;

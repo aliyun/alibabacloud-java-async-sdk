@@ -42,6 +42,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateSaslUserResponse> createSaslUser(CreateSaslUserRequest request);
 
+    CompletableFuture<CreateScheduledScalingRuleResponse> createScheduledScalingRule(CreateScheduledScalingRuleRequest request);
+
     /**
       * *   Each Alibaba Cloud account can call this operation up to once per second.
       * *   The maximum number of topics that you can create in an instance is determined by the specification of the instance.
@@ -57,6 +59,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteSaslUserResponse> deleteSaslUser(DeleteSaslUserRequest request);
 
+    CompletableFuture<DeleteScheduledScalingRuleResponse> deleteScheduledScalingRule(DeleteScheduledScalingRuleRequest request);
+
     CompletableFuture<DeleteTopicResponse> deleteTopic(DeleteTopicRequest request);
 
     CompletableFuture<DescribeAclsResponse> describeAcls(DescribeAclsRequest request);
@@ -70,6 +74,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAllInstanceIdListResponse> getAllInstanceIdList(GetAllInstanceIdListRequest request);
 
     CompletableFuture<GetAllowedIpListResponse> getAllowedIpList(GetAllowedIpListRequest request);
+
+    CompletableFuture<GetAutoScalingConfigurationResponse> getAutoScalingConfiguration(GetAutoScalingConfigurationRequest request);
 
     CompletableFuture<GetConsumerListResponse> getConsumerList(GetConsumerListRequest request);
 
@@ -90,6 +96,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyInstanceNameResponse> modifyInstanceName(ModifyInstanceNameRequest request);
 
     CompletableFuture<ModifyPartitionNumResponse> modifyPartitionNum(ModifyPartitionNumRequest request);
+
+    CompletableFuture<ModifyScheduledScalingRuleResponse> modifyScheduledScalingRule(ModifyScheduledScalingRuleRequest request);
 
     CompletableFuture<ModifyTopicRemarkResponse> modifyTopicRemark(ModifyTopicRemarkRequest request);
 

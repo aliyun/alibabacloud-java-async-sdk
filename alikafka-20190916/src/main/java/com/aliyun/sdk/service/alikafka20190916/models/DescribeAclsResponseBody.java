@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAclsResponseBody</p>
  */
 public class DescribeAclsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("KafkaAclList")
+    @com.aliyun.core.annotation.NameInMap("KafkaAclList")
     private KafkaAclList kafkaAclList;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeAclsResponseBody(Builder builder) {
@@ -94,7 +93,7 @@ public class DescribeAclsResponseBody extends TeaModel {
         }
 
         /**
-         * The ACLs.
+         * The access control lists (ACLs).
          */
         public Builder kafkaAclList(KafkaAclList kafkaAclList) {
             this.kafkaAclList = kafkaAclList;
@@ -132,25 +131,25 @@ public class DescribeAclsResponseBody extends TeaModel {
     } 
 
     public static class KafkaAclVO extends TeaModel {
-        @NameInMap("AclOperationType")
+        @com.aliyun.core.annotation.NameInMap("AclOperationType")
         private String aclOperationType;
 
-        @NameInMap("AclPermissionType")
+        @com.aliyun.core.annotation.NameInMap("AclPermissionType")
         private String aclPermissionType;
 
-        @NameInMap("AclResourceName")
+        @com.aliyun.core.annotation.NameInMap("AclResourceName")
         private String aclResourceName;
 
-        @NameInMap("AclResourcePatternType")
+        @com.aliyun.core.annotation.NameInMap("AclResourcePatternType")
         private String aclResourcePatternType;
 
-        @NameInMap("AclResourceType")
+        @com.aliyun.core.annotation.NameInMap("AclResourceType")
         private String aclResourceType;
 
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("Username")
+        @com.aliyun.core.annotation.NameInMap("Username")
         private String username;
 
         private KafkaAclVO(Builder builder) {
@@ -230,7 +229,7 @@ public class DescribeAclsResponseBody extends TeaModel {
             private String username; 
 
             /**
-             * The type of the operation. Valid values:
+             * The operation type. Valid values:
              * <p>
              * 
              * *   **Write**
@@ -250,11 +249,11 @@ public class DescribeAclsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource.
+             * The resource name.
              * <p>
              * 
-             * *   The value can be the name of a topic or a consumer group.
-             * *   An asterisk (\*) represents the names of all topics or consumer groups.
+             * *   The value can be the name of a topic or consumer group.
+             * *   You can use the asterisk (\*) wildcard character to specify the names of all topics or consumer groups.
              */
             public Builder aclResourceName(String aclResourceName) {
                 this.aclResourceName = aclResourceName;
@@ -262,10 +261,10 @@ public class DescribeAclsResponseBody extends TeaModel {
             }
 
             /**
-             * The match mode. Valid values:
+             * The matching mode. Valid values:
              * <p>
              * 
-             * *   **LITERAL**: full-name match
+             * *   **LITERAL:** full-name match
              * *   **PREFIXED**: prefix match
              */
             public Builder aclResourcePatternType(String aclResourcePatternType) {
@@ -274,7 +273,7 @@ public class DescribeAclsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resources to which you want to attach tags. Valid values:
+             * The resource type. Valid values:
              * <p>
              * 
              * *   **Topic**
@@ -294,7 +293,7 @@ public class DescribeAclsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the user.
+             * The username.
              */
             public Builder username(String username) {
                 this.username = username;
@@ -309,7 +308,7 @@ public class DescribeAclsResponseBody extends TeaModel {
 
     }
     public static class KafkaAclList extends TeaModel {
-        @NameInMap("KafkaAclVO")
+        @com.aliyun.core.annotation.NameInMap("KafkaAclVO")
         private java.util.List < KafkaAclVO> kafkaAclVO;
 
         private KafkaAclList(Builder builder) {

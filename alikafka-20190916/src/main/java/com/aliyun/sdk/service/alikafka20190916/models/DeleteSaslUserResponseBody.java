@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteSaslUserResponseBody</p>
  */
 public class DeleteSaslUserResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DeleteSaslUserResponseBody(Builder builder) {
@@ -74,7 +73,7 @@ public class DeleteSaslUserResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.
+         * The HTTP status code. If the request is successful, 200 is returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -90,7 +89,7 @@ public class DeleteSaslUserResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetConsumerProgressResponseBody</p>
  */
 public class GetConsumerProgressResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("ConsumerProgress")
+    @com.aliyun.core.annotation.NameInMap("ConsumerProgress")
     private ConsumerProgress consumerProgress;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetConsumerProgressResponseBody(Builder builder) {
@@ -132,22 +131,22 @@ public class GetConsumerProgressResponseBody extends TeaModel {
     } 
 
     public static class RebalanceInfoList extends TeaModel {
-        @NameInMap("Generation")
+        @com.aliyun.core.annotation.NameInMap("Generation")
         private Long generation;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("LastRebalanceTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LastRebalanceTimestamp")
         private Long lastRebalanceTimestamp;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("RebalanceSuccess")
+        @com.aliyun.core.annotation.NameInMap("RebalanceSuccess")
         private Boolean rebalanceSuccess;
 
-        @NameInMap("RebalanceTimeConsuming")
+        @com.aliyun.core.annotation.NameInMap("RebalanceTimeConsuming")
         private Long rebalanceTimeConsuming;
 
         private RebalanceInfoList(Builder builder) {
@@ -273,7 +272,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
 
     }
     public static class ConsumerProgressRebalanceInfoList extends TeaModel {
-        @NameInMap("RebalanceInfoList")
+        @com.aliyun.core.annotation.NameInMap("RebalanceInfoList")
         private java.util.List < RebalanceInfoList> rebalanceInfoList;
 
         private ConsumerProgressRebalanceInfoList(Builder builder) {
@@ -314,16 +313,16 @@ public class GetConsumerProgressResponseBody extends TeaModel {
 
     }
     public static class OffsetList extends TeaModel {
-        @NameInMap("BrokerOffset")
+        @com.aliyun.core.annotation.NameInMap("BrokerOffset")
         private Long brokerOffset;
 
-        @NameInMap("ConsumerOffset")
+        @com.aliyun.core.annotation.NameInMap("ConsumerOffset")
         private Long consumerOffset;
 
-        @NameInMap("LastTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LastTimestamp")
         private Long lastTimestamp;
 
-        @NameInMap("Partition")
+        @com.aliyun.core.annotation.NameInMap("Partition")
         private Integer partition;
 
         private OffsetList(Builder builder) {
@@ -415,7 +414,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
 
     }
     public static class TopicListOffsetList extends TeaModel {
-        @NameInMap("OffsetList")
+        @com.aliyun.core.annotation.NameInMap("OffsetList")
         private java.util.List < OffsetList> offsetList;
 
         private TopicListOffsetList(Builder builder) {
@@ -456,16 +455,16 @@ public class GetConsumerProgressResponseBody extends TeaModel {
 
     }
     public static class TopicList extends TeaModel {
-        @NameInMap("LastTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LastTimestamp")
         private Long lastTimestamp;
 
-        @NameInMap("OffsetList")
+        @com.aliyun.core.annotation.NameInMap("OffsetList")
         private TopicListOffsetList offsetList;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
-        @NameInMap("TotalDiff")
+        @com.aliyun.core.annotation.NameInMap("TotalDiff")
         private Long totalDiff;
 
         private TopicList(Builder builder) {
@@ -557,7 +556,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
 
     }
     public static class ConsumerProgressTopicList extends TeaModel {
-        @NameInMap("TopicList")
+        @com.aliyun.core.annotation.NameInMap("TopicList")
         private java.util.List < TopicList> topicList;
 
         private ConsumerProgressTopicList(Builder builder) {
@@ -598,16 +597,16 @@ public class GetConsumerProgressResponseBody extends TeaModel {
 
     }
     public static class ConsumerProgress extends TeaModel {
-        @NameInMap("LastTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LastTimestamp")
         private Long lastTimestamp;
 
-        @NameInMap("RebalanceInfoList")
+        @com.aliyun.core.annotation.NameInMap("RebalanceInfoList")
         private ConsumerProgressRebalanceInfoList rebalanceInfoList;
 
-        @NameInMap("TopicList")
+        @com.aliyun.core.annotation.NameInMap("TopicList")
         private ConsumerProgressTopicList topicList;
 
-        @NameInMap("TotalDiff")
+        @com.aliyun.core.annotation.NameInMap("TotalDiff")
         private Long totalDiff;
 
         private ConsumerProgress(Builder builder) {

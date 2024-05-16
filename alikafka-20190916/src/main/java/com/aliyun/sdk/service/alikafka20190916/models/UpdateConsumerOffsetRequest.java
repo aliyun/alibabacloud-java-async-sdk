@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateConsumerOffsetRequest</p>
  */
 public class UpdateConsumerOffsetRequest extends Request {
-    @Query
-    @NameInMap("ConsumerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConsumerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String consumerId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Offsets")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Offsets")
     private java.util.List < Offsets> offsets;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResetType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResetType")
     private String resetType;
 
-    @Query
-    @NameInMap("Time")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Time")
     private String time;
 
-    @Query
-    @NameInMap("Topic")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Topic")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String topic;
 
     private UpdateConsumerOffsetRequest(Builder builder) {
@@ -233,10 +232,10 @@ public class UpdateConsumerOffsetRequest extends Request {
     } 
 
     public static class Offsets extends TeaModel {
-        @NameInMap("Offset")
+        @com.aliyun.core.annotation.NameInMap("Offset")
         private Long offset;
 
-        @NameInMap("Partition")
+        @com.aliyun.core.annotation.NameInMap("Partition")
         private Integer partition;
 
         private Offsets(Builder builder) {

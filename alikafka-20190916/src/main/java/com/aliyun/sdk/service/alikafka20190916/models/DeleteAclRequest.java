@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,51 +11,51 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteAclRequest</p>
  */
 public class DeleteAclRequest extends Request {
-    @Query
-    @NameInMap("AclOperationType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclOperationType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aclOperationType;
 
-    @Query
-    @NameInMap("AclOperationTypes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclOperationTypes")
     private String aclOperationTypes;
 
-    @Query
-    @NameInMap("AclPermissionType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclPermissionType")
     private String aclPermissionType;
 
-    @Query
-    @NameInMap("AclResourceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclResourceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aclResourceName;
 
-    @Query
-    @NameInMap("AclResourcePatternType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclResourcePatternType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aclResourcePatternType;
 
-    @Query
-    @NameInMap("AclResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aclResourceType;
 
-    @Query
-    @NameInMap("Host")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Host")
     private String host;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Username")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Username")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String username;
 
     private DeleteAclRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTopicStatusResponseBody</p>
  */
 public class GetTopicStatusResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TopicStatus")
+    @com.aliyun.core.annotation.NameInMap("TopicStatus")
     private TopicStatus topicStatus;
 
     private GetTopicStatusResponseBody(Builder builder) {
@@ -132,19 +131,19 @@ public class GetTopicStatusResponseBody extends TeaModel {
     } 
 
     public static class OffsetTable extends TeaModel {
-        @NameInMap("LastUpdateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LastUpdateTimestamp")
         private Long lastUpdateTimestamp;
 
-        @NameInMap("MaxOffset")
+        @com.aliyun.core.annotation.NameInMap("MaxOffset")
         private Long maxOffset;
 
-        @NameInMap("MinOffset")
+        @com.aliyun.core.annotation.NameInMap("MinOffset")
         private Long minOffset;
 
-        @NameInMap("Partition")
+        @com.aliyun.core.annotation.NameInMap("Partition")
         private Integer partition;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
         private OffsetTable(Builder builder) {
@@ -253,7 +252,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
 
     }
     public static class TopicStatusOffsetTable extends TeaModel {
-        @NameInMap("OffsetTable")
+        @com.aliyun.core.annotation.NameInMap("OffsetTable")
         private java.util.List < OffsetTable> offsetTable;
 
         private TopicStatusOffsetTable(Builder builder) {
@@ -294,13 +293,13 @@ public class GetTopicStatusResponseBody extends TeaModel {
 
     }
     public static class TopicStatus extends TeaModel {
-        @NameInMap("LastTimeStamp")
+        @com.aliyun.core.annotation.NameInMap("LastTimeStamp")
         private Long lastTimeStamp;
 
-        @NameInMap("OffsetTable")
+        @com.aliyun.core.annotation.NameInMap("OffsetTable")
         private TopicStatusOffsetTable offsetTable;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private TopicStatus(Builder builder) {

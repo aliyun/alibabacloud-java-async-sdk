@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryMessageRequest</p>
  */
 public class QueryMessageRequest extends Request {
-    @Query
-    @NameInMap("BeginTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BeginTime")
     private Long beginTime;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Offset")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Offset")
     private String offset;
 
-    @Query
-    @NameInMap("Partition")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Partition")
     private String partition;
 
-    @Query
-    @NameInMap("QueryType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String queryType;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Topic")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Topic")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String topic;
 
     private QueryMessageRequest(Builder builder) {
@@ -183,6 +182,20 @@ public class QueryMessageRequest extends Request {
          * 
          * *   byOffset: queries messages by offset. If you select this value, you must configure Partition and Offset.
          * *   byTimestamp: queries messages by time. If you select this value, you must configure BeginTime.
+         * 
+         * <!---->
+         * 
+         * *   <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder queryType(String queryType) {
             this.putQueryParameter("QueryType", queryType);

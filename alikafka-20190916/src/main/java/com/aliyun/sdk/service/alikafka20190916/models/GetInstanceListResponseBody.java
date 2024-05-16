@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInstanceListResponseBody</p>
  */
 public class GetInstanceListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("InstanceList")
+    @com.aliyun.core.annotation.NameInMap("InstanceList")
     private InstanceList instanceList;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetInstanceListResponseBody(Builder builder) {
@@ -132,58 +131,58 @@ public class GetInstanceListResponseBody extends TeaModel {
     } 
 
     public static class ConfluentConfig extends TeaModel {
-        @NameInMap("ConnectCU")
+        @com.aliyun.core.annotation.NameInMap("ConnectCU")
         private Integer connectCU;
 
-        @NameInMap("ConnectReplica")
+        @com.aliyun.core.annotation.NameInMap("ConnectReplica")
         private Integer connectReplica;
 
-        @NameInMap("ControlCenterCU")
+        @com.aliyun.core.annotation.NameInMap("ControlCenterCU")
         private Integer controlCenterCU;
 
-        @NameInMap("ControlCenterReplica")
+        @com.aliyun.core.annotation.NameInMap("ControlCenterReplica")
         private Integer controlCenterReplica;
 
-        @NameInMap("ControlCenterStorage")
+        @com.aliyun.core.annotation.NameInMap("ControlCenterStorage")
         private Integer controlCenterStorage;
 
-        @NameInMap("KafkaCU")
+        @com.aliyun.core.annotation.NameInMap("KafkaCU")
         private Integer kafkaCU;
 
-        @NameInMap("KafkaReplica")
+        @com.aliyun.core.annotation.NameInMap("KafkaReplica")
         private Integer kafkaReplica;
 
-        @NameInMap("KafkaRestProxyCU")
+        @com.aliyun.core.annotation.NameInMap("KafkaRestProxyCU")
         private Integer kafkaRestProxyCU;
 
-        @NameInMap("KafkaRestProxyReplica")
+        @com.aliyun.core.annotation.NameInMap("KafkaRestProxyReplica")
         private Integer kafkaRestProxyReplica;
 
-        @NameInMap("KafkaStorage")
+        @com.aliyun.core.annotation.NameInMap("KafkaStorage")
         private Integer kafkaStorage;
 
-        @NameInMap("KsqlCU")
+        @com.aliyun.core.annotation.NameInMap("KsqlCU")
         private Integer ksqlCU;
 
-        @NameInMap("KsqlReplica")
+        @com.aliyun.core.annotation.NameInMap("KsqlReplica")
         private Integer ksqlReplica;
 
-        @NameInMap("KsqlStorage")
+        @com.aliyun.core.annotation.NameInMap("KsqlStorage")
         private Integer ksqlStorage;
 
-        @NameInMap("SchemaRegistryCU")
+        @com.aliyun.core.annotation.NameInMap("SchemaRegistryCU")
         private Integer schemaRegistryCU;
 
-        @NameInMap("SchemaRegistryReplica")
+        @com.aliyun.core.annotation.NameInMap("SchemaRegistryReplica")
         private Integer schemaRegistryReplica;
 
-        @NameInMap("ZooKeeperCU")
+        @com.aliyun.core.annotation.NameInMap("ZooKeeperCU")
         private Integer zooKeeperCU;
 
-        @NameInMap("ZooKeeperReplica")
+        @com.aliyun.core.annotation.NameInMap("ZooKeeperReplica")
         private Integer zooKeeperReplica;
 
-        @NameInMap("ZooKeeperStorage")
+        @com.aliyun.core.annotation.NameInMap("ZooKeeperStorage")
         private Integer zooKeeperStorage;
 
         private ConfluentConfig(Builder builder) {
@@ -362,7 +361,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             private Integer zooKeeperStorage; 
 
             /**
-             * ConnectCU.
+             * The number of CPU cores of Connect.
              */
             public Builder connectCU(Integer connectCU) {
                 this.connectCU = connectCU;
@@ -370,7 +369,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectReplica.
+             * The number of replicas of Connect.
              */
             public Builder connectReplica(Integer connectReplica) {
                 this.connectReplica = connectReplica;
@@ -378,7 +377,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * ControlCenterCU.
+             * The number of CPU cores of Control Center.
              */
             public Builder controlCenterCU(Integer controlCenterCU) {
                 this.controlCenterCU = controlCenterCU;
@@ -386,7 +385,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * ControlCenterReplica.
+             * The number of replicas of Control Center.
              */
             public Builder controlCenterReplica(Integer controlCenterReplica) {
                 this.controlCenterReplica = controlCenterReplica;
@@ -394,7 +393,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * ControlCenterStorage.
+             * The disk capacity of Control Center. Unit: GB.
              */
             public Builder controlCenterStorage(Integer controlCenterStorage) {
                 this.controlCenterStorage = controlCenterStorage;
@@ -402,7 +401,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * KafkaCU.
+             * The number of CPU cores of the Kafka broker.
              */
             public Builder kafkaCU(Integer kafkaCU) {
                 this.kafkaCU = kafkaCU;
@@ -410,7 +409,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * KafkaReplica.
+             * The number of replicas of the Kafka broker.
              */
             public Builder kafkaReplica(Integer kafkaReplica) {
                 this.kafkaReplica = kafkaReplica;
@@ -418,7 +417,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * KafkaRestProxyCU.
+             * The number of CPU cores of Kafka Rest Proxy.
              */
             public Builder kafkaRestProxyCU(Integer kafkaRestProxyCU) {
                 this.kafkaRestProxyCU = kafkaRestProxyCU;
@@ -426,7 +425,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * KafkaRestProxyReplica.
+             * The number of replicas of Kafka Rest Proxy.
              */
             public Builder kafkaRestProxyReplica(Integer kafkaRestProxyReplica) {
                 this.kafkaRestProxyReplica = kafkaRestProxyReplica;
@@ -434,7 +433,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * KafkaStorage.
+             * The disk capacity of the Kafka broker. Unit: GB.
              */
             public Builder kafkaStorage(Integer kafkaStorage) {
                 this.kafkaStorage = kafkaStorage;
@@ -442,7 +441,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * KsqlCU.
+             * The number of CPU cores of ksqlDB.
              */
             public Builder ksqlCU(Integer ksqlCU) {
                 this.ksqlCU = ksqlCU;
@@ -450,7 +449,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * KsqlReplica.
+             * The number of replicas of ksqlDB.
              */
             public Builder ksqlReplica(Integer ksqlReplica) {
                 this.ksqlReplica = ksqlReplica;
@@ -458,7 +457,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * KsqlStorage.
+             * The disk capacity of ksqlDB. Unit: GB.
              */
             public Builder ksqlStorage(Integer ksqlStorage) {
                 this.ksqlStorage = ksqlStorage;
@@ -466,7 +465,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaRegistryCU.
+             * The number of CPU cores of Schema Registry.
              */
             public Builder schemaRegistryCU(Integer schemaRegistryCU) {
                 this.schemaRegistryCU = schemaRegistryCU;
@@ -474,7 +473,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaRegistryReplica.
+             * The number of replicas of Schema Registry.
              */
             public Builder schemaRegistryReplica(Integer schemaRegistryReplica) {
                 this.schemaRegistryReplica = schemaRegistryReplica;
@@ -482,7 +481,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * ZooKeeperCU.
+             * The number of CPU cores of ZooKeeper.
              */
             public Builder zooKeeperCU(Integer zooKeeperCU) {
                 this.zooKeeperCU = zooKeeperCU;
@@ -490,7 +489,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * ZooKeeperReplica.
+             * The number of replicas of ZooKeeper.
              */
             public Builder zooKeeperReplica(Integer zooKeeperReplica) {
                 this.zooKeeperReplica = zooKeeperReplica;
@@ -498,7 +497,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * ZooKeeperStorage.
+             * The disk capacity of ZooKeeper. Unit: GB.
              */
             public Builder zooKeeperStorage(Integer zooKeeperStorage) {
                 this.zooKeeperStorage = zooKeeperStorage;
@@ -513,10 +512,10 @@ public class GetInstanceListResponseBody extends TeaModel {
 
     }
     public static class TagVO extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private TagVO(Builder builder) {
@@ -574,7 +573,7 @@ public class GetInstanceListResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("TagVO")
+        @com.aliyun.core.annotation.NameInMap("TagVO")
         private java.util.List < TagVO> tagVO;
 
         private Tags(Builder builder) {
@@ -615,7 +614,7 @@ public class GetInstanceListResponseBody extends TeaModel {
 
     }
     public static class UpgradeServiceDetailInfo extends TeaModel {
-        @NameInMap("Current2OpenSourceVersion")
+        @com.aliyun.core.annotation.NameInMap("Current2OpenSourceVersion")
         private String current2OpenSourceVersion;
 
         private UpgradeServiceDetailInfo(Builder builder) {
@@ -656,127 +655,127 @@ public class GetInstanceListResponseBody extends TeaModel {
 
     }
     public static class InstanceVO extends TeaModel {
-        @NameInMap("AllConfig")
+        @com.aliyun.core.annotation.NameInMap("AllConfig")
         private String allConfig;
 
-        @NameInMap("ConfluentConfig")
+        @com.aliyun.core.annotation.NameInMap("ConfluentConfig")
         private ConfluentConfig confluentConfig;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("DeployType")
+        @com.aliyun.core.annotation.NameInMap("DeployType")
         private Integer deployType;
 
-        @NameInMap("DiskSize")
+        @com.aliyun.core.annotation.NameInMap("DiskSize")
         private Integer diskSize;
 
-        @NameInMap("DiskType")
+        @com.aliyun.core.annotation.NameInMap("DiskType")
         private Integer diskType;
 
-        @NameInMap("DomainEndpoint")
+        @com.aliyun.core.annotation.NameInMap("DomainEndpoint")
         private String domainEndpoint;
 
-        @NameInMap("EipMax")
+        @com.aliyun.core.annotation.NameInMap("EipMax")
         private Integer eipMax;
 
-        @NameInMap("EndPoint")
+        @com.aliyun.core.annotation.NameInMap("EndPoint")
         private String endPoint;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private Long expiredTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("IoMax")
+        @com.aliyun.core.annotation.NameInMap("IoMax")
         private Integer ioMax;
 
-        @NameInMap("IoMaxRead")
+        @com.aliyun.core.annotation.NameInMap("IoMaxRead")
         private Integer ioMaxRead;
 
-        @NameInMap("IoMaxSpec")
+        @com.aliyun.core.annotation.NameInMap("IoMaxSpec")
         private String ioMaxSpec;
 
-        @NameInMap("IoMaxWrite")
+        @com.aliyun.core.annotation.NameInMap("IoMaxWrite")
         private Integer ioMaxWrite;
 
-        @NameInMap("KmsKeyId")
+        @com.aliyun.core.annotation.NameInMap("KmsKeyId")
         private String kmsKeyId;
 
-        @NameInMap("MsgRetain")
+        @com.aliyun.core.annotation.NameInMap("MsgRetain")
         private Integer msgRetain;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PaidType")
+        @com.aliyun.core.annotation.NameInMap("PaidType")
         private Integer paidType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ReservedPublishCapacity")
+        @com.aliyun.core.annotation.NameInMap("ReservedPublishCapacity")
         private Integer reservedPublishCapacity;
 
-        @NameInMap("ReservedSubscribeCapacity")
+        @com.aliyun.core.annotation.NameInMap("ReservedSubscribeCapacity")
         private Integer reservedSubscribeCapacity;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SaslDomainEndpoint")
+        @com.aliyun.core.annotation.NameInMap("SaslDomainEndpoint")
         private String saslDomainEndpoint;
 
-        @NameInMap("SecurityGroup")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroup")
         private String securityGroup;
 
-        @NameInMap("Series")
+        @com.aliyun.core.annotation.NameInMap("Series")
         private String series;
 
-        @NameInMap("ServiceStatus")
+        @com.aliyun.core.annotation.NameInMap("ServiceStatus")
         private Integer serviceStatus;
 
-        @NameInMap("SpecType")
+        @com.aliyun.core.annotation.NameInMap("SpecType")
         private String specType;
 
-        @NameInMap("SslDomainEndpoint")
+        @com.aliyun.core.annotation.NameInMap("SslDomainEndpoint")
         private String sslDomainEndpoint;
 
-        @NameInMap("SslEndPoint")
+        @com.aliyun.core.annotation.NameInMap("SslEndPoint")
         private String sslEndPoint;
 
-        @NameInMap("StandardZoneId")
+        @com.aliyun.core.annotation.NameInMap("StandardZoneId")
         private String standardZoneId;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("TopicNumLimit")
+        @com.aliyun.core.annotation.NameInMap("TopicNumLimit")
         private Integer topicNumLimit;
 
-        @NameInMap("UpgradeServiceDetailInfo")
+        @com.aliyun.core.annotation.NameInMap("UpgradeServiceDetailInfo")
         private UpgradeServiceDetailInfo upgradeServiceDetailInfo;
 
-        @NameInMap("UsedGroupCount")
+        @com.aliyun.core.annotation.NameInMap("UsedGroupCount")
         private Integer usedGroupCount;
 
-        @NameInMap("UsedPartitionCount")
+        @com.aliyun.core.annotation.NameInMap("UsedPartitionCount")
         private Integer usedPartitionCount;
 
-        @NameInMap("UsedTopicCount")
+        @com.aliyun.core.annotation.NameInMap("UsedTopicCount")
         private Integer usedTopicCount;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("ViewInstanceStatusCode")
+        @com.aliyun.core.annotation.NameInMap("ViewInstanceStatusCode")
         private Integer viewInstanceStatusCode;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private InstanceVO(Builder builder) {
@@ -1170,7 +1169,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * ConfluentConfig.
+             * The parameters that are returned for the ApsaraMQ for Confluent instance.
              */
             public Builder confluentConfig(ConfluentConfig confluentConfig) {
                 this.confluentConfig = confluentConfig;
@@ -1198,7 +1197,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The disk size. Unit: GB.
+             * The disk size. Unit: GB
              */
             public Builder diskSize(Integer diskSize) {
                 this.diskSize = diskSize;
@@ -1230,7 +1229,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The peak Internet traffic allowed for the instance.
+             * The maximum Internet traffic in the instance.
              */
             public Builder eipMax(Integer eipMax) {
                 this.eipMax = eipMax;
@@ -1266,7 +1265,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The peak traffic allowed for the instance.
+             * The maximum traffic in the instance.
              */
             public Builder ioMax(Integer ioMax) {
                 this.ioMax = ioMax;
@@ -1274,7 +1273,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * IoMaxRead.
+             * The maximum read traffic in the instance. Unit: Mbit/s.
              */
             public Builder ioMaxRead(Integer ioMaxRead) {
                 this.ioMaxRead = ioMaxRead;
@@ -1290,7 +1289,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * IoMaxWrite.
+             * The maximum write traffic. Unit: Mbit/s.
              */
             public Builder ioMaxWrite(Integer ioMaxWrite) {
                 this.ioMaxWrite = ioMaxWrite;
@@ -1325,8 +1324,10 @@ public class GetInstanceListResponseBody extends TeaModel {
              * The billing method of the instance. Valid values:
              * <p>
              * 
-             * *   **0**: subscription
-             * *   **1**: pay-as-you-go
+             * *   **0**: the subscription billing method
+             * *   **1**: the pay-as-you-go billing method
+             * *   **3**: the pay-as-you-go billing method for serverless ApsaraMQ for Kafka V3 instances
+             * *   **4**: the pay-as-you-go billing method for ApsaraMQ for Confluent instances
              */
             public Builder paidType(Integer paidType) {
                 this.paidType = paidType;
@@ -1342,7 +1343,10 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * ReservedPublishCapacity.
+             * The traffic reserved for message publishing. Unit: MB/s.
+             * <p>
+             * 
+             * >  This parameter is returned only if the instance is a serverless ApsaraMQ for Kafka V3 instance.
              */
             public Builder reservedPublishCapacity(Integer reservedPublishCapacity) {
                 this.reservedPublishCapacity = reservedPublishCapacity;
@@ -1350,7 +1354,10 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * ReservedSubscribeCapacity.
+             * The traffic reserved for message subscription. Unit: MB/s.
+             * <p>
+             * 
+             * >  This parameter is returned only if the instance is a serverless ApsaraMQ for Kafka V3 instance.
              */
             public Builder reservedSubscribeCapacity(Integer reservedSubscribeCapacity) {
                 this.reservedSubscribeCapacity = reservedSubscribeCapacity;
@@ -1378,10 +1385,10 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The security group of the instance.
+             * The security group to which the instance belongs.
              * <p>
              * 
-             * *   If the instance is deployed by using the ApsaraMQ for Kafka console or calling the [StartInstance](~~157786~~) operation without a security group configured, no value is returned.
+             * *   If the instance is deployed in the ApsaraMQ for Kafka console or by calling the [StartInstance](~~157786~~) operation without a security group configured, no value is returned.
              * *   If the instance is deployed by calling the [StartInstance](~~157786~~) operation with a security group configured, the returned value is the configured security group.
              */
             public Builder securityGroup(String securityGroup) {
@@ -1390,7 +1397,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * Series.
+             * 实例系列标识。返回值有 v2 ，v3，confluent。
              */
             public Builder series(String series) {
                 this.series = series;
@@ -1398,8 +1405,10 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The instance status. Valid values:
+             * >  This parameter is out of date. We recommend that you refer to the ViewInstanceStatusCode parameter.
              * <p>
+             * 
+             * The instance status. Valid values:
              * 
              * *   **0**: pending
              * *   **1**: preparing hardware resources
@@ -1409,10 +1418,11 @@ public class GetInstanceListResponseBody extends TeaModel {
              * *   **6**: migrating
              * *   **7**: ready for upgrade
              * *   **8**: upgrading
-             * *   **9**: ready for changes
+             * *   **9**: ready for change
              * *   **10**: released
              * *   **11**: changing
              * *   **15**: expired
+             * *   **30**: scaling
              */
             public Builder serviceStatus(Integer serviceStatus) {
                 this.serviceStatus = serviceStatus;
@@ -1481,7 +1491,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The upgrade information of the instance.
+             * The upgrade information about the instance.
              */
             public Builder upgradeServiceDetailInfo(UpgradeServiceDetailInfo upgradeServiceDetailInfo) {
                 this.upgradeServiceDetailInfo = upgradeServiceDetailInfo;
@@ -1513,7 +1523,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch ID of the instance.
+             * The ID of the vSwitch to which the instance belongs.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -1521,7 +1531,27 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * ViewInstanceStatusCode.
+             * The instance status. The valid values are consistent with the values displayed in the ApsaraMQ for Kafka console. This parameter is used in the new version of ApsaraMQ for Kafka.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   **0**: pending
+             * *   **1**: deploying
+             * *   **2**: running
+             * *   **3**: stopped
+             * *   **4**: expiring
+             * *   **5**: expired
+             * *   **6**: released
+             * *   **7**: upgrading
+             * *   **8**: migrating
+             * *   **21**: stopping
+             * *   **22**: starting
+             * *   **23**: releasing
+             * *   **30**: auto scaling
+             * *   **101**: deployment failed
+             * *   **102**: upgrade failed
+             * *   **103**: migration failed
              */
             public Builder viewInstanceStatusCode(Integer viewInstanceStatusCode) {
                 this.viewInstanceStatusCode = viewInstanceStatusCode;
@@ -1552,7 +1582,7 @@ public class GetInstanceListResponseBody extends TeaModel {
 
     }
     public static class InstanceList extends TeaModel {
-        @NameInMap("InstanceVO")
+        @com.aliyun.core.annotation.NameInMap("InstanceVO")
         private java.util.List < InstanceVO> instanceVO;
 
         private InstanceList(Builder builder) {

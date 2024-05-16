@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryMessageResponseBody</p>
  */
 public class QueryMessageResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("MessageList")
+    @com.aliyun.core.annotation.NameInMap("MessageList")
     private java.util.List < MessageList> messageList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryMessageResponseBody(Builder builder) {
@@ -136,46 +135,46 @@ public class QueryMessageResponseBody extends TeaModel {
     } 
 
     public static class MessageList extends TeaModel {
-        @NameInMap("Checksum")
+        @com.aliyun.core.annotation.NameInMap("Checksum")
         private Long checksum;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("KeyTruncated")
+        @com.aliyun.core.annotation.NameInMap("KeyTruncated")
         private Boolean keyTruncated;
 
-        @NameInMap("Offset")
+        @com.aliyun.core.annotation.NameInMap("Offset")
         private Long offset;
 
-        @NameInMap("Partition")
+        @com.aliyun.core.annotation.NameInMap("Partition")
         private Long partition;
 
-        @NameInMap("SerializedKeySize")
+        @com.aliyun.core.annotation.NameInMap("SerializedKeySize")
         private Integer serializedKeySize;
 
-        @NameInMap("SerializedValueSize")
+        @com.aliyun.core.annotation.NameInMap("SerializedValueSize")
         private Integer serializedValueSize;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
-        @NameInMap("TimestampType")
+        @com.aliyun.core.annotation.NameInMap("TimestampType")
         private String timestampType;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
-        @NameInMap("TruncatedKeySize")
+        @com.aliyun.core.annotation.NameInMap("TruncatedKeySize")
         private Integer truncatedKeySize;
 
-        @NameInMap("TruncatedValueSize")
+        @com.aliyun.core.annotation.NameInMap("TruncatedValueSize")
         private Integer truncatedValueSize;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        @NameInMap("ValueTruncated")
+        @com.aliyun.core.annotation.NameInMap("ValueTruncated")
         private Boolean valueTruncated;
 
         private MessageList(Builder builder) {
@@ -401,7 +400,7 @@ public class QueryMessageResponseBody extends TeaModel {
              * The truncated size of the message key. Unit: bytes.
              * <p>
              * 
-             * *   A message is truncated only if the message exceeds 10 MB in size.
+             * >  A maximum of 1 KB content can be displayed for each message. Content that exceeds 1 KB is automatically truncated. For more information, see [Query messages](https://help.aliyun.com/zh/apsaramq-for-kafka/query-messages).
              */
             public Builder truncatedKeySize(Integer truncatedKeySize) {
                 this.truncatedKeySize = truncatedKeySize;
@@ -412,7 +411,7 @@ public class QueryMessageResponseBody extends TeaModel {
              * The truncated size of the message value. Unit: bytes.
              * <p>
              * 
-             * *   A message is truncated only if the message exceeds 10 MB in size.
+             * >  A maximum of 1 KB content can be displayed for each message. Content that exceeds 1 KB is automatically truncated. For more information, see [Query messages](https://help.aliyun.com/zh/apsaramq-for-kafka/query-messages).
              */
             public Builder truncatedValueSize(Integer truncatedValueSize) {
                 this.truncatedValueSize = truncatedValueSize;

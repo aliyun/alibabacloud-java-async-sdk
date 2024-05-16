@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alikafka20190916.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSaslUsersResponseBody</p>
  */
 public class DescribeSaslUsersResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SaslUserList")
+    @com.aliyun.core.annotation.NameInMap("SaslUserList")
     private SaslUserList saslUserList;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeSaslUsersResponseBody(Builder builder) {
@@ -110,7 +109,7 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The SASL users.
+         * The Simple Authentication and Security Layer (SASL) users.
          */
         public Builder saslUserList(SaslUserList saslUserList) {
             this.saslUserList = saslUserList;
@@ -132,16 +131,16 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
     } 
 
     public static class SaslUserVO extends TeaModel {
-        @NameInMap("Mechanism")
+        @com.aliyun.core.annotation.NameInMap("Mechanism")
         private String mechanism;
 
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Username")
+        @com.aliyun.core.annotation.NameInMap("Username")
         private String username;
 
         private SaslUserVO(Builder builder) {
@@ -194,7 +193,10 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
             private String username; 
 
             /**
-             * Mechanism.
+             * The encryption method.
+             * <p>
+             * 
+             * >  This field is available only for ApsaraMQ for Kafka V3 Serverless instances.
              */
             public Builder mechanism(String mechanism) {
                 this.mechanism = mechanism;
@@ -202,7 +204,7 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The password that is used to access the Elasticsearch cluster.
+             * The password.
              */
             public Builder password(String password) {
                 this.password = password;
@@ -210,11 +212,11 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The request type. Valid values:
+             * The type. Valid values:
              * <p>
              * 
-             * *   **plain**: a simple mechanism that uses usernames and passwords to verify user identities. Message Queue for Apache Kafka provides an optimized PLAIN mechanism that allows you to dynamically create SASL users for an instance without the need to restart the instance.
-             * *   **scram**: a mechanism that uses usernames and passwords to verify user identities. This mechanism provides better security protection than the PLAIN mechanism. Message Queue for Apache Kafka uses SCRAM-SHA-256.
+             * *   **plain**: a simple mechanism that uses usernames and passwords to verify user identities. ApsaraMQ for Kafka provides an improved PLAIN mechanism that allows you to dynamically add SASL users without the need to restart an instance.
+             * *   **SCRAM**: a mechanism that uses usernames and passwords to verify user identities. Compared with the PLAIN mechanism, this mechanism provides better security protection. ApsaraMQ for Kafka uses the SCRAM-SHA-256 algorithm.
              * 
              * Default value: **plain**.
              */
@@ -224,7 +226,7 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the user.
+             * The username.
              */
             public Builder username(String username) {
                 this.username = username;
@@ -239,7 +241,7 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
 
     }
     public static class SaslUserList extends TeaModel {
-        @NameInMap("SaslUserVO")
+        @com.aliyun.core.annotation.NameInMap("SaslUserVO")
         private java.util.List < SaslUserVO> saslUserVO;
 
         private SaslUserList(Builder builder) {
