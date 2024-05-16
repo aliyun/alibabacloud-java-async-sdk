@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.expressconnectrouter20230901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyExpressConnectRouterInterRegionTransitModeRequest</p>
  */
 public class ModifyExpressConnectRouterInterRegionTransitModeRequest extends Request {
-    @Body
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Body
-    @NameInMap("EcrId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EcrId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ecrId;
 
-    @Body
-    @NameInMap("TransitModeList")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TransitModeList")
     private java.util.List < TransitModeList> transitModeList;
 
     private ModifyExpressConnectRouterInterRegionTransitModeRequest(Builder builder) {
@@ -140,10 +139,10 @@ public class ModifyExpressConnectRouterInterRegionTransitModeRequest extends Req
     } 
 
     public static class TransitModeList extends TeaModel {
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private TransitModeList(Builder builder) {

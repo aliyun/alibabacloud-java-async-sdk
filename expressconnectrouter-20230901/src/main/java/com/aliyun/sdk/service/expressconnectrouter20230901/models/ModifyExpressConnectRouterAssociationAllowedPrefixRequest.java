@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.expressconnectrouter20230901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyExpressConnectRouterAssociationAllowedPrefixRequest</p>
  */
 public class ModifyExpressConnectRouterAssociationAllowedPrefixRequest extends Request {
-    @Body
-    @NameInMap("AllowedPrefixes")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AllowedPrefixes")
     private java.util.List < String > allowedPrefixes;
 
-    @Body
-    @NameInMap("AssociationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AssociationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String associationId;
 
-    @Body
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Body
-    @NameInMap("EcrId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EcrId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ecrId;
 
-    @Body
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
     private ModifyExpressConnectRouterAssociationAllowedPrefixRequest(Builder builder) {

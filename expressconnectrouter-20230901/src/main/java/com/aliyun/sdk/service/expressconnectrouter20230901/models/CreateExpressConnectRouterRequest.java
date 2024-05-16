@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.expressconnectrouter20230901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateExpressConnectRouterRequest</p>
  */
 public class CreateExpressConnectRouterRequest extends Request {
-    @Body
-    @NameInMap("AlibabaSideAsn")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlibabaSideAsn")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long alibabaSideAsn;
 
-    @Body
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Body
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Body
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List < Tags> tags;
 
     private CreateExpressConnectRouterRequest(Builder builder) {
         super(builder);
@@ -45,6 +48,7 @@ public class CreateExpressConnectRouterRequest extends Request {
         this.dryRun = builder.dryRun;
         this.name = builder.name;
         this.resourceGroupId = builder.resourceGroupId;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -102,6 +106,13 @@ public class CreateExpressConnectRouterRequest extends Request {
         return this.resourceGroupId;
     }
 
+    /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
+    }
+
     public static final class Builder extends Request.Builder<CreateExpressConnectRouterRequest, Builder> {
         private Long alibabaSideAsn; 
         private String clientToken; 
@@ -109,6 +120,7 @@ public class CreateExpressConnectRouterRequest extends Request {
         private Boolean dryRun; 
         private String name; 
         private String resourceGroupId; 
+        private java.util.List < Tags> tags; 
 
         private Builder() {
             super();
@@ -122,6 +134,7 @@ public class CreateExpressConnectRouterRequest extends Request {
             this.dryRun = request.dryRun;
             this.name = request.name;
             this.resourceGroupId = request.resourceGroupId;
+            this.tags = request.tags;
         } 
 
         /**
@@ -178,6 +191,15 @@ public class CreateExpressConnectRouterRequest extends Request {
             return this;
         }
 
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            this.putBodyParameter("Tags", tags);
+            this.tags = tags;
+            return this;
+        }
+
         @Override
         public CreateExpressConnectRouterRequest build() {
             return new CreateExpressConnectRouterRequest(this);
@@ -185,4 +207,65 @@ public class CreateExpressConnectRouterRequest extends Request {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

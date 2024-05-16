@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.expressconnectrouter20230901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeExpressConnectRouterRouteEntriesResponseBody</p>
  */
 public class DescribeExpressConnectRouterRouteEntriesResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("DynamicCode")
+    @com.aliyun.core.annotation.NameInMap("DynamicCode")
     private String dynamicCode;
 
-    @NameInMap("DynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("DynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RouteEntriesList")
+    @com.aliyun.core.annotation.NameInMap("RouteEntriesList")
     private java.util.List < RouteEntriesList> routeEntriesList;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeExpressConnectRouterRouteEntriesResponseBody(Builder builder) {
@@ -272,22 +271,22 @@ public class DescribeExpressConnectRouterRouteEntriesResponseBody extends TeaMod
     } 
 
     public static class RouteEntriesList extends TeaModel {
-        @NameInMap("AsPath")
+        @com.aliyun.core.annotation.NameInMap("AsPath")
         private String asPath;
 
-        @NameInMap("Community")
+        @com.aliyun.core.annotation.NameInMap("Community")
         private String community;
 
-        @NameInMap("DestinationCidrBlock")
+        @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
         private String destinationCidrBlock;
 
-        @NameInMap("NexthopInstanceId")
+        @com.aliyun.core.annotation.NameInMap("NexthopInstanceId")
         private String nexthopInstanceId;
 
-        @NameInMap("NexthopInstanceRegionId")
+        @com.aliyun.core.annotation.NameInMap("NexthopInstanceRegionId")
         private String nexthopInstanceRegionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private RouteEntriesList(Builder builder) {

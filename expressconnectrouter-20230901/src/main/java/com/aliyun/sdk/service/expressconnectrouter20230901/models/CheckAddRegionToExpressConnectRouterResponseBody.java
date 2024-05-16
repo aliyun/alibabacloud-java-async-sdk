@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.expressconnectrouter20230901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,43 +11,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CheckAddRegionToExpressConnectRouterResponseBody</p>
  */
 public class CheckAddRegionToExpressConnectRouterResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
-    @NameInMap("AnyCrossBorderLink")
+    @com.aliyun.core.annotation.NameInMap("AnyCrossBorderLink")
     private Boolean anyCrossBorderLink;
 
-    @NameInMap("AnyInterRegionLink")
+    @com.aliyun.core.annotation.NameInMap("AnyInterRegionLink")
     private Boolean anyInterRegionLink;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("DynamicCode")
+    @com.aliyun.core.annotation.NameInMap("DynamicCode")
     private String dynamicCode;
 
-    @NameInMap("DynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("DynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("IsCdtCrossBorderEnabled")
+    @com.aliyun.core.annotation.NameInMap("IsCdtCrossBorderEnabled")
     private Boolean isCdtCrossBorderEnabled;
 
-    @NameInMap("IsCdtInterRegionEnabled")
+    @com.aliyun.core.annotation.NameInMap("IsCdtInterRegionEnabled")
     private Boolean isCdtInterRegionEnabled;
 
-    @NameInMap("IsUserAllowedToCreateCrossBorderLink")
+    @com.aliyun.core.annotation.NameInMap("IsUserAllowedToCreateCrossBorderLink")
     private Boolean isUserAllowedToCreateCrossBorderLink;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CheckAddRegionToExpressConnectRouterResponseBody(Builder builder) {
