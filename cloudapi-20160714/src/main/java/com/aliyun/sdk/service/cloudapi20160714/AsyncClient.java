@@ -91,6 +91,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateAppResponse> createApp(CreateAppRequest request);
 
+    CompletableFuture<CreateAppCodeResponse> createAppCode(CreateAppCodeRequest request);
+
+    CompletableFuture<CreateAppKeyResponse> createAppKey(CreateAppKeyRequest request);
+
     CompletableFuture<CreateBackendResponse> createBackend(CreateBackendRequest request);
 
     CompletableFuture<CreateBackendModelResponse> createBackendModel(CreateBackendModelRequest request);
@@ -190,6 +194,10 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<DeleteAppResponse> deleteApp(DeleteAppRequest request);
+
+    CompletableFuture<DeleteAppCodeResponse> deleteAppCode(DeleteAppCodeRequest request);
+
+    CompletableFuture<DeleteAppKeyResponse> deleteAppKey(DeleteAppKeyRequest request);
 
     CompletableFuture<DeleteBackendResponse> deleteBackend(DeleteBackendRequest request);
 
