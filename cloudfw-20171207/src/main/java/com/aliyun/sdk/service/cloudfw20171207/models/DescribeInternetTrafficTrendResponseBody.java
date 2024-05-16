@@ -29,6 +29,9 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("MaxBandwidthTime")
     private Long maxBandwidthTime;
 
+    @com.aliyun.core.annotation.NameInMap("MaxDayExceedBytes")
+    private Long maxDayExceedBytes;
+
     @com.aliyun.core.annotation.NameInMap("MaxInBps")
     private Long maxInBps;
 
@@ -47,6 +50,9 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("TotalBytes")
     private Long totalBytes;
 
+    @com.aliyun.core.annotation.NameInMap("TotalExceedBytes")
+    private Long totalExceedBytes;
+
     @com.aliyun.core.annotation.NameInMap("TotalInBytes")
     private Long totalInBytes;
 
@@ -63,12 +69,14 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         this.avgTotalBps = builder.avgTotalBps;
         this.dataList = builder.dataList;
         this.maxBandwidthTime = builder.maxBandwidthTime;
+        this.maxDayExceedBytes = builder.maxDayExceedBytes;
         this.maxInBps = builder.maxInBps;
         this.maxOutBps = builder.maxOutBps;
         this.maxSession = builder.maxSession;
         this.maxTotalBps = builder.maxTotalBps;
         this.requestId = builder.requestId;
         this.totalBytes = builder.totalBytes;
+        this.totalExceedBytes = builder.totalExceedBytes;
         this.totalInBytes = builder.totalInBytes;
         this.totalOutBytes = builder.totalOutBytes;
         this.totalSession = builder.totalSession;
@@ -125,6 +133,13 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
     }
 
     /**
+     * @return maxDayExceedBytes
+     */
+    public Long getMaxDayExceedBytes() {
+        return this.maxDayExceedBytes;
+    }
+
+    /**
      * @return maxInBps
      */
     public Long getMaxInBps() {
@@ -167,6 +182,13 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
     }
 
     /**
+     * @return totalExceedBytes
+     */
+    public Long getTotalExceedBytes() {
+        return this.totalExceedBytes;
+    }
+
+    /**
      * @return totalInBytes
      */
     public Long getTotalInBytes() {
@@ -194,12 +216,14 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         private Long avgTotalBps; 
         private java.util.List < DataList> dataList; 
         private Long maxBandwidthTime; 
+        private Long maxDayExceedBytes; 
         private Long maxInBps; 
         private Long maxOutBps; 
         private Long maxSession; 
         private Long maxTotalBps; 
         private String requestId; 
         private Long totalBytes; 
+        private Long totalExceedBytes; 
         private Long totalInBytes; 
         private Long totalOutBytes; 
         private Long totalSession; 
@@ -253,6 +277,14 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
+         * MaxDayExceedBytes.
+         */
+        public Builder maxDayExceedBytes(Long maxDayExceedBytes) {
+            this.maxDayExceedBytes = maxDayExceedBytes;
+            return this;
+        }
+
+        /**
          * The maximum inbound network throughput, which indicates the maximum number of bits that are sent inbound per second. Unit: bit/s.
          */
         public Builder maxInBps(Long maxInBps) {
@@ -297,6 +329,14 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
          */
         public Builder totalBytes(Long totalBytes) {
             this.totalBytes = totalBytes;
+            return this;
+        }
+
+        /**
+         * TotalExceedBytes.
+         */
+        public Builder totalExceedBytes(Long totalExceedBytes) {
+            this.totalExceedBytes = totalExceedBytes;
             return this;
         }
 
