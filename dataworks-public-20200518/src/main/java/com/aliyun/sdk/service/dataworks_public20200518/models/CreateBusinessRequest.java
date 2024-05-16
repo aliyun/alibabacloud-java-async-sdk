@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateBusinessRequest</p>
  */
 public class CreateBusinessRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("BusinessName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BusinessName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String businessName;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("Owner")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Owner")
     private String owner;
 
-    @Body
-    @NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
     private Long projectId;
 
-    @Body
-    @NameInMap("ProjectIdentifier")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectIdentifier")
     private String projectIdentifier;
 
-    @Body
-    @NameInMap("UseType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UseType")
     private String useType;
 
     private CreateBusinessRequest(Builder builder) {

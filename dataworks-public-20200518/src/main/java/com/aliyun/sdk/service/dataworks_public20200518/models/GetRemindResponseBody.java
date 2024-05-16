@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetRemindResponseBody</p>
  */
 public class GetRemindResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetRemindResponseBody(Builder builder) {
@@ -152,10 +151,10 @@ public class GetRemindResponseBody extends TeaModel {
     } 
 
     public static class Baselines extends TeaModel {
-        @NameInMap("BaselineId")
+        @com.aliyun.core.annotation.NameInMap("BaselineId")
         private Long baselineId;
 
-        @NameInMap("BaselineName")
+        @com.aliyun.core.annotation.NameInMap("BaselineName")
         private String baselineName;
 
         private Baselines(Builder builder) {
@@ -213,10 +212,10 @@ public class GetRemindResponseBody extends TeaModel {
 
     }
     public static class BizProcesses extends TeaModel {
-        @NameInMap("BizId")
+        @com.aliyun.core.annotation.NameInMap("BizId")
         private Long bizId;
 
-        @NameInMap("BizProcessName")
+        @com.aliyun.core.annotation.NameInMap("BizProcessName")
         private String bizProcessName;
 
         private BizProcesses(Builder builder) {
@@ -274,16 +273,16 @@ public class GetRemindResponseBody extends TeaModel {
 
     }
     public static class Nodes extends TeaModel {
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
         private Nodes(Builder builder) {
@@ -375,7 +374,7 @@ public class GetRemindResponseBody extends TeaModel {
 
     }
     public static class Projects extends TeaModel {
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
         private Projects(Builder builder) {
@@ -416,10 +415,10 @@ public class GetRemindResponseBody extends TeaModel {
 
     }
     public static class Robots extends TeaModel {
-        @NameInMap("AtAll")
+        @com.aliyun.core.annotation.NameInMap("AtAll")
         private Boolean atAll;
 
-        @NameInMap("WebUrl")
+        @com.aliyun.core.annotation.NameInMap("WebUrl")
         private String webUrl;
 
         private Robots(Builder builder) {
@@ -477,64 +476,64 @@ public class GetRemindResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AlertInterval")
+        @com.aliyun.core.annotation.NameInMap("AlertInterval")
         private Integer alertInterval;
 
-        @NameInMap("AlertMethods")
+        @com.aliyun.core.annotation.NameInMap("AlertMethods")
         private java.util.List < String > alertMethods;
 
-        @NameInMap("AlertTargets")
+        @com.aliyun.core.annotation.NameInMap("AlertTargets")
         private java.util.List < String > alertTargets;
 
-        @NameInMap("AlertUnit")
+        @com.aliyun.core.annotation.NameInMap("AlertUnit")
         private String alertUnit;
 
-        @NameInMap("Baselines")
+        @com.aliyun.core.annotation.NameInMap("Baselines")
         private java.util.List < Baselines> baselines;
 
-        @NameInMap("BizProcesses")
+        @com.aliyun.core.annotation.NameInMap("BizProcesses")
         private java.util.List < BizProcesses> bizProcesses;
 
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private String detail;
 
-        @NameInMap("DndEnd")
+        @com.aliyun.core.annotation.NameInMap("DndEnd")
         private String dndEnd;
 
-        @NameInMap("DndStart")
+        @com.aliyun.core.annotation.NameInMap("DndStart")
         private String dndStart;
 
-        @NameInMap("Founder")
+        @com.aliyun.core.annotation.NameInMap("Founder")
         private String founder;
 
-        @NameInMap("MaxAlertTimes")
+        @com.aliyun.core.annotation.NameInMap("MaxAlertTimes")
         private Integer maxAlertTimes;
 
-        @NameInMap("Nodes")
+        @com.aliyun.core.annotation.NameInMap("Nodes")
         private java.util.List < Nodes> nodes;
 
-        @NameInMap("Projects")
+        @com.aliyun.core.annotation.NameInMap("Projects")
         private java.util.List < Projects> projects;
 
-        @NameInMap("RemindId")
+        @com.aliyun.core.annotation.NameInMap("RemindId")
         private Long remindId;
 
-        @NameInMap("RemindName")
+        @com.aliyun.core.annotation.NameInMap("RemindName")
         private String remindName;
 
-        @NameInMap("RemindType")
+        @com.aliyun.core.annotation.NameInMap("RemindType")
         private String remindType;
 
-        @NameInMap("RemindUnit")
+        @com.aliyun.core.annotation.NameInMap("RemindUnit")
         private String remindUnit;
 
-        @NameInMap("Robots")
+        @com.aliyun.core.annotation.NameInMap("Robots")
         private java.util.List < Robots> robots;
 
-        @NameInMap("Useflag")
+        @com.aliyun.core.annotation.NameInMap("Useflag")
         private Boolean useflag;
 
-        @NameInMap("Webhooks")
+        @com.aliyun.core.annotation.NameInMap("Webhooks")
         private java.util.List < String > webhooks;
 
         private Data(Builder builder) {

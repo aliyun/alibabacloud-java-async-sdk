@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteTableRequest</p>
  */
 public class DeleteTableRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AppGuid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppGuid")
     private String appGuid;
 
-    @Query
-    @NameInMap("EnvType")
-    @Validation(maximum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnvType")
+    @com.aliyun.core.annotation.Validation(maximum = 1)
     private Integer envType;
 
-    @Query
-    @NameInMap("ProjectId")
-    @Validation(minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long projectId;
 
-    @Query
-    @NameInMap("Schema")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Schema")
     private String schema;
 
-    @Query
-    @NameInMap("TableName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tableName;
 
     private DeleteTableRequest(Builder builder) {

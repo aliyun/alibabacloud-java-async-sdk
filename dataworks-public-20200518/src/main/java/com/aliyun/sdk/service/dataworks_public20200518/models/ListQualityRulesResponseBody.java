@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListQualityRulesResponseBody</p>
  */
 public class ListQualityRulesResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListQualityRulesResponseBody(Builder builder) {
@@ -156,82 +155,82 @@ public class ListQualityRulesResponseBody extends TeaModel {
     } 
 
     public static class Rules extends TeaModel {
-        @NameInMap("BlockType")
+        @com.aliyun.core.annotation.NameInMap("BlockType")
         private Integer blockType;
 
-        @NameInMap("CheckerId")
+        @com.aliyun.core.annotation.NameInMap("CheckerId")
         private Integer checkerId;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("CriticalThreshold")
+        @com.aliyun.core.annotation.NameInMap("CriticalThreshold")
         private String criticalThreshold;
 
-        @NameInMap("EntityId")
+        @com.aliyun.core.annotation.NameInMap("EntityId")
         private Long entityId;
 
-        @NameInMap("ExpectValue")
+        @com.aliyun.core.annotation.NameInMap("ExpectValue")
         private String expectValue;
 
-        @NameInMap("FixCheck")
+        @com.aliyun.core.annotation.NameInMap("FixCheck")
         private Boolean fixCheck;
 
-        @NameInMap("HistoryCriticalThreshold")
+        @com.aliyun.core.annotation.NameInMap("HistoryCriticalThreshold")
         private String historyCriticalThreshold;
 
-        @NameInMap("HistoryWarningThreshold")
+        @com.aliyun.core.annotation.NameInMap("HistoryWarningThreshold")
         private String historyWarningThreshold;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("MatchExpression")
+        @com.aliyun.core.annotation.NameInMap("MatchExpression")
         private String matchExpression;
 
-        @NameInMap("MethodId")
+        @com.aliyun.core.annotation.NameInMap("MethodId")
         private Integer methodId;
 
-        @NameInMap("MethodName")
+        @com.aliyun.core.annotation.NameInMap("MethodName")
         private String methodName;
 
-        @NameInMap("OnDuty")
+        @com.aliyun.core.annotation.NameInMap("OnDuty")
         private String onDuty;
 
-        @NameInMap("OnDutyAccountName")
+        @com.aliyun.core.annotation.NameInMap("OnDutyAccountName")
         private String onDutyAccountName;
 
-        @NameInMap("ProjectName")
+        @com.aliyun.core.annotation.NameInMap("ProjectName")
         private String projectName;
 
-        @NameInMap("Property")
+        @com.aliyun.core.annotation.NameInMap("Property")
         private String property;
 
-        @NameInMap("PropertyKey")
+        @com.aliyun.core.annotation.NameInMap("PropertyKey")
         private String propertyKey;
 
-        @NameInMap("RuleCheckerRelationId")
+        @com.aliyun.core.annotation.NameInMap("RuleCheckerRelationId")
         private Long ruleCheckerRelationId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("RuleType")
+        @com.aliyun.core.annotation.NameInMap("RuleType")
         private Integer ruleType;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private Integer templateId;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
-        @NameInMap("Trend")
+        @com.aliyun.core.annotation.NameInMap("Trend")
         private String trend;
 
-        @NameInMap("WarningThreshold")
+        @com.aliyun.core.annotation.NameInMap("WarningThreshold")
         private String warningThreshold;
 
         private Rules(Builder builder) {
@@ -709,16 +708,16 @@ public class ListQualityRulesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Rules")
+        @com.aliyun.core.annotation.NameInMap("Rules")
         private java.util.List < Rules> rules;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private Data(Builder builder) {

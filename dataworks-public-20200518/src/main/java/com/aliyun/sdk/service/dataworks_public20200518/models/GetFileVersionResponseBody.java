@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetFileVersionResponseBody</p>
  */
 public class GetFileVersionResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetFileVersionResponseBody(Builder builder) {
@@ -152,43 +151,43 @@ public class GetFileVersionResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("ChangeType")
+        @com.aliyun.core.annotation.NameInMap("ChangeType")
         private String changeType;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("CommitTime")
+        @com.aliyun.core.annotation.NameInMap("CommitTime")
         private Long commitTime;
 
-        @NameInMap("CommitUser")
+        @com.aliyun.core.annotation.NameInMap("CommitUser")
         private String commitUser;
 
-        @NameInMap("FileContent")
+        @com.aliyun.core.annotation.NameInMap("FileContent")
         private String fileContent;
 
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("FilePropertyContent")
+        @com.aliyun.core.annotation.NameInMap("FilePropertyContent")
         private String filePropertyContent;
 
-        @NameInMap("FileVersion")
+        @com.aliyun.core.annotation.NameInMap("FileVersion")
         private Integer fileVersion;
 
-        @NameInMap("IsCurrentProd")
+        @com.aliyun.core.annotation.NameInMap("IsCurrentProd")
         private Boolean isCurrentProd;
 
-        @NameInMap("NodeContent")
+        @com.aliyun.core.annotation.NameInMap("NodeContent")
         private String nodeContent;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UseType")
+        @com.aliyun.core.annotation.NameInMap("UseType")
         private String useType;
 
         private Data(Builder builder) {

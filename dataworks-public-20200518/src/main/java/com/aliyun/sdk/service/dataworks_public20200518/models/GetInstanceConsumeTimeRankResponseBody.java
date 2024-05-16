@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInstanceConsumeTimeRankResponseBody</p>
  */
 public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
-    @NameInMap("InstanceConsumeTimeRank")
+    @com.aliyun.core.annotation.NameInMap("InstanceConsumeTimeRank")
     private InstanceConsumeTimeRank instanceConsumeTimeRank;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetInstanceConsumeTimeRankResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
     } 
 
     public static class ConsumeTimeRank extends TeaModel {
-        @NameInMap("Bizdate")
+        @com.aliyun.core.annotation.NameInMap("Bizdate")
         private Long bizdate;
 
-        @NameInMap("Consumed")
+        @com.aliyun.core.annotation.NameInMap("Consumed")
         private Long consumed;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("PrgType")
+        @com.aliyun.core.annotation.NameInMap("PrgType")
         private Integer prgType;
 
         private ConsumeTimeRank(Builder builder) {
@@ -233,10 +232,10 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
 
     }
     public static class InstanceConsumeTimeRank extends TeaModel {
-        @NameInMap("ConsumeTimeRank")
+        @com.aliyun.core.annotation.NameInMap("ConsumeTimeRank")
         private java.util.List < ConsumeTimeRank> consumeTimeRank;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private InstanceConsumeTimeRank(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTopicInfluenceResponseBody</p>
  */
 public class GetTopicInfluenceResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetTopicInfluenceResponseBody(Builder builder) {
@@ -152,31 +151,31 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
     } 
 
     public static class Influences extends TeaModel {
-        @NameInMap("BaselineId")
+        @com.aliyun.core.annotation.NameInMap("BaselineId")
         private Long baselineId;
 
-        @NameInMap("BaselineName")
+        @com.aliyun.core.annotation.NameInMap("BaselineName")
         private String baselineName;
 
-        @NameInMap("Bizdate")
+        @com.aliyun.core.annotation.NameInMap("Bizdate")
         private Long bizdate;
 
-        @NameInMap("Buffer")
+        @com.aliyun.core.annotation.NameInMap("Buffer")
         private Long buffer;
 
-        @NameInMap("InGroupId")
+        @com.aliyun.core.annotation.NameInMap("InGroupId")
         private Integer inGroupId;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Influences(Builder builder) {
@@ -353,10 +352,10 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Influences")
+        @com.aliyun.core.annotation.NameInMap("Influences")
         private java.util.List < Influences> influences;
 
-        @NameInMap("TopicId")
+        @com.aliyun.core.annotation.NameInMap("TopicId")
         private Long topicId;
 
         private Data(Builder builder) {

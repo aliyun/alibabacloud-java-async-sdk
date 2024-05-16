@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Entity</p>
  */
 public class Entity extends TeaModel {
-    @NameInMap("EntityContent")
+    @com.aliyun.core.annotation.NameInMap("EntityContent")
     private java.util.Map < String, ? > entityContent;
 
-    @NameInMap("QualifiedName")
+    @com.aliyun.core.annotation.NameInMap("QualifiedName")
     private String qualifiedName;
 
-    @NameInMap("TenantId")
+    @com.aliyun.core.annotation.NameInMap("TenantId")
     private Long tenantId;
 
     private Entity(Builder builder) {

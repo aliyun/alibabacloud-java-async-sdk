@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,44 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateManualDagRequest</p>
  */
 public class CreateManualDagRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("BizDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizDate;
 
-    @Body
-    @NameInMap("DagParameters")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DagParameters")
     private String dagParameters;
 
-    @Body
-    @NameInMap("ExcludeNodeIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExcludeNodeIds")
     private String excludeNodeIds;
 
-    @Body
-    @NameInMap("FlowName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FlowName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String flowName;
 
-    @Body
-    @NameInMap("IncludeNodeIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IncludeNodeIds")
     private String includeNodeIds;
 
-    @Body
-    @NameInMap("NodeParameters")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeParameters")
     private String nodeParameters;
 
-    @Body
-    @NameInMap("ProjectEnv")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectEnv")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectEnv;
 
-    @Body
-    @NameInMap("ProjectName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectName;
 
     private CreateManualDagRequest(Builder builder) {

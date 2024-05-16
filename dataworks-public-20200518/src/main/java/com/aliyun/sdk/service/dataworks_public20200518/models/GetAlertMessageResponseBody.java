@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAlertMessageResponseBody</p>
  */
 public class GetAlertMessageResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetAlertMessageResponseBody(Builder builder) {
@@ -152,19 +151,19 @@ public class GetAlertMessageResponseBody extends TeaModel {
     } 
 
     public static class Instances extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Instances(Builder builder) {
@@ -273,16 +272,16 @@ public class GetAlertMessageResponseBody extends TeaModel {
 
     }
     public static class Nodes extends TeaModel {
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
         private Nodes(Builder builder) {
@@ -374,25 +373,25 @@ public class GetAlertMessageResponseBody extends TeaModel {
 
     }
     public static class SlaAlert extends TeaModel {
-        @NameInMap("BaselineId")
+        @com.aliyun.core.annotation.NameInMap("BaselineId")
         private Long baselineId;
 
-        @NameInMap("BaselineName")
+        @com.aliyun.core.annotation.NameInMap("BaselineName")
         private String baselineName;
 
-        @NameInMap("BaselineOwner")
+        @com.aliyun.core.annotation.NameInMap("BaselineOwner")
         private String baselineOwner;
 
-        @NameInMap("Bizdate")
+        @com.aliyun.core.annotation.NameInMap("Bizdate")
         private Long bizdate;
 
-        @NameInMap("InGroupId")
+        @com.aliyun.core.annotation.NameInMap("InGroupId")
         private Integer inGroupId;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private SlaAlert(Builder builder) {
@@ -535,22 +534,22 @@ public class GetAlertMessageResponseBody extends TeaModel {
 
     }
     public static class Topics extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
 
-        @NameInMap("TopicId")
+        @com.aliyun.core.annotation.NameInMap("TopicId")
         private Long topicId;
 
-        @NameInMap("TopicName")
+        @com.aliyun.core.annotation.NameInMap("TopicName")
         private String topicName;
 
-        @NameInMap("TopicOwner")
+        @com.aliyun.core.annotation.NameInMap("TopicOwner")
         private String topicOwner;
 
-        @NameInMap("TopicStatus")
+        @com.aliyun.core.annotation.NameInMap("TopicStatus")
         private String topicStatus;
 
         private Topics(Builder builder) {
@@ -676,43 +675,43 @@ public class GetAlertMessageResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AlertId")
+        @com.aliyun.core.annotation.NameInMap("AlertId")
         private Long alertId;
 
-        @NameInMap("AlertMessageStatus")
+        @com.aliyun.core.annotation.NameInMap("AlertMessageStatus")
         private String alertMessageStatus;
 
-        @NameInMap("AlertMethod")
+        @com.aliyun.core.annotation.NameInMap("AlertMethod")
         private String alertMethod;
 
-        @NameInMap("AlertTime")
+        @com.aliyun.core.annotation.NameInMap("AlertTime")
         private Long alertTime;
 
-        @NameInMap("AlertUser")
+        @com.aliyun.core.annotation.NameInMap("AlertUser")
         private String alertUser;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("Instances")
+        @com.aliyun.core.annotation.NameInMap("Instances")
         private java.util.List < Instances> instances;
 
-        @NameInMap("Nodes")
+        @com.aliyun.core.annotation.NameInMap("Nodes")
         private java.util.List < Nodes> nodes;
 
-        @NameInMap("RemindId")
+        @com.aliyun.core.annotation.NameInMap("RemindId")
         private Long remindId;
 
-        @NameInMap("RemindName")
+        @com.aliyun.core.annotation.NameInMap("RemindName")
         private String remindName;
 
-        @NameInMap("SlaAlert")
+        @com.aliyun.core.annotation.NameInMap("SlaAlert")
         private SlaAlert slaAlert;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("Topics")
+        @com.aliyun.core.annotation.NameInMap("Topics")
         private java.util.List < Topics> topics;
 
         private Data(Builder builder) {

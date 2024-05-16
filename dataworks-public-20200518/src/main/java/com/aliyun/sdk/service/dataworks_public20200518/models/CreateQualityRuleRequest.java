@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,96 +11,96 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateQualityRuleRequest</p>
  */
 public class CreateQualityRuleRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("BlockType")
-    @Validation(required = true, maximum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BlockType")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
     private Integer blockType;
 
-    @Body
-    @NameInMap("Checker")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Checker")
     private Integer checker;
 
-    @Body
-    @NameInMap("Comment")
-    @Validation(maxLength = 128, minLength = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Comment")
+    @com.aliyun.core.annotation.Validation(maxLength = 128, minLength = 1)
     private String comment;
 
-    @Body
-    @NameInMap("CriticalThreshold")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CriticalThreshold")
     private String criticalThreshold;
 
-    @Body
-    @NameInMap("EntityId")
-    @Validation(required = true, maximum = 2147483647, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EntityId")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 2147483647, minimum = 1)
     private Long entityId;
 
-    @Body
-    @NameInMap("ExpectValue")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExpectValue")
     private String expectValue;
 
-    @Body
-    @NameInMap("MethodName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MethodName")
     private String methodName;
 
-    @Body
-    @NameInMap("Operator")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Operator")
     private String operator;
 
-    @Body
-    @NameInMap("PredictType")
-    @Validation(required = true, maximum = 99)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PredictType")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 99)
     private Integer predictType;
 
-    @Body
-    @NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
     private Long projectId;
 
-    @Body
-    @NameInMap("ProjectName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectName;
 
-    @Body
-    @NameInMap("Property")
-    @Validation(maxLength = 128)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Property")
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String property;
 
-    @Body
-    @NameInMap("PropertyType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PropertyType")
     private String propertyType;
 
-    @Body
-    @NameInMap("RuleName")
-    @Validation(required = true, maxLength = 128)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RuleName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128)
     private String ruleName;
 
-    @Body
-    @NameInMap("RuleType")
-    @Validation(required = true, maximum = 99)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RuleType")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 99)
     private Integer ruleType;
 
-    @Body
-    @NameInMap("TaskSetting")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TaskSetting")
     private String taskSetting;
 
-    @Body
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private Integer templateId;
 
-    @Body
-    @NameInMap("Trend")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Trend")
     private String trend;
 
-    @Body
-    @NameInMap("WarningThreshold")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WarningThreshold")
     private String warningThreshold;
 
-    @Body
-    @NameInMap("WhereCondition")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WhereCondition")
     private String whereCondition;
 
     private CreateQualityRuleRequest(Builder builder) {

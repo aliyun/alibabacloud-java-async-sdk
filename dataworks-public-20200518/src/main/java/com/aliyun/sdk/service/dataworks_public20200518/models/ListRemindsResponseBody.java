@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRemindsResponseBody</p>
  */
 public class ListRemindsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListRemindsResponseBody(Builder builder) {
@@ -152,49 +151,49 @@ public class ListRemindsResponseBody extends TeaModel {
     } 
 
     public static class Reminds extends TeaModel {
-        @NameInMap("AlertMethods")
+        @com.aliyun.core.annotation.NameInMap("AlertMethods")
         private java.util.List < String > alertMethods;
 
-        @NameInMap("AlertTargets")
+        @com.aliyun.core.annotation.NameInMap("AlertTargets")
         private java.util.List < String > alertTargets;
 
-        @NameInMap("AlertUnit")
+        @com.aliyun.core.annotation.NameInMap("AlertUnit")
         private String alertUnit;
 
-        @NameInMap("BaselineIds")
+        @com.aliyun.core.annotation.NameInMap("BaselineIds")
         private java.util.List < Long > baselineIds;
 
-        @NameInMap("BizProcessIds")
+        @com.aliyun.core.annotation.NameInMap("BizProcessIds")
         private java.util.List < Long > bizProcessIds;
 
-        @NameInMap("DndEnd")
+        @com.aliyun.core.annotation.NameInMap("DndEnd")
         private String dndEnd;
 
-        @NameInMap("DndStart")
+        @com.aliyun.core.annotation.NameInMap("DndStart")
         private String dndStart;
 
-        @NameInMap("Founder")
+        @com.aliyun.core.annotation.NameInMap("Founder")
         private String founder;
 
-        @NameInMap("NodeIds")
+        @com.aliyun.core.annotation.NameInMap("NodeIds")
         private java.util.List < Long > nodeIds;
 
-        @NameInMap("ProjectIds")
+        @com.aliyun.core.annotation.NameInMap("ProjectIds")
         private java.util.List < Long > projectIds;
 
-        @NameInMap("RemindId")
+        @com.aliyun.core.annotation.NameInMap("RemindId")
         private Long remindId;
 
-        @NameInMap("RemindName")
+        @com.aliyun.core.annotation.NameInMap("RemindName")
         private String remindName;
 
-        @NameInMap("RemindType")
+        @com.aliyun.core.annotation.NameInMap("RemindType")
         private String remindType;
 
-        @NameInMap("RemindUnit")
+        @com.aliyun.core.annotation.NameInMap("RemindUnit")
         private String remindUnit;
 
-        @NameInMap("Useflag")
+        @com.aliyun.core.annotation.NameInMap("Useflag")
         private Boolean useflag;
 
         private Reminds(Builder builder) {
@@ -473,16 +472,16 @@ public class ListRemindsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Reminds")
+        @com.aliyun.core.annotation.NameInMap("Reminds")
         private java.util.List < Reminds> reminds;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTopicResponseBody</p>
  */
 public class GetTopicResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetTopicResponseBody(Builder builder) {
@@ -152,73 +151,73 @@ public class GetTopicResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AddTime")
+        @com.aliyun.core.annotation.NameInMap("AddTime")
         private Long addTime;
 
-        @NameInMap("AlertTime")
+        @com.aliyun.core.annotation.NameInMap("AlertTime")
         private Long alertTime;
 
-        @NameInMap("Assigner")
+        @com.aliyun.core.annotation.NameInMap("Assigner")
         private String assigner;
 
-        @NameInMap("BaselineBuffer")
+        @com.aliyun.core.annotation.NameInMap("BaselineBuffer")
         private Long baselineBuffer;
 
-        @NameInMap("BaselineId")
+        @com.aliyun.core.annotation.NameInMap("BaselineId")
         private Long baselineId;
 
-        @NameInMap("BaselineInGroupId")
+        @com.aliyun.core.annotation.NameInMap("BaselineInGroupId")
         private Integer baselineInGroupId;
 
-        @NameInMap("BaselineName")
+        @com.aliyun.core.annotation.NameInMap("BaselineName")
         private String baselineName;
 
-        @NameInMap("BaselineStatus")
+        @com.aliyun.core.annotation.NameInMap("BaselineStatus")
         private String baselineStatus;
 
-        @NameInMap("Buffer")
+        @com.aliyun.core.annotation.NameInMap("Buffer")
         private Long buffer;
 
-        @NameInMap("DealTime")
+        @com.aliyun.core.annotation.NameInMap("DealTime")
         private Long dealTime;
 
-        @NameInMap("DealUser")
+        @com.aliyun.core.annotation.NameInMap("DealUser")
         private String dealUser;
 
-        @NameInMap("FixTime")
+        @com.aliyun.core.annotation.NameInMap("FixTime")
         private Long fixTime;
 
-        @NameInMap("HappenTime")
+        @com.aliyun.core.annotation.NameInMap("HappenTime")
         private Long happenTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
 
-        @NameInMap("NextAlertTime")
+        @com.aliyun.core.annotation.NameInMap("NextAlertTime")
         private Long nextAlertTime;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
-        @NameInMap("TopicId")
+        @com.aliyun.core.annotation.NameInMap("TopicId")
         private Long topicId;
 
-        @NameInMap("TopicName")
+        @com.aliyun.core.annotation.NameInMap("TopicName")
         private String topicName;
 
-        @NameInMap("TopicStatus")
+        @com.aliyun.core.annotation.NameInMap("TopicStatus")
         private String topicStatus;
 
-        @NameInMap("TopicType")
+        @com.aliyun.core.annotation.NameInMap("TopicType")
         private String topicType;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteLineageRelationRequest</p>
  */
 public class DeleteLineageRelationRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("DestEntityQualifiedName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestEntityQualifiedName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String destEntityQualifiedName;
 
-    @Query
-    @NameInMap("RelationshipGuid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelationshipGuid")
     private String relationshipGuid;
 
-    @Query
-    @NameInMap("SrcEntityQualifiedName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcEntityQualifiedName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String srcEntityQualifiedName;
 
     private DeleteLineageRelationRequest(Builder builder) {

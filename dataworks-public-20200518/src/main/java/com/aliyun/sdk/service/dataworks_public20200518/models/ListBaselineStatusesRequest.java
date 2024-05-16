@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,51 +11,51 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListBaselineStatusesRequest</p>
  */
 public class ListBaselineStatusesRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("BaselineTypes")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BaselineTypes")
     private String baselineTypes;
 
-    @Body
-    @NameInMap("Bizdate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Bizdate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizdate;
 
-    @Body
-    @NameInMap("FinishStatus")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FinishStatus")
     private String finishStatus;
 
-    @Body
-    @NameInMap("Owner")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Owner")
     private String owner;
 
-    @Body
-    @NameInMap("PageNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNumber;
 
-    @Body
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @Body
-    @NameInMap("Priority")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Priority")
     private String priority;
 
-    @Body
-    @NameInMap("SearchText")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SearchText")
     private String searchText;
 
-    @Body
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Body
-    @NameInMap("TopicId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TopicId")
     private Long topicId;
 
     private ListBaselineStatusesRequest(Builder builder) {

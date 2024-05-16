@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListConnectionsResponseBody</p>
  */
 public class ListConnectionsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListConnectionsResponseBody(Builder builder) {
@@ -112,58 +111,58 @@ public class ListConnectionsResponseBody extends TeaModel {
     } 
 
     public static class Connections extends TeaModel {
-        @NameInMap("BindingCalcEngineId")
+        @com.aliyun.core.annotation.NameInMap("BindingCalcEngineId")
         private Integer bindingCalcEngineId;
 
-        @NameInMap("ConnectStatus")
+        @com.aliyun.core.annotation.NameInMap("ConnectStatus")
         private Integer connectStatus;
 
-        @NameInMap("ConnectionType")
+        @com.aliyun.core.annotation.NameInMap("ConnectionType")
         private String connectionType;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("DefaultEngine")
+        @com.aliyun.core.annotation.NameInMap("DefaultEngine")
         private Boolean defaultEngine;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EnvType")
+        @com.aliyun.core.annotation.NameInMap("EnvType")
         private Integer envType;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Integer projectId;
 
-        @NameInMap("Sequence")
+        @com.aliyun.core.annotation.NameInMap("Sequence")
         private Integer sequence;
 
-        @NameInMap("Shared")
+        @com.aliyun.core.annotation.NameInMap("Shared")
         private Boolean shared;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("SubType")
+        @com.aliyun.core.annotation.NameInMap("SubType")
         private String subType;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private Long tenantId;
 
         private Connections(Builder builder) {
@@ -493,16 +492,16 @@ public class ListConnectionsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Connections")
+        @com.aliyun.core.annotation.NameInMap("Connections")
         private java.util.List < Connections> connections;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {

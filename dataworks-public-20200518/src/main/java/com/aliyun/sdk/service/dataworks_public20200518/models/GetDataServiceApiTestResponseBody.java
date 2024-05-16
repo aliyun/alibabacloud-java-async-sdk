@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDataServiceApiTestResponseBody</p>
  */
 public class GetDataServiceApiTestResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetDataServiceApiTestResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("ApiId")
+        @com.aliyun.core.annotation.NameInMap("ApiId")
         private Long apiId;
 
-        @NameInMap("CostTime")
+        @com.aliyun.core.annotation.NameInMap("CostTime")
         private String costTime;
 
-        @NameInMap("DebugInfo")
+        @com.aliyun.core.annotation.NameInMap("DebugInfo")
         private String debugInfo;
 
-        @NameInMap("NodesDebugInfo")
+        @com.aliyun.core.annotation.NameInMap("NodesDebugInfo")
         private String nodesDebugInfo;
 
-        @NameInMap("ParamMap")
+        @com.aliyun.core.annotation.NameInMap("ParamMap")
         private String paramMap;
 
-        @NameInMap("RetCode")
+        @com.aliyun.core.annotation.NameInMap("RetCode")
         private Long retCode;
 
-        @NameInMap("RetResult")
+        @com.aliyun.core.annotation.NameInMap("RetResult")
         private String retResult;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Data(Builder builder) {

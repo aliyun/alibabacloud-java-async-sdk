@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstanceHistoryResponseBody</p>
  */
 public class ListInstanceHistoryResponseBody extends TeaModel {
-    @NameInMap("Instances")
+    @com.aliyun.core.annotation.NameInMap("Instances")
     private java.util.List < Instances> instances;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListInstanceHistoryResponseBody(Builder builder) {
@@ -106,55 +105,55 @@ public class ListInstanceHistoryResponseBody extends TeaModel {
     } 
 
     public static class Instances extends TeaModel {
-        @NameInMap("BeginRunningTime")
+        @com.aliyun.core.annotation.NameInMap("BeginRunningTime")
         private Long beginRunningTime;
 
-        @NameInMap("BeginWaitResTime")
+        @com.aliyun.core.annotation.NameInMap("BeginWaitResTime")
         private Long beginWaitResTime;
 
-        @NameInMap("BeginWaitTimeTime")
+        @com.aliyun.core.annotation.NameInMap("BeginWaitTimeTime")
         private Long beginWaitTimeTime;
 
-        @NameInMap("Bizdate")
+        @com.aliyun.core.annotation.NameInMap("Bizdate")
         private Long bizdate;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("CycTime")
+        @com.aliyun.core.annotation.NameInMap("CycTime")
         private Long cycTime;
 
-        @NameInMap("DagId")
+        @com.aliyun.core.annotation.NameInMap("DagId")
         private Long dagId;
 
-        @NameInMap("DagType")
+        @com.aliyun.core.annotation.NameInMap("DagType")
         private String dagType;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private Long finishTime;
 
-        @NameInMap("InstanceHistoryId")
+        @com.aliyun.core.annotation.NameInMap("InstanceHistoryId")
         private Long instanceHistoryId;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private Long modifyTime;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
         private Instances(Builder builder) {

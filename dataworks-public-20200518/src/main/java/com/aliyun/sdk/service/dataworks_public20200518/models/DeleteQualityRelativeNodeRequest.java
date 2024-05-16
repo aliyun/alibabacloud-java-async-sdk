@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,48 +11,48 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteQualityRelativeNodeRequest</p>
  */
 public class DeleteQualityRelativeNodeRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("EnvType")
-    @Validation(required = true, maxLength = 40, minLength = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnvType")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 40, minLength = 1)
     private String envType;
 
-    @Body
-    @NameInMap("MatchExpression")
-    @Validation(required = true, maxLength = 80, minLength = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MatchExpression")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 80, minLength = 1)
     private String matchExpression;
 
-    @Body
-    @NameInMap("NodeId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long nodeId;
 
-    @Body
-    @NameInMap("ProjectId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long projectId;
 
-    @Body
-    @NameInMap("ProjectName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectName;
 
-    @Body
-    @NameInMap("TableName")
-    @Validation(required = true, maxLength = 128, minLength = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TableName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128, minLength = 1)
     private String tableName;
 
-    @Body
-    @NameInMap("TargetNodeProjectId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TargetNodeProjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long targetNodeProjectId;
 
-    @Body
-    @NameInMap("TargetNodeProjectName")
-    @Validation(required = true, maxLength = 512, minLength = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TargetNodeProjectName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 512, minLength = 1)
     private String targetNodeProjectName;
 
     private DeleteQualityRelativeNodeRequest(Builder builder) {

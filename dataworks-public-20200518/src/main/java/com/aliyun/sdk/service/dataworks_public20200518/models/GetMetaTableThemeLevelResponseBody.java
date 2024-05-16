@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMetaTableThemeLevelResponseBody</p>
  */
 public class GetMetaTableThemeLevelResponseBody extends TeaModel {
-    @NameInMap("Entity")
+    @com.aliyun.core.annotation.NameInMap("Entity")
     private Entity entity;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetMetaTableThemeLevelResponseBody(Builder builder) {
@@ -152,16 +151,16 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
     } 
 
     public static class Level extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("LevelId")
+        @com.aliyun.core.annotation.NameInMap("LevelId")
         private Long levelId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
         private Level(Builder builder) {
@@ -257,16 +256,16 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
 
     }
     public static class Theme extends TeaModel {
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private Integer level;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ParentId")
+        @com.aliyun.core.annotation.NameInMap("ParentId")
         private Long parentId;
 
-        @NameInMap("ThemeId")
+        @com.aliyun.core.annotation.NameInMap("ThemeId")
         private Long themeId;
 
         private Theme(Builder builder) {
@@ -362,10 +361,10 @@ public class GetMetaTableThemeLevelResponseBody extends TeaModel {
 
     }
     public static class Entity extends TeaModel {
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private java.util.List < Level> level;
 
-        @NameInMap("Theme")
+        @com.aliyun.core.annotation.NameInMap("Theme")
         private java.util.List < Theme> theme;
 
         private Entity(Builder builder) {

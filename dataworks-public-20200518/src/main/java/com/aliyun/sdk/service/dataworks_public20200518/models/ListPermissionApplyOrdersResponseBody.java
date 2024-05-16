@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPermissionApplyOrdersResponseBody</p>
  */
 public class ListPermissionApplyOrdersResponseBody extends TeaModel {
-    @NameInMap("ApplyOrders")
+    @com.aliyun.core.annotation.NameInMap("ApplyOrders")
     private ApplyOrders applyOrders;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListPermissionApplyOrdersResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
     } 
 
     public static class ObjectMetaList extends TeaModel {
-        @NameInMap("Actions")
+        @com.aliyun.core.annotation.NameInMap("Actions")
         private java.util.List < String > actions;
 
-        @NameInMap("ObjectName")
+        @com.aliyun.core.annotation.NameInMap("ObjectName")
         private String objectName;
 
         private ObjectMetaList(Builder builder) {
@@ -136,10 +135,10 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
 
     }
     public static class ProjectMeta extends TeaModel {
-        @NameInMap("ObjectMetaList")
+        @com.aliyun.core.annotation.NameInMap("ObjectMetaList")
         private java.util.List < ObjectMetaList> objectMetaList;
 
-        @NameInMap("WorkspaceName")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceName")
         private String workspaceName;
 
         private ProjectMeta(Builder builder) {
@@ -197,13 +196,13 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
 
     }
     public static class ApproveContent extends TeaModel {
-        @NameInMap("ApplyReason")
+        @com.aliyun.core.annotation.NameInMap("ApplyReason")
         private String applyReason;
 
-        @NameInMap("OrderType")
+        @com.aliyun.core.annotation.NameInMap("OrderType")
         private Integer orderType;
 
-        @NameInMap("ProjectMeta")
+        @com.aliyun.core.annotation.NameInMap("ProjectMeta")
         private ProjectMeta projectMeta;
 
         private ApproveContent(Builder builder) {
@@ -278,19 +277,19 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
 
     }
     public static class ApplyOrder extends TeaModel {
-        @NameInMap("ApplyBaseId")
+        @com.aliyun.core.annotation.NameInMap("ApplyBaseId")
         private String applyBaseId;
 
-        @NameInMap("ApplyTimestamp")
+        @com.aliyun.core.annotation.NameInMap("ApplyTimestamp")
         private Long applyTimestamp;
 
-        @NameInMap("ApproveContent")
+        @com.aliyun.core.annotation.NameInMap("ApproveContent")
         private ApproveContent approveContent;
 
-        @NameInMap("FlowId")
+        @com.aliyun.core.annotation.NameInMap("FlowId")
         private String flowId;
 
-        @NameInMap("FlowStatus")
+        @com.aliyun.core.annotation.NameInMap("FlowStatus")
         private Integer flowStatus;
 
         private ApplyOrder(Builder builder) {
@@ -405,16 +404,16 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
 
     }
     public static class ApplyOrders extends TeaModel {
-        @NameInMap("ApplyOrder")
+        @com.aliyun.core.annotation.NameInMap("ApplyOrder")
         private java.util.List < ApplyOrder> applyOrder;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private ApplyOrders(Builder builder) {

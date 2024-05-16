@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetBaselineConfigResponseBody</p>
  */
 public class GetBaselineConfigResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetBaselineConfigResponseBody(Builder builder) {
@@ -152,46 +151,46 @@ public class GetBaselineConfigResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("BaselineId")
+        @com.aliyun.core.annotation.NameInMap("BaselineId")
         private Long baselineId;
 
-        @NameInMap("BaselineName")
+        @com.aliyun.core.annotation.NameInMap("BaselineName")
         private String baselineName;
 
-        @NameInMap("BaselineType")
+        @com.aliyun.core.annotation.NameInMap("BaselineType")
         private String baselineType;
 
-        @NameInMap("ExpHour")
+        @com.aliyun.core.annotation.NameInMap("ExpHour")
         private Integer expHour;
 
-        @NameInMap("ExpMinu")
+        @com.aliyun.core.annotation.NameInMap("ExpMinu")
         private Integer expMinu;
 
-        @NameInMap("HourExpDetail")
+        @com.aliyun.core.annotation.NameInMap("HourExpDetail")
         private String hourExpDetail;
 
-        @NameInMap("HourSlaDetail")
+        @com.aliyun.core.annotation.NameInMap("HourSlaDetail")
         private String hourSlaDetail;
 
-        @NameInMap("IsDefault")
+        @com.aliyun.core.annotation.NameInMap("IsDefault")
         private Boolean isDefault;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
-        @NameInMap("SlaHour")
+        @com.aliyun.core.annotation.NameInMap("SlaHour")
         private Integer slaHour;
 
-        @NameInMap("SlaMinu")
+        @com.aliyun.core.annotation.NameInMap("SlaMinu")
         private Integer slaMinu;
 
-        @NameInMap("UseFlag")
+        @com.aliyun.core.annotation.NameInMap("UseFlag")
         private Boolean useFlag;
 
         private Data(Builder builder) {

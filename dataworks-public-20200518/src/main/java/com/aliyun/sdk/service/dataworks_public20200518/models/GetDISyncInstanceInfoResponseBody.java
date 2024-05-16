@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDISyncInstanceInfoResponseBody</p>
  */
 public class GetDISyncInstanceInfoResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetDISyncInstanceInfoResponseBody(Builder builder) {
@@ -94,16 +93,16 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
     } 
 
     public static class StepDetail extends TeaModel {
-        @NameInMap("Info")
+        @com.aliyun.core.annotation.NameInMap("Info")
         private String info;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StepId")
+        @com.aliyun.core.annotation.NameInMap("StepId")
         private Long stepId;
 
-        @NameInMap("StepName")
+        @com.aliyun.core.annotation.NameInMap("StepName")
         private String stepName;
 
         private StepDetail(Builder builder) {
@@ -195,16 +194,16 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
 
     }
     public static class SolutionInfo extends TeaModel {
-        @NameInMap("CreatorName")
+        @com.aliyun.core.annotation.NameInMap("CreatorName")
         private String creatorName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StepDetail")
+        @com.aliyun.core.annotation.NameInMap("StepDetail")
         private java.util.List < StepDetail> stepDetail;
 
         private SolutionInfo(Builder builder) {
@@ -296,16 +295,16 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("SolutionInfo")
+        @com.aliyun.core.annotation.NameInMap("SolutionInfo")
         private SolutionInfo solutionInfo;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSuccessInstanceAmountResponseBody</p>
  */
 public class ListSuccessInstanceAmountResponseBody extends TeaModel {
-    @NameInMap("InstanceStatusTrend")
+    @com.aliyun.core.annotation.NameInMap("InstanceStatusTrend")
     private InstanceStatusTrend instanceStatusTrend;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListSuccessInstanceAmountResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class ListSuccessInstanceAmountResponseBody extends TeaModel {
     } 
 
     public static class AvgTrend extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("TimePoint")
+        @com.aliyun.core.annotation.NameInMap("TimePoint")
         private String timePoint;
 
         private AvgTrend(Builder builder) {
@@ -133,10 +132,10 @@ public class ListSuccessInstanceAmountResponseBody extends TeaModel {
 
     }
     public static class TodayTrend extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("TimePoint")
+        @com.aliyun.core.annotation.NameInMap("TimePoint")
         private String timePoint;
 
         private TodayTrend(Builder builder) {
@@ -194,10 +193,10 @@ public class ListSuccessInstanceAmountResponseBody extends TeaModel {
 
     }
     public static class YesterdayTrend extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("TimePoint")
+        @com.aliyun.core.annotation.NameInMap("TimePoint")
         private String timePoint;
 
         private YesterdayTrend(Builder builder) {
@@ -255,13 +254,13 @@ public class ListSuccessInstanceAmountResponseBody extends TeaModel {
 
     }
     public static class InstanceStatusTrend extends TeaModel {
-        @NameInMap("AvgTrend")
+        @com.aliyun.core.annotation.NameInMap("AvgTrend")
         private java.util.List < AvgTrend> avgTrend;
 
-        @NameInMap("TodayTrend")
+        @com.aliyun.core.annotation.NameInMap("TodayTrend")
         private java.util.List < TodayTrend> todayTrend;
 
-        @NameInMap("YesterdayTrend")
+        @com.aliyun.core.annotation.NameInMap("YesterdayTrend")
         private java.util.List < YesterdayTrend> yesterdayTrend;
 
         private InstanceStatusTrend(Builder builder) {

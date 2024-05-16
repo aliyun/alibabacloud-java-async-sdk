@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>LineageRelationRegisterVO</p>
  */
 public class LineageRelationRegisterVO extends TeaModel {
-    @NameInMap("CreateTimestamp")
+    @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
     private Long createTimestamp;
 
-    @NameInMap("DestEntity")
+    @com.aliyun.core.annotation.NameInMap("DestEntity")
     private LineageEntityVO destEntity;
 
-    @NameInMap("Relationship")
+    @com.aliyun.core.annotation.NameInMap("Relationship")
     private RelationshipVO relationship;
 
-    @NameInMap("SrcEntity")
+    @com.aliyun.core.annotation.NameInMap("SrcEntity")
     private LineageEntityVO srcEntity;
 
     private LineageRelationRegisterVO(Builder builder) {

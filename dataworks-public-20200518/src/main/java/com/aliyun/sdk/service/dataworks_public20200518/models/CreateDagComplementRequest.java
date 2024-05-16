@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,59 +11,59 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDagComplementRequest</p>
  */
 public class CreateDagComplementRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("BizBeginTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizBeginTime")
     private String bizBeginTime;
 
-    @Body
-    @NameInMap("BizEndTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizEndTime")
     private String bizEndTime;
 
-    @Body
-    @NameInMap("EndBizDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndBizDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endBizDate;
 
-    @Body
-    @NameInMap("ExcludeNodeIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExcludeNodeIds")
     private String excludeNodeIds;
 
-    @Body
-    @NameInMap("IncludeNodeIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IncludeNodeIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String includeNodeIds;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("NodeParams")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeParams")
     private String nodeParams;
 
-    @Body
-    @NameInMap("Parallelism")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Parallelism")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean parallelism;
 
-    @Body
-    @NameInMap("ProjectEnv")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectEnv")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectEnv;
 
-    @Body
-    @NameInMap("RootNodeId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RootNodeId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long rootNodeId;
 
-    @Body
-    @NameInMap("StartBizDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StartBizDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startBizDate;
 
     private CreateDagComplementRequest(Builder builder) {

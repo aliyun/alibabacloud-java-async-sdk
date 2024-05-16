@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDIAlarmRuleResponseBody</p>
  */
 public class CreateDIAlarmRuleResponseBody extends TeaModel {
-    @NameInMap("DIAlarmRuleId")
+    @com.aliyun.core.annotation.NameInMap("DIAlarmRuleId")
     private Long DIAlarmRuleId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateDIAlarmRuleResponseBody(Builder builder) {

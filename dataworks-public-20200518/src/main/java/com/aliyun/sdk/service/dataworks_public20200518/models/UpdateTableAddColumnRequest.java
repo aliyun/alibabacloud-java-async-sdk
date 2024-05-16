@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateTableAddColumnRequest</p>
  */
 public class UpdateTableAddColumnRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("Column")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Column")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Column> column;
 
-    @Query
-    @NameInMap("TableGuid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableGuid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tableGuid;
 
     private UpdateTableAddColumnRequest(Builder builder) {
@@ -118,18 +117,18 @@ public class UpdateTableAddColumnRequest extends Request {
     } 
 
     public static class Column extends TeaModel {
-        @NameInMap("ColumnName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ColumnName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String columnName;
 
-        @NameInMap("ColumnNameCn")
+        @com.aliyun.core.annotation.NameInMap("ColumnNameCn")
         private String columnNameCn;
 
-        @NameInMap("ColumnType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ColumnType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String columnType;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
         private Column(Builder builder) {

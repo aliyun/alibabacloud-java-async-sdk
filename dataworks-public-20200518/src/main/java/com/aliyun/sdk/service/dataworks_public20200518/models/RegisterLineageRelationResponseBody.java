@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RegisterLineageRelationResponseBody</p>
  */
 public class RegisterLineageRelationResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("LineageRelation")
+    @com.aliyun.core.annotation.NameInMap("LineageRelation")
     private LineageRelation lineageRelation;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private RegisterLineageRelationResponseBody(Builder builder) {
@@ -152,13 +151,13 @@ public class RegisterLineageRelationResponseBody extends TeaModel {
     } 
 
     public static class LineageRelation extends TeaModel {
-        @NameInMap("DestEntityQualifiedName")
+        @com.aliyun.core.annotation.NameInMap("DestEntityQualifiedName")
         private String destEntityQualifiedName;
 
-        @NameInMap("RelationshipGuid")
+        @com.aliyun.core.annotation.NameInMap("RelationshipGuid")
         private String relationshipGuid;
 
-        @NameInMap("SrcEntityQualifiedName")
+        @com.aliyun.core.annotation.NameInMap("SrcEntityQualifiedName")
         private String srcEntityQualifiedName;
 
         private LineageRelation(Builder builder) {

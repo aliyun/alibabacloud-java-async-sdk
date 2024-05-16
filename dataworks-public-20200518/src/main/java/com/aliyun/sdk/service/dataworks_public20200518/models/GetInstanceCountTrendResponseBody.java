@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInstanceCountTrendResponseBody</p>
  */
 public class GetInstanceCountTrendResponseBody extends TeaModel {
-    @NameInMap("InstanceCounts")
+    @com.aliyun.core.annotation.NameInMap("InstanceCounts")
     private java.util.List < InstanceCounts> instanceCounts;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetInstanceCountTrendResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class GetInstanceCountTrendResponseBody extends TeaModel {
     } 
 
     public static class InstanceCounts extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("Date")
+        @com.aliyun.core.annotation.NameInMap("Date")
         private Long date;
 
         private InstanceCounts(Builder builder) {

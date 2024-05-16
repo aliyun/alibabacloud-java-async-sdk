@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,60 +11,60 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDIJobRequest</p>
  */
 public class CreateDIJobRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("DestinationDataSourceSettings")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DestinationDataSourceSettings")
     private java.util.List < DestinationDataSourceSettings> destinationDataSourceSettings;
 
-    @Body
-    @NameInMap("DestinationDataSourceType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DestinationDataSourceType")
     private String destinationDataSourceType;
 
-    @Body
-    @NameInMap("JobName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("JobName")
     private String jobName;
 
-    @Body
-    @NameInMap("JobSettings")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("JobSettings")
     private JobSettings jobSettings;
 
-    @Body
-    @NameInMap("MigrationType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MigrationType")
     private String migrationType;
 
-    @Body
-    @NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
     private Long projectId;
 
-    @Body
-    @NameInMap("ResourceSettings")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceSettings")
     private ResourceSettings resourceSettings;
 
-    @Body
-    @NameInMap("SourceDataSourceSettings")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceDataSourceSettings")
     private java.util.List < SourceDataSourceSettings> sourceDataSourceSettings;
 
-    @Body
-    @NameInMap("SourceDataSourceType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceDataSourceType")
     private String sourceDataSourceType;
 
-    @Query
-    @NameInMap("SystemDebug")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SystemDebug")
     private String systemDebug;
 
-    @Body
-    @NameInMap("TableMappings")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TableMappings")
     private java.util.List < TableMappings> tableMappings;
 
-    @Body
-    @NameInMap("TransformationRules")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TransformationRules")
     private java.util.List < TransformationRules> transformationRules;
 
     private CreateDIJobRequest(Builder builder) {
@@ -375,10 +374,10 @@ public class CreateDIJobRequest extends Request {
     } 
 
     public static class DestinationDataSourceSettings extends TeaModel {
-        @NameInMap("DataSourceName")
+        @com.aliyun.core.annotation.NameInMap("DataSourceName")
         private String dataSourceName;
 
-        @NameInMap("DataSourceProperties")
+        @com.aliyun.core.annotation.NameInMap("DataSourceProperties")
         private java.util.Map < String, String > dataSourceProperties;
 
         private DestinationDataSourceSettings(Builder builder) {
@@ -436,10 +435,10 @@ public class CreateDIJobRequest extends Request {
 
     }
     public static class ColumnDataTypeSettings extends TeaModel {
-        @NameInMap("DestinationDataType")
+        @com.aliyun.core.annotation.NameInMap("DestinationDataType")
         private String destinationDataType;
 
-        @NameInMap("SourceDataType")
+        @com.aliyun.core.annotation.NameInMap("SourceDataType")
         private String sourceDataType;
 
         private ColumnDataTypeSettings(Builder builder) {
@@ -497,10 +496,10 @@ public class CreateDIJobRequest extends Request {
 
     }
     public static class CycleScheduleSettings extends TeaModel {
-        @NameInMap("CycleMigrationType")
+        @com.aliyun.core.annotation.NameInMap("CycleMigrationType")
         private String cycleMigrationType;
 
-        @NameInMap("ScheduleParameters")
+        @com.aliyun.core.annotation.NameInMap("ScheduleParameters")
         private String scheduleParameters;
 
         private CycleScheduleSettings(Builder builder) {
@@ -558,10 +557,10 @@ public class CreateDIJobRequest extends Request {
 
     }
     public static class DdlHandlingSettings extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private DdlHandlingSettings(Builder builder) {
@@ -619,10 +618,10 @@ public class CreateDIJobRequest extends Request {
 
     }
     public static class ImportRuleSettings extends TeaModel {
-        @NameInMap("FileId")
+        @com.aliyun.core.annotation.NameInMap("FileId")
         private String fileId;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
         private ImportRuleSettings(Builder builder) {
@@ -680,10 +679,10 @@ public class CreateDIJobRequest extends Request {
 
     }
     public static class RuntimeSettings extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private RuntimeSettings(Builder builder) {
@@ -741,22 +740,22 @@ public class CreateDIJobRequest extends Request {
 
     }
     public static class JobSettings extends TeaModel {
-        @NameInMap("ChannelSettings")
+        @com.aliyun.core.annotation.NameInMap("ChannelSettings")
         private String channelSettings;
 
-        @NameInMap("ColumnDataTypeSettings")
+        @com.aliyun.core.annotation.NameInMap("ColumnDataTypeSettings")
         private java.util.List < ColumnDataTypeSettings> columnDataTypeSettings;
 
-        @NameInMap("CycleScheduleSettings")
+        @com.aliyun.core.annotation.NameInMap("CycleScheduleSettings")
         private CycleScheduleSettings cycleScheduleSettings;
 
-        @NameInMap("DdlHandlingSettings")
+        @com.aliyun.core.annotation.NameInMap("DdlHandlingSettings")
         private java.util.List < DdlHandlingSettings> ddlHandlingSettings;
 
-        @NameInMap("ImportRuleSettings")
+        @com.aliyun.core.annotation.NameInMap("ImportRuleSettings")
         private ImportRuleSettings importRuleSettings;
 
-        @NameInMap("RuntimeSettings")
+        @com.aliyun.core.annotation.NameInMap("RuntimeSettings")
         private java.util.List < RuntimeSettings> runtimeSettings;
 
         private JobSettings(Builder builder) {
@@ -882,7 +881,7 @@ public class CreateDIJobRequest extends Request {
 
     }
     public static class OfflineResourceSettings extends TeaModel {
-        @NameInMap("ResourceGroupIdentifier")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupIdentifier")
         private String resourceGroupIdentifier;
 
         private OfflineResourceSettings(Builder builder) {
@@ -923,7 +922,7 @@ public class CreateDIJobRequest extends Request {
 
     }
     public static class RealtimeResourceSettings extends TeaModel {
-        @NameInMap("ResourceGroupIdentifier")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupIdentifier")
         private String resourceGroupIdentifier;
 
         private RealtimeResourceSettings(Builder builder) {
@@ -964,10 +963,10 @@ public class CreateDIJobRequest extends Request {
 
     }
     public static class ResourceSettings extends TeaModel {
-        @NameInMap("OfflineResourceSettings")
+        @com.aliyun.core.annotation.NameInMap("OfflineResourceSettings")
         private OfflineResourceSettings offlineResourceSettings;
 
-        @NameInMap("RealtimeResourceSettings")
+        @com.aliyun.core.annotation.NameInMap("RealtimeResourceSettings")
         private RealtimeResourceSettings realtimeResourceSettings;
 
         private ResourceSettings(Builder builder) {
@@ -1025,10 +1024,10 @@ public class CreateDIJobRequest extends Request {
 
     }
     public static class SourceDataSourceSettings extends TeaModel {
-        @NameInMap("DataSourceName")
+        @com.aliyun.core.annotation.NameInMap("DataSourceName")
         private String dataSourceName;
 
-        @NameInMap("DataSourceProperties")
+        @com.aliyun.core.annotation.NameInMap("DataSourceProperties")
         private java.util.Map < String, String > dataSourceProperties;
 
         private SourceDataSourceSettings(Builder builder) {
@@ -1086,10 +1085,10 @@ public class CreateDIJobRequest extends Request {
 
     }
     public static class SourceObjectSelectionRules extends TeaModel {
-        @NameInMap("Expression")
+        @com.aliyun.core.annotation.NameInMap("Expression")
         private String expression;
 
-        @NameInMap("ObjectType")
+        @com.aliyun.core.annotation.NameInMap("ObjectType")
         private String objectType;
 
         private SourceObjectSelectionRules(Builder builder) {
@@ -1147,13 +1146,13 @@ public class CreateDIJobRequest extends Request {
 
     }
     public static class TableMappingsTransformationRules extends TeaModel {
-        @NameInMap("RuleActionType")
+        @com.aliyun.core.annotation.NameInMap("RuleActionType")
         private String ruleActionType;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("RuleTargetType")
+        @com.aliyun.core.annotation.NameInMap("RuleTargetType")
         private String ruleTargetType;
 
         private TableMappingsTransformationRules(Builder builder) {
@@ -1228,10 +1227,10 @@ public class CreateDIJobRequest extends Request {
 
     }
     public static class TableMappings extends TeaModel {
-        @NameInMap("SourceObjectSelectionRules")
+        @com.aliyun.core.annotation.NameInMap("SourceObjectSelectionRules")
         private java.util.List < SourceObjectSelectionRules> sourceObjectSelectionRules;
 
-        @NameInMap("TransformationRules")
+        @com.aliyun.core.annotation.NameInMap("TransformationRules")
         private java.util.List < TableMappingsTransformationRules> transformationRules;
 
         private TableMappings(Builder builder) {
@@ -1289,16 +1288,16 @@ public class CreateDIJobRequest extends Request {
 
     }
     public static class TransformationRules extends TeaModel {
-        @NameInMap("RuleActionType")
+        @com.aliyun.core.annotation.NameInMap("RuleActionType")
         private String ruleActionType;
 
-        @NameInMap("RuleExpression")
+        @com.aliyun.core.annotation.NameInMap("RuleExpression")
         private String ruleExpression;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("RuleTargetType")
+        @com.aliyun.core.annotation.NameInMap("RuleTargetType")
         private String ruleTargetType;
 
         private TransformationRules(Builder builder) {

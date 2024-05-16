@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>LineageEntityVO</p>
  */
 public class LineageEntityVO extends TeaModel {
-    @NameInMap("DetailUrl")
+    @com.aliyun.core.annotation.NameInMap("DetailUrl")
     private String detailUrl;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("ParentName")
+    @com.aliyun.core.annotation.NameInMap("ParentName")
     private String parentName;
 
-    @NameInMap("QualifiedName")
+    @com.aliyun.core.annotation.NameInMap("QualifiedName")
     private String qualifiedName;
 
     private LineageEntityVO(Builder builder) {

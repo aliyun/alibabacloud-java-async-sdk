@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,69 +11,69 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DsgQuerySensResultRequest</p>
  */
 public class DsgQuerySensResultRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("Col")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Col")
     private String col;
 
-    @Body
-    @NameInMap("DbType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DbType")
     private String dbType;
 
-    @Body
-    @NameInMap("Level")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Level")
     private String level;
 
-    @Body
-    @NameInMap("NodeName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeName")
     private String nodeName;
 
-    @Body
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @Body
-    @NameInMap("OrderField")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OrderField")
     private String orderField;
 
-    @Body
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @Body
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Body
-    @NameInMap("ProjectName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectName")
     private String projectName;
 
-    @Body
-    @NameInMap("SchemaName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SchemaName")
     private String schemaName;
 
-    @Body
-    @NameInMap("SensStatus")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SensStatus")
     private String sensStatus;
 
-    @Body
-    @NameInMap("SensitiveId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SensitiveId")
     private String sensitiveId;
 
-    @Body
-    @NameInMap("SensitiveName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SensitiveName")
     private String sensitiveName;
 
-    @Body
-    @NameInMap("Table")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Table")
     private String table;
 
-    @Body
-    @NameInMap("TenantId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tenantId;
 
     private DsgQuerySensResultRequest(Builder builder) {

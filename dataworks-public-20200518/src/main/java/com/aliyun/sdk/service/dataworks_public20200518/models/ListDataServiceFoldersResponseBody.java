@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDataServiceFoldersResponseBody</p>
  */
 public class ListDataServiceFoldersResponseBody extends TeaModel {
-    @NameInMap("FolderPagingResult")
+    @com.aliyun.core.annotation.NameInMap("FolderPagingResult")
     private FolderPagingResult folderPagingResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListDataServiceFoldersResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
     } 
 
     public static class Folders extends TeaModel {
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("FolderId")
+        @com.aliyun.core.annotation.NameInMap("FolderId")
         private Long folderId;
 
-        @NameInMap("FolderName")
+        @com.aliyun.core.annotation.NameInMap("FolderName")
         private String folderName;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("ParentId")
+        @com.aliyun.core.annotation.NameInMap("ParentId")
         private Long parentId;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private Long tenantId;
 
         private Folders(Builder builder) {
@@ -253,16 +252,16 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
 
     }
     public static class FolderPagingResult extends TeaModel {
-        @NameInMap("Folders")
+        @com.aliyun.core.annotation.NameInMap("Folders")
         private java.util.List < Folders> folders;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private FolderPagingResult(Builder builder) {

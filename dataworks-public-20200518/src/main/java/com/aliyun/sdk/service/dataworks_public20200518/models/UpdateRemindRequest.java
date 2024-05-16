@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,83 +11,83 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateRemindRequest</p>
  */
 public class UpdateRemindRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("AlertInterval")
-    @Validation(maximum = 1800, minimum = 1200)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertInterval")
+    @com.aliyun.core.annotation.Validation(maximum = 1800, minimum = 1200)
     private Integer alertInterval;
 
-    @Body
-    @NameInMap("AlertMethods")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertMethods")
     private String alertMethods;
 
-    @Body
-    @NameInMap("AlertTargets")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertTargets")
     private String alertTargets;
 
-    @Body
-    @NameInMap("AlertUnit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertUnit")
     private String alertUnit;
 
-    @Body
-    @NameInMap("BaselineIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BaselineIds")
     private String baselineIds;
 
-    @Body
-    @NameInMap("BizProcessIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizProcessIds")
     private String bizProcessIds;
 
-    @Body
-    @NameInMap("Detail")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Detail")
     private String detail;
 
-    @Body
-    @NameInMap("DndEnd")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DndEnd")
     private String dndEnd;
 
-    @Body
-    @NameInMap("MaxAlertTimes")
-    @Validation(maximum = 10, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxAlertTimes")
+    @com.aliyun.core.annotation.Validation(maximum = 10, minimum = 1)
     private Integer maxAlertTimes;
 
-    @Body
-    @NameInMap("NodeIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeIds")
     private String nodeIds;
 
-    @Body
-    @NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
     private Long projectId;
 
-    @Body
-    @NameInMap("RemindId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RemindId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long remindId;
 
-    @Body
-    @NameInMap("RemindName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RemindName")
     private String remindName;
 
-    @Body
-    @NameInMap("RemindType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RemindType")
     private String remindType;
 
-    @Body
-    @NameInMap("RemindUnit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RemindUnit")
     private String remindUnit;
 
-    @Body
-    @NameInMap("RobotUrls")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RobotUrls")
     private String robotUrls;
 
-    @Body
-    @NameInMap("UseFlag")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UseFlag")
     private Boolean useFlag;
 
-    @Body
-    @NameInMap("Webhooks")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Webhooks")
     private String webhooks;
 
     private UpdateRemindRequest(Builder builder) {

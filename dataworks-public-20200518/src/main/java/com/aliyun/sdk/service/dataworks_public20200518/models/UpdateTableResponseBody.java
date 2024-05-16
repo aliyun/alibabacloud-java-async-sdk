@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateTableResponseBody</p>
  */
 public class UpdateTableResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskInfo")
+    @com.aliyun.core.annotation.NameInMap("TaskInfo")
     private TaskInfo taskInfo;
 
     private UpdateTableResponseBody(Builder builder) {
@@ -83,16 +82,16 @@ public class UpdateTableResponseBody extends TeaModel {
     } 
 
     public static class TaskInfo extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("NextTaskId")
+        @com.aliyun.core.annotation.NameInMap("NextTaskId")
         private String nextTaskId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
         private TaskInfo(Builder builder) {

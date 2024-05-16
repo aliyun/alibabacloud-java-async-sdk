@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,45 +11,45 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListMetaCollectionsRequest</p>
  */
 public class ListMetaCollectionsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Administrator")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Administrator")
     private String administrator;
 
-    @Query
-    @NameInMap("CollectionType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CollectionType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String collectionType;
 
-    @Query
-    @NameInMap("Creator")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Creator")
     private String creator;
 
-    @Query
-    @NameInMap("Follower")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Follower")
     private String follower;
 
-    @Query
-    @NameInMap("Keyword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OrderBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderBy")
     private String orderBy;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ParentQualifiedName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentQualifiedName")
     private String parentQualifiedName;
 
     private ListMetaCollectionsRequest(Builder builder) {

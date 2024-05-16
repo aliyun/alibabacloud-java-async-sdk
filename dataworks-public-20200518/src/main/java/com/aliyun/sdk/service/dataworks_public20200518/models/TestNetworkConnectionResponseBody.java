@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TestNetworkConnectionResponseBody</p>
  */
 public class TestNetworkConnectionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TaskList")
+    @com.aliyun.core.annotation.NameInMap("TaskList")
     private TaskList taskList;
 
     private TestNetworkConnectionResponseBody(Builder builder) {
@@ -96,10 +95,10 @@ public class TestNetworkConnectionResponseBody extends TeaModel {
     } 
 
     public static class TaskList extends TeaModel {
-        @NameInMap("ConnectMessage")
+        @com.aliyun.core.annotation.NameInMap("ConnectMessage")
         private String connectMessage;
 
-        @NameInMap("ConnectStatus")
+        @com.aliyun.core.annotation.NameInMap("ConnectStatus")
         private Boolean connectStatus;
 
         private TaskList(Builder builder) {

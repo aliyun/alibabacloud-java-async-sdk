@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListShiftPersonnelsResponseBody</p>
  */
 public class ListShiftPersonnelsResponseBody extends TeaModel {
-    @NameInMap("Paging")
+    @com.aliyun.core.annotation.NameInMap("Paging")
     private Paging paging;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListShiftPersonnelsResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
     } 
 
     public static class ShiftPersons extends TeaModel {
-        @NameInMap("BeginTime")
+        @com.aliyun.core.annotation.NameInMap("BeginTime")
         private Long beginTime;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("ShiftPersonName")
+        @com.aliyun.core.annotation.NameInMap("ShiftPersonName")
         private String shiftPersonName;
 
-        @NameInMap("ShiftPersonUID")
+        @com.aliyun.core.annotation.NameInMap("ShiftPersonUID")
         private String shiftPersonUID;
 
         private ShiftPersons(Builder builder) {
@@ -173,16 +172,16 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
 
     }
     public static class Paging extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("ShiftPersons")
+        @com.aliyun.core.annotation.NameInMap("ShiftPersons")
         private java.util.List < ShiftPersons> shiftPersons;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Paging(Builder builder) {

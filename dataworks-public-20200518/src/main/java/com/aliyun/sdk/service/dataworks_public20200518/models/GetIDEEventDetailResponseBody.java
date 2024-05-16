@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetIDEEventDetailResponseBody</p>
  */
 public class GetIDEEventDetailResponseBody extends TeaModel {
-    @NameInMap("EventDetail")
+    @com.aliyun.core.annotation.NameInMap("EventDetail")
     private EventDetail eventDetail;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetIDEEventDetailResponseBody(Builder builder) {
@@ -75,22 +74,22 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
     } 
 
     public static class FilePropertyContent extends TeaModel {
-        @NameInMap("BusinessId")
+        @com.aliyun.core.annotation.NameInMap("BusinessId")
         private Long businessId;
 
-        @NameInMap("CurrentVersion")
+        @com.aliyun.core.annotation.NameInMap("CurrentVersion")
         private Long currentVersion;
 
-        @NameInMap("DataSourceName")
+        @com.aliyun.core.annotation.NameInMap("DataSourceName")
         private String dataSourceName;
 
-        @NameInMap("FolderId")
+        @com.aliyun.core.annotation.NameInMap("FolderId")
         private String folderId;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("ParentFileId")
+        @com.aliyun.core.annotation.NameInMap("ParentFileId")
         private Long parentFileId;
 
         private FilePropertyContent(Builder builder) {
@@ -216,10 +215,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
 
     }
     public static class InputList extends TeaModel {
-        @NameInMap("Input")
+        @com.aliyun.core.annotation.NameInMap("Input")
         private String input;
 
-        @NameInMap("ParseType")
+        @com.aliyun.core.annotation.NameInMap("ParseType")
         private String parseType;
 
         private InputList(Builder builder) {
@@ -284,10 +283,10 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
 
     }
     public static class OutputList extends TeaModel {
-        @NameInMap("Output")
+        @com.aliyun.core.annotation.NameInMap("Output")
         private String output;
 
-        @NameInMap("RefTableName")
+        @com.aliyun.core.annotation.NameInMap("RefTableName")
         private String refTableName;
 
         private OutputList(Builder builder) {
@@ -351,40 +350,40 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
 
     }
     public static class NodeConfiguration extends TeaModel {
-        @NameInMap("AutoRerunIntervalMillis")
+        @com.aliyun.core.annotation.NameInMap("AutoRerunIntervalMillis")
         private Long autoRerunIntervalMillis;
 
-        @NameInMap("AutoRerunTimes")
+        @com.aliyun.core.annotation.NameInMap("AutoRerunTimes")
         private Long autoRerunTimes;
 
-        @NameInMap("CronExpress")
+        @com.aliyun.core.annotation.NameInMap("CronExpress")
         private String cronExpress;
 
-        @NameInMap("CycleType")
+        @com.aliyun.core.annotation.NameInMap("CycleType")
         private String cycleType;
 
-        @NameInMap("DependentNodeIdList")
+        @com.aliyun.core.annotation.NameInMap("DependentNodeIdList")
         private String dependentNodeIdList;
 
-        @NameInMap("DependentType")
+        @com.aliyun.core.annotation.NameInMap("DependentType")
         private String dependentType;
 
-        @NameInMap("InputList")
+        @com.aliyun.core.annotation.NameInMap("InputList")
         private java.util.List < InputList> inputList;
 
-        @NameInMap("OutputList")
+        @com.aliyun.core.annotation.NameInMap("OutputList")
         private java.util.List < OutputList> outputList;
 
-        @NameInMap("ParaValue")
+        @com.aliyun.core.annotation.NameInMap("ParaValue")
         private String paraValue;
 
-        @NameInMap("RerunMode")
+        @com.aliyun.core.annotation.NameInMap("RerunMode")
         private String rerunMode;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private Long resourceGroupId;
 
-        @NameInMap("SchedulerType")
+        @com.aliyun.core.annotation.NameInMap("SchedulerType")
         private String schedulerType;
 
         private NodeConfiguration(Builder builder) {
@@ -643,37 +642,37 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
 
     }
     public static class CommittedFile extends TeaModel {
-        @NameInMap("ChangeType")
+        @com.aliyun.core.annotation.NameInMap("ChangeType")
         private String changeType;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("Committor")
+        @com.aliyun.core.annotation.NameInMap("Committor")
         private String committor;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("FileId")
+        @com.aliyun.core.annotation.NameInMap("FileId")
         private Long fileId;
 
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("FilePropertyContent")
+        @com.aliyun.core.annotation.NameInMap("FilePropertyContent")
         private FilePropertyContent filePropertyContent;
 
-        @NameInMap("FileType")
+        @com.aliyun.core.annotation.NameInMap("FileType")
         private Long fileType;
 
-        @NameInMap("NodeConfiguration")
+        @com.aliyun.core.annotation.NameInMap("NodeConfiguration")
         private NodeConfiguration nodeConfiguration;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
 
-        @NameInMap("UseType")
+        @com.aliyun.core.annotation.NameInMap("UseType")
         private String useType;
 
         private CommittedFile(Builder builder) {
@@ -892,40 +891,40 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
 
     }
     public static class DeletedFile extends TeaModel {
-        @NameInMap("BusinessId")
+        @com.aliyun.core.annotation.NameInMap("BusinessId")
         private Long businessId;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("CurrentVersion")
+        @com.aliyun.core.annotation.NameInMap("CurrentVersion")
         private Long currentVersion;
 
-        @NameInMap("DataSourceName")
+        @com.aliyun.core.annotation.NameInMap("DataSourceName")
         private String dataSourceName;
 
-        @NameInMap("FileId")
+        @com.aliyun.core.annotation.NameInMap("FileId")
         private Long fileId;
 
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("FileType")
+        @com.aliyun.core.annotation.NameInMap("FileType")
         private Long fileType;
 
-        @NameInMap("FolderId")
+        @com.aliyun.core.annotation.NameInMap("FolderId")
         private String folderId;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("ParentFileId")
+        @com.aliyun.core.annotation.NameInMap("ParentFileId")
         private Long parentFileId;
 
-        @NameInMap("UseType")
+        @com.aliyun.core.annotation.NameInMap("UseType")
         private String useType;
 
         private DeletedFile(Builder builder) {
@@ -1161,16 +1160,16 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
 
     }
     public static class FileExecutionCommand extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("DataSourceName")
+        @com.aliyun.core.annotation.NameInMap("DataSourceName")
         private String dataSourceName;
 
-        @NameInMap("FileId")
+        @com.aliyun.core.annotation.NameInMap("FileId")
         private Long fileId;
 
-        @NameInMap("FileType")
+        @com.aliyun.core.annotation.NameInMap("FileType")
         private Long fileType;
 
         private FileExecutionCommand(Builder builder) {
@@ -1262,16 +1261,16 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
 
     }
     public static class Columns extends TeaModel {
-        @NameInMap("ColumnName")
+        @com.aliyun.core.annotation.NameInMap("ColumnName")
         private String columnName;
 
-        @NameInMap("ColumnType")
+        @com.aliyun.core.annotation.NameInMap("ColumnType")
         private String columnType;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("IsPartitionColumn")
+        @com.aliyun.core.annotation.NameInMap("IsPartitionColumn")
         private Boolean isPartitionColumn;
 
         private Columns(Builder builder) {
@@ -1367,25 +1366,25 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
 
     }
     public static class TableModel extends TeaModel {
-        @NameInMap("Columns")
+        @com.aliyun.core.annotation.NameInMap("Columns")
         private java.util.List < Columns> columns;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("DataSourceName")
+        @com.aliyun.core.annotation.NameInMap("DataSourceName")
         private String dataSourceName;
 
-        @NameInMap("Env")
+        @com.aliyun.core.annotation.NameInMap("Env")
         private String env;
 
-        @NameInMap("LifeCycle")
+        @com.aliyun.core.annotation.NameInMap("LifeCycle")
         private Long lifeCycle;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private TableModel(Builder builder) {
@@ -1532,16 +1531,16 @@ public class GetIDEEventDetailResponseBody extends TeaModel {
 
     }
     public static class EventDetail extends TeaModel {
-        @NameInMap("CommittedFile")
+        @com.aliyun.core.annotation.NameInMap("CommittedFile")
         private CommittedFile committedFile;
 
-        @NameInMap("DeletedFile")
+        @com.aliyun.core.annotation.NameInMap("DeletedFile")
         private DeletedFile deletedFile;
 
-        @NameInMap("FileExecutionCommand")
+        @com.aliyun.core.annotation.NameInMap("FileExecutionCommand")
         private FileExecutionCommand fileExecutionCommand;
 
-        @NameInMap("TableModel")
+        @com.aliyun.core.annotation.NameInMap("TableModel")
         private TableModel tableModel;
 
         private EventDetail(Builder builder) {

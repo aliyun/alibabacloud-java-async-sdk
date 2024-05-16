@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetNodeTypeListInfoResponseBody</p>
  */
 public class GetNodeTypeListInfoResponseBody extends TeaModel {
-    @NameInMap("NodeTypeInfoList")
+    @com.aliyun.core.annotation.NameInMap("NodeTypeInfoList")
     private NodeTypeInfoList nodeTypeInfoList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetNodeTypeListInfoResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class GetNodeTypeListInfoResponseBody extends TeaModel {
     } 
 
     public static class NodeTypeInfo extends TeaModel {
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private Integer nodeType;
 
-        @NameInMap("NodeTypeName")
+        @com.aliyun.core.annotation.NameInMap("NodeTypeName")
         private String nodeTypeName;
 
         private NodeTypeInfo(Builder builder) {
@@ -133,16 +132,16 @@ public class GetNodeTypeListInfoResponseBody extends TeaModel {
 
     }
     public static class NodeTypeInfoList extends TeaModel {
-        @NameInMap("NodeTypeInfo")
+        @com.aliyun.core.annotation.NameInMap("NodeTypeInfo")
         private java.util.List < NodeTypeInfo> nodeTypeInfo;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private NodeTypeInfoList(Builder builder) {

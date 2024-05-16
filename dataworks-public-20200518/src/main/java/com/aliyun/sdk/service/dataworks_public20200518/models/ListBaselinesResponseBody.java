@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListBaselinesResponseBody</p>
  */
 public class ListBaselinesResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListBaselinesResponseBody(Builder builder) {
@@ -152,10 +151,10 @@ public class ListBaselinesResponseBody extends TeaModel {
     } 
 
     public static class OverTimeSettings extends TeaModel {
-        @NameInMap("Cycle")
+        @com.aliyun.core.annotation.NameInMap("Cycle")
         private Integer cycle;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
         private OverTimeSettings(Builder builder) {
@@ -213,34 +212,34 @@ public class ListBaselinesResponseBody extends TeaModel {
 
     }
     public static class Baselines extends TeaModel {
-        @NameInMap("AlertEnabled")
+        @com.aliyun.core.annotation.NameInMap("AlertEnabled")
         private Boolean alertEnabled;
 
-        @NameInMap("AlertMarginThreshold")
+        @com.aliyun.core.annotation.NameInMap("AlertMarginThreshold")
         private Integer alertMarginThreshold;
 
-        @NameInMap("BaselineId")
+        @com.aliyun.core.annotation.NameInMap("BaselineId")
         private Long baselineId;
 
-        @NameInMap("BaselineName")
+        @com.aliyun.core.annotation.NameInMap("BaselineName")
         private String baselineName;
 
-        @NameInMap("BaselineType")
+        @com.aliyun.core.annotation.NameInMap("BaselineType")
         private String baselineType;
 
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("OverTimeSettings")
+        @com.aliyun.core.annotation.NameInMap("OverTimeSettings")
         private java.util.List < OverTimeSettings> overTimeSettings;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
         private Baselines(Builder builder) {
@@ -434,16 +433,16 @@ public class ListBaselinesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Baselines")
+        @com.aliyun.core.annotation.NameInMap("Baselines")
         private java.util.List < Baselines> baselines;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private String pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private String pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private String totalCount;
 
         private Data(Builder builder) {

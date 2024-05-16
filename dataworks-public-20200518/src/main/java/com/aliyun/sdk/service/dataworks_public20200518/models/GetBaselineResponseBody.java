@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetBaselineResponseBody</p>
  */
 public class GetBaselineResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetBaselineResponseBody(Builder builder) {
@@ -152,10 +151,10 @@ public class GetBaselineResponseBody extends TeaModel {
     } 
 
     public static class DingRobots extends TeaModel {
-        @NameInMap("AtAll")
+        @com.aliyun.core.annotation.NameInMap("AtAll")
         private Boolean atAll;
 
-        @NameInMap("WebUrl")
+        @com.aliyun.core.annotation.NameInMap("WebUrl")
         private String webUrl;
 
         private DingRobots(Builder builder) {
@@ -213,40 +212,40 @@ public class GetBaselineResponseBody extends TeaModel {
 
     }
     public static class AlertSettings extends TeaModel {
-        @NameInMap("AlertInterval")
+        @com.aliyun.core.annotation.NameInMap("AlertInterval")
         private Integer alertInterval;
 
-        @NameInMap("AlertMaximum")
+        @com.aliyun.core.annotation.NameInMap("AlertMaximum")
         private Integer alertMaximum;
 
-        @NameInMap("AlertMethods")
+        @com.aliyun.core.annotation.NameInMap("AlertMethods")
         private java.util.List < String > alertMethods;
 
-        @NameInMap("AlertRecipient")
+        @com.aliyun.core.annotation.NameInMap("AlertRecipient")
         private String alertRecipient;
 
-        @NameInMap("AlertRecipientType")
+        @com.aliyun.core.annotation.NameInMap("AlertRecipientType")
         private String alertRecipientType;
 
-        @NameInMap("AlertType")
+        @com.aliyun.core.annotation.NameInMap("AlertType")
         private String alertType;
 
-        @NameInMap("BaselineAlertEnabled")
+        @com.aliyun.core.annotation.NameInMap("BaselineAlertEnabled")
         private Boolean baselineAlertEnabled;
 
-        @NameInMap("DingRobots")
+        @com.aliyun.core.annotation.NameInMap("DingRobots")
         private java.util.List < DingRobots> dingRobots;
 
-        @NameInMap("SilenceEndTime")
+        @com.aliyun.core.annotation.NameInMap("SilenceEndTime")
         private String silenceEndTime;
 
-        @NameInMap("SilenceStartTime")
+        @com.aliyun.core.annotation.NameInMap("SilenceStartTime")
         private String silenceStartTime;
 
-        @NameInMap("TopicTypes")
+        @com.aliyun.core.annotation.NameInMap("TopicTypes")
         private java.util.List < String > topicTypes;
 
-        @NameInMap("Webhooks")
+        @com.aliyun.core.annotation.NameInMap("Webhooks")
         private java.util.List < String > webhooks;
 
         private AlertSettings(Builder builder) {
@@ -474,10 +473,10 @@ public class GetBaselineResponseBody extends TeaModel {
 
     }
     public static class OverTimeSettings extends TeaModel {
-        @NameInMap("Cycle")
+        @com.aliyun.core.annotation.NameInMap("Cycle")
         private Integer cycle;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
         private OverTimeSettings(Builder builder) {
@@ -535,40 +534,40 @@ public class GetBaselineResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AlertEnabled")
+        @com.aliyun.core.annotation.NameInMap("AlertEnabled")
         private Boolean alertEnabled;
 
-        @NameInMap("AlertMarginThreshold")
+        @com.aliyun.core.annotation.NameInMap("AlertMarginThreshold")
         private Integer alertMarginThreshold;
 
-        @NameInMap("AlertSettings")
+        @com.aliyun.core.annotation.NameInMap("AlertSettings")
         private java.util.List < AlertSettings> alertSettings;
 
-        @NameInMap("BaselineId")
+        @com.aliyun.core.annotation.NameInMap("BaselineId")
         private Long baselineId;
 
-        @NameInMap("BaselineName")
+        @com.aliyun.core.annotation.NameInMap("BaselineName")
         private String baselineName;
 
-        @NameInMap("BaselineType")
+        @com.aliyun.core.annotation.NameInMap("BaselineType")
         private String baselineType;
 
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("NodeIds")
+        @com.aliyun.core.annotation.NameInMap("NodeIds")
         private java.util.List < Long > nodeIds;
 
-        @NameInMap("OverTimeSettings")
+        @com.aliyun.core.annotation.NameInMap("OverTimeSettings")
         private java.util.List < OverTimeSettings> overTimeSettings;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
         private Data(Builder builder) {

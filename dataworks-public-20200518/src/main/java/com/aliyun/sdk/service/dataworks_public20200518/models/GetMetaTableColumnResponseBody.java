@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMetaTableColumnResponseBody</p>
  */
 public class GetMetaTableColumnResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetMetaTableColumnResponseBody(Builder builder) {
@@ -152,34 +151,34 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
     } 
 
     public static class ColumnList extends TeaModel {
-        @NameInMap("Caption")
+        @com.aliyun.core.annotation.NameInMap("Caption")
         private String caption;
 
-        @NameInMap("ColumnGuid")
+        @com.aliyun.core.annotation.NameInMap("ColumnGuid")
         private String columnGuid;
 
-        @NameInMap("ColumnName")
+        @com.aliyun.core.annotation.NameInMap("ColumnName")
         private String columnName;
 
-        @NameInMap("ColumnType")
+        @com.aliyun.core.annotation.NameInMap("ColumnType")
         private String columnType;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("IsForeignKey")
+        @com.aliyun.core.annotation.NameInMap("IsForeignKey")
         private Boolean isForeignKey;
 
-        @NameInMap("IsPartitionColumn")
+        @com.aliyun.core.annotation.NameInMap("IsPartitionColumn")
         private Boolean isPartitionColumn;
 
-        @NameInMap("IsPrimaryKey")
+        @com.aliyun.core.annotation.NameInMap("IsPrimaryKey")
         private Boolean isPrimaryKey;
 
-        @NameInMap("Position")
+        @com.aliyun.core.annotation.NameInMap("Position")
         private Integer position;
 
-        @NameInMap("RelationCount")
+        @com.aliyun.core.annotation.NameInMap("RelationCount")
         private Long relationCount;
 
         private ColumnList(Builder builder) {
@@ -385,16 +384,16 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("ColumnList")
+        @com.aliyun.core.annotation.NameInMap("ColumnList")
         private java.util.List < ColumnList> columnList;
 
-        @NameInMap("PageNum")
+        @com.aliyun.core.annotation.NameInMap("PageNum")
         private Integer pageNum;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private Data(Builder builder) {

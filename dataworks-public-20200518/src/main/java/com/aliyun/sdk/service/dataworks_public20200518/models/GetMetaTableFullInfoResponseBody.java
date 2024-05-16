@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMetaTableFullInfoResponseBody</p>
  */
 public class GetMetaTableFullInfoResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetMetaTableFullInfoResponseBody(Builder builder) {
@@ -152,31 +151,31 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
     } 
 
     public static class ColumnList extends TeaModel {
-        @NameInMap("Caption")
+        @com.aliyun.core.annotation.NameInMap("Caption")
         private String caption;
 
-        @NameInMap("ColumnGuid")
+        @com.aliyun.core.annotation.NameInMap("ColumnGuid")
         private String columnGuid;
 
-        @NameInMap("ColumnName")
+        @com.aliyun.core.annotation.NameInMap("ColumnName")
         private String columnName;
 
-        @NameInMap("ColumnType")
+        @com.aliyun.core.annotation.NameInMap("ColumnType")
         private String columnType;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("IsForeignKey")
+        @com.aliyun.core.annotation.NameInMap("IsForeignKey")
         private Boolean isForeignKey;
 
-        @NameInMap("IsPartitionColumn")
+        @com.aliyun.core.annotation.NameInMap("IsPartitionColumn")
         private Boolean isPartitionColumn;
 
-        @NameInMap("IsPrimaryKey")
+        @com.aliyun.core.annotation.NameInMap("IsPrimaryKey")
         private Boolean isPrimaryKey;
 
-        @NameInMap("Position")
+        @com.aliyun.core.annotation.NameInMap("Position")
         private Integer position;
 
         private ColumnList(Builder builder) {
@@ -365,70 +364,70 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ColumnList")
+        @com.aliyun.core.annotation.NameInMap("ColumnList")
         private java.util.List < ColumnList> columnList;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("DataSize")
+        @com.aliyun.core.annotation.NameInMap("DataSize")
         private Long dataSize;
 
-        @NameInMap("DatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
-        @NameInMap("EnvType")
+        @com.aliyun.core.annotation.NameInMap("EnvType")
         private Integer envType;
 
-        @NameInMap("IsVisible")
+        @com.aliyun.core.annotation.NameInMap("IsVisible")
         private Integer isVisible;
 
-        @NameInMap("LastAccessTime")
+        @com.aliyun.core.annotation.NameInMap("LastAccessTime")
         private Long lastAccessTime;
 
-        @NameInMap("LastDdlTime")
+        @com.aliyun.core.annotation.NameInMap("LastDdlTime")
         private Long lastDdlTime;
 
-        @NameInMap("LastModifyTime")
+        @com.aliyun.core.annotation.NameInMap("LastModifyTime")
         private Long lastModifyTime;
 
-        @NameInMap("LifeCycle")
+        @com.aliyun.core.annotation.NameInMap("LifeCycle")
         private Integer lifeCycle;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
-        @NameInMap("PartitionKeys")
+        @com.aliyun.core.annotation.NameInMap("PartitionKeys")
         private String partitionKeys;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
-        @NameInMap("ProjectName")
+        @com.aliyun.core.annotation.NameInMap("ProjectName")
         private String projectName;
 
-        @NameInMap("Schema")
+        @com.aliyun.core.annotation.NameInMap("Schema")
         private String schema;
 
-        @NameInMap("TableGuid")
+        @com.aliyun.core.annotation.NameInMap("TableGuid")
         private String tableGuid;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private Long tenantId;
 
-        @NameInMap("TotalColumnCount")
+        @com.aliyun.core.annotation.NameInMap("TotalColumnCount")
         private Long totalColumnCount;
 
         private Data(Builder builder) {

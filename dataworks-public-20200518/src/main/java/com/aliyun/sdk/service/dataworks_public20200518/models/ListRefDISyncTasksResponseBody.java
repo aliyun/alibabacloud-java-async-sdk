@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRefDISyncTasksResponseBody</p>
  */
 public class ListRefDISyncTasksResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListRefDISyncTasksResponseBody(Builder builder) {
@@ -96,19 +95,19 @@ public class ListRefDISyncTasksResponseBody extends TeaModel {
     } 
 
     public static class DISyncTasks extends TeaModel {
-        @NameInMap("DiDestinationDatasource")
+        @com.aliyun.core.annotation.NameInMap("DiDestinationDatasource")
         private String diDestinationDatasource;
 
-        @NameInMap("DiSourceDatasource")
+        @com.aliyun.core.annotation.NameInMap("DiSourceDatasource")
         private String diSourceDatasource;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
         private DISyncTasks(Builder builder) {
@@ -231,7 +230,7 @@ public class ListRefDISyncTasksResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("DISyncTasks")
+        @com.aliyun.core.annotation.NameInMap("DISyncTasks")
         private java.util.List < DISyncTasks> DISyncTasks;
 
         private Data(Builder builder) {

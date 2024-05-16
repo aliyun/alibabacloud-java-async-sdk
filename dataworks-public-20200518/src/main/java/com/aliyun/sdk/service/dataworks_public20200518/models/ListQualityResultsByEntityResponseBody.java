@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListQualityResultsByEntityResponseBody</p>
  */
 public class ListQualityResultsByEntityResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListQualityResultsByEntityResponseBody(Builder builder) {
@@ -152,19 +151,19 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
     } 
 
     public static class ReferenceValue extends TeaModel {
-        @NameInMap("BizDate")
+        @com.aliyun.core.annotation.NameInMap("BizDate")
         private String bizDate;
 
-        @NameInMap("DiscreteProperty")
+        @com.aliyun.core.annotation.NameInMap("DiscreteProperty")
         private String discreteProperty;
 
-        @NameInMap("SingleCheckResult")
+        @com.aliyun.core.annotation.NameInMap("SingleCheckResult")
         private Integer singleCheckResult;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private Float threshold;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private ReferenceValue(Builder builder) {
@@ -273,13 +272,13 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
 
     }
     public static class SampleValue extends TeaModel {
-        @NameInMap("BizDate")
+        @com.aliyun.core.annotation.NameInMap("BizDate")
         private String bizDate;
 
-        @NameInMap("DiscreteProperty")
+        @com.aliyun.core.annotation.NameInMap("DiscreteProperty")
         private String discreteProperty;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private SampleValue(Builder builder) {
@@ -354,127 +353,127 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
 
     }
     public static class RuleChecks extends TeaModel {
-        @NameInMap("ActualExpression")
+        @com.aliyun.core.annotation.NameInMap("ActualExpression")
         private String actualExpression;
 
-        @NameInMap("BeginTime")
+        @com.aliyun.core.annotation.NameInMap("BeginTime")
         private Long beginTime;
 
-        @NameInMap("BizDate")
+        @com.aliyun.core.annotation.NameInMap("BizDate")
         private Long bizDate;
 
-        @NameInMap("BlockType")
+        @com.aliyun.core.annotation.NameInMap("BlockType")
         private Integer blockType;
 
-        @NameInMap("CheckResult")
+        @com.aliyun.core.annotation.NameInMap("CheckResult")
         private Integer checkResult;
 
-        @NameInMap("CheckResultStatus")
+        @com.aliyun.core.annotation.NameInMap("CheckResultStatus")
         private Integer checkResultStatus;
 
-        @NameInMap("CheckerId")
+        @com.aliyun.core.annotation.NameInMap("CheckerId")
         private Integer checkerId;
 
-        @NameInMap("CheckerName")
+        @com.aliyun.core.annotation.NameInMap("CheckerName")
         private String checkerName;
 
-        @NameInMap("CheckerType")
+        @com.aliyun.core.annotation.NameInMap("CheckerType")
         private Integer checkerType;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("CriticalThreshold")
+        @com.aliyun.core.annotation.NameInMap("CriticalThreshold")
         private Float criticalThreshold;
 
-        @NameInMap("DateType")
+        @com.aliyun.core.annotation.NameInMap("DateType")
         private String dateType;
 
-        @NameInMap("DiscreteCheck")
+        @com.aliyun.core.annotation.NameInMap("DiscreteCheck")
         private Boolean discreteCheck;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("EntityId")
+        @com.aliyun.core.annotation.NameInMap("EntityId")
         private Long entityId;
 
-        @NameInMap("ExpectValue")
+        @com.aliyun.core.annotation.NameInMap("ExpectValue")
         private Float expectValue;
 
-        @NameInMap("ExternalId")
+        @com.aliyun.core.annotation.NameInMap("ExternalId")
         private String externalId;
 
-        @NameInMap("ExternalType")
+        @com.aliyun.core.annotation.NameInMap("ExternalType")
         private String externalType;
 
-        @NameInMap("FixedCheck")
+        @com.aliyun.core.annotation.NameInMap("FixedCheck")
         private Boolean fixedCheck;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("IsPrediction")
+        @com.aliyun.core.annotation.NameInMap("IsPrediction")
         private Boolean isPrediction;
 
-        @NameInMap("LowerValue")
+        @com.aliyun.core.annotation.NameInMap("LowerValue")
         private Float lowerValue;
 
-        @NameInMap("MatchExpression")
+        @com.aliyun.core.annotation.NameInMap("MatchExpression")
         private String matchExpression;
 
-        @NameInMap("MethodName")
+        @com.aliyun.core.annotation.NameInMap("MethodName")
         private String methodName;
 
-        @NameInMap("Op")
+        @com.aliyun.core.annotation.NameInMap("Op")
         private String op;
 
-        @NameInMap("ProjectName")
+        @com.aliyun.core.annotation.NameInMap("ProjectName")
         private String projectName;
 
-        @NameInMap("Property")
+        @com.aliyun.core.annotation.NameInMap("Property")
         private String property;
 
-        @NameInMap("ReferenceValue")
+        @com.aliyun.core.annotation.NameInMap("ReferenceValue")
         private java.util.List < ReferenceValue> referenceValue;
 
-        @NameInMap("ResultString")
+        @com.aliyun.core.annotation.NameInMap("ResultString")
         private String resultString;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("SampleValue")
+        @com.aliyun.core.annotation.NameInMap("SampleValue")
         private java.util.List < SampleValue> sampleValue;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private Integer templateId;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
-        @NameInMap("TimeCost")
+        @com.aliyun.core.annotation.NameInMap("TimeCost")
         private String timeCost;
 
-        @NameInMap("Trend")
+        @com.aliyun.core.annotation.NameInMap("Trend")
         private String trend;
 
-        @NameInMap("UpperValue")
+        @com.aliyun.core.annotation.NameInMap("UpperValue")
         private Float upperValue;
 
-        @NameInMap("WarningThreshold")
+        @com.aliyun.core.annotation.NameInMap("WarningThreshold")
         private Float warningThreshold;
 
-        @NameInMap("WhereCondition")
+        @com.aliyun.core.annotation.NameInMap("WhereCondition")
         private String whereCondition;
 
         private RuleChecks(Builder builder) {
@@ -1221,16 +1220,16 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("RuleChecks")
+        @com.aliyun.core.annotation.NameInMap("RuleChecks")
         private java.util.List < RuleChecks> ruleChecks;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private Data(Builder builder) {

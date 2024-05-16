@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListLineageResponseBody</p>
  */
 public class ListLineageResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListLineageResponseBody(Builder builder) {
@@ -152,16 +151,16 @@ public class ListLineageResponseBody extends TeaModel {
     } 
 
     public static class RelationList extends TeaModel {
-        @NameInMap("Channel")
+        @com.aliyun.core.annotation.NameInMap("Channel")
         private String channel;
 
-        @NameInMap("Datasource")
+        @com.aliyun.core.annotation.NameInMap("Datasource")
         private String datasource;
 
-        @NameInMap("Guid")
+        @com.aliyun.core.annotation.NameInMap("Guid")
         private String guid;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private RelationList(Builder builder) {
@@ -253,13 +252,13 @@ public class ListLineageResponseBody extends TeaModel {
 
     }
     public static class DataEntityList extends TeaModel {
-        @NameInMap("CreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
-        @NameInMap("Entity")
+        @com.aliyun.core.annotation.NameInMap("Entity")
         private Entity entity;
 
-        @NameInMap("RelationList")
+        @com.aliyun.core.annotation.NameInMap("RelationList")
         private java.util.List < RelationList> relationList;
 
         private DataEntityList(Builder builder) {
@@ -334,10 +333,10 @@ public class ListLineageResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("DataEntityList")
+        @com.aliyun.core.annotation.NameInMap("DataEntityList")
         private java.util.List < DataEntityList> dataEntityList;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
         private Data(Builder builder) {

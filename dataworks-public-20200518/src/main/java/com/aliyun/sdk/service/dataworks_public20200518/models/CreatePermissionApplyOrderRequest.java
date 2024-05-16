@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,45 +11,45 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreatePermissionApplyOrderRequest</p>
  */
 public class CreatePermissionApplyOrderRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ApplyObject")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplyObject")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < ApplyObject> applyObject;
 
-    @Query
-    @NameInMap("ApplyReason")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplyReason")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String applyReason;
 
-    @Query
-    @NameInMap("ApplyUserIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplyUserIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String applyUserIds;
 
-    @Query
-    @NameInMap("Deadline")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Deadline")
     private Long deadline;
 
-    @Query
-    @NameInMap("EngineType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineType")
     private String engineType;
 
-    @Query
-    @NameInMap("MaxComputeProjectName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxComputeProjectName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String maxComputeProjectName;
 
-    @Query
-    @NameInMap("OrderType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderType")
     private Integer orderType;
 
-    @Query
-    @NameInMap("WorkspaceId")
-    @Validation(required = true, maximum = 999999)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 999999)
     private Integer workspaceId;
 
     private CreatePermissionApplyOrderRequest(Builder builder) {
@@ -266,8 +265,8 @@ public class CreatePermissionApplyOrderRequest extends Request {
     } 
 
     public static class ColumnMetaList extends TeaModel {
-        @NameInMap("Name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
         private ColumnMetaList(Builder builder) {
@@ -311,16 +310,16 @@ public class CreatePermissionApplyOrderRequest extends Request {
 
     }
     public static class ApplyObject extends TeaModel {
-        @NameInMap("Actions")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Actions")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String actions;
 
-        @NameInMap("ColumnMetaList")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ColumnMetaList")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List < ColumnMetaList> columnMetaList;
 
-        @NameInMap("Name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
         private ApplyObject(Builder builder) {

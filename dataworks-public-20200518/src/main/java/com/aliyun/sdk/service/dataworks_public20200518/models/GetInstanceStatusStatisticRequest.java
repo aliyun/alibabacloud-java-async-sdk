@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,35 +11,35 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInstanceStatusStatisticRequest</p>
  */
 public class GetInstanceStatusStatisticRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("BizDate")
-    @Validation(required = true, maxLength = 10, minLength = 10)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizDate")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 10, minLength = 10)
     private String bizDate;
 
-    @Body
-    @NameInMap("DagType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DagType")
     private String dagType;
 
-    @Body
-    @NameInMap("ProjectEnv")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectEnv")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectEnv;
 
-    @Body
-    @NameInMap("ProjectId")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Long projectId;
 
-    @Body
-    @NameInMap("SchedulerPeriod")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SchedulerPeriod")
     private String schedulerPeriod;
 
-    @Body
-    @NameInMap("SchedulerType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SchedulerType")
     private String schedulerType;
 
     private GetInstanceStatusStatisticRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInstanceStatusStatisticResponseBody</p>
  */
 public class GetInstanceStatusStatisticResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StatusCount")
+    @com.aliyun.core.annotation.NameInMap("StatusCount")
     private StatusCount statusCount;
 
     private GetInstanceStatusStatisticResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class GetInstanceStatusStatisticResponseBody extends TeaModel {
     } 
 
     public static class StatusCount extends TeaModel {
-        @NameInMap("FailureCount")
+        @com.aliyun.core.annotation.NameInMap("FailureCount")
         private Integer failureCount;
 
-        @NameInMap("NotRunCount")
+        @com.aliyun.core.annotation.NameInMap("NotRunCount")
         private Integer notRunCount;
 
-        @NameInMap("RunningCount")
+        @com.aliyun.core.annotation.NameInMap("RunningCount")
         private Integer runningCount;
 
-        @NameInMap("SuccessCount")
+        @com.aliyun.core.annotation.NameInMap("SuccessCount")
         private Integer successCount;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
-        @NameInMap("WaitResCount")
+        @com.aliyun.core.annotation.NameInMap("WaitResCount")
         private Integer waitResCount;
 
-        @NameInMap("WaitTimeCount")
+        @com.aliyun.core.annotation.NameInMap("WaitTimeCount")
         private Integer waitTimeCount;
 
         private StatusCount(Builder builder) {

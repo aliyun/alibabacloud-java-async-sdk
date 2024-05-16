@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateIDEEventResultRequest</p>
  */
 public class UpdateIDEEventResultRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("CheckResult")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CheckResult")
     private String checkResult;
 
-    @Body
-    @NameInMap("CheckResultTip")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CheckResultTip")
     private String checkResultTip;
 
-    @Body
-    @NameInMap("ExtensionCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExtensionCode")
     private String extensionCode;
 
-    @Body
-    @NameInMap("MessageId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MessageId")
     private String messageId;
 
     private UpdateIDEEventResultRequest(Builder builder) {

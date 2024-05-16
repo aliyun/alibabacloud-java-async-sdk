@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RevokeColumnPermissionRequest</p>
  */
 public class RevokeColumnPermissionRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Columns")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Columns")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String columns;
 
-    @Query
-    @NameInMap("MaxComputeProjectName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxComputeProjectName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String maxComputeProjectName;
 
-    @Query
-    @NameInMap("RevokeUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RevokeUserId")
     private String revokeUserId;
 
-    @Query
-    @NameInMap("RevokeUserName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RevokeUserName")
     private String revokeUserName;
 
-    @Query
-    @NameInMap("TableName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tableName;
 
-    @Query
-    @NameInMap("WorkspaceId")
-    @Validation(required = true, maximum = 9999999, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 9999999, minimum = 1)
     private Long workspaceId;
 
     private RevokeColumnPermissionRequest(Builder builder) {

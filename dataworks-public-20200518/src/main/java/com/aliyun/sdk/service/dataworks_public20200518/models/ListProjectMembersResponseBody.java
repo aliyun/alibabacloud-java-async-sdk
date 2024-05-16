@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListProjectMembersResponseBody</p>
  */
 public class ListProjectMembersResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListProjectMembersResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class ListProjectMembersResponseBody extends TeaModel {
     } 
 
     public static class ProjectRoleList extends TeaModel {
-        @NameInMap("ProjectRoleCode")
+        @com.aliyun.core.annotation.NameInMap("ProjectRoleCode")
         private String projectRoleCode;
 
-        @NameInMap("ProjectRoleId")
+        @com.aliyun.core.annotation.NameInMap("ProjectRoleId")
         private Integer projectRoleId;
 
-        @NameInMap("ProjectRoleName")
+        @com.aliyun.core.annotation.NameInMap("ProjectRoleName")
         private String projectRoleName;
 
-        @NameInMap("ProjectRoleType")
+        @com.aliyun.core.annotation.NameInMap("ProjectRoleType")
         private String projectRoleType;
 
         private ProjectRoleList(Builder builder) {
@@ -179,22 +178,22 @@ public class ListProjectMembersResponseBody extends TeaModel {
 
     }
     public static class ProjectMemberList extends TeaModel {
-        @NameInMap("Nick")
+        @com.aliyun.core.annotation.NameInMap("Nick")
         private String nick;
 
-        @NameInMap("ProjectMemberId")
+        @com.aliyun.core.annotation.NameInMap("ProjectMemberId")
         private String projectMemberId;
 
-        @NameInMap("ProjectMemberName")
+        @com.aliyun.core.annotation.NameInMap("ProjectMemberName")
         private String projectMemberName;
 
-        @NameInMap("ProjectMemberType")
+        @com.aliyun.core.annotation.NameInMap("ProjectMemberType")
         private String projectMemberType;
 
-        @NameInMap("ProjectRoleList")
+        @com.aliyun.core.annotation.NameInMap("ProjectRoleList")
         private java.util.List < ProjectRoleList> projectRoleList;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ProjectMemberList(Builder builder) {
@@ -329,16 +328,16 @@ public class ListProjectMembersResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("ProjectMemberList")
+        @com.aliyun.core.annotation.NameInMap("ProjectMemberList")
         private java.util.List < ProjectMemberList> projectMemberList;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {

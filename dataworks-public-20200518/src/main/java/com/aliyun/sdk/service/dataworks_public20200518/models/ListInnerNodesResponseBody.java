@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInnerNodesResponseBody</p>
  */
 public class ListInnerNodesResponseBody extends TeaModel {
-    @NameInMap("Paging")
+    @com.aliyun.core.annotation.NameInMap("Paging")
     private Paging paging;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListInnerNodesResponseBody(Builder builder) {
@@ -92,58 +91,58 @@ public class ListInnerNodesResponseBody extends TeaModel {
     } 
 
     public static class Nodes extends TeaModel {
-        @NameInMap("BaselineId")
+        @com.aliyun.core.annotation.NameInMap("BaselineId")
         private Long baselineId;
 
-        @NameInMap("BusinessId")
+        @com.aliyun.core.annotation.NameInMap("BusinessId")
         private Long businessId;
 
-        @NameInMap("Connection")
+        @com.aliyun.core.annotation.NameInMap("Connection")
         private String connection;
 
-        @NameInMap("CronExpress")
+        @com.aliyun.core.annotation.NameInMap("CronExpress")
         private String cronExpress;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DqcDescription")
+        @com.aliyun.core.annotation.NameInMap("DqcDescription")
         private String dqcDescription;
 
-        @NameInMap("DqcType")
+        @com.aliyun.core.annotation.NameInMap("DqcType")
         private String dqcType;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
-        @NameInMap("ParamValues")
+        @com.aliyun.core.annotation.NameInMap("ParamValues")
         private String paramValues;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("ProgramType")
+        @com.aliyun.core.annotation.NameInMap("ProgramType")
         private String programType;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
-        @NameInMap("RepeatInterval")
+        @com.aliyun.core.annotation.NameInMap("RepeatInterval")
         private Long repeatInterval;
 
-        @NameInMap("Repeatability")
+        @com.aliyun.core.annotation.NameInMap("Repeatability")
         private Boolean repeatability;
 
-        @NameInMap("ResGroupName")
+        @com.aliyun.core.annotation.NameInMap("ResGroupName")
         private String resGroupName;
 
-        @NameInMap("SchedulerType")
+        @com.aliyun.core.annotation.NameInMap("SchedulerType")
         private String schedulerType;
 
         private Nodes(Builder builder) {
@@ -473,16 +472,16 @@ public class ListInnerNodesResponseBody extends TeaModel {
 
     }
     public static class Paging extends TeaModel {
-        @NameInMap("Nodes")
+        @com.aliyun.core.annotation.NameInMap("Nodes")
         private java.util.List < Nodes> nodes;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Paging(Builder builder) {

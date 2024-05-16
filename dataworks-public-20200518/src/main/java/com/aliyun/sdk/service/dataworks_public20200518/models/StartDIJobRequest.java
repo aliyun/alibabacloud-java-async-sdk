@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StartDIJobRequest</p>
  */
 public class StartDIJobRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("DIJobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DIJobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long DIJobId;
 
-    @Body
-    @NameInMap("ForceToRerun")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ForceToRerun")
     private Boolean forceToRerun;
 
-    @Body
-    @NameInMap("RealtimeStartSettings")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RealtimeStartSettings")
     private RealtimeStartSettings realtimeStartSettings;
 
     private StartDIJobRequest(Builder builder) {
@@ -141,10 +140,10 @@ public class StartDIJobRequest extends Request {
     } 
 
     public static class FailoverSettings extends TeaModel {
-        @NameInMap("Interval")
+        @com.aliyun.core.annotation.NameInMap("Interval")
         private Long interval;
 
-        @NameInMap("UpperLimit")
+        @com.aliyun.core.annotation.NameInMap("UpperLimit")
         private Long upperLimit;
 
         private FailoverSettings(Builder builder) {
@@ -202,10 +201,10 @@ public class StartDIJobRequest extends Request {
 
     }
     public static class RealtimeStartSettings extends TeaModel {
-        @NameInMap("FailoverSettings")
+        @com.aliyun.core.annotation.NameInMap("FailoverSettings")
         private FailoverSettings failoverSettings;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
         private RealtimeStartSettings(Builder builder) {

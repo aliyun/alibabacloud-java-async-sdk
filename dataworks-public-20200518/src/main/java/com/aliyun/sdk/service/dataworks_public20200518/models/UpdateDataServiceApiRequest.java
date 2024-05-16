@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,73 +11,73 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateDataServiceApiRequest</p>
  */
 public class UpdateDataServiceApiRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("ApiDescription")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApiDescription")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String apiDescription;
 
-    @Body
-    @NameInMap("ApiId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApiId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long apiId;
 
-    @Body
-    @NameInMap("ApiPath")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApiPath")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String apiPath;
 
-    @Body
-    @NameInMap("ProjectId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long projectId;
 
-    @Body
-    @NameInMap("Protocols")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Protocols")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String protocols;
 
-    @Body
-    @NameInMap("RegistrationDetails")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegistrationDetails")
     private String registrationDetails;
 
-    @Body
-    @NameInMap("RequestMethod")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RequestMethod")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer requestMethod;
 
-    @Body
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private Long resourceGroupId;
 
-    @Body
-    @NameInMap("ResponseContentType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResponseContentType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer responseContentType;
 
-    @Body
-    @NameInMap("ScriptDetails")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ScriptDetails")
     private String scriptDetails;
 
-    @Body
-    @NameInMap("TenantId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
     private Long tenantId;
 
-    @Body
-    @NameInMap("Timeout")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Timeout")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer timeout;
 
-    @Body
-    @NameInMap("VisibleRange")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VisibleRange")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer visibleRange;
 
-    @Body
-    @NameInMap("WizardDetails")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WizardDetails")
     private String wizardDetails;
 
     private UpdateDataServiceApiRequest(Builder builder) {

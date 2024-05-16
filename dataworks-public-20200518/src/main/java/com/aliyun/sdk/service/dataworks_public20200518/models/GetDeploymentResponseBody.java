@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDeploymentResponseBody</p>
  */
 public class GetDeploymentResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetDeploymentResponseBody(Builder builder) {
@@ -152,13 +151,13 @@ public class GetDeploymentResponseBody extends TeaModel {
     } 
 
     public static class DeployedItems extends TeaModel {
-        @NameInMap("FileId")
+        @com.aliyun.core.annotation.NameInMap("FileId")
         private Long fileId;
 
-        @NameInMap("FileVersion")
+        @com.aliyun.core.annotation.NameInMap("FileVersion")
         private Long fileVersion;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private DeployedItems(Builder builder) {
@@ -233,34 +232,34 @@ public class GetDeploymentResponseBody extends TeaModel {
 
     }
     public static class Deployment extends TeaModel {
-        @NameInMap("CheckingStatus")
+        @com.aliyun.core.annotation.NameInMap("CheckingStatus")
         private Integer checkingStatus;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("CreatorId")
+        @com.aliyun.core.annotation.NameInMap("CreatorId")
         private String creatorId;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("ExecuteTime")
+        @com.aliyun.core.annotation.NameInMap("ExecuteTime")
         private Long executeTime;
 
-        @NameInMap("FromEnvironment")
+        @com.aliyun.core.annotation.NameInMap("FromEnvironment")
         private Integer fromEnvironment;
 
-        @NameInMap("HandlerId")
+        @com.aliyun.core.annotation.NameInMap("HandlerId")
         private String handlerId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("ToEnvironment")
+        @com.aliyun.core.annotation.NameInMap("ToEnvironment")
         private Integer toEnvironment;
 
         private Deployment(Builder builder) {
@@ -458,10 +457,10 @@ public class GetDeploymentResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("DeployedItems")
+        @com.aliyun.core.annotation.NameInMap("DeployedItems")
         private java.util.List < DeployedItems> deployedItems;
 
-        @NameInMap("Deployment")
+        @com.aliyun.core.annotation.NameInMap("Deployment")
         private Deployment deployment;
 
         private Data(Builder builder) {

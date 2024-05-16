@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListProjectIdsResponseBody</p>
  */
 public class ListProjectIdsResponseBody extends TeaModel {
-    @NameInMap("ProjectIds")
+    @com.aliyun.core.annotation.NameInMap("ProjectIds")
     private java.util.List < Long > projectIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListProjectIdsResponseBody(Builder builder) {

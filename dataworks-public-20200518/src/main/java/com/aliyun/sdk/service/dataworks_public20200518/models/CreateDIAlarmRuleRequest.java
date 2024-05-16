@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDIAlarmRuleRequest</p>
  */
 public class CreateDIAlarmRuleRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("DIJobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DIJobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long DIJobId;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("Enabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Enabled")
     private Boolean enabled;
 
-    @Body
-    @NameInMap("MetricType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MetricType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String metricType;
 
-    @Body
-    @NameInMap("NotificationSettings")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NotificationSettings")
+    @com.aliyun.core.annotation.Validation(required = true)
     private NotificationSettings notificationSettings;
 
-    @Body
-    @NameInMap("TriggerConditions")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TriggerConditions")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < TriggerConditions> triggerConditions;
 
     private CreateDIAlarmRuleRequest(Builder builder) {
@@ -214,10 +213,10 @@ public class CreateDIAlarmRuleRequest extends Request {
     } 
 
     public static class NotificationChannels extends TeaModel {
-        @NameInMap("Channels")
+        @com.aliyun.core.annotation.NameInMap("Channels")
         private java.util.List < String > channels;
 
-        @NameInMap("Severity")
+        @com.aliyun.core.annotation.NameInMap("Severity")
         private String severity;
 
         private NotificationChannels(Builder builder) {
@@ -275,10 +274,10 @@ public class CreateDIAlarmRuleRequest extends Request {
 
     }
     public static class NotificationReceivers extends TeaModel {
-        @NameInMap("ReceiverType")
+        @com.aliyun.core.annotation.NameInMap("ReceiverType")
         private String receiverType;
 
-        @NameInMap("ReceiverValues")
+        @com.aliyun.core.annotation.NameInMap("ReceiverValues")
         private java.util.List < String > receiverValues;
 
         private NotificationReceivers(Builder builder) {
@@ -336,15 +335,15 @@ public class CreateDIAlarmRuleRequest extends Request {
 
     }
     public static class NotificationSettings extends TeaModel {
-        @NameInMap("InhibitionInterval")
+        @com.aliyun.core.annotation.NameInMap("InhibitionInterval")
         private Integer inhibitionInterval;
 
-        @NameInMap("NotificationChannels")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("NotificationChannels")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List < NotificationChannels> notificationChannels;
 
-        @NameInMap("NotificationReceivers")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("NotificationReceivers")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List < NotificationReceivers> notificationReceivers;
 
         private NotificationSettings(Builder builder) {
@@ -419,13 +418,13 @@ public class CreateDIAlarmRuleRequest extends Request {
 
     }
     public static class TriggerConditions extends TeaModel {
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
 
-        @NameInMap("Severity")
+        @com.aliyun.core.annotation.NameInMap("Severity")
         private String severity;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private Long threshold;
 
         private TriggerConditions(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,55 +11,55 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateMetaTableRequest</p>
  */
 public class UpdateMetaTableRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("AddedLabels")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AddedLabels")
     private String addedLabels;
 
-    @Query
-    @NameInMap("Caption")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Caption")
     private String caption;
 
-    @Query
-    @NameInMap("CategoryId")
-    @Validation()
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CategoryId")
+    @com.aliyun.core.annotation.Validation()
     private Long categoryId;
 
-    @Query
-    @NameInMap("EnvType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnvType")
     private Integer envType;
 
-    @Query
-    @NameInMap("NewOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewOwnerId")
     private String newOwnerId;
 
-    @Query
-    @NameInMap("ProjectId")
-    @Validation()
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation()
     private Long projectId;
 
-    @Body
-    @NameInMap("RemovedLabels")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RemovedLabels")
     private String removedLabels;
 
-    @Query
-    @NameInMap("Schema")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Schema")
     private String schema;
 
-    @Query
-    @NameInMap("TableGuid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableGuid")
     private String tableGuid;
 
-    @Query
-    @NameInMap("TableName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableName")
     private String tableName;
 
-    @Query
-    @NameInMap("Visibility")
-    @Validation(maximum = 100)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Visibility")
+    @com.aliyun.core.annotation.Validation(maximum = 100)
     private Integer visibility;
 
     private UpdateMetaTableRequest(Builder builder) {

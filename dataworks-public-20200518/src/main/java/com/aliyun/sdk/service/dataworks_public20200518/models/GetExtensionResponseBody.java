@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetExtensionResponseBody</p>
  */
 public class GetExtensionResponseBody extends TeaModel {
-    @NameInMap("Extension")
+    @com.aliyun.core.annotation.NameInMap("Extension")
     private Extension extension;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetExtensionResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class GetExtensionResponseBody extends TeaModel {
     } 
 
     public static class BindEventList extends TeaModel {
-        @NameInMap("EventCode")
+        @com.aliyun.core.annotation.NameInMap("EventCode")
         private String eventCode;
 
-        @NameInMap("EventName")
+        @com.aliyun.core.annotation.NameInMap("EventName")
         private String eventName;
 
         private BindEventList(Builder builder) {
@@ -133,10 +132,10 @@ public class GetExtensionResponseBody extends TeaModel {
 
     }
     public static class EventCategoryList extends TeaModel {
-        @NameInMap("CategoryCode")
+        @com.aliyun.core.annotation.NameInMap("CategoryCode")
         private String categoryCode;
 
-        @NameInMap("CategoryName")
+        @com.aliyun.core.annotation.NameInMap("CategoryName")
         private String categoryName;
 
         private EventCategoryList(Builder builder) {
@@ -194,37 +193,37 @@ public class GetExtensionResponseBody extends TeaModel {
 
     }
     public static class Extension extends TeaModel {
-        @NameInMap("BindEventList")
+        @com.aliyun.core.annotation.NameInMap("BindEventList")
         private java.util.List < BindEventList> bindEventList;
 
-        @NameInMap("DetailUrl")
+        @com.aliyun.core.annotation.NameInMap("DetailUrl")
         private String detailUrl;
 
-        @NameInMap("EventCategoryList")
+        @com.aliyun.core.annotation.NameInMap("EventCategoryList")
         private java.util.List < EventCategoryList> eventCategoryList;
 
-        @NameInMap("ExtensionCode")
+        @com.aliyun.core.annotation.NameInMap("ExtensionCode")
         private String extensionCode;
 
-        @NameInMap("ExtensionDesc")
+        @com.aliyun.core.annotation.NameInMap("ExtensionDesc")
         private String extensionDesc;
 
-        @NameInMap("ExtensionName")
+        @com.aliyun.core.annotation.NameInMap("ExtensionName")
         private String extensionName;
 
-        @NameInMap("HelpDocUrl")
+        @com.aliyun.core.annotation.NameInMap("HelpDocUrl")
         private String helpDocUrl;
 
-        @NameInMap("OptionSetting")
+        @com.aliyun.core.annotation.NameInMap("OptionSetting")
         private String optionSetting;
 
-        @NameInMap("ParameterSetting")
+        @com.aliyun.core.annotation.NameInMap("ParameterSetting")
         private String parameterSetting;
 
-        @NameInMap("ProjectTesting")
+        @com.aliyun.core.annotation.NameInMap("ProjectTesting")
         private Long projectTesting;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private Extension(Builder builder) {

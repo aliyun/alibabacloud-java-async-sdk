@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetBaselineKeyPathResponseBody</p>
  */
 public class GetBaselineKeyPathResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetBaselineKeyPathResponseBody(Builder builder) {
@@ -152,28 +151,28 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
     } 
 
     public static class Runs extends TeaModel {
-        @NameInMap("AbsTime")
+        @com.aliyun.core.annotation.NameInMap("AbsTime")
         private Long absTime;
 
-        @NameInMap("BeginCast")
+        @com.aliyun.core.annotation.NameInMap("BeginCast")
         private Long beginCast;
 
-        @NameInMap("BeginRunningTime")
+        @com.aliyun.core.annotation.NameInMap("BeginRunningTime")
         private Long beginRunningTime;
 
-        @NameInMap("BeginWaitResTime")
+        @com.aliyun.core.annotation.NameInMap("BeginWaitResTime")
         private Long beginWaitResTime;
 
-        @NameInMap("BeginWaitTimeTime")
+        @com.aliyun.core.annotation.NameInMap("BeginWaitTimeTime")
         private Long beginWaitTimeTime;
 
-        @NameInMap("EndCast")
+        @com.aliyun.core.annotation.NameInMap("EndCast")
         private Long endCast;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private Long finishTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Runs(Builder builder) {
@@ -333,16 +332,16 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
 
     }
     public static class Topics extends TeaModel {
-        @NameInMap("AddTime")
+        @com.aliyun.core.annotation.NameInMap("AddTime")
         private Long addTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
 
-        @NameInMap("TopicId")
+        @com.aliyun.core.annotation.NameInMap("TopicId")
         private Long topicId;
 
-        @NameInMap("TopicName")
+        @com.aliyun.core.annotation.NameInMap("TopicName")
         private String topicName;
 
         private Topics(Builder builder) {
@@ -434,34 +433,34 @@ public class GetBaselineKeyPathResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Bizdate")
+        @com.aliyun.core.annotation.NameInMap("Bizdate")
         private Long bizdate;
 
-        @NameInMap("InGroupId")
+        @com.aliyun.core.annotation.NameInMap("InGroupId")
         private Integer inGroupId;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("PrgType")
+        @com.aliyun.core.annotation.NameInMap("PrgType")
         private Integer prgType;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
-        @NameInMap("Runs")
+        @com.aliyun.core.annotation.NameInMap("Runs")
         private java.util.List < Runs> runs;
 
-        @NameInMap("Topics")
+        @com.aliyun.core.annotation.NameInMap("Topics")
         private java.util.List < Topics> topics;
 
         private Data(Builder builder) {

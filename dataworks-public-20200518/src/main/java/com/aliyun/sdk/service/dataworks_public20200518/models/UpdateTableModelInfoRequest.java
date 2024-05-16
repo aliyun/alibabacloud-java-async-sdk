@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateTableModelInfoRequest</p>
  */
 public class UpdateTableModelInfoRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("FirstLevelThemeId")
-    @Validation()
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirstLevelThemeId")
+    @com.aliyun.core.annotation.Validation()
     private Long firstLevelThemeId;
 
-    @Query
-    @NameInMap("LevelId")
-    @Validation()
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LevelId")
+    @com.aliyun.core.annotation.Validation()
     private Long levelId;
 
-    @Query
-    @NameInMap("LevelType")
-    @Validation(maximum = 2147483647)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LevelType")
+    @com.aliyun.core.annotation.Validation(maximum = 2147483647)
     private Integer levelType;
 
-    @Query
-    @NameInMap("SecondLevelThemeId")
-    @Validation()
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecondLevelThemeId")
+    @com.aliyun.core.annotation.Validation()
     private Long secondLevelThemeId;
 
-    @Query
-    @NameInMap("TableGuid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableGuid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tableGuid;
 
     private UpdateTableModelInfoRequest(Builder builder) {

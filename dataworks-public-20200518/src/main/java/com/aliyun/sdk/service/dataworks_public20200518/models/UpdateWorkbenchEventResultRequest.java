@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateWorkbenchEventResultRequest</p>
  */
 public class UpdateWorkbenchEventResultRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("CheckResult")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckResult")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String checkResult;
 
-    @Query
-    @NameInMap("CheckResultTip")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckResultTip")
     private String checkResultTip;
 
-    @Query
-    @NameInMap("ExtensionCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtensionCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String extensionCode;
 
-    @Query
-    @NameInMap("MessageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MessageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String messageId;
 
     private UpdateWorkbenchEventResultRequest(Builder builder) {

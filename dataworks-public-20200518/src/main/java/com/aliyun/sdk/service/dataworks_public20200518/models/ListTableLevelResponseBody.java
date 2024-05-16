@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTableLevelResponseBody</p>
  */
 public class ListTableLevelResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TableLevelInfo")
+    @com.aliyun.core.annotation.NameInMap("TableLevelInfo")
     private TableLevelInfo tableLevelInfo;
 
     private ListTableLevelResponseBody(Builder builder) {
@@ -152,19 +151,19 @@ public class ListTableLevelResponseBody extends TeaModel {
     } 
 
     public static class LevelList extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("LevelId")
+        @com.aliyun.core.annotation.NameInMap("LevelId")
         private Long levelId;
 
-        @NameInMap("LevelType")
+        @com.aliyun.core.annotation.NameInMap("LevelType")
         private Integer levelType;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
         private LevelList(Builder builder) {
@@ -273,10 +272,10 @@ public class ListTableLevelResponseBody extends TeaModel {
 
     }
     public static class TableLevelInfo extends TeaModel {
-        @NameInMap("LevelList")
+        @com.aliyun.core.annotation.NameInMap("LevelList")
         private java.util.List < LevelList> levelList;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private TableLevelInfo(Builder builder) {

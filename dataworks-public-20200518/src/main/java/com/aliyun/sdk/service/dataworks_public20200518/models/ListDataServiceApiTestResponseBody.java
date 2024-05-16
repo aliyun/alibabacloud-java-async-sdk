@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDataServiceApiTestResponseBody</p>
  */
 public class ListDataServiceApiTestResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListDataServiceApiTestResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class ListDataServiceApiTestResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("ApiId")
+        @com.aliyun.core.annotation.NameInMap("ApiId")
         private Long apiId;
 
-        @NameInMap("CostTime")
+        @com.aliyun.core.annotation.NameInMap("CostTime")
         private Integer costTime;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("ParamMap")
+        @com.aliyun.core.annotation.NameInMap("ParamMap")
         private String paramMap;
 
-        @NameInMap("RetCode")
+        @com.aliyun.core.annotation.NameInMap("RetCode")
         private Long retCode;
 
-        @NameInMap("RetResult")
+        @com.aliyun.core.annotation.NameInMap("RetResult")
         private String retResult;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TestId")
+        @com.aliyun.core.annotation.NameInMap("TestId")
         private Long testId;
 
         private Data(Builder builder) {

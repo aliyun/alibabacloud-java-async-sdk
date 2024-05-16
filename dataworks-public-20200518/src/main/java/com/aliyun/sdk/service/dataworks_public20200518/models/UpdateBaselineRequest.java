@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,62 +11,62 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateBaselineRequest</p>
  */
 public class UpdateBaselineRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("AlertEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertEnabled")
     private Boolean alertEnabled;
 
-    @Body
-    @NameInMap("AlertMarginThreshold")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertMarginThreshold")
     private Integer alertMarginThreshold;
 
-    @Body
-    @NameInMap("AlertSettings")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertSettings")
     private java.util.List < AlertSettings> alertSettings;
 
-    @Body
-    @NameInMap("BaselineId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BaselineId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long baselineId;
 
-    @Body
-    @NameInMap("BaselineName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BaselineName")
     private String baselineName;
 
-    @Body
-    @NameInMap("BaselineType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BaselineType")
     private String baselineType;
 
-    @Body
-    @NameInMap("Enabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Enabled")
     private Boolean enabled;
 
-    @Body
-    @NameInMap("NodeIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeIds")
     private String nodeIds;
 
-    @Body
-    @NameInMap("OvertimeSettings")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OvertimeSettings")
     private java.util.List < OvertimeSettings> overtimeSettings;
 
-    @Body
-    @NameInMap("Owner")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Owner")
     private String owner;
 
-    @Body
-    @NameInMap("Priority")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Priority")
     private Integer priority;
 
-    @Body
-    @NameInMap("ProjectId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long projectId;
 
-    @Body
-    @NameInMap("RemoveNodeIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RemoveNodeIds")
     private String removeNodeIds;
 
     private UpdateBaselineRequest(Builder builder) {
@@ -373,10 +372,10 @@ public class UpdateBaselineRequest extends Request {
     } 
 
     public static class DingRobots extends TeaModel {
-        @NameInMap("AtAll")
+        @com.aliyun.core.annotation.NameInMap("AtAll")
         private Boolean atAll;
 
-        @NameInMap("WebUrl")
+        @com.aliyun.core.annotation.NameInMap("WebUrl")
         private String webUrl;
 
         private DingRobots(Builder builder) {
@@ -434,42 +433,42 @@ public class UpdateBaselineRequest extends Request {
 
     }
     public static class AlertSettings extends TeaModel {
-        @NameInMap("AlertInterval")
-        @Validation(maximum = 1440, minimum = 5)
+        @com.aliyun.core.annotation.NameInMap("AlertInterval")
+        @com.aliyun.core.annotation.Validation(maximum = 1440, minimum = 5)
         private Integer alertInterval;
 
-        @NameInMap("AlertMaximum")
-        @Validation(maximum = 288, minimum = 1)
+        @com.aliyun.core.annotation.NameInMap("AlertMaximum")
+        @com.aliyun.core.annotation.Validation(maximum = 288, minimum = 1)
         private Integer alertMaximum;
 
-        @NameInMap("AlertMethods")
+        @com.aliyun.core.annotation.NameInMap("AlertMethods")
         private java.util.List < String > alertMethods;
 
-        @NameInMap("AlertRecipient")
+        @com.aliyun.core.annotation.NameInMap("AlertRecipient")
         private String alertRecipient;
 
-        @NameInMap("AlertRecipientType")
+        @com.aliyun.core.annotation.NameInMap("AlertRecipientType")
         private String alertRecipientType;
 
-        @NameInMap("AlertType")
+        @com.aliyun.core.annotation.NameInMap("AlertType")
         private String alertType;
 
-        @NameInMap("BaselineAlertEnabled")
+        @com.aliyun.core.annotation.NameInMap("BaselineAlertEnabled")
         private Boolean baselineAlertEnabled;
 
-        @NameInMap("DingRobots")
+        @com.aliyun.core.annotation.NameInMap("DingRobots")
         private java.util.List < DingRobots> dingRobots;
 
-        @NameInMap("SilenceEndTime")
+        @com.aliyun.core.annotation.NameInMap("SilenceEndTime")
         private String silenceEndTime;
 
-        @NameInMap("SilenceStartTime")
+        @com.aliyun.core.annotation.NameInMap("SilenceStartTime")
         private String silenceStartTime;
 
-        @NameInMap("TopicTypes")
+        @com.aliyun.core.annotation.NameInMap("TopicTypes")
         private java.util.List < String > topicTypes;
 
-        @NameInMap("Webhooks")
+        @com.aliyun.core.annotation.NameInMap("Webhooks")
         private java.util.List < String > webhooks;
 
         private AlertSettings(Builder builder) {
@@ -697,10 +696,10 @@ public class UpdateBaselineRequest extends Request {
 
     }
     public static class OvertimeSettings extends TeaModel {
-        @NameInMap("Cycle")
+        @com.aliyun.core.annotation.NameInMap("Cycle")
         private Integer cycle;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
         private OvertimeSettings(Builder builder) {

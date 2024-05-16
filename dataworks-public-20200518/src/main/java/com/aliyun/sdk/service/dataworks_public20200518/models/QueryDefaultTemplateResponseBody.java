@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryDefaultTemplateResponseBody</p>
  */
 public class QueryDefaultTemplateResponseBody extends TeaModel {
-    @NameInMap("Data")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("Data")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Object data;
 
-    @NameInMap("ErrorCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String requestId;
 
-    @NameInMap("Success")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("Success")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean success;
 
     private QueryDefaultTemplateResponseBody(Builder builder) {

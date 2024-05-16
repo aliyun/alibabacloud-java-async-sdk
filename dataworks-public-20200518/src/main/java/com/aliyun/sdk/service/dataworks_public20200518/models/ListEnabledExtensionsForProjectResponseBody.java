@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListEnabledExtensionsForProjectResponseBody</p>
  */
 public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
-    @NameInMap("Extensions")
+    @com.aliyun.core.annotation.NameInMap("Extensions")
     private java.util.List < Extensions> extensions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListEnabledExtensionsForProjectResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class ListEnabledExtensionsForProjectResponseBody extends TeaModel {
     } 
 
     public static class Extensions extends TeaModel {
-        @NameInMap("CreateUser")
+        @com.aliyun.core.annotation.NameInMap("CreateUser")
         private String createUser;
 
-        @NameInMap("ExtensionCode")
+        @com.aliyun.core.annotation.NameInMap("ExtensionCode")
         private String extensionCode;
 
-        @NameInMap("ExtensionDesc")
+        @com.aliyun.core.annotation.NameInMap("ExtensionDesc")
         private String extensionDesc;
 
-        @NameInMap("ExtensionName")
+        @com.aliyun.core.annotation.NameInMap("ExtensionName")
         private String extensionName;
 
-        @NameInMap("ModifyUser")
+        @com.aliyun.core.annotation.NameInMap("ModifyUser")
         private String modifyUser;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("ParameterSetting")
+        @com.aliyun.core.annotation.NameInMap("ParameterSetting")
         private String parameterSetting;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private Long tenantId;
 
         private Extensions(Builder builder) {

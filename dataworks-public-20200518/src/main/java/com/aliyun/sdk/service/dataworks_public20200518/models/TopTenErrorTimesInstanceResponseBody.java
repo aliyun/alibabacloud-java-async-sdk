@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TopTenErrorTimesInstanceResponseBody</p>
  */
 public class TopTenErrorTimesInstanceResponseBody extends TeaModel {
-    @NameInMap("InstanceErrorRank")
+    @com.aliyun.core.annotation.NameInMap("InstanceErrorRank")
     private InstanceErrorRank instanceErrorRank;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private TopTenErrorTimesInstanceResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class TopTenErrorTimesInstanceResponseBody extends TeaModel {
     } 
 
     public static class ErrorRank extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("ProgramType")
+        @com.aliyun.core.annotation.NameInMap("ProgramType")
         private Integer programType;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
         private ErrorRank(Builder builder) {
@@ -218,10 +217,10 @@ public class TopTenErrorTimesInstanceResponseBody extends TeaModel {
 
     }
     public static class InstanceErrorRank extends TeaModel {
-        @NameInMap("ErrorRank")
+        @com.aliyun.core.annotation.NameInMap("ErrorRank")
         private java.util.List < ErrorRank> errorRank;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private InstanceErrorRank(Builder builder) {

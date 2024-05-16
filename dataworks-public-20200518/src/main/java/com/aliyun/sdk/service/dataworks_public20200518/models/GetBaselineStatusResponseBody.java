@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetBaselineStatusResponseBody</p>
  */
 public class GetBaselineStatusResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetBaselineStatusResponseBody(Builder builder) {
@@ -152,28 +151,28 @@ public class GetBaselineStatusResponseBody extends TeaModel {
     } 
 
     public static class BlockInstance extends TeaModel {
-        @NameInMap("EndCast")
+        @com.aliyun.core.annotation.NameInMap("EndCast")
         private Long endCast;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private Long finishTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private BlockInstance(Builder builder) {
@@ -333,28 +332,28 @@ public class GetBaselineStatusResponseBody extends TeaModel {
 
     }
     public static class LastInstance extends TeaModel {
-        @NameInMap("EndCast")
+        @com.aliyun.core.annotation.NameInMap("EndCast")
         private Long endCast;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private Long finishTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private LastInstance(Builder builder) {
@@ -514,52 +513,52 @@ public class GetBaselineStatusResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("BaselineId")
+        @com.aliyun.core.annotation.NameInMap("BaselineId")
         private Long baselineId;
 
-        @NameInMap("BaselineName")
+        @com.aliyun.core.annotation.NameInMap("BaselineName")
         private String baselineName;
 
-        @NameInMap("Bizdate")
+        @com.aliyun.core.annotation.NameInMap("Bizdate")
         private Long bizdate;
 
-        @NameInMap("BlockInstance")
+        @com.aliyun.core.annotation.NameInMap("BlockInstance")
         private BlockInstance blockInstance;
 
-        @NameInMap("Buffer")
+        @com.aliyun.core.annotation.NameInMap("Buffer")
         private Float buffer;
 
-        @NameInMap("EndCast")
+        @com.aliyun.core.annotation.NameInMap("EndCast")
         private Long endCast;
 
-        @NameInMap("ExpTime")
+        @com.aliyun.core.annotation.NameInMap("ExpTime")
         private Long expTime;
 
-        @NameInMap("FinishStatus")
+        @com.aliyun.core.annotation.NameInMap("FinishStatus")
         private String finishStatus;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private Long finishTime;
 
-        @NameInMap("InGroupId")
+        @com.aliyun.core.annotation.NameInMap("InGroupId")
         private Integer inGroupId;
 
-        @NameInMap("LastInstance")
+        @com.aliyun.core.annotation.NameInMap("LastInstance")
         private LastInstance lastInstance;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
-        @NameInMap("SlaTime")
+        @com.aliyun.core.annotation.NameInMap("SlaTime")
         private Long slaTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Data(Builder builder) {

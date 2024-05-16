@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,94 +11,94 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateTableRequest</p>
  */
 public class CreateTableRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AppGuid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppGuid")
     private String appGuid;
 
-    @Query
-    @NameInMap("CategoryId")
-    @Validation(minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CategoryId")
+    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long categoryId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("Columns")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Columns")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Columns> columns;
 
-    @Query
-    @NameInMap("Comment")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comment")
     private String comment;
 
-    @Body
-    @NameInMap("Endpoint")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Endpoint")
     private String endpoint;
 
-    @Body
-    @NameInMap("EnvType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnvType")
     private Integer envType;
 
-    @Query
-    @NameInMap("ExternalTableType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExternalTableType")
     private String externalTableType;
 
-    @Query
-    @NameInMap("HasPart")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HasPart")
     private Integer hasPart;
 
-    @Query
-    @NameInMap("IsView")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsView")
     private Integer isView;
 
-    @Query
-    @NameInMap("LifeCycle")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LifeCycle")
     private Integer lifeCycle;
 
-    @Query
-    @NameInMap("Location")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Location")
     private String location;
 
-    @Query
-    @NameInMap("LogicalLevelId")
-    @Validation(minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogicalLevelId")
+    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long logicalLevelId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
-    @Query
-    @NameInMap("PhysicsLevelId")
-    @Validation(minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhysicsLevelId")
+    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long physicsLevelId;
 
-    @Query
-    @NameInMap("ProjectId")
-    @Validation(minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long projectId;
 
-    @Query
-    @NameInMap("Schema")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Schema")
     private String schema;
 
-    @Query
-    @NameInMap("TableName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tableName;
 
-    @Body
-    @NameInMap("Themes")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Themes")
     private java.util.List < Themes> themes;
 
-    @Query
-    @NameInMap("Visibility")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Visibility")
     private Integer visibility;
 
     private CreateTableRequest(Builder builder) {
@@ -554,27 +553,27 @@ public class CreateTableRequest extends Request {
     } 
 
     public static class Columns extends TeaModel {
-        @NameInMap("ColumnName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ColumnName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String columnName;
 
-        @NameInMap("ColumnNameCn")
+        @com.aliyun.core.annotation.NameInMap("ColumnNameCn")
         private String columnNameCn;
 
-        @NameInMap("ColumnType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ColumnType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String columnType;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("IsPartitionCol")
+        @com.aliyun.core.annotation.NameInMap("IsPartitionCol")
         private Boolean isPartitionCol;
 
-        @NameInMap("Length")
+        @com.aliyun.core.annotation.NameInMap("Length")
         private Integer length;
 
-        @NameInMap("SeqNumber")
+        @com.aliyun.core.annotation.NameInMap("SeqNumber")
         private Integer seqNumber;
 
         private Columns(Builder builder) {
@@ -723,11 +722,11 @@ public class CreateTableRequest extends Request {
 
     }
     public static class Themes extends TeaModel {
-        @NameInMap("ThemeId")
-        @Validation(minimum = 1)
+        @com.aliyun.core.annotation.NameInMap("ThemeId")
+        @com.aliyun.core.annotation.Validation(minimum = 1)
         private Long themeId;
 
-        @NameInMap("ThemeLevel")
+        @com.aliyun.core.annotation.NameInMap("ThemeLevel")
         private Integer themeLevel;
 
         private Themes(Builder builder) {

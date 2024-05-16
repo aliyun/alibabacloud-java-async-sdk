@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetQualityEntityResponseBody</p>
  */
 public class GetQualityEntityResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetQualityEntityResponseBody(Builder builder) {
@@ -152,52 +151,52 @@ public class GetQualityEntityResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("EntityLevel")
+        @com.aliyun.core.annotation.NameInMap("EntityLevel")
         private Integer entityLevel;
 
-        @NameInMap("EnvType")
+        @com.aliyun.core.annotation.NameInMap("EnvType")
         private String envType;
 
-        @NameInMap("Followers")
+        @com.aliyun.core.annotation.NameInMap("Followers")
         private String followers;
 
-        @NameInMap("HasRelativeNode")
+        @com.aliyun.core.annotation.NameInMap("HasRelativeNode")
         private Boolean hasRelativeNode;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("MatchExpression")
+        @com.aliyun.core.annotation.NameInMap("MatchExpression")
         private String matchExpression;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private Long modifyTime;
 
-        @NameInMap("ModifyUser")
+        @com.aliyun.core.annotation.NameInMap("ModifyUser")
         private String modifyUser;
 
-        @NameInMap("OnDuty")
+        @com.aliyun.core.annotation.NameInMap("OnDuty")
         private String onDuty;
 
-        @NameInMap("OnDutyAccountName")
+        @com.aliyun.core.annotation.NameInMap("OnDutyAccountName")
         private String onDutyAccountName;
 
-        @NameInMap("ProjectName")
+        @com.aliyun.core.annotation.NameInMap("ProjectName")
         private String projectName;
 
-        @NameInMap("RelativeNode")
+        @com.aliyun.core.annotation.NameInMap("RelativeNode")
         private String relativeNode;
 
-        @NameInMap("Sql")
+        @com.aliyun.core.annotation.NameInMap("Sql")
         private Integer sql;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
-        @NameInMap("Task")
+        @com.aliyun.core.annotation.NameInMap("Task")
         private Integer task;
 
         private Data(Builder builder) {

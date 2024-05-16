@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListMetaDBResponseBody</p>
  */
 public class ListMetaDBResponseBody extends TeaModel {
-    @NameInMap("DatabaseInfo")
+    @com.aliyun.core.annotation.NameInMap("DatabaseInfo")
     private DatabaseInfo databaseInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListMetaDBResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class ListMetaDBResponseBody extends TeaModel {
     } 
 
     public static class DbList extends TeaModel {
-        @NameInMap("CreateTimeStamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimeStamp")
         private Long createTimeStamp;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("ModifiedTimeStamp")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTimeStamp")
         private Long modifiedTimeStamp;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UUID")
+        @com.aliyun.core.annotation.NameInMap("UUID")
         private String UUID;
 
         private DbList(Builder builder) {
@@ -233,10 +232,10 @@ public class ListMetaDBResponseBody extends TeaModel {
 
     }
     public static class DatabaseInfo extends TeaModel {
-        @NameInMap("DbList")
+        @com.aliyun.core.annotation.NameInMap("DbList")
         private java.util.List < DbList> dbList;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private DatabaseInfo(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInstanceResponseBody</p>
  */
 public class GetInstanceResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetInstanceResponseBody(Builder builder) {
@@ -152,85 +151,85 @@ public class GetInstanceResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("BaselineId")
+        @com.aliyun.core.annotation.NameInMap("BaselineId")
         private Long baselineId;
 
-        @NameInMap("BeginRunningTime")
+        @com.aliyun.core.annotation.NameInMap("BeginRunningTime")
         private Long beginRunningTime;
 
-        @NameInMap("BeginWaitResTime")
+        @com.aliyun.core.annotation.NameInMap("BeginWaitResTime")
         private Long beginWaitResTime;
 
-        @NameInMap("BeginWaitTimeTime")
+        @com.aliyun.core.annotation.NameInMap("BeginWaitTimeTime")
         private Long beginWaitTimeTime;
 
-        @NameInMap("Bizdate")
+        @com.aliyun.core.annotation.NameInMap("Bizdate")
         private Long bizdate;
 
-        @NameInMap("BusinessId")
+        @com.aliyun.core.annotation.NameInMap("BusinessId")
         private Long businessId;
 
-        @NameInMap("Connection")
+        @com.aliyun.core.annotation.NameInMap("Connection")
         private String connection;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("CreateUser")
+        @com.aliyun.core.annotation.NameInMap("CreateUser")
         private String createUser;
 
-        @NameInMap("CycTime")
+        @com.aliyun.core.annotation.NameInMap("CycTime")
         private Long cycTime;
 
-        @NameInMap("DagId")
+        @com.aliyun.core.annotation.NameInMap("DagId")
         private Long dagId;
 
-        @NameInMap("DagType")
+        @com.aliyun.core.annotation.NameInMap("DagType")
         private String dagType;
 
-        @NameInMap("DqcDescription")
+        @com.aliyun.core.annotation.NameInMap("DqcDescription")
         private String dqcDescription;
 
-        @NameInMap("DqcType")
+        @com.aliyun.core.annotation.NameInMap("DqcType")
         private Integer dqcType;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private Long finishTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private Long modifyTime;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("ParamValues")
+        @com.aliyun.core.annotation.NameInMap("ParamValues")
         private String paramValues;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("RelatedFlowId")
+        @com.aliyun.core.annotation.NameInMap("RelatedFlowId")
         private Long relatedFlowId;
 
-        @NameInMap("RepeatInterval")
+        @com.aliyun.core.annotation.NameInMap("RepeatInterval")
         private Long repeatInterval;
 
-        @NameInMap("Repeatability")
+        @com.aliyun.core.annotation.NameInMap("Repeatability")
         private Boolean repeatability;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskRerunTime")
+        @com.aliyun.core.annotation.NameInMap("TaskRerunTime")
         private Integer taskRerunTime;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDataServiceApiResponseBody</p>
  */
 public class GetDataServiceApiResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetDataServiceApiResponseBody(Builder builder) {
@@ -152,13 +151,13 @@ public class GetDataServiceApiResponseBody extends TeaModel {
     } 
 
     public static class RegistrationErrorCodes extends TeaModel {
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("ErrorSolution")
+        @com.aliyun.core.annotation.NameInMap("ErrorSolution")
         private String errorSolution;
 
         private RegistrationErrorCodes(Builder builder) {
@@ -233,31 +232,31 @@ public class GetDataServiceApiResponseBody extends TeaModel {
 
     }
     public static class RegistrationRequestParameters extends TeaModel {
-        @NameInMap("ColumnName")
+        @com.aliyun.core.annotation.NameInMap("ColumnName")
         private String columnName;
 
-        @NameInMap("DefaultValue")
+        @com.aliyun.core.annotation.NameInMap("DefaultValue")
         private String defaultValue;
 
-        @NameInMap("ExampleValue")
+        @com.aliyun.core.annotation.NameInMap("ExampleValue")
         private String exampleValue;
 
-        @NameInMap("IsRequiredParameter")
+        @com.aliyun.core.annotation.NameInMap("IsRequiredParameter")
         private Boolean isRequiredParameter;
 
-        @NameInMap("ParameterDataType")
+        @com.aliyun.core.annotation.NameInMap("ParameterDataType")
         private Integer parameterDataType;
 
-        @NameInMap("ParameterDescription")
+        @com.aliyun.core.annotation.NameInMap("ParameterDescription")
         private String parameterDescription;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
-        @NameInMap("ParameterOperator")
+        @com.aliyun.core.annotation.NameInMap("ParameterOperator")
         private Integer parameterOperator;
 
-        @NameInMap("ParameterPosition")
+        @com.aliyun.core.annotation.NameInMap("ParameterPosition")
         private Integer parameterPosition;
 
         private RegistrationRequestParameters(Builder builder) {
@@ -450,28 +449,28 @@ public class GetDataServiceApiResponseBody extends TeaModel {
 
     }
     public static class RegistrationDetails extends TeaModel {
-        @NameInMap("FailedResultSample")
+        @com.aliyun.core.annotation.NameInMap("FailedResultSample")
         private String failedResultSample;
 
-        @NameInMap("RegistrationErrorCodes")
+        @com.aliyun.core.annotation.NameInMap("RegistrationErrorCodes")
         private java.util.List < RegistrationErrorCodes> registrationErrorCodes;
 
-        @NameInMap("RegistrationRequestParameters")
+        @com.aliyun.core.annotation.NameInMap("RegistrationRequestParameters")
         private java.util.List < RegistrationRequestParameters> registrationRequestParameters;
 
-        @NameInMap("ServiceContentType")
+        @com.aliyun.core.annotation.NameInMap("ServiceContentType")
         private Integer serviceContentType;
 
-        @NameInMap("ServiceHost")
+        @com.aliyun.core.annotation.NameInMap("ServiceHost")
         private String serviceHost;
 
-        @NameInMap("ServicePath")
+        @com.aliyun.core.annotation.NameInMap("ServicePath")
         private String servicePath;
 
-        @NameInMap("ServiceRequestBodyDescription")
+        @com.aliyun.core.annotation.NameInMap("ServiceRequestBodyDescription")
         private String serviceRequestBodyDescription;
 
-        @NameInMap("SuccessfulResultSample")
+        @com.aliyun.core.annotation.NameInMap("SuccessfulResultSample")
         private String successfulResultSample;
 
         private RegistrationDetails(Builder builder) {
@@ -637,10 +636,10 @@ public class GetDataServiceApiResponseBody extends TeaModel {
 
     }
     public static class ScriptConnection extends TeaModel {
-        @NameInMap("ConnectionId")
+        @com.aliyun.core.annotation.NameInMap("ConnectionId")
         private Long connectionId;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private ScriptConnection(Builder builder) {
@@ -698,31 +697,31 @@ public class GetDataServiceApiResponseBody extends TeaModel {
 
     }
     public static class ScriptRequestParameters extends TeaModel {
-        @NameInMap("ColumnName")
+        @com.aliyun.core.annotation.NameInMap("ColumnName")
         private String columnName;
 
-        @NameInMap("DefaultValue")
+        @com.aliyun.core.annotation.NameInMap("DefaultValue")
         private String defaultValue;
 
-        @NameInMap("ExampleValue")
+        @com.aliyun.core.annotation.NameInMap("ExampleValue")
         private String exampleValue;
 
-        @NameInMap("IsRequiredParameter")
+        @com.aliyun.core.annotation.NameInMap("IsRequiredParameter")
         private Boolean isRequiredParameter;
 
-        @NameInMap("ParameterDataType")
+        @com.aliyun.core.annotation.NameInMap("ParameterDataType")
         private Integer parameterDataType;
 
-        @NameInMap("ParameterDescription")
+        @com.aliyun.core.annotation.NameInMap("ParameterDescription")
         private String parameterDescription;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
-        @NameInMap("ParameterOperator")
+        @com.aliyun.core.annotation.NameInMap("ParameterOperator")
         private Integer parameterOperator;
 
-        @NameInMap("ParameterPosition")
+        @com.aliyun.core.annotation.NameInMap("ParameterPosition")
         private Integer parameterPosition;
 
         private ScriptRequestParameters(Builder builder) {
@@ -899,19 +898,19 @@ public class GetDataServiceApiResponseBody extends TeaModel {
 
     }
     public static class ScriptResponseParameters extends TeaModel {
-        @NameInMap("ColumnName")
+        @com.aliyun.core.annotation.NameInMap("ColumnName")
         private String columnName;
 
-        @NameInMap("ExampleValue")
+        @com.aliyun.core.annotation.NameInMap("ExampleValue")
         private String exampleValue;
 
-        @NameInMap("ParameterDataType")
+        @com.aliyun.core.annotation.NameInMap("ParameterDataType")
         private Integer parameterDataType;
 
-        @NameInMap("ParameterDescription")
+        @com.aliyun.core.annotation.NameInMap("ParameterDescription")
         private String parameterDescription;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
         private ScriptResponseParameters(Builder builder) {
@@ -1020,19 +1019,19 @@ public class GetDataServiceApiResponseBody extends TeaModel {
 
     }
     public static class ScriptDetails extends TeaModel {
-        @NameInMap("IsPagedResponse")
+        @com.aliyun.core.annotation.NameInMap("IsPagedResponse")
         private Boolean isPagedResponse;
 
-        @NameInMap("Script")
+        @com.aliyun.core.annotation.NameInMap("Script")
         private String script;
 
-        @NameInMap("ScriptConnection")
+        @com.aliyun.core.annotation.NameInMap("ScriptConnection")
         private ScriptConnection scriptConnection;
 
-        @NameInMap("ScriptRequestParameters")
+        @com.aliyun.core.annotation.NameInMap("ScriptRequestParameters")
         private java.util.List < ScriptRequestParameters> scriptRequestParameters;
 
-        @NameInMap("ScriptResponseParameters")
+        @com.aliyun.core.annotation.NameInMap("ScriptResponseParameters")
         private java.util.List < ScriptResponseParameters> scriptResponseParameters;
 
         private ScriptDetails(Builder builder) {
@@ -1141,10 +1140,10 @@ public class GetDataServiceApiResponseBody extends TeaModel {
 
     }
     public static class WizardConnection extends TeaModel {
-        @NameInMap("ConnectionId")
+        @com.aliyun.core.annotation.NameInMap("ConnectionId")
         private Long connectionId;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private WizardConnection(Builder builder) {
@@ -1202,31 +1201,31 @@ public class GetDataServiceApiResponseBody extends TeaModel {
 
     }
     public static class WizardRequestParameters extends TeaModel {
-        @NameInMap("ColumnName")
+        @com.aliyun.core.annotation.NameInMap("ColumnName")
         private String columnName;
 
-        @NameInMap("DefaultValue")
+        @com.aliyun.core.annotation.NameInMap("DefaultValue")
         private String defaultValue;
 
-        @NameInMap("ExampleValue")
+        @com.aliyun.core.annotation.NameInMap("ExampleValue")
         private String exampleValue;
 
-        @NameInMap("IsRequiredParameter")
+        @com.aliyun.core.annotation.NameInMap("IsRequiredParameter")
         private Boolean isRequiredParameter;
 
-        @NameInMap("ParameterDataType")
+        @com.aliyun.core.annotation.NameInMap("ParameterDataType")
         private Integer parameterDataType;
 
-        @NameInMap("ParameterDescription")
+        @com.aliyun.core.annotation.NameInMap("ParameterDescription")
         private String parameterDescription;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
-        @NameInMap("ParameterOperator")
+        @com.aliyun.core.annotation.NameInMap("ParameterOperator")
         private Integer parameterOperator;
 
-        @NameInMap("ParameterPosition")
+        @com.aliyun.core.annotation.NameInMap("ParameterPosition")
         private Integer parameterPosition;
 
         private WizardRequestParameters(Builder builder) {
@@ -1403,19 +1402,19 @@ public class GetDataServiceApiResponseBody extends TeaModel {
 
     }
     public static class WizardResponseParameters extends TeaModel {
-        @NameInMap("ColumnName")
+        @com.aliyun.core.annotation.NameInMap("ColumnName")
         private String columnName;
 
-        @NameInMap("ExampleValue")
+        @com.aliyun.core.annotation.NameInMap("ExampleValue")
         private String exampleValue;
 
-        @NameInMap("ParameterDataType")
+        @com.aliyun.core.annotation.NameInMap("ParameterDataType")
         private Integer parameterDataType;
 
-        @NameInMap("ParameterDescription")
+        @com.aliyun.core.annotation.NameInMap("ParameterDescription")
         private String parameterDescription;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
         private WizardResponseParameters(Builder builder) {
@@ -1524,16 +1523,16 @@ public class GetDataServiceApiResponseBody extends TeaModel {
 
     }
     public static class WizardDetails extends TeaModel {
-        @NameInMap("IsPagedResponse")
+        @com.aliyun.core.annotation.NameInMap("IsPagedResponse")
         private Boolean isPagedResponse;
 
-        @NameInMap("WizardConnection")
+        @com.aliyun.core.annotation.NameInMap("WizardConnection")
         private WizardConnection wizardConnection;
 
-        @NameInMap("WizardRequestParameters")
+        @com.aliyun.core.annotation.NameInMap("WizardRequestParameters")
         private java.util.List < WizardRequestParameters> wizardRequestParameters;
 
-        @NameInMap("WizardResponseParameters")
+        @com.aliyun.core.annotation.NameInMap("WizardResponseParameters")
         private java.util.List < WizardResponseParameters> wizardResponseParameters;
 
         private WizardDetails(Builder builder) {
@@ -1625,70 +1624,70 @@ public class GetDataServiceApiResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("ApiId")
+        @com.aliyun.core.annotation.NameInMap("ApiId")
         private Long apiId;
 
-        @NameInMap("ApiMode")
+        @com.aliyun.core.annotation.NameInMap("ApiMode")
         private Integer apiMode;
 
-        @NameInMap("ApiName")
+        @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
 
-        @NameInMap("ApiPath")
+        @com.aliyun.core.annotation.NameInMap("ApiPath")
         private String apiPath;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("CreatorId")
+        @com.aliyun.core.annotation.NameInMap("CreatorId")
         private String creatorId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("FolderId")
+        @com.aliyun.core.annotation.NameInMap("FolderId")
         private Long folderId;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("OperatorId")
+        @com.aliyun.core.annotation.NameInMap("OperatorId")
         private String operatorId;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
-        @NameInMap("Protocols")
+        @com.aliyun.core.annotation.NameInMap("Protocols")
         private java.util.List < Integer > protocols;
 
-        @NameInMap("RegistrationDetails")
+        @com.aliyun.core.annotation.NameInMap("RegistrationDetails")
         private RegistrationDetails registrationDetails;
 
-        @NameInMap("RequestMethod")
+        @com.aliyun.core.annotation.NameInMap("RequestMethod")
         private Integer requestMethod;
 
-        @NameInMap("ResponseContentType")
+        @com.aliyun.core.annotation.NameInMap("ResponseContentType")
         private Integer responseContentType;
 
-        @NameInMap("ScriptDetails")
+        @com.aliyun.core.annotation.NameInMap("ScriptDetails")
         private ScriptDetails scriptDetails;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private Long tenantId;
 
-        @NameInMap("Timeout")
+        @com.aliyun.core.annotation.NameInMap("Timeout")
         private Integer timeout;
 
-        @NameInMap("VisibleRange")
+        @com.aliyun.core.annotation.NameInMap("VisibleRange")
         private Integer visibleRange;
 
-        @NameInMap("WizardDetails")
+        @com.aliyun.core.annotation.NameInMap("WizardDetails")
         private WizardDetails wizardDetails;
 
         private Data(Builder builder) {

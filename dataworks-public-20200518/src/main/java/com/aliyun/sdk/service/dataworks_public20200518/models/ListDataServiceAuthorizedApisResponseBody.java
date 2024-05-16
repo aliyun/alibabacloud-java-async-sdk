@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDataServiceAuthorizedApisResponseBody</p>
  */
 public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListDataServiceAuthorizedApisResponseBody(Builder builder) {
@@ -152,43 +151,43 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
     } 
 
     public static class ApiAuthorizedList extends TeaModel {
-        @NameInMap("ApiId")
+        @com.aliyun.core.annotation.NameInMap("ApiId")
         private Long apiId;
 
-        @NameInMap("ApiName")
+        @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
 
-        @NameInMap("ApiPath")
+        @com.aliyun.core.annotation.NameInMap("ApiPath")
         private String apiPath;
 
-        @NameInMap("ApiStatus")
+        @com.aliyun.core.annotation.NameInMap("ApiStatus")
         private Integer apiStatus;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("CreatorId")
+        @com.aliyun.core.annotation.NameInMap("CreatorId")
         private String creatorId;
 
-        @NameInMap("GrantCreatedTime")
+        @com.aliyun.core.annotation.NameInMap("GrantCreatedTime")
         private String grantCreatedTime;
 
-        @NameInMap("GrantEndTime")
+        @com.aliyun.core.annotation.NameInMap("GrantEndTime")
         private String grantEndTime;
 
-        @NameInMap("GrantOperatorId")
+        @com.aliyun.core.annotation.NameInMap("GrantOperatorId")
         private String grantOperatorId;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private Long tenantId;
 
         private ApiAuthorizedList(Builder builder) {
@@ -433,16 +432,16 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("ApiAuthorizedList")
+        @com.aliyun.core.annotation.NameInMap("ApiAuthorizedList")
         private java.util.List < ApiAuthorizedList> apiAuthorizedList;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListExtensionsResponseBody</p>
  */
 public class ListExtensionsResponseBody extends TeaModel {
-    @NameInMap("PagingInfo")
+    @com.aliyun.core.annotation.NameInMap("PagingInfo")
     private PagingInfo pagingInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListExtensionsResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class ListExtensionsResponseBody extends TeaModel {
     } 
 
     public static class BindEventList extends TeaModel {
-        @NameInMap("EventCode")
+        @com.aliyun.core.annotation.NameInMap("EventCode")
         private String eventCode;
 
-        @NameInMap("EventName")
+        @com.aliyun.core.annotation.NameInMap("EventName")
         private String eventName;
 
         private BindEventList(Builder builder) {
@@ -133,22 +132,22 @@ public class ListExtensionsResponseBody extends TeaModel {
 
     }
     public static class Extensions extends TeaModel {
-        @NameInMap("BindEventList")
+        @com.aliyun.core.annotation.NameInMap("BindEventList")
         private java.util.List < BindEventList> bindEventList;
 
-        @NameInMap("ExtensionCode")
+        @com.aliyun.core.annotation.NameInMap("ExtensionCode")
         private String extensionCode;
 
-        @NameInMap("ExtensionDesc")
+        @com.aliyun.core.annotation.NameInMap("ExtensionDesc")
         private String extensionDesc;
 
-        @NameInMap("ExtensionName")
+        @com.aliyun.core.annotation.NameInMap("ExtensionName")
         private String extensionName;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private Extensions(Builder builder) {
@@ -274,16 +273,16 @@ public class ListExtensionsResponseBody extends TeaModel {
 
     }
     public static class PagingInfo extends TeaModel {
-        @NameInMap("Extensions")
+        @com.aliyun.core.annotation.NameInMap("Extensions")
         private java.util.List < Extensions> extensions;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PagingInfo(Builder builder) {

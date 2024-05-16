@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,134 +11,134 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateFileRequest</p>
  */
 public class CreateFileRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("AdvancedSettings")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AdvancedSettings")
     private String advancedSettings;
 
-    @Body
-    @NameInMap("AutoParsing")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoParsing")
     private Boolean autoParsing;
 
-    @Body
-    @NameInMap("AutoRerunIntervalMillis")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoRerunIntervalMillis")
     private Integer autoRerunIntervalMillis;
 
-    @Body
-    @NameInMap("AutoRerunTimes")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoRerunTimes")
     private Integer autoRerunTimes;
 
-    @Body
-    @NameInMap("ConnectionName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConnectionName")
     private String connectionName;
 
-    @Body
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Content")
     private String content;
 
-    @Body
-    @NameInMap("CreateFolderIfNotExists")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CreateFolderIfNotExists")
     private Boolean createFolderIfNotExists;
 
-    @Body
-    @NameInMap("CronExpress")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CronExpress")
     private String cronExpress;
 
-    @Body
-    @NameInMap("CycleType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CycleType")
     private String cycleType;
 
-    @Body
-    @NameInMap("DependentNodeIdList")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DependentNodeIdList")
     private String dependentNodeIdList;
 
-    @Body
-    @NameInMap("DependentType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DependentType")
     private String dependentType;
 
-    @Body
-    @NameInMap("EndEffectDate")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndEffectDate")
     private Long endEffectDate;
 
-    @Body
-    @NameInMap("FileDescription")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FileDescription")
     private String fileDescription;
 
-    @Body
-    @NameInMap("FileFolderPath")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FileFolderPath")
     private String fileFolderPath;
 
-    @Body
-    @NameInMap("FileName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FileName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileName;
 
-    @Body
-    @NameInMap("FileType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FileType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer fileType;
 
-    @Body
-    @NameInMap("IgnoreParentSkipRunningProperty")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IgnoreParentSkipRunningProperty")
     private Boolean ignoreParentSkipRunningProperty;
 
-    @Body
-    @NameInMap("InputList")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InputList")
     private String inputList;
 
-    @Body
-    @NameInMap("InputParameters")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InputParameters")
     private String inputParameters;
 
-    @Body
-    @NameInMap("OutputParameters")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OutputParameters")
     private String outputParameters;
 
-    @Body
-    @NameInMap("Owner")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Owner")
     private String owner;
 
-    @Body
-    @NameInMap("ParaValue")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ParaValue")
     private String paraValue;
 
-    @Body
-    @NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
     private Long projectId;
 
-    @Body
-    @NameInMap("ProjectIdentifier")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectIdentifier")
     private String projectIdentifier;
 
-    @Body
-    @NameInMap("RerunMode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RerunMode")
     private String rerunMode;
 
-    @Body
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private Long resourceGroupId;
 
-    @Body
-    @NameInMap("ResourceGroupIdentifier")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupIdentifier")
     private String resourceGroupIdentifier;
 
-    @Body
-    @NameInMap("SchedulerType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SchedulerType")
     private String schedulerType;
 
-    @Body
-    @NameInMap("StartEffectDate")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StartEffectDate")
     private Long startEffectDate;
 
-    @Body
-    @NameInMap("StartImmediately")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StartImmediately")
     private Boolean startImmediately;
 
-    @Body
-    @NameInMap("Stop")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Stop")
     private Boolean stop;
 
     private CreateFileRequest(Builder builder) {

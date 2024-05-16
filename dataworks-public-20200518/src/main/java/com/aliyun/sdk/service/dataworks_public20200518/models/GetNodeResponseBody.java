@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetNodeResponseBody</p>
  */
 public class GetNodeResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetNodeResponseBody(Builder builder) {
@@ -152,67 +151,67 @@ public class GetNodeResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("BaselineId")
+        @com.aliyun.core.annotation.NameInMap("BaselineId")
         private Long baselineId;
 
-        @NameInMap("BusinessId")
+        @com.aliyun.core.annotation.NameInMap("BusinessId")
         private Long businessId;
 
-        @NameInMap("Connection")
+        @com.aliyun.core.annotation.NameInMap("Connection")
         private String connection;
 
-        @NameInMap("CronExpress")
+        @com.aliyun.core.annotation.NameInMap("CronExpress")
         private String cronExpress;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DqcDescription")
+        @com.aliyun.core.annotation.NameInMap("DqcDescription")
         private String dqcDescription;
 
-        @NameInMap("DqcType")
+        @com.aliyun.core.annotation.NameInMap("DqcType")
         private Integer dqcType;
 
-        @NameInMap("FileType")
+        @com.aliyun.core.annotation.NameInMap("FileType")
         private Integer fileType;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
-        @NameInMap("ParamValues")
+        @com.aliyun.core.annotation.NameInMap("ParamValues")
         private String paramValues;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("ProgramType")
+        @com.aliyun.core.annotation.NameInMap("ProgramType")
         private String programType;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
-        @NameInMap("RelatedFlowId")
+        @com.aliyun.core.annotation.NameInMap("RelatedFlowId")
         private Long relatedFlowId;
 
-        @NameInMap("RepeatInterval")
+        @com.aliyun.core.annotation.NameInMap("RepeatInterval")
         private Long repeatInterval;
 
-        @NameInMap("Repeatability")
+        @com.aliyun.core.annotation.NameInMap("Repeatability")
         private String repeatability;
 
-        @NameInMap("ResGroupIdentifier")
+        @com.aliyun.core.annotation.NameInMap("ResGroupIdentifier")
         private String resGroupIdentifier;
 
-        @NameInMap("ResGroupName")
+        @com.aliyun.core.annotation.NameInMap("ResGroupName")
         private String resGroupName;
 
-        @NameInMap("SchedulerType")
+        @com.aliyun.core.annotation.NameInMap("SchedulerType")
         private String schedulerType;
 
         private Data(Builder builder) {

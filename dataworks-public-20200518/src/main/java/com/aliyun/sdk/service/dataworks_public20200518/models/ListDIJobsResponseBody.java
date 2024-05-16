@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDIJobsResponseBody</p>
  */
 public class ListDIJobsResponseBody extends TeaModel {
-    @NameInMap("DIJobPaging")
+    @com.aliyun.core.annotation.NameInMap("DIJobPaging")
     private DIJobPaging DIJobPaging;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListDIJobsResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class ListDIJobsResponseBody extends TeaModel {
     } 
 
     public static class DIJobs extends TeaModel {
-        @NameInMap("DIJobId")
+        @com.aliyun.core.annotation.NameInMap("DIJobId")
         private Long DIJobId;
 
-        @NameInMap("DestinationDataSourceType")
+        @com.aliyun.core.annotation.NameInMap("DestinationDataSourceType")
         private String destinationDataSourceType;
 
-        @NameInMap("JobName")
+        @com.aliyun.core.annotation.NameInMap("JobName")
         private String jobName;
 
-        @NameInMap("JobStatus")
+        @com.aliyun.core.annotation.NameInMap("JobStatus")
         private String jobStatus;
 
-        @NameInMap("MigrationType")
+        @com.aliyun.core.annotation.NameInMap("MigrationType")
         private String migrationType;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
-        @NameInMap("SourceDataSourceType")
+        @com.aliyun.core.annotation.NameInMap("SourceDataSourceType")
         private String sourceDataSourceType;
 
         private DIJobs(Builder builder) {
@@ -233,16 +232,16 @@ public class ListDIJobsResponseBody extends TeaModel {
 
     }
     public static class DIJobPaging extends TeaModel {
-        @NameInMap("DIJobs")
+        @com.aliyun.core.annotation.NameInMap("DIJobs")
         private java.util.List < DIJobs> DIJobs;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private DIJobPaging(Builder builder) {

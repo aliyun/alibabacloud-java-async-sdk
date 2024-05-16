@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDIAlarmRuleResponseBody</p>
  */
 public class GetDIAlarmRuleResponseBody extends TeaModel {
-    @NameInMap("DIAlarmRule")
+    @com.aliyun.core.annotation.NameInMap("DIAlarmRule")
     private DIAlarmRule DIAlarmRule;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetDIAlarmRuleResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
     } 
 
     public static class NotificationChannels extends TeaModel {
-        @NameInMap("Channels")
+        @com.aliyun.core.annotation.NameInMap("Channels")
         private java.util.List < String > channels;
 
-        @NameInMap("Severity")
+        @com.aliyun.core.annotation.NameInMap("Severity")
         private String severity;
 
         private NotificationChannels(Builder builder) {
@@ -133,10 +132,10 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
 
     }
     public static class NotificationReceivers extends TeaModel {
-        @NameInMap("ReceiverType")
+        @com.aliyun.core.annotation.NameInMap("ReceiverType")
         private String receiverType;
 
-        @NameInMap("ReceiverValues")
+        @com.aliyun.core.annotation.NameInMap("ReceiverValues")
         private java.util.List < String > receiverValues;
 
         private NotificationReceivers(Builder builder) {
@@ -194,13 +193,13 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
 
     }
     public static class NotificationSettings extends TeaModel {
-        @NameInMap("InhibitionInterval")
+        @com.aliyun.core.annotation.NameInMap("InhibitionInterval")
         private Integer inhibitionInterval;
 
-        @NameInMap("NotificationChannels")
+        @com.aliyun.core.annotation.NameInMap("NotificationChannels")
         private java.util.List < NotificationChannels> notificationChannels;
 
-        @NameInMap("NotificationReceivers")
+        @com.aliyun.core.annotation.NameInMap("NotificationReceivers")
         private java.util.List < NotificationReceivers> notificationReceivers;
 
         private NotificationSettings(Builder builder) {
@@ -275,13 +274,13 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
 
     }
     public static class TriggerConditions extends TeaModel {
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
 
-        @NameInMap("Severity")
+        @com.aliyun.core.annotation.NameInMap("Severity")
         private String severity;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private Long threshold;
 
         private TriggerConditions(Builder builder) {
@@ -356,37 +355,37 @@ public class GetDIAlarmRuleResponseBody extends TeaModel {
 
     }
     public static class DIAlarmRule extends TeaModel {
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private Long createdTime;
 
-        @NameInMap("CreatedUid")
+        @com.aliyun.core.annotation.NameInMap("CreatedUid")
         private String createdUid;
 
-        @NameInMap("DIAlarmRuleId")
+        @com.aliyun.core.annotation.NameInMap("DIAlarmRuleId")
         private Long DIAlarmRuleId;
 
-        @NameInMap("DIJobId")
+        @com.aliyun.core.annotation.NameInMap("DIJobId")
         private Long DIJobId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("MetricType")
+        @com.aliyun.core.annotation.NameInMap("MetricType")
         private String metricType;
 
-        @NameInMap("NotificationSettings")
+        @com.aliyun.core.annotation.NameInMap("NotificationSettings")
         private NotificationSettings notificationSettings;
 
-        @NameInMap("TriggerConditions")
+        @com.aliyun.core.annotation.NameInMap("TriggerConditions")
         private java.util.List < TriggerConditions> triggerConditions;
 
-        @NameInMap("UpdatedTime")
+        @com.aliyun.core.annotation.NameInMap("UpdatedTime")
         private Long updatedTime;
 
-        @NameInMap("UpdatedUid")
+        @com.aliyun.core.annotation.NameInMap("UpdatedUid")
         private String updatedUid;
 
         private DIAlarmRule(Builder builder) {

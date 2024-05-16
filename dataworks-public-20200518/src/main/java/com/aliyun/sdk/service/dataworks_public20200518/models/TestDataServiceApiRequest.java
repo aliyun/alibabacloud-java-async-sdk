@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TestDataServiceApiRequest</p>
  */
 public class TestDataServiceApiRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ApiId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApiId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long apiId;
 
-    @Body
-    @NameInMap("BodyContent")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BodyContent")
     private String bodyContent;
 
-    @Body
-    @NameInMap("BodyParams")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BodyParams")
     private java.util.List < BodyParams> bodyParams;
 
-    @Body
-    @NameInMap("HeadParams")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HeadParams")
     private java.util.List < HeadParams> headParams;
 
-    @Body
-    @NameInMap("PathParams")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PathParams")
     private java.util.List < PathParams> pathParams;
 
-    @Body
-    @NameInMap("QueryParam")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QueryParam")
     private java.util.List < QueryParam> queryParam;
 
     private TestDataServiceApiRequest(Builder builder) {
@@ -209,10 +208,10 @@ public class TestDataServiceApiRequest extends Request {
     } 
 
     public static class BodyParams extends TeaModel {
-        @NameInMap("ParamKey")
+        @com.aliyun.core.annotation.NameInMap("ParamKey")
         private String paramKey;
 
-        @NameInMap("ParamValue")
+        @com.aliyun.core.annotation.NameInMap("ParamValue")
         private String paramValue;
 
         private BodyParams(Builder builder) {
@@ -270,10 +269,10 @@ public class TestDataServiceApiRequest extends Request {
 
     }
     public static class HeadParams extends TeaModel {
-        @NameInMap("ParamKey")
+        @com.aliyun.core.annotation.NameInMap("ParamKey")
         private String paramKey;
 
-        @NameInMap("ParamValue")
+        @com.aliyun.core.annotation.NameInMap("ParamValue")
         private String paramValue;
 
         private HeadParams(Builder builder) {
@@ -331,10 +330,10 @@ public class TestDataServiceApiRequest extends Request {
 
     }
     public static class PathParams extends TeaModel {
-        @NameInMap("ParamKey")
+        @com.aliyun.core.annotation.NameInMap("ParamKey")
         private String paramKey;
 
-        @NameInMap("ParamValue")
+        @com.aliyun.core.annotation.NameInMap("ParamValue")
         private String paramValue;
 
         private PathParams(Builder builder) {
@@ -392,10 +391,10 @@ public class TestDataServiceApiRequest extends Request {
 
     }
     public static class QueryParam extends TeaModel {
-        @NameInMap("ParamKey")
+        @com.aliyun.core.annotation.NameInMap("ParamKey")
         private String paramKey;
 
-        @NameInMap("ParamValue")
+        @com.aliyun.core.annotation.NameInMap("ParamValue")
         private String paramValue;
 
         private QueryParam(Builder builder) {

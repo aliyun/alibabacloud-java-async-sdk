@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPermissionApplyOrderDetailResponseBody</p>
  */
 public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
-    @NameInMap("ApplyOrderDetail")
+    @com.aliyun.core.annotation.NameInMap("ApplyOrderDetail")
     private ApplyOrderDetail applyOrderDetail;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetPermissionApplyOrderDetailResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
     } 
 
     public static class ApproveAccountList extends TeaModel {
-        @NameInMap("BaseId")
+        @com.aliyun.core.annotation.NameInMap("BaseId")
         private String baseId;
 
         private ApproveAccountList(Builder builder) {
@@ -113,13 +112,13 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
 
     }
     public static class ColumnMetaList extends TeaModel {
-        @NameInMap("ColumnComment")
+        @com.aliyun.core.annotation.NameInMap("ColumnComment")
         private String columnComment;
 
-        @NameInMap("ColumnName")
+        @com.aliyun.core.annotation.NameInMap("ColumnName")
         private String columnName;
 
-        @NameInMap("SecurityLevel")
+        @com.aliyun.core.annotation.NameInMap("SecurityLevel")
         private String securityLevel;
 
         private ColumnMetaList(Builder builder) {
@@ -194,10 +193,10 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
 
     }
     public static class ObjectMetaList extends TeaModel {
-        @NameInMap("ColumnMetaList")
+        @com.aliyun.core.annotation.NameInMap("ColumnMetaList")
         private java.util.List < ColumnMetaList> columnMetaList;
 
-        @NameInMap("ObjectName")
+        @com.aliyun.core.annotation.NameInMap("ObjectName")
         private String objectName;
 
         private ObjectMetaList(Builder builder) {
@@ -255,13 +254,13 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
 
     }
     public static class ProjectMeta extends TeaModel {
-        @NameInMap("MaxComputeProjectName")
+        @com.aliyun.core.annotation.NameInMap("MaxComputeProjectName")
         private String maxComputeProjectName;
 
-        @NameInMap("ObjectMetaList")
+        @com.aliyun.core.annotation.NameInMap("ObjectMetaList")
         private java.util.List < ObjectMetaList> objectMetaList;
 
-        @NameInMap("WorkspaceId")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceId")
         private Integer workspaceId;
 
         private ProjectMeta(Builder builder) {
@@ -336,16 +335,16 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
 
     }
     public static class ApproveContent extends TeaModel {
-        @NameInMap("ApplyReason")
+        @com.aliyun.core.annotation.NameInMap("ApplyReason")
         private String applyReason;
 
-        @NameInMap("Deadline")
+        @com.aliyun.core.annotation.NameInMap("Deadline")
         private Long deadline;
 
-        @NameInMap("OrderType")
+        @com.aliyun.core.annotation.NameInMap("OrderType")
         private Integer orderType;
 
-        @NameInMap("ProjectMeta")
+        @com.aliyun.core.annotation.NameInMap("ProjectMeta")
         private ProjectMeta projectMeta;
 
         private ApproveContent(Builder builder) {
@@ -440,16 +439,16 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
 
     }
     public static class GranteeObjectList extends TeaModel {
-        @NameInMap("GranteeId")
+        @com.aliyun.core.annotation.NameInMap("GranteeId")
         private String granteeId;
 
-        @NameInMap("GranteeName")
+        @com.aliyun.core.annotation.NameInMap("GranteeName")
         private String granteeName;
 
-        @NameInMap("GranteeType")
+        @com.aliyun.core.annotation.NameInMap("GranteeType")
         private Integer granteeType;
 
-        @NameInMap("GranteeTypeSub")
+        @com.aliyun.core.annotation.NameInMap("GranteeTypeSub")
         private Integer granteeTypeSub;
 
         private GranteeObjectList(Builder builder) {
@@ -550,25 +549,25 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
 
     }
     public static class ApplyOrderDetail extends TeaModel {
-        @NameInMap("ApplyBaseId")
+        @com.aliyun.core.annotation.NameInMap("ApplyBaseId")
         private String applyBaseId;
 
-        @NameInMap("ApplyTimestamp")
+        @com.aliyun.core.annotation.NameInMap("ApplyTimestamp")
         private Long applyTimestamp;
 
-        @NameInMap("ApproveAccountList")
+        @com.aliyun.core.annotation.NameInMap("ApproveAccountList")
         private java.util.List < ApproveAccountList> approveAccountList;
 
-        @NameInMap("ApproveContent")
+        @com.aliyun.core.annotation.NameInMap("ApproveContent")
         private ApproveContent approveContent;
 
-        @NameInMap("FlowId")
+        @com.aliyun.core.annotation.NameInMap("FlowId")
         private String flowId;
 
-        @NameInMap("FlowStatus")
+        @com.aliyun.core.annotation.NameInMap("FlowStatus")
         private Integer flowStatus;
 
-        @NameInMap("GranteeObjectList")
+        @com.aliyun.core.annotation.NameInMap("GranteeObjectList")
         private java.util.List < GranteeObjectList> granteeObjectList;
 
         private ApplyOrderDetail(Builder builder) {

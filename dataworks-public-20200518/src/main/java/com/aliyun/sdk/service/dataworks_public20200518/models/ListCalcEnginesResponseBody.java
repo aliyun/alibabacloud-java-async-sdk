@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCalcEnginesResponseBody</p>
  */
 public class ListCalcEnginesResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListCalcEnginesResponseBody(Builder builder) {
@@ -112,43 +111,43 @@ public class ListCalcEnginesResponseBody extends TeaModel {
     } 
 
     public static class CalcEngines extends TeaModel {
-        @NameInMap("BindingProjectId")
+        @com.aliyun.core.annotation.NameInMap("BindingProjectId")
         private Integer bindingProjectId;
 
-        @NameInMap("BindingProjectName")
+        @com.aliyun.core.annotation.NameInMap("BindingProjectName")
         private String bindingProjectName;
 
-        @NameInMap("CalcEngineType")
+        @com.aliyun.core.annotation.NameInMap("CalcEngineType")
         private String calcEngineType;
 
-        @NameInMap("DwRegion")
+        @com.aliyun.core.annotation.NameInMap("DwRegion")
         private String dwRegion;
 
-        @NameInMap("EngineId")
+        @com.aliyun.core.annotation.NameInMap("EngineId")
         private Integer engineId;
 
-        @NameInMap("EngineInfo")
+        @com.aliyun.core.annotation.NameInMap("EngineInfo")
         private java.util.Map < String, ? > engineInfo;
 
-        @NameInMap("EnvType")
+        @com.aliyun.core.annotation.NameInMap("EnvType")
         private String envType;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("IsDefault")
+        @com.aliyun.core.annotation.NameInMap("IsDefault")
         private Boolean isDefault;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("TaskAuthType")
+        @com.aliyun.core.annotation.NameInMap("TaskAuthType")
         private String taskAuthType;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private Long tenantId;
 
         private CalcEngines(Builder builder) {
@@ -393,16 +392,16 @@ public class ListCalcEnginesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("CalcEngines")
+        @com.aliyun.core.annotation.NameInMap("CalcEngines")
         private java.util.List < CalcEngines> calcEngines;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {

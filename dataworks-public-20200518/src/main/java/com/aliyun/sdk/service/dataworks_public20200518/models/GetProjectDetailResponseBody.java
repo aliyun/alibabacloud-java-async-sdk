@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetProjectDetailResponseBody</p>
  */
 public class GetProjectDetailResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetProjectDetailResponseBody(Builder builder) {
@@ -112,10 +111,10 @@ public class GetProjectDetailResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -173,76 +172,76 @@ public class GetProjectDetailResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("DefaultDiResourceGroupIdentifier")
+        @com.aliyun.core.annotation.NameInMap("DefaultDiResourceGroupIdentifier")
         private String defaultDiResourceGroupIdentifier;
 
-        @NameInMap("DevelopmentType")
+        @com.aliyun.core.annotation.NameInMap("DevelopmentType")
         private Integer developmentType;
 
-        @NameInMap("DisableDevelopment")
+        @com.aliyun.core.annotation.NameInMap("DisableDevelopment")
         private Boolean disableDevelopment;
 
-        @NameInMap("EnvTypes")
+        @com.aliyun.core.annotation.NameInMap("EnvTypes")
         private java.util.List < String > envTypes;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("IsAllowDownload")
+        @com.aliyun.core.annotation.NameInMap("IsAllowDownload")
         private Integer isAllowDownload;
 
-        @NameInMap("IsDefault")
+        @com.aliyun.core.annotation.NameInMap("IsDefault")
         private Integer isDefault;
 
-        @NameInMap("ProjectDescription")
+        @com.aliyun.core.annotation.NameInMap("ProjectDescription")
         private String projectDescription;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Integer projectId;
 
-        @NameInMap("ProjectIdentifier")
+        @com.aliyun.core.annotation.NameInMap("ProjectIdentifier")
         private String projectIdentifier;
 
-        @NameInMap("ProjectMode")
+        @com.aliyun.core.annotation.NameInMap("ProjectMode")
         private Integer projectMode;
 
-        @NameInMap("ProjectName")
+        @com.aliyun.core.annotation.NameInMap("ProjectName")
         private String projectName;
 
-        @NameInMap("ProjectOwnerBaseId")
+        @com.aliyun.core.annotation.NameInMap("ProjectOwnerBaseId")
         private String projectOwnerBaseId;
 
-        @NameInMap("ProtectedMode")
+        @com.aliyun.core.annotation.NameInMap("ProtectedMode")
         private Integer protectedMode;
 
-        @NameInMap("ResidentArea")
+        @com.aliyun.core.annotation.NameInMap("ResidentArea")
         private String residentArea;
 
-        @NameInMap("ResourceManagerResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceManagerResourceGroupId")
         private String resourceManagerResourceGroupId;
 
-        @NameInMap("SchedulerMaxRetryTimes")
+        @com.aliyun.core.annotation.NameInMap("SchedulerMaxRetryTimes")
         private Integer schedulerMaxRetryTimes;
 
-        @NameInMap("SchedulerRetryInterval")
+        @com.aliyun.core.annotation.NameInMap("SchedulerRetryInterval")
         private Integer schedulerRetryInterval;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("TablePrivacyMode")
+        @com.aliyun.core.annotation.NameInMap("TablePrivacyMode")
         private Integer tablePrivacyMode;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private Long tenantId;
 
-        @NameInMap("UseProxyOdpsAccount")
+        @com.aliyun.core.annotation.NameInMap("UseProxyOdpsAccount")
         private Boolean useProxyOdpsAccount;
 
         private Data(Builder builder) {

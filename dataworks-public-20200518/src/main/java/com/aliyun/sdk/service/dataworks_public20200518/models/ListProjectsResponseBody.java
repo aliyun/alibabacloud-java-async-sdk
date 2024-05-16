@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListProjectsResponseBody</p>
  */
 public class ListProjectsResponseBody extends TeaModel {
-    @NameInMap("PageResult")
+    @com.aliyun.core.annotation.NameInMap("PageResult")
     private PageResult pageResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListProjectsResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class ListProjectsResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -138,43 +137,43 @@ public class ListProjectsResponseBody extends TeaModel {
 
     }
     public static class ProjectList extends TeaModel {
-        @NameInMap("DisableDevelopment")
+        @com.aliyun.core.annotation.NameInMap("DisableDevelopment")
         private Boolean disableDevelopment;
 
-        @NameInMap("IsDefault")
+        @com.aliyun.core.annotation.NameInMap("IsDefault")
         private Integer isDefault;
 
-        @NameInMap("ProjectDescription")
+        @com.aliyun.core.annotation.NameInMap("ProjectDescription")
         private String projectDescription;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
-        @NameInMap("ProjectIdentifier")
+        @com.aliyun.core.annotation.NameInMap("ProjectIdentifier")
         private String projectIdentifier;
 
-        @NameInMap("ProjectName")
+        @com.aliyun.core.annotation.NameInMap("ProjectName")
         private String projectName;
 
-        @NameInMap("ProjectOwnerBaseId")
+        @com.aliyun.core.annotation.NameInMap("ProjectOwnerBaseId")
         private String projectOwnerBaseId;
 
-        @NameInMap("ProjectStatus")
+        @com.aliyun.core.annotation.NameInMap("ProjectStatus")
         private Integer projectStatus;
 
-        @NameInMap("ProjectStatusCode")
+        @com.aliyun.core.annotation.NameInMap("ProjectStatusCode")
         private String projectStatusCode;
 
-        @NameInMap("ResourceManagerResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceManagerResourceGroupId")
         private String resourceManagerResourceGroupId;
 
-        @NameInMap("TablePrivacyMode")
+        @com.aliyun.core.annotation.NameInMap("TablePrivacyMode")
         private Integer tablePrivacyMode;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("UseProxyOdpsAccount")
+        @com.aliyun.core.annotation.NameInMap("UseProxyOdpsAccount")
         private Boolean useProxyOdpsAccount;
 
         private ProjectList(Builder builder) {
@@ -427,16 +426,16 @@ public class ListProjectsResponseBody extends TeaModel {
 
     }
     public static class PageResult extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("ProjectList")
+        @com.aliyun.core.annotation.NameInMap("ProjectList")
         private java.util.List < ProjectList> projectList;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private PageResult(Builder builder) {

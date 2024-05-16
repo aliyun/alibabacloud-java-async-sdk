@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListProgramTypeCountResponseBody</p>
  */
 public class ListProgramTypeCountResponseBody extends TeaModel {
-    @NameInMap("ProgramTypeAndCounts")
+    @com.aliyun.core.annotation.NameInMap("ProgramTypeAndCounts")
     private java.util.List < ProgramTypeAndCounts> programTypeAndCounts;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListProgramTypeCountResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class ListProgramTypeCountResponseBody extends TeaModel {
     } 
 
     public static class ProgramTypeAndCounts extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("ProgramType")
+        @com.aliyun.core.annotation.NameInMap("ProgramType")
         private String programType;
 
         private ProgramTypeAndCounts(Builder builder) {

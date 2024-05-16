@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,60 +11,60 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateUdfFileRequest</p>
  */
 public class UpdateUdfFileRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("ClassName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClassName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String className;
 
-    @Body
-    @NameInMap("CmdDescription")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CmdDescription")
     private String cmdDescription;
 
-    @Body
-    @NameInMap("Example")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Example")
     private String example;
 
-    @Body
-    @NameInMap("FileFolderPath")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FileFolderPath")
     private String fileFolderPath;
 
-    @Body
-    @NameInMap("FileId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FileId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileId;
 
-    @Body
-    @NameInMap("FunctionType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FunctionType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String functionType;
 
-    @Body
-    @NameInMap("ParameterDescription")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ParameterDescription")
     private String parameterDescription;
 
-    @Body
-    @NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
     private Long projectId;
 
-    @Body
-    @NameInMap("ProjectIdentifier")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectIdentifier")
     private String projectIdentifier;
 
-    @Body
-    @NameInMap("Resources")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Resources")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resources;
 
-    @Body
-    @NameInMap("ReturnValue")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ReturnValue")
     private String returnValue;
 
-    @Body
-    @NameInMap("UdfDescription")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UdfDescription")
     private String udfDescription;
 
     private UpdateUdfFileRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMetaTableBasicInfoResponseBody</p>
  */
 public class GetMetaTableBasicInfoResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetMetaTableBasicInfoResponseBody(Builder builder) {
@@ -152,85 +151,85 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("Caption")
+        @com.aliyun.core.annotation.NameInMap("Caption")
         private String caption;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ColumnCount")
+        @com.aliyun.core.annotation.NameInMap("ColumnCount")
         private Integer columnCount;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("DataSize")
+        @com.aliyun.core.annotation.NameInMap("DataSize")
         private Long dataSize;
 
-        @NameInMap("DatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
-        @NameInMap("EnvType")
+        @com.aliyun.core.annotation.NameInMap("EnvType")
         private Integer envType;
 
-        @NameInMap("FavoriteCount")
+        @com.aliyun.core.annotation.NameInMap("FavoriteCount")
         private Long favoriteCount;
 
-        @NameInMap("IsPartitionTable")
+        @com.aliyun.core.annotation.NameInMap("IsPartitionTable")
         private Boolean isPartitionTable;
 
-        @NameInMap("IsView")
+        @com.aliyun.core.annotation.NameInMap("IsView")
         private Boolean isView;
 
-        @NameInMap("IsVisible")
+        @com.aliyun.core.annotation.NameInMap("IsVisible")
         private Integer isVisible;
 
-        @NameInMap("LastAccessTime")
+        @com.aliyun.core.annotation.NameInMap("LastAccessTime")
         private Long lastAccessTime;
 
-        @NameInMap("LastDdlTime")
+        @com.aliyun.core.annotation.NameInMap("LastDdlTime")
         private Long lastDdlTime;
 
-        @NameInMap("LastModifyTime")
+        @com.aliyun.core.annotation.NameInMap("LastModifyTime")
         private Long lastModifyTime;
 
-        @NameInMap("LifeCycle")
+        @com.aliyun.core.annotation.NameInMap("LifeCycle")
         private Integer lifeCycle;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
-        @NameInMap("PartitionKeys")
+        @com.aliyun.core.annotation.NameInMap("PartitionKeys")
         private String partitionKeys;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
-        @NameInMap("ProjectName")
+        @com.aliyun.core.annotation.NameInMap("ProjectName")
         private String projectName;
 
-        @NameInMap("ReadCount")
+        @com.aliyun.core.annotation.NameInMap("ReadCount")
         private Long readCount;
 
-        @NameInMap("Schema")
+        @com.aliyun.core.annotation.NameInMap("Schema")
         private String schema;
 
-        @NameInMap("TableGuid")
+        @com.aliyun.core.annotation.NameInMap("TableGuid")
         private String tableGuid;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private Long tenantId;
 
-        @NameInMap("ViewCount")
+        @com.aliyun.core.annotation.NameInMap("ViewCount")
         private Long viewCount;
 
         private Data(Builder builder) {

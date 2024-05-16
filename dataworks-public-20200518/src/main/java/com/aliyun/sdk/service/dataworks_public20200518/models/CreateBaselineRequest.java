@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,46 +11,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateBaselineRequest</p>
  */
 public class CreateBaselineRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("AlertMarginThreshold")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertMarginThreshold")
     private Integer alertMarginThreshold;
 
-    @Body
-    @NameInMap("BaselineName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BaselineName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String baselineName;
 
-    @Body
-    @NameInMap("BaselineType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BaselineType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String baselineType;
 
-    @Body
-    @NameInMap("NodeIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeIds")
     private String nodeIds;
 
-    @Body
-    @NameInMap("OvertimeSettings")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OvertimeSettings")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < OvertimeSettings> overtimeSettings;
 
-    @Body
-    @NameInMap("Owner")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Owner")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String owner;
 
-    @Body
-    @NameInMap("Priority")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Priority")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer priority;
 
-    @Body
-    @NameInMap("ProjectId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long projectId;
 
     private CreateBaselineRequest(Builder builder) {
@@ -260,10 +259,10 @@ public class CreateBaselineRequest extends Request {
     } 
 
     public static class OvertimeSettings extends TeaModel {
-        @NameInMap("Cycle")
+        @com.aliyun.core.annotation.NameInMap("Cycle")
         private Integer cycle;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
         private OvertimeSettings(Builder builder) {

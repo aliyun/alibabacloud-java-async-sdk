@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetQualityRuleResponseBody</p>
  */
 public class GetQualityRuleResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetQualityRuleResponseBody(Builder builder) {
@@ -152,76 +151,76 @@ public class GetQualityRuleResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("BlockType")
+        @com.aliyun.core.annotation.NameInMap("BlockType")
         private Integer blockType;
 
-        @NameInMap("Checker")
+        @com.aliyun.core.annotation.NameInMap("Checker")
         private Integer checker;
 
-        @NameInMap("CheckerName")
+        @com.aliyun.core.annotation.NameInMap("CheckerName")
         private String checkerName;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("CriticalThreshold")
+        @com.aliyun.core.annotation.NameInMap("CriticalThreshold")
         private String criticalThreshold;
 
-        @NameInMap("EntityId")
+        @com.aliyun.core.annotation.NameInMap("EntityId")
         private Long entityId;
 
-        @NameInMap("ExpectValue")
+        @com.aliyun.core.annotation.NameInMap("ExpectValue")
         private String expectValue;
 
-        @NameInMap("FixCheck")
+        @com.aliyun.core.annotation.NameInMap("FixCheck")
         private Boolean fixCheck;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("MethodId")
+        @com.aliyun.core.annotation.NameInMap("MethodId")
         private Integer methodId;
 
-        @NameInMap("MethodName")
+        @com.aliyun.core.annotation.NameInMap("MethodName")
         private String methodName;
 
-        @NameInMap("OnDuty")
+        @com.aliyun.core.annotation.NameInMap("OnDuty")
         private String onDuty;
 
-        @NameInMap("OnDutyAccountName")
+        @com.aliyun.core.annotation.NameInMap("OnDutyAccountName")
         private String onDutyAccountName;
 
-        @NameInMap("OpenSwitch")
+        @com.aliyun.core.annotation.NameInMap("OpenSwitch")
         private Boolean openSwitch;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("PredictType")
+        @com.aliyun.core.annotation.NameInMap("PredictType")
         private Integer predictType;
 
-        @NameInMap("Property")
+        @com.aliyun.core.annotation.NameInMap("Property")
         private String property;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("RuleType")
+        @com.aliyun.core.annotation.NameInMap("RuleType")
         private Integer ruleType;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private Integer templateId;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
-        @NameInMap("Trend")
+        @com.aliyun.core.annotation.NameInMap("Trend")
         private String trend;
 
-        @NameInMap("WarningThreshold")
+        @com.aliyun.core.annotation.NameInMap("WarningThreshold")
         private String warningThreshold;
 
-        @NameInMap("WhereCondition")
+        @com.aliyun.core.annotation.NameInMap("WhereCondition")
         private String whereCondition;
 
         private Data(Builder builder) {

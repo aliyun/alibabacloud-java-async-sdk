@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,93 +11,93 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>EditRecognizeRuleRequest</p>
  */
 public class EditRecognizeRuleRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("AccountName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccountName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountName;
 
-    @Body
-    @NameInMap("ColExclude")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ColExclude")
     private String colExclude;
 
-    @Body
-    @NameInMap("ColScan")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ColScan")
     private String colScan;
 
-    @Body
-    @NameInMap("CommentScan")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CommentScan")
     private String commentScan;
 
-    @Body
-    @NameInMap("ContentScan")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ContentScan")
     private String contentScan;
 
-    @Body
-    @NameInMap("HitThreshold")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HitThreshold")
     private Integer hitThreshold;
 
-    @Body
-    @NameInMap("LevelName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LevelName")
     private String levelName;
 
-    @Body
-    @NameInMap("NodeId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodeId;
 
-    @Body
-    @NameInMap("NodeParent")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeParent")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodeParent;
 
-    @Body
-    @NameInMap("OperationType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OperationType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer operationType;
 
-    @Body
-    @NameInMap("RecognizeRules")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RecognizeRules")
     private String recognizeRules;
 
-    @Body
-    @NameInMap("RecognizeRulesType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RecognizeRulesType")
     private String recognizeRulesType;
 
-    @Body
-    @NameInMap("SensitiveDescription")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SensitiveDescription")
     private String sensitiveDescription;
 
-    @Body
-    @NameInMap("SensitiveId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SensitiveId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sensitiveId;
 
-    @Body
-    @NameInMap("SensitiveName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SensitiveName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sensitiveName;
 
-    @Body
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
-    @Body
-    @NameInMap("TemplateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateId;
 
-    @Body
-    @NameInMap("TenantId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tenantId;
 
-    @Body
-    @NameInMap("level")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("level")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String level;
 
     private EditRecognizeRuleRequest(Builder builder) {

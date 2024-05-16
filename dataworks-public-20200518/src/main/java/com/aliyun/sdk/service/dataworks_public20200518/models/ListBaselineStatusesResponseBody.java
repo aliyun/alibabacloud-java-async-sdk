@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListBaselineStatusesResponseBody</p>
  */
 public class ListBaselineStatusesResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListBaselineStatusesResponseBody(Builder builder) {
@@ -152,46 +151,46 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
     } 
 
     public static class BaselineStatuses extends TeaModel {
-        @NameInMap("BaselineId")
+        @com.aliyun.core.annotation.NameInMap("BaselineId")
         private Long baselineId;
 
-        @NameInMap("BaselineName")
+        @com.aliyun.core.annotation.NameInMap("BaselineName")
         private String baselineName;
 
-        @NameInMap("Bizdate")
+        @com.aliyun.core.annotation.NameInMap("Bizdate")
         private Long bizdate;
 
-        @NameInMap("Buffer")
+        @com.aliyun.core.annotation.NameInMap("Buffer")
         private Long buffer;
 
-        @NameInMap("EndCast")
+        @com.aliyun.core.annotation.NameInMap("EndCast")
         private Long endCast;
 
-        @NameInMap("ExpTime")
+        @com.aliyun.core.annotation.NameInMap("ExpTime")
         private Long expTime;
 
-        @NameInMap("FinishStatus")
+        @com.aliyun.core.annotation.NameInMap("FinishStatus")
         private String finishStatus;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private Long finishTime;
 
-        @NameInMap("InGroupId")
+        @com.aliyun.core.annotation.NameInMap("InGroupId")
         private Integer inGroupId;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
-        @NameInMap("SlaTime")
+        @com.aliyun.core.annotation.NameInMap("SlaTime")
         private Long slaTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private BaselineStatuses(Builder builder) {
@@ -453,16 +452,16 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("BaselineStatuses")
+        @com.aliyun.core.annotation.NameInMap("BaselineStatuses")
         private java.util.List < BaselineStatuses> baselineStatuses;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {

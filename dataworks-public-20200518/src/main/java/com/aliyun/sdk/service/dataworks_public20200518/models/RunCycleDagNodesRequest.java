@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dataworks_public20200518.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,76 +11,76 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RunCycleDagNodesRequest</p>
  */
 public class RunCycleDagNodesRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("AlertNoticeType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertNoticeType")
     private String alertNoticeType;
 
-    @Body
-    @NameInMap("AlertType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertType")
     private String alertType;
 
-    @Body
-    @NameInMap("BizBeginTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizBeginTime")
     private String bizBeginTime;
 
-    @Body
-    @NameInMap("BizEndTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizEndTime")
     private String bizEndTime;
 
-    @Body
-    @NameInMap("ConcurrentRuns")
-    @Validation(maximum = 10, minimum = 2)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConcurrentRuns")
+    @com.aliyun.core.annotation.Validation(maximum = 10, minimum = 2)
     private Integer concurrentRuns;
 
-    @Body
-    @NameInMap("EndBizDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndBizDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endBizDate;
 
-    @Body
-    @NameInMap("ExcludeNodeIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExcludeNodeIds")
     private String excludeNodeIds;
 
-    @Body
-    @NameInMap("IncludeNodeIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IncludeNodeIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String includeNodeIds;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true, maxLength = 128)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128)
     private String name;
 
-    @Body
-    @NameInMap("NodeParams")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeParams")
     private String nodeParams;
 
-    @Body
-    @NameInMap("Parallelism")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Parallelism")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean parallelism;
 
-    @Body
-    @NameInMap("ProjectEnv")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectEnv")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectEnv;
 
-    @Body
-    @NameInMap("RootNodeId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RootNodeId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long rootNodeId;
 
-    @Body
-    @NameInMap("StartBizDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StartBizDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startBizDate;
 
-    @Body
-    @NameInMap("StartFutureInstanceImmediately")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StartFutureInstanceImmediately")
     private Boolean startFutureInstanceImmediately;
 
     private RunCycleDagNodesRequest(Builder builder) {
