@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,26 +11,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ApplyEciScalingConfigurationRequest</p>
  */
 public class ApplyEciScalingConfigurationRequest extends Request {
-    @Query
-    @NameInMap("Content")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Content")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String content;
 
-    @Query
-    @NameInMap("Format")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Format")
     private String format;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ScalingConfigurationId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingConfigurationId")
     private String scalingConfigurationId;
 
-    @Query
-    @NameInMap("ScalingGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scalingGroupId;
 
     private ApplyEciScalingConfigurationRequest(Builder builder) {
@@ -112,7 +111,7 @@ public class ApplyEciScalingConfigurationRequest extends Request {
         } 
 
         /**
-         * Content.
+         * The content of the configuration file.
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -121,7 +120,7 @@ public class ApplyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * Format.
+         * Optional. The format of the configuration file. Default value: YAML. Set the value to YAML.
          */
         public Builder format(String format) {
             this.putQueryParameter("Format", format);
@@ -130,7 +129,7 @@ public class ApplyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -139,7 +138,7 @@ public class ApplyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * ScalingConfigurationId.
+         * The ID of the scaling configuration that you want to update. If you want to update a scaling configuration based on the value of Content, you must specify ScalingConfigurationId. If you want to create a scaling configuration based on the value of Content, you can leave ScalingConfigurationId empty.
          */
         public Builder scalingConfigurationId(String scalingConfigurationId) {
             this.putQueryParameter("ScalingConfigurationId", scalingConfigurationId);
@@ -148,7 +147,7 @@ public class ApplyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * ScalingGroupId.
+         * The ID of the scaling group.
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);

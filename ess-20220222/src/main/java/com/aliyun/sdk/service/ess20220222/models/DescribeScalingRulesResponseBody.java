@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeScalingRulesResponseBody</p>
  */
 public class DescribeScalingRulesResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ScalingRules")
+    @com.aliyun.core.annotation.NameInMap("ScalingRules")
     private java.util.List < ScalingRules> scalingRules;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeScalingRulesResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
     } 
 
     public static class AlarmDimensions extends TeaModel {
-        @NameInMap("DimensionKey")
+        @com.aliyun.core.annotation.NameInMap("DimensionKey")
         private String dimensionKey;
 
-        @NameInMap("DimensionValue")
+        @com.aliyun.core.annotation.NameInMap("DimensionValue")
         private String dimensionValue;
 
         private AlarmDimensions(Builder builder) {
@@ -193,10 +192,10 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
 
     }
     public static class Dimensions extends TeaModel {
-        @NameInMap("DimensionKey")
+        @com.aliyun.core.annotation.NameInMap("DimensionKey")
         private String dimensionKey;
 
-        @NameInMap("DimensionValue")
+        @com.aliyun.core.annotation.NameInMap("DimensionValue")
         private String dimensionValue;
 
         private Dimensions(Builder builder) {
@@ -258,31 +257,31 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
 
     }
     public static class Alarms extends TeaModel {
-        @NameInMap("AlarmTaskId")
+        @com.aliyun.core.annotation.NameInMap("AlarmTaskId")
         private String alarmTaskId;
 
-        @NameInMap("AlarmTaskName")
+        @com.aliyun.core.annotation.NameInMap("AlarmTaskName")
         private String alarmTaskName;
 
-        @NameInMap("ComparisonOperator")
+        @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
         private String comparisonOperator;
 
-        @NameInMap("Dimensions")
+        @com.aliyun.core.annotation.NameInMap("Dimensions")
         private java.util.List < Dimensions> dimensions;
 
-        @NameInMap("EvaluationCount")
+        @com.aliyun.core.annotation.NameInMap("EvaluationCount")
         private Integer evaluationCount;
 
-        @NameInMap("MetricName")
+        @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
 
-        @NameInMap("MetricType")
+        @com.aliyun.core.annotation.NameInMap("MetricType")
         private String metricType;
 
-        @NameInMap("Statistics")
+        @com.aliyun.core.annotation.NameInMap("Statistics")
         private String statistics;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private Float threshold;
 
         private Alarms(Builder builder) {
@@ -474,13 +473,13 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
 
     }
     public static class StepAdjustments extends TeaModel {
-        @NameInMap("MetricIntervalLowerBound")
+        @com.aliyun.core.annotation.NameInMap("MetricIntervalLowerBound")
         private Float metricIntervalLowerBound;
 
-        @NameInMap("MetricIntervalUpperBound")
+        @com.aliyun.core.annotation.NameInMap("MetricIntervalUpperBound")
         private Float metricIntervalUpperBound;
 
-        @NameInMap("ScalingAdjustment")
+        @com.aliyun.core.annotation.NameInMap("ScalingAdjustment")
         private Integer scalingAdjustment;
 
         private StepAdjustments(Builder builder) {
@@ -555,79 +554,79 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
 
     }
     public static class ScalingRules extends TeaModel {
-        @NameInMap("AdjustmentType")
+        @com.aliyun.core.annotation.NameInMap("AdjustmentType")
         private String adjustmentType;
 
-        @NameInMap("AdjustmentValue")
+        @com.aliyun.core.annotation.NameInMap("AdjustmentValue")
         private Integer adjustmentValue;
 
-        @NameInMap("AlarmDimensions")
+        @com.aliyun.core.annotation.NameInMap("AlarmDimensions")
         private java.util.List < AlarmDimensions> alarmDimensions;
 
-        @NameInMap("Alarms")
+        @com.aliyun.core.annotation.NameInMap("Alarms")
         private java.util.List < Alarms> alarms;
 
-        @NameInMap("Cooldown")
+        @com.aliyun.core.annotation.NameInMap("Cooldown")
         private Integer cooldown;
 
-        @NameInMap("DisableScaleIn")
+        @com.aliyun.core.annotation.NameInMap("DisableScaleIn")
         private Boolean disableScaleIn;
 
-        @NameInMap("EstimatedInstanceWarmup")
+        @com.aliyun.core.annotation.NameInMap("EstimatedInstanceWarmup")
         private Integer estimatedInstanceWarmup;
 
-        @NameInMap("InitialMaxSize")
+        @com.aliyun.core.annotation.NameInMap("InitialMaxSize")
         private Integer initialMaxSize;
 
-        @NameInMap("MaxSize")
+        @com.aliyun.core.annotation.NameInMap("MaxSize")
         private Integer maxSize;
 
-        @NameInMap("MetricName")
+        @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
 
-        @NameInMap("MinAdjustmentMagnitude")
+        @com.aliyun.core.annotation.NameInMap("MinAdjustmentMagnitude")
         private Integer minAdjustmentMagnitude;
 
-        @NameInMap("MinSize")
+        @com.aliyun.core.annotation.NameInMap("MinSize")
         private Integer minSize;
 
-        @NameInMap("PredictiveScalingMode")
+        @com.aliyun.core.annotation.NameInMap("PredictiveScalingMode")
         private String predictiveScalingMode;
 
-        @NameInMap("PredictiveTaskBufferTime")
+        @com.aliyun.core.annotation.NameInMap("PredictiveTaskBufferTime")
         private Integer predictiveTaskBufferTime;
 
-        @NameInMap("PredictiveValueBehavior")
+        @com.aliyun.core.annotation.NameInMap("PredictiveValueBehavior")
         private String predictiveValueBehavior;
 
-        @NameInMap("PredictiveValueBuffer")
+        @com.aliyun.core.annotation.NameInMap("PredictiveValueBuffer")
         private Integer predictiveValueBuffer;
 
-        @NameInMap("ScaleInEvaluationCount")
+        @com.aliyun.core.annotation.NameInMap("ScaleInEvaluationCount")
         private Integer scaleInEvaluationCount;
 
-        @NameInMap("ScaleOutEvaluationCount")
+        @com.aliyun.core.annotation.NameInMap("ScaleOutEvaluationCount")
         private Integer scaleOutEvaluationCount;
 
-        @NameInMap("ScalingGroupId")
+        @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
         private String scalingGroupId;
 
-        @NameInMap("ScalingRuleAri")
+        @com.aliyun.core.annotation.NameInMap("ScalingRuleAri")
         private String scalingRuleAri;
 
-        @NameInMap("ScalingRuleId")
+        @com.aliyun.core.annotation.NameInMap("ScalingRuleId")
         private String scalingRuleId;
 
-        @NameInMap("ScalingRuleName")
+        @com.aliyun.core.annotation.NameInMap("ScalingRuleName")
         private String scalingRuleName;
 
-        @NameInMap("ScalingRuleType")
+        @com.aliyun.core.annotation.NameInMap("ScalingRuleType")
         private String scalingRuleType;
 
-        @NameInMap("StepAdjustments")
+        @com.aliyun.core.annotation.NameInMap("StepAdjustments")
         private java.util.List < StepAdjustments> stepAdjustments;
 
-        @NameInMap("TargetValue")
+        @com.aliyun.core.annotation.NameInMap("TargetValue")
         private Float targetValue;
 
         private ScalingRules(Builder builder) {

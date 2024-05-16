@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeScalingGroupDetailResponseBody</p>
  */
 public class DescribeScalingGroupDetailResponseBody extends TeaModel {
-    @NameInMap("Output")
+    @com.aliyun.core.annotation.NameInMap("Output")
     private String output;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ScalingGroup")
+    @com.aliyun.core.annotation.NameInMap("ScalingGroup")
     private ScalingGroup scalingGroup;
 
     private DescribeScalingGroupDetailResponseBody(Builder builder) {
@@ -62,7 +61,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
         private ScalingGroup scalingGroup; 
 
         /**
-         * Output.
+         * The output details of the scaling group of the Elastic Container Instance type. The output is a Kubernetes Deployment file in the YAML format.
          */
         public Builder output(String output) {
             this.output = output;
@@ -70,7 +69,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +77,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ScalingGroup.
+         * The information about the scaling group.
          */
         public Builder scalingGroup(ScalingGroup scalingGroup) {
             this.scalingGroup = scalingGroup;
@@ -92,13 +91,13 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
     } 
 
     public static class AlbServerGroups extends TeaModel {
-        @NameInMap("AlbServerGroupId")
+        @com.aliyun.core.annotation.NameInMap("AlbServerGroupId")
         private String albServerGroupId;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private AlbServerGroups(Builder builder) {
@@ -142,7 +141,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * AlbServerGroupId.
+             * The ID of the ALB server group.
              */
             public Builder albServerGroupId(String albServerGroupId) {
                 this.albServerGroupId = albServerGroupId;
@@ -150,7 +149,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port number of an ECS instance as a backend server in the ALB server group.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -158,7 +157,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Weight.
+             * The weight of an ECS instance as a backend server in the ALB server group.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -173,13 +172,13 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
 
     }
     public static class LaunchTemplateOverrides extends TeaModel {
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("SpotPriceLimit")
+        @com.aliyun.core.annotation.NameInMap("SpotPriceLimit")
         private Float spotPriceLimit;
 
-        @NameInMap("WeightedCapacity")
+        @com.aliyun.core.annotation.NameInMap("WeightedCapacity")
         private Integer weightedCapacity;
 
         private LaunchTemplateOverrides(Builder builder) {
@@ -223,7 +222,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             private Integer weightedCapacity; 
 
             /**
-             * InstanceType.
+             * The instance type. The instance type specified by using InstanceType overrides the instance type specified in the launch template.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -231,7 +230,10 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SpotPriceLimit.
+             * The maximum bid price of the instance type that is specified by `LaunchTemplateOverride.InstanceType`.
+             * <p>
+             * 
+             * >  This parameter takes effect only if you use `LaunchTemplateId` to specify a launch template.
              */
             public Builder spotPriceLimit(Float spotPriceLimit) {
                 this.spotPriceLimit = spotPriceLimit;
@@ -239,7 +241,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * WeightedCapacity.
+             * The weight of the instance type. The value of this parameter indicates the capacity of a single instance of the specified instance type in the scaling group. A higher weight indicates that a smaller number of instances of the specified instance type are required to meet the expected capacity requirement.
              */
             public Builder weightedCapacity(Integer weightedCapacity) {
                 this.weightedCapacity = weightedCapacity;
@@ -254,10 +256,10 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
 
     }
     public static class LoadBalancerConfigs extends TeaModel {
-        @NameInMap("LoadBalancerId")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
         private String loadBalancerId;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private LoadBalancerConfigs(Builder builder) {
@@ -292,7 +294,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * LoadBalancerId.
+             * The ID of the CLB instance.
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -300,7 +302,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Weight.
+             * The weight of a backend server.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -315,16 +317,16 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
 
     }
     public static class ServerGroups extends TeaModel {
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("ServerGroupId")
+        @com.aliyun.core.annotation.NameInMap("ServerGroupId")
         private String serverGroupId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private ServerGroups(Builder builder) {
@@ -377,7 +379,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * Port.
+             * The port number of an ECS instance as a backend server in the server group.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -385,7 +387,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ServerGroupId.
+             * The ID of the server group.
              */
             public Builder serverGroupId(String serverGroupId) {
                 this.serverGroupId = serverGroupId;
@@ -393,7 +395,11 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the server group. Valid values:
+             * <p>
+             * 
+             * *   ALB
+             * *   NLB
              */
             public Builder type(String type) {
                 this.type = type;
@@ -401,7 +407,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Weight.
+             * The weight of an ECS instance as a backend server in the server group.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -416,13 +422,13 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Propagate")
+        @com.aliyun.core.annotation.NameInMap("Propagate")
         private Boolean propagate;
 
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tags(Builder builder) {
@@ -466,7 +472,13 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * Propagate.
+             * Indicates whether the tags of the scaling group can be propagated to instances. Valid values:
+             * <p>
+             * 
+             * *   true: Tags of the scaling group can be propagated to only instances that are newly created.
+             * *   false: Tags of the scaling group cannot be propagated to instances.
+             * 
+             * Default value: false.
              */
             public Builder propagate(Boolean propagate) {
                 this.propagate = propagate;
@@ -474,7 +486,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TagKey.
+             * The tag key of the scaling group.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -482,7 +494,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * The tag value of the scaling group.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -497,13 +509,13 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
 
     }
     public static class VServerGroupAttributes extends TeaModel {
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("VServerGroupId")
+        @com.aliyun.core.annotation.NameInMap("VServerGroupId")
         private String vServerGroupId;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private VServerGroupAttributes(Builder builder) {
@@ -547,7 +559,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * Port.
+             * The port number of a backend vServer.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -555,7 +567,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * VServerGroupId.
+             * The ID of the backend vServer group.
              */
             public Builder vServerGroupId(String vServerGroupId) {
                 this.vServerGroupId = vServerGroupId;
@@ -563,7 +575,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Weight.
+             * The weight of the backend vServer group.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -578,10 +590,10 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
 
     }
     public static class VServerGroups extends TeaModel {
-        @NameInMap("LoadBalancerId")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
         private String loadBalancerId;
 
-        @NameInMap("VServerGroupAttributes")
+        @com.aliyun.core.annotation.NameInMap("VServerGroupAttributes")
         private java.util.List < VServerGroupAttributes> vServerGroupAttributes;
 
         private VServerGroups(Builder builder) {
@@ -616,7 +628,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             private java.util.List < VServerGroupAttributes> vServerGroupAttributes; 
 
             /**
-             * LoadBalancerId.
+             * The ID of the Classic Load Balancer (CLB, formerly known as Server Load Balancer or SLB) instance to which the backend vServer group belongs.
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -624,7 +636,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * VServerGroupAttributes.
+             * The attributes of the backend vServer group.
              */
             public Builder vServerGroupAttributes(java.util.List < VServerGroupAttributes> vServerGroupAttributes) {
                 this.vServerGroupAttributes = vServerGroupAttributes;
@@ -639,181 +651,181 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
 
     }
     public static class ScalingGroup extends TeaModel {
-        @NameInMap("ActiveCapacity")
+        @com.aliyun.core.annotation.NameInMap("ActiveCapacity")
         private Integer activeCapacity;
 
-        @NameInMap("ActiveScalingConfigurationId")
+        @com.aliyun.core.annotation.NameInMap("ActiveScalingConfigurationId")
         private String activeScalingConfigurationId;
 
-        @NameInMap("AlbServerGroups")
+        @com.aliyun.core.annotation.NameInMap("AlbServerGroups")
         private java.util.List < AlbServerGroups> albServerGroups;
 
-        @NameInMap("AllocationStrategy")
+        @com.aliyun.core.annotation.NameInMap("AllocationStrategy")
         private String allocationStrategy;
 
-        @NameInMap("AzBalance")
+        @com.aliyun.core.annotation.NameInMap("AzBalance")
         private Boolean azBalance;
 
-        @NameInMap("CompensateWithOnDemand")
+        @com.aliyun.core.annotation.NameInMap("CompensateWithOnDemand")
         private Boolean compensateWithOnDemand;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("CurrentHostName")
+        @com.aliyun.core.annotation.NameInMap("CurrentHostName")
         private String currentHostName;
 
-        @NameInMap("CustomPolicyARN")
+        @com.aliyun.core.annotation.NameInMap("CustomPolicyARN")
         private String customPolicyARN;
 
-        @NameInMap("DBInstanceIds")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceIds")
         private java.util.List < String > DBInstanceIds;
 
-        @NameInMap("DefaultCooldown")
+        @com.aliyun.core.annotation.NameInMap("DefaultCooldown")
         private Integer defaultCooldown;
 
-        @NameInMap("DesiredCapacity")
+        @com.aliyun.core.annotation.NameInMap("DesiredCapacity")
         private Integer desiredCapacity;
 
-        @NameInMap("EnableDesiredCapacity")
+        @com.aliyun.core.annotation.NameInMap("EnableDesiredCapacity")
         private Boolean enableDesiredCapacity;
 
-        @NameInMap("GroupDeletionProtection")
+        @com.aliyun.core.annotation.NameInMap("GroupDeletionProtection")
         private Boolean groupDeletionProtection;
 
-        @NameInMap("GroupType")
+        @com.aliyun.core.annotation.NameInMap("GroupType")
         private String groupType;
 
-        @NameInMap("HealthCheckType")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckType")
         private String healthCheckType;
 
-        @NameInMap("HealthCheckTypes")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckTypes")
         private java.util.List < String > healthCheckTypes;
 
-        @NameInMap("InitCapacity")
+        @com.aliyun.core.annotation.NameInMap("InitCapacity")
         private Integer initCapacity;
 
-        @NameInMap("IsElasticStrengthInAlarm")
+        @com.aliyun.core.annotation.NameInMap("IsElasticStrengthInAlarm")
         private Boolean isElasticStrengthInAlarm;
 
-        @NameInMap("LaunchTemplateId")
+        @com.aliyun.core.annotation.NameInMap("LaunchTemplateId")
         private String launchTemplateId;
 
-        @NameInMap("LaunchTemplateOverrides")
+        @com.aliyun.core.annotation.NameInMap("LaunchTemplateOverrides")
         private java.util.List < LaunchTemplateOverrides> launchTemplateOverrides;
 
-        @NameInMap("LaunchTemplateVersion")
+        @com.aliyun.core.annotation.NameInMap("LaunchTemplateVersion")
         private String launchTemplateVersion;
 
-        @NameInMap("LifecycleState")
+        @com.aliyun.core.annotation.NameInMap("LifecycleState")
         private String lifecycleState;
 
-        @NameInMap("LoadBalancerConfigs")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerConfigs")
         private java.util.List < LoadBalancerConfigs> loadBalancerConfigs;
 
-        @NameInMap("LoadBalancerIds")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerIds")
         private java.util.List < String > loadBalancerIds;
 
-        @NameInMap("MaxInstanceLifetime")
+        @com.aliyun.core.annotation.NameInMap("MaxInstanceLifetime")
         private Integer maxInstanceLifetime;
 
-        @NameInMap("MaxSize")
+        @com.aliyun.core.annotation.NameInMap("MaxSize")
         private Integer maxSize;
 
-        @NameInMap("MinSize")
+        @com.aliyun.core.annotation.NameInMap("MinSize")
         private Integer minSize;
 
-        @NameInMap("ModificationTime")
+        @com.aliyun.core.annotation.NameInMap("ModificationTime")
         private String modificationTime;
 
-        @NameInMap("MonitorGroupId")
+        @com.aliyun.core.annotation.NameInMap("MonitorGroupId")
         private String monitorGroupId;
 
-        @NameInMap("MultiAZPolicy")
+        @com.aliyun.core.annotation.NameInMap("MultiAZPolicy")
         private String multiAZPolicy;
 
-        @NameInMap("OnDemandBaseCapacity")
+        @com.aliyun.core.annotation.NameInMap("OnDemandBaseCapacity")
         private Integer onDemandBaseCapacity;
 
-        @NameInMap("OnDemandPercentageAboveBaseCapacity")
+        @com.aliyun.core.annotation.NameInMap("OnDemandPercentageAboveBaseCapacity")
         private Integer onDemandPercentageAboveBaseCapacity;
 
-        @NameInMap("PendingCapacity")
+        @com.aliyun.core.annotation.NameInMap("PendingCapacity")
         private Integer pendingCapacity;
 
-        @NameInMap("PendingWaitCapacity")
+        @com.aliyun.core.annotation.NameInMap("PendingWaitCapacity")
         private Integer pendingWaitCapacity;
 
-        @NameInMap("ProtectedCapacity")
+        @com.aliyun.core.annotation.NameInMap("ProtectedCapacity")
         private Integer protectedCapacity;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RemovalPolicies")
+        @com.aliyun.core.annotation.NameInMap("RemovalPolicies")
         private java.util.List < String > removalPolicies;
 
-        @NameInMap("RemovingCapacity")
+        @com.aliyun.core.annotation.NameInMap("RemovingCapacity")
         private Integer removingCapacity;
 
-        @NameInMap("RemovingWaitCapacity")
+        @com.aliyun.core.annotation.NameInMap("RemovingWaitCapacity")
         private Integer removingWaitCapacity;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ScalingGroupId")
+        @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
         private String scalingGroupId;
 
-        @NameInMap("ScalingGroupName")
+        @com.aliyun.core.annotation.NameInMap("ScalingGroupName")
         private String scalingGroupName;
 
-        @NameInMap("ScalingPolicy")
+        @com.aliyun.core.annotation.NameInMap("ScalingPolicy")
         private String scalingPolicy;
 
-        @NameInMap("ServerGroups")
+        @com.aliyun.core.annotation.NameInMap("ServerGroups")
         private java.util.List < ServerGroups> serverGroups;
 
-        @NameInMap("SpotAllocationStrategy")
+        @com.aliyun.core.annotation.NameInMap("SpotAllocationStrategy")
         private String spotAllocationStrategy;
 
-        @NameInMap("SpotInstancePools")
+        @com.aliyun.core.annotation.NameInMap("SpotInstancePools")
         private Integer spotInstancePools;
 
-        @NameInMap("SpotInstanceRemedy")
+        @com.aliyun.core.annotation.NameInMap("SpotInstanceRemedy")
         private Boolean spotInstanceRemedy;
 
-        @NameInMap("StandbyCapacity")
+        @com.aliyun.core.annotation.NameInMap("StandbyCapacity")
         private Integer standbyCapacity;
 
-        @NameInMap("StoppedCapacity")
+        @com.aliyun.core.annotation.NameInMap("StoppedCapacity")
         private Integer stoppedCapacity;
 
-        @NameInMap("SuspendedProcesses")
+        @com.aliyun.core.annotation.NameInMap("SuspendedProcesses")
         private java.util.List < String > suspendedProcesses;
 
-        @NameInMap("SystemSuspended")
+        @com.aliyun.core.annotation.NameInMap("SystemSuspended")
         private Boolean systemSuspended;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("TotalCapacity")
+        @com.aliyun.core.annotation.NameInMap("TotalCapacity")
         private Integer totalCapacity;
 
-        @NameInMap("TotalInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("TotalInstanceCount")
         private Integer totalInstanceCount;
 
-        @NameInMap("VServerGroups")
+        @com.aliyun.core.annotation.NameInMap("VServerGroups")
         private java.util.List < VServerGroups> vServerGroups;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VSwitchIds")
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
         private java.util.List < String > vSwitchIds;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private ScalingGroup(Builder builder) {
@@ -1361,7 +1373,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * ActiveCapacity.
+             * The number of ECS instances that are in the In Service state in the scaling group.
              */
             public Builder activeCapacity(Integer activeCapacity) {
                 this.activeCapacity = activeCapacity;
@@ -1369,7 +1381,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ActiveScalingConfigurationId.
+             * The ID of the active scaling configuration in the scaling group.
              */
             public Builder activeScalingConfigurationId(String activeScalingConfigurationId) {
                 this.activeScalingConfigurationId = activeScalingConfigurationId;
@@ -1377,7 +1389,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * AlbServerGroups.
+             * The information about the Application Load Balancer (ALB) server groups.
              */
             public Builder albServerGroups(java.util.List < AlbServerGroups> albServerGroups) {
                 this.albServerGroups = albServerGroups;
@@ -1385,7 +1397,11 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * AllocationStrategy.
+             * The allocation policy of instances. Auto Scaling selects instance types based on the allocation policy to create the required number of instances. You can apply the policy to pay-as-you-go instances and preemptible instances. This parameter takes effect only if you set `MultiAZPolicy` to `COMPOSABLE`. Valid values:
+             * <p>
+             * 
+             * *   priority: Auto Scaling selects instance types based on the specified order to create the required number of instances.
+             * *   lowestPrice: Auto Scaling selects instance types that have the lowest unit price of vCPUs to create the required number of instances.
              */
             public Builder allocationStrategy(String allocationStrategy) {
                 this.allocationStrategy = allocationStrategy;
@@ -1393,7 +1409,11 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * AzBalance.
+             * Indicates whether instances in the scaling group are evenly distributed across zones. This parameter takes effect only if you set `MultiAZPolicy` to `COMPOSABLE`. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder azBalance(Boolean azBalance) {
                 this.azBalance = azBalance;
@@ -1401,7 +1421,11 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CompensateWithOnDemand.
+             * Indicates whether pay-as-you-go ECS instances can be automatically created to reach the required number of ECS instances when preemptible ECS instances cannot be created due to high prices or insufficient inventory of resources. This parameter takes effect when you set `MultiAZPolicy` to `COST_OPTIMIZED`. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder compensateWithOnDemand(Boolean compensateWithOnDemand) {
                 this.compensateWithOnDemand = compensateWithOnDemand;
@@ -1409,7 +1433,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the scaling group was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -1417,7 +1441,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentHostName.
+             * >  This parameter is not available for use.
              */
             public Builder currentHostName(String currentHostName) {
                 this.currentHostName = currentHostName;
@@ -1425,7 +1449,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CustomPolicyARN.
+             * The Alibaba Cloud Resource Name (ARN) of the function that is specified in the custom scale-in policy. This parameter takes effect only if you set the first value of RemovalPolicies to CustomPolicy.
              */
             public Builder customPolicyARN(String customPolicyARN) {
                 this.customPolicyARN = customPolicyARN;
@@ -1433,7 +1457,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceIds.
+             * The IDs of the ApsaraDB RDS instances that are associated with the scaling group.
              */
             public Builder DBInstanceIds(java.util.List < String > DBInstanceIds) {
                 this.DBInstanceIds = DBInstanceIds;
@@ -1441,7 +1465,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultCooldown.
+             * The cooldown period of the scaling group. Unit: seconds.
              */
             public Builder defaultCooldown(Integer defaultCooldown) {
                 this.defaultCooldown = defaultCooldown;
@@ -1449,7 +1473,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DesiredCapacity.
+             * The expected number of ECS instances in the scaling group. Auto Scaling automatically maintains the expected number of ECS instances.
              */
             public Builder desiredCapacity(Integer desiredCapacity) {
                 this.desiredCapacity = desiredCapacity;
@@ -1457,7 +1481,11 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EnableDesiredCapacity.
+             * Indicates whether the Expected Number of Instances feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder enableDesiredCapacity(Boolean enableDesiredCapacity) {
                 this.enableDesiredCapacity = enableDesiredCapacity;
@@ -1465,7 +1493,11 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GroupDeletionProtection.
+             * Indicates whether Deletion Protection is enabled for the scaling group. Valid values:
+             * <p>
+             * 
+             * *   true: Deletion Protection is enabled for the scaling group. This way, the scaling group cannot be deleted.
+             * *   false: Deletion Protection is disabled for the scaling group.
              */
             public Builder groupDeletionProtection(Boolean groupDeletionProtection) {
                 this.groupDeletionProtection = groupDeletionProtection;
@@ -1473,7 +1505,11 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GroupType.
+             * The type of instances that are managed by the scaling group. Valid values:
+             * <p>
+             * 
+             * *   ECS: ECS instances
+             * *   ECI: elastic container instances
              */
             public Builder groupType(String groupType) {
                 this.groupType = groupType;
@@ -1481,7 +1517,11 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * HealthCheckType.
+             * The health check mode of the scaling group. Valid values:
+             * <p>
+             * 
+             * *   NONE: Auto Scaling does not perform health checks in the scaling group.
+             * *   ECS: Auto Scaling performs health checks on ECS instances in the scaling group.
              */
             public Builder healthCheckType(String healthCheckType) {
                 this.healthCheckType = healthCheckType;
@@ -1489,7 +1529,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * HealthCheckTypes.
+             * The health check types.
              */
             public Builder healthCheckTypes(java.util.List < String > healthCheckTypes) {
                 this.healthCheckTypes = healthCheckTypes;
@@ -1497,7 +1537,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InitCapacity.
+             * The number of instances that are in the Initialized state and not added to the scaling group.
              */
             public Builder initCapacity(Integer initCapacity) {
                 this.initCapacity = initCapacity;
@@ -1505,7 +1545,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * IsElasticStrengthInAlarm.
+             * >  This parameter is not available for use.
              */
             public Builder isElasticStrengthInAlarm(Boolean isElasticStrengthInAlarm) {
                 this.isElasticStrengthInAlarm = isElasticStrengthInAlarm;
@@ -1513,7 +1553,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * LaunchTemplateId.
+             * The ID of the launch template that is used by the scaling group.
              */
             public Builder launchTemplateId(String launchTemplateId) {
                 this.launchTemplateId = launchTemplateId;
@@ -1521,7 +1561,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * LaunchTemplateOverrides.
+             * The information about the instance types that are extended in the launch template.
              */
             public Builder launchTemplateOverrides(java.util.List < LaunchTemplateOverrides> launchTemplateOverrides) {
                 this.launchTemplateOverrides = launchTemplateOverrides;
@@ -1529,7 +1569,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * LaunchTemplateVersion.
+             * The version number of the launch template.
              */
             public Builder launchTemplateVersion(String launchTemplateVersion) {
                 this.launchTemplateVersion = launchTemplateVersion;
@@ -1537,7 +1577,12 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * LifecycleState.
+             * The status of the scaling group. Valid values:
+             * <p>
+             * 
+             * *   Active: The scaling group is in the Enabled state. Enabled scaling groups can receive requests to execute scaling rules and trigger scaling activities.
+             * *   Inactive: The scaling group is in the Disabled state. Disabled scaling groups cannot receive requests to execute scaling rules.
+             * *   Deleting: The scaling group is being deleted. Scaling groups that are being deleted cannot receive requests to execute scaling rules, and the parameter settings of the scaling groups cannot be modified.
              */
             public Builder lifecycleState(String lifecycleState) {
                 this.lifecycleState = lifecycleState;
@@ -1545,7 +1590,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * LoadBalancerConfigs.
+             * The CLB configurations.
              */
             public Builder loadBalancerConfigs(java.util.List < LoadBalancerConfigs> loadBalancerConfigs) {
                 this.loadBalancerConfigs = loadBalancerConfigs;
@@ -1553,7 +1598,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * LoadBalancerIds.
+             * The IDs of the SLB instances that are associated with the scaling group.
              */
             public Builder loadBalancerIds(java.util.List < String > loadBalancerIds) {
                 this.loadBalancerIds = loadBalancerIds;
@@ -1561,7 +1606,14 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MaxInstanceLifetime.
+             * The maximum life span of an ECS instance in the scaling group. Unit: seconds.
+             * <p>
+             * 
+             * Valid values: 0 and `[86400, Integer.maxValue]`. A value of 0 indicates that the ECS instance has an unlimited life span in the scaling group.
+             * 
+             * Default value: null.
+             * 
+             * >  This parameter is not supported by scaling groups of the Elastic Container Instance type and scaling groups whose ScalingPolicy is set to Recycle.
              */
             public Builder maxInstanceLifetime(Integer maxInstanceLifetime) {
                 this.maxInstanceLifetime = maxInstanceLifetime;
@@ -1569,7 +1621,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MaxSize.
+             * The maximum number of ECS instances that can be contained in the scaling group.
              */
             public Builder maxSize(Integer maxSize) {
                 this.maxSize = maxSize;
@@ -1577,7 +1629,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MinSize.
+             * The minimum number of ECS instances that must be contained in the scaling group.
              */
             public Builder minSize(Integer minSize) {
                 this.minSize = minSize;
@@ -1585,7 +1637,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ModificationTime.
+             * The time when the scaling group was modified.
              */
             public Builder modificationTime(String modificationTime) {
                 this.modificationTime = modificationTime;
@@ -1593,7 +1645,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MonitorGroupId.
+             * The ID of the CloudMonitor application group that is associated with the scaling group.
              */
             public Builder monitorGroupId(String monitorGroupId) {
                 this.monitorGroupId = monitorGroupId;
@@ -1601,7 +1653,18 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MultiAZPolicy.
+             * The scaling policy of the ECS instances in the multi-zone scaling group. Valid values:
+             * <p>
+             * 
+             * *   PRIORITY: ECS instances are created based on the value of VSwitchIds. If Auto Scaling cannot create ECS instances in the zone where the vSwitch of the highest priority resides, Auto Scaling creates ECS instances in the zone where the vSwitch of the next highest priority resides.
+             * 
+             * *   COST_OPTIMIZED: ECS instances are created based on the unit prices of their vCPUs. Auto Scaling preferentially creates ECS instances that use the lowest-priced vCPUs. If preemptible instance types are specified in the scaling configuration, Auto Scaling preferentially creates preemptible instances. You can also specify CompensateWithOnDemand to allow Auto Scaling to create pay-as-you-go instances in the case that preemptible instances cannot be created due to insufficient inventory of preemptible instance types.
+             * 
+             *     **
+             * 
+             *     **Note** The COST_OPTIMIZED setting takes effect only if you specified multiple instance types or preemptible instance types in your scaling configuration.
+             * 
+             * *   BALANCE: ECS instances are evenly distributed across the zones of the scaling group. If ECS instance are unevenly distributed across the specified zones due to insufficient inventory of instance types, you can call the RebalanceInstance operation to rebalance the distribution of the ECS instances.
              */
             public Builder multiAZPolicy(String multiAZPolicy) {
                 this.multiAZPolicy = multiAZPolicy;
@@ -1609,7 +1672,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OnDemandBaseCapacity.
+             * The minimum number of pay-as-you-go instances that must be contained in the scaling group. Valid values: 0 to 1000. If the number of pay-as-you-go instances in the scaling group is less than the value of this parameter, Auto Scaling preferentially creates pay-as-you-go instances.
              */
             public Builder onDemandBaseCapacity(Integer onDemandBaseCapacity) {
                 this.onDemandBaseCapacity = onDemandBaseCapacity;
@@ -1617,7 +1680,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OnDemandPercentageAboveBaseCapacity.
+             * The percentage of pay-as-you-go instances among the excess instances when the minimum number of pay-as-you-go instances reaches the requirement. Valid values: 0 to 100.
              */
             public Builder onDemandPercentageAboveBaseCapacity(Integer onDemandPercentageAboveBaseCapacity) {
                 this.onDemandPercentageAboveBaseCapacity = onDemandPercentageAboveBaseCapacity;
@@ -1625,7 +1688,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PendingCapacity.
+             * The number of ECS instances that are being added to the scaling group and configured.
              */
             public Builder pendingCapacity(Integer pendingCapacity) {
                 this.pendingCapacity = pendingCapacity;
@@ -1633,7 +1696,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PendingWaitCapacity.
+             * The number of ECS instances that are in the Pending Add state in the scaling group.
              */
             public Builder pendingWaitCapacity(Integer pendingWaitCapacity) {
                 this.pendingWaitCapacity = pendingWaitCapacity;
@@ -1641,7 +1704,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ProtectedCapacity.
+             * The number of ECS instances that are in the Protected state in the scaling group.
              */
             public Builder protectedCapacity(Integer protectedCapacity) {
                 this.protectedCapacity = protectedCapacity;
@@ -1649,7 +1712,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the scaling group.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1657,7 +1720,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RemovalPolicies.
+             * The instance removal policies.
              */
             public Builder removalPolicies(java.util.List < String > removalPolicies) {
                 this.removalPolicies = removalPolicies;
@@ -1665,7 +1728,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RemovingCapacity.
+             * The number of ECS instances that are being removed from the scaling group.
              */
             public Builder removingCapacity(Integer removingCapacity) {
                 this.removingCapacity = removingCapacity;
@@ -1673,7 +1736,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RemovingWaitCapacity.
+             * The number of ECS instances that are in the Pending Remove state in the scaling group.
              */
             public Builder removingWaitCapacity(Integer removingWaitCapacity) {
                 this.removingWaitCapacity = removingWaitCapacity;
@@ -1681,7 +1744,10 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group to which the scaling group belongs.
+             * <p>
+             * 
+             * >  If you specify this parameter, new scaling groups are added to the specified resource group. If you do not specify this parameter, new scaling groups are added to the default resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1689,7 +1755,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ScalingGroupId.
+             * The ID of the scaling group.
              */
             public Builder scalingGroupId(String scalingGroupId) {
                 this.scalingGroupId = scalingGroupId;
@@ -1697,7 +1763,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ScalingGroupName.
+             * The name of the scaling group. The name of a scaling group must be unique in a region. The name must be 2 to 64 characters in length, and can contain digits, underscores (\_), hyphens (-), and periods (.). It must start with a letter or digit.
              */
             public Builder scalingGroupName(String scalingGroupName) {
                 this.scalingGroupName = scalingGroupName;
@@ -1705,7 +1771,14 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ScalingPolicy.
+             * The reclaim mode of the scaling group. Valid values:
+             * <p>
+             * 
+             * *   recycle: economical mode
+             * *   release: release mode
+             * *   forcerelease: forced release mode
+             * 
+             * For more information, see [RemoveInstances](~~25955~~).
              */
             public Builder scalingPolicy(String scalingPolicy) {
                 this.scalingPolicy = scalingPolicy;
@@ -1713,7 +1786,10 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ServerGroups.
+             * The information about the server groups.
+             * <p>
+             * 
+             * >  You can use this parameter to obtain information about ALB server groups and Network Load Balancer (NLB) server groups that are associated with your scaling group.
              */
             public Builder serverGroups(java.util.List < ServerGroups> serverGroups) {
                 this.serverGroups = serverGroups;
@@ -1721,7 +1797,11 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SpotAllocationStrategy.
+             * The allocation policy of preemptible instances. Auto Scaling selects instance types based on the allocation policy to create the required number of preemptible instances. You can apply the policy to pay-as-you-go instances and preemptible instances. This parameter takes effect only if you set `MultiAZPolicy` to `COMPOSABLE`. Valid values:
+             * <p>
+             * 
+             * *   priority: Auto Scaling selects instance types based on the specified order to create the required number of preemptible instances.
+             * *   lowestPrice: Auto Scaling selects instance types that have the lowest unit price of vCPUs to create the required number of preemptible instances.
              */
             public Builder spotAllocationStrategy(String spotAllocationStrategy) {
                 this.spotAllocationStrategy = spotAllocationStrategy;
@@ -1729,7 +1809,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SpotInstancePools.
+             * The number of instance types that are specified. Preemptible instances of multiple lowest-priced instance types are evenly distributed across the zones of the scaling group. Valid values: 0 to 10.
              */
             public Builder spotInstancePools(Integer spotInstancePools) {
                 this.spotInstancePools = spotInstancePools;
@@ -1737,7 +1817,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SpotInstanceRemedy.
+             * Indicates whether preemptible instances can be supplemented. If this parameter is set to true, Auto Scaling creates an instance to replace a preemptible instance when Auto Scaling receives the system message which indicates that the preemptible instance is to be reclaimed.
              */
             public Builder spotInstanceRemedy(Boolean spotInstanceRemedy) {
                 this.spotInstanceRemedy = spotInstanceRemedy;
@@ -1745,7 +1825,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StandbyCapacity.
+             * The number of ECS instances that are in the Standby state in the scaling group.
              */
             public Builder standbyCapacity(Integer standbyCapacity) {
                 this.standbyCapacity = standbyCapacity;
@@ -1753,7 +1833,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StoppedCapacity.
+             * The number of instances that are stopped in Economical Mode in the scaling group.
              */
             public Builder stoppedCapacity(Integer stoppedCapacity) {
                 this.stoppedCapacity = stoppedCapacity;
@@ -1761,7 +1841,14 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SuspendedProcesses.
+             * The processes that are suspended. If no process is suspended, null is returned. Valid values:
+             * <p>
+             * 
+             * *   ScaleIn: scale-in
+             * *   ScaleOut: scale-out
+             * *   HealthCheck: health check
+             * *   AlarmNotification: event-triggered task
+             * *   ScheduledAction: scheduled task
              */
             public Builder suspendedProcesses(java.util.List < String > suspendedProcesses) {
                 this.suspendedProcesses = suspendedProcesses;
@@ -1769,7 +1856,11 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SystemSuspended.
+             * Indicates whether Auto Scaling stops executing scaling activities in the scaling group. Valid values:
+             * <p>
+             * 
+             * *   true: Auto Scaling stops executing scaling activities in the scaling group if the scaling activities failed for more than seven consecutive days in the scaling group. You must modify the scaling group or scaling configuration to resume the execution of the scaling activities.
+             * *   false: Auto Scaling does not stop executing scaling activities in the scaling group.
              */
             public Builder systemSuspended(Boolean systemSuspended) {
                 this.systemSuspended = systemSuspended;
@@ -1777,7 +1868,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags of the scaling group.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -1785,7 +1876,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCapacity.
+             * The total weighted capacity of all ECS instances in the scaling group if Weighted is specified. In other cases, the value of this parameter indicates the total number of ECS instances in the scaling group.
              */
             public Builder totalCapacity(Integer totalCapacity) {
                 this.totalCapacity = totalCapacity;
@@ -1793,7 +1884,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TotalInstanceCount.
+             * The total number of Elastic Compute Service (ECS) instances in the scaling group.
              */
             public Builder totalInstanceCount(Integer totalInstanceCount) {
                 this.totalInstanceCount = totalInstanceCount;
@@ -1801,7 +1892,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * VServerGroups.
+             * The backend vServer groups.
              */
             public Builder vServerGroups(java.util.List < VServerGroups> vServerGroups) {
                 this.vServerGroups = vServerGroups;
@@ -1809,7 +1900,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The vSwitch ID of the scaling group.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -1817,7 +1908,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchIds.
+             * The IDs of the vSwitches that are associated with the scaling group. If you specify VSwitchIds, VSwitchId is ignored.
              */
             public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -1825,7 +1916,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The virtual private cloud (VPC) ID of the scaling group.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

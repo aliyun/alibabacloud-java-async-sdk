@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeScalingConfigurationsResponseBody</p>
  */
 public class DescribeScalingConfigurationsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ScalingConfigurations")
+    @com.aliyun.core.annotation.NameInMap("ScalingConfigurations")
     private java.util.List < ScalingConfigurations> scalingConfigurations;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeScalingConfigurationsResponseBody(Builder builder) {
@@ -110,7 +109,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the scaling configurations.
+         * The scaling configurations.
          */
         public Builder scalingConfigurations(java.util.List < ScalingConfigurations> scalingConfigurations) {
             this.scalingConfigurations = scalingConfigurations;
@@ -132,10 +131,10 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
     } 
 
     public static class CustomPriorities extends TeaModel {
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("VswitchId")
+        @com.aliyun.core.annotation.NameInMap("VswitchId")
         private String vswitchId;
 
         private CustomPriorities(Builder builder) {
@@ -170,7 +169,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             private String vswitchId; 
 
             /**
-             * InstanceType.
+             * The instance type of the ECS instances.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -178,7 +177,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * VswitchId.
+             * The vSwitch ID.
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -193,46 +192,46 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
 
     }
     public static class DataDisks extends TeaModel {
-        @NameInMap("AutoSnapshotPolicyId")
+        @com.aliyun.core.annotation.NameInMap("AutoSnapshotPolicyId")
         private String autoSnapshotPolicyId;
 
-        @NameInMap("BurstingEnabled")
+        @com.aliyun.core.annotation.NameInMap("BurstingEnabled")
         private Boolean burstingEnabled;
 
-        @NameInMap("Categories")
+        @com.aliyun.core.annotation.NameInMap("Categories")
         private java.util.List < String > categories;
 
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("DeleteWithInstance")
+        @com.aliyun.core.annotation.NameInMap("DeleteWithInstance")
         private Boolean deleteWithInstance;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Device")
+        @com.aliyun.core.annotation.NameInMap("Device")
         private String device;
 
-        @NameInMap("DiskName")
+        @com.aliyun.core.annotation.NameInMap("DiskName")
         private String diskName;
 
-        @NameInMap("Encrypted")
+        @com.aliyun.core.annotation.NameInMap("Encrypted")
         private String encrypted;
 
-        @NameInMap("KMSKeyId")
+        @com.aliyun.core.annotation.NameInMap("KMSKeyId")
         private String KMSKeyId;
 
-        @NameInMap("PerformanceLevel")
+        @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
         private String performanceLevel;
 
-        @NameInMap("ProvisionedIops")
+        @com.aliyun.core.annotation.NameInMap("ProvisionedIops")
         private Long provisionedIops;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
-        @NameInMap("SnapshotId")
+        @com.aliyun.core.annotation.NameInMap("SnapshotId")
         private String snapshotId;
 
         private DataDisks(Builder builder) {
@@ -383,15 +382,13 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the burst feature is enabled for the data disk. Valid values:
+             * Indicates whether the Performance Burst feature is enabled for the data disk. Valid values:
              * <p>
              * 
              * *   true
              * *   false
              * 
-             * > This parameter is available only if you set the `DataDisk.Category` parameter to `cloud_auto`.
-             * 
-             * For more information, see the [ESSD AutoPL disks](~~368372~~) topic.
+             * >  This parameter is available only when you set `DataDisk.Category` to `cloud_auto`.
              */
             public Builder burstingEnabled(Boolean burstingEnabled) {
                 this.burstingEnabled = burstingEnabled;
@@ -399,10 +396,10 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The categories of the data disks. The values are sorted based on their priorities. The first value has the highest priority. If Auto Scaling cannot create instances by using the disk that has the highest priority, Auto Scaling creates instances by using the disk that has the next highest priority. Valid values:
+             * The categories of the data disks. The values are sorted based on their priorities. The first value has the highest priority. If Auto Scaling cannot create instances by using the disk category of the highest priority, Auto Scaling creates instances by using the disk category of the next highest priority. Valid values:
              * <p>
              * 
-             * *   cloud: basic disk. The DeleteWithInstance parameter of a basic disk that is created together with the instance is set to true.
+             * *   cloud: basic disk. DeleteWithInstance of a basic disk created along with the ECS instance is set to true.
              * *   cloud_efficiency: ultra disk.
              * *   cloud_ssd: standard SSD.
              * *   cloud_essd: ESSD.
@@ -416,12 +413,12 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
              * The category of the data disk. Valid values:
              * <p>
              * 
-             * *   cloud: basic disk. The DeleteWithInstance parameter of a basic disk that is created together with the instance is set to true.
+             * *   cloud: basic disk. DeleteWithInstance of a basic disk created along with the ECS instance is set to true.
              * *   cloud_efficiency: ultra disk.
              * *   cloud_ssd: standard SSD.
-             * *   ephemeral_ssd: local standard SSD.
+             * *   ephemeral_ssd: local SSD.
              * *   cloud_essd: ESSD.
-             * *   cloud_auto: ESSD AutoPL disk.
+             * *   cloud_auto: ESSD AutoPL.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -429,7 +426,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the data disk is released if the instance to which the data disk is attached is released. Valid values:
+             * Indicates whether the data disk is released when the instance to which the data disk is attached is released. Valid values:
              * <p>
              * 
              * *   true
@@ -479,7 +476,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Key Management Service (KMS) key that is used to encrypt the data disk.
+             * The ID of the Key Management Service (KMS) key that is applied to the data disk.
              */
             public Builder KMSKeyId(String KMSKeyId) {
                 this.KMSKeyId = KMSKeyId;
@@ -487,7 +484,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The PL of the data disk of the ESSD category.
+             * The PL of the data disk that is an ESSD.
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -495,10 +492,10 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The provisioned input/output operations per second (IOPS) for the data disk.
+             * The provisioned IOPS of the data disk.
              * <p>
              * 
-             * > IOPS measures the number of read and write operations that an Elastic Block Storage (EBS) device can process per second.
+             * >  IOPS measures the number of read and write operations that an Elastic Block Storage (EBS) device can process per second.
              */
             public Builder provisionedIops(Long provisionedIops) {
                 this.provisionedIops = provisionedIops;
@@ -506,14 +503,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the data disk. Unit: GiB.
+             * The size of the data disk. Unit: GB. Valid values:
              * <p>
              * 
-             * *   Valid values if you set the Category parameter to cloud: 5 to 2000.
-             * *   Valid values if you set the Category parameter to cloud_efficiency: 20 to 32768.
-             * *   Valid values if you set the Category parameter to cloud_ssd: 20 to 32768.
-             * *   Valid values if you set the Category parameter to cloud_essd: 20 to 32768.
-             * *   Valid values if you set the Category parameter to ephemeral_ssd: 5 to 800.
+             * *   5 to 2000 if you set Category to cloud.
+             * *   20 to 32768 if you set Category to cloud_efficiency.
+             * *   20 to 32768 if you set Category to cloud_ssd.
+             * *   20 to 32768 if you set Category to cloud_essd.
+             * *   5 to 800 if you set Category to ephemeral_ssd.
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -521,7 +518,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the snapshot that is used to create the data disk.
+             * The ID of the snapshot based on which the data disk is created.
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -536,25 +533,25 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
 
     }
     public static class InstancePatternInfos extends TeaModel {
-        @NameInMap("Architectures")
+        @com.aliyun.core.annotation.NameInMap("Architectures")
         private java.util.List < String > architectures;
 
-        @NameInMap("BurstablePerformance")
+        @com.aliyun.core.annotation.NameInMap("BurstablePerformance")
         private String burstablePerformance;
 
-        @NameInMap("Cores")
+        @com.aliyun.core.annotation.NameInMap("Cores")
         private Integer cores;
 
-        @NameInMap("ExcludedInstanceTypes")
+        @com.aliyun.core.annotation.NameInMap("ExcludedInstanceTypes")
         private java.util.List < String > excludedInstanceTypes;
 
-        @NameInMap("InstanceFamilyLevel")
+        @com.aliyun.core.annotation.NameInMap("InstanceFamilyLevel")
         private String instanceFamilyLevel;
 
-        @NameInMap("MaxPrice")
+        @com.aliyun.core.annotation.NameInMap("MaxPrice")
         private Float maxPrice;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Float memory;
 
         private InstancePatternInfos(Builder builder) {
@@ -634,14 +631,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             private Float memory; 
 
             /**
-             * The architectures of the instance types. Valid values:
+             * The architecture types of the instance types. Valid values:
              * <p>
              * 
-             * *   X86: x86 architecture.
-             * *   Heterogeneous: heterogeneous architecture, such as GPUs and FPGAs.
-             * *   BareMetal: ECS Bare Metal Instance architecture.
-             * *   Arm: ARM architecture.
-             * *   SuperComputeCluster: Super Computing Cluster architecture.
+             * *   X86: x86
+             * *   Heterogeneous: heterogeneous computing, such as GPU-accelerated or FPGA-accelerated
+             * *   BareMetal: ECS Bare Metal Instance
+             * *   Arm: Arm
+             * *   SuperComputeCluster: Super Computing Cluster
              */
             public Builder architectures(java.util.List < String > architectures) {
                 this.architectures = architectures;
@@ -670,7 +667,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The instance types that are excluded. You can use wildcard characters such as an asterisk (\*) to exclude an instance type or an instance family. Examples:
+             * The instance types that are excluded. You can use wildcard characters, such as an asterisk (\*), to exclude an instance type or an instance family. Examples:
              * <p>
              * 
              * *   ecs.c6.large: The ecs.c6.large instance type is excluded.
@@ -685,9 +682,9 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
              * The level of the instance family.
              * <p>
              * 
-             * *   EntryLevel: shared instance type. Instances of this level are cost-effective, but do not provide stable computing performance. Instances of this level are suitable for scenarios in which the CPU utilization is low. For more information, see [Shared instance families](~~108489~~).
-             * *   EnterpriseLevel: Instances of this level provide stable performance and dedicated resources, and are suitable for scenarios in which high stability is required. For more information, see [Overview of instance families](~~25378~~).
-             * *   CreditEntryLevel: This value is available only for burstable instances. CPU credits are used to ensure computing performance. Instances of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see [Overview](~~59977~~) of burstable instances
+             * *   EntryLevel: entry level (shared instance types) Instance types of this level are the most cost-effective but may not provide stable computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low. For more information, see [Shared instance families](~~108489~~).
+             * *   EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources and are suitable for scenarios that require high stability. For more information, see [Overview of instance families](~~25378~~).
+             * *   CreditEntryLevel: credit entry level (burstable instance types). CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see [Overview of burstable instances](~~59977~~).
              */
             public Builder instanceFamilyLevel(String instanceFamilyLevel) {
                 this.instanceFamilyLevel = instanceFamilyLevel;
@@ -695,7 +692,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum hourly price for pay-as-you-go instances or preemptible instances.
+             * The maximum hourly price for pay-as-you-go or preemptible instances.
              */
             public Builder maxPrice(Float maxPrice) {
                 this.maxPrice = maxPrice;
@@ -718,16 +715,16 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
 
     }
     public static class NetworkInterfaces extends TeaModel {
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("Ipv6AddressCount")
+        @com.aliyun.core.annotation.NameInMap("Ipv6AddressCount")
         private Integer ipv6AddressCount;
 
-        @NameInMap("NetworkInterfaceTrafficMode")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceTrafficMode")
         private String networkInterfaceTrafficMode;
 
-        @NameInMap("SecurityGroupIds")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
         private java.util.List < String > securityGroupIds;
 
         private NetworkInterfaces(Builder builder) {
@@ -780,7 +777,11 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             private java.util.List < String > securityGroupIds; 
 
             /**
-             * InstanceType.
+             * The ENI type. Valid values:
+             * <p>
+             * 
+             * *   Primary: the primary ENI
+             * *   Secondary: the secondary ENI
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -788,7 +789,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Ipv6AddressCount.
+             * The number of randomly generated IPv6 addresses that are allocated to the primary ENI.
              */
             public Builder ipv6AddressCount(Integer ipv6AddressCount) {
                 this.ipv6AddressCount = ipv6AddressCount;
@@ -796,7 +797,11 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkInterfaceTrafficMode.
+             * The communication mode of the ENI. Valid values:
+             * <p>
+             * 
+             * *   Standard: The TCP communication mode is used.
+             * *   HighPerformance: The Elastic RDMA Interface (ERI) is enabled and the remote direct memory access (RDMA) communication mode is used.
              */
             public Builder networkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
                 this.networkInterfaceTrafficMode = networkInterfaceTrafficMode;
@@ -804,7 +809,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupIds.
+             * The IDs of the security groups to which the ENIs belong.
              */
             public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
@@ -819,7 +824,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
 
     }
     public static class SchedulerOptions extends TeaModel {
-        @NameInMap("ManagedPrivateSpaceId")
+        @com.aliyun.core.annotation.NameInMap("ManagedPrivateSpaceId")
         private String managedPrivateSpaceId;
 
         private SchedulerOptions(Builder builder) {
@@ -845,7 +850,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             private String managedPrivateSpaceId; 
 
             /**
-             * > This parameter is in invitational preview and is unavailable.
+             * >  This parameter is in invitational preview and is not available for use.
              */
             public Builder managedPrivateSpaceId(String managedPrivateSpaceId) {
                 this.managedPrivateSpaceId = managedPrivateSpaceId;
@@ -860,10 +865,10 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
 
     }
     public static class SpotPriceLimits extends TeaModel {
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("PriceLimit")
+        @com.aliyun.core.annotation.NameInMap("PriceLimit")
         private Float priceLimit;
 
         private SpotPriceLimits(Builder builder) {
@@ -898,7 +903,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             private Float priceLimit; 
 
             /**
-             * The instance type of the preemptible instance.
+             * The instance type of the preemptible instances.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -906,7 +911,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The price limit of the preemptible instance.
+             * The price limit of the preemptible instances.
              */
             public Builder priceLimit(Float priceLimit) {
                 this.priceLimit = priceLimit;
@@ -921,10 +926,10 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -959,10 +964,10 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of tag N. Valid values of N: 1 to 20.
+             * The tag key of the ECS instance. You can specify up to 20 tags for each ECS instance.
              * <p>
              * 
-             * The tag key cannot be an empty string. The tag key can be up to 128 characters in length, and cannot start with `acs:` or `aliyun`. The tag key cannot contain `http://` or `https://`.
+             * The tag key cannot be an empty string. The tag value can be up to 128 characters in length. It cannot start with `aliyun` or `acs:` and cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -970,10 +975,10 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of tag N. Valid values of N: 1 to 20.
+             * The tag value of the ECS instance. You can specify up to 20 tags for each ECS instance.
              * <p>
              * 
-             * The tag value can be an empty string. The tag value can be up to 128 characters in length, and cannot start with `acs:`. The tag value cannot contain `http://` or `https://`.
+             * The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with `acs:` and cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -988,208 +993,208 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
 
     }
     public static class ScalingConfigurations extends TeaModel {
-        @NameInMap("Affinity")
+        @com.aliyun.core.annotation.NameInMap("Affinity")
         private String affinity;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("CreditSpecification")
+        @com.aliyun.core.annotation.NameInMap("CreditSpecification")
         private String creditSpecification;
 
-        @NameInMap("CustomPriorities")
+        @com.aliyun.core.annotation.NameInMap("CustomPriorities")
         private java.util.List < CustomPriorities> customPriorities;
 
-        @NameInMap("DataDisks")
+        @com.aliyun.core.annotation.NameInMap("DataDisks")
         private java.util.List < DataDisks> dataDisks;
 
-        @NameInMap("DedicatedHostClusterId")
+        @com.aliyun.core.annotation.NameInMap("DedicatedHostClusterId")
         private String dedicatedHostClusterId;
 
-        @NameInMap("DedicatedHostId")
+        @com.aliyun.core.annotation.NameInMap("DedicatedHostId")
         private String dedicatedHostId;
 
-        @NameInMap("DeletionProtection")
+        @com.aliyun.core.annotation.NameInMap("DeletionProtection")
         private Boolean deletionProtection;
 
-        @NameInMap("DeploymentSetId")
+        @com.aliyun.core.annotation.NameInMap("DeploymentSetId")
         private String deploymentSetId;
 
-        @NameInMap("HostName")
+        @com.aliyun.core.annotation.NameInMap("HostName")
         private String hostName;
 
-        @NameInMap("HpcClusterId")
+        @com.aliyun.core.annotation.NameInMap("HpcClusterId")
         private String hpcClusterId;
 
-        @NameInMap("ImageFamily")
+        @com.aliyun.core.annotation.NameInMap("ImageFamily")
         private String imageFamily;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("ImageName")
+        @com.aliyun.core.annotation.NameInMap("ImageName")
         private String imageName;
 
-        @NameInMap("ImageOptionsLoginAsNonRoot")
+        @com.aliyun.core.annotation.NameInMap("ImageOptionsLoginAsNonRoot")
         private Boolean imageOptionsLoginAsNonRoot;
 
-        @NameInMap("ImageOwnerAlias")
+        @com.aliyun.core.annotation.NameInMap("ImageOwnerAlias")
         private String imageOwnerAlias;
 
-        @NameInMap("InstanceDescription")
+        @com.aliyun.core.annotation.NameInMap("InstanceDescription")
         private String instanceDescription;
 
-        @NameInMap("InstanceGeneration")
+        @com.aliyun.core.annotation.NameInMap("InstanceGeneration")
         private String instanceGeneration;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InstancePatternInfos")
+        @com.aliyun.core.annotation.NameInMap("InstancePatternInfos")
         private java.util.List < InstancePatternInfos> instancePatternInfos;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("InstanceTypes")
+        @com.aliyun.core.annotation.NameInMap("InstanceTypes")
         private java.util.List < String > instanceTypes;
 
-        @NameInMap("InternetChargeType")
+        @com.aliyun.core.annotation.NameInMap("InternetChargeType")
         private String internetChargeType;
 
-        @NameInMap("InternetMaxBandwidthIn")
+        @com.aliyun.core.annotation.NameInMap("InternetMaxBandwidthIn")
         private Integer internetMaxBandwidthIn;
 
-        @NameInMap("InternetMaxBandwidthOut")
+        @com.aliyun.core.annotation.NameInMap("InternetMaxBandwidthOut")
         private Integer internetMaxBandwidthOut;
 
-        @NameInMap("IoOptimized")
+        @com.aliyun.core.annotation.NameInMap("IoOptimized")
         private String ioOptimized;
 
-        @NameInMap("Ipv6AddressCount")
+        @com.aliyun.core.annotation.NameInMap("Ipv6AddressCount")
         private Integer ipv6AddressCount;
 
-        @NameInMap("KeyPairName")
+        @com.aliyun.core.annotation.NameInMap("KeyPairName")
         private String keyPairName;
 
-        @NameInMap("LifecycleState")
+        @com.aliyun.core.annotation.NameInMap("LifecycleState")
         private String lifecycleState;
 
-        @NameInMap("LoadBalancerWeight")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerWeight")
         private Integer loadBalancerWeight;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Integer memory;
 
-        @NameInMap("NetworkInterfaces")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaces")
         private java.util.List < NetworkInterfaces> networkInterfaces;
 
-        @NameInMap("PasswordInherit")
+        @com.aliyun.core.annotation.NameInMap("PasswordInherit")
         private Boolean passwordInherit;
 
-        @NameInMap("PrivatePoolOptions.Id")
+        @com.aliyun.core.annotation.NameInMap("PrivatePoolOptions.Id")
         private String privatePoolOptions_id;
 
-        @NameInMap("PrivatePoolOptions.MatchCriteria")
+        @com.aliyun.core.annotation.NameInMap("PrivatePoolOptions.MatchCriteria")
         private String privatePoolOptions_matchCriteria;
 
-        @NameInMap("RamRoleName")
+        @com.aliyun.core.annotation.NameInMap("RamRoleName")
         private String ramRoleName;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ScalingConfigurationId")
+        @com.aliyun.core.annotation.NameInMap("ScalingConfigurationId")
         private String scalingConfigurationId;
 
-        @NameInMap("ScalingConfigurationName")
+        @com.aliyun.core.annotation.NameInMap("ScalingConfigurationName")
         private String scalingConfigurationName;
 
-        @NameInMap("ScalingGroupId")
+        @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
         private String scalingGroupId;
 
-        @NameInMap("SchedulerOptions")
+        @com.aliyun.core.annotation.NameInMap("SchedulerOptions")
         private SchedulerOptions schedulerOptions;
 
-        @NameInMap("SecurityEnhancementStrategy")
+        @com.aliyun.core.annotation.NameInMap("SecurityEnhancementStrategy")
         private String securityEnhancementStrategy;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("SecurityGroupIds")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
         private java.util.List < String > securityGroupIds;
 
-        @NameInMap("SpotDuration")
+        @com.aliyun.core.annotation.NameInMap("SpotDuration")
         private Integer spotDuration;
 
-        @NameInMap("SpotInterruptionBehavior")
+        @com.aliyun.core.annotation.NameInMap("SpotInterruptionBehavior")
         private String spotInterruptionBehavior;
 
-        @NameInMap("SpotPriceLimits")
+        @com.aliyun.core.annotation.NameInMap("SpotPriceLimits")
         private java.util.List < SpotPriceLimits> spotPriceLimits;
 
-        @NameInMap("SpotStrategy")
+        @com.aliyun.core.annotation.NameInMap("SpotStrategy")
         private String spotStrategy;
 
-        @NameInMap("StorageSetId")
+        @com.aliyun.core.annotation.NameInMap("StorageSetId")
         private String storageSetId;
 
-        @NameInMap("StorageSetPartitionNumber")
+        @com.aliyun.core.annotation.NameInMap("StorageSetPartitionNumber")
         private Integer storageSetPartitionNumber;
 
-        @NameInMap("SystemDiskAutoSnapshotPolicyId")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskAutoSnapshotPolicyId")
         private String systemDiskAutoSnapshotPolicyId;
 
-        @NameInMap("SystemDiskBurstingEnabled")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskBurstingEnabled")
         private Boolean systemDiskBurstingEnabled;
 
-        @NameInMap("SystemDiskCategories")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskCategories")
         private java.util.List < String > systemDiskCategories;
 
-        @NameInMap("SystemDiskCategory")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskCategory")
         private String systemDiskCategory;
 
-        @NameInMap("SystemDiskDescription")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskDescription")
         private String systemDiskDescription;
 
-        @NameInMap("SystemDiskEncryptAlgorithm")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskEncryptAlgorithm")
         private String systemDiskEncryptAlgorithm;
 
-        @NameInMap("SystemDiskEncrypted")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskEncrypted")
         private Boolean systemDiskEncrypted;
 
-        @NameInMap("SystemDiskKMSKeyId")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskKMSKeyId")
         private String systemDiskKMSKeyId;
 
-        @NameInMap("SystemDiskName")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskName")
         private String systemDiskName;
 
-        @NameInMap("SystemDiskPerformanceLevel")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskPerformanceLevel")
         private String systemDiskPerformanceLevel;
 
-        @NameInMap("SystemDiskProvisionedIops")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskProvisionedIops")
         private Long systemDiskProvisionedIops;
 
-        @NameInMap("SystemDiskSize")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
         private Integer systemDiskSize;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("Tenancy")
+        @com.aliyun.core.annotation.NameInMap("Tenancy")
         private String tenancy;
 
-        @NameInMap("UserData")
+        @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
-        @NameInMap("WeightedCapacities")
+        @com.aliyun.core.annotation.NameInMap("WeightedCapacities")
         private java.util.List < Integer > weightedCapacities;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private ScalingConfigurations(Builder builder) {
@@ -1818,11 +1823,11 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * Indicates whether the instance on the dedicated host is associated with the dedicated host. Valid values:
+             * Indicates whether the ECS instance on a dedicated host is associated with the dedicated host. Valid values:
              * <p>
              * 
-             * *   default: The instance is not associated with the dedicated host. If you start an instance that was stopped in Economical Mode and the original dedicated host has insufficient resources, the instance is automatically deployed to another dedicated host in the automatic deployment resource pool.
-             * *   host: The instance is associated with the dedicated host. If you start an instance that was stopped in Economical Mode, the instance remains on the original dedicated host. If the original dedicated host has insufficient resources, the instance cannot be started.
+             * *   default: The instance is not associated with the dedicated host. If you restart an instance that was stopped in Economical Mode and the original dedicated host of the instance has insufficient resources, the instance is automatically deployed to another dedicated host in the automatic deployment resource pool.
+             * *   host: The instance is associated with the dedicated host. If you restart an instance that was stopped in Economical Mode, the instance remains on the original dedicated host. If the available resources of the original dedicated host are insufficient, the instance cannot be restarted.
              */
             public Builder affinity(String affinity) {
                 this.affinity = affinity;
@@ -1833,9 +1838,9 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
              * The number of vCPUs.
              * <p>
              * 
-             * You can specify the number of vCPUs and the memory size to determine the range of instance types. For example, you can set the Cpu parameter to 2 and the Memory parameter to 16 to specify the instance types that have 2 vCPUs and 16 GiB of memory. If you specify the Cpu and Memory parameters, Auto Scaling determines the available instance types based on factors such as I/O optimization requirements and zones. Then, Auto Scaling preferentially creates instances of the instance type that is provided at the lowest price.
+             * You can specify CPU and Memory to define the range of instance types. For example, if you set CPU to 2 and Memory to 16, the instance types that have 2 vCPUs and 16 GiB are returned. If you specify CPU and Memory, Auto Scaling determines the available instance types based on factors such as I/O optimization requirements and zones and preferentially creates instances by using the lowest-priced instance type.
              * 
-             * > You can specify CPU and memory specifications to determine the range of instance types only if the Scaling Policy parameter is set to Cost Optimization Policy and no instance type is specified in the scaling configuration.
+             * >  You can specify CPU and Memory to define instance types only when you set Scaling Policy to Cost Optimization and no instance type is specified in the scaling configuration.
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -1843,7 +1848,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the scaling configuration was created.
+             * The time at which the scaling configuration was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -1851,11 +1856,11 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The performance mode of the burstable instance. Valid values:
+             * The performance mode of the burstable instances. Valid values:
              * <p>
              * 
-             * *   Standard: standard mode. For more information, see the "Standard mode" section in the [Burstable instances](~~59977~~) topic.
-             * *   Unlimited: unlimited mode. For more information, see the "Unlimited mode" section in the [Burstable instances](~~59977~~) topic.
+             * *   Standard: the standard mode. For more information, see the "Standard mode" section in [Overview of burstable instances](~~59977~~).
+             * *   Unlimited: the unlimited mode. For more information, see the "Unlimited mode" section in [Overview of burstable instances](~~59977~~).
              */
             public Builder creditSpecification(String creditSpecification) {
                 this.creditSpecification = creditSpecification;
@@ -1863,7 +1868,16 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * CustomPriorities.
+             * The priority of the custom ECS instance type + vSwitch combination.
+             * <p>
+             * 
+             * >  This parameter takes effect only when Scaling Policy of the scaling group is set to Priority Policy.
+             * 
+             * If Auto Scaling cannot create ECS instances by using the custom ECS instance type + vSwitch combination of the highest priority, Auto Scaling creates ECS instances by using the custom ECS instance type + vSwitch combination of the next highest priority.
+             * 
+             * >  If you specified the priorities of only partial custom ECS instance type + vSwitch combinations, Auto Scaling preferentially creates ECS instances by using the custom combinations that have specified priorities. If the custom combinations that have specified priorities do not provide sufficient resources, Auto Scaling creates ECS instances by using the custom combinations that do not have specified priorities based on the specified orders of vSwitches and instance types.
+             * 
+             * *   Example: the specified order of vSwitches for your scaling group is vsw1 and vsw2 and the specified order of instance types in your scaling configuration is type1 and type 2. In addition, you use CustomPriorities to specify \["vsw2+type2", "vsw1+type2"]. In this example, the vsw2+type2 combination has the highest priority and the vsw2+type1 combination has the lowest priority. The vsw1+type2 combination has a higher priority than the vsw1+type1 combination.
              */
             public Builder customPriorities(java.util.List < CustomPriorities> customPriorities) {
                 this.customPriorities = customPriorities;
@@ -1871,7 +1885,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the data disks.
+             * The data disks.
              */
             public Builder dataDisks(java.util.List < DataDisks> dataDisks) {
                 this.dataDisks = dataDisks;
@@ -1887,10 +1901,10 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the dedicated host on which the ECS instance is created. Preemptible instances cannot be created on dedicated hosts. If you specify the DedicatedHostId parameter, the SpotStrategy and SpotPriceLimit parameters are ignored.
+             * The ID of the dedicated host on which the ECS instance is created. Preemptible instances are not supported by dedicated hosts. Therefore, if you specify DedicatedHostId, SpotStrategy and SpotPriceLimit are ignored.
              * <p>
              * 
-             * You can call the DescribeDedicatedHosts operation to query dedicated host IDs.
+             * You can call the DescribeDedicatedHosts operation to query the IDs of dedicated hosts.
              */
             public Builder dedicatedHostId(String dedicatedHostId) {
                 this.dedicatedHostId = dedicatedHostId;
@@ -1898,7 +1912,13 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * DeletionProtection.
+             * Indicates whether Release Protection is enabled for the ECS instances. You can specify this parameter to determine whether the ECS instances can be deleted by using the ECS console or calling the DeleteInstance operation. Valid values:
+             * <p>
+             * 
+             * *   true: Release Protection is enabled for the ECS instances. You cannot delete the ECS instances by using the ECS console or calling the DeleteInstance operation.
+             * *   false: Release Protection is disabled for the ECS instances. You can delete the ECS instances by using the ECS console or calling the DeleteInstance operation.
+             * 
+             * >  You can enable Release Protection for only pay-as-you-go instances to prevent unexpected instance deletion during scale-ins. The Release Protection feature does not affect normal scaling activities. In other words, an instance that meets the criteria of scale-in policies can be removed from a scaling group during a scale-in even if you enabled Release Protection for the instance.
              */
             public Builder deletionProtection(Boolean deletionProtection) {
                 this.deletionProtection = deletionProtection;
@@ -1906,7 +1926,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the deployment set to which the Elastic Compute Service (ECS) instance belongs.
+             * The ID of the deployment set to which the Elastic Compute Service (ECS) instances belong.
              */
             public Builder deploymentSetId(String deploymentSetId) {
                 this.deploymentSetId = deploymentSetId;
@@ -1914,7 +1934,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The hostname of the ECS instance.
+             * The hostname series of the ECS instances.
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -1922,7 +1942,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Elastic High Performance Computing (E-HPC) cluster to which the ECS instance belongs.
+             * The ID of the High Performance Computing (HPC) cluster to which the ECS instances belong.
              */
             public Builder hpcClusterId(String hpcClusterId) {
                 this.hpcClusterId = hpcClusterId;
@@ -1930,7 +1950,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image family. If you specify this parameter, the latest custom images that are available in the specified image family are returned. You can use the images to create instances. If the ImageId parameter is specified, you cannot specify the ImageFamily parameter.
+             * The name of the image family. You can specify this parameter to obtain the latest available images in the current image family for instance creation. If you specify `ImageId`, you cannot specify this parameter.
              */
             public Builder imageFamily(String imageFamily) {
                 this.imageFamily = imageFamily;
@@ -1938,7 +1958,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image that is used by Auto Scaling to create instances.
+             * The ID of the image file that provides the image resource for Auto Scaling to create ECS instances.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -1954,11 +1974,11 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * ECS实例是否使用ecs-user用户登录。可能值：
+             * Indicates whether the ecs-user username can be used to log on to an ECS instance created from the scaling configuration. Valid values:
              * <p>
              * 
-             * - true：是。
-             * - false：否。
+             * *   true
+             * *   false
              */
             public Builder imageOptionsLoginAsNonRoot(Boolean imageOptionsLoginAsNonRoot) {
                 this.imageOptionsLoginAsNonRoot = imageOptionsLoginAsNonRoot;
@@ -1969,10 +1989,10 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
              * The source of the image. Valid values:
              * <p>
              * 
-             * *   system: public images provided by Alibaba Cloud
-             * *   self: custom images that you create
-             * *   others: shared images from other Alibaba Cloud accounts or community images published by other Alibaba Cloud accounts
-             * *   marketplace: images that are available in Alibaba Cloud Marketplace
+             * *   system: a public image provided by Alibaba Cloud
+             * *   self: a custom image that you created
+             * *   others: a shared image from another Alibaba Cloud account or a community image published by another Alibaba Cloud account
+             * *   marketplace: an Alibaba Cloud Marketplace image
              */
             public Builder imageOwnerAlias(String imageOwnerAlias) {
                 this.imageOwnerAlias = imageOwnerAlias;
@@ -1980,7 +2000,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the ECS instance.
+             * The description of the ECS instances.
              */
             public Builder instanceDescription(String instanceDescription) {
                 this.instanceDescription = instanceDescription;
@@ -1988,7 +2008,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The generation of the ECS instance.
+             * The generation of the ECS instances.
              */
             public Builder instanceGeneration(String instanceGeneration) {
                 this.instanceGeneration = instanceGeneration;
@@ -1996,7 +2016,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the ECS instance.
+             * The naming series of the ECS instances.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -2004,7 +2024,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the intelligent configuration settings, which determines the range of instance types that meet the specified criteria.
+             * The information about the intelligent configuration settings, which determines the available instance types.
              */
             public Builder instancePatternInfos(java.util.List < InstancePatternInfos> instancePatternInfos) {
                 this.instancePatternInfos = instancePatternInfos;
@@ -2012,7 +2032,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the ECS instance.
+             * The instance type of the ECS instances.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -2020,7 +2040,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the ECS instance types.
+             * The ECS instance types.
              */
             public Builder instanceTypes(java.util.List < String > instanceTypes) {
                 this.instanceTypes = instanceTypes;
@@ -2031,8 +2051,8 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
              * The billing method for network usage. Valid values:
              * <p>
              * 
-             * *   PayByBandwidth: You are charged for the maximum available bandwidth that is specified by the InternetMaxBandwidthOut parameter.
-             * *   PayByTraffic: You are charged for the actual data transfer. The InternetMaxBandwidthOut parameter specifies only the maximum available bandwidth.
+             * *   PayByBandwidth: pay-by-bandwidth. You are charged for the bandwidth that you specified by using InternetMaxBandwidthOut.
+             * *   PayByTraffic: pay-by-traffic. You are charged for the actual traffic that you used. InternetMaxBandwidthOut specifies only the maximum available bandwidth.
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -2040,7 +2060,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum inbound public bandwidth. Unit: Mbit/s. Valid values: 1 to 200.
+             * The maximum inbound bandwidth. Unit: Mbit/s. Valid values: 1 to 200.
              */
             public Builder internetMaxBandwidthIn(Integer internetMaxBandwidthIn) {
                 this.internetMaxBandwidthIn = internetMaxBandwidthIn;
@@ -2048,11 +2068,11 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum outbound public bandwidth. Unit: Mbit/s. Valid values:
+             * The maximum outbound bandwidth. Unit: Mbit/s. Valid values:
              * <p>
              * 
-             * *   0 to 100 if you set the InternetChargeType parameter to PayByBandwidth. If you leave this parameter empty, this parameter is automatically set to 0.
-             * *   0 to 100 if you set the InternetChargeType parameter to PayByTraffic. If you leave this parameter empty, an error is reported.
+             * *   0 to 1024 if you set InternetChargeType to PayByBandwidth. If you leave this parameter empty, this parameter is automatically set to 0.
+             * *   0 to 1024 if you set InternetChargeType to PayByTraffic. If you leave this parameter empty, an error is returned.
              */
             public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
                 this.internetMaxBandwidthOut = internetMaxBandwidthOut;
@@ -2060,11 +2080,11 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instance is I/O optimized. Valid values:
+             * Indicates whether the ECS instances are I/O optimized. Valid values:
              * <p>
              * 
-             * *   none: The instance is not I/O optimized.
-             * *   optimized: The instance is I/O optimized.
+             * *   none: The ECS instances are not I/O optimized.
+             * *   optimized: The ECS instances are I/O optimized.
              */
             public Builder ioOptimized(String ioOptimized) {
                 this.ioOptimized = ioOptimized;
@@ -2080,7 +2100,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the key pair that is used to log on to the ECS instance.
+             * The name of the key pair that is used to log on to an ECS instance created from the scaling configuration.
              */
             public Builder keyPairName(String keyPairName) {
                 this.keyPairName = keyPairName;
@@ -2091,8 +2111,8 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
              * The status of the scaling configuration in the scaling group. Valid values:
              * <p>
              * 
-             * *   Active: The scaling configuration is active in the scaling group. Auto Scaling uses the active scaling configuration to automatically create ECS instances.
-             * *   Inactive: The scaling configuration is inactive in the scaling group. Auto Scaling does not use inactive scaling configurations to automatically create ECS instances. Inactive scaling configurations are retained in the scaling group.
+             * *   Active: The scaling configuration is active in the scaling group. Auto Scaling uses the scaling configuration that is in the Active state to create ECS instances during scale-outs.
+             * *   Inactive: The scaling configuration is inactive in the scaling group. Scaling configurations that are in the Inactive state are still contained in the scaling group, but Auto Scaling does not use the inactive scaling configurations to create ECS instances during scale-outs.
              */
             public Builder lifecycleState(String lifecycleState) {
                 this.lifecycleState = lifecycleState;
@@ -2100,7 +2120,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The weight of the ECS instance as a backend server. Valid values: 1 to 100.
+             * The weight of an ECS instance as a backend server. Valid values: 1 to 100.
              */
             public Builder loadBalancerWeight(Integer loadBalancerWeight) {
                 this.loadBalancerWeight = loadBalancerWeight;
@@ -2111,9 +2131,9 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
              * The memory size. Unit: GiB.
              * <p>
              * 
-             * You can specify the number of vCPUs and the memory size to determine the range of instance types. For example, you can set the Cpu parameter to 2 and the Memory parameter to 16 to specify the instance types that have 2 vCPUs and 16 GiB of memory. If you specify the Cpu and Memory parameters, Auto Scaling determines the available instance types based on factors such as I/O optimization requirements and zones. Then, Auto Scaling preferentially creates instances of the instance type that is provided at the lowest price.
+             * You can specify CPU and Memory to define the range of instance types. For example, if you set CPU to 2 and Memory to 16, the instance types that have 2 vCPUs and 16 GiB are returned. If you specify CPU and Memory, Auto Scaling determines the available instance types based on factors such as I/O optimization requirements and zones and preferentially creates instances by using the lowest-priced instance type.
              * 
-             * > You can specify CPU and memory specifications to determine the range of instance types only if the Scaling Policy parameter is set to Cost Optimization Policy and no instance type is specified in the scaling configuration.
+             * >  You can specify CPU and Memory to define instance types only when you set Scaling Policy to Cost Optimization and no instance type is specified in the scaling configuration.
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -2121,7 +2141,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkInterfaces.
+             * The ENIs.
              */
             public Builder networkInterfaces(java.util.List < NetworkInterfaces> networkInterfaces) {
                 this.networkInterfaces = networkInterfaces;
@@ -2153,7 +2173,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the RAM role that is associated with the ECS instance. The name is provided and maintained by Resource Access Management (RAM). You can call the ListRoles operation to query the available RAM roles.
+             * The name of the Resource Access Management (RAM) role assumed by the ECS instances. This name is provided and maintained by RAM. You can call the ListRoles operation to query the available RAM roles.
              */
             public Builder ramRoleName(String ramRoleName) {
                 this.ramRoleName = ramRoleName;
@@ -2161,7 +2181,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the ECS instance belongs.
+             * The ID of the resource group to which the ECS instances belong.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -2193,7 +2213,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is in invitational preview and is unavailable.
+             * >  This parameter is in invitational preview and is not available for use.
              */
             public Builder schedulerOptions(SchedulerOptions schedulerOptions) {
                 this.schedulerOptions = schedulerOptions;
@@ -2201,11 +2221,11 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether security hardening is enabled. Valid values:
+             * Indicates whether Security Hardening is enabled. Valid values:
              * <p>
              * 
-             * *   Active: Security hardening is enabled. This value is available only to public images.
-             * *   Deactive: Security hardening is disabled. This value is available to all types of images.
+             * *   Active: Security Hardening is enabled. This value is applicable to only public images.
+             * *   Deactive: Security Hardening is disabled. This value is applicable to all images.
              */
             public Builder securityEnhancementStrategy(String securityEnhancementStrategy) {
                 this.securityEnhancementStrategy = securityEnhancementStrategy;
@@ -2213,7 +2233,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security group with which the ECS instance is associated. ECS instances that are associated with the same security group can access each other.
+             * The ID of the security group to which the ECS instances belong. ECS instances that belong to the same security group can communicate with each other.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -2221,7 +2241,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the security groups with which the ECS instance is associated. ECS instances that are associated with the same security group can access each other.
+             * The IDs of the security groups to which the ECS instances belong. ECS instances that belong to the same security group can communicate with each other.
              */
             public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
@@ -2229,7 +2249,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The protection period of the preemptible instance. Unit: hours.
+             * The protection period of the preemptible instances. Unit: hours.
              */
             public Builder spotDuration(Integer spotDuration) {
                 this.spotDuration = spotDuration;
@@ -2237,7 +2257,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The interruption mode of the preemptible instance.
+             * The interruption event of the preemptible instances.
              */
             public Builder spotInterruptionBehavior(String spotInterruptionBehavior) {
                 this.spotInterruptionBehavior = spotInterruptionBehavior;
@@ -2245,7 +2265,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the preemptible instances.
+             * The information about the preemptible instances.
              */
             public Builder spotPriceLimits(java.util.List < SpotPriceLimits> spotPriceLimits) {
                 this.spotPriceLimits = spotPriceLimits;
@@ -2253,12 +2273,12 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The preemption policy that is applied to pay-as-you-go instances and preemptible instances. Valid values:
+             * The preemption policy that is applied to the pay-as-you-go instance. Valid values:
              * <p>
              * 
              * *   NoSpot: The instance is created as a pay-as-you-go instance.
              * *   SpotWithPriceLimit: The instance is a preemptible instance that has a user-defined maximum hourly price.
-             * *   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.
+             * *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -2266,7 +2286,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * StorageSetId.
+             * The ID of the storage set.
              */
             public Builder storageSetId(String storageSetId) {
                 this.storageSetId = storageSetId;
@@ -2274,7 +2294,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * StorageSetPartitionNumber.
+             * The maximum number of partitions in the storage set. The value is an integer that is greater than or equal to 2.
              */
             public Builder storageSetPartitionNumber(Integer storageSetPartitionNumber) {
                 this.storageSetPartitionNumber = storageSetPartitionNumber;
@@ -2290,13 +2310,13 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the burst feature is enabled for the system disk. Valid values:
+             * Indicates whether the Performance Burst feature is enabled for the system disk. Valid values:
              * <p>
              * 
              * *   true
              * *   false
              * 
-             * > This parameter is available only if you set the SystemDisk.Category parameter to cloud_auto.
+             * >  This parameter is available only when you set SystemDisk.Category to cloud_auto.
              */
             public Builder systemDiskBurstingEnabled(Boolean systemDiskBurstingEnabled) {
                 this.systemDiskBurstingEnabled = systemDiskBurstingEnabled;
@@ -2304,7 +2324,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The categories of the system disks. The values are sorted based on their priorities. The first value has the highest priority. If Auto Scaling cannot create instances by using the disk that has the highest priority, Auto Scaling creates instances by using the disk that has the next highest priority. Valid values:
+             * The categories of the system disks. The values are sorted based on their priorities. The first value has the highest priority. If Auto Scaling cannot create instances by using the disk category of the highest priority, Auto Scaling creates instances by using the disk category of the next highest priority. Valid values:
              * <p>
              * 
              * *   cloud: basic disk
@@ -2324,9 +2344,9 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
              * *   cloud: basic disk
              * *   cloud_efficiency: ultra disk
              * *   cloud_ssd: standard SSD
-             * *   ephemeral_ssd: local standard SSD
+             * *   ephemeral_ssd: local SSD
              * *   cloud_essd: enhanced SSD (ESSD)
-             * *   cloud_auto: ESSD AutoPL disk
+             * *   cloud_auto: ESSD AutoPL
              */
             public Builder systemDiskCategory(String systemDiskCategory) {
                 this.systemDiskCategory = systemDiskCategory;
@@ -2342,7 +2362,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The algorithm that is used to encrypt the system disk. Valid values:
+             * The encryption algorithm that is applied to the system disk. Valid values:
              * <p>
              * 
              * *   AES-256
@@ -2366,7 +2386,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the KMS key that is used to encrypt the system disk.
+             * The ID of the KMS key that is applied to the system disk.
              */
             public Builder systemDiskKMSKeyId(String systemDiskKMSKeyId) {
                 this.systemDiskKMSKeyId = systemDiskKMSKeyId;
@@ -2382,7 +2402,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The performance level (PL) of the system disk of the ESSD category.
+             * The performance level (PL) of the system disk that is an ESSD.
              */
             public Builder systemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
                 this.systemDiskPerformanceLevel = systemDiskPerformanceLevel;
@@ -2390,10 +2410,10 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The provisioned IOPS for the system disk.
+             * The provisioned IOPS of the system disk.
              * <p>
              * 
-             * > IOPS measures the number of read and write operations that an EBS device can process per second.
+             * >  IOPS measures the number of read and write operations that an EBS device can process per second.
              */
             public Builder systemDiskProvisionedIops(Long systemDiskProvisionedIops) {
                 this.systemDiskProvisionedIops = systemDiskProvisionedIops;
@@ -2409,7 +2429,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the tags.
+             * The tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -2417,11 +2437,11 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instance is created on a dedicated host. Valid values:
+             * Indicates whether the ECS instance is created on a dedicated host. Valid values:
              * <p>
              * 
-             * *   default: The instance is created on a non-dedicated host.
-             * *   host: The instance is created on a dedicated host. If you do not specify the DedicatedHostId parameter, Alibaba Cloud selects a dedicated host for the instance.
+             * *   default: The ECS instance is created on a non-dedicated host.
+             * *   host: The ECS instance is created on a dedicated host. If you do not specify DedicatedHostId, the system selects a dedicated host for the ECS instance.
              * 
              * Default value: default.
              */
@@ -2431,7 +2451,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The user data of the ECS instance.
+             * The user data of the ECS instances.
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -2439,7 +2459,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The weight of the instance type. The weight of an instance type indicates the capacity of an instance of the specified instance type in the scaling group. A higher weight indicates that a smaller number of instances of the specified instance type are required to meet the expected capacity requirement.
+             * The weights of the instance types. The value of this parameter indicates the capacity of an instance of the specified instance type in the scaling group. A higher weight indicates that a smaller number of instances of the instance type are required to meet the expected capacity requirement.
              */
             public Builder weightedCapacities(java.util.List < Integer > weightedCapacities) {
                 this.weightedCapacities = weightedCapacities;
@@ -2447,7 +2467,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID of the ECS instance. You can call the DescribeZones operation to query the most recent zone list.
+             * The ID of the zone in which the ECS instances are created. You can call the DescribeZones operation to query the zone IDs.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

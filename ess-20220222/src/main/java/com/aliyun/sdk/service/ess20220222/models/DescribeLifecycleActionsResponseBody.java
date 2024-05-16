@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLifecycleActionsResponseBody</p>
  */
 public class DescribeLifecycleActionsResponseBody extends TeaModel {
-    @NameInMap("LifecycleActions")
+    @com.aliyun.core.annotation.NameInMap("LifecycleActions")
     private java.util.List < LifecycleActions> lifecycleActions;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeLifecycleActionsResponseBody(Builder builder) {
@@ -132,19 +131,19 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
     } 
 
     public static class LifecycleActions extends TeaModel {
-        @NameInMap("InstanceIds")
+        @com.aliyun.core.annotation.NameInMap("InstanceIds")
         private java.util.List < String > instanceIds;
 
-        @NameInMap("LifecycleActionResult")
+        @com.aliyun.core.annotation.NameInMap("LifecycleActionResult")
         private String lifecycleActionResult;
 
-        @NameInMap("LifecycleActionStatus")
+        @com.aliyun.core.annotation.NameInMap("LifecycleActionStatus")
         private String lifecycleActionStatus;
 
-        @NameInMap("LifecycleActionToken")
+        @com.aliyun.core.annotation.NameInMap("LifecycleActionToken")
         private String lifecycleActionToken;
 
-        @NameInMap("LifecycleHookId")
+        @com.aliyun.core.annotation.NameInMap("LifecycleHookId")
         private String lifecycleHookId;
 
         private LifecycleActions(Builder builder) {

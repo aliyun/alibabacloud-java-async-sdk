@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,51 +11,51 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ScaleWithAdjustmentRequest</p>
  */
 public class ScaleWithAdjustmentRequest extends Request {
-    @Query
-    @NameInMap("ActivityMetadata")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ActivityMetadata")
     private String activityMetadata;
 
-    @Query
-    @NameInMap("AdjustmentType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdjustmentType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String adjustmentType;
 
-    @Query
-    @NameInMap("AdjustmentValue")
-    @Validation(required = true, maximum = 2147483647)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdjustmentValue")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 2147483647)
     private Integer adjustmentValue;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("LifecycleHookContext")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LifecycleHookContext")
     private LifecycleHookContext lifecycleHookContext;
 
-    @Query
-    @NameInMap("MinAdjustmentMagnitude")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinAdjustmentMagnitude")
     private Integer minAdjustmentMagnitude;
 
-    @Query
-    @NameInMap("Overrides")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Overrides")
     private Overrides overrides;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ScalingGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scalingGroupId;
 
-    @Query
-    @NameInMap("SyncActivity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SyncActivity")
     private Boolean syncActivity;
 
     private ScaleWithAdjustmentRequest(Builder builder) {
@@ -197,7 +196,7 @@ public class ScaleWithAdjustmentRequest extends Request {
         } 
 
         /**
-         * ActivityMetadata.
+         * The metadata of the scaling activity.
          */
         public Builder activityMetadata(String activityMetadata) {
             this.putQueryParameter("ActivityMetadata", activityMetadata);
@@ -243,7 +242,7 @@ public class ScaleWithAdjustmentRequest extends Request {
         }
 
         /**
-         * LifecycleHookContext.
+         * The context of the lifecycle hook.
          */
         public Builder lifecycleHookContext(LifecycleHookContext lifecycleHookContext) {
             String lifecycleHookContextShrink = shrink(lifecycleHookContext, "LifecycleHookContext", "json");
@@ -262,7 +261,7 @@ public class ScaleWithAdjustmentRequest extends Request {
         }
 
         /**
-         * Overrides.
+         * The overrides that allow you to adjust the scaling group of the Elastic Container Instance type during a scale-out.
          */
         public Builder overrides(Overrides overrides) {
             String overridesShrink = shrink(overrides, "Overrides", "json");
@@ -323,10 +322,10 @@ public class ScaleWithAdjustmentRequest extends Request {
     } 
 
     public static class LifecycleHookContext extends TeaModel {
-        @NameInMap("DisableLifecycleHook")
+        @com.aliyun.core.annotation.NameInMap("DisableLifecycleHook")
         private Boolean disableLifecycleHook;
 
-        @NameInMap("IgnoredLifecycleHookIds")
+        @com.aliyun.core.annotation.NameInMap("IgnoredLifecycleHookIds")
         private java.util.List < String > ignoredLifecycleHookIds;
 
         private LifecycleHookContext(Builder builder) {
@@ -361,7 +360,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             private java.util.List < String > ignoredLifecycleHookIds; 
 
             /**
-             * DisableLifecycleHook.
+             * Specifies whether to disable the lifecycle hook.
              */
             public Builder disableLifecycleHook(Boolean disableLifecycleHook) {
                 this.disableLifecycleHook = disableLifecycleHook;
@@ -369,7 +368,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             }
 
             /**
-             * IgnoredLifecycleHookIds.
+             * The IDs of the lifecycle hooks that you want to disable.
              */
             public Builder ignoredLifecycleHookIds(java.util.List < String > ignoredLifecycleHookIds) {
                 this.ignoredLifecycleHookIds = ignoredLifecycleHookIds;
@@ -384,10 +383,10 @@ public class ScaleWithAdjustmentRequest extends Request {
 
     }
     public static class EnvironmentVars extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private EnvironmentVars(Builder builder) {
@@ -422,7 +421,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The name of the environment variable. The name must be 1 to 128 characters in length and can contain letters, underscores (\_), and digits. The name cannot start with a digit. Specify the value in the `[0-9a-zA-Z]` format.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -430,7 +429,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the environment variable. The value can be up to 256 characters in length.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -445,22 +444,22 @@ public class ScaleWithAdjustmentRequest extends Request {
 
     }
     public static class ContainerOverrides extends TeaModel {
-        @NameInMap("Args")
+        @com.aliyun.core.annotation.NameInMap("Args")
         private java.util.List < String > args;
 
-        @NameInMap("Commands")
+        @com.aliyun.core.annotation.NameInMap("Commands")
         private java.util.List < String > commands;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Float cpu;
 
-        @NameInMap("EnvironmentVars")
+        @com.aliyun.core.annotation.NameInMap("EnvironmentVars")
         private java.util.List < EnvironmentVars> environmentVars;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Float memory;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private ContainerOverrides(Builder builder) {
@@ -531,7 +530,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             private String name; 
 
             /**
-             * Args.
+             * The container startup arguments. You can specify up to 10 arguments.
              */
             public Builder args(java.util.List < String > args) {
                 this.args = args;
@@ -539,7 +538,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             }
 
             /**
-             * Commands.
+             * The container startup commands. You can specify up to 20 commands. Each command contains up to 256 characters.
              */
             public Builder commands(java.util.List < String > commands) {
                 this.commands = commands;
@@ -547,7 +546,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             }
 
             /**
-             * Cpu.
+             * The number of vCPUs that you want to allocate to the container.
              */
             public Builder cpu(Float cpu) {
                 this.cpu = cpu;
@@ -555,7 +554,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             }
 
             /**
-             * EnvironmentVars.
+             * The information about the environment variables.
              */
             public Builder environmentVars(java.util.List < EnvironmentVars> environmentVars) {
                 this.environmentVars = environmentVars;
@@ -563,7 +562,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             }
 
             /**
-             * Memory.
+             * The memory size that you want to allocate to the container. Unit: GiB.
              */
             public Builder memory(Float memory) {
                 this.memory = memory;
@@ -571,7 +570,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             }
 
             /**
-             * Name.
+             * The container name. If you specify ContainerOverrides, you must also specify Name. ContainerOverrides takes effect only when the container name specified by Name matches that specified in the scaling configuration.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -586,13 +585,13 @@ public class ScaleWithAdjustmentRequest extends Request {
 
     }
     public static class Overrides extends TeaModel {
-        @NameInMap("ContainerOverrides")
+        @com.aliyun.core.annotation.NameInMap("ContainerOverrides")
         private java.util.List < ContainerOverrides> containerOverrides;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Float cpu;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Float memory;
 
         private Overrides(Builder builder) {
@@ -636,7 +635,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             private Float memory; 
 
             /**
-             * ContainerOverrides.
+             * The list of parameters that you want to use to override specific configurations for containers.
              */
             public Builder containerOverrides(java.util.List < ContainerOverrides> containerOverrides) {
                 this.containerOverrides = containerOverrides;
@@ -644,7 +643,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             }
 
             /**
-             * Cpu.
+             * The number of vCPUs that you want to allocate to the instance.
              */
             public Builder cpu(Float cpu) {
                 this.cpu = cpu;
@@ -652,7 +651,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             }
 
             /**
-             * Memory.
+             * The memory size that you want to allocate to the instance. Unit: GiB.
              */
             public Builder memory(Float memory) {
                 this.memory = memory;

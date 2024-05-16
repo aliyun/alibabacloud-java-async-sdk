@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLifecycleHooksRequest</p>
  */
 public class DescribeLifecycleHooksRequest extends Request {
-    @Query
-    @NameInMap("LifecycleHookIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LifecycleHookIds")
     private java.util.List < String > lifecycleHookIds;
 
-    @Query
-    @NameInMap("LifecycleHookName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LifecycleHookName")
     private String lifecycleHookName;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ScalingGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
     private String scalingGroupId;
 
     private DescribeLifecycleHooksRequest(Builder builder) {
@@ -166,7 +165,7 @@ public class DescribeLifecycleHooksRequest extends Request {
         } 
 
         /**
-         * LifecycleHookIds.
+         * The ID of the lifecycle hook.
          */
         public Builder lifecycleHookIds(java.util.List < String > lifecycleHookIds) {
             this.putQueryParameter("LifecycleHookIds", lifecycleHookIds);
@@ -175,7 +174,7 @@ public class DescribeLifecycleHooksRequest extends Request {
         }
 
         /**
-         * LifecycleHookName.
+         * The name of the lifecycle hook.
          */
         public Builder lifecycleHookName(String lifecycleHookName) {
             this.putQueryParameter("LifecycleHookName", lifecycleHookName);
@@ -202,7 +201,10 @@ public class DescribeLifecycleHooksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page 1.
+         * <p>
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -211,7 +213,10 @@ public class DescribeLifecycleHooksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: 50.
+         * <p>
+         * 
+         * Default value: 50.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -220,7 +225,7 @@ public class DescribeLifecycleHooksRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the scaling group.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -238,7 +243,7 @@ public class DescribeLifecycleHooksRequest extends Request {
         }
 
         /**
-         * ScalingGroupId.
+         * The ID of the scaling group.
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);

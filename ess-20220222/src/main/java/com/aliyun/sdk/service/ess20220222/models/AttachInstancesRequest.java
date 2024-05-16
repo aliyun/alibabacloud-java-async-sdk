@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,49 +11,49 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AttachInstancesRequest</p>
  */
 public class AttachInstancesRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Entrusted")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Entrusted")
     private Boolean entrusted;
 
-    @Query
-    @NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private java.util.List < String > instanceIds;
 
-    @Query
-    @NameInMap("LifecycleHook")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LifecycleHook")
     private Boolean lifecycleHook;
 
-    @Query
-    @NameInMap("LoadBalancerWeights")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerWeights")
     private java.util.List < Integer > loadBalancerWeights;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ScalingGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scalingGroupId;
 
     private AttachInstancesRequest(Builder builder) {
@@ -195,7 +194,7 @@ public class AttachInstancesRequest extends Request {
         } 
 
         /**
-         * 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。只支持ASCII字符，且不能超过64个字符。更多信息，请参见[如何保证幂等性](~~25965~~)。
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -204,13 +203,13 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether the scaling group manages the lifecycles of instances that are manually added to the scaling group. Valid values:
+         * Specifies whether to use the scaling group to manage the lifecycles of manually added instances. Valid values:
          * <p>
          * 
-         * *   true: The scaling group manages the lifecycles of instances that are manually added in a similar manner in which the scaling group manages the lifecycles of automatically created instances. After Auto Scaling removes instances from the scaling group, Auto Scaling releases the instances. After you call the DetachInstances operation to remove instances from the scaling group, Auto Scaling does not release the instances.
-         * *   false: The scaling group does not manage the lifecycles of instances that are manually added. After Auto Scaling removes instances from the scaling group, Auto Scaling does not release the instances.
+         * *   true: The scaling group manages the lifecycles of manually added instances and automatically created instances in the same manner. In this case, Auto Scaling releases the instances when they are removed from the scaling group. This rule does not apply to instances that are removed by calling the DetachInstances operation.
+         * *   false: The scaling group does not manage the lifecycles of manually added instances. In this case, Auto Scaling does not release the instances when they are removed from the scaling group.
          * 
-         * > You cannot specify this parameter for subscription instances.
+         * >  You cannot specify this parameter for subscription instances, non-Alibaba Cloud instances, and instances in Economical Mode.
          * 
          * Default value: false.
          */
@@ -221,7 +220,7 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * The IDs of the ECS instances or elastic container instances that you want to add.
+         * The IDs of the ECS instances, elastic container instances, non-Alibaba Cloud instances, or instances in Economical Mode.
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -230,11 +229,13 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to trigger a lifecycle hook for a scale-out activity. Valid values:
+         * Specifies whether to trigger the lifecycle hook for scale-outs when you call this operation. Valid values:
          * <p>
          * 
          * *   true
          * *   false
+         * 
+         * >  You cannot specify this parameter for subscription instances and instances in Economical Mode.
          * 
          * Default value: false.
          */
@@ -245,7 +246,7 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * The weights of the ECS instances or elastic container instances as the backend servers of the associated Classic Load Balancer (CLB) instance.
+         * The weight of an ECS instance or elastic container instance as a backend server. You can use this parameter to specify weights for multiple instances at the same time.
          */
         public Builder loadBalancerWeights(java.util.List < Integer > loadBalancerWeights) {
             this.putQueryParameter("LoadBalancerWeights", loadBalancerWeights);

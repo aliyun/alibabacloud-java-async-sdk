@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ScaleWithAdjustmentResponseBody</p>
  */
 public class ScaleWithAdjustmentResponseBody extends TeaModel {
-    @NameInMap("ActivityType")
+    @com.aliyun.core.annotation.NameInMap("ActivityType")
     private String activityType;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ScalingActivityId")
+    @com.aliyun.core.annotation.NameInMap("ScalingActivityId")
     private String scalingActivityId;
 
     private ScaleWithAdjustmentResponseBody(Builder builder) {
@@ -62,10 +61,7 @@ public class ScaleWithAdjustmentResponseBody extends TeaModel {
         private String scalingActivityId; 
 
         /**
-         * 伸缩活动的类型。
-         * <p>
-         * 
-         * 当ActivityType为CapacityChange时，表示返回值ScalingActivityId对应伸缩活动仅修改伸缩组期望实例数，没有立刻执行扩缩。适用范围：期望实例数类型伸缩组。
+         * ActivityType.
          */
         public Builder activityType(String activityType) {
             this.activityType = activityType;

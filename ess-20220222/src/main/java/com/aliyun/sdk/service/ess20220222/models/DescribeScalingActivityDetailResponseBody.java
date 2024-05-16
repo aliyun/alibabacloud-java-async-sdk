@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeScalingActivityDetailResponseBody</p>
  */
 public class DescribeScalingActivityDetailResponseBody extends TeaModel {
-    @NameInMap("Detail")
+    @com.aliyun.core.annotation.NameInMap("Detail")
     private String detail;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ScalingActivityId")
+    @com.aliyun.core.annotation.NameInMap("ScalingActivityId")
     private String scalingActivityId;
 
     private DescribeScalingActivityDetailResponseBody(Builder builder) {
@@ -62,7 +61,7 @@ public class DescribeScalingActivityDetailResponseBody extends TeaModel {
         private String scalingActivityId; 
 
         /**
-         * The details about the event.
+         * Details of the scaling activity.
          */
         public Builder detail(String detail) {
             this.detail = detail;

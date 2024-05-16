@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,35 +11,35 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DetachAlbServerGroupsRequest</p>
  */
 public class DetachAlbServerGroupsRequest extends Request {
-    @Query
-    @NameInMap("AlbServerGroups")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlbServerGroups")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < AlbServerGroups> albServerGroups;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("ForceDetach")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForceDetach")
     private Boolean forceDetach;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ScalingGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scalingGroupId;
 
     private DetachAlbServerGroupsRequest(Builder builder) {
@@ -220,12 +219,12 @@ public class DetachAlbServerGroupsRequest extends Request {
     } 
 
     public static class AlbServerGroups extends TeaModel {
-        @NameInMap("AlbServerGroupId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("AlbServerGroupId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String albServerGroupId;
 
-        @NameInMap("Port")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Port")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer port;
 
         private AlbServerGroups(Builder builder) {

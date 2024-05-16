@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ApplyEciScalingConfigurationResponseBody</p>
  */
 public class ApplyEciScalingConfigurationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ScalingConfigurationId")
+    @com.aliyun.core.annotation.NameInMap("ScalingConfigurationId")
     private String scalingConfigurationId;
 
     private ApplyEciScalingConfigurationResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class ApplyEciScalingConfigurationResponseBody extends TeaModel {
         private String scalingConfigurationId; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +57,7 @@ public class ApplyEciScalingConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * ScalingConfigurationId.
+         * The ID of the scaling configuration.
          */
         public Builder scalingConfigurationId(String scalingConfigurationId) {
             this.scalingConfigurationId = scalingConfigurationId;

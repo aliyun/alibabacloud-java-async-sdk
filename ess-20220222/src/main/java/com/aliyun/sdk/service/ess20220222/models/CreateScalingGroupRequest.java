@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,187 +11,187 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateScalingGroupRequest</p>
  */
 public class CreateScalingGroupRequest extends Request {
-    @Query
-    @NameInMap("AlbServerGroups")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlbServerGroups")
     private java.util.List < AlbServerGroups> albServerGroups;
 
-    @Query
-    @NameInMap("AllocationStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllocationStrategy")
     private String allocationStrategy;
 
-    @Query
-    @NameInMap("AzBalance")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AzBalance")
     private Boolean azBalance;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("CompensateWithOnDemand")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CompensateWithOnDemand")
     private Boolean compensateWithOnDemand;
 
-    @Query
-    @NameInMap("ContainerGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerGroupId")
     private String containerGroupId;
 
-    @Query
-    @NameInMap("CustomPolicyARN")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomPolicyARN")
     private String customPolicyARN;
 
-    @Query
-    @NameInMap("DBInstanceIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceIds")
     private String DBInstanceIds;
 
-    @Query
-    @NameInMap("DBInstances")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstances")
     private java.util.List < DBInstances> DBInstances;
 
-    @Query
-    @NameInMap("DefaultCooldown")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefaultCooldown")
     private Integer defaultCooldown;
 
-    @Query
-    @NameInMap("DesiredCapacity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesiredCapacity")
     private Integer desiredCapacity;
 
-    @Query
-    @NameInMap("GroupDeletionProtection")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupDeletionProtection")
     private Boolean groupDeletionProtection;
 
-    @Query
-    @NameInMap("GroupType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupType")
     private String groupType;
 
-    @Query
-    @NameInMap("HealthCheckType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckType")
     private String healthCheckType;
 
-    @Query
-    @NameInMap("HealthCheckTypes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckTypes")
     private java.util.List < String > healthCheckTypes;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("LaunchTemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LaunchTemplateId")
     private String launchTemplateId;
 
-    @Query
-    @NameInMap("LaunchTemplateOverrides")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LaunchTemplateOverrides")
     private java.util.List < LaunchTemplateOverrides> launchTemplateOverrides;
 
-    @Query
-    @NameInMap("LaunchTemplateVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LaunchTemplateVersion")
     private String launchTemplateVersion;
 
-    @Query
-    @NameInMap("LifecycleHooks")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LifecycleHooks")
     private java.util.List < LifecycleHooks> lifecycleHooks;
 
-    @Query
-    @NameInMap("LoadBalancerConfigs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerConfigs")
     private java.util.List < LoadBalancerConfigs> loadBalancerConfigs;
 
-    @Query
-    @NameInMap("LoadBalancerIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerIds")
     private String loadBalancerIds;
 
-    @Query
-    @NameInMap("MaxInstanceLifetime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxInstanceLifetime")
     private Integer maxInstanceLifetime;
 
-    @Query
-    @NameInMap("MaxSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer maxSize;
 
-    @Query
-    @NameInMap("MinSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer minSize;
 
-    @Query
-    @NameInMap("MultiAZPolicy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MultiAZPolicy")
     private String multiAZPolicy;
 
-    @Query
-    @NameInMap("OnDemandBaseCapacity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OnDemandBaseCapacity")
     private Integer onDemandBaseCapacity;
 
-    @Query
-    @NameInMap("OnDemandPercentageAboveBaseCapacity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OnDemandPercentageAboveBaseCapacity")
     private Integer onDemandPercentageAboveBaseCapacity;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("RemovalPolicies")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RemovalPolicies")
     private java.util.List < String > removalPolicies;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ScalingGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingGroupName")
     private String scalingGroupName;
 
-    @Query
-    @NameInMap("ScalingPolicy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingPolicy")
     private String scalingPolicy;
 
-    @Query
-    @NameInMap("ServerGroups")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerGroups")
     private java.util.List < ServerGroups> serverGroups;
 
-    @Query
-    @NameInMap("SpotAllocationStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotAllocationStrategy")
     private String spotAllocationStrategy;
 
-    @Query
-    @NameInMap("SpotInstancePools")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotInstancePools")
     private Integer spotInstancePools;
 
-    @Query
-    @NameInMap("SpotInstanceRemedy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotInstanceRemedy")
     private Boolean spotInstanceRemedy;
 
-    @Query
-    @NameInMap("SyncAlarmRuleToCms")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SyncAlarmRuleToCms")
     private Boolean syncAlarmRuleToCms;
 
-    @Query
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List < Tags> tags;
 
-    @Query
-    @NameInMap("VServerGroups")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VServerGroups")
     private java.util.List < VServerGroups> vServerGroups;
 
-    @Query
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @Query
-    @NameInMap("VSwitchIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchIds")
     private java.util.List < String > vSwitchIds;
 
     private CreateScalingGroupRequest(Builder builder) {
@@ -766,7 +765,7 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * DBInstances.
+         * The databases that you want to attach to the scaling group.
          */
         public Builder DBInstances(java.util.List < DBInstances> DBInstances) {
             this.putQueryParameter("DBInstances", DBInstances);
@@ -1159,7 +1158,7 @@ public class CreateScalingGroupRequest extends Request {
         }
 
         /**
-         * Details of the tags that you want to add to the scaling group.
+         * The tags that you want to add to the scaling group.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -1214,13 +1213,13 @@ public class CreateScalingGroupRequest extends Request {
     } 
 
     public static class AlbServerGroups extends TeaModel {
-        @NameInMap("AlbServerGroupId")
+        @com.aliyun.core.annotation.NameInMap("AlbServerGroupId")
         private String albServerGroupId;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private AlbServerGroups(Builder builder) {
@@ -1298,13 +1297,13 @@ public class CreateScalingGroupRequest extends Request {
 
     }
     public static class DBInstances extends TeaModel {
-        @NameInMap("AttachMode")
+        @com.aliyun.core.annotation.NameInMap("AttachMode")
         private String attachMode;
 
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private DBInstances(Builder builder) {
@@ -1348,7 +1347,11 @@ public class CreateScalingGroupRequest extends Request {
             private String type; 
 
             /**
-             * AttachMode.
+             * The mode in which you want to attach the database to the scaling group. Valid values:
+             * <p>
+             * 
+             * *   SecurityIp: the mode in which Auto Scaling automatically adds the private IP addresses of the scaled out instances to the IP address whitelist of the database. This mode is supported only if you set Type to RDS.
+             * *   SecurityGroup: the mode in which Auto Scaling adds the security group of the applied scaling configuration in the scaling group to the security group whitelist of the database to enable secure access from instances to the database.
              */
             public Builder attachMode(String attachMode) {
                 this.attachMode = attachMode;
@@ -1356,7 +1359,7 @@ public class CreateScalingGroupRequest extends Request {
             }
 
             /**
-             * DBInstanceId.
+             * The database ID.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -1364,7 +1367,14 @@ public class CreateScalingGroupRequest extends Request {
             }
 
             /**
-             * Type.
+             * The database type. Valid values:
+             * <p>
+             * 
+             * *   RDS
+             * *   Redis
+             * *   MongoDB
+             * 
+             * Default value: RDS.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1379,13 +1389,13 @@ public class CreateScalingGroupRequest extends Request {
 
     }
     public static class LaunchTemplateOverrides extends TeaModel {
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("SpotPriceLimit")
+        @com.aliyun.core.annotation.NameInMap("SpotPriceLimit")
         private Float spotPriceLimit;
 
-        @NameInMap("WeightedCapacity")
+        @com.aliyun.core.annotation.NameInMap("WeightedCapacity")
         private Integer weightedCapacity;
 
         private LaunchTemplateOverrides(Builder builder) {
@@ -1487,22 +1497,22 @@ public class CreateScalingGroupRequest extends Request {
 
     }
     public static class LifecycleHooks extends TeaModel {
-        @NameInMap("DefaultResult")
+        @com.aliyun.core.annotation.NameInMap("DefaultResult")
         private String defaultResult;
 
-        @NameInMap("HeartbeatTimeout")
+        @com.aliyun.core.annotation.NameInMap("HeartbeatTimeout")
         private Integer heartbeatTimeout;
 
-        @NameInMap("LifecycleHookName")
+        @com.aliyun.core.annotation.NameInMap("LifecycleHookName")
         private String lifecycleHookName;
 
-        @NameInMap("LifecycleTransition")
+        @com.aliyun.core.annotation.NameInMap("LifecycleTransition")
         private String lifecycleTransition;
 
-        @NameInMap("NotificationArn")
+        @com.aliyun.core.annotation.NameInMap("NotificationArn")
         private String notificationArn;
 
-        @NameInMap("NotificationMetadata")
+        @com.aliyun.core.annotation.NameInMap("NotificationMetadata")
         private String notificationMetadata;
 
         private LifecycleHooks(Builder builder) {
@@ -1656,10 +1666,10 @@ public class CreateScalingGroupRequest extends Request {
 
     }
     public static class LoadBalancerConfigs extends TeaModel {
-        @NameInMap("LoadBalancerId")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
         private String loadBalancerId;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private LoadBalancerConfigs(Builder builder) {
@@ -1717,16 +1727,16 @@ public class CreateScalingGroupRequest extends Request {
 
     }
     public static class ServerGroups extends TeaModel {
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("ServerGroupId")
+        @com.aliyun.core.annotation.NameInMap("ServerGroupId")
         private String serverGroupId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private ServerGroups(Builder builder) {
@@ -1825,13 +1835,13 @@ public class CreateScalingGroupRequest extends Request {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Propagate")
+        @com.aliyun.core.annotation.NameInMap("Propagate")
         private Boolean propagate;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -1883,7 +1893,13 @@ public class CreateScalingGroupRequest extends Request {
             }
 
             /**
-             * Propagate.
+             * Specifies whether to propagate the tag that you want to add to the scaling group. Valid values:
+             * <p>
+             * 
+             * *   true: propagates the tag to only instances that are newly created.
+             * *   false: does not propagate the tag to any instances.
+             * 
+             * Default value: false.
              */
             public Builder propagate(Boolean propagate) {
                 this.propagate = propagate;
@@ -1906,13 +1922,13 @@ public class CreateScalingGroupRequest extends Request {
 
     }
     public static class VServerGroupAttributes extends TeaModel {
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("VServerGroupId")
+        @com.aliyun.core.annotation.NameInMap("VServerGroupId")
         private String vServerGroupId;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private VServerGroupAttributes(Builder builder) {
@@ -1987,10 +2003,10 @@ public class CreateScalingGroupRequest extends Request {
 
     }
     public static class VServerGroups extends TeaModel {
-        @NameInMap("LoadBalancerId")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
         private String loadBalancerId;
 
-        @NameInMap("VServerGroupAttributes")
+        @com.aliyun.core.annotation.NameInMap("VServerGroupAttributes")
         private java.util.List < VServerGroupAttributes> vServerGroupAttributes;
 
         private VServerGroups(Builder builder) {

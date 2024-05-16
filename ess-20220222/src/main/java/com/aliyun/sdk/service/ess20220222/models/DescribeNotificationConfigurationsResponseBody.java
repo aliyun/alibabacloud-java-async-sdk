@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeNotificationConfigurationsResponseBody</p>
  */
 public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
-    @NameInMap("NotificationConfigurationModels")
+    @com.aliyun.core.annotation.NameInMap("NotificationConfigurationModels")
     private java.util.List < NotificationConfigurationModels> notificationConfigurationModels;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeNotificationConfigurationsResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
     } 
 
     public static class NotificationConfigurationModels extends TeaModel {
-        @NameInMap("NotificationArn")
+        @com.aliyun.core.annotation.NameInMap("NotificationArn")
         private String notificationArn;
 
-        @NameInMap("NotificationTypes")
+        @com.aliyun.core.annotation.NameInMap("NotificationTypes")
         private java.util.List < String > notificationTypes;
 
-        @NameInMap("ScalingGroupId")
+        @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
         private String scalingGroupId;
 
         private NotificationConfigurationModels(Builder builder) {
@@ -142,17 +141,7 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The types of notifications for scaling activities and resource changes.
-             * <p>
-             * 
-             * *   AUTOSCALING:SCALE_OUT_SUCCESS: The scale-out event is successful.
-             * *   AUTOSCALING:SCALE_IN_SUCCESS: The scale-in event is successful.
-             * *   AUTOSCALING:SCALE_OUT_ERROR: The scale-out event fails.
-             * *   AUTOSCALING:SCALE_IN_ERROR: The scale-in event fails.
-             * *   AUTOSCALING:SCALE_REJECT: The scaling activity is rejected.
-             * *   AUTOSCALING:SCALE_OUT_START: The scale-out event is started.
-             * *   AUTOSCALING:SCALE_IN_START: The scale-in event is started.
-             * *   AUTOSCALING:SCHEDULE_TASK_EXPIRING: Auto Scaling sends a notification when a scheduled task is about to expire.
+             * The types of the notifications.
              */
             public Builder notificationTypes(java.util.List < String > notificationTypes) {
                 this.notificationTypes = notificationTypes;

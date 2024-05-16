@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAlarmResponseBody</p>
  */
 public class CreateAlarmResponseBody extends TeaModel {
-    @NameInMap("AlarmTaskId")
+    @com.aliyun.core.annotation.NameInMap("AlarmTaskId")
     private String alarmTaskId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateAlarmResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class CreateAlarmResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AlarmTaskId.
+         * The ID of the event-triggered task.
          */
         public Builder alarmTaskId(String alarmTaskId) {
             this.alarmTaskId = alarmTaskId;
@@ -58,7 +57,7 @@ public class CreateAlarmResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

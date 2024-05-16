@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeScalingGroupsResponseBody</p>
  */
 public class DescribeScalingGroupsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ScalingGroups")
+    @com.aliyun.core.annotation.NameInMap("ScalingGroups")
     private java.util.List < ScalingGroups> scalingGroups;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeScalingGroupsResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
     } 
 
     public static class AlbServerGroups extends TeaModel {
-        @NameInMap("AlbServerGroupId")
+        @com.aliyun.core.annotation.NameInMap("AlbServerGroupId")
         private String albServerGroupId;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private AlbServerGroups(Builder builder) {
@@ -213,13 +212,13 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
 
     }
     public static class DBInstances extends TeaModel {
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("SecurityGroupIds")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
         private java.util.List < String > securityGroupIds;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private DBInstances(Builder builder) {
@@ -263,7 +262,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * DBInstanceId.
+             * The database ID.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -271,7 +270,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupIds.
+             * The IDs of the security groups added to the security group whitelist of the attached database.
              */
             public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
@@ -279,7 +278,12 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the database. Valid values:
+             * <p>
+             * 
+             * *   RDS
+             * *   Redis
+             * *   MongoDB
              */
             public Builder type(String type) {
                 this.type = type;
@@ -294,13 +298,13 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
 
     }
     public static class LaunchTemplateOverrides extends TeaModel {
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("SpotPriceLimit")
+        @com.aliyun.core.annotation.NameInMap("SpotPriceLimit")
         private Float spotPriceLimit;
 
-        @NameInMap("WeightedCapacity")
+        @com.aliyun.core.annotation.NameInMap("WeightedCapacity")
         private Integer weightedCapacity;
 
         private LaunchTemplateOverrides(Builder builder) {
@@ -363,7 +367,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The weight of the instance type. The value of this parameter indicates the capacity of an instance of the specified instance type in the scaling group. A higher weight indicates that a smaller number of instances of the specified instance type are required to meet the expected capacity requirement.
+             * The weight of the instance type. The value of this parameter indicates the capacity of an instance of the specified instance type in the scaling group. A larger weight indicates that a smaller number of instances of the specified instance type are required to meet the expected capacity requirement.
              */
             public Builder weightedCapacity(Integer weightedCapacity) {
                 this.weightedCapacity = weightedCapacity;
@@ -378,10 +382,10 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
 
     }
     public static class LoadBalancerConfigs extends TeaModel {
-        @NameInMap("LoadBalancerId")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
         private String loadBalancerId;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private LoadBalancerConfigs(Builder builder) {
@@ -416,7 +420,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * The ID of the Classic Load Balancer (CLB, formerly known as Server Load Balancer or SLB) instance.
+             * The ID of the CLB (formerly known as Server Load Balancer or SLB) instance.
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -439,16 +443,16 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
 
     }
     public static class ServerGroups extends TeaModel {
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("ServerGroupId")
+        @com.aliyun.core.annotation.NameInMap("ServerGroupId")
         private String serverGroupId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private ServerGroups(Builder builder) {
@@ -520,8 +524,8 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
              * The type of the server group. Valid values:
              * <p>
              * 
-             * *   ALB: ALB server group
-             * *   NLB: NLB server group
+             * *   ALB
+             * *   NLB
              */
             public Builder type(String type) {
                 this.type = type;
@@ -544,13 +548,13 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Propagate")
+        @com.aliyun.core.annotation.NameInMap("Propagate")
         private Boolean propagate;
 
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tags(Builder builder) {
@@ -631,13 +635,13 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
 
     }
     public static class VServerGroupAttributes extends TeaModel {
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("VServerGroupId")
+        @com.aliyun.core.annotation.NameInMap("VServerGroupId")
         private String vServerGroupId;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private VServerGroupAttributes(Builder builder) {
@@ -712,10 +716,10 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
 
     }
     public static class VServerGroups extends TeaModel {
-        @NameInMap("LoadBalancerId")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
         private String loadBalancerId;
 
-        @NameInMap("VServerGroupAttributes")
+        @com.aliyun.core.annotation.NameInMap("VServerGroupAttributes")
         private java.util.List < VServerGroupAttributes> vServerGroupAttributes;
 
         private VServerGroups(Builder builder) {
@@ -773,184 +777,184 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
 
     }
     public static class ScalingGroups extends TeaModel {
-        @NameInMap("ActiveCapacity")
+        @com.aliyun.core.annotation.NameInMap("ActiveCapacity")
         private Integer activeCapacity;
 
-        @NameInMap("ActiveScalingConfigurationId")
+        @com.aliyun.core.annotation.NameInMap("ActiveScalingConfigurationId")
         private String activeScalingConfigurationId;
 
-        @NameInMap("AlbServerGroups")
+        @com.aliyun.core.annotation.NameInMap("AlbServerGroups")
         private java.util.List < AlbServerGroups> albServerGroups;
 
-        @NameInMap("AllocationStrategy")
+        @com.aliyun.core.annotation.NameInMap("AllocationStrategy")
         private String allocationStrategy;
 
-        @NameInMap("AzBalance")
+        @com.aliyun.core.annotation.NameInMap("AzBalance")
         private Boolean azBalance;
 
-        @NameInMap("CompensateWithOnDemand")
+        @com.aliyun.core.annotation.NameInMap("CompensateWithOnDemand")
         private Boolean compensateWithOnDemand;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("CurrentHostName")
+        @com.aliyun.core.annotation.NameInMap("CurrentHostName")
         private String currentHostName;
 
-        @NameInMap("CustomPolicyARN")
+        @com.aliyun.core.annotation.NameInMap("CustomPolicyARN")
         private String customPolicyARN;
 
-        @NameInMap("DBInstanceIds")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceIds")
         private java.util.List < String > DBInstanceIds;
 
-        @NameInMap("DBInstances")
+        @com.aliyun.core.annotation.NameInMap("DBInstances")
         private java.util.List < DBInstances> DBInstances;
 
-        @NameInMap("DefaultCooldown")
+        @com.aliyun.core.annotation.NameInMap("DefaultCooldown")
         private Integer defaultCooldown;
 
-        @NameInMap("DesiredCapacity")
+        @com.aliyun.core.annotation.NameInMap("DesiredCapacity")
         private Integer desiredCapacity;
 
-        @NameInMap("EnableDesiredCapacity")
+        @com.aliyun.core.annotation.NameInMap("EnableDesiredCapacity")
         private Boolean enableDesiredCapacity;
 
-        @NameInMap("GroupDeletionProtection")
+        @com.aliyun.core.annotation.NameInMap("GroupDeletionProtection")
         private Boolean groupDeletionProtection;
 
-        @NameInMap("GroupType")
+        @com.aliyun.core.annotation.NameInMap("GroupType")
         private String groupType;
 
-        @NameInMap("HealthCheckType")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckType")
         private String healthCheckType;
 
-        @NameInMap("HealthCheckTypes")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckTypes")
         private java.util.List < String > healthCheckTypes;
 
-        @NameInMap("InitCapacity")
+        @com.aliyun.core.annotation.NameInMap("InitCapacity")
         private Integer initCapacity;
 
-        @NameInMap("IsElasticStrengthInAlarm")
+        @com.aliyun.core.annotation.NameInMap("IsElasticStrengthInAlarm")
         private Boolean isElasticStrengthInAlarm;
 
-        @NameInMap("LaunchTemplateId")
+        @com.aliyun.core.annotation.NameInMap("LaunchTemplateId")
         private String launchTemplateId;
 
-        @NameInMap("LaunchTemplateOverrides")
+        @com.aliyun.core.annotation.NameInMap("LaunchTemplateOverrides")
         private java.util.List < LaunchTemplateOverrides> launchTemplateOverrides;
 
-        @NameInMap("LaunchTemplateVersion")
+        @com.aliyun.core.annotation.NameInMap("LaunchTemplateVersion")
         private String launchTemplateVersion;
 
-        @NameInMap("LifecycleState")
+        @com.aliyun.core.annotation.NameInMap("LifecycleState")
         private String lifecycleState;
 
-        @NameInMap("LoadBalancerConfigs")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerConfigs")
         private java.util.List < LoadBalancerConfigs> loadBalancerConfigs;
 
-        @NameInMap("LoadBalancerIds")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerIds")
         private java.util.List < String > loadBalancerIds;
 
-        @NameInMap("MaxInstanceLifetime")
+        @com.aliyun.core.annotation.NameInMap("MaxInstanceLifetime")
         private Integer maxInstanceLifetime;
 
-        @NameInMap("MaxSize")
+        @com.aliyun.core.annotation.NameInMap("MaxSize")
         private Integer maxSize;
 
-        @NameInMap("MinSize")
+        @com.aliyun.core.annotation.NameInMap("MinSize")
         private Integer minSize;
 
-        @NameInMap("ModificationTime")
+        @com.aliyun.core.annotation.NameInMap("ModificationTime")
         private String modificationTime;
 
-        @NameInMap("MonitorGroupId")
+        @com.aliyun.core.annotation.NameInMap("MonitorGroupId")
         private String monitorGroupId;
 
-        @NameInMap("MultiAZPolicy")
+        @com.aliyun.core.annotation.NameInMap("MultiAZPolicy")
         private String multiAZPolicy;
 
-        @NameInMap("OnDemandBaseCapacity")
+        @com.aliyun.core.annotation.NameInMap("OnDemandBaseCapacity")
         private Integer onDemandBaseCapacity;
 
-        @NameInMap("OnDemandPercentageAboveBaseCapacity")
+        @com.aliyun.core.annotation.NameInMap("OnDemandPercentageAboveBaseCapacity")
         private Integer onDemandPercentageAboveBaseCapacity;
 
-        @NameInMap("PendingCapacity")
+        @com.aliyun.core.annotation.NameInMap("PendingCapacity")
         private Integer pendingCapacity;
 
-        @NameInMap("PendingWaitCapacity")
+        @com.aliyun.core.annotation.NameInMap("PendingWaitCapacity")
         private Integer pendingWaitCapacity;
 
-        @NameInMap("ProtectedCapacity")
+        @com.aliyun.core.annotation.NameInMap("ProtectedCapacity")
         private Integer protectedCapacity;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RemovalPolicies")
+        @com.aliyun.core.annotation.NameInMap("RemovalPolicies")
         private java.util.List < String > removalPolicies;
 
-        @NameInMap("RemovingCapacity")
+        @com.aliyun.core.annotation.NameInMap("RemovingCapacity")
         private Integer removingCapacity;
 
-        @NameInMap("RemovingWaitCapacity")
+        @com.aliyun.core.annotation.NameInMap("RemovingWaitCapacity")
         private Integer removingWaitCapacity;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ScalingGroupId")
+        @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
         private String scalingGroupId;
 
-        @NameInMap("ScalingGroupName")
+        @com.aliyun.core.annotation.NameInMap("ScalingGroupName")
         private String scalingGroupName;
 
-        @NameInMap("ScalingPolicy")
+        @com.aliyun.core.annotation.NameInMap("ScalingPolicy")
         private String scalingPolicy;
 
-        @NameInMap("ServerGroups")
+        @com.aliyun.core.annotation.NameInMap("ServerGroups")
         private java.util.List < ServerGroups> serverGroups;
 
-        @NameInMap("SpotAllocationStrategy")
+        @com.aliyun.core.annotation.NameInMap("SpotAllocationStrategy")
         private String spotAllocationStrategy;
 
-        @NameInMap("SpotInstancePools")
+        @com.aliyun.core.annotation.NameInMap("SpotInstancePools")
         private Integer spotInstancePools;
 
-        @NameInMap("SpotInstanceRemedy")
+        @com.aliyun.core.annotation.NameInMap("SpotInstanceRemedy")
         private Boolean spotInstanceRemedy;
 
-        @NameInMap("StandbyCapacity")
+        @com.aliyun.core.annotation.NameInMap("StandbyCapacity")
         private Integer standbyCapacity;
 
-        @NameInMap("StoppedCapacity")
+        @com.aliyun.core.annotation.NameInMap("StoppedCapacity")
         private Integer stoppedCapacity;
 
-        @NameInMap("SuspendedProcesses")
+        @com.aliyun.core.annotation.NameInMap("SuspendedProcesses")
         private java.util.List < String > suspendedProcesses;
 
-        @NameInMap("SystemSuspended")
+        @com.aliyun.core.annotation.NameInMap("SystemSuspended")
         private Boolean systemSuspended;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("TotalCapacity")
+        @com.aliyun.core.annotation.NameInMap("TotalCapacity")
         private Integer totalCapacity;
 
-        @NameInMap("TotalInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("TotalInstanceCount")
         private Integer totalInstanceCount;
 
-        @NameInMap("VServerGroups")
+        @com.aliyun.core.annotation.NameInMap("VServerGroups")
         private java.util.List < VServerGroups> vServerGroups;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VSwitchIds")
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
         private java.util.List < String > vSwitchIds;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private ScalingGroups(Builder builder) {
@@ -1534,8 +1538,8 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
              * The allocation policy of instances. Auto Scaling selects instance types based on the allocation policy to create the required number of instances. You can apply the policy to pay-as-you-go instances and preemptible instances. This parameter takes effect only if you set `MultiAZPolicy` to `COMPOSABLE`. Valid values:
              * <p>
              * 
-             * *   priority: Auto Scaling selects instance types based on the specified order of the instance types to create the required number of instances.
-             * *   lowestPrice: Auto Scaling selects instance types that have the lowest unit price of vCPUs to create the required number of instances.
+             * *   priority: Auto Scaling adheres to the predefined instance type sequence to create the required number of instances.
+             * *   lowestPrice: Auto Scaling selects instance types with the most economical vCPU pricing to create the required number of instances.
              */
             public Builder allocationStrategy(String allocationStrategy) {
                 this.allocationStrategy = allocationStrategy;
@@ -1555,7 +1559,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Auto Scaling can create pay-as-you-go instances to supplement preemptible instances in the case that preemptilble instances cannot be created due to price-related factors or insufficient inventory when MultiAZPolicy is set to COST_OPTIMIZED. Valid values:
+             * Indicates whether Auto Scaling would use pay-as-you-go instances as a backup when unable to create preemptible instances due to price fluctuations or stock shortages when MultiAZPolicy is set to COST_OPTIMIZED. Valid values:
              * <p>
              * 
              * *   true
@@ -1591,7 +1595,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the ApsaraDB RDS instances that are associated with the scaling group.
+             * The IDs of the ApsaraDB RDS instances that are attached to the scaling group.
              */
             public Builder DBInstanceIds(java.util.List < String > DBInstanceIds) {
                 this.DBInstanceIds = DBInstanceIds;
@@ -1599,7 +1603,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstances.
+             * The databases attached to the scaling group.
              */
             public Builder DBInstances(java.util.List < DBInstances> DBInstances) {
                 this.DBInstances = DBInstances;
@@ -1647,7 +1651,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of instances that are managed by the scaling group.
+             * The type of the instances that are managed by the scaling group.
              */
             public Builder groupType(String groupType) {
                 this.groupType = groupType;
@@ -1658,7 +1662,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
              * The health check mode of the scaling group. Valid values:
              * <p>
              * 
-             * *   NONE: Auto Scaling does not check the health status of instances in the scaling group.
+             * *   NONE: Auto Scaling does not perform health checks.
              * *   ECS: Auto Scaling checks the health status of ECS instances in the scaling group.
              * *   LOAD_BALANCER: Auto Scaling checks the health status of instances in the scaling group based on the health check results of load balancers. The health check results of Classic Load Balancer (CLB) instances are not supported as the health check basis for instances in the scaling group.
              */
@@ -1671,7 +1675,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
              * The health check modes of the scaling group. Valid values:
              * <p>
              * 
-             * *   NONE: Auto Scaling does not check the health status of instances in the scaling group.
+             * *   NONE: Auto Scaling does not perform health checks in the scaling group.
              * *   ECS: Auto Scaling checks the health status of ECS instances in the scaling group.
              * *   LOAD_BALANCER: Auto Scaling checks the health status of instances in the scaling group based on the health check results of load balancers. The health check results of CLB instances are not supported as the health check basis for instances in the scaling group.
              */
@@ -1681,7 +1685,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances that are in the Initialized state and ready to be scaled out in the scaling group.
+             * The number of instances that are initialized before they are actually added into the scaling group.
              */
             public Builder initCapacity(Integer initCapacity) {
                 this.initCapacity = initCapacity;
@@ -1721,11 +1725,11 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The lifecycle status of the scaling group. Valid values:
+             * The state of the scaling group. Valid values:
              * <p>
              * 
-             * *   Active: The scaling group is in the Enabled state. Enabled scaling groups can receive requests to execute scaling rules and trigger scaling activities.
-             * *   Inactive: The scaling group is in the Disabled state. Disabled scaling groups cannot receive requests to execute scaling rules.
+             * *   Active: The scaling group is active. Active scaling groups can receive requests to execute scaling rules and trigger scaling activities.
+             * *   Inactive: The scaling group is inactive. Inactive scaling groups cannot receive requests to execute scaling rules.
              * *   Deleting: The scaling group is being deleted. Scaling groups that are being deleted cannot receive requests to execute scaling rules, and the parameter settings of the scaling groups cannot be modified.
              */
             public Builder lifecycleState(String lifecycleState) {
@@ -1742,7 +1746,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the load balancers that are associated with the scaling group.
+             * The IDs of the load balancers that are attached to the scaling group.
              */
             public Builder loadBalancerIds(java.util.List < String > loadBalancerIds) {
                 this.loadBalancerIds = loadBalancerIds;
@@ -1750,10 +1754,10 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum life span of an ECS instance in the scaling group. Unit: seconds.
+             * The maximum life span of an instance in the scaling group. Unit: seconds.
              * <p>
              * 
-             * Valid values: 0 or from 86400 to `Integer.maxValue`. A value of 0 indicates that the ECS instance has an unlimited life span in the scaling group.
+             * Valid values: 0 or from 86400 to `Integer.maxValue`. A value of 0 for MaxInstanceLifetime indicates that any previously set limit has been removed, effectively disabling the maximum instance lifetime constraint.
              * 
              * Default value: null.
              * 
@@ -1802,13 +1806,13 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
              * 
              * *   PRIORITY: ECS instances are created based on the value of VSwitchIds. If Auto Scaling cannot create ECS instances in the zone where the vSwitch of the highest priority resides, Auto Scaling creates ECS instances in the zone where the vSwitch of the next highest priority resides.
              * 
-             * *   COST_OPTIMIZED: ECS instances are created based on the unit prices of their vCPUs. Auto Scaling preferentially creates ECS instances whose vCPUs are provided at the lowest price. If preemptible instance types are specified in the scaling configuration, Auto Scaling preferentially creates preemptible instances. You can also specify CompensateWithOnDemand to allow Auto Scaling to create pay-as-you-go instances in the case that preemptible instances cannot be created due to insufficient inventory of preemptible instance types.
+             * *   COST_OPTIMIZED: ECS instances are created based on the unit prices of their vCPUs. Auto Scaling preferentially creates ECS instances whose vCPUs are provided at the lowest price. If preemptible instance types are specified in the scaling configuration, Auto Scaling preferentially creates preemptible instances. You can also specify CompensateWithOnDemand to allow Auto Scaling to create pay-as-you-go instances in the case that preemptible instances cannot be created due to limited stock.
              * 
              *     **
              * 
-             *     **Note** The COST_OPTIMIZED setting takes effect only if you specified multiple instance types or preemptible instance types in your scaling configuration.
+             *     **Note** The COST_OPTIMIZED setting takes effect only when your scaling configuration includes multiple instance types or specifically includes preemptible instance types.
              * 
-             * *   BALANCE: ECS instances are evenly distributed across the zones that are specified for the scaling group. If ECS instance are unevenly distributed across the specified zones due to insufficient inventory of instance types, you can call the RebalanceInstance operation to rebalance the distribution of the ECS instances.
+             * *   BALANCE: ECS instances are evenly distributed across the zones that are specified for the scaling group. If ECS instances become unevenly distributed across the designated zones due to limited instance type availability, you can call the RebalanceInstance operation to rebalance the distribution of the ECS instances.
              */
             public Builder multiAZPolicy(String multiAZPolicy) {
                 this.multiAZPolicy = multiAZPolicy;
@@ -1816,7 +1820,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum number of pay-as-you-go instances that must be contained in the scaling group. Valid values: 0 to 1000. If the number of pay-as-you-go instances in the scaling group is less than the value of this parameter, Auto Scaling preferentially creates pay-as-you-go instances.
+             * The minimum number of pay-as-you-go instances that must be contained in the scaling group. Valid values: 0 to 1000. If the number of pay-as-you-go instances is less than the value of this parameter, Auto Scaling preferentially creates pay-as-you-go instances.
              */
             public Builder onDemandBaseCapacity(Integer onDemandBaseCapacity) {
                 this.onDemandBaseCapacity = onDemandBaseCapacity;
@@ -1869,7 +1873,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
              * 
              * *   OldestInstance: Auto Scaling removes ECS instances that are added at the earliest point in time to the scaling group.
              * *   NewestInstance: Auto Scaling removes ECS instances that are most recently added to the scaling group.
-             * *   OldestScalingConfiguration: Auto Scaling removes ECS instances that are created based on the earliest scaling configuration.
+             * *   OldestScalingConfiguration: Auto Scaling removes ECS instances that are created from the earliest scaling configuration.
              */
             public Builder removalPolicies(java.util.List < String > removalPolicies) {
                 this.removalPolicies = removalPolicies;
@@ -1943,11 +1947,11 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The allocation policy of preemptible instances. You can use this parameter to individually specify the allocation policy for preemptible instances. This parameter takes effect only if you set `MultiAZPolicy` to `COMPOSABLE`. Valid values:
+             * The allocation policy of preemptible instances. This parameter indicates the manner in which Auto Scaling selects instance types to create the required number of preemptible instances. This parameter takes effect only if you set `MultiAZPolicy` to `COMPOSABLE`. Valid values:
              * <p>
              * 
-             * *   priority: Auto Scaling selects instance types based on the specified order of the instance types to create the required number of preemptible instances.
-             * *   lowestPrice: Auto Scaling selects instance types that have the lowest unit price of vCPUs to create the required number of preemptible instances.
+             * *   priority: Auto Scaling adheres to the predefined instance type sequence to create the required number of preemptible instances.
+             * *   lowestPrice: Auto Scaling selects instance types with the most economical vCPU pricing to create the required number of preemptible instances.
              * 
              * Default value: priority.
              */
@@ -1957,7 +1961,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of specified instance types. Auto Scaling evenly creates preemptible instances of multiple instance types that are provided at the lowest price across the zones of the scaling group. Valid values: 0 to 10.
+             * The number of instance types that are specified. Auto Scaling evenly creates preemptible instances of multiple instance types that are provided at the lowest price across the zones of the scaling group. Valid values: 0 to 10.
              */
             public Builder spotInstancePools(Integer spotInstancePools) {
                 this.spotInstancePools = spotInstancePools;
@@ -1965,7 +1969,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether preemptible instances can be supplemented. If this parameter is set to true, Auto Scaling creates an instance to replace a preemptible instance when Auto Scaling receives the system message which indicates that the preemptible instance is to be reclaimed.
+             * Indicates whether preemptible instances can be supplemented. If this parameter is set to true, Auto Scaling proactively creates new instances to replace preemptible instances upon receiving a system notification signaling their impending reclamation.
              */
             public Builder spotInstanceRemedy(Boolean spotInstanceRemedy) {
                 this.spotInstanceRemedy = spotInstanceRemedy;
@@ -1981,7 +1985,7 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances that are in Economical Mode in the scaling group.
+             * The number of instances that was stopped in Economical Mode in the scaling group.
              */
             public Builder stoppedCapacity(Integer stoppedCapacity) {
                 this.stoppedCapacity = stoppedCapacity;
@@ -1992,11 +1996,11 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
              * The processes that are suspended. If no process is suspended, null is returned. Valid values:
              * <p>
              * 
-             * *   ScaleIn: scale-in
-             * *   ScaleOut: scale-out
-             * *   HealthCheck: health check
-             * *   AlarmNotification: event-triggered task
-             * *   ScheduledAction: scheduled task
+             * *   ScaleIn: the scale-in process
+             * *   ScaleOut: the scale-out process
+             * *   HealthCheck: the health check process
+             * *   AlarmNotification: the process of executing an event-triggered task
+             * *   ScheduledAction: the process of executing a scheduled task
              */
             public Builder suspendedProcesses(java.util.List < String > suspendedProcesses) {
                 this.suspendedProcesses = suspendedProcesses;

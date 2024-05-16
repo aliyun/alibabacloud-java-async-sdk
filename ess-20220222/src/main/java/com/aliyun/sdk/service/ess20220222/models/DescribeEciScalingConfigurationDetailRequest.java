@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEciScalingConfigurationDetailRequest</p>
  */
 public class DescribeEciScalingConfigurationDetailRequest extends Request {
-    @Query
-    @NameInMap("OutputFormat")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutputFormat")
     private String outputFormat;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ScalingConfigurationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingConfigurationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scalingConfigurationId;
 
-    @Query
-    @NameInMap("ScalingGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
     private String scalingGroupId;
 
     private DescribeEciScalingConfigurationDetailRequest(Builder builder) {
@@ -98,7 +97,7 @@ public class DescribeEciScalingConfigurationDetailRequest extends Request {
         } 
 
         /**
-         * OutputFormat.
+         * The output format. Set the value to yaml.
          */
         public Builder outputFormat(String outputFormat) {
             this.putQueryParameter("OutputFormat", outputFormat);
@@ -107,7 +106,7 @@ public class DescribeEciScalingConfigurationDetailRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the scaling group to which the scaling configuration belongs.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -116,7 +115,7 @@ public class DescribeEciScalingConfigurationDetailRequest extends Request {
         }
 
         /**
-         * ScalingConfigurationId.
+         * The ID of the scaling configuration based on which elastic container instances are created.
          */
         public Builder scalingConfigurationId(String scalingConfigurationId) {
             this.putQueryParameter("ScalingConfigurationId", scalingConfigurationId);
@@ -125,7 +124,7 @@ public class DescribeEciScalingConfigurationDetailRequest extends Request {
         }
 
         /**
-         * ScalingGroupId.
+         * The ID of the scaling group to which the scaling configuration belongs.
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);

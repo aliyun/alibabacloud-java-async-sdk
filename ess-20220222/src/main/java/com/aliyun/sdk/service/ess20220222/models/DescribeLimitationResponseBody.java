@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,49 +11,49 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLimitationResponseBody</p>
  */
 public class DescribeLimitationResponseBody extends TeaModel {
-    @NameInMap("MaxNumberOfAlbServerGroup")
+    @com.aliyun.core.annotation.NameInMap("MaxNumberOfAlbServerGroup")
     private Integer maxNumberOfAlbServerGroup;
 
-    @NameInMap("MaxNumberOfDBInstances")
+    @com.aliyun.core.annotation.NameInMap("MaxNumberOfDBInstances")
     private Integer maxNumberOfDBInstances;
 
-    @NameInMap("MaxNumberOfLifecycleHooks")
+    @com.aliyun.core.annotation.NameInMap("MaxNumberOfLifecycleHooks")
     private Integer maxNumberOfLifecycleHooks;
 
-    @NameInMap("MaxNumberOfLoadBalancers")
+    @com.aliyun.core.annotation.NameInMap("MaxNumberOfLoadBalancers")
     private Integer maxNumberOfLoadBalancers;
 
-    @NameInMap("MaxNumberOfMaxSize")
+    @com.aliyun.core.annotation.NameInMap("MaxNumberOfMaxSize")
     private Integer maxNumberOfMaxSize;
 
-    @NameInMap("MaxNumberOfMinSize")
+    @com.aliyun.core.annotation.NameInMap("MaxNumberOfMinSize")
     private Integer maxNumberOfMinSize;
 
-    @NameInMap("MaxNumberOfNlbServerGroup")
+    @com.aliyun.core.annotation.NameInMap("MaxNumberOfNlbServerGroup")
     private Integer maxNumberOfNlbServerGroup;
 
-    @NameInMap("MaxNumberOfNotificationConfigurations")
+    @com.aliyun.core.annotation.NameInMap("MaxNumberOfNotificationConfigurations")
     private Integer maxNumberOfNotificationConfigurations;
 
-    @NameInMap("MaxNumberOfScalingConfigurations")
+    @com.aliyun.core.annotation.NameInMap("MaxNumberOfScalingConfigurations")
     private Integer maxNumberOfScalingConfigurations;
 
-    @NameInMap("MaxNumberOfScalingGroups")
+    @com.aliyun.core.annotation.NameInMap("MaxNumberOfScalingGroups")
     private Integer maxNumberOfScalingGroups;
 
-    @NameInMap("MaxNumberOfScalingInstances")
+    @com.aliyun.core.annotation.NameInMap("MaxNumberOfScalingInstances")
     private Integer maxNumberOfScalingInstances;
 
-    @NameInMap("MaxNumberOfScalingRules")
+    @com.aliyun.core.annotation.NameInMap("MaxNumberOfScalingRules")
     private Integer maxNumberOfScalingRules;
 
-    @NameInMap("MaxNumberOfScheduledTasks")
+    @com.aliyun.core.annotation.NameInMap("MaxNumberOfScheduledTasks")
     private Integer maxNumberOfScheduledTasks;
 
-    @NameInMap("MaxNumberOfVServerGroups")
+    @com.aliyun.core.annotation.NameInMap("MaxNumberOfVServerGroups")
     private Integer maxNumberOfVServerGroups;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeLimitationResponseBody(Builder builder) {
@@ -206,7 +205,10 @@ public class DescribeLimitationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MaxNumberOfAlbServerGroup.
+         * The maximum number of Application Load Balancer (ALB) server groups that can be attached to a scaling group.
+         * <p>
+         * 
+         * >  To view the server group quota or request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).
          */
         public Builder maxNumberOfAlbServerGroup(Integer maxNumberOfAlbServerGroup) {
             this.maxNumberOfAlbServerGroup = maxNumberOfAlbServerGroup;
@@ -214,7 +216,10 @@ public class DescribeLimitationResponseBody extends TeaModel {
         }
 
         /**
-         * MaxNumberOfDBInstances.
+         * The maximum number of ApsaraDB RDS instances that can be attached to a scaling group.
+         * <p>
+         * 
+         * >  To view the database quota or request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).
          */
         public Builder maxNumberOfDBInstances(Integer maxNumberOfDBInstances) {
             this.maxNumberOfDBInstances = maxNumberOfDBInstances;
@@ -246,7 +251,7 @@ public class DescribeLimitationResponseBody extends TeaModel {
         }
 
         /**
-         * MaxNumberOfMinSize.
+         * The minimum number of instances that must be contained in a scaling group. The value of `MaxNumberOfMinSize` must be consistent with the value of `MaxNumberOfMaxSize`.
          */
         public Builder maxNumberOfMinSize(Integer maxNumberOfMinSize) {
             this.maxNumberOfMinSize = maxNumberOfMinSize;
@@ -270,7 +275,10 @@ public class DescribeLimitationResponseBody extends TeaModel {
         }
 
         /**
-         * MaxNumberOfScalingConfigurations.
+         * The maximum number of scaling configurations that can be created in a scaling group.
+         * <p>
+         * 
+         * >  To view the scaling configuration quota or request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).
          */
         public Builder maxNumberOfScalingConfigurations(Integer maxNumberOfScalingConfigurations) {
             this.maxNumberOfScalingConfigurations = maxNumberOfScalingConfigurations;
@@ -278,7 +286,10 @@ public class DescribeLimitationResponseBody extends TeaModel {
         }
 
         /**
-         * MaxNumberOfScalingGroups.
+         * The maximum number of scaling groups that can be created in a region by using an Alibaba Cloud account.
+         * <p>
+         * 
+         * >  To view the scaling group quota or request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).
          */
         public Builder maxNumberOfScalingGroups(Integer maxNumberOfScalingGroups) {
             this.maxNumberOfScalingGroups = maxNumberOfScalingGroups;
@@ -294,7 +305,10 @@ public class DescribeLimitationResponseBody extends TeaModel {
         }
 
         /**
-         * MaxNumberOfScalingRules.
+         * The maximum number of scaling rules that can be created in a scaling group.
+         * <p>
+         * 
+         * >  To view the scaling rule quota or request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).
          */
         public Builder maxNumberOfScalingRules(Integer maxNumberOfScalingRules) {
             this.maxNumberOfScalingRules = maxNumberOfScalingRules;

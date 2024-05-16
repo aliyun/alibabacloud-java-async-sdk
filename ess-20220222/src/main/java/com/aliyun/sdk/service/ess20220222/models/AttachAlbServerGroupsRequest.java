@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,35 +11,35 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AttachAlbServerGroupsRequest</p>
  */
 public class AttachAlbServerGroupsRequest extends Request {
-    @Query
-    @NameInMap("AlbServerGroups")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlbServerGroups")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < AlbServerGroups> albServerGroups;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("ForceAttach")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForceAttach")
     private Boolean forceAttach;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ScalingGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scalingGroupId;
 
     private AttachAlbServerGroupsRequest(Builder builder) {
@@ -159,11 +158,11 @@ public class AttachAlbServerGroupsRequest extends Request {
         }
 
         /**
-         * Specifies whether to add the ECS instances in the scaling group to the ALB server group. Valid values:
+         * Specifies whether to add Elastic Compute Service (ECS) instances in the scaling group to new ALB server groups. Valid values:
          * <p>
          * 
-         * *   true: adds the ECS instances to the ALB server group and returns the value of the `ScalingActivityId` parameter. You can check whether the ECS instances are added to the ALB server group by using the ID of the scaling activity.
-         * *   false: does not add the ECS instances to the ALB server group.
+         * *   true: adds ECS instances in the scaling group to new ALB server groups and returns the value of `ScalingActivityId`. You can check whether ECS instances are added to new ALB server groups by the scaling activity ID.
+         * *   false: does not add ECS instances in the scaling group to new ALB server groups.
          * 
          * Default value: false.
          */
@@ -217,16 +216,16 @@ public class AttachAlbServerGroupsRequest extends Request {
     } 
 
     public static class AlbServerGroups extends TeaModel {
-        @NameInMap("AlbServerGroupId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("AlbServerGroupId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String albServerGroupId;
 
-        @NameInMap("Port")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Port")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer port;
 
-        @NameInMap("Weight")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Weight")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer weight;
 
         private AlbServerGroups(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,82 +11,82 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAlarmRequest</p>
  */
 public class CreateAlarmRequest extends Request {
-    @Query
-    @NameInMap("AlarmActions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlarmActions")
     private java.util.List < String > alarmActions;
 
-    @Query
-    @NameInMap("ComparisonOperator")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
     private String comparisonOperator;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Dimensions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Dimensions")
     private java.util.List < Dimensions> dimensions;
 
-    @Query
-    @NameInMap("Effective")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Effective")
     private String effective;
 
-    @Query
-    @NameInMap("EvaluationCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EvaluationCount")
     private Integer evaluationCount;
 
-    @Query
-    @NameInMap("Expressions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Expressions")
     private java.util.List < Expressions> expressions;
 
-    @Query
-    @NameInMap("ExpressionsLogicOperator")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExpressionsLogicOperator")
     private String expressionsLogicOperator;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private Integer groupId;
 
-    @Query
-    @NameInMap("MetricName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricName")
     private String metricName;
 
-    @Query
-    @NameInMap("MetricType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricType")
     private String metricType;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ScalingGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scalingGroupId;
 
-    @Query
-    @NameInMap("Statistics")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Statistics")
     private String statistics;
 
-    @Query
-    @NameInMap("Threshold")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Threshold")
     private Float threshold;
 
     private CreateAlarmRequest(Builder builder) {
@@ -308,7 +307,7 @@ public class CreateAlarmRequest extends Request {
         } 
 
         /**
-         * AlarmActions.
+         * The list of unique identifiers of the scaling rules that are associated with the event-triggered task.
          */
         public Builder alarmActions(java.util.List < String > alarmActions) {
             this.putQueryParameter("AlarmActions", alarmActions);
@@ -317,7 +316,15 @@ public class CreateAlarmRequest extends Request {
         }
 
         /**
-         * ComparisonOperator.
+         * The operator that is used to compare the metric value and the threshold. Valid values:
+         * <p>
+         * 
+         * *   If the metric value is greater than or equal to the threshold, set the value to: >=.
+         * *   If the metric value is less than or equal to the threshold, set the value to: <=.
+         * *   If the metric value is greater than the threshold, set the value to: >.
+         * *   If the metric value is less than the threshold, set the value to: <.
+         * 
+         * Default value: >=.
          */
         public Builder comparisonOperator(String comparisonOperator) {
             this.putQueryParameter("ComparisonOperator", comparisonOperator);
@@ -326,7 +333,7 @@ public class CreateAlarmRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the event-triggered task.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -335,7 +342,7 @@ public class CreateAlarmRequest extends Request {
         }
 
         /**
-         * Dimensions.
+         * The metric dimensions.
          */
         public Builder dimensions(java.util.List < Dimensions> dimensions) {
             this.putQueryParameter("Dimensions", dimensions);
@@ -344,7 +351,21 @@ public class CreateAlarmRequest extends Request {
         }
 
         /**
-         * Effective.
+         * The effective period of the event-triggered task. By default, the event-triggered task is in effect all the time.
+         * <p>
+         * 
+         * This parameter follows the cron expression format. The default format is `X X X X X ?`. In the format:
+         * 
+         * *   X: a placeholder for a field, which represents seconds, minutes, hours, days, and months in sequence. X can be a definite value or a special character that has logical meaning. For information about the valid values of X, see [Cron expression](~~25907~~).
+         * *   ?: No value is specified.
+         * 
+         * > By default, this parameter value is specified in **UTC+8**. You can specify the time zone in the `TZ=+yy` format before a cron expression. y indicates the time zone. For example, `TZ=+00 * * 1-2 * * ?` specifies that the event-triggered task is in effect between 01:00 and 02:59 (UTC+0) every day.
+         * 
+         * Sample values:
+         * 
+         * *   ` * * * * * ?  `: The event-triggered task is in effect all the time.
+         * *   ` * * 17-18 * * ?  `: The event-triggered task is in effect between 17:00 and 18:59 (UTC+8) every day.
+         * *   `TZ=+00 * * 1-2 * * ?`: The event-triggered task is in effect between 01:00 and 02:59 (UTC+0) every day.
          */
         public Builder effective(String effective) {
             this.putQueryParameter("Effective", effective);
@@ -353,7 +374,10 @@ public class CreateAlarmRequest extends Request {
         }
 
         /**
-         * EvaluationCount.
+         * The number of times that the threshold must be reached before a scaling rule can be executed. For example, if you set this parameter to 3, the average CPU utilization must reach or exceed 80% three times in a row before a scaling rule is triggered.
+         * <p>
+         * 
+         * Default value: 3.
          */
         public Builder evaluationCount(Integer evaluationCount) {
             this.putQueryParameter("EvaluationCount", evaluationCount);
@@ -362,7 +386,7 @@ public class CreateAlarmRequest extends Request {
         }
 
         /**
-         * Expressions.
+         * The expressions that are specified in the multi-metric alert rule.
          */
         public Builder expressions(java.util.List < Expressions> expressions) {
             this.putQueryParameter("Expressions", expressions);
@@ -371,7 +395,13 @@ public class CreateAlarmRequest extends Request {
         }
 
         /**
-         * ExpressionsLogicOperator.
+         * The relationship between the trigger conditions in the multi-metric alert rule. Valid values:
+         * <p>
+         * 
+         * *   `&&`: An alert is triggered only if all metrics in the multi-metric alert rule meet the trigger conditions. In this case, an alert is triggered only if the results of all trigger conditions that are specified in the multi-metric alert rule are `true`.
+         * *   `||`: An alert is triggered if one of the metrics in the multi-metric alert rule meets the trigger conditions.
+         * 
+         * Default value: `&&`.
          */
         public Builder expressionsLogicOperator(String expressionsLogicOperator) {
             this.putQueryParameter("ExpressionsLogicOperator", expressionsLogicOperator);
@@ -380,7 +410,7 @@ public class CreateAlarmRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the application group to which the custom metric belongs. If you set the MetricType parameter to custom, you must specify this parameter.
          */
         public Builder groupId(Integer groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -389,7 +419,36 @@ public class CreateAlarmRequest extends Request {
         }
 
         /**
-         * MetricName.
+         * The name of the metric. The valid values vary based on the metric type.
+         * <p>
+         * 
+         * *   If you set the MetricType parameter to custom, the valid values are your custom metrics.
+         * 
+         * *   If you set the MetricType parameter to system, the MetricName parameter has the following valid values:
+         * 
+         *     *   CpuUtilization: the CPU utilization of an ECS instance. Unit: %.
+         *     *   IntranetTx: the outbound traffic over the internal network from an ECS instance. Unit: KB/min.
+         *     *   IntranetRx: the inbound traffic over the Internet to an ECS instance that resides in a virtual private cloud (VPC). Unit: KB/min.
+         *     *   VpcInternetTx: the outbound traffic over the Internet from an ECS instance that resides in a VPC. Unit: KB/min.
+         *     *   VpcInternetRx: the inbound traffic over the Internet to an ECS instance that resides in a VPC. Unit: KB/min.
+         *     *   SystemDiskReadBps: the number of bytes read from the system disk used by an ECS instance per second.
+         *     *   SystemDiskWriteBps: the number of bytes written to the system disk used by an ECS instance per second.
+         *     *   SystemDiskReadOps: the number of read operations on the system disk used by an ECS instance per second.
+         *     *   SystemDiskWriteOps: the number of write operations on the system disk used by an ECS instance per second.
+         *     *   CpuUtilizationAgent: the CPU utilization of an agent. Unit: %.
+         *     *   GpuUtilizationAgent: the GPU utilization of an agent. Unit: %.
+         *     *   GpuMemoryFreeUtilizationAgent: the percentage of idle GPU memory of an agent.
+         *     *   GpuMemoryUtilizationAgent: the GPU memory usage of an agent. Unit: %.
+         *     *   MemoryUtilization: the memory usage of an agent. Unit: %.
+         *     *   LoadAverage: the average system load of an agent.
+         *     *   TcpConnection: the total number of TCP connections of an agent.
+         *     *   TcpConnection: the number of established TCP connections of an agent.
+         *     *   PackagesNetOut: the number of packets that are sent by the internal network interface controller (NIC) used by an agent.
+         *     *   PackagesNetIn: the number of packets that are received by the internal NIC used by an agent.
+         *     *   EciPodCpuUtilization: the CPU utilization of an elastic container instance. Unit: %.
+         *     *   EciPodMemoryUtilization: the memory usage of an elastic container instance. Unit: %.
+         * 
+         * For more information, see [Event-triggered task for system monitoring](~~74854~~).
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -398,7 +457,11 @@ public class CreateAlarmRequest extends Request {
         }
 
         /**
-         * MetricType.
+         * The type of the metric. Valid values:
+         * <p>
+         * 
+         * *   system: system metrics of CloudMonitor
+         * *   custom: custom metrics that are reported to CloudMonitor
          */
         public Builder metricType(String metricType) {
             this.putQueryParameter("MetricType", metricType);
@@ -407,7 +470,7 @@ public class CreateAlarmRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the event-triggered task.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -425,7 +488,18 @@ public class CreateAlarmRequest extends Request {
         }
 
         /**
-         * Period.
+         * The period during which the statistical value of the metric is collected. Unit: seconds. Valid values:
+         * <p>
+         * 
+         * *   15
+         * *   60
+         * *   120
+         * *   300
+         * *   900
+         * 
+         * > If your scaling group is of the ECS type and uses CloudMonitor metrics, you can set the Period parameter to 15. In other cases, you can set the Period parameter to 60, 120, 300, or 900. In most cases, the name of a CloudMonitor metric contains Agent.
+         * 
+         * Default value: 300.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -434,7 +508,7 @@ public class CreateAlarmRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the scaling group.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -452,7 +526,7 @@ public class CreateAlarmRequest extends Request {
         }
 
         /**
-         * ScalingGroupId.
+         * The scaling group ID of the event-triggered task.
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);
@@ -461,7 +535,14 @@ public class CreateAlarmRequest extends Request {
         }
 
         /**
-         * Statistics.
+         * The method that is used to aggregate statistics for the metric. Valid values:
+         * <p>
+         * 
+         * *   Average
+         * *   Minimum
+         * *   Maximum
+         * 
+         * Default value: Average.
          */
         public Builder statistics(String statistics) {
             this.putQueryParameter("Statistics", statistics);
@@ -470,7 +551,7 @@ public class CreateAlarmRequest extends Request {
         }
 
         /**
-         * Threshold.
+         * The threshold of the metric value. If the threshold is reached the specified number of times within the specified period, a scaling rule is executed.
          */
         public Builder threshold(Float threshold) {
             this.putQueryParameter("Threshold", threshold);
@@ -486,10 +567,10 @@ public class CreateAlarmRequest extends Request {
     } 
 
     public static class Dimensions extends TeaModel {
-        @NameInMap("DimensionKey")
+        @com.aliyun.core.annotation.NameInMap("DimensionKey")
         private String dimensionKey;
 
-        @NameInMap("DimensionValue")
+        @com.aliyun.core.annotation.NameInMap("DimensionValue")
         private String dimensionValue;
 
         private Dimensions(Builder builder) {
@@ -524,7 +605,17 @@ public class CreateAlarmRequest extends Request {
             private String dimensionValue; 
 
             /**
-             * DimensionKey.
+             * The key of the metric dimension. The valid values vary based on the metric type.
+             * <p>
+             * 
+             * *   If you set the MetricType parameter to custom, you can specify this parameter based on your business requirements.
+             * 
+             * *   If you set the MetricType parameter to system, this parameter has the following valid values:
+             * 
+             *     *   user_id: the ID of your Alibaba Cloud account
+             *     *   scaling_group: the scaling group that you want to monitor
+             *     *   device: the type of the NIC
+             *     *   state: the status of the TCP connection
              */
             public Builder dimensionKey(String dimensionKey) {
                 this.dimensionKey = dimensionKey;
@@ -532,7 +623,26 @@ public class CreateAlarmRequest extends Request {
             }
 
             /**
-             * DimensionValue.
+             * The value of the metric dimension. The valid values vary based on the value of the DimensionKey parameter.
+             * <p>
+             * 
+             * *   If you set the MetricType parameter to custom, you can specify this parameter based on your business requirements.
+             * 
+             * *   If you set the MetricType parameter to system, the following rules apply:
+             * 
+             *     *   If you set the DimensionKey parameter to user_id, the system specifies the value of the DimensionValue parameter.
+             * 
+             *     *   If you set the DimensionKey parameter to scaling_group, the system specifies the value of the DimensionValue parameter.
+             * 
+             *     *   If you set the DimensionKey parameter to device, you can set the DimensionValue parameter to eth0 or eth1.
+             * 
+             *         *   For instances that reside in the classic network, eth0 specifies the internal NIC. Only one eth0 NIC exists on each instance that resides in a VPC.
+             *         *   For instances that reside in the classic network, eth1 specifies the public NIC.
+             * 
+             *     *   If you set the DimensionKey parameter to state, you can set the DimensionValue parameter to TCP_TOTAL or ESTABLISHED.
+             * 
+             *         *   TCP_TOTAL specifies the total number of TCP connections.
+             *         *   ESTABLISHED specifies the number of established TCP connections.
              */
             public Builder dimensionValue(String dimensionValue) {
                 this.dimensionValue = dimensionValue;
@@ -547,19 +657,19 @@ public class CreateAlarmRequest extends Request {
 
     }
     public static class Expressions extends TeaModel {
-        @NameInMap("ComparisonOperator")
+        @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
         private String comparisonOperator;
 
-        @NameInMap("MetricName")
+        @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
 
-        @NameInMap("Period")
+        @com.aliyun.core.annotation.NameInMap("Period")
         private Integer period;
 
-        @NameInMap("Statistics")
+        @com.aliyun.core.annotation.NameInMap("Statistics")
         private String statistics;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private Float threshold;
 
         private Expressions(Builder builder) {
@@ -621,7 +731,15 @@ public class CreateAlarmRequest extends Request {
             private Float threshold; 
 
             /**
-             * ComparisonOperator.
+             * The operator that is used to compare the metric value and the threshold. Valid values:
+             * <p>
+             * 
+             * *   If the metric value is greater than or equal to the threshold, set the value to: >=.
+             * *   If the metric value is less than or equal to the threshold, set the value to: <=.
+             * *   If the metric value is greater than the threshold, set the value to: >.
+             * *   If the metric value is less than the threshold, set the value to: <.
+             * 
+             * Default value: >=.
              */
             public Builder comparisonOperator(String comparisonOperator) {
                 this.comparisonOperator = comparisonOperator;
@@ -629,7 +747,36 @@ public class CreateAlarmRequest extends Request {
             }
 
             /**
-             * MetricName.
+             * The names of the metrics that are specified in the multi-metric alert rule. The valid values of this parameter vary based on the metric type.
+             * <p>
+             * 
+             * *   If you set the MetricType parameter to custom, the valid values are your custom metrics.
+             * 
+             * *   If you set the MetricType parameter to system, the MetricName parameter has the following valid values:
+             * 
+             *     *   CpuUtilization: the CPU utilization of an ECS instance. Unit: %.
+             *     *   IntranetTx: the outbound traffic over the internal network from an ECS instance. Unit: KB/min.
+             *     *   IntranetRx: the inbound traffic over the Internet to an ECS instance that resides in a VPC. Unit: KB/min.
+             *     *   VpcInternetTx: the outbound traffic over the Internet from an ECS instance that resides in a VPC. Unit: KB/min.
+             *     *   VpcInternetRx: the inbound traffic over the Internet to an ECS instance that resides in a VPC. Unit: KB/min.
+             *     *   SystemDiskReadBps: the number of bytes read from the system disk used by an ECS instance per second.
+             *     *   SystemDiskWriteBps: the number of bytes written to the system disk used by an ECS instance per second.
+             *     *   SystemDiskReadOps: the number of read operations on the system disk used by an ECS instance per second.
+             *     *   SystemDiskWriteOps: the number of write operations on the system disk used by an ECS instance per second.
+             *     *   CpuUtilizationAgent: the CPU utilization of an agent. Unit: %.
+             *     *   GpuUtilizationAgent: the GPU utilization of an agent. Unit: %.
+             *     *   GpuMemoryFreeUtilizationAgent: the percentage of idle GPU memory of an agent.
+             *     *   GpuMemoryUtilizationAgent: the GPU memory usage of an agent. Unit: %.
+             *     *   MemoryUtilization: the memory usage of an agent. Unit: %.
+             *     *   LoadAverage: the average system load of an agent.
+             *     *   TcpConnection: the total number of TCP connections of an agent.
+             *     *   TcpConnection: the number of established TCP connections of an agent.
+             *     *   PackagesNetOut: the number of packets that are sent by the internal NIC used by an agent.
+             *     *   PackagesNetIn: the number of packets that are received by the internal NIC used by an agent.
+             *     *   EciPodCpuUtilization: the CPU utilization of an elastic container instance. Unit: %.
+             *     *   EciPodMemoryUtilization: the memory usage of an elastic container instance. Unit: %.
+             * 
+             * For more information, see [Event-triggered task for system monitoring](~~74854~~).
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -637,7 +784,18 @@ public class CreateAlarmRequest extends Request {
             }
 
             /**
-             * Period.
+             * The period during which the statistical values of the metrics that are specified in the multi-metric alert rule are collected. Unit: seconds. Valid values:
+             * <p>
+             * 
+             * *   15
+             * *   60
+             * *   120
+             * *   300
+             * *   900
+             * 
+             * > If your scaling group is of the ECS type and uses CloudMonitor metrics, you can set the Period parameter to 15. In other cases, you can set the Period parameter to 60, 120, 300, or 900. In most cases, the name of a CloudMonitor metric contains Agent.
+             * 
+             * Default value: 300.
              */
             public Builder period(Integer period) {
                 this.period = period;
@@ -645,7 +803,14 @@ public class CreateAlarmRequest extends Request {
             }
 
             /**
-             * Statistics.
+             * The method that is used to aggregate statistics about the metrics that are specified in the multi-metric alert rule. Valid values:
+             * <p>
+             * 
+             * *   Average
+             * *   Minimum
+             * *   Maximum
+             * 
+             * Default value: Average.
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -653,7 +818,7 @@ public class CreateAlarmRequest extends Request {
             }
 
             /**
-             * Threshold.
+             * The thresholds of the metric values. If the thresholds are reached the specified number of times within the specified period, a scaling rule is executed.
              */
             public Builder threshold(Float threshold) {
                 this.threshold = threshold;

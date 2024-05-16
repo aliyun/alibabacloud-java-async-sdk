@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,35 +11,35 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DetachServerGroupsRequest</p>
  */
 public class DetachServerGroupsRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("ForceDetach")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForceDetach")
     private Boolean forceDetach;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ScalingGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scalingGroupId;
 
-    @Query
-    @NameInMap("ServerGroups")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerGroups")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < ServerGroups> serverGroups;
 
     private DetachServerGroupsRequest(Builder builder) {
@@ -153,7 +152,7 @@ public class DetachServerGroupsRequest extends Request {
         }
 
         /**
-         * Specifies whether to remove the Elastic Compute Service (ECS) instances in the scaling group from the detached server group.
+         * Specifies whether to remove the Elastic Compute Service (ECS) instances in the scaling group from the server group that you want to detach.
          * <p>
          * 
          * *   true
@@ -220,16 +219,16 @@ public class DetachServerGroupsRequest extends Request {
     } 
 
     public static class ServerGroups extends TeaModel {
-        @NameInMap("Port")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Port")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer port;
 
-        @NameInMap("ServerGroupId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ServerGroupId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String serverGroupId;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private ServerGroups(Builder builder) {

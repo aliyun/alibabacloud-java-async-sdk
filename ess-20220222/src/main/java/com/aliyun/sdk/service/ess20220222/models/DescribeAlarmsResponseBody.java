@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAlarmsResponseBody</p>
  */
 public class DescribeAlarmsResponseBody extends TeaModel {
-    @NameInMap("AlarmList")
+    @com.aliyun.core.annotation.NameInMap("AlarmList")
     private java.util.List < AlarmList> alarmList;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeAlarmsResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class DescribeAlarmsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * AlarmList.
+         * The list of event-triggered tasks.
          */
         public Builder alarmList(java.util.List < AlarmList> alarmList) {
             this.alarmList = alarmList;
@@ -94,7 +93,7 @@ public class DescribeAlarmsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +101,7 @@ public class DescribeAlarmsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +109,7 @@ public class DescribeAlarmsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +117,7 @@ public class DescribeAlarmsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of event-triggered tasks.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -132,10 +131,10 @@ public class DescribeAlarmsResponseBody extends TeaModel {
     } 
 
     public static class Dimensions extends TeaModel {
-        @NameInMap("DimensionKey")
+        @com.aliyun.core.annotation.NameInMap("DimensionKey")
         private String dimensionKey;
 
-        @NameInMap("DimensionValue")
+        @com.aliyun.core.annotation.NameInMap("DimensionValue")
         private String dimensionValue;
 
         private Dimensions(Builder builder) {
@@ -170,7 +169,13 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             private String dimensionValue; 
 
             /**
-             * DimensionKey.
+             * The key of the dimension. Valid values:
+             * <p>
+             * 
+             * *   user_id: the ID of your Alibaba Cloud account
+             * *   scaling_group: the scaling group that you want to monitor
+             * *   device: the type of the NIC
+             * *   state: the state of the TCP connection
              */
             public Builder dimensionKey(String dimensionKey) {
                 this.dimensionKey = dimensionKey;
@@ -178,7 +183,22 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * DimensionValue.
+             * The value of the dimension. The value of the DimensionValue parameter varies based on the value of the DimensionKey parameter.
+             * <p>
+             * 
+             * *   If you set the DimensionKey parameter to `user_id`, the system specifies the value of the DimensionValue parameter.
+             * 
+             * *   If you set the DimensionKey parameter to `scaling_group`, the system specifies the value of the DimensionValue parameter.
+             * 
+             * *   If you set the DimensionKey parameter to `device`, you can set the DimensionValue parameter to eth0 or eth1.
+             * 
+             *     *   For instances that reside in the classic network type, eth0 specifies the internal NIC. Only one eth0 NIC exists on each instance that resides in a VPC.
+             *     *   For instances that reside in the classic network, eth1 specifies the public NIC.
+             * 
+             * *   If you set the DimensionKey parameter to `state`, you can set the DimensionValue parameter to TCP_TOTAL or ESTABLISHED.
+             * 
+             *     *   TCP_TOTAL specifies the total number of TCP connections.
+             *     *   ESTABLISHED specifies the number of established TCP connections.
              */
             public Builder dimensionValue(String dimensionValue) {
                 this.dimensionValue = dimensionValue;
@@ -193,19 +213,19 @@ public class DescribeAlarmsResponseBody extends TeaModel {
 
     }
     public static class Expressions extends TeaModel {
-        @NameInMap("ComparisonOperator")
+        @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
         private String comparisonOperator;
 
-        @NameInMap("MetricName")
+        @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
 
-        @NameInMap("Period")
+        @com.aliyun.core.annotation.NameInMap("Period")
         private Integer period;
 
-        @NameInMap("Statistics")
+        @com.aliyun.core.annotation.NameInMap("Statistics")
         private String statistics;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private Float threshold;
 
         private Expressions(Builder builder) {
@@ -267,7 +287,15 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             private Float threshold; 
 
             /**
-             * ComparisonOperator.
+             * The operator that is used to compare the metric value and the threshold.
+             * <p>
+             * 
+             * *   Valid value if the metric value is greater than or equal to the threshold: >=
+             * *   Valid value if the metric value is less than or equal to the threshold: <=
+             * *   Valid value if the metric value is greater than the threshold: >
+             * *   Valid value if the metric value is less than the threshold: <
+             * 
+             * Default value: >=.
              */
             public Builder comparisonOperator(String comparisonOperator) {
                 this.comparisonOperator = comparisonOperator;
@@ -275,7 +303,32 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * MetricName.
+             * The name of the metric that is specified in the multi-metric alert rule. Valid values:
+             * <p>
+             * 
+             * *   CpuUtilization: the CPU utilization of an ECS instance. Unit: %.
+             * *   IntranetTx: the outbound traffic over the internal network from an ECS instance. Unit: KB/min.
+             * *   IntranetRx: the inbound traffic over the Internet to an ECS instance that resides in a VPC. Unit: KB/min.
+             * *   VpcInternetTx: the outbound traffic over the Internet from an ECS instance that resides in a VPC. Unit: KB/min.
+             * *   VpcInternetRx: the inbound traffic over the Internet to an ECS instance that resides in a VPC. Unit: KB/min.
+             * *   SystemDiskReadBps: the number of bytes read from the system disk used by an ECS instance per second.
+             * *   SystemDiskWriteBps: the number of bytes written to the system disk used by an ECS instance per second.
+             * *   SystemDiskReadOps: the number of read operations on the system disk used by an ECS instance per second.
+             * *   SystemDiskWriteOps: the number of write operations on the system disk used by an ECS instance per second.
+             * *   CpuUtilizationAgent: the CPU utilization of an agent. Unit: %.
+             * *   GpuUtilizationAgent: the GPU utilization of an agent. Unit: %.
+             * *   GpuMemoryFreeUtilizationAgent: the percentage of idle GPU memory of an agent.
+             * *   GpuMemoryUtilizationAgent: the GPU memory usage of an agent. Unit: %.
+             * *   MemoryUtilization: the memory usage of an agent. Unit: %.
+             * *   LoadAverage: the average system load of an agent.
+             * *   TcpConnection: the total number of TCP connections of an agent.
+             * *   TcpConnection: the number of established TCP connections of an agent.
+             * *   PackagesNetOut: the number of packets that are sent by the internal NIC used by an agent.
+             * *   PackagesNetIn: the number of packets that are received by the internal NIC used by an agent.
+             * *   EciPodCpuUtilization: the CPU utilization of an elastic container instance. Unit: %.
+             * *   EciPodMemoryUtilization: the memory usage of an elastic container instance. Unit: %.
+             * 
+             * For more information, see [Event-triggered task for system monitoring](~~74854~~).
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -283,7 +336,16 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * Period.
+             * The period of time during which statistics about the metrics in the multi-metric alert rule is collected. Unit: seconds. Valid values:
+             * <p>
+             * 
+             * *   15
+             * *   60
+             * *   120
+             * *   300
+             * *   900
+             * 
+             * > If your scaling group is of the ECS type and the event-triggered task associated with your scaling group monitors CloudMonitor metrics, you can set the Period parameter to 15. In most cases, the name of a CloudMonitor metric contains Agent.
              */
             public Builder period(Integer period) {
                 this.period = period;
@@ -291,7 +353,12 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * Statistics.
+             * The method that is used to aggregate statistics about the metrics in the multi-metric alert rule. Valid values:
+             * <p>
+             * 
+             * *   Average
+             * *   Minimum
+             * *   Maximum
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -299,7 +366,7 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * Threshold.
+             * The thresholds of the metric values in the multi-metric alert rule. If the thresholds are reached the specified number of times within the specified period, a scaling rule is executed.
              */
             public Builder threshold(Float threshold) {
                 this.threshold = threshold;
@@ -314,58 +381,58 @@ public class DescribeAlarmsResponseBody extends TeaModel {
 
     }
     public static class AlarmList extends TeaModel {
-        @NameInMap("AlarmActions")
+        @com.aliyun.core.annotation.NameInMap("AlarmActions")
         private java.util.List < String > alarmActions;
 
-        @NameInMap("AlarmTaskId")
+        @com.aliyun.core.annotation.NameInMap("AlarmTaskId")
         private String alarmTaskId;
 
-        @NameInMap("ComparisonOperator")
+        @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
         private String comparisonOperator;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Dimensions")
+        @com.aliyun.core.annotation.NameInMap("Dimensions")
         private java.util.List < Dimensions> dimensions;
 
-        @NameInMap("Effective")
+        @com.aliyun.core.annotation.NameInMap("Effective")
         private String effective;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
 
-        @NameInMap("EvaluationCount")
+        @com.aliyun.core.annotation.NameInMap("EvaluationCount")
         private Integer evaluationCount;
 
-        @NameInMap("Expressions")
+        @com.aliyun.core.annotation.NameInMap("Expressions")
         private java.util.List < Expressions> expressions;
 
-        @NameInMap("ExpressionsLogicOperator")
+        @com.aliyun.core.annotation.NameInMap("ExpressionsLogicOperator")
         private String expressionsLogicOperator;
 
-        @NameInMap("MetricName")
+        @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
 
-        @NameInMap("MetricType")
+        @com.aliyun.core.annotation.NameInMap("MetricType")
         private String metricType;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Period")
+        @com.aliyun.core.annotation.NameInMap("Period")
         private Integer period;
 
-        @NameInMap("ScalingGroupId")
+        @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
         private String scalingGroupId;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Statistics")
+        @com.aliyun.core.annotation.NameInMap("Statistics")
         private String statistics;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private Float threshold;
 
         private AlarmList(Builder builder) {
@@ -544,7 +611,7 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             private Float threshold; 
 
             /**
-             * AlarmActions.
+             * The list of unique identifiers of the scaling rules that are associated with the event-triggered task.
              */
             public Builder alarmActions(java.util.List < String > alarmActions) {
                 this.alarmActions = alarmActions;
@@ -552,7 +619,7 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * AlarmTaskId.
+             * The ID of the event-triggered task.
              */
             public Builder alarmTaskId(String alarmTaskId) {
                 this.alarmTaskId = alarmTaskId;
@@ -560,7 +627,13 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * ComparisonOperator.
+             * The operator that is used to compare the metric value and the threshold.
+             * <p>
+             * 
+             * *   Valid value if the metric value is greater than or equal to the threshold: >=
+             * *   Valid value if the metric value is less than or equal to the threshold: <=
+             * *   Valid value if the metric value is greater than the threshold: >
+             * *   Valid value if the metric value is less than the threshold: <
              */
             public Builder comparisonOperator(String comparisonOperator) {
                 this.comparisonOperator = comparisonOperator;
@@ -568,7 +641,7 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the event-triggered task.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -576,7 +649,7 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * Dimensions.
+             * Details of the dimensions.
              */
             public Builder dimensions(java.util.List < Dimensions> dimensions) {
                 this.dimensions = dimensions;
@@ -584,7 +657,7 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * Effective.
+             * > This parameter is in invitational preview and is unavailable.
              */
             public Builder effective(String effective) {
                 this.effective = effective;
@@ -592,7 +665,11 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * Indicates whether the event-triggered task is enabled. Valid values:
+             * <p>
+             * 
+             * *   true: The event-triggered task is enabled.
+             * *   false: The event-triggered task is disabled.
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -600,7 +677,7 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * EvaluationCount.
+             * The number of times that the threshold must be reached before a scaling rule can be executed. For example, if you set this parameter to 3, the average CPU utilization must reach or exceed 80% three times in a row before a scaling rule is triggered.
              */
             public Builder evaluationCount(Integer evaluationCount) {
                 this.evaluationCount = evaluationCount;
@@ -608,7 +685,7 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * Expressions.
+             * The expressions that are specified in the multi-metric alert rule.
              */
             public Builder expressions(java.util.List < Expressions> expressions) {
                 this.expressions = expressions;
@@ -616,7 +693,11 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpressionsLogicOperator.
+             * The relationship between the trigger conditions that are specified in the multi-metric alert rule. Valid values:
+             * <p>
+             * 
+             * *   `&&`: An alert is triggered only if all metrics in the multi-metric alert rule meet the trigger conditions. In this case, an alert is triggered only if the results of all trigger conditions that are specified in the multi-metric alert rule are `true`.
+             * *   `||`: An alert is triggered if one of the metrics in the multi-metric alert rule meets the trigger conditions.
              */
             public Builder expressionsLogicOperator(String expressionsLogicOperator) {
                 this.expressionsLogicOperator = expressionsLogicOperator;
@@ -624,7 +705,31 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * MetricName.
+             * The name of the metric. Valid values:
+             * <p>
+             * 
+             * *   CpuUtilization: the CPU utilization of an ECS instance. Unit: %.
+             * *   IntranetTx: the outbound traffic over the internal network from an ECS instance. Unit: KB/min.
+             * *   IntranetRx: the inbound traffic over the Internet to an ECS instance that resides in a VPC. Unit: KB/min.
+             * *   VpcInternetTx: the outbound traffic over the Internet from an ECS instance that resides in a VPC. Unit: KB/min.
+             * *   VpcInternetRx: the inbound traffic over the Internet to an ECS instance that resides in a VPC. Unit: KB/min.
+             * *   SystemDiskReadBps: the number of bytes read from the system disk used by an ECS instance per second.
+             * *   SystemDiskWriteBps: the number of bytes written to the system disk used by an ECS instance per second.
+             * *   SystemDiskReadOps: the number of read operations on the system disk used by an ECS instance per second.
+             * *   SystemDiskWriteOps: the number of write operations on the system disk used by an ECS instance per second.
+             * *   CpuUtilizationAgent: the CPU utilization of an agent. Unit: %.
+             * *   GpuMemoryFreeUtilizationAgent: the percentage of idle GPU memory of an agent.
+             * *   GpuMemoryUtilizationAgent: the GPU memory usage of an agent. Unit: %.
+             * *   MemoryUtilization: the memory usage of an agent. Unit: %.
+             * *   LoadAverage: the average system load of an agent.
+             * *   TcpConnection: the total number of TCP connections of an agent.
+             * *   TcpConnection: the number of established TCP connections of an agent.
+             * *   PackagesNetOut: the number of packets that are sent by the internal NIC used by an agent.
+             * *   PackagesNetIn: the number of packets that are received by the internal NIC used by an agent.
+             * *   EciPodCpuUtilization: the CPU utilization of an elastic container instance. Unit: %.
+             * *   EciPodMemoryUtilization: the memory usage of an elastic container instance. Unit: %.
+             * 
+             * For more information, see [Event-triggered task for system monitoring](~~74854~~).
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -632,7 +737,11 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * MetricType.
+             * The type of the metric. Valid values:
+             * <p>
+             * 
+             * *   system: system metrics of CloudMonitor
+             * *   custom: custom metrics that are reported to CloudMonitor
              */
             public Builder metricType(String metricType) {
                 this.metricType = metricType;
@@ -640,7 +749,7 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the event-triggered task.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -648,7 +757,16 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * Period.
+             * The period of time during which statistics about the metric is collected. Unit: seconds. Valid values:
+             * <p>
+             * 
+             * *   15
+             * *   60
+             * *   120
+             * *   300
+             * *   900
+             * 
+             * > If your scaling group is of the ECS type and the event-triggered task associated with your scaling group monitors CloudMonitor metrics, you can set the Period parameter to 15. In most cases, the name of a CloudMonitor metric contains Agent.
              */
             public Builder period(Integer period) {
                 this.period = period;
@@ -656,7 +774,7 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * ScalingGroupId.
+             * The scaling group ID of the event-triggered task.
              */
             public Builder scalingGroupId(String scalingGroupId) {
                 this.scalingGroupId = scalingGroupId;
@@ -664,7 +782,12 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The status of the event-triggered task. Valid values:
+             * <p>
+             * 
+             * *   ALARM: The alert condition is met and an alert is triggered.
+             * *   OK: The alert condition is not met.
+             * *   INSUFFICIENT_DATA: Auto Scaling cannot determine whether the alert condition is met due to insufficient data.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -672,7 +795,12 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * Statistics.
+             * The method that is used to aggregate statistics for the metric. Valid values:
+             * <p>
+             * 
+             * *   Average
+             * *   Minimum
+             * *   Maximum
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -680,7 +808,7 @@ public class DescribeAlarmsResponseBody extends TeaModel {
             }
 
             /**
-             * Threshold.
+             * The threshold of the metric value. If the threshold is reached the specified times within the specified period, a scaling rule is executed.
              */
             public Builder threshold(Float threshold) {
                 this.threshold = threshold;

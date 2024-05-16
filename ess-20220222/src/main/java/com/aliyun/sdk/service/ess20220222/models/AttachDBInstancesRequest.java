@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,42 +11,42 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AttachDBInstancesRequest</p>
  */
 public class AttachDBInstancesRequest extends Request {
-    @Query
-    @NameInMap("AttachMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AttachMode")
     private String attachMode;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DBInstances")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstances")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > DBInstances;
 
-    @Query
-    @NameInMap("ForceAttach")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForceAttach")
     private Boolean forceAttach;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ScalingGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scalingGroupId;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private AttachDBInstancesRequest(Builder builder) {
@@ -168,7 +167,11 @@ public class AttachDBInstancesRequest extends Request {
         } 
 
         /**
-         * AttachMode.
+         * The mode in which you want to attach the ApsaraDB RDS instance to the scaling group. Valid values:
+         * <p>
+         * 
+         * *   SecurityIp: the SecurityIp mode. Auto Scaling automatically adds the private IP addresses of the scaled out instances to the IP address whitelist of the ApsaraDB RDS instance. You can select this mode only when you attach an ApsaraDB RDS instance to a scaling group.
+         * *   SecurityGroup: the security group mode. Auto Scaling adds the security group of the scaling configuration to the security group whitelist for registration and association.
          */
         public Builder attachMode(String attachMode) {
             this.putQueryParameter("AttachMode", attachMode);
@@ -249,7 +252,14 @@ public class AttachDBInstancesRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the database that you want to attach to the scaling group. Valid values:
+         * <p>
+         * 
+         * *   ApsaraDB RDS
+         * *   ApsaraDB for Redis
+         * *   ApsaraDB for MongoDB
+         * 
+         * Default value: RDS.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

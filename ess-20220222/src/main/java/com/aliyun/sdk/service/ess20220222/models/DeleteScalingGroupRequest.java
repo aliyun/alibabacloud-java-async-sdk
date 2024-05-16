@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteScalingGroupRequest</p>
  */
 public class DeleteScalingGroupRequest extends Request {
-    @Query
-    @NameInMap("ForceDelete")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForceDelete")
     private Boolean forceDelete;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ScalingGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scalingGroupId;
 
     private DeleteScalingGroupRequest(Builder builder) {
@@ -125,16 +124,17 @@ public class DeleteScalingGroupRequest extends Request {
         } 
 
         /**
-         * Specifies whether to forcefully delete the VPC. Valid values:
+         * Specifies whether to forcibly delete the scaling group and release Elastic Compute Service (ECS) instances in the scaling group when ECS instances or ongoing scaling activities exist in the scaling group. Valid values:
          * <p>
          * 
-         * - **true**: yes
-         * - **false** (default): no
+         * *   true: forcibly deletes the scaling group. The scaling group is disabled and new scaling requests are rejected. After all existing scaling requests are processed, the ECS instances are removed from the scaling group. Then, the scaling group is deleted. If the ECS instances are manually added to the scaling group, the ECS instances are only removed from the scaling group. If the ECS instances are automatically created and added to the scaling group, the ECS instances are removed from the scaling group and then released.
          * 
-         * You can forcefully delete a VPC in the following scenarios:
+         * *   false: does not forcibly delete the scaling group. The scaling group is disabled and then deleted if the following conditions are met:
          * 
-         * - Only an IPv4 gateway and routes that point to the IPv4 gateway exist in the VPC.
-         * - Only an IPv6 gateway and routes that point to the IPv6 gateway exist in the VPC.
+         *     *   No scaling activities are in process in the scaling group.
+         *     *   The Total Capacity parameter is set to 0. A value of 0 specifies that no ECS instances exist in the scaling group.
+         * 
+         * Default value: false.
          */
         public Builder forceDelete(Boolean forceDelete) {
             this.putQueryParameter("ForceDelete", forceDelete);
@@ -161,7 +161,7 @@ public class DeleteScalingGroupRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * The region ID of the scaling group.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

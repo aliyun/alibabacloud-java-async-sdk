@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,97 +11,97 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyScalingRuleRequest</p>
  */
 public class ModifyScalingRuleRequest extends Request {
-    @Query
-    @NameInMap("AdjustmentType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdjustmentType")
     private String adjustmentType;
 
-    @Query
-    @NameInMap("AdjustmentValue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdjustmentValue")
     private Integer adjustmentValue;
 
-    @Query
-    @NameInMap("AlarmDimensions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlarmDimensions")
     private java.util.List < AlarmDimensions> alarmDimensions;
 
-    @Query
-    @NameInMap("Cooldown")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Cooldown")
     private Integer cooldown;
 
-    @Query
-    @NameInMap("DisableScaleIn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisableScaleIn")
     private Boolean disableScaleIn;
 
-    @Query
-    @NameInMap("EstimatedInstanceWarmup")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EstimatedInstanceWarmup")
     private Integer estimatedInstanceWarmup;
 
-    @Query
-    @NameInMap("InitialMaxSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InitialMaxSize")
     private Integer initialMaxSize;
 
-    @Query
-    @NameInMap("MetricName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricName")
     private String metricName;
 
-    @Query
-    @NameInMap("MinAdjustmentMagnitude")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinAdjustmentMagnitude")
     private Integer minAdjustmentMagnitude;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PredictiveScalingMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PredictiveScalingMode")
     private String predictiveScalingMode;
 
-    @Query
-    @NameInMap("PredictiveTaskBufferTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PredictiveTaskBufferTime")
     private Integer predictiveTaskBufferTime;
 
-    @Query
-    @NameInMap("PredictiveValueBehavior")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PredictiveValueBehavior")
     private String predictiveValueBehavior;
 
-    @Query
-    @NameInMap("PredictiveValueBuffer")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PredictiveValueBuffer")
     private Integer predictiveValueBuffer;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ScaleInEvaluationCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScaleInEvaluationCount")
     private Integer scaleInEvaluationCount;
 
-    @Query
-    @NameInMap("ScaleOutEvaluationCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScaleOutEvaluationCount")
     private Integer scaleOutEvaluationCount;
 
-    @Query
-    @NameInMap("ScalingRuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingRuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scalingRuleId;
 
-    @Query
-    @NameInMap("ScalingRuleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingRuleName")
     private String scalingRuleName;
 
-    @Query
-    @NameInMap("StepAdjustments")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StepAdjustments")
     private java.util.List < StepAdjustments> stepAdjustments;
 
-    @Query
-    @NameInMap("TargetValue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetValue")
     private Float targetValue;
 
     private ModifyScalingRuleRequest(Builder builder) {
@@ -621,10 +620,10 @@ public class ModifyScalingRuleRequest extends Request {
     } 
 
     public static class AlarmDimensions extends TeaModel {
-        @NameInMap("DimensionKey")
+        @com.aliyun.core.annotation.NameInMap("DimensionKey")
         private String dimensionKey;
 
-        @NameInMap("DimensionValue")
+        @com.aliyun.core.annotation.NameInMap("DimensionValue")
         private String dimensionValue;
 
         private AlarmDimensions(Builder builder) {
@@ -682,13 +681,13 @@ public class ModifyScalingRuleRequest extends Request {
 
     }
     public static class StepAdjustments extends TeaModel {
-        @NameInMap("MetricIntervalLowerBound")
+        @com.aliyun.core.annotation.NameInMap("MetricIntervalLowerBound")
         private Float metricIntervalLowerBound;
 
-        @NameInMap("MetricIntervalUpperBound")
+        @com.aliyun.core.annotation.NameInMap("MetricIntervalUpperBound")
         private Float metricIntervalUpperBound;
 
-        @NameInMap("ScalingAdjustment")
+        @com.aliyun.core.annotation.NameInMap("ScalingAdjustment")
         private Integer scalingAdjustment;
 
         private StepAdjustments(Builder builder) {

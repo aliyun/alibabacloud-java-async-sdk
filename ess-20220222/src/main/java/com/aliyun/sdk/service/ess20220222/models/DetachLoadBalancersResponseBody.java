@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DetachLoadBalancersResponseBody</p>
  */
 public class DetachLoadBalancersResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ScalingActivityId")
+    @com.aliyun.core.annotation.NameInMap("ScalingActivityId")
     private String scalingActivityId;
 
     private DetachLoadBalancersResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class DetachLoadBalancersResponseBody extends TeaModel {
         private String scalingActivityId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +57,7 @@ public class DetachLoadBalancersResponseBody extends TeaModel {
         }
 
         /**
-         * ScalingActivityId.
+         * The ID of the scaling activity. The value of this parameter is returned only if you set the Async parameter to true. You can call the describescalingactivities operation to query all scaling activity IDs and use the scaling activity IDs to check the status of the scaling activities.
          */
         public Builder scalingActivityId(String scalingActivityId) {
             this.scalingActivityId = scalingActivityId;

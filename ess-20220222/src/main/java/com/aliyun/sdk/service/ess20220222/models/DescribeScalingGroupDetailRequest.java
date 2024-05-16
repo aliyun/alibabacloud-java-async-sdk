@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeScalingGroupDetailRequest</p>
  */
 public class DescribeScalingGroupDetailRequest extends Request {
-    @Query
-    @NameInMap("OutputFormat")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutputFormat")
     private String outputFormat;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ScalingGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scalingGroupId;
 
     private DescribeScalingGroupDetailRequest(Builder builder) {
@@ -98,7 +97,7 @@ public class DescribeScalingGroupDetailRequest extends Request {
         } 
 
         /**
-         * OutputFormat.
+         * The output format. Set the value to yaml.
          */
         public Builder outputFormat(String outputFormat) {
             this.putQueryParameter("OutputFormat", outputFormat);
@@ -116,7 +115,7 @@ public class DescribeScalingGroupDetailRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the scaling group. For more information, see the "Regions and zones" topic.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -125,7 +124,7 @@ public class DescribeScalingGroupDetailRequest extends Request {
         }
 
         /**
-         * ScalingGroupId.
+         * The ID of the scaling group.
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,50 +11,50 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeScheduledTasksRequest</p>
  */
 public class DescribeScheduledTasksRequest extends Request {
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 50)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 50)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ScalingGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
     private String scalingGroupId;
 
-    @Query
-    @NameInMap("ScheduledActions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScheduledActions")
     private java.util.List < String > scheduledActions;
 
-    @Query
-    @NameInMap("ScheduledTaskIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScheduledTaskIds")
     private java.util.List < String > scheduledTaskIds;
 
-    @Query
-    @NameInMap("ScheduledTaskNames")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScheduledTaskNames")
     private java.util.List < String > scheduledTaskNames;
 
     private DescribeScheduledTasksRequest(Builder builder) {
@@ -214,7 +213,10 @@ public class DescribeScheduledTasksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page 1.
+         * <p>
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -223,7 +225,10 @@ public class DescribeScheduledTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: 1 to 50.
+         * <p>
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -232,7 +237,7 @@ public class DescribeScheduledTasksRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the scaling group to which the scheduled task belongs.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -259,7 +264,7 @@ public class DescribeScheduledTasksRequest extends Request {
         }
 
         /**
-         * ScalingGroupId.
+         * The ID of the scaling group to which the scheduled task belongs.
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);
@@ -268,7 +273,7 @@ public class DescribeScheduledTasksRequest extends Request {
         }
 
         /**
-         * ScheduledActions.
+         * The actions that you want Auto Scaling to perform when the scheduled task is triggered.
          */
         public Builder scheduledActions(java.util.List < String > scheduledActions) {
             this.putQueryParameter("ScheduledActions", scheduledActions);
@@ -277,7 +282,7 @@ public class DescribeScheduledTasksRequest extends Request {
         }
 
         /**
-         * ScheduledTaskIds.
+         * The ID of the scheduled task that you want to query.
          */
         public Builder scheduledTaskIds(java.util.List < String > scheduledTaskIds) {
             this.putQueryParameter("ScheduledTaskIds", scheduledTaskIds);
@@ -286,7 +291,7 @@ public class DescribeScheduledTasksRequest extends Request {
         }
 
         /**
-         * ScheduledTaskNames.
+         * The names of the scheduled tasks that you want to query.
          */
         public Builder scheduledTaskNames(java.util.List < String > scheduledTaskNames) {
             this.putQueryParameter("ScheduledTaskNames", scheduledTaskNames);

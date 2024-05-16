@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>VerifyAuthenticationRequest</p>
  */
 public class VerifyAuthenticationRequest extends Request {
-    @Query
-    @NameInMap("OnlyCheck")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OnlyCheck")
     private Boolean onlyCheck;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Uid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uid")
     private Long uid;
 
     private VerifyAuthenticationRequest(Builder builder) {
@@ -110,7 +109,11 @@ public class VerifyAuthenticationRequest extends Request {
         } 
 
         /**
-         * OnlyCheck.
+         * Specifies whether to check only the authorization status. Valid values:
+         * <p>
+         * 
+         * *   true: checks only the authorization status. The service-linked role is not created.
+         * *   false (default): checks the authorization status and resource usage.
          */
         public Builder onlyCheck(Boolean onlyCheck) {
             this.putQueryParameter("OnlyCheck", onlyCheck);
@@ -146,7 +149,7 @@ public class VerifyAuthenticationRequest extends Request {
         }
 
         /**
-         * Uid.
+         * The ID of your Alibaba Cloud account.
          */
         public Builder uid(Long uid) {
             this.putQueryParameter("Uid", uid);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,134 +11,134 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyScalingGroupRequest</p>
  */
 public class ModifyScalingGroupRequest extends Request {
-    @Query
-    @NameInMap("ActiveScalingConfigurationId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ActiveScalingConfigurationId")
     private String activeScalingConfigurationId;
 
-    @Query
-    @NameInMap("AllocationStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllocationStrategy")
     private String allocationStrategy;
 
-    @Query
-    @NameInMap("AzBalance")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AzBalance")
     private Boolean azBalance;
 
-    @Query
-    @NameInMap("CompensateWithOnDemand")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CompensateWithOnDemand")
     private Boolean compensateWithOnDemand;
 
-    @Query
-    @NameInMap("CustomPolicyARN")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomPolicyARN")
     private String customPolicyARN;
 
-    @Query
-    @NameInMap("DefaultCooldown")
-    @Validation(maximum = 86400)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefaultCooldown")
+    @com.aliyun.core.annotation.Validation(maximum = 86400)
     private Integer defaultCooldown;
 
-    @Query
-    @NameInMap("DesiredCapacity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesiredCapacity")
     private Integer desiredCapacity;
 
-    @Query
-    @NameInMap("DisableDesiredCapacity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisableDesiredCapacity")
     private Boolean disableDesiredCapacity;
 
-    @Query
-    @NameInMap("GroupDeletionProtection")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupDeletionProtection")
     private Boolean groupDeletionProtection;
 
-    @Query
-    @NameInMap("HealthCheckType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckType")
     private String healthCheckType;
 
-    @Query
-    @NameInMap("HealthCheckTypes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckTypes")
     private java.util.List < String > healthCheckTypes;
 
-    @Query
-    @NameInMap("LaunchTemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LaunchTemplateId")
     private String launchTemplateId;
 
-    @Query
-    @NameInMap("LaunchTemplateOverrides")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LaunchTemplateOverrides")
     private java.util.List < LaunchTemplateOverrides> launchTemplateOverrides;
 
-    @Query
-    @NameInMap("LaunchTemplateVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LaunchTemplateVersion")
     private String launchTemplateVersion;
 
-    @Query
-    @NameInMap("MaxInstanceLifetime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxInstanceLifetime")
     private Integer maxInstanceLifetime;
 
-    @Query
-    @NameInMap("MaxSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxSize")
     private Integer maxSize;
 
-    @Query
-    @NameInMap("MinSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinSize")
     private Integer minSize;
 
-    @Query
-    @NameInMap("MultiAZPolicy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MultiAZPolicy")
     private String multiAZPolicy;
 
-    @Query
-    @NameInMap("OnDemandBaseCapacity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OnDemandBaseCapacity")
     private Integer onDemandBaseCapacity;
 
-    @Query
-    @NameInMap("OnDemandPercentageAboveBaseCapacity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OnDemandPercentageAboveBaseCapacity")
     private Integer onDemandPercentageAboveBaseCapacity;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RemovalPolicies")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RemovalPolicies")
     private java.util.List < String > removalPolicies;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ScalingGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scalingGroupId;
 
-    @Query
-    @NameInMap("ScalingGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingGroupName")
     private String scalingGroupName;
 
-    @Query
-    @NameInMap("ScalingPolicy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingPolicy")
     private String scalingPolicy;
 
-    @Query
-    @NameInMap("SpotAllocationStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotAllocationStrategy")
     private String spotAllocationStrategy;
 
-    @Query
-    @NameInMap("SpotInstancePools")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotInstancePools")
     private Integer spotInstancePools;
 
-    @Query
-    @NameInMap("SpotInstanceRemedy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotInstanceRemedy")
     private Boolean spotInstanceRemedy;
 
-    @Query
-    @NameInMap("VSwitchIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchIds")
     private java.util.List < String > vSwitchIds;
 
     private ModifyScalingGroupRequest(Builder builder) {
@@ -888,13 +887,13 @@ public class ModifyScalingGroupRequest extends Request {
     } 
 
     public static class LaunchTemplateOverrides extends TeaModel {
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("SpotPriceLimit")
+        @com.aliyun.core.annotation.NameInMap("SpotPriceLimit")
         private Float spotPriceLimit;
 
-        @NameInMap("WeightedCapacity")
+        @com.aliyun.core.annotation.NameInMap("WeightedCapacity")
         private Integer weightedCapacity;
 
         private LaunchTemplateOverrides(Builder builder) {

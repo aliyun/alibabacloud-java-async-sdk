@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AttachLoadBalancersRequest</p>
  */
 public class AttachLoadBalancersRequest extends Request {
-    @Query
-    @NameInMap("Async")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Async")
     private Boolean async;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("ForceAttach")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForceAttach")
     private Boolean forceAttach;
 
-    @Query
-    @NameInMap("LoadBalancerConfigs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerConfigs")
     private java.util.List < LoadBalancerConfigs> loadBalancerConfigs;
 
-    @Query
-    @NameInMap("LoadBalancers")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancers")
     private java.util.List < String > loadBalancers;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ScalingGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scalingGroupId;
 
     private AttachLoadBalancersRequest(Builder builder) {
@@ -168,7 +167,10 @@ public class AttachLoadBalancersRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25965~~).
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](~~25965~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -177,11 +179,16 @@ public class AttachLoadBalancersRequest extends Request {
         }
 
         /**
-         * Specifies whether to add all instances in the scaling group to the vServer groups of the CLB instance. Valid values:
+         * Specifies whether to add the existing instances in the scaling group as backend servers of the load balancer. Valid values:
          * <p>
          * 
-         * *   true
-         * *   false
+         * *   true: If you set this parameter to `true`, the attachment of the load balancer entails the addition of the existing instances in the scaling group to the backend server groups of the load balancer.
+         * 
+         *     **
+         * 
+         *     **Note** If a load balancer is currently attached to your scaling group, and you want to add the instances in your scaling group to the backend server groups of the load balancer, you can call this operation again and set the ForceAttach request parameter to true.
+         * 
+         * *   false: If you set this parameter to false, the attachment of the load balancer does not entail the addition of the existing instances in the scaling group to the backend server groups of the load balancer.
          * 
          * Default value: false.
          */
@@ -192,7 +199,7 @@ public class AttachLoadBalancersRequest extends Request {
         }
 
         /**
-         * 负载均衡配置列表。
+         * The configurations of the classic load balancer (CLB, formerly known as SLB) instance.
          */
         public Builder loadBalancerConfigs(java.util.List < LoadBalancerConfigs> loadBalancerConfigs) {
             this.putQueryParameter("LoadBalancerConfigs", loadBalancerConfigs);
@@ -201,7 +208,7 @@ public class AttachLoadBalancersRequest extends Request {
         }
 
         /**
-         * The IDs of the CLB instances.
+         * The IDs of the load balancers that you want to attach to the scaling group.
          */
         public Builder loadBalancers(java.util.List < String > loadBalancers) {
             this.putQueryParameter("LoadBalancers", loadBalancers);
@@ -244,10 +251,10 @@ public class AttachLoadBalancersRequest extends Request {
     } 
 
     public static class LoadBalancerConfigs extends TeaModel {
-        @NameInMap("LoadBalancerId")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
         private String loadBalancerId;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private LoadBalancerConfigs(Builder builder) {
@@ -282,7 +289,7 @@ public class AttachLoadBalancersRequest extends Request {
             private Integer weight; 
 
             /**
-             * 负载均衡CLB（原SLB）实例的ID。
+             * The ID of the CLB instance.
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -290,7 +297,10 @@ public class AttachLoadBalancersRequest extends Request {
             }
 
             /**
-             * 弹性伸缩将ECS实例添加到SLB服务器组后，ECS实例作为后端服务器的权重。权重越高，ECS实例将被分配到越多的访问请求。如果权重为0，则ECS实例不会收到访问请求。取值范围：0~100。
+             * The weight of an Elastic Compute Service (ECS) instance or elastic container instance as a backend sever of the CLB instance. If an instance has a higher weight, more access traffic is routed to the instance. If an instance has zero weight, no access traffic is routed to the instance.
+             * <p>
+             * 
+             * Valid values: 0 to 100.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;

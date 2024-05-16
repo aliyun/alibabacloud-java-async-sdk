@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,35 +11,35 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AttachVServerGroupsRequest</p>
  */
 public class AttachVServerGroupsRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("ForceAttach")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForceAttach")
     private Boolean forceAttach;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ScalingGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scalingGroupId;
 
-    @Query
-    @NameInMap("VServerGroups")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VServerGroups")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < VServerGroups> vServerGroups;
 
     private AttachVServerGroupsRequest(Builder builder) {
@@ -153,7 +152,7 @@ public class AttachVServerGroupsRequest extends Request {
         }
 
         /**
-         * Specifies whether to add Elastic Compute Service (ECS) instances in the scaling group to the vServer group. Valid values:
+         * Specifies whether to add Elastic Compute Service (ECS) instances in the scaling group to new vServer groups. Valid values:
          * <p>
          * 
          * *   true
@@ -220,13 +219,13 @@ public class AttachVServerGroupsRequest extends Request {
     } 
 
     public static class VServerGroupAttributes extends TeaModel {
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("VServerGroupId")
+        @com.aliyun.core.annotation.NameInMap("VServerGroupId")
         private String vServerGroupId;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private VServerGroupAttributes(Builder builder) {
@@ -304,10 +303,10 @@ public class AttachVServerGroupsRequest extends Request {
 
     }
     public static class VServerGroups extends TeaModel {
-        @NameInMap("LoadBalancerId")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
         private String loadBalancerId;
 
-        @NameInMap("VServerGroupAttributes")
+        @com.aliyun.core.annotation.NameInMap("VServerGroupAttributes")
         private java.util.List < VServerGroupAttributes> vServerGroupAttributes;
 
         private VServerGroups(Builder builder) {

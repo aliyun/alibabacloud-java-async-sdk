@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeScalingInstancesResponseBody</p>
  */
 public class DescribeScalingInstancesResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ScalingInstances")
+    @com.aliyun.core.annotation.NameInMap("ScalingInstances")
     private java.util.List < ScalingInstances> scalingInstances;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("TotalSpotCount")
+    @com.aliyun.core.annotation.NameInMap("TotalSpotCount")
     private Integer totalSpotCount;
 
     private DescribeScalingInstancesResponseBody(Builder builder) {
@@ -152,61 +151,61 @@ public class DescribeScalingInstancesResponseBody extends TeaModel {
     } 
 
     public static class ScalingInstances extends TeaModel {
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("CreationType")
+        @com.aliyun.core.annotation.NameInMap("CreationType")
         private String creationType;
 
-        @NameInMap("Entrusted")
+        @com.aliyun.core.annotation.NameInMap("Entrusted")
         private Boolean entrusted;
 
-        @NameInMap("HealthStatus")
+        @com.aliyun.core.annotation.NameInMap("HealthStatus")
         private String healthStatus;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("LaunchTemplateId")
+        @com.aliyun.core.annotation.NameInMap("LaunchTemplateId")
         private String launchTemplateId;
 
-        @NameInMap("LaunchTemplateVersion")
+        @com.aliyun.core.annotation.NameInMap("LaunchTemplateVersion")
         private String launchTemplateVersion;
 
-        @NameInMap("LifecycleState")
+        @com.aliyun.core.annotation.NameInMap("LifecycleState")
         private String lifecycleState;
 
-        @NameInMap("LoadBalancerWeight")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerWeight")
         private Integer loadBalancerWeight;
 
-        @NameInMap("PrivateIpAddress")
+        @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
         private String privateIpAddress;
 
-        @NameInMap("ScalingActivityId")
+        @com.aliyun.core.annotation.NameInMap("ScalingActivityId")
         private String scalingActivityId;
 
-        @NameInMap("ScalingConfigurationId")
+        @com.aliyun.core.annotation.NameInMap("ScalingConfigurationId")
         private String scalingConfigurationId;
 
-        @NameInMap("ScalingGroupId")
+        @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
         private String scalingGroupId;
 
-        @NameInMap("ScalingInstanceId")
+        @com.aliyun.core.annotation.NameInMap("ScalingInstanceId")
         private String scalingInstanceId;
 
-        @NameInMap("SpotStrategy")
+        @com.aliyun.core.annotation.NameInMap("SpotStrategy")
         private String spotStrategy;
 
-        @NameInMap("WarmupState")
+        @com.aliyun.core.annotation.NameInMap("WarmupState")
         private String warmupState;
 
-        @NameInMap("WeightedCapacity")
+        @com.aliyun.core.annotation.NameInMap("WeightedCapacity")
         private Integer weightedCapacity;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private ScalingInstances(Builder builder) {

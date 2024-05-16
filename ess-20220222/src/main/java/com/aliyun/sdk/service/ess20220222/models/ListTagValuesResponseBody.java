@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTagValuesResponseBody</p>
  */
 public class ListTagValuesResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Values")
+    @com.aliyun.core.annotation.NameInMap("Values")
     private java.util.List < String > values;
 
     private ListTagValuesResponseBody(Builder builder) {
@@ -74,7 +73,7 @@ public class ListTagValuesResponseBody extends TeaModel {
         private java.util.List < String > values; 
 
         /**
-         * The token that is returned for the next query.
+         * The token that determines the start point of the next query. If this parameter is empty, all results are returned.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -98,7 +97,7 @@ public class ListTagValuesResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the tag values.
+         * Details of the tag values.
          */
         public Builder values(java.util.List < String > values) {
             this.values = values;

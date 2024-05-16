@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEciScalingConfigurationDetailResponseBody</p>
  */
 public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel {
-    @NameInMap("Output")
+    @com.aliyun.core.annotation.NameInMap("Output")
     private String output;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ScalingConfiguration")
+    @com.aliyun.core.annotation.NameInMap("ScalingConfiguration")
     private ScalingConfiguration scalingConfiguration;
 
     private DescribeEciScalingConfigurationDetailResponseBody(Builder builder) {
@@ -62,7 +61,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         private ScalingConfiguration scalingConfiguration; 
 
         /**
-         * Output.
+         * The YAML output of the scaling configuration.
          */
         public Builder output(String output) {
             this.output = output;
@@ -70,7 +69,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +77,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
         }
 
         /**
-         * ScalingConfiguration.
+         * The information about the scaling configuration.
          */
         public Builder scalingConfiguration(ScalingConfiguration scalingConfiguration) {
             this.scalingConfiguration = scalingConfiguration;
@@ -92,16 +91,16 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
     } 
 
     public static class AcrRegistryInfos extends TeaModel {
-        @NameInMap("Domains")
+        @com.aliyun.core.annotation.NameInMap("Domains")
         private java.util.List < String > domains;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private AcrRegistryInfos(Builder builder) {
@@ -154,7 +153,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             private String regionId; 
 
             /**
-             * Domains.
+             * The domain names of the Container Registry Enterprise Edition instance. By default, all domain names of the Container Registry Enterprise Edition instance are displayed. You can specify one or more domain names. Separate multiple domain names with commas (,).
              */
             public Builder domains(java.util.List < String > domains) {
                 this.domains = domains;
@@ -162,7 +161,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * InstanceId.
+             * The ID of the Container Registry Enterprise Edition instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -170,7 +169,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * InstanceName.
+             * The name of the Container Registry Enterprise Edition instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -178,7 +177,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * RegionId.
+             * The region ID of the Container Registry Enterprise Edition instance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -193,13 +192,13 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
 
     }
     public static class EnvironmentVars extends TeaModel {
-        @NameInMap("FieldRefFieldPath")
+        @com.aliyun.core.annotation.NameInMap("FieldRefFieldPath")
         private String fieldRefFieldPath;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private EnvironmentVars(Builder builder) {
@@ -243,7 +242,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             private String value; 
 
             /**
-             * FieldRefFieldPath.
+             * >  This parameter is not available for use.
              */
             public Builder fieldRefFieldPath(String fieldRefFieldPath) {
                 this.fieldRefFieldPath = fieldRefFieldPath;
@@ -251,7 +250,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Key.
+             * The key of the environment variable.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -259,7 +258,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Value.
+             * The value of the environment variable.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -274,10 +273,10 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
 
     }
     public static class Ports extends TeaModel {
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
         private Ports(Builder builder) {
@@ -312,7 +311,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             private String protocol; 
 
             /**
-             * Port.
+             * The port number. Valid values: 1 to 65535.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -320,7 +319,11 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Protocol.
+             * The protocol type. Valid values:
+             * <p>
+             * 
+             * *   TCP
+             * *   UDP
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -335,19 +338,19 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
 
     }
     public static class VolumeMounts extends TeaModel {
-        @NameInMap("MountPath")
+        @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
 
-        @NameInMap("MountPropagation")
+        @com.aliyun.core.annotation.NameInMap("MountPropagation")
         private String mountPropagation;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ReadOnly")
+        @com.aliyun.core.annotation.NameInMap("ReadOnly")
         private Boolean readOnly;
 
-        @NameInMap("SubPath")
+        @com.aliyun.core.annotation.NameInMap("SubPath")
         private String subPath;
 
         private VolumeMounts(Builder builder) {
@@ -409,7 +412,10 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             private String subPath; 
 
             /**
-             * MountPath.
+             * The directory in which the container mounts the volume.
+             * <p>
+             * 
+             * >  Data in this directory is overwritten by data on the volume. Specify this parameter with caution.
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -417,7 +423,14 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * MountPropagation.
+             * The mount propagation settings of the volume. Mount propagation allows volumes that are mounted on one container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:
+             * <p>
+             * 
+             * *   None: The volume mount does not receive subsequent mounts that are performed on the volume or on the subdirectories of the volume.
+             * *   HostToCotainer: The volume mount receives subsequent mounts that are performed on the volume or on the subdirectories of the volume.
+             * *   Bidirectional: The volume mount behaves the same as the HostToContainer mount. The volume mount receives subsequent mounts that are performed on the volume or on the subdirectories of the volume. In addition, all volume mounts that are performed on the container are propagated back to the host and all containers of all pods that use the same volume.
+             * 
+             * Default value: None.
              */
             public Builder mountPropagation(String mountPropagation) {
                 this.mountPropagation = mountPropagation;
@@ -425,7 +438,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Name.
+             * The name of the mounted volume.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -433,7 +446,10 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * ReadOnly.
+             * Indicates whether the volume is read-only.
+             * <p>
+             * 
+             * Default value: false.
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -441,7 +457,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * SubPath.
+             * The subdirectory of the volume.
              */
             public Builder subPath(String subPath) {
                 this.subPath = subPath;
@@ -456,160 +472,160 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
 
     }
     public static class Containers extends TeaModel {
-        @NameInMap("Args")
+        @com.aliyun.core.annotation.NameInMap("Args")
         private java.util.List < String > args;
 
-        @NameInMap("Commands")
+        @com.aliyun.core.annotation.NameInMap("Commands")
         private java.util.List < String > commands;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Float cpu;
 
-        @NameInMap("EnvironmentVars")
+        @com.aliyun.core.annotation.NameInMap("EnvironmentVars")
         private java.util.List < EnvironmentVars> environmentVars;
 
-        @NameInMap("Gpu")
+        @com.aliyun.core.annotation.NameInMap("Gpu")
         private Integer gpu;
 
-        @NameInMap("Image")
+        @com.aliyun.core.annotation.NameInMap("Image")
         private String image;
 
-        @NameInMap("ImagePullPolicy")
+        @com.aliyun.core.annotation.NameInMap("ImagePullPolicy")
         private String imagePullPolicy;
 
-        @NameInMap("LifecyclePostStartHandlerExecs")
+        @com.aliyun.core.annotation.NameInMap("LifecyclePostStartHandlerExecs")
         private java.util.List < String > lifecyclePostStartHandlerExecs;
 
-        @NameInMap("LifecyclePostStartHandlerHttpGetHost")
+        @com.aliyun.core.annotation.NameInMap("LifecyclePostStartHandlerHttpGetHost")
         private String lifecyclePostStartHandlerHttpGetHost;
 
-        @NameInMap("LifecyclePostStartHandlerHttpGetPath")
+        @com.aliyun.core.annotation.NameInMap("LifecyclePostStartHandlerHttpGetPath")
         private String lifecyclePostStartHandlerHttpGetPath;
 
-        @NameInMap("LifecyclePostStartHandlerHttpGetPort")
+        @com.aliyun.core.annotation.NameInMap("LifecyclePostStartHandlerHttpGetPort")
         private Integer lifecyclePostStartHandlerHttpGetPort;
 
-        @NameInMap("LifecyclePostStartHandlerHttpGetScheme")
+        @com.aliyun.core.annotation.NameInMap("LifecyclePostStartHandlerHttpGetScheme")
         private String lifecyclePostStartHandlerHttpGetScheme;
 
-        @NameInMap("LifecyclePostStartHandlerTcpSocketHost")
+        @com.aliyun.core.annotation.NameInMap("LifecyclePostStartHandlerTcpSocketHost")
         private String lifecyclePostStartHandlerTcpSocketHost;
 
-        @NameInMap("LifecyclePostStartHandlerTcpSocketPort")
+        @com.aliyun.core.annotation.NameInMap("LifecyclePostStartHandlerTcpSocketPort")
         private Integer lifecyclePostStartHandlerTcpSocketPort;
 
-        @NameInMap("LifecyclePreStopHandlerExecs")
+        @com.aliyun.core.annotation.NameInMap("LifecyclePreStopHandlerExecs")
         private java.util.List < String > lifecyclePreStopHandlerExecs;
 
-        @NameInMap("LifecyclePreStopHandlerHttpGetHost")
+        @com.aliyun.core.annotation.NameInMap("LifecyclePreStopHandlerHttpGetHost")
         private String lifecyclePreStopHandlerHttpGetHost;
 
-        @NameInMap("LifecyclePreStopHandlerHttpGetPath")
+        @com.aliyun.core.annotation.NameInMap("LifecyclePreStopHandlerHttpGetPath")
         private String lifecyclePreStopHandlerHttpGetPath;
 
-        @NameInMap("LifecyclePreStopHandlerHttpGetPort")
+        @com.aliyun.core.annotation.NameInMap("LifecyclePreStopHandlerHttpGetPort")
         private Integer lifecyclePreStopHandlerHttpGetPort;
 
-        @NameInMap("LifecyclePreStopHandlerHttpGetScheme")
+        @com.aliyun.core.annotation.NameInMap("LifecyclePreStopHandlerHttpGetScheme")
         private String lifecyclePreStopHandlerHttpGetScheme;
 
-        @NameInMap("LifecyclePreStopHandlerTcpSocketHost")
+        @com.aliyun.core.annotation.NameInMap("LifecyclePreStopHandlerTcpSocketHost")
         private String lifecyclePreStopHandlerTcpSocketHost;
 
-        @NameInMap("LifecyclePreStopHandlerTcpSocketPort")
+        @com.aliyun.core.annotation.NameInMap("LifecyclePreStopHandlerTcpSocketPort")
         private Integer lifecyclePreStopHandlerTcpSocketPort;
 
-        @NameInMap("LivenessProbeExecCommands")
+        @com.aliyun.core.annotation.NameInMap("LivenessProbeExecCommands")
         private java.util.List < String > livenessProbeExecCommands;
 
-        @NameInMap("LivenessProbeFailureThreshold")
+        @com.aliyun.core.annotation.NameInMap("LivenessProbeFailureThreshold")
         private Integer livenessProbeFailureThreshold;
 
-        @NameInMap("LivenessProbeHttpGetPath")
+        @com.aliyun.core.annotation.NameInMap("LivenessProbeHttpGetPath")
         private String livenessProbeHttpGetPath;
 
-        @NameInMap("LivenessProbeHttpGetPort")
+        @com.aliyun.core.annotation.NameInMap("LivenessProbeHttpGetPort")
         private Integer livenessProbeHttpGetPort;
 
-        @NameInMap("LivenessProbeHttpGetScheme")
+        @com.aliyun.core.annotation.NameInMap("LivenessProbeHttpGetScheme")
         private String livenessProbeHttpGetScheme;
 
-        @NameInMap("LivenessProbeInitialDelaySeconds")
+        @com.aliyun.core.annotation.NameInMap("LivenessProbeInitialDelaySeconds")
         private Integer livenessProbeInitialDelaySeconds;
 
-        @NameInMap("LivenessProbePeriodSeconds")
+        @com.aliyun.core.annotation.NameInMap("LivenessProbePeriodSeconds")
         private Integer livenessProbePeriodSeconds;
 
-        @NameInMap("LivenessProbeSuccessThreshold")
+        @com.aliyun.core.annotation.NameInMap("LivenessProbeSuccessThreshold")
         private Integer livenessProbeSuccessThreshold;
 
-        @NameInMap("LivenessProbeTcpSocketPort")
+        @com.aliyun.core.annotation.NameInMap("LivenessProbeTcpSocketPort")
         private Integer livenessProbeTcpSocketPort;
 
-        @NameInMap("LivenessProbeTimeoutSeconds")
+        @com.aliyun.core.annotation.NameInMap("LivenessProbeTimeoutSeconds")
         private Integer livenessProbeTimeoutSeconds;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Float memory;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Ports")
+        @com.aliyun.core.annotation.NameInMap("Ports")
         private java.util.List < Ports> ports;
 
-        @NameInMap("ReadinessProbeExecCommands")
+        @com.aliyun.core.annotation.NameInMap("ReadinessProbeExecCommands")
         private java.util.List < String > readinessProbeExecCommands;
 
-        @NameInMap("ReadinessProbeFailureThreshold")
+        @com.aliyun.core.annotation.NameInMap("ReadinessProbeFailureThreshold")
         private Integer readinessProbeFailureThreshold;
 
-        @NameInMap("ReadinessProbeHttpGetPath")
+        @com.aliyun.core.annotation.NameInMap("ReadinessProbeHttpGetPath")
         private String readinessProbeHttpGetPath;
 
-        @NameInMap("ReadinessProbeHttpGetPort")
+        @com.aliyun.core.annotation.NameInMap("ReadinessProbeHttpGetPort")
         private Integer readinessProbeHttpGetPort;
 
-        @NameInMap("ReadinessProbeHttpGetScheme")
+        @com.aliyun.core.annotation.NameInMap("ReadinessProbeHttpGetScheme")
         private String readinessProbeHttpGetScheme;
 
-        @NameInMap("ReadinessProbeInitialDelaySeconds")
+        @com.aliyun.core.annotation.NameInMap("ReadinessProbeInitialDelaySeconds")
         private Integer readinessProbeInitialDelaySeconds;
 
-        @NameInMap("ReadinessProbePeriodSeconds")
+        @com.aliyun.core.annotation.NameInMap("ReadinessProbePeriodSeconds")
         private Integer readinessProbePeriodSeconds;
 
-        @NameInMap("ReadinessProbeSuccessThreshold")
+        @com.aliyun.core.annotation.NameInMap("ReadinessProbeSuccessThreshold")
         private Integer readinessProbeSuccessThreshold;
 
-        @NameInMap("ReadinessProbeTcpSocketPort")
+        @com.aliyun.core.annotation.NameInMap("ReadinessProbeTcpSocketPort")
         private Integer readinessProbeTcpSocketPort;
 
-        @NameInMap("ReadinessProbeTimeoutSeconds")
+        @com.aliyun.core.annotation.NameInMap("ReadinessProbeTimeoutSeconds")
         private Integer readinessProbeTimeoutSeconds;
 
-        @NameInMap("SecurityContextCapabilityAdds")
+        @com.aliyun.core.annotation.NameInMap("SecurityContextCapabilityAdds")
         private java.util.List < String > securityContextCapabilityAdds;
 
-        @NameInMap("SecurityContextReadOnlyRootFilesystem")
+        @com.aliyun.core.annotation.NameInMap("SecurityContextReadOnlyRootFilesystem")
         private Boolean securityContextReadOnlyRootFilesystem;
 
-        @NameInMap("SecurityContextRunAsUser")
+        @com.aliyun.core.annotation.NameInMap("SecurityContextRunAsUser")
         private Long securityContextRunAsUser;
 
-        @NameInMap("Stdin")
+        @com.aliyun.core.annotation.NameInMap("Stdin")
         private Boolean stdin;
 
-        @NameInMap("StdinOnce")
+        @com.aliyun.core.annotation.NameInMap("StdinOnce")
         private Boolean stdinOnce;
 
-        @NameInMap("Tty")
+        @com.aliyun.core.annotation.NameInMap("Tty")
         private Boolean tty;
 
-        @NameInMap("VolumeMounts")
+        @com.aliyun.core.annotation.NameInMap("VolumeMounts")
         private java.util.List < VolumeMounts> volumeMounts;
 
-        @NameInMap("WorkingDir")
+        @com.aliyun.core.annotation.NameInMap("WorkingDir")
         private String workingDir;
 
         private Containers(Builder builder) {
@@ -1094,7 +1110,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             private String workingDir; 
 
             /**
-             * Args.
+             * The startup arguments of the container.
              */
             public Builder args(java.util.List < String > args) {
                 this.args = args;
@@ -1102,7 +1118,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Commands.
+             * The startup commands of the container.
              */
             public Builder commands(java.util.List < String > commands) {
                 this.commands = commands;
@@ -1110,7 +1126,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Cpu.
+             * The number of vCPUs that are allocated to the elastic container instance.
              */
             public Builder cpu(Float cpu) {
                 this.cpu = cpu;
@@ -1118,7 +1134,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * EnvironmentVars.
+             * The environment variables.
              */
             public Builder environmentVars(java.util.List < EnvironmentVars> environmentVars) {
                 this.environmentVars = environmentVars;
@@ -1126,7 +1142,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Gpu.
+             * The number of GPUs.
              */
             public Builder gpu(Integer gpu) {
                 this.gpu = gpu;
@@ -1134,7 +1150,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Image.
+             * The container image.
              */
             public Builder image(String image) {
                 this.image = image;
@@ -1142,7 +1158,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * ImagePullPolicy.
+             * The image pulling policy.
              */
             public Builder imagePullPolicy(String imagePullPolicy) {
                 this.imagePullPolicy = imagePullPolicy;
@@ -1150,7 +1166,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * LifecyclePostStartHandlerExecs.
+             * The commands that are run by using the CLI in the container to specify the postStart callback function.
              */
             public Builder lifecyclePostStartHandlerExecs(java.util.List < String > lifecyclePostStartHandlerExecs) {
                 this.lifecyclePostStartHandlerExecs = lifecyclePostStartHandlerExecs;
@@ -1158,7 +1174,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * LifecyclePostStartHandlerHttpGetHost.
+             * The host IP address detected by the HTTP GET requests that are used to specify the postStart callback function.
              */
             public Builder lifecyclePostStartHandlerHttpGetHost(String lifecyclePostStartHandlerHttpGetHost) {
                 this.lifecyclePostStartHandlerHttpGetHost = lifecyclePostStartHandlerHttpGetHost;
@@ -1166,7 +1182,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * LifecyclePostStartHandlerHttpGetPath.
+             * The path detected by the HTTP GET requests that are used to specify the postStart callback function.
              */
             public Builder lifecyclePostStartHandlerHttpGetPath(String lifecyclePostStartHandlerHttpGetPath) {
                 this.lifecyclePostStartHandlerHttpGetPath = lifecyclePostStartHandlerHttpGetPath;
@@ -1174,7 +1190,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * LifecyclePostStartHandlerHttpGetPort.
+             * The port number detected by the HTTP Get requests that are used to specify the postStart callback function.
              */
             public Builder lifecyclePostStartHandlerHttpGetPort(Integer lifecyclePostStartHandlerHttpGetPort) {
                 this.lifecyclePostStartHandlerHttpGetPort = lifecyclePostStartHandlerHttpGetPort;
@@ -1182,7 +1198,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * LifecyclePostStartHandlerHttpGetScheme.
+             * The protocol type of the HTTP Get requests that are used to specify the postStart callback function.
              */
             public Builder lifecyclePostStartHandlerHttpGetScheme(String lifecyclePostStartHandlerHttpGetScheme) {
                 this.lifecyclePostStartHandlerHttpGetScheme = lifecyclePostStartHandlerHttpGetScheme;
@@ -1190,7 +1206,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * LifecyclePostStartHandlerTcpSocketHost.
+             * The host IP address detected by the TCP sockets that are used to specify the postStart callback function.
              */
             public Builder lifecyclePostStartHandlerTcpSocketHost(String lifecyclePostStartHandlerTcpSocketHost) {
                 this.lifecyclePostStartHandlerTcpSocketHost = lifecyclePostStartHandlerTcpSocketHost;
@@ -1198,7 +1214,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * LifecyclePostStartHandlerTcpSocketPort.
+             * The port number detected by the TCP sockets that are used to specify the postStart callback function.
              */
             public Builder lifecyclePostStartHandlerTcpSocketPort(Integer lifecyclePostStartHandlerTcpSocketPort) {
                 this.lifecyclePostStartHandlerTcpSocketPort = lifecyclePostStartHandlerTcpSocketPort;
@@ -1206,7 +1222,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * LifecyclePreStopHandlerExecs.
+             * The commands that are run by using the CLI in the container to specify the preStop callback function.
              */
             public Builder lifecyclePreStopHandlerExecs(java.util.List < String > lifecyclePreStopHandlerExecs) {
                 this.lifecyclePreStopHandlerExecs = lifecyclePreStopHandlerExecs;
@@ -1214,7 +1230,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * LifecyclePreStopHandlerHttpGetHost.
+             * The host IP address detected by the HTTP Get requests that are used to specify the preStop callback function.
              */
             public Builder lifecyclePreStopHandlerHttpGetHost(String lifecyclePreStopHandlerHttpGetHost) {
                 this.lifecyclePreStopHandlerHttpGetHost = lifecyclePreStopHandlerHttpGetHost;
@@ -1222,7 +1238,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * LifecyclePreStopHandlerHttpGetPath.
+             * The path detected by the HTTP Get requests that are used to specify the preStop callback function.
              */
             public Builder lifecyclePreStopHandlerHttpGetPath(String lifecyclePreStopHandlerHttpGetPath) {
                 this.lifecyclePreStopHandlerHttpGetPath = lifecyclePreStopHandlerHttpGetPath;
@@ -1230,7 +1246,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * LifecyclePreStopHandlerHttpGetPort.
+             * The port number detected by the HTTP Get requests that are used to specify the preStop callback function.
              */
             public Builder lifecyclePreStopHandlerHttpGetPort(Integer lifecyclePreStopHandlerHttpGetPort) {
                 this.lifecyclePreStopHandlerHttpGetPort = lifecyclePreStopHandlerHttpGetPort;
@@ -1238,7 +1254,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * LifecyclePreStopHandlerHttpGetScheme.
+             * The protocol type of the HTTP Get requests that are used to specify the preStop callback function.
              */
             public Builder lifecyclePreStopHandlerHttpGetScheme(String lifecyclePreStopHandlerHttpGetScheme) {
                 this.lifecyclePreStopHandlerHttpGetScheme = lifecyclePreStopHandlerHttpGetScheme;
@@ -1246,7 +1262,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * LifecyclePreStopHandlerTcpSocketHost.
+             * The host IP address detected by the TCP sockets that are used to specify the preStop callback function.
              */
             public Builder lifecyclePreStopHandlerTcpSocketHost(String lifecyclePreStopHandlerTcpSocketHost) {
                 this.lifecyclePreStopHandlerTcpSocketHost = lifecyclePreStopHandlerTcpSocketHost;
@@ -1254,7 +1270,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * LifecyclePreStopHandlerTcpSocketPort.
+             * The port number detected by the TCP sockets that are used to specify the preStop callback function.
              */
             public Builder lifecyclePreStopHandlerTcpSocketPort(Integer lifecyclePreStopHandlerTcpSocketPort) {
                 this.lifecyclePreStopHandlerTcpSocketPort = lifecyclePreStopHandlerTcpSocketPort;
@@ -1262,7 +1278,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * LivenessProbeExecCommands.
+             * The commands that are run in the container when you use the command line interface (CLI) to perform liveness probes.
              */
             public Builder livenessProbeExecCommands(java.util.List < String > livenessProbeExecCommands) {
                 this.livenessProbeExecCommands = livenessProbeExecCommands;
@@ -1270,7 +1286,10 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * LivenessProbeFailureThreshold.
+             * The minimum number of consecutive failures before a successful liveness probe is considered failed.
+             * <p>
+             * 
+             * Default value: 3.
              */
             public Builder livenessProbeFailureThreshold(Integer livenessProbeFailureThreshold) {
                 this.livenessProbeFailureThreshold = livenessProbeFailureThreshold;
@@ -1278,7 +1297,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * LivenessProbeHttpGetPath.
+             * The path to which HTTP Get requests are sent when you use the HTTP requests to perform liveness probes.
              */
             public Builder livenessProbeHttpGetPath(String livenessProbeHttpGetPath) {
                 this.livenessProbeHttpGetPath = livenessProbeHttpGetPath;
@@ -1286,7 +1305,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * LivenessProbeHttpGetPort.
+             * The port detected by HTTP Get requests when you use the HTTP requests to perform liveness probes.
              */
             public Builder livenessProbeHttpGetPort(Integer livenessProbeHttpGetPort) {
                 this.livenessProbeHttpGetPort = livenessProbeHttpGetPort;
@@ -1294,7 +1313,11 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * LivenessProbeHttpGetScheme.
+             * The protocol type of HTTP GET requests when you use the HTTP requests to perform liveness probes. Valid values:
+             * <p>
+             * 
+             * *   HTTP
+             * *   HTTPS
              */
             public Builder livenessProbeHttpGetScheme(String livenessProbeHttpGetScheme) {
                 this.livenessProbeHttpGetScheme = livenessProbeHttpGetScheme;
@@ -1302,7 +1325,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * LivenessProbeInitialDelaySeconds.
+             * The number of seconds that elapses from the startup of the container to the start time of a liveness probe.
              */
             public Builder livenessProbeInitialDelaySeconds(Integer livenessProbeInitialDelaySeconds) {
                 this.livenessProbeInitialDelaySeconds = livenessProbeInitialDelaySeconds;
@@ -1310,7 +1333,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * LivenessProbePeriodSeconds.
+             * The interval at which liveness probes are performed. Unit: seconds. Default value: 10. Minimum value: 1.
              */
             public Builder livenessProbePeriodSeconds(Integer livenessProbePeriodSeconds) {
                 this.livenessProbePeriodSeconds = livenessProbePeriodSeconds;
@@ -1318,7 +1341,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * LivenessProbeSuccessThreshold.
+             * The minimum number of consecutive successes before a failed liveness probe is considered successful. Default value: 1. Valid value: 1.
              */
             public Builder livenessProbeSuccessThreshold(Integer livenessProbeSuccessThreshold) {
                 this.livenessProbeSuccessThreshold = livenessProbeSuccessThreshold;
@@ -1326,7 +1349,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * LivenessProbeTcpSocketPort.
+             * The port detected by TCP sockets when you use the TCP sockets to perform liveness probes.
              */
             public Builder livenessProbeTcpSocketPort(Integer livenessProbeTcpSocketPort) {
                 this.livenessProbeTcpSocketPort = livenessProbeTcpSocketPort;
@@ -1334,7 +1357,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * LivenessProbeTimeoutSeconds.
+             * The timeout period of the liveness probe. Default value: 1. Minimum value: 1. Unit: seconds.
              */
             public Builder livenessProbeTimeoutSeconds(Integer livenessProbeTimeoutSeconds) {
                 this.livenessProbeTimeoutSeconds = livenessProbeTimeoutSeconds;
@@ -1342,7 +1365,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Memory.
+             * The memory size.
              */
             public Builder memory(Float memory) {
                 this.memory = memory;
@@ -1350,7 +1373,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Name.
+             * The container name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1358,7 +1381,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Ports.
+             * The exposed ports and protocols of the container.
              */
             public Builder ports(java.util.List < Ports> ports) {
                 this.ports = ports;
@@ -1366,7 +1389,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * ReadinessProbeExecCommands.
+             * The commands that are run in the container when you use the CLI to perform readiness probes.
              */
             public Builder readinessProbeExecCommands(java.util.List < String > readinessProbeExecCommands) {
                 this.readinessProbeExecCommands = readinessProbeExecCommands;
@@ -1374,7 +1397,10 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * ReadinessProbeFailureThreshold.
+             * The minimum number of consecutive failures before a successful readiness probe is considered failed.
+             * <p>
+             * 
+             * Default value: 3.
              */
             public Builder readinessProbeFailureThreshold(Integer readinessProbeFailureThreshold) {
                 this.readinessProbeFailureThreshold = readinessProbeFailureThreshold;
@@ -1382,7 +1408,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * ReadinessProbeHttpGetPath.
+             * The path to which HTTP Get requests are sent when you use the HTTP requests to perform readiness probes.
              */
             public Builder readinessProbeHttpGetPath(String readinessProbeHttpGetPath) {
                 this.readinessProbeHttpGetPath = readinessProbeHttpGetPath;
@@ -1390,7 +1416,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * ReadinessProbeHttpGetPort.
+             * The path to which HTTP Get requests are sent when you use the HTTP requests to perform readiness probes.
              */
             public Builder readinessProbeHttpGetPort(Integer readinessProbeHttpGetPort) {
                 this.readinessProbeHttpGetPort = readinessProbeHttpGetPort;
@@ -1398,7 +1424,11 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * ReadinessProbeHttpGetScheme.
+             * The protocol type of HTTP GET requests when you use the HTTP requests to perform readiness probes. Valid values:
+             * <p>
+             * 
+             * *   HTTP
+             * *   HTTPS
              */
             public Builder readinessProbeHttpGetScheme(String readinessProbeHttpGetScheme) {
                 this.readinessProbeHttpGetScheme = readinessProbeHttpGetScheme;
@@ -1406,7 +1436,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * ReadinessProbeInitialDelaySeconds.
+             * The number of seconds that elapses from the startup of the container to the start time of a readiness probe.
              */
             public Builder readinessProbeInitialDelaySeconds(Integer readinessProbeInitialDelaySeconds) {
                 this.readinessProbeInitialDelaySeconds = readinessProbeInitialDelaySeconds;
@@ -1414,7 +1444,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * ReadinessProbePeriodSeconds.
+             * The interval at which readiness probes are performed. Unit: seconds. Default value: 10. Minimum value: 1.
              */
             public Builder readinessProbePeriodSeconds(Integer readinessProbePeriodSeconds) {
                 this.readinessProbePeriodSeconds = readinessProbePeriodSeconds;
@@ -1422,7 +1452,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * ReadinessProbeSuccessThreshold.
+             * The minimum number of consecutive successes before a failed readiness probe is considered successful. Default value: 1. Valid value: 1.
              */
             public Builder readinessProbeSuccessThreshold(Integer readinessProbeSuccessThreshold) {
                 this.readinessProbeSuccessThreshold = readinessProbeSuccessThreshold;
@@ -1430,7 +1460,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * ReadinessProbeTcpSocketPort.
+             * The port detected by TCP sockets when you use the TCP sockets to perform readiness probes.
              */
             public Builder readinessProbeTcpSocketPort(Integer readinessProbeTcpSocketPort) {
                 this.readinessProbeTcpSocketPort = readinessProbeTcpSocketPort;
@@ -1438,7 +1468,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * ReadinessProbeTimeoutSeconds.
+             * The timeout period of the readiness probe. Default value: 1. Minimum value: 1. Unit: seconds.
              */
             public Builder readinessProbeTimeoutSeconds(Integer readinessProbeTimeoutSeconds) {
                 this.readinessProbeTimeoutSeconds = readinessProbeTimeoutSeconds;
@@ -1446,7 +1476,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * SecurityContextCapabilityAdds.
+             * The permissions that are granted to the processes in the container. Valid values: NET_ADMIN and NET_RAW.
              */
             public Builder securityContextCapabilityAdds(java.util.List < String > securityContextCapabilityAdds) {
                 this.securityContextCapabilityAdds = securityContextCapabilityAdds;
@@ -1454,7 +1484,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * SecurityContextReadOnlyRootFilesystem.
+             * Indicates whether the root file system is read-only. Valid value: true.
              */
             public Builder securityContextReadOnlyRootFilesystem(Boolean securityContextReadOnlyRootFilesystem) {
                 this.securityContextReadOnlyRootFilesystem = securityContextReadOnlyRootFilesystem;
@@ -1462,7 +1492,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * SecurityContextRunAsUser.
+             * The ID of the user that runs the entry point of the container process.
              */
             public Builder securityContextRunAsUser(Long securityContextRunAsUser) {
                 this.securityContextRunAsUser = securityContextRunAsUser;
@@ -1470,7 +1500,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Stdin.
+             * Indicates whether the container allocates buffer resources to standard input streams when the container is run. If this parameter is not specified, an end-of-file (EOF) error may occur when standard input streams in the container are read. Default value: false.
              */
             public Builder stdin(Boolean stdin) {
                 this.stdin = stdin;
@@ -1478,7 +1508,10 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * StdinOnce.
+             * Indicates whether standard input streams are disconnected after a client is disconnected. If Stdin is set to true, standard input streams remain connected among multiple sessions.
+             * <p>
+             * 
+             * If StdinOnce is set to true, stdin is opened upon container startup, but remains empty until the first client attaches to stdin, and then remains open and receives data until the client disconnects. When the client disconnects, stdin is closed and remains closed until the container is restarted.
              */
             public Builder stdinOnce(Boolean stdinOnce) {
                 this.stdinOnce = stdinOnce;
@@ -1486,7 +1519,15 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Tty.
+             * Indicates whether Interaction is enabled. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
+             * 
+             * If the command is a /bin/bash command, the value of this parameter is true.
+             * 
+             * Default value: false.
              */
             public Builder tty(Boolean tty) {
                 this.tty = tty;
@@ -1494,7 +1535,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * VolumeMounts.
+             * The mounted volumes.
              */
             public Builder volumeMounts(java.util.List < VolumeMounts> volumeMounts) {
                 this.volumeMounts = volumeMounts;
@@ -1502,7 +1543,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * WorkingDir.
+             * The working directory in the container.
              */
             public Builder workingDir(String workingDir) {
                 this.workingDir = workingDir;
@@ -1517,10 +1558,10 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
 
     }
     public static class DnsConfigOptions extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private DnsConfigOptions(Builder builder) {
@@ -1555,7 +1596,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             private String value; 
 
             /**
-             * Name.
+             * The variable name of the option.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1563,7 +1604,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Value.
+             * The variable value of the option.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1578,10 +1619,10 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
 
     }
     public static class HostAliases extends TeaModel {
-        @NameInMap("Hostnames")
+        @com.aliyun.core.annotation.NameInMap("Hostnames")
         private java.util.List < String > hostnames;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
         private HostAliases(Builder builder) {
@@ -1616,7 +1657,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             private String ip; 
 
             /**
-             * Hostnames.
+             * The added hostnames.
              */
             public Builder hostnames(java.util.List < String > hostnames) {
                 this.hostnames = hostnames;
@@ -1624,7 +1665,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Ip.
+             * The added IP address.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -1639,13 +1680,13 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
 
     }
     public static class ImageRegistryCredentials extends TeaModel {
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
 
-        @NameInMap("Server")
+        @com.aliyun.core.annotation.NameInMap("Server")
         private String server;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private ImageRegistryCredentials(Builder builder) {
@@ -1689,7 +1730,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             private String userName; 
 
             /**
-             * Password.
+             * The password of the image repository.
              */
             public Builder password(String password) {
                 this.password = password;
@@ -1697,7 +1738,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Server.
+             * The domain name of the image repository.
              */
             public Builder server(String server) {
                 this.server = server;
@@ -1705,7 +1746,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * UserName.
+             * The username of the image repository.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -1720,13 +1761,13 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
 
     }
     public static class InitContainerEnvironmentVars extends TeaModel {
-        @NameInMap("FieldRefFieldPath")
+        @com.aliyun.core.annotation.NameInMap("FieldRefFieldPath")
         private String fieldRefFieldPath;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private InitContainerEnvironmentVars(Builder builder) {
@@ -1770,7 +1811,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             private String value; 
 
             /**
-             * FieldRefFieldPath.
+             * >  This parameter is not available for use.
              */
             public Builder fieldRefFieldPath(String fieldRefFieldPath) {
                 this.fieldRefFieldPath = fieldRefFieldPath;
@@ -1778,7 +1819,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Key.
+             * The key of the environment variable.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1786,7 +1827,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Value.
+             * The value of the environment variable.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1801,10 +1842,10 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
 
     }
     public static class InitContainerPorts extends TeaModel {
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
         private InitContainerPorts(Builder builder) {
@@ -1839,7 +1880,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             private String protocol; 
 
             /**
-             * Port.
+             * The port number. Valid values: 1 to 65535.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -1847,7 +1888,11 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Protocol.
+             * The protocol type. Valid values:
+             * <p>
+             * 
+             * *   TCP
+             * *   UDP
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -1862,19 +1907,19 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
 
     }
     public static class InitContainerVolumeMounts extends TeaModel {
-        @NameInMap("MountPath")
+        @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
 
-        @NameInMap("MountPropagation")
+        @com.aliyun.core.annotation.NameInMap("MountPropagation")
         private String mountPropagation;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ReadOnly")
+        @com.aliyun.core.annotation.NameInMap("ReadOnly")
         private Boolean readOnly;
 
-        @NameInMap("SubPath")
+        @com.aliyun.core.annotation.NameInMap("SubPath")
         private String subPath;
 
         private InitContainerVolumeMounts(Builder builder) {
@@ -1936,7 +1981,10 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             private String subPath; 
 
             /**
-             * MountPath.
+             * The directory to which the init container mounts the volume.
+             * <p>
+             * 
+             * >  Data in this directory is overwritten by the data on the volume. Specify this parameter with caution.
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -1944,7 +1992,14 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * MountPropagation.
+             * The mount propagation settings of the volume. Mount propagation allows volumes that are mounted on one init container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:
+             * <p>
+             * 
+             * *   None: The volume mount does not receive subsequent mounts that are performed on the volume or on the subdirectories of the volume.
+             * *   HostToCotainer: The volume mount receives subsequent mounts that are performed on the volume or on the subdirectories of the volume.
+             * *   Bidirectional: The volume mount behaves the same as the HostToContainer mount. The volume mount receives subsequent mounts that are performed on the volume or on the subdirectories of the volume. In addition, all volume mounts that are performed on the init container are propagated back to the host and all containers of all pods that use the same volume.
+             * 
+             * Default value: None.
              */
             public Builder mountPropagation(String mountPropagation) {
                 this.mountPropagation = mountPropagation;
@@ -1952,7 +2007,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Name.
+             * The name of the mounted volume.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1960,7 +2015,10 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * ReadOnly.
+             * Indicates whether the mount directory is read-only.
+             * <p>
+             * 
+             * Default value: false.
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -1968,7 +2026,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * SubPath.
+             * The subdirectory of the volume.
              */
             public Builder subPath(String subPath) {
                 this.subPath = subPath;
@@ -1983,49 +2041,49 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
 
     }
     public static class InitContainers extends TeaModel {
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Float cpu;
 
-        @NameInMap("Gpu")
+        @com.aliyun.core.annotation.NameInMap("Gpu")
         private Integer gpu;
 
-        @NameInMap("Image")
+        @com.aliyun.core.annotation.NameInMap("Image")
         private String image;
 
-        @NameInMap("ImagePullPolicy")
+        @com.aliyun.core.annotation.NameInMap("ImagePullPolicy")
         private String imagePullPolicy;
 
-        @NameInMap("InitContainerArgs")
+        @com.aliyun.core.annotation.NameInMap("InitContainerArgs")
         private java.util.List < String > initContainerArgs;
 
-        @NameInMap("InitContainerCommands")
+        @com.aliyun.core.annotation.NameInMap("InitContainerCommands")
         private java.util.List < String > initContainerCommands;
 
-        @NameInMap("InitContainerEnvironmentVars")
+        @com.aliyun.core.annotation.NameInMap("InitContainerEnvironmentVars")
         private java.util.List < InitContainerEnvironmentVars> initContainerEnvironmentVars;
 
-        @NameInMap("InitContainerPorts")
+        @com.aliyun.core.annotation.NameInMap("InitContainerPorts")
         private java.util.List < InitContainerPorts> initContainerPorts;
 
-        @NameInMap("InitContainerVolumeMounts")
+        @com.aliyun.core.annotation.NameInMap("InitContainerVolumeMounts")
         private java.util.List < InitContainerVolumeMounts> initContainerVolumeMounts;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Float memory;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("SecurityContextCapabilityAdds")
+        @com.aliyun.core.annotation.NameInMap("SecurityContextCapabilityAdds")
         private java.util.List < String > securityContextCapabilityAdds;
 
-        @NameInMap("SecurityContextReadOnlyRootFilesystem")
+        @com.aliyun.core.annotation.NameInMap("SecurityContextReadOnlyRootFilesystem")
         private Boolean securityContextReadOnlyRootFilesystem;
 
-        @NameInMap("SecurityContextRunAsUser")
+        @com.aliyun.core.annotation.NameInMap("SecurityContextRunAsUser")
         private String securityContextRunAsUser;
 
-        @NameInMap("WorkingDir")
+        @com.aliyun.core.annotation.NameInMap("WorkingDir")
         private String workingDir;
 
         private InitContainers(Builder builder) {
@@ -2177,7 +2235,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             private String workingDir; 
 
             /**
-             * Cpu.
+             * The number of vCPUs that are allocated to the init container.
              */
             public Builder cpu(Float cpu) {
                 this.cpu = cpu;
@@ -2185,7 +2243,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Gpu.
+             * The number of GPUs that are allocated to the init container.
              */
             public Builder gpu(Integer gpu) {
                 this.gpu = gpu;
@@ -2193,7 +2251,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Image.
+             * The init container image.
              */
             public Builder image(String image) {
                 this.image = image;
@@ -2201,7 +2259,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * ImagePullPolicy.
+             * The image pulling policy.
              */
             public Builder imagePullPolicy(String imagePullPolicy) {
                 this.imagePullPolicy = imagePullPolicy;
@@ -2209,7 +2267,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * InitContainerArgs.
+             * The startup arguments of the init container.
              */
             public Builder initContainerArgs(java.util.List < String > initContainerArgs) {
                 this.initContainerArgs = initContainerArgs;
@@ -2217,7 +2275,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * InitContainerCommands.
+             * The startup commands of the init container.
              */
             public Builder initContainerCommands(java.util.List < String > initContainerCommands) {
                 this.initContainerCommands = initContainerCommands;
@@ -2225,7 +2283,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * InitContainerEnvironmentVars.
+             * The environment variables of the init container.
              */
             public Builder initContainerEnvironmentVars(java.util.List < InitContainerEnvironmentVars> initContainerEnvironmentVars) {
                 this.initContainerEnvironmentVars = initContainerEnvironmentVars;
@@ -2233,7 +2291,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * InitContainerPorts.
+             * The ports of the init container.
              */
             public Builder initContainerPorts(java.util.List < InitContainerPorts> initContainerPorts) {
                 this.initContainerPorts = initContainerPorts;
@@ -2241,7 +2299,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * InitContainerVolumeMounts.
+             * The volume mounts of the init container.
              */
             public Builder initContainerVolumeMounts(java.util.List < InitContainerVolumeMounts> initContainerVolumeMounts) {
                 this.initContainerVolumeMounts = initContainerVolumeMounts;
@@ -2249,7 +2307,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Memory.
+             * The memory size that is allocated to the init container.
              */
             public Builder memory(Float memory) {
                 this.memory = memory;
@@ -2257,7 +2315,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Name.
+             * The name of the init container.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2265,7 +2323,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * SecurityContextCapabilityAdds.
+             * The permissions that are granted to the processes in the init container. Valid values: NET_ADMIN and NET_RAW.
              */
             public Builder securityContextCapabilityAdds(java.util.List < String > securityContextCapabilityAdds) {
                 this.securityContextCapabilityAdds = securityContextCapabilityAdds;
@@ -2273,7 +2331,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * SecurityContextReadOnlyRootFilesystem.
+             * Indicates whether the root file system is read-only. Valid value: true.
              */
             public Builder securityContextReadOnlyRootFilesystem(Boolean securityContextReadOnlyRootFilesystem) {
                 this.securityContextReadOnlyRootFilesystem = securityContextReadOnlyRootFilesystem;
@@ -2281,7 +2339,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * SecurityContextRunAsUser.
+             * The ID of the user that runs the entry point of the init container.
              */
             public Builder securityContextRunAsUser(String securityContextRunAsUser) {
                 this.securityContextRunAsUser = securityContextRunAsUser;
@@ -2289,7 +2347,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * WorkingDir.
+             * The working directory of the init container.
              */
             public Builder workingDir(String workingDir) {
                 this.workingDir = workingDir;
@@ -2304,10 +2362,10 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
 
     }
     public static class SecurityContextSysCtls extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SecurityContextSysCtls(Builder builder) {
@@ -2342,7 +2400,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             private String value; 
 
             /**
-             * Name.
+             * The system name of the security context in which the elastic container instance runs.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2350,7 +2408,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Value.
+             * The variable value of the security context in which the elastic container instance runs.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2365,10 +2423,10 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -2403,7 +2461,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -2411,7 +2469,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2426,13 +2484,13 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
 
     }
     public static class ConfigFileVolumeConfigFileToPaths extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private Integer mode;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
         private ConfigFileVolumeConfigFileToPaths(Builder builder) {
@@ -2476,7 +2534,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             private String path; 
 
             /**
-             * Content.
+             * The content of the configuration file.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -2484,7 +2542,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Mode.
+             * The permissions on the ConfigFile volume.
              */
             public Builder mode(Integer mode) {
                 this.mode = mode;
@@ -2492,7 +2550,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Path.
+             * The path to the configuration file.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -2507,55 +2565,55 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
 
     }
     public static class Volumes extends TeaModel {
-        @NameInMap("ConfigFileVolumeConfigFileToPaths")
+        @com.aliyun.core.annotation.NameInMap("ConfigFileVolumeConfigFileToPaths")
         private java.util.List < ConfigFileVolumeConfigFileToPaths> configFileVolumeConfigFileToPaths;
 
-        @NameInMap("ConfigFileVolumeDefaultMode")
+        @com.aliyun.core.annotation.NameInMap("ConfigFileVolumeDefaultMode")
         private Integer configFileVolumeDefaultMode;
 
-        @NameInMap("DiskVolumeDiskId")
+        @com.aliyun.core.annotation.NameInMap("DiskVolumeDiskId")
         private String diskVolumeDiskId;
 
-        @NameInMap("DiskVolumeDiskSize")
+        @com.aliyun.core.annotation.NameInMap("DiskVolumeDiskSize")
         private Integer diskVolumeDiskSize;
 
-        @NameInMap("DiskVolumeFsType")
+        @com.aliyun.core.annotation.NameInMap("DiskVolumeFsType")
         private String diskVolumeFsType;
 
-        @NameInMap("EmptyDirVolumeMedium")
+        @com.aliyun.core.annotation.NameInMap("EmptyDirVolumeMedium")
         private String emptyDirVolumeMedium;
 
-        @NameInMap("EmptyDirVolumeSizeLimit")
+        @com.aliyun.core.annotation.NameInMap("EmptyDirVolumeSizeLimit")
         private String emptyDirVolumeSizeLimit;
 
-        @NameInMap("FlexVolumeDriver")
+        @com.aliyun.core.annotation.NameInMap("FlexVolumeDriver")
         private String flexVolumeDriver;
 
-        @NameInMap("FlexVolumeFsType")
+        @com.aliyun.core.annotation.NameInMap("FlexVolumeFsType")
         private String flexVolumeFsType;
 
-        @NameInMap("FlexVolumeOptions")
+        @com.aliyun.core.annotation.NameInMap("FlexVolumeOptions")
         private String flexVolumeOptions;
 
-        @NameInMap("HostPathVolumePath")
+        @com.aliyun.core.annotation.NameInMap("HostPathVolumePath")
         private String hostPathVolumePath;
 
-        @NameInMap("HostPathVolumeType")
+        @com.aliyun.core.annotation.NameInMap("HostPathVolumeType")
         private String hostPathVolumeType;
 
-        @NameInMap("NFSVolumePath")
+        @com.aliyun.core.annotation.NameInMap("NFSVolumePath")
         private String NFSVolumePath;
 
-        @NameInMap("NFSVolumeReadOnly")
+        @com.aliyun.core.annotation.NameInMap("NFSVolumeReadOnly")
         private Boolean NFSVolumeReadOnly;
 
-        @NameInMap("NFSVolumeServer")
+        @com.aliyun.core.annotation.NameInMap("NFSVolumeServer")
         private String NFSVolumeServer;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Volumes(Builder builder) {
@@ -2725,7 +2783,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             private String type; 
 
             /**
-             * ConfigFileVolumeConfigFileToPaths.
+             * The paths to the configuration files.
              */
             public Builder configFileVolumeConfigFileToPaths(java.util.List < ConfigFileVolumeConfigFileToPaths> configFileVolumeConfigFileToPaths) {
                 this.configFileVolumeConfigFileToPaths = configFileVolumeConfigFileToPaths;
@@ -2733,7 +2791,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * ConfigFileVolumeDefaultMode.
+             * The default permissions on the ConfigFile volume.
              */
             public Builder configFileVolumeDefaultMode(Integer configFileVolumeDefaultMode) {
                 this.configFileVolumeDefaultMode = configFileVolumeDefaultMode;
@@ -2741,7 +2799,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * DiskVolumeDiskId.
+             * The ID of the disk volume.
              */
             public Builder diskVolumeDiskId(String diskVolumeDiskId) {
                 this.diskVolumeDiskId = diskVolumeDiskId;
@@ -2749,7 +2807,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * DiskVolumeDiskSize.
+             * The size of the disk volume. Unit: GiB.
              */
             public Builder diskVolumeDiskSize(Integer diskVolumeDiskSize) {
                 this.diskVolumeDiskSize = diskVolumeDiskSize;
@@ -2757,7 +2815,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * DiskVolumeFsType.
+             * The system type of the disk volume.
              */
             public Builder diskVolumeFsType(String diskVolumeFsType) {
                 this.diskVolumeFsType = diskVolumeFsType;
@@ -2765,7 +2823,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * EmptyDirVolumeMedium.
+             * The storage medium of the emptyDir volume. If you do not specify a storage medium for the emptyDir volume, the volume stores data in the file system of a node by default. We recommend that you set this parameter to memory. In this case, the emptyDir volume stores data in the specified memory.
              */
             public Builder emptyDirVolumeMedium(String emptyDirVolumeMedium) {
                 this.emptyDirVolumeMedium = emptyDirVolumeMedium;
@@ -2773,7 +2831,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * EmptyDirVolumeSizeLimit.
+             * The storage size of the emptyDir volume.
              */
             public Builder emptyDirVolumeSizeLimit(String emptyDirVolumeSizeLimit) {
                 this.emptyDirVolumeSizeLimit = emptyDirVolumeSizeLimit;
@@ -2781,7 +2839,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * FlexVolumeDriver.
+             * The name of the FlexVolume driver.
              */
             public Builder flexVolumeDriver(String flexVolumeDriver) {
                 this.flexVolumeDriver = flexVolumeDriver;
@@ -2789,7 +2847,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * FlexVolumeFsType.
+             * The type of the mounted file system. The default value is determined by the script of FlexVolume.
              */
             public Builder flexVolumeFsType(String flexVolumeFsType) {
                 this.flexVolumeFsType = flexVolumeFsType;
@@ -2797,7 +2855,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * FlexVolumeOptions.
+             * The FlexVolume options.
              */
             public Builder flexVolumeOptions(String flexVolumeOptions) {
                 this.flexVolumeOptions = flexVolumeOptions;
@@ -2805,7 +2863,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * HostPathVolumePath.
+             * The path to the HostPath volume on the host.
              */
             public Builder hostPathVolumePath(String hostPathVolumePath) {
                 this.hostPathVolumePath = hostPathVolumePath;
@@ -2813,7 +2871,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * HostPathVolumeType.
+             * The type of the HostPath volume.
              */
             public Builder hostPathVolumeType(String hostPathVolumeType) {
                 this.hostPathVolumeType = hostPathVolumeType;
@@ -2821,7 +2879,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * NFSVolumePath.
+             * The path to the Network File System (NFS) volume.
              */
             public Builder NFSVolumePath(String NFSVolumePath) {
                 this.NFSVolumePath = NFSVolumePath;
@@ -2829,7 +2887,10 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * NFSVolumeReadOnly.
+             * Indicates whether the NFS volume is read-only.
+             * <p>
+             * 
+             * Default value: false.
              */
             public Builder NFSVolumeReadOnly(Boolean NFSVolumeReadOnly) {
                 this.NFSVolumeReadOnly = NFSVolumeReadOnly;
@@ -2837,7 +2898,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * NFSVolumeServer.
+             * The address of the Network File System (NFS) server.
              */
             public Builder NFSVolumeServer(String NFSVolumeServer) {
                 this.NFSVolumeServer = NFSVolumeServer;
@@ -2845,7 +2906,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Name.
+             * The volume name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2853,7 +2914,13 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Type.
+             * The volume type. Valid values:
+             * <p>
+             * 
+             * *   EmptyDirVolume
+             * *   NFSVolume
+             * *   ConfigFileVolume
+             * *   FlexVolume
              */
             public Builder type(String type) {
                 this.type = type;
@@ -2868,169 +2935,169 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
 
     }
     public static class ScalingConfiguration extends TeaModel {
-        @NameInMap("AcrRegistryInfos")
+        @com.aliyun.core.annotation.NameInMap("AcrRegistryInfos")
         private java.util.List < AcrRegistryInfos> acrRegistryInfos;
 
-        @NameInMap("ActiveDeadlineSeconds")
+        @com.aliyun.core.annotation.NameInMap("ActiveDeadlineSeconds")
         private Integer activeDeadlineSeconds;
 
-        @NameInMap("AutoCreateEip")
+        @com.aliyun.core.annotation.NameInMap("AutoCreateEip")
         private Boolean autoCreateEip;
 
-        @NameInMap("AutoMatchImageCache")
+        @com.aliyun.core.annotation.NameInMap("AutoMatchImageCache")
         private Boolean autoMatchImageCache;
 
-        @NameInMap("ComputeCategory")
+        @com.aliyun.core.annotation.NameInMap("ComputeCategory")
         private java.util.List < String > computeCategory;
 
-        @NameInMap("ContainerGroupName")
+        @com.aliyun.core.annotation.NameInMap("ContainerGroupName")
         private String containerGroupName;
 
-        @NameInMap("Containers")
+        @com.aliyun.core.annotation.NameInMap("Containers")
         private java.util.List < Containers> containers;
 
-        @NameInMap("CostOptimization")
+        @com.aliyun.core.annotation.NameInMap("CostOptimization")
         private Boolean costOptimization;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Float cpu;
 
-        @NameInMap("CpuOptionsCore")
+        @com.aliyun.core.annotation.NameInMap("CpuOptionsCore")
         private Integer cpuOptionsCore;
 
-        @NameInMap("CpuOptionsThreadsPerCore")
+        @com.aliyun.core.annotation.NameInMap("CpuOptionsThreadsPerCore")
         private Integer cpuOptionsThreadsPerCore;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DataCacheBucket")
+        @com.aliyun.core.annotation.NameInMap("DataCacheBucket")
         private String dataCacheBucket;
 
-        @NameInMap("DataCacheBurstingEnabled")
+        @com.aliyun.core.annotation.NameInMap("DataCacheBurstingEnabled")
         private Boolean dataCacheBurstingEnabled;
 
-        @NameInMap("DataCachePL")
+        @com.aliyun.core.annotation.NameInMap("DataCachePL")
         private String dataCachePL;
 
-        @NameInMap("DataCacheProvisionedIops")
+        @com.aliyun.core.annotation.NameInMap("DataCacheProvisionedIops")
         private Integer dataCacheProvisionedIops;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DnsConfigNameServers")
+        @com.aliyun.core.annotation.NameInMap("DnsConfigNameServers")
         private java.util.List < String > dnsConfigNameServers;
 
-        @NameInMap("DnsConfigOptions")
+        @com.aliyun.core.annotation.NameInMap("DnsConfigOptions")
         private java.util.List < DnsConfigOptions> dnsConfigOptions;
 
-        @NameInMap("DnsConfigSearches")
+        @com.aliyun.core.annotation.NameInMap("DnsConfigSearches")
         private java.util.List < String > dnsConfigSearches;
 
-        @NameInMap("DnsPolicy")
+        @com.aliyun.core.annotation.NameInMap("DnsPolicy")
         private String dnsPolicy;
 
-        @NameInMap("EgressBandwidth")
+        @com.aliyun.core.annotation.NameInMap("EgressBandwidth")
         private Long egressBandwidth;
 
-        @NameInMap("EipBandwidth")
+        @com.aliyun.core.annotation.NameInMap("EipBandwidth")
         private Integer eipBandwidth;
 
-        @NameInMap("EipCommonBandwidthPackage")
+        @com.aliyun.core.annotation.NameInMap("EipCommonBandwidthPackage")
         private String eipCommonBandwidthPackage;
 
-        @NameInMap("EipISP")
+        @com.aliyun.core.annotation.NameInMap("EipISP")
         private String eipISP;
 
-        @NameInMap("EipPublicIpAddressPoolId")
+        @com.aliyun.core.annotation.NameInMap("EipPublicIpAddressPoolId")
         private String eipPublicIpAddressPoolId;
 
-        @NameInMap("EphemeralStorage")
+        @com.aliyun.core.annotation.NameInMap("EphemeralStorage")
         private Integer ephemeralStorage;
 
-        @NameInMap("HostAliases")
+        @com.aliyun.core.annotation.NameInMap("HostAliases")
         private java.util.List < HostAliases> hostAliases;
 
-        @NameInMap("HostName")
+        @com.aliyun.core.annotation.NameInMap("HostName")
         private String hostName;
 
-        @NameInMap("ImageRegistryCredentials")
+        @com.aliyun.core.annotation.NameInMap("ImageRegistryCredentials")
         private java.util.List < ImageRegistryCredentials> imageRegistryCredentials;
 
-        @NameInMap("ImageSnapshotId")
+        @com.aliyun.core.annotation.NameInMap("ImageSnapshotId")
         private String imageSnapshotId;
 
-        @NameInMap("IngressBandwidth")
+        @com.aliyun.core.annotation.NameInMap("IngressBandwidth")
         private Long ingressBandwidth;
 
-        @NameInMap("InitContainers")
+        @com.aliyun.core.annotation.NameInMap("InitContainers")
         private java.util.List < InitContainers> initContainers;
 
-        @NameInMap("InstanceFamilyLevel")
+        @com.aliyun.core.annotation.NameInMap("InstanceFamilyLevel")
         private String instanceFamilyLevel;
 
-        @NameInMap("InstanceTypes")
+        @com.aliyun.core.annotation.NameInMap("InstanceTypes")
         private java.util.List < String > instanceTypes;
 
-        @NameInMap("Ipv6AddressCount")
+        @com.aliyun.core.annotation.NameInMap("Ipv6AddressCount")
         private Integer ipv6AddressCount;
 
-        @NameInMap("LifecycleState")
+        @com.aliyun.core.annotation.NameInMap("LifecycleState")
         private String lifecycleState;
 
-        @NameInMap("LoadBalancerWeight")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerWeight")
         private Integer loadBalancerWeight;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Float memory;
 
-        @NameInMap("NtpServers")
+        @com.aliyun.core.annotation.NameInMap("NtpServers")
         private java.util.List < String > ntpServers;
 
-        @NameInMap("RamRoleName")
+        @com.aliyun.core.annotation.NameInMap("RamRoleName")
         private String ramRoleName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("RestartPolicy")
+        @com.aliyun.core.annotation.NameInMap("RestartPolicy")
         private String restartPolicy;
 
-        @NameInMap("ScalingConfigurationId")
+        @com.aliyun.core.annotation.NameInMap("ScalingConfigurationId")
         private String scalingConfigurationId;
 
-        @NameInMap("ScalingConfigurationName")
+        @com.aliyun.core.annotation.NameInMap("ScalingConfigurationName")
         private String scalingConfigurationName;
 
-        @NameInMap("ScalingGroupId")
+        @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
         private String scalingGroupId;
 
-        @NameInMap("SecurityContextSysCtls")
+        @com.aliyun.core.annotation.NameInMap("SecurityContextSysCtls")
         private java.util.List < SecurityContextSysCtls> securityContextSysCtls;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("SlsEnable")
+        @com.aliyun.core.annotation.NameInMap("SlsEnable")
         private Boolean slsEnable;
 
-        @NameInMap("SpotPriceLimit")
+        @com.aliyun.core.annotation.NameInMap("SpotPriceLimit")
         private Float spotPriceLimit;
 
-        @NameInMap("SpotStrategy")
+        @com.aliyun.core.annotation.NameInMap("SpotStrategy")
         private String spotStrategy;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("TerminationGracePeriodSeconds")
+        @com.aliyun.core.annotation.NameInMap("TerminationGracePeriodSeconds")
         private Integer terminationGracePeriodSeconds;
 
-        @NameInMap("Volumes")
+        @com.aliyun.core.annotation.NameInMap("Volumes")
         private java.util.List < Volumes> volumes;
 
         private ScalingConfiguration(Builder builder) {
@@ -3542,7 +3609,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             private java.util.List < Volumes> volumes; 
 
             /**
-             * AcrRegistryInfos.
+             * The information about the Container Registry Enterprise Edition instance.
              */
             public Builder acrRegistryInfos(java.util.List < AcrRegistryInfos> acrRegistryInfos) {
                 this.acrRegistryInfos = acrRegistryInfos;
@@ -3550,7 +3617,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * ActiveDeadlineSeconds.
+             * The validity period of the scaling configuration. Unit: seconds.
              */
             public Builder activeDeadlineSeconds(Integer activeDeadlineSeconds) {
                 this.activeDeadlineSeconds = activeDeadlineSeconds;
@@ -3558,7 +3625,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * AutoCreateEip.
+             * Indicates whether an elastic IP address (EIP) is automatically created and bound to the elastic container instance.
              */
             public Builder autoCreateEip(Boolean autoCreateEip) {
                 this.autoCreateEip = autoCreateEip;
@@ -3566,7 +3633,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * AutoMatchImageCache.
+             * Indicates whether the image cache is automatically matched. Default value: false.
              */
             public Builder autoMatchImageCache(Boolean autoMatchImageCache) {
                 this.autoMatchImageCache = autoMatchImageCache;
@@ -3574,7 +3641,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * ComputeCategory.
+             * The computing power types. A value of economy indicates that economic instance types are returned.
              */
             public Builder computeCategory(java.util.List < String > computeCategory) {
                 this.computeCategory = computeCategory;
@@ -3582,7 +3649,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * ContainerGroupName.
+             * The name of the container group.
              */
             public Builder containerGroupName(String containerGroupName) {
                 this.containerGroupName = containerGroupName;
@@ -3590,7 +3657,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Containers.
+             * The containers that are run on the instance.
              */
             public Builder containers(java.util.List < Containers> containers) {
                 this.containers = containers;
@@ -3598,7 +3665,11 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * CostOptimization.
+             * Indicates whether the Cost Optimization feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder costOptimization(Boolean costOptimization) {
                 this.costOptimization = costOptimization;
@@ -3606,7 +3677,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Cpu.
+             * The number of vCPUs that are allocated to the elastic container instance.
              */
             public Builder cpu(Float cpu) {
                 this.cpu = cpu;
@@ -3614,7 +3685,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * CpuOptionsCore.
+             * The number of physical CPU cores. You can specify this parameter for only specific instance types.
              */
             public Builder cpuOptionsCore(Integer cpuOptionsCore) {
                 this.cpuOptionsCore = cpuOptionsCore;
@@ -3622,7 +3693,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * CpuOptionsThreadsPerCore.
+             * The number of threads per core. You can specify this parameter for only specific instance types. A value of 1 indicates that Hyper-Threading is disabled. For more information, see [Specify CPU options](~~197781~~).
              */
             public Builder cpuOptionsThreadsPerCore(Integer cpuOptionsThreadsPerCore) {
                 this.cpuOptionsThreadsPerCore = cpuOptionsThreadsPerCore;
@@ -3630,7 +3701,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * CreationTime.
+             * The time when the scaling configuration was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -3638,7 +3709,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * DataCacheBucket.
+             * The bucket that caches data.
              */
             public Builder dataCacheBucket(String dataCacheBucket) {
                 this.dataCacheBucket = dataCacheBucket;
@@ -3646,7 +3717,15 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * DataCacheBurstingEnabled.
+             * Indicates whether the Performance Burst feature is enabled for the ESSD AutoPL disk that caches data. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
+             * 
+             * Default value: false.
+             * 
+             * >  For more information about ESSD AutoPL disks, see [ESSD AutoPL disks](~~122389~~).
              */
             public Builder dataCacheBurstingEnabled(Boolean dataCacheBurstingEnabled) {
                 this.dataCacheBurstingEnabled = dataCacheBurstingEnabled;
@@ -3654,7 +3733,15 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * DataCachePL.
+             * The performance level (PL) of the cloud disk that caches data. We recommend that you use enhanced SSDs (ESSDs). Valid values:
+             * <p>
+             * 
+             * *   PL0: An ESSD can provide up to 10,000 random read/write IOPS.
+             * *   PL1: An ESSD can provide up to 50,000 random read/write IOPS.
+             * *   PL2: An ESSD can provide up to 100,000 random read/write IOPS.
+             * *   PL3: An ESSD can provide up to 1,000,000 random read/write IOPS.
+             * 
+             * >  For more information about ESSDs, see [ESSDs](~~122389~~).
              */
             public Builder dataCachePL(String dataCachePL) {
                 this.dataCachePL = dataCachePL;
@@ -3662,7 +3749,10 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * DataCacheProvisionedIops.
+             * The provisioned read/write IOPS of the ESSD AutoPL disk that caches data. Valid values: 0 to min{50,000, 1,000 x *Capacity - Baseline IOPS}. Baseline IOPS = min{1,800 + 50* x Capacity, 50,000}.
+             * <p>
+             * 
+             * >  For more information about ESSD AutoPL disks, see [ESSD AutoPL disks](~~368372~~).
              */
             public Builder dataCacheProvisionedIops(Integer dataCacheProvisionedIops) {
                 this.dataCacheProvisionedIops = dataCacheProvisionedIops;
@@ -3670,7 +3760,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Description.
+             * >  This parameter is not available for use.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3678,7 +3768,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * DnsConfigNameServers.
+             * The IP addresses of DNS servers.
              */
             public Builder dnsConfigNameServers(java.util.List < String > dnsConfigNameServers) {
                 this.dnsConfigNameServers = dnsConfigNameServers;
@@ -3686,7 +3776,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * DnsConfigOptions.
+             * The DNS options.
              */
             public Builder dnsConfigOptions(java.util.List < DnsConfigOptions> dnsConfigOptions) {
                 this.dnsConfigOptions = dnsConfigOptions;
@@ -3694,7 +3784,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * DnsConfigSearches.
+             * The search domains of the DNS servers.
              */
             public Builder dnsConfigSearches(java.util.List < String > dnsConfigSearches) {
                 this.dnsConfigSearches = dnsConfigSearches;
@@ -3702,7 +3792,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * DnsPolicy.
+             * The Domain Name System (DNS) policy.
              */
             public Builder dnsPolicy(String dnsPolicy) {
                 this.dnsPolicy = dnsPolicy;
@@ -3710,7 +3800,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * EgressBandwidth.
+             * The maximum outbound bandwidth. Unit: bit/s.
              */
             public Builder egressBandwidth(Long egressBandwidth) {
                 this.egressBandwidth = egressBandwidth;
@@ -3718,7 +3808,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * EipBandwidth.
+             * The bandwidth of the EIP. Default value: 5. Unit: Mbit/s.
              */
             public Builder eipBandwidth(Integer eipBandwidth) {
                 this.eipBandwidth = eipBandwidth;
@@ -3726,7 +3816,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * EipCommonBandwidthPackage.
+             * The bound EIP bandwidth plan.
              */
             public Builder eipCommonBandwidthPackage(String eipCommonBandwidthPackage) {
                 this.eipCommonBandwidthPackage = eipCommonBandwidthPackage;
@@ -3734,7 +3824,11 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * EipISP.
+             * The line type of the EIP. Valid values:
+             * <p>
+             * 
+             * *   BGP: BGP (Multi-ISP) lines
+             * *   BGP_PRO: BGP (Multi-ISP) Pro
              */
             public Builder eipISP(String eipISP) {
                 this.eipISP = eipISP;
@@ -3742,7 +3836,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * EipPublicIpAddressPoolId.
+             * The ID of the IP address pool.
              */
             public Builder eipPublicIpAddressPoolId(String eipPublicIpAddressPoolId) {
                 this.eipPublicIpAddressPoolId = eipPublicIpAddressPoolId;
@@ -3750,7 +3844,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * EphemeralStorage.
+             * The size of the temporary storage space. Unit: GiB.
              */
             public Builder ephemeralStorage(Integer ephemeralStorage) {
                 this.ephemeralStorage = ephemeralStorage;
@@ -3758,7 +3852,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * HostAliases.
+             * The custom hostname mappings of a container in the elastic container instance.
              */
             public Builder hostAliases(java.util.List < HostAliases> hostAliases) {
                 this.hostAliases = hostAliases;
@@ -3766,7 +3860,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * HostName.
+             * The hostname.
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -3774,7 +3868,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * ImageRegistryCredentials.
+             * The image repositories.
              */
             public Builder imageRegistryCredentials(java.util.List < ImageRegistryCredentials> imageRegistryCredentials) {
                 this.imageRegistryCredentials = imageRegistryCredentials;
@@ -3782,7 +3876,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * ImageSnapshotId.
+             * The ID of the image cache.
              */
             public Builder imageSnapshotId(String imageSnapshotId) {
                 this.imageSnapshotId = imageSnapshotId;
@@ -3790,7 +3884,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * IngressBandwidth.
+             * The maximum inbound bandwidth. Unit: bit/s.
              */
             public Builder ingressBandwidth(Long ingressBandwidth) {
                 this.ingressBandwidth = ingressBandwidth;
@@ -3798,7 +3892,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * InitContainers.
+             * The init containers.
              */
             public Builder initContainers(java.util.List < InitContainers> initContainers) {
                 this.initContainers = initContainers;
@@ -3806,7 +3900,12 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * InstanceFamilyLevel.
+             * The level of the instance family, which is used to filter instance types that meet the specified criteria. This parameter takes effect only if `CostOptimization` is set to true. Valid values:
+             * <p>
+             * 
+             * *   EntryLevel: entry level (shared instance types). Instance types of this level are the most cost-effective but may not provide stable computing performance in a consistent manner. Instance types of this level are suitable for business scenarios in which the CPU utilization is low. For more information, see [Shared instance families](~~108489~~).
+             * *   EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources and are suitable for business scenarios that require high stability. For more information, see [Overview of instance families](~~25378~~).
+             * *   CreditEntryLevel: credit entry level (burstable instance types). CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see [Overview](~~59977~~) of burstable instances.
              */
             public Builder instanceFamilyLevel(String instanceFamilyLevel) {
                 this.instanceFamilyLevel = instanceFamilyLevel;
@@ -3814,7 +3913,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * InstanceTypes.
+             * The specified ECS instance types. You can specify up to five instance types.
              */
             public Builder instanceTypes(java.util.List < String > instanceTypes) {
                 this.instanceTypes = instanceTypes;
@@ -3822,7 +3921,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Ipv6AddressCount.
+             * The number of IPv6 addresses.
              */
             public Builder ipv6AddressCount(Integer ipv6AddressCount) {
                 this.ipv6AddressCount = ipv6AddressCount;
@@ -3830,7 +3929,11 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * LifecycleState.
+             * The state of the scaling configuration in the scaling group. Valid values:
+             * <p>
+             * 
+             * *   Active: The scaling configuration is active in the scaling group. Auto Scaling uses the active scaling configuration to automatically create elastic container instances.
+             * *   Inactive: The scaling configuration is inactive in the scaling group. Inactive scaling configurations are retained in scaling groups. However, Auto Scaling does not use inactive scaling groups to create elastic container instances.
              */
             public Builder lifecycleState(String lifecycleState) {
                 this.lifecycleState = lifecycleState;
@@ -3838,7 +3941,10 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * LoadBalancerWeight.
+             * The weight of an elastic container instance as a Server Load Balancer (SLB) backend server. Valid values: 1 to 100.
+             * <p>
+             * 
+             * Default value: 50.
              */
             public Builder loadBalancerWeight(Integer loadBalancerWeight) {
                 this.loadBalancerWeight = loadBalancerWeight;
@@ -3846,7 +3952,12 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Memory.
+             * The memory size. Unit: GiB.
+             * <p>
+             * 
+             * You can specify CPU and Memory to define the range of instance types. For example, if you set CPU to 2 and Memory to 16, the instance types that have 2 vCPUs and 16 GiB are returned. If you specify CPU and Memory, Auto Scaling determines the available instance types based on factors such as I/O optimization requirements and zones and preferentially creates instances by using the lowest-priced instance type.
+             * 
+             * >  You can specify CPU and Memory to define instance types only when you set Scaling Policy to Cost Optimization and no instance type is specified in the scaling configuration.
              */
             public Builder memory(Float memory) {
                 this.memory = memory;
@@ -3854,7 +3965,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * NtpServers.
+             * The endpoints of the Network Time Protocol (NTP) servers.
              */
             public Builder ntpServers(java.util.List < String > ntpServers) {
                 this.ntpServers = ntpServers;
@@ -3862,7 +3973,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * RamRoleName.
+             * The Resource Access Management (RAM) role of the elastic container instance. Elastic container instances and Elastic Compute Service (ECS) instances can share the same RAM role. For more information, see [Use the instance RAM role by calling APIs](~~61178~~).
              */
             public Builder ramRoleName(String ramRoleName) {
                 this.ramRoleName = ramRoleName;
@@ -3870,7 +3981,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * RegionId.
+             * The region ID of the scaling group to which the scaling configuration belongs.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -3878,7 +3989,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -3886,7 +3997,12 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * RestartPolicy.
+             * The restart policy of the container group. Valid values:
+             * <p>
+             * 
+             * *   Never: The container group is never restarted.
+             * *   Always: The container group is always restarted.
+             * *   OnFailure: The container group is restarted upon failures.
              */
             public Builder restartPolicy(String restartPolicy) {
                 this.restartPolicy = restartPolicy;
@@ -3894,7 +4010,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * ScalingConfigurationId.
+             * The ID of the scaling configuration.
              */
             public Builder scalingConfigurationId(String scalingConfigurationId) {
                 this.scalingConfigurationId = scalingConfigurationId;
@@ -3902,7 +4018,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * ScalingConfigurationName.
+             * The name of the scaling configuration.
              */
             public Builder scalingConfigurationName(String scalingConfigurationName) {
                 this.scalingConfigurationName = scalingConfigurationName;
@@ -3910,7 +4026,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * ScalingGroupId.
+             * The ID of the scaling group.
              */
             public Builder scalingGroupId(String scalingGroupId) {
                 this.scalingGroupId = scalingGroupId;
@@ -3918,7 +4034,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * SecurityContextSysCtls.
+             * The system information of the security context in which the elastic container instance is run.
              */
             public Builder securityContextSysCtls(java.util.List < SecurityContextSysCtls> securityContextSysCtls) {
                 this.securityContextSysCtls = securityContextSysCtls;
@@ -3926,7 +4042,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * SecurityGroupId.
+             * The ID of the security group with which the elastic container instance is associated. Elastic container instances that are associated with the same security group can access each other.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -3934,7 +4050,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * SlsEnable.
+             * Indicates whether user logs are collected. Default value: **false**.
              */
             public Builder slsEnable(Boolean slsEnable) {
                 this.slsEnable = slsEnable;
@@ -3942,7 +4058,10 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * SpotPriceLimit.
+             * The maximum hourly price for the preemptible instance.
+             * <p>
+             * 
+             * This parameter is returned only when SpotStrategy is set to SpotWithPriceLimit.
              */
             public Builder spotPriceLimit(Float spotPriceLimit) {
                 this.spotPriceLimit = spotPriceLimit;
@@ -3950,7 +4069,12 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * SpotStrategy.
+             * The preemption policy of the instance. Valid values:
+             * <p>
+             * 
+             * *   NoSpot: The instance is created as a regular pay-as-you-go instance.
+             * *   SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.
+             * *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is used as the bid price.
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -3958,7 +4082,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Tags.
+             * The tags of the elastic container instance. Tags are specified in the key-value format.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -3966,7 +4090,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * TerminationGracePeriodSeconds.
+             * The buffer time during which a program handles operations before the program stops.
              */
             public Builder terminationGracePeriodSeconds(Integer terminationGracePeriodSeconds) {
                 this.terminationGracePeriodSeconds = terminationGracePeriodSeconds;
@@ -3974,7 +4098,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Volumes.
+             * The volumes.
              */
             public Builder volumes(java.util.List < Volumes> volumes) {
                 this.volumes = volumes;

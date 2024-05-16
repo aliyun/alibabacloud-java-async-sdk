@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeactivateScalingConfigurationResponse} extends {@link TeaModel}
+ * {@link DescribePatternTypesResponse} extends {@link TeaModel}
  *
- * <p>DeactivateScalingConfigurationResponse</p>
+ * <p>DescribePatternTypesResponse</p>
  */
-public class DeactivateScalingConfigurationResponse extends Response {
+public class DescribePatternTypesResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +18,16 @@ public class DeactivateScalingConfigurationResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DeactivateScalingConfigurationResponseBody body;
+    private DescribePatternTypesResponseBody body;
 
-    private DeactivateScalingConfigurationResponse(BuilderImpl builder) {
+    private DescribePatternTypesResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DeactivateScalingConfigurationResponse create() {
+    public static DescribePatternTypesResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +53,35 @@ public class DeactivateScalingConfigurationResponse extends Response {
     /**
      * @return body
      */
-    public DeactivateScalingConfigurationResponseBody getBody() {
+    public DescribePatternTypesResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DeactivateScalingConfigurationResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribePatternTypesResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DeactivateScalingConfigurationResponseBody body);
+        Builder body(DescribePatternTypesResponseBody body);
 
         @Override
-        DeactivateScalingConfigurationResponse build();
+        DescribePatternTypesResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DeactivateScalingConfigurationResponse, Builder>
+            extends Response.BuilderImpl<DescribePatternTypesResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DeactivateScalingConfigurationResponseBody body; 
+        private DescribePatternTypesResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DeactivateScalingConfigurationResponse response) {
+        private BuilderImpl(DescribePatternTypesResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +110,14 @@ public class DeactivateScalingConfigurationResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DeactivateScalingConfigurationResponseBody body) {
+        public Builder body(DescribePatternTypesResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DeactivateScalingConfigurationResponse build() {
-            return new DeactivateScalingConfigurationResponse(this);
+        public DescribePatternTypesResponse build() {
+            return new DescribePatternTypesResponse(this);
         } 
 
     } 

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ess20220222.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,26 +11,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetGroupDeletionProtectionRequest</p>
  */
 public class SetGroupDeletionProtectionRequest extends Request {
-    @Query
-    @NameInMap("GroupDeletionProtection")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupDeletionProtection")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean groupDeletionProtection;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ScalingGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scalingGroupId;
 
     private SetGroupDeletionProtectionRequest(Builder builder) {
@@ -115,8 +114,10 @@ public class SetGroupDeletionProtectionRequest extends Request {
          * Specifies whether to enable deletion protection for the scaling group. Valid values:
          * <p>
          * 
-         * *   true: enables deletion protection for the scaling group. This way, the scaling group cannot be deleted.
-         * *   false: disables deletion protection for the scaling group.
+         * *   true: enables deletion protection. In this case, you cannot delete the scaling group by using the Auto Scaling console or calling an API operation. You must disable deletion protection before you can delete the scaling group.
+         * *   false: disables deletion protection.
+         * 
+         * Default value: false.
          */
         public Builder groupDeletionProtection(Boolean groupDeletionProtection) {
             this.putQueryParameter("GroupDeletionProtection", groupDeletionProtection);
