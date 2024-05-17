@@ -1,3 +1,6 @@
+2024-05-17 Version: 1.0.7
+- Generated java-async 2019-04-30 for schedulerx2.
+
 2023-07-17 Version: 1.0.6
 - Get Workflow Instance Add Node Field.
 

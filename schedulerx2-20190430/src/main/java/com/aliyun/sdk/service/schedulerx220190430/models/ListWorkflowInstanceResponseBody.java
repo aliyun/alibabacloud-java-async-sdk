@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.schedulerx220190430.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListWorkflowInstanceResponseBody</p>
  */
 public class ListWorkflowInstanceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListWorkflowInstanceResponseBody(Builder builder) {
@@ -136,25 +135,25 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
     } 
 
     public static class WfInstanceInfos extends TeaModel {
-        @NameInMap("DataTime")
+        @com.aliyun.core.annotation.NameInMap("DataTime")
         private String dataTime;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("ScheduleTime")
+        @com.aliyun.core.annotation.NameInMap("ScheduleTime")
         private String scheduleTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("WfInstanceId")
+        @com.aliyun.core.annotation.NameInMap("WfInstanceId")
         private Long wfInstanceId;
 
-        @NameInMap("WorkflowId")
+        @com.aliyun.core.annotation.NameInMap("WorkflowId")
         private Long workflowId;
 
         private WfInstanceInfos(Builder builder) {
@@ -304,7 +303,7 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("WfInstanceInfos")
+        @com.aliyun.core.annotation.NameInMap("WfInstanceInfos")
         private java.util.List < WfInstanceInfos> wfInstanceInfos;
 
         private Data(Builder builder) {

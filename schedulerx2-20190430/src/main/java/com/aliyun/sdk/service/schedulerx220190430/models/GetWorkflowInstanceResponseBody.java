@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.schedulerx220190430.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetWorkflowInstanceResponseBody</p>
  */
 public class GetWorkflowInstanceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetWorkflowInstanceResponseBody(Builder builder) {
@@ -136,10 +135,10 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
     } 
 
     public static class Edges extends TeaModel {
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private Long source;
 
-        @NameInMap("Target")
+        @com.aliyun.core.annotation.NameInMap("Target")
         private Long target;
 
         private Edges(Builder builder) {
@@ -197,37 +196,37 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
 
     }
     public static class Nodes extends TeaModel {
-        @NameInMap("Attempt")
+        @com.aliyun.core.annotation.NameInMap("Attempt")
         private Integer attempt;
 
-        @NameInMap("DataTime")
+        @com.aliyun.core.annotation.NameInMap("DataTime")
         private String dataTime;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private Long jobId;
 
-        @NameInMap("JobInstanceId")
+        @com.aliyun.core.annotation.NameInMap("JobInstanceId")
         private Long jobInstanceId;
 
-        @NameInMap("JobName")
+        @com.aliyun.core.annotation.NameInMap("JobName")
         private String jobName;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private String result;
 
-        @NameInMap("ScheduleTime")
+        @com.aliyun.core.annotation.NameInMap("ScheduleTime")
         private String scheduleTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("WorkAddr")
+        @com.aliyun.core.annotation.NameInMap("WorkAddr")
         private String workAddr;
 
         private Nodes(Builder builder) {
@@ -438,10 +437,10 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
 
     }
     public static class WfInstanceDag extends TeaModel {
-        @NameInMap("Edges")
+        @com.aliyun.core.annotation.NameInMap("Edges")
         private java.util.List < Edges> edges;
 
-        @NameInMap("Nodes")
+        @com.aliyun.core.annotation.NameInMap("Nodes")
         private java.util.List < Nodes> nodes;
 
         private WfInstanceDag(Builder builder) {
@@ -499,19 +498,19 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
 
     }
     public static class WfInstanceInfo extends TeaModel {
-        @NameInMap("DataTime")
+        @com.aliyun.core.annotation.NameInMap("DataTime")
         private String dataTime;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("ScheduleTime")
+        @com.aliyun.core.annotation.NameInMap("ScheduleTime")
         private String scheduleTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private WfInstanceInfo(Builder builder) {
@@ -627,10 +626,10 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("WfInstanceDag")
+        @com.aliyun.core.annotation.NameInMap("WfInstanceDag")
         private WfInstanceDag wfInstanceDag;
 
-        @NameInMap("WfInstanceInfo")
+        @com.aliyun.core.annotation.NameInMap("WfInstanceInfo")
         private WfInstanceInfo wfInstanceInfo;
 
         private Data(Builder builder) {

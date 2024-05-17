@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.schedulerx220190430.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,157 +11,157 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateJobRequest</p>
  */
 public class CreateJobRequest extends Request {
-    @Body
-    @NameInMap("AttemptInterval")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AttemptInterval")
     private Integer attemptInterval;
 
-    @Body
-    @NameInMap("Calendar")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Calendar")
     private String calendar;
 
-    @Body
-    @NameInMap("ClassName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClassName")
     private String className;
 
-    @Body
-    @NameInMap("ConsumerSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConsumerSize")
     private Integer consumerSize;
 
-    @Body
-    @NameInMap("ContactInfo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ContactInfo")
     private java.util.List < ContactInfo> contactInfo;
 
-    @Body
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Content")
     private String content;
 
-    @Body
-    @NameInMap("DataOffset")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DataOffset")
     private Integer dataOffset;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("DispatcherSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DispatcherSize")
     private Integer dispatcherSize;
 
-    @Body
-    @NameInMap("ExecuteMode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExecuteMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String executeMode;
 
-    @Body
-    @NameInMap("FailEnable")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FailEnable")
     private Boolean failEnable;
 
-    @Body
-    @NameInMap("FailTimes")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FailTimes")
     private Integer failTimes;
 
-    @Body
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Body
-    @NameInMap("JobType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("JobType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobType;
 
-    @Body
-    @NameInMap("MaxAttempt")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxAttempt")
     private Integer maxAttempt;
 
-    @Body
-    @NameInMap("MaxConcurrency")
-    @Validation(maximum = 200, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxConcurrency")
+    @com.aliyun.core.annotation.Validation(maximum = 200, minimum = 1)
     private Integer maxConcurrency;
 
-    @Body
-    @NameInMap("MissWorkerEnable")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MissWorkerEnable")
     private Boolean missWorkerEnable;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @Body
-    @NameInMap("NamespaceSource")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NamespaceSource")
     private String namespaceSource;
 
-    @Body
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Body
-    @NameInMap("Parameters")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Parameters")
     private String parameters;
 
-    @Body
-    @NameInMap("QueueSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QueueSize")
     private Integer queueSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Body
-    @NameInMap("SendChannel")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SendChannel")
     private String sendChannel;
 
-    @Body
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
-    @Body
-    @NameInMap("SuccessNoticeEnable")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SuccessNoticeEnable")
     private Boolean successNoticeEnable;
 
-    @Body
-    @NameInMap("TaskAttemptInterval")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TaskAttemptInterval")
     private Integer taskAttemptInterval;
 
-    @Body
-    @NameInMap("TaskMaxAttempt")
-    @Validation(maximum = 10)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TaskMaxAttempt")
+    @com.aliyun.core.annotation.Validation(maximum = 10)
     private Integer taskMaxAttempt;
 
-    @Body
-    @NameInMap("TimeExpression")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TimeExpression")
     private String timeExpression;
 
-    @Body
-    @NameInMap("TimeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TimeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer timeType;
 
-    @Body
-    @NameInMap("Timeout")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Timeout")
     private Long timeout;
 
-    @Body
-    @NameInMap("TimeoutEnable")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TimeoutEnable")
     private Boolean timeoutEnable;
 
-    @Body
-    @NameInMap("TimeoutKillEnable")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TimeoutKillEnable")
     private Boolean timeoutKillEnable;
 
-    @Body
-    @NameInMap("Timezone")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Timezone")
     private String timezone;
 
-    @Body
-    @NameInMap("XAttrs")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("XAttrs")
     private String xAttrs;
 
     private CreateJobRequest(Builder builder) {
@@ -935,16 +934,16 @@ public class CreateJobRequest extends Request {
     } 
 
     public static class ContactInfo extends TeaModel {
-        @NameInMap("Ding")
+        @com.aliyun.core.annotation.NameInMap("Ding")
         private String ding;
 
-        @NameInMap("UserMail")
+        @com.aliyun.core.annotation.NameInMap("UserMail")
         private String userMail;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
-        @NameInMap("UserPhone")
+        @com.aliyun.core.annotation.NameInMap("UserPhone")
         private String userPhone;
 
         private ContactInfo(Builder builder) {

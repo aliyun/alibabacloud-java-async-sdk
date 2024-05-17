@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.schedulerx220190430.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetJobInfoResponseBody</p>
  */
 public class GetJobInfoResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetJobInfoResponseBody(Builder builder) {
@@ -136,16 +135,16 @@ public class GetJobInfoResponseBody extends TeaModel {
     } 
 
     public static class ContactInfo extends TeaModel {
-        @NameInMap("Ding")
+        @com.aliyun.core.annotation.NameInMap("Ding")
         private String ding;
 
-        @NameInMap("UserMail")
+        @com.aliyun.core.annotation.NameInMap("UserMail")
         private String userMail;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
-        @NameInMap("UserPhone")
+        @com.aliyun.core.annotation.NameInMap("UserPhone")
         private String userPhone;
 
         private ContactInfo(Builder builder) {
@@ -237,22 +236,22 @@ public class GetJobInfoResponseBody extends TeaModel {
 
     }
     public static class MonitorConfig extends TeaModel {
-        @NameInMap("FailEnable")
+        @com.aliyun.core.annotation.NameInMap("FailEnable")
         private Boolean failEnable;
 
-        @NameInMap("MissWorkerEnable")
+        @com.aliyun.core.annotation.NameInMap("MissWorkerEnable")
         private Boolean missWorkerEnable;
 
-        @NameInMap("SendChannel")
+        @com.aliyun.core.annotation.NameInMap("SendChannel")
         private String sendChannel;
 
-        @NameInMap("Timeout")
+        @com.aliyun.core.annotation.NameInMap("Timeout")
         private Long timeout;
 
-        @NameInMap("TimeoutEnable")
+        @com.aliyun.core.annotation.NameInMap("TimeoutEnable")
         private Boolean timeoutEnable;
 
-        @NameInMap("TimeoutKillEnable")
+        @com.aliyun.core.annotation.NameInMap("TimeoutKillEnable")
         private Boolean timeoutKillEnable;
 
         private MonitorConfig(Builder builder) {
@@ -386,10 +385,10 @@ public class GetJobInfoResponseBody extends TeaModel {
 
     }
     public static class JobMonitorInfo extends TeaModel {
-        @NameInMap("ContactInfo")
+        @com.aliyun.core.annotation.NameInMap("ContactInfo")
         private java.util.List < ContactInfo> contactInfo;
 
-        @NameInMap("MonitorConfig")
+        @com.aliyun.core.annotation.NameInMap("MonitorConfig")
         private MonitorConfig monitorConfig;
 
         private JobMonitorInfo(Builder builder) {
@@ -447,22 +446,22 @@ public class GetJobInfoResponseBody extends TeaModel {
 
     }
     public static class MapTaskXAttrs extends TeaModel {
-        @NameInMap("ConsumerSize")
+        @com.aliyun.core.annotation.NameInMap("ConsumerSize")
         private Integer consumerSize;
 
-        @NameInMap("DispatcherSize")
+        @com.aliyun.core.annotation.NameInMap("DispatcherSize")
         private Integer dispatcherSize;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("QueueSize")
+        @com.aliyun.core.annotation.NameInMap("QueueSize")
         private Integer queueSize;
 
-        @NameInMap("TaskAttemptInterval")
+        @com.aliyun.core.annotation.NameInMap("TaskAttemptInterval")
         private Integer taskAttemptInterval;
 
-        @NameInMap("TaskMaxAttempt")
+        @com.aliyun.core.annotation.NameInMap("TaskMaxAttempt")
         private Integer taskMaxAttempt;
 
         private MapTaskXAttrs(Builder builder) {
@@ -588,16 +587,16 @@ public class GetJobInfoResponseBody extends TeaModel {
 
     }
     public static class TimeConfig extends TeaModel {
-        @NameInMap("Calendar")
+        @com.aliyun.core.annotation.NameInMap("Calendar")
         private String calendar;
 
-        @NameInMap("DataOffset")
+        @com.aliyun.core.annotation.NameInMap("DataOffset")
         private Integer dataOffset;
 
-        @NameInMap("TimeExpression")
+        @com.aliyun.core.annotation.NameInMap("TimeExpression")
         private String timeExpression;
 
-        @NameInMap("TimeType")
+        @com.aliyun.core.annotation.NameInMap("TimeType")
         private Integer timeType;
 
         private TimeConfig(Builder builder) {
@@ -702,55 +701,55 @@ public class GetJobInfoResponseBody extends TeaModel {
 
     }
     public static class JobConfigInfo extends TeaModel {
-        @NameInMap("AttemptInterval")
+        @com.aliyun.core.annotation.NameInMap("AttemptInterval")
         private Integer attemptInterval;
 
-        @NameInMap("ClassName")
+        @com.aliyun.core.annotation.NameInMap("ClassName")
         private String className;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ExecuteMode")
+        @com.aliyun.core.annotation.NameInMap("ExecuteMode")
         private String executeMode;
 
-        @NameInMap("JarUrl")
+        @com.aliyun.core.annotation.NameInMap("JarUrl")
         private String jarUrl;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private Long jobId;
 
-        @NameInMap("JobMonitorInfo")
+        @com.aliyun.core.annotation.NameInMap("JobMonitorInfo")
         private JobMonitorInfo jobMonitorInfo;
 
-        @NameInMap("JobType")
+        @com.aliyun.core.annotation.NameInMap("JobType")
         private String jobType;
 
-        @NameInMap("MapTaskXAttrs")
+        @com.aliyun.core.annotation.NameInMap("MapTaskXAttrs")
         private MapTaskXAttrs mapTaskXAttrs;
 
-        @NameInMap("MaxAttempt")
+        @com.aliyun.core.annotation.NameInMap("MaxAttempt")
         private Integer maxAttempt;
 
-        @NameInMap("MaxConcurrency")
+        @com.aliyun.core.annotation.NameInMap("MaxConcurrency")
         private String maxConcurrency;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Parameters")
+        @com.aliyun.core.annotation.NameInMap("Parameters")
         private String parameters;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("TimeConfig")
+        @com.aliyun.core.annotation.NameInMap("TimeConfig")
         private TimeConfig timeConfig;
 
-        @NameInMap("XAttrs")
+        @com.aliyun.core.annotation.NameInMap("XAttrs")
         private String xAttrs;
 
         private JobConfigInfo(Builder builder) {
@@ -1078,7 +1077,7 @@ public class GetJobInfoResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("JobConfigInfo")
+        @com.aliyun.core.annotation.NameInMap("JobConfigInfo")
         private JobConfigInfo jobConfigInfo;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.schedulerx220190430.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,47 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetJobInstanceListRequest</p>
  */
 public class GetJobInstanceListRequest extends Request {
-    @Query
-    @NameInMap("EndTimestamp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTimestamp")
     private Long endTimestamp;
 
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("JobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private Long jobId;
 
-    @Query
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @Query
-    @NameInMap("NamespaceSource")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespaceSource")
     private String namespaceSource;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
+    private Integer pageNum;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("StartTimestamp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTimestamp")
     private Long startTimestamp;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
     private GetJobInstanceListRequest(Builder builder) {
@@ -55,6 +61,8 @@ public class GetJobInstanceListRequest extends Request {
         this.jobId = builder.jobId;
         this.namespace = builder.namespace;
         this.namespaceSource = builder.namespaceSource;
+        this.pageNum = builder.pageNum;
+        this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
         this.startTimestamp = builder.startTimestamp;
         this.status = builder.status;
@@ -109,6 +117,20 @@ public class GetJobInstanceListRequest extends Request {
     }
 
     /**
+     * @return pageNum
+     */
+    public Integer getPageNum() {
+        return this.pageNum;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -135,6 +157,8 @@ public class GetJobInstanceListRequest extends Request {
         private Long jobId; 
         private String namespace; 
         private String namespaceSource; 
+        private Integer pageNum; 
+        private Integer pageSize; 
         private String regionId; 
         private Long startTimestamp; 
         private Integer status; 
@@ -150,13 +174,15 @@ public class GetJobInstanceListRequest extends Request {
             this.jobId = request.jobId;
             this.namespace = request.namespace;
             this.namespaceSource = request.namespaceSource;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
             this.regionId = request.regionId;
             this.startTimestamp = request.startTimestamp;
             this.status = request.status;
         } 
 
         /**
-         * 结束时间（时间戳）。
+         * The end of the time range to query. Specify the time as a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder endTimestamp(Long endTimestamp) {
             this.putQueryParameter("EndTimestamp", endTimestamp);
@@ -165,7 +191,7 @@ public class GetJobInstanceListRequest extends Request {
         }
 
         /**
-         * The ID of the application. You can obtain the application ID on the Application Management page in the SchedulerX console.
+         * The application group ID.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -174,7 +200,7 @@ public class GetJobInstanceListRequest extends Request {
         }
 
         /**
-         * The ID of the job. You can obtain the ID of the job on the Task Management page in the SchedulerX console.
+         * The job ID.
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -183,7 +209,7 @@ public class GetJobInstanceListRequest extends Request {
         }
 
         /**
-         * The ID of the namespace. You can obtain the namespace ID on the Namespace page in the SchedulerX console.
+         * The namespace ID. You can obtain the namespace ID on the **Namespace** page in the SchedulerX console.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -201,7 +227,25 @@ public class GetJobInstanceListRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * PageNum.
+         */
+        public Builder pageNum(Integer pageNum) {
+            this.putQueryParameter("PageNum", pageNum);
+            this.pageNum = pageNum;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -210,7 +254,7 @@ public class GetJobInstanceListRequest extends Request {
         }
 
         /**
-         * 开始时间（时间戳）。
+         * The beginning of the time range to query. Specify the time as a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder startTimestamp(Long startTimestamp) {
             this.putQueryParameter("StartTimestamp", startTimestamp);
@@ -219,15 +263,10 @@ public class GetJobInstanceListRequest extends Request {
         }
 
         /**
-         * 实例状态。包含以下几种状态：
+         * The state of the job instance. Valid values:
          * <p>
          * 
-         * 1：等待
-         * 3：运行中
-         * 4：成功
-         * 5：失败
-         * 9：拒绝
-         * 对应枚举类： com.alibaba.schedulerx.common.domain.InstanceStatus
+         * 1: The job instance is waiting for execution. 3: The job instance is running. 4: The job instance is successful. 5: The job instance fails. 9: The job instance is rejected. Enumeration class: com.alibaba.schedulerx.common.domain.InstanceStatus
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.schedulerx220190430.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetJobInstanceListResponseBody</p>
  */
 public class GetJobInstanceListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetJobInstanceListResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class GetJobInstanceListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code that is returned.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -102,7 +101,7 @@ public class GetJobInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * The error message that is returned if an error occurs.
+         * The error message that is returned only if the corresponding error occurs.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +109,7 @@ public class GetJobInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +117,11 @@ public class GetJobInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   **true**: The call is successful.
-         * *   **false**: The call fails.
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -136,43 +135,43 @@ public class GetJobInstanceListResponseBody extends TeaModel {
     } 
 
     public static class JobInstanceDetails extends TeaModel {
-        @NameInMap("DataTime")
+        @com.aliyun.core.annotation.NameInMap("DataTime")
         private String dataTime;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("Executor")
+        @com.aliyun.core.annotation.NameInMap("Executor")
         private String executor;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private Long jobId;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private String result;
 
-        @NameInMap("ScheduleTime")
+        @com.aliyun.core.annotation.NameInMap("ScheduleTime")
         private String scheduleTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("TimeType")
+        @com.aliyun.core.annotation.NameInMap("TimeType")
         private Integer timeType;
 
-        @NameInMap("TriggerType")
+        @com.aliyun.core.annotation.NameInMap("TriggerType")
         private Integer triggerType;
 
-        @NameInMap("WorkAddr")
+        @com.aliyun.core.annotation.NameInMap("WorkAddr")
         private String workAddr;
 
         private JobInstanceDetails(Builder builder) {
@@ -306,7 +305,7 @@ public class GetJobInstanceListResponseBody extends TeaModel {
             private String workAddr; 
 
             /**
-             * The data time.
+             * The data timestamp of the job instance.
              */
             public Builder dataTime(String dataTime) {
                 this.dataTime = dataTime;
@@ -330,7 +329,7 @@ public class GetJobInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the job instance.
+             * The job instance ID.
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -338,7 +337,7 @@ public class GetJobInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the job.
+             * The job ID.
              */
             public Builder jobId(Long jobId) {
                 this.jobId = jobId;
@@ -362,7 +361,7 @@ public class GetJobInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The scheduled time of the job.
+             * The time when the job was scheduled to run.
              */
             public Builder scheduleTime(String scheduleTime) {
                 this.scheduleTime = scheduleTime;
@@ -378,13 +377,13 @@ public class GetJobInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the job instance. Valid values:
+             * The state of the job instance. Valid values:
              * <p>
              * 
              * *   **1**: The job instance is waiting for execution.
              * *   **3**: The job instance is running.
              * *   **4**: The job instance is successful.
-             * *   **5**: The job instance fails.
+             * *   **5**: The job instance failed.
              * *   **9**: The job instance is rejected.
              * 
              * Enumeration class: com.alibaba.schedulerx.common.domain.InstanceStatus
@@ -414,11 +413,11 @@ public class GetJobInstanceListResponseBody extends TeaModel {
              * The trigger type of the job instance. Valid values:
              * <p>
              * 
-             * *   **1**: The job instance is triggered at the scheduled time.
-             * *   **2**: The job instance is triggered due to data update.
-             * *   **3**: The job instance is triggered by an API call.
-             * *   **4**: The job instance is triggered because it is manually rerun.
-             * *   **5**: The job instance is triggered because the system automatically reruns the job instance upon a system exception, such as a database exception.
+             * *   **1**: The job instance was triggered at the scheduled time.
+             * *   **2**: The job instance was triggered due to data updates.
+             * *   **3**: The job instance was triggered by an API call.
+             * *   **4**: The job instance was triggered because it is manually rerun.
+             * *   **5**: The job instance was triggered because the system automatically reruns the job instance upon a system exception, such as a database exception.
              * 
              * Enumeration class: com.alibaba.schedulerx.common.domain.TriggerType
              */
@@ -443,7 +442,7 @@ public class GetJobInstanceListResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("JobInstanceDetails")
+        @com.aliyun.core.annotation.NameInMap("JobInstanceDetails")
         private java.util.List < JobInstanceDetails> jobInstanceDetails;
 
         private Data(Builder builder) {
