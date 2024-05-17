@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateServiceInstanceSpecRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableUserPrometheus")
     private Boolean enableUserPrometheus;
 
@@ -33,6 +37,7 @@ public class UpdateServiceInstanceSpecRequest extends Request {
 
     private UpdateServiceInstanceSpecRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.enableUserPrometheus = builder.enableUserPrometheus;
         this.operationName = builder.operationName;
         this.parameters = builder.parameters;
@@ -51,6 +56,13 @@ public class UpdateServiceInstanceSpecRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -89,6 +101,7 @@ public class UpdateServiceInstanceSpecRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateServiceInstanceSpecRequest, Builder> {
+        private String clientToken; 
         private Boolean enableUserPrometheus; 
         private String operationName; 
         private java.util.Map < String, ? > parameters; 
@@ -101,12 +114,22 @@ public class UpdateServiceInstanceSpecRequest extends Request {
 
         private Builder(UpdateServiceInstanceSpecRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
             this.enableUserPrometheus = request.enableUserPrometheus;
             this.operationName = request.operationName;
             this.parameters = request.parameters;
             this.predefinedParametersName = request.predefinedParametersName;
             this.serviceInstanceId = request.serviceInstanceId;
         } 
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
 
         /**
          * EnableUserPrometheus.
