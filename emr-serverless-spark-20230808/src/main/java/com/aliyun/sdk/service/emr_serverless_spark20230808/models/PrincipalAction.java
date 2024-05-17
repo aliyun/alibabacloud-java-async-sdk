@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr_serverless_spark20230808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PrincipalAction</p>
  */
 public class PrincipalAction extends TeaModel {
-    @NameInMap("actionArn")
+    @com.aliyun.core.annotation.NameInMap("actionArn")
     private String actionArn;
 
-    @NameInMap("principalArn")
+    @com.aliyun.core.annotation.NameInMap("principalArn")
     private String principalArn;
 
     private PrincipalAction(Builder builder) {

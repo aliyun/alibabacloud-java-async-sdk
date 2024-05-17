@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr_serverless_spark20230808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,7 +11,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>JobDriver</p>
  */
 public class JobDriver extends TeaModel {
-    @NameInMap("sparkSubmit")
+    @com.aliyun.core.annotation.NameInMap("sparkSubmit")
     private SparkSubmit sparkSubmit;
 
     private JobDriver(Builder builder) {
@@ -52,13 +51,13 @@ public class JobDriver extends TeaModel {
     } 
 
     public static class SparkSubmit extends TeaModel {
-        @NameInMap("entryPoint")
+        @com.aliyun.core.annotation.NameInMap("entryPoint")
         private String entryPoint;
 
-        @NameInMap("entryPointArguments")
+        @com.aliyun.core.annotation.NameInMap("entryPointArguments")
         private java.util.List < String > entryPointArguments;
 
-        @NameInMap("sparkSubmitParameters")
+        @com.aliyun.core.annotation.NameInMap("sparkSubmitParameters")
         private String sparkSubmitParameters;
 
         private SparkSubmit(Builder builder) {

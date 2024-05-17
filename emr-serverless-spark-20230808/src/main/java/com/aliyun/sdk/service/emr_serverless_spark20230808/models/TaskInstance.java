@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr_serverless_spark20230808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TaskInstance</p>
  */
 public class TaskInstance extends TeaModel {
-    @NameInMap("bizId")
+    @com.aliyun.core.annotation.NameInMap("bizId")
     private String bizId;
 
-    @NameInMap("creator")
+    @com.aliyun.core.annotation.NameInMap("creator")
     private Long creator;
 
-    @NameInMap("fenixRunId")
+    @com.aliyun.core.annotation.NameInMap("fenixRunId")
     private String fenixRunId;
 
-    @NameInMap("gmtCreated")
+    @com.aliyun.core.annotation.NameInMap("gmtCreated")
     private String gmtCreated;
 
-    @NameInMap("taskBizId")
+    @com.aliyun.core.annotation.NameInMap("taskBizId")
     private String taskBizId;
 
-    @NameInMap("taskInfo")
+    @com.aliyun.core.annotation.NameInMap("taskInfo")
     private Task taskInfo;
 
-    @NameInMap("taskStatus")
+    @com.aliyun.core.annotation.NameInMap("taskStatus")
     private String taskStatus;
 
-    @NameInMap("workspaceBizId")
+    @com.aliyun.core.annotation.NameInMap("workspaceBizId")
     private String workspaceBizId;
 
     private TaskInstance(Builder builder) {

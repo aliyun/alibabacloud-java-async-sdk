@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr_serverless_spark20230808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,52 +11,53 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListJobRunsRequest</p>
  */
 public class ListJobRunsRequest extends Request {
-    @Path
-    @NameInMap("workspaceId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("workspaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
-    @Query
-    @NameInMap("creator")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("creator")
     private String creator;
 
-    @Query
-    @NameInMap("endTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("endTime")
     private EndTime endTime;
 
-    @Query
-    @NameInMap("jobRunId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("jobRunId")
     private String jobRunId;
 
-    @Query
-    @NameInMap("maxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("maxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @Query
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("regionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("regionId")
     private String regionId;
 
-    @Query
-    @NameInMap("resourceQueueId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("resourceQueueId")
     private String resourceQueueId;
 
-    @Query
-    @NameInMap("startTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("startTime")
     private StartTime startTime;
 
-    @Query
-    @NameInMap("states")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("states")
     private java.util.List < String > states;
 
-    @Query
-    @NameInMap("tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("tags")
     private java.util.List < Tags> tags;
 
     private ListJobRunsRequest(Builder builder) {
@@ -327,10 +327,10 @@ public class ListJobRunsRequest extends Request {
     } 
 
     public static class EndTime extends TeaModel {
-        @NameInMap("endTime")
+        @com.aliyun.core.annotation.NameInMap("endTime")
         private Long endTime;
 
-        @NameInMap("startTime")
+        @com.aliyun.core.annotation.NameInMap("startTime")
         private Long startTime;
 
         private EndTime(Builder builder) {
@@ -388,10 +388,10 @@ public class ListJobRunsRequest extends Request {
 
     }
     public static class StartTime extends TeaModel {
-        @NameInMap("endTime")
+        @com.aliyun.core.annotation.NameInMap("endTime")
         private Long endTime;
 
-        @NameInMap("startTime")
+        @com.aliyun.core.annotation.NameInMap("startTime")
         private Long startTime;
 
         private StartTime(Builder builder) {
@@ -449,10 +449,10 @@ public class ListJobRunsRequest extends Request {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("key")
+        @com.aliyun.core.annotation.NameInMap("key")
         private String key;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private Tags(Builder builder) {

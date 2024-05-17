@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr_serverless_spark20230808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TaskSnapshot</p>
  */
 public class TaskSnapshot extends TeaModel {
-    @NameInMap("bizId")
+    @com.aliyun.core.annotation.NameInMap("bizId")
     private String bizId;
 
-    @NameInMap("commiter")
+    @com.aliyun.core.annotation.NameInMap("commiter")
     private Long commiter;
 
-    @NameInMap("gmtCreated")
+    @com.aliyun.core.annotation.NameInMap("gmtCreated")
     private String gmtCreated;
 
-    @NameInMap("item")
+    @com.aliyun.core.annotation.NameInMap("item")
     private Task item;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("taskBizId")
+    @com.aliyun.core.annotation.NameInMap("taskBizId")
     private String taskBizId;
 
-    @NameInMap("version")
+    @com.aliyun.core.annotation.NameInMap("version")
     private String version;
 
     private TaskSnapshot(Builder builder) {

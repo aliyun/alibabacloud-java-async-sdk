@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr_serverless_spark20230808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,35 +11,35 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Category</p>
  */
 public class Category extends TeaModel {
-    @NameInMap("bizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("bizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @NameInMap("creator")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("creator")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long creator;
 
-    @NameInMap("gmtCreated")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("gmtCreated")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String gmtCreated;
 
-    @NameInMap("gmtModified")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("gmtModified")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String gmtModified;
 
-    @NameInMap("modifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("modifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long modifier;
 
-    @NameInMap("name")
-    @Validation(required = true, maxLength = 64, minLength = 1)
+    @com.aliyun.core.annotation.NameInMap("name")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64, minLength = 1)
     private String name;
 
-    @NameInMap("parentBizId")
+    @com.aliyun.core.annotation.NameInMap("parentBizId")
     private String parentBizId;
 
-    @NameInMap("type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private Category(Builder builder) {

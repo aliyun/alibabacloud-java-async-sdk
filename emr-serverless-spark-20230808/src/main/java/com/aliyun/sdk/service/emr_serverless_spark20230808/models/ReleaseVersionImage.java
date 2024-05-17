@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr_serverless_spark20230808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ReleaseVersionImage</p>
  */
 public class ReleaseVersionImage extends TeaModel {
-    @NameInMap("cpuArchitecture")
+    @com.aliyun.core.annotation.NameInMap("cpuArchitecture")
     private String cpuArchitecture;
 
-    @NameInMap("imageId")
+    @com.aliyun.core.annotation.NameInMap("imageId")
     private String imageId;
 
-    @NameInMap("runtimeEngineType")
+    @com.aliyun.core.annotation.NameInMap("runtimeEngineType")
     private String runtimeEngineType;
 
     private ReleaseVersionImage(Builder builder) {

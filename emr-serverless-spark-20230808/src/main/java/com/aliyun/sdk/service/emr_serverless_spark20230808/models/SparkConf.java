@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr_serverless_spark20230808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SparkConf</p>
  */
 public class SparkConf extends TeaModel {
-    @NameInMap("key")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("key")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String key;
 
-    @NameInMap("value")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("value")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String value;
 
     private SparkConf(Builder builder) {

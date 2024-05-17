@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr_serverless_spark20230808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SqlOutput</p>
  */
 public class SqlOutput extends TeaModel {
-    @NameInMap("rows")
+    @com.aliyun.core.annotation.NameInMap("rows")
     private java.util.List < Rows> rows;
 
-    @NameInMap("schema")
+    @com.aliyun.core.annotation.NameInMap("schema")
     private Schema schema;
 
     private SqlOutput(Builder builder) {
@@ -72,7 +71,7 @@ public class SqlOutput extends TeaModel {
     } 
 
     public static class Rows extends TeaModel {
-        @NameInMap("values")
+        @com.aliyun.core.annotation.NameInMap("values")
         private java.util.List < String > values;
 
         private Rows(Builder builder) {
@@ -113,13 +112,13 @@ public class SqlOutput extends TeaModel {
 
     }
     public static class Fields extends TeaModel {
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("nullable")
+        @com.aliyun.core.annotation.NameInMap("nullable")
         private Boolean nullable;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Fields(Builder builder) {
@@ -194,7 +193,7 @@ public class SqlOutput extends TeaModel {
 
     }
     public static class Schema extends TeaModel {
-        @NameInMap("fields")
+        @com.aliyun.core.annotation.NameInMap("fields")
         private java.util.List < Fields> fields;
 
         private Schema(Builder builder) {

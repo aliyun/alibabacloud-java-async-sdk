@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr_serverless_spark20230808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetJobRunRequest</p>
  */
 public class GetJobRunRequest extends Request {
-    @Path
-    @NameInMap("workspaceId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("workspaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
-    @Path
-    @NameInMap("jobRunId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("jobRunId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobRunId;
 
-    @Query
-    @NameInMap("regionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("regionId")
     private String regionId;
 
     private GetJobRunRequest(Builder builder) {

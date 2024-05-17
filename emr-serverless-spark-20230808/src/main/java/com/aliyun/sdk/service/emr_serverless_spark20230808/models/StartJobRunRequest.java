@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr_serverless_spark20230808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,52 +11,53 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StartJobRunRequest</p>
  */
 public class StartJobRunRequest extends Request {
-    @Path
-    @NameInMap("workspaceId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("workspaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
-    @Body
-    @NameInMap("clientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("codeType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("codeType")
     private String codeType;
 
-    @Body
-    @NameInMap("configurationOverrides")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("configurationOverrides")
     private ConfigurationOverrides configurationOverrides;
 
-    @Body
-    @NameInMap("executionTimeoutSeconds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("executionTimeoutSeconds")
     private Integer executionTimeoutSeconds;
 
-    @Body
-    @NameInMap("jobDriver")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("jobDriver")
     private JobDriver jobDriver;
 
-    @Body
-    @NameInMap("jobId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("jobId")
     private String jobId;
 
-    @Body
-    @NameInMap("name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @Body
-    @NameInMap("releaseVersion")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("releaseVersion")
     private String releaseVersion;
 
-    @Body
-    @NameInMap("resourceQueueId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("resourceQueueId")
     private String resourceQueueId;
 
-    @Body
-    @NameInMap("tags")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("tags")
     private java.util.List < Tag > tags;
 
-    @Query
-    @NameInMap("regionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("regionId")
     private String regionId;
 
     private StartJobRunRequest(Builder builder) {
@@ -323,13 +323,13 @@ public class StartJobRunRequest extends Request {
     } 
 
     public static class Configurations extends TeaModel {
-        @NameInMap("configFileName")
+        @com.aliyun.core.annotation.NameInMap("configFileName")
         private String configFileName;
 
-        @NameInMap("configItemKey")
+        @com.aliyun.core.annotation.NameInMap("configItemKey")
         private String configItemKey;
 
-        @NameInMap("configItemValue")
+        @com.aliyun.core.annotation.NameInMap("configItemValue")
         private String configItemValue;
 
         private Configurations(Builder builder) {
@@ -404,7 +404,7 @@ public class StartJobRunRequest extends Request {
 
     }
     public static class ConfigurationOverrides extends TeaModel {
-        @NameInMap("configurations")
+        @com.aliyun.core.annotation.NameInMap("configurations")
         private java.util.List < Configurations> configurations;
 
         private ConfigurationOverrides(Builder builder) {

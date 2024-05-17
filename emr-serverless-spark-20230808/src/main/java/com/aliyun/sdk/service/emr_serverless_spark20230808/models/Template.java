@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr_serverless_spark20230808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,54 +11,54 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Template</p>
  */
 public class Template extends TeaModel {
-    @NameInMap("creator")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("creator")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long creator;
 
-    @NameInMap("gmtCreated")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("gmtCreated")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String gmtCreated;
 
-    @NameInMap("gmtModified")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("gmtModified")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String gmtModified;
 
-    @NameInMap("modifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("modifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long modifier;
 
-    @NameInMap("sparkConf")
+    @com.aliyun.core.annotation.NameInMap("sparkConf")
     private java.util.List < SparkConf > sparkConf;
 
-    @NameInMap("sparkDriverCores")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("sparkDriverCores")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer sparkDriverCores;
 
-    @NameInMap("sparkDriverMemory")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("sparkDriverMemory")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long sparkDriverMemory;
 
-    @NameInMap("sparkExecutorCores")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("sparkExecutorCores")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer sparkExecutorCores;
 
-    @NameInMap("sparkExecutorMemory")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("sparkExecutorMemory")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long sparkExecutorMemory;
 
-    @NameInMap("sparkLogLevel")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("sparkLogLevel")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sparkLogLevel;
 
-    @NameInMap("sparkLogPath")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("sparkLogPath")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sparkLogPath;
 
-    @NameInMap("sparkVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("sparkVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sparkVersion;
 
-    @NameInMap("templateType")
+    @com.aliyun.core.annotation.NameInMap("templateType")
     private String templateType;
 
     private Template(Builder builder) {

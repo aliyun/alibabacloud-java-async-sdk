@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr_serverless_spark20230808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,112 +11,125 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Task</p>
  */
 public class Task extends TeaModel {
-    @NameInMap("artifactUrl")
+    @com.aliyun.core.annotation.NameInMap("archives")
+    private java.util.List < String > archives;
+
+    @com.aliyun.core.annotation.NameInMap("artifactUrl")
     private String artifactUrl;
 
-    @NameInMap("bizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("bizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @NameInMap("categoryBizId")
+    @com.aliyun.core.annotation.NameInMap("categoryBizId")
     private String categoryBizId;
 
-    @NameInMap("content")
+    @com.aliyun.core.annotation.NameInMap("content")
     private String content;
 
-    @NameInMap("creator")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("creator")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long creator;
 
-    @NameInMap("defaultCatalogId")
+    @com.aliyun.core.annotation.NameInMap("defaultCatalogId")
     private String defaultCatalogId;
 
-    @NameInMap("defaultDatabase")
+    @com.aliyun.core.annotation.NameInMap("defaultDatabase")
     private String defaultDatabase;
 
-    @NameInMap("defaultResourceQueueId")
+    @com.aliyun.core.annotation.NameInMap("defaultResourceQueueId")
     private String defaultResourceQueueId;
 
-    @NameInMap("defaultSqlComputeId")
+    @com.aliyun.core.annotation.NameInMap("defaultSqlComputeId")
     private String defaultSqlComputeId;
 
-    @NameInMap("extraArtifactIds")
+    @com.aliyun.core.annotation.NameInMap("extraArtifactIds")
     private java.util.List < String > extraArtifactIds;
 
-    @NameInMap("gmtCreated")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("extraSparkSubmitParams")
+    private String extraSparkSubmitParams;
+
+    @com.aliyun.core.annotation.NameInMap("files")
+    private java.util.List < String > files;
+
+    @com.aliyun.core.annotation.NameInMap("gmtCreated")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String gmtCreated;
 
-    @NameInMap("gmtModified")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("gmtModified")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String gmtModified;
 
-    @NameInMap("hasChanged")
+    @com.aliyun.core.annotation.NameInMap("hasChanged")
     private Boolean hasChanged;
 
-    @NameInMap("hasCommited")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("hasCommited")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean hasCommited;
 
-    @NameInMap("lastRunResourceQueueId")
+    @com.aliyun.core.annotation.NameInMap("jars")
+    private java.util.List < String > jars;
+
+    @com.aliyun.core.annotation.NameInMap("lastRunResourceQueueId")
     private String lastRunResourceQueueId;
 
-    @NameInMap("modifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("modifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long modifier;
 
-    @NameInMap("name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @NameInMap("pyFiles")
+    @com.aliyun.core.annotation.NameInMap("pyFiles")
     private java.util.List < String > pyFiles;
 
-    @NameInMap("sparkArgs")
+    @com.aliyun.core.annotation.NameInMap("sparkArgs")
     private String sparkArgs;
 
-    @NameInMap("sparkConf")
+    @com.aliyun.core.annotation.NameInMap("sparkConf")
     private java.util.List < SparkConf > sparkConf;
 
-    @NameInMap("sparkDriverCores")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("sparkDriverCores")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer sparkDriverCores;
 
-    @NameInMap("sparkDriverMemory")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("sparkDriverMemory")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long sparkDriverMemory;
 
-    @NameInMap("sparkEntrypoint")
+    @com.aliyun.core.annotation.NameInMap("sparkEntrypoint")
     private String sparkEntrypoint;
 
-    @NameInMap("sparkExecutorCores")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("sparkExecutorCores")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer sparkExecutorCores;
 
-    @NameInMap("sparkExecutorMemory")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("sparkExecutorMemory")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long sparkExecutorMemory;
 
-    @NameInMap("sparkLogLevel")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("sparkLogLevel")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sparkLogLevel;
 
-    @NameInMap("sparkLogPath")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("sparkLogPath")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sparkLogPath;
 
-    @NameInMap("sparkVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("sparkVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sparkVersion;
 
-    @NameInMap("tags")
+    @com.aliyun.core.annotation.NameInMap("tags")
     private java.util.Map < String, String > tags;
 
-    @NameInMap("type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private Task(Builder builder) {
+        this.archives = builder.archives;
         this.artifactUrl = builder.artifactUrl;
         this.bizId = builder.bizId;
         this.categoryBizId = builder.categoryBizId;
@@ -128,10 +140,13 @@ public class Task extends TeaModel {
         this.defaultResourceQueueId = builder.defaultResourceQueueId;
         this.defaultSqlComputeId = builder.defaultSqlComputeId;
         this.extraArtifactIds = builder.extraArtifactIds;
+        this.extraSparkSubmitParams = builder.extraSparkSubmitParams;
+        this.files = builder.files;
         this.gmtCreated = builder.gmtCreated;
         this.gmtModified = builder.gmtModified;
         this.hasChanged = builder.hasChanged;
         this.hasCommited = builder.hasCommited;
+        this.jars = builder.jars;
         this.lastRunResourceQueueId = builder.lastRunResourceQueueId;
         this.modifier = builder.modifier;
         this.name = builder.name;
@@ -156,6 +171,13 @@ public class Task extends TeaModel {
 
     public static Task create() {
         return builder().build();
+    }
+
+    /**
+     * @return archives
+     */
+    public java.util.List < String > getArchives() {
+        return this.archives;
     }
 
     /**
@@ -229,6 +251,20 @@ public class Task extends TeaModel {
     }
 
     /**
+     * @return extraSparkSubmitParams
+     */
+    public String getExtraSparkSubmitParams() {
+        return this.extraSparkSubmitParams;
+    }
+
+    /**
+     * @return files
+     */
+    public java.util.List < String > getFiles() {
+        return this.files;
+    }
+
+    /**
      * @return gmtCreated
      */
     public String getGmtCreated() {
@@ -254,6 +290,13 @@ public class Task extends TeaModel {
      */
     public Boolean getHasCommited() {
         return this.hasCommited;
+    }
+
+    /**
+     * @return jars
+     */
+    public java.util.List < String > getJars() {
+        return this.jars;
     }
 
     /**
@@ -369,6 +412,7 @@ public class Task extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.List < String > archives; 
         private String artifactUrl; 
         private String bizId; 
         private String categoryBizId; 
@@ -379,10 +423,13 @@ public class Task extends TeaModel {
         private String defaultResourceQueueId; 
         private String defaultSqlComputeId; 
         private java.util.List < String > extraArtifactIds; 
+        private String extraSparkSubmitParams; 
+        private java.util.List < String > files; 
         private String gmtCreated; 
         private String gmtModified; 
         private Boolean hasChanged; 
         private Boolean hasCommited; 
+        private java.util.List < String > jars; 
         private String lastRunResourceQueueId; 
         private Long modifier; 
         private String name; 
@@ -399,6 +446,14 @@ public class Task extends TeaModel {
         private String sparkVersion; 
         private java.util.Map < String, String > tags; 
         private String type; 
+
+        /**
+         * archives.
+         */
+        public Builder archives(java.util.List < String > archives) {
+            this.archives = archives;
+            return this;
+        }
 
         /**
          * artifactUrl.
@@ -481,6 +536,22 @@ public class Task extends TeaModel {
         }
 
         /**
+         * extraSparkSubmitParams.
+         */
+        public Builder extraSparkSubmitParams(String extraSparkSubmitParams) {
+            this.extraSparkSubmitParams = extraSparkSubmitParams;
+            return this;
+        }
+
+        /**
+         * files.
+         */
+        public Builder files(java.util.List < String > files) {
+            this.files = files;
+            return this;
+        }
+
+        /**
          * gmtCreated.
          */
         public Builder gmtCreated(String gmtCreated) {
@@ -509,6 +580,14 @@ public class Task extends TeaModel {
          */
         public Builder hasCommited(Boolean hasCommited) {
             this.hasCommited = hasCommited;
+            return this;
+        }
+
+        /**
+         * jars.
+         */
+        public Builder jars(java.util.List < String > jars) {
+            this.jars = jars;
             return this;
         }
 

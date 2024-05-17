@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr_serverless_spark20230808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,15 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RunLog</p>
  */
 public class RunLog extends TeaModel {
-    @NameInMap("driverStdError")
+    @com.aliyun.core.annotation.NameInMap("driverStartup")
+    private String driverStartup;
+
+    @com.aliyun.core.annotation.NameInMap("driverStdError")
     private String driverStdError;
 
-    @NameInMap("driverStdOut")
+    @com.aliyun.core.annotation.NameInMap("driverStdOut")
     private String driverStdOut;
 
+    @com.aliyun.core.annotation.NameInMap("driverSyslog")
+    private String driverSyslog;
+
     private RunLog(Builder builder) {
+        this.driverStartup = builder.driverStartup;
         this.driverStdError = builder.driverStdError;
         this.driverStdOut = builder.driverStdOut;
+        this.driverSyslog = builder.driverSyslog;
     }
 
     public static Builder builder() {
@@ -29,6 +36,13 @@ public class RunLog extends TeaModel {
 
     public static RunLog create() {
         return builder().build();
+    }
+
+    /**
+     * @return driverStartup
+     */
+    public String getDriverStartup() {
+        return this.driverStartup;
     }
 
     /**
@@ -45,9 +59,26 @@ public class RunLog extends TeaModel {
         return this.driverStdOut;
     }
 
+    /**
+     * @return driverSyslog
+     */
+    public String getDriverSyslog() {
+        return this.driverSyslog;
+    }
+
     public static final class Builder {
+        private String driverStartup; 
         private String driverStdError; 
         private String driverStdOut; 
+        private String driverSyslog; 
+
+        /**
+         * driverStartup.
+         */
+        public Builder driverStartup(String driverStartup) {
+            this.driverStartup = driverStartup;
+            return this;
+        }
 
         /**
          * driverStdError.
@@ -62,6 +93,14 @@ public class RunLog extends TeaModel {
          */
         public Builder driverStdOut(String driverStdOut) {
             this.driverStdOut = driverStdOut;
+            return this;
+        }
+
+        /**
+         * driverSyslog.
+         */
+        public Builder driverSyslog(String driverSyslog) {
+            this.driverSyslog = driverSyslog;
             return this;
         }
 

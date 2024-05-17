@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr_serverless_spark20230808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Credential</p>
  */
 public class Credential extends TeaModel {
-    @NameInMap("accessId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("accessId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accessId;
 
-    @NameInMap("dir")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("dir")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dir;
 
-    @NameInMap("expire")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("expire")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String expire;
 
-    @NameInMap("host")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("host")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String host;
 
-    @NameInMap("policy")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("policy")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policy;
 
-    @NameInMap("securityToken")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("securityToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String securityToken;
 
-    @NameInMap("signature")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("signature")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String signature;
 
     private Credential(Builder builder) {
