@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,64 +11,64 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateMcubeUpgradeTaskRequest</p>
  */
 public class CreateMcubeUpgradeTaskRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
-    @Body
-    @NameInMap("GreyConfigInfo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GreyConfigInfo")
     private String greyConfigInfo;
 
-    @Body
-    @NameInMap("GreyEndtimeData")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GreyEndtimeData")
     private String greyEndtimeData;
 
-    @Body
-    @NameInMap("GreyNum")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GreyNum")
     private Integer greyNum;
 
-    @Body
-    @NameInMap("HistoryForce")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HistoryForce")
     private Integer historyForce;
 
-    @Body
-    @NameInMap("Memo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Memo")
     private String memo;
 
-    @Body
-    @NameInMap("PackageInfoId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PackageInfoId")
     private Long packageInfoId;
 
-    @Body
-    @NameInMap("PublishMode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PublishMode")
     private Integer publishMode;
 
-    @Body
-    @NameInMap("PublishType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PublishType")
     private Integer publishType;
 
-    @Body
-    @NameInMap("TenantId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
     private String tenantId;
 
-    @Body
-    @NameInMap("UpgradeContent")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UpgradeContent")
     private String upgradeContent;
 
-    @Body
-    @NameInMap("UpgradeType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UpgradeType")
     private Integer upgradeType;
 
-    @Body
-    @NameInMap("WhitelistIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WhitelistIds")
     private String whitelistIds;
 
-    @Body
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
     private CreateMcubeUpgradeTaskRequest(Builder builder) {

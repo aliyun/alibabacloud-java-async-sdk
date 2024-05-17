@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListMappCenterWorkspacesResponseBody</p>
  */
 public class ListMappCenterWorkspacesResponseBody extends TeaModel {
-    @NameInMap("ListMappCenterWorkspaceResult")
+    @com.aliyun.core.annotation.NameInMap("ListMappCenterWorkspaceResult")
     private ListMappCenterWorkspaceResult listMappCenterWorkspaceResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultCode")
+    @com.aliyun.core.annotation.NameInMap("ResultCode")
     private String resultCode;
 
-    @NameInMap("ResultMessage")
+    @com.aliyun.core.annotation.NameInMap("ResultMessage")
     private String resultMessage;
 
     private ListMappCenterWorkspacesResponseBody(Builder builder) {
@@ -112,40 +111,40 @@ public class ListMappCenterWorkspacesResponseBody extends TeaModel {
     } 
 
     public static class MappCenterWorkspaceList extends TeaModel {
-        @NameInMap("CompatibleId")
+        @com.aliyun.core.annotation.NameInMap("CompatibleId")
         private String compatibleId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Uid")
+        @com.aliyun.core.annotation.NameInMap("Uid")
         private Long uid;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("WorkspaceId")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceId")
         private String workspaceId;
 
-        @NameInMap("Zones")
+        @com.aliyun.core.annotation.NameInMap("Zones")
         private String zones;
 
         private MappCenterWorkspaceList(Builder builder) {
@@ -373,16 +372,16 @@ public class ListMappCenterWorkspacesResponseBody extends TeaModel {
 
     }
     public static class ListMappCenterWorkspaceResult extends TeaModel {
-        @NameInMap("MappCenterWorkspaceList")
+        @com.aliyun.core.annotation.NameInMap("MappCenterWorkspaceList")
         private java.util.List < MappCenterWorkspaceList> mappCenterWorkspaceList;
 
-        @NameInMap("ResultMsg")
+        @com.aliyun.core.annotation.NameInMap("ResultMsg")
         private String resultMsg;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private ListMappCenterWorkspaceResult(Builder builder) {

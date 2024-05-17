@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,72 +11,72 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListMgsApiRequest</p>
  */
 public class ListMgsApiRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("ApiStatus")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApiStatus")
     private String apiStatus;
 
-    @Body
-    @NameInMap("ApiType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApiType")
     private String apiType;
 
-    @Body
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
-    @Body
-    @NameInMap("Format")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Format")
     private String format;
 
-    @Body
-    @NameInMap("Host")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Host")
     private String host;
 
-    @Body
-    @NameInMap("NeedEncrypt")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NeedEncrypt")
     private String needEncrypt;
 
-    @Body
-    @NameInMap("NeedEtag")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NeedEtag")
     private String needEtag;
 
-    @Body
-    @NameInMap("NeedSign")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NeedSign")
     private String needSign;
 
-    @Body
-    @NameInMap("OperationType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OperationType")
     private String operationType;
 
-    @Body
-    @NameInMap("OptFuzzy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OptFuzzy")
     private String optFuzzy;
 
-    @Body
-    @NameInMap("PageIndex")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageIndex")
     private Long pageIndex;
 
-    @Body
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @Body
-    @NameInMap("SysId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SysId")
     private Long sysId;
 
-    @Body
-    @NameInMap("SysName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SysName")
     private String sysName;
 
-    @Body
-    @NameInMap("TenantId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
     private String tenantId;
 
-    @Body
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
     private ListMgsApiRequest(Builder builder) {

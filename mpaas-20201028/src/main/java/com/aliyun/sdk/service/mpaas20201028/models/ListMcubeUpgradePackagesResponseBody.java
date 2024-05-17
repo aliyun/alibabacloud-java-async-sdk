@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListMcubeUpgradePackagesResponseBody</p>
  */
 public class ListMcubeUpgradePackagesResponseBody extends TeaModel {
-    @NameInMap("ListPackagesResult")
+    @com.aliyun.core.annotation.NameInMap("ListPackagesResult")
     private ListPackagesResult listPackagesResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultCode")
+    @com.aliyun.core.annotation.NameInMap("ResultCode")
     private String resultCode;
 
-    @NameInMap("ResultMessage")
+    @com.aliyun.core.annotation.NameInMap("ResultMessage")
     private String resultMessage;
 
     private ListMcubeUpgradePackagesResponseBody(Builder builder) {
@@ -112,124 +111,124 @@ public class ListMcubeUpgradePackagesResponseBody extends TeaModel {
     } 
 
     public static class Packages extends TeaModel {
-        @NameInMap("AllowCreateTask")
+        @com.aliyun.core.annotation.NameInMap("AllowCreateTask")
         private Boolean allowCreateTask;
 
-        @NameInMap("AppCode")
+        @com.aliyun.core.annotation.NameInMap("AppCode")
         private String appCode;
 
-        @NameInMap("AppstoreUrl")
+        @com.aliyun.core.annotation.NameInMap("AppstoreUrl")
         private String appstoreUrl;
 
-        @NameInMap("BackLog")
+        @com.aliyun.core.annotation.NameInMap("BackLog")
         private String backLog;
 
-        @NameInMap("ChangeLog")
+        @com.aliyun.core.annotation.NameInMap("ChangeLog")
         private String changeLog;
 
-        @NameInMap("ClientFileSize")
+        @com.aliyun.core.annotation.NameInMap("ClientFileSize")
         private Integer clientFileSize;
 
-        @NameInMap("ClientName")
+        @com.aliyun.core.annotation.NameInMap("ClientName")
         private String clientName;
 
-        @NameInMap("CpId")
+        @com.aliyun.core.annotation.NameInMap("CpId")
         private String cpId;
 
-        @NameInMap("Creator")
+        @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
 
-        @NameInMap("DownloadUrl")
+        @com.aliyun.core.annotation.NameInMap("DownloadUrl")
         private String downloadUrl;
 
-        @NameInMap("GlobalVariables")
+        @com.aliyun.core.annotation.NameInMap("GlobalVariables")
         private String globalVariables;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtCreateStr")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateStr")
         private String gmtCreateStr;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("GmtModifiedStr")
+        @com.aliyun.core.annotation.NameInMap("GmtModifiedStr")
         private String gmtModifiedStr;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("InnerVersion")
+        @com.aliyun.core.annotation.NameInMap("InnerVersion")
         private String innerVersion;
 
-        @NameInMap("IosSymbol")
+        @com.aliyun.core.annotation.NameInMap("IosSymbol")
         private String iosSymbol;
 
-        @NameInMap("IsEnterprise")
+        @com.aliyun.core.annotation.NameInMap("IsEnterprise")
         private Integer isEnterprise;
 
-        @NameInMap("IsRc")
+        @com.aliyun.core.annotation.NameInMap("IsRc")
         private Integer isRc;
 
-        @NameInMap("IsRelease")
+        @com.aliyun.core.annotation.NameInMap("IsRelease")
         private Integer isRelease;
 
-        @NameInMap("MaxVersion")
+        @com.aliyun.core.annotation.NameInMap("MaxVersion")
         private String maxVersion;
 
-        @NameInMap("Md5")
+        @com.aliyun.core.annotation.NameInMap("Md5")
         private String md5;
 
-        @NameInMap("Modifier")
+        @com.aliyun.core.annotation.NameInMap("Modifier")
         private String modifier;
 
-        @NameInMap("NeedCheck")
+        @com.aliyun.core.annotation.NameInMap("NeedCheck")
         private Integer needCheck;
 
-        @NameInMap("OssPath")
+        @com.aliyun.core.annotation.NameInMap("OssPath")
         private String ossPath;
 
-        @NameInMap("PackageType")
+        @com.aliyun.core.annotation.NameInMap("PackageType")
         private String packageType;
 
-        @NameInMap("Platform")
+        @com.aliyun.core.annotation.NameInMap("Platform")
         private String platform;
 
-        @NameInMap("ProductId")
+        @com.aliyun.core.annotation.NameInMap("ProductId")
         private String productId;
 
-        @NameInMap("ProductName")
+        @com.aliyun.core.annotation.NameInMap("ProductName")
         private String productName;
 
-        @NameInMap("ProductVersion")
+        @com.aliyun.core.annotation.NameInMap("ProductVersion")
         private String productVersion;
 
-        @NameInMap("PublishPeriod")
+        @com.aliyun.core.annotation.NameInMap("PublishPeriod")
         private Integer publishPeriod;
 
-        @NameInMap("QrcodeUrl")
+        @com.aliyun.core.annotation.NameInMap("QrcodeUrl")
         private String qrcodeUrl;
 
-        @NameInMap("ReleaseType")
+        @com.aliyun.core.annotation.NameInMap("ReleaseType")
         private String releaseType;
 
-        @NameInMap("ReleaseWindow")
+        @com.aliyun.core.annotation.NameInMap("ReleaseWindow")
         private String releaseWindow;
 
-        @NameInMap("ScmDownloadUrl")
+        @com.aliyun.core.annotation.NameInMap("ScmDownloadUrl")
         private String scmDownloadUrl;
 
-        @NameInMap("ServerVersion")
+        @com.aliyun.core.annotation.NameInMap("ServerVersion")
         private Integer serverVersion;
 
-        @NameInMap("VerificationCode")
+        @com.aliyun.core.annotation.NameInMap("VerificationCode")
         private String verificationCode;
 
-        @NameInMap("VerifyResult")
+        @com.aliyun.core.annotation.NameInMap("VerifyResult")
         private Integer verifyResult;
 
-        @NameInMap("VersionCode")
+        @com.aliyun.core.annotation.NameInMap("VersionCode")
         private String versionCode;
 
         private Packages(Builder builder) {
@@ -933,31 +932,31 @@ public class ListMcubeUpgradePackagesResponseBody extends TeaModel {
 
     }
     public static class ListPackagesResult extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("HasMore")
+        @com.aliyun.core.annotation.NameInMap("HasMore")
         private Boolean hasMore;
 
-        @NameInMap("Packages")
+        @com.aliyun.core.annotation.NameInMap("Packages")
         private java.util.List < Packages> packages;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("RequestId")
+        @com.aliyun.core.annotation.NameInMap("RequestId")
         private String requestId;
 
-        @NameInMap("ResultMsg")
+        @com.aliyun.core.annotation.NameInMap("ResultMsg")
         private String resultMsg;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private ListPackagesResult(Builder builder) {

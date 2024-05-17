@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateMcubeNebulaAppResponseBody</p>
  */
 public class CreateMcubeNebulaAppResponseBody extends TeaModel {
-    @NameInMap("CreateNebulaAppResult")
+    @com.aliyun.core.annotation.NameInMap("CreateNebulaAppResult")
     private CreateNebulaAppResult createNebulaAppResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultCode")
+    @com.aliyun.core.annotation.NameInMap("ResultCode")
     private String resultCode;
 
-    @NameInMap("ResultMessage")
+    @com.aliyun.core.annotation.NameInMap("ResultMessage")
     private String resultMessage;
 
     private CreateMcubeNebulaAppResponseBody(Builder builder) {
@@ -112,16 +111,16 @@ public class CreateMcubeNebulaAppResponseBody extends TeaModel {
     } 
 
     public static class CreateNebulaAppResult extends TeaModel {
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("RequestId")
+        @com.aliyun.core.annotation.NameInMap("RequestId")
         private String requestId;
 
-        @NameInMap("ResultMsg")
+        @com.aliyun.core.annotation.NameInMap("ResultMsg")
         private String resultMsg;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private CreateNebulaAppResult(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ChangeMcubeNebulaTaskStatusRequest</p>
  */
 public class ChangeMcubeNebulaTaskStatusRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
-    @Body
-    @NameInMap("BizType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizType")
     private String bizType;
 
-    @Body
-    @NameInMap("PackageId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PackageId")
     private String packageId;
 
-    @Body
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
-    @Body
-    @NameInMap("TaskStatus")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TaskStatus")
     private Integer taskStatus;
 
-    @Body
-    @NameInMap("TenantId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
     private String tenantId;
 
-    @Body
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
     private ChangeMcubeNebulaTaskStatusRequest(Builder builder) {

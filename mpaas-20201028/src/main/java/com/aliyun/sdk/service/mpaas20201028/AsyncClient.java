@@ -31,6 +31,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CopyMcdpGroupResponse> copyMcdpGroup(CopyMcdpGroupRequest request);
 
+    CompletableFuture<CreateLinkResponse> createLink(CreateLinkRequest request);
+
     CompletableFuture<CreateMasCrowdResponse> createMasCrowd(CreateMasCrowdRequest request);
 
     CompletableFuture<CreateMasFunnelResponse> createMasFunnel(CreateMasFunnelRequest request);
@@ -190,6 +192,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PushUnBindResponse> pushUnBind(PushUnBindRequest request);
 
     CompletableFuture<QueryInfoFromMdpResponse> queryInfoFromMdp(QueryInfoFromMdpRequest request);
+
+    CompletableFuture<QueryLinkResponse> queryLink(QueryLinkRequest request);
 
     CompletableFuture<QueryMappCenterAppResponse> queryMappCenterApp(QueryMappCenterAppRequest request);
 

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,41 +11,41 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListMcubeMiniPackagesRequest</p>
  */
 public class ListMcubeMiniPackagesRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Body
-    @NameInMap("H5Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("H5Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String h5Id;
 
-    @Body
-    @NameInMap("PackageTypes")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PackageTypes")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String packageTypes;
 
-    @Body
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @Body
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Body
-    @NameInMap("TenantId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tenantId;
 
-    @Body
-    @NameInMap("WorkspaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
     private ListMcubeMiniPackagesRequest(Builder builder) {

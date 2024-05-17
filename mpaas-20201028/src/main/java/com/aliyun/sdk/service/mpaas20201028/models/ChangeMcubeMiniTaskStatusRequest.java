@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,43 +11,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ChangeMcubeMiniTaskStatusRequest</p>
  */
 public class ChangeMcubeMiniTaskStatusRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Body
-    @NameInMap("BizType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizType;
 
-    @Body
-    @NameInMap("PackageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PackageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long packageId;
 
-    @Body
-    @NameInMap("TaskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long taskId;
 
-    @Body
-    @NameInMap("TaskStatus")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TaskStatus")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long taskStatus;
 
-    @Body
-    @NameInMap("TenantId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tenantId;
 
-    @Body
-    @NameInMap("WorkspaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
     private ChangeMcubeMiniTaskStatusRequest(Builder builder) {

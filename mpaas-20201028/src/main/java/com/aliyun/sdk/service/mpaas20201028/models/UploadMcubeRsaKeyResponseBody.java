@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UploadMcubeRsaKeyResponseBody</p>
  */
 public class UploadMcubeRsaKeyResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultCode")
+    @com.aliyun.core.annotation.NameInMap("ResultCode")
     private String resultCode;
 
-    @NameInMap("ResultMessage")
+    @com.aliyun.core.annotation.NameInMap("ResultMessage")
     private String resultMessage;
 
-    @NameInMap("UploadRsaResult")
+    @com.aliyun.core.annotation.NameInMap("UploadRsaResult")
     private UploadRsaResult uploadRsaResult;
 
     private UploadMcubeRsaKeyResponseBody(Builder builder) {
@@ -112,13 +111,13 @@ public class UploadMcubeRsaKeyResponseBody extends TeaModel {
     } 
 
     public static class UploadRsaResult extends TeaModel {
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private String data;
 
-        @NameInMap("ResultMsg")
+        @com.aliyun.core.annotation.NameInMap("ResultMsg")
         private String resultMsg;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private UploadRsaResult(Builder builder) {

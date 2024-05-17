@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,44 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryPushAnalysisCoreIndexRequest</p>
  */
 public class QueryPushAnalysisCoreIndexRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Body
-    @NameInMap("Channel")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Channel")
     private String channel;
 
-    @Body
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @Body
-    @NameInMap("Platform")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Platform")
     private String platform;
 
-    @Body
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
-    @Body
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
-    @Body
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @Body
-    @NameInMap("WorkspaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
     private QueryPushAnalysisCoreIndexRequest(Builder builder) {

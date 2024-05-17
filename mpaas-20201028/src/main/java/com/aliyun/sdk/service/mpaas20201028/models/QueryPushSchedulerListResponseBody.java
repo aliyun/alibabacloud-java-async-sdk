@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryPushSchedulerListResponseBody</p>
  */
 public class QueryPushSchedulerListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultCode")
+    @com.aliyun.core.annotation.NameInMap("ResultCode")
     private String resultCode;
 
-    @NameInMap("ResultContent")
+    @com.aliyun.core.annotation.NameInMap("ResultContent")
     private ResultContent resultContent;
 
-    @NameInMap("ResultMessage")
+    @com.aliyun.core.annotation.NameInMap("ResultMessage")
     private String resultMessage;
 
     private QueryPushSchedulerListResponseBody(Builder builder) {
@@ -112,37 +111,37 @@ public class QueryPushSchedulerListResponseBody extends TeaModel {
     } 
 
     public static class List extends TeaModel {
-        @NameInMap("CreateType")
+        @com.aliyun.core.annotation.NameInMap("CreateType")
         private Integer createType;
 
-        @NameInMap("DeliveryType")
+        @com.aliyun.core.annotation.NameInMap("DeliveryType")
         private Integer deliveryType;
 
-        @NameInMap("ExecutedStatus")
+        @com.aliyun.core.annotation.NameInMap("ExecutedStatus")
         private String executedStatus;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("ParentId")
+        @com.aliyun.core.annotation.NameInMap("ParentId")
         private String parentId;
 
-        @NameInMap("PushContent")
+        @com.aliyun.core.annotation.NameInMap("PushContent")
         private String pushContent;
 
-        @NameInMap("PushTime")
+        @com.aliyun.core.annotation.NameInMap("PushTime")
         private Long pushTime;
 
-        @NameInMap("PushTitle")
+        @com.aliyun.core.annotation.NameInMap("PushTitle")
         private String pushTitle;
 
-        @NameInMap("StrategyType")
+        @com.aliyun.core.annotation.NameInMap("StrategyType")
         private Integer strategyType;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
-        @NameInMap("UniqueId")
+        @com.aliyun.core.annotation.NameInMap("UniqueId")
         private String uniqueId;
 
         private List(Builder builder) {
@@ -353,10 +352,10 @@ public class QueryPushSchedulerListResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {
@@ -414,7 +413,7 @@ public class QueryPushSchedulerListResponseBody extends TeaModel {
 
     }
     public static class ResultContent extends TeaModel {
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private Data data;
 
         private ResultContent(Builder builder) {

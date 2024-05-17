@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetFileTokenForUploadToMsaResponseBody</p>
  */
 public class GetFileTokenForUploadToMsaResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultCode")
+    @com.aliyun.core.annotation.NameInMap("ResultCode")
     private String resultCode;
 
-    @NameInMap("ResultContent")
+    @com.aliyun.core.annotation.NameInMap("ResultContent")
     private ResultContent resultContent;
 
-    @NameInMap("ResultMessage")
+    @com.aliyun.core.annotation.NameInMap("ResultMessage")
     private String resultMessage;
 
     private GetFileTokenForUploadToMsaResponseBody(Builder builder) {
@@ -112,22 +111,22 @@ public class GetFileTokenForUploadToMsaResponseBody extends TeaModel {
     } 
 
     public static class Content extends TeaModel {
-        @NameInMap("Accessid")
+        @com.aliyun.core.annotation.NameInMap("Accessid")
         private String accessid;
 
-        @NameInMap("Dir")
+        @com.aliyun.core.annotation.NameInMap("Dir")
         private String dir;
 
-        @NameInMap("Expire")
+        @com.aliyun.core.annotation.NameInMap("Expire")
         private String expire;
 
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("Policy")
+        @com.aliyun.core.annotation.NameInMap("Policy")
         private String policy;
 
-        @NameInMap("Signature")
+        @com.aliyun.core.annotation.NameInMap("Signature")
         private String signature;
 
         private Content(Builder builder) {
@@ -253,19 +252,19 @@ public class GetFileTokenForUploadToMsaResponseBody extends TeaModel {
 
     }
     public static class ResultContent extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private Content content;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("RequestId")
+        @com.aliyun.core.annotation.NameInMap("RequestId")
         private String requestId;
 
-        @NameInMap("ResultMsg")
+        @com.aliyun.core.annotation.NameInMap("ResultMsg")
         private String resultMsg;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private String success;
 
         private ResultContent(Builder builder) {

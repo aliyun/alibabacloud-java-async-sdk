@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryMappCenterAppResponseBody</p>
  */
 public class QueryMappCenterAppResponseBody extends TeaModel {
-    @NameInMap("QueryMappCenterAppResult")
+    @com.aliyun.core.annotation.NameInMap("QueryMappCenterAppResult")
     private QueryMappCenterAppResult queryMappCenterAppResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultCode")
+    @com.aliyun.core.annotation.NameInMap("ResultCode")
     private String resultCode;
 
-    @NameInMap("ResultMessage")
+    @com.aliyun.core.annotation.NameInMap("ResultMessage")
     private String resultMessage;
 
     private QueryMappCenterAppResponseBody(Builder builder) {
@@ -112,10 +111,10 @@ public class QueryMappCenterAppResponseBody extends TeaModel {
     } 
 
     public static class AndroidConfig extends TeaModel {
-        @NameInMap("CertRSA")
+        @com.aliyun.core.annotation.NameInMap("CertRSA")
         private String certRSA;
 
-        @NameInMap("PackageName")
+        @com.aliyun.core.annotation.NameInMap("PackageName")
         private String packageName;
 
         private AndroidConfig(Builder builder) {
@@ -173,7 +172,7 @@ public class QueryMappCenterAppResponseBody extends TeaModel {
 
     }
     public static class IosConfig extends TeaModel {
-        @NameInMap("BundleId")
+        @com.aliyun.core.annotation.NameInMap("BundleId")
         private String bundleId;
 
         private IosConfig(Builder builder) {
@@ -214,52 +213,52 @@ public class QueryMappCenterAppResponseBody extends TeaModel {
 
     }
     public static class MappCenterApp extends TeaModel {
-        @NameInMap("AndroidConfig")
+        @com.aliyun.core.annotation.NameInMap("AndroidConfig")
         private AndroidConfig androidConfig;
 
-        @NameInMap("AppDesc")
+        @com.aliyun.core.annotation.NameInMap("AppDesc")
         private String appDesc;
 
-        @NameInMap("AppIcon")
+        @com.aliyun.core.annotation.NameInMap("AppIcon")
         private String appIcon;
 
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("AppSecret")
+        @com.aliyun.core.annotation.NameInMap("AppSecret")
         private String appSecret;
 
-        @NameInMap("Creator")
+        @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("IosConfig")
+        @com.aliyun.core.annotation.NameInMap("IosConfig")
         private IosConfig iosConfig;
 
-        @NameInMap("Modifier")
+        @com.aliyun.core.annotation.NameInMap("Modifier")
         private String modifier;
 
-        @NameInMap("MonitorJson")
+        @com.aliyun.core.annotation.NameInMap("MonitorJson")
         private String monitorJson;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Long status;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Long type;
 
         private MappCenterApp(Builder builder) {
@@ -555,13 +554,13 @@ public class QueryMappCenterAppResponseBody extends TeaModel {
 
     }
     public static class QueryMappCenterAppResult extends TeaModel {
-        @NameInMap("MappCenterApp")
+        @com.aliyun.core.annotation.NameInMap("MappCenterApp")
         private MappCenterApp mappCenterApp;
 
-        @NameInMap("ResultMsg")
+        @com.aliyun.core.annotation.NameInMap("ResultMsg")
         private String resultMsg;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private QueryMappCenterAppResult(Builder builder) {

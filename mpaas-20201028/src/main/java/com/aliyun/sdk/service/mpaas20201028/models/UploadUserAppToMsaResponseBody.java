@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UploadUserAppToMsaResponseBody</p>
  */
 public class UploadUserAppToMsaResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultCode")
+    @com.aliyun.core.annotation.NameInMap("ResultCode")
     private String resultCode;
 
-    @NameInMap("ResultContent")
+    @com.aliyun.core.annotation.NameInMap("ResultContent")
     private ResultContent resultContent;
 
-    @NameInMap("ResultMessage")
+    @com.aliyun.core.annotation.NameInMap("ResultMessage")
     private String resultMessage;
 
     private UploadUserAppToMsaResponseBody(Builder builder) {
@@ -112,13 +111,13 @@ public class UploadUserAppToMsaResponseBody extends TeaModel {
     } 
 
     public static class EnhanceMapping extends TeaModel {
-        @NameInMap("Info")
+        @com.aliyun.core.annotation.NameInMap("Info")
         private String info;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private EnhanceMapping(Builder builder) {
@@ -193,55 +192,55 @@ public class UploadUserAppToMsaResponseBody extends TeaModel {
 
     }
     public static class ApkInfo extends TeaModel {
-        @NameInMap("AfterMd5")
+        @com.aliyun.core.annotation.NameInMap("AfterMd5")
         private String afterMd5;
 
-        @NameInMap("AfterSize")
+        @com.aliyun.core.annotation.NameInMap("AfterSize")
         private Long afterSize;
 
-        @NameInMap("AppCode")
+        @com.aliyun.core.annotation.NameInMap("AppCode")
         private String appCode;
 
-        @NameInMap("AppPackage")
+        @com.aliyun.core.annotation.NameInMap("AppPackage")
         private String appPackage;
 
-        @NameInMap("BeforeMd5")
+        @com.aliyun.core.annotation.NameInMap("BeforeMd5")
         private String beforeMd5;
 
-        @NameInMap("BeforeSize")
+        @com.aliyun.core.annotation.NameInMap("BeforeSize")
         private Long beforeSize;
 
-        @NameInMap("ClassForest")
+        @com.aliyun.core.annotation.NameInMap("ClassForest")
         private String classForest;
 
-        @NameInMap("EnhanceMapping")
+        @com.aliyun.core.annotation.NameInMap("EnhanceMapping")
         private EnhanceMapping enhanceMapping;
 
-        @NameInMap("EnhanceRules")
+        @com.aliyun.core.annotation.NameInMap("EnhanceRules")
         private java.util.List < String > enhanceRules;
 
-        @NameInMap("EnhancedClasses")
+        @com.aliyun.core.annotation.NameInMap("EnhancedClasses")
         private java.util.List < String > enhancedClasses;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private Long progress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Long status;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
-        @NameInMap("VersionCode")
+        @com.aliyun.core.annotation.NameInMap("VersionCode")
         private String versionCode;
 
-        @NameInMap("VersionName")
+        @com.aliyun.core.annotation.NameInMap("VersionName")
         private String versionName;
 
         private ApkInfo(Builder builder) {
@@ -554,19 +553,19 @@ public class UploadUserAppToMsaResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("ApkInfo")
+        @com.aliyun.core.annotation.NameInMap("ApkInfo")
         private ApkInfo apkInfo;
 
-        @NameInMap("EnhanceTaskId")
+        @com.aliyun.core.annotation.NameInMap("EnhanceTaskId")
         private Long enhanceTaskId;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private Long progress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Long status;
 
         private Data(Builder builder) {
@@ -675,19 +674,19 @@ public class UploadUserAppToMsaResponseBody extends TeaModel {
 
     }
     public static class ResultContent extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private Data data;
 
-        @NameInMap("Extra")
+        @com.aliyun.core.annotation.NameInMap("Extra")
         private String extra;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private ResultContent(Builder builder) {

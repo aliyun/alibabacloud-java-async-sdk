@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,65 +11,65 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PushReportRequest</p>
  */
 public class PushReportRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Body
-    @NameInMap("AppVersion")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppVersion")
     private String appVersion;
 
-    @Body
-    @NameInMap("Channel")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Channel")
     private String channel;
 
-    @Body
-    @NameInMap("ConnectType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConnectType")
     private String connectType;
 
-    @Body
-    @NameInMap("DeliveryToken")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeliveryToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deliveryToken;
 
-    @Body
-    @NameInMap("Imei")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Imei")
     private String imei;
 
-    @Body
-    @NameInMap("Imsi")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Imsi")
     private String imsi;
 
-    @Body
-    @NameInMap("Model")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Model")
     private String model;
 
-    @Body
-    @NameInMap("OsType")
-    @Validation(required = true, maximum = 100)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OsType")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100)
     private Integer osType;
 
-    @Body
-    @NameInMap("PushVersion")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PushVersion")
     private String pushVersion;
 
-    @Body
-    @NameInMap("ThirdChannel")
-    @Validation(maximum = 100)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ThirdChannel")
+    @com.aliyun.core.annotation.Validation(maximum = 100)
     private Integer thirdChannel;
 
-    @Body
-    @NameInMap("ThirdChannelDeviceToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ThirdChannelDeviceToken")
     private String thirdChannelDeviceToken;
 
-    @Body
-    @NameInMap("WorkspaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
     private PushReportRequest(Builder builder) {

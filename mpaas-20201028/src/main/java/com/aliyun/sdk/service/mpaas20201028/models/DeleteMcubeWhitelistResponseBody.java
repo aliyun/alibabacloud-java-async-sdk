@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteMcubeWhitelistResponseBody</p>
  */
 public class DeleteMcubeWhitelistResponseBody extends TeaModel {
-    @NameInMap("DeleteWhitelistResult")
+    @com.aliyun.core.annotation.NameInMap("DeleteWhitelistResult")
     private DeleteWhitelistResult deleteWhitelistResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultCode")
+    @com.aliyun.core.annotation.NameInMap("ResultCode")
     private String resultCode;
 
-    @NameInMap("ResultMessage")
+    @com.aliyun.core.annotation.NameInMap("ResultMessage")
     private String resultMessage;
 
     private DeleteMcubeWhitelistResponseBody(Builder builder) {
@@ -112,13 +111,13 @@ public class DeleteMcubeWhitelistResponseBody extends TeaModel {
     } 
 
     public static class DeleteWhitelistResult extends TeaModel {
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private String data;
 
-        @NameInMap("ResultMsg")
+        @com.aliyun.core.annotation.NameInMap("ResultMsg")
         private String resultMsg;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private DeleteWhitelistResult(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryPushAnalysisCoreIndexResponseBody</p>
  */
 public class QueryPushAnalysisCoreIndexResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultCode")
+    @com.aliyun.core.annotation.NameInMap("ResultCode")
     private String resultCode;
 
-    @NameInMap("ResultContent")
+    @com.aliyun.core.annotation.NameInMap("ResultContent")
     private ResultContent resultContent;
 
-    @NameInMap("ResultMessage")
+    @com.aliyun.core.annotation.NameInMap("ResultMessage")
     private String resultMessage;
 
     private QueryPushAnalysisCoreIndexResponseBody(Builder builder) {
@@ -112,28 +111,28 @@ public class QueryPushAnalysisCoreIndexResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("ArrivalNum")
+        @com.aliyun.core.annotation.NameInMap("ArrivalNum")
         private Float arrivalNum;
 
-        @NameInMap("ArrivalRate")
+        @com.aliyun.core.annotation.NameInMap("ArrivalRate")
         private Float arrivalRate;
 
-        @NameInMap("IgnoreNum")
+        @com.aliyun.core.annotation.NameInMap("IgnoreNum")
         private Float ignoreNum;
 
-        @NameInMap("IgnoreRate")
+        @com.aliyun.core.annotation.NameInMap("IgnoreRate")
         private Float ignoreRate;
 
-        @NameInMap("OpenNum")
+        @com.aliyun.core.annotation.NameInMap("OpenNum")
         private Float openNum;
 
-        @NameInMap("OpenRate")
+        @com.aliyun.core.annotation.NameInMap("OpenRate")
         private Float openRate;
 
-        @NameInMap("PushNum")
+        @com.aliyun.core.annotation.NameInMap("PushNum")
         private Float pushNum;
 
-        @NameInMap("PushTotalNum")
+        @com.aliyun.core.annotation.NameInMap("PushTotalNum")
         private Float pushTotalNum;
 
         private Data(Builder builder) {
@@ -293,7 +292,7 @@ public class QueryPushAnalysisCoreIndexResponseBody extends TeaModel {
 
     }
     public static class ResultContent extends TeaModel {
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private Data data;
 
         private ResultContent(Builder builder) {

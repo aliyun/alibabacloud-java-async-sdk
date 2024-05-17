@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,80 +11,80 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateMcubeUpgradePackageRequest</p>
  */
 public class CreateMcubeUpgradePackageRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
-    @Body
-    @NameInMap("AppVersion")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppVersion")
     private String appVersion;
 
-    @Body
-    @NameInMap("AppstoreUrl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppstoreUrl")
     private String appstoreUrl;
 
-    @Body
-    @NameInMap("BundleId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BundleId")
     private String bundleId;
 
-    @Body
-    @NameInMap("CustomDomainName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustomDomainName")
     private String customDomainName;
 
-    @Body
-    @NameInMap("Desc")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Desc")
     private String desc;
 
-    @Body
-    @NameInMap("DownloadUrl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DownloadUrl")
     private String downloadUrl;
 
-    @Body
-    @NameInMap("FileUrl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FileUrl")
     private String fileUrl;
 
-    @Body
-    @NameInMap("IconFileUrl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IconFileUrl")
     private String iconFileUrl;
 
-    @Body
-    @NameInMap("InstallAmount")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstallAmount")
     private Integer installAmount;
 
-    @Body
-    @NameInMap("IosSymbolfileUrl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IosSymbolfileUrl")
     private String iosSymbolfileUrl;
 
-    @Body
-    @NameInMap("IsEnterprise")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IsEnterprise")
     private Integer isEnterprise;
 
-    @Body
-    @NameInMap("NeedCheck")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NeedCheck")
     private Integer needCheck;
 
-    @Body
-    @NameInMap("OnexFlag")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OnexFlag")
     private Boolean onexFlag;
 
-    @Body
-    @NameInMap("Platform")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Platform")
     private String platform;
 
-    @Body
-    @NameInMap("TenantId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
     private String tenantId;
 
-    @Body
-    @NameInMap("ValidDays")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ValidDays")
     private Integer validDays;
 
-    @Body
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
     private CreateMcubeUpgradePackageRequest(Builder builder) {

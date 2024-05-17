@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,39 +11,39 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryInfoFromMdpRequest</p>
  */
 public class QueryInfoFromMdpRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Body
-    @NameInMap("Mobile")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Mobile")
     private String mobile;
 
-    @Body
-    @NameInMap("MobileMd5")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MobileMd5")
     private String mobileMd5;
 
-    @Body
-    @NameInMap("MobileSha256")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MobileSha256")
     private String mobileSha256;
 
-    @Body
-    @NameInMap("RiskScene")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RiskScene")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String riskScene;
 
-    @Body
-    @NameInMap("TenantId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
     private String tenantId;
 
-    @Body
-    @NameInMap("WorkspaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
     private QueryInfoFromMdpRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryMgsApirestResponseBody</p>
  */
 public class QueryMgsApirestResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultCode")
+    @com.aliyun.core.annotation.NameInMap("ResultCode")
     private String resultCode;
 
-    @NameInMap("ResultContent")
+    @com.aliyun.core.annotation.NameInMap("ResultContent")
     private ResultContent resultContent;
 
-    @NameInMap("ResultMessage")
+    @com.aliyun.core.annotation.NameInMap("ResultMessage")
     private String resultMessage;
 
     private QueryMgsApirestResponseBody(Builder builder) {
@@ -112,19 +111,19 @@ public class QueryMgsApirestResponseBody extends TeaModel {
     } 
 
     public static class HttpInvoker extends TeaModel {
-        @NameInMap("Charset")
+        @com.aliyun.core.annotation.NameInMap("Charset")
         private String charset;
 
-        @NameInMap("ContentType")
+        @com.aliyun.core.annotation.NameInMap("ContentType")
         private String contentType;
 
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("Method")
+        @com.aliyun.core.annotation.NameInMap("Method")
         private String method;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
         private HttpInvoker(Builder builder) {
@@ -233,10 +232,10 @@ public class QueryMgsApirestResponseBody extends TeaModel {
 
     }
     public static class ApiInvoker extends TeaModel {
-        @NameInMap("HttpInvoker")
+        @com.aliyun.core.annotation.NameInMap("HttpInvoker")
         private HttpInvoker httpInvoker;
 
-        @NameInMap("RpcInvoker")
+        @com.aliyun.core.annotation.NameInMap("RpcInvoker")
         private String rpcInvoker;
 
         private ApiInvoker(Builder builder) {
@@ -294,13 +293,13 @@ public class QueryMgsApirestResponseBody extends TeaModel {
 
     }
     public static class CacheRule extends TeaModel {
-        @NameInMap("CacheKey")
+        @com.aliyun.core.annotation.NameInMap("CacheKey")
         private String cacheKey;
 
-        @NameInMap("NeedCache")
+        @com.aliyun.core.annotation.NameInMap("NeedCache")
         private Boolean needCache;
 
-        @NameInMap("Ttl")
+        @com.aliyun.core.annotation.NameInMap("Ttl")
         private Long ttl;
 
         private CacheRule(Builder builder) {
@@ -375,34 +374,34 @@ public class QueryMgsApirestResponseBody extends TeaModel {
 
     }
     public static class CircuitBreakerRule extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("DefaultResponse")
+        @com.aliyun.core.annotation.NameInMap("DefaultResponse")
         private String defaultResponse;
 
-        @NameInMap("ErrorThreshold")
+        @com.aliyun.core.annotation.NameInMap("ErrorThreshold")
         private Long errorThreshold;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Model")
+        @com.aliyun.core.annotation.NameInMap("Model")
         private String model;
 
-        @NameInMap("OpenTimeoutSeconds")
+        @com.aliyun.core.annotation.NameInMap("OpenTimeoutSeconds")
         private Long openTimeoutSeconds;
 
-        @NameInMap("SlowRatioThreshold")
+        @com.aliyun.core.annotation.NameInMap("SlowRatioThreshold")
         private Double slowRatioThreshold;
 
-        @NameInMap("SwitchStatus")
+        @com.aliyun.core.annotation.NameInMap("SwitchStatus")
         private String switchStatus;
 
-        @NameInMap("WindowsInSeconds")
+        @com.aliyun.core.annotation.NameInMap("WindowsInSeconds")
         private Long windowsInSeconds;
 
-        @NameInMap("WorkspaceId")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceId")
         private String workspaceId;
 
         private CircuitBreakerRule(Builder builder) {
@@ -596,10 +595,10 @@ public class QueryMgsApirestResponseBody extends TeaModel {
 
     }
     public static class DefaultLimitRule extends TeaModel {
-        @NameInMap("ConfigId")
+        @com.aliyun.core.annotation.NameInMap("ConfigId")
         private Integer configId;
 
-        @NameInMap("DefaultLimit")
+        @com.aliyun.core.annotation.NameInMap("DefaultLimit")
         private Boolean defaultLimit;
 
         private DefaultLimitRule(Builder builder) {
@@ -657,16 +656,16 @@ public class QueryMgsApirestResponseBody extends TeaModel {
 
     }
     public static class HeaderRule extends TeaModel {
-        @NameInMap("HeaderKey")
+        @com.aliyun.core.annotation.NameInMap("HeaderKey")
         private String headerKey;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private HeaderRule(Builder builder) {
@@ -758,16 +757,16 @@ public class QueryMgsApirestResponseBody extends TeaModel {
 
     }
     public static class HeaderRules extends TeaModel {
-        @NameInMap("HeaderKey")
+        @com.aliyun.core.annotation.NameInMap("HeaderKey")
         private String headerKey;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private HeaderRules(Builder builder) {
@@ -859,19 +858,19 @@ public class QueryMgsApirestResponseBody extends TeaModel {
 
     }
     public static class LimitRule extends TeaModel {
-        @NameInMap("DefaultResponse")
+        @com.aliyun.core.annotation.NameInMap("DefaultResponse")
         private String defaultResponse;
 
-        @NameInMap("I18nResponse")
+        @com.aliyun.core.annotation.NameInMap("I18nResponse")
         private String i18nResponse;
 
-        @NameInMap("Interval")
+        @com.aliyun.core.annotation.NameInMap("Interval")
         private Long interval;
 
-        @NameInMap("Limit")
+        @com.aliyun.core.annotation.NameInMap("Limit")
         private Long limit;
 
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
         private LimitRule(Builder builder) {
@@ -980,22 +979,22 @@ public class QueryMgsApirestResponseBody extends TeaModel {
 
     }
     public static class MigrateRule extends TeaModel {
-        @NameInMap("FlowPercent")
+        @com.aliyun.core.annotation.NameInMap("FlowPercent")
         private Long flowPercent;
 
-        @NameInMap("NeedMigrate")
+        @com.aliyun.core.annotation.NameInMap("NeedMigrate")
         private Boolean needMigrate;
 
-        @NameInMap("NeedSwitchCompletely")
+        @com.aliyun.core.annotation.NameInMap("NeedSwitchCompletely")
         private Boolean needSwitchCompletely;
 
-        @NameInMap("SysId")
+        @com.aliyun.core.annotation.NameInMap("SysId")
         private Long sysId;
 
-        @NameInMap("SysName")
+        @com.aliyun.core.annotation.NameInMap("SysName")
         private String sysName;
 
-        @NameInMap("UpstreamType")
+        @com.aliyun.core.annotation.NameInMap("UpstreamType")
         private String upstreamType;
 
         private MigrateRule(Builder builder) {
@@ -1121,16 +1120,16 @@ public class QueryMgsApirestResponseBody extends TeaModel {
 
     }
     public static class MockRule extends TeaModel {
-        @NameInMap("MockData")
+        @com.aliyun.core.annotation.NameInMap("MockData")
         private String mockData;
 
-        @NameInMap("NeedMock")
+        @com.aliyun.core.annotation.NameInMap("NeedMock")
         private Boolean needMock;
 
-        @NameInMap("Percentage")
+        @com.aliyun.core.annotation.NameInMap("Percentage")
         private Long percentage;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private MockRule(Builder builder) {
@@ -1222,34 +1221,34 @@ public class QueryMgsApirestResponseBody extends TeaModel {
 
     }
     public static class RequestParams extends TeaModel {
-        @NameInMap("ApiId")
+        @com.aliyun.core.annotation.NameInMap("ApiId")
         private String apiId;
 
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("DefaultValue")
+        @com.aliyun.core.annotation.NameInMap("DefaultValue")
         private String defaultValue;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RefType")
+        @com.aliyun.core.annotation.NameInMap("RefType")
         private String refType;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("WorkspaceId")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceId")
         private String workspaceId;
 
         private RequestParams(Builder builder) {
@@ -1443,118 +1442,118 @@ public class QueryMgsApirestResponseBody extends TeaModel {
 
     }
     public static class Value extends TeaModel {
-        @NameInMap("ApiInvoker")
+        @com.aliyun.core.annotation.NameInMap("ApiInvoker")
         private ApiInvoker apiInvoker;
 
-        @NameInMap("ApiName")
+        @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
 
-        @NameInMap("ApiStatus")
+        @com.aliyun.core.annotation.NameInMap("ApiStatus")
         private String apiStatus;
 
-        @NameInMap("ApiType")
+        @com.aliyun.core.annotation.NameInMap("ApiType")
         private String apiType;
 
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AuthRuleName")
+        @com.aliyun.core.annotation.NameInMap("AuthRuleName")
         private String authRuleName;
 
-        @NameInMap("CacheRule")
+        @com.aliyun.core.annotation.NameInMap("CacheRule")
         private CacheRule cacheRule;
 
-        @NameInMap("Charset")
+        @com.aliyun.core.annotation.NameInMap("Charset")
         private String charset;
 
-        @NameInMap("CircuitBreakerRule")
+        @com.aliyun.core.annotation.NameInMap("CircuitBreakerRule")
         private CircuitBreakerRule circuitBreakerRule;
 
-        @NameInMap("ContentType")
+        @com.aliyun.core.annotation.NameInMap("ContentType")
         private String contentType;
 
-        @NameInMap("DefaultLimitRule")
+        @com.aliyun.core.annotation.NameInMap("DefaultLimitRule")
         private DefaultLimitRule defaultLimitRule;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("HeaderRule")
+        @com.aliyun.core.annotation.NameInMap("HeaderRule")
         private java.util.List < HeaderRule> headerRule;
 
-        @NameInMap("HeaderRules")
+        @com.aliyun.core.annotation.NameInMap("HeaderRules")
         private java.util.List < HeaderRules> headerRules;
 
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("InterfaceType")
+        @com.aliyun.core.annotation.NameInMap("InterfaceType")
         private String interfaceType;
 
-        @NameInMap("LimitRule")
+        @com.aliyun.core.annotation.NameInMap("LimitRule")
         private LimitRule limitRule;
 
-        @NameInMap("Method")
+        @com.aliyun.core.annotation.NameInMap("Method")
         private String method;
 
-        @NameInMap("MethodName")
+        @com.aliyun.core.annotation.NameInMap("MethodName")
         private String methodName;
 
-        @NameInMap("MigrateRule")
+        @com.aliyun.core.annotation.NameInMap("MigrateRule")
         private MigrateRule migrateRule;
 
-        @NameInMap("MockRule")
+        @com.aliyun.core.annotation.NameInMap("MockRule")
         private MockRule mockRule;
 
-        @NameInMap("NeedETag")
+        @com.aliyun.core.annotation.NameInMap("NeedETag")
         private String needETag;
 
-        @NameInMap("NeedEncrypt")
+        @com.aliyun.core.annotation.NameInMap("NeedEncrypt")
         private String needEncrypt;
 
-        @NameInMap("NeedJsonp")
+        @com.aliyun.core.annotation.NameInMap("NeedJsonp")
         private String needJsonp;
 
-        @NameInMap("NeedSign")
+        @com.aliyun.core.annotation.NameInMap("NeedSign")
         private String needSign;
 
-        @NameInMap("OperationType")
+        @com.aliyun.core.annotation.NameInMap("OperationType")
         private String operationType;
 
-        @NameInMap("ParamGetMethod")
+        @com.aliyun.core.annotation.NameInMap("ParamGetMethod")
         private String paramGetMethod;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("RequestBodyModel")
+        @com.aliyun.core.annotation.NameInMap("RequestBodyModel")
         private String requestBodyModel;
 
-        @NameInMap("RequestParams")
+        @com.aliyun.core.annotation.NameInMap("RequestParams")
         private java.util.List < RequestParams> requestParams;
 
-        @NameInMap("ResponseBodyModel")
+        @com.aliyun.core.annotation.NameInMap("ResponseBodyModel")
         private String responseBodyModel;
 
-        @NameInMap("SysId")
+        @com.aliyun.core.annotation.NameInMap("SysId")
         private Long sysId;
 
-        @NameInMap("SysName")
+        @com.aliyun.core.annotation.NameInMap("SysName")
         private String sysName;
 
-        @NameInMap("Timeout")
+        @com.aliyun.core.annotation.NameInMap("Timeout")
         private String timeout;
 
-        @NameInMap("WorkspaceId")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceId")
         private String workspaceId;
 
         private Value(Builder builder) {
@@ -2224,13 +2223,13 @@ public class QueryMgsApirestResponseBody extends TeaModel {
 
     }
     public static class ResultContent extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Value value;
 
         private ResultContent(Builder builder) {

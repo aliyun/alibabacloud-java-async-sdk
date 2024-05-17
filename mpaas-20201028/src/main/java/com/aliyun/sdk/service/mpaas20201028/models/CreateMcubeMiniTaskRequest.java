@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,59 +11,59 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateMcubeMiniTaskRequest</p>
  */
 public class CreateMcubeMiniTaskRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Body
-    @NameInMap("GreyConfigInfo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GreyConfigInfo")
     private String greyConfigInfo;
 
-    @Body
-    @NameInMap("GreyEndtimeData")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GreyEndtimeData")
     private String greyEndtimeData;
 
-    @Body
-    @NameInMap("GreyNum")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GreyNum")
     private Long greyNum;
 
-    @Body
-    @NameInMap("Memo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Memo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String memo;
 
-    @Body
-    @NameInMap("PackageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PackageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long packageId;
 
-    @Body
-    @NameInMap("PublishMode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PublishMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long publishMode;
 
-    @Body
-    @NameInMap("PublishType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PublishType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long publishType;
 
-    @Body
-    @NameInMap("TenantId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tenantId;
 
-    @Body
-    @NameInMap("WhitelistIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WhitelistIds")
     private String whitelistIds;
 
-    @Body
-    @NameInMap("WorkspaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
     private CreateMcubeMiniTaskRequest(Builder builder) {

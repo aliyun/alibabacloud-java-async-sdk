@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryPushAnalysisTaskDetailResponseBody</p>
  */
 public class QueryPushAnalysisTaskDetailResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultCode")
+    @com.aliyun.core.annotation.NameInMap("ResultCode")
     private String resultCode;
 
-    @NameInMap("ResultContent")
+    @com.aliyun.core.annotation.NameInMap("ResultContent")
     private ResultContent resultContent;
 
-    @NameInMap("ResultMessage")
+    @com.aliyun.core.annotation.NameInMap("ResultMessage")
     private String resultMessage;
 
     private QueryPushAnalysisTaskDetailResponseBody(Builder builder) {
@@ -112,25 +111,25 @@ public class QueryPushAnalysisTaskDetailResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("PushArrivalNum")
+        @com.aliyun.core.annotation.NameInMap("PushArrivalNum")
         private Float pushArrivalNum;
 
-        @NameInMap("PushNum")
+        @com.aliyun.core.annotation.NameInMap("PushNum")
         private Float pushNum;
 
-        @NameInMap("PushSuccessNum")
+        @com.aliyun.core.annotation.NameInMap("PushSuccessNum")
         private Float pushSuccessNum;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private Long taskId;
 
         private Data(Builder builder) {
@@ -273,7 +272,7 @@ public class QueryPushAnalysisTaskDetailResponseBody extends TeaModel {
 
     }
     public static class ResultContent extends TeaModel {
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private Data data;
 
         private ResultContent(Builder builder) {

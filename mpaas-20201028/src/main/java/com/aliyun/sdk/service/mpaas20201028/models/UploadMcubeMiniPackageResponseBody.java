@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UploadMcubeMiniPackageResponseBody</p>
  */
 public class UploadMcubeMiniPackageResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultCode")
+    @com.aliyun.core.annotation.NameInMap("ResultCode")
     private String resultCode;
 
-    @NameInMap("ResultMessage")
+    @com.aliyun.core.annotation.NameInMap("ResultMessage")
     private String resultMessage;
 
-    @NameInMap("UploadMiniPackageResult")
+    @com.aliyun.core.annotation.NameInMap("UploadMiniPackageResult")
     private UploadMiniPackageResult uploadMiniPackageResult;
 
     private UploadMcubeMiniPackageResponseBody(Builder builder) {
@@ -112,13 +111,13 @@ public class UploadMcubeMiniPackageResponseBody extends TeaModel {
     } 
 
     public static class ReturnPackageResult extends TeaModel {
-        @NameInMap("DebugUrl")
+        @com.aliyun.core.annotation.NameInMap("DebugUrl")
         private String debugUrl;
 
-        @NameInMap("PackageId")
+        @com.aliyun.core.annotation.NameInMap("PackageId")
         private String packageId;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private ReturnPackageResult(Builder builder) {
@@ -193,13 +192,13 @@ public class UploadMcubeMiniPackageResponseBody extends TeaModel {
 
     }
     public static class UploadMiniPackageResult extends TeaModel {
-        @NameInMap("ResultMsg")
+        @com.aliyun.core.annotation.NameInMap("ResultMsg")
         private String resultMsg;
 
-        @NameInMap("ReturnPackageResult")
+        @com.aliyun.core.annotation.NameInMap("ReturnPackageResult")
         private ReturnPackageResult returnPackageResult;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private UploadMiniPackageResult(Builder builder) {

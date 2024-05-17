@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateMcubeMiniTaskResponseBody</p>
  */
 public class CreateMcubeMiniTaskResponseBody extends TeaModel {
-    @NameInMap("CreateMiniTaskResult")
+    @com.aliyun.core.annotation.NameInMap("CreateMiniTaskResult")
     private CreateMiniTaskResult createMiniTaskResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultCode")
+    @com.aliyun.core.annotation.NameInMap("ResultCode")
     private String resultCode;
 
-    @NameInMap("ResultMessage")
+    @com.aliyun.core.annotation.NameInMap("ResultMessage")
     private String resultMessage;
 
     private CreateMcubeMiniTaskResponseBody(Builder builder) {
@@ -112,13 +111,13 @@ public class CreateMcubeMiniTaskResponseBody extends TeaModel {
     } 
 
     public static class CreateMiniTaskResult extends TeaModel {
-        @NameInMap("MiniTaskId")
+        @com.aliyun.core.annotation.NameInMap("MiniTaskId")
         private String miniTaskId;
 
-        @NameInMap("ResultMsg")
+        @com.aliyun.core.annotation.NameInMap("ResultMsg")
         private String resultMsg;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private CreateMiniTaskResult(Builder builder) {

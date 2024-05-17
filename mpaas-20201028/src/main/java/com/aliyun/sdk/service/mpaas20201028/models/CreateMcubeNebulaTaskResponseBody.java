@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateMcubeNebulaTaskResponseBody</p>
  */
 public class CreateMcubeNebulaTaskResponseBody extends TeaModel {
-    @NameInMap("CreateMcubeNebulaTaskResult")
+    @com.aliyun.core.annotation.NameInMap("CreateMcubeNebulaTaskResult")
     private CreateMcubeNebulaTaskResult createMcubeNebulaTaskResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultCode")
+    @com.aliyun.core.annotation.NameInMap("ResultCode")
     private String resultCode;
 
-    @NameInMap("ResultMessage")
+    @com.aliyun.core.annotation.NameInMap("ResultMessage")
     private String resultMessage;
 
     private CreateMcubeNebulaTaskResponseBody(Builder builder) {
@@ -112,19 +111,19 @@ public class CreateMcubeNebulaTaskResponseBody extends TeaModel {
     } 
 
     public static class CreateMcubeNebulaTaskResult extends TeaModel {
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("NebulaTaskId")
+        @com.aliyun.core.annotation.NameInMap("NebulaTaskId")
         private String nebulaTaskId;
 
-        @NameInMap("RequestId")
+        @com.aliyun.core.annotation.NameInMap("RequestId")
         private String requestId;
 
-        @NameInMap("ResultMsg")
+        @com.aliyun.core.annotation.NameInMap("ResultMsg")
         private String resultMsg;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private CreateMcubeNebulaTaskResult(Builder builder) {

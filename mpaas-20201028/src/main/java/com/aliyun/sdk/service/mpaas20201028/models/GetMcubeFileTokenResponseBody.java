@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMcubeFileTokenResponseBody</p>
  */
 public class GetMcubeFileTokenResponseBody extends TeaModel {
-    @NameInMap("GetFileTokenResult")
+    @com.aliyun.core.annotation.NameInMap("GetFileTokenResult")
     private GetFileTokenResult getFileTokenResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultCode")
+    @com.aliyun.core.annotation.NameInMap("ResultCode")
     private String resultCode;
 
-    @NameInMap("ResultMessage")
+    @com.aliyun.core.annotation.NameInMap("ResultMessage")
     private String resultMessage;
 
     private GetMcubeFileTokenResponseBody(Builder builder) {
@@ -112,22 +111,22 @@ public class GetMcubeFileTokenResponseBody extends TeaModel {
     } 
 
     public static class FileToken extends TeaModel {
-        @NameInMap("Accessid")
+        @com.aliyun.core.annotation.NameInMap("Accessid")
         private String accessid;
 
-        @NameInMap("Dir")
+        @com.aliyun.core.annotation.NameInMap("Dir")
         private String dir;
 
-        @NameInMap("Expire")
+        @com.aliyun.core.annotation.NameInMap("Expire")
         private String expire;
 
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("Policy")
+        @com.aliyun.core.annotation.NameInMap("Policy")
         private String policy;
 
-        @NameInMap("Signature")
+        @com.aliyun.core.annotation.NameInMap("Signature")
         private String signature;
 
         private FileToken(Builder builder) {
@@ -253,13 +252,13 @@ public class GetMcubeFileTokenResponseBody extends TeaModel {
 
     }
     public static class GetFileTokenResult extends TeaModel {
-        @NameInMap("FileToken")
+        @com.aliyun.core.annotation.NameInMap("FileToken")
         private FileToken fileToken;
 
-        @NameInMap("ResultMsg")
+        @com.aliyun.core.annotation.NameInMap("ResultMsg")
         private String resultMsg;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private GetFileTokenResult(Builder builder) {

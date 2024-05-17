@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,52 +11,52 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListMcdpAimRequest</p>
  */
 public class ListMcdpAimRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
-    @Body
-    @NameInMap("EmptyTag")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EmptyTag")
     private String emptyTag;
 
-    @Body
-    @NameInMap("Keyword")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
-    @Body
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Body
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Long pageNo;
 
-    @Body
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @Body
-    @NameInMap("Sort")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Sort")
     private String sort;
 
-    @Body
-    @NameInMap("SortField")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SortField")
     private String sortField;
 
-    @Body
-    @NameInMap("TenantId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
     private String tenantId;
 
-    @Body
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @Body
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
     private ListMcdpAimRequest(Builder builder) {

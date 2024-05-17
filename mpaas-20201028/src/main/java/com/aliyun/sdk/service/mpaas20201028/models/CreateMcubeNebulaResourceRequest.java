@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,88 +11,88 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateMcubeNebulaResourceRequest</p>
  */
 public class CreateMcubeNebulaResourceRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
-    @Body
-    @NameInMap("AutoInstall")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoInstall")
     private Integer autoInstall;
 
-    @Body
-    @NameInMap("ClientVersionMax")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientVersionMax")
     private String clientVersionMax;
 
-    @Body
-    @NameInMap("ClientVersionMin")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientVersionMin")
     private String clientVersionMin;
 
-    @Body
-    @NameInMap("CustomDomainName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustomDomainName")
     private String customDomainName;
 
-    @Body
-    @NameInMap("ExtendInfo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExtendInfo")
     private String extendInfo;
 
-    @Body
-    @NameInMap("FileUrl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FileUrl")
     private String fileUrl;
 
-    @Body
-    @NameInMap("H5Id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("H5Id")
     private String h5Id;
 
-    @Body
-    @NameInMap("H5Name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("H5Name")
     private String h5Name;
 
-    @Body
-    @NameInMap("H5Version")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("H5Version")
     private String h5Version;
 
-    @Body
-    @NameInMap("InstallType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstallType")
     private Integer installType;
 
-    @Body
-    @NameInMap("MainUrl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MainUrl")
     private String mainUrl;
 
-    @Body
-    @NameInMap("OnexFlag")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OnexFlag")
     private Boolean onexFlag;
 
-    @Body
-    @NameInMap("Platform")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Platform")
     private String platform;
 
-    @Body
-    @NameInMap("RepeatNebula")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RepeatNebula")
     private Integer repeatNebula;
 
-    @Body
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private Integer resourceType;
 
-    @Body
-    @NameInMap("SubUrl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SubUrl")
     private String subUrl;
 
-    @Body
-    @NameInMap("TenantId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
     private String tenantId;
 
-    @Body
-    @NameInMap("Vhost")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Vhost")
     private String vhost;
 
-    @Body
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
     private CreateMcubeNebulaResourceRequest(Builder builder) {

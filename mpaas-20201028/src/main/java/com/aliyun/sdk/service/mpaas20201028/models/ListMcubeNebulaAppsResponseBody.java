@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListMcubeNebulaAppsResponseBody</p>
  */
 public class ListMcubeNebulaAppsResponseBody extends TeaModel {
-    @NameInMap("ListMcubeNebulaAppsResult")
+    @com.aliyun.core.annotation.NameInMap("ListMcubeNebulaAppsResult")
     private ListMcubeNebulaAppsResult listMcubeNebulaAppsResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultCode")
+    @com.aliyun.core.annotation.NameInMap("ResultCode")
     private String resultCode;
 
-    @NameInMap("ResultMessage")
+    @com.aliyun.core.annotation.NameInMap("ResultMessage")
     private String resultMessage;
 
     private ListMcubeNebulaAppsResponseBody(Builder builder) {
@@ -112,10 +111,10 @@ public class ListMcubeNebulaAppsResponseBody extends TeaModel {
     } 
 
     public static class NebulaAppInfos extends TeaModel {
-        @NameInMap("H5Id")
+        @com.aliyun.core.annotation.NameInMap("H5Id")
         private String h5Id;
 
-        @NameInMap("H5Name")
+        @com.aliyun.core.annotation.NameInMap("H5Name")
         private String h5Name;
 
         private NebulaAppInfos(Builder builder) {
@@ -173,31 +172,31 @@ public class ListMcubeNebulaAppsResponseBody extends TeaModel {
 
     }
     public static class ListMcubeNebulaAppsResult extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("HasMore")
+        @com.aliyun.core.annotation.NameInMap("HasMore")
         private Boolean hasMore;
 
-        @NameInMap("NebulaAppInfos")
+        @com.aliyun.core.annotation.NameInMap("NebulaAppInfos")
         private java.util.List < NebulaAppInfos> nebulaAppInfos;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("RequestId")
+        @com.aliyun.core.annotation.NameInMap("RequestId")
         private String requestId;
 
-        @NameInMap("ResultMsg")
+        @com.aliyun.core.annotation.NameInMap("ResultMsg")
         private String resultMsg;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private ListMcubeNebulaAppsResult(Builder builder) {

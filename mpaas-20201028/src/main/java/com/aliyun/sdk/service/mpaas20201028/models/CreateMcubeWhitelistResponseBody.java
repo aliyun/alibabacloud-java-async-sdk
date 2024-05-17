@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateMcubeWhitelistResponseBody</p>
  */
 public class CreateMcubeWhitelistResponseBody extends TeaModel {
-    @NameInMap("CreateWhitelistResult")
+    @com.aliyun.core.annotation.NameInMap("CreateWhitelistResult")
     private CreateWhitelistResult createWhitelistResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultCode")
+    @com.aliyun.core.annotation.NameInMap("ResultCode")
     private String resultCode;
 
-    @NameInMap("ResultMessage")
+    @com.aliyun.core.annotation.NameInMap("ResultMessage")
     private String resultMessage;
 
     private CreateMcubeWhitelistResponseBody(Builder builder) {
@@ -112,13 +111,13 @@ public class CreateMcubeWhitelistResponseBody extends TeaModel {
     } 
 
     public static class CreateWhitelistResult extends TeaModel {
-        @NameInMap("ResultMsg")
+        @com.aliyun.core.annotation.NameInMap("ResultMsg")
         private String resultMsg;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
-        @NameInMap("WhitelistId")
+        @com.aliyun.core.annotation.NameInMap("WhitelistId")
         private String whitelistId;
 
         private CreateWhitelistResult(Builder builder) {

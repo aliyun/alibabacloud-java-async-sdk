@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListMcubeUpgradeTasksResponseBody</p>
  */
 public class ListMcubeUpgradeTasksResponseBody extends TeaModel {
-    @NameInMap("ListTaskResult")
+    @com.aliyun.core.annotation.NameInMap("ListTaskResult")
     private ListTaskResult listTaskResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultCode")
+    @com.aliyun.core.annotation.NameInMap("ResultCode")
     private String resultCode;
 
-    @NameInMap("ResultMessage")
+    @com.aliyun.core.annotation.NameInMap("ResultMessage")
     private String resultMessage;
 
     private ListMcubeUpgradeTasksResponseBody(Builder builder) {
@@ -112,142 +111,142 @@ public class ListMcubeUpgradeTasksResponseBody extends TeaModel {
     } 
 
     public static class TaskInfo extends TeaModel {
-        @NameInMap("AppCode")
+        @com.aliyun.core.annotation.NameInMap("AppCode")
         private String appCode;
 
-        @NameInMap("Creator")
+        @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
 
-        @NameInMap("DevicePercent")
+        @com.aliyun.core.annotation.NameInMap("DevicePercent")
         private Integer devicePercent;
 
-        @NameInMap("ExecutionOrder")
+        @com.aliyun.core.annotation.NameInMap("ExecutionOrder")
         private Integer executionOrder;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtCreateStr")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateStr")
         private String gmtCreateStr;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("GmtModifiedStr")
+        @com.aliyun.core.annotation.NameInMap("GmtModifiedStr")
         private String gmtModifiedStr;
 
-        @NameInMap("GreyConfigInfo")
+        @com.aliyun.core.annotation.NameInMap("GreyConfigInfo")
         private String greyConfigInfo;
 
-        @NameInMap("GreyEndtime")
+        @com.aliyun.core.annotation.NameInMap("GreyEndtime")
         private String greyEndtime;
 
-        @NameInMap("GreyNotice")
+        @com.aliyun.core.annotation.NameInMap("GreyNotice")
         private Integer greyNotice;
 
-        @NameInMap("GreyNum")
+        @com.aliyun.core.annotation.NameInMap("GreyNum")
         private Integer greyNum;
 
-        @NameInMap("GreyPausePoint")
+        @com.aliyun.core.annotation.NameInMap("GreyPausePoint")
         private Integer greyPausePoint;
 
-        @NameInMap("GreyPauseType")
+        @com.aliyun.core.annotation.NameInMap("GreyPauseType")
         private Integer greyPauseType;
 
-        @NameInMap("GreyUv")
+        @com.aliyun.core.annotation.NameInMap("GreyUv")
         private Integer greyUv;
 
-        @NameInMap("HistoryForce")
+        @com.aliyun.core.annotation.NameInMap("HistoryForce")
         private Integer historyForce;
 
-        @NameInMap("HuobanNoticeId")
+        @com.aliyun.core.annotation.NameInMap("HuobanNoticeId")
         private String huobanNoticeId;
 
-        @NameInMap("HuobanUrl")
+        @com.aliyun.core.annotation.NameInMap("HuobanUrl")
         private String huobanUrl;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("InnerVersion")
+        @com.aliyun.core.annotation.NameInMap("InnerVersion")
         private String innerVersion;
 
-        @NameInMap("IsEnterprise")
+        @com.aliyun.core.annotation.NameInMap("IsEnterprise")
         private Integer isEnterprise;
 
-        @NameInMap("IsOfficial")
+        @com.aliyun.core.annotation.NameInMap("IsOfficial")
         private Integer isOfficial;
 
-        @NameInMap("IsPush")
+        @com.aliyun.core.annotation.NameInMap("IsPush")
         private Integer isPush;
 
-        @NameInMap("IsRelease")
+        @com.aliyun.core.annotation.NameInMap("IsRelease")
         private Integer isRelease;
 
-        @NameInMap("MaxVersion")
+        @com.aliyun.core.annotation.NameInMap("MaxVersion")
         private String maxVersion;
 
-        @NameInMap("Memo")
+        @com.aliyun.core.annotation.NameInMap("Memo")
         private String memo;
 
-        @NameInMap("Modifier")
+        @com.aliyun.core.annotation.NameInMap("Modifier")
         private String modifier;
 
-        @NameInMap("PackageInfoId")
+        @com.aliyun.core.annotation.NameInMap("PackageInfoId")
         private Long packageInfoId;
 
-        @NameInMap("Platform")
+        @com.aliyun.core.annotation.NameInMap("Platform")
         private String platform;
 
-        @NameInMap("ProductId")
+        @com.aliyun.core.annotation.NameInMap("ProductId")
         private String productId;
 
-        @NameInMap("ProductVersion")
+        @com.aliyun.core.annotation.NameInMap("ProductVersion")
         private String productVersion;
 
-        @NameInMap("PublishMode")
+        @com.aliyun.core.annotation.NameInMap("PublishMode")
         private Integer publishMode;
 
-        @NameInMap("PublishType")
+        @com.aliyun.core.annotation.NameInMap("PublishType")
         private Integer publishType;
 
-        @NameInMap("PushContent")
+        @com.aliyun.core.annotation.NameInMap("PushContent")
         private String pushContent;
 
-        @NameInMap("RealGreyEndtime")
+        @com.aliyun.core.annotation.NameInMap("RealGreyEndtime")
         private String realGreyEndtime;
 
-        @NameInMap("RealGreyEndtimeStr")
+        @com.aliyun.core.annotation.NameInMap("RealGreyEndtimeStr")
         private String realGreyEndtimeStr;
 
-        @NameInMap("RealGreyEndtype")
+        @com.aliyun.core.annotation.NameInMap("RealGreyEndtype")
         private Integer realGreyEndtype;
 
-        @NameInMap("RealGreyNum")
+        @com.aliyun.core.annotation.NameInMap("RealGreyNum")
         private Integer realGreyNum;
 
-        @NameInMap("RealGreyUv")
+        @com.aliyun.core.annotation.NameInMap("RealGreyUv")
         private Integer realGreyUv;
 
-        @NameInMap("SilentType")
+        @com.aliyun.core.annotation.NameInMap("SilentType")
         private Integer silentType;
 
-        @NameInMap("SyncResult")
+        @com.aliyun.core.annotation.NameInMap("SyncResult")
         private String syncResult;
 
-        @NameInMap("TaskStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private Integer taskStatus;
 
-        @NameInMap("UpgradeContent")
+        @com.aliyun.core.annotation.NameInMap("UpgradeContent")
         private String upgradeContent;
 
-        @NameInMap("UpgradeType")
+        @com.aliyun.core.annotation.NameInMap("UpgradeType")
         private Integer upgradeType;
 
-        @NameInMap("UpgradeValidTime")
+        @com.aliyun.core.annotation.NameInMap("UpgradeValidTime")
         private Integer upgradeValidTime;
 
-        @NameInMap("WhitelistIds")
+        @com.aliyun.core.annotation.NameInMap("WhitelistIds")
         private String whitelistIds;
 
         private TaskInfo(Builder builder) {
@@ -1053,19 +1052,19 @@ public class ListMcubeUpgradeTasksResponseBody extends TeaModel {
 
     }
     public static class ListTaskResult extends TeaModel {
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("RequestId")
+        @com.aliyun.core.annotation.NameInMap("RequestId")
         private String requestId;
 
-        @NameInMap("ResultMsg")
+        @com.aliyun.core.annotation.NameInMap("ResultMsg")
         private String resultMsg;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
-        @NameInMap("TaskInfo")
+        @com.aliyun.core.annotation.NameInMap("TaskInfo")
         private java.util.List < TaskInfo> taskInfo;
 
         private ListTaskResult(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PushBindRequest</p>
  */
 public class PushBindRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Body
-    @NameInMap("DeliveryToken")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeliveryToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deliveryToken;
 
-    @Body
-    @NameInMap("OsType")
-    @Validation(required = true, maximum = 100)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OsType")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100)
     private Integer osType;
 
-    @Body
-    @NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
     private String phoneNumber;
 
-    @Body
-    @NameInMap("UserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
-    @Body
-    @NameInMap("WorkspaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
     private PushBindRequest(Builder builder) {

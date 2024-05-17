@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryMcubeMiniPackageResponseBody</p>
  */
 public class QueryMcubeMiniPackageResponseBody extends TeaModel {
-    @NameInMap("QueryMiniPackageResult")
+    @com.aliyun.core.annotation.NameInMap("QueryMiniPackageResult")
     private QueryMiniPackageResult queryMiniPackageResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultCode")
+    @com.aliyun.core.annotation.NameInMap("ResultCode")
     private String resultCode;
 
-    @NameInMap("ResultMessage")
+    @com.aliyun.core.annotation.NameInMap("ResultMessage")
     private String resultMessage;
 
     private QueryMcubeMiniPackageResponseBody(Builder builder) {
@@ -112,70 +111,70 @@ public class QueryMcubeMiniPackageResponseBody extends TeaModel {
     } 
 
     public static class MiniPackageInfo extends TeaModel {
-        @NameInMap("AppCode")
+        @com.aliyun.core.annotation.NameInMap("AppCode")
         private String appCode;
 
-        @NameInMap("AutoInstall")
+        @com.aliyun.core.annotation.NameInMap("AutoInstall")
         private Long autoInstall;
 
-        @NameInMap("ClientVersionMax")
+        @com.aliyun.core.annotation.NameInMap("ClientVersionMax")
         private String clientVersionMax;
 
-        @NameInMap("ClientVersionMin")
+        @com.aliyun.core.annotation.NameInMap("ClientVersionMin")
         private String clientVersionMin;
 
-        @NameInMap("DownloadUrl")
+        @com.aliyun.core.annotation.NameInMap("DownloadUrl")
         private String downloadUrl;
 
-        @NameInMap("ExtendInfo")
+        @com.aliyun.core.annotation.NameInMap("ExtendInfo")
         private String extendInfo;
 
-        @NameInMap("ExtraData")
+        @com.aliyun.core.annotation.NameInMap("ExtraData")
         private String extraData;
 
-        @NameInMap("FallbackBaseUrl")
+        @com.aliyun.core.annotation.NameInMap("FallbackBaseUrl")
         private String fallbackBaseUrl;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("H5Id")
+        @com.aliyun.core.annotation.NameInMap("H5Id")
         private String h5Id;
 
-        @NameInMap("H5Name")
+        @com.aliyun.core.annotation.NameInMap("H5Name")
         private String h5Name;
 
-        @NameInMap("H5Version")
+        @com.aliyun.core.annotation.NameInMap("H5Version")
         private String h5Version;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("InstallType")
+        @com.aliyun.core.annotation.NameInMap("InstallType")
         private Long installType;
 
-        @NameInMap("MainUrl")
+        @com.aliyun.core.annotation.NameInMap("MainUrl")
         private String mainUrl;
 
-        @NameInMap("Memo")
+        @com.aliyun.core.annotation.NameInMap("Memo")
         private String memo;
 
-        @NameInMap("PackageType")
+        @com.aliyun.core.annotation.NameInMap("PackageType")
         private Long packageType;
 
-        @NameInMap("Platform")
+        @com.aliyun.core.annotation.NameInMap("Platform")
         private String platform;
 
-        @NameInMap("PublishPeriod")
+        @com.aliyun.core.annotation.NameInMap("PublishPeriod")
         private Long publishPeriod;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private Long resourceType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Long status;
 
         private MiniPackageInfo(Builder builder) {
@@ -573,13 +572,13 @@ public class QueryMcubeMiniPackageResponseBody extends TeaModel {
 
     }
     public static class QueryMiniPackageResult extends TeaModel {
-        @NameInMap("MiniPackageInfo")
+        @com.aliyun.core.annotation.NameInMap("MiniPackageInfo")
         private MiniPackageInfo miniPackageInfo;
 
-        @NameInMap("ResultMsg")
+        @com.aliyun.core.annotation.NameInMap("ResultMsg")
         private String resultMsg;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private QueryMiniPackageResult(Builder builder) {

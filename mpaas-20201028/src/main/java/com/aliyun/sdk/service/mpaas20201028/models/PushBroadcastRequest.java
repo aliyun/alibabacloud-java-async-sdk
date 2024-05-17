@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,107 +11,107 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PushBroadcastRequest</p>
  */
 public class PushBroadcastRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("AndroidChannel")
-    @Validation(maximum = 10)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AndroidChannel")
+    @com.aliyun.core.annotation.Validation(maximum = 10)
     private Integer androidChannel;
 
-    @Body
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Body
-    @NameInMap("BindPeriod")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BindPeriod")
     private Integer bindPeriod;
 
-    @Body
-    @NameInMap("ChannelId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChannelId")
     private String channelId;
 
-    @Body
-    @NameInMap("Classification")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Classification")
     private String classification;
 
-    @Body
-    @NameInMap("DeliveryType")
-    @Validation(required = true, maximum = 10)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeliveryType")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 10)
     private Long deliveryType;
 
-    @Body
-    @NameInMap("ExpiredSeconds")
-    @Validation(required = true, maximum = 259200)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExpiredSeconds")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 259200)
     private Long expiredSeconds;
 
-    @Body
-    @NameInMap("ExtendedParams")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExtendedParams")
     private String extendedParams;
 
-    @Body
-    @NameInMap("MiChannelId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MiChannelId")
     private String miChannelId;
 
-    @Body
-    @NameInMap("Msgkey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Msgkey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String msgkey;
 
-    @Body
-    @NameInMap("NotifyType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NotifyType")
     private String notifyType;
 
-    @Body
-    @NameInMap("PushAction")
-    @Validation(maximum = 10)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PushAction")
+    @com.aliyun.core.annotation.Validation(maximum = 10)
     private Long pushAction;
 
-    @Body
-    @NameInMap("PushStatus")
-    @Validation(maximum = 10)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PushStatus")
+    @com.aliyun.core.annotation.Validation(maximum = 10)
     private Long pushStatus;
 
-    @Body
-    @NameInMap("Silent")
-    @Validation(maximum = 10)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Silent")
+    @com.aliyun.core.annotation.Validation(maximum = 10)
     private Long silent;
 
-    @Body
-    @NameInMap("StrategyContent")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StrategyContent")
     private String strategyContent;
 
-    @Body
-    @NameInMap("StrategyType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StrategyType")
     private Integer strategyType;
 
-    @Body
-    @NameInMap("TaskName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TaskName")
     private String taskName;
 
-    @Body
-    @NameInMap("TemplateKeyValue")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateKeyValue")
     private String templateKeyValue;
 
-    @Body
-    @NameInMap("TemplateName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateName;
 
-    @Body
-    @NameInMap("ThirdChannelCategory")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ThirdChannelCategory")
     private java.util.Map < String, ? > thirdChannelCategory;
 
-    @Body
-    @NameInMap("UnBindPeriod")
-    @Validation(maximum = 10)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UnBindPeriod")
+    @com.aliyun.core.annotation.Validation(maximum = 10)
     private Long unBindPeriod;
 
-    @Body
-    @NameInMap("WorkspaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
     private PushBroadcastRequest(Builder builder) {

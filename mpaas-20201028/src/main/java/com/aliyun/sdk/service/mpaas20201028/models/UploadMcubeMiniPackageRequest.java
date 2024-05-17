@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mpaas20201028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,128 +11,128 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UploadMcubeMiniPackageRequest</p>
  */
 public class UploadMcubeMiniPackageRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Body
-    @NameInMap("AutoInstall")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoInstall")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long autoInstall;
 
-    @Body
-    @NameInMap("ClientVersionMax")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientVersionMax")
     private String clientVersionMax;
 
-    @Body
-    @NameInMap("ClientVersionMin")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientVersionMin")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientVersionMin;
 
-    @Body
-    @NameInMap("EnableKeepAlive")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableKeepAlive")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String enableKeepAlive;
 
-    @Body
-    @NameInMap("EnableOptionMenu")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableOptionMenu")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String enableOptionMenu;
 
-    @Body
-    @NameInMap("EnableTabBar")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableTabBar")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long enableTabBar;
 
-    @Body
-    @NameInMap("ExtendInfo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExtendInfo")
     private String extendInfo;
 
-    @Body
-    @NameInMap("H5Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("H5Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String h5Id;
 
-    @Body
-    @NameInMap("H5Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("H5Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String h5Name;
 
-    @Body
-    @NameInMap("H5Version")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("H5Version")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String h5Version;
 
-    @Body
-    @NameInMap("IconFileUrl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IconFileUrl")
     private String iconFileUrl;
 
-    @Body
-    @NameInMap("IconUrl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IconUrl")
     private String iconUrl;
 
-    @Body
-    @NameInMap("InstallType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstallType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long installType;
 
-    @Body
-    @NameInMap("MainUrl")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MainUrl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mainUrl;
 
-    @Body
-    @NameInMap("OnexFlag")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OnexFlag")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean onexFlag;
 
-    @Body
-    @NameInMap("PackageType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PackageType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long packageType;
 
-    @Body
-    @NameInMap("Platform")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Platform")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String platform;
 
-    @Body
-    @NameInMap("ResourceFileUrl")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceFileUrl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceFileUrl;
 
-    @Body
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long resourceType;
 
-    @Body
-    @NameInMap("TenantId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tenantId;
 
-    @Body
-    @NameInMap("UserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
-    @Body
-    @NameInMap("Uuid")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Uuid")
     private String uuid;
 
-    @Body
-    @NameInMap("Vhost")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Vhost")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vhost;
 
-    @Body
-    @NameInMap("WorkspaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
     private UploadMcubeMiniPackageRequest(Builder builder) {
