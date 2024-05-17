@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeDBTablesRecoveryTimeRangeResponse} extends {@link TeaModel}
+ * {@link DescribeBackupDataListResponse} extends {@link TeaModel}
  *
- * <p>DescribeDBTablesRecoveryTimeRangeResponse</p>
+ * <p>DescribeBackupDataListResponse</p>
  */
-public class DescribeDBTablesRecoveryTimeRangeResponse extends Response {
+public class DescribeBackupDataListResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +18,16 @@ public class DescribeDBTablesRecoveryTimeRangeResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DescribeDBTablesRecoveryTimeRangeResponseBody body;
+    private DescribeBackupDataListResponseBody body;
 
-    private DescribeDBTablesRecoveryTimeRangeResponse(BuilderImpl builder) {
+    private DescribeBackupDataListResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeDBTablesRecoveryTimeRangeResponse create() {
+    public static DescribeBackupDataListResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +53,35 @@ public class DescribeDBTablesRecoveryTimeRangeResponse extends Response {
     /**
      * @return body
      */
-    public DescribeDBTablesRecoveryTimeRangeResponseBody getBody() {
+    public DescribeBackupDataListResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeDBTablesRecoveryTimeRangeResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeBackupDataListResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribeDBTablesRecoveryTimeRangeResponseBody body);
+        Builder body(DescribeBackupDataListResponseBody body);
 
         @Override
-        DescribeDBTablesRecoveryTimeRangeResponse build();
+        DescribeBackupDataListResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeDBTablesRecoveryTimeRangeResponse, Builder>
+            extends Response.BuilderImpl<DescribeBackupDataListResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DescribeDBTablesRecoveryTimeRangeResponseBody body; 
+        private DescribeBackupDataListResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeDBTablesRecoveryTimeRangeResponse response) {
+        private BuilderImpl(DescribeBackupDataListResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +110,14 @@ public class DescribeDBTablesRecoveryTimeRangeResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeDBTablesRecoveryTimeRangeResponseBody body) {
+        public Builder body(DescribeBackupDataListResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeDBTablesRecoveryTimeRangeResponse build() {
-            return new DescribeDBTablesRecoveryTimeRangeResponse(this);
+        public DescribeBackupDataListResponse build() {
+            return new DescribeBackupDataListResponse(this);
         } 
 
     } 

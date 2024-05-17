@@ -1,3 +1,6 @@
+2024-05-17 Version: 1.0.5
+- Generated java-async 2021-01-01 for Dbs.
+
 2023-12-22 Version: 1.0.4
 - Generated java-async 2021-01-01 for Dbs.
 

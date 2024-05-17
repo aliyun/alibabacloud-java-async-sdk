@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dbs20210101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDownloadTaskResponseBody</p>
  */
 public class DescribeDownloadTaskResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private DescribeDownloadTaskResponseBody(Builder builder) {
@@ -118,7 +117,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the download task.
+         * The details of the tasks.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -176,43 +175,43 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
     } 
 
     public static class List extends TeaModel {
-        @NameInMap("BackupSetTime")
+        @com.aliyun.core.annotation.NameInMap("BackupSetTime")
         private String backupSetTime;
 
-        @NameInMap("BakSetId")
+        @com.aliyun.core.annotation.NameInMap("BakSetId")
         private String bakSetId;
 
-        @NameInMap("DbList")
+        @com.aliyun.core.annotation.NameInMap("DbList")
         private String dbList;
 
-        @NameInMap("DownloadStatus")
+        @com.aliyun.core.annotation.NameInMap("DownloadStatus")
         private String downloadStatus;
 
-        @NameInMap("ExportDataSize")
+        @com.aliyun.core.annotation.NameInMap("ExportDataSize")
         private String exportDataSize;
 
-        @NameInMap("Format")
+        @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("ImportDataSize")
+        @com.aliyun.core.annotation.NameInMap("ImportDataSize")
         private String importDataSize;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("RegionCode")
+        @com.aliyun.core.annotation.NameInMap("RegionCode")
         private String regionCode;
 
-        @NameInMap("TargetPath")
+        @com.aliyun.core.annotation.NameInMap("TargetPath")
         private String targetPath;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
         private List(Builder builder) {
@@ -346,7 +345,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * The point in time of the backup set if the task is used to download a backup set at a specific point in time. The value is a timestamp of the LONG type. Unit: milliseconds.
+             * The point in time of the backup set if the task is used to download a backup set at a specific point in time. The value is a timestamp of the LONG type. Unit: millisecond.
              */
             public Builder backupSetTime(String backupSetTime) {
                 this.backupSetTime = backupSetTime;
@@ -362,7 +361,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The databases.
+             * The details of the databases.
              */
             public Builder dbList(String dbList) {
                 this.dbList = dbList;
@@ -370,15 +369,15 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the download task. Valid values:
+             * The status of the download task. Valid values:
              * <p>
              * 
-             * *   **Initializing**: The download task was being initialized.
-             * *   **queuing**: The download task was queuing.
-             * *   **running**: The download task was running.
-             * *   **failed**: The download task failed.
-             * *   **finished**: The download task was complete.
-             * *   **expired**: The download task expired.
+             * *   **Initializing**: The download task is being initialized.
+             * *   **queuing**: The download task is queuing.
+             * *   **running**: The download task is running.
+             * *   **failed**: The download task fails.
+             * *   **finished**: The download task is complete.
+             * *   **expired**: The download task expires.
              */
             public Builder downloadStatus(String downloadStatus) {
                 this.downloadStatus = downloadStatus;
@@ -439,7 +438,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The destination path to which the data is downloaded if the TargeType parameter is set to OSS.
+             * The destination path to which the data is downloaded if the value of **TargetType is OSS**.
              */
             public Builder targetPath(String targetPath) {
                 this.targetPath = targetPath;
@@ -459,7 +458,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the download task.
+             * The download task ID.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -474,7 +473,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
 
     }
     public static class Content extends TeaModel {
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;
 
         private Content(Builder builder) {
@@ -515,22 +514,22 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private Content content;
 
-        @NameInMap("Extra")
+        @com.aliyun.core.annotation.NameInMap("Extra")
         private String extra;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Long pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Long pageSize;
 
-        @NameInMap("TotalElements")
+        @com.aliyun.core.annotation.NameInMap("TotalElements")
         private Long totalElements;
 
-        @NameInMap("TotalPages")
+        @com.aliyun.core.annotation.NameInMap("TotalPages")
         private Long totalPages;
 
         private Data(Builder builder) {
@@ -601,7 +600,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             private Long totalPages; 
 
             /**
-             * The details of the download task.
+             * The details of the task.
              */
             public Builder content(Content content) {
                 this.content = content;

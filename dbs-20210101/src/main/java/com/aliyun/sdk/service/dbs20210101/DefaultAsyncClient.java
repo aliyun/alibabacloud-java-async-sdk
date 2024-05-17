@@ -78,7 +78,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For ApsaraDB RDS for MySQL instances that use standard SSDs or enhanced SSDs (ESSDs) and meet your business requirements, you can create an advanced download task by point in time or backup set. You can set the download destination to an URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~).
+      * ### [](#)Supported database engines
+      * *   ApsaraDB RDS for MySQL
+      * *   ApsaraDB RDS for PostgreSQL
+      * *   PolarDB for MySQL
+      * ### [](#)References
+      * For the instances that meet your business requirements, you can create an advanced download task by point in time or backup set. You can set the download destination to a URL or directly upload the downloaded backup set to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving.
+      * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~)
+      * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](~~96774~~)
+      * *   [Download the backup files of a PolarDB for MySQL cluster](~~2627635~~)
       *
      */
     @Override
@@ -90,24 +98,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateDownloadResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-      * Before you call this operation, you must enable the sandbox feature for the database instance. For more information, see [Use the emergency recovery feature of an ApsaraDB RDS for MySQL instance](~~203154~~) or [Create a sandbox instance for emergency disaster recovery of a self-managed MySQL database](~~185577~~). This operation is available only in Database Backup (DBS) API of the 2021-01-01 version.
-      *
-     */
-    @Override
-    public CompletableFuture<CreateSandboxInstanceResponse> createSandboxInstance(CreateSandboxInstanceRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateSandboxInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateSandboxInstanceResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CreateSandboxInstanceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -126,6 +116,34 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteSandboxInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<DescribeBackupDataListResponse> describeBackupDataList(DescribeBackupDataListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeBackupDataList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeBackupDataListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeBackupDataListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<DescribeBackupPolicyResponse> describeBackupPolicy(DescribeBackupPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeBackupPolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeBackupPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeBackupPolicyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -174,7 +192,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can create an advanced download task by point in time or backup set. You can set the download destination to an URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~).
+      * ### [](#)Supported database engines
+      * *   ApsaraDB RDS for MySQL
+      * *   ApsaraDB RDS for PostgreSQL
+      * *   PolarDB for MySQL
+      * ### [](#)References
+      * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~)
+      * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](~~96774~~)
+      * *   [Download the backup files of a PolarDB for MySQL cluster](~~2627635~~)
       *
      */
     @Override
@@ -192,7 +217,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can create an advanced download task by point in time or backup set. You can set the download destination to an URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~).
+      * ### [](#)Supported database engines
+      * *   ApsaraDB RDS for MySQL
+      * *   ApsaraDB RDS for PostgreSQL
+      * *   PolarDB for MySQL
+      * ### [](#)References
+      * You can create an advanced download task by point in time or backup set. You can set the download destination to a URL or directly upload the downloaded backup set to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving.
+      * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~)
+      * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](~~96774~~)
+      * *   [Download the backup files of a PolarDB for MySQL cluster](~~2627635~~)
       *
      */
     @Override
@@ -210,7 +243,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can create an advanced download task by point in time or backup set. You can set the Download Destination parameter to URL or directly upload the downloaded data to your Object Storage Service (OSS) bucket to facilitate data analysis and offline archiving. For more information, see [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~).
+      * ### [](#)Supported database engines
+      * *   ApsaraDB RDS for MySQL
+      * *   ApsaraDB RDS for PostgreSQL
+      * *   PolarDB for MySQL
+      * ### [](#)References
+      * *   [Download the backup files of an ApsaraDB RDS for MySQL instance](~~98819~~)
+      * *   [Download the backup files of an ApsaraDB RDS for PostgreSQL instance](~~96774~~)
+      * *   [Download the backup files of a PolarDB for MySQL cluster](~~2627635~~)
       *
      */
     @Override

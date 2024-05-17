@@ -6,27 +6,27 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeDBTablesRecoveryStateRequest} extends {@link RequestModel}
+ * {@link DescribeBackupPolicyRequest} extends {@link RequestModel}
  *
- * <p>DescribeDBTablesRecoveryStateRequest</p>
+ * <p>DescribeBackupPolicyRequest</p>
  */
-public class DescribeDBTablesRecoveryStateRequest extends Request {
+public class DescribeBackupPolicyRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("InstanceId")
-    private String instanceId;
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
+    private String instanceName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionCode")
     private String regionCode;
 
-    private DescribeDBTablesRecoveryStateRequest(Builder builder) {
+    private DescribeBackupPolicyRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.instanceId = builder.instanceId;
+        this.instanceName = builder.instanceName;
         this.regionCode = builder.regionCode;
     }
 
@@ -34,7 +34,7 @@ public class DescribeDBTablesRecoveryStateRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeDBTablesRecoveryStateRequest create() {
+    public static DescribeBackupPolicyRequest create() {
         return builder().build();
     }
 
@@ -51,10 +51,10 @@ public class DescribeDBTablesRecoveryStateRequest extends Request {
     }
 
     /**
-     * @return instanceId
+     * @return instanceName
      */
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getInstanceName() {
+        return this.instanceName;
     }
 
     /**
@@ -64,19 +64,19 @@ public class DescribeDBTablesRecoveryStateRequest extends Request {
         return this.regionCode;
     }
 
-    public static final class Builder extends Request.Builder<DescribeDBTablesRecoveryStateRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeBackupPolicyRequest, Builder> {
         private String regionId; 
-        private String instanceId; 
+        private String instanceName; 
         private String regionCode; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeDBTablesRecoveryStateRequest request) {
+        private Builder(DescribeBackupPolicyRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.instanceId = request.instanceId;
+            this.instanceName = request.instanceName;
             this.regionCode = request.regionCode;
         } 
 
@@ -90,11 +90,11 @@ public class DescribeDBTablesRecoveryStateRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * InstanceName.
          */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
+        public Builder instanceName(String instanceName) {
+            this.putQueryParameter("InstanceName", instanceName);
+            this.instanceName = instanceName;
             return this;
         }
 
@@ -108,8 +108,8 @@ public class DescribeDBTablesRecoveryStateRequest extends Request {
         }
 
         @Override
-        public DescribeDBTablesRecoveryStateRequest build() {
-            return new DescribeDBTablesRecoveryStateRequest(this);
+        public DescribeBackupPolicyRequest build() {
+            return new DescribeBackupPolicyRequest(this);
         } 
 
     } 
