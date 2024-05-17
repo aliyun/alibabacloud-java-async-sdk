@@ -184,6 +184,9 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         @com.aliyun.core.annotation.NameInMap("CallsOffered")
         private Long callsOffered;
 
+        @com.aliyun.core.annotation.NameInMap("CallsQueuingTimeout")
+        private Long callsQueuingTimeout;
+
         @com.aliyun.core.annotation.NameInMap("CallsServiceLevel10")
         private Long callsServiceLevel10;
 
@@ -192,6 +195,9 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
 
         @com.aliyun.core.annotation.NameInMap("CallsServiceLevel30")
         private Long callsServiceLevel30;
+
+        @com.aliyun.core.annotation.NameInMap("CallsTimeout")
+        private Long callsTimeout;
 
         @com.aliyun.core.annotation.NameInMap("GiveUpByAgentOfQueueCount")
         private Long giveUpByAgentOfQueueCount;
@@ -253,9 +259,11 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             this.callsBlindTransferOut = builder.callsBlindTransferOut;
             this.callsHandled = builder.callsHandled;
             this.callsOffered = builder.callsOffered;
+            this.callsQueuingTimeout = builder.callsQueuingTimeout;
             this.callsServiceLevel10 = builder.callsServiceLevel10;
             this.callsServiceLevel20 = builder.callsServiceLevel20;
             this.callsServiceLevel30 = builder.callsServiceLevel30;
+            this.callsTimeout = builder.callsTimeout;
             this.giveUpByAgentOfQueueCount = builder.giveUpByAgentOfQueueCount;
             this.handleRate = builder.handleRate;
             this.inComingQueueOfQueueCount = builder.inComingQueueOfQueueCount;
@@ -360,6 +368,13 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         }
 
         /**
+         * @return callsQueuingTimeout
+         */
+        public Long getCallsQueuingTimeout() {
+            return this.callsQueuingTimeout;
+        }
+
+        /**
          * @return callsServiceLevel10
          */
         public Long getCallsServiceLevel10() {
@@ -378,6 +393,13 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
          */
         public Long getCallsServiceLevel30() {
             return this.callsServiceLevel30;
+        }
+
+        /**
+         * @return callsTimeout
+         */
+        public Long getCallsTimeout() {
+            return this.callsTimeout;
         }
 
         /**
@@ -504,9 +526,11 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             private Long callsBlindTransferOut; 
             private Long callsHandled; 
             private Long callsOffered; 
+            private Long callsQueuingTimeout; 
             private Long callsServiceLevel10; 
             private Long callsServiceLevel20; 
             private Long callsServiceLevel30; 
+            private Long callsTimeout; 
             private Long giveUpByAgentOfQueueCount; 
             private Float handleRate; 
             private Long inComingQueueOfQueueCount; 
@@ -613,6 +637,14 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
+             * CallsQueuingTimeout.
+             */
+            public Builder callsQueuingTimeout(Long callsQueuingTimeout) {
+                this.callsQueuingTimeout = callsQueuingTimeout;
+                return this;
+            }
+
+            /**
              * CallsServiceLevel10.
              */
             public Builder callsServiceLevel10(Long callsServiceLevel10) {
@@ -633,6 +665,14 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
              */
             public Builder callsServiceLevel30(Long callsServiceLevel30) {
                 this.callsServiceLevel30 = callsServiceLevel30;
+                return this;
+            }
+
+            /**
+             * CallsTimeout.
+             */
+            public Builder callsTimeout(Long callsTimeout) {
+                this.callsTimeout = callsTimeout;
                 return this;
             }
 
