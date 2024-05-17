@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPrivateAccessApplicationResponseBody</p>
  */
 public class GetPrivateAccessApplicationResponseBody extends TeaModel {
-    @NameInMap("Application")
+    @com.aliyun.core.annotation.NameInMap("Application")
     private Application application;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetPrivateAccessApplicationResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
     } 
 
     public static class PortRanges extends TeaModel {
-        @NameInMap("Begin")
+        @com.aliyun.core.annotation.NameInMap("Begin")
         private Integer begin;
 
-        @NameInMap("End")
+        @com.aliyun.core.annotation.NameInMap("End")
         private Integer end;
 
         private PortRanges(Builder builder) {
@@ -133,37 +132,37 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
 
     }
     public static class Application extends TeaModel {
-        @NameInMap("Addresses")
+        @com.aliyun.core.annotation.NameInMap("Addresses")
         private java.util.List < String > addresses;
 
-        @NameInMap("ApplicationId")
+        @com.aliyun.core.annotation.NameInMap("ApplicationId")
         private String applicationId;
 
-        @NameInMap("ConnectorIds")
+        @com.aliyun.core.annotation.NameInMap("ConnectorIds")
         private java.util.List < String > connectorIds;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PolicyIds")
+        @com.aliyun.core.annotation.NameInMap("PolicyIds")
         private java.util.List < String > policyIds;
 
-        @NameInMap("PortRanges")
+        @com.aliyun.core.annotation.NameInMap("PortRanges")
         private java.util.List < PortRanges> portRanges;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TagIds")
+        @com.aliyun.core.annotation.NameInMap("TagIds")
         private java.util.List < String > tagIds;
 
         private Application(Builder builder) {

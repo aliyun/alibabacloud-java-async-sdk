@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateExcessiveDeviceRegistrationApplicationsStatusRequest</p>
  */
 public class UpdateExcessiveDeviceRegistrationApplicationsStatusRequest extends Request {
-    @Body
-    @NameInMap("ApplicationIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApplicationIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > applicationIds;
 
-    @Body
-    @NameInMap("Status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String status;
 
     private UpdateExcessiveDeviceRegistrationApplicationsStatusRequest(Builder builder) {

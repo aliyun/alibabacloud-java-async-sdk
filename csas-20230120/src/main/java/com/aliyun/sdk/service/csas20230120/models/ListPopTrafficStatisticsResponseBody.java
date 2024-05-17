@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPopTrafficStatisticsResponseBody</p>
  */
 public class ListPopTrafficStatisticsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TrafficData")
+    @com.aliyun.core.annotation.NameInMap("TrafficData")
     private java.util.List < TrafficData> trafficData;
 
     private ListPopTrafficStatisticsResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class ListPopTrafficStatisticsResponseBody extends TeaModel {
     } 
 
     public static class Datapoints extends TeaModel {
-        @NameInMap("Average")
+        @com.aliyun.core.annotation.NameInMap("Average")
         private Double average;
 
-        @NameInMap("DateTime")
+        @com.aliyun.core.annotation.NameInMap("DateTime")
         private String dateTime;
 
         private Datapoints(Builder builder) {
@@ -133,10 +132,10 @@ public class ListPopTrafficStatisticsResponseBody extends TeaModel {
 
     }
     public static class TrafficData extends TeaModel {
-        @NameInMap("Datapoints")
+        @com.aliyun.core.annotation.NameInMap("Datapoints")
         private java.util.List < Datapoints> datapoints;
 
-        @NameInMap("MetricName")
+        @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
 
         private TrafficData(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPolicesForUserGroupResponseBody</p>
  */
 public class ListPolicesForUserGroupResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UserGroups")
+    @com.aliyun.core.annotation.NameInMap("UserGroups")
     private java.util.List < UserGroups> userGroups;
 
     private ListPolicesForUserGroupResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class ListPolicesForUserGroupResponseBody extends TeaModel {
     } 
 
     public static class Polices extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PolicyId")
+        @com.aliyun.core.annotation.NameInMap("PolicyId")
         private String policyId;
 
-        @NameInMap("PolicyType")
+        @com.aliyun.core.annotation.NameInMap("PolicyType")
         private String policyType;
 
         private Polices(Builder builder) {
@@ -153,10 +152,10 @@ public class ListPolicesForUserGroupResponseBody extends TeaModel {
 
     }
     public static class UserGroups extends TeaModel {
-        @NameInMap("Polices")
+        @com.aliyun.core.annotation.NameInMap("Polices")
         private java.util.List < Polices> polices;
 
-        @NameInMap("UserGroupId")
+        @com.aliyun.core.annotation.NameInMap("UserGroupId")
         private String userGroupId;
 
         private UserGroups(Builder builder) {

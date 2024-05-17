@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListApplicationsForPrivateAccessTagResponseBody</p>
  */
 public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List < Tags> tags;
 
     private ListApplicationsForPrivateAccessTagResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
     } 
 
     public static class PortRanges extends TeaModel {
-        @NameInMap("Begin")
+        @com.aliyun.core.annotation.NameInMap("Begin")
         private Integer begin;
 
-        @NameInMap("End")
+        @com.aliyun.core.annotation.NameInMap("End")
         private Integer end;
 
         private PortRanges(Builder builder) {
@@ -133,28 +132,28 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
 
     }
     public static class Applications extends TeaModel {
-        @NameInMap("Addresses")
+        @com.aliyun.core.annotation.NameInMap("Addresses")
         private java.util.List < String > addresses;
 
-        @NameInMap("ApplicationId")
+        @com.aliyun.core.annotation.NameInMap("ApplicationId")
         private String applicationId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PortRanges")
+        @com.aliyun.core.annotation.NameInMap("PortRanges")
         private java.util.List < PortRanges> portRanges;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Applications(Builder builder) {
@@ -314,10 +313,10 @@ public class ListApplicationsForPrivateAccessTagResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Applications")
+        @com.aliyun.core.annotation.NameInMap("Applications")
         private java.util.List < Applications> applications;
 
-        @NameInMap("TagId")
+        @com.aliyun.core.annotation.NameInMap("TagId")
         private String tagId;
 
         private Tags(Builder builder) {

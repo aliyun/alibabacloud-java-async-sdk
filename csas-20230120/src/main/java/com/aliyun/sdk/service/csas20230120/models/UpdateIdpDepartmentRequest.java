@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateIdpDepartmentRequest</p>
  */
 public class UpdateIdpDepartmentRequest extends Request {
-    @Query
-    @NameInMap("DepartmentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DepartmentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String departmentId;
 
-    @Query
-    @NameInMap("DepartmentName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DepartmentName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String departmentName;
 
-    @Query
-    @NameInMap("IdpConfigId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdpConfigId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String idpConfigId;
 
     private UpdateIdpDepartmentRequest(Builder builder) {

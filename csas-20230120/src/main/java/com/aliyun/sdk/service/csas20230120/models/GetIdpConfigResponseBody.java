@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetIdpConfigResponseBody</p>
  */
 public class GetIdpConfigResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetIdpConfigResponseBody(Builder builder) {
@@ -72,58 +71,58 @@ public class GetIdpConfigResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AccessKey")
+        @com.aliyun.core.annotation.NameInMap("AccessKey")
         private String accessKey;
 
-        @NameInMap("AccessKeySecret")
+        @com.aliyun.core.annotation.NameInMap("AccessKeySecret")
         private String accessKeySecret;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GetGroupUrl")
+        @com.aliyun.core.annotation.NameInMap("GetGroupUrl")
         private String getGroupUrl;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("IdpMetadata")
+        @com.aliyun.core.annotation.NameInMap("IdpMetadata")
         private String idpMetadata;
 
-        @NameInMap("MfaConfigType")
+        @com.aliyun.core.annotation.NameInMap("MfaConfigType")
         private String mfaConfigType;
 
-        @NameInMap("MobileLoginType")
+        @com.aliyun.core.annotation.NameInMap("MobileLoginType")
         private String mobileLoginType;
 
-        @NameInMap("MobileMfaConfigType")
+        @com.aliyun.core.annotation.NameInMap("MobileMfaConfigType")
         private String mobileMfaConfigType;
 
-        @NameInMap("MultiIdpInfo")
+        @com.aliyun.core.annotation.NameInMap("MultiIdpInfo")
         private String multiIdpInfo;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PcLoginType")
+        @com.aliyun.core.annotation.NameInMap("PcLoginType")
         private String pcLoginType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("VerifyAesKey")
+        @com.aliyun.core.annotation.NameInMap("VerifyAesKey")
         private String verifyAesKey;
 
-        @NameInMap("VerifyToken")
+        @com.aliyun.core.annotation.NameInMap("VerifyToken")
         private String verifyToken;
 
-        @NameInMap("VerifyUrl")
+        @com.aliyun.core.annotation.NameInMap("VerifyUrl")
         private String verifyUrl;
 
         private Data(Builder builder) {

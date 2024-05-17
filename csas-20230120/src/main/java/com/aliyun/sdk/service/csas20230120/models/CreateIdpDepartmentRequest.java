@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateIdpDepartmentRequest</p>
  */
 public class CreateIdpDepartmentRequest extends Request {
-    @Query
-    @NameInMap("DepartmentName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DepartmentName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String departmentName;
 
-    @Query
-    @NameInMap("IdpConfigId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdpConfigId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String idpConfigId;
 
     private CreateIdpDepartmentRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSoftwareForUserDeviceResponseBody</p>
  */
 public class ListSoftwareForUserDeviceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Software")
+    @com.aliyun.core.annotation.NameInMap("Software")
     private java.util.List < Software> software;
 
-    @NameInMap("TotalNum")
+    @com.aliyun.core.annotation.NameInMap("TotalNum")
     private Long totalNum;
 
     private ListSoftwareForUserDeviceResponseBody(Builder builder) {
@@ -92,16 +91,16 @@ public class ListSoftwareForUserDeviceResponseBody extends TeaModel {
     } 
 
     public static class Software extends TeaModel {
-        @NameInMap("Inc")
+        @com.aliyun.core.annotation.NameInMap("Inc")
         private String inc;
 
-        @NameInMap("InstallTime")
+        @com.aliyun.core.annotation.NameInMap("InstallTime")
         private String installTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Versions")
+        @com.aliyun.core.annotation.NameInMap("Versions")
         private java.util.List < String > versions;
 
         private Software(Builder builder) {

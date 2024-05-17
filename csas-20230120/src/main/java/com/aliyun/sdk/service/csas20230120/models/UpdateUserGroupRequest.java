@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateUserGroupRequest</p>
  */
 public class UpdateUserGroupRequest extends Request {
-    @Body
-    @NameInMap("Attributes")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Attributes")
     private java.util.List < Attributes> attributes;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("ModifyType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ModifyType")
     private String modifyType;
 
-    @Body
-    @NameInMap("UserGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userGroupId;
 
     private UpdateUserGroupRequest(Builder builder) {
@@ -140,19 +139,19 @@ public class UpdateUserGroupRequest extends Request {
     } 
 
     public static class Attributes extends TeaModel {
-        @NameInMap("IdpId")
+        @com.aliyun.core.annotation.NameInMap("IdpId")
         private Integer idpId;
 
-        @NameInMap("Relation")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Relation")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String relation;
 
-        @NameInMap("UserGroupType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("UserGroupType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String userGroupType;
 
-        @NameInMap("Value")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Value")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String value;
 
         private Attributes(Builder builder) {

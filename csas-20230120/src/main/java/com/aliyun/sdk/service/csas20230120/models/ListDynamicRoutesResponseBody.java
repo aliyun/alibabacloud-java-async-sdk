@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDynamicRoutesResponseBody</p>
  */
 public class ListDynamicRoutesResponseBody extends TeaModel {
-    @NameInMap("DynamicRoutes")
+    @com.aliyun.core.annotation.NameInMap("DynamicRoutes")
     private java.util.List < DynamicRoutes> dynamicRoutes;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalNum")
+    @com.aliyun.core.annotation.NameInMap("TotalNum")
     private Integer totalNum;
 
     private ListDynamicRoutesResponseBody(Builder builder) {
@@ -92,40 +91,40 @@ public class ListDynamicRoutesResponseBody extends TeaModel {
     } 
 
     public static class DynamicRoutes extends TeaModel {
-        @NameInMap("ApplicationIds")
+        @com.aliyun.core.annotation.NameInMap("ApplicationIds")
         private java.util.List < String > applicationIds;
 
-        @NameInMap("ApplicationType")
+        @com.aliyun.core.annotation.NameInMap("ApplicationType")
         private String applicationType;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DynamicRouteId")
+        @com.aliyun.core.annotation.NameInMap("DynamicRouteId")
         private String dynamicRouteId;
 
-        @NameInMap("DynamicRouteType")
+        @com.aliyun.core.annotation.NameInMap("DynamicRouteType")
         private String dynamicRouteType;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NextHop")
+        @com.aliyun.core.annotation.NameInMap("NextHop")
         private String nextHop;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("RegionIds")
+        @com.aliyun.core.annotation.NameInMap("RegionIds")
         private java.util.List < String > regionIds;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TagIds")
+        @com.aliyun.core.annotation.NameInMap("TagIds")
         private java.util.List < String > tagIds;
 
         private DynamicRoutes(Builder builder) {

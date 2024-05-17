@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUserGroupsForPrivateAccessPolicyResponseBody</p>
  */
 public class ListUserGroupsForPrivateAccessPolicyResponseBody extends TeaModel {
-    @NameInMap("Polices")
+    @com.aliyun.core.annotation.NameInMap("Polices")
     private java.util.List < Polices> polices;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListUserGroupsForPrivateAccessPolicyResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class ListUserGroupsForPrivateAccessPolicyResponseBody extends TeaModel {
     } 
 
     public static class Attributes extends TeaModel {
-        @NameInMap("IdpId")
+        @com.aliyun.core.annotation.NameInMap("IdpId")
         private Integer idpId;
 
-        @NameInMap("Relation")
+        @com.aliyun.core.annotation.NameInMap("Relation")
         private String relation;
 
-        @NameInMap("UserGroupType")
+        @com.aliyun.core.annotation.NameInMap("UserGroupType")
         private String userGroupType;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Attributes(Builder builder) {
@@ -173,19 +172,19 @@ public class ListUserGroupsForPrivateAccessPolicyResponseBody extends TeaModel {
 
     }
     public static class UserGroups extends TeaModel {
-        @NameInMap("Attributes")
+        @com.aliyun.core.annotation.NameInMap("Attributes")
         private java.util.List < Attributes> attributes;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("UserGroupId")
+        @com.aliyun.core.annotation.NameInMap("UserGroupId")
         private String userGroupId;
 
         private UserGroups(Builder builder) {
@@ -294,10 +293,10 @@ public class ListUserGroupsForPrivateAccessPolicyResponseBody extends TeaModel {
 
     }
     public static class Polices extends TeaModel {
-        @NameInMap("PolicyId")
+        @com.aliyun.core.annotation.NameInMap("PolicyId")
         private String policyId;
 
-        @NameInMap("UserGroups")
+        @com.aliyun.core.annotation.NameInMap("UserGroups")
         private java.util.List < UserGroups> userGroups;
 
         private Polices(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetRegistrationPolicyResponseBody</p>
  */
 public class GetRegistrationPolicyResponseBody extends TeaModel {
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("LimitDetail")
+    @com.aliyun.core.annotation.NameInMap("LimitDetail")
     private java.util.List < LimitDetail> limitDetail;
 
-    @NameInMap("MatchMode")
+    @com.aliyun.core.annotation.NameInMap("MatchMode")
     private String matchMode;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("PolicyId")
+    @com.aliyun.core.annotation.NameInMap("PolicyId")
     private String policyId;
 
-    @NameInMap("Priority")
+    @com.aliyun.core.annotation.NameInMap("Priority")
     private Long priority;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("UserGroupIds")
+    @com.aliyun.core.annotation.NameInMap("UserGroupIds")
     private java.util.List < String > userGroupIds;
 
-    @NameInMap("Whitelist")
+    @com.aliyun.core.annotation.NameInMap("Whitelist")
     private java.util.List < String > whitelist;
 
     private GetRegistrationPolicyResponseBody(Builder builder) {
@@ -252,13 +251,13 @@ public class GetRegistrationPolicyResponseBody extends TeaModel {
     } 
 
     public static class LimitCount extends TeaModel {
-        @NameInMap("All")
+        @com.aliyun.core.annotation.NameInMap("All")
         private Integer all;
 
-        @NameInMap("Mobile")
+        @com.aliyun.core.annotation.NameInMap("Mobile")
         private Integer mobile;
 
-        @NameInMap("PC")
+        @com.aliyun.core.annotation.NameInMap("PC")
         private Integer pc;
 
         private LimitCount(Builder builder) {
@@ -333,13 +332,13 @@ public class GetRegistrationPolicyResponseBody extends TeaModel {
 
     }
     public static class LimitDetail extends TeaModel {
-        @NameInMap("DeviceBelong")
+        @com.aliyun.core.annotation.NameInMap("DeviceBelong")
         private String deviceBelong;
 
-        @NameInMap("LimitCount")
+        @com.aliyun.core.annotation.NameInMap("LimitCount")
         private LimitCount limitCount;
 
-        @NameInMap("LimitType")
+        @com.aliyun.core.annotation.NameInMap("LimitType")
         private String limitType;
 
         private LimitDetail(Builder builder) {

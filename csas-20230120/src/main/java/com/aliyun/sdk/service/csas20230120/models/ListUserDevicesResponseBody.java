@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUserDevicesResponseBody</p>
  */
 public class ListUserDevicesResponseBody extends TeaModel {
-    @NameInMap("Devices")
+    @com.aliyun.core.annotation.NameInMap("Devices")
     private java.util.List < Devices> devices;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalNum")
+    @com.aliyun.core.annotation.NameInMap("TotalNum")
     private Long totalNum;
 
     private ListUserDevicesResponseBody(Builder builder) {
@@ -92,79 +91,79 @@ public class ListUserDevicesResponseBody extends TeaModel {
     } 
 
     public static class Devices extends TeaModel {
-        @NameInMap("AppStatus")
+        @com.aliyun.core.annotation.NameInMap("AppStatus")
         private String appStatus;
 
-        @NameInMap("AppVersion")
+        @com.aliyun.core.annotation.NameInMap("AppVersion")
         private String appVersion;
 
-        @NameInMap("CPU")
+        @com.aliyun.core.annotation.NameInMap("CPU")
         private String CPU;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Department")
+        @com.aliyun.core.annotation.NameInMap("Department")
         private String department;
 
-        @NameInMap("DeviceBelong")
+        @com.aliyun.core.annotation.NameInMap("DeviceBelong")
         private String deviceBelong;
 
-        @NameInMap("DeviceModel")
+        @com.aliyun.core.annotation.NameInMap("DeviceModel")
         private String deviceModel;
 
-        @NameInMap("DeviceStatus")
+        @com.aliyun.core.annotation.NameInMap("DeviceStatus")
         private String deviceStatus;
 
-        @NameInMap("DeviceTag")
+        @com.aliyun.core.annotation.NameInMap("DeviceTag")
         private String deviceTag;
 
-        @NameInMap("DeviceType")
+        @com.aliyun.core.annotation.NameInMap("DeviceType")
         private String deviceType;
 
-        @NameInMap("DeviceVersion")
+        @com.aliyun.core.annotation.NameInMap("DeviceVersion")
         private String deviceVersion;
 
-        @NameInMap("Disk")
+        @com.aliyun.core.annotation.NameInMap("Disk")
         private String disk;
 
-        @NameInMap("DlpStatus")
+        @com.aliyun.core.annotation.NameInMap("DlpStatus")
         private String dlpStatus;
 
-        @NameInMap("Hostname")
+        @com.aliyun.core.annotation.NameInMap("Hostname")
         private String hostname;
 
-        @NameInMap("IaStatus")
+        @com.aliyun.core.annotation.NameInMap("IaStatus")
         private String iaStatus;
 
-        @NameInMap("InnerIP")
+        @com.aliyun.core.annotation.NameInMap("InnerIP")
         private String innerIP;
 
-        @NameInMap("Mac")
+        @com.aliyun.core.annotation.NameInMap("Mac")
         private String mac;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private String memory;
 
-        @NameInMap("NacStatus")
+        @com.aliyun.core.annotation.NameInMap("NacStatus")
         private String nacStatus;
 
-        @NameInMap("PaStatus")
+        @com.aliyun.core.annotation.NameInMap("PaStatus")
         private String paStatus;
 
-        @NameInMap("SaseUserId")
+        @com.aliyun.core.annotation.NameInMap("SaseUserId")
         private String saseUserId;
 
-        @NameInMap("SharingStatus")
+        @com.aliyun.core.annotation.NameInMap("SharingStatus")
         private Boolean sharingStatus;
 
-        @NameInMap("SrcIP")
+        @com.aliyun.core.annotation.NameInMap("SrcIP")
         private String srcIP;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("Username")
+        @com.aliyun.core.annotation.NameInMap("Username")
         private String username;
 
         private Devices(Builder builder) {

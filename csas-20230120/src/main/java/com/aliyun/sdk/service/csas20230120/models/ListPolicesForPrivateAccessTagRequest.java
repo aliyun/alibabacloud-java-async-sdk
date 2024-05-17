@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPolicesForPrivateAccessTagRequest</p>
  */
 public class ListPolicesForPrivateAccessTagRequest extends Request {
-    @Query
-    @NameInMap("TagIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > tagIds;
 
     private ListPolicesForPrivateAccessTagRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetUserDeviceRequest</p>
  */
 public class GetUserDeviceRequest extends Request {
-    @Query
-    @NameInMap("DeviceTag")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceTag")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deviceTag;
 
     private GetUserDeviceRequest(Builder builder) {

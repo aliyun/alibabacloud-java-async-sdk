@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,78 +11,82 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUserDevicesRequest</p>
  */
 public class ListUserDevicesRequest extends Request {
-    @Query
-    @NameInMap("AppStatuses")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppStatuses")
     private java.util.List < String > appStatuses;
 
-    @Query
-    @NameInMap("CurrentPage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long currentPage;
 
-    @Query
-    @NameInMap("Department")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Department")
     private String department;
 
-    @Query
-    @NameInMap("DeviceBelong")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceBelong")
     private String deviceBelong;
 
-    @Query
-    @NameInMap("DeviceStatuses")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceStatuses")
     private java.util.List < String > deviceStatuses;
 
-    @Query
-    @NameInMap("DeviceTags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceTags")
     private java.util.List < String > deviceTags;
 
-    @Query
-    @NameInMap("DeviceTypes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceTypes")
     private java.util.List < String > deviceTypes;
 
-    @Query
-    @NameInMap("DlpStatuses")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DlpStatuses")
     private java.util.List < String > dlpStatuses;
 
-    @Query
-    @NameInMap("Hostname")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Hostname")
     private String hostname;
 
-    @Query
-    @NameInMap("IaStatuses")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IaStatuses")
     private java.util.List < String > iaStatuses;
 
-    @Query
-    @NameInMap("Mac")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InnerIp")
+    private String innerIp;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mac")
     private String mac;
 
-    @Query
-    @NameInMap("NacStatuses")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NacStatuses")
     private java.util.List < String > nacStatuses;
 
-    @Query
-    @NameInMap("PaStatuses")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PaStatuses")
     private java.util.List < String > paStatuses;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long pageSize;
 
-    @Query
-    @NameInMap("SaseUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SaseUserId")
     private String saseUserId;
 
-    @Query
-    @NameInMap("SharingStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SharingStatus")
     private Boolean sharingStatus;
 
-    @Query
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
-    @Query
-    @NameInMap("Username")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Username")
     private String username;
 
     private ListUserDevicesRequest(Builder builder) {
@@ -98,6 +101,7 @@ public class ListUserDevicesRequest extends Request {
         this.dlpStatuses = builder.dlpStatuses;
         this.hostname = builder.hostname;
         this.iaStatuses = builder.iaStatuses;
+        this.innerIp = builder.innerIp;
         this.mac = builder.mac;
         this.nacStatuses = builder.nacStatuses;
         this.paStatuses = builder.paStatuses;
@@ -192,6 +196,13 @@ public class ListUserDevicesRequest extends Request {
     }
 
     /**
+     * @return innerIp
+     */
+    public String getInnerIp() {
+        return this.innerIp;
+    }
+
+    /**
      * @return mac
      */
     public String getMac() {
@@ -258,6 +269,7 @@ public class ListUserDevicesRequest extends Request {
         private java.util.List < String > dlpStatuses; 
         private String hostname; 
         private java.util.List < String > iaStatuses; 
+        private String innerIp; 
         private String mac; 
         private java.util.List < String > nacStatuses; 
         private java.util.List < String > paStatuses; 
@@ -283,6 +295,7 @@ public class ListUserDevicesRequest extends Request {
             this.dlpStatuses = request.dlpStatuses;
             this.hostname = request.hostname;
             this.iaStatuses = request.iaStatuses;
+            this.innerIp = request.innerIp;
             this.mac = request.mac;
             this.nacStatuses = request.nacStatuses;
             this.paStatuses = request.paStatuses;
@@ -380,6 +393,15 @@ public class ListUserDevicesRequest extends Request {
         public Builder iaStatuses(java.util.List < String > iaStatuses) {
             this.putQueryParameter("IaStatuses", iaStatuses);
             this.iaStatuses = iaStatuses;
+            return this;
+        }
+
+        /**
+         * InnerIp.
+         */
+        public Builder innerIp(String innerIp) {
+            this.putQueryParameter("InnerIp", innerIp);
+            this.innerIp = innerIp;
             return this;
         }
 

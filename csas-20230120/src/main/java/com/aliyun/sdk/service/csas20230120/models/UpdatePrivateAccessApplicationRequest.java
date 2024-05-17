@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdatePrivateAccessApplicationRequest</p>
  */
 public class UpdatePrivateAccessApplicationRequest extends Request {
-    @Body
-    @NameInMap("Addresses")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Addresses")
     private java.util.List < String > addresses;
 
-    @Body
-    @NameInMap("ApplicationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApplicationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String applicationId;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("ModifyType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ModifyType")
     private String modifyType;
 
-    @Body
-    @NameInMap("PortRanges")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PortRanges")
     private java.util.List < PortRanges> portRanges;
 
-    @Body
-    @NameInMap("Protocol")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Protocol")
     private String protocol;
 
-    @Body
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Body
-    @NameInMap("TagIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TagIds")
     private java.util.List < String > tagIds;
 
     private UpdatePrivateAccessApplicationRequest(Builder builder) {
@@ -232,12 +231,12 @@ public class UpdatePrivateAccessApplicationRequest extends Request {
     } 
 
     public static class PortRanges extends TeaModel {
-        @NameInMap("Begin")
-        @Validation(maximum = 65535, minimum = 1)
+        @com.aliyun.core.annotation.NameInMap("Begin")
+        @com.aliyun.core.annotation.Validation(maximum = 65535, minimum = 1)
         private Integer begin;
 
-        @NameInMap("End")
-        @Validation(maximum = 65535, minimum = 1)
+        @com.aliyun.core.annotation.NameInMap("End")
+        @com.aliyun.core.annotation.Validation(maximum = 65535, minimum = 1)
         private Integer end;
 
         private PortRanges(Builder builder) {

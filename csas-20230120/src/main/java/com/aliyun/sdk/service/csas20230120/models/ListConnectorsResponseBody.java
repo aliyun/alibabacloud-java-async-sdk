@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListConnectorsResponseBody</p>
  */
 public class ListConnectorsResponseBody extends TeaModel {
-    @NameInMap("Connectors")
+    @com.aliyun.core.annotation.NameInMap("Connectors")
     private java.util.List < Connectors> connectors;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalNum")
+    @com.aliyun.core.annotation.NameInMap("TotalNum")
     private Integer totalNum;
 
     private ListConnectorsResponseBody(Builder builder) {
@@ -92,10 +91,10 @@ public class ListConnectorsResponseBody extends TeaModel {
     } 
 
     public static class Applications extends TeaModel {
-        @NameInMap("ApplicationId")
+        @com.aliyun.core.annotation.NameInMap("ApplicationId")
         private String applicationId;
 
-        @NameInMap("ApplicationName")
+        @com.aliyun.core.annotation.NameInMap("ApplicationName")
         private String applicationName;
 
         private Applications(Builder builder) {
@@ -153,16 +152,16 @@ public class ListConnectorsResponseBody extends TeaModel {
 
     }
     public static class ConnectorClients extends TeaModel {
-        @NameInMap("ConnectionStatus")
+        @com.aliyun.core.annotation.NameInMap("ConnectionStatus")
         private String connectionStatus;
 
-        @NameInMap("DevTag")
+        @com.aliyun.core.annotation.NameInMap("DevTag")
         private String devTag;
 
-        @NameInMap("Hostname")
+        @com.aliyun.core.annotation.NameInMap("Hostname")
         private String hostname;
 
-        @NameInMap("PublicIp")
+        @com.aliyun.core.annotation.NameInMap("PublicIp")
         private String publicIp;
 
         private ConnectorClients(Builder builder) {
@@ -254,10 +253,10 @@ public class ListConnectorsResponseBody extends TeaModel {
 
     }
     public static class UpgradeTime extends TeaModel {
-        @NameInMap("End")
+        @com.aliyun.core.annotation.NameInMap("End")
         private String end;
 
-        @NameInMap("Start")
+        @com.aliyun.core.annotation.NameInMap("Start")
         private String start;
 
         private UpgradeTime(Builder builder) {
@@ -315,31 +314,31 @@ public class ListConnectorsResponseBody extends TeaModel {
 
     }
     public static class Connectors extends TeaModel {
-        @NameInMap("Applications")
+        @com.aliyun.core.annotation.NameInMap("Applications")
         private java.util.List < Applications> applications;
 
-        @NameInMap("ConnectorClients")
+        @com.aliyun.core.annotation.NameInMap("ConnectorClients")
         private java.util.List < ConnectorClients> connectorClients;
 
-        @NameInMap("ConnectorId")
+        @com.aliyun.core.annotation.NameInMap("ConnectorId")
         private String connectorId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SwitchStatus")
+        @com.aliyun.core.annotation.NameInMap("SwitchStatus")
         private String switchStatus;
 
-        @NameInMap("UpgradeTime")
+        @com.aliyun.core.annotation.NameInMap("UpgradeTime")
         private UpgradeTime upgradeTime;
 
         private Connectors(Builder builder) {

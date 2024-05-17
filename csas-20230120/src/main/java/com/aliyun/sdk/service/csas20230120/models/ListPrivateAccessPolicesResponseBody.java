@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPrivateAccessPolicesResponseBody</p>
  */
 public class ListPrivateAccessPolicesResponseBody extends TeaModel {
-    @NameInMap("Polices")
+    @com.aliyun.core.annotation.NameInMap("Polices")
     private java.util.List < Polices> polices;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalNum")
+    @com.aliyun.core.annotation.NameInMap("TotalNum")
     private Integer totalNum;
 
     private ListPrivateAccessPolicesResponseBody(Builder builder) {
@@ -92,16 +91,16 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
     } 
 
     public static class CustomUserAttributes extends TeaModel {
-        @NameInMap("IdpId")
+        @com.aliyun.core.annotation.NameInMap("IdpId")
         private Integer idpId;
 
-        @NameInMap("Relation")
+        @com.aliyun.core.annotation.NameInMap("Relation")
         private String relation;
 
-        @NameInMap("UserGroupType")
+        @com.aliyun.core.annotation.NameInMap("UserGroupType")
         private String userGroupType;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private CustomUserAttributes(Builder builder) {
@@ -193,46 +192,46 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
 
     }
     public static class Polices extends TeaModel {
-        @NameInMap("ApplicationIds")
+        @com.aliyun.core.annotation.NameInMap("ApplicationIds")
         private java.util.List < String > applicationIds;
 
-        @NameInMap("ApplicationType")
+        @com.aliyun.core.annotation.NameInMap("ApplicationType")
         private String applicationType;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CustomUserAttributes")
+        @com.aliyun.core.annotation.NameInMap("CustomUserAttributes")
         private java.util.List < CustomUserAttributes> customUserAttributes;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DeviceAttributeId")
+        @com.aliyun.core.annotation.NameInMap("DeviceAttributeId")
         private String deviceAttributeId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PolicyAction")
+        @com.aliyun.core.annotation.NameInMap("PolicyAction")
         private String policyAction;
 
-        @NameInMap("PolicyId")
+        @com.aliyun.core.annotation.NameInMap("PolicyId")
         private String policyId;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TagIds")
+        @com.aliyun.core.annotation.NameInMap("TagIds")
         private java.util.List < String > tagIds;
 
-        @NameInMap("UserGroupIds")
+        @com.aliyun.core.annotation.NameInMap("UserGroupIds")
         private java.util.List < String > userGroupIds;
 
-        @NameInMap("UserGroupMode")
+        @com.aliyun.core.annotation.NameInMap("UserGroupMode")
         private String userGroupMode;
 
         private Polices(Builder builder) {

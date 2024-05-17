@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListIdpDepartmentsResponseBody</p>
  */
 public class ListIdpDepartmentsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListIdpDepartmentsResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class ListIdpDepartmentsResponseBody extends TeaModel {
     } 
 
     public static class DataList extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("IdpConfigId")
+        @com.aliyun.core.annotation.NameInMap("IdpConfigId")
         private String idpConfigId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private DataList(Builder builder) {
@@ -153,10 +152,10 @@ public class ListIdpDepartmentsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("DataList")
+        @com.aliyun.core.annotation.NameInMap("DataList")
         private java.util.List < DataList> dataList;
 
-        @NameInMap("TotalNum")
+        @com.aliyun.core.annotation.NameInMap("TotalNum")
         private Long totalNum;
 
         private Data(Builder builder) {

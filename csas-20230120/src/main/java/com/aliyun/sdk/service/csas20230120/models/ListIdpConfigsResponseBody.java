@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.csas20230120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListIdpConfigsResponseBody</p>
  */
 public class ListIdpConfigsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListIdpConfigsResponseBody(Builder builder) {
@@ -72,37 +71,37 @@ public class ListIdpConfigsResponseBody extends TeaModel {
     } 
 
     public static class DataList extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Mfa")
+        @com.aliyun.core.annotation.NameInMap("Mfa")
         private String mfa;
 
-        @NameInMap("MobileLoginType")
+        @com.aliyun.core.annotation.NameInMap("MobileLoginType")
         private String mobileLoginType;
 
-        @NameInMap("MobileMfaConfigType")
+        @com.aliyun.core.annotation.NameInMap("MobileMfaConfigType")
         private String mobileMfaConfigType;
 
-        @NameInMap("MultiIdpInfo")
+        @com.aliyun.core.annotation.NameInMap("MultiIdpInfo")
         private String multiIdpInfo;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PcLoginType")
+        @com.aliyun.core.annotation.NameInMap("PcLoginType")
         private String pcLoginType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private DataList(Builder builder) {
@@ -313,10 +312,10 @@ public class ListIdpConfigsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("DataList")
+        @com.aliyun.core.annotation.NameInMap("DataList")
         private java.util.List < DataList> dataList;
 
-        @NameInMap("TotalNum")
+        @com.aliyun.core.annotation.NameInMap("TotalNum")
         private Long totalNum;
 
         private Data(Builder builder) {
