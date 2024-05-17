@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBClusterEndpointsResponseBody</p>
  */
 public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBClusterEndpointsResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
     } 
 
     public static class AddressItems extends TeaModel {
-        @NameInMap("ConnectionString")
+        @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
 
-        @NameInMap("IPAddress")
+        @com.aliyun.core.annotation.NameInMap("IPAddress")
         private String IPAddress;
 
-        @NameInMap("NetType")
+        @com.aliyun.core.annotation.NameInMap("NetType")
         private String netType;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("PrivateZoneConnectionString")
+        @com.aliyun.core.annotation.NameInMap("PrivateZoneConnectionString")
         private String privateZoneConnectionString;
 
-        @NameInMap("VPCId")
+        @com.aliyun.core.annotation.NameInMap("VPCId")
         private String VPCId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcInstanceId")
+        @com.aliyun.core.annotation.NameInMap("VpcInstanceId")
         private String vpcInstanceId;
 
         private AddressItems(Builder builder) {
@@ -260,34 +259,34 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("AddressItems")
+        @com.aliyun.core.annotation.NameInMap("AddressItems")
         private java.util.List < AddressItems> addressItems;
 
-        @NameInMap("AutoAddNewNodes")
+        @com.aliyun.core.annotation.NameInMap("AutoAddNewNodes")
         private String autoAddNewNodes;
 
-        @NameInMap("DBClusterId")
+        @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
 
-        @NameInMap("DBEndpointDescription")
+        @com.aliyun.core.annotation.NameInMap("DBEndpointDescription")
         private String DBEndpointDescription;
 
-        @NameInMap("DBEndpointId")
+        @com.aliyun.core.annotation.NameInMap("DBEndpointId")
         private String DBEndpointId;
 
-        @NameInMap("EndpointConfig")
+        @com.aliyun.core.annotation.NameInMap("EndpointConfig")
         private String endpointConfig;
 
-        @NameInMap("EndpointType")
+        @com.aliyun.core.annotation.NameInMap("EndpointType")
         private String endpointType;
 
-        @NameInMap("NodeWithRoles")
+        @com.aliyun.core.annotation.NameInMap("NodeWithRoles")
         private String nodeWithRoles;
 
-        @NameInMap("Nodes")
+        @com.aliyun.core.annotation.NameInMap("Nodes")
         private String nodes;
 
-        @NameInMap("ReadWriteMode")
+        @com.aliyun.core.annotation.NameInMap("ReadWriteMode")
         private String readWriteMode;
 
         private Items(Builder builder) {

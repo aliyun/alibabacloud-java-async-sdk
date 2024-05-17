@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,73 +11,73 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyBackupPolicyRequest</p>
  */
 public class ModifyBackupPolicyRequest extends Request {
-    @Query
-    @NameInMap("BackupFrequency")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupFrequency")
     private String backupFrequency;
 
-    @Query
-    @NameInMap("BackupRetentionPolicyOnClusterDeletion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupRetentionPolicyOnClusterDeletion")
     private String backupRetentionPolicyOnClusterDeletion;
 
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("DataLevel1BackupFrequency")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataLevel1BackupFrequency")
     private String dataLevel1BackupFrequency;
 
-    @Query
-    @NameInMap("DataLevel1BackupPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataLevel1BackupPeriod")
     private String dataLevel1BackupPeriod;
 
-    @Query
-    @NameInMap("DataLevel1BackupRetentionPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataLevel1BackupRetentionPeriod")
     private String dataLevel1BackupRetentionPeriod;
 
-    @Query
-    @NameInMap("DataLevel1BackupTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataLevel1BackupTime")
     private String dataLevel1BackupTime;
 
-    @Query
-    @NameInMap("DataLevel2BackupAnotherRegionRegion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataLevel2BackupAnotherRegionRegion")
     private String dataLevel2BackupAnotherRegionRegion;
 
-    @Query
-    @NameInMap("DataLevel2BackupAnotherRegionRetentionPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataLevel2BackupAnotherRegionRetentionPeriod")
     private String dataLevel2BackupAnotherRegionRetentionPeriod;
 
-    @Query
-    @NameInMap("DataLevel2BackupPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataLevel2BackupPeriod")
     private String dataLevel2BackupPeriod;
 
-    @Query
-    @NameInMap("DataLevel2BackupRetentionPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataLevel2BackupRetentionPeriod")
     private String dataLevel2BackupRetentionPeriod;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PreferredBackupPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreferredBackupPeriod")
     private String preferredBackupPeriod;
 
-    @Query
-    @NameInMap("PreferredBackupTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreferredBackupTime")
     private String preferredBackupTime;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyBackupPolicyRequest(Builder builder) {

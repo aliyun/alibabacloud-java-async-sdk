@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDBNodesResponseBody</p>
  */
 public class CreateDBNodesResponseBody extends TeaModel {
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("DBNodeIds")
+    @com.aliyun.core.annotation.NameInMap("DBNodeIds")
     private DBNodeIds DBNodeIds;
 
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateDBNodesResponseBody(Builder builder) {
@@ -112,7 +111,7 @@ public class CreateDBNodesResponseBody extends TeaModel {
     } 
 
     public static class DBNodeIds extends TeaModel {
-        @NameInMap("DBNodeId")
+        @com.aliyun.core.annotation.NameInMap("DBNodeId")
         private java.util.List < String > DBNodeId;
 
         private DBNodeIds(Builder builder) {

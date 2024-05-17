@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,46 +11,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBackupPolicyResponseBody</p>
  */
 public class DescribeBackupPolicyResponseBody extends TeaModel {
-    @NameInMap("BackupFrequency")
+    @com.aliyun.core.annotation.NameInMap("BackupFrequency")
     private String backupFrequency;
 
-    @NameInMap("BackupRetentionPolicyOnClusterDeletion")
+    @com.aliyun.core.annotation.NameInMap("BackupRetentionPolicyOnClusterDeletion")
     private String backupRetentionPolicyOnClusterDeletion;
 
-    @NameInMap("DataLevel1BackupFrequency")
+    @com.aliyun.core.annotation.NameInMap("DataLevel1BackupFrequency")
     private String dataLevel1BackupFrequency;
 
-    @NameInMap("DataLevel1BackupPeriod")
+    @com.aliyun.core.annotation.NameInMap("DataLevel1BackupPeriod")
     private String dataLevel1BackupPeriod;
 
-    @NameInMap("DataLevel1BackupRetentionPeriod")
+    @com.aliyun.core.annotation.NameInMap("DataLevel1BackupRetentionPeriod")
     private String dataLevel1BackupRetentionPeriod;
 
-    @NameInMap("DataLevel1BackupTime")
+    @com.aliyun.core.annotation.NameInMap("DataLevel1BackupTime")
     private String dataLevel1BackupTime;
 
-    @NameInMap("DataLevel2BackupAnotherRegionRegion")
+    @com.aliyun.core.annotation.NameInMap("DataLevel2BackupAnotherRegionRegion")
     private String dataLevel2BackupAnotherRegionRegion;
 
-    @NameInMap("DataLevel2BackupAnotherRegionRetentionPeriod")
+    @com.aliyun.core.annotation.NameInMap("DataLevel2BackupAnotherRegionRetentionPeriod")
     private String dataLevel2BackupAnotherRegionRetentionPeriod;
 
-    @NameInMap("DataLevel2BackupPeriod")
+    @com.aliyun.core.annotation.NameInMap("DataLevel2BackupPeriod")
     private String dataLevel2BackupPeriod;
 
-    @NameInMap("DataLevel2BackupRetentionPeriod")
+    @com.aliyun.core.annotation.NameInMap("DataLevel2BackupRetentionPeriod")
     private String dataLevel2BackupRetentionPeriod;
 
-    @NameInMap("PreferredBackupPeriod")
+    @com.aliyun.core.annotation.NameInMap("PreferredBackupPeriod")
     private String preferredBackupPeriod;
 
-    @NameInMap("PreferredBackupTime")
+    @com.aliyun.core.annotation.NameInMap("PreferredBackupTime")
     private String preferredBackupTime;
 
-    @NameInMap("PreferredNextBackupTime")
+    @com.aliyun.core.annotation.NameInMap("PreferredNextBackupTime")
     private String preferredNextBackupTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeBackupPolicyResponseBody(Builder builder) {

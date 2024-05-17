@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLogBackupPolicyResponseBody</p>
  */
 public class DescribeLogBackupPolicyResponseBody extends TeaModel {
-    @NameInMap("EnableBackupLog")
+    @com.aliyun.core.annotation.NameInMap("EnableBackupLog")
     private Integer enableBackupLog;
 
-    @NameInMap("LogBackupAnotherRegionRegion")
+    @com.aliyun.core.annotation.NameInMap("LogBackupAnotherRegionRegion")
     private String logBackupAnotherRegionRegion;
 
-    @NameInMap("LogBackupAnotherRegionRetentionPeriod")
+    @com.aliyun.core.annotation.NameInMap("LogBackupAnotherRegionRetentionPeriod")
     private String logBackupAnotherRegionRetentionPeriod;
 
-    @NameInMap("LogBackupRetentionPeriod")
+    @com.aliyun.core.annotation.NameInMap("LogBackupRetentionPeriod")
     private Integer logBackupRetentionPeriod;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeLogBackupPolicyResponseBody(Builder builder) {

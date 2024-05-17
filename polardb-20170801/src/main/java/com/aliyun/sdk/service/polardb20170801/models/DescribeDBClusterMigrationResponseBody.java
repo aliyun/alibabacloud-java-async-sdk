@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,46 +11,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBClusterMigrationResponseBody</p>
  */
 public class DescribeDBClusterMigrationResponseBody extends TeaModel {
-    @NameInMap("Comment")
+    @com.aliyun.core.annotation.NameInMap("Comment")
     private String comment;
 
-    @NameInMap("DBClusterEndpointList")
+    @com.aliyun.core.annotation.NameInMap("DBClusterEndpointList")
     private java.util.List < DBClusterEndpointList> DBClusterEndpointList;
 
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("DBClusterReadWriteMode")
+    @com.aliyun.core.annotation.NameInMap("DBClusterReadWriteMode")
     private String DBClusterReadWriteMode;
 
-    @NameInMap("DelayedSeconds")
+    @com.aliyun.core.annotation.NameInMap("DelayedSeconds")
     private Integer delayedSeconds;
 
-    @NameInMap("DtsInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DtsInstanceId")
     private String dtsInstanceId;
 
-    @NameInMap("ExpiredTime")
+    @com.aliyun.core.annotation.NameInMap("ExpiredTime")
     private String expiredTime;
 
-    @NameInMap("MigrationStatus")
+    @com.aliyun.core.annotation.NameInMap("MigrationStatus")
     private String migrationStatus;
 
-    @NameInMap("RdsEndpointList")
+    @com.aliyun.core.annotation.NameInMap("RdsEndpointList")
     private java.util.List < RdsEndpointList> rdsEndpointList;
 
-    @NameInMap("RdsReadWriteMode")
+    @com.aliyun.core.annotation.NameInMap("RdsReadWriteMode")
     private String rdsReadWriteMode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SourceRDSDBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("SourceRDSDBInstanceId")
     private String sourceRDSDBInstanceId;
 
-    @NameInMap("SrcDbType")
+    @com.aliyun.core.annotation.NameInMap("SrcDbType")
     private String srcDbType;
 
-    @NameInMap("Topologies")
+    @com.aliyun.core.annotation.NameInMap("Topologies")
     private String topologies;
 
     private DescribeDBClusterMigrationResponseBody(Builder builder) {
@@ -337,25 +336,25 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
     } 
 
     public static class AddressItems extends TeaModel {
-        @NameInMap("ConnectionString")
+        @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
 
-        @NameInMap("IPAddress")
+        @com.aliyun.core.annotation.NameInMap("IPAddress")
         private String IPAddress;
 
-        @NameInMap("NetType")
+        @com.aliyun.core.annotation.NameInMap("NetType")
         private String netType;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("SSLEnabled")
+        @com.aliyun.core.annotation.NameInMap("SSLEnabled")
         private String SSLEnabled;
 
-        @NameInMap("VPCId")
+        @com.aliyun.core.annotation.NameInMap("VPCId")
         private String VPCId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
         private AddressItems(Builder builder) {
@@ -507,16 +506,16 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
 
     }
     public static class DBClusterEndpointList extends TeaModel {
-        @NameInMap("AddressItems")
+        @com.aliyun.core.annotation.NameInMap("AddressItems")
         private java.util.List < AddressItems> addressItems;
 
-        @NameInMap("DBEndpointId")
+        @com.aliyun.core.annotation.NameInMap("DBEndpointId")
         private String DBEndpointId;
 
-        @NameInMap("EndpointType")
+        @com.aliyun.core.annotation.NameInMap("EndpointType")
         private String endpointType;
 
-        @NameInMap("ReadWriteMode")
+        @com.aliyun.core.annotation.NameInMap("ReadWriteMode")
         private String readWriteMode;
 
         private DBClusterEndpointList(Builder builder) {
@@ -613,25 +612,25 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
 
     }
     public static class RdsEndpointListAddressItems extends TeaModel {
-        @NameInMap("ConnectionString")
+        @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
 
-        @NameInMap("IPAddress")
+        @com.aliyun.core.annotation.NameInMap("IPAddress")
         private String IPAddress;
 
-        @NameInMap("NetType")
+        @com.aliyun.core.annotation.NameInMap("NetType")
         private String netType;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("SSLEnabled")
+        @com.aliyun.core.annotation.NameInMap("SSLEnabled")
         private String SSLEnabled;
 
-        @NameInMap("VPCId")
+        @com.aliyun.core.annotation.NameInMap("VPCId")
         private String VPCId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
         private RdsEndpointListAddressItems(Builder builder) {
@@ -783,16 +782,16 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
 
     }
     public static class RdsEndpointList extends TeaModel {
-        @NameInMap("AddressItems")
+        @com.aliyun.core.annotation.NameInMap("AddressItems")
         private java.util.List < RdsEndpointListAddressItems> addressItems;
 
-        @NameInMap("CustinsType")
+        @com.aliyun.core.annotation.NameInMap("CustinsType")
         private String custinsType;
 
-        @NameInMap("DBEndpointId")
+        @com.aliyun.core.annotation.NameInMap("DBEndpointId")
         private String DBEndpointId;
 
-        @NameInMap("EndpointType")
+        @com.aliyun.core.annotation.NameInMap("EndpointType")
         private String endpointType;
 
         private RdsEndpointList(Builder builder) {

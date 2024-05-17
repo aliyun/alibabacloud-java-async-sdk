@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,43 +11,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBClusterVersionResponseBody</p>
  */
 public class DescribeDBClusterVersionResponseBody extends TeaModel {
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("DBLatestVersion")
+    @com.aliyun.core.annotation.NameInMap("DBLatestVersion")
     private String DBLatestVersion;
 
-    @NameInMap("DBMinorVersion")
+    @com.aliyun.core.annotation.NameInMap("DBMinorVersion")
     private String DBMinorVersion;
 
-    @NameInMap("DBRevisionVersion")
+    @com.aliyun.core.annotation.NameInMap("DBRevisionVersion")
     private String DBRevisionVersion;
 
-    @NameInMap("DBRevisionVersionList")
+    @com.aliyun.core.annotation.NameInMap("DBRevisionVersionList")
     private java.util.List < DBRevisionVersionList> DBRevisionVersionList;
 
-    @NameInMap("DBVersion")
+    @com.aliyun.core.annotation.NameInMap("DBVersion")
     private String DBVersion;
 
-    @NameInMap("DBVersionStatus")
+    @com.aliyun.core.annotation.NameInMap("DBVersionStatus")
     private String DBVersionStatus;
 
-    @NameInMap("IsLatestVersion")
+    @com.aliyun.core.annotation.NameInMap("IsLatestVersion")
     private String isLatestVersion;
 
-    @NameInMap("IsProxyLatestVersion")
+    @com.aliyun.core.annotation.NameInMap("IsProxyLatestVersion")
     private String isProxyLatestVersion;
 
-    @NameInMap("ProxyLatestVersion")
+    @com.aliyun.core.annotation.NameInMap("ProxyLatestVersion")
     private String proxyLatestVersion;
 
-    @NameInMap("ProxyRevisionVersion")
+    @com.aliyun.core.annotation.NameInMap("ProxyRevisionVersion")
     private String proxyRevisionVersion;
 
-    @NameInMap("ProxyVersionStatus")
+    @com.aliyun.core.annotation.NameInMap("ProxyVersionStatus")
     private String proxyVersionStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBClusterVersionResponseBody(Builder builder) {
@@ -327,16 +326,16 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
     } 
 
     public static class DBRevisionVersionList extends TeaModel {
-        @NameInMap("ReleaseNote")
+        @com.aliyun.core.annotation.NameInMap("ReleaseNote")
         private String releaseNote;
 
-        @NameInMap("ReleaseType")
+        @com.aliyun.core.annotation.NameInMap("ReleaseType")
         private String releaseType;
 
-        @NameInMap("RevisionVersionCode")
+        @com.aliyun.core.annotation.NameInMap("RevisionVersionCode")
         private String revisionVersionCode;
 
-        @NameInMap("RevisionVersionName")
+        @com.aliyun.core.annotation.NameInMap("RevisionVersionName")
         private String revisionVersionName;
 
         private DBRevisionVersionList(Builder builder) {

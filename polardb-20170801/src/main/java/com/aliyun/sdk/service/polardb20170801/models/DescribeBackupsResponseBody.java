@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBackupsResponseBody</p>
  */
 public class DescribeBackupsResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private String pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private String totalRecordCount;
 
     private DescribeBackupsResponseBody(Builder builder) {
@@ -132,46 +131,46 @@ public class DescribeBackupsResponseBody extends TeaModel {
     } 
 
     public static class Backup extends TeaModel {
-        @NameInMap("BackupEndTime")
+        @com.aliyun.core.annotation.NameInMap("BackupEndTime")
         private String backupEndTime;
 
-        @NameInMap("BackupId")
+        @com.aliyun.core.annotation.NameInMap("BackupId")
         private String backupId;
 
-        @NameInMap("BackupMethod")
+        @com.aliyun.core.annotation.NameInMap("BackupMethod")
         private String backupMethod;
 
-        @NameInMap("BackupMode")
+        @com.aliyun.core.annotation.NameInMap("BackupMode")
         private String backupMode;
 
-        @NameInMap("BackupSetSize")
+        @com.aliyun.core.annotation.NameInMap("BackupSetSize")
         private String backupSetSize;
 
-        @NameInMap("BackupStartTime")
+        @com.aliyun.core.annotation.NameInMap("BackupStartTime")
         private String backupStartTime;
 
-        @NameInMap("BackupStatus")
+        @com.aliyun.core.annotation.NameInMap("BackupStatus")
         private String backupStatus;
 
-        @NameInMap("BackupType")
+        @com.aliyun.core.annotation.NameInMap("BackupType")
         private String backupType;
 
-        @NameInMap("BackupsLevel")
+        @com.aliyun.core.annotation.NameInMap("BackupsLevel")
         private String backupsLevel;
 
-        @NameInMap("ConsistentTime")
+        @com.aliyun.core.annotation.NameInMap("ConsistentTime")
         private String consistentTime;
 
-        @NameInMap("DBClusterId")
+        @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
 
-        @NameInMap("ExpectExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpectExpireTime")
         private String expectExpireTime;
 
-        @NameInMap("ExpectExpireType")
+        @com.aliyun.core.annotation.NameInMap("ExpectExpireType")
         private String expectExpireType;
 
-        @NameInMap("IsAvail")
+        @com.aliyun.core.annotation.NameInMap("IsAvail")
         private String isAvail;
 
         private Backup(Builder builder) {
@@ -481,7 +480,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("Backup")
+        @com.aliyun.core.annotation.NameInMap("Backup")
         private java.util.List < Backup> backup;
 
         private Items(Builder builder) {

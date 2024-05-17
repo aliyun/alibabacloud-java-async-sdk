@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBackupTasksResponseBody</p>
  */
 public class DescribeBackupTasksResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeBackupTasksResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
     } 
 
     public static class BackupJob extends TeaModel {
-        @NameInMap("BackupJobId")
+        @com.aliyun.core.annotation.NameInMap("BackupJobId")
         private String backupJobId;
 
-        @NameInMap("BackupProgressStatus")
+        @com.aliyun.core.annotation.NameInMap("BackupProgressStatus")
         private String backupProgressStatus;
 
-        @NameInMap("JobMode")
+        @com.aliyun.core.annotation.NameInMap("JobMode")
         private String jobMode;
 
-        @NameInMap("Process")
+        @com.aliyun.core.annotation.NameInMap("Process")
         private String process;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("TaskAction")
+        @com.aliyun.core.annotation.NameInMap("TaskAction")
         private String taskAction;
 
         private BackupJob(Builder builder) {
@@ -229,7 +228,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("BackupJob")
+        @com.aliyun.core.annotation.NameInMap("BackupJob")
         private java.util.List < BackupJob> backupJob;
 
         private Items(Builder builder) {

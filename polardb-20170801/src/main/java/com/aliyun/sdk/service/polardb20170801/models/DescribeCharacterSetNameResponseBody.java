@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCharacterSetNameResponseBody</p>
  */
 public class DescribeCharacterSetNameResponseBody extends TeaModel {
-    @NameInMap("CharacterSetNameItems")
+    @com.aliyun.core.annotation.NameInMap("CharacterSetNameItems")
     private CharacterSetNameItems characterSetNameItems;
 
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCharacterSetNameResponseBody(Builder builder) {
@@ -92,7 +91,7 @@ public class DescribeCharacterSetNameResponseBody extends TeaModel {
     } 
 
     public static class CharacterSetNameItems extends TeaModel {
-        @NameInMap("CharacterSetName")
+        @com.aliyun.core.annotation.NameInMap("CharacterSetName")
         private java.util.List < String > characterSetName;
 
         private CharacterSetNameItems(Builder builder) {

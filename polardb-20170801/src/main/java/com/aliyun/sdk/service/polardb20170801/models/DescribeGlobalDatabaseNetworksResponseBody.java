@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeGlobalDatabaseNetworksResponseBody</p>
  */
 public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeGlobalDatabaseNetworksResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
     } 
 
     public static class DBClusters extends TeaModel {
-        @NameInMap("DBClusterId")
+        @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
         private DBClusters(Builder builder) {
@@ -219,25 +218,25 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DBClusters")
+        @com.aliyun.core.annotation.NameInMap("DBClusters")
         private java.util.List < DBClusters> DBClusters;
 
-        @NameInMap("DBType")
+        @com.aliyun.core.annotation.NameInMap("DBType")
         private String DBType;
 
-        @NameInMap("DBVersion")
+        @com.aliyun.core.annotation.NameInMap("DBVersion")
         private String DBVersion;
 
-        @NameInMap("GDNDescription")
+        @com.aliyun.core.annotation.NameInMap("GDNDescription")
         private String GDNDescription;
 
-        @NameInMap("GDNId")
+        @com.aliyun.core.annotation.NameInMap("GDNId")
         private String GDNId;
 
-        @NameInMap("GDNStatus")
+        @com.aliyun.core.annotation.NameInMap("GDNStatus")
         private String GDNStatus;
 
         private Items(Builder builder) {

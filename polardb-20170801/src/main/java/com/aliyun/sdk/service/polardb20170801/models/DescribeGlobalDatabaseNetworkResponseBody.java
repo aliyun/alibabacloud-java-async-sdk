@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeGlobalDatabaseNetworkResponseBody</p>
  */
 public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
-    @NameInMap("Connections")
+    @com.aliyun.core.annotation.NameInMap("Connections")
     private java.util.List < Connections> connections;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("DBClusters")
+    @com.aliyun.core.annotation.NameInMap("DBClusters")
     private java.util.List < DBClusters> DBClusters;
 
-    @NameInMap("DBType")
+    @com.aliyun.core.annotation.NameInMap("DBType")
     private String DBType;
 
-    @NameInMap("DBVersion")
+    @com.aliyun.core.annotation.NameInMap("DBVersion")
     private String DBVersion;
 
-    @NameInMap("GDNDescription")
+    @com.aliyun.core.annotation.NameInMap("GDNDescription")
     private String GDNDescription;
 
-    @NameInMap("GDNId")
+    @com.aliyun.core.annotation.NameInMap("GDNId")
     private String GDNId;
 
-    @NameInMap("GDNStatus")
+    @com.aliyun.core.annotation.NameInMap("GDNStatus")
     private String GDNStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private DescribeGlobalDatabaseNetworkResponseBody(Builder builder) {
@@ -265,13 +264,13 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
     } 
 
     public static class Connections extends TeaModel {
-        @NameInMap("ConnectionString")
+        @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
 
-        @NameInMap("NetType")
+        @com.aliyun.core.annotation.NameInMap("NetType")
         private String netType;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
         private Connections(Builder builder) {
@@ -346,31 +345,31 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
 
     }
     public static class DBNodes extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DBNodeClass")
+        @com.aliyun.core.annotation.NameInMap("DBNodeClass")
         private String DBNodeClass;
 
-        @NameInMap("DBNodeId")
+        @com.aliyun.core.annotation.NameInMap("DBNodeId")
         private String DBNodeId;
 
-        @NameInMap("DBNodeRole")
+        @com.aliyun.core.annotation.NameInMap("DBNodeRole")
         private String DBNodeRole;
 
-        @NameInMap("DBNodeStatus")
+        @com.aliyun.core.annotation.NameInMap("DBNodeStatus")
         private String DBNodeStatus;
 
-        @NameInMap("FailoverPriority")
+        @com.aliyun.core.annotation.NameInMap("FailoverPriority")
         private Integer failoverPriority;
 
-        @NameInMap("MaxConnections")
+        @com.aliyun.core.annotation.NameInMap("MaxConnections")
         private Integer maxConnections;
 
-        @NameInMap("MaxIOPS")
+        @com.aliyun.core.annotation.NameInMap("MaxIOPS")
         private Integer maxIOPS;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private DBNodes(Builder builder) {
@@ -566,49 +565,49 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
 
     }
     public static class DBClusters extends TeaModel {
-        @NameInMap("DBClusterDescription")
+        @com.aliyun.core.annotation.NameInMap("DBClusterDescription")
         private String DBClusterDescription;
 
-        @NameInMap("DBClusterId")
+        @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
 
-        @NameInMap("DBClusterStatus")
+        @com.aliyun.core.annotation.NameInMap("DBClusterStatus")
         private String DBClusterStatus;
 
-        @NameInMap("DBNodeClass")
+        @com.aliyun.core.annotation.NameInMap("DBNodeClass")
         private String DBNodeClass;
 
-        @NameInMap("DBNodes")
+        @com.aliyun.core.annotation.NameInMap("DBNodes")
         private java.util.List < DBNodes> DBNodes;
 
-        @NameInMap("DBType")
+        @com.aliyun.core.annotation.NameInMap("DBType")
         private String DBType;
 
-        @NameInMap("DBVersion")
+        @com.aliyun.core.annotation.NameInMap("DBVersion")
         private String DBVersion;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("Expired")
+        @com.aliyun.core.annotation.NameInMap("Expired")
         private String expired;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ReplicaLag")
+        @com.aliyun.core.annotation.NameInMap("ReplicaLag")
         private String replicaLag;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("ServerlessType")
+        @com.aliyun.core.annotation.NameInMap("ServerlessType")
         private String serverlessType;
 
-        @NameInMap("StorageUsed")
+        @com.aliyun.core.annotation.NameInMap("StorageUsed")
         private String storageUsed;
 
         private DBClusters(Builder builder) {

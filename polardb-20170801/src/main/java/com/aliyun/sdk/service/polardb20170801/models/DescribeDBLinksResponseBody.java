@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBLinksResponseBody</p>
  */
 public class DescribeDBLinksResponseBody extends TeaModel {
-    @NameInMap("DBInstanceName")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceName")
     private String DBInstanceName;
 
-    @NameInMap("DBLinkInfos")
+    @com.aliyun.core.annotation.NameInMap("DBLinkInfos")
     private java.util.List < DBLinkInfos> DBLinkInfos;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBLinksResponseBody(Builder builder) {
@@ -92,22 +91,22 @@ public class DescribeDBLinksResponseBody extends TeaModel {
     } 
 
     public static class DBLinkInfos extends TeaModel {
-        @NameInMap("DBInstanceName")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceName")
         private String DBInstanceName;
 
-        @NameInMap("DBLinkName")
+        @com.aliyun.core.annotation.NameInMap("DBLinkName")
         private String DBLinkName;
 
-        @NameInMap("SourceDBName")
+        @com.aliyun.core.annotation.NameInMap("SourceDBName")
         private String sourceDBName;
 
-        @NameInMap("TargetAccount")
+        @com.aliyun.core.annotation.NameInMap("TargetAccount")
         private String targetAccount;
 
-        @NameInMap("TargetDBInstanceName")
+        @com.aliyun.core.annotation.NameInMap("TargetDBInstanceName")
         private String targetDBInstanceName;
 
-        @NameInMap("TargetDBName")
+        @com.aliyun.core.annotation.NameInMap("TargetDBName")
         private String targetDBName;
 
         private DBLinkInfos(Builder builder) {

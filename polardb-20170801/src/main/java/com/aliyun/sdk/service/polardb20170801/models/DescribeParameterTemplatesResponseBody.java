@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeParameterTemplatesResponseBody</p>
  */
 public class DescribeParameterTemplatesResponseBody extends TeaModel {
-    @NameInMap("DBType")
+    @com.aliyun.core.annotation.NameInMap("DBType")
     private String DBType;
 
-    @NameInMap("DBVersion")
+    @com.aliyun.core.annotation.NameInMap("DBVersion")
     private String DBVersion;
 
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @NameInMap("ParameterCount")
+    @com.aliyun.core.annotation.NameInMap("ParameterCount")
     private String parameterCount;
 
-    @NameInMap("Parameters")
+    @com.aliyun.core.annotation.NameInMap("Parameters")
     private Parameters parameters;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeParameterTemplatesResponseBody(Builder builder) {
@@ -152,28 +151,28 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
     } 
 
     public static class TemplateRecord extends TeaModel {
-        @NameInMap("CheckingCode")
+        @com.aliyun.core.annotation.NameInMap("CheckingCode")
         private String checkingCode;
 
-        @NameInMap("ForceModify")
+        @com.aliyun.core.annotation.NameInMap("ForceModify")
         private String forceModify;
 
-        @NameInMap("ForceRestart")
+        @com.aliyun.core.annotation.NameInMap("ForceRestart")
         private String forceRestart;
 
-        @NameInMap("IsNodeAvailable")
+        @com.aliyun.core.annotation.NameInMap("IsNodeAvailable")
         private String isNodeAvailable;
 
-        @NameInMap("ParamRelyRule")
+        @com.aliyun.core.annotation.NameInMap("ParamRelyRule")
         private String paramRelyRule;
 
-        @NameInMap("ParameterDescription")
+        @com.aliyun.core.annotation.NameInMap("ParameterDescription")
         private String parameterDescription;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
-        @NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
         private String parameterValue;
 
         private TemplateRecord(Builder builder) {
@@ -345,7 +344,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
 
     }
     public static class Parameters extends TeaModel {
-        @NameInMap("TemplateRecord")
+        @com.aliyun.core.annotation.NameInMap("TemplateRecord")
         private java.util.List < TemplateRecord> templateRecord;
 
         private Parameters(Builder builder) {

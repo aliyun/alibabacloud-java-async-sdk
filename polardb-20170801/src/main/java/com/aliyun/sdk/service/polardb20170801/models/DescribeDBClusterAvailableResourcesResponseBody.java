@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBClusterAvailableResourcesResponseBody</p>
  */
 public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
-    @NameInMap("AvailableZones")
+    @com.aliyun.core.annotation.NameInMap("AvailableZones")
     private java.util.List < AvailableZones> availableZones;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBClusterAvailableResourcesResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
     } 
 
     public static class AvailableResources extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("DBNodeClass")
+        @com.aliyun.core.annotation.NameInMap("DBNodeClass")
         private String DBNodeClass;
 
         private AvailableResources(Builder builder) {
@@ -143,10 +142,10 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
 
     }
     public static class SupportedEngines extends TeaModel {
-        @NameInMap("AvailableResources")
+        @com.aliyun.core.annotation.NameInMap("AvailableResources")
         private java.util.List < AvailableResources> availableResources;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
         private SupportedEngines(Builder builder) {
@@ -204,13 +203,13 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
 
     }
     public static class AvailableZones extends TeaModel {
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SupportedEngines")
+        @com.aliyun.core.annotation.NameInMap("SupportedEngines")
         private java.util.List < SupportedEngines> supportedEngines;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private AvailableZones(Builder builder) {

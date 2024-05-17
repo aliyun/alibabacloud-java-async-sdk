@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBClusterParametersResponseBody</p>
  */
 public class DescribeDBClusterParametersResponseBody extends TeaModel {
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("DBType")
+    @com.aliyun.core.annotation.NameInMap("DBType")
     private String DBType;
 
-    @NameInMap("DBVersion")
+    @com.aliyun.core.annotation.NameInMap("DBVersion")
     private String DBVersion;
 
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @NameInMap("ParameterNumbers")
+    @com.aliyun.core.annotation.NameInMap("ParameterNumbers")
     private String parameterNumbers;
 
-    @NameInMap("Parameters")
+    @com.aliyun.core.annotation.NameInMap("Parameters")
     private Parameters parameters;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RunningParameters")
+    @com.aliyun.core.annotation.NameInMap("RunningParameters")
     private RunningParameters runningParameters;
 
     private DescribeDBClusterParametersResponseBody(Builder builder) {
@@ -205,43 +204,43 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
     } 
 
     public static class ParametersParameters extends TeaModel {
-        @NameInMap("IsEqual")
+        @com.aliyun.core.annotation.NameInMap("IsEqual")
         private String isEqual;
 
-        @NameInMap("IsInstancePolarDBKey")
+        @com.aliyun.core.annotation.NameInMap("IsInstancePolarDBKey")
         private String isInstancePolarDBKey;
 
-        @NameInMap("IsInstanceRdsKey")
+        @com.aliyun.core.annotation.NameInMap("IsInstanceRdsKey")
         private String isInstanceRdsKey;
 
-        @NameInMap("IsPolarDBKey")
+        @com.aliyun.core.annotation.NameInMap("IsPolarDBKey")
         private String isPolarDBKey;
 
-        @NameInMap("IsRdsKey")
+        @com.aliyun.core.annotation.NameInMap("IsRdsKey")
         private String isRdsKey;
 
-        @NameInMap("distParameterDescription")
+        @com.aliyun.core.annotation.NameInMap("distParameterDescription")
         private String distParameterDescription;
 
-        @NameInMap("distParameterName")
+        @com.aliyun.core.annotation.NameInMap("distParameterName")
         private String distParameterName;
 
-        @NameInMap("distParameterOptional")
+        @com.aliyun.core.annotation.NameInMap("distParameterOptional")
         private String distParameterOptional;
 
-        @NameInMap("distParameterValue")
+        @com.aliyun.core.annotation.NameInMap("distParameterValue")
         private String distParameterValue;
 
-        @NameInMap("rdsParameterDescription")
+        @com.aliyun.core.annotation.NameInMap("rdsParameterDescription")
         private String rdsParameterDescription;
 
-        @NameInMap("rdsParameterName")
+        @com.aliyun.core.annotation.NameInMap("rdsParameterName")
         private String rdsParameterName;
 
-        @NameInMap("rdsParameterOptional")
+        @com.aliyun.core.annotation.NameInMap("rdsParameterOptional")
         private String rdsParameterOptional;
 
-        @NameInMap("rdsParameterValue")
+        @com.aliyun.core.annotation.NameInMap("rdsParameterValue")
         private String rdsParameterValue;
 
         private ParametersParameters(Builder builder) {
@@ -486,7 +485,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
 
     }
     public static class Parameters extends TeaModel {
-        @NameInMap("Parameters")
+        @com.aliyun.core.annotation.NameInMap("Parameters")
         private java.util.List < ParametersParameters> parameters;
 
         private Parameters(Builder builder) {
@@ -527,40 +526,40 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
 
     }
     public static class Parameter extends TeaModel {
-        @NameInMap("CheckingCode")
+        @com.aliyun.core.annotation.NameInMap("CheckingCode")
         private String checkingCode;
 
-        @NameInMap("DataType")
+        @com.aliyun.core.annotation.NameInMap("DataType")
         private String dataType;
 
-        @NameInMap("DefaultParameterValue")
+        @com.aliyun.core.annotation.NameInMap("DefaultParameterValue")
         private String defaultParameterValue;
 
-        @NameInMap("Factor")
+        @com.aliyun.core.annotation.NameInMap("Factor")
         private String factor;
 
-        @NameInMap("ForceRestart")
+        @com.aliyun.core.annotation.NameInMap("ForceRestart")
         private Boolean forceRestart;
 
-        @NameInMap("IsModifiable")
+        @com.aliyun.core.annotation.NameInMap("IsModifiable")
         private Boolean isModifiable;
 
-        @NameInMap("IsNodeAvailable")
+        @com.aliyun.core.annotation.NameInMap("IsNodeAvailable")
         private String isNodeAvailable;
 
-        @NameInMap("ParamRelyRule")
+        @com.aliyun.core.annotation.NameInMap("ParamRelyRule")
         private String paramRelyRule;
 
-        @NameInMap("ParameterDescription")
+        @com.aliyun.core.annotation.NameInMap("ParameterDescription")
         private String parameterDescription;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
-        @NameInMap("ParameterStatus")
+        @com.aliyun.core.annotation.NameInMap("ParameterStatus")
         private String parameterStatus;
 
-        @NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
         private String parameterValue;
 
         private Parameter(Builder builder) {
@@ -809,7 +808,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
 
     }
     public static class RunningParameters extends TeaModel {
-        @NameInMap("Parameter")
+        @com.aliyun.core.annotation.NameInMap("Parameter")
         private java.util.List < Parameter> parameter;
 
         private RunningParameters(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeParameterGroupsResponseBody</p>
  */
 public class DescribeParameterGroupsResponseBody extends TeaModel {
-    @NameInMap("ParameterGroups")
+    @com.aliyun.core.annotation.NameInMap("ParameterGroups")
     private java.util.List < ParameterGroups> parameterGroups;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeParameterGroupsResponseBody(Builder builder) {
@@ -72,31 +71,31 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
     } 
 
     public static class ParameterGroups extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DBType")
+        @com.aliyun.core.annotation.NameInMap("DBType")
         private String DBType;
 
-        @NameInMap("DBVersion")
+        @com.aliyun.core.annotation.NameInMap("DBVersion")
         private String DBVersion;
 
-        @NameInMap("ForceRestart")
+        @com.aliyun.core.annotation.NameInMap("ForceRestart")
         private String forceRestart;
 
-        @NameInMap("ParameterCounts")
+        @com.aliyun.core.annotation.NameInMap("ParameterCounts")
         private Long parameterCounts;
 
-        @NameInMap("ParameterGroupDesc")
+        @com.aliyun.core.annotation.NameInMap("ParameterGroupDesc")
         private String parameterGroupDesc;
 
-        @NameInMap("ParameterGroupId")
+        @com.aliyun.core.annotation.NameInMap("ParameterGroupId")
         private String parameterGroupId;
 
-        @NameInMap("ParameterGroupName")
+        @com.aliyun.core.annotation.NameInMap("ParameterGroupName")
         private String parameterGroupName;
 
-        @NameInMap("ParameterGroupType")
+        @com.aliyun.core.annotation.NameInMap("ParameterGroupType")
         private String parameterGroupType;
 
         private ParameterGroups(Builder builder) {

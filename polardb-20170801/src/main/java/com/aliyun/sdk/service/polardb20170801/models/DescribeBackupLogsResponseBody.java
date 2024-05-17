@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBackupLogsResponseBody</p>
  */
 public class DescribeBackupLogsResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private String pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private String totalRecordCount;
 
     private DescribeBackupLogsResponseBody(Builder builder) {
@@ -132,28 +131,28 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
     } 
 
     public static class BackupLog extends TeaModel {
-        @NameInMap("BackupLogEndTime")
+        @com.aliyun.core.annotation.NameInMap("BackupLogEndTime")
         private String backupLogEndTime;
 
-        @NameInMap("BackupLogId")
+        @com.aliyun.core.annotation.NameInMap("BackupLogId")
         private String backupLogId;
 
-        @NameInMap("BackupLogName")
+        @com.aliyun.core.annotation.NameInMap("BackupLogName")
         private String backupLogName;
 
-        @NameInMap("BackupLogSize")
+        @com.aliyun.core.annotation.NameInMap("BackupLogSize")
         private String backupLogSize;
 
-        @NameInMap("BackupLogStartTime")
+        @com.aliyun.core.annotation.NameInMap("BackupLogStartTime")
         private String backupLogStartTime;
 
-        @NameInMap("DownloadLink")
+        @com.aliyun.core.annotation.NameInMap("DownloadLink")
         private String downloadLink;
 
-        @NameInMap("IntranetDownloadLink")
+        @com.aliyun.core.annotation.NameInMap("IntranetDownloadLink")
         private String intranetDownloadLink;
 
-        @NameInMap("LinkExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("LinkExpiredTime")
         private String linkExpiredTime;
 
         private BackupLog(Builder builder) {
@@ -313,7 +312,7 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("BackupLog")
+        @com.aliyun.core.annotation.NameInMap("BackupLog")
         private java.util.List < BackupLog> backupLog;
 
         private Items(Builder builder) {

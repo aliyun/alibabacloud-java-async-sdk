@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBNodesParametersResponseBody</p>
  */
 public class DescribeDBNodesParametersResponseBody extends TeaModel {
-    @NameInMap("DBNodeIds")
+    @com.aliyun.core.annotation.NameInMap("DBNodeIds")
     private java.util.List < DBNodeIds> DBNodeIds;
 
-    @NameInMap("DBType")
+    @com.aliyun.core.annotation.NameInMap("DBType")
     private String DBType;
 
-    @NameInMap("DBVersion")
+    @com.aliyun.core.annotation.NameInMap("DBVersion")
     private String DBVersion;
 
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBNodesParametersResponseBody(Builder builder) {
@@ -137,40 +136,40 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
     } 
 
     public static class RunningParameters extends TeaModel {
-        @NameInMap("CheckingCode")
+        @com.aliyun.core.annotation.NameInMap("CheckingCode")
         private String checkingCode;
 
-        @NameInMap("DataType")
+        @com.aliyun.core.annotation.NameInMap("DataType")
         private String dataType;
 
-        @NameInMap("DefaultParameterValue")
+        @com.aliyun.core.annotation.NameInMap("DefaultParameterValue")
         private String defaultParameterValue;
 
-        @NameInMap("Factor")
+        @com.aliyun.core.annotation.NameInMap("Factor")
         private String factor;
 
-        @NameInMap("ForceRestart")
+        @com.aliyun.core.annotation.NameInMap("ForceRestart")
         private Boolean forceRestart;
 
-        @NameInMap("IsModifiable")
+        @com.aliyun.core.annotation.NameInMap("IsModifiable")
         private Boolean isModifiable;
 
-        @NameInMap("IsNodeAvailable")
+        @com.aliyun.core.annotation.NameInMap("IsNodeAvailable")
         private String isNodeAvailable;
 
-        @NameInMap("ParamRelyRule")
+        @com.aliyun.core.annotation.NameInMap("ParamRelyRule")
         private String paramRelyRule;
 
-        @NameInMap("ParameterDescription")
+        @com.aliyun.core.annotation.NameInMap("ParameterDescription")
         private String parameterDescription;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
-        @NameInMap("ParameterStatus")
+        @com.aliyun.core.annotation.NameInMap("ParameterStatus")
         private String parameterStatus;
 
-        @NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
         private String parameterValue;
 
         private RunningParameters(Builder builder) {
@@ -419,10 +418,10 @@ public class DescribeDBNodesParametersResponseBody extends TeaModel {
 
     }
     public static class DBNodeIds extends TeaModel {
-        @NameInMap("DBNodeId")
+        @com.aliyun.core.annotation.NameInMap("DBNodeId")
         private String DBNodeId;
 
-        @NameInMap("RunningParameters")
+        @com.aliyun.core.annotation.NameInMap("RunningParameters")
         private java.util.List < RunningParameters> runningParameters;
 
         private DBNodeIds(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAutoRenewAttributeResponseBody</p>
  */
 public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeAutoRenewAttributeResponseBody(Builder builder) {
@@ -132,22 +131,22 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
     } 
 
     public static class AutoRenewAttribute extends TeaModel {
-        @NameInMap("AutoRenewEnabled")
+        @com.aliyun.core.annotation.NameInMap("AutoRenewEnabled")
         private Boolean autoRenewEnabled;
 
-        @NameInMap("DBClusterId")
+        @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Integer duration;
 
-        @NameInMap("PeriodUnit")
+        @com.aliyun.core.annotation.NameInMap("PeriodUnit")
         private String periodUnit;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RenewalStatus")
+        @com.aliyun.core.annotation.NameInMap("RenewalStatus")
         private String renewalStatus;
 
         private AutoRenewAttribute(Builder builder) {
@@ -286,7 +285,7 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("AutoRenewAttribute")
+        @com.aliyun.core.annotation.NameInMap("AutoRenewAttribute")
         private java.util.List < AutoRenewAttribute> autoRenewAttribute;
 
         private Items(Builder builder) {

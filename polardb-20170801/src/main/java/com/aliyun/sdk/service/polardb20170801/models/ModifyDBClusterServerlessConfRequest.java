@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,70 +11,82 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDBClusterServerlessConfRequest</p>
  */
 public class ModifyDBClusterServerlessConfRequest extends Request {
-    @Query
-    @NameInMap("AllowShutDown")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllowShutDown")
     private String allowShutDown;
 
-    @Query
-    @NameInMap("DBClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
-    @Query
-    @NameInMap("FromTimeService")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FromTimeService")
     private Boolean fromTimeService;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PlannedEndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlannedEndTime")
     private String plannedEndTime;
 
-    @Query
-    @NameInMap("PlannedStartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlannedStartTime")
     private String plannedStartTime;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ScaleApRoNumMax")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScaleApRoNumMax")
     private String scaleApRoNumMax;
 
-    @Query
-    @NameInMap("ScaleApRoNumMin")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScaleApRoNumMin")
     private String scaleApRoNumMin;
 
-    @Query
-    @NameInMap("ScaleMax")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScaleMax")
     private String scaleMax;
 
-    @Query
-    @NameInMap("ScaleMin")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScaleMin")
     private String scaleMin;
 
-    @Query
-    @NameInMap("ScaleRoNumMax")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScaleRoNumMax")
     private String scaleRoNumMax;
 
-    @Query
-    @NameInMap("ScaleRoNumMin")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScaleRoNumMin")
     private String scaleRoNumMin;
 
-    @Query
-    @NameInMap("SecondsUntilAutoPause")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecondsUntilAutoPause")
     private String secondsUntilAutoPause;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerlessRuleCpuEnlargeThreshold")
+    private String serverlessRuleCpuEnlargeThreshold;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerlessRuleCpuShrinkThreshold")
+    private String serverlessRuleCpuShrinkThreshold;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerlessRuleMode")
+    private String serverlessRuleMode;
 
     private ModifyDBClusterServerlessConfRequest(Builder builder) {
         super(builder);
@@ -95,6 +106,9 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         this.scaleRoNumMax = builder.scaleRoNumMax;
         this.scaleRoNumMin = builder.scaleRoNumMin;
         this.secondsUntilAutoPause = builder.secondsUntilAutoPause;
+        this.serverlessRuleCpuEnlargeThreshold = builder.serverlessRuleCpuEnlargeThreshold;
+        this.serverlessRuleCpuShrinkThreshold = builder.serverlessRuleCpuShrinkThreshold;
+        this.serverlessRuleMode = builder.serverlessRuleMode;
     }
 
     public static Builder builder() {
@@ -222,6 +236,27 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         return this.secondsUntilAutoPause;
     }
 
+    /**
+     * @return serverlessRuleCpuEnlargeThreshold
+     */
+    public String getServerlessRuleCpuEnlargeThreshold() {
+        return this.serverlessRuleCpuEnlargeThreshold;
+    }
+
+    /**
+     * @return serverlessRuleCpuShrinkThreshold
+     */
+    public String getServerlessRuleCpuShrinkThreshold() {
+        return this.serverlessRuleCpuShrinkThreshold;
+    }
+
+    /**
+     * @return serverlessRuleMode
+     */
+    public String getServerlessRuleMode() {
+        return this.serverlessRuleMode;
+    }
+
     public static final class Builder extends Request.Builder<ModifyDBClusterServerlessConfRequest, Builder> {
         private String allowShutDown; 
         private String DBClusterId; 
@@ -239,6 +274,9 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         private String scaleRoNumMax; 
         private String scaleRoNumMin; 
         private String secondsUntilAutoPause; 
+        private String serverlessRuleCpuEnlargeThreshold; 
+        private String serverlessRuleCpuShrinkThreshold; 
+        private String serverlessRuleMode; 
 
         private Builder() {
             super();
@@ -262,6 +300,9 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
             this.scaleRoNumMax = request.scaleRoNumMax;
             this.scaleRoNumMin = request.scaleRoNumMin;
             this.secondsUntilAutoPause = request.secondsUntilAutoPause;
+            this.serverlessRuleCpuEnlargeThreshold = request.serverlessRuleCpuEnlargeThreshold;
+            this.serverlessRuleCpuShrinkThreshold = request.serverlessRuleCpuShrinkThreshold;
+            this.serverlessRuleMode = request.serverlessRuleMode;
         } 
 
         /**
@@ -420,6 +461,33 @@ public class ModifyDBClusterServerlessConfRequest extends Request {
         public Builder secondsUntilAutoPause(String secondsUntilAutoPause) {
             this.putQueryParameter("SecondsUntilAutoPause", secondsUntilAutoPause);
             this.secondsUntilAutoPause = secondsUntilAutoPause;
+            return this;
+        }
+
+        /**
+         * ServerlessRuleCpuEnlargeThreshold.
+         */
+        public Builder serverlessRuleCpuEnlargeThreshold(String serverlessRuleCpuEnlargeThreshold) {
+            this.putQueryParameter("ServerlessRuleCpuEnlargeThreshold", serverlessRuleCpuEnlargeThreshold);
+            this.serverlessRuleCpuEnlargeThreshold = serverlessRuleCpuEnlargeThreshold;
+            return this;
+        }
+
+        /**
+         * ServerlessRuleCpuShrinkThreshold.
+         */
+        public Builder serverlessRuleCpuShrinkThreshold(String serverlessRuleCpuShrinkThreshold) {
+            this.putQueryParameter("ServerlessRuleCpuShrinkThreshold", serverlessRuleCpuShrinkThreshold);
+            this.serverlessRuleCpuShrinkThreshold = serverlessRuleCpuShrinkThreshold;
+            return this;
+        }
+
+        /**
+         * ServerlessRuleMode.
+         */
+        public Builder serverlessRuleMode(String serverlessRuleMode) {
+            this.putQueryParameter("ServerlessRuleMode", serverlessRuleMode);
+            this.serverlessRuleMode = serverlessRuleMode;
             return this;
         }
 

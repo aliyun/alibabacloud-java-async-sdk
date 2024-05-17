@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBClusterTDEResponseBody</p>
  */
 public class DescribeDBClusterTDEResponseBody extends TeaModel {
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("EncryptNewTables")
+    @com.aliyun.core.annotation.NameInMap("EncryptNewTables")
     private String encryptNewTables;
 
-    @NameInMap("EncryptionKey")
+    @com.aliyun.core.annotation.NameInMap("EncryptionKey")
     private String encryptionKey;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TDERegion")
+    @com.aliyun.core.annotation.NameInMap("TDERegion")
     private String TDERegion;
 
-    @NameInMap("TDEStatus")
+    @com.aliyun.core.annotation.NameInMap("TDEStatus")
     private String TDEStatus;
 
     private DescribeDBClusterTDEResponseBody(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSlowLogRecordsResponseBody</p>
  */
 public class DescribeSlowLogRecordsResponseBody extends TeaModel {
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeSlowLogRecordsResponseBody(Builder builder) {
@@ -172,34 +171,34 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     } 
 
     public static class SQLSlowRecord extends TeaModel {
-        @NameInMap("DBName")
+        @com.aliyun.core.annotation.NameInMap("DBName")
         private String DBName;
 
-        @NameInMap("DBNodeId")
+        @com.aliyun.core.annotation.NameInMap("DBNodeId")
         private String DBNodeId;
 
-        @NameInMap("ExecutionStartTime")
+        @com.aliyun.core.annotation.NameInMap("ExecutionStartTime")
         private String executionStartTime;
 
-        @NameInMap("HostAddress")
+        @com.aliyun.core.annotation.NameInMap("HostAddress")
         private String hostAddress;
 
-        @NameInMap("LockTimes")
+        @com.aliyun.core.annotation.NameInMap("LockTimes")
         private Long lockTimes;
 
-        @NameInMap("ParseRowCounts")
+        @com.aliyun.core.annotation.NameInMap("ParseRowCounts")
         private Long parseRowCounts;
 
-        @NameInMap("QueryTimeMS")
+        @com.aliyun.core.annotation.NameInMap("QueryTimeMS")
         private Long queryTimeMS;
 
-        @NameInMap("QueryTimes")
+        @com.aliyun.core.annotation.NameInMap("QueryTimes")
         private Long queryTimes;
 
-        @NameInMap("ReturnRowCounts")
+        @com.aliyun.core.annotation.NameInMap("ReturnRowCounts")
         private Long returnRowCounts;
 
-        @NameInMap("SQLText")
+        @com.aliyun.core.annotation.NameInMap("SQLText")
         private String SQLText;
 
         private SQLSlowRecord(Builder builder) {
@@ -393,7 +392,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("SQLSlowRecord")
+        @com.aliyun.core.annotation.NameInMap("SQLSlowRecord")
         private java.util.List < SQLSlowRecord> SQLSlowRecord;
 
         private Items(Builder builder) {

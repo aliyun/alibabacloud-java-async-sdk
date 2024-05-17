@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSlowLogsResponseBody</p>
  */
 public class DescribeSlowLogsResponseBody extends TeaModel {
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeSlowLogsResponseBody(Builder builder) {
@@ -212,46 +211,46 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
     } 
 
     public static class SQLSlowLog extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DBName")
+        @com.aliyun.core.annotation.NameInMap("DBName")
         private String DBName;
 
-        @NameInMap("DBNodeId")
+        @com.aliyun.core.annotation.NameInMap("DBNodeId")
         private String DBNodeId;
 
-        @NameInMap("MaxExecutionTime")
+        @com.aliyun.core.annotation.NameInMap("MaxExecutionTime")
         private Long maxExecutionTime;
 
-        @NameInMap("MaxLockTime")
+        @com.aliyun.core.annotation.NameInMap("MaxLockTime")
         private Long maxLockTime;
 
-        @NameInMap("ParseMaxRowCount")
+        @com.aliyun.core.annotation.NameInMap("ParseMaxRowCount")
         private Long parseMaxRowCount;
 
-        @NameInMap("ParseTotalRowCounts")
+        @com.aliyun.core.annotation.NameInMap("ParseTotalRowCounts")
         private Long parseTotalRowCounts;
 
-        @NameInMap("ReturnMaxRowCount")
+        @com.aliyun.core.annotation.NameInMap("ReturnMaxRowCount")
         private Long returnMaxRowCount;
 
-        @NameInMap("ReturnTotalRowCounts")
+        @com.aliyun.core.annotation.NameInMap("ReturnTotalRowCounts")
         private Long returnTotalRowCounts;
 
-        @NameInMap("SQLHASH")
+        @com.aliyun.core.annotation.NameInMap("SQLHASH")
         private String SQLHASH;
 
-        @NameInMap("SQLText")
+        @com.aliyun.core.annotation.NameInMap("SQLText")
         private String SQLText;
 
-        @NameInMap("TotalExecutionCounts")
+        @com.aliyun.core.annotation.NameInMap("TotalExecutionCounts")
         private Long totalExecutionCounts;
 
-        @NameInMap("TotalExecutionTimes")
+        @com.aliyun.core.annotation.NameInMap("TotalExecutionTimes")
         private Long totalExecutionTimes;
 
-        @NameInMap("TotalLockTimes")
+        @com.aliyun.core.annotation.NameInMap("TotalLockTimes")
         private Long totalLockTimes;
 
         private SQLSlowLog(Builder builder) {
@@ -513,7 +512,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("SQLSlowLog")
+        @com.aliyun.core.annotation.NameInMap("SQLSlowLog")
         private java.util.List < SQLSlowLog> SQLSlowLog;
 
         private Items(Builder builder) {

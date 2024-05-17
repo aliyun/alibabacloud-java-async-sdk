@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBClusterSSLResponseBody</p>
  */
 public class DescribeDBClusterSSLResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SSLAutoRotate")
+    @com.aliyun.core.annotation.NameInMap("SSLAutoRotate")
     private String SSLAutoRotate;
 
     private DescribeDBClusterSSLResponseBody(Builder builder) {
@@ -98,16 +97,16 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("DBEndpointId")
+        @com.aliyun.core.annotation.NameInMap("DBEndpointId")
         private String DBEndpointId;
 
-        @NameInMap("SSLConnectionString")
+        @com.aliyun.core.annotation.NameInMap("SSLConnectionString")
         private String SSLConnectionString;
 
-        @NameInMap("SSLEnabled")
+        @com.aliyun.core.annotation.NameInMap("SSLEnabled")
         private String SSLEnabled;
 
-        @NameInMap("SSLExpireTime")
+        @com.aliyun.core.annotation.NameInMap("SSLExpireTime")
         private String SSLExpireTime;
 
         private Items(Builder builder) {

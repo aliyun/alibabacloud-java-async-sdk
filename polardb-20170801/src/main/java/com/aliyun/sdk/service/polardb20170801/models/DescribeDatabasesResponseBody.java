@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDatabasesResponseBody</p>
  */
 public class DescribeDatabasesResponseBody extends TeaModel {
-    @NameInMap("Databases")
+    @com.aliyun.core.annotation.NameInMap("Databases")
     private Databases databases;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDatabasesResponseBody(Builder builder) {
@@ -112,16 +111,16 @@ public class DescribeDatabasesResponseBody extends TeaModel {
     } 
 
     public static class Account extends TeaModel {
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("AccountPrivilege")
+        @com.aliyun.core.annotation.NameInMap("AccountPrivilege")
         private String accountPrivilege;
 
-        @NameInMap("AccountStatus")
+        @com.aliyun.core.annotation.NameInMap("AccountStatus")
         private String accountStatus;
 
-        @NameInMap("PrivilegeStatus")
+        @com.aliyun.core.annotation.NameInMap("PrivilegeStatus")
         private String privilegeStatus;
 
         private Account(Builder builder) {
@@ -233,7 +232,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
 
     }
     public static class Accounts extends TeaModel {
-        @NameInMap("Account")
+        @com.aliyun.core.annotation.NameInMap("Account")
         private java.util.List < Account> account;
 
         private Accounts(Builder builder) {
@@ -274,25 +273,25 @@ public class DescribeDatabasesResponseBody extends TeaModel {
 
     }
     public static class Database extends TeaModel {
-        @NameInMap("Accounts")
+        @com.aliyun.core.annotation.NameInMap("Accounts")
         private Accounts accounts;
 
-        @NameInMap("CharacterSetName")
+        @com.aliyun.core.annotation.NameInMap("CharacterSetName")
         private String characterSetName;
 
-        @NameInMap("DBDescription")
+        @com.aliyun.core.annotation.NameInMap("DBDescription")
         private String DBDescription;
 
-        @NameInMap("DBName")
+        @com.aliyun.core.annotation.NameInMap("DBName")
         private String DBName;
 
-        @NameInMap("DBStatus")
+        @com.aliyun.core.annotation.NameInMap("DBStatus")
         private String DBStatus;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("MasterID")
+        @com.aliyun.core.annotation.NameInMap("MasterID")
         private String masterID;
 
         private Database(Builder builder) {
@@ -448,7 +447,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
 
     }
     public static class Databases extends TeaModel {
-        @NameInMap("Database")
+        @com.aliyun.core.annotation.NameInMap("Database")
         private java.util.List < Database> database;
 
         private Databases(Builder builder) {

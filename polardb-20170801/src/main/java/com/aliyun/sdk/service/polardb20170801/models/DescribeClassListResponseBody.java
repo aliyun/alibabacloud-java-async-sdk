@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeClassListResponseBody</p>
  */
 public class DescribeClassListResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeClassListResponseBody(Builder builder) {
@@ -92,49 +91,49 @@ public class DescribeClassListResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("ClassCode")
+        @com.aliyun.core.annotation.NameInMap("ClassCode")
         private String classCode;
 
-        @NameInMap("ClassGroup")
+        @com.aliyun.core.annotation.NameInMap("ClassGroup")
         private String classGroup;
 
-        @NameInMap("ClassTypeLevel")
+        @com.aliyun.core.annotation.NameInMap("ClassTypeLevel")
         private String classTypeLevel;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private String cpu;
 
-        @NameInMap("MaxConnections")
+        @com.aliyun.core.annotation.NameInMap("MaxConnections")
         private String maxConnections;
 
-        @NameInMap("MaxIOPS")
+        @com.aliyun.core.annotation.NameInMap("MaxIOPS")
         private String maxIOPS;
 
-        @NameInMap("MaxStorageCapacity")
+        @com.aliyun.core.annotation.NameInMap("MaxStorageCapacity")
         private String maxStorageCapacity;
 
-        @NameInMap("MemoryClass")
+        @com.aliyun.core.annotation.NameInMap("MemoryClass")
         private String memoryClass;
 
-        @NameInMap("Pl1MaxIOPS")
+        @com.aliyun.core.annotation.NameInMap("Pl1MaxIOPS")
         private String pl1MaxIOPS;
 
-        @NameInMap("Pl2MaxIOPS")
+        @com.aliyun.core.annotation.NameInMap("Pl2MaxIOPS")
         private String pl2MaxIOPS;
 
-        @NameInMap("Pl3MaxIOPS")
+        @com.aliyun.core.annotation.NameInMap("Pl3MaxIOPS")
         private String pl3MaxIOPS;
 
-        @NameInMap("Psl4MaxIOPS")
+        @com.aliyun.core.annotation.NameInMap("Psl4MaxIOPS")
         private String psl4MaxIOPS;
 
-        @NameInMap("Psl5MaxIOPS")
+        @com.aliyun.core.annotation.NameInMap("Psl5MaxIOPS")
         private String psl5MaxIOPS;
 
-        @NameInMap("ReferenceExtPrice")
+        @com.aliyun.core.annotation.NameInMap("ReferenceExtPrice")
         private String referenceExtPrice;
 
-        @NameInMap("ReferencePrice")
+        @com.aliyun.core.annotation.NameInMap("ReferencePrice")
         private String referencePrice;
 
         private Items(Builder builder) {

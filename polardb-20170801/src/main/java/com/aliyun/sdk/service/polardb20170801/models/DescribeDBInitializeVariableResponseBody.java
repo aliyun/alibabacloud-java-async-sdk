@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBInitializeVariableResponseBody</p>
  */
 public class DescribeDBInitializeVariableResponseBody extends TeaModel {
-    @NameInMap("DBType")
+    @com.aliyun.core.annotation.NameInMap("DBType")
     private String DBType;
 
-    @NameInMap("DBVersion")
+    @com.aliyun.core.annotation.NameInMap("DBVersion")
     private String DBVersion;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Variables")
+    @com.aliyun.core.annotation.NameInMap("Variables")
     private Variables variables;
 
     private DescribeDBInitializeVariableResponseBody(Builder builder) {
@@ -116,13 +115,13 @@ public class DescribeDBInitializeVariableResponseBody extends TeaModel {
     } 
 
     public static class Variable extends TeaModel {
-        @NameInMap("Charset")
+        @com.aliyun.core.annotation.NameInMap("Charset")
         private String charset;
 
-        @NameInMap("Collate")
+        @com.aliyun.core.annotation.NameInMap("Collate")
         private String collate;
 
-        @NameInMap("Ctype")
+        @com.aliyun.core.annotation.NameInMap("Ctype")
         private String ctype;
 
         private Variable(Builder builder) {
@@ -212,7 +211,7 @@ public class DescribeDBInitializeVariableResponseBody extends TeaModel {
 
     }
     public static class Variables extends TeaModel {
-        @NameInMap("Variable")
+        @com.aliyun.core.annotation.NameInMap("Variable")
         private java.util.List < Variable> variable;
 
         private Variables(Builder builder) {

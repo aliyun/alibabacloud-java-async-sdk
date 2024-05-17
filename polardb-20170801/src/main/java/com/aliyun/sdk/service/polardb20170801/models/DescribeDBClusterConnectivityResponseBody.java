@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBClusterConnectivityResponseBody</p>
  */
 public class DescribeDBClusterConnectivityResponseBody extends TeaModel {
-    @NameInMap("ConnCheckErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ConnCheckErrorCode")
     private String connCheckErrorCode;
 
-    @NameInMap("ConnCheckErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ConnCheckErrorMessage")
     private String connCheckErrorMessage;
 
-    @NameInMap("ConnCheckResult")
+    @com.aliyun.core.annotation.NameInMap("ConnCheckResult")
     private String connCheckResult;
 
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBClusterConnectivityResponseBody(Builder builder) {

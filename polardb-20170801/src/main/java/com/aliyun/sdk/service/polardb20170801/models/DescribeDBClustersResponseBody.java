@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBClustersResponseBody</p>
  */
 public class DescribeDBClustersResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeDBClustersResponseBody(Builder builder) {
@@ -132,28 +131,28 @@ public class DescribeDBClustersResponseBody extends TeaModel {
     } 
 
     public static class DBNode extends TeaModel {
-        @NameInMap("DBNodeClass")
+        @com.aliyun.core.annotation.NameInMap("DBNodeClass")
         private String DBNodeClass;
 
-        @NameInMap("DBNodeId")
+        @com.aliyun.core.annotation.NameInMap("DBNodeId")
         private String DBNodeId;
 
-        @NameInMap("DBNodeRole")
+        @com.aliyun.core.annotation.NameInMap("DBNodeRole")
         private String DBNodeRole;
 
-        @NameInMap("HotReplicaMode")
+        @com.aliyun.core.annotation.NameInMap("HotReplicaMode")
         private String hotReplicaMode;
 
-        @NameInMap("ImciSwitch")
+        @com.aliyun.core.annotation.NameInMap("ImciSwitch")
         private String imciSwitch;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Serverless")
+        @com.aliyun.core.annotation.NameInMap("Serverless")
         private String serverless;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private DBNode(Builder builder) {
@@ -329,7 +328,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
 
     }
     public static class DBNodes extends TeaModel {
-        @NameInMap("DBNode")
+        @com.aliyun.core.annotation.NameInMap("DBNode")
         private java.util.List < DBNode> DBNode;
 
         private DBNodes(Builder builder) {
@@ -370,10 +369,10 @@ public class DescribeDBClustersResponseBody extends TeaModel {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -431,7 +430,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -472,103 +471,103 @@ public class DescribeDBClustersResponseBody extends TeaModel {
 
     }
     public static class DBCluster extends TeaModel {
-        @NameInMap("AiType")
+        @com.aliyun.core.annotation.NameInMap("AiType")
         private String aiType;
 
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("CpuCores")
+        @com.aliyun.core.annotation.NameInMap("CpuCores")
         private String cpuCores;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DBClusterDescription")
+        @com.aliyun.core.annotation.NameInMap("DBClusterDescription")
         private String DBClusterDescription;
 
-        @NameInMap("DBClusterId")
+        @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
 
-        @NameInMap("DBClusterNetworkType")
+        @com.aliyun.core.annotation.NameInMap("DBClusterNetworkType")
         private String DBClusterNetworkType;
 
-        @NameInMap("DBClusterStatus")
+        @com.aliyun.core.annotation.NameInMap("DBClusterStatus")
         private String DBClusterStatus;
 
-        @NameInMap("DBNodeClass")
+        @com.aliyun.core.annotation.NameInMap("DBNodeClass")
         private String DBNodeClass;
 
-        @NameInMap("DBNodeNumber")
+        @com.aliyun.core.annotation.NameInMap("DBNodeNumber")
         private Integer DBNodeNumber;
 
-        @NameInMap("DBNodes")
+        @com.aliyun.core.annotation.NameInMap("DBNodes")
         private DBNodes DBNodes;
 
-        @NameInMap("DBType")
+        @com.aliyun.core.annotation.NameInMap("DBType")
         private String DBType;
 
-        @NameInMap("DBVersion")
+        @com.aliyun.core.annotation.NameInMap("DBVersion")
         private String DBVersion;
 
-        @NameInMap("DeletionLock")
+        @com.aliyun.core.annotation.NameInMap("DeletionLock")
         private Integer deletionLock;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("Expired")
+        @com.aliyun.core.annotation.NameInMap("Expired")
         private String expired;
 
-        @NameInMap("LockMode")
+        @com.aliyun.core.annotation.NameInMap("LockMode")
         private String lockMode;
 
-        @NameInMap("MemorySize")
+        @com.aliyun.core.annotation.NameInMap("MemorySize")
         private String memorySize;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RemoteMemorySize")
+        @com.aliyun.core.annotation.NameInMap("RemoteMemorySize")
         private String remoteMemorySize;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ServerlessType")
+        @com.aliyun.core.annotation.NameInMap("ServerlessType")
         private String serverlessType;
 
-        @NameInMap("StoragePayType")
+        @com.aliyun.core.annotation.NameInMap("StoragePayType")
         private String storagePayType;
 
-        @NameInMap("StorageSpace")
+        @com.aliyun.core.annotation.NameInMap("StorageSpace")
         private Long storageSpace;
 
-        @NameInMap("StorageUsed")
+        @com.aliyun.core.annotation.NameInMap("StorageUsed")
         private Long storageUsed;
 
-        @NameInMap("StrictConsistency")
+        @com.aliyun.core.annotation.NameInMap("StrictConsistency")
         private String strictConsistency;
 
-        @NameInMap("SubCategory")
+        @com.aliyun.core.annotation.NameInMap("SubCategory")
         private String subCategory;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VswitchId")
+        @com.aliyun.core.annotation.NameInMap("VswitchId")
         private String vswitchId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private DBCluster(Builder builder) {
@@ -1195,7 +1194,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("DBCluster")
+        @com.aliyun.core.annotation.NameInMap("DBCluster")
         private java.util.List < DBCluster> DBCluster;
 
         private Items(Builder builder) {

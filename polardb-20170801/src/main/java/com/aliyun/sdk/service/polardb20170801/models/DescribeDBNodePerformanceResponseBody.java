@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBNodePerformanceResponseBody</p>
  */
 public class DescribeDBNodePerformanceResponseBody extends TeaModel {
-    @NameInMap("DBNodeId")
+    @com.aliyun.core.annotation.NameInMap("DBNodeId")
     private String DBNodeId;
 
-    @NameInMap("DBType")
+    @com.aliyun.core.annotation.NameInMap("DBType")
     private String DBType;
 
-    @NameInMap("DBVersion")
+    @com.aliyun.core.annotation.NameInMap("DBVersion")
     private String DBVersion;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("PerformanceKeys")
+    @com.aliyun.core.annotation.NameInMap("PerformanceKeys")
     private PerformanceKeys performanceKeys;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeDBNodePerformanceResponseBody(Builder builder) {
@@ -172,10 +171,10 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
     } 
 
     public static class PerformanceItemValue extends TeaModel {
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private PerformanceItemValue(Builder builder) {
@@ -233,7 +232,7 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
 
     }
     public static class Points extends TeaModel {
-        @NameInMap("PerformanceItemValue")
+        @com.aliyun.core.annotation.NameInMap("PerformanceItemValue")
         private java.util.List < PerformanceItemValue> performanceItemValue;
 
         private Points(Builder builder) {
@@ -274,13 +273,13 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
 
     }
     public static class PerformanceItem extends TeaModel {
-        @NameInMap("Measurement")
+        @com.aliyun.core.annotation.NameInMap("Measurement")
         private String measurement;
 
-        @NameInMap("MetricName")
+        @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
 
-        @NameInMap("Points")
+        @com.aliyun.core.annotation.NameInMap("Points")
         private Points points;
 
         private PerformanceItem(Builder builder) {
@@ -355,7 +354,7 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
 
     }
     public static class PerformanceKeys extends TeaModel {
-        @NameInMap("PerformanceItem")
+        @com.aliyun.core.annotation.NameInMap("PerformanceItem")
         private java.util.List < PerformanceItem> performanceItem;
 
         private PerformanceKeys(Builder builder) {

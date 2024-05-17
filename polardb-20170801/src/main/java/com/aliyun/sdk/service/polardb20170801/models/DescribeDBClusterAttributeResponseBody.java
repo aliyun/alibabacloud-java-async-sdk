@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,172 +11,172 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBClusterAttributeResponseBody</p>
  */
 public class DescribeDBClusterAttributeResponseBody extends TeaModel {
-    @NameInMap("AiCreatingTime")
+    @com.aliyun.core.annotation.NameInMap("AiCreatingTime")
     private String aiCreatingTime;
 
-    @NameInMap("AiType")
+    @com.aliyun.core.annotation.NameInMap("AiType")
     private String aiType;
 
-    @NameInMap("Architecture")
+    @com.aliyun.core.annotation.NameInMap("Architecture")
     private String architecture;
 
-    @NameInMap("BlktagTotal")
+    @com.aliyun.core.annotation.NameInMap("BlktagTotal")
     private Long blktagTotal;
 
-    @NameInMap("BlktagUsed")
+    @com.aliyun.core.annotation.NameInMap("BlktagUsed")
     private Long blktagUsed;
 
-    @NameInMap("Category")
+    @com.aliyun.core.annotation.NameInMap("Category")
     private String category;
 
-    @NameInMap("CompressStorageMode")
+    @com.aliyun.core.annotation.NameInMap("CompressStorageMode")
     private String compressStorageMode;
 
-    @NameInMap("CompressStorageUsed")
+    @com.aliyun.core.annotation.NameInMap("CompressStorageUsed")
     private Long compressStorageUsed;
 
-    @NameInMap("CreationTime")
+    @com.aliyun.core.annotation.NameInMap("CreationTime")
     private String creationTime;
 
-    @NameInMap("DBClusterDescription")
+    @com.aliyun.core.annotation.NameInMap("DBClusterDescription")
     private String DBClusterDescription;
 
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("DBClusterNetworkType")
+    @com.aliyun.core.annotation.NameInMap("DBClusterNetworkType")
     private String DBClusterNetworkType;
 
-    @NameInMap("DBClusterStatus")
+    @com.aliyun.core.annotation.NameInMap("DBClusterStatus")
     private String DBClusterStatus;
 
-    @NameInMap("DBNodes")
+    @com.aliyun.core.annotation.NameInMap("DBNodes")
     private java.util.List < DBNodes> DBNodes;
 
-    @NameInMap("DBType")
+    @com.aliyun.core.annotation.NameInMap("DBType")
     private String DBType;
 
-    @NameInMap("DBVersion")
+    @com.aliyun.core.annotation.NameInMap("DBVersion")
     private String DBVersion;
 
-    @NameInMap("DBVersionStatus")
+    @com.aliyun.core.annotation.NameInMap("DBVersionStatus")
     private String DBVersionStatus;
 
-    @NameInMap("DataLevel1BackupChainSize")
+    @com.aliyun.core.annotation.NameInMap("DataLevel1BackupChainSize")
     private Long dataLevel1BackupChainSize;
 
-    @NameInMap("DataSyncMode")
+    @com.aliyun.core.annotation.NameInMap("DataSyncMode")
     private String dataSyncMode;
 
-    @NameInMap("DeletionLock")
+    @com.aliyun.core.annotation.NameInMap("DeletionLock")
     private Integer deletionLock;
 
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @NameInMap("ExpireTime")
+    @com.aliyun.core.annotation.NameInMap("ExpireTime")
     private String expireTime;
 
-    @NameInMap("Expired")
+    @com.aliyun.core.annotation.NameInMap("Expired")
     private String expired;
 
-    @NameInMap("HasCompleteStandbyRes")
+    @com.aliyun.core.annotation.NameInMap("HasCompleteStandbyRes")
     private Boolean hasCompleteStandbyRes;
 
-    @NameInMap("HotStandbyCluster")
+    @com.aliyun.core.annotation.NameInMap("HotStandbyCluster")
     private String hotStandbyCluster;
 
-    @NameInMap("InodeTotal")
+    @com.aliyun.core.annotation.NameInMap("InodeTotal")
     private Long inodeTotal;
 
-    @NameInMap("InodeUsed")
+    @com.aliyun.core.annotation.NameInMap("InodeUsed")
     private Long inodeUsed;
 
-    @NameInMap("IsLatestVersion")
+    @com.aliyun.core.annotation.NameInMap("IsLatestVersion")
     private Boolean isLatestVersion;
 
-    @NameInMap("IsProxyLatestVersion")
+    @com.aliyun.core.annotation.NameInMap("IsProxyLatestVersion")
     private Boolean isProxyLatestVersion;
 
-    @NameInMap("LockMode")
+    @com.aliyun.core.annotation.NameInMap("LockMode")
     private String lockMode;
 
-    @NameInMap("MaintainTime")
+    @com.aliyun.core.annotation.NameInMap("MaintainTime")
     private String maintainTime;
 
-    @NameInMap("PayType")
+    @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
 
-    @NameInMap("ProvisionedIops")
+    @com.aliyun.core.annotation.NameInMap("ProvisionedIops")
     private String provisionedIops;
 
-    @NameInMap("ProxyCpuCores")
+    @com.aliyun.core.annotation.NameInMap("ProxyCpuCores")
     private String proxyCpuCores;
 
-    @NameInMap("ProxyServerlessType")
+    @com.aliyun.core.annotation.NameInMap("ProxyServerlessType")
     private String proxyServerlessType;
 
-    @NameInMap("ProxyStandardCpuCores")
+    @com.aliyun.core.annotation.NameInMap("ProxyStandardCpuCores")
     private String proxyStandardCpuCores;
 
-    @NameInMap("ProxyStatus")
+    @com.aliyun.core.annotation.NameInMap("ProxyStatus")
     private String proxyStatus;
 
-    @NameInMap("ProxyType")
+    @com.aliyun.core.annotation.NameInMap("ProxyType")
     private String proxyType;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("SQLSize")
+    @com.aliyun.core.annotation.NameInMap("SQLSize")
     private Long SQLSize;
 
-    @NameInMap("ServerlessType")
+    @com.aliyun.core.annotation.NameInMap("ServerlessType")
     private String serverlessType;
 
-    @NameInMap("StandbyHAMode")
+    @com.aliyun.core.annotation.NameInMap("StandbyHAMode")
     private String standbyHAMode;
 
-    @NameInMap("StorageMax")
+    @com.aliyun.core.annotation.NameInMap("StorageMax")
     private Long storageMax;
 
-    @NameInMap("StoragePayType")
+    @com.aliyun.core.annotation.NameInMap("StoragePayType")
     private String storagePayType;
 
-    @NameInMap("StorageSpace")
+    @com.aliyun.core.annotation.NameInMap("StorageSpace")
     private Long storageSpace;
 
-    @NameInMap("StorageType")
+    @com.aliyun.core.annotation.NameInMap("StorageType")
     private String storageType;
 
-    @NameInMap("StorageUsed")
+    @com.aliyun.core.annotation.NameInMap("StorageUsed")
     private Long storageUsed;
 
-    @NameInMap("StrictConsistency")
+    @com.aliyun.core.annotation.NameInMap("StrictConsistency")
     private String strictConsistency;
 
-    @NameInMap("SubCategory")
+    @com.aliyun.core.annotation.NameInMap("SubCategory")
     private String subCategory;
 
-    @NameInMap("SupportInstantSwitchWithImci")
+    @com.aliyun.core.annotation.NameInMap("SupportInstantSwitchWithImci")
     private String supportInstantSwitchWithImci;
 
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List < Tags> tags;
 
-    @NameInMap("VPCId")
+    @com.aliyun.core.annotation.NameInMap("VPCId")
     private String VPCId;
 
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @NameInMap("ZoneIds")
+    @com.aliyun.core.annotation.NameInMap("ZoneIds")
     private String zoneIds;
 
     private DescribeDBClusterAttributeResponseBody(Builder builder) {
@@ -1232,65 +1231,65 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     } 
 
     public static class DBNodes extends TeaModel {
-        @NameInMap("AddedCpuCores")
+        @com.aliyun.core.annotation.NameInMap("AddedCpuCores")
         private String addedCpuCores;
 
-        @NameInMap("CpuCores")
+        @com.aliyun.core.annotation.NameInMap("CpuCores")
         private String cpuCores;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DBNodeClass")
+        @com.aliyun.core.annotation.NameInMap("DBNodeClass")
         private String DBNodeClass;
 
-        @NameInMap("DBNodeId")
+        @com.aliyun.core.annotation.NameInMap("DBNodeId")
         private String DBNodeId;
 
-        @NameInMap("DBNodeRole")
+        @com.aliyun.core.annotation.NameInMap("DBNodeRole")
         private String DBNodeRole;
 
-        @NameInMap("DBNodeStatus")
+        @com.aliyun.core.annotation.NameInMap("DBNodeStatus")
         private String DBNodeStatus;
 
-        @NameInMap("FailoverPriority")
+        @com.aliyun.core.annotation.NameInMap("FailoverPriority")
         private Integer failoverPriority;
 
-        @NameInMap("HotReplicaMode")
+        @com.aliyun.core.annotation.NameInMap("HotReplicaMode")
         private String hotReplicaMode;
 
-        @NameInMap("ImciSwitch")
+        @com.aliyun.core.annotation.NameInMap("ImciSwitch")
         private String imciSwitch;
 
-        @NameInMap("MasterId")
+        @com.aliyun.core.annotation.NameInMap("MasterId")
         private String masterId;
 
-        @NameInMap("MaxConnections")
+        @com.aliyun.core.annotation.NameInMap("MaxConnections")
         private Integer maxConnections;
 
-        @NameInMap("MaxIOPS")
+        @com.aliyun.core.annotation.NameInMap("MaxIOPS")
         private Integer maxIOPS;
 
-        @NameInMap("MemorySize")
+        @com.aliyun.core.annotation.NameInMap("MemorySize")
         private String memorySize;
 
-        @NameInMap("RemoteMemorySize")
+        @com.aliyun.core.annotation.NameInMap("RemoteMemorySize")
         private String remoteMemorySize;
 
-        @NameInMap("SccMode")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("SccMode")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String sccMode;
 
-        @NameInMap("ServerWeight")
+        @com.aliyun.core.annotation.NameInMap("ServerWeight")
         private String serverWeight;
 
-        @NameInMap("ServerlessType")
+        @com.aliyun.core.annotation.NameInMap("ServerlessType")
         private String serverlessType;
 
-        @NameInMap("SubCluster")
+        @com.aliyun.core.annotation.NameInMap("SubCluster")
         private String subCluster;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private DBNodes(Builder builder) {
@@ -1688,10 +1687,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {

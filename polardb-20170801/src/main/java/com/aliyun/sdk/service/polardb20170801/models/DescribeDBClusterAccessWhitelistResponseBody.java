@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBClusterAccessWhitelistResponseBody</p>
  */
 public class DescribeDBClusterAccessWhitelistResponseBody extends TeaModel {
-    @NameInMap("DBClusterSecurityGroups")
+    @com.aliyun.core.annotation.NameInMap("DBClusterSecurityGroups")
     private DBClusterSecurityGroups DBClusterSecurityGroups;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBClusterAccessWhitelistResponseBody(Builder builder) {
@@ -92,10 +91,10 @@ public class DescribeDBClusterAccessWhitelistResponseBody extends TeaModel {
     } 
 
     public static class DBClusterSecurityGroup extends TeaModel {
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("SecurityGroupName")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupName")
         private String securityGroupName;
 
         private DBClusterSecurityGroup(Builder builder) {
@@ -153,7 +152,7 @@ public class DescribeDBClusterAccessWhitelistResponseBody extends TeaModel {
 
     }
     public static class DBClusterSecurityGroups extends TeaModel {
-        @NameInMap("DBClusterSecurityGroup")
+        @com.aliyun.core.annotation.NameInMap("DBClusterSecurityGroup")
         private java.util.List < DBClusterSecurityGroup> DBClusterSecurityGroup;
 
         private DBClusterSecurityGroups(Builder builder) {
@@ -194,13 +193,13 @@ public class DescribeDBClusterAccessWhitelistResponseBody extends TeaModel {
 
     }
     public static class DBClusterIPArray extends TeaModel {
-        @NameInMap("DBClusterIPArrayAttribute")
+        @com.aliyun.core.annotation.NameInMap("DBClusterIPArrayAttribute")
         private String DBClusterIPArrayAttribute;
 
-        @NameInMap("DBClusterIPArrayName")
+        @com.aliyun.core.annotation.NameInMap("DBClusterIPArrayName")
         private String DBClusterIPArrayName;
 
-        @NameInMap("SecurityIps")
+        @com.aliyun.core.annotation.NameInMap("SecurityIps")
         private String securityIps;
 
         private DBClusterIPArray(Builder builder) {
@@ -293,7 +292,7 @@ public class DescribeDBClusterAccessWhitelistResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("DBClusterIPArray")
+        @com.aliyun.core.annotation.NameInMap("DBClusterIPArray")
         private java.util.List < DBClusterIPArray> DBClusterIPArray;
 
         private Items(Builder builder) {

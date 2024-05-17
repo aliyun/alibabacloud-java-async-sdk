@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeScheduleTasksResponseBody</p>
  */
 public class DescribeScheduleTasksResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeScheduleTasksResponseBody(Builder builder) {
@@ -115,40 +114,40 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
     } 
 
     public static class TimerInfos extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("DBClusterId")
+        @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
 
-        @NameInMap("DbClusterDescription")
+        @com.aliyun.core.annotation.NameInMap("DbClusterDescription")
         private String dbClusterDescription;
 
-        @NameInMap("DbClusterStatus")
+        @com.aliyun.core.annotation.NameInMap("DbClusterStatus")
         private String dbClusterStatus;
 
-        @NameInMap("OrderId")
+        @com.aliyun.core.annotation.NameInMap("OrderId")
         private String orderId;
 
-        @NameInMap("PlannedEndTime")
+        @com.aliyun.core.annotation.NameInMap("PlannedEndTime")
         private String plannedEndTime;
 
-        @NameInMap("PlannedStartTime")
+        @com.aliyun.core.annotation.NameInMap("PlannedStartTime")
         private String plannedStartTime;
 
-        @NameInMap("PlannedTime")
+        @com.aliyun.core.annotation.NameInMap("PlannedTime")
         private String plannedTime;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskCancel")
+        @com.aliyun.core.annotation.NameInMap("TaskCancel")
         private Boolean taskCancel;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
         private TimerInfos(Builder builder) {
@@ -383,16 +382,16 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TimerInfos")
+        @com.aliyun.core.annotation.NameInMap("TimerInfos")
         private java.util.List < TimerInfos> timerInfos;
 
-        @NameInMap("TotalRecordCount")
+        @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
         private Integer totalRecordCount;
 
         private Data(Builder builder) {

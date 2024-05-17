@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardb20170801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBClusterServerlessConfResponseBody</p>
  */
 public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
-    @NameInMap("AllowShutDown")
+    @com.aliyun.core.annotation.NameInMap("AllowShutDown")
     private String allowShutDown;
 
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ScaleApRoNumMax")
+    @com.aliyun.core.annotation.NameInMap("ScaleApRoNumMax")
     private String scaleApRoNumMax;
 
-    @NameInMap("ScaleApRoNumMin")
+    @com.aliyun.core.annotation.NameInMap("ScaleApRoNumMin")
     private String scaleApRoNumMin;
 
-    @NameInMap("ScaleMax")
+    @com.aliyun.core.annotation.NameInMap("ScaleMax")
     private String scaleMax;
 
-    @NameInMap("ScaleMin")
+    @com.aliyun.core.annotation.NameInMap("ScaleMin")
     private String scaleMin;
 
-    @NameInMap("ScaleRoNumMax")
+    @com.aliyun.core.annotation.NameInMap("ScaleRoNumMax")
     private String scaleRoNumMax;
 
-    @NameInMap("ScaleRoNumMin")
+    @com.aliyun.core.annotation.NameInMap("ScaleRoNumMin")
     private String scaleRoNumMin;
 
-    @NameInMap("SecondsUntilAutoPause")
+    @com.aliyun.core.annotation.NameInMap("SecondsUntilAutoPause")
     private String secondsUntilAutoPause;
 
-    @NameInMap("Switchs")
+    @com.aliyun.core.annotation.NameInMap("ServerlessRuleCpuEnlargeThreshold")
+    private String serverlessRuleCpuEnlargeThreshold;
+
+    @com.aliyun.core.annotation.NameInMap("ServerlessRuleCpuShrinkThreshold")
+    private String serverlessRuleCpuShrinkThreshold;
+
+    @com.aliyun.core.annotation.NameInMap("ServerlessRuleMode")
+    private String serverlessRuleMode;
+
+    @com.aliyun.core.annotation.NameInMap("Switchs")
     private String switchs;
 
     private DescribeDBClusterServerlessConfResponseBody(Builder builder) {
@@ -56,6 +64,9 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
         this.scaleRoNumMax = builder.scaleRoNumMax;
         this.scaleRoNumMin = builder.scaleRoNumMin;
         this.secondsUntilAutoPause = builder.secondsUntilAutoPause;
+        this.serverlessRuleCpuEnlargeThreshold = builder.serverlessRuleCpuEnlargeThreshold;
+        this.serverlessRuleCpuShrinkThreshold = builder.serverlessRuleCpuShrinkThreshold;
+        this.serverlessRuleMode = builder.serverlessRuleMode;
         this.switchs = builder.switchs;
     }
 
@@ -138,6 +149,27 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
     }
 
     /**
+     * @return serverlessRuleCpuEnlargeThreshold
+     */
+    public String getServerlessRuleCpuEnlargeThreshold() {
+        return this.serverlessRuleCpuEnlargeThreshold;
+    }
+
+    /**
+     * @return serverlessRuleCpuShrinkThreshold
+     */
+    public String getServerlessRuleCpuShrinkThreshold() {
+        return this.serverlessRuleCpuShrinkThreshold;
+    }
+
+    /**
+     * @return serverlessRuleMode
+     */
+    public String getServerlessRuleMode() {
+        return this.serverlessRuleMode;
+    }
+
+    /**
      * @return switchs
      */
     public String getSwitchs() {
@@ -155,6 +187,9 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
         private String scaleRoNumMax; 
         private String scaleRoNumMin; 
         private String secondsUntilAutoPause; 
+        private String serverlessRuleCpuEnlargeThreshold; 
+        private String serverlessRuleCpuShrinkThreshold; 
+        private String serverlessRuleMode; 
         private String switchs; 
 
         /**
@@ -238,6 +273,30 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
          */
         public Builder secondsUntilAutoPause(String secondsUntilAutoPause) {
             this.secondsUntilAutoPause = secondsUntilAutoPause;
+            return this;
+        }
+
+        /**
+         * ServerlessRuleCpuEnlargeThreshold.
+         */
+        public Builder serverlessRuleCpuEnlargeThreshold(String serverlessRuleCpuEnlargeThreshold) {
+            this.serverlessRuleCpuEnlargeThreshold = serverlessRuleCpuEnlargeThreshold;
+            return this;
+        }
+
+        /**
+         * ServerlessRuleCpuShrinkThreshold.
+         */
+        public Builder serverlessRuleCpuShrinkThreshold(String serverlessRuleCpuShrinkThreshold) {
+            this.serverlessRuleCpuShrinkThreshold = serverlessRuleCpuShrinkThreshold;
+            return this;
+        }
+
+        /**
+         * ServerlessRuleMode.
+         */
+        public Builder serverlessRuleMode(String serverlessRuleMode) {
+            this.serverlessRuleMode = serverlessRuleMode;
             return this;
         }
 
