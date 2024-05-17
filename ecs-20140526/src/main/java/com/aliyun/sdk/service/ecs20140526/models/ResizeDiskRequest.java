@@ -274,7 +274,7 @@ public class ResizeDiskRequest extends Request {
          * The method that you want to use to resize the disk. Valid values:
          * <p>
          * 
-         * *   offline (default): resizes the disk offline. After you resize a disk offline, you must restart its associated instance by using the ECS console or by calling the [RebootInstance](~~25502~~) operation to make the resizing operation take effect. For information about how to restart an ECS instance in the ECS console, see [Restart an instance](~~25440~~).
+         * *   offline (default): resizes the disk offline. After you resize a disk offline, you must restart its associated instance in the ECS console or by calling the [RebootInstance](~~25502~~) operation to make the resizing operation take effect. For information about how to restart an ECS instance in the ECS console, see [Restart an instance](~~25440~~).
          * *   online: resizes the disk online. After you resize a disk online, the resizing operation takes effect immediately and you do not need to restart the instance. You can resize ultra disks, standard SSDs, and ESSDs online.
          */
         public Builder type(String type) {

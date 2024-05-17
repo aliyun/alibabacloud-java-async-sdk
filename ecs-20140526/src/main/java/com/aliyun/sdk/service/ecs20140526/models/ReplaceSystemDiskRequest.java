@@ -352,11 +352,7 @@ public class ReplaceSystemDiskRequest extends Request {
         }
 
         /**
-         * The system architecture. Valid values:
-         * <p>
-         * 
-         * *   i386
-         * *   x86\_64
+         * >  This parameter is deprecated.
          */
         public Builder architecture(String architecture) {
             this.putQueryParameter("Architecture", architecture);
@@ -383,14 +379,7 @@ public class ReplaceSystemDiskRequest extends Request {
         }
 
         /**
-         * The disk ID.
-         * <p>
-         * 
-         * If the `ImageId` parameter is not specified, this parameter is required.
-         * 
-         * If the DiskId parameter is specified, the `Platform` and `Architecture` parameters are required. The specified values of `Platform` and `Architecture` must be consistent with those of `Platform` and `Architecture` parameters of the instance.
-         * 
-         * > This feature is available to select users. To use this feature, [submit a ticket](https://workorder-intl.console.aliyun.com/console.htm).
+         * >  This parameter is deprecated. To improve compatibility, we recommend that you use `ImageId`.
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -515,11 +504,7 @@ public class ReplaceSystemDiskRequest extends Request {
         }
 
         /**
-         * The operating system distribution. Valid values:
-         * <p>
-         * 
-         * *   CentOS
-         * *   Ubuntu
+         * >  This parameter is deprecated.
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -606,12 +591,15 @@ public class ReplaceSystemDiskRequest extends Request {
             private Integer size; 
 
             /**
-             * The capacity of the new system disk. Unit: GiB. Valid values: Max{20, Size of the image specified by ImageId} to 500.
+             * The capacity of the new system disk. Unit: GiB. Valid values:
              * <p>
              * 
-             * Default value: Max{40, Size of the image specified by ImageId}.
+             * *   Basic disk: Max{20, Size of the image corresponding to ImageId} to 500.
+             * *   Other disks: Max{20, Size of the image corresponding to ImageId} to 2,048.
              * 
-             * > If the capacity of the new system disk exceeds `Max{20, Capacity of the original system disk}`, you are charged for the excess capacity.
+             * Default value: 40 or the size of the image corresponding to ImageId, whichever is greater.
+             * 
+             * >  If the capacity of the new system disk exceeds `Max{20, Capacity of the original system disk}`, you are charged for excess capacity.
              */
             public Builder size(Integer size) {
                 this.size = size;

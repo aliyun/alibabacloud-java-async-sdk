@@ -171,7 +171,7 @@ public class StopInvocationRequest extends Request {
         }
 
         /**
-         * The ID of instance N on which you want to stop the process of the Cloud Assistant command. You can specify up to 50 instance IDs in each request. Valid values of N: 1 to 50.
+         * The ID of the command task. You can call the [DescribeInvocations](~~64840~~) operation to query all task IDs.
          */
         public Builder invokeId(String invokeId) {
             this.putQueryParameter("InvokeId", invokeId);

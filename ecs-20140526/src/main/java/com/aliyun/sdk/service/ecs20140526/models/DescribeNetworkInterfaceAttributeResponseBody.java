@@ -53,6 +53,9 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("NetworkInterfaceName")
     private String networkInterfaceName;
 
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfaceTrafficConfig")
+    private NetworkInterfaceTrafficConfig networkInterfaceTrafficConfig;
+
     @com.aliyun.core.annotation.NameInMap("NetworkInterfaceTrafficMode")
     private String networkInterfaceTrafficMode;
 
@@ -125,6 +128,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         this.macAddress = builder.macAddress;
         this.networkInterfaceId = builder.networkInterfaceId;
         this.networkInterfaceName = builder.networkInterfaceName;
+        this.networkInterfaceTrafficConfig = builder.networkInterfaceTrafficConfig;
         this.networkInterfaceTrafficMode = builder.networkInterfaceTrafficMode;
         this.ownerId = builder.ownerId;
         this.privateIpAddress = builder.privateIpAddress;
@@ -250,6 +254,13 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
      */
     public String getNetworkInterfaceName() {
         return this.networkInterfaceName;
+    }
+
+    /**
+     * @return networkInterfaceTrafficConfig
+     */
+    public NetworkInterfaceTrafficConfig getNetworkInterfaceTrafficConfig() {
+        return this.networkInterfaceTrafficConfig;
     }
 
     /**
@@ -400,6 +411,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         private String macAddress; 
         private String networkInterfaceId; 
         private String networkInterfaceName; 
+        private NetworkInterfaceTrafficConfig networkInterfaceTrafficConfig; 
         private String networkInterfaceTrafficMode; 
         private String ownerId; 
         private String privateIpAddress; 
@@ -536,6 +548,14 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
          */
         public Builder networkInterfaceName(String networkInterfaceName) {
             this.networkInterfaceName = networkInterfaceName;
+            return this;
+        }
+
+        /**
+         * NetworkInterfaceTrafficConfig.
+         */
+        public Builder networkInterfaceTrafficConfig(NetworkInterfaceTrafficConfig networkInterfaceTrafficConfig) {
+            this.networkInterfaceTrafficConfig = networkInterfaceTrafficConfig;
             return this;
         }
 
@@ -685,7 +705,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * >  This parameter is in invitational preview and unavailable for general users.
+         * >  This parameter is in invitational preview and is not publicly available.
          */
         public Builder tcpOptionAddressEnabled(String tcpOptionAddressEnabled) {
             this.tcpOptionAddressEnabled = tcpOptionAddressEnabled;
@@ -1471,6 +1491,108 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         } 
 
     }
+    public static class NetworkInterfaceTrafficConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceTrafficMode")
+        private String networkInterfaceTrafficMode;
+
+        @com.aliyun.core.annotation.NameInMap("QueueNumber")
+        private Integer queueNumber;
+
+        @com.aliyun.core.annotation.NameInMap("QueuePairNumber")
+        private Integer queuePairNumber;
+
+        private NetworkInterfaceTrafficConfig(Builder builder) {
+            this.networkInterfaceTrafficMode = builder.networkInterfaceTrafficMode;
+            this.queueNumber = builder.queueNumber;
+            this.queuePairNumber = builder.queuePairNumber;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetworkInterfaceTrafficConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return networkInterfaceTrafficMode
+         */
+        public String getNetworkInterfaceTrafficMode() {
+            return this.networkInterfaceTrafficMode;
+        }
+
+        /**
+         * @return queueNumber
+         */
+        public Integer getQueueNumber() {
+            return this.queueNumber;
+        }
+
+        /**
+         * @return queuePairNumber
+         */
+        public Integer getQueuePairNumber() {
+            return this.queuePairNumber;
+        }
+
+        public static final class Builder {
+            private String networkInterfaceTrafficMode; 
+            private Integer queueNumber; 
+            private Integer queuePairNumber; 
+
+            /**
+             * The communication model of the ENI. Valid values:
+             * <p>
+             * 
+             * *   Standard: The TCP communication mode is used.
+             * *   HighPerformance: The Elastic RDMA Interface (ERI) is enabled and the remote direct memory access (RDMA) communication mode is used.
+             * 
+             * >  This parameter can have a value of HighPerformance only when the ENI is attached to a c7re RDMA-enhanced instance that resides in Beijing Zone K.
+             */
+            public Builder networkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
+                this.networkInterfaceTrafficMode = networkInterfaceTrafficMode;
+                return this;
+            }
+
+            /**
+             * The number of queues supported by the ENI.
+             * <p>
+             * 
+             * *   For a primary ENI: The default number of queues that the instance type supports for the ENI is returned.
+             * 
+             * *   For a secondary ENI:
+             * 
+             *     *   When the ENI is in the InUse state, the following situations occur for the QueueNumber parameter:
+             * 
+             *         *   If the number of queues supported by the ENI has not been modified, the default number of queues that the instance type supports for the ENI is returned.
+             *         *   If the number of queues supported by the ENI has been modified, the new number of queues is returned.
+             * 
+             *     *   When the ENI is in the Available state, the following situations occur for the QueueNumber parameter:
+             * 
+             *         *   If the number of queues supported by the ENI has not been modified, the return value is empty.
+             *         *   If the number of queues supported by the ENI has been modified, the new number of queues is returned.
+             */
+            public Builder queueNumber(Integer queueNumber) {
+                this.queueNumber = queueNumber;
+                return this;
+            }
+
+            /**
+             * >  This parameter is in invitational preview and unavailable for general users.
+             */
+            public Builder queuePairNumber(Integer queuePairNumber) {
+                this.queuePairNumber = queuePairNumber;
+                return this;
+            }
+
+            public NetworkInterfaceTrafficConfig build() {
+                return new NetworkInterfaceTrafficConfig(this);
+            } 
+
+        } 
+
+    }
     public static class PrivateIpSetAssociatedPublicIp extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllocationId")
         private String allocationId;
@@ -1583,7 +1705,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             private String privateIpAddress; 
 
             /**
-             * The elastic IP address (EIP) that is associated with the secondary private IP address of the ENI.
+             * The EIP that is associated with the secondary private IP address of the ENI.
              */
             public Builder associatedPublicIp(PrivateIpSetAssociatedPublicIp associatedPublicIp) {
                 this.associatedPublicIp = associatedPublicIp;
@@ -1819,7 +1941,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The key of the tag.
+             * The tag key.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -1827,7 +1949,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * The tag value.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

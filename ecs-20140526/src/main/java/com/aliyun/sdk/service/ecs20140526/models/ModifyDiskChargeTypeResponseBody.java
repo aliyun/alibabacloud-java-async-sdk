@@ -49,7 +49,7 @@ public class ModifyDiskChargeTypeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The order ID.
+         * The ID of the order.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;

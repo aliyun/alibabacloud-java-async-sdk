@@ -137,7 +137,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -145,7 +145,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -153,7 +153,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the image.
+         * The region ID of the custom image.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -161,7 +161,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -237,7 +237,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the image was shared. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.
+             * The time when the image was shared. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder sharedTime(String sharedTime) {
                 this.sharedTime = sharedTime;

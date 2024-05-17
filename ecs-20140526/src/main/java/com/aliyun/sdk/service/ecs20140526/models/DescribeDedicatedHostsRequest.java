@@ -380,7 +380,12 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries per page. If you specify this parameter, both MaxResults and NextToken are used for a paged query.
+         * <p>
+         * 
+         * Valid values: 1 to 100.
+         * 
+         * Default value: 10.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -389,7 +394,7 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -481,7 +486,11 @@ public class DescribeDedicatedHostsRequest extends Request {
         }
 
         /**
-         * Specifies whether to display socket capacity information.
+         * Specifies whether to display socket information. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder socketDetails(String socketDetails) {
             this.putQueryParameter("SocketDetails", socketDetails);
@@ -571,7 +580,7 @@ public class DescribeDedicatedHostsRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the dedicated host. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * The key of tag N of the dedicated host. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -579,7 +588,7 @@ public class DescribeDedicatedHostsRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the dedicated host. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * The value of tag N of the dedicated host. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

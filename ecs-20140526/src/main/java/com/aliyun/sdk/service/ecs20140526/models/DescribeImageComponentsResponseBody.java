@@ -93,7 +93,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +101,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         }
 
         /**
-         * The query token returned in this call. For information about how to use this return value, see the "Description" section in this topic.
+         * A pagination token. It can be used in the next request to retrieve a new page of results. For information about how to use the returned value, see the "Usage notes" section of this topic.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +109,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -169,7 +169,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key of the image component.
+             * The key of the tag.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -177,7 +177,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the image component.
+             * The value of the tag.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -427,7 +427,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * The ID of the resource group to which the image component belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -435,7 +435,7 @@ public class DescribeImageComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system type supported by the image component.
+             * The type of the operating system supported by the image component.
              */
             public Builder systemType(String systemType) {
                 this.systemType = systemType;

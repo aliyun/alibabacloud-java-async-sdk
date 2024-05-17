@@ -717,7 +717,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The automatic release time of the instance. Specify the time in the [ISO 8601 standard](~~25696~~) in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * The automatic release time of the instance. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          * <p>
          * 
          * *   If the value of `ss` is not `00`, the time is automatically rounded down to the nearest minute based on the value of `mm`.
@@ -1121,7 +1121,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
          * 
          * Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify a protection period based on your business requirements.
          * 
-         * >  This parameter takes effect only if you set SpotStrategy to SpotWithPriceLimit or SpotAsPriceGo.
+         * >  This parameter takes effect only if SpotStrategy is set to SpotWithPriceLimit or SpotAsPriceGo.
          */
         public Builder spotDuration(Integer spotDuration) {
             this.putQueryParameter("SpotDuration", spotDuration);
@@ -1162,7 +1162,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The user data of the instance. The user data must be encoded in Base64. The maximum size of raw data is 16 KB.
+         * The user data of the instance. The user data must be encoded in Base64. The maximum size of raw data is 32 KB.
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -1386,7 +1386,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
              * *   cloud: basic disk.
              * *   cloud_efficiency: ultra disk.
              * *   cloud_ssd: standard SSD.
-             * *   cloud_auto: enhanced SSD (ESSD) AutoPL disk.
+             * *   cloud_auto: Enterprise SSD (ESSD) AutoPL disk.
              * *   cloud_essd: ESSD. You can use `SystemDisk.PerformanceLevel` to set the performance level of the ESSD to use as the system disk.
              * *   cloud_essd_entry: ESSD Entry disk.
              * 
@@ -1728,7 +1728,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             }
 
             /**
-             * The name of data disk N. The name must be 2 to 128 characters in length The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+             * The name of data disk N. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
              */
             public Builder diskName(String diskName) {
                 this.diskName = diskName;
@@ -1763,7 +1763,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
              * The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}
              * <p>
              * 
-             * Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.
+             * Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}
              * 
              * >  This parameter is available only if you set DataDisk.N.Category to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).
              */
@@ -1801,7 +1801,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             }
 
             /**
-             * The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16. If you specify `DataDisk.N.SnapshotId`, `DataDisk.N.Size` is ignored. The data disk is created with the size of the specified snapshot.
+             * The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16. When `DataDisk.N.SnapshotId` is specified, `DataDisk.N.Size` is ignored. The data disk is created with the size of the specified snapshot.
              * <p>
              * 
              * Use snapshots created on or after July 15, 2013. Otherwise, an error is returned and your request is rejected.

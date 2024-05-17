@@ -70,6 +70,10 @@ public class CreateNetworkInterfaceRequest extends Request {
     private String networkInterfaceName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfaceTrafficConfig")
+    private NetworkInterfaceTrafficConfig networkInterfaceTrafficConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkInterfaceTrafficMode")
     private String networkInterfaceTrafficMode;
 
@@ -163,6 +167,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         this.ipv6Prefix = builder.ipv6Prefix;
         this.ipv6PrefixCount = builder.ipv6PrefixCount;
         this.networkInterfaceName = builder.networkInterfaceName;
+        this.networkInterfaceTrafficConfig = builder.networkInterfaceTrafficConfig;
         this.networkInterfaceTrafficMode = builder.networkInterfaceTrafficMode;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -293,6 +298,13 @@ public class CreateNetworkInterfaceRequest extends Request {
      */
     public String getNetworkInterfaceName() {
         return this.networkInterfaceName;
+    }
+
+    /**
+     * @return networkInterfaceTrafficConfig
+     */
+    public NetworkInterfaceTrafficConfig getNetworkInterfaceTrafficConfig() {
+        return this.networkInterfaceTrafficConfig;
     }
 
     /**
@@ -443,6 +455,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         private java.util.List < String > ipv6Prefix; 
         private Integer ipv6PrefixCount; 
         private String networkInterfaceName; 
+        private NetworkInterfaceTrafficConfig networkInterfaceTrafficConfig; 
         private String networkInterfaceTrafficMode; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -483,6 +496,7 @@ public class CreateNetworkInterfaceRequest extends Request {
             this.ipv6Prefix = request.ipv6Prefix;
             this.ipv6PrefixCount = request.ipv6PrefixCount;
             this.networkInterfaceName = request.networkInterfaceName;
+            this.networkInterfaceTrafficConfig = request.networkInterfaceTrafficConfig;
             this.networkInterfaceTrafficMode = request.networkInterfaceTrafficMode;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -663,6 +677,15 @@ public class CreateNetworkInterfaceRequest extends Request {
         public Builder networkInterfaceName(String networkInterfaceName) {
             this.putQueryParameter("NetworkInterfaceName", networkInterfaceName);
             this.networkInterfaceName = networkInterfaceName;
+            return this;
+        }
+
+        /**
+         * NetworkInterfaceTrafficConfig.
+         */
+        public Builder networkInterfaceTrafficConfig(NetworkInterfaceTrafficConfig networkInterfaceTrafficConfig) {
+            this.putQueryParameter("NetworkInterfaceTrafficConfig", networkInterfaceTrafficConfig);
+            this.networkInterfaceTrafficConfig = networkInterfaceTrafficConfig;
             return this;
         }
 
@@ -959,6 +982,152 @@ public class CreateNetworkInterfaceRequest extends Request {
 
             public ConnectionTrackingConfiguration build() {
                 return new ConnectionTrackingConfiguration(this);
+            } 
+
+        } 
+
+    }
+    public static class NetworkInterfaceTrafficConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceTrafficMode")
+        private String networkInterfaceTrafficMode;
+
+        @com.aliyun.core.annotation.NameInMap("QueueNumber")
+        private Integer queueNumber;
+
+        @com.aliyun.core.annotation.NameInMap("QueuePairNumber")
+        private Integer queuePairNumber;
+
+        @com.aliyun.core.annotation.NameInMap("RxQueueSize")
+        private Integer rxQueueSize;
+
+        @com.aliyun.core.annotation.NameInMap("TxQueueSize")
+        private Integer txQueueSize;
+
+        private NetworkInterfaceTrafficConfig(Builder builder) {
+            this.networkInterfaceTrafficMode = builder.networkInterfaceTrafficMode;
+            this.queueNumber = builder.queueNumber;
+            this.queuePairNumber = builder.queuePairNumber;
+            this.rxQueueSize = builder.rxQueueSize;
+            this.txQueueSize = builder.txQueueSize;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetworkInterfaceTrafficConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return networkInterfaceTrafficMode
+         */
+        public String getNetworkInterfaceTrafficMode() {
+            return this.networkInterfaceTrafficMode;
+        }
+
+        /**
+         * @return queueNumber
+         */
+        public Integer getQueueNumber() {
+            return this.queueNumber;
+        }
+
+        /**
+         * @return queuePairNumber
+         */
+        public Integer getQueuePairNumber() {
+            return this.queuePairNumber;
+        }
+
+        /**
+         * @return rxQueueSize
+         */
+        public Integer getRxQueueSize() {
+            return this.rxQueueSize;
+        }
+
+        /**
+         * @return txQueueSize
+         */
+        public Integer getTxQueueSize() {
+            return this.txQueueSize;
+        }
+
+        public static final class Builder {
+            private String networkInterfaceTrafficMode; 
+            private Integer queueNumber; 
+            private Integer queuePairNumber; 
+            private Integer rxQueueSize; 
+            private Integer txQueueSize; 
+
+            /**
+             * The communication mode of the ENI. Valid values:
+             * <p>
+             * 
+             * *   Standard: uses the TCP communication mode.
+             * *   HighPerformance: uses the remote direct memory access (RDMA) communication mode with Elastic RDMA Interface (ERI) enabled.
+             * 
+             * >  ENIs in RDMA mode can be attached only to instances of the instance types that support ERIs. The number of ENIs in RDMA mode that are attached to an instance cannot exceed the maximum number of ENIs that the instance type supports. For more information, see [Overview of ECS instance families](~~25378~~) and [Configure eRDMA on an enterprise-level instance](~~336853~~).
+             * 
+             * Default value: Standard.
+             */
+            public Builder networkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
+                this.networkInterfaceTrafficMode = networkInterfaceTrafficMode;
+                return this;
+            }
+
+            /**
+             * The number of queues supported by the ENI. Valid values: 1 to 2048.
+             * <p>
+             * 
+             * When you attach the ENI to an instance, make sure that the value of this parameter is less than the maximum number of queues per ENI that is allowed for the instance type. To view the maximum number of queues per ENI allowed for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation and then check the return value of `MaximumQueueNumberPerEni`.
+             * 
+             * This parameter is left empty by default. If you do not specify this parameter, the default number of queues per ENI for the instance type of an instance is used when you attach the ENI to the instance. To view the default number of queues per ENI for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation and then check the return value of `SecondaryEniQueueNumber`.
+             */
+            public Builder queueNumber(Integer queueNumber) {
+                this.queueNumber = queueNumber;
+                return this;
+            }
+
+            /**
+             * > This parameter is in invitational preview and is not publicly available.
+             */
+            public Builder queuePairNumber(Integer queuePairNumber) {
+                this.queuePairNumber = queuePairNumber;
+                return this;
+            }
+
+            /**
+             * The receive (Rx) queue depth of the ENI.
+             * <p>
+             * 
+             * Take note of the following items:
+             * 
+             * *   The Rx queue depth of an ENI must be the same as the Tx queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.
+             * *   A larger Rx queue depth yields higher inbound throughput but consumes more memory.
+             */
+            public Builder rxQueueSize(Integer rxQueueSize) {
+                this.rxQueueSize = rxQueueSize;
+                return this;
+            }
+
+            /**
+             * The transmit (Tx) queue depth of the ENI.
+             * <p>
+             * 
+             * Take note of the following items:
+             * 
+             * *   The Tx queue depth of an ENI must be the same as the Rx queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.
+             * *   A larger Tx queue depth yields higher outbound throughput but consumes more memory.
+             */
+            public Builder txQueueSize(Integer txQueueSize) {
+                this.txQueueSize = txQueueSize;
+                return this;
+            }
+
+            public NetworkInterfaceTrafficConfig build() {
+                return new NetworkInterfaceTrafficConfig(this);
             } 
 
         } 

@@ -219,7 +219,7 @@ public class AssignIpv6AddressesRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.**** For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -228,12 +228,12 @@ public class AssignIpv6AddressesRequest extends Request {
         }
 
         /**
-         * The IPv6 addresses that you want to assign to the ENI. You can specify up to 10 IPv6 addresses.
+         * The IPv6 addresses to assign to the ENI. Valid values of N: 1 to 10.
          * <p>
          * 
          * Example: Ipv6Address.1=2001:db8:1234:1a00::\*\*\*\*
          * 
-         * > You must specify `Ipv6Addresses.N` or `Ipv6AddressCount` but cannot specify both.
+         * >  You must specify `Ipv6Addresses.N` or `Ipv6AddressCount`, but not both.
          */
         public Builder ipv6Address(java.util.List < String > ipv6Address) {
             this.putQueryParameter("Ipv6Address", ipv6Address);
@@ -242,10 +242,10 @@ public class AssignIpv6AddressesRequest extends Request {
         }
 
         /**
-         * The number of IPv6 addresses that you want to generate at random for the ENI. Valid values: 1 to 10.
+         * The number of IPv6 addresses to randomly generate for the ENI. Valid values: 1 to 10.
          * <p>
          * 
-         * > You must specify `Ipv6Addresses.N` or `Ipv6AddressCount` but cannot specify both.
+         * >  You must specify `Ipv6Addresses.N` or `Ipv6AddressCount`, but not both.
          */
         public Builder ipv6AddressCount(Integer ipv6AddressCount) {
             this.putQueryParameter("Ipv6AddressCount", ipv6AddressCount);
@@ -254,7 +254,10 @@ public class AssignIpv6AddressesRequest extends Request {
         }
 
         /**
-         * > This parameter is in invitational preview and is unavailable for general users.
+         * The IPv6 prefixes to assign to the ENI. Valid values of N: 1 to 10.
+         * <p>
+         * 
+         * >  To assign IPv6 prefixes to the ENI, you must specify Ipv6Prefix.N or Ipv6PrefixCount, but not both.
          */
         public Builder ipv6Prefix(java.util.List < String > ipv6Prefix) {
             this.putQueryParameter("Ipv6Prefix", ipv6Prefix);
@@ -263,7 +266,10 @@ public class AssignIpv6AddressesRequest extends Request {
         }
 
         /**
-         * > This parameter is in invitational preview and is unavailable for general users.
+         * The number of IPv6 prefixes to assign to the ENI. Valid values: 1 to 10.
+         * <p>
+         * 
+         * >  To assign IPv6 prefixes to the ENI, you must specify Ipv6Prefix.N or Ipv6PrefixCount, but not both.
          */
         public Builder ipv6PrefixCount(Integer ipv6PrefixCount) {
             this.putQueryParameter("Ipv6PrefixCount", ipv6PrefixCount);

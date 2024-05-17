@@ -49,7 +49,7 @@ public class StartInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The error code that is returned for the operation on the ECS instance. The value 200 indicates that the operation is successful. For more information, see the "Error codes" section in this topic.
+         * The status of the instances before and after the operation is called and the operation results.
          */
         public Builder instanceResponses(InstanceResponses instanceResponses) {
             this.instanceResponses = instanceResponses;
@@ -145,7 +145,7 @@ public class StartInstancesResponseBody extends TeaModel {
             private String previousStatus; 
 
             /**
-             * The error message that is returned for the operation on the ECS instance. The value success indicates that the operation is successful. For more information, see the "Error codes" section in this topic.
+             * The error code returned for the operation on the instance. The status code 200 indicates that the request was successful. For more information, see the "Error codes" section of this topic.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -153,7 +153,7 @@ public class StartInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the ECS instance before the operation is called.
+             * The status of the instance after the operation is called.
              */
             public Builder currentStatus(String currentStatus) {
                 this.currentStatus = currentStatus;
@@ -161,7 +161,7 @@ public class StartInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the ECS instance after the operation is called.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -169,7 +169,7 @@ public class StartInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECS instance.
+             * The error message returned for the operation on the instance. The status code 200 indicates that the request was successful. For more information, see the "Error codes" section of this topic.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -177,7 +177,7 @@ public class StartInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PreviousStatus.
+             * The status of the instance before the operation is called.
              */
             public Builder previousStatus(String previousStatus) {
                 this.previousStatus = previousStatus;

@@ -176,12 +176,12 @@ public class DescribeNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * The attribute of the ENI. Valid values:
+         * The attribute of the ENI. Valid value:
          * <p>
          * 
-         * attachment: attachment information about the ENI 
+         * attachment: attachment information about the ENI
          * 
-         * >This parameter is in invitational preview and is not publicly available.
+         * >  This parameter is in invitational preview and is not publicly available.
          */
         public Builder attribute(String attribute) {
             this.putQueryParameter("Attribute", attribute);

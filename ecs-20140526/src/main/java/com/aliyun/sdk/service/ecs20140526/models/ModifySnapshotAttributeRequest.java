@@ -205,6 +205,8 @@ public class ModifySnapshotAttributeRequest extends Request {
          * *   false
          * 
          * Default value: false.
+         * 
+         * >  This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see [Use the instant access feature](~~193667~~).
          */
         public Builder disableInstantAccess(Boolean disableInstantAccess) {
             this.putQueryParameter("DisableInstantAccess", disableInstantAccess);

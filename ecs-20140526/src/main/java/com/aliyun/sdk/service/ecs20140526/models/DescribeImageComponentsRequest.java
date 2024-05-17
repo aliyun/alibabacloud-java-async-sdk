@@ -232,7 +232,7 @@ public class DescribeImageComponentsRequest extends Request {
         }
 
         /**
-         * The IDs of the image components. You can specify up to 20 image components.
+         * The IDs of image components. Valid values of N: 1 to 20.
          */
         public Builder imageComponentId(java.util.List < String > imageComponentId) {
             this.putQueryParameter("ImageComponentId", imageComponentId);
@@ -241,7 +241,7 @@ public class DescribeImageComponentsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return on each page. Valid values: 1 to 500.
+         * The number of entries per page. Valid values: 1 to 500.
          * <p>
          * 
          * Default value: 50.
@@ -262,7 +262,7 @@ public class DescribeImageComponentsRequest extends Request {
         }
 
         /**
-         * The query token. Set the value to the `NextToken` value returned in the last call to the DescribeImageComponents operation. Leave this parameter empty the first time you call this operation.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -341,7 +341,7 @@ public class DescribeImageComponentsRequest extends Request {
         }
 
         /**
-         * The tags
+         * The tags of the image component.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -395,7 +395,7 @@ public class DescribeImageComponentsRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the image component. Valid values of N: 1 to 20.
+             * The key of tag N. Valid values of N: 1 to 20.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -403,7 +403,7 @@ public class DescribeImageComponentsRequest extends Request {
             }
 
             /**
-             * The value of tag N of the image component. Valid values of N: 1 to 20.
+             * The value of tag N. Valid values of N: 1 to 20.
              */
             public Builder value(String value) {
                 this.value = value;

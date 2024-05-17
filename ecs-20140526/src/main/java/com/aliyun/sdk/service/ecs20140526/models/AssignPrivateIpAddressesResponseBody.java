@@ -203,7 +203,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
             private PrivateIpSet privateIpSet; 
 
             /**
-             * > 该参数正在邀测中，暂未开放使用。
+             * Details about the assigned IPv4 prefixes.
              */
             public Builder ipv4PrefixSet(Ipv4PrefixSet ipv4PrefixSet) {
                 this.ipv4PrefixSet = ipv4PrefixSet;

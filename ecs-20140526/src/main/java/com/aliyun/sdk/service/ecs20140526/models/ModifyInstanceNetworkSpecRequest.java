@@ -272,7 +272,7 @@ public class ModifyInstanceNetworkSpecRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the automatic payment feature. Valid values:
+         * Specifies whether to automatically complete the payment. Valid values:
          * <p>
          * 
          * *   true: After you modify the bandwidth configurations, the payment is automatically complete. Make sure that you have a sufficient balance in your account before you set AutoPay to true. If your account balance is insufficient, your order cannot be paid in the ECS console and becomes invalid. You must cancel the order.

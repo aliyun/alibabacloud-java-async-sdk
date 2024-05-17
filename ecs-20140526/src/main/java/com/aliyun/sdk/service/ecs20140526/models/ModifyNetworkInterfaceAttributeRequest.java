@@ -37,6 +37,10 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
     private String networkInterfaceName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfaceTrafficConfig")
+    private NetworkInterfaceTrafficConfig networkInterfaceTrafficConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -81,6 +85,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         this.description = builder.description;
         this.networkInterfaceId = builder.networkInterfaceId;
         this.networkInterfaceName = builder.networkInterfaceName;
+        this.networkInterfaceTrafficConfig = builder.networkInterfaceTrafficConfig;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.queueNumber = builder.queueNumber;
@@ -145,6 +150,13 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
      */
     public String getNetworkInterfaceName() {
         return this.networkInterfaceName;
+    }
+
+    /**
+     * @return networkInterfaceTrafficConfig
+     */
+    public NetworkInterfaceTrafficConfig getNetworkInterfaceTrafficConfig() {
+        return this.networkInterfaceTrafficConfig;
     }
 
     /**
@@ -217,6 +229,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         private String description; 
         private String networkInterfaceId; 
         private String networkInterfaceName; 
+        private NetworkInterfaceTrafficConfig networkInterfaceTrafficConfig; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer queueNumber; 
@@ -239,6 +252,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
             this.description = request.description;
             this.networkInterfaceId = request.networkInterfaceId;
             this.networkInterfaceName = request.networkInterfaceName;
+            this.networkInterfaceTrafficConfig = request.networkInterfaceTrafficConfig;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.queueNumber = request.queueNumber;
@@ -311,6 +325,15 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         public Builder networkInterfaceName(String networkInterfaceName) {
             this.putQueryParameter("NetworkInterfaceName", networkInterfaceName);
             this.networkInterfaceName = networkInterfaceName;
+            return this;
+        }
+
+        /**
+         * NetworkInterfaceTrafficConfig.
+         */
+        public Builder networkInterfaceTrafficConfig(NetworkInterfaceTrafficConfig networkInterfaceTrafficConfig) {
+            this.putQueryParameter("NetworkInterfaceTrafficConfig", networkInterfaceTrafficConfig);
+            this.networkInterfaceTrafficConfig = networkInterfaceTrafficConfig;
             return this;
         }
 
@@ -499,6 +522,144 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
 
             public ConnectionTrackingConfiguration build() {
                 return new ConnectionTrackingConfiguration(this);
+            } 
+
+        } 
+
+    }
+    public static class NetworkInterfaceTrafficConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceTrafficMode")
+        private String networkInterfaceTrafficMode;
+
+        @com.aliyun.core.annotation.NameInMap("QueueNumber")
+        private Integer queueNumber;
+
+        @com.aliyun.core.annotation.NameInMap("QueuePairNumber")
+        private Integer queuePairNumber;
+
+        @com.aliyun.core.annotation.NameInMap("RxQueueSize")
+        private Integer rxQueueSize;
+
+        @com.aliyun.core.annotation.NameInMap("TxQueueSize")
+        private Integer txQueueSize;
+
+        private NetworkInterfaceTrafficConfig(Builder builder) {
+            this.networkInterfaceTrafficMode = builder.networkInterfaceTrafficMode;
+            this.queueNumber = builder.queueNumber;
+            this.queuePairNumber = builder.queuePairNumber;
+            this.rxQueueSize = builder.rxQueueSize;
+            this.txQueueSize = builder.txQueueSize;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetworkInterfaceTrafficConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return networkInterfaceTrafficMode
+         */
+        public String getNetworkInterfaceTrafficMode() {
+            return this.networkInterfaceTrafficMode;
+        }
+
+        /**
+         * @return queueNumber
+         */
+        public Integer getQueueNumber() {
+            return this.queueNumber;
+        }
+
+        /**
+         * @return queuePairNumber
+         */
+        public Integer getQueuePairNumber() {
+            return this.queuePairNumber;
+        }
+
+        /**
+         * @return rxQueueSize
+         */
+        public Integer getRxQueueSize() {
+            return this.rxQueueSize;
+        }
+
+        /**
+         * @return txQueueSize
+         */
+        public Integer getTxQueueSize() {
+            return this.txQueueSize;
+        }
+
+        public static final class Builder {
+            private String networkInterfaceTrafficMode; 
+            private Integer queueNumber; 
+            private Integer queuePairNumber; 
+            private Integer rxQueueSize; 
+            private Integer txQueueSize; 
+
+            /**
+             * NetworkInterfaceTrafficMode.
+             */
+            public Builder networkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
+                this.networkInterfaceTrafficMode = networkInterfaceTrafficMode;
+                return this;
+            }
+
+            /**
+             * The number of queues supported by the ENI. Valid values: 1 to 2048.
+             * <p>
+             * 
+             * *   You can change only the number of queues supported by the secondary ENI.
+             * *   You can change the number of queues supported by the secondary ENI only when the ENI is in the `Available` state or the ENI is attached (`InUse`) to an instance that is in the `Stopped` state.
+             * *   The number of queues supported by the secondary ENI cannot exceed the maximum number of queues that the instance allows for each ENI. The total number of queues for all ENIs on the instance cannot exceed the queue quota that the instance allows. To query the maximum number of queues per ENI and the queue quota for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation and check the values of `MaximumQueueNumberPerEni` and `TotalEniQueueQuantity` in the response.
+             */
+            public Builder queueNumber(Integer queueNumber) {
+                this.queueNumber = queueNumber;
+                return this;
+            }
+
+            /**
+             * QueuePairNumber.
+             */
+            public Builder queuePairNumber(Integer queuePairNumber) {
+                this.queuePairNumber = queuePairNumber;
+                return this;
+            }
+
+            /**
+             * The receive (Rx) queue depth of the ENI.
+             * <p>
+             * 
+             * Take note of the following items:
+             * 
+             * *   The Rx queue depth of an ENI must be the same as the transmit (Tx) queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.
+             * *   A larger Rx queue depth yields higher inbound throughput but consumes more memory.
+             */
+            public Builder rxQueueSize(Integer rxQueueSize) {
+                this.rxQueueSize = rxQueueSize;
+                return this;
+            }
+
+            /**
+             * The Tx queue depth of the ENI.
+             * <p>
+             * 
+             * Take note of the following items:
+             * 
+             * *   The Tx queue depth of an ENI must be the same as the Rx queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.
+             * *   A larger Tx queue depth yields higher outbound throughput but consumes more memory.
+             */
+            public Builder txQueueSize(Integer txQueueSize) {
+                this.txQueueSize = txQueueSize;
+                return this;
+            }
+
+            public NetworkInterfaceTrafficConfig build() {
+                return new NetworkInterfaceTrafficConfig(this);
             } 
 
         } 

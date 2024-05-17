@@ -794,7 +794,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of elastic RDMA interfaces (ERIs).
+             * The number of ERIs.
              * <p>
              * 
              * >  This parameter is in invitational preview and is not publicly available.
@@ -813,7 +813,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of GPU memory per GPU. Unit: GiB.
+             * The amount of GPU memory per GPU. Unit: GiB
              */
             public Builder GPUMemorySize(Float GPUMemorySize) {
                 this.GPUMemorySize = GPUMemorySize;
@@ -856,22 +856,22 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
              * The category of the instance type. Valid values:
              * <p>
              * 
-             * *   General-purpose: general-purpose instance type
-             * *   Compute-optimized: compute-optimized instance type
-             * *   Memory-optimized: memory-optimized instance type
-             * *   Big data: big data instance type
-             * *   Local SSDs: instance type with local SSDs
-             * *   High Clock Speed: instance type with high clock speeds
-             * *   Enhanced: enhanced instance type
-             * *   Shared: shared instance type
-             * *   Compute-optimized with GPU: GPU-accelerated compute-optimized instance type
-             * *   Visual Compute-optimized: visual compute-optimized instance type
-             * *   Heterogeneous Service: heterogeneous service instance type
-             * *   Compute-optimized with FPGA: FPGA-accelerated compute-optimized instance type
-             * *   Compute-optimized with NPU: NPU-accelerated compute-optimized instance type
-             * *   ECS Bare Metal: ECS Bare Metal Instance type
-             * *   Super Computing Cluster: SCC instance type
-             * *   High Performance Compute: high-performance computing instance type
+             * *   General-purpose
+             * *   Compute-optimized
+             * *   Memory-optimized
+             * *   Big data
+             * *   Local SSDs
+             * *   High Clock Speed
+             * *   Enhanced
+             * *   Shared
+             * *   Compute-optimized with GPU
+             * *   Visual Compute-optimized
+             * *   Heterogeneous Service
+             * *   Compute-optimized with FPGA
+             * *   Compute-optimized with NPU
+             * *   ECS Bare Metal
+             * *   Super Computing Cluster
+             * *   High Performance Compute
              */
             public Builder instanceCategory(String instanceCategory) {
                 this.instanceCategory = instanceCategory;
@@ -932,7 +932,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The capacity of each local disk attached per instance. Unit: GiB.
+             * The capacity of each local disk. Unit: GiB
              */
             public Builder localStorageCapacity(Long localStorageCapacity) {
                 this.localStorageCapacity = localStorageCapacity;
@@ -943,8 +943,8 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
              * The category of local disks. For more information, see [Local disks](~~63138~~). Valid values:
              * <p>
              * 
-             * *   local_hdd_pro: local SATA HDDs, which are attached to d1ne or d1 instances.
-             * *   local_ssd_pro: local NVMe SSDs, which are attached to i2, i2g, i1, ga1, or gn5 instances.
+             * *   local_hdd_pro: local SATA HDDs, which are attached to d1ne or d1 instances
+             * *   local_ssd_pro: local NVMe SSDs, which are attached to i2, i2g, i1, ga1, or gn5 instances
              */
             public Builder localStorageCategory(String localStorageCategory) {
                 this.localStorageCategory = localStorageCategory;
@@ -960,7 +960,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size. Unit: GiB.
+             * The memory size. Unit: GiB
              */
             public Builder memorySize(Float memorySize) {
                 this.memorySize = memorySize;
@@ -976,7 +976,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the network cards.
+             * The information of the network cards.
              */
             public Builder networkCards(NetworkCards networkCards) {
                 this.networkCards = networkCards;
@@ -1024,7 +1024,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of QP queues per ERI.
+             * The maximum number of QPs per ERI.
              */
             public Builder queuePairNumber(Integer queuePairNumber) {
                 this.queuePairNumber = queuePairNumber;
@@ -1040,7 +1040,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * 规格支持的启动模式。
+             * The boot modes supported by the instance type.
              */
             public Builder supportedBootModes(SupportedBootModes supportedBootModes) {
                 this.supportedBootModes = supportedBootModes;

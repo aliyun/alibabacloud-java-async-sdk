@@ -168,7 +168,7 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to remove all tags from the resource. This parameter is valid only when the TagKey.N parameter is not specified. Valid values:
+         * Specifies whether to remove all tags from the resource. This parameter takes effect only if you do not specify TagKey.N. Valid values:
          * <p>
          * 
          * *   true
@@ -210,7 +210,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The resource IDs.
+         * The resource IDs. Valid values of N: 1 to 50.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -255,6 +255,8 @@ public class UntagResourcesRequest extends Request {
          * *   snapshotpolicy: automatic snapshot policy
          * *   elasticityassurance: elasticity assurance
          * *   capacityreservation: capacity reservation
+         * *   command: Cloud Assistant command
+         * *   invocation: Cloud Assistant command execution result
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -263,7 +265,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The tag keys of the resource.
+         * The tag keys. Valid values of N: 1 to 20.
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

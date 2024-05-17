@@ -73,7 +73,7 @@ public class AssignIpv6AddressesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * > This parameter is in invitational preview and is unavailable for general users.
+         * The IPv6 prefixes of the ENI.
          */
         public Builder ipv6PrefixSets(Ipv6PrefixSets ipv6PrefixSets) {
             this.ipv6PrefixSets = ipv6PrefixSets;
