@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,74 +11,74 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateTransitRouterVpcAttachmentRequest</p>
  */
 public class CreateTransitRouterVpcAttachmentRequest extends Request {
-    @Query
-    @NameInMap("AutoPublishRouteEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPublishRouteEnabled")
     private Boolean autoPublishRouteEnabled;
 
-    @Query
-    @NameInMap("CenId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CenId")
     private String cenId;
 
-    @Query
-    @NameInMap("ChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("TransitRouterAttachmentDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentDescription")
     private String transitRouterAttachmentDescription;
 
-    @Query
-    @NameInMap("TransitRouterAttachmentName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentName")
     private String transitRouterAttachmentName;
 
-    @Query
-    @NameInMap("TransitRouterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterId")
     private String transitRouterId;
 
-    @Query
-    @NameInMap("VpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
-    @Query
-    @NameInMap("VpcOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcOwnerId")
     private Long vpcOwnerId;
 
-    @Query
-    @NameInMap("ZoneMappings")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneMappings")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < ZoneMappings> zoneMappings;
 
     private CreateTransitRouterVpcAttachmentRequest(Builder builder) {
@@ -316,7 +315,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
          * 
          * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          * 
-         * >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.
+         * >  If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -471,10 +470,10 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -542,12 +541,12 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
 
     }
     public static class ZoneMappings extends TeaModel {
-        @NameInMap("VSwitchId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String vSwitchId;
 
-        @NameInMap("ZoneId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String zoneId;
 
         private ZoneMappings(Builder builder) {

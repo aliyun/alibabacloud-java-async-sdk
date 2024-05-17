@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCenBandwidthPackageResponseBody</p>
  */
 public class CreateCenBandwidthPackageResponseBody extends TeaModel {
-    @NameInMap("CenBandwidthPackageId")
+    @com.aliyun.core.annotation.NameInMap("CenBandwidthPackageId")
     private String cenBandwidthPackageId;
 
-    @NameInMap("CenBandwidthPackageOrderId")
+    @com.aliyun.core.annotation.NameInMap("CenBandwidthPackageOrderId")
     private String cenBandwidthPackageOrderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateCenBandwidthPackageResponseBody(Builder builder) {

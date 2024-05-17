@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,41 +11,41 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCenAttachedChildInstancesRequest</p>
  */
 public class DescribeCenAttachedChildInstancesRequest extends Request {
-    @Query
-    @NameInMap("CenId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CenId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cenId;
 
-    @Query
-    @NameInMap("ChildInstanceRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChildInstanceRegionId")
     private String childInstanceRegionId;
 
-    @Query
-    @NameInMap("ChildInstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChildInstanceType")
     private String childInstanceType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private DescribeCenAttachedChildInstancesRequest(Builder builder) {
@@ -167,7 +166,7 @@ public class DescribeCenAttachedChildInstancesRequest extends Request {
         } 
 
         /**
-         * CenId.
+         * The ID of the CEN instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -176,7 +175,10 @@ public class DescribeCenAttachedChildInstancesRequest extends Request {
         }
 
         /**
-         * ChildInstanceRegionId.
+         * The ID of the region where the network instance is deployed.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder childInstanceRegionId(String childInstanceRegionId) {
             this.putQueryParameter("ChildInstanceRegionId", childInstanceRegionId);
@@ -185,7 +187,12 @@ public class DescribeCenAttachedChildInstancesRequest extends Request {
         }
 
         /**
-         * ChildInstanceType.
+         * The type of the network instance. Valid values:
+         * <p>
+         * 
+         * *   **VPC**: virtual private cloud (VPC)
+         * *   **VBR**: virtual border router (VBR)
+         * *   **CCN**: Cloud Connect Network (CCN) instance
          */
         public Builder childInstanceType(String childInstanceType) {
             this.putQueryParameter("ChildInstanceType", childInstanceType);
@@ -212,7 +219,7 @@ public class DescribeCenAttachedChildInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -221,7 +228,7 @@ public class DescribeCenAttachedChildInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

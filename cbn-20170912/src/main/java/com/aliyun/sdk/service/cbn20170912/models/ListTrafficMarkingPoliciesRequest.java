@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,44 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTrafficMarkingPoliciesRequest</p>
  */
 public class ListTrafficMarkingPoliciesRequest extends Request {
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TrafficMarkingPolicyDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficMarkingPolicyDescription")
     private String trafficMarkingPolicyDescription;
 
-    @Query
-    @NameInMap("TrafficMarkingPolicyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficMarkingPolicyId")
     private String trafficMarkingPolicyId;
 
-    @Query
-    @NameInMap("TrafficMarkingPolicyName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficMarkingPolicyName")
     private String trafficMarkingPolicyName;
 
-    @Query
-    @NameInMap("TransitRouterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterId")
     private String transitRouterId;
 
     private ListTrafficMarkingPoliciesRequest(Builder builder) {
@@ -241,7 +240,7 @@ public class ListTrafficMarkingPoliciesRequest extends Request {
          * The description of the traffic marking policy.
          * <p>
          * 
-         * The description must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The description must start with a letter.
+         * This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.
          */
         public Builder trafficMarkingPolicyDescription(String trafficMarkingPolicyDescription) {
             this.putQueryParameter("TrafficMarkingPolicyDescription", trafficMarkingPolicyDescription);
@@ -262,7 +261,7 @@ public class ListTrafficMarkingPoliciesRequest extends Request {
          * The name of the traffic marking policy.
          * <p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+         * The name must be 1 to 128 characters in length, and cannot start with http:// or https://.
          */
         public Builder trafficMarkingPolicyName(String trafficMarkingPolicyName) {
             this.putQueryParameter("TrafficMarkingPolicyName", trafficMarkingPolicyName);

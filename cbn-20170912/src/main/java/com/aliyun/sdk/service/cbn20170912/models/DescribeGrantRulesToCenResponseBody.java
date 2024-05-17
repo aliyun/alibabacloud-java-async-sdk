@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeGrantRulesToCenResponseBody</p>
  */
 public class DescribeGrantRulesToCenResponseBody extends TeaModel {
-    @NameInMap("GrantRules")
+    @com.aliyun.core.annotation.NameInMap("GrantRules")
     private GrantRules grantRules;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Long maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeGrantRulesToCenResponseBody(Builder builder) {
@@ -138,28 +137,28 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
     } 
 
     public static class GrantRule extends TeaModel {
-        @NameInMap("CenId")
+        @com.aliyun.core.annotation.NameInMap("CenId")
         private String cenId;
 
-        @NameInMap("CenOwnerId")
+        @com.aliyun.core.annotation.NameInMap("CenOwnerId")
         private Long cenOwnerId;
 
-        @NameInMap("ChildInstanceId")
+        @com.aliyun.core.annotation.NameInMap("ChildInstanceId")
         private String childInstanceId;
 
-        @NameInMap("ChildInstanceOwnerId")
+        @com.aliyun.core.annotation.NameInMap("ChildInstanceOwnerId")
         private Long childInstanceOwnerId;
 
-        @NameInMap("ChildInstanceRegionId")
+        @com.aliyun.core.annotation.NameInMap("ChildInstanceRegionId")
         private String childInstanceRegionId;
 
-        @NameInMap("ChildInstanceType")
+        @com.aliyun.core.annotation.NameInMap("ChildInstanceType")
         private String childInstanceType;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("OrderType")
+        @com.aliyun.core.annotation.NameInMap("OrderType")
         private String orderType;
 
         private GrantRule(Builder builder) {
@@ -332,7 +331,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
 
     }
     public static class GrantRules extends TeaModel {
-        @NameInMap("GrantRule")
+        @com.aliyun.core.annotation.NameInMap("GrantRule")
         private java.util.List < GrantRule> grantRule;
 
         private GrantRules(Builder builder) {

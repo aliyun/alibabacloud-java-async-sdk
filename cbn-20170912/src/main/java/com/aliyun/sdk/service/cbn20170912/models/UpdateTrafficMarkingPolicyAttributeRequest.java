@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,49 +11,49 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateTrafficMarkingPolicyAttributeRequest</p>
  */
 public class UpdateTrafficMarkingPolicyAttributeRequest extends Request {
-    @Query
-    @NameInMap("AddTrafficMatchRules")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddTrafficMatchRules")
     private java.util.List < AddTrafficMatchRules> addTrafficMatchRules;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DeleteTrafficMatchRules")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeleteTrafficMatchRules")
     private java.util.List < DeleteTrafficMatchRules> deleteTrafficMatchRules;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TrafficMarkingPolicyDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficMarkingPolicyDescription")
     private String trafficMarkingPolicyDescription;
 
-    @Query
-    @NameInMap("TrafficMarkingPolicyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficMarkingPolicyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String trafficMarkingPolicyId;
 
-    @Query
-    @NameInMap("TrafficMarkingPolicyName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficMarkingPolicyName")
     private String trafficMarkingPolicyName;
 
     private UpdateTrafficMarkingPolicyAttributeRequest(Builder builder) {
@@ -317,28 +316,28 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends Request {
     } 
 
     public static class AddTrafficMatchRules extends TeaModel {
-        @NameInMap("DstCidr")
+        @com.aliyun.core.annotation.NameInMap("DstCidr")
         private String dstCidr;
 
-        @NameInMap("DstPortRange")
+        @com.aliyun.core.annotation.NameInMap("DstPortRange")
         private java.util.List < Integer > dstPortRange;
 
-        @NameInMap("MatchDscp")
+        @com.aliyun.core.annotation.NameInMap("MatchDscp")
         private Integer matchDscp;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("SrcCidr")
+        @com.aliyun.core.annotation.NameInMap("SrcCidr")
         private String srcCidr;
 
-        @NameInMap("SrcPortRange")
+        @com.aliyun.core.annotation.NameInMap("SrcPortRange")
         private java.util.List < Integer > srcPortRange;
 
-        @NameInMap("TrafficMatchRuleDescription")
+        @com.aliyun.core.annotation.NameInMap("TrafficMatchRuleDescription")
         private String trafficMatchRuleDescription;
 
-        @NameInMap("TrafficMatchRuleName")
+        @com.aliyun.core.annotation.NameInMap("TrafficMatchRuleName")
         private String trafficMatchRuleName;
 
         private AddTrafficMatchRules(Builder builder) {
@@ -567,28 +566,28 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends Request {
 
     }
     public static class DeleteTrafficMatchRules extends TeaModel {
-        @NameInMap("DstCidr")
+        @com.aliyun.core.annotation.NameInMap("DstCidr")
         private String dstCidr;
 
-        @NameInMap("DstPortRange")
+        @com.aliyun.core.annotation.NameInMap("DstPortRange")
         private java.util.List < Integer > dstPortRange;
 
-        @NameInMap("MatchDscp")
+        @com.aliyun.core.annotation.NameInMap("MatchDscp")
         private Integer matchDscp;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("SrcCidr")
+        @com.aliyun.core.annotation.NameInMap("SrcCidr")
         private String srcCidr;
 
-        @NameInMap("SrcPortRange")
+        @com.aliyun.core.annotation.NameInMap("SrcPortRange")
         private java.util.List < Integer > srcPortRange;
 
-        @NameInMap("TrafficMatchRuleDescription")
+        @com.aliyun.core.annotation.NameInMap("TrafficMatchRuleDescription")
         private String trafficMatchRuleDescription;
 
-        @NameInMap("TrafficMatchRuleName")
+        @com.aliyun.core.annotation.NameInMap("TrafficMatchRuleName")
         private String trafficMatchRuleName;
 
         private DeleteTrafficMatchRules(Builder builder) {

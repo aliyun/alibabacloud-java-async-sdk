@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,52 +11,52 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCenInterRegionTrafficQosQueuesRequest</p>
  */
 public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TrafficQosPolicyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficQosPolicyId")
     private String trafficQosPolicyId;
 
-    @Query
-    @NameInMap("TrafficQosQueueDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficQosQueueDescription")
     private String trafficQosQueueDescription;
 
-    @Query
-    @NameInMap("TrafficQosQueueId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficQosQueueId")
     private String trafficQosQueueId;
 
-    @Query
-    @NameInMap("TrafficQosQueueName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficQosQueueName")
     private String trafficQosQueueName;
 
-    @Query
-    @NameInMap("TransitRouterAttachmentId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentId")
     private String transitRouterAttachmentId;
 
-    @Query
-    @NameInMap("TransitRouterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterId")
     private String transitRouterId;
 
     private ListCenInterRegionTrafficQosQueuesRequest(Builder builder) {
@@ -208,7 +207,7 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -217,7 +216,11 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the query.
+         * <p>
+         * 
+         * - If NextToken was not returned in the previous query, it indicates that no additional results exist.
+         * - If NextToken was returned in the previous query, specify the value to obtain the next set of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -262,7 +265,7 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
         }
 
         /**
-         * TrafficQosPolicyId.
+         * The ID of the QoS policy.
          */
         public Builder trafficQosPolicyId(String trafficQosPolicyId) {
             this.putQueryParameter("TrafficQosPolicyId", trafficQosPolicyId);
@@ -271,7 +274,7 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
         }
 
         /**
-         * TrafficQosQueueDescription.
+         * The description of the queue.
          */
         public Builder trafficQosQueueDescription(String trafficQosQueueDescription) {
             this.putQueryParameter("TrafficQosQueueDescription", trafficQosQueueDescription);
@@ -280,7 +283,7 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
         }
 
         /**
-         * TrafficQosQueueId.
+         * The ID of the queue.
          */
         public Builder trafficQosQueueId(String trafficQosQueueId) {
             this.putQueryParameter("TrafficQosQueueId", trafficQosQueueId);
@@ -289,7 +292,7 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
         }
 
         /**
-         * TrafficQosQueueName.
+         * The name of the queue.
          */
         public Builder trafficQosQueueName(String trafficQosQueueName) {
             this.putQueryParameter("TrafficQosQueueName", trafficQosQueueName);
@@ -298,7 +301,7 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
         }
 
         /**
-         * TransitRouterAttachmentId.
+         * The ID of the inter-region connection.
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
@@ -307,7 +310,7 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
         }
 
         /**
-         * TransitRouterId.
+         * The ID of the transit router.
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTransitRouterVpcAttachmentsResponseBody</p>
  */
 public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("TransitRouterAttachments")
+    @com.aliyun.core.annotation.NameInMap("TransitRouterAttachments")
     private java.util.List < TransitRouterAttachments> transitRouterAttachments;
 
     private ListTransitRouterVpcAttachmentsResponseBody(Builder builder) {
@@ -136,10 +135,10 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -197,13 +196,13 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
 
     }
     public static class ZoneMappings extends TeaModel {
-        @NameInMap("NetworkInterfaceId")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
         private String networkInterfaceId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private ZoneMappings(Builder builder) {
@@ -247,7 +246,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The ID of the ENI that is associated with the vSwitch of the Enterprise Edition transit router.
+             * The ID of the ENI created by the Enterprise Edition transit router in the vSwitch.
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
@@ -278,52 +277,52 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
 
     }
     public static class TransitRouterAttachments extends TeaModel {
-        @NameInMap("AutoPublishRouteEnabled")
+        @com.aliyun.core.annotation.NameInMap("AutoPublishRouteEnabled")
         private Boolean autoPublishRouteEnabled;
 
-        @NameInMap("CenId")
+        @com.aliyun.core.annotation.NameInMap("CenId")
         private String cenId;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("OrderType")
+        @com.aliyun.core.annotation.NameInMap("OrderType")
         private String orderType;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("TransitRouterAttachmentDescription")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentDescription")
         private String transitRouterAttachmentDescription;
 
-        @NameInMap("TransitRouterAttachmentId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentId")
         private String transitRouterAttachmentId;
 
-        @NameInMap("TransitRouterAttachmentName")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentName")
         private String transitRouterAttachmentName;
 
-        @NameInMap("TransitRouterId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterId")
         private String transitRouterId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcOwnerId")
+        @com.aliyun.core.annotation.NameInMap("VpcOwnerId")
         private Long vpcOwnerId;
 
-        @NameInMap("VpcRegionId")
+        @com.aliyun.core.annotation.NameInMap("VpcRegionId")
         private String vpcRegionId;
 
-        @NameInMap("ZoneMappings")
+        @com.aliyun.core.annotation.NameInMap("ZoneMappings")
         private java.util.List < ZoneMappings> zoneMappings;
 
         private TransitRouterAttachments(Builder builder) {
@@ -484,10 +483,10 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
             private java.util.List < ZoneMappings> zoneMappings; 
 
             /**
-             * Indicates whether the Enterprise Edition transit router automatically advertises routes to VPCs. Valid values:
+             * Indicates whether the Enterprise Edition transit router can automatically advertise routes to the VPC. Valid values:
              * <p>
              * 
-             * *   **false:** (default)
+             * *   **false**
              * *   **true**
              */
             public Builder autoPublishRouteEnabled(Boolean autoPublishRouteEnabled) {
@@ -496,7 +495,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The CEN instance ID.
+             * The ID of the CEN instance.
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -507,7 +506,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
              * The billing method of the VPC connection.
              * <p>
              * 
-             * Only **POSTPAY** may be returned, which is the default value and specifies the pay-as-you-go billing method.
+             * Only **POSTPAY** may be returned, which indicates the default pay-as-you-go billing method.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -518,7 +517,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
              * The time when the VPC connection was created.
              * <p>
              * 
-             * The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.
+             * The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -555,7 +554,6 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
              * *   **Attached**
              * *   **Attaching**
              * *   **Detaching**
-             * *   **Detached**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -563,7 +561,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the tags.
+             * The tag key.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -579,7 +577,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC connection.
+             * The VPC connection ID.
              */
             public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
                 this.transitRouterAttachmentId = transitRouterAttachmentId;
@@ -595,7 +593,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Enterprise Edition transit router.
+             * The description of the Enterprise Edition transit router.
              */
             public Builder transitRouterId(String transitRouterId) {
                 this.transitRouterId = transitRouterId;
@@ -627,7 +625,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The primary and secondary zones of the VPC connection and the vSwitches and elastic network interfaces (ENIs) of the VPC.
+             * The primary and secondary zones, vSwitches, and ENIs of the VPC.
              */
             public Builder zoneMappings(java.util.List < ZoneMappings> zoneMappings) {
                 this.zoneMappings = zoneMappings;

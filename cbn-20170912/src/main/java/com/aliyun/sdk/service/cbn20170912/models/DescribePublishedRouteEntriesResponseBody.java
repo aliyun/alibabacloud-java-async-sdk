@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePublishedRouteEntriesResponseBody</p>
  */
 public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("PublishedRouteEntries")
+    @com.aliyun.core.annotation.NameInMap("PublishedRouteEntries")
     private PublishedRouteEntries publishedRouteEntries;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribePublishedRouteEntriesResponseBody(Builder builder) {
@@ -132,19 +131,19 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
     } 
 
     public static class Conflict extends TeaModel {
-        @NameInMap("DestinationCidrBlock")
+        @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
         private String destinationCidrBlock;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Conflict(Builder builder) {
@@ -262,7 +261,7 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
 
     }
     public static class Conflicts extends TeaModel {
-        @NameInMap("Conflict")
+        @com.aliyun.core.annotation.NameInMap("Conflict")
         private java.util.List < Conflict> conflict;
 
         private Conflicts(Builder builder) {
@@ -303,28 +302,28 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
 
     }
     public static class PublishedRouteEntry extends TeaModel {
-        @NameInMap("ChildInstanceRouteTableId")
+        @com.aliyun.core.annotation.NameInMap("ChildInstanceRouteTableId")
         private String childInstanceRouteTableId;
 
-        @NameInMap("Conflicts")
+        @com.aliyun.core.annotation.NameInMap("Conflicts")
         private Conflicts conflicts;
 
-        @NameInMap("DestinationCidrBlock")
+        @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
         private String destinationCidrBlock;
 
-        @NameInMap("NextHopId")
+        @com.aliyun.core.annotation.NameInMap("NextHopId")
         private String nextHopId;
 
-        @NameInMap("NextHopType")
+        @com.aliyun.core.annotation.NameInMap("NextHopType")
         private String nextHopType;
 
-        @NameInMap("OperationalMode")
+        @com.aliyun.core.annotation.NameInMap("OperationalMode")
         private Boolean operationalMode;
 
-        @NameInMap("PublishStatus")
+        @com.aliyun.core.annotation.NameInMap("PublishStatus")
         private String publishStatus;
 
-        @NameInMap("RouteType")
+        @com.aliyun.core.annotation.NameInMap("RouteType")
         private String routeType;
 
         private PublishedRouteEntry(Builder builder) {
@@ -520,7 +519,7 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
 
     }
     public static class PublishedRouteEntries extends TeaModel {
-        @NameInMap("PublishedRouteEntry")
+        @com.aliyun.core.annotation.NameInMap("PublishedRouteEntry")
         private java.util.List < PublishedRouteEntry> publishedRouteEntry;
 
         private PublishedRouteEntries(Builder builder) {

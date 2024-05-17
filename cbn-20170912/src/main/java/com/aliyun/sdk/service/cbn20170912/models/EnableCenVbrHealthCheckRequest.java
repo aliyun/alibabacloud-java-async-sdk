@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,66 +11,66 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>EnableCenVbrHealthCheckRequest</p>
  */
 public class EnableCenVbrHealthCheckRequest extends Request {
-    @Query
-    @NameInMap("CenId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CenId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cenId;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("HealthCheckInterval")
-    @Validation(maximum = 3, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckInterval")
+    @com.aliyun.core.annotation.Validation(maximum = 3, minimum = 1)
     private Integer healthCheckInterval;
 
-    @Query
-    @NameInMap("HealthCheckOnly")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckOnly")
     private Boolean healthCheckOnly;
 
-    @Query
-    @NameInMap("HealthCheckSourceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckSourceIp")
     private String healthCheckSourceIp;
 
-    @Query
-    @NameInMap("HealthCheckTargetIp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckTargetIp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String healthCheckTargetIp;
 
-    @Query
-    @NameInMap("HealthyThreshold")
-    @Validation(maximum = 8, minimum = 3)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthyThreshold")
+    @com.aliyun.core.annotation.Validation(maximum = 8, minimum = 3)
     private Integer healthyThreshold;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("VbrInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VbrInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vbrInstanceId;
 
-    @Query
-    @NameInMap("VbrInstanceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VbrInstanceOwnerId")
     private Long vbrInstanceOwnerId;
 
-    @Query
-    @NameInMap("VbrInstanceRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VbrInstanceRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vbrInstanceRegionId;
 
     private EnableCenVbrHealthCheckRequest(Builder builder) {

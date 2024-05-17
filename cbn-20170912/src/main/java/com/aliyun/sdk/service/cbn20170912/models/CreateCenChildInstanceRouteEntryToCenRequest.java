@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,54 +11,54 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCenChildInstanceRouteEntryToCenRequest</p>
  */
 public class CreateCenChildInstanceRouteEntryToCenRequest extends Request {
-    @Query
-    @NameInMap("CenId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CenId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cenId;
 
-    @Query
-    @NameInMap("ChildInstanceAliUid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChildInstanceAliUid")
     private Long childInstanceAliUid;
 
-    @Query
-    @NameInMap("ChildInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChildInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String childInstanceId;
 
-    @Query
-    @NameInMap("ChildInstanceRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChildInstanceRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String childInstanceRegionId;
 
-    @Query
-    @NameInMap("ChildInstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChildInstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String childInstanceType;
 
-    @Query
-    @NameInMap("DestinationCidrBlock")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String destinationCidrBlock;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RouteTableId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteTableId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String routeTableId;
 
     private CreateCenChildInstanceRouteEntryToCenRequest(Builder builder) {
@@ -212,7 +211,7 @@ public class CreateCenChildInstanceRouteEntryToCenRequest extends Request {
          * The ID of the Alibaba Cloud account to which the network instance belongs.
          * <p>
          * 
-         * >  If the network instance belongs to another Alibaba Cloud account, this parameter is required.
+         * > If the network instance belongs to another Alibaba Cloud account, this parameter is required.
          */
         public Builder childInstanceAliUid(Long childInstanceAliUid) {
             this.putQueryParameter("ChildInstanceAliUid", childInstanceAliUid);
@@ -242,7 +241,7 @@ public class CreateCenChildInstanceRouteEntryToCenRequest extends Request {
         }
 
         /**
-         * The type of the attached network instance. Valid values:
+         * The type of the network instance. Valid values:
          * <p>
          * 
          * *   **VPC**: a virtual private cloud (VPC)
@@ -255,7 +254,7 @@ public class CreateCenChildInstanceRouteEntryToCenRequest extends Request {
         }
 
         /**
-         * The destination CIDR block of the route entry.
+         * The destination CIDR block of the route.
          * <p>
          * 
          * Specify the value of this parameter in CIDR notation. Example: 192.168.10.0/24.
@@ -303,7 +302,7 @@ public class CreateCenChildInstanceRouteEntryToCenRequest extends Request {
         }
 
         /**
-         * The ID of the route table of the network instance.
+         * The ID of the route table configured on the network instance.
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);

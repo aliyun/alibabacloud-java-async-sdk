@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCenAttachedChildInstanceAttributeResponseBody</p>
  */
 public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaModel {
-    @NameInMap("CenId")
+    @com.aliyun.core.annotation.NameInMap("CenId")
     private String cenId;
 
-    @NameInMap("ChildInstanceAttachTime")
+    @com.aliyun.core.annotation.NameInMap("ChildInstanceAttachTime")
     private String childInstanceAttachTime;
 
-    @NameInMap("ChildInstanceAttributes")
+    @com.aliyun.core.annotation.NameInMap("ChildInstanceAttributes")
     private ChildInstanceAttributes childInstanceAttributes;
 
-    @NameInMap("ChildInstanceId")
+    @com.aliyun.core.annotation.NameInMap("ChildInstanceId")
     private String childInstanceId;
 
-    @NameInMap("ChildInstanceName")
+    @com.aliyun.core.annotation.NameInMap("ChildInstanceName")
     private String childInstanceName;
 
-    @NameInMap("ChildInstanceOwnerId")
+    @com.aliyun.core.annotation.NameInMap("ChildInstanceOwnerId")
     private Long childInstanceOwnerId;
 
-    @NameInMap("ChildInstanceRegionId")
+    @com.aliyun.core.annotation.NameInMap("ChildInstanceRegionId")
     private String childInstanceRegionId;
 
-    @NameInMap("ChildInstanceType")
+    @com.aliyun.core.annotation.NameInMap("ChildInstanceType")
     private String childInstanceType;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeCenAttachedChildInstanceAttributeResponseBody(Builder builder) {
@@ -245,10 +244,10 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
     } 
 
     public static class Ipv6CidrBlock extends TeaModel {
-        @NameInMap("Ipv6CidrBlock")
+        @com.aliyun.core.annotation.NameInMap("Ipv6CidrBlock")
         private String ipv6CidrBlock;
 
-        @NameInMap("Ipv6Isp")
+        @com.aliyun.core.annotation.NameInMap("Ipv6Isp")
         private String ipv6Isp;
 
         private Ipv6CidrBlock(Builder builder) {
@@ -314,7 +313,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
 
     }
     public static class Ipv6CidrBlocks extends TeaModel {
-        @NameInMap("ipv6CidrBlock")
+        @com.aliyun.core.annotation.NameInMap("ipv6CidrBlock")
         private java.util.List < Ipv6CidrBlock> ipv6CidrBlock;
 
         private Ipv6CidrBlocks(Builder builder) {
@@ -355,7 +354,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
 
     }
     public static class SecondaryCidrBlocks extends TeaModel {
-        @NameInMap("secondaryCidrBlock")
+        @com.aliyun.core.annotation.NameInMap("secondaryCidrBlock")
         private java.util.List < String > secondaryCidrBlock;
 
         private SecondaryCidrBlocks(Builder builder) {
@@ -396,16 +395,16 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
 
     }
     public static class ChildInstanceAttributes extends TeaModel {
-        @NameInMap("CidrBlock")
+        @com.aliyun.core.annotation.NameInMap("CidrBlock")
         private String cidrBlock;
 
-        @NameInMap("Ipv6CidrBlock")
+        @com.aliyun.core.annotation.NameInMap("Ipv6CidrBlock")
         private String ipv6CidrBlock;
 
-        @NameInMap("Ipv6CidrBlocks")
+        @com.aliyun.core.annotation.NameInMap("Ipv6CidrBlocks")
         private Ipv6CidrBlocks ipv6CidrBlocks;
 
-        @NameInMap("SecondaryCidrBlocks")
+        @com.aliyun.core.annotation.NameInMap("SecondaryCidrBlocks")
         private SecondaryCidrBlocks secondaryCidrBlocks;
 
         private ChildInstanceAttributes(Builder builder) {

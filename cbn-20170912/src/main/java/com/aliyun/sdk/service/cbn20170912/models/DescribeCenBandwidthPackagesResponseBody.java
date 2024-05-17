@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCenBandwidthPackagesResponseBody</p>
  */
 public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
-    @NameInMap("CenBandwidthPackages")
+    @com.aliyun.core.annotation.NameInMap("CenBandwidthPackages")
     private CenBandwidthPackages cenBandwidthPackages;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeCenBandwidthPackagesResponseBody(Builder builder) {
@@ -132,7 +131,7 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
     } 
 
     public static class CenIds extends TeaModel {
-        @NameInMap("CenId")
+        @com.aliyun.core.annotation.NameInMap("CenId")
         private java.util.List < String > cenId;
 
         private CenIds(Builder builder) {
@@ -173,16 +172,16 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
 
     }
     public static class OrginInterRegionBandwidthLimit extends TeaModel {
-        @NameInMap("BandwidthLimit")
+        @com.aliyun.core.annotation.NameInMap("BandwidthLimit")
         private String bandwidthLimit;
 
-        @NameInMap("GeographicSpanId")
+        @com.aliyun.core.annotation.NameInMap("GeographicSpanId")
         private String geographicSpanId;
 
-        @NameInMap("LocalRegionId")
+        @com.aliyun.core.annotation.NameInMap("LocalRegionId")
         private String localRegionId;
 
-        @NameInMap("OppositeRegionId")
+        @com.aliyun.core.annotation.NameInMap("OppositeRegionId")
         private String oppositeRegionId;
 
         private OrginInterRegionBandwidthLimit(Builder builder) {
@@ -274,7 +273,7 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
 
     }
     public static class OrginInterRegionBandwidthLimits extends TeaModel {
-        @NameInMap("OrginInterRegionBandwidthLimit")
+        @com.aliyun.core.annotation.NameInMap("OrginInterRegionBandwidthLimit")
         private java.util.List < OrginInterRegionBandwidthLimit> orginInterRegionBandwidthLimit;
 
         private OrginInterRegionBandwidthLimits(Builder builder) {
@@ -315,10 +314,10 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -376,7 +375,7 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -417,70 +416,70 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
 
     }
     public static class CenBandwidthPackage extends TeaModel {
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Long bandwidth;
 
-        @NameInMap("BandwidthPackageChargeType")
+        @com.aliyun.core.annotation.NameInMap("BandwidthPackageChargeType")
         private String bandwidthPackageChargeType;
 
-        @NameInMap("BusinessStatus")
+        @com.aliyun.core.annotation.NameInMap("BusinessStatus")
         private String businessStatus;
 
-        @NameInMap("CenBandwidthPackageId")
+        @com.aliyun.core.annotation.NameInMap("CenBandwidthPackageId")
         private String cenBandwidthPackageId;
 
-        @NameInMap("CenIds")
+        @com.aliyun.core.annotation.NameInMap("CenIds")
         private CenIds cenIds;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("GeographicRegionAId")
+        @com.aliyun.core.annotation.NameInMap("GeographicRegionAId")
         private String geographicRegionAId;
 
-        @NameInMap("GeographicRegionBId")
+        @com.aliyun.core.annotation.NameInMap("GeographicRegionBId")
         private String geographicRegionBId;
 
-        @NameInMap("GeographicSpanId")
+        @com.aliyun.core.annotation.NameInMap("GeographicSpanId")
         private String geographicSpanId;
 
-        @NameInMap("HasReservationData")
+        @com.aliyun.core.annotation.NameInMap("HasReservationData")
         private String hasReservationData;
 
-        @NameInMap("IsCrossBorder")
+        @com.aliyun.core.annotation.NameInMap("IsCrossBorder")
         private Boolean isCrossBorder;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OrginInterRegionBandwidthLimits")
+        @com.aliyun.core.annotation.NameInMap("OrginInterRegionBandwidthLimits")
         private OrginInterRegionBandwidthLimits orginInterRegionBandwidthLimits;
 
-        @NameInMap("ReservationActiveTime")
+        @com.aliyun.core.annotation.NameInMap("ReservationActiveTime")
         private String reservationActiveTime;
 
-        @NameInMap("ReservationBandwidth")
+        @com.aliyun.core.annotation.NameInMap("ReservationBandwidth")
         private String reservationBandwidth;
 
-        @NameInMap("ReservationInternetChargeType")
+        @com.aliyun.core.annotation.NameInMap("ReservationInternetChargeType")
         private String reservationInternetChargeType;
 
-        @NameInMap("ReservationOrderType")
+        @com.aliyun.core.annotation.NameInMap("ReservationOrderType")
         private String reservationOrderType;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
         private CenBandwidthPackage(Builder builder) {
@@ -915,7 +914,7 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
 
     }
     public static class CenBandwidthPackages extends TeaModel {
-        @NameInMap("CenBandwidthPackage")
+        @com.aliyun.core.annotation.NameInMap("CenBandwidthPackage")
         private java.util.List < CenBandwidthPackage> cenBandwidthPackage;
 
         private CenBandwidthPackages(Builder builder) {

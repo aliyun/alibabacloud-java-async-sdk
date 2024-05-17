@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCenInterRegionTrafficQosQueuesResponseBody</p>
  */
 public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TrafficQosQueues")
+    @com.aliyun.core.annotation.NameInMap("TrafficQosQueues")
     private java.util.List < TrafficQosQueues> trafficQosQueues;
 
     private ListCenInterRegionTrafficQosQueuesResponseBody(Builder builder) {
@@ -62,7 +61,11 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
         private java.util.List < TrafficQosQueues> trafficQosQueues; 
 
         /**
-         * NextToken.
+         * The token that determines the start point of the query. Valid values:
+         * <p>
+         * 
+         * - If NextToken was not returned, it indicates that no additional results exist.
+         * - If NextToken was returned in the previous query, specify the value to obtain the next set of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +73,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
         }
 
         /**
-         * TrafficQosQueues.
+         * A list of queues.
          */
         public Builder trafficQosQueues(java.util.List < TrafficQosQueues> trafficQosQueues) {
             this.trafficQosQueues = trafficQosQueues;
@@ -92,31 +95,31 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
     } 
 
     public static class TrafficQosQueues extends TeaModel {
-        @NameInMap("Dscps")
+        @com.aliyun.core.annotation.NameInMap("Dscps")
         private java.util.List < Integer > dscps;
 
-        @NameInMap("RemainBandwidthPercent")
+        @com.aliyun.core.annotation.NameInMap("RemainBandwidthPercent")
         private Integer remainBandwidthPercent;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TrafficQosPolicyId")
+        @com.aliyun.core.annotation.NameInMap("TrafficQosPolicyId")
         private String trafficQosPolicyId;
 
-        @NameInMap("TrafficQosQueueDescription")
+        @com.aliyun.core.annotation.NameInMap("TrafficQosQueueDescription")
         private String trafficQosQueueDescription;
 
-        @NameInMap("TrafficQosQueueId")
+        @com.aliyun.core.annotation.NameInMap("TrafficQosQueueId")
         private String trafficQosQueueId;
 
-        @NameInMap("TrafficQosQueueName")
+        @com.aliyun.core.annotation.NameInMap("TrafficQosQueueName")
         private String trafficQosQueueName;
 
-        @NameInMap("TransitRouterAttachmentId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentId")
         private String transitRouterAttachmentId;
 
-        @NameInMap("TransitRouterId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterId")
         private String transitRouterId;
 
         private TrafficQosQueues(Builder builder) {
@@ -214,7 +217,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             private String transitRouterId; 
 
             /**
-             * Dscps.
+             * The differentiated services code point (DSCP) value that matches the current queue.
              */
             public Builder dscps(java.util.List < Integer > dscps) {
                 this.dscps = dscps;
@@ -222,7 +225,10 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * RemainBandwidthPercent.
+             * The percentage of bandwidth resources that can be allocated to the current queue.
+             * <p>
+             * 
+             * For example, a value of 1 indicates that 1 percent of bandwidth resources can be allocated to the queue.
              */
             public Builder remainBandwidthPercent(Integer remainBandwidthPercent) {
                 this.remainBandwidthPercent = remainBandwidthPercent;
@@ -230,7 +236,12 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the queue. Valid values:
+             * <p>
+             * 
+             * - **Creating**: The queue is being created. 
+             * - **Active**: The queue is available. 
+             * - **Deleting**: The queue is being deleted.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -238,7 +249,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficQosPolicyId.
+             * The ID of the QoS policy.
              */
             public Builder trafficQosPolicyId(String trafficQosPolicyId) {
                 this.trafficQosPolicyId = trafficQosPolicyId;
@@ -246,7 +257,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficQosQueueDescription.
+             * The description of the queue.
              */
             public Builder trafficQosQueueDescription(String trafficQosQueueDescription) {
                 this.trafficQosQueueDescription = trafficQosQueueDescription;
@@ -254,7 +265,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficQosQueueId.
+             * The ID of the queue.
              */
             public Builder trafficQosQueueId(String trafficQosQueueId) {
                 this.trafficQosQueueId = trafficQosQueueId;
@@ -262,7 +273,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficQosQueueName.
+             * The name of the queue.
              */
             public Builder trafficQosQueueName(String trafficQosQueueName) {
                 this.trafficQosQueueName = trafficQosQueueName;
@@ -270,7 +281,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * TransitRouterAttachmentId.
+             * The ID of the inter-region connection.
              */
             public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
                 this.transitRouterAttachmentId = transitRouterAttachmentId;
@@ -278,7 +289,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * TransitRouterId.
+             * The ID of the transit router.
              */
             public Builder transitRouterId(String transitRouterId) {
                 this.transitRouterId = transitRouterId;

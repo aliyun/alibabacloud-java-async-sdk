@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCenGeographicSpansResponseBody</p>
  */
 public class DescribeCenGeographicSpansResponseBody extends TeaModel {
-    @NameInMap("GeographicSpanModels")
+    @com.aliyun.core.annotation.NameInMap("GeographicSpanModels")
     private GeographicSpanModels geographicSpanModels;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeCenGeographicSpansResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
     } 
 
     public static class GeographicSpanModel extends TeaModel {
-        @NameInMap("GeographicSpanId")
+        @com.aliyun.core.annotation.NameInMap("GeographicSpanId")
         private String geographicSpanId;
 
-        @NameInMap("LocalGeoRegionId")
+        @com.aliyun.core.annotation.NameInMap("LocalGeoRegionId")
         private String localGeoRegionId;
 
-        @NameInMap("OppositeGeoRegionId")
+        @com.aliyun.core.annotation.NameInMap("OppositeGeoRegionId")
         private String oppositeGeoRegionId;
 
         private GeographicSpanModel(Builder builder) {
@@ -213,7 +212,7 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
 
     }
     public static class GeographicSpanModels extends TeaModel {
-        @NameInMap("GeographicSpanModel")
+        @com.aliyun.core.annotation.NameInMap("GeographicSpanModel")
         private java.util.List < GeographicSpanModel> geographicSpanModel;
 
         private GeographicSpanModels(Builder builder) {

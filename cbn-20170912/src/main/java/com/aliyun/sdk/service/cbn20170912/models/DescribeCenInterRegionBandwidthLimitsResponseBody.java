@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCenInterRegionBandwidthLimitsResponseBody</p>
  */
 public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel {
-    @NameInMap("CenInterRegionBandwidthLimits")
+    @com.aliyun.core.annotation.NameInMap("CenInterRegionBandwidthLimits")
     private CenInterRegionBandwidthLimits cenInterRegionBandwidthLimits;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeCenInterRegionBandwidthLimitsResponseBody(Builder builder) {
@@ -132,30 +131,34 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
     } 
 
     public static class CenInterRegionBandwidthLimit extends TeaModel {
-        @NameInMap("BandwidthLimit")
+        @com.aliyun.core.annotation.NameInMap("BandwidthLimit")
         private Long bandwidthLimit;
 
-        @NameInMap("BandwidthPackageId")
+        @com.aliyun.core.annotation.NameInMap("BandwidthPackageId")
         private String bandwidthPackageId;
 
-        @NameInMap("CenId")
+        @com.aliyun.core.annotation.NameInMap("BandwidthType")
+        private String bandwidthType;
+
+        @com.aliyun.core.annotation.NameInMap("CenId")
         private String cenId;
 
-        @NameInMap("GeographicSpanId")
+        @com.aliyun.core.annotation.NameInMap("GeographicSpanId")
         private String geographicSpanId;
 
-        @NameInMap("LocalRegionId")
+        @com.aliyun.core.annotation.NameInMap("LocalRegionId")
         private String localRegionId;
 
-        @NameInMap("OppositeRegionId")
+        @com.aliyun.core.annotation.NameInMap("OppositeRegionId")
         private String oppositeRegionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private CenInterRegionBandwidthLimit(Builder builder) {
             this.bandwidthLimit = builder.bandwidthLimit;
             this.bandwidthPackageId = builder.bandwidthPackageId;
+            this.bandwidthType = builder.bandwidthType;
             this.cenId = builder.cenId;
             this.geographicSpanId = builder.geographicSpanId;
             this.localRegionId = builder.localRegionId;
@@ -183,6 +186,13 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
          */
         public String getBandwidthPackageId() {
             return this.bandwidthPackageId;
+        }
+
+        /**
+         * @return bandwidthType
+         */
+        public String getBandwidthType() {
+            return this.bandwidthType;
         }
 
         /**
@@ -223,6 +233,7 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
         public static final class Builder {
             private Long bandwidthLimit; 
             private String bandwidthPackageId; 
+            private String bandwidthType; 
             private String cenId; 
             private String geographicSpanId; 
             private String localRegionId; 
@@ -242,6 +253,14 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
              */
             public Builder bandwidthPackageId(String bandwidthPackageId) {
                 this.bandwidthPackageId = bandwidthPackageId;
+                return this;
+            }
+
+            /**
+             * BandwidthType.
+             */
+            public Builder bandwidthType(String bandwidthType) {
+                this.bandwidthType = bandwidthType;
                 return this;
             }
 
@@ -300,7 +319,7 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
 
     }
     public static class CenInterRegionBandwidthLimits extends TeaModel {
-        @NameInMap("CenInterRegionBandwidthLimit")
+        @com.aliyun.core.annotation.NameInMap("CenInterRegionBandwidthLimit")
         private java.util.List < CenInterRegionBandwidthLimit> cenInterRegionBandwidthLimit;
 
         private CenInterRegionBandwidthLimits(Builder builder) {

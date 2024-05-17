@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTransitRouterPrefixListAssociationResponseBody</p>
  */
 public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("PrefixLists")
+    @com.aliyun.core.annotation.NameInMap("PrefixLists")
     private java.util.List < PrefixLists> prefixLists;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListTransitRouterPrefixListAssociationResponseBody(Builder builder) {
@@ -132,28 +131,28 @@ public class ListTransitRouterPrefixListAssociationResponseBody extends TeaModel
     } 
 
     public static class PrefixLists extends TeaModel {
-        @NameInMap("NextHop")
+        @com.aliyun.core.annotation.NameInMap("NextHop")
         private String nextHop;
 
-        @NameInMap("NextHopInstanceId")
+        @com.aliyun.core.annotation.NameInMap("NextHopInstanceId")
         private String nextHopInstanceId;
 
-        @NameInMap("NextHopType")
+        @com.aliyun.core.annotation.NameInMap("NextHopType")
         private String nextHopType;
 
-        @NameInMap("OwnerUid")
+        @com.aliyun.core.annotation.NameInMap("OwnerUid")
         private Long ownerUid;
 
-        @NameInMap("PrefixListId")
+        @com.aliyun.core.annotation.NameInMap("PrefixListId")
         private String prefixListId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TransitRouterId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterId")
         private String transitRouterId;
 
-        @NameInMap("TransitRouterTableId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterTableId")
         private String transitRouterTableId;
 
         private PrefixLists(Builder builder) {

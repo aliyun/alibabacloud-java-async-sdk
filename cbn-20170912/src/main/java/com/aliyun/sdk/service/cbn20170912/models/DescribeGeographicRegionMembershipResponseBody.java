@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeGeographicRegionMembershipResponseBody</p>
  */
 public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RegionIds")
+    @com.aliyun.core.annotation.NameInMap("RegionIds")
     private RegionIds regionIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeGeographicRegionMembershipResponseBody(Builder builder) {
@@ -132,7 +131,7 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
     } 
 
     public static class RegionId extends TeaModel {
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private RegionId(Builder builder) {
@@ -173,7 +172,7 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
 
     }
     public static class RegionIds extends TeaModel {
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private java.util.List < RegionId> regionId;
 
         private RegionIds(Builder builder) {

@@ -141,6 +141,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * - A vSwitch can be associated with only one multicast domain. Make sure that the vSwitch is not associated with other multicast domains. For more information about how to disassociate a vSwitch from a multicast domain, see [DisassociateTransitRouterMulticastDomain](~~429774~~).
+      * - AssociateTransitRouterMulticastDomain is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the ListTransitRouterMulticastDomainAssociations operation to query whether a vSwitch is associated with the specified multicast domain.
+      *   - If the status is Associating, it indicates that the vSwitch is being associated with the specified multicast domain. You can query the vSwitch but cannot perform other operations on the vSwitch.
+      *   - If the status is Associated, the vSwitch is associated with the specified multicast domain.
+      * - The VPC of the vSwitch must be associated with an Enterprise Edition transit router. For more information about how to associate a VPC with an Enterprise Edition transit router, see [CreateTransitRouterVpcAttachment](~~468237~~).
+      *
+     */
     @Override
     public CompletableFuture<AssociateTransitRouterMulticastDomainResponse> associateTransitRouterMulticastDomain(AssociateTransitRouterMulticastDomainRequest request) {
         try {
@@ -254,9 +262,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * ## Limits
-      * *   By default, the CreateCenChildInstanceRouteEntryToCen operation is unavailable. To call this operation, [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
+      * *   By default, the CreateCenChildInstanceRouteEntryToCen operation is unavailable. To call this operation,[submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
       * *   You cannot add a route entry to an Enterprise Edition transit router by calling the CreateCenChildInstanceRouteEntryToCen operation.
-      * *   By default, the next hop of the route entry is the regional gateway of the CEN instance. You cannot modify the next hop.
+      * *   By default, the next hop of the route entry is the regional gateway of the Cloud Enterprise Network (CEN) instance. You cannot modify the next hop.
       *
      */
     @Override
@@ -275,14 +283,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * *   Only inter-region connections created on Enterprise Edition transit routers support QoS policies.
-      *         If your inter-region connection uses test bandwidth, you cannot create QoS policies for the inter-region connection. 
-      * *   QoS policies apply only to outbound traffic on Enterprise Edition transit routers.
-      *         If you create an inter-region connection between the China (Hangzhou) region and the China (Qingdao) region, and create QoS policies for the transit router in the China (Hangzhou) region and the transit router in the China (Qingdao) region, the QoS policies apply only to the network traffic that flows from China (Hangzhou) to China (Qingdao). QoS policies allocate bandwidth resources to different services. 
-      * *   **CreateCenInterRegionTrafficQosPolicy** is an asynchronous operation. After you send a request, the system returns a QoS policy ID and runs the task in the system background. You can call **ListCenInterRegionTrafficQosPolicies** to query the status of a QoS policy.
-      *     *   If a QoS policy is in the **Creating** state, the QoS policy is being created. You can query the QoS policy but cannot perform other operations.
-      *     *   If a QoS policy is in the **Active** state, the QoS policy is created.
-      * ### Prerequisites
-      * Make sure that the following requirements are met before you call the **CreateCenInterRegionTrafficQosPolicy** operation:
+      * *   Traffic scheduling applies only to outbound traffic on Enterprise Edition transit routers.
+      *     For example, you create an inter-region connection between the China (Hangzhou) and China (Qingdao) regions, and create a QoS policy for the transit router in the China (Hangzhou) region. In this case, the QoS policy can ensure bandwidth for network traffic from the China (Hangzhou) region to the China (Qingdao) region. However, the QoS policy does not apply to network traffic from the China (Qingdao) region to the China (Hangzhou) region.
+      * *   **CreateCenInterRegionTrafficQosPolicy** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the **ListCenInterRegionTrafficQosPolicies** operation to query the status of the task.
+      *     *   If the QoS policy is in the **Creating** state, the QoS policy is being created. You can query the QoS policy but cannot perform other operations on the QoS policy.
+      *     *   If the QoS policy is in the **Active** state, the QoS policy is created.
+      * ## [](#)Prerequisite
+      * Before you call the **CreateCenInterRegionTrafficQosPolicy** operation, make sure that the following requirements are met:
       * *   An inter-region connection is created. For more information, see [CreateTransitRouterPeerAttachment](~~261363~~).
       * *   A traffic marking policy is created. For more information, see [CreateTrafficMarkingPolicy](~~419025~~).
       *
@@ -640,7 +647,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
       * *   By default, route learning and associated forwarding are disabled between transit router route tables and IPsec-VPN attachments.
       * *   When you call `CreateTransitRouterVpnAttachment`, if you set **CenId** and **RegionId**, you do not need to set **TransitRouterId**. If you set **TransitRouterId** and **RegionId**, you do not need to set **CenId**.
-      * ## Prerequisites
+      * ### Prerequisites
       * *   Before you attach an IPsec-VPN connection to a transit router, make sure that at least one IPsec-VPN connection is created in the region where the transit router is deployed. Make sure the IPsec-VPN connection is not associated with a resource. For more information, see [CreateVpnAttachment](~~442455~~).
       * *   If the IPsec-VPN connection to be attached to the transit router belongs to a different Alibaba Cloud account, make sure that the transit router has obtained the required permissions from the IPsec-VPN connection. For more information, see [GrantInstanceToTransitRouter](~~417520~~).
       *
@@ -1135,10 +1142,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you delete a VPN attachment, make sure that the following requirements are met:
-      * *   No associated forwarding correlation is established between the VPN attachment and the route tables of the Enterprise Edition transit router. For more information about how to delete an associated forwarding correlation, see [DissociateTransitRouterAttachmentFromRouteTable](~~260944~~).
-      * *   No route learning correlation is established between the VPn attachment and the route tables of the Enterprise Edition transit router. For more information about how to delete a route learning correlation, see [DisableTransitRouterRouteTablePropagation](~~260945~~).
-      * *   No route in the route table of the Enterprise Edition transit router points to the VPN attachment. For more information, see [DeleteTransitRouterRouteEntry](~~261240~~).
+      * Before you call the **DeleteTransitRouterVpnAttachment** operation, make sure that all request parameters are valid. If a request parameter is invalid, a **request ID** is returned, but the VPN attachment is not deleted.
       *
      */
     @Override
@@ -1156,9 +1160,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * `DeregisterTransitRouterMulticastGroupMembers` is an asynchronous operation. After you send a request, the system returns a **request ID** and runs the task in the background. You can call the `ListTransitRouterMulticastGroups` operation to query the status of a multicast member.
-      * *   If a multicast member is in the **Deregistering** state, the multicast member is being removed. In this case, you can query the multicast member but cannot perform other operations.
+      * `DeregisterTransitRouterMulticastGroupMembers` is an asynchronous operation. After a request is sent, the system returns a **request ID** and runs the task in the background. You can call the `ListTransitRouterMulticastGroups` operation to query the status of a multicast member.
+      * *   If the multicast member is in the **Deregistering** state, the multicast member is being removed. In this case, you can query the multicast member but cannot perform other operations on the multicast member.
       * *   If a multicast member cannot be found, the multicast member is removed from the multicast group.``
+      * Before you call the DeregisterTransitRouterMulticastGroupMembers operation, make sure that all request parameters are valid. If a request parameter is invalid, a request ID is returned but the multicast member is not removed.
       *
      */
     @Override
@@ -1211,8 +1216,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The time when the network instance was attached to the CEN instance.
-      * The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.
+      * You can use one of the following methods to query the information about the network instances that are attached to a CEN instance:
+      * *   You can query all the network instances that are attached to a CEN instance by setting the `CenId` parameter.
+      * *   You can query the network instances that are attached to a CEN instance in a specified region by setting the `CenId` and `ChildInstanceRegionId` parameters.
+      * *   You can query a specified type of network instances that are attached to a CEN instance by setting the `CenId` and `ChildInstanceType` parameters.
       *
      */
     @Override
@@ -1573,6 +1580,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   Before you delete a vSwitch from a multicast domain, make sure that the vSwitch does not contain a multicast source or a multicast member. For more information about how to remove a multicast source or member from a vSwitch, see [DeregisterTransitRouterMulticastGroupSources](~~468416~~) and [DeregisterTransitRouterMulticastGroupMembers](~~468409~~).
+      * *   If a request parameter is invalid, the system returns a request ID but does not disassociate the vSwitch from the multicast domain.
+      * *   **DisassociateTransitRouterMulticastDomain** is an asynchronous operation. After a request is sent, the system returns a **request ID** and runs the task in the background. You can call the **ListTransitRouterMulticastDomainAssociations** operation to query whether a vSwitch is disassociated from the specified multicast domain.
+      *     *   If the status is **Dissociating**, it indicates that the vSwitch is being disassociated from the specified multicast domain. You can query the vSwitch but cannot perform other operations on the vSwitch.
+      *     *   If the vSwitch cannot be found, the vSwitch is disassociated from the multicast domain.
+      *
+     */
     @Override
     public CompletableFuture<DisassociateTransitRouterMulticastDomainResponse> disassociateTransitRouterMulticastDomain(DisassociateTransitRouterMulticastDomainRequest request) {
         try {
@@ -1686,10 +1701,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you call the **ListCenInterRegionTrafficQosPolicies** operation, take note of the following information:
-      * *   If you do not set the **TrafficQosPolicyId** parameter, the system returns information about QoS policies based on the values of the **TransitRouterId**, **TransitRouterAttachmentId**, **TrafficQosPolicyName**, and **TrafficQosPolicyDescription** parameters, but does not return information about the queues in the QoS policies. The **TrafficQosQueues** parameter is not included in the response.
-      * *   If you specify a QoS policy ID in the **TrafficMarkingPolicyId** parameter, the system returns the information about the QoS policy and the queues. The **TrafficQosQueues** parameter is included in the response.
-      *     If the **TrafficQosQueues** parameter contains an empty array, it indicates that the QoS policy contains only the default queue.
+      * Before you call the **ListCenInterRegionTrafficQosPolicies** operation, take note of the following information:
+      * *   You must specify at least one of the **TransitRouterId** and **TrafficQosPolicyId** parameters.
+      * *   If you do not specify a QoS policy ID (**TrafficQosPolicyId**), the system returns information based on the values of the **TransitRouterId**, **TransitRouterAttachmentId**, **TrafficQosPolicyName**, and **TrafficQosPolicyDescription** parameters. The information about the queues in the QoS policies is not returned. In this case, the **TrafficQosQueues** parameter is not included in the response.
+      * *   If you specify a QoS policy ID (**TrafficQosPolicyId**), the system returns the information about the QoS policy and queues in the QoS policy. In this case, the **TrafficQosQueues** parameter is included in the response. If the value of the **TrafficQosQueues** parameter is an empty string, it indicates that the QoS policy contains only the default queue.
+      * *   Make sure that all the request parameters are valid. If a request parameter is invalid, a request ID is returned but the information about the QoS policy is not returned.
       *
      */
     @Override
@@ -1784,10 +1800,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Take note of the following rules when you call the **ListTrafficMarkingPolicies** operation:
-      * *   If you do not specify a traffic marking policy ID in the **TrafficMarkingPolicyId** parameter, the system returns the information about the traffic marking policies based on the **TransitRouterId**, **TrafficMarkingPolicyName**, and **TrafficMarkingPolicyDescription** parameters. The information about the traffic classification rules in the policies is not returned. The **TrafficMatchRules** parameter is not included in the response.
-      * *   If you specify a traffic marking policy ID in the **TrafficMarkingPolicyId** parameter, this operation returns the information about the traffic marking policy and the traffic classification rules. The **TrafficMatchRules** parameter is included in the response.
-      *     If the **TrafficMatchRules** parameter contains an empty array, it indicates that the traffic marking policy does not contain a traffic classification rule.
+      * Before you call the **ListTrafficMarkingPolicies** operation, take note of the following limits:
+      * *   Specify at least one of the **TransitRouterId** and **TrafficMarkingPolicyId** parameters.
+      * *   If you do not specify a traffic marking policy ID (**TrafficMarkingPolicyId**), the operation queries only the information about the traffic marking policy based on the **TransitRouterId**, **TrafficMarkingPolicyName**, and **TrafficMarkingPolicyDescription** parameters. The **TrafficMatchRules** parameter that contains the information about the traffic classification rules is not returned.
+      * *   If you specify a traffic marking policy ID (**TrafficMarkingPolicyId**), the operation queries the information about the traffic marking policy and traffic classification rules. The **TrafficMatchRules** parameter is returned in the response. If the value of the **TrafficMatchRules** parameter is an empty array, the traffic marking policy does not contain a traffic classification rule.
       *
      */
     @Override
@@ -1903,6 +1919,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   If you configure one of the RegionId and CenId parameters, you must configure the other parameter. Otherwise, no information about the multicast domain is returned. You can configure only one of the TransitRouterId and TransitRouterMulticastDomainId parameters.
+      * *   Make sure that all the request parameters are valid. If a request parameter is invalid, a **request ID** is returned but the information about the multicast domain is not returned.
+      *
+     */
     @Override
     public CompletableFuture<ListTransitRouterMulticastDomainsResponse> listTransitRouterMulticastDomains(ListTransitRouterMulticastDomainsRequest request) {
         try {
@@ -2082,10 +2103,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you call the **ListTransitRouterVpnAttachments** operation, take note of the following items:
-      * *   If you set only **CenId** and **RegionId**, the VPN attachments in the current region are queried.
-      * *   If you set **CenId**, **RegionId**, and **TransitRouterAttachmentId**, only the specified VPN attachment is queried.
-      * *   If you set **CenId** and **RegionId**, you do not need to set **TransitRouterId**. If you set **TransitRouterId**, you do not need to set **CenId** or **RegionId**.
+      * You can use the following methods to call the ListTransitRouterVpnAttachments operation:
+      * *   Specify only the **TransitRouterAttachmentId** parameter to query the information about a VPN attachment.
+      * *   Specify only the **TransitRouterId** parameter to query the information about all VPN attachments on a transit router.
+      * *   Specify the **CenId** and **RegionId** parameter to query the information about VPN attachments in a specified region.
+      * Before you call the **ListTransitRouterVpnAttachments** operation, make sure that all request parameters are valid. If a request parameter is invalid, a **request ID** is returned, but the information about the VPN attachments is not returned.
       *
      */
     @Override
@@ -2330,13 +2352,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Enterprise Edition transit routers allow you to specify elastic network interfaces (ENIs) as multicast members. You can call the `RegisterTransitRouterMulticastGroupMembers` operation to add ENIs in the same region or in different regions to a multicast group as multicast members.
-      * *   If you specify a value for **NetworkInterfaceIds**, ENIs in the current region are specified as multicast members. Make sure that the vSwitches of the ENIs are associated with the multicast domain. For more information, see [AssociateTransitRouterMulticastDomain](~~429778~~).
-      * *   If you specify a value for **PeerTransitRouterMulticastDomains**, multicast members in the multicast group that has the same IP address as the current multicast group but is in a different region are added to the current multicast group. Make sure that an inter-region connection is created. For more information, see [CreateTransitRouterPeerAttachment](~~261363~~).
-      *       For example, Alice created a multicast domain (Domain A) in the Australia (Sydney) region and a multicast domain (Domain B) in the UK (London) region. Domain A contains a multicast group (Group A), and Domain B contains a multicast group (Group B). Group A and Group B have the same multicast IP address. Group B in UK (London) contains a multicast member (Member B). When Alice calls the `RegisterTransitRouterMulticastGroupMembers` operation, if she sets **PeerTransitRouterMulticastDomains** to the ID of Member B in Group B that is in the UK (London) region, Member B is added to Group A in the Australia (Sydney) region. 
-      * *   The `RegisterTransitRouterMulticastGroupMembers` operation is an asynchronous operation. After you send a request, the system returns a **request ID** and runs the task in the background. You can call the `ListTransitRouterMulticastGroups` operation to query the status of a multicast member.
-      *     *   If a multicast member is in the **Registering** state, the multicast member is being added. You can query the multicast member but cannot perform other operations.
-      *     *   If a multicast member is in the **Registered** state, the multicast member is added.
+      * Enterprise Edition transit routers support only elastic network interfaces (ENIs) as multicast members. You can call the `RegisterTransitRouterMulticastGroupMembers` operation to specify an ENI in the current region or a different region as a multicast member.
+      * *   If you specify a value for the **NetworkInterfaceIds** parameter, an ENI in the current region is to be specified as a multicast member. Make sure that the ENI and vSwitch are associated with the multicast group. For more information, see [AssociateTransitRouterMulticastDomain](~~429778~~).
+      * *   If you specify a value for the **PeerTransitRouterMulticastDomains**, a multicast member in a multicast group that belongs to another region but has the same IP address as the current multicast group is to be specified as a multicast member for the current multicast group. Make sure that an inter-region connection is established between the regions. For more information, see [CreateTransitRouterPeerAttachment](~~261363~~).
+      *     For example, Multicast Domain 1 is created in the Australia (Sydney) region. Multicast Group 1 is created in Multicast Domain 1. Multicast Domain 2 is created in the UK (London) region. Multicast Group 2 is created in Multicast Domain 2. Multicast Group 1 and Multicast Group 2 use the same IP address. Multicast Group contains a multicast member named Member 2. When you call the `RegisterTransitRouterMulticastGroupMembers` operation to add a multicast member to Multicast Group 1 in the Australia (Sydney) region, you can set **PeerTransitRouterMulticastDomains** to the ID of the Multicast Domain 2 in the UK (London) region. As a result, Member 2 in Multicast Group 2 in the UK (London) region is also added to Multicast Group 1 in the Australia (Sydney) region as a multicast member.
+      * *   `RegisterTransitRouterMulticastGroupMembers` is an asynchronous operation. After a request is sent, the system returns a **request ID** and runs the task in the background. You can call the `ListTransitRouterMulticastGroups` operation to query the status of a multicast member.
+      *     *   If the multicast member is in the **Registering**, the multicast member is being created. In this case, you can query the multicast member but cannot perform other operations on the multicast member.
+      *     *   If the multicast member is in the **Registered** state, the multicast member is created.
       *
      */
     @Override

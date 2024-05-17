@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCenInterRegionTrafficQosPoliciesResponseBody</p>
  */
 public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("TrafficQosPolicies")
+    @com.aliyun.core.annotation.NameInMap("TrafficQosPolicies")
     private java.util.List < TrafficQosPolicies> trafficQosPolicies;
 
     private ListCenInterRegionTrafficQosPoliciesResponseBody(Builder builder) {
@@ -136,19 +135,19 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
     } 
 
     public static class TrafficQosQueues extends TeaModel {
-        @NameInMap("Dscps")
+        @com.aliyun.core.annotation.NameInMap("Dscps")
         private java.util.List < Integer > dscps;
 
-        @NameInMap("QosQueueDescription")
+        @com.aliyun.core.annotation.NameInMap("QosQueueDescription")
         private String qosQueueDescription;
 
-        @NameInMap("QosQueueId")
+        @com.aliyun.core.annotation.NameInMap("QosQueueId")
         private String qosQueueId;
 
-        @NameInMap("QosQueueName")
+        @com.aliyun.core.annotation.NameInMap("QosQueueName")
         private String qosQueueName;
 
-        @NameInMap("RemainBandwidthPercent")
+        @com.aliyun.core.annotation.NameInMap("RemainBandwidthPercent")
         private Integer remainBandwidthPercent;
 
         private TrafficQosQueues(Builder builder) {
@@ -210,7 +209,7 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
             private Integer remainBandwidthPercent; 
 
             /**
-             * The differentiated services code point (DSCP) value used to match packets in the queue.
+             * The differentiated services code point (DSCP) value that is used to match packets.
              */
             public Builder dscps(java.util.List < Integer > dscps) {
                 this.dscps = dscps;
@@ -226,7 +225,7 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the queue.
+             * The queue ID.
              */
             public Builder qosQueueId(String qosQueueId) {
                 this.qosQueueId = qosQueueId;
@@ -257,25 +256,25 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
 
     }
     public static class TrafficQosPolicies extends TeaModel {
-        @NameInMap("TrafficQosPolicyDescription")
+        @com.aliyun.core.annotation.NameInMap("TrafficQosPolicyDescription")
         private String trafficQosPolicyDescription;
 
-        @NameInMap("TrafficQosPolicyId")
+        @com.aliyun.core.annotation.NameInMap("TrafficQosPolicyId")
         private String trafficQosPolicyId;
 
-        @NameInMap("TrafficQosPolicyName")
+        @com.aliyun.core.annotation.NameInMap("TrafficQosPolicyName")
         private String trafficQosPolicyName;
 
-        @NameInMap("TrafficQosPolicyStatus")
+        @com.aliyun.core.annotation.NameInMap("TrafficQosPolicyStatus")
         private String trafficQosPolicyStatus;
 
-        @NameInMap("TrafficQosQueues")
+        @com.aliyun.core.annotation.NameInMap("TrafficQosQueues")
         private java.util.List < TrafficQosQueues> trafficQosQueues;
 
-        @NameInMap("TransitRouterAttachmentId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentId")
         private String transitRouterAttachmentId;
 
-        @NameInMap("TransitRouterId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterId")
         private String transitRouterId;
 
         private TrafficQosPolicies(Builder builder) {
@@ -379,14 +378,13 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the QoS policy. Valid values:
+             * The status of the QoS policy.
              * <p>
              * 
              * *   **Creating**: The QoS policy is being created.
              * *   **Active**: The QoS policy is available.
-             * *   **Modifying**: The QoS policy is being modified
+             * *   **Modifying**: The policy is being modified.
              * *   **Deleting**: The QoS policy is being deleted.
-             * *   **Deleted**: The QoS policy is deleted.
              */
             public Builder trafficQosPolicyStatus(String trafficQosPolicyStatus) {
                 this.trafficQosPolicyStatus = trafficQosPolicyStatus;

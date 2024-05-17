@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTransitRouterCidrResponseBody</p>
  */
 public class ListTransitRouterCidrResponseBody extends TeaModel {
-    @NameInMap("CidrLists")
+    @com.aliyun.core.annotation.NameInMap("CidrLists")
     private java.util.List < CidrLists> cidrLists;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListTransitRouterCidrResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class ListTransitRouterCidrResponseBody extends TeaModel {
     } 
 
     public static class CidrLists extends TeaModel {
-        @NameInMap("Cidr")
+        @com.aliyun.core.annotation.NameInMap("Cidr")
         private String cidr;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Family")
+        @com.aliyun.core.annotation.NameInMap("Family")
         private String family;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PublishCidrRoute")
+        @com.aliyun.core.annotation.NameInMap("PublishCidrRoute")
         private Boolean publishCidrRoute;
 
-        @NameInMap("TransitRouterCidrId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterCidrId")
         private String transitRouterCidrId;
 
-        @NameInMap("TransitRouterId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterId")
         private String transitRouterId;
 
         private CidrLists(Builder builder) {

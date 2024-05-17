@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCenRegionDomainRouteEntriesResponseBody</p>
  */
 public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
-    @NameInMap("CenRouteEntries")
+    @com.aliyun.core.annotation.NameInMap("CenRouteEntries")
     private CenRouteEntries cenRouteEntries;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeCenRegionDomainRouteEntriesResponseBody(Builder builder) {
@@ -132,7 +131,7 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
     } 
 
     public static class AsPaths extends TeaModel {
-        @NameInMap("AsPath")
+        @com.aliyun.core.annotation.NameInMap("AsPath")
         private java.util.List < String > asPath;
 
         private AsPaths(Builder builder) {
@@ -173,10 +172,10 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
 
     }
     public static class CenOutRouteMapRecord extends TeaModel {
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RouteMapId")
+        @com.aliyun.core.annotation.NameInMap("RouteMapId")
         private String routeMapId;
 
         private CenOutRouteMapRecord(Builder builder) {
@@ -234,7 +233,7 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
 
     }
     public static class CenOutRouteMapRecords extends TeaModel {
-        @NameInMap("CenOutRouteMapRecord")
+        @com.aliyun.core.annotation.NameInMap("CenOutRouteMapRecord")
         private java.util.List < CenOutRouteMapRecord> cenOutRouteMapRecord;
 
         private CenOutRouteMapRecords(Builder builder) {
@@ -275,10 +274,10 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
 
     }
     public static class CenRouteMapRecord extends TeaModel {
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RouteMapId")
+        @com.aliyun.core.annotation.NameInMap("RouteMapId")
         private String routeMapId;
 
         private CenRouteMapRecord(Builder builder) {
@@ -336,7 +335,7 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
 
     }
     public static class CenRouteMapRecords extends TeaModel {
-        @NameInMap("CenRouteMapRecord")
+        @com.aliyun.core.annotation.NameInMap("CenRouteMapRecord")
         private java.util.List < CenRouteMapRecord> cenRouteMapRecord;
 
         private CenRouteMapRecords(Builder builder) {
@@ -377,7 +376,7 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
 
     }
     public static class Communities extends TeaModel {
-        @NameInMap("Community")
+        @com.aliyun.core.annotation.NameInMap("Community")
         private java.util.List < String > community;
 
         private Communities(Builder builder) {
@@ -418,40 +417,40 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
 
     }
     public static class CenRouteEntry extends TeaModel {
-        @NameInMap("AsPaths")
+        @com.aliyun.core.annotation.NameInMap("AsPaths")
         private AsPaths asPaths;
 
-        @NameInMap("CenOutRouteMapRecords")
+        @com.aliyun.core.annotation.NameInMap("CenOutRouteMapRecords")
         private CenOutRouteMapRecords cenOutRouteMapRecords;
 
-        @NameInMap("CenRouteMapRecords")
+        @com.aliyun.core.annotation.NameInMap("CenRouteMapRecords")
         private CenRouteMapRecords cenRouteMapRecords;
 
-        @NameInMap("Communities")
+        @com.aliyun.core.annotation.NameInMap("Communities")
         private Communities communities;
 
-        @NameInMap("DestinationCidrBlock")
+        @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
         private String destinationCidrBlock;
 
-        @NameInMap("NextHopInstanceId")
+        @com.aliyun.core.annotation.NameInMap("NextHopInstanceId")
         private String nextHopInstanceId;
 
-        @NameInMap("NextHopRegionId")
+        @com.aliyun.core.annotation.NameInMap("NextHopRegionId")
         private String nextHopRegionId;
 
-        @NameInMap("NextHopType")
+        @com.aliyun.core.annotation.NameInMap("NextHopType")
         private String nextHopType;
 
-        @NameInMap("Preference")
+        @com.aliyun.core.annotation.NameInMap("Preference")
         private Integer preference;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("ToOtherRegionStatus")
+        @com.aliyun.core.annotation.NameInMap("ToOtherRegionStatus")
         private String toOtherRegionStatus;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private CenRouteEntry(Builder builder) {
@@ -703,7 +702,7 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
 
     }
     public static class CenRouteEntries extends TeaModel {
-        @NameInMap("CenRouteEntry")
+        @com.aliyun.core.annotation.NameInMap("CenRouteEntry")
         private java.util.List < CenRouteEntry> cenRouteEntry;
 
         private CenRouteEntries(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTransitRouterPeerAttachmentsResponseBody</p>
  */
 public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("TransitRouterAttachments")
+    @com.aliyun.core.annotation.NameInMap("TransitRouterAttachments")
     private java.util.List < TransitRouterAttachments> transitRouterAttachments;
 
     private ListTransitRouterPeerAttachmentsResponseBody(Builder builder) {
@@ -136,10 +135,10 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -197,61 +196,61 @@ public class ListTransitRouterPeerAttachmentsResponseBody extends TeaModel {
 
     }
     public static class TransitRouterAttachments extends TeaModel {
-        @NameInMap("AutoPublishRouteEnabled")
+        @com.aliyun.core.annotation.NameInMap("AutoPublishRouteEnabled")
         private Boolean autoPublishRouteEnabled;
 
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Integer bandwidth;
 
-        @NameInMap("BandwidthType")
+        @com.aliyun.core.annotation.NameInMap("BandwidthType")
         private String bandwidthType;
 
-        @NameInMap("CenBandwidthPackageId")
+        @com.aliyun.core.annotation.NameInMap("CenBandwidthPackageId")
         private String cenBandwidthPackageId;
 
-        @NameInMap("CenId")
+        @com.aliyun.core.annotation.NameInMap("CenId")
         private String cenId;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DefaultLinkType")
+        @com.aliyun.core.annotation.NameInMap("DefaultLinkType")
         private String defaultLinkType;
 
-        @NameInMap("GeographicSpanId")
+        @com.aliyun.core.annotation.NameInMap("GeographicSpanId")
         private String geographicSpanId;
 
-        @NameInMap("PeerTransitRouterId")
+        @com.aliyun.core.annotation.NameInMap("PeerTransitRouterId")
         private String peerTransitRouterId;
 
-        @NameInMap("PeerTransitRouterOwnerId")
+        @com.aliyun.core.annotation.NameInMap("PeerTransitRouterOwnerId")
         private Long peerTransitRouterOwnerId;
 
-        @NameInMap("PeerTransitRouterRegionId")
+        @com.aliyun.core.annotation.NameInMap("PeerTransitRouterRegionId")
         private String peerTransitRouterRegionId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("TransitRouterAttachmentDescription")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentDescription")
         private String transitRouterAttachmentDescription;
 
-        @NameInMap("TransitRouterAttachmentId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentId")
         private String transitRouterAttachmentId;
 
-        @NameInMap("TransitRouterAttachmentName")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentName")
         private String transitRouterAttachmentName;
 
-        @NameInMap("TransitRouterId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterId")
         private String transitRouterId;
 
         private TransitRouterAttachments(Builder builder) {

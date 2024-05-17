@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTransitRouterRouteTablesResponseBody</p>
  */
 public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("TransitRouterRouteTables")
+    @com.aliyun.core.annotation.NameInMap("TransitRouterRouteTables")
     private java.util.List < TransitRouterRouteTables> transitRouterRouteTables;
 
     private ListTransitRouterRouteTablesResponseBody(Builder builder) {
@@ -136,7 +135,7 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
     } 
 
     public static class RouteTableOptions extends TeaModel {
-        @NameInMap("MultiRegionECMP")
+        @com.aliyun.core.annotation.NameInMap("MultiRegionECMP")
         private String multiRegionECMP;
 
         private RouteTableOptions(Builder builder) {
@@ -181,10 +180,10 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -242,34 +241,34 @@ public class ListTransitRouterRouteTablesResponseBody extends TeaModel {
 
     }
     public static class TransitRouterRouteTables extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RouteTableOptions")
+        @com.aliyun.core.annotation.NameInMap("RouteTableOptions")
         private RouteTableOptions routeTableOptions;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("TransitRouterId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterId")
         private String transitRouterId;
 
-        @NameInMap("TransitRouterRouteTableDescription")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterRouteTableDescription")
         private String transitRouterRouteTableDescription;
 
-        @NameInMap("TransitRouterRouteTableId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterRouteTableId")
         private String transitRouterRouteTableId;
 
-        @NameInMap("TransitRouterRouteTableName")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterRouteTableName")
         private String transitRouterRouteTableName;
 
-        @NameInMap("TransitRouterRouteTableStatus")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterRouteTableStatus")
         private String transitRouterRouteTableStatus;
 
-        @NameInMap("TransitRouterRouteTableType")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterRouteTableType")
         private String transitRouterRouteTableType;
 
         private TransitRouterRouteTables(Builder builder) {

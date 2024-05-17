@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeFlowlogsResponseBody</p>
  */
 public class DescribeFlowlogsResponseBody extends TeaModel {
-    @NameInMap("FlowLogs")
+    @com.aliyun.core.annotation.NameInMap("FlowLogs")
     private FlowLogs flowLogs;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private DescribeFlowlogsResponseBody(Builder builder) {
@@ -156,10 +155,10 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -217,7 +216,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -258,40 +257,40 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
 
     }
     public static class FlowLog extends TeaModel {
-        @NameInMap("CenId")
+        @com.aliyun.core.annotation.NameInMap("CenId")
         private String cenId;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("FlowLogId")
+        @com.aliyun.core.annotation.NameInMap("FlowLogId")
         private String flowLogId;
 
-        @NameInMap("FlowLogName")
+        @com.aliyun.core.annotation.NameInMap("FlowLogName")
         private String flowLogName;
 
-        @NameInMap("Interval")
+        @com.aliyun.core.annotation.NameInMap("Interval")
         private Long interval;
 
-        @NameInMap("LogStoreName")
+        @com.aliyun.core.annotation.NameInMap("LogStoreName")
         private String logStoreName;
 
-        @NameInMap("ProjectName")
+        @com.aliyun.core.annotation.NameInMap("ProjectName")
         private String projectName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("TransitRouterAttachmentId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentId")
         private String transitRouterAttachmentId;
 
         private FlowLog(Builder builder) {
@@ -526,7 +525,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
 
     }
     public static class FlowLogs extends TeaModel {
-        @NameInMap("FlowLog")
+        @com.aliyun.core.annotation.NameInMap("FlowLog")
         private java.util.List < FlowLog> flowLog;
 
         private FlowLogs(Builder builder) {

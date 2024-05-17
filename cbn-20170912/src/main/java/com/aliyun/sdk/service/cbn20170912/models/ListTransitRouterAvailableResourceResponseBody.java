@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTransitRouterAvailableResourceResponseBody</p>
  */
 public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
-    @NameInMap("AvailableZones")
+    @com.aliyun.core.annotation.NameInMap("AvailableZones")
     private java.util.List < String > availableZones;
 
-    @NameInMap("MasterZones")
+    @com.aliyun.core.annotation.NameInMap("MasterZones")
     private java.util.List < String > masterZones;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SlaveZones")
+    @com.aliyun.core.annotation.NameInMap("SlaveZones")
     private java.util.List < String > slaveZones;
 
-    @NameInMap("SupportMulticast")
+    @com.aliyun.core.annotation.NameInMap("SupportMulticast")
     private Boolean supportMulticast;
 
     private ListTransitRouterAvailableResourceResponseBody(Builder builder) {

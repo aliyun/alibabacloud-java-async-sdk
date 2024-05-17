@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeGrantRulesToResourceResponseBody</p>
  */
 public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
-    @NameInMap("GrantRules")
+    @com.aliyun.core.annotation.NameInMap("GrantRules")
     private java.util.List < GrantRules> grantRules;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeGrantRulesToResourceResponseBody(Builder builder) {
@@ -138,16 +137,16 @@ public class DescribeGrantRulesToResourceResponseBody extends TeaModel {
     } 
 
     public static class GrantRules extends TeaModel {
-        @NameInMap("CenId")
+        @com.aliyun.core.annotation.NameInMap("CenId")
         private String cenId;
 
-        @NameInMap("CenOwnerId")
+        @com.aliyun.core.annotation.NameInMap("CenOwnerId")
         private Long cenOwnerId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("OrderType")
+        @com.aliyun.core.annotation.NameInMap("OrderType")
         private String orderType;
 
         private GrantRules(Builder builder) {

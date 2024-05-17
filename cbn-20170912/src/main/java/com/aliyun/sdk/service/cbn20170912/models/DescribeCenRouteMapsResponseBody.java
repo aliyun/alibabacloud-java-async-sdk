@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCenRouteMapsResponseBody</p>
  */
 public class DescribeCenRouteMapsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RouteMaps")
+    @com.aliyun.core.annotation.NameInMap("RouteMaps")
     private RouteMaps routeMaps;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeCenRouteMapsResponseBody(Builder builder) {
@@ -132,7 +131,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
     } 
 
     public static class DestinationChildInstanceTypes extends TeaModel {
-        @NameInMap("DestinationChildInstanceType")
+        @com.aliyun.core.annotation.NameInMap("DestinationChildInstanceType")
         private java.util.List < String > destinationChildInstanceType;
 
         private DestinationChildInstanceTypes(Builder builder) {
@@ -173,7 +172,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
 
     }
     public static class DestinationCidrBlocks extends TeaModel {
-        @NameInMap("DestinationCidrBlock")
+        @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
         private java.util.List < String > destinationCidrBlock;
 
         private DestinationCidrBlocks(Builder builder) {
@@ -214,7 +213,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
 
     }
     public static class DestinationInstanceIds extends TeaModel {
-        @NameInMap("DestinationInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DestinationInstanceId")
         private java.util.List < String > destinationInstanceId;
 
         private DestinationInstanceIds(Builder builder) {
@@ -255,7 +254,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
 
     }
     public static class DestinationRouteTableIds extends TeaModel {
-        @NameInMap("DestinationRouteTableId")
+        @com.aliyun.core.annotation.NameInMap("DestinationRouteTableId")
         private java.util.List < String > destinationRouteTableId;
 
         private DestinationRouteTableIds(Builder builder) {
@@ -296,7 +295,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
 
     }
     public static class MatchAsns extends TeaModel {
-        @NameInMap("MatchAsn")
+        @com.aliyun.core.annotation.NameInMap("MatchAsn")
         private java.util.List < String > matchAsn;
 
         private MatchAsns(Builder builder) {
@@ -337,7 +336,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
 
     }
     public static class MatchCommunitySet extends TeaModel {
-        @NameInMap("MatchCommunity")
+        @com.aliyun.core.annotation.NameInMap("MatchCommunity")
         private java.util.List < String > matchCommunity;
 
         private MatchCommunitySet(Builder builder) {
@@ -378,7 +377,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
 
     }
     public static class OperateCommunitySet extends TeaModel {
-        @NameInMap("OperateCommunity")
+        @com.aliyun.core.annotation.NameInMap("OperateCommunity")
         private java.util.List < String > operateCommunity;
 
         private OperateCommunitySet(Builder builder) {
@@ -419,7 +418,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
 
     }
     public static class PrependAsPath extends TeaModel {
-        @NameInMap("AsPath")
+        @com.aliyun.core.annotation.NameInMap("AsPath")
         private java.util.List < String > asPath;
 
         private PrependAsPath(Builder builder) {
@@ -460,7 +459,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
 
     }
     public static class RouteTypes extends TeaModel {
-        @NameInMap("RouteType")
+        @com.aliyun.core.annotation.NameInMap("RouteType")
         private java.util.List < String > routeType;
 
         private RouteTypes(Builder builder) {
@@ -501,7 +500,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
 
     }
     public static class SourceChildInstanceTypes extends TeaModel {
-        @NameInMap("SourceChildInstanceType")
+        @com.aliyun.core.annotation.NameInMap("SourceChildInstanceType")
         private java.util.List < String > sourceChildInstanceType;
 
         private SourceChildInstanceTypes(Builder builder) {
@@ -542,7 +541,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
 
     }
     public static class SourceInstanceIds extends TeaModel {
-        @NameInMap("SourceInstanceId")
+        @com.aliyun.core.annotation.NameInMap("SourceInstanceId")
         private java.util.List < String > sourceInstanceId;
 
         private SourceInstanceIds(Builder builder) {
@@ -583,7 +582,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
 
     }
     public static class SourceRegionIds extends TeaModel {
-        @NameInMap("SourceRegionId")
+        @com.aliyun.core.annotation.NameInMap("SourceRegionId")
         private java.util.List < String > sourceRegionId;
 
         private SourceRegionIds(Builder builder) {
@@ -624,7 +623,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
 
     }
     public static class SourceRouteTableIds extends TeaModel {
-        @NameInMap("SourceRouteTableId")
+        @com.aliyun.core.annotation.NameInMap("SourceRouteTableId")
         private java.util.List < String > sourceRouteTableId;
 
         private SourceRouteTableIds(Builder builder) {
@@ -665,97 +664,97 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
 
     }
     public static class RouteMap extends TeaModel {
-        @NameInMap("AsPathMatchMode")
+        @com.aliyun.core.annotation.NameInMap("AsPathMatchMode")
         private String asPathMatchMode;
 
-        @NameInMap("CenId")
+        @com.aliyun.core.annotation.NameInMap("CenId")
         private String cenId;
 
-        @NameInMap("CenRegionId")
+        @com.aliyun.core.annotation.NameInMap("CenRegionId")
         private String cenRegionId;
 
-        @NameInMap("CidrMatchMode")
+        @com.aliyun.core.annotation.NameInMap("CidrMatchMode")
         private String cidrMatchMode;
 
-        @NameInMap("CommunityMatchMode")
+        @com.aliyun.core.annotation.NameInMap("CommunityMatchMode")
         private String communityMatchMode;
 
-        @NameInMap("CommunityOperateMode")
+        @com.aliyun.core.annotation.NameInMap("CommunityOperateMode")
         private String communityOperateMode;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DestinationChildInstanceTypes")
+        @com.aliyun.core.annotation.NameInMap("DestinationChildInstanceTypes")
         private DestinationChildInstanceTypes destinationChildInstanceTypes;
 
-        @NameInMap("DestinationCidrBlocks")
+        @com.aliyun.core.annotation.NameInMap("DestinationCidrBlocks")
         private DestinationCidrBlocks destinationCidrBlocks;
 
-        @NameInMap("DestinationInstanceIds")
+        @com.aliyun.core.annotation.NameInMap("DestinationInstanceIds")
         private DestinationInstanceIds destinationInstanceIds;
 
-        @NameInMap("DestinationInstanceIdsReverseMatch")
+        @com.aliyun.core.annotation.NameInMap("DestinationInstanceIdsReverseMatch")
         private Boolean destinationInstanceIdsReverseMatch;
 
-        @NameInMap("DestinationRouteTableIds")
+        @com.aliyun.core.annotation.NameInMap("DestinationRouteTableIds")
         private DestinationRouteTableIds destinationRouteTableIds;
 
-        @NameInMap("MapResult")
+        @com.aliyun.core.annotation.NameInMap("MapResult")
         private String mapResult;
 
-        @NameInMap("MatchAddressType")
+        @com.aliyun.core.annotation.NameInMap("MatchAddressType")
         private String matchAddressType;
 
-        @NameInMap("MatchAsns")
+        @com.aliyun.core.annotation.NameInMap("MatchAsns")
         private MatchAsns matchAsns;
 
-        @NameInMap("MatchCommunitySet")
+        @com.aliyun.core.annotation.NameInMap("MatchCommunitySet")
         private MatchCommunitySet matchCommunitySet;
 
-        @NameInMap("NextPriority")
+        @com.aliyun.core.annotation.NameInMap("NextPriority")
         private Integer nextPriority;
 
-        @NameInMap("OperateCommunitySet")
+        @com.aliyun.core.annotation.NameInMap("OperateCommunitySet")
         private OperateCommunitySet operateCommunitySet;
 
-        @NameInMap("Preference")
+        @com.aliyun.core.annotation.NameInMap("Preference")
         private Integer preference;
 
-        @NameInMap("PrependAsPath")
+        @com.aliyun.core.annotation.NameInMap("PrependAsPath")
         private PrependAsPath prependAsPath;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("RouteMapId")
+        @com.aliyun.core.annotation.NameInMap("RouteMapId")
         private String routeMapId;
 
-        @NameInMap("RouteTypes")
+        @com.aliyun.core.annotation.NameInMap("RouteTypes")
         private RouteTypes routeTypes;
 
-        @NameInMap("SourceChildInstanceTypes")
+        @com.aliyun.core.annotation.NameInMap("SourceChildInstanceTypes")
         private SourceChildInstanceTypes sourceChildInstanceTypes;
 
-        @NameInMap("SourceInstanceIds")
+        @com.aliyun.core.annotation.NameInMap("SourceInstanceIds")
         private SourceInstanceIds sourceInstanceIds;
 
-        @NameInMap("SourceInstanceIdsReverseMatch")
+        @com.aliyun.core.annotation.NameInMap("SourceInstanceIdsReverseMatch")
         private Boolean sourceInstanceIdsReverseMatch;
 
-        @NameInMap("SourceRegionIds")
+        @com.aliyun.core.annotation.NameInMap("SourceRegionIds")
         private SourceRegionIds sourceRegionIds;
 
-        @NameInMap("SourceRouteTableIds")
+        @com.aliyun.core.annotation.NameInMap("SourceRouteTableIds")
         private SourceRouteTableIds sourceRouteTableIds;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TransitRouterRouteTableId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterRouteTableId")
         private String transitRouterRouteTableId;
 
-        @NameInMap("TransmitDirection")
+        @com.aliyun.core.annotation.NameInMap("TransmitDirection")
         private String transmitDirection;
 
         private RouteMap(Builder builder) {
@@ -1384,7 +1383,7 @@ public class DescribeCenRouteMapsResponseBody extends TeaModel {
 
     }
     public static class RouteMaps extends TeaModel {
-        @NameInMap("RouteMap")
+        @com.aliyun.core.annotation.NameInMap("RouteMap")
         private java.util.List < RouteMap> routeMap;
 
         private RouteMaps(Builder builder) {

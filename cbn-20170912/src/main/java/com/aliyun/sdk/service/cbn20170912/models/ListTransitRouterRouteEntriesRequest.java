@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,87 +11,87 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTransitRouterRouteEntriesRequest</p>
  */
 public class ListTransitRouterRouteEntriesRequest extends Request {
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PrefixListId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrefixListId")
     private String prefixListId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RouteFilter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteFilter")
     private java.util.List < RouteFilter> routeFilter;
 
-    @Query
-    @NameInMap("TransitRouterRouteEntryDestinationCidrBlock")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterRouteEntryDestinationCidrBlock")
     @Deprecated
     private String transitRouterRouteEntryDestinationCidrBlock;
 
-    @Query
-    @NameInMap("TransitRouterRouteEntryIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterRouteEntryIds")
     private java.util.List < String > transitRouterRouteEntryIds;
 
-    @Query
-    @NameInMap("TransitRouterRouteEntryNames")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterRouteEntryNames")
     private java.util.List < String > transitRouterRouteEntryNames;
 
-    @Query
-    @NameInMap("TransitRouterRouteEntryNextHopId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterRouteEntryNextHopId")
     private String transitRouterRouteEntryNextHopId;
 
-    @Query
-    @NameInMap("TransitRouterRouteEntryNextHopResourceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterRouteEntryNextHopResourceId")
     private String transitRouterRouteEntryNextHopResourceId;
 
-    @Query
-    @NameInMap("TransitRouterRouteEntryNextHopResourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterRouteEntryNextHopResourceType")
     private String transitRouterRouteEntryNextHopResourceType;
 
-    @Query
-    @NameInMap("TransitRouterRouteEntryNextHopType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterRouteEntryNextHopType")
     private String transitRouterRouteEntryNextHopType;
 
-    @Query
-    @NameInMap("TransitRouterRouteEntryOriginResourceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterRouteEntryOriginResourceId")
     private String transitRouterRouteEntryOriginResourceId;
 
-    @Query
-    @NameInMap("TransitRouterRouteEntryOriginResourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterRouteEntryOriginResourceType")
     private String transitRouterRouteEntryOriginResourceType;
 
-    @Query
-    @NameInMap("TransitRouterRouteEntryStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterRouteEntryStatus")
     private String transitRouterRouteEntryStatus;
 
-    @Query
-    @NameInMap("TransitRouterRouteEntryType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterRouteEntryType")
     private String transitRouterRouteEntryType;
 
-    @Query
-    @NameInMap("TransitRouterRouteTableId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterRouteTableId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String transitRouterRouteTableId;
 
     private ListTransitRouterRouteEntriesRequest(Builder builder) {
@@ -552,10 +551,10 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
     } 
 
     public static class RouteFilter extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private java.util.List < String > value;
 
         private RouteFilter(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRouteConflictResponseBody</p>
  */
 public class DescribeRouteConflictResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RouteConflicts")
+    @com.aliyun.core.annotation.NameInMap("RouteConflicts")
     private RouteConflicts routeConflicts;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeRouteConflictResponseBody(Builder builder) {
@@ -132,19 +131,19 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
     } 
 
     public static class RouteConflict extends TeaModel {
-        @NameInMap("DestinationCidrBlock")
+        @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
         private String destinationCidrBlock;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private RouteConflict(Builder builder) {
@@ -262,7 +261,7 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
 
     }
     public static class RouteConflicts extends TeaModel {
-        @NameInMap("RouteConflict")
+        @com.aliyun.core.annotation.NameInMap("RouteConflict")
         private java.util.List < RouteConflict> routeConflict;
 
         private RouteConflicts(Builder builder) {

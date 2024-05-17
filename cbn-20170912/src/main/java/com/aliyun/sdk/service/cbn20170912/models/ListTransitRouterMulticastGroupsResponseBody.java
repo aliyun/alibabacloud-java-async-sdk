@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTransitRouterMulticastGroupsResponseBody</p>
  */
 public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("TransitRouterMulticastGroups")
+    @com.aliyun.core.annotation.NameInMap("TransitRouterMulticastGroups")
     private java.util.List < TransitRouterMulticastGroups> transitRouterMulticastGroups;
 
     private ListTransitRouterMulticastGroupsResponseBody(Builder builder) {
@@ -136,46 +135,46 @@ public class ListTransitRouterMulticastGroupsResponseBody extends TeaModel {
     } 
 
     public static class TransitRouterMulticastGroups extends TeaModel {
-        @NameInMap("GroupIpAddress")
+        @com.aliyun.core.annotation.NameInMap("GroupIpAddress")
         private String groupIpAddress;
 
-        @NameInMap("GroupMember")
+        @com.aliyun.core.annotation.NameInMap("GroupMember")
         private Boolean groupMember;
 
-        @NameInMap("GroupSource")
+        @com.aliyun.core.annotation.NameInMap("GroupSource")
         private Boolean groupSource;
 
-        @NameInMap("MemberType")
+        @com.aliyun.core.annotation.NameInMap("MemberType")
         private String memberType;
 
-        @NameInMap("NetworkInterfaceId")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
         private String networkInterfaceId;
 
-        @NameInMap("PeerTransitRouterMulticastDomainId")
+        @com.aliyun.core.annotation.NameInMap("PeerTransitRouterMulticastDomainId")
         private String peerTransitRouterMulticastDomainId;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceOwnerId")
+        @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
         private Long resourceOwnerId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("SourceType")
+        @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TransitRouterAttachmentId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentId")
         private String transitRouterAttachmentId;
 
-        @NameInMap("TransitRouterMulticastDomainId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterMulticastDomainId")
         private String transitRouterMulticastDomainId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
         private TransitRouterMulticastGroups(Builder builder) {

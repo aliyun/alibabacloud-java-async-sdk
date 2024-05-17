@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListGrantVSwitchEnisResponseBody</p>
  */
 public class ListGrantVSwitchEnisResponseBody extends TeaModel {
-    @NameInMap("GrantVSwitchEnis")
+    @com.aliyun.core.annotation.NameInMap("GrantVSwitchEnis")
     private java.util.List < GrantVSwitchEnis> grantVSwitchEnis;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Long maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private ListGrantVSwitchEnisResponseBody(Builder builder) {
@@ -135,25 +134,25 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
     } 
 
     public static class GrantVSwitchEnis extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("NetworkInterfaceId")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
         private String networkInterfaceId;
 
-        @NameInMap("NetworkInterfaceName")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceName")
         private String networkInterfaceName;
 
-        @NameInMap("PrimaryIpAddress")
+        @com.aliyun.core.annotation.NameInMap("PrimaryIpAddress")
         private String primaryIpAddress;
 
-        @NameInMap("TransitRouterFlag")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterFlag")
         private Boolean transitRouterFlag;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private GrantVSwitchEnis(Builder builder) {

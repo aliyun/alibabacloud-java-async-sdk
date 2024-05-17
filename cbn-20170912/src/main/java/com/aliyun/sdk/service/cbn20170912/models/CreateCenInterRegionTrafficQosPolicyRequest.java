@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,50 +11,50 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCenInterRegionTrafficQosPolicyRequest</p>
  */
 public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TrafficQosPolicyDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficQosPolicyDescription")
     private String trafficQosPolicyDescription;
 
-    @Query
-    @NameInMap("TrafficQosPolicyName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficQosPolicyName")
     private String trafficQosPolicyName;
 
-    @Query
-    @NameInMap("TrafficQosQueues")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficQosQueues")
     private java.util.List < TrafficQosQueues> trafficQosQueues;
 
-    @Query
-    @NameInMap("TransitRouterAttachmentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String transitRouterAttachmentId;
 
-    @Query
-    @NameInMap("TransitRouterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String transitRouterId;
 
     private CreateCenInterRegionTrafficQosPolicyRequest(Builder builder) {
@@ -260,7 +259,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
          * The description of the QoS policy.
          * <p>
          * 
-         * The description must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The description must start with a letter.
+         * This parameter is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http:// or https://.
          */
         public Builder trafficQosPolicyDescription(String trafficQosPolicyDescription) {
             this.putQueryParameter("TrafficQosPolicyDescription", trafficQosPolicyDescription);
@@ -272,7 +271,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
          * The name of the QoS policy.
          * <p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
+         * The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.
          */
         public Builder trafficQosPolicyName(String trafficQosPolicyName) {
             this.putQueryParameter("TrafficQosPolicyName", trafficQosPolicyName);
@@ -284,7 +283,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
          * The information about the QoS queue.
          * <p>
          * 
-         * You can call this operation to create at most three QoS queues. To create more queues, you must call the CreateCenInterRegionTrafficQosQueue operation.
+         * You can add at most three QoS queues in a QoS policy by calling this operation. To add more QoS queues, call the CreateCenInterRegionTrafficQosQueue operation.
          */
         public Builder trafficQosQueues(java.util.List < TrafficQosQueues> trafficQosQueues) {
             this.putQueryParameter("TrafficQosQueues", trafficQosQueues);
@@ -318,16 +317,16 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
     } 
 
     public static class TrafficQosQueues extends TeaModel {
-        @NameInMap("Dscps")
+        @com.aliyun.core.annotation.NameInMap("Dscps")
         private java.util.List < Integer > dscps;
 
-        @NameInMap("QosQueueDescription")
+        @com.aliyun.core.annotation.NameInMap("QosQueueDescription")
         private String qosQueueDescription;
 
-        @NameInMap("QosQueueName")
+        @com.aliyun.core.annotation.NameInMap("QosQueueName")
         private String qosQueueName;
 
-        @NameInMap("RemainBandwidthPercent")
+        @com.aliyun.core.annotation.NameInMap("RemainBandwidthPercent")
         private String remainBandwidthPercent;
 
         private TrafficQosQueues(Builder builder) {
@@ -380,10 +379,10 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
             private String remainBandwidthPercent; 
 
             /**
-             * The DSCP value that matches the current queue.
+             * The Differentiated Services Code Point (DSCP) value that matches the current queue.
              * <p>
              * 
-             * Each QoS policy supports up to three queues. You can specify at most 60 DSCP values for each queue. Separate DSCP values with commas (,).
+             * Each QoS policy supports at most three queues. You can specify at most 60 DSCP values for each queue. Separate multiple DCSP values with commas (,).
              */
             public Builder dscps(java.util.List < Integer > dscps) {
                 this.dscps = dscps;
@@ -394,9 +393,9 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
              * The description of the current queue.
              * <p>
              * 
-             * Each QoS policy supports up to three queues. You can add a description to each queue.
+             * Each QoS policy supports at most three queues. You can specify a description for each queue.
              * 
-             * The description must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The description must start with a letter.
+             * This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.
              */
             public Builder qosQueueDescription(String qosQueueDescription) {
                 this.qosQueueDescription = qosQueueDescription;
@@ -407,9 +406,9 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
              * The name of the current queue.
              * <p>
              * 
-             * Each QoS policy supports up to three queues. You can specify a name for each queue.
+             * Each QoS policy supports at most three queues. You can specify a name for each queue.
              * 
-             * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
+             * The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.
              */
             public Builder qosQueueName(String qosQueueName) {
                 this.qosQueueName = qosQueueName;
@@ -417,12 +416,12 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
             }
 
             /**
-             * The percentage of bandwidth resources that can be allocated to the current queue.
+             * The percentage of the inter-region bandwidth that can be used by the queue.
              * <p>
              * 
-             * Each QoS policy supports up to three queues. You can specify a percentage of bandwidth resources for each queue.
+             * Each QoS policy supports at most three queues. You can specify a valid percentage for each queue.
              * 
-             * If you enter **1**, it indicates that the current queue can consume at most \*\*1%\*\* of the bandwidth resources.
+             * For example, a value of **1** specifies that the queue can consume 1% of the inter-region bandwidth.
              * 
              * >  The sum of the percentage values of all the queues in a QoS policy cannot exceed 100%.
              */

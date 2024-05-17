@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RemoveTrafficMatchRuleFromTrafficMarkingPolicyRequest</p>
  */
 public class RemoveTrafficMatchRuleFromTrafficMarkingPolicyRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TrafficMarkRuleIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficMarkRuleIds")
     private java.util.List < String > trafficMarkRuleIds;
 
-    @Query
-    @NameInMap("TrafficMarkingPolicyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficMarkingPolicyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String trafficMarkingPolicyId;
 
     private RemoveTrafficMatchRuleFromTrafficMarkingPolicyRequest(Builder builder) {
@@ -217,9 +216,6 @@ public class RemoveTrafficMatchRuleFromTrafficMarkingPolicyRequest extends Reque
 
         /**
          * The ID of the traffic classification rule.
-         * <p>
-         * 
-         * You can specify at most 20 traffic classification rules.
          */
         public Builder trafficMarkRuleIds(java.util.List < String > trafficMarkRuleIds) {
             this.putQueryParameter("TrafficMarkRuleIds", trafficMarkRuleIds);

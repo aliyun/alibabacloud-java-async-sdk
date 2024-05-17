@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTransitRouterCidrAllocationResponseBody</p>
  */
 public class ListTransitRouterCidrAllocationResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("TransitRouterCidrAllocations")
+    @com.aliyun.core.annotation.NameInMap("TransitRouterCidrAllocations")
     private java.util.List < TransitRouterCidrAllocations> transitRouterCidrAllocations;
 
     private ListTransitRouterCidrAllocationResponseBody(Builder builder) {
@@ -140,19 +139,19 @@ public class ListTransitRouterCidrAllocationResponseBody extends TeaModel {
     } 
 
     public static class TransitRouterCidrAllocations extends TeaModel {
-        @NameInMap("AllocatedCidrBlock")
+        @com.aliyun.core.annotation.NameInMap("AllocatedCidrBlock")
         private String allocatedCidrBlock;
 
-        @NameInMap("AttachmentId")
+        @com.aliyun.core.annotation.NameInMap("AttachmentId")
         private String attachmentId;
 
-        @NameInMap("AttachmentName")
+        @com.aliyun.core.annotation.NameInMap("AttachmentName")
         private String attachmentName;
 
-        @NameInMap("Cidr")
+        @com.aliyun.core.annotation.NameInMap("Cidr")
         private String cidr;
 
-        @NameInMap("TransitRouterCidrId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterCidrId")
         private String transitRouterCidrId;
 
         private TransitRouterCidrAllocations(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTransitRouterMulticastDomainAssociationsResponseBody</p>
  */
 public class ListTransitRouterMulticastDomainAssociationsResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("TransitRouterMulticastAssociations")
+    @com.aliyun.core.annotation.NameInMap("TransitRouterMulticastAssociations")
     private java.util.List < TransitRouterMulticastAssociations> transitRouterMulticastAssociations;
 
     private ListTransitRouterMulticastDomainAssociationsResponseBody(Builder builder) {
@@ -136,25 +135,25 @@ public class ListTransitRouterMulticastDomainAssociationsResponseBody extends Te
     } 
 
     public static class TransitRouterMulticastAssociations extends TeaModel {
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceOwnerId")
+        @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
         private Long resourceOwnerId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TransitRouterAttachmentId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentId")
         private String transitRouterAttachmentId;
 
-        @NameInMap("TransitRouterMulticastDomainId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterMulticastDomainId")
         private String transitRouterMulticastDomainId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
         private TransitRouterMulticastAssociations(Builder builder) {

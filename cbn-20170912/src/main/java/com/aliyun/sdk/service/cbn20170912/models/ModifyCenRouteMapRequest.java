@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,139 +11,139 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyCenRouteMapRequest</p>
  */
 public class ModifyCenRouteMapRequest extends Request {
-    @Query
-    @NameInMap("AsPathMatchMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AsPathMatchMode")
     private String asPathMatchMode;
 
-    @Query
-    @NameInMap("CenId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CenId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cenId;
 
-    @Query
-    @NameInMap("CenRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CenRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cenRegionId;
 
-    @Query
-    @NameInMap("CidrMatchMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CidrMatchMode")
     private String cidrMatchMode;
 
-    @Query
-    @NameInMap("CommunityMatchMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommunityMatchMode")
     private String communityMatchMode;
 
-    @Query
-    @NameInMap("CommunityOperateMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommunityOperateMode")
     private String communityOperateMode;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DestinationChildInstanceTypes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationChildInstanceTypes")
     private java.util.List < String > destinationChildInstanceTypes;
 
-    @Query
-    @NameInMap("DestinationCidrBlocks")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationCidrBlocks")
     private java.util.List < String > destinationCidrBlocks;
 
-    @Query
-    @NameInMap("DestinationInstanceIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationInstanceIds")
     private java.util.List < String > destinationInstanceIds;
 
-    @Query
-    @NameInMap("DestinationInstanceIdsReverseMatch")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationInstanceIdsReverseMatch")
     private Boolean destinationInstanceIdsReverseMatch;
 
-    @Query
-    @NameInMap("DestinationRouteTableIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationRouteTableIds")
     private java.util.List < String > destinationRouteTableIds;
 
-    @Query
-    @NameInMap("MapResult")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MapResult")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mapResult;
 
-    @Query
-    @NameInMap("MatchAddressType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MatchAddressType")
     private String matchAddressType;
 
-    @Query
-    @NameInMap("MatchAsns")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MatchAsns")
     private java.util.List < Integer > matchAsns;
 
-    @Query
-    @NameInMap("MatchCommunitySet")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MatchCommunitySet")
     private java.util.List < String > matchCommunitySet;
 
-    @Query
-    @NameInMap("NextPriority")
-    @Validation(maximum = 1000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextPriority")
+    @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 1)
     private Integer nextPriority;
 
-    @Query
-    @NameInMap("OperateCommunitySet")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperateCommunitySet")
     private java.util.List < String > operateCommunitySet;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Preference")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Preference")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer preference;
 
-    @Query
-    @NameInMap("PrependAsPath")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrependAsPath")
     private java.util.List < Long > prependAsPath;
 
-    @Query
-    @NameInMap("Priority")
-    @Validation(required = true, maximum = 1000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Priority")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 1000, minimum = 1)
     private Integer priority;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RouteMapId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteMapId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String routeMapId;
 
-    @Query
-    @NameInMap("RouteTypes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteTypes")
     private java.util.List < String > routeTypes;
 
-    @Query
-    @NameInMap("SourceChildInstanceTypes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceChildInstanceTypes")
     private java.util.List < String > sourceChildInstanceTypes;
 
-    @Query
-    @NameInMap("SourceInstanceIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceInstanceIds")
     private java.util.List < String > sourceInstanceIds;
 
-    @Query
-    @NameInMap("SourceInstanceIdsReverseMatch")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceInstanceIdsReverseMatch")
     private Boolean sourceInstanceIdsReverseMatch;
 
-    @Query
-    @NameInMap("SourceRegionIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceRegionIds")
     private java.util.List < String > sourceRegionIds;
 
-    @Query
-    @NameInMap("SourceRouteTableIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceRouteTableIds")
     private java.util.List < String > sourceRouteTableIds;
 
     private ModifyCenRouteMapRequest(Builder builder) {

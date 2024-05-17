@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,42 +11,42 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>WithdrawPublishedRouteEntriesRequest</p>
  */
 public class WithdrawPublishedRouteEntriesRequest extends Request {
-    @Query
-    @NameInMap("CenId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CenId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cenId;
 
-    @Query
-    @NameInMap("ChildInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChildInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String childInstanceId;
 
-    @Query
-    @NameInMap("ChildInstanceRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChildInstanceRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String childInstanceRegionId;
 
-    @Query
-    @NameInMap("ChildInstanceRouteTableId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChildInstanceRouteTableId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String childInstanceRouteTableId;
 
-    @Query
-    @NameInMap("ChildInstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChildInstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String childInstanceType;
 
-    @Query
-    @NameInMap("DestinationCidrBlock")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String destinationCidrBlock;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private WithdrawPublishedRouteEntriesRequest(Builder builder) {
@@ -158,7 +157,7 @@ public class WithdrawPublishedRouteEntriesRequest extends Request {
         } 
 
         /**
-         * CenId.
+         * The ID of the CEN instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -167,7 +166,7 @@ public class WithdrawPublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * ChildInstanceId.
+         * The ID of the attached network instance.
          */
         public Builder childInstanceId(String childInstanceId) {
             this.putQueryParameter("ChildInstanceId", childInstanceId);
@@ -176,7 +175,7 @@ public class WithdrawPublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * ChildInstanceRegionId.
+         * The ID of the region where the attached network instance is created.
          */
         public Builder childInstanceRegionId(String childInstanceRegionId) {
             this.putQueryParameter("ChildInstanceRegionId", childInstanceRegionId);
@@ -185,7 +184,7 @@ public class WithdrawPublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * ChildInstanceRouteTableId.
+         * The ID of the route table of the attached network instance.
          */
         public Builder childInstanceRouteTableId(String childInstanceRouteTableId) {
             this.putQueryParameter("ChildInstanceRouteTableId", childInstanceRouteTableId);
@@ -194,7 +193,10 @@ public class WithdrawPublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * ChildInstanceType.
+         * The type of the attached network instance.
+         * <p>
+         * 
+         * Set the value to **VPC**, which indicates a virtual private cloud (VPC).
          */
         public Builder childInstanceType(String childInstanceType) {
             this.putQueryParameter("ChildInstanceType", childInstanceType);
@@ -203,7 +205,7 @@ public class WithdrawPublishedRouteEntriesRequest extends Request {
         }
 
         /**
-         * DestinationCidrBlock.
+         * The destination CIDR block of the route that you want to withdraw.
          */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTransitRouterMulticastDomainsResponseBody</p>
  */
 public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("TransitRouterMulticastDomains")
+    @com.aliyun.core.annotation.NameInMap("TransitRouterMulticastDomains")
     private java.util.List < TransitRouterMulticastDomains> transitRouterMulticastDomains;
 
     private ListTransitRouterMulticastDomainsResponseBody(Builder builder) {
@@ -136,10 +135,10 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -197,28 +196,28 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
 
     }
     public static class TransitRouterMulticastDomains extends TeaModel {
-        @NameInMap("CenId")
+        @com.aliyun.core.annotation.NameInMap("CenId")
         private String cenId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("TransitRouterId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterId")
         private String transitRouterId;
 
-        @NameInMap("TransitRouterMulticastDomainDescription")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterMulticastDomainDescription")
         private String transitRouterMulticastDomainDescription;
 
-        @NameInMap("TransitRouterMulticastDomainId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterMulticastDomainId")
         private String transitRouterMulticastDomainId;
 
-        @NameInMap("TransitRouterMulticastDomainName")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterMulticastDomainName")
         private String transitRouterMulticastDomainName;
 
         private TransitRouterMulticastDomains(Builder builder) {

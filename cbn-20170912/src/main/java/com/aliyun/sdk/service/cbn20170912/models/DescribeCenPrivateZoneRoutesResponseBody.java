@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCenPrivateZoneRoutesResponseBody</p>
  */
 public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
-    @NameInMap("CenId")
+    @com.aliyun.core.annotation.NameInMap("CenId")
     private String cenId;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("PrivateZoneDnsServers")
+    @com.aliyun.core.annotation.NameInMap("PrivateZoneDnsServers")
     private String privateZoneDnsServers;
 
-    @NameInMap("PrivateZoneInfos")
+    @com.aliyun.core.annotation.NameInMap("PrivateZoneInfos")
     private PrivateZoneInfos privateZoneInfos;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeCenPrivateZoneRoutesResponseBody(Builder builder) {
@@ -172,16 +171,16 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
     } 
 
     public static class PrivateZoneInfo extends TeaModel {
-        @NameInMap("AccessRegionId")
+        @com.aliyun.core.annotation.NameInMap("AccessRegionId")
         private String accessRegionId;
 
-        @NameInMap("HostRegionId")
+        @com.aliyun.core.annotation.NameInMap("HostRegionId")
         private String hostRegionId;
 
-        @NameInMap("HostVpcId")
+        @com.aliyun.core.annotation.NameInMap("HostVpcId")
         private String hostVpcId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private PrivateZoneInfo(Builder builder) {
@@ -278,7 +277,7 @@ public class DescribeCenPrivateZoneRoutesResponseBody extends TeaModel {
 
     }
     public static class PrivateZoneInfos extends TeaModel {
-        @NameInMap("PrivateZoneInfo")
+        @com.aliyun.core.annotation.NameInMap("PrivateZoneInfo")
         private java.util.List < PrivateZoneInfo> privateZoneInfo;
 
         private PrivateZoneInfos(Builder builder) {

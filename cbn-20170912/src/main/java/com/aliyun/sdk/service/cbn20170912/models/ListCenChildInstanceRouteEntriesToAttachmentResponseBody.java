@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCenChildInstanceRouteEntriesToAttachmentResponseBody</p>
  */
 public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RouteEntry")
+    @com.aliyun.core.annotation.NameInMap("RouteEntry")
     private java.util.List < RouteEntry> routeEntry;
 
     private ListCenChildInstanceRouteEntriesToAttachmentResponseBody(Builder builder) {
@@ -96,22 +95,22 @@ public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody extends Te
     } 
 
     public static class RouteEntry extends TeaModel {
-        @NameInMap("CenId")
+        @com.aliyun.core.annotation.NameInMap("CenId")
         private String cenId;
 
-        @NameInMap("ChildInstanceRouteTableId")
+        @com.aliyun.core.annotation.NameInMap("ChildInstanceRouteTableId")
         private String childInstanceRouteTableId;
 
-        @NameInMap("DestinationCidrBlock")
+        @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
         private String destinationCidrBlock;
 
-        @NameInMap("ServiceType")
+        @com.aliyun.core.annotation.NameInMap("ServiceType")
         private String serviceType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TransitRouterAttachmentId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentId")
         private String transitRouterAttachmentId;
 
         private RouteEntry(Builder builder) {

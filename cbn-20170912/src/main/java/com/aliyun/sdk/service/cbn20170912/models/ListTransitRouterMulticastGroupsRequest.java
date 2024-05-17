@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,72 +11,72 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTransitRouterMulticastGroupsRequest</p>
  */
 public class ListTransitRouterMulticastGroupsRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("GroupIpAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupIpAddress")
     private String groupIpAddress;
 
-    @Query
-    @NameInMap("IsGroupMember")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsGroupMember")
     private Boolean isGroupMember;
 
-    @Query
-    @NameInMap("IsGroupSource")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsGroupSource")
     private Boolean isGroupSource;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Long maxResults;
 
-    @Query
-    @NameInMap("NetworkInterfaceIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfaceIds")
     private java.util.List < String > networkInterfaceIds;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PeerTransitRouterMulticastDomains")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeerTransitRouterMulticastDomains")
     private java.util.List < String > peerTransitRouterMulticastDomains;
 
-    @Query
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
-    @Query
-    @NameInMap("TransitRouterAttachmentId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentId")
     private String transitRouterAttachmentId;
 
-    @Query
-    @NameInMap("TransitRouterMulticastDomainId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterMulticastDomainId")
     private String transitRouterMulticastDomainId;
 
-    @Query
-    @NameInMap("VSwitchIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchIds")
     private java.util.List < String > vSwitchIds;
 
     private ListTransitRouterMulticastGroupsRequest(Builder builder) {
@@ -305,10 +304,10 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
          * Specified whether to query the multicast members. Valid values:
          * <p>
          * 
-         * *   **false**: no
-         * *   **true**: yes
+         * *   **false**
+         * *   **true**
          * 
-         * >- This parameter can be set together with the IsGroupMember parameter.
+         * >- This parameter must be specified together with the IsGroupMember parameter.
          * >- If you do not set IsGroupMember or IsGroupSource, both the multicast sources and members are queried.
          * >- If you set only one of them or both of them, the specified values prevail.
          */
@@ -322,12 +321,12 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
          * Specifies whether to query the multicast sources. Valid values:
          * <p>
          * 
-         * *   **false**: no
-         * *   **true**: yes
+         * *   **false**
+         * *   **true**
          * 
-         * >- This parameter can be set together with the IsGroupMember parameter.
-         * >- If you do not set IsGroupSource or IsGroupMember, both the multicast sources and members are queried.
-         * >- If you set only one of them or both of them, the specified values prevail.
+         * > - This parameter must be specified together with the IsGroupMember parameter.
+         * > *   If you do not specify IsGroupMember or IsGroupSource, both the multicast sources and members are queried.
+         * > *   If you specify only one of them or both of them, the specified values prevail.
          */
         public Builder isGroupSource(Boolean isGroupSource) {
             this.putQueryParameter("IsGroupSource", isGroupSource);
@@ -434,7 +433,10 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the network instance connection.
+         * The ID of the network instance connection
+         * <p>
+         * 
+         * You must configure one of the TransitRouterMulticastDomainId and TransitRouterAttachmentId parameters.
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
@@ -444,6 +446,9 @@ public class ListTransitRouterMulticastGroupsRequest extends Request {
 
         /**
          * The ID of the multicast domain.
+         * <p>
+         * 
+         * You must configure one of the TransitRouterMulticastDomainId and TransitRouterAttachmentId parameters.
          */
         public Builder transitRouterMulticastDomainId(String transitRouterMulticastDomainId) {
             this.putQueryParameter("TransitRouterMulticastDomainId", transitRouterMulticastDomainId);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,45 +11,45 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateTransitRouterVpnAttachmentAttributeRequest</p>
  */
 public class UpdateTransitRouterVpnAttachmentAttributeRequest extends Request {
-    @Query
-    @NameInMap("AutoPublishRouteEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPublishRouteEnabled")
     private Boolean autoPublishRouteEnabled;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TransitRouterAttachmentDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentDescription")
     private String transitRouterAttachmentDescription;
 
-    @Query
-    @NameInMap("TransitRouterAttachmentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String transitRouterAttachmentId;
 
-    @Query
-    @NameInMap("TransitRouterAttachmentName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentName")
     private String transitRouterAttachmentName;
 
     private UpdateTransitRouterVpnAttachmentAttributeRequest(Builder builder) {
@@ -257,10 +256,10 @@ public class UpdateTransitRouterVpnAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * The new description of the VPN connection.
+         * The new description of the VPN attachment.
          * <p>
          * 
-         * The description can be empty or 1 to 256 characters in length, and cannot start with http:// or https://.
+         * The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder transitRouterAttachmentDescription(String transitRouterAttachmentDescription) {
             this.putQueryParameter("TransitRouterAttachmentDescription", transitRouterAttachmentDescription);
@@ -278,10 +277,10 @@ public class UpdateTransitRouterVpnAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * The name of the VPN connection.
+         * The name of the VPN attachment.
          * <p>
          * 
-         * The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
          */
         public Builder transitRouterAttachmentName(String transitRouterAttachmentName) {
             this.putQueryParameter("TransitRouterAttachmentName", transitRouterAttachmentName);

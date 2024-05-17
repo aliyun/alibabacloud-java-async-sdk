@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTrafficMarkingPoliciesResponseBody</p>
  */
 public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("TrafficMarkingPolicies")
+    @com.aliyun.core.annotation.NameInMap("TrafficMarkingPolicies")
     private java.util.List < TrafficMarkingPolicies> trafficMarkingPolicies;
 
     private ListTrafficMarkingPoliciesResponseBody(Builder builder) {
@@ -122,7 +121,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The list of traffic marking policies.
+         * The information about the traffic marking policy.
          */
         public Builder trafficMarkingPolicies(java.util.List < TrafficMarkingPolicies> trafficMarkingPolicies) {
             this.trafficMarkingPolicies = trafficMarkingPolicies;
@@ -136,34 +135,34 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
     } 
 
     public static class TrafficMatchRules extends TeaModel {
-        @NameInMap("DstCidr")
+        @com.aliyun.core.annotation.NameInMap("DstCidr")
         private String dstCidr;
 
-        @NameInMap("DstPortRange")
+        @com.aliyun.core.annotation.NameInMap("DstPortRange")
         private java.util.List < Integer > dstPortRange;
 
-        @NameInMap("MatchDscp")
+        @com.aliyun.core.annotation.NameInMap("MatchDscp")
         private Integer matchDscp;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("SrcCidr")
+        @com.aliyun.core.annotation.NameInMap("SrcCidr")
         private String srcCidr;
 
-        @NameInMap("SrcPortRange")
+        @com.aliyun.core.annotation.NameInMap("SrcPortRange")
         private java.util.List < Integer > srcPortRange;
 
-        @NameInMap("TrafficMatchRuleDescription")
+        @com.aliyun.core.annotation.NameInMap("TrafficMatchRuleDescription")
         private String trafficMatchRuleDescription;
 
-        @NameInMap("TrafficMatchRuleId")
+        @com.aliyun.core.annotation.NameInMap("TrafficMatchRuleId")
         private String trafficMatchRuleId;
 
-        @NameInMap("TrafficMatchRuleName")
+        @com.aliyun.core.annotation.NameInMap("TrafficMatchRuleName")
         private String trafficMatchRuleName;
 
-        @NameInMap("TrafficMatchRuleStatus")
+        @com.aliyun.core.annotation.NameInMap("TrafficMatchRuleStatus")
         private String trafficMatchRuleStatus;
 
         private TrafficMatchRules(Builder builder) {
@@ -270,7 +269,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
             private String trafficMatchRuleStatus; 
 
             /**
-             * The destination CIDR block used to match data packets.
+             * The destination CIDR block that is used to match packets.
              */
             public Builder dstCidr(String dstCidr) {
                 this.dstCidr = dstCidr;
@@ -287,6 +286,9 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
 
             /**
              * The DSCP value used to match data packets.
+             * <p>
+             * 
+             * >  If the value of the **MatchDscp** parameter is -1, data packets are considered a match regardless of the DSCP value.
              */
             public Builder matchDscp(Integer matchDscp) {
                 this.matchDscp = matchDscp;
@@ -294,10 +296,10 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol used to match data packets.
+             * The protocol that is used to match packets.
              * <p>
              * 
-             * > Traffic marking policies support multiple protocols. For more information, see the documentation of CEN.
+             * >  Traffic marking policies support multiple protocols. For more information, see the documentation of CEN.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -305,7 +307,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The source CIDR block used to match data packets.
+             * The source CIDR block that is used to match packets.
              */
             public Builder srcCidr(String srcCidr) {
                 this.srcCidr = srcCidr;
@@ -351,7 +353,6 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
              * *   **Creating**: The rule is being created.
              * *   **Active**: The rule is available.
              * *   **Deleting**: The rule is being deleted.
-             * *   **Deleted**: The rule is deleted.
              */
             public Builder trafficMatchRuleStatus(String trafficMatchRuleStatus) {
                 this.trafficMatchRuleStatus = trafficMatchRuleStatus;
@@ -366,28 +367,28 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
 
     }
     public static class TrafficMarkingPolicies extends TeaModel {
-        @NameInMap("MarkingDscp")
+        @com.aliyun.core.annotation.NameInMap("MarkingDscp")
         private Integer markingDscp;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("TrafficMarkingPolicyDescription")
+        @com.aliyun.core.annotation.NameInMap("TrafficMarkingPolicyDescription")
         private String trafficMarkingPolicyDescription;
 
-        @NameInMap("TrafficMarkingPolicyId")
+        @com.aliyun.core.annotation.NameInMap("TrafficMarkingPolicyId")
         private String trafficMarkingPolicyId;
 
-        @NameInMap("TrafficMarkingPolicyName")
+        @com.aliyun.core.annotation.NameInMap("TrafficMarkingPolicyName")
         private String trafficMarkingPolicyName;
 
-        @NameInMap("TrafficMarkingPolicyStatus")
+        @com.aliyun.core.annotation.NameInMap("TrafficMarkingPolicyStatus")
         private String trafficMarkingPolicyStatus;
 
-        @NameInMap("TrafficMatchRules")
+        @com.aliyun.core.annotation.NameInMap("TrafficMatchRules")
         private java.util.List < TrafficMatchRules> trafficMatchRules;
 
-        @NameInMap("TransitRouterId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterId")
         private String transitRouterId;
 
         private TrafficMarkingPolicies(Builder builder) {
@@ -476,7 +477,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
             private String transitRouterId; 
 
             /**
-             * The differentiated services code point (DSCP) value of the traffic marking policy.
+             * The Differentiated Service Code Point (DSCP) value of the traffic marking policy.
              */
             public Builder markingDscp(Integer markingDscp) {
                 this.markingDscp = markingDscp;
@@ -487,7 +488,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
              * The priority of the traffic marking policy.
              * <p>
              * 
-             * A smaller value indicates a higher priority.
+             * A lower value indicates a higher priority.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -524,9 +525,8 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
              * 
              * *   **Creating**: The policy is being created.
              * *   **Active**: The policy is available.
-             * *   **Modifying**: The policy is being modified
+             * *   **Modifying**: The policy is being modified.
              * *   **Deleting**: The policy is being deleted.
-             * *   **Deleted**: The policy is deleted.
              */
             public Builder trafficMarkingPolicyStatus(String trafficMarkingPolicyStatus) {
                 this.trafficMarkingPolicyStatus = trafficMarkingPolicyStatus;
@@ -534,7 +534,7 @@ public class ListTrafficMarkingPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The list of traffic classification rules.
+             * The traffic classification rules.
              */
             public Builder trafficMatchRules(java.util.List < TrafficMatchRules> trafficMatchRules) {
                 this.trafficMatchRules = trafficMatchRules;

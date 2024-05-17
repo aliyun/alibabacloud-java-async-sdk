@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,45 +11,50 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetCenInterRegionBandwidthLimitRequest</p>
  */
 public class SetCenInterRegionBandwidthLimitRequest extends Request {
-    @Query
-    @NameInMap("BandwidthLimit")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BandwidthLimit")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long bandwidthLimit;
 
-    @Query
-    @NameInMap("CenId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BandwidthType")
+    private String bandwidthType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CenId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cenId;
 
-    @Query
-    @NameInMap("LocalRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LocalRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String localRegionId;
 
-    @Query
-    @NameInMap("OppositeRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OppositeRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String oppositeRegionId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private SetCenInterRegionBandwidthLimitRequest(Builder builder) {
         super(builder);
         this.bandwidthLimit = builder.bandwidthLimit;
+        this.bandwidthType = builder.bandwidthType;
         this.cenId = builder.cenId;
         this.localRegionId = builder.localRegionId;
         this.oppositeRegionId = builder.oppositeRegionId;
@@ -78,6 +82,13 @@ public class SetCenInterRegionBandwidthLimitRequest extends Request {
      */
     public Long getBandwidthLimit() {
         return this.bandwidthLimit;
+    }
+
+    /**
+     * @return bandwidthType
+     */
+    public String getBandwidthType() {
+        return this.bandwidthType;
     }
 
     /**
@@ -131,6 +142,7 @@ public class SetCenInterRegionBandwidthLimitRequest extends Request {
 
     public static final class Builder extends Request.Builder<SetCenInterRegionBandwidthLimitRequest, Builder> {
         private Long bandwidthLimit; 
+        private String bandwidthType; 
         private String cenId; 
         private String localRegionId; 
         private String oppositeRegionId; 
@@ -146,6 +158,7 @@ public class SetCenInterRegionBandwidthLimitRequest extends Request {
         private Builder(SetCenInterRegionBandwidthLimitRequest request) {
             super(request);
             this.bandwidthLimit = request.bandwidthLimit;
+            this.bandwidthType = request.bandwidthType;
             this.cenId = request.cenId;
             this.localRegionId = request.localRegionId;
             this.oppositeRegionId = request.oppositeRegionId;
@@ -161,6 +174,15 @@ public class SetCenInterRegionBandwidthLimitRequest extends Request {
         public Builder bandwidthLimit(Long bandwidthLimit) {
             this.putQueryParameter("BandwidthLimit", bandwidthLimit);
             this.bandwidthLimit = bandwidthLimit;
+            return this;
+        }
+
+        /**
+         * BandwidthType.
+         */
+        public Builder bandwidthType(String bandwidthType) {
+            this.putQueryParameter("BandwidthType", bandwidthType);
+            this.bandwidthType = bandwidthType;
             return this;
         }
 

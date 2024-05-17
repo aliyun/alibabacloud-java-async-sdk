@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCenVbrHealthCheckResponseBody</p>
  */
 public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("VbrHealthChecks")
+    @com.aliyun.core.annotation.NameInMap("VbrHealthChecks")
     private VbrHealthChecks vbrHealthChecks;
 
     private DescribeCenVbrHealthCheckResponseBody(Builder builder) {
@@ -132,31 +131,31 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
     } 
 
     public static class VbrHealthCheck extends TeaModel {
-        @NameInMap("CenId")
+        @com.aliyun.core.annotation.NameInMap("CenId")
         private String cenId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("HealthCheckInterval")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckInterval")
         private Integer healthCheckInterval;
 
-        @NameInMap("HealthCheckOnly")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckOnly")
         private Boolean healthCheckOnly;
 
-        @NameInMap("HealthCheckSourceIp")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckSourceIp")
         private String healthCheckSourceIp;
 
-        @NameInMap("HealthCheckTargetIp")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckTargetIp")
         private String healthCheckTargetIp;
 
-        @NameInMap("HealthyThreshold")
+        @com.aliyun.core.annotation.NameInMap("HealthyThreshold")
         private Integer healthyThreshold;
 
-        @NameInMap("VbrInstanceId")
+        @com.aliyun.core.annotation.NameInMap("VbrInstanceId")
         private String vbrInstanceId;
 
-        @NameInMap("VbrInstanceRegionId")
+        @com.aliyun.core.annotation.NameInMap("VbrInstanceRegionId")
         private String vbrInstanceRegionId;
 
         private VbrHealthCheck(Builder builder) {
@@ -342,7 +341,7 @@ public class DescribeCenVbrHealthCheckResponseBody extends TeaModel {
 
     }
     public static class VbrHealthChecks extends TeaModel {
-        @NameInMap("VbrHealthCheck")
+        @com.aliyun.core.annotation.NameInMap("VbrHealthCheck")
         private java.util.List < VbrHealthCheck> vbrHealthCheck;
 
         private VbrHealthChecks(Builder builder) {

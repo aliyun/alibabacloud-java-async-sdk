@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTransitRoutersResponseBody</p>
  */
 public class ListTransitRoutersResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("TransitRouters")
+    @com.aliyun.core.annotation.NameInMap("TransitRouters")
     private java.util.List < TransitRouters> transitRouters;
 
     private ListTransitRoutersResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class ListTransitRoutersResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -193,19 +192,19 @@ public class ListTransitRoutersResponseBody extends TeaModel {
 
     }
     public static class TransitRouterCidrList extends TeaModel {
-        @NameInMap("Cidr")
+        @com.aliyun.core.annotation.NameInMap("Cidr")
         private String cidr;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PublishCidrRoute")
+        @com.aliyun.core.annotation.NameInMap("PublishCidrRoute")
         private Boolean publishCidrRoute;
 
-        @NameInMap("TransitRouterCidrId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterCidrId")
         private String transitRouterCidrId;
 
         private TransitRouterCidrList(Builder builder) {
@@ -323,40 +322,40 @@ public class ListTransitRoutersResponseBody extends TeaModel {
 
     }
     public static class TransitRouters extends TeaModel {
-        @NameInMap("AliUid")
+        @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
 
-        @NameInMap("CenId")
+        @com.aliyun.core.annotation.NameInMap("CenId")
         private String cenId;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SupportMulticast")
+        @com.aliyun.core.annotation.NameInMap("SupportMulticast")
         private Boolean supportMulticast;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("TransitRouterCidrList")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterCidrList")
         private java.util.List < TransitRouterCidrList> transitRouterCidrList;
 
-        @NameInMap("TransitRouterDescription")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterDescription")
         private String transitRouterDescription;
 
-        @NameInMap("TransitRouterId")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterId")
         private String transitRouterId;
 
-        @NameInMap("TransitRouterName")
+        @com.aliyun.core.annotation.NameInMap("TransitRouterName")
         private String transitRouterName;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private TransitRouters(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cbn20170912.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRouteServicesInCenResponseBody</p>
  */
 public class DescribeRouteServicesInCenResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RouteServiceEntries")
+    @com.aliyun.core.annotation.NameInMap("RouteServiceEntries")
     private RouteServiceEntries routeServiceEntries;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeRouteServicesInCenResponseBody(Builder builder) {
@@ -132,7 +131,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
     } 
 
     public static class Cidrs extends TeaModel {
-        @NameInMap("Cidr")
+        @com.aliyun.core.annotation.NameInMap("Cidr")
         private java.util.List < String > cidr;
 
         private Cidrs(Builder builder) {
@@ -173,28 +172,28 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
 
     }
     public static class RouteServiceEntry extends TeaModel {
-        @NameInMap("AccessRegionId")
+        @com.aliyun.core.annotation.NameInMap("AccessRegionId")
         private String accessRegionId;
 
-        @NameInMap("CenId")
+        @com.aliyun.core.annotation.NameInMap("CenId")
         private String cenId;
 
-        @NameInMap("Cidrs")
+        @com.aliyun.core.annotation.NameInMap("Cidrs")
         private Cidrs cidrs;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("HostRegionId")
+        @com.aliyun.core.annotation.NameInMap("HostRegionId")
         private String hostRegionId;
 
-        @NameInMap("HostVpcId")
+        @com.aliyun.core.annotation.NameInMap("HostVpcId")
         private String hostVpcId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private RouteServiceEntry(Builder builder) {
@@ -359,7 +358,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
 
     }
     public static class RouteServiceEntries extends TeaModel {
-        @NameInMap("RouteServiceEntry")
+        @com.aliyun.core.annotation.NameInMap("RouteServiceEntry")
         private java.util.List < RouteServiceEntry> routeServiceEntry;
 
         private RouteServiceEntries(Builder builder) {
