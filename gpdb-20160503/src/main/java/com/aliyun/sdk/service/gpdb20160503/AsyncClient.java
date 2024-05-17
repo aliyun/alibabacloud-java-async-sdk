@@ -31,6 +31,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CancelUpsertCollectionDataJobResponse> cancelUpsertCollectionDataJob(CancelUpsertCollectionDataJobRequest request);
 
+    CompletableFuture<CheckHadoopDataSourceResponse> checkHadoopDataSource(CheckHadoopDataSourceRequest request);
+
+    CompletableFuture<CheckHadoopNetConnectionResponse> checkHadoopNetConnection(CheckHadoopNetConnectionRequest request);
+
+    CompletableFuture<CheckJDBCSourceNetConnectionResponse> checkJDBCSourceNetConnection(CheckJDBCSourceNetConnectionRequest request);
+
     CompletableFuture<CheckServiceLinkedRoleResponse> checkServiceLinkedRole(CheckServiceLinkedRoleRequest request);
 
     /**
@@ -63,6 +69,14 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateDocumentCollectionResponse> createDocumentCollection(CreateDocumentCollectionRequest request);
 
+    CompletableFuture<CreateExtensionsResponse> createExtensions(CreateExtensionsRequest request);
+
+    CompletableFuture<CreateExternalDataServiceResponse> createExternalDataService(CreateExternalDataServiceRequest request);
+
+    CompletableFuture<CreateHadoopDataSourceResponse> createHadoopDataSource(CreateHadoopDataSourceRequest request);
+
+    CompletableFuture<CreateJDBCDataSourceResponse> createJDBCDataSource(CreateJDBCDataSourceRequest request);
+
     CompletableFuture<CreateNamespaceResponse> createNamespace(CreateNamespaceRequest request);
 
     /**
@@ -79,6 +93,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateSampleDataResponse> createSampleData(CreateSampleDataRequest request);
 
     CompletableFuture<CreateServiceLinkedRoleResponse> createServiceLinkedRole(CreateServiceLinkedRoleRequest request);
+
+    CompletableFuture<CreateStreamingDataServiceResponse> createStreamingDataService(CreateStreamingDataServiceRequest request);
+
+    CompletableFuture<CreateStreamingDataSourceResponse> createStreamingDataSource(CreateStreamingDataSourceRequest request);
+
+    CompletableFuture<CreateStreamingJobResponse> createStreamingJob(CreateStreamingJobRequest request);
 
     CompletableFuture<CreateVectorIndexResponse> createVectorIndex(CreateVectorIndexRequest request);
 
@@ -107,7 +127,21 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteDocumentCollectionResponse> deleteDocumentCollection(DeleteDocumentCollectionRequest request);
 
+    CompletableFuture<DeleteExtensionResponse> deleteExtension(DeleteExtensionRequest request);
+
+    CompletableFuture<DeleteExternalDataServiceResponse> deleteExternalDataService(DeleteExternalDataServiceRequest request);
+
+    CompletableFuture<DeleteHadoopDataSourceResponse> deleteHadoopDataSource(DeleteHadoopDataSourceRequest request);
+
+    CompletableFuture<DeleteJDBCDataSourceResponse> deleteJDBCDataSource(DeleteJDBCDataSourceRequest request);
+
     CompletableFuture<DeleteNamespaceResponse> deleteNamespace(DeleteNamespaceRequest request);
+
+    CompletableFuture<DeleteStreamingDataServiceResponse> deleteStreamingDataService(DeleteStreamingDataServiceRequest request);
+
+    CompletableFuture<DeleteStreamingDataSourceResponse> deleteStreamingDataSource(DeleteStreamingDataSourceRequest request);
+
+    CompletableFuture<DeleteStreamingJobResponse> deleteStreamingJob(DeleteStreamingJobRequest request);
 
     CompletableFuture<DeleteVectorIndexResponse> deleteVectorIndex(DeleteVectorIndexRequest request);
 
@@ -299,6 +333,14 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeDownloadSQLLogsResponse> describeDownloadSQLLogs(DescribeDownloadSQLLogsRequest request);
 
+    CompletableFuture<DescribeExternalDataServiceResponse> describeExternalDataService(DescribeExternalDataServiceRequest request);
+
+    CompletableFuture<DescribeHadoopClustersInSameNetResponse> describeHadoopClustersInSameNet(DescribeHadoopClustersInSameNetRequest request);
+
+    CompletableFuture<DescribeHadoopConfigsResponse> describeHadoopConfigs(DescribeHadoopConfigsRequest request);
+
+    CompletableFuture<DescribeHadoopDataSourceResponse> describeHadoopDataSource(DescribeHadoopDataSourceRequest request);
+
     /**
       * This operation is called to query the health status of an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode and its coordinator and compute nodes.
       * ## Limits
@@ -308,6 +350,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeHealthStatusResponse> describeHealthStatus(DescribeHealthStatusRequest request);
 
     CompletableFuture<DescribeIMVInfosResponse> describeIMVInfos(DescribeIMVInfosRequest request);
+
+    CompletableFuture<DescribeJDBCDataSourceResponse> describeJDBCDataSource(DescribeJDBCDataSourceRequest request);
 
     CompletableFuture<DescribeLogBackupsResponse> describeLogBackups(DescribeLogBackupsRequest request);
 
@@ -373,6 +417,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeSampleDataResponse> describeSampleData(DescribeSampleDataRequest request);
 
+    CompletableFuture<DescribeStreamingDataServiceResponse> describeStreamingDataService(DescribeStreamingDataServiceRequest request);
+
+    CompletableFuture<DescribeStreamingDataSourceResponse> describeStreamingDataSource(DescribeStreamingDataSourceRequest request);
+
+    CompletableFuture<DescribeStreamingJobResponse> describeStreamingJob(DescribeStreamingJobRequest request);
+
     CompletableFuture<DescribeSupportFeaturesResponse> describeSupportFeatures(DescribeSupportFeaturesRequest request);
 
     CompletableFuture<DescribeTagsResponse> describeTags(DescribeTagsRequest request);
@@ -422,7 +472,19 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListDocumentsResponse> listDocuments(ListDocumentsRequest request);
 
+    CompletableFuture<ListExternalDataServicesResponse> listExternalDataServices(ListExternalDataServicesRequest request);
+
+    CompletableFuture<ListExternalDataSourcesResponse> listExternalDataSources(ListExternalDataSourcesRequest request);
+
+    CompletableFuture<ListInstanceExtensionsResponse> listInstanceExtensions(ListInstanceExtensionsRequest request);
+
     CompletableFuture<ListNamespacesResponse> listNamespaces(ListNamespacesRequest request);
+
+    CompletableFuture<ListStreamingDataServicesResponse> listStreamingDataServices(ListStreamingDataServicesRequest request);
+
+    CompletableFuture<ListStreamingDataSourcesResponse> listStreamingDataSources(ListStreamingDataSourcesRequest request);
+
+    CompletableFuture<ListStreamingJobsResponse> listStreamingJobs(ListStreamingJobsRequest request);
 
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
@@ -458,6 +520,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyDBInstanceSSLResponse> modifyDBInstanceSSL(ModifyDBInstanceSSLRequest request);
 
+    CompletableFuture<ModifyExternalDataServiceResponse> modifyExternalDataService(ModifyExternalDataServiceRequest request);
+
+    CompletableFuture<ModifyHadoopDataSourceResponse> modifyHadoopDataSource(ModifyHadoopDataSourceRequest request);
+
+    CompletableFuture<ModifyJDBCDataSourceResponse> modifyJDBCDataSource(ModifyJDBCDataSourceRequest request);
+
     CompletableFuture<ModifyMasterSpecResponse> modifyMasterSpec(ModifyMasterSpecRequest request);
 
     /**
@@ -477,6 +545,12 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<ModifySecurityIpsResponse> modifySecurityIps(ModifySecurityIpsRequest request);
+
+    CompletableFuture<ModifyStreamingDataServiceResponse> modifyStreamingDataService(ModifyStreamingDataServiceRequest request);
+
+    CompletableFuture<ModifyStreamingDataSourceResponse> modifyStreamingDataSource(ModifyStreamingDataSourceRequest request);
+
+    CompletableFuture<ModifyStreamingJobResponse> modifyStreamingJob(ModifyStreamingJobRequest request);
 
     CompletableFuture<ModifyVectorConfigurationResponse> modifyVectorConfiguration(ModifyVectorConfigurationRequest request);
 
@@ -566,6 +640,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpgradeDBInstanceResponse> upgradeDBInstance(UpgradeDBInstanceRequest request);
 
     CompletableFuture<UpgradeDBVersionResponse> upgradeDBVersion(UpgradeDBVersionRequest request);
+
+    CompletableFuture<UpgradeExtensionsResponse> upgradeExtensions(UpgradeExtensionsRequest request);
 
     CompletableFuture<UpsertChunksResponse> upsertChunks(UpsertChunksRequest request);
 
