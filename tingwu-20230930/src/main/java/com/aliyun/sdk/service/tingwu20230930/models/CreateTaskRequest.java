@@ -171,6 +171,9 @@ public class CreateTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("MultipleStreamsEnabled")
         private Boolean multipleStreamsEnabled;
 
+        @com.aliyun.core.annotation.NameInMap("OutputPath")
+        private String outputPath;
+
         @com.aliyun.core.annotation.NameInMap("ProgressiveCallbacksEnabled")
         private Boolean progressiveCallbacksEnabled;
 
@@ -191,6 +194,7 @@ public class CreateTaskRequest extends Request {
             this.fileUrl = builder.fileUrl;
             this.format = builder.format;
             this.multipleStreamsEnabled = builder.multipleStreamsEnabled;
+            this.outputPath = builder.outputPath;
             this.progressiveCallbacksEnabled = builder.progressiveCallbacksEnabled;
             this.sampleRate = builder.sampleRate;
             this.sourceLanguage = builder.sourceLanguage;
@@ -225,6 +229,13 @@ public class CreateTaskRequest extends Request {
          */
         public Boolean getMultipleStreamsEnabled() {
             return this.multipleStreamsEnabled;
+        }
+
+        /**
+         * @return outputPath
+         */
+        public String getOutputPath() {
+            return this.outputPath;
         }
 
         /**
@@ -266,6 +277,7 @@ public class CreateTaskRequest extends Request {
             private String fileUrl; 
             private String format; 
             private Boolean multipleStreamsEnabled; 
+            private String outputPath; 
             private Boolean progressiveCallbacksEnabled; 
             private Integer sampleRate; 
             private String sourceLanguage; 
@@ -293,6 +305,14 @@ public class CreateTaskRequest extends Request {
              */
             public Builder multipleStreamsEnabled(Boolean multipleStreamsEnabled) {
                 this.multipleStreamsEnabled = multipleStreamsEnabled;
+                return this;
+            }
+
+            /**
+             * OutputPath.
+             */
+            public Builder outputPath(String outputPath) {
+                this.outputPath = outputPath;
                 return this;
             }
 
@@ -488,10 +508,14 @@ public class CreateTaskRequest extends Request {
 
     }
     public static class ExtraParams extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MaxKeywords")
+        private Integer maxKeywords;
+
         @com.aliyun.core.annotation.NameInMap("NfixEnabled")
         private Boolean nfixEnabled;
 
         private ExtraParams(Builder builder) {
+            this.maxKeywords = builder.maxKeywords;
             this.nfixEnabled = builder.nfixEnabled;
         }
 
@@ -504,6 +528,13 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
+         * @return maxKeywords
+         */
+        public Integer getMaxKeywords() {
+            return this.maxKeywords;
+        }
+
+        /**
          * @return nfixEnabled
          */
         public Boolean getNfixEnabled() {
@@ -511,7 +542,16 @@ public class CreateTaskRequest extends Request {
         }
 
         public static final class Builder {
+            private Integer maxKeywords; 
             private Boolean nfixEnabled; 
+
+            /**
+             * MaxKeywords.
+             */
+            public Builder maxKeywords(Integer maxKeywords) {
+                this.maxKeywords = maxKeywords;
+                return this;
+            }
 
             /**
              * NfixEnabled.
