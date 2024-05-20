@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePipelineRequest</p>
  */
 public class DescribePipelineRequest extends Request {
-    @Query
-    @NameInMap("PipelineId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PipelineId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pipelineId;
 
     private DescribePipelineRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,45 +11,45 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetApplicationLogsInput</p>
  */
 public class GetApplicationLogsInput extends TeaModel {
-    @NameInMap("backwardLine")
+    @com.aliyun.core.annotation.NameInMap("backwardLine")
     private Long backwardLine;
 
-    @NameInMap("endTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("endTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @NameInMap("forwardLine")
+    @com.aliyun.core.annotation.NameInMap("forwardLine")
     private Long forwardLine;
 
-    @NameInMap("instanceID")
+    @com.aliyun.core.annotation.NameInMap("instanceID")
     private String instanceID;
 
-    @NameInMap("isTail")
+    @com.aliyun.core.annotation.NameInMap("isTail")
     private Boolean isTail;
 
-    @NameInMap("match")
+    @com.aliyun.core.annotation.NameInMap("match")
     private String match;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("offset")
+    @com.aliyun.core.annotation.NameInMap("offset")
     private Long offset;
 
-    @NameInMap("packID")
+    @com.aliyun.core.annotation.NameInMap("packID")
     private String packID;
 
-    @NameInMap("packMeta")
+    @com.aliyun.core.annotation.NameInMap("packMeta")
     private String packMeta;
 
-    @NameInMap("startTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("startTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
-    @NameInMap("timestamp")
+    @com.aliyun.core.annotation.NameInMap("timestamp")
     private String timestamp;
 
-    @NameInMap("versionID")
+    @com.aliyun.core.annotation.NameInMap("versionID")
     private String versionID;
 
     private GetApplicationLogsInput(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListStaticsQueryResponse</p>
  */
 public class ListStaticsQueryResponse extends Response {
-    @NameInMap("length")
+    @com.aliyun.core.annotation.NameInMap("length")
     private Long length;
 
-    @NameInMap("sort")
+    @com.aliyun.core.annotation.NameInMap("sort")
     private String sort;
 
-    @NameInMap("statics")
+    @com.aliyun.core.annotation.NameInMap("statics")
     private java.util.List < StaticsInfo > statics;
 
     private ListStaticsQueryResponse(BuilderImpl builder) {

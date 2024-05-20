@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeNamespaceResourcesResponseBody</p>
  */
 public class DescribeNamespaceResourcesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TraceId")
+    @com.aliyun.core.annotation.NameInMap("TraceId")
     private String traceId;
 
     private DescribeNamespaceResourcesResponseBody(Builder builder) {
@@ -190,61 +189,61 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AppCount")
+        @com.aliyun.core.annotation.NameInMap("AppCount")
         private Long appCount;
 
-        @NameInMap("BelongRegion")
+        @com.aliyun.core.annotation.NameInMap("BelongRegion")
         private String belongRegion;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("JumpServerAppId")
+        @com.aliyun.core.annotation.NameInMap("JumpServerAppId")
         private String jumpServerAppId;
 
-        @NameInMap("JumpServerIp")
+        @com.aliyun.core.annotation.NameInMap("JumpServerIp")
         private String jumpServerIp;
 
-        @NameInMap("LastChangeOrderId")
+        @com.aliyun.core.annotation.NameInMap("LastChangeOrderId")
         private String lastChangeOrderId;
 
-        @NameInMap("LastChangeOrderRunning")
+        @com.aliyun.core.annotation.NameInMap("LastChangeOrderRunning")
         private Boolean lastChangeOrderRunning;
 
-        @NameInMap("LastChangeOrderStatus")
+        @com.aliyun.core.annotation.NameInMap("LastChangeOrderStatus")
         private String lastChangeOrderStatus;
 
-        @NameInMap("NameSpaceShortId")
+        @com.aliyun.core.annotation.NameInMap("NameSpaceShortId")
         private String nameSpaceShortId;
 
-        @NameInMap("NamespaceId")
+        @com.aliyun.core.annotation.NameInMap("NamespaceId")
         private String namespaceId;
 
-        @NameInMap("NamespaceName")
+        @com.aliyun.core.annotation.NameInMap("NamespaceName")
         private String namespaceName;
 
-        @NameInMap("NotificationExpired")
+        @com.aliyun.core.annotation.NameInMap("NotificationExpired")
         private Boolean notificationExpired;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VSwitchName")
+        @com.aliyun.core.annotation.NameInMap("VSwitchName")
         private String vSwitchName;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcName")
+        @com.aliyun.core.annotation.NameInMap("VpcName")
         private String vpcName;
 
         private Data(Builder builder) {

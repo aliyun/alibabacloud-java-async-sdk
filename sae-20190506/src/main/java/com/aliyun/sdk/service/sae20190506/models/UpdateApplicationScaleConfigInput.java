@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,15 +11,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateApplicationScaleConfigInput</p>
  */
 public class UpdateApplicationScaleConfigInput extends TeaModel {
-    @NameInMap("alwaysAllocateCPU")
+    @com.aliyun.core.annotation.NameInMap("alwaysAllocateCPU")
     private Boolean alwaysAllocateCPU;
 
-    @NameInMap("maximumInstanceCount")
-    @Validation(maximum = 5000)
+    @com.aliyun.core.annotation.NameInMap("maximumInstanceCount")
+    @com.aliyun.core.annotation.Validation(maximum = 5000)
     private Long maximumInstanceCount;
 
-    @NameInMap("minimumInstanceCount")
-    @Validation(maximum = 5000)
+    @com.aliyun.core.annotation.NameInMap("minimumInstanceCount")
+    @com.aliyun.core.annotation.Validation(maximum = 5000)
     private Long minimumInstanceCount;
 
     private UpdateApplicationScaleConfigInput(Builder builder) {

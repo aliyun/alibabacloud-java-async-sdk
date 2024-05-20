@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePipelineResponseBody</p>
  */
 public class DescribePipelineResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TraceId")
+    @com.aliyun.core.annotation.NameInMap("TraceId")
     private String traceId;
 
     private DescribePipelineResponseBody(Builder builder) {
@@ -186,31 +185,31 @@ public class DescribePipelineResponseBody extends TeaModel {
     } 
 
     public static class TaskList extends TeaModel {
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorIgnore")
+        @com.aliyun.core.annotation.NameInMap("ErrorIgnore")
         private Integer errorIgnore;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("ShowManualIgnore")
+        @com.aliyun.core.annotation.NameInMap("ShowManualIgnore")
         private Boolean showManualIgnore;
 
-        @NameInMap("StageId")
+        @com.aliyun.core.annotation.NameInMap("StageId")
         private String stageId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
         private TaskList(Builder builder) {
@@ -403,19 +402,19 @@ public class DescribePipelineResponseBody extends TeaModel {
 
     }
     public static class StageList extends TeaModel {
-        @NameInMap("ExecutorType")
+        @com.aliyun.core.annotation.NameInMap("ExecutorType")
         private Integer executorType;
 
-        @NameInMap("StageId")
+        @com.aliyun.core.annotation.NameInMap("StageId")
         private String stageId;
 
-        @NameInMap("StageName")
+        @com.aliyun.core.annotation.NameInMap("StageName")
         private String stageName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("TaskList")
+        @com.aliyun.core.annotation.NameInMap("TaskList")
         private java.util.List < TaskList> taskList;
 
         private StageList(Builder builder) {
@@ -535,28 +534,28 @@ public class DescribePipelineResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("CoStatus")
+        @com.aliyun.core.annotation.NameInMap("CoStatus")
         private String coStatus;
 
-        @NameInMap("CurrentStageId")
+        @com.aliyun.core.annotation.NameInMap("CurrentStageId")
         private String currentStageId;
 
-        @NameInMap("NextPipelineId")
+        @com.aliyun.core.annotation.NameInMap("NextPipelineId")
         private String nextPipelineId;
 
-        @NameInMap("PipelineId")
+        @com.aliyun.core.annotation.NameInMap("PipelineId")
         private String pipelineId;
 
-        @NameInMap("PipelineName")
+        @com.aliyun.core.annotation.NameInMap("PipelineName")
         private String pipelineName;
 
-        @NameInMap("PipelineStatus")
+        @com.aliyun.core.annotation.NameInMap("PipelineStatus")
         private Integer pipelineStatus;
 
-        @NameInMap("ShowBatch")
+        @com.aliyun.core.annotation.NameInMap("ShowBatch")
         private Boolean showBatch;
 
-        @NameInMap("StageList")
+        @com.aliyun.core.annotation.NameInMap("StageList")
         private java.util.List < StageList> stageList;
 
         private Data(Builder builder) {

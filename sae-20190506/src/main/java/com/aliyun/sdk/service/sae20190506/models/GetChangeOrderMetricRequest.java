@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetChangeOrderMetricRequest</p>
  */
 public class GetChangeOrderMetricRequest extends Request {
-    @Query
-    @NameInMap("AppSource")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppSource")
     private String appSource;
 
-    @Query
-    @NameInMap("CpuStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CpuStrategy")
     private String cpuStrategy;
 
-    @Query
-    @NameInMap("CreateTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String createTime;
 
-    @Query
-    @NameInMap("Limit")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Limit")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long limit;
 
-    @Query
-    @NameInMap("OrderBy")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderBy")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String orderBy;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private GetChangeOrderMetricRequest(Builder builder) {

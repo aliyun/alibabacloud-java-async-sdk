@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeApplicationSlbsResponseBody</p>
  */
 public class DescribeApplicationSlbsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TraceId")
+    @com.aliyun.core.annotation.NameInMap("TraceId")
     private String traceId;
 
     private DescribeApplicationSlbsResponseBody(Builder builder) {
@@ -186,16 +185,16 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
     } 
 
     public static class Internet extends TeaModel {
-        @NameInMap("HttpsCertId")
+        @com.aliyun.core.annotation.NameInMap("HttpsCertId")
         private String httpsCertId;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("TargetPort")
+        @com.aliyun.core.annotation.NameInMap("TargetPort")
         private Integer targetPort;
 
         private Internet(Builder builder) {
@@ -287,16 +286,16 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
 
     }
     public static class Intranet extends TeaModel {
-        @NameInMap("HttpsCertId")
+        @com.aliyun.core.annotation.NameInMap("HttpsCertId")
         private String httpsCertId;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("TargetPort")
+        @com.aliyun.core.annotation.NameInMap("TargetPort")
         private Integer targetPort;
 
         private Intranet(Builder builder) {
@@ -388,28 +387,28 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Internet")
+        @com.aliyun.core.annotation.NameInMap("Internet")
         private java.util.List < Internet> internet;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("InternetSlbExpired")
+        @com.aliyun.core.annotation.NameInMap("InternetSlbExpired")
         private Boolean internetSlbExpired;
 
-        @NameInMap("InternetSlbId")
+        @com.aliyun.core.annotation.NameInMap("InternetSlbId")
         private String internetSlbId;
 
-        @NameInMap("Intranet")
+        @com.aliyun.core.annotation.NameInMap("Intranet")
         private java.util.List < Intranet> intranet;
 
-        @NameInMap("IntranetIp")
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("IntranetSlbExpired")
+        @com.aliyun.core.annotation.NameInMap("IntranetSlbExpired")
         private Boolean intranetSlbExpired;
 
-        @NameInMap("IntranetSlbId")
+        @com.aliyun.core.annotation.NameInMap("IntranetSlbId")
         private String intranetSlbId;
 
         private Data(Builder builder) {

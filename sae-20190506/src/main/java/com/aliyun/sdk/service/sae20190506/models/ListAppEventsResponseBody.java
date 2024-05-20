@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAppEventsResponseBody</p>
  */
 public class ListAppEventsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListAppEventsResponseBody(Builder builder) {
@@ -166,25 +165,25 @@ public class ListAppEventsResponseBody extends TeaModel {
     } 
 
     public static class AppEventEntity extends TeaModel {
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
 
-        @NameInMap("FirstTimestamp")
+        @com.aliyun.core.annotation.NameInMap("FirstTimestamp")
         private String firstTimestamp;
 
-        @NameInMap("LastTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LastTimestamp")
         private String lastTimestamp;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("ObjectKind")
+        @com.aliyun.core.annotation.NameInMap("ObjectKind")
         private String objectKind;
 
-        @NameInMap("ObjectName")
+        @com.aliyun.core.annotation.NameInMap("ObjectName")
         private String objectName;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
         private AppEventEntity(Builder builder) {
@@ -327,16 +326,16 @@ public class ListAppEventsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AppEventEntity")
+        @com.aliyun.core.annotation.NameInMap("AppEventEntity")
         private java.util.List < AppEventEntity> appEventEntity;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Integer totalSize;
 
         private Data(Builder builder) {

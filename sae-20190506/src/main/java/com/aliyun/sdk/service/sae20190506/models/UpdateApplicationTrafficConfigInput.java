@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateApplicationTrafficConfigInput</p>
  */
 public class UpdateApplicationTrafficConfigInput extends TeaModel {
-    @NameInMap("additionalVersionWeight")
+    @com.aliyun.core.annotation.NameInMap("additionalVersionWeight")
     private java.util.Map < String, Float > additionalVersionWeight;
 
-    @NameInMap("resolvePolicy")
+    @com.aliyun.core.annotation.NameInMap("resolvePolicy")
     private String resolvePolicy;
 
-    @NameInMap("routePolicy")
+    @com.aliyun.core.annotation.NameInMap("routePolicy")
     private RoutePolicy routePolicy;
 
-    @NameInMap("versionId")
-    @Validation(maxLength = 10, minLength = 1)
+    @com.aliyun.core.annotation.NameInMap("versionId")
+    @com.aliyun.core.annotation.Validation(maxLength = 10, minLength = 1)
     private String versionId;
 
     private UpdateApplicationTrafficConfigInput(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeGreyTagRouteRequest</p>
  */
 public class DescribeGreyTagRouteRequest extends Request {
-    @Query
-    @NameInMap("GreyTagRouteId")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GreyTagRouteId")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Long greyTagRouteId;
 
     private DescribeGreyTagRouteRequest(Builder builder) {

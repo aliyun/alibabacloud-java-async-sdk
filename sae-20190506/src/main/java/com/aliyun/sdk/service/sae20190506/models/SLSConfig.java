@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,7 +11,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SLSConfig</p>
  */
 public class SLSConfig extends TeaModel {
-    @NameInMap("collectConfigs")
+    @com.aliyun.core.annotation.NameInMap("collectConfigs")
     private java.util.List < CollectConfigs> collectConfigs;
 
     private SLSConfig(Builder builder) {
@@ -52,19 +51,19 @@ public class SLSConfig extends TeaModel {
     } 
 
     public static class CollectConfigs extends TeaModel {
-        @NameInMap("logPath")
+        @com.aliyun.core.annotation.NameInMap("logPath")
         private String logPath;
 
-        @NameInMap("logType")
+        @com.aliyun.core.annotation.NameInMap("logType")
         private String logType;
 
-        @NameInMap("logstoreName")
+        @com.aliyun.core.annotation.NameInMap("logstoreName")
         private String logstoreName;
 
-        @NameInMap("logtailName")
+        @com.aliyun.core.annotation.NameInMap("logtailName")
         private String logtailName;
 
-        @NameInMap("projectName")
+        @com.aliyun.core.annotation.NameInMap("projectName")
         private String projectName;
 
         private CollectConfigs(Builder builder) {

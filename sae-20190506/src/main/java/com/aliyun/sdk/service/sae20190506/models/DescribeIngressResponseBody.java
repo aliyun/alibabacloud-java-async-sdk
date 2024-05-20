@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeIngressResponseBody</p>
  */
 public class DescribeIngressResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TraceId")
+    @com.aliyun.core.annotation.NameInMap("TraceId")
     private String traceId;
 
     private DescribeIngressResponseBody(Builder builder) {
@@ -172,16 +171,16 @@ public class DescribeIngressResponseBody extends TeaModel {
     } 
 
     public static class DefaultRule extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("BackendProtocol")
+        @com.aliyun.core.annotation.NameInMap("BackendProtocol")
         private String backendProtocol;
 
-        @NameInMap("ContainerPort")
+        @com.aliyun.core.annotation.NameInMap("ContainerPort")
         private Integer containerPort;
 
         private DefaultRule(Builder builder) {
@@ -273,25 +272,25 @@ public class DescribeIngressResponseBody extends TeaModel {
 
     }
     public static class Rules extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("BackendProtocol")
+        @com.aliyun.core.annotation.NameInMap("BackendProtocol")
         private String backendProtocol;
 
-        @NameInMap("ContainerPort")
+        @com.aliyun.core.annotation.NameInMap("ContainerPort")
         private Integer containerPort;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("RewritePath")
+        @com.aliyun.core.annotation.NameInMap("RewritePath")
         private String rewritePath;
 
         private Rules(Builder builder) {
@@ -446,43 +445,43 @@ public class DescribeIngressResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("CertId")
+        @com.aliyun.core.annotation.NameInMap("CertId")
         private String certId;
 
-        @NameInMap("CertIds")
+        @com.aliyun.core.annotation.NameInMap("CertIds")
         private String certIds;
 
-        @NameInMap("DefaultRule")
+        @com.aliyun.core.annotation.NameInMap("DefaultRule")
         private DefaultRule defaultRule;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("ListenerPort")
+        @com.aliyun.core.annotation.NameInMap("ListenerPort")
         private Integer listenerPort;
 
-        @NameInMap("ListenerProtocol")
+        @com.aliyun.core.annotation.NameInMap("ListenerProtocol")
         private String listenerProtocol;
 
-        @NameInMap("LoadBalanceType")
+        @com.aliyun.core.annotation.NameInMap("LoadBalanceType")
         private String loadBalanceType;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NamespaceId")
+        @com.aliyun.core.annotation.NameInMap("NamespaceId")
         private String namespaceId;
 
-        @NameInMap("Rules")
+        @com.aliyun.core.annotation.NameInMap("Rules")
         private java.util.List < Rules> rules;
 
-        @NameInMap("SlbId")
+        @com.aliyun.core.annotation.NameInMap("SlbId")
         private String slbId;
 
-        @NameInMap("SlbType")
+        @com.aliyun.core.annotation.NameInMap("SlbType")
         private String slbType;
 
         private Data(Builder builder) {

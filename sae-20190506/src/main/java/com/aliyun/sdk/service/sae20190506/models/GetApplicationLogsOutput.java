@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetApplicationLogsOutput</p>
  */
 public class GetApplicationLogsOutput extends TeaModel {
-    @NameInMap("logEntrys")
+    @com.aliyun.core.annotation.NameInMap("logEntrys")
     private java.util.List < LogEntry > logEntrys;
 
-    @NameInMap("nextOffset")
+    @com.aliyun.core.annotation.NameInMap("nextOffset")
     private Long nextOffset;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private GetApplicationLogsOutput(Builder builder) {

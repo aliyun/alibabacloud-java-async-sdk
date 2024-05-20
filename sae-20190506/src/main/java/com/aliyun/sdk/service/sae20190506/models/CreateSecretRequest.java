@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSecretRequest</p>
  */
 public class CreateSecretRequest extends Request {
-    @Query
-    @NameInMap("NamespaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespaceId;
 
-    @Query
-    @NameInMap("SecretData")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecretData")
+    @com.aliyun.core.annotation.Validation(required = true)
     private SecretData secretData;
 
-    @Query
-    @NameInMap("SecretName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecretName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String secretName;
 
-    @Query
-    @NameInMap("SecretType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecretType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String secretType;
 
     private CreateSecretRequest(Builder builder) {
@@ -144,8 +143,8 @@ public class CreateSecretRequest extends Request {
     } 
 
     public static class SecretData extends TeaModel {
-        @NameInMap("SecretData")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("SecretData")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String secretData;
 
         private SecretData(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSecretsResponseBody</p>
  */
 public class ListSecretsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TraceId")
+    @com.aliyun.core.annotation.NameInMap("TraceId")
     private String traceId;
 
     private ListSecretsResponseBody(Builder builder) {
@@ -190,10 +189,10 @@ public class ListSecretsResponseBody extends TeaModel {
     } 
 
     public static class RelateApps extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
         private RelateApps(Builder builder) {
@@ -251,25 +250,25 @@ public class ListSecretsResponseBody extends TeaModel {
 
     }
     public static class Secrets extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("NamespaceId")
+        @com.aliyun.core.annotation.NameInMap("NamespaceId")
         private String namespaceId;
 
-        @NameInMap("RelateApps")
+        @com.aliyun.core.annotation.NameInMap("RelateApps")
         private java.util.List < RelateApps> relateApps;
 
-        @NameInMap("SecretId")
+        @com.aliyun.core.annotation.NameInMap("SecretId")
         private Long secretId;
 
-        @NameInMap("SecretName")
+        @com.aliyun.core.annotation.NameInMap("SecretName")
         private String secretName;
 
-        @NameInMap("SecretType")
+        @com.aliyun.core.annotation.NameInMap("SecretType")
         private String secretType;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private Secrets(Builder builder) {
@@ -415,7 +414,7 @@ public class ListSecretsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Secrets")
+        @com.aliyun.core.annotation.NameInMap("Secrets")
         private java.util.List < Secrets> secrets;
 
         private Data(Builder builder) {

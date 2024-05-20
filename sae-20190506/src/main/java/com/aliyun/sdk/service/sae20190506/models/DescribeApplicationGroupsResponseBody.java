@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeApplicationGroupsResponseBody</p>
  */
 public class DescribeApplicationGroupsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TraceId")
+    @com.aliyun.core.annotation.NameInMap("TraceId")
     private String traceId;
 
     private DescribeApplicationGroupsResponseBody(Builder builder) {
@@ -186,40 +185,40 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("EdasContainerVersion")
+        @com.aliyun.core.annotation.NameInMap("EdasContainerVersion")
         private String edasContainerVersion;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("GroupType")
+        @com.aliyun.core.annotation.NameInMap("GroupType")
         private Integer groupType;
 
-        @NameInMap("ImageUrl")
+        @com.aliyun.core.annotation.NameInMap("ImageUrl")
         private String imageUrl;
 
-        @NameInMap("Jdk")
+        @com.aliyun.core.annotation.NameInMap("Jdk")
         private String jdk;
 
-        @NameInMap("PackageType")
+        @com.aliyun.core.annotation.NameInMap("PackageType")
         private String packageType;
 
-        @NameInMap("PackageUrl")
+        @com.aliyun.core.annotation.NameInMap("PackageUrl")
         private String packageUrl;
 
-        @NameInMap("PackageVersion")
+        @com.aliyun.core.annotation.NameInMap("PackageVersion")
         private String packageVersion;
 
-        @NameInMap("Replicas")
+        @com.aliyun.core.annotation.NameInMap("Replicas")
         private Integer replicas;
 
-        @NameInMap("RunningInstances")
+        @com.aliyun.core.annotation.NameInMap("RunningInstances")
         private Integer runningInstances;
 
-        @NameInMap("WebContainer")
+        @com.aliyun.core.annotation.NameInMap("WebContainer")
         private String webContainer;
 
         private Data(Builder builder) {

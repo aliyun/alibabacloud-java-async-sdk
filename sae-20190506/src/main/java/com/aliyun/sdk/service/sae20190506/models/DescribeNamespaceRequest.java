@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeNamespaceRequest</p>
  */
 public class DescribeNamespaceRequest extends Request {
-    @Query
-    @NameInMap("NameSpaceShortId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NameSpaceShortId")
     private String nameSpaceShortId;
 
-    @Query
-    @NameInMap("NamespaceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespaceId")
     private String namespaceId;
 
     private DescribeNamespaceRequest(Builder builder) {
@@ -68,7 +67,7 @@ public class DescribeNamespaceRequest extends Request {
         } 
 
         /**
-         * NameSpaceShortId.
+         * The short ID of the namespace. You do not need to specify a region ID. We recommend that you configure this parameter. The value of this parameter can be up to 20 characters in length and can contain only lowercase letters and digits.
          */
         public Builder nameSpaceShortId(String nameSpaceShortId) {
             this.putQueryParameter("NameSpaceShortId", nameSpaceShortId);
@@ -77,7 +76,7 @@ public class DescribeNamespaceRequest extends Request {
         }
 
         /**
-         * The description of the namespace.
+         * The ID of the namespace. The information about the default namespace cannot be queried or modified. The default namespace cannot be deleted.
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);

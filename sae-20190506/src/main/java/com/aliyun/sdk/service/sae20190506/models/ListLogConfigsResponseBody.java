@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListLogConfigsResponseBody</p>
  */
 public class ListLogConfigsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TraceId")
+    @com.aliyun.core.annotation.NameInMap("TraceId")
     private String traceId;
 
     private ListLogConfigsResponseBody(Builder builder) {
@@ -186,28 +185,28 @@ public class ListLogConfigsResponseBody extends TeaModel {
     } 
 
     public static class LogConfigs extends TeaModel {
-        @NameInMap("ConfigName")
+        @com.aliyun.core.annotation.NameInMap("ConfigName")
         private String configName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("LogDir")
+        @com.aliyun.core.annotation.NameInMap("LogDir")
         private String logDir;
 
-        @NameInMap("LogType")
+        @com.aliyun.core.annotation.NameInMap("LogType")
         private String logType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SlsLogStore")
+        @com.aliyun.core.annotation.NameInMap("SlsLogStore")
         private String slsLogStore;
 
-        @NameInMap("SlsProject")
+        @com.aliyun.core.annotation.NameInMap("SlsProject")
         private String slsProject;
 
-        @NameInMap("StoreType")
+        @com.aliyun.core.annotation.NameInMap("StoreType")
         private String storeType;
 
         private LogConfigs(Builder builder) {
@@ -367,16 +366,16 @@ public class ListLogConfigsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("LogConfigs")
+        @com.aliyun.core.annotation.NameInMap("LogConfigs")
         private java.util.List < LogConfigs> logConfigs;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Integer totalSize;
 
         private Data(Builder builder) {

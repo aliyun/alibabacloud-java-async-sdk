@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TomcatConfig</p>
  */
 public class TomcatConfig extends TeaModel {
-    @NameInMap("ContextPath")
+    @com.aliyun.core.annotation.NameInMap("ContextPath")
     private String contextPath;
 
-    @NameInMap("MaxThreads")
+    @com.aliyun.core.annotation.NameInMap("MaxThreads")
     private Integer maxThreads;
 
-    @NameInMap("Port")
+    @com.aliyun.core.annotation.NameInMap("Port")
     private Integer port;
 
-    @NameInMap("UriEncoding")
+    @com.aliyun.core.annotation.NameInMap("UriEncoding")
     private String uriEncoding;
 
-    @NameInMap("UseBodyEncodingForUri")
+    @com.aliyun.core.annotation.NameInMap("UseBodyEncodingForUri")
     private Boolean useBodyEncodingForUri;
 
-    @NameInMap("Version")
+    @com.aliyun.core.annotation.NameInMap("Version")
     private String version;
 
     private TomcatConfig(Builder builder) {

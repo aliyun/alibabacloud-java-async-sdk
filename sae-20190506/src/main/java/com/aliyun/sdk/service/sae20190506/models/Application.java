@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,160 +11,160 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Application</p>
  */
 public class Application extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("applicationID")
+    @com.aliyun.core.annotation.NameInMap("applicationID")
     private String applicationID;
 
-    @NameInMap("applicationId")
+    @com.aliyun.core.annotation.NameInMap("applicationId")
     private String applicationId;
 
-    @NameInMap("applicationName")
+    @com.aliyun.core.annotation.NameInMap("applicationName")
     private String applicationName;
 
-    @NameInMap("args")
+    @com.aliyun.core.annotation.NameInMap("args")
     private String args;
 
-    @NameInMap("caPort")
+    @com.aliyun.core.annotation.NameInMap("caPort")
     private Integer caPort;
 
-    @NameInMap("codeChecksum")
+    @com.aliyun.core.annotation.NameInMap("codeChecksum")
     private String codeChecksum;
 
-    @NameInMap("codeSize")
+    @com.aliyun.core.annotation.NameInMap("codeSize")
     private Long codeSize;
 
-    @NameInMap("command")
+    @com.aliyun.core.annotation.NameInMap("command")
     private String command;
 
-    @NameInMap("cpu")
+    @com.aliyun.core.annotation.NameInMap("cpu")
     private Float cpu;
 
-    @NameInMap("createdTime")
+    @com.aliyun.core.annotation.NameInMap("createdTime")
     private String createdTime;
 
-    @NameInMap("customDNS")
+    @com.aliyun.core.annotation.NameInMap("customDNS")
     private CustomDNS customDNS;
 
-    @NameInMap("customDomainName")
+    @com.aliyun.core.annotation.NameInMap("customDomainName")
     private String customDomainName;
 
-    @NameInMap("customHealthCheckConfig")
+    @com.aliyun.core.annotation.NameInMap("customHealthCheckConfig")
     private CustomHealthCheckConfig customHealthCheckConfig;
 
-    @NameInMap("customRuntimeConfig")
+    @com.aliyun.core.annotation.NameInMap("customRuntimeConfig")
     private CustomRuntimeConfig customRuntimeConfig;
 
-    @NameInMap("description")
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @NameInMap("diskSize")
+    @com.aliyun.core.annotation.NameInMap("diskSize")
     private Integer diskSize;
 
-    @NameInMap("enableAppMetric")
+    @com.aliyun.core.annotation.NameInMap("enableAppMetric")
     private Boolean enableAppMetric;
 
-    @NameInMap("enableArmsAdvanced")
+    @com.aliyun.core.annotation.NameInMap("enableArmsAdvanced")
     private Boolean enableArmsAdvanced;
 
-    @NameInMap("environmentVariables")
+    @com.aliyun.core.annotation.NameInMap("environmentVariables")
     private java.util.Map < String, String > environmentVariables;
 
-    @NameInMap("gpuMemorySize")
+    @com.aliyun.core.annotation.NameInMap("gpuMemorySize")
     private Integer gpuMemorySize;
 
-    @NameInMap("handler")
+    @com.aliyun.core.annotation.NameInMap("handler")
     private String handler;
 
-    @NameInMap("httpTriggerConfig")
+    @com.aliyun.core.annotation.NameInMap("httpTriggerConfig")
     private HTTPTriggerConfig httpTriggerConfig;
 
-    @NameInMap("imageConfig")
+    @com.aliyun.core.annotation.NameInMap("imageConfig")
     private ImageConfig imageConfig;
 
-    @NameInMap("initializationTimeout")
+    @com.aliyun.core.annotation.NameInMap("initializationTimeout")
     private Integer initializationTimeout;
 
-    @NameInMap("initializer")
+    @com.aliyun.core.annotation.NameInMap("initializer")
     private String initializer;
 
-    @NameInMap("instanceConcurrency")
+    @com.aliyun.core.annotation.NameInMap("instanceConcurrency")
     private Integer instanceConcurrency;
 
-    @NameInMap("instanceLifecycleConfig")
+    @com.aliyun.core.annotation.NameInMap("instanceLifecycleConfig")
     private InstanceLifecycleConfig instanceLifecycleConfig;
 
-    @NameInMap("instanceSoftConcurrency")
+    @com.aliyun.core.annotation.NameInMap("instanceSoftConcurrency")
     private Integer instanceSoftConcurrency;
 
-    @NameInMap("instanceType")
+    @com.aliyun.core.annotation.NameInMap("instanceType")
     private String instanceType;
 
-    @NameInMap("internetAccess")
+    @com.aliyun.core.annotation.NameInMap("internetAccess")
     private Boolean internetAccess;
 
-    @NameInMap("lastModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("lastModifiedTime")
     private String lastModifiedTime;
 
-    @NameInMap("layers")
+    @com.aliyun.core.annotation.NameInMap("layers")
     private java.util.List < String > layers;
 
-    @NameInMap("layersArnV2")
+    @com.aliyun.core.annotation.NameInMap("layersArnV2")
     private java.util.List < String > layersArnV2;
 
-    @NameInMap("livenessProbe")
+    @com.aliyun.core.annotation.NameInMap("livenessProbe")
     private Probe livenessProbe;
 
-    @NameInMap("logConfig")
+    @com.aliyun.core.annotation.NameInMap("logConfig")
     private LogConfig logConfig;
 
-    @NameInMap("memorySize")
+    @com.aliyun.core.annotation.NameInMap("memorySize")
     private Integer memorySize;
 
-    @NameInMap("namespace")
+    @com.aliyun.core.annotation.NameInMap("namespace")
     private String namespace;
 
-    @NameInMap("namespaceID")
+    @com.aliyun.core.annotation.NameInMap("namespaceID")
     private String namespaceID;
 
-    @NameInMap("namespaceName")
+    @com.aliyun.core.annotation.NameInMap("namespaceName")
     private String namespaceName;
 
-    @NameInMap("nasConfig")
+    @com.aliyun.core.annotation.NameInMap("nasConfig")
     private NASConfig nasConfig;
 
-    @NameInMap("ossMountConfig")
+    @com.aliyun.core.annotation.NameInMap("ossMountConfig")
     private OSSMountConfig ossMountConfig;
 
-    @NameInMap("runtime")
+    @com.aliyun.core.annotation.NameInMap("runtime")
     private String runtime;
 
-    @NameInMap("scaleConfig")
+    @com.aliyun.core.annotation.NameInMap("scaleConfig")
     private ScaleConfig scaleConfig;
 
-    @NameInMap("slsConfig")
+    @com.aliyun.core.annotation.NameInMap("slsConfig")
     private SLSConfig slsConfig;
 
-    @NameInMap("startupProbe")
+    @com.aliyun.core.annotation.NameInMap("startupProbe")
     private Probe startupProbe;
 
-    @NameInMap("timeout")
+    @com.aliyun.core.annotation.NameInMap("timeout")
     private Integer timeout;
 
-    @NameInMap("tracingConfig")
+    @com.aliyun.core.annotation.NameInMap("tracingConfig")
     private TracingConfig tracingConfig;
 
-    @NameInMap("urlInternet")
+    @com.aliyun.core.annotation.NameInMap("urlInternet")
     private String urlInternet;
 
-    @NameInMap("urlIntranet")
+    @com.aliyun.core.annotation.NameInMap("urlIntranet")
     private String urlIntranet;
 
-    @NameInMap("version")
+    @com.aliyun.core.annotation.NameInMap("version")
     private Version version;
 
-    @NameInMap("vpcConfig")
+    @com.aliyun.core.annotation.NameInMap("vpcConfig")
     private VPCConfig vpcConfig;
 
     private Application(Builder builder) {

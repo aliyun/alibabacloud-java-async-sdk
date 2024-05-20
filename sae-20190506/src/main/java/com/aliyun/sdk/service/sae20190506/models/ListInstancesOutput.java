@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstancesOutput</p>
  */
 public class ListInstancesOutput extends TeaModel {
-    @NameInMap("currentError")
+    @com.aliyun.core.annotation.NameInMap("currentError")
     private String currentError;
 
-    @NameInMap("instances")
+    @com.aliyun.core.annotation.NameInMap("instances")
     private java.util.List < InstanceInfo > instances;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("versionStatus")
+    @com.aliyun.core.annotation.NameInMap("versionStatus")
     private java.util.Map < String, VersionStatus > versionStatus;
 
     private ListInstancesOutput(Builder builder) {

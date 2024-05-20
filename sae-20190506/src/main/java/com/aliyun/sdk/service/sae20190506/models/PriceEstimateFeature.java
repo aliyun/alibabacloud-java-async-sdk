@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,64 +11,64 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PriceEstimateFeature</p>
  */
 public class PriceEstimateFeature extends TeaModel {
-    @NameInMap("AppType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("AppType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appType;
 
-    @NameInMap("CpuCore")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("CpuCore")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Float cpuCore;
 
-    @NameInMap("CpuStrategy")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("CpuStrategy")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cpuStrategy;
 
-    @NameInMap("EnvType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("EnvType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String envType;
 
-    @NameInMap("HighLoadInstanceCount")
+    @com.aliyun.core.annotation.NameInMap("HighLoadInstanceCount")
     private Long highLoadInstanceCount;
 
-    @NameInMap("HighLoadQps")
+    @com.aliyun.core.annotation.NameInMap("HighLoadQps")
     private Float highLoadQps;
 
-    @NameInMap("HighLoadSeconds")
+    @com.aliyun.core.annotation.NameInMap("HighLoadSeconds")
     private Long highLoadSeconds;
 
-    @NameInMap("InstanceQps")
+    @com.aliyun.core.annotation.NameInMap("InstanceQps")
     private Float instanceQps;
 
-    @NameInMap("InternetOutboundGiB")
+    @com.aliyun.core.annotation.NameInMap("InternetOutboundGiB")
     private Float internetOutboundGiB;
 
-    @NameInMap("LowLoadInstanceCount")
+    @com.aliyun.core.annotation.NameInMap("LowLoadInstanceCount")
     private Long lowLoadInstanceCount;
 
-    @NameInMap("LowLoadQps")
+    @com.aliyun.core.annotation.NameInMap("LowLoadQps")
     private Float lowLoadQps;
 
-    @NameInMap("LowLoadSeconds")
+    @com.aliyun.core.annotation.NameInMap("LowLoadSeconds")
     private Long lowLoadSeconds;
 
-    @NameInMap("MaxInstanceCount")
+    @com.aliyun.core.annotation.NameInMap("MaxInstanceCount")
     private Long maxInstanceCount;
 
-    @NameInMap("MemoryGiB")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("MemoryGiB")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Float memoryGiB;
 
-    @NameInMap("MinInstanceCount")
+    @com.aliyun.core.annotation.NameInMap("MinInstanceCount")
     private Long minInstanceCount;
 
-    @NameInMap("NoneLoadInstanceCount")
+    @com.aliyun.core.annotation.NameInMap("NoneLoadInstanceCount")
     private Long noneLoadInstanceCount;
 
-    @NameInMap("NoneLoadSeconds")
+    @com.aliyun.core.annotation.NameInMap("NoneLoadSeconds")
     private Long noneLoadSeconds;
 
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private PriceEstimateFeature(Builder builder) {

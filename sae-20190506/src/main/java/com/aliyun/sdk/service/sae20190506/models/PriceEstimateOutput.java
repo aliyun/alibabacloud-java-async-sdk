@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PriceEstimateOutput</p>
  */
 public class PriceEstimateOutput extends TeaModel {
-    @NameInMap("Apps")
+    @com.aliyun.core.annotation.NameInMap("Apps")
     private java.util.List < Apps> apps;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("TotalPrice")
+    @com.aliyun.core.annotation.NameInMap("TotalPrice")
     private Float totalPrice;
 
     private PriceEstimateOutput(Builder builder) {
@@ -92,13 +91,13 @@ public class PriceEstimateOutput extends TeaModel {
     } 
 
     public static class Usages extends TeaModel {
-        @NameInMap("Amount")
+        @com.aliyun.core.annotation.NameInMap("Amount")
         private Float amount;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
         private Usages(Builder builder) {
@@ -173,13 +172,13 @@ public class PriceEstimateOutput extends TeaModel {
 
     }
     public static class Apps extends TeaModel {
-        @NameInMap("Feature")
+        @com.aliyun.core.annotation.NameInMap("Feature")
         private PriceEstimateFeature feature;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Usages")
+        @com.aliyun.core.annotation.NameInMap("Usages")
         private java.util.List < Usages> usages;
 
         private Apps(Builder builder) {
@@ -254,19 +253,19 @@ public class PriceEstimateOutput extends TeaModel {
 
     }
     public static class Steps extends TeaModel {
-        @NameInMap("Begin")
+        @com.aliyun.core.annotation.NameInMap("Begin")
         private Long begin;
 
-        @NameInMap("End")
+        @com.aliyun.core.annotation.NameInMap("End")
         private Long end;
 
-        @NameInMap("Price")
+        @com.aliyun.core.annotation.NameInMap("Price")
         private Float price;
 
-        @NameInMap("RegionIds")
+        @com.aliyun.core.annotation.NameInMap("RegionIds")
         private java.util.List < String > regionIds;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
         private Steps(Builder builder) {
@@ -375,25 +374,25 @@ public class PriceEstimateOutput extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("Amount")
+        @com.aliyun.core.annotation.NameInMap("Amount")
         private Float amount;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Price")
+        @com.aliyun.core.annotation.NameInMap("Price")
         private Float price;
 
-        @NameInMap("Steps")
+        @com.aliyun.core.annotation.NameInMap("Steps")
         private java.util.List < Steps> steps;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
         private Items(Builder builder) {

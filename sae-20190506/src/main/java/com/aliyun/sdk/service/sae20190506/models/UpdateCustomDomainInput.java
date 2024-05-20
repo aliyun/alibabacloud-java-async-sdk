@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateCustomDomainInput</p>
  */
 public class UpdateCustomDomainInput extends TeaModel {
-    @NameInMap("applicationID")
+    @com.aliyun.core.annotation.NameInMap("applicationID")
     private String applicationID;
 
-    @NameInMap("applicationName")
+    @com.aliyun.core.annotation.NameInMap("applicationName")
     private String applicationName;
 
-    @NameInMap("certConfig")
+    @com.aliyun.core.annotation.NameInMap("certConfig")
     private CertConfig certConfig;
 
-    @NameInMap("keepFullPath")
+    @com.aliyun.core.annotation.NameInMap("keepFullPath")
     private Boolean keepFullPath;
 
-    @NameInMap("namespaceID")
+    @com.aliyun.core.annotation.NameInMap("namespaceID")
     private String namespaceID;
 
-    @NameInMap("protocol")
+    @com.aliyun.core.annotation.NameInMap("protocol")
     private String protocol;
 
-    @NameInMap("tlsConfig")
+    @com.aliyun.core.annotation.NameInMap("tlsConfig")
     private TLSConfig tlsConfig;
 
-    @NameInMap("wafConfig")
+    @com.aliyun.core.annotation.NameInMap("wafConfig")
     private WAFConfig wafConfig;
 
     private UpdateCustomDomainInput(Builder builder) {

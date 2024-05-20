@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,11 +11,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>LifecycleHook</p>
  */
 public class LifecycleHook extends TeaModel {
-    @NameInMap("handler")
-    @Validation(maxLength = 128)
+    @com.aliyun.core.annotation.NameInMap("handler")
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String handler;
 
-    @NameInMap("timeout")
+    @com.aliyun.core.annotation.NameInMap("timeout")
     private Integer timeout;
 
     private LifecycleHook(Builder builder) {

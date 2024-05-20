@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Version</p>
  */
 public class Version extends TeaModel {
-    @NameInMap("createdTime")
+    @com.aliyun.core.annotation.NameInMap("createdTime")
     private String createdTime;
 
-    @NameInMap("description")
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @NameInMap("image")
+    @com.aliyun.core.annotation.NameInMap("image")
     private String image;
 
-    @NameInMap("lastModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("lastModifiedTime")
     private String lastModifiedTime;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("versionId")
+    @com.aliyun.core.annotation.NameInMap("versionId")
     private String versionId;
 
-    @NameInMap("weight")
+    @com.aliyun.core.annotation.NameInMap("weight")
     private Double weight;
 
     private Version(Builder builder) {

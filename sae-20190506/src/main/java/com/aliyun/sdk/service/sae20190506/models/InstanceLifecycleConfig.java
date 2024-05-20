@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InstanceLifecycleConfig</p>
  */
 public class InstanceLifecycleConfig extends TeaModel {
-    @NameInMap("preFreeze")
+    @com.aliyun.core.annotation.NameInMap("preFreeze")
     private LifecycleHook preFreeze;
 
-    @NameInMap("preStop")
+    @com.aliyun.core.annotation.NameInMap("preStop")
     private LifecycleHook preStop;
 
     private InstanceLifecycleConfig(Builder builder) {

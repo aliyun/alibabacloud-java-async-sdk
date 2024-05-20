@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeNamespacesResponseBody</p>
  */
 public class DescribeNamespacesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TraceId")
+    @com.aliyun.core.annotation.NameInMap("TraceId")
     private String traceId;
 
     private DescribeNamespacesResponseBody(Builder builder) {
@@ -190,31 +189,31 @@ public class DescribeNamespacesResponseBody extends TeaModel {
     } 
 
     public static class Namespaces extends TeaModel {
-        @NameInMap("AccessKey")
+        @com.aliyun.core.annotation.NameInMap("AccessKey")
         private String accessKey;
 
-        @NameInMap("AddressServerHost")
+        @com.aliyun.core.annotation.NameInMap("AddressServerHost")
         private String addressServerHost;
 
-        @NameInMap("NameSpaceShortId")
+        @com.aliyun.core.annotation.NameInMap("NameSpaceShortId")
         private String nameSpaceShortId;
 
-        @NameInMap("NamespaceDescription")
+        @com.aliyun.core.annotation.NameInMap("NamespaceDescription")
         private String namespaceDescription;
 
-        @NameInMap("NamespaceId")
+        @com.aliyun.core.annotation.NameInMap("NamespaceId")
         private String namespaceId;
 
-        @NameInMap("NamespaceName")
+        @com.aliyun.core.annotation.NameInMap("NamespaceName")
         private String namespaceName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SecretKey")
+        @com.aliyun.core.annotation.NameInMap("SecretKey")
         private String secretKey;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
         private Namespaces(Builder builder) {
@@ -391,16 +390,16 @@ public class DescribeNamespacesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("Namespaces")
+        @com.aliyun.core.annotation.NameInMap("Namespaces")
         private java.util.List < Namespaces> namespaces;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Integer totalSize;
 
         private Data(Builder builder) {

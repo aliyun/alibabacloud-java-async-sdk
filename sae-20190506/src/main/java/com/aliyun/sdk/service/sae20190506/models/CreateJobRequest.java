@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,225 +11,225 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateJobRequest</p>
  */
 public class CreateJobRequest extends Request {
-    @Query
-    @NameInMap("AcrAssumeRoleArn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcrAssumeRoleArn")
     private String acrAssumeRoleArn;
 
-    @Body
-    @NameInMap("AcrInstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AcrInstanceId")
     private String acrInstanceId;
 
-    @Query
-    @NameInMap("AppDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppDescription")
     private String appDescription;
 
-    @Query
-    @NameInMap("AppName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
-    @Query
-    @NameInMap("AutoConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoConfig")
     private Boolean autoConfig;
 
-    @Query
-    @NameInMap("BackoffLimit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackoffLimit")
     private Long backoffLimit;
 
-    @Query
-    @NameInMap("Command")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Command")
     private String command;
 
-    @Query
-    @NameInMap("CommandArgs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommandArgs")
     private String commandArgs;
 
-    @Query
-    @NameInMap("ConcurrencyPolicy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConcurrencyPolicy")
     private String concurrencyPolicy;
 
-    @Body
-    @NameInMap("ConfigMapMountDesc")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConfigMapMountDesc")
     private String configMapMountDesc;
 
-    @Query
-    @NameInMap("Cpu")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Cpu")
     private Integer cpu;
 
-    @Query
-    @NameInMap("CustomHostAlias")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomHostAlias")
     private String customHostAlias;
 
-    @Query
-    @NameInMap("EdasContainerVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EdasContainerVersion")
     private String edasContainerVersion;
 
-    @Body
-    @NameInMap("EnableImageAccl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableImageAccl")
     private Boolean enableImageAccl;
 
-    @Query
-    @NameInMap("Envs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Envs")
     private String envs;
 
-    @Query
-    @NameInMap("ImagePullSecrets")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImagePullSecrets")
     private String imagePullSecrets;
 
-    @Query
-    @NameInMap("ImageUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageUrl")
     private String imageUrl;
 
-    @Query
-    @NameInMap("JarStartArgs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JarStartArgs")
     private String jarStartArgs;
 
-    @Query
-    @NameInMap("JarStartOptions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JarStartOptions")
     private String jarStartOptions;
 
-    @Query
-    @NameInMap("Jdk")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Jdk")
     private String jdk;
 
-    @Query
-    @NameInMap("Memory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Memory")
     private Integer memory;
 
-    @Query
-    @NameInMap("MountDesc")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MountDesc")
     private String mountDesc;
 
-    @Query
-    @NameInMap("MountHost")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MountHost")
     private String mountHost;
 
-    @Query
-    @NameInMap("NamespaceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespaceId")
     private String namespaceId;
 
-    @Query
-    @NameInMap("NasId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NasId")
     private String nasId;
 
-    @Body
-    @NameInMap("OssAkId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OssAkId")
     private String ossAkId;
 
-    @Body
-    @NameInMap("OssAkSecret")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OssAkSecret")
     private String ossAkSecret;
 
-    @Body
-    @NameInMap("OssMountDescs")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OssMountDescs")
     private String ossMountDescs;
 
-    @Query
-    @NameInMap("PackageType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PackageType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String packageType;
 
-    @Query
-    @NameInMap("PackageUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PackageUrl")
     private String packageUrl;
 
-    @Query
-    @NameInMap("PackageVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PackageVersion")
     private String packageVersion;
 
-    @Body
-    @NameInMap("PhpConfig")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PhpConfig")
     private String phpConfig;
 
-    @Query
-    @NameInMap("PhpConfigLocation")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhpConfigLocation")
     private String phpConfigLocation;
 
-    @Query
-    @NameInMap("PostStart")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PostStart")
     private String postStart;
 
-    @Query
-    @NameInMap("PreStop")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreStop")
     private String preStop;
 
-    @Query
-    @NameInMap("ProgrammingLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProgrammingLanguage")
     private String programmingLanguage;
 
-    @Query
-    @NameInMap("Python")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Python")
     private String python;
 
-    @Query
-    @NameInMap("PythonModules")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PythonModules")
     private String pythonModules;
 
-    @Query
-    @NameInMap("RefAppId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RefAppId")
     private String refAppId;
 
-    @Query
-    @NameInMap("Replicas")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Replicas")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer replicas;
 
-    @Query
-    @NameInMap("SecurityGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
     private String securityGroupId;
 
-    @Query
-    @NameInMap("Slice")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Slice")
     private Boolean slice;
 
-    @Query
-    @NameInMap("SliceEnvs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SliceEnvs")
     private String sliceEnvs;
 
-    @Query
-    @NameInMap("SlsConfigs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SlsConfigs")
     private String slsConfigs;
 
-    @Query
-    @NameInMap("TerminationGracePeriodSeconds")
-    @Validation(maximum = 6000)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TerminationGracePeriodSeconds")
+    @com.aliyun.core.annotation.Validation(maximum = 6000)
     private Integer terminationGracePeriodSeconds;
 
-    @Query
-    @NameInMap("Timeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Timeout")
     private Long timeout;
 
-    @Query
-    @NameInMap("Timezone")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Timezone")
     private String timezone;
 
-    @Query
-    @NameInMap("TomcatConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TomcatConfig")
     private String tomcatConfig;
 
-    @Query
-    @NameInMap("TriggerConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TriggerConfig")
     private String triggerConfig;
 
-    @Query
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @Query
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
-    @Query
-    @NameInMap("WarStartOptions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WarStartOptions")
     private String warStartOptions;
 
-    @Query
-    @NameInMap("WebContainer")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WebContainer")
     private String webContainer;
 
-    @Query
-    @NameInMap("Workload")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Workload")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workload;
 
     private CreateJobRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRegionsResponseBody</p>
  */
 public class DescribeRegionsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Regions")
+    @com.aliyun.core.annotation.NameInMap("Regions")
     private Regions regions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeRegionsResponseBody(Builder builder) {
@@ -118,7 +117,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
     } 
 
     public static class RecommendZones extends TeaModel {
-        @NameInMap("RecommendZone")
+        @com.aliyun.core.annotation.NameInMap("RecommendZone")
         private java.util.List < String > recommendZone;
 
         private RecommendZones(Builder builder) {
@@ -159,16 +158,16 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     }
     public static class Region extends TeaModel {
-        @NameInMap("LocalName")
+        @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
 
-        @NameInMap("RecommendZones")
+        @com.aliyun.core.annotation.NameInMap("RecommendZones")
         private RecommendZones recommendZones;
 
-        @NameInMap("RegionEndpoint")
+        @com.aliyun.core.annotation.NameInMap("RegionEndpoint")
         private String regionEndpoint;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private Region(Builder builder) {
@@ -293,7 +292,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     }
     public static class Regions extends TeaModel {
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private java.util.List < Region> region;
 
         private Regions(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CertConfig</p>
  */
 public class CertConfig extends TeaModel {
-    @NameInMap("certName")
-    @Validation(maxLength = 128, minLength = 1)
+    @com.aliyun.core.annotation.NameInMap("certName")
+    @com.aliyun.core.annotation.Validation(maxLength = 128, minLength = 1)
     private String certName;
 
-    @NameInMap("certificate")
-    @Validation(maxLength = 20480)
+    @com.aliyun.core.annotation.NameInMap("certificate")
+    @com.aliyun.core.annotation.Validation(maxLength = 20480)
     private String certificate;
 
-    @NameInMap("privateKey")
-    @Validation(maxLength = 4096)
+    @com.aliyun.core.annotation.NameInMap("privateKey")
+    @com.aliyun.core.annotation.Validation(maxLength = 4096)
     private String privateKey;
 
     private CertConfig(Builder builder) {

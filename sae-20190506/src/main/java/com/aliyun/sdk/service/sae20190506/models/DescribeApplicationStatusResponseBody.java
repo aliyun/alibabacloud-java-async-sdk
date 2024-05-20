@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeApplicationStatusResponseBody</p>
  */
 public class DescribeApplicationStatusResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TraceId")
+    @com.aliyun.core.annotation.NameInMap("TraceId")
     private String traceId;
 
     private DescribeApplicationStatusResponseBody(Builder builder) {
@@ -190,40 +189,40 @@ public class DescribeApplicationStatusResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("ArmsAdvancedEnabled")
+        @com.aliyun.core.annotation.NameInMap("ArmsAdvancedEnabled")
         private String armsAdvancedEnabled;
 
-        @NameInMap("ArmsApmInfo")
+        @com.aliyun.core.annotation.NameInMap("ArmsApmInfo")
         private String armsApmInfo;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CurrentStatus")
+        @com.aliyun.core.annotation.NameInMap("CurrentStatus")
         private String currentStatus;
 
-        @NameInMap("EnableAgent")
+        @com.aliyun.core.annotation.NameInMap("EnableAgent")
         private Boolean enableAgent;
 
-        @NameInMap("FileSizeLimit")
+        @com.aliyun.core.annotation.NameInMap("FileSizeLimit")
         private Long fileSizeLimit;
 
-        @NameInMap("LastChangeOrderId")
+        @com.aliyun.core.annotation.NameInMap("LastChangeOrderId")
         private String lastChangeOrderId;
 
-        @NameInMap("LastChangeOrderRunning")
+        @com.aliyun.core.annotation.NameInMap("LastChangeOrderRunning")
         private Boolean lastChangeOrderRunning;
 
-        @NameInMap("LastChangeOrderStatus")
+        @com.aliyun.core.annotation.NameInMap("LastChangeOrderStatus")
         private String lastChangeOrderStatus;
 
-        @NameInMap("RunningInstances")
+        @com.aliyun.core.annotation.NameInMap("RunningInstances")
         private Integer runningInstances;
 
-        @NameInMap("SubStatus")
+        @com.aliyun.core.annotation.NameInMap("SubStatus")
         private String subStatus;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateNamespaceResponseBody</p>
  */
 public class UpdateNamespaceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TraceId")
+    @com.aliyun.core.annotation.NameInMap("TraceId")
     private String traceId;
 
     private UpdateNamespaceResponseBody(Builder builder) {
@@ -186,22 +185,22 @@ public class UpdateNamespaceResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("EnableMicroRegistration")
+        @com.aliyun.core.annotation.NameInMap("EnableMicroRegistration")
         private Boolean enableMicroRegistration;
 
-        @NameInMap("NameSpaceShortId")
+        @com.aliyun.core.annotation.NameInMap("NameSpaceShortId")
         private String nameSpaceShortId;
 
-        @NameInMap("NamespaceDescription")
+        @com.aliyun.core.annotation.NameInMap("NamespaceDescription")
         private String namespaceDescription;
 
-        @NameInMap("NamespaceId")
+        @com.aliyun.core.annotation.NameInMap("NamespaceId")
         private String namespaceId;
 
-        @NameInMap("NamespaceName")
+        @com.aliyun.core.annotation.NameInMap("NamespaceName")
         private String namespaceName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private Data(Builder builder) {

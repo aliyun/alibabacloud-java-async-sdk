@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SourceCodeAccount</p>
  */
 public class SourceCodeAccount extends TeaModel {
-    @NameInMap("AvatarUrl")
+    @com.aliyun.core.annotation.NameInMap("AvatarUrl")
     private String avatarUrl;
 
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("Organizations")
+    @com.aliyun.core.annotation.NameInMap("Organizations")
     private java.util.List < Organizations> organizations;
 
     private SourceCodeAccount(Builder builder) {
@@ -112,13 +111,13 @@ public class SourceCodeAccount extends TeaModel {
     } 
 
     public static class Organizations extends TeaModel {
-        @NameInMap("AvatarUrl")
+        @com.aliyun.core.annotation.NameInMap("AvatarUrl")
         private String avatarUrl;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Organizations(Builder builder) {

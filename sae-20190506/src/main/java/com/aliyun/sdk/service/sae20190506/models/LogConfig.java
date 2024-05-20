@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>LogConfig</p>
  */
 public class LogConfig extends TeaModel {
-    @NameInMap("enableInstanceMetrics")
+    @com.aliyun.core.annotation.NameInMap("enableInstanceMetrics")
     private Boolean enableInstanceMetrics;
 
-    @NameInMap("enableRequestMetrics")
+    @com.aliyun.core.annotation.NameInMap("enableRequestMetrics")
     private Boolean enableRequestMetrics;
 
-    @NameInMap("logBeginRule")
+    @com.aliyun.core.annotation.NameInMap("logBeginRule")
     private String logBeginRule;
 
-    @NameInMap("logstore")
-    @Validation(maxLength = 63)
+    @com.aliyun.core.annotation.NameInMap("logstore")
+    @com.aliyun.core.annotation.Validation(maxLength = 63)
     private String logstore;
 
-    @NameInMap("project")
-    @Validation(maxLength = 63)
+    @com.aliyun.core.annotation.NameInMap("project")
+    @com.aliyun.core.annotation.Validation(maxLength = 63)
     private String project;
 
-    @NameInMap("pushToUserSLS")
+    @com.aliyun.core.annotation.NameInMap("pushToUserSLS")
     private Boolean pushToUserSLS;
 
     private LogConfig(Builder builder) {

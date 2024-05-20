@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Probe</p>
  */
 public class Probe extends TeaModel {
-    @NameInMap("failureThreshold")
+    @com.aliyun.core.annotation.NameInMap("failureThreshold")
     private Integer failureThreshold;
 
-    @NameInMap("initialDelaySeconds")
+    @com.aliyun.core.annotation.NameInMap("initialDelaySeconds")
     private Integer initialDelaySeconds;
 
-    @NameInMap("periodSeconds")
+    @com.aliyun.core.annotation.NameInMap("periodSeconds")
     private Integer periodSeconds;
 
-    @NameInMap("probeHandler")
+    @com.aliyun.core.annotation.NameInMap("probeHandler")
     private ProbeHandler probeHandler;
 
-    @NameInMap("timeoutSeconds")
+    @com.aliyun.core.annotation.NameInMap("timeoutSeconds")
     private Integer timeoutSeconds;
 
     private Probe(Builder builder) {
@@ -132,10 +131,10 @@ public class Probe extends TeaModel {
     } 
 
     public static class HttpHeaders extends TeaModel {
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private HttpHeaders(Builder builder) {
@@ -193,13 +192,13 @@ public class Probe extends TeaModel {
 
     }
     public static class HttpGet extends TeaModel {
-        @NameInMap("httpHeaders")
+        @com.aliyun.core.annotation.NameInMap("httpHeaders")
         private java.util.List < HttpHeaders> httpHeaders;
 
-        @NameInMap("path")
+        @com.aliyun.core.annotation.NameInMap("path")
         private String path;
 
-        @NameInMap("port")
+        @com.aliyun.core.annotation.NameInMap("port")
         private Integer port;
 
         private HttpGet(Builder builder) {
@@ -274,7 +273,7 @@ public class Probe extends TeaModel {
 
     }
     public static class TcpSocket extends TeaModel {
-        @NameInMap("port")
+        @com.aliyun.core.annotation.NameInMap("port")
         private Integer port;
 
         private TcpSocket(Builder builder) {
@@ -315,10 +314,10 @@ public class Probe extends TeaModel {
 
     }
     public static class ProbeHandler extends TeaModel {
-        @NameInMap("httpGet")
+        @com.aliyun.core.annotation.NameInMap("httpGet")
         private HttpGet httpGet;
 
-        @NameInMap("tcpSocket")
+        @com.aliyun.core.annotation.NameInMap("tcpSocket")
         private TcpSocket tcpSocket;
 
         private ProbeHandler(Builder builder) {

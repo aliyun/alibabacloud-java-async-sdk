@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeGreyTagRouteResponseBody</p>
  */
 public class DescribeGreyTagRouteResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TraceId")
+    @com.aliyun.core.annotation.NameInMap("TraceId")
     private String traceId;
 
     private DescribeGreyTagRouteResponseBody(Builder builder) {
@@ -186,25 +185,25 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("cond")
+        @com.aliyun.core.annotation.NameInMap("cond")
         private String cond;
 
-        @NameInMap("expr")
+        @com.aliyun.core.annotation.NameInMap("expr")
         private String expr;
 
-        @NameInMap("index")
+        @com.aliyun.core.annotation.NameInMap("index")
         private Integer index;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("operator")
+        @com.aliyun.core.annotation.NameInMap("operator")
         private String operator;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private Items(Builder builder) {
@@ -347,16 +346,16 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
 
     }
     public static class AlbRules extends TeaModel {
-        @NameInMap("condition")
+        @com.aliyun.core.annotation.NameInMap("condition")
         private String condition;
 
-        @NameInMap("ingressId")
+        @com.aliyun.core.annotation.NameInMap("ingressId")
         private String ingressId;
 
-        @NameInMap("items")
+        @com.aliyun.core.annotation.NameInMap("items")
         private java.util.List < Items> items;
 
-        @NameInMap("serviceId")
+        @com.aliyun.core.annotation.NameInMap("serviceId")
         private String serviceId;
 
         private AlbRules(Builder builder) {
@@ -448,25 +447,25 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
 
     }
     public static class DubboRulesItems extends TeaModel {
-        @NameInMap("cond")
+        @com.aliyun.core.annotation.NameInMap("cond")
         private String cond;
 
-        @NameInMap("expr")
+        @com.aliyun.core.annotation.NameInMap("expr")
         private String expr;
 
-        @NameInMap("index")
+        @com.aliyun.core.annotation.NameInMap("index")
         private Integer index;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("operator")
+        @com.aliyun.core.annotation.NameInMap("operator")
         private String operator;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private DubboRulesItems(Builder builder) {
@@ -623,22 +622,22 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
 
     }
     public static class DubboRules extends TeaModel {
-        @NameInMap("condition")
+        @com.aliyun.core.annotation.NameInMap("condition")
         private String condition;
 
-        @NameInMap("group")
+        @com.aliyun.core.annotation.NameInMap("group")
         private String group;
 
-        @NameInMap("items")
+        @com.aliyun.core.annotation.NameInMap("items")
         private java.util.List < DubboRulesItems> items;
 
-        @NameInMap("methodName")
+        @com.aliyun.core.annotation.NameInMap("methodName")
         private String methodName;
 
-        @NameInMap("serviceName")
+        @com.aliyun.core.annotation.NameInMap("serviceName")
         private String serviceName;
 
-        @NameInMap("version")
+        @com.aliyun.core.annotation.NameInMap("version")
         private String version;
 
         private DubboRules(Builder builder) {
@@ -768,25 +767,25 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
 
     }
     public static class ScRulesItems extends TeaModel {
-        @NameInMap("cond")
+        @com.aliyun.core.annotation.NameInMap("cond")
         private String cond;
 
-        @NameInMap("expr")
+        @com.aliyun.core.annotation.NameInMap("expr")
         private String expr;
 
-        @NameInMap("index")
+        @com.aliyun.core.annotation.NameInMap("index")
         private Integer index;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("operator")
+        @com.aliyun.core.annotation.NameInMap("operator")
         private String operator;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private ScRulesItems(Builder builder) {
@@ -940,13 +939,13 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
 
     }
     public static class ScRules extends TeaModel {
-        @NameInMap("condition")
+        @com.aliyun.core.annotation.NameInMap("condition")
         private String condition;
 
-        @NameInMap("items")
+        @com.aliyun.core.annotation.NameInMap("items")
         private java.util.List < ScRulesItems> items;
 
-        @NameInMap("path")
+        @com.aliyun.core.annotation.NameInMap("path")
         private String path;
 
         private ScRules(Builder builder) {
@@ -1025,31 +1024,31 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AlbRules")
+        @com.aliyun.core.annotation.NameInMap("AlbRules")
         private java.util.List < AlbRules> albRules;
 
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DubboRules")
+        @com.aliyun.core.annotation.NameInMap("DubboRules")
         private java.util.List < DubboRules> dubboRules;
 
-        @NameInMap("GreyTagRouteId")
+        @com.aliyun.core.annotation.NameInMap("GreyTagRouteId")
         private Long greyTagRouteId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ScRules")
+        @com.aliyun.core.annotation.NameInMap("ScRules")
         private java.util.List < ScRules> scRules;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private Data(Builder builder) {

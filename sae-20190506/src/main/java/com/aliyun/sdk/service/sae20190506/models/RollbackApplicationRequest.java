@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RollbackApplicationRequest</p>
  */
 public class RollbackApplicationRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("AutoEnableApplicationScalingRule")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoEnableApplicationScalingRule")
     private String autoEnableApplicationScalingRule;
 
-    @Query
-    @NameInMap("BatchWaitTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BatchWaitTime")
     private Integer batchWaitTime;
 
-    @Query
-    @NameInMap("MinReadyInstanceRatio")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinReadyInstanceRatio")
     private Integer minReadyInstanceRatio;
 
-    @Query
-    @NameInMap("MinReadyInstances")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinReadyInstances")
     private Integer minReadyInstances;
 
-    @Query
-    @NameInMap("UpdateStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UpdateStrategy")
     private String updateStrategy;
 
-    @Query
-    @NameInMap("VersionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VersionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String versionId;
 
     private RollbackApplicationRequest(Builder builder) {

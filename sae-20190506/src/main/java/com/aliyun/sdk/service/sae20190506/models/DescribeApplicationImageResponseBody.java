@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeApplicationImageResponseBody</p>
  */
 public class DescribeApplicationImageResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TraceId")
+    @com.aliyun.core.annotation.NameInMap("TraceId")
     private String traceId;
 
     private DescribeApplicationImageResponseBody(Builder builder) {
@@ -190,28 +189,28 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("CrUrl")
+        @com.aliyun.core.annotation.NameInMap("CrUrl")
         private String crUrl;
 
-        @NameInMap("Logo")
+        @com.aliyun.core.annotation.NameInMap("Logo")
         private String logo;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RepoName")
+        @com.aliyun.core.annotation.NameInMap("RepoName")
         private String repoName;
 
-        @NameInMap("RepoNamespace")
+        @com.aliyun.core.annotation.NameInMap("RepoNamespace")
         private String repoNamespace;
 
-        @NameInMap("RepoOriginType")
+        @com.aliyun.core.annotation.NameInMap("RepoOriginType")
         private String repoOriginType;
 
-        @NameInMap("RepoTag")
+        @com.aliyun.core.annotation.NameInMap("RepoTag")
         private String repoTag;
 
-        @NameInMap("RepoType")
+        @com.aliyun.core.annotation.NameInMap("RepoType")
         private String repoType;
 
         private Data(Builder builder) {

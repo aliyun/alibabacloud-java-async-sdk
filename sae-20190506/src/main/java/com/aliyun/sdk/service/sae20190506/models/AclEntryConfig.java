@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,8 +11,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AclEntryConfig</p>
  */
 public class AclEntryConfig extends TeaModel {
-    @NameInMap("entry")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("entry")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String entry;
 
     private AclEntryConfig(Builder builder) {

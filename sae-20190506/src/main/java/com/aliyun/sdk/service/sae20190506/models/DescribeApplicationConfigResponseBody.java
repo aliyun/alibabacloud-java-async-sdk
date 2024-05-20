@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeApplicationConfigResponseBody</p>
  */
 public class DescribeApplicationConfigResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TraceId")
+    @com.aliyun.core.annotation.NameInMap("TraceId")
     private String traceId;
 
     private DescribeApplicationConfigResponseBody(Builder builder) {
@@ -186,16 +185,16 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
     } 
 
     public static class ConfigMapMountDesc extends TeaModel {
-        @NameInMap("ConfigMapId")
+        @com.aliyun.core.annotation.NameInMap("ConfigMapId")
         private Long configMapId;
 
-        @NameInMap("ConfigMapName")
+        @com.aliyun.core.annotation.NameInMap("ConfigMapName")
         private String configMapName;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("MountPath")
+        @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
 
         private ConfigMapMountDesc(Builder builder) {
@@ -287,10 +286,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
 
     }
     public static class MountDesc extends TeaModel {
-        @NameInMap("MountPath")
+        @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
 
-        @NameInMap("NasPath")
+        @com.aliyun.core.annotation.NameInMap("NasPath")
         private String nasPath;
 
         private MountDesc(Builder builder) {
@@ -348,16 +347,16 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
 
     }
     public static class OssMountDescs extends TeaModel {
-        @NameInMap("bucketName")
+        @com.aliyun.core.annotation.NameInMap("bucketName")
         private String bucketName;
 
-        @NameInMap("bucketPath")
+        @com.aliyun.core.annotation.NameInMap("bucketPath")
         private String bucketPath;
 
-        @NameInMap("mountPath")
+        @com.aliyun.core.annotation.NameInMap("mountPath")
         private String mountPath;
 
-        @NameInMap("readOnly")
+        @com.aliyun.core.annotation.NameInMap("readOnly")
         private Boolean readOnly;
 
         private OssMountDescs(Builder builder) {
@@ -453,10 +452,10 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -514,199 +513,199 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AcrAssumeRoleArn")
+        @com.aliyun.core.annotation.NameInMap("AcrAssumeRoleArn")
         private String acrAssumeRoleArn;
 
-        @NameInMap("AcrInstanceId")
+        @com.aliyun.core.annotation.NameInMap("AcrInstanceId")
         private String acrInstanceId;
 
-        @NameInMap("AppDescription")
+        @com.aliyun.core.annotation.NameInMap("AppDescription")
         private String appDescription;
 
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("AppSource")
+        @com.aliyun.core.annotation.NameInMap("AppSource")
         private String appSource;
 
-        @NameInMap("AssociateEip")
+        @com.aliyun.core.annotation.NameInMap("AssociateEip")
         private Boolean associateEip;
 
-        @NameInMap("BatchWaitTime")
+        @com.aliyun.core.annotation.NameInMap("BatchWaitTime")
         private Integer batchWaitTime;
 
-        @NameInMap("Command")
+        @com.aliyun.core.annotation.NameInMap("Command")
         private String command;
 
-        @NameInMap("CommandArgs")
+        @com.aliyun.core.annotation.NameInMap("CommandArgs")
         private String commandArgs;
 
-        @NameInMap("ConfigMapMountDesc")
+        @com.aliyun.core.annotation.NameInMap("ConfigMapMountDesc")
         private java.util.List < ConfigMapMountDesc> configMapMountDesc;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
-        @NameInMap("CustomHostAlias")
+        @com.aliyun.core.annotation.NameInMap("CustomHostAlias")
         private String customHostAlias;
 
-        @NameInMap("EdasContainerVersion")
+        @com.aliyun.core.annotation.NameInMap("EdasContainerVersion")
         private String edasContainerVersion;
 
-        @NameInMap("EnableAhas")
+        @com.aliyun.core.annotation.NameInMap("EnableAhas")
         private String enableAhas;
 
-        @NameInMap("EnableGreyTagRoute")
+        @com.aliyun.core.annotation.NameInMap("EnableGreyTagRoute")
         private Boolean enableGreyTagRoute;
 
-        @NameInMap("Envs")
+        @com.aliyun.core.annotation.NameInMap("Envs")
         private String envs;
 
-        @NameInMap("ImagePullSecrets")
+        @com.aliyun.core.annotation.NameInMap("ImagePullSecrets")
         private String imagePullSecrets;
 
-        @NameInMap("ImageUrl")
+        @com.aliyun.core.annotation.NameInMap("ImageUrl")
         private String imageUrl;
 
-        @NameInMap("JarStartArgs")
+        @com.aliyun.core.annotation.NameInMap("JarStartArgs")
         private String jarStartArgs;
 
-        @NameInMap("JarStartOptions")
+        @com.aliyun.core.annotation.NameInMap("JarStartOptions")
         private String jarStartOptions;
 
-        @NameInMap("Jdk")
+        @com.aliyun.core.annotation.NameInMap("Jdk")
         private String jdk;
 
-        @NameInMap("KafkaConfigs")
+        @com.aliyun.core.annotation.NameInMap("KafkaConfigs")
         private String kafkaConfigs;
 
-        @NameInMap("Liveness")
+        @com.aliyun.core.annotation.NameInMap("Liveness")
         private String liveness;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Integer memory;
 
-        @NameInMap("MicroRegistration")
+        @com.aliyun.core.annotation.NameInMap("MicroRegistration")
         private String microRegistration;
 
-        @NameInMap("MinReadyInstanceRatio")
+        @com.aliyun.core.annotation.NameInMap("MinReadyInstanceRatio")
         private Integer minReadyInstanceRatio;
 
-        @NameInMap("MinReadyInstances")
+        @com.aliyun.core.annotation.NameInMap("MinReadyInstances")
         private Integer minReadyInstances;
 
-        @NameInMap("MountDesc")
+        @com.aliyun.core.annotation.NameInMap("MountDesc")
         private java.util.List < MountDesc> mountDesc;
 
-        @NameInMap("MountHost")
+        @com.aliyun.core.annotation.NameInMap("MountHost")
         private String mountHost;
 
-        @NameInMap("MseApplicationId")
+        @com.aliyun.core.annotation.NameInMap("MseApplicationId")
         private String mseApplicationId;
 
-        @NameInMap("MseApplicationName")
+        @com.aliyun.core.annotation.NameInMap("MseApplicationName")
         private String mseApplicationName;
 
-        @NameInMap("NamespaceId")
+        @com.aliyun.core.annotation.NameInMap("NamespaceId")
         private String namespaceId;
 
-        @NameInMap("NasConfigs")
+        @com.aliyun.core.annotation.NameInMap("NasConfigs")
         private String nasConfigs;
 
-        @NameInMap("NasId")
+        @com.aliyun.core.annotation.NameInMap("NasId")
         private String nasId;
 
-        @NameInMap("OssAkId")
+        @com.aliyun.core.annotation.NameInMap("OssAkId")
         private String ossAkId;
 
-        @NameInMap("OssAkSecret")
+        @com.aliyun.core.annotation.NameInMap("OssAkSecret")
         private String ossAkSecret;
 
-        @NameInMap("OssMountDescs")
+        @com.aliyun.core.annotation.NameInMap("OssMountDescs")
         private java.util.List < OssMountDescs> ossMountDescs;
 
-        @NameInMap("PackageType")
+        @com.aliyun.core.annotation.NameInMap("PackageType")
         private String packageType;
 
-        @NameInMap("PackageUrl")
+        @com.aliyun.core.annotation.NameInMap("PackageUrl")
         private String packageUrl;
 
-        @NameInMap("PackageVersion")
+        @com.aliyun.core.annotation.NameInMap("PackageVersion")
         private String packageVersion;
 
-        @NameInMap("Php")
+        @com.aliyun.core.annotation.NameInMap("Php")
         private String php;
 
-        @NameInMap("PhpArmsConfigLocation")
+        @com.aliyun.core.annotation.NameInMap("PhpArmsConfigLocation")
         private String phpArmsConfigLocation;
 
-        @NameInMap("PhpConfig")
+        @com.aliyun.core.annotation.NameInMap("PhpConfig")
         private String phpConfig;
 
-        @NameInMap("PhpConfigLocation")
+        @com.aliyun.core.annotation.NameInMap("PhpConfigLocation")
         private String phpConfigLocation;
 
-        @NameInMap("PostStart")
+        @com.aliyun.core.annotation.NameInMap("PostStart")
         private String postStart;
 
-        @NameInMap("PreStop")
+        @com.aliyun.core.annotation.NameInMap("PreStop")
         private String preStop;
 
-        @NameInMap("ProgrammingLanguage")
+        @com.aliyun.core.annotation.NameInMap("ProgrammingLanguage")
         private String programmingLanguage;
 
-        @NameInMap("PvtzDiscovery")
+        @com.aliyun.core.annotation.NameInMap("PvtzDiscovery")
         private String pvtzDiscovery;
 
-        @NameInMap("Python")
+        @com.aliyun.core.annotation.NameInMap("Python")
         private String python;
 
-        @NameInMap("PythonModules")
+        @com.aliyun.core.annotation.NameInMap("PythonModules")
         private String pythonModules;
 
-        @NameInMap("Readiness")
+        @com.aliyun.core.annotation.NameInMap("Readiness")
         private String readiness;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Replicas")
+        @com.aliyun.core.annotation.NameInMap("Replicas")
         private Integer replicas;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("SlsConfigs")
+        @com.aliyun.core.annotation.NameInMap("SlsConfigs")
         private String slsConfigs;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("TerminationGracePeriodSeconds")
+        @com.aliyun.core.annotation.NameInMap("TerminationGracePeriodSeconds")
         private Integer terminationGracePeriodSeconds;
 
-        @NameInMap("Timezone")
+        @com.aliyun.core.annotation.NameInMap("Timezone")
         private String timezone;
 
-        @NameInMap("TomcatConfig")
+        @com.aliyun.core.annotation.NameInMap("TomcatConfig")
         private String tomcatConfig;
 
-        @NameInMap("UpdateStrategy")
+        @com.aliyun.core.annotation.NameInMap("UpdateStrategy")
         private String updateStrategy;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("WarStartOptions")
+        @com.aliyun.core.annotation.NameInMap("WarStartOptions")
         private String warStartOptions;
 
-        @NameInMap("WebContainer")
+        @com.aliyun.core.annotation.NameInMap("WebContainer")
         private String webContainer;
 
         private Data(Builder builder) {

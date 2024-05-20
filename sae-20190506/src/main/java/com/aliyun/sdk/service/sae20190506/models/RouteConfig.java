@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,7 +11,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RouteConfig</p>
  */
 public class RouteConfig extends TeaModel {
-    @NameInMap("routes")
+    @com.aliyun.core.annotation.NameInMap("routes")
     private java.util.List < PathConfig > routes;
 
     private RouteConfig(Builder builder) {

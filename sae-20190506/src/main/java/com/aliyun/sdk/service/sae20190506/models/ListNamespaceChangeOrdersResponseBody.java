@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListNamespaceChangeOrdersResponseBody</p>
  */
 public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TraceId")
+    @com.aliyun.core.annotation.NameInMap("TraceId")
     private String traceId;
 
     private ListNamespaceChangeOrdersResponseBody(Builder builder) {
@@ -186,49 +185,49 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
     } 
 
     public static class ChangeOrderList extends TeaModel {
-        @NameInMap("BatchCount")
+        @com.aliyun.core.annotation.NameInMap("BatchCount")
         private Integer batchCount;
 
-        @NameInMap("BatchType")
+        @com.aliyun.core.annotation.NameInMap("BatchType")
         private String batchType;
 
-        @NameInMap("ChangeOrderId")
+        @com.aliyun.core.annotation.NameInMap("ChangeOrderId")
         private String changeOrderId;
 
-        @NameInMap("CoType")
+        @com.aliyun.core.annotation.NameInMap("CoType")
         private String coType;
 
-        @NameInMap("CoTypeCode")
+        @com.aliyun.core.annotation.NameInMap("CoTypeCode")
         private String coTypeCode;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateUserId")
+        @com.aliyun.core.annotation.NameInMap("CreateUserId")
         private String createUserId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("NamespaceId")
+        @com.aliyun.core.annotation.NameInMap("NamespaceId")
         private String namespaceId;
 
-        @NameInMap("Pipelines")
+        @com.aliyun.core.annotation.NameInMap("Pipelines")
         private String pipelines;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private ChangeOrderList(Builder builder) {
@@ -523,16 +522,16 @@ public class ListNamespaceChangeOrdersResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("ChangeOrderList")
+        @com.aliyun.core.annotation.NameInMap("ChangeOrderList")
         private java.util.List < ChangeOrderList> changeOrderList;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Integer totalSize;
 
         private Data(Builder builder) {

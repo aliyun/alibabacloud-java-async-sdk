@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>LogEntry</p>
  */
 public class LogEntry extends TeaModel {
-    @NameInMap("instanceID")
+    @com.aliyun.core.annotation.NameInMap("instanceID")
     private String instanceID;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("offset")
+    @com.aliyun.core.annotation.NameInMap("offset")
     private Long offset;
 
-    @NameInMap("packID")
+    @com.aliyun.core.annotation.NameInMap("packID")
     private String packID;
 
-    @NameInMap("packMeta")
+    @com.aliyun.core.annotation.NameInMap("packMeta")
     private String packMeta;
 
-    @NameInMap("qualifier")
+    @com.aliyun.core.annotation.NameInMap("qualifier")
     private String qualifier;
 
-    @NameInMap("timestamp")
+    @com.aliyun.core.annotation.NameInMap("timestamp")
     private Integer timestamp;
 
-    @NameInMap("versionID")
+    @com.aliyun.core.annotation.NameInMap("versionID")
     private String versionID;
 
     private LogEntry(Builder builder) {

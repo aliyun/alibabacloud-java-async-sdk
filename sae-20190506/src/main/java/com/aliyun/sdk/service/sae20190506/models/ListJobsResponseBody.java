@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListJobsResponseBody</p>
  */
 public class ListJobsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalSize")
+    @com.aliyun.core.annotation.NameInMap("TotalSize")
     private Integer totalSize;
 
     private ListJobsResponseBody(Builder builder) {
@@ -226,10 +225,10 @@ public class ListJobsResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -287,58 +286,58 @@ public class ListJobsResponseBody extends TeaModel {
 
     }
     public static class Applications extends TeaModel {
-        @NameInMap("Active")
+        @com.aliyun.core.annotation.NameInMap("Active")
         private Long active;
 
-        @NameInMap("AppDescription")
+        @com.aliyun.core.annotation.NameInMap("AppDescription")
         private String appDescription;
 
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("CompletionTime")
+        @com.aliyun.core.annotation.NameInMap("CompletionTime")
         private Long completionTime;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
-        @NameInMap("Failed")
+        @com.aliyun.core.annotation.NameInMap("Failed")
         private Long failed;
 
-        @NameInMap("LastChangeorderState")
+        @com.aliyun.core.annotation.NameInMap("LastChangeorderState")
         private String lastChangeorderState;
 
-        @NameInMap("LastJobState")
+        @com.aliyun.core.annotation.NameInMap("LastJobState")
         private String lastJobState;
 
-        @NameInMap("LastStartTime")
+        @com.aliyun.core.annotation.NameInMap("LastStartTime")
         private Long lastStartTime;
 
-        @NameInMap("Mem")
+        @com.aliyun.core.annotation.NameInMap("Mem")
         private Integer mem;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("NamespaceId")
+        @com.aliyun.core.annotation.NameInMap("NamespaceId")
         private String namespaceId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Succeeded")
+        @com.aliyun.core.annotation.NameInMap("Succeeded")
         private Long succeeded;
 
-        @NameInMap("Suspend")
+        @com.aliyun.core.annotation.NameInMap("Suspend")
         private Boolean suspend;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("TriggerConfig")
+        @com.aliyun.core.annotation.NameInMap("TriggerConfig")
         private String triggerConfig;
 
         private Applications(Builder builder) {
@@ -678,16 +677,16 @@ public class ListJobsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Applications")
+        @com.aliyun.core.annotation.NameInMap("Applications")
         private java.util.List < Applications> applications;
 
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Integer totalSize;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSlsIndexResponse</p>
  */
 public class CreateSlsIndexResponse extends Response {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("logStore")
+    @com.aliyun.core.annotation.NameInMap("logStore")
     private String logStore;
 
-    @NameInMap("project")
+    @com.aliyun.core.annotation.NameInMap("project")
     private String project;
 
     private CreateSlsIndexResponse(BuilderImpl builder) {

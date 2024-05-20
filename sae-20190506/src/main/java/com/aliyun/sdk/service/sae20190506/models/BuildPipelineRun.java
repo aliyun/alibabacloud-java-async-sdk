@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,55 +11,55 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BuildPipelineRun</p>
  */
 public class BuildPipelineRun extends TeaModel {
-    @NameInMap("BuildConfig")
+    @com.aliyun.core.annotation.NameInMap("BuildConfig")
     private BuildConfig buildConfig;
 
-    @NameInMap("BuildDuration")
+    @com.aliyun.core.annotation.NameInMap("BuildDuration")
     private Long buildDuration;
 
-    @NameInMap("CodeConfig")
+    @com.aliyun.core.annotation.NameInMap("CodeConfig")
     private CodeConfig codeConfig;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private Long createTime;
 
-    @NameInMap("DeployConfig")
+    @com.aliyun.core.annotation.NameInMap("DeployConfig")
     private DeployConfig deployConfig;
 
-    @NameInMap("DeployDuration")
+    @com.aliyun.core.annotation.NameInMap("DeployDuration")
     private Long deployDuration;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @NameInMap("ImageConfig")
+    @com.aliyun.core.annotation.NameInMap("ImageConfig")
     private ImageConfig imageConfig;
 
-    @NameInMap("PackageConfig")
+    @com.aliyun.core.annotation.NameInMap("PackageConfig")
     private PackageConfig packageConfig;
 
-    @NameInMap("PipelineId")
+    @com.aliyun.core.annotation.NameInMap("PipelineId")
     private String pipelineId;
 
-    @NameInMap("PipelineRunId")
+    @com.aliyun.core.annotation.NameInMap("PipelineRunId")
     private String pipelineRunId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("Steps")
+    @com.aliyun.core.annotation.NameInMap("Steps")
     private java.util.List < Steps> steps;
 
-    @NameInMap("TriggerConfig")
+    @com.aliyun.core.annotation.NameInMap("TriggerConfig")
     private TriggerConfig triggerConfig;
 
-    @NameInMap("VersionId")
+    @com.aliyun.core.annotation.NameInMap("VersionId")
     private String versionId;
 
-    @NameInMap("WaitDuration")
+    @com.aliyun.core.annotation.NameInMap("WaitDuration")
     private Long waitDuration;
 
     private BuildPipelineRun(Builder builder) {
@@ -372,14 +371,14 @@ public class BuildPipelineRun extends TeaModel {
     } 
 
     public static class Trigger extends TeaModel {
-        @NameInMap("BranchName")
+        @com.aliyun.core.annotation.NameInMap("BranchName")
         private String branchName;
 
-        @NameInMap("TagName")
+        @com.aliyun.core.annotation.NameInMap("TagName")
         private String tagName;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private Trigger(Builder builder) {
@@ -454,33 +453,33 @@ public class BuildPipelineRun extends TeaModel {
 
     }
     public static class BuildConfig extends TeaModel {
-        @NameInMap("BeforeBuildCommand")
+        @com.aliyun.core.annotation.NameInMap("BeforeBuildCommand")
         private String beforeBuildCommand;
 
-        @NameInMap("BuildType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("BuildType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String buildType;
 
-        @NameInMap("DockerfilePath")
+        @com.aliyun.core.annotation.NameInMap("DockerfilePath")
         private String dockerfilePath;
 
-        @NameInMap("RunCommand")
+        @com.aliyun.core.annotation.NameInMap("RunCommand")
         private String runCommand;
 
-        @NameInMap("RuntimeType")
+        @com.aliyun.core.annotation.NameInMap("RuntimeType")
         private String runtimeType;
 
-        @NameInMap("RuntimeVersion")
+        @com.aliyun.core.annotation.NameInMap("RuntimeVersion")
         private String runtimeVersion;
 
-        @NameInMap("TomcatConfig")
+        @com.aliyun.core.annotation.NameInMap("TomcatConfig")
         private TomcatConfig tomcatConfig;
 
-        @NameInMap("Trigger")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Trigger")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Trigger trigger;
 
-        @NameInMap("WorkingDir")
+        @com.aliyun.core.annotation.NameInMap("WorkingDir")
         private String workingDir;
 
         private BuildConfig(Builder builder) {
@@ -657,33 +656,33 @@ public class BuildPipelineRun extends TeaModel {
 
     }
     public static class CodeConfig extends TeaModel {
-        @NameInMap("AccountId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("AccountId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String accountId;
 
-        @NameInMap("BranchName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("BranchName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String branchName;
 
-        @NameInMap("CommitId")
+        @com.aliyun.core.annotation.NameInMap("CommitId")
         private String commitId;
 
-        @NameInMap("CommitUrl")
+        @com.aliyun.core.annotation.NameInMap("CommitUrl")
         private String commitUrl;
 
-        @NameInMap("OrganizationId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationId")
         private String organizationId;
 
-        @NameInMap("Provider")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Provider")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String provider;
 
-        @NameInMap("RepoFullName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("RepoFullName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String repoFullName;
 
-        @NameInMap("RepoId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("RepoId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String repoId;
 
         private CodeConfig(Builder builder) {
@@ -843,16 +842,16 @@ public class BuildPipelineRun extends TeaModel {
 
     }
     public static class DeployConfig extends TeaModel {
-        @NameInMap("AlwaysAllocateCPU")
+        @com.aliyun.core.annotation.NameInMap("AlwaysAllocateCPU")
         private Boolean alwaysAllocateCPU;
 
-        @NameInMap("MaximumInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("MaximumInstanceCount")
         private Integer maximumInstanceCount;
 
-        @NameInMap("MinimumInstanceCount")
+        @com.aliyun.core.annotation.NameInMap("MinimumInstanceCount")
         private Integer minimumInstanceCount;
 
-        @NameInMap("UpdateApplicationInput")
+        @com.aliyun.core.annotation.NameInMap("UpdateApplicationInput")
         private String updateApplicationInput;
 
         private DeployConfig(Builder builder) {
@@ -944,13 +943,13 @@ public class BuildPipelineRun extends TeaModel {
 
     }
     public static class ImageConfig extends TeaModel {
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("Repository")
+        @com.aliyun.core.annotation.NameInMap("Repository")
         private String repository;
 
         private ImageConfig(Builder builder) {
@@ -1025,16 +1024,16 @@ public class BuildPipelineRun extends TeaModel {
 
     }
     public static class PackageConfig extends TeaModel {
-        @NameInMap("PackageName")
+        @com.aliyun.core.annotation.NameInMap("PackageName")
         private String packageName;
 
-        @NameInMap("PackageType")
+        @com.aliyun.core.annotation.NameInMap("PackageType")
         private String packageType;
 
-        @NameInMap("PackageUrl")
+        @com.aliyun.core.annotation.NameInMap("PackageUrl")
         private String packageUrl;
 
-        @NameInMap("PackageVersion")
+        @com.aliyun.core.annotation.NameInMap("PackageVersion")
         private String packageVersion;
 
         private PackageConfig(Builder builder) {
@@ -1126,28 +1125,28 @@ public class BuildPipelineRun extends TeaModel {
 
     }
     public static class Steps extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private String result;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Steps(Builder builder) {
@@ -1307,13 +1306,13 @@ public class BuildPipelineRun extends TeaModel {
 
     }
     public static class TriggerConfig extends TeaModel {
-        @NameInMap("BranchName")
+        @com.aliyun.core.annotation.NameInMap("BranchName")
         private String branchName;
 
-        @NameInMap("TagName")
+        @com.aliyun.core.annotation.NameInMap("TagName")
         private String tagName;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private TriggerConfig(Builder builder) {

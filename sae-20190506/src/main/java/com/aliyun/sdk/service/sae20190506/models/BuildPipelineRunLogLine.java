@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BuildPipelineRunLogLine</p>
  */
 public class BuildPipelineRunLogLine extends TeaModel {
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private String content;
 
-    @NameInMap("Offset")
+    @com.aliyun.core.annotation.NameInMap("Offset")
     private Long offset;
 
     private BuildPipelineRunLogLine(Builder builder) {

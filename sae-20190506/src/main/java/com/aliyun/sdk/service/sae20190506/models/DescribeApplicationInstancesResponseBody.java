@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeApplicationInstancesResponseBody</p>
  */
 public class DescribeApplicationInstancesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TraceId")
+    @com.aliyun.core.annotation.NameInMap("TraceId")
     private String traceId;
 
     private DescribeApplicationInstancesResponseBody(Builder builder) {
@@ -186,43 +185,43 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
     } 
 
     public static class Instances extends TeaModel {
-        @NameInMap("CreateTimeStamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimeStamp")
         private Long createTimeStamp;
 
-        @NameInMap("DebugStatus")
+        @com.aliyun.core.annotation.NameInMap("DebugStatus")
         private Boolean debugStatus;
 
-        @NameInMap("Eip")
+        @com.aliyun.core.annotation.NameInMap("Eip")
         private String eip;
 
-        @NameInMap("FinishTimeStamp")
+        @com.aliyun.core.annotation.NameInMap("FinishTimeStamp")
         private Long finishTimeStamp;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("ImageUrl")
+        @com.aliyun.core.annotation.NameInMap("ImageUrl")
         private String imageUrl;
 
-        @NameInMap("InstanceContainerIp")
+        @com.aliyun.core.annotation.NameInMap("InstanceContainerIp")
         private String instanceContainerIp;
 
-        @NameInMap("InstanceContainerRestarts")
+        @com.aliyun.core.annotation.NameInMap("InstanceContainerRestarts")
         private Long instanceContainerRestarts;
 
-        @NameInMap("InstanceContainerStatus")
+        @com.aliyun.core.annotation.NameInMap("InstanceContainerStatus")
         private String instanceContainerStatus;
 
-        @NameInMap("InstanceHealthStatus")
+        @com.aliyun.core.annotation.NameInMap("InstanceHealthStatus")
         private String instanceHealthStatus;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("PackageVersion")
+        @com.aliyun.core.annotation.NameInMap("PackageVersion")
         private String packageVersion;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
         private Instances(Builder builder) {
@@ -493,16 +492,16 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("Instances")
+        @com.aliyun.core.annotation.NameInMap("Instances")
         private java.util.List < Instances> instances;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Integer totalSize;
 
         private Data(Builder builder) {

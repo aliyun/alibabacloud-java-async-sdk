@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RoutePolicy</p>
  */
 public class RoutePolicy extends TeaModel {
-    @NameInMap("condition")
+    @com.aliyun.core.annotation.NameInMap("condition")
     private String condition;
 
-    @NameInMap("policyItems")
+    @com.aliyun.core.annotation.NameInMap("policyItems")
     private java.util.List < PolicyItem > policyItems;
 
     private RoutePolicy(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeNamespaceResponseBody</p>
  */
 public class DescribeNamespaceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TraceId")
+    @com.aliyun.core.annotation.NameInMap("TraceId")
     private String traceId;
 
     private DescribeNamespaceResponseBody(Builder builder) {
@@ -110,7 +109,13 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * The ID of the trace. It can be used to query the details of a request.
+         * The HTTP status code. Valid values:
+         * <p>
+         * 
+         * *   **2xx**: The call was successful.
+         * *   **3xx**: The call was redirected.
+         * *   **4xx**: The call failed.
+         * *   **5xx**: A server error occurred.
          */
         public Builder code(String code) {
             this.code = code;
@@ -126,7 +131,11 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The error code returned. Take note of the following rules:
+         * <p>
+         * 
+         * *   The **ErrorCode** parameter is not returned if the request succeeds.
+         * *   The **ErrorCode** parameter is returned if the request fails. For more information, see the **Error codes** section in this topic.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +143,11 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the region.
+         * The additional information that is returned. Valid values:
+         * <p>
+         * 
+         * *   success: If the call is successful, **success** is returned.
+         * *   An error code: If the call fails, an error code is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,11 +155,7 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
-         * <p>
-         * 
-         * *   The **ErrorCode** parameter is not returned when the request succeeds.
-         * *   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +163,11 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the namespace.
+         * Indicates whether the information about the namespace was queried successfully. Valid values:
+         * <p>
+         * 
+         * *   **true**: The information was queried.
+         * *   **false**: The image failed to be found.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -162,13 +175,7 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code. Valid values:
-         * <p>
-         * 
-         * *   **2xx**: indicates that the request was successful.
-         * *   **3xx**: indicates that the request was redirected.
-         * *   **4xx**: indicates that the request was invalid.
-         * *   **5xx**: indicates that a server error occurred.
+         * The trace ID that is used to query the details of the request.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -182,22 +189,22 @@ public class DescribeNamespaceResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("EnableMicroRegistration")
+        @com.aliyun.core.annotation.NameInMap("EnableMicroRegistration")
         private Boolean enableMicroRegistration;
 
-        @NameInMap("NameSpaceShortId")
+        @com.aliyun.core.annotation.NameInMap("NameSpaceShortId")
         private String nameSpaceShortId;
 
-        @NameInMap("NamespaceDescription")
+        @com.aliyun.core.annotation.NameInMap("NamespaceDescription")
         private String namespaceDescription;
 
-        @NameInMap("NamespaceId")
+        @com.aliyun.core.annotation.NameInMap("NamespaceId")
         private String namespaceId;
 
-        @NameInMap("NamespaceName")
+        @com.aliyun.core.annotation.NameInMap("NamespaceName")
         private String namespaceName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private Data(Builder builder) {
@@ -268,7 +275,11 @@ public class DescribeNamespaceResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * EnableMicroRegistration.
+             * Indicates whether the SAE built-in registry is enabled. 
+             * <p>
+             * Valid values:
+             * * true
+             * * false
              */
             public Builder enableMicroRegistration(Boolean enableMicroRegistration) {
                 this.enableMicroRegistration = enableMicroRegistration;
@@ -276,7 +287,7 @@ public class DescribeNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * NameSpaceShortId.
+             * The short ID of the namespace.
              */
             public Builder nameSpaceShortId(String nameSpaceShortId) {
                 this.nameSpaceShortId = nameSpaceShortId;
@@ -284,7 +295,7 @@ public class DescribeNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The description of the namespace.
              */
             public Builder namespaceDescription(String namespaceDescription) {
                 this.namespaceDescription = namespaceDescription;
@@ -292,7 +303,7 @@ public class DescribeNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * cn-beijing:test
+             * The ID of the namespace. The information about the default namespace cannot be queried or modified. The default namespace cannot be deleted.
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -308,7 +319,7 @@ public class DescribeNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * cn-beijing:test
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

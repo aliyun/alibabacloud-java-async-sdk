@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>MetricInfo</p>
  */
 public class MetricInfo extends TeaModel {
-    @NameInMap("Average")
+    @com.aliyun.core.annotation.NameInMap("Average")
     private Float average;
 
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Float count;
 
-    @NameInMap("Maximum")
+    @com.aliyun.core.annotation.NameInMap("Maximum")
     private Float maximum;
 
-    @NameInMap("Minimum")
+    @com.aliyun.core.annotation.NameInMap("Minimum")
     private Float minimum;
 
-    @NameInMap("Sum")
+    @com.aliyun.core.annotation.NameInMap("Sum")
     private Float sum;
 
-    @NameInMap("timestamp")
+    @com.aliyun.core.annotation.NameInMap("timestamp")
     private Long timestamp;
 
-    @NameInMap("value")
+    @com.aliyun.core.annotation.NameInMap("value")
     private Float value;
 
     private MetricInfo(Builder builder) {

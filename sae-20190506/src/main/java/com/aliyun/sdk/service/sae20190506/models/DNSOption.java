@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DNSOption</p>
  */
 public class DNSOption extends TeaModel {
-    @NameInMap("name")
-    @Validation(maxLength = 256)
+    @com.aliyun.core.annotation.NameInMap("name")
+    @com.aliyun.core.annotation.Validation(maxLength = 256)
     private String name;
 
-    @NameInMap("value")
-    @Validation(maxLength = 256)
+    @com.aliyun.core.annotation.NameInMap("value")
+    @com.aliyun.core.annotation.Validation(maxLength = 256)
     private String value;
 
     private DNSOption(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetQuotaOutput</p>
  */
 public class GetQuotaOutput extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("instanceLimit")
+    @com.aliyun.core.annotation.NameInMap("instanceLimit")
     private Long instanceLimit;
 
-    @NameInMap("instanceUsed")
+    @com.aliyun.core.annotation.NameInMap("instanceUsed")
     private Long instanceUsed;
 
     private GetQuotaOutput(Builder builder) {

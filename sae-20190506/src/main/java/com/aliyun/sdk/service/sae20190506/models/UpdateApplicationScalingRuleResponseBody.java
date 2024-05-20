@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateApplicationScalingRuleResponseBody</p>
  */
 public class UpdateApplicationScalingRuleResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TraceId")
+    @com.aliyun.core.annotation.NameInMap("TraceId")
     private String traceId;
 
     private UpdateApplicationScalingRuleResponseBody(Builder builder) {
@@ -190,22 +189,22 @@ public class UpdateApplicationScalingRuleResponseBody extends TeaModel {
     } 
 
     public static class Metrics extends TeaModel {
-        @NameInMap("MetricTargetAverageUtilization")
+        @com.aliyun.core.annotation.NameInMap("MetricTargetAverageUtilization")
         private Integer metricTargetAverageUtilization;
 
-        @NameInMap("MetricType")
+        @com.aliyun.core.annotation.NameInMap("MetricType")
         private String metricType;
 
-        @NameInMap("SlbId")
+        @com.aliyun.core.annotation.NameInMap("SlbId")
         private String slbId;
 
-        @NameInMap("SlbLogstore")
+        @com.aliyun.core.annotation.NameInMap("SlbLogstore")
         private String slbLogstore;
 
-        @NameInMap("SlbProject")
+        @com.aliyun.core.annotation.NameInMap("SlbProject")
         private String slbProject;
 
-        @NameInMap("Vport")
+        @com.aliyun.core.annotation.NameInMap("Vport")
         private String vport;
 
         private Metrics(Builder builder) {
@@ -345,13 +344,13 @@ public class UpdateApplicationScalingRuleResponseBody extends TeaModel {
 
     }
     public static class Metric extends TeaModel {
-        @NameInMap("MaxReplicas")
+        @com.aliyun.core.annotation.NameInMap("MaxReplicas")
         private Integer maxReplicas;
 
-        @NameInMap("Metrics")
+        @com.aliyun.core.annotation.NameInMap("Metrics")
         private java.util.List < Metrics> metrics;
 
-        @NameInMap("MinReplicas")
+        @com.aliyun.core.annotation.NameInMap("MinReplicas")
         private Integer minReplicas;
 
         private Metric(Builder builder) {
@@ -426,16 +425,16 @@ public class UpdateApplicationScalingRuleResponseBody extends TeaModel {
 
     }
     public static class Schedules extends TeaModel {
-        @NameInMap("AtTime")
+        @com.aliyun.core.annotation.NameInMap("AtTime")
         private String atTime;
 
-        @NameInMap("MaxReplicas")
+        @com.aliyun.core.annotation.NameInMap("MaxReplicas")
         private Integer maxReplicas;
 
-        @NameInMap("MinReplicas")
+        @com.aliyun.core.annotation.NameInMap("MinReplicas")
         private Integer minReplicas;
 
-        @NameInMap("TargetReplicas")
+        @com.aliyun.core.annotation.NameInMap("TargetReplicas")
         private Integer targetReplicas;
 
         private Schedules(Builder builder) {
@@ -527,16 +526,16 @@ public class UpdateApplicationScalingRuleResponseBody extends TeaModel {
 
     }
     public static class Timer extends TeaModel {
-        @NameInMap("BeginDate")
+        @com.aliyun.core.annotation.NameInMap("BeginDate")
         private String beginDate;
 
-        @NameInMap("EndDate")
+        @com.aliyun.core.annotation.NameInMap("EndDate")
         private String endDate;
 
-        @NameInMap("Period")
+        @com.aliyun.core.annotation.NameInMap("Period")
         private String period;
 
-        @NameInMap("Schedules")
+        @com.aliyun.core.annotation.NameInMap("Schedules")
         private java.util.List < Schedules> schedules;
 
         private Timer(Builder builder) {
@@ -651,31 +650,31 @@ public class UpdateApplicationScalingRuleResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("LastDisableTime")
+        @com.aliyun.core.annotation.NameInMap("LastDisableTime")
         private Long lastDisableTime;
 
-        @NameInMap("Metric")
+        @com.aliyun.core.annotation.NameInMap("Metric")
         private Metric metric;
 
-        @NameInMap("ScaleRuleEnabled")
+        @com.aliyun.core.annotation.NameInMap("ScaleRuleEnabled")
         private Boolean scaleRuleEnabled;
 
-        @NameInMap("ScaleRuleName")
+        @com.aliyun.core.annotation.NameInMap("ScaleRuleName")
         private String scaleRuleName;
 
-        @NameInMap("ScaleRuleType")
+        @com.aliyun.core.annotation.NameInMap("ScaleRuleType")
         private String scaleRuleType;
 
-        @NameInMap("Timer")
+        @com.aliyun.core.annotation.NameInMap("Timer")
         private Timer timer;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private Data(Builder builder) {

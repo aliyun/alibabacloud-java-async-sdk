@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>VersionStatus</p>
  */
 public class VersionStatus extends TeaModel {
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("status")
+    @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
     private VersionStatus(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeNamespaceListRequest</p>
  */
 public class DescribeNamespaceListRequest extends Request {
-    @Query
-    @NameInMap("ContainCustom")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainCustom")
     private Boolean containCustom;
 
-    @Query
-    @NameInMap("HybridCloudExclude")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HybridCloudExclude")
     private Boolean hybridCloudExclude;
 
     private DescribeNamespaceListRequest(Builder builder) {

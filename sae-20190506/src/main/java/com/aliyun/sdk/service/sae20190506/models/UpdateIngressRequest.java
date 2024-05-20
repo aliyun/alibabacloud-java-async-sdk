@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,41 +11,41 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateIngressRequest</p>
  */
 public class UpdateIngressRequest extends Request {
-    @Query
-    @NameInMap("CertId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertId")
     private String certId;
 
-    @Query
-    @NameInMap("CertIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertIds")
     private String certIds;
 
-    @Query
-    @NameInMap("DefaultRule")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefaultRule")
     private String defaultRule;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("IngressId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IngressId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long ingressId;
 
-    @Query
-    @NameInMap("ListenerPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerPort")
     private String listenerPort;
 
-    @Query
-    @NameInMap("ListenerProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerProtocol")
     private String listenerProtocol;
 
-    @Query
-    @NameInMap("LoadBalanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalanceType")
     private String loadBalanceType;
 
-    @Body
-    @NameInMap("Rules")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Rules")
     private String rules;
 
     private UpdateIngressRequest(Builder builder) {

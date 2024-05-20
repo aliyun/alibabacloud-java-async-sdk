@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BindSlbRequest</p>
  */
 public class BindSlbRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("Internet")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Internet")
     private String internet;
 
-    @Query
-    @NameInMap("InternetSlbId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetSlbId")
     private String internetSlbId;
 
-    @Query
-    @NameInMap("Intranet")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Intranet")
     private String intranet;
 
-    @Query
-    @NameInMap("IntranetSlbId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntranetSlbId")
     private String intranetSlbId;
 
     private BindSlbRequest(Builder builder) {

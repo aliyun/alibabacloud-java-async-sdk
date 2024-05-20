@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InstanceInfo</p>
  */
 public class InstanceInfo extends TeaModel {
-    @NameInMap("imageUrl")
+    @com.aliyun.core.annotation.NameInMap("imageUrl")
     private String imageUrl;
 
-    @NameInMap("instanceId")
+    @com.aliyun.core.annotation.NameInMap("instanceId")
     private String instanceId;
 
-    @NameInMap("status")
+    @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
-    @NameInMap("versionId")
+    @com.aliyun.core.annotation.NameInMap("versionId")
     private String versionId;
 
     private InstanceInfo(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sae20190506.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryResourceStaticsResponseBody</p>
  */
 public class QueryResourceStaticsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TraceId")
+    @com.aliyun.core.annotation.NameInMap("TraceId")
     private String traceId;
 
     private QueryResourceStaticsResponseBody(Builder builder) {
@@ -190,10 +189,10 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
     } 
 
     public static class RealTimeRes extends TeaModel {
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Float cpu;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Float memory;
 
         private RealTimeRes(Builder builder) {
@@ -251,10 +250,10 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
 
     }
     public static class Summary extends TeaModel {
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Float cpu;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Float memory;
 
         private Summary(Builder builder) {
@@ -312,10 +311,10 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("RealTimeRes")
+        @com.aliyun.core.annotation.NameInMap("RealTimeRes")
         private RealTimeRes realTimeRes;
 
-        @NameInMap("Summary")
+        @com.aliyun.core.annotation.NameInMap("Summary")
         private Summary summary;
 
         private Data(Builder builder) {
