@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opt20210730.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetOrderInfoRequest</p>
  */
 public class GetOrderInfoRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("RelService")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListReleased")
+    private Boolean listReleased;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelService")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String relService;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true, maximum = 1, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 1, minimum = 1)
     private Integer resourceType;
 
     private GetOrderInfoRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.listReleased = builder.listReleased;
         this.relService = builder.relService;
         this.resourceType = builder.resourceType;
     }
@@ -54,6 +58,13 @@ public class GetOrderInfoRequest extends Request {
     }
 
     /**
+     * @return listReleased
+     */
+    public Boolean getListReleased() {
+        return this.listReleased;
+    }
+
+    /**
      * @return relService
      */
     public String getRelService() {
@@ -69,6 +80,7 @@ public class GetOrderInfoRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetOrderInfoRequest, Builder> {
         private String regionId; 
+        private Boolean listReleased; 
         private String relService; 
         private Integer resourceType; 
 
@@ -79,6 +91,7 @@ public class GetOrderInfoRequest extends Request {
         private Builder(GetOrderInfoRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.listReleased = request.listReleased;
             this.relService = request.relService;
             this.resourceType = request.resourceType;
         } 
@@ -89,6 +102,15 @@ public class GetOrderInfoRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ListReleased.
+         */
+        public Builder listReleased(Boolean listReleased) {
+            this.putQueryParameter("ListReleased", listReleased);
+            this.listReleased = listReleased;
             return this;
         }
 

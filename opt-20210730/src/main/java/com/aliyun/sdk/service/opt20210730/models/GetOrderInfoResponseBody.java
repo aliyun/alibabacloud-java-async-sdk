@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opt20210730.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetOrderInfoResponseBody</p>
  */
 public class GetOrderInfoResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetOrderInfoResponseBody(Builder builder) {
@@ -132,25 +131,25 @@ public class GetOrderInfoResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("bizType")
+        @com.aliyun.core.annotation.NameInMap("bizType")
         private String bizType;
 
-        @NameInMap("currentConcurrency")
+        @com.aliyun.core.annotation.NameInMap("currentConcurrency")
         private Integer currentConcurrency;
 
-        @NameInMap("currentDays")
+        @com.aliyun.core.annotation.NameInMap("currentDays")
         private Integer currentDays;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
-        @NameInMap("licenseKey")
+        @com.aliyun.core.annotation.NameInMap("licenseKey")
         private String licenseKey;
 
-        @NameInMap("remark")
+        @com.aliyun.core.annotation.NameInMap("remark")
         private String remark;
 
-        @NameInMap("totalDays")
+        @com.aliyun.core.annotation.NameInMap("totalDays")
         private Integer totalDays;
 
         private Data(Builder builder) {

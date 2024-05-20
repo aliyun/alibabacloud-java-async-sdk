@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opt20210730.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetOrderUsageRequest</p>
  */
 public class GetOrderUsageRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("LicenseKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LicenseKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String licenseKey;
 
-    @Query
-    @NameInMap("RelService")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelService")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String relService;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true, maximum = 1, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 1, minimum = 1)
     private Integer resourceType;
 
-    @Query
-    @NameInMap("TimeRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeRange")
     private Integer timeRange;
 
     private GetOrderUsageRequest(Builder builder) {
