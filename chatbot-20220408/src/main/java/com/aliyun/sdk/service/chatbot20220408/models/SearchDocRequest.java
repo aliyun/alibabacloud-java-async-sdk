@@ -88,6 +88,10 @@ public class SearchDocRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagIds")
+    private java.util.List < Long > tagIds;
+
     private SearchDocRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -109,6 +113,7 @@ public class SearchDocRequest extends Request {
         this.startTimeBegin = builder.startTimeBegin;
         this.startTimeEnd = builder.startTimeEnd;
         this.status = builder.status;
+        this.tagIds = builder.tagIds;
     }
 
     public static Builder builder() {
@@ -257,6 +262,13 @@ public class SearchDocRequest extends Request {
         return this.status;
     }
 
+    /**
+     * @return tagIds
+     */
+    public java.util.List < Long > getTagIds() {
+        return this.tagIds;
+    }
+
     public static final class Builder extends Request.Builder<SearchDocRequest, Builder> {
         private String regionId; 
         private String agentKey; 
@@ -277,6 +289,7 @@ public class SearchDocRequest extends Request {
         private String startTimeBegin; 
         private String startTimeEnd; 
         private Integer status; 
+        private java.util.List < Long > tagIds; 
 
         private Builder() {
             super();
@@ -303,6 +316,7 @@ public class SearchDocRequest extends Request {
             this.startTimeBegin = request.startTimeBegin;
             this.startTimeEnd = request.startTimeEnd;
             this.status = request.status;
+            this.tagIds = request.tagIds;
         } 
 
         /**
@@ -474,6 +488,16 @@ public class SearchDocRequest extends Request {
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * TagIds.
+         */
+        public Builder tagIds(java.util.List < Long > tagIds) {
+            String tagIdsShrink = shrink(tagIds, "TagIds", "json");
+            this.putQueryParameter("TagIds", tagIdsShrink);
+            this.tagIds = tagIds;
             return this;
         }
 

@@ -57,6 +57,10 @@ public class UpdateDocRequest extends Request {
     private String startDate;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagIds")
+    private java.util.List < Long > tagIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Title")
     @com.aliyun.core.annotation.Validation(maxLength = 128, minLength = 1)
     private String title;
@@ -73,6 +77,7 @@ public class UpdateDocRequest extends Request {
         this.knowledgeId = builder.knowledgeId;
         this.meta = builder.meta;
         this.startDate = builder.startDate;
+        this.tagIds = builder.tagIds;
         this.title = builder.title;
     }
 
@@ -160,6 +165,13 @@ public class UpdateDocRequest extends Request {
     }
 
     /**
+     * @return tagIds
+     */
+    public java.util.List < Long > getTagIds() {
+        return this.tagIds;
+    }
+
+    /**
      * @return title
      */
     public String getTitle() {
@@ -177,6 +189,7 @@ public class UpdateDocRequest extends Request {
         private Long knowledgeId; 
         private String meta; 
         private String startDate; 
+        private java.util.List < Long > tagIds; 
         private String title; 
 
         private Builder() {
@@ -195,6 +208,7 @@ public class UpdateDocRequest extends Request {
             this.knowledgeId = request.knowledgeId;
             this.meta = request.meta;
             this.startDate = request.startDate;
+            this.tagIds = request.tagIds;
             this.title = request.title;
         } 
 
@@ -285,6 +299,16 @@ public class UpdateDocRequest extends Request {
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
             this.startDate = startDate;
+            return this;
+        }
+
+        /**
+         * TagIds.
+         */
+        public Builder tagIds(java.util.List < Long > tagIds) {
+            String tagIdsShrink = shrink(tagIds, "TagIds", "json");
+            this.putQueryParameter("TagIds", tagIdsShrink);
+            this.tagIds = tagIds;
             return this;
         }
 

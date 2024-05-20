@@ -130,6 +130,127 @@ public class SearchDocResponseBody extends TeaModel {
 
     } 
 
+    public static class DocTags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DefaultTag")
+        private Boolean defaultTag;
+
+        @com.aliyun.core.annotation.NameInMap("GroupId")
+        private Long groupId;
+
+        @com.aliyun.core.annotation.NameInMap("GroupName")
+        private String groupName;
+
+        @com.aliyun.core.annotation.NameInMap("TagId")
+        private Long tagId;
+
+        @com.aliyun.core.annotation.NameInMap("TagName")
+        private String tagName;
+
+        private DocTags(Builder builder) {
+            this.defaultTag = builder.defaultTag;
+            this.groupId = builder.groupId;
+            this.groupName = builder.groupName;
+            this.tagId = builder.tagId;
+            this.tagName = builder.tagName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DocTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return defaultTag
+         */
+        public Boolean getDefaultTag() {
+            return this.defaultTag;
+        }
+
+        /**
+         * @return groupId
+         */
+        public Long getGroupId() {
+            return this.groupId;
+        }
+
+        /**
+         * @return groupName
+         */
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        /**
+         * @return tagId
+         */
+        public Long getTagId() {
+            return this.tagId;
+        }
+
+        /**
+         * @return tagName
+         */
+        public String getTagName() {
+            return this.tagName;
+        }
+
+        public static final class Builder {
+            private Boolean defaultTag; 
+            private Long groupId; 
+            private String groupName; 
+            private Long tagId; 
+            private String tagName; 
+
+            /**
+             * DefaultTag.
+             */
+            public Builder defaultTag(Boolean defaultTag) {
+                this.defaultTag = defaultTag;
+                return this;
+            }
+
+            /**
+             * GroupId.
+             */
+            public Builder groupId(Long groupId) {
+                this.groupId = groupId;
+                return this;
+            }
+
+            /**
+             * GroupName.
+             */
+            public Builder groupName(String groupName) {
+                this.groupName = groupName;
+                return this;
+            }
+
+            /**
+             * TagId.
+             */
+            public Builder tagId(Long tagId) {
+                this.tagId = tagId;
+                return this;
+            }
+
+            /**
+             * TagName.
+             */
+            public Builder tagName(String tagName) {
+                this.tagName = tagName;
+                return this;
+            }
+
+            public DocTags build() {
+                return new DocTags(this);
+            } 
+
+        } 
+
+    }
     public static class DocHits extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BizCode")
         private String bizCode;
@@ -151,6 +272,9 @@ public class SearchDocResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("DocName")
         private String docName;
+
+        @com.aliyun.core.annotation.NameInMap("DocTags")
+        private java.util.List < DocTags> docTags;
 
         @com.aliyun.core.annotation.NameInMap("EffectStatus")
         private Integer effectStatus;
@@ -199,6 +323,7 @@ public class SearchDocResponseBody extends TeaModel {
             this.createUserId = builder.createUserId;
             this.createUserName = builder.createUserName;
             this.docName = builder.docName;
+            this.docTags = builder.docTags;
             this.effectStatus = builder.effectStatus;
             this.endDate = builder.endDate;
             this.knowledgeId = builder.knowledgeId;
@@ -269,6 +394,13 @@ public class SearchDocResponseBody extends TeaModel {
          */
         public String getDocName() {
             return this.docName;
+        }
+
+        /**
+         * @return docTags
+         */
+        public java.util.List < DocTags> getDocTags() {
+            return this.docTags;
         }
 
         /**
@@ -370,6 +502,7 @@ public class SearchDocResponseBody extends TeaModel {
             private Long createUserId; 
             private String createUserName; 
             private String docName; 
+            private java.util.List < DocTags> docTags; 
             private Integer effectStatus; 
             private String endDate; 
             private Long knowledgeId; 
@@ -437,6 +570,14 @@ public class SearchDocResponseBody extends TeaModel {
              */
             public Builder docName(String docName) {
                 this.docName = docName;
+                return this;
+            }
+
+            /**
+             * DocTags.
+             */
+            public Builder docTags(java.util.List < DocTags> docTags) {
+                this.docTags = docTags;
                 return this;
             }
 

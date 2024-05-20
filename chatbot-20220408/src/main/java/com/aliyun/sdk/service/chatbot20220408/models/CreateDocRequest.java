@@ -30,7 +30,6 @@ public class CreateDocRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Content")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String content;
 
     @com.aliyun.core.annotation.Query
@@ -46,9 +45,17 @@ public class CreateDocRequest extends Request {
     private String startDate;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagIds")
+    private java.util.List < Long > tagIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Title")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 128, minLength = 1)
     private String title;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Url")
+    private String url;
 
     private CreateDocRequest(Builder builder) {
         super(builder);
@@ -60,7 +67,9 @@ public class CreateDocRequest extends Request {
         this.endDate = builder.endDate;
         this.meta = builder.meta;
         this.startDate = builder.startDate;
+        this.tagIds = builder.tagIds;
         this.title = builder.title;
+        this.url = builder.url;
     }
 
     public static Builder builder() {
@@ -133,10 +142,24 @@ public class CreateDocRequest extends Request {
     }
 
     /**
+     * @return tagIds
+     */
+    public java.util.List < Long > getTagIds() {
+        return this.tagIds;
+    }
+
+    /**
      * @return title
      */
     public String getTitle() {
         return this.title;
+    }
+
+    /**
+     * @return url
+     */
+    public String getUrl() {
+        return this.url;
     }
 
     public static final class Builder extends Request.Builder<CreateDocRequest, Builder> {
@@ -148,7 +171,9 @@ public class CreateDocRequest extends Request {
         private String endDate; 
         private String meta; 
         private String startDate; 
+        private java.util.List < Long > tagIds; 
         private String title; 
+        private String url; 
 
         private Builder() {
             super();
@@ -164,7 +189,9 @@ public class CreateDocRequest extends Request {
             this.endDate = request.endDate;
             this.meta = request.meta;
             this.startDate = request.startDate;
+            this.tagIds = request.tagIds;
             this.title = request.title;
+            this.url = request.url;
         } 
 
         /**
@@ -240,11 +267,30 @@ public class CreateDocRequest extends Request {
         }
 
         /**
+         * TagIds.
+         */
+        public Builder tagIds(java.util.List < Long > tagIds) {
+            String tagIdsShrink = shrink(tagIds, "TagIds", "json");
+            this.putQueryParameter("TagIds", tagIdsShrink);
+            this.tagIds = tagIds;
+            return this;
+        }
+
+        /**
          * Title.
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);
             this.title = title;
+            return this;
+        }
+
+        /**
+         * Url.
+         */
+        public Builder url(String url) {
+            this.putQueryParameter("Url", url);
+            this.url = url;
             return this;
         }
 
