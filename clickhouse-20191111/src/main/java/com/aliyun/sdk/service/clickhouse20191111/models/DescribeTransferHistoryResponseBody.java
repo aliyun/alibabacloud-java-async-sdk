@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTransferHistoryResponseBody</p>
  */
 public class DescribeTransferHistoryResponseBody extends TeaModel {
-    @NameInMap("HistoryDetails")
+    @com.aliyun.core.annotation.NameInMap("HistoryDetails")
     private HistoryDetails historyDetails;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeTransferHistoryResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
     } 
 
     public static class HistoryDetail extends TeaModel {
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("SourceDBCluster")
+        @com.aliyun.core.annotation.NameInMap("SourceDBCluster")
         private String sourceDBCluster;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TargetDBCluster")
+        @com.aliyun.core.annotation.NameInMap("TargetDBCluster")
         private String targetDBCluster;
 
         private HistoryDetail(Builder builder) {
@@ -177,7 +176,7 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
 
     }
     public static class HistoryDetails extends TeaModel {
-        @NameInMap("HistoryDetail")
+        @com.aliyun.core.annotation.NameInMap("HistoryDetail")
         private java.util.List < HistoryDetail> historyDetail;
 
         private HistoryDetails(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBClusterNetInfoItemsResponseBody</p>
  */
 public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
-    @NameInMap("ClusterNetworkType")
+    @com.aliyun.core.annotation.NameInMap("ClusterNetworkType")
     private String clusterNetworkType;
 
-    @NameInMap("EnableSLB")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("EnableSLB")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean enableSLB;
 
-    @NameInMap("NetInfoItems")
+    @com.aliyun.core.annotation.NameInMap("NetInfoItems")
     private NetInfoItems netInfoItems;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBClusterNetInfoItemsResponseBody(Builder builder) {
@@ -117,31 +116,31 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
     } 
 
     public static class NetInfoItem extends TeaModel {
-        @NameInMap("ConnectionString")
+        @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
 
-        @NameInMap("HttpPort")
+        @com.aliyun.core.annotation.NameInMap("HttpPort")
         private String httpPort;
 
-        @NameInMap("HttpsPort")
+        @com.aliyun.core.annotation.NameInMap("HttpsPort")
         private String httpsPort;
 
-        @NameInMap("IPAddress")
+        @com.aliyun.core.annotation.NameInMap("IPAddress")
         private String IPAddress;
 
-        @NameInMap("JdbcPort")
+        @com.aliyun.core.annotation.NameInMap("JdbcPort")
         private String jdbcPort;
 
-        @NameInMap("MySQLPort")
+        @com.aliyun.core.annotation.NameInMap("MySQLPort")
         private String mySQLPort;
 
-        @NameInMap("NetType")
+        @com.aliyun.core.annotation.NameInMap("NetType")
         private String netType;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private NetInfoItem(Builder builder) {
@@ -328,7 +327,7 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
 
     }
     public static class NetInfoItems extends TeaModel {
-        @NameInMap("NetInfoItem")
+        @com.aliyun.core.annotation.NameInMap("NetInfoItem")
         private java.util.List < NetInfoItem> netInfoItem;
 
         private NetInfoItems(Builder builder) {

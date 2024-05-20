@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,68 +11,68 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CheckClickhouseToRDSRequest</p>
  */
 public class CheckClickhouseToRDSRequest extends Request {
-    @Query
-    @NameInMap("CkPassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CkPassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ckPassword;
 
-    @Query
-    @NameInMap("CkUserName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CkUserName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ckUserName;
 
-    @Query
-    @NameInMap("ClickhousePort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClickhousePort")
     private Long clickhousePort;
 
-    @Query
-    @NameInMap("DbClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbClusterId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RdsId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RdsId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String rdsId;
 
-    @Query
-    @NameInMap("RdsPassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RdsPassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String rdsPassword;
 
-    @Query
-    @NameInMap("RdsPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RdsPort")
     private Long rdsPort;
 
-    @Query
-    @NameInMap("RdsUserName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RdsUserName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String rdsUserName;
 
-    @Query
-    @NameInMap("RdsVpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RdsVpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String rdsVpcId;
 
-    @Query
-    @NameInMap("RdsVpcUrl")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RdsVpcUrl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String rdsVpcUrl;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private CheckClickhouseToRDSRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeConfigHistoryResponseBody</p>
  */
 public class DescribeConfigHistoryResponseBody extends TeaModel {
-    @NameInMap("ConfigHistoryItems")
+    @com.aliyun.core.annotation.NameInMap("ConfigHistoryItems")
     private java.util.List < ConfigHistoryItems> configHistoryItems;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeConfigHistoryResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
     } 
 
     public static class ConfigHistoryItems extends TeaModel {
-        @NameInMap("ChangeId")
+        @com.aliyun.core.annotation.NameInMap("ChangeId")
         private String changeId;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
         private ConfigHistoryItems(Builder builder) {

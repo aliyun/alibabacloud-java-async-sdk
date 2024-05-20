@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeProcessListResponseBody</p>
  */
 public class DescribeProcessListResponseBody extends TeaModel {
-    @NameInMap("ProcessList")
+    @com.aliyun.core.annotation.NameInMap("ProcessList")
     private ProcessList processList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeProcessListResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class DescribeProcessListResponseBody extends TeaModel {
     } 
 
     public static class ResultSet extends TeaModel {
-        @NameInMap("InitialAddress")
+        @com.aliyun.core.annotation.NameInMap("InitialAddress")
         private String initialAddress;
 
-        @NameInMap("InitialQueryId")
+        @com.aliyun.core.annotation.NameInMap("InitialQueryId")
         private String initialQueryId;
 
-        @NameInMap("InitialUser")
+        @com.aliyun.core.annotation.NameInMap("InitialUser")
         private String initialUser;
 
-        @NameInMap("Query")
+        @com.aliyun.core.annotation.NameInMap("Query")
         private String query;
 
-        @NameInMap("QueryDurationMs")
+        @com.aliyun.core.annotation.NameInMap("QueryDurationMs")
         private String queryDurationMs;
 
-        @NameInMap("QueryStartTime")
+        @com.aliyun.core.annotation.NameInMap("QueryStartTime")
         private String queryStartTime;
 
         private ResultSet(Builder builder) {
@@ -213,7 +212,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("ResultSet")
+        @com.aliyun.core.annotation.NameInMap("ResultSet")
         private java.util.List < ResultSet> resultSet;
 
         private Data(Builder builder) {
@@ -254,13 +253,13 @@ public class DescribeProcessListResponseBody extends TeaModel {
 
     }
     public static class Statistics extends TeaModel {
-        @NameInMap("BytesRead")
+        @com.aliyun.core.annotation.NameInMap("BytesRead")
         private Integer bytesRead;
 
-        @NameInMap("ElapsedTime")
+        @com.aliyun.core.annotation.NameInMap("ElapsedTime")
         private Float elapsedTime;
 
-        @NameInMap("RowsRead")
+        @com.aliyun.core.annotation.NameInMap("RowsRead")
         private Integer rowsRead;
 
         private Statistics(Builder builder) {
@@ -335,10 +334,10 @@ public class DescribeProcessListResponseBody extends TeaModel {
 
     }
     public static class TableSchemaResultSet extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private TableSchemaResultSet(Builder builder) {
@@ -396,7 +395,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
 
     }
     public static class TableSchema extends TeaModel {
-        @NameInMap("ResultSet")
+        @com.aliyun.core.annotation.NameInMap("ResultSet")
         private java.util.List < TableSchemaResultSet> resultSet;
 
         private TableSchema(Builder builder) {
@@ -437,19 +436,19 @@ public class DescribeProcessListResponseBody extends TeaModel {
 
     }
     public static class ProcessList extends TeaModel {
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private Data data;
 
-        @NameInMap("Rows")
+        @com.aliyun.core.annotation.NameInMap("Rows")
         private String rows;
 
-        @NameInMap("RowsBeforeLimitAtLeast")
+        @com.aliyun.core.annotation.NameInMap("RowsBeforeLimitAtLeast")
         private String rowsBeforeLimitAtLeast;
 
-        @NameInMap("Statistics")
+        @com.aliyun.core.annotation.NameInMap("Statistics")
         private Statistics statistics;
 
-        @NameInMap("TableSchema")
+        @com.aliyun.core.annotation.NameInMap("TableSchema")
         private TableSchema tableSchema;
 
         private ProcessList(Builder builder) {

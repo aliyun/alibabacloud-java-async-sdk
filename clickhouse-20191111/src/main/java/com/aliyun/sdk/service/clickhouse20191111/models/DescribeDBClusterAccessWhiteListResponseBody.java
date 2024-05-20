@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBClusterAccessWhiteListResponseBody</p>
  */
 public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
-    @NameInMap("DBClusterAccessWhiteList")
+    @com.aliyun.core.annotation.NameInMap("DBClusterAccessWhiteList")
     private DBClusterAccessWhiteList DBClusterAccessWhiteList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBClusterAccessWhiteListResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
     } 
 
     public static class IPArray extends TeaModel {
-        @NameInMap("DBClusterIPArrayAttribute")
+        @com.aliyun.core.annotation.NameInMap("DBClusterIPArrayAttribute")
         private String DBClusterIPArrayAttribute;
 
-        @NameInMap("DBClusterIPArrayName")
+        @com.aliyun.core.annotation.NameInMap("DBClusterIPArrayName")
         private String DBClusterIPArrayName;
 
-        @NameInMap("SecurityIPList")
+        @com.aliyun.core.annotation.NameInMap("SecurityIPList")
         private String securityIPList;
 
         private IPArray(Builder builder) {
@@ -153,7 +152,7 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
 
     }
     public static class DBClusterAccessWhiteList extends TeaModel {
-        @NameInMap("IPArray")
+        @com.aliyun.core.annotation.NameInMap("IPArray")
         private java.util.List < IPArray> IPArray;
 
         private DBClusterAccessWhiteList(Builder builder) {

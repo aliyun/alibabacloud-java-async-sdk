@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBClusterAttributeResponseBody</p>
  */
 public class DescribeDBClusterAttributeResponseBody extends TeaModel {
-    @NameInMap("DBCluster")
+    @com.aliyun.core.annotation.NameInMap("DBCluster")
     private DBCluster DBCluster;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBClusterAttributeResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     } 
 
     public static class ScaleOutStatus extends TeaModel {
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("Ratio")
+        @com.aliyun.core.annotation.NameInMap("Ratio")
         private String ratio;
 
         private ScaleOutStatus(Builder builder) {
@@ -139,10 +138,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -200,7 +199,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -241,162 +240,166 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
     }
     public static class DBCluster extends TeaModel {
-        @NameInMap("AliUid")
+        @com.aliyun.core.annotation.NameInMap("AliUid")
         private String aliUid;
 
-        @NameInMap("AppointmentRestartTime")
+        @com.aliyun.core.annotation.NameInMap("AppointmentRestartTime")
         private String appointmentRestartTime;
 
-        @NameInMap("Bid")
+        @com.aliyun.core.annotation.NameInMap("AvailableUpgradeMajorVersion")
+        private java.util.Map < String, ? > availableUpgradeMajorVersion;
+
+        @com.aliyun.core.annotation.NameInMap("Bid")
         private String bid;
 
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("CommodityCode")
+        @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
 
-        @NameInMap("ConnectionString")
+        @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
 
-        @NameInMap("ControlVersion")
+        @com.aliyun.core.annotation.NameInMap("ControlVersion")
         private String controlVersion;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DBClusterDescription")
+        @com.aliyun.core.annotation.NameInMap("DBClusterDescription")
         private String DBClusterDescription;
 
-        @NameInMap("DBClusterId")
+        @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
 
-        @NameInMap("DBClusterNetworkType")
+        @com.aliyun.core.annotation.NameInMap("DBClusterNetworkType")
         private String DBClusterNetworkType;
 
-        @NameInMap("DBClusterStatus")
+        @com.aliyun.core.annotation.NameInMap("DBClusterStatus")
         private String DBClusterStatus;
 
-        @NameInMap("DBClusterType")
+        @com.aliyun.core.annotation.NameInMap("DBClusterType")
         private String DBClusterType;
 
-        @NameInMap("DBNodeClass")
+        @com.aliyun.core.annotation.NameInMap("DBNodeClass")
         private String DBNodeClass;
 
-        @NameInMap("DBNodeCount")
+        @com.aliyun.core.annotation.NameInMap("DBNodeCount")
         private Long DBNodeCount;
 
-        @NameInMap("DBNodeStorage")
+        @com.aliyun.core.annotation.NameInMap("DBNodeStorage")
         private Long DBNodeStorage;
 
-        @NameInMap("EncryptionKey")
+        @com.aliyun.core.annotation.NameInMap("EncryptionKey")
         private String encryptionKey;
 
-        @NameInMap("EncryptionType")
+        @com.aliyun.core.annotation.NameInMap("EncryptionType")
         private String encryptionType;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("EngineLatestMinorVersion")
+        @com.aliyun.core.annotation.NameInMap("EngineLatestMinorVersion")
         private String engineLatestMinorVersion;
 
-        @NameInMap("EngineMinorVersion")
+        @com.aliyun.core.annotation.NameInMap("EngineMinorVersion")
         private String engineMinorVersion;
 
-        @NameInMap("EngineVersion")
+        @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private String engineVersion;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("ExtStorageSize")
+        @com.aliyun.core.annotation.NameInMap("ExtStorageSize")
         private Integer extStorageSize;
 
-        @NameInMap("ExtStorageType")
+        @com.aliyun.core.annotation.NameInMap("ExtStorageType")
         private String extStorageType;
 
-        @NameInMap("IsExpired")
+        @com.aliyun.core.annotation.NameInMap("IsExpired")
         private String isExpired;
 
-        @NameInMap("LockMode")
+        @com.aliyun.core.annotation.NameInMap("LockMode")
         private String lockMode;
 
-        @NameInMap("LockReason")
+        @com.aliyun.core.annotation.NameInMap("LockReason")
         private String lockReason;
 
-        @NameInMap("MaintainAutoType")
+        @com.aliyun.core.annotation.NameInMap("MaintainAutoType")
         private Boolean maintainAutoType;
 
-        @NameInMap("MaintainTime")
+        @com.aliyun.core.annotation.NameInMap("MaintainTime")
         private String maintainTime;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("PublicConnectionString")
+        @com.aliyun.core.annotation.NameInMap("PublicConnectionString")
         private String publicConnectionString;
 
-        @NameInMap("PublicIpAddr")
+        @com.aliyun.core.annotation.NameInMap("PublicIpAddr")
         private String publicIpAddr;
 
-        @NameInMap("PublicPort")
+        @com.aliyun.core.annotation.NameInMap("PublicPort")
         private String publicPort;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ScaleOutStatus")
+        @com.aliyun.core.annotation.NameInMap("ScaleOutStatus")
         private ScaleOutStatus scaleOutStatus;
 
-        @NameInMap("StorageType")
+        @com.aliyun.core.annotation.NameInMap("StorageType")
         private String storageType;
 
-        @NameInMap("SupportBackup")
+        @com.aliyun.core.annotation.NameInMap("SupportBackup")
         private Integer supportBackup;
 
-        @NameInMap("SupportHttpsPort")
+        @com.aliyun.core.annotation.NameInMap("SupportHttpsPort")
         private Boolean supportHttpsPort;
 
-        @NameInMap("SupportMysqlPort")
+        @com.aliyun.core.annotation.NameInMap("SupportMysqlPort")
         private Boolean supportMysqlPort;
 
-        @NameInMap("SupportOss")
+        @com.aliyun.core.annotation.NameInMap("SupportOss")
         private Integer supportOss;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcCloudInstanceId")
+        @com.aliyun.core.annotation.NameInMap("VpcCloudInstanceId")
         private String vpcCloudInstanceId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcIpAddr")
+        @com.aliyun.core.annotation.NameInMap("VpcIpAddr")
         private String vpcIpAddr;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
-        @NameInMap("ZoneIdVswitchMap")
+        @com.aliyun.core.annotation.NameInMap("ZoneIdVswitchMap")
         private java.util.Map < String, ? > zoneIdVswitchMap;
 
-        @NameInMap("ZookeeperClass")
+        @com.aliyun.core.annotation.NameInMap("ZookeeperClass")
         private String zookeeperClass;
 
         private DBCluster(Builder builder) {
             this.aliUid = builder.aliUid;
             this.appointmentRestartTime = builder.appointmentRestartTime;
+            this.availableUpgradeMajorVersion = builder.availableUpgradeMajorVersion;
             this.bid = builder.bid;
             this.category = builder.category;
             this.commodityCode = builder.commodityCode;
@@ -468,6 +471,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          */
         public String getAppointmentRestartTime() {
             return this.appointmentRestartTime;
+        }
+
+        /**
+         * @return availableUpgradeMajorVersion
+         */
+        public java.util.Map < String, ? > getAvailableUpgradeMajorVersion() {
+            return this.availableUpgradeMajorVersion;
         }
 
         /**
@@ -816,6 +826,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private String aliUid; 
             private String appointmentRestartTime; 
+            private java.util.Map < String, ? > availableUpgradeMajorVersion; 
             private String bid; 
             private String category; 
             private String commodityCode; 
@@ -879,6 +890,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
              */
             public Builder appointmentRestartTime(String appointmentRestartTime) {
                 this.appointmentRestartTime = appointmentRestartTime;
+                return this;
+            }
+
+            /**
+             * AvailableUpgradeMajorVersion.
+             */
+            public Builder availableUpgradeMajorVersion(java.util.Map < String, ? > availableUpgradeMajorVersion) {
+                this.availableUpgradeMajorVersion = availableUpgradeMajorVersion;
                 return this;
             }
 

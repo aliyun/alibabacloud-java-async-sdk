@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,135 +11,135 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDBInstanceRequest</p>
  */
 public class CreateDBInstanceRequest extends Request {
-    @Query
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private Boolean autoRenew;
 
-    @Query
-    @NameInMap("BackupSetID")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupSetID")
     private String backupSetID;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DBClusterCategory")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterCategory")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterCategory;
 
-    @Query
-    @NameInMap("DBClusterClass")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterClass")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterClass;
 
-    @Query
-    @NameInMap("DBClusterDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterDescription")
     private String DBClusterDescription;
 
-    @Query
-    @NameInMap("DBClusterNetworkType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterNetworkType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterNetworkType;
 
-    @Query
-    @NameInMap("DBClusterVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterVersion;
 
-    @Query
-    @NameInMap("DBNodeGroupCount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBNodeGroupCount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBNodeGroupCount;
 
-    @Query
-    @NameInMap("DBNodeStorage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBNodeStorage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBNodeStorage;
 
-    @Query
-    @NameInMap("DbNodeStorageType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbNodeStorageType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbNodeStorageType;
 
-    @Query
-    @NameInMap("EncryptionKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptionKey")
     private String encryptionKey;
 
-    @Query
-    @NameInMap("EncryptionType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptionType")
     private String encryptionType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PayType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PayType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String payType;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private String period;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SourceDBClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceDBClusterId")
     private String sourceDBClusterId;
 
-    @Query
-    @NameInMap("UsedTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UsedTime")
     private String usedTime;
 
-    @Query
-    @NameInMap("VPCId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VPCId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String VPCId;
 
-    @Query
-    @NameInMap("VSwitchBak")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchBak")
     private String vSwitchBak;
 
-    @Query
-    @NameInMap("VSwitchBak2")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchBak2")
     private String vSwitchBak2;
 
-    @Query
-    @NameInMap("VSwitchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
 
-    @Query
-    @NameInMap("ZondIdBak2")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZondIdBak2")
     private String zondIdBak2;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
-    @Query
-    @NameInMap("ZoneIdBak")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneIdBak")
     private String zoneIdBak;
 
     private CreateDBInstanceRequest(Builder builder) {
@@ -471,7 +470,10 @@ public class CreateDBInstanceRequest extends Request {
         } 
 
         /**
-         * AutoRenew.
+         * Specifies whether to enable auto-renewal.
+         * <p>
+         * 
+         * >  This parameter is valid only if the value of PayType is set to Prepaid.
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -517,13 +519,23 @@ public class CreateDBInstanceRequest extends Request {
          * The specifications of the cluster.
          * <p>
          * 
-         * *   Valid values when the cluster is of Single-replica Edition: -**S4**: 4 CPU cores and 16 GB of memory -**S8**: 8 CPU cores and 32 GB of memory -**S16**: 16 CPU cores and 64 GB of memory
+         * *   Valid values when the cluster is of Single-replica Edition: 
          * 
+         *     - **S4**: 4 CPU cores and 16 GB of memory 
+         *     - **S8**: 8 CPU cores and 32 GB of memory
+         *     -  **S16**: 16 CPU cores and 64 GB of memory
          *     *   **S32**: 32 CPU cores and 128 GB of memory
          *     *   **S64**: 64 CPU cores and 256 GB of memory
          *     *   **S104**: 104 CPU cores and 384 GB of memory
          * 
-         * *   Valid values when the cluster is of Double-replica Edition: -**C4**: 4 CPU cores and 16 GB of memory -**C8**: 8 CPU cores and 32 GB of memory -**C16**: 16 CPU cores and 64 GB of memory -**C32**: 32 CPU cores and 128 GB of memory -**C64**: 64 CPU cores and 256 GB of memory -**C104**: 104 CPU cores and 384 GB of memory
+         * *   Valid values when the cluster is of Double-replica Edition: 
+         * 
+         *     - **C4**: 4 CPU cores and 16 GB of memory 
+         *     - **C8**: 8 CPU cores and 32 GB of memory 
+         *     - **C16**: 16 CPU cores and 64 GB of memory 
+         *     - **C32**: 32 CPU cores and 128 GB of memory 
+         *     - **C64**: 64 CPU cores and 256 GB of memory 
+         *     - **C104**: 104 CPU cores and 384 GB of memory
          */
         public Builder DBClusterClass(String DBClusterClass) {
             this.putQueryParameter("DBClusterClass", DBClusterClass);
@@ -591,7 +603,7 @@ public class CreateDBInstanceRequest extends Request {
          * The storage type of the cluster. Valid values:
          * <p>
          * 
-         * *   **CloudESSD_PL1**: The cluster uses an enhanced SSD (ESSD) of performance level (PL) 1.
+         * *   **CloudESSD**: The cluster uses an enhanced SSD (ESSD) of performance level 1 (PL1).
          * *   **CloudESSD_PL2**: The cluster uses an ESSD of PL2.
          * *   **CloudESSD_PL3**: The cluster uses an ESSD of PL3.
          * *   **CloudEfficiency**: The cluster uses an ultra disk.
@@ -747,7 +759,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * 备专有网络交换机
+         * The vSwitch in the secondary zone for the VPC.
          */
         public Builder vSwitchBak(String vSwitchBak) {
             this.putQueryParameter("VSwitchBak", vSwitchBak);
@@ -756,7 +768,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * 备专有网络交换机2
+         * The vSwitch in secondary zone 2 for the VPC.
          */
         public Builder vSwitchBak2(String vSwitchBak2) {
             this.putQueryParameter("VSwitchBak2", vSwitchBak2);
@@ -774,7 +786,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * ZondIdBak2.
+         * Secondary zone 2.
          */
         public Builder zondIdBak2(String zondIdBak2) {
             this.putQueryParameter("ZondIdBak2", zondIdBak2);
@@ -792,7 +804,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * ZoneIdBak.
+         * The secondary zone.
          */
         public Builder zoneIdBak(String zoneIdBak) {
             this.putQueryParameter("ZoneIdBak", zoneIdBak);

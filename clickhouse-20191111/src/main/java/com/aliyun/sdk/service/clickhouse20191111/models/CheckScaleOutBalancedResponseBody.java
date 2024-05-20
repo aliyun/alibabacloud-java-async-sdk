@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CheckScaleOutBalancedResponseBody</p>
  */
 public class CheckScaleOutBalancedResponseBody extends TeaModel {
-    @NameInMap("CheckCode")
+    @com.aliyun.core.annotation.NameInMap("CheckCode")
     private String checkCode;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TableDetails")
+    @com.aliyun.core.annotation.NameInMap("TableDetails")
     private TableDetails tableDetails;
 
-    @NameInMap("TimeDuration")
+    @com.aliyun.core.annotation.NameInMap("TimeDuration")
     private String timeDuration;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private CheckScaleOutBalancedResponseBody(Builder builder) {
@@ -181,16 +180,16 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
     } 
 
     public static class TableDetail extends TeaModel {
-        @NameInMap("Cluster")
+        @com.aliyun.core.annotation.NameInMap("Cluster")
         private String cluster;
 
-        @NameInMap("Database")
+        @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
 
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private Integer detail;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private TableDetail(Builder builder) {
@@ -286,7 +285,7 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
 
     }
     public static class TableDetails extends TeaModel {
-        @NameInMap("TableDetail")
+        @com.aliyun.core.annotation.NameInMap("TableDetail")
         private java.util.List < TableDetail> tableDetail;
 
         private TableDetails(Builder builder) {

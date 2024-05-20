@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSchemasResponseBody</p>
  */
 public class DescribeSchemasResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeSchemasResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeSchemasResponseBody extends TeaModel {
     } 
 
     public static class Schema extends TeaModel {
-        @NameInMap("DBClusterId")
+        @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
 
-        @NameInMap("SchemaName")
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
         private String schemaName;
 
         private Schema(Builder builder) {
@@ -133,7 +132,7 @@ public class DescribeSchemasResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("Schema")
+        @com.aliyun.core.annotation.NameInMap("Schema")
         private java.util.List < Schema> schema;
 
         private Items(Builder builder) {

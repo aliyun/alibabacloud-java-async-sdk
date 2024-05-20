@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAllDataSourceResponseBody</p>
  */
 public class DescribeAllDataSourceResponseBody extends TeaModel {
-    @NameInMap("Columns")
+    @com.aliyun.core.annotation.NameInMap("Columns")
     private Columns columns;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Schemas")
+    @com.aliyun.core.annotation.NameInMap("Schemas")
     private Schemas schemas;
 
-    @NameInMap("Tables")
+    @com.aliyun.core.annotation.NameInMap("Tables")
     private Tables tables;
 
     private DescribeAllDataSourceResponseBody(Builder builder) {
@@ -112,25 +111,25 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
     } 
 
     public static class Column extends TeaModel {
-        @NameInMap("AutoIncrementColumn")
+        @com.aliyun.core.annotation.NameInMap("AutoIncrementColumn")
         private Boolean autoIncrementColumn;
 
-        @NameInMap("ColumnName")
+        @com.aliyun.core.annotation.NameInMap("ColumnName")
         private String columnName;
 
-        @NameInMap("DBClusterId")
+        @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
 
-        @NameInMap("PrimaryKey")
+        @com.aliyun.core.annotation.NameInMap("PrimaryKey")
         private Boolean primaryKey;
 
-        @NameInMap("SchemaName")
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
         private String schemaName;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Column(Builder builder) {
@@ -281,7 +280,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
 
     }
     public static class Columns extends TeaModel {
-        @NameInMap("Column")
+        @com.aliyun.core.annotation.NameInMap("Column")
         private java.util.List < Column> column;
 
         private Columns(Builder builder) {
@@ -322,10 +321,10 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
 
     }
     public static class Schema extends TeaModel {
-        @NameInMap("DBClusterId")
+        @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
 
-        @NameInMap("SchemaName")
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
         private String schemaName;
 
         private Schema(Builder builder) {
@@ -383,7 +382,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
 
     }
     public static class Schemas extends TeaModel {
-        @NameInMap("Schema")
+        @com.aliyun.core.annotation.NameInMap("Schema")
         private java.util.List < Schema> schema;
 
         private Schemas(Builder builder) {
@@ -424,13 +423,13 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
 
     }
     public static class Table extends TeaModel {
-        @NameInMap("DBClusterId")
+        @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
 
-        @NameInMap("SchemaName")
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
         private String schemaName;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private Table(Builder builder) {
@@ -505,7 +504,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
 
     }
     public static class Tables extends TeaModel {
-        @NameInMap("Table")
+        @com.aliyun.core.annotation.NameInMap("Table")
         private java.util.List < Table> table;
 
         private Tables(Builder builder) {

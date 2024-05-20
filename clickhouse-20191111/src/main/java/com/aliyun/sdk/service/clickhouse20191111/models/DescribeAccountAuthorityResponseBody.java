@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAccountAuthorityResponseBody</p>
  */
 public class DescribeAccountAuthorityResponseBody extends TeaModel {
-    @NameInMap("AccountName")
+    @com.aliyun.core.annotation.NameInMap("AccountName")
     private String accountName;
 
-    @NameInMap("AllowDatabases")
+    @com.aliyun.core.annotation.NameInMap("AllowDatabases")
     private java.util.List < String > allowDatabases;
 
-    @NameInMap("AllowDictionaries")
+    @com.aliyun.core.annotation.NameInMap("AllowDictionaries")
     private java.util.List < String > allowDictionaries;
 
-    @NameInMap("DdlAuthority")
+    @com.aliyun.core.annotation.NameInMap("DdlAuthority")
     private Boolean ddlAuthority;
 
-    @NameInMap("DmlAuthority")
+    @com.aliyun.core.annotation.NameInMap("DmlAuthority")
     private String dmlAuthority;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalDatabases")
+    @com.aliyun.core.annotation.NameInMap("TotalDatabases")
     private java.util.List < String > totalDatabases;
 
-    @NameInMap("TotalDictionaries")
+    @com.aliyun.core.annotation.NameInMap("TotalDictionaries")
     private java.util.List < String > totalDictionaries;
 
     private DescribeAccountAuthorityResponseBody(Builder builder) {

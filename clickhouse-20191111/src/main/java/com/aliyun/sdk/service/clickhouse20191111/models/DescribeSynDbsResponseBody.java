@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSynDbsResponseBody</p>
  */
 public class DescribeSynDbsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SynDbs")
+    @com.aliyun.core.annotation.NameInMap("SynDbs")
     private java.util.List < SynDbs> synDbs;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeSynDbsResponseBody(Builder builder) {
@@ -132,22 +131,22 @@ public class DescribeSynDbsResponseBody extends TeaModel {
     } 
 
     public static class SynDbs extends TeaModel {
-        @NameInMap("ErrorMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
 
-        @NameInMap("RdsId")
+        @com.aliyun.core.annotation.NameInMap("RdsId")
         private String rdsId;
 
-        @NameInMap("RdsUserName")
+        @com.aliyun.core.annotation.NameInMap("RdsUserName")
         private String rdsUserName;
 
-        @NameInMap("RdsVpcUrl")
+        @com.aliyun.core.annotation.NameInMap("RdsVpcUrl")
         private String rdsVpcUrl;
 
-        @NameInMap("SynDb")
+        @com.aliyun.core.annotation.NameInMap("SynDb")
         private String synDb;
 
-        @NameInMap("SynStatus")
+        @com.aliyun.core.annotation.NameInMap("SynStatus")
         private Boolean synStatus;
 
         private SynDbs(Builder builder) {

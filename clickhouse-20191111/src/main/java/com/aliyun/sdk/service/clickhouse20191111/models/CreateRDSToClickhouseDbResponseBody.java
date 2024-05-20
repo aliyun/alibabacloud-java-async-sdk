@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateRDSToClickhouseDbResponseBody</p>
  */
 public class CreateRDSToClickhouseDbResponseBody extends TeaModel {
-    @NameInMap("ErrorMsg")
+    @com.aliyun.core.annotation.NameInMap("ErrorMsg")
     private String errorMsg;
 
-    @NameInMap("RepeatedDbs")
+    @com.aliyun.core.annotation.NameInMap("RepeatedDbs")
     private java.util.List < String > repeatedDbs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Long status;
 
     private CreateRDSToClickhouseDbResponseBody(Builder builder) {
@@ -103,7 +102,7 @@ public class CreateRDSToClickhouseDbResponseBody extends TeaModel {
          * 
          * *   **1**: Created.
          * *   **0**: Creation failed. The tables in the synchronization task are duplicate. The duplicate tables are returned for the **RepeatedDbs** parameter.
-         * *   **1**: Creation failed. The cause why the creation failed is returned for the **ErrorMsg** parameter.
+         * *   **-1**: Creation failed. The cause why the creation failed is returned for the **ErrorMsg** parameter.
          */
         public Builder status(Long status) {
             this.status = status;

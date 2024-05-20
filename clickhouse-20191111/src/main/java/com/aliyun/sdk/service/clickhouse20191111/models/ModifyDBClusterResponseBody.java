@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.clickhouse20191111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDBClusterResponseBody</p>
  */
 public class ModifyDBClusterResponseBody extends TeaModel {
-    @NameInMap("DBCluster")
+    @com.aliyun.core.annotation.NameInMap("DBCluster")
     private DBCluster DBCluster;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyDBClusterResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class ModifyDBClusterResponseBody extends TeaModel {
     } 
 
     public static class DBCluster extends TeaModel {
-        @NameInMap("dbClusterId")
+        @com.aliyun.core.annotation.NameInMap("dbClusterId")
         private String dbClusterId;
 
-        @NameInMap("orderId")
+        @com.aliyun.core.annotation.NameInMap("orderId")
         private String orderId;
 
         private DBCluster(Builder builder) {
