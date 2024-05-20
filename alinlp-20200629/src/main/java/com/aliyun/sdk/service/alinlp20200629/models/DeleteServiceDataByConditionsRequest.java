@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alinlp20200629.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteServiceDataByConditionsRequest</p>
  */
 public class DeleteServiceDataByConditionsRequest extends Request {
-    @Body
-    @NameInMap("Conditions")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Conditions")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.Map < String, ? > conditions;
 
-    @Body
-    @NameInMap("ServiceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long serviceId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("X-DashScope-OpenAPISource")
+    private String xDashScopeOpenAPISource;
 
     private DeleteServiceDataByConditionsRequest(Builder builder) {
         super(builder);
         this.conditions = builder.conditions;
         this.serviceId = builder.serviceId;
+        this.xDashScopeOpenAPISource = builder.xDashScopeOpenAPISource;
     }
 
     public static Builder builder() {
@@ -55,9 +59,17 @@ public class DeleteServiceDataByConditionsRequest extends Request {
         return this.serviceId;
     }
 
+    /**
+     * @return xDashScopeOpenAPISource
+     */
+    public String getXDashScopeOpenAPISource() {
+        return this.xDashScopeOpenAPISource;
+    }
+
     public static final class Builder extends Request.Builder<DeleteServiceDataByConditionsRequest, Builder> {
         private java.util.Map < String, ? > conditions; 
         private Long serviceId; 
+        private String xDashScopeOpenAPISource; 
 
         private Builder() {
             super();
@@ -67,6 +79,7 @@ public class DeleteServiceDataByConditionsRequest extends Request {
             super(request);
             this.conditions = request.conditions;
             this.serviceId = request.serviceId;
+            this.xDashScopeOpenAPISource = request.xDashScopeOpenAPISource;
         } 
 
         /**
@@ -85,6 +98,15 @@ public class DeleteServiceDataByConditionsRequest extends Request {
         public Builder serviceId(Long serviceId) {
             this.putBodyParameter("ServiceId", serviceId);
             this.serviceId = serviceId;
+            return this;
+        }
+
+        /**
+         * X-DashScope-OpenAPISource.
+         */
+        public Builder xDashScopeOpenAPISource(String xDashScopeOpenAPISource) {
+            this.putBodyParameter("X-DashScope-OpenAPISource", xDashScopeOpenAPISource);
+            this.xDashScopeOpenAPISource = xDashScopeOpenAPISource;
             return this;
         }
 

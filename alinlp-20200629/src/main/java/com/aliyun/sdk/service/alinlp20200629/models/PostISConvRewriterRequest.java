@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alinlp20200629.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PostISConvRewriterRequest</p>
  */
 public class PostISConvRewriterRequest extends Request {
-    @Body
-    @NameInMap("Algorithm")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Algorithm")
     private String algorithm;
 
-    @Body
-    @NameInMap("Debug")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Debug")
     private Boolean debug;
 
-    @Body
-    @NameInMap("Input")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Input")
     private java.util.Map < String, ? > input;
 
-    @Body
-    @NameInMap("Parameters")
-    private java.util.Map < String, ? > parameters;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Model")
+    private String model;
 
-    @Body
-    @NameInMap("Version")
-    private String version;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Parameters")
+    private java.util.Map < String, ? > parameters;
 
     private PostISConvRewriterRequest(Builder builder) {
         super(builder);
         this.algorithm = builder.algorithm;
         this.debug = builder.debug;
         this.input = builder.input;
+        this.model = builder.model;
         this.parameters = builder.parameters;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -76,25 +75,25 @@ public class PostISConvRewriterRequest extends Request {
     }
 
     /**
+     * @return model
+     */
+    public String getModel() {
+        return this.model;
+    }
+
+    /**
      * @return parameters
      */
     public java.util.Map < String, ? > getParameters() {
         return this.parameters;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<PostISConvRewriterRequest, Builder> {
         private String algorithm; 
         private Boolean debug; 
         private java.util.Map < String, ? > input; 
+        private String model; 
         private java.util.Map < String, ? > parameters; 
-        private String version; 
 
         private Builder() {
             super();
@@ -105,8 +104,8 @@ public class PostISConvRewriterRequest extends Request {
             this.algorithm = request.algorithm;
             this.debug = request.debug;
             this.input = request.input;
+            this.model = request.model;
             this.parameters = request.parameters;
-            this.version = request.version;
         } 
 
         /**
@@ -138,21 +137,21 @@ public class PostISConvRewriterRequest extends Request {
         }
 
         /**
+         * Model.
+         */
+        public Builder model(String model) {
+            this.putBodyParameter("Model", model);
+            this.model = model;
+            return this;
+        }
+
+        /**
          * Parameters.
          */
         public Builder parameters(java.util.Map < String, ? > parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
             this.putBodyParameter("Parameters", parametersShrink);
             this.parameters = parameters;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putBodyParameter("Version", version);
-            this.version = version;
             return this;
         }
 

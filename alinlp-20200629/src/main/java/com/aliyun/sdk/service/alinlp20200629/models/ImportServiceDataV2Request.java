@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alinlp20200629.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ImportServiceDataV2Request</p>
  */
 public class ImportServiceDataV2Request extends Request {
-    @Body
-    @NameInMap("DataType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DataType")
     private String dataType;
 
-    @Body
-    @NameInMap("Documents")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Documents")
     private java.util.List < Documents> documents;
 
-    @Body
-    @NameInMap("ServiceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long serviceId;
 
     private ImportServiceDataV2Request(Builder builder) {
@@ -118,22 +117,22 @@ public class ImportServiceDataV2Request extends Request {
     } 
 
     public static class Documents extends TeaModel {
-        @NameInMap("BizParams")
+        @com.aliyun.core.annotation.NameInMap("BizParams")
         private java.util.Map < String, String > bizParams;
 
-        @NameInMap("DocId")
+        @com.aliyun.core.annotation.NameInMap("DocId")
         private String docId;
 
-        @NameInMap("FileExtension")
+        @com.aliyun.core.annotation.NameInMap("FileExtension")
         private String fileExtension;
 
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("FilePath")
+        @com.aliyun.core.annotation.NameInMap("FilePath")
         private String filePath;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private Documents(Builder builder) {

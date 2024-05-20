@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alinlp20200629.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,61 +11,65 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PostMSSearchEnhanceRequest</p>
  */
 public class PostMSSearchEnhanceRequest extends Request {
-    @Body
-    @NameInMap("Body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Body")
     private String body;
 
-    @Body
-    @NameInMap("CustomConfigInfo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustomConfigInfo")
     private java.util.Map < String, ? > customConfigInfo;
 
-    @Body
-    @NameInMap("Debug")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Debug")
     private Boolean debug;
 
-    @Body
-    @NameInMap("Fields")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Fields")
     private java.util.List < String > fields;
 
-    @Body
-    @NameInMap("Filters")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Filters")
     private String filters;
 
-    @Body
-    @NameInMap("MinScore")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MinScore")
     private Double minScore;
 
-    @Body
-    @NameInMap("Page")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Page")
     private Integer page;
 
-    @Body
-    @NameInMap("Queries")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Queries")
     private String queries;
 
-    @Body
-    @NameInMap("RankModelInfo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RankModelInfo")
     private java.util.Map < String, ? > rankModelInfo;
 
-    @Body
-    @NameInMap("Rows")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Rows")
     private Integer rows;
 
-    @Body
-    @NameInMap("ServiceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
     private Long serviceId;
 
-    @Body
-    @NameInMap("Sort")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Sort")
     private java.util.List < String > sort;
 
-    @Body
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @Body
-    @NameInMap("Uq")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Uq")
     private String uq;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("X-DashScope-OpenAPISource")
+    private String xDashScopeOpenAPISource;
 
     private PostMSSearchEnhanceRequest(Builder builder) {
         super(builder);
@@ -84,6 +87,7 @@ public class PostMSSearchEnhanceRequest extends Request {
         this.sort = builder.sort;
         this.type = builder.type;
         this.uq = builder.uq;
+        this.xDashScopeOpenAPISource = builder.xDashScopeOpenAPISource;
     }
 
     public static Builder builder() {
@@ -197,6 +201,13 @@ public class PostMSSearchEnhanceRequest extends Request {
         return this.uq;
     }
 
+    /**
+     * @return xDashScopeOpenAPISource
+     */
+    public String getXDashScopeOpenAPISource() {
+        return this.xDashScopeOpenAPISource;
+    }
+
     public static final class Builder extends Request.Builder<PostMSSearchEnhanceRequest, Builder> {
         private String body; 
         private java.util.Map < String, ? > customConfigInfo; 
@@ -212,6 +223,7 @@ public class PostMSSearchEnhanceRequest extends Request {
         private java.util.List < String > sort; 
         private String type; 
         private String uq; 
+        private String xDashScopeOpenAPISource; 
 
         private Builder() {
             super();
@@ -233,6 +245,7 @@ public class PostMSSearchEnhanceRequest extends Request {
             this.sort = request.sort;
             this.type = request.type;
             this.uq = request.uq;
+            this.xDashScopeOpenAPISource = request.xDashScopeOpenAPISource;
         } 
 
         /**
@@ -362,6 +375,15 @@ public class PostMSSearchEnhanceRequest extends Request {
         public Builder uq(String uq) {
             this.putBodyParameter("Uq", uq);
             this.uq = uq;
+            return this;
+        }
+
+        /**
+         * X-DashScope-OpenAPISource.
+         */
+        public Builder xDashScopeOpenAPISource(String xDashScopeOpenAPISource) {
+            this.putBodyParameter("X-DashScope-OpenAPISource", xDashScopeOpenAPISource);
+            this.xDashScopeOpenAPISource = xDashScopeOpenAPISource;
             return this;
         }
 

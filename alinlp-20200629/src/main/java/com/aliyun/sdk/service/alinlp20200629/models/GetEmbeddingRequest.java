@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alinlp20200629.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetEmbeddingRequest</p>
  */
 public class GetEmbeddingRequest extends Request {
-    @Body
-    @NameInMap("ServiceCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceCode;
 
-    @Body
-    @NameInMap("Text")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Text")
     private String text;
 
-    @Body
-    @NameInMap("TextType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TextType")
     private String textType;
 
     private GetEmbeddingRequest(Builder builder) {

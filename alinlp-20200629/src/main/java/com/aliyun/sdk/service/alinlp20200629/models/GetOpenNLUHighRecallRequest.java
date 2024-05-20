@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alinlp20200629.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetOpenNLUHighRecallRequest</p>
  */
 public class GetOpenNLUHighRecallRequest extends Request {
-    @Body
-    @NameInMap("Examples")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Examples")
     private String examples;
 
-    @Body
-    @NameInMap("Labels")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Labels")
     private String labels;
 
-    @Body
-    @NameInMap("Sentence")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Sentence")
     private String sentence;
 
-    @Body
-    @NameInMap("ServiceCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceCode;
 
-    @Body
-    @NameInMap("Task")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Task")
     private String task;
 
     private GetOpenNLUHighRecallRequest(Builder builder) {

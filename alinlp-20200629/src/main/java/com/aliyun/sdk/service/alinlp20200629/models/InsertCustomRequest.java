@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alinlp20200629.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InsertCustomRequest</p>
  */
 public class InsertCustomRequest extends Request {
-    @Body
-    @NameInMap("ApiId")
-    @Validation(required = true, maximum = 10000000)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApiId")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 10000000)
     private Integer apiId;
 
-    @Body
-    @NameInMap("CustomFileName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustomFileName")
     private String customFileName;
 
-    @Body
-    @NameInMap("CustomUrl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustomUrl")
     private String customUrl;
 
-    @Body
-    @NameInMap("RegFileName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegFileName")
     private String regFileName;
 
-    @Body
-    @NameInMap("RegUrl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegUrl")
     private String regUrl;
 
-    @Body
-    @NameInMap("ServiceCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceCode;
 
     private InsertCustomRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alinlp20200629.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ImportServiceDataRequest</p>
  */
 public class ImportServiceDataRequest extends Request {
-    @Body
-    @NameInMap("Partition")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Partition")
     private java.util.List < java.util.Map<String, String>> partition;
 
-    @Body
-    @NameInMap("ServiceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long serviceId;
 
-    @Body
-    @NameInMap("SubPath")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SubPath")
     private String subPath;
 
-    @Body
-    @NameInMap("Url")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Url")
     private String url;
 
     private ImportServiceDataRequest(Builder builder) {

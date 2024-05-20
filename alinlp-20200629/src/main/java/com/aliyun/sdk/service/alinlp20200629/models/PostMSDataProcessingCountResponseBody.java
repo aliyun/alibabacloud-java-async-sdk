@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alinlp20200629.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PostMSDataProcessingCountResponseBody</p>
  */
 public class PostMSDataProcessingCountResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Msg")
+    @com.aliyun.core.annotation.NameInMap("Msg")
     private String msg;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private PostMSDataProcessingCountResponseBody(Builder builder) {
@@ -152,13 +151,13 @@ public class PostMSDataProcessingCountResponseBody extends TeaModel {
     } 
 
     public static class ErrorDataList extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("OpType")
+        @com.aliyun.core.annotation.NameInMap("OpType")
         private String opType;
 
         private ErrorDataList(Builder builder) {
@@ -233,22 +232,22 @@ public class PostMSDataProcessingCountResponseBody extends TeaModel {
 
     }
     public static class DataProcessedStatuses extends TeaModel {
-        @NameInMap("ChunkNum")
+        @com.aliyun.core.annotation.NameInMap("ChunkNum")
         private String chunkNum;
 
-        @NameInMap("DataId")
+        @com.aliyun.core.annotation.NameInMap("DataId")
         private String dataId;
 
-        @NameInMap("ErrorDataList")
+        @com.aliyun.core.annotation.NameInMap("ErrorDataList")
         private java.util.List < ErrorDataList> errorDataList;
 
-        @NameInMap("OpStatus")
+        @com.aliyun.core.annotation.NameInMap("OpStatus")
         private java.util.Map < String, Integer > opStatus;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("VersionValue")
+        @com.aliyun.core.annotation.NameInMap("VersionValue")
         private String versionValue;
 
         private DataProcessedStatuses(Builder builder) {
@@ -374,10 +373,10 @@ public class PostMSDataProcessingCountResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("DataProcessedStatuses")
+        @com.aliyun.core.annotation.NameInMap("DataProcessedStatuses")
         private java.util.List < DataProcessedStatuses> dataProcessedStatuses;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Data(Builder builder) {

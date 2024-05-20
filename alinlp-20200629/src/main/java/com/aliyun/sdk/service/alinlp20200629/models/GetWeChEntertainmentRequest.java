@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alinlp20200629.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetWeChEntertainmentRequest</p>
  */
 public class GetWeChEntertainmentRequest extends Request {
-    @Body
-    @NameInMap("Operation")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Operation")
     private String operation;
 
-    @Body
-    @NameInMap("ServiceCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceCode;
 
-    @Body
-    @NameInMap("Size")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Size")
     private String size;
 
-    @Body
-    @NameInMap("Text")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Text")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String text;
 
-    @Body
-    @NameInMap("TokenizerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TokenizerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tokenizerId;
 
-    @Body
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private GetWeChEntertainmentRequest(Builder builder) {

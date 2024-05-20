@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alinlp20200629.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetServiceDataImportStatusRequest</p>
  */
 public class GetServiceDataImportStatusRequest extends Request {
-    @Body
-    @NameInMap("DataImportIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DataImportIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Long > dataImportIds;
 
     private GetServiceDataImportStatusRequest(Builder builder) {

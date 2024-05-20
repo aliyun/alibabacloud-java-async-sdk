@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alinlp20200629.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PostMSDataProcessingCountRequest</p>
  */
 public class PostMSDataProcessingCountRequest extends Request {
-    @Body
-    @NameInMap("DataIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DataIds")
     private java.util.List < String > dataIds;
 
-    @Body
-    @NameInMap("DataImportId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DataImportId")
     private Long dataImportId;
 
-    @Body
-    @NameInMap("ServiceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
     private Long serviceId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("X-DashScope-OpenAPISource")
+    private String xDashScopeOpenAPISource;
 
     private PostMSDataProcessingCountRequest(Builder builder) {
         super(builder);
         this.dataIds = builder.dataIds;
         this.dataImportId = builder.dataImportId;
         this.serviceId = builder.serviceId;
+        this.xDashScopeOpenAPISource = builder.xDashScopeOpenAPISource;
     }
 
     public static Builder builder() {
@@ -65,10 +69,18 @@ public class PostMSDataProcessingCountRequest extends Request {
         return this.serviceId;
     }
 
+    /**
+     * @return xDashScopeOpenAPISource
+     */
+    public String getXDashScopeOpenAPISource() {
+        return this.xDashScopeOpenAPISource;
+    }
+
     public static final class Builder extends Request.Builder<PostMSDataProcessingCountRequest, Builder> {
         private java.util.List < String > dataIds; 
         private Long dataImportId; 
         private Long serviceId; 
+        private String xDashScopeOpenAPISource; 
 
         private Builder() {
             super();
@@ -79,6 +91,7 @@ public class PostMSDataProcessingCountRequest extends Request {
             this.dataIds = request.dataIds;
             this.dataImportId = request.dataImportId;
             this.serviceId = request.serviceId;
+            this.xDashScopeOpenAPISource = request.xDashScopeOpenAPISource;
         } 
 
         /**
@@ -106,6 +119,15 @@ public class PostMSDataProcessingCountRequest extends Request {
         public Builder serviceId(Long serviceId) {
             this.putBodyParameter("ServiceId", serviceId);
             this.serviceId = serviceId;
+            return this;
+        }
+
+        /**
+         * X-DashScope-OpenAPISource.
+         */
+        public Builder xDashScopeOpenAPISource(String xDashScopeOpenAPISource) {
+            this.putBodyParameter("X-DashScope-OpenAPISource", xDashScopeOpenAPISource);
+            this.xDashScopeOpenAPISource = xDashScopeOpenAPISource;
             return this;
         }
 
