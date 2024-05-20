@@ -208,10 +208,18 @@ public class CreateSubscribedCalendarRequest extends Request {
 
     }
     public static class SubscribeScope extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CorpIds")
+        private java.util.List < String > corpIds;
+
+        @com.aliyun.core.annotation.NameInMap("OpenConversationIds")
+        private java.util.List < String > openConversationIds;
+
         @com.aliyun.core.annotation.NameInMap("UserIds")
         private java.util.List < String > userIds;
 
         private SubscribeScope(Builder builder) {
+            this.corpIds = builder.corpIds;
+            this.openConversationIds = builder.openConversationIds;
             this.userIds = builder.userIds;
         }
 
@@ -224,6 +232,20 @@ public class CreateSubscribedCalendarRequest extends Request {
         }
 
         /**
+         * @return corpIds
+         */
+        public java.util.List < String > getCorpIds() {
+            return this.corpIds;
+        }
+
+        /**
+         * @return openConversationIds
+         */
+        public java.util.List < String > getOpenConversationIds() {
+            return this.openConversationIds;
+        }
+
+        /**
          * @return userIds
          */
         public java.util.List < String > getUserIds() {
@@ -231,7 +253,25 @@ public class CreateSubscribedCalendarRequest extends Request {
         }
 
         public static final class Builder {
+            private java.util.List < String > corpIds; 
+            private java.util.List < String > openConversationIds; 
             private java.util.List < String > userIds; 
+
+            /**
+             * CorpIds.
+             */
+            public Builder corpIds(java.util.List < String > corpIds) {
+                this.corpIds = corpIds;
+                return this;
+            }
+
+            /**
+             * OpenConversationIds.
+             */
+            public Builder openConversationIds(java.util.List < String > openConversationIds) {
+                this.openConversationIds = openConversationIds;
+                return this;
+            }
 
             /**
              * UserIds.
