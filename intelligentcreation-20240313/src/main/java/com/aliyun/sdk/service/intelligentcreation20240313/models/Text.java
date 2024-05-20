@@ -1,0 +1,299 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.intelligentcreation20240313.models;
+
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link Text} extends {@link TeaModel}
+ *
+ * <p>Text</p>
+ */
+public class Text extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("desc")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String desc;
+
+    @com.aliyun.core.annotation.NameInMap("gmtCreate")
+    private String gmtCreate;
+
+    @com.aliyun.core.annotation.NameInMap("gmtModified")
+    private String gmtModified;
+
+    @com.aliyun.core.annotation.NameInMap("illustrationTaskIdList")
+    private java.util.List < Long > illustrationTaskIdList;
+
+    @com.aliyun.core.annotation.NameInMap("textContent")
+    private String textContent;
+
+    @com.aliyun.core.annotation.NameInMap("textId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private Long textId;
+
+    @com.aliyun.core.annotation.NameInMap("textIllustrationTag")
+    private Boolean textIllustrationTag;
+
+    @com.aliyun.core.annotation.NameInMap("textModeType")
+    private String textModeType;
+
+    @com.aliyun.core.annotation.NameInMap("textStatus")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String textStatus;
+
+    @com.aliyun.core.annotation.NameInMap("textTaskId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private Long textTaskId;
+
+    @com.aliyun.core.annotation.NameInMap("title")
+    private String title;
+
+    @com.aliyun.core.annotation.NameInMap("userNameCreate")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String userNameCreate;
+
+    @com.aliyun.core.annotation.NameInMap("userNameModified")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String userNameModified;
+
+    private Text(Builder builder) {
+        this.desc = builder.desc;
+        this.gmtCreate = builder.gmtCreate;
+        this.gmtModified = builder.gmtModified;
+        this.illustrationTaskIdList = builder.illustrationTaskIdList;
+        this.textContent = builder.textContent;
+        this.textId = builder.textId;
+        this.textIllustrationTag = builder.textIllustrationTag;
+        this.textModeType = builder.textModeType;
+        this.textStatus = builder.textStatus;
+        this.textTaskId = builder.textTaskId;
+        this.title = builder.title;
+        this.userNameCreate = builder.userNameCreate;
+        this.userNameModified = builder.userNameModified;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static Text create() {
+        return builder().build();
+    }
+
+    /**
+     * @return desc
+     */
+    public String getDesc() {
+        return this.desc;
+    }
+
+    /**
+     * @return gmtCreate
+     */
+    public String getGmtCreate() {
+        return this.gmtCreate;
+    }
+
+    /**
+     * @return gmtModified
+     */
+    public String getGmtModified() {
+        return this.gmtModified;
+    }
+
+    /**
+     * @return illustrationTaskIdList
+     */
+    public java.util.List < Long > getIllustrationTaskIdList() {
+        return this.illustrationTaskIdList;
+    }
+
+    /**
+     * @return textContent
+     */
+    public String getTextContent() {
+        return this.textContent;
+    }
+
+    /**
+     * @return textId
+     */
+    public Long getTextId() {
+        return this.textId;
+    }
+
+    /**
+     * @return textIllustrationTag
+     */
+    public Boolean getTextIllustrationTag() {
+        return this.textIllustrationTag;
+    }
+
+    /**
+     * @return textModeType
+     */
+    public String getTextModeType() {
+        return this.textModeType;
+    }
+
+    /**
+     * @return textStatus
+     */
+    public String getTextStatus() {
+        return this.textStatus;
+    }
+
+    /**
+     * @return textTaskId
+     */
+    public Long getTextTaskId() {
+        return this.textTaskId;
+    }
+
+    /**
+     * @return title
+     */
+    public String getTitle() {
+        return this.title;
+    }
+
+    /**
+     * @return userNameCreate
+     */
+    public String getUserNameCreate() {
+        return this.userNameCreate;
+    }
+
+    /**
+     * @return userNameModified
+     */
+    public String getUserNameModified() {
+        return this.userNameModified;
+    }
+
+    public static final class Builder {
+        private String desc; 
+        private String gmtCreate; 
+        private String gmtModified; 
+        private java.util.List < Long > illustrationTaskIdList; 
+        private String textContent; 
+        private Long textId; 
+        private Boolean textIllustrationTag; 
+        private String textModeType; 
+        private String textStatus; 
+        private Long textTaskId; 
+        private String title; 
+        private String userNameCreate; 
+        private String userNameModified; 
+
+        /**
+         * desc.
+         */
+        public Builder desc(String desc) {
+            this.desc = desc;
+            return this;
+        }
+
+        /**
+         * gmtCreate.
+         */
+        public Builder gmtCreate(String gmtCreate) {
+            this.gmtCreate = gmtCreate;
+            return this;
+        }
+
+        /**
+         * gmtModified.
+         */
+        public Builder gmtModified(String gmtModified) {
+            this.gmtModified = gmtModified;
+            return this;
+        }
+
+        /**
+         * illustrationTaskIdList.
+         */
+        public Builder illustrationTaskIdList(java.util.List < Long > illustrationTaskIdList) {
+            this.illustrationTaskIdList = illustrationTaskIdList;
+            return this;
+        }
+
+        /**
+         * textContent.
+         */
+        public Builder textContent(String textContent) {
+            this.textContent = textContent;
+            return this;
+        }
+
+        /**
+         * textId.
+         */
+        public Builder textId(Long textId) {
+            this.textId = textId;
+            return this;
+        }
+
+        /**
+         * textIllustrationTag.
+         */
+        public Builder textIllustrationTag(Boolean textIllustrationTag) {
+            this.textIllustrationTag = textIllustrationTag;
+            return this;
+        }
+
+        /**
+         * textModeType.
+         */
+        public Builder textModeType(String textModeType) {
+            this.textModeType = textModeType;
+            return this;
+        }
+
+        /**
+         * textStatus.
+         */
+        public Builder textStatus(String textStatus) {
+            this.textStatus = textStatus;
+            return this;
+        }
+
+        /**
+         * textTaskId.
+         */
+        public Builder textTaskId(Long textTaskId) {
+            this.textTaskId = textTaskId;
+            return this;
+        }
+
+        /**
+         * title.
+         */
+        public Builder title(String title) {
+            this.title = title;
+            return this;
+        }
+
+        /**
+         * userNameCreate.
+         */
+        public Builder userNameCreate(String userNameCreate) {
+            this.userNameCreate = userNameCreate;
+            return this;
+        }
+
+        /**
+         * userNameModified.
+         */
+        public Builder userNameModified(String userNameModified) {
+            this.userNameModified = userNameModified;
+            return this;
+        }
+
+        public Text build() {
+            return new Text(this);
+        } 
+
+    } 
+
+}
