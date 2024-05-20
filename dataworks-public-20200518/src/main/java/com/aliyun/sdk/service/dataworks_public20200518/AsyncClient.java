@@ -198,6 +198,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DesensitizeDataResponse> desensitizeData(DesensitizeDataRequest request);
 
+    CompletableFuture<DsgDesensPlanAddOrUpdateResponse> dsgDesensPlanAddOrUpdate(DsgDesensPlanAddOrUpdateRequest request);
+
     CompletableFuture<DsgDesensPlanDeleteResponse> dsgDesensPlanDelete(DsgDesensPlanDeleteRequest request);
 
     CompletableFuture<DsgDesensPlanQueryListResponse> dsgDesensPlanQueryList(DsgDesensPlanQueryListRequest request);
@@ -214,6 +216,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DsgSceneAddOrUpdateSceneResponse> dsgSceneAddOrUpdateScene(DsgSceneAddOrUpdateSceneRequest request);
 
+    CompletableFuture<DsgSceneQuerySceneListByNameResponse> dsgSceneQuerySceneListByName(DsgSceneQuerySceneListByNameRequest request);
+
+    CompletableFuture<DsgScenedDeleteSceneResponse> dsgScenedDeleteScene(DsgScenedDeleteSceneRequest request);
+
     CompletableFuture<DsgStopSensIdentifyResponse> dsgStopSensIdentify(DsgStopSensIdentifyRequest request);
 
     CompletableFuture<DsgUserGroupAddOrUpdateResponse> dsgUserGroupAddOrUpdate(DsgUserGroupAddOrUpdateRequest request);
@@ -225,6 +231,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DsgUserGroupQueryListResponse> dsgUserGroupQueryList(DsgUserGroupQueryListRequest request);
 
     CompletableFuture<DsgUserGroupQueryUserListResponse> dsgUserGroupQueryUserList(DsgUserGroupQueryUserListRequest request);
+
+    CompletableFuture<DsgWhiteListAddOrUpdateResponse> dsgWhiteListAddOrUpdate(DsgWhiteListAddOrUpdateRequest request);
+
+    CompletableFuture<DsgWhiteListDeleteListResponse> dsgWhiteListDeleteList(DsgWhiteListDeleteListRequest request);
 
     CompletableFuture<DsgWhiteListQueryListResponse> dsgWhiteListQueryList(DsgWhiteListQueryListRequest request);
 
