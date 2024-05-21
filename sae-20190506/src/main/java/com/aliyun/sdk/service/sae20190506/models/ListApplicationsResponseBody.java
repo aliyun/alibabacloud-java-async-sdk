@@ -249,6 +249,408 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String value; 
 
             /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    public static class Children extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AppDeletingStatus")
+        private Boolean appDeletingStatus;
+
+        @com.aliyun.core.annotation.NameInMap("AppDescription")
+        private String appDescription;
+
+        @com.aliyun.core.annotation.NameInMap("AppId")
+        private String appId;
+
+        @com.aliyun.core.annotation.NameInMap("AppName")
+        private String appName;
+
+        @com.aliyun.core.annotation.NameInMap("BaseAppId")
+        private String baseAppId;
+
+        @com.aliyun.core.annotation.NameInMap("Cpu")
+        private Integer cpu;
+
+        @com.aliyun.core.annotation.NameInMap("Instances")
+        private Integer instances;
+
+        @com.aliyun.core.annotation.NameInMap("Mem")
+        private Integer mem;
+
+        @com.aliyun.core.annotation.NameInMap("MseEnabled")
+        private Boolean mseEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("NamespaceId")
+        private String namespaceId;
+
+        @com.aliyun.core.annotation.NameInMap("ProgrammingLanguage")
+        private String programmingLanguage;
+
+        @com.aliyun.core.annotation.NameInMap("RegionId")
+        private String regionId;
+
+        @com.aliyun.core.annotation.NameInMap("RunningInstances")
+        private Integer runningInstances;
+
+        @com.aliyun.core.annotation.NameInMap("ScaleRuleEnabled")
+        private Boolean scaleRuleEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("ScaleRuleType")
+        private String scaleRuleType;
+
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List < Tags> tags;
+
+        private Children(Builder builder) {
+            this.appDeletingStatus = builder.appDeletingStatus;
+            this.appDescription = builder.appDescription;
+            this.appId = builder.appId;
+            this.appName = builder.appName;
+            this.baseAppId = builder.baseAppId;
+            this.cpu = builder.cpu;
+            this.instances = builder.instances;
+            this.mem = builder.mem;
+            this.mseEnabled = builder.mseEnabled;
+            this.namespaceId = builder.namespaceId;
+            this.programmingLanguage = builder.programmingLanguage;
+            this.regionId = builder.regionId;
+            this.runningInstances = builder.runningInstances;
+            this.scaleRuleEnabled = builder.scaleRuleEnabled;
+            this.scaleRuleType = builder.scaleRuleType;
+            this.tags = builder.tags;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Children create() {
+            return builder().build();
+        }
+
+        /**
+         * @return appDeletingStatus
+         */
+        public Boolean getAppDeletingStatus() {
+            return this.appDeletingStatus;
+        }
+
+        /**
+         * @return appDescription
+         */
+        public String getAppDescription() {
+            return this.appDescription;
+        }
+
+        /**
+         * @return appId
+         */
+        public String getAppId() {
+            return this.appId;
+        }
+
+        /**
+         * @return appName
+         */
+        public String getAppName() {
+            return this.appName;
+        }
+
+        /**
+         * @return baseAppId
+         */
+        public String getBaseAppId() {
+            return this.baseAppId;
+        }
+
+        /**
+         * @return cpu
+         */
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        /**
+         * @return instances
+         */
+        public Integer getInstances() {
+            return this.instances;
+        }
+
+        /**
+         * @return mem
+         */
+        public Integer getMem() {
+            return this.mem;
+        }
+
+        /**
+         * @return mseEnabled
+         */
+        public Boolean getMseEnabled() {
+            return this.mseEnabled;
+        }
+
+        /**
+         * @return namespaceId
+         */
+        public String getNamespaceId() {
+            return this.namespaceId;
+        }
+
+        /**
+         * @return programmingLanguage
+         */
+        public String getProgrammingLanguage() {
+            return this.programmingLanguage;
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
+         * @return runningInstances
+         */
+        public Integer getRunningInstances() {
+            return this.runningInstances;
+        }
+
+        /**
+         * @return scaleRuleEnabled
+         */
+        public Boolean getScaleRuleEnabled() {
+            return this.scaleRuleEnabled;
+        }
+
+        /**
+         * @return scaleRuleType
+         */
+        public String getScaleRuleType() {
+            return this.scaleRuleType;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
+        }
+
+        public static final class Builder {
+            private Boolean appDeletingStatus; 
+            private String appDescription; 
+            private String appId; 
+            private String appName; 
+            private String baseAppId; 
+            private Integer cpu; 
+            private Integer instances; 
+            private Integer mem; 
+            private Boolean mseEnabled; 
+            private String namespaceId; 
+            private String programmingLanguage; 
+            private String regionId; 
+            private Integer runningInstances; 
+            private Boolean scaleRuleEnabled; 
+            private String scaleRuleType; 
+            private java.util.List < Tags> tags; 
+
+            /**
+             * AppDeletingStatus.
+             */
+            public Builder appDeletingStatus(Boolean appDeletingStatus) {
+                this.appDeletingStatus = appDeletingStatus;
+                return this;
+            }
+
+            /**
+             * AppDescription.
+             */
+            public Builder appDescription(String appDescription) {
+                this.appDescription = appDescription;
+                return this;
+            }
+
+            /**
+             * AppId.
+             */
+            public Builder appId(String appId) {
+                this.appId = appId;
+                return this;
+            }
+
+            /**
+             * AppName.
+             */
+            public Builder appName(String appName) {
+                this.appName = appName;
+                return this;
+            }
+
+            /**
+             * BaseAppId.
+             */
+            public Builder baseAppId(String baseAppId) {
+                this.baseAppId = baseAppId;
+                return this;
+            }
+
+            /**
+             * Cpu.
+             */
+            public Builder cpu(Integer cpu) {
+                this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * Instances.
+             */
+            public Builder instances(Integer instances) {
+                this.instances = instances;
+                return this;
+            }
+
+            /**
+             * Mem.
+             */
+            public Builder mem(Integer mem) {
+                this.mem = mem;
+                return this;
+            }
+
+            /**
+             * MseEnabled.
+             */
+            public Builder mseEnabled(Boolean mseEnabled) {
+                this.mseEnabled = mseEnabled;
+                return this;
+            }
+
+            /**
+             * NamespaceId.
+             */
+            public Builder namespaceId(String namespaceId) {
+                this.namespaceId = namespaceId;
+                return this;
+            }
+
+            /**
+             * ProgrammingLanguage.
+             */
+            public Builder programmingLanguage(String programmingLanguage) {
+                this.programmingLanguage = programmingLanguage;
+                return this;
+            }
+
+            /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * RunningInstances.
+             */
+            public Builder runningInstances(Integer runningInstances) {
+                this.runningInstances = runningInstances;
+                return this;
+            }
+
+            /**
+             * ScaleRuleEnabled.
+             */
+            public Builder scaleRuleEnabled(Boolean scaleRuleEnabled) {
+                this.scaleRuleEnabled = scaleRuleEnabled;
+                return this;
+            }
+
+            /**
+             * ScaleRuleType.
+             */
+            public Builder scaleRuleType(String scaleRuleType) {
+                this.scaleRuleType = scaleRuleType;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            public Children build() {
+                return new Children(this);
+            } 
+
+        } 
+
+    }
+    public static class ApplicationsTags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private ApplicationsTags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ApplicationsTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
              * appName
              */
             public Builder key(String key) {
@@ -264,8 +666,8 @@ public class ListApplicationsResponseBody extends TeaModel {
                 return this;
             }
 
-            public Tags build() {
-                return new Tags(this);
+            public ApplicationsTags build() {
+                return new ApplicationsTags(this);
             } 
 
         } 
@@ -284,6 +686,12 @@ public class ListApplicationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
+        @com.aliyun.core.annotation.NameInMap("BaseAppId")
+        private String baseAppId;
+
+        @com.aliyun.core.annotation.NameInMap("Children")
+        private java.util.List < Children> children;
+
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
@@ -293,8 +701,14 @@ public class ListApplicationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Mem")
         private Integer mem;
 
+        @com.aliyun.core.annotation.NameInMap("MseEnabled")
+        private Boolean mseEnabled;
+
         @com.aliyun.core.annotation.NameInMap("NamespaceId")
         private String namespaceId;
+
+        @com.aliyun.core.annotation.NameInMap("ProgrammingLanguage")
+        private String programmingLanguage;
 
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -303,17 +717,21 @@ public class ListApplicationsResponseBody extends TeaModel {
         private Integer runningInstances;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List < ApplicationsTags> tags;
 
         private Applications(Builder builder) {
             this.appDeletingStatus = builder.appDeletingStatus;
             this.appDescription = builder.appDescription;
             this.appId = builder.appId;
             this.appName = builder.appName;
+            this.baseAppId = builder.baseAppId;
+            this.children = builder.children;
             this.cpu = builder.cpu;
             this.instances = builder.instances;
             this.mem = builder.mem;
+            this.mseEnabled = builder.mseEnabled;
             this.namespaceId = builder.namespaceId;
+            this.programmingLanguage = builder.programmingLanguage;
             this.regionId = builder.regionId;
             this.runningInstances = builder.runningInstances;
             this.tags = builder.tags;
@@ -356,6 +774,20 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return baseAppId
+         */
+        public String getBaseAppId() {
+            return this.baseAppId;
+        }
+
+        /**
+         * @return children
+         */
+        public java.util.List < Children> getChildren() {
+            return this.children;
+        }
+
+        /**
          * @return cpu
          */
         public Integer getCpu() {
@@ -377,10 +809,24 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return mseEnabled
+         */
+        public Boolean getMseEnabled() {
+            return this.mseEnabled;
+        }
+
+        /**
          * @return namespaceId
          */
         public String getNamespaceId() {
             return this.namespaceId;
+        }
+
+        /**
+         * @return programmingLanguage
+         */
+        public String getProgrammingLanguage() {
+            return this.programmingLanguage;
         }
 
         /**
@@ -400,7 +846,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List < ApplicationsTags> getTags() {
             return this.tags;
         }
 
@@ -409,13 +855,17 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String appDescription; 
             private String appId; 
             private String appName; 
+            private String baseAppId; 
+            private java.util.List < Children> children; 
             private Integer cpu; 
             private Integer instances; 
             private Integer mem; 
+            private Boolean mseEnabled; 
             private String namespaceId; 
+            private String programmingLanguage; 
             private String regionId; 
             private Integer runningInstances; 
-            private java.util.List < Tags> tags; 
+            private java.util.List < ApplicationsTags> tags; 
 
             /**
              * demo-app
@@ -450,6 +900,22 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
+             * BaseAppId.
+             */
+            public Builder baseAppId(String baseAppId) {
+                this.baseAppId = baseAppId;
+                return this;
+            }
+
+            /**
+             * Children.
+             */
+            public Builder children(java.util.List < Children> children) {
+                this.children = children;
+                return this;
+            }
+
+            /**
              * Cpu.
              */
             public Builder cpu(Integer cpu) {
@@ -474,10 +940,26 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
+             * MseEnabled.
+             */
+            public Builder mseEnabled(Boolean mseEnabled) {
+                this.mseEnabled = mseEnabled;
+                return this;
+            }
+
+            /**
              * demo-app
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
+                return this;
+            }
+
+            /**
+             * ProgrammingLanguage.
+             */
+            public Builder programmingLanguage(String programmingLanguage) {
+                this.programmingLanguage = programmingLanguage;
                 return this;
             }
 
@@ -500,7 +982,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             /**
              * cn-beijing:demo
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List < ApplicationsTags> tags) {
                 this.tags = tags;
                 return this;
             }

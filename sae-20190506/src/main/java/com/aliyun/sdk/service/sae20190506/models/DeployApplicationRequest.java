@@ -116,6 +116,10 @@ public class DeployApplicationRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("MicroRegistration")
     private String microRegistration;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MicroRegistrationConfig")
+    private String microRegistrationConfig;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MinReadyInstanceRatio")
     private Integer minReadyInstanceRatio;
@@ -212,6 +216,10 @@ public class DeployApplicationRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
     private String securityGroupId;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceTags")
+    private String serviceTags;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SlsConfigs")
     private String slsConfigs;
@@ -273,6 +281,7 @@ public class DeployApplicationRequest extends Request {
         this.liveness = builder.liveness;
         this.memory = builder.memory;
         this.microRegistration = builder.microRegistration;
+        this.microRegistrationConfig = builder.microRegistrationConfig;
         this.minReadyInstanceRatio = builder.minReadyInstanceRatio;
         this.minReadyInstances = builder.minReadyInstances;
         this.mountDesc = builder.mountDesc;
@@ -297,6 +306,7 @@ public class DeployApplicationRequest extends Request {
         this.readiness = builder.readiness;
         this.replicas = builder.replicas;
         this.securityGroupId = builder.securityGroupId;
+        this.serviceTags = builder.serviceTags;
         this.slsConfigs = builder.slsConfigs;
         this.terminationGracePeriodSeconds = builder.terminationGracePeriodSeconds;
         this.timezone = builder.timezone;
@@ -503,6 +513,13 @@ public class DeployApplicationRequest extends Request {
     }
 
     /**
+     * @return microRegistrationConfig
+     */
+    public String getMicroRegistrationConfig() {
+        return this.microRegistrationConfig;
+    }
+
+    /**
      * @return minReadyInstanceRatio
      */
     public Integer getMinReadyInstanceRatio() {
@@ -671,6 +688,13 @@ public class DeployApplicationRequest extends Request {
     }
 
     /**
+     * @return serviceTags
+     */
+    public String getServiceTags() {
+        return this.serviceTags;
+    }
+
+    /**
      * @return slsConfigs
      */
     public String getSlsConfigs() {
@@ -753,6 +777,7 @@ public class DeployApplicationRequest extends Request {
         private String liveness; 
         private Integer memory; 
         private String microRegistration; 
+        private String microRegistrationConfig; 
         private Integer minReadyInstanceRatio; 
         private Integer minReadyInstances; 
         private String mountDesc; 
@@ -777,6 +802,7 @@ public class DeployApplicationRequest extends Request {
         private String readiness; 
         private Integer replicas; 
         private String securityGroupId; 
+        private String serviceTags; 
         private String slsConfigs; 
         private Integer terminationGracePeriodSeconds; 
         private String timezone; 
@@ -818,6 +844,7 @@ public class DeployApplicationRequest extends Request {
             this.liveness = request.liveness;
             this.memory = request.memory;
             this.microRegistration = request.microRegistration;
+            this.microRegistrationConfig = request.microRegistrationConfig;
             this.minReadyInstanceRatio = request.minReadyInstanceRatio;
             this.minReadyInstances = request.minReadyInstances;
             this.mountDesc = request.mountDesc;
@@ -842,6 +869,7 @@ public class DeployApplicationRequest extends Request {
             this.readiness = request.readiness;
             this.replicas = request.replicas;
             this.securityGroupId = request.securityGroupId;
+            this.serviceTags = request.serviceTags;
             this.slsConfigs = request.slsConfigs;
             this.terminationGracePeriodSeconds = request.terminationGracePeriodSeconds;
             this.timezone = request.timezone;
@@ -1185,6 +1213,15 @@ public class DeployApplicationRequest extends Request {
         }
 
         /**
+         * MicroRegistrationConfig.
+         */
+        public Builder microRegistrationConfig(String microRegistrationConfig) {
+            this.putBodyParameter("MicroRegistrationConfig", microRegistrationConfig);
+            this.microRegistrationConfig = microRegistrationConfig;
+            return this;
+        }
+
+        /**
          * The percentage of the minimum number of available instances. Take note of the following rules:
          * <p>
          * 
@@ -1437,6 +1474,15 @@ public class DeployApplicationRequest extends Request {
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
             this.securityGroupId = securityGroupId;
+            return this;
+        }
+
+        /**
+         * ServiceTags.
+         */
+        public Builder serviceTags(String serviceTags) {
+            this.putBodyParameter("ServiceTags", serviceTags);
+            this.serviceTags = serviceTags;
             return this;
         }
 

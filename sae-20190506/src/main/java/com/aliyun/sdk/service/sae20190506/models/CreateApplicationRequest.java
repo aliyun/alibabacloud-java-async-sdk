@@ -40,6 +40,10 @@ public class CreateApplicationRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("AutoConfig")
     private Boolean autoConfig;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BaseAppId")
+    private String baseAppId;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Command")
     private String command;
@@ -111,6 +115,10 @@ public class CreateApplicationRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MicroRegistration")
     private String microRegistration;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MicroRegistrationConfig")
+    private String microRegistrationConfig;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MountDesc")
@@ -214,6 +222,10 @@ public class CreateApplicationRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
     private String securityGroupId;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceTags")
+    private String serviceTags;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SlsConfigs")
     private String slsConfigs;
@@ -256,6 +268,7 @@ public class CreateApplicationRequest extends Request {
         this.appSource = builder.appSource;
         this.associateEip = builder.associateEip;
         this.autoConfig = builder.autoConfig;
+        this.baseAppId = builder.baseAppId;
         this.command = builder.command;
         this.commandArgs = builder.commandArgs;
         this.configMapMountDesc = builder.configMapMountDesc;
@@ -274,6 +287,7 @@ public class CreateApplicationRequest extends Request {
         this.liveness = builder.liveness;
         this.memory = builder.memory;
         this.microRegistration = builder.microRegistration;
+        this.microRegistrationConfig = builder.microRegistrationConfig;
         this.mountDesc = builder.mountDesc;
         this.mountHost = builder.mountHost;
         this.namespaceId = builder.namespaceId;
@@ -299,6 +313,7 @@ public class CreateApplicationRequest extends Request {
         this.replicas = builder.replicas;
         this.saeVersion = builder.saeVersion;
         this.securityGroupId = builder.securityGroupId;
+        this.serviceTags = builder.serviceTags;
         this.slsConfigs = builder.slsConfigs;
         this.terminationGracePeriodSeconds = builder.terminationGracePeriodSeconds;
         this.timezone = builder.timezone;
@@ -369,6 +384,13 @@ public class CreateApplicationRequest extends Request {
      */
     public Boolean getAutoConfig() {
         return this.autoConfig;
+    }
+
+    /**
+     * @return baseAppId
+     */
+    public String getBaseAppId() {
+        return this.baseAppId;
     }
 
     /**
@@ -495,6 +517,13 @@ public class CreateApplicationRequest extends Request {
      */
     public String getMicroRegistration() {
         return this.microRegistration;
+    }
+
+    /**
+     * @return microRegistrationConfig
+     */
+    public String getMicroRegistrationConfig() {
+        return this.microRegistrationConfig;
     }
 
     /**
@@ -673,6 +702,13 @@ public class CreateApplicationRequest extends Request {
     }
 
     /**
+     * @return serviceTags
+     */
+    public String getServiceTags() {
+        return this.serviceTags;
+    }
+
+    /**
      * @return slsConfigs
      */
     public String getSlsConfigs() {
@@ -736,6 +772,7 @@ public class CreateApplicationRequest extends Request {
         private String appSource; 
         private Boolean associateEip; 
         private Boolean autoConfig; 
+        private String baseAppId; 
         private String command; 
         private String commandArgs; 
         private String configMapMountDesc; 
@@ -754,6 +791,7 @@ public class CreateApplicationRequest extends Request {
         private String liveness; 
         private Integer memory; 
         private String microRegistration; 
+        private String microRegistrationConfig; 
         private String mountDesc; 
         private String mountHost; 
         private String namespaceId; 
@@ -779,6 +817,7 @@ public class CreateApplicationRequest extends Request {
         private Integer replicas; 
         private String saeVersion; 
         private String securityGroupId; 
+        private String serviceTags; 
         private String slsConfigs; 
         private Integer terminationGracePeriodSeconds; 
         private String timezone; 
@@ -801,6 +840,7 @@ public class CreateApplicationRequest extends Request {
             this.appSource = request.appSource;
             this.associateEip = request.associateEip;
             this.autoConfig = request.autoConfig;
+            this.baseAppId = request.baseAppId;
             this.command = request.command;
             this.commandArgs = request.commandArgs;
             this.configMapMountDesc = request.configMapMountDesc;
@@ -819,6 +859,7 @@ public class CreateApplicationRequest extends Request {
             this.liveness = request.liveness;
             this.memory = request.memory;
             this.microRegistration = request.microRegistration;
+            this.microRegistrationConfig = request.microRegistrationConfig;
             this.mountDesc = request.mountDesc;
             this.mountHost = request.mountHost;
             this.namespaceId = request.namespaceId;
@@ -844,6 +885,7 @@ public class CreateApplicationRequest extends Request {
             this.replicas = request.replicas;
             this.saeVersion = request.saeVersion;
             this.securityGroupId = request.securityGroupId;
+            this.serviceTags = request.serviceTags;
             this.slsConfigs = request.slsConfigs;
             this.terminationGracePeriodSeconds = request.terminationGracePeriodSeconds;
             this.timezone = request.timezone;
@@ -914,6 +956,15 @@ public class CreateApplicationRequest extends Request {
         public Builder autoConfig(Boolean autoConfig) {
             this.putQueryParameter("AutoConfig", autoConfig);
             this.autoConfig = autoConfig;
+            return this;
+        }
+
+        /**
+         * BaseAppId.
+         */
+        public Builder baseAppId(String baseAppId) {
+            this.putBodyParameter("BaseAppId", baseAppId);
+            this.baseAppId = baseAppId;
             return this;
         }
 
@@ -1076,6 +1127,15 @@ public class CreateApplicationRequest extends Request {
         public Builder microRegistration(String microRegistration) {
             this.putQueryParameter("MicroRegistration", microRegistration);
             this.microRegistration = microRegistration;
+            return this;
+        }
+
+        /**
+         * MicroRegistrationConfig.
+         */
+        public Builder microRegistrationConfig(String microRegistrationConfig) {
+            this.putBodyParameter("MicroRegistrationConfig", microRegistrationConfig);
+            this.microRegistrationConfig = microRegistrationConfig;
             return this;
         }
 
@@ -1301,6 +1361,15 @@ public class CreateApplicationRequest extends Request {
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
             this.securityGroupId = securityGroupId;
+            return this;
+        }
+
+        /**
+         * ServiceTags.
+         */
+        public Builder serviceTags(String serviceTags) {
+            this.putBodyParameter("ServiceTags", serviceTags);
+            this.serviceTags = serviceTags;
             return this;
         }
 

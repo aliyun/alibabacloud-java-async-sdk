@@ -678,6 +678,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
+        @com.aliyun.core.annotation.NameInMap("ServiceTags")
+        private java.util.Map < String, String > serviceTags;
+
         @com.aliyun.core.annotation.NameInMap("SlsConfigs")
         private String slsConfigs;
 
@@ -764,6 +767,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.regionId = builder.regionId;
             this.replicas = builder.replicas;
             this.securityGroupId = builder.securityGroupId;
+            this.serviceTags = builder.serviceTags;
             this.slsConfigs = builder.slsConfigs;
             this.tags = builder.tags;
             this.terminationGracePeriodSeconds = builder.terminationGracePeriodSeconds;
@@ -1170,6 +1174,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return serviceTags
+         */
+        public java.util.Map < String, String > getServiceTags() {
+            return this.serviceTags;
+        }
+
+        /**
          * @return slsConfigs
          */
         public String getSlsConfigs() {
@@ -1295,6 +1306,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private String regionId; 
             private Integer replicas; 
             private String securityGroupId; 
+            private java.util.Map < String, String > serviceTags; 
             private String slsConfigs; 
             private java.util.List < Tags> tags; 
             private Integer terminationGracePeriodSeconds; 
@@ -1894,6 +1906,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * ServiceTags.
+             */
+            public Builder serviceTags(java.util.Map < String, String > serviceTags) {
+                this.serviceTags = serviceTags;
                 return this;
             }
 
