@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ChangeVisibilityModelRequest</p>
  */
 public class ChangeVisibilityModelRequest extends Request {
-    @Query
-    @NameInMap("DataPortalId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataPortalId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dataPortalId;
 
-    @Query
-    @NameInMap("MenuIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MenuIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String menuIds;
 
-    @Query
-    @NameInMap("ShowOnlyWithAccess")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShowOnlyWithAccess")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean showOnlyWithAccess;
 
     private ChangeVisibilityModelRequest(Builder builder) {

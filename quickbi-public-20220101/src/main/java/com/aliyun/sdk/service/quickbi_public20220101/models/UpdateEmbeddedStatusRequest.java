@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateEmbeddedStatusRequest</p>
  */
 public class UpdateEmbeddedStatusRequest extends Request {
-    @Query
-    @NameInMap("ThirdPartAuthFlag")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ThirdPartAuthFlag")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean thirdPartAuthFlag;
 
-    @Query
-    @NameInMap("WorksId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorksId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String worksId;
 
     private UpdateEmbeddedStatusRequest(Builder builder) {

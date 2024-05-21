@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddUserRequest</p>
  */
 public class AddUserRequest extends Request {
-    @Query
-    @NameInMap("AccountName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountName;
 
-    @Query
-    @NameInMap("AdminUser")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdminUser")
     private Boolean adminUser;
 
-    @Query
-    @NameInMap("AuthAdminUser")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthAdminUser")
     private Boolean authAdminUser;
 
-    @Query
-    @NameInMap("NickName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NickName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nickName;
 
-    @Body
-    @NameInMap("RoleIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleIds")
     private String roleIds;
 
-    @Query
-    @NameInMap("UserType")
-    @Validation(required = true, maximum = 10, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserType")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 10, minimum = 1)
     private Integer userType;
 
     private AddUserRequest(Builder builder) {

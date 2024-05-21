@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddShareReportRequest</p>
  */
 public class AddShareReportRequest extends Request {
-    @Query
-    @NameInMap("AuthPoint")
-    @Validation(required = true, maximum = 3, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthPoint")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 3, minimum = 1)
     private Integer authPoint;
 
-    @Query
-    @NameInMap("ExpireDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExpireDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long expireDate;
 
-    @Query
-    @NameInMap("ShareToId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShareToId")
     private String shareToId;
 
-    @Query
-    @NameInMap("ShareToType")
-    @Validation(required = true, maximum = 2)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShareToType")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 2)
     private Integer shareToType;
 
-    @Query
-    @NameInMap("WorksId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorksId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String worksId;
 
     private AddShareReportRequest(Builder builder) {

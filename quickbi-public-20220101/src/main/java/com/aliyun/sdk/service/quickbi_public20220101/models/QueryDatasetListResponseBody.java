@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryDatasetListResponseBody</p>
  */
 public class QueryDatasetListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryDatasetListResponseBody(Builder builder) {
@@ -96,13 +95,13 @@ public class QueryDatasetListResponseBody extends TeaModel {
     } 
 
     public static class DataSource extends TeaModel {
-        @NameInMap("DsId")
+        @com.aliyun.core.annotation.NameInMap("DsId")
         private String dsId;
 
-        @NameInMap("DsName")
+        @com.aliyun.core.annotation.NameInMap("DsName")
         private String dsName;
 
-        @NameInMap("DsType")
+        @com.aliyun.core.annotation.NameInMap("DsType")
         private String dsType;
 
         private DataSource(Builder builder) {
@@ -177,16 +176,16 @@ public class QueryDatasetListResponseBody extends TeaModel {
 
     }
     public static class Directory extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PathId")
+        @com.aliyun.core.annotation.NameInMap("PathId")
         private String pathId;
 
-        @NameInMap("PathName")
+        @com.aliyun.core.annotation.NameInMap("PathName")
         private String pathName;
 
         private Directory(Builder builder) {
@@ -278,40 +277,40 @@ public class QueryDatasetListResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DataSource")
+        @com.aliyun.core.annotation.NameInMap("DataSource")
         private DataSource dataSource;
 
-        @NameInMap("DatasetId")
+        @com.aliyun.core.annotation.NameInMap("DatasetId")
         private String datasetId;
 
-        @NameInMap("DatasetName")
+        @com.aliyun.core.annotation.NameInMap("DatasetName")
         private String datasetName;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Directory")
+        @com.aliyun.core.annotation.NameInMap("Directory")
         private Directory directory;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
-        @NameInMap("OwnerName")
+        @com.aliyun.core.annotation.NameInMap("OwnerName")
         private String ownerName;
 
-        @NameInMap("RowLevel")
+        @com.aliyun.core.annotation.NameInMap("RowLevel")
         private Boolean rowLevel;
 
-        @NameInMap("WorkspaceId")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceId")
         private String workspaceId;
 
-        @NameInMap("WorkspaceName")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceName")
         private String workspaceName;
 
         private Data(Builder builder) {
@@ -543,19 +542,19 @@ public class QueryDatasetListResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private java.util.List < Data> data;
 
-        @NameInMap("PageNum")
+        @com.aliyun.core.annotation.NameInMap("PageNum")
         private Integer pageNum;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalNum")
+        @com.aliyun.core.annotation.NameInMap("TotalNum")
         private Integer totalNum;
 
-        @NameInMap("TotalPages")
+        @com.aliyun.core.annotation.NameInMap("TotalPages")
         private Integer totalPages;
 
         private Result(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryUserGroupMemberResponseBody</p>
  */
 public class QueryUserGroupMemberResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryUserGroupMemberResponseBody(Builder builder) {
@@ -92,19 +91,19 @@ public class QueryUserGroupMemberResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("IsUserGroup")
+        @com.aliyun.core.annotation.NameInMap("IsUserGroup")
         private Boolean isUserGroup;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ParentUserGroupId")
+        @com.aliyun.core.annotation.NameInMap("ParentUserGroupId")
         private String parentUserGroupId;
 
-        @NameInMap("ParentUserGroupName")
+        @com.aliyun.core.annotation.NameInMap("ParentUserGroupName")
         private String parentUserGroupName;
 
         private Result(Builder builder) {

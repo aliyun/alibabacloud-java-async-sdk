@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryCubeOptimizationResponseBody</p>
  */
 public class QueryCubeOptimizationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryCubeOptimizationResponseBody(Builder builder) {
@@ -92,67 +91,67 @@ public class QueryCubeOptimizationResponseBody extends TeaModel {
     } 
 
     public static class CubePerformanceDiagnoseModel extends TeaModel {
-        @NameInMap("CacheCostTimeAvg")
+        @com.aliyun.core.annotation.NameInMap("CacheCostTimeAvg")
         private Double cacheCostTimeAvg;
 
-        @NameInMap("CacheQueryCount")
+        @com.aliyun.core.annotation.NameInMap("CacheQueryCount")
         private Integer cacheQueryCount;
 
-        @NameInMap("CostTimeAvg")
+        @com.aliyun.core.annotation.NameInMap("CostTimeAvg")
         private Double costTimeAvg;
 
-        @NameInMap("CubeId")
+        @com.aliyun.core.annotation.NameInMap("CubeId")
         private String cubeId;
 
-        @NameInMap("CubeName")
+        @com.aliyun.core.annotation.NameInMap("CubeName")
         private String cubeName;
 
-        @NameInMap("QueryCount")
+        @com.aliyun.core.annotation.NameInMap("QueryCount")
         private Integer queryCount;
 
-        @NameInMap("QueryCountAvg")
+        @com.aliyun.core.annotation.NameInMap("QueryCountAvg")
         private Double queryCountAvg;
 
-        @NameInMap("QueryOverFivePercentNum")
+        @com.aliyun.core.annotation.NameInMap("QueryOverFivePercentNum")
         private Double queryOverFivePercentNum;
 
-        @NameInMap("QueryOverFiveSecPercent")
+        @com.aliyun.core.annotation.NameInMap("QueryOverFiveSecPercent")
         private String queryOverFiveSecPercent;
 
-        @NameInMap("QueryOverTenSecPercent")
+        @com.aliyun.core.annotation.NameInMap("QueryOverTenSecPercent")
         private String queryOverTenSecPercent;
 
-        @NameInMap("QueryOverTenSecPercentNum")
+        @com.aliyun.core.annotation.NameInMap("QueryOverTenSecPercentNum")
         private Double queryOverTenSecPercentNum;
 
-        @NameInMap("QueryTimeoutCount")
+        @com.aliyun.core.annotation.NameInMap("QueryTimeoutCount")
         private Integer queryTimeoutCount;
 
-        @NameInMap("QueryTimeoutCountPercent")
+        @com.aliyun.core.annotation.NameInMap("QueryTimeoutCountPercent")
         private Double queryTimeoutCountPercent;
 
-        @NameInMap("QuickIndexCostTimeAvg")
+        @com.aliyun.core.annotation.NameInMap("QuickIndexCostTimeAvg")
         private Double quickIndexCostTimeAvg;
 
-        @NameInMap("QuickIndexQueryCount")
+        @com.aliyun.core.annotation.NameInMap("QuickIndexQueryCount")
         private Integer quickIndexQueryCount;
 
-        @NameInMap("RepeatQueryPercent")
+        @com.aliyun.core.annotation.NameInMap("RepeatQueryPercent")
         private String repeatQueryPercent;
 
-        @NameInMap("RepeatQueryPercentNum")
+        @com.aliyun.core.annotation.NameInMap("RepeatQueryPercentNum")
         private Double repeatQueryPercentNum;
 
-        @NameInMap("RepeatSqlQueryCount")
+        @com.aliyun.core.annotation.NameInMap("RepeatSqlQueryCount")
         private Integer repeatSqlQueryCount;
 
-        @NameInMap("RepeatSqlQueryPercent")
+        @com.aliyun.core.annotation.NameInMap("RepeatSqlQueryPercent")
         private String repeatSqlQueryPercent;
 
-        @NameInMap("WorkspaceId")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceId")
         private String workspaceId;
 
-        @NameInMap("WorkspaceName")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceName")
         private String workspaceName;
 
         private CubePerformanceDiagnoseModel(Builder builder) {
@@ -533,10 +532,10 @@ public class QueryCubeOptimizationResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("AdviceType")
+        @com.aliyun.core.annotation.NameInMap("AdviceType")
         private String adviceType;
 
-        @NameInMap("CubePerformanceDiagnoseModel")
+        @com.aliyun.core.annotation.NameInMap("CubePerformanceDiagnoseModel")
         private CubePerformanceDiagnoseModel cubePerformanceDiagnoseModel;
 
         private Result(Builder builder) {

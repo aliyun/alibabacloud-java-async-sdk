@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateUserRequest</p>
  */
 public class UpdateUserRequest extends Request {
-    @Query
-    @NameInMap("AdminUser")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdminUser")
     private Boolean adminUser;
 
-    @Query
-    @NameInMap("AuthAdminUser")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthAdminUser")
     private Boolean authAdminUser;
 
-    @Query
-    @NameInMap("NickName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NickName")
     private String nickName;
 
-    @Query
-    @NameInMap("RoleIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleIds")
     private String roleIds;
 
-    @Query
-    @NameInMap("UserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
-    @Query
-    @NameInMap("UserType")
-    @Validation(maximum = 10, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserType")
+    @com.aliyun.core.annotation.Validation(maximum = 10, minimum = 1)
     private Integer userType;
 
     private UpdateUserRequest(Builder builder) {

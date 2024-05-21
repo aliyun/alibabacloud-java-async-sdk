@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryDatasetSwitchInfoResponseBody</p>
  */
 public class QueryDatasetSwitchInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryDatasetSwitchInfoResponseBody(Builder builder) {
@@ -92,13 +91,13 @@ public class QueryDatasetSwitchInfoResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("CubeId")
+        @com.aliyun.core.annotation.NameInMap("CubeId")
         private String cubeId;
 
-        @NameInMap("IsOpenColumnLevelPermission")
+        @com.aliyun.core.annotation.NameInMap("IsOpenColumnLevelPermission")
         private Integer isOpenColumnLevelPermission;
 
-        @NameInMap("IsOpenRowLevelPermission")
+        @com.aliyun.core.annotation.NameInMap("IsOpenRowLevelPermission")
         private Integer isOpenRowLevelPermission;
 
         private Result(Builder builder) {

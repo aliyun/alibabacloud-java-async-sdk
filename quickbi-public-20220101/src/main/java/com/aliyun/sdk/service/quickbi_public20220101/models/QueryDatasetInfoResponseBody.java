@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryDatasetInfoResponseBody</p>
  */
 public class QueryDatasetInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryDatasetInfoResponseBody(Builder builder) {
@@ -96,28 +95,28 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
     } 
 
     public static class CubeTableList extends TeaModel {
-        @NameInMap("Caption")
+        @com.aliyun.core.annotation.NameInMap("Caption")
         private String caption;
 
-        @NameInMap("Customsql")
+        @com.aliyun.core.annotation.NameInMap("Customsql")
         private Boolean customsql;
 
-        @NameInMap("DatasourceId")
+        @com.aliyun.core.annotation.NameInMap("DatasourceId")
         private String datasourceId;
 
-        @NameInMap("DsType")
+        @com.aliyun.core.annotation.NameInMap("DsType")
         private String dsType;
 
-        @NameInMap("FactTable")
+        @com.aliyun.core.annotation.NameInMap("FactTable")
         private Boolean factTable;
 
-        @NameInMap("Sql")
+        @com.aliyun.core.annotation.NameInMap("Sql")
         private String sql;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
-        @NameInMap("UniqueId")
+        @com.aliyun.core.annotation.NameInMap("UniqueId")
         private String uniqueId;
 
         private CubeTableList(Builder builder) {
@@ -291,31 +290,31 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
 
     }
     public static class DimensionList extends TeaModel {
-        @NameInMap("Caption")
+        @com.aliyun.core.annotation.NameInMap("Caption")
         private String caption;
 
-        @NameInMap("DataType")
+        @com.aliyun.core.annotation.NameInMap("DataType")
         private String dataType;
 
-        @NameInMap("DimensionType")
+        @com.aliyun.core.annotation.NameInMap("DimensionType")
         private String dimensionType;
 
-        @NameInMap("Expression")
+        @com.aliyun.core.annotation.NameInMap("Expression")
         private String expression;
 
-        @NameInMap("FactColumn")
+        @com.aliyun.core.annotation.NameInMap("FactColumn")
         private String factColumn;
 
-        @NameInMap("Granularity")
+        @com.aliyun.core.annotation.NameInMap("Granularity")
         private String granularity;
 
-        @NameInMap("RefUid")
+        @com.aliyun.core.annotation.NameInMap("RefUid")
         private String refUid;
 
-        @NameInMap("TableUniqueId")
+        @com.aliyun.core.annotation.NameInMap("TableUniqueId")
         private String tableUniqueId;
 
-        @NameInMap("Uid")
+        @com.aliyun.core.annotation.NameInMap("Uid")
         private String uid;
 
         private DimensionList(Builder builder) {
@@ -502,16 +501,16 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
 
     }
     public static class Directory extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PathId")
+        @com.aliyun.core.annotation.NameInMap("PathId")
         private String pathId;
 
-        @NameInMap("PathName")
+        @com.aliyun.core.annotation.NameInMap("PathName")
         private String pathName;
 
         private Directory(Builder builder) {
@@ -603,25 +602,25 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
 
     }
     public static class MeasureList extends TeaModel {
-        @NameInMap("Caption")
+        @com.aliyun.core.annotation.NameInMap("Caption")
         private String caption;
 
-        @NameInMap("DataType")
+        @com.aliyun.core.annotation.NameInMap("DataType")
         private String dataType;
 
-        @NameInMap("Expression")
+        @com.aliyun.core.annotation.NameInMap("Expression")
         private String expression;
 
-        @NameInMap("FactColumn")
+        @com.aliyun.core.annotation.NameInMap("FactColumn")
         private String factColumn;
 
-        @NameInMap("MeasureType")
+        @com.aliyun.core.annotation.NameInMap("MeasureType")
         private String measureType;
 
-        @NameInMap("TableUniqueId")
+        @com.aliyun.core.annotation.NameInMap("TableUniqueId")
         private String tableUniqueId;
 
-        @NameInMap("Uid")
+        @com.aliyun.core.annotation.NameInMap("Uid")
         private String uid;
 
         private MeasureList(Builder builder) {
@@ -773,55 +772,55 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("CubeTableList")
+        @com.aliyun.core.annotation.NameInMap("CubeTableList")
         private java.util.List < CubeTableList> cubeTableList;
 
-        @NameInMap("CustimzeSql")
+        @com.aliyun.core.annotation.NameInMap("CustimzeSql")
         private Boolean custimzeSql;
 
-        @NameInMap("DatasetId")
+        @com.aliyun.core.annotation.NameInMap("DatasetId")
         private String datasetId;
 
-        @NameInMap("DatasetName")
+        @com.aliyun.core.annotation.NameInMap("DatasetName")
         private String datasetName;
 
-        @NameInMap("DimensionList")
+        @com.aliyun.core.annotation.NameInMap("DimensionList")
         private java.util.List < DimensionList> dimensionList;
 
-        @NameInMap("Directory")
+        @com.aliyun.core.annotation.NameInMap("Directory")
         private Directory directory;
 
-        @NameInMap("DsId")
+        @com.aliyun.core.annotation.NameInMap("DsId")
         private String dsId;
 
-        @NameInMap("DsName")
+        @com.aliyun.core.annotation.NameInMap("DsName")
         private String dsName;
 
-        @NameInMap("DsType")
+        @com.aliyun.core.annotation.NameInMap("DsType")
         private String dsType;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModify")
+        @com.aliyun.core.annotation.NameInMap("GmtModify")
         private String gmtModify;
 
-        @NameInMap("MeasureList")
+        @com.aliyun.core.annotation.NameInMap("MeasureList")
         private java.util.List < MeasureList> measureList;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
-        @NameInMap("OwnerName")
+        @com.aliyun.core.annotation.NameInMap("OwnerName")
         private String ownerName;
 
-        @NameInMap("RowLevel")
+        @com.aliyun.core.annotation.NameInMap("RowLevel")
         private Boolean rowLevel;
 
-        @NameInMap("WorkspaceId")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceId")
         private String workspaceId;
 
-        @NameInMap("WorkspaceName")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceName")
         private String workspaceName;
 
         private Result(Builder builder) {

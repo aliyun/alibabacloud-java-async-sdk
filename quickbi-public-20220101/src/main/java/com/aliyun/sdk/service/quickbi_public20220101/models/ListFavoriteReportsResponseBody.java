@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListFavoriteReportsResponseBody</p>
  */
 public class ListFavoriteReportsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListFavoriteReportsResponseBody(Builder builder) {
@@ -92,47 +91,51 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("Favorite")
+        @com.aliyun.core.annotation.NameInMap("Favorite")
         private Boolean favorite;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("FavoriteDate")
+        private String favoriteDate;
+
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("HasEditAuth")
+        @com.aliyun.core.annotation.NameInMap("HasEditAuth")
         private Boolean hasEditAuth;
 
-        @NameInMap("HasViewAuth")
+        @com.aliyun.core.annotation.NameInMap("HasViewAuth")
         private Boolean hasViewAuth;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OwnerName")
+        @com.aliyun.core.annotation.NameInMap("OwnerName")
         private String ownerName;
 
-        @NameInMap("OwnerNum")
+        @com.aliyun.core.annotation.NameInMap("OwnerNum")
         private String ownerNum;
 
-        @NameInMap("PublishStatus")
+        @com.aliyun.core.annotation.NameInMap("PublishStatus")
         private Integer publishStatus;
 
-        @NameInMap("TreeId")
+        @com.aliyun.core.annotation.NameInMap("TreeId")
         private String treeId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("WorkspaceId")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceId")
         private String workspaceId;
 
-        @NameInMap("WorkspaceName")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceName")
         private String workspaceName;
 
         private Data(Builder builder) {
             this.favorite = builder.favorite;
+            this.favoriteDate = builder.favoriteDate;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
             this.hasEditAuth = builder.hasEditAuth;
@@ -160,6 +163,13 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
          */
         public Boolean getFavorite() {
             return this.favorite;
+        }
+
+        /**
+         * @return favoriteDate
+         */
+        public String getFavoriteDate() {
+            return this.favoriteDate;
         }
 
         /**
@@ -248,6 +258,7 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean favorite; 
+            private String favoriteDate; 
             private String gmtCreate; 
             private String gmtModified; 
             private Boolean hasEditAuth; 
@@ -266,6 +277,14 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
              */
             public Builder favorite(Boolean favorite) {
                 this.favorite = favorite;
+                return this;
+            }
+
+            /**
+             * FavoriteDate.
+             */
+            public Builder favoriteDate(String favoriteDate) {
+                this.favoriteDate = favoriteDate;
                 return this;
             }
 
@@ -373,19 +392,19 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private java.util.List < Data> data;
 
-        @NameInMap("PageNum")
+        @com.aliyun.core.annotation.NameInMap("PageNum")
         private Integer pageNum;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalNum")
+        @com.aliyun.core.annotation.NameInMap("TotalNum")
         private Integer totalNum;
 
-        @NameInMap("TotalPages")
+        @com.aliyun.core.annotation.NameInMap("TotalPages")
         private Integer totalPages;
 
         private Result(Builder builder) {

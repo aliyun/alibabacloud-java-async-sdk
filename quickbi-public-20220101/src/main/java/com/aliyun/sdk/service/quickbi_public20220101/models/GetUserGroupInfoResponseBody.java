@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetUserGroupInfoResponseBody</p>
  */
 public class GetUserGroupInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetUserGroupInfoResponseBody(Builder builder) {
@@ -92,31 +91,31 @@ public class GetUserGroupInfoResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateUser")
+        @com.aliyun.core.annotation.NameInMap("CreateUser")
         private String createUser;
 
-        @NameInMap("IdentifiedPath")
+        @com.aliyun.core.annotation.NameInMap("IdentifiedPath")
         private String identifiedPath;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("ModifyUser")
+        @com.aliyun.core.annotation.NameInMap("ModifyUser")
         private String modifyUser;
 
-        @NameInMap("ParentUsergroupId")
+        @com.aliyun.core.annotation.NameInMap("ParentUsergroupId")
         private String parentUsergroupId;
 
-        @NameInMap("UsergroupDesc")
+        @com.aliyun.core.annotation.NameInMap("UsergroupDesc")
         private String usergroupDesc;
 
-        @NameInMap("UsergroupId")
+        @com.aliyun.core.annotation.NameInMap("UsergroupId")
         private String usergroupId;
 
-        @NameInMap("UsergroupName")
+        @com.aliyun.core.annotation.NameInMap("UsergroupName")
         private String usergroupName;
 
         private Result(Builder builder) {

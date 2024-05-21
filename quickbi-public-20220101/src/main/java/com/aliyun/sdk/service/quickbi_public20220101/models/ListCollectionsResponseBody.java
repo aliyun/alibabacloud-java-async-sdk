@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCollectionsResponseBody</p>
  */
 public class ListCollectionsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListCollectionsResponseBody(Builder builder) {
@@ -92,25 +91,25 @@ public class ListCollectionsResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("FavoriteId")
+        @com.aliyun.core.annotation.NameInMap("FavoriteId")
         private Integer favoriteId;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
-        @NameInMap("WorksId")
+        @com.aliyun.core.annotation.NameInMap("WorksId")
         private String worksId;
 
-        @NameInMap("WorksName")
+        @com.aliyun.core.annotation.NameInMap("WorksName")
         private String worksName;
 
-        @NameInMap("WorksType")
+        @com.aliyun.core.annotation.NameInMap("WorksType")
         private String worksType;
 
-        @NameInMap("WorkspaceId")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceId")
         private String workspaceId;
 
-        @NameInMap("WorkspaceName")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceName")
         private String workspaceName;
 
         private Result(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPortalMenuAuthorizationResponseBody</p>
  */
 public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListPortalMenuAuthorizationResponseBody(Builder builder) {
@@ -96,10 +95,10 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
     } 
 
     public static class Receivers extends TeaModel {
-        @NameInMap("ReceiverId")
+        @com.aliyun.core.annotation.NameInMap("ReceiverId")
         private String receiverId;
 
-        @NameInMap("ReceiverType")
+        @com.aliyun.core.annotation.NameInMap("ReceiverType")
         private Integer receiverType;
 
         private Receivers(Builder builder) {
@@ -161,13 +160,13 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("MenuId")
+        @com.aliyun.core.annotation.NameInMap("MenuId")
         private String menuId;
 
-        @NameInMap("Receivers")
+        @com.aliyun.core.annotation.NameInMap("Receivers")
         private java.util.List < Receivers> receivers;
 
-        @NameInMap("ShowOnlyWithAccess")
+        @com.aliyun.core.annotation.NameInMap("ShowOnlyWithAccess")
         private Boolean showOnlyWithAccess;
 
         private Result(Builder builder) {

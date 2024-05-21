@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryWorksBloodRelationshipResponseBody</p>
  */
 public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryWorksBloodRelationshipResponseBody(Builder builder) {
@@ -96,25 +95,25 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
     } 
 
     public static class QueryParams extends TeaModel {
-        @NameInMap("AreaId")
+        @com.aliyun.core.annotation.NameInMap("AreaId")
         private String areaId;
 
-        @NameInMap("AreaName")
+        @com.aliyun.core.annotation.NameInMap("AreaName")
         private String areaName;
 
-        @NameInMap("Caption")
+        @com.aliyun.core.annotation.NameInMap("Caption")
         private String caption;
 
-        @NameInMap("DataType")
+        @com.aliyun.core.annotation.NameInMap("DataType")
         private String dataType;
 
-        @NameInMap("IsMeasure")
+        @com.aliyun.core.annotation.NameInMap("IsMeasure")
         private Boolean isMeasure;
 
-        @NameInMap("PathId")
+        @com.aliyun.core.annotation.NameInMap("PathId")
         private String pathId;
 
-        @NameInMap("Uid")
+        @com.aliyun.core.annotation.NameInMap("Uid")
         private String uid;
 
         private QueryParams(Builder builder) {
@@ -272,22 +271,22 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("ComponentId")
+        @com.aliyun.core.annotation.NameInMap("ComponentId")
         private String componentId;
 
-        @NameInMap("ComponentName")
+        @com.aliyun.core.annotation.NameInMap("ComponentName")
         private String componentName;
 
-        @NameInMap("ComponentType")
+        @com.aliyun.core.annotation.NameInMap("ComponentType")
         private Integer componentType;
 
-        @NameInMap("ComponentTypeName")
+        @com.aliyun.core.annotation.NameInMap("ComponentTypeName")
         private String componentTypeName;
 
-        @NameInMap("DatasetId")
+        @com.aliyun.core.annotation.NameInMap("DatasetId")
         private String datasetId;
 
-        @NameInMap("QueryParams")
+        @com.aliyun.core.annotation.NameInMap("QueryParams")
         private java.util.List < QueryParams> queryParams;
 
         private Result(Builder builder) {

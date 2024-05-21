@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryOrganizationRoleConfigResponseBody</p>
  */
 public class QueryOrganizationRoleConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryOrganizationRoleConfigResponseBody(Builder builder) {
@@ -92,7 +91,7 @@ public class QueryOrganizationRoleConfigResponseBody extends TeaModel {
     } 
 
     public static class AuthConfigList extends TeaModel {
-        @NameInMap("AuthKey")
+        @com.aliyun.core.annotation.NameInMap("AuthKey")
         private String authKey;
 
         private AuthConfigList(Builder builder) {
@@ -133,16 +132,16 @@ public class QueryOrganizationRoleConfigResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("AuthConfigList")
+        @com.aliyun.core.annotation.NameInMap("AuthConfigList")
         private java.util.List < AuthConfigList> authConfigList;
 
-        @NameInMap("IsSystemRole")
+        @com.aliyun.core.annotation.NameInMap("IsSystemRole")
         private Boolean isSystemRole;
 
-        @NameInMap("RoleId")
+        @com.aliyun.core.annotation.NameInMap("RoleId")
         private Long roleId;
 
-        @NameInMap("RoleName")
+        @com.aliyun.core.annotation.NameInMap("RoleName")
         private String roleName;
 
         private Result(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddDataLevelPermissionWhiteListRequest</p>
  */
 public class AddDataLevelPermissionWhiteListRequest extends Request {
-    @Query
-    @NameInMap("CubeId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CubeId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cubeId;
 
-    @Query
-    @NameInMap("OperateType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperateType")
     private String operateType;
 
-    @Query
-    @NameInMap("RuleType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleType")
     private String ruleType;
 
-    @Query
-    @NameInMap("TargetIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetIds")
     private String targetIds;
 
-    @Query
-    @NameInMap("TargetType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetType")
     private String targetType;
 
     private AddDataLevelPermissionWhiteListRequest(Builder builder) {

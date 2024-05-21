@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CancelAuthorizationMenuRequest</p>
  */
 public class CancelAuthorizationMenuRequest extends Request {
-    @Query
-    @NameInMap("DataPortalId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataPortalId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dataPortalId;
 
-    @Query
-    @NameInMap("MenuIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MenuIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String menuIds;
 
-    @Query
-    @NameInMap("UserGroupIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserGroupIds")
     private String userGroupIds;
 
-    @Query
-    @NameInMap("UserIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserIds")
     private String userIds;
 
     private CancelAuthorizationMenuRequest(Builder builder) {

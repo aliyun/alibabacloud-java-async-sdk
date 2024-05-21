@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryEmbeddedInfoResponseBody</p>
  */
 public class QueryEmbeddedInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryEmbeddedInfoResponseBody(Builder builder) {
@@ -96,13 +95,13 @@ public class QueryEmbeddedInfoResponseBody extends TeaModel {
     } 
 
     public static class Detail extends TeaModel {
-        @NameInMap("DashboardOfflineQuery")
+        @com.aliyun.core.annotation.NameInMap("DashboardOfflineQuery")
         private Integer dashboardOfflineQuery;
 
-        @NameInMap("Page")
+        @com.aliyun.core.annotation.NameInMap("Page")
         private Integer page;
 
-        @NameInMap("Report")
+        @com.aliyun.core.annotation.NameInMap("Report")
         private Integer report;
 
         private Detail(Builder builder) {
@@ -177,13 +176,13 @@ public class QueryEmbeddedInfoResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private Detail detail;
 
-        @NameInMap("EmbeddedCount")
+        @com.aliyun.core.annotation.NameInMap("EmbeddedCount")
         private Integer embeddedCount;
 
-        @NameInMap("MaxCount")
+        @com.aliyun.core.annotation.NameInMap("MaxCount")
         private Integer maxCount;
 
         private Result(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryWorksResponseBody</p>
  */
 public class QueryWorksResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryWorksResponseBody(Builder builder) {
@@ -92,16 +91,16 @@ public class QueryWorksResponseBody extends TeaModel {
     } 
 
     public static class Directory extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PathId")
+        @com.aliyun.core.annotation.NameInMap("PathId")
         private String pathId;
 
-        @NameInMap("PathName")
+        @com.aliyun.core.annotation.NameInMap("PathName")
         private String pathName;
 
         private Directory(Builder builder) {
@@ -193,49 +192,49 @@ public class QueryWorksResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("Auth3rdFlag")
+        @com.aliyun.core.annotation.NameInMap("Auth3rdFlag")
         private Integer auth3rdFlag;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Directory")
+        @com.aliyun.core.annotation.NameInMap("Directory")
         private Directory directory;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModify")
+        @com.aliyun.core.annotation.NameInMap("GmtModify")
         private String gmtModify;
 
-        @NameInMap("ModifyName")
+        @com.aliyun.core.annotation.NameInMap("ModifyName")
         private String modifyName;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
-        @NameInMap("OwnerName")
+        @com.aliyun.core.annotation.NameInMap("OwnerName")
         private String ownerName;
 
-        @NameInMap("SecurityLevel")
+        @com.aliyun.core.annotation.NameInMap("SecurityLevel")
         private String securityLevel;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("WorkName")
+        @com.aliyun.core.annotation.NameInMap("WorkName")
         private String workName;
 
-        @NameInMap("WorkType")
+        @com.aliyun.core.annotation.NameInMap("WorkType")
         private String workType;
 
-        @NameInMap("WorksId")
+        @com.aliyun.core.annotation.NameInMap("WorksId")
         private String worksId;
 
-        @NameInMap("WorkspaceId")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceId")
         private String workspaceId;
 
-        @NameInMap("WorkspaceName")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceName")
         private String workspaceName;
 
         private Result(Builder builder) {

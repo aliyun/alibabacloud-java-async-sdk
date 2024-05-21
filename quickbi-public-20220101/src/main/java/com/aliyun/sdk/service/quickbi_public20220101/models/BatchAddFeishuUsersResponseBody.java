@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BatchAddFeishuUsersResponseBody</p>
  */
 public class BatchAddFeishuUsersResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private BatchAddFeishuUsersResponseBody(Builder builder) {
@@ -92,13 +91,13 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
     } 
 
     public static class FailInfos extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("CodeDesc")
+        @com.aliyun.core.annotation.NameInMap("CodeDesc")
         private String codeDesc;
 
-        @NameInMap("Input")
+        @com.aliyun.core.annotation.NameInMap("Input")
         private String input;
 
         private FailInfos(Builder builder) {
@@ -173,7 +172,7 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
 
     }
     public static class FailResults extends TeaModel {
-        @NameInMap("FailInfos")
+        @com.aliyun.core.annotation.NameInMap("FailInfos")
         private java.util.List < FailInfos> failInfos;
 
         private FailResults(Builder builder) {
@@ -214,13 +213,13 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("FailCount")
+        @com.aliyun.core.annotation.NameInMap("FailCount")
         private Integer failCount;
 
-        @NameInMap("FailResults")
+        @com.aliyun.core.annotation.NameInMap("FailResults")
         private java.util.List < FailResults> failResults;
 
-        @NameInMap("OkCount")
+        @com.aliyun.core.annotation.NameInMap("OkCount")
         private Integer okCount;
 
         private Result(Builder builder) {

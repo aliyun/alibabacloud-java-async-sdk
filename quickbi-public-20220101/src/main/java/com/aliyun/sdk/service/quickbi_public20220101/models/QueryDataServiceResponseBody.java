@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quickbi_public20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryDataServiceResponseBody</p>
  */
 public class QueryDataServiceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryDataServiceResponseBody(Builder builder) {
@@ -96,22 +95,22 @@ public class QueryDataServiceResponseBody extends TeaModel {
     } 
 
     public static class Headers extends TeaModel {
-        @NameInMap("Aggregator")
+        @com.aliyun.core.annotation.NameInMap("Aggregator")
         private String aggregator;
 
-        @NameInMap("Column")
+        @com.aliyun.core.annotation.NameInMap("Column")
         private String column;
 
-        @NameInMap("DataType")
+        @com.aliyun.core.annotation.NameInMap("DataType")
         private String dataType;
 
-        @NameInMap("Granularity")
+        @com.aliyun.core.annotation.NameInMap("Granularity")
         private String granularity;
 
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Headers(Builder builder) {
@@ -241,13 +240,13 @@ public class QueryDataServiceResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("Headers")
+        @com.aliyun.core.annotation.NameInMap("Headers")
         private java.util.List < Headers> headers;
 
-        @NameInMap("Sql")
+        @com.aliyun.core.annotation.NameInMap("Sql")
         private String sql;
 
-        @NameInMap("Values")
+        @com.aliyun.core.annotation.NameInMap("Values")
         private java.util.List < java.util.Map<String, ?>> values;
 
         private Result(Builder builder) {
