@@ -104,7 +104,10 @@ public class VerifyUserRequest extends Request {
         }
 
         /**
-         * The ID of the region where you want to activate Auto Scaling.
+         * The ID of the region where Auto Scaling is required.
+         * <p>
+         * 
+         * Examples: `cn-hangzhou` and `cn-shanghai`. For more information, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

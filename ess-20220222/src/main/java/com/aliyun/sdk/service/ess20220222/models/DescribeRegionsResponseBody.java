@@ -49,7 +49,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details of the regions.
+         * The collection of region information.
          */
         public Builder regions(java.util.List < Regions> regions) {
             this.regions = regions;
@@ -145,7 +145,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private Boolean vpcUnavailable; 
 
             /**
-             * Indicates whether the region supports scaling groups of the classic network type. Valid values:
+             * Indicates whether the current region supports scaling groups that reside in the classic network. Valid values:
              * <p>
              * 
              * *   true
@@ -157,7 +157,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the region.
+             * The region name.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -165,7 +165,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the region.
+             * The region endpoint.
              */
             public Builder regionEndpoint(String regionEndpoint) {
                 this.regionEndpoint = regionEndpoint;
@@ -173,7 +173,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -181,11 +181,11 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the region supports scaling groups of the virtual private cloud (VPC) type. Valid values:
+             * Indicates whether the current region supports scaling groups that reside in virtual private clouds (VPCs). Valid values:
              * <p>
              * 
-             * *   true: The region does not support scaling groups of the VPC type.
-             * *   false: The region supports scaling groups of the VPC type.
+             * *   true
+             * *   false
              */
             public Builder vpcUnavailable(Boolean vpcUnavailable) {
                 this.vpcUnavailable = vpcUnavailable;

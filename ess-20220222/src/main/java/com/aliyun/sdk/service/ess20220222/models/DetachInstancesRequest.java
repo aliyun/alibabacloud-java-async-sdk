@@ -24,6 +24,10 @@ public class DetachInstancesRequest extends Request {
     private String detachOption;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IgnoreInvalidInstance")
+    private Boolean ignoreInvalidInstance;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > instanceIds;
@@ -58,6 +62,7 @@ public class DetachInstancesRequest extends Request {
         this.clientToken = builder.clientToken;
         this.decreaseDesiredCapacity = builder.decreaseDesiredCapacity;
         this.detachOption = builder.detachOption;
+        this.ignoreInvalidInstance = builder.ignoreInvalidInstance;
         this.instanceIds = builder.instanceIds;
         this.lifecycleHook = builder.lifecycleHook;
         this.ownerAccount = builder.ownerAccount;
@@ -99,6 +104,13 @@ public class DetachInstancesRequest extends Request {
      */
     public String getDetachOption() {
         return this.detachOption;
+    }
+
+    /**
+     * @return ignoreInvalidInstance
+     */
+    public Boolean getIgnoreInvalidInstance() {
+        return this.ignoreInvalidInstance;
     }
 
     /**
@@ -154,6 +166,7 @@ public class DetachInstancesRequest extends Request {
         private String clientToken; 
         private Boolean decreaseDesiredCapacity; 
         private String detachOption; 
+        private Boolean ignoreInvalidInstance; 
         private java.util.List < String > instanceIds; 
         private Boolean lifecycleHook; 
         private String ownerAccount; 
@@ -171,6 +184,7 @@ public class DetachInstancesRequest extends Request {
             this.clientToken = request.clientToken;
             this.decreaseDesiredCapacity = request.decreaseDesiredCapacity;
             this.detachOption = request.detachOption;
+            this.ignoreInvalidInstance = request.ignoreInvalidInstance;
             this.instanceIds = request.instanceIds;
             this.lifecycleHook = request.lifecycleHook;
             this.ownerAccount = request.ownerAccount;
@@ -213,6 +227,15 @@ public class DetachInstancesRequest extends Request {
         public Builder detachOption(String detachOption) {
             this.putQueryParameter("DetachOption", detachOption);
             this.detachOption = detachOption;
+            return this;
+        }
+
+        /**
+         * IgnoreInvalidInstance.
+         */
+        public Builder ignoreInvalidInstance(Boolean ignoreInvalidInstance) {
+            this.putQueryParameter("IgnoreInvalidInstance", ignoreInvalidInstance);
+            this.ignoreInvalidInstance = ignoreInvalidInstance;
             return this;
         }
 

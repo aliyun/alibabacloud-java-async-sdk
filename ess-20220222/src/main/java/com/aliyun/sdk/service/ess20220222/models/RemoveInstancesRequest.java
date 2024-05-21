@@ -20,6 +20,10 @@ public class RemoveInstancesRequest extends Request {
     private Boolean decreaseDesiredCapacity;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IgnoreInvalidInstance")
+    private Boolean ignoreInvalidInstance;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > instanceIds;
@@ -57,6 +61,7 @@ public class RemoveInstancesRequest extends Request {
         super(builder);
         this.clientToken = builder.clientToken;
         this.decreaseDesiredCapacity = builder.decreaseDesiredCapacity;
+        this.ignoreInvalidInstance = builder.ignoreInvalidInstance;
         this.instanceIds = builder.instanceIds;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -92,6 +97,13 @@ public class RemoveInstancesRequest extends Request {
      */
     public Boolean getDecreaseDesiredCapacity() {
         return this.decreaseDesiredCapacity;
+    }
+
+    /**
+     * @return ignoreInvalidInstance
+     */
+    public Boolean getIgnoreInvalidInstance() {
+        return this.ignoreInvalidInstance;
     }
 
     /**
@@ -153,6 +165,7 @@ public class RemoveInstancesRequest extends Request {
     public static final class Builder extends Request.Builder<RemoveInstancesRequest, Builder> {
         private String clientToken; 
         private Boolean decreaseDesiredCapacity; 
+        private Boolean ignoreInvalidInstance; 
         private java.util.List < String > instanceIds; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -170,6 +183,7 @@ public class RemoveInstancesRequest extends Request {
             super(request);
             this.clientToken = request.clientToken;
             this.decreaseDesiredCapacity = request.decreaseDesiredCapacity;
+            this.ignoreInvalidInstance = request.ignoreInvalidInstance;
             this.instanceIds = request.instanceIds;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -201,6 +215,15 @@ public class RemoveInstancesRequest extends Request {
         public Builder decreaseDesiredCapacity(Boolean decreaseDesiredCapacity) {
             this.putQueryParameter("DecreaseDesiredCapacity", decreaseDesiredCapacity);
             this.decreaseDesiredCapacity = decreaseDesiredCapacity;
+            return this;
+        }
+
+        /**
+         * IgnoreInvalidInstance.
+         */
+        public Builder ignoreInvalidInstance(Boolean ignoreInvalidInstance) {
+            this.putQueryParameter("IgnoreInvalidInstance", ignoreInvalidInstance);
+            this.ignoreInvalidInstance = ignoreInvalidInstance;
             return this;
         }
 

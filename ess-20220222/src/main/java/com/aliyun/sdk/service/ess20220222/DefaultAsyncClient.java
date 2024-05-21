@@ -558,9 +558,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You cannot delete a scaling configuration that is used to create elastic container instances in the following scenarios:
+      * You cannot call this operation to delete a scaling configuration in the following scenarios:
       * *   The scaling configuration is in the Active state.
-      * *   The scaling group contains elastic container instances that are created based on the scaling configuration.
+      * *   The scaling group contains elastic container instances created from the scaling configuration.
       *
      */
     @Override
@@ -632,9 +632,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you delete a scaling group, take note of the following items:
-      * *   After you delete a scaling group, the scaling configuration, scaling rules, scaling activities, and scaling requests related to the scaling group are also deleted.
-      * *   After you delete a scaling group, the scheduled tasks and event-triggered tasks of the scaling group are not deleted. The Classic Load Balancer (CLB) instances and ApsaraDB RDS instances with which the scaling group is associated are also not deleted.
+      * Before you call the DeleteScalingGroup operation, take note of the following items:
+      * *   If you delete a scaling group, the scaling configurations, scaling rules, scaling activities, and scaling requests related to the scaling group are also deleted.
+      * *   If you delete a scaling group, the scheduled tasks and event-triggered tasks of the scaling group are not deleted. The Server Load Balancer (SLB) instances and ApsaraDB RDS instances that are attached to the scaling group are also not deleted.
+      * *   If the scaling group that you want to delete contains ECS instances or elastic container instances that are in the In Service state, Auto Scaling stops the instances and then removes all manually added instances from the scaling group or releases all automatically created instances in the scaling group before the scaling group is deleted.
+      *     **
+      *     **Note** Before you delete a scaling group, make sure that the Deletion Protection feature is disabled. If you have enabled the Deletion Protection feature for a scaling group, disable the feature on the Modify Scaling Group page before you delete the scaling group.
+      * *   If you do not disable the Deletion Protection feature for a scaling group, you cannot delete the scaling group by using the Auto Scaling console or calling this operation. The Deletion Protection feature is an effective measure to safeguard scaling groups against unintended deletion.
+      * *   Prior to deleting a scaling group, make sure that your ECS instances within the scaling group are safeguarded against unintended release. Even if you have already enabled the Release Protection feature for the ECS instances, you must manually put these ECS instances into the Protected state. Doing so guarantees that the ECS instances will not be forcibly released during the deletion process of the scaling group, providing an extra layer of security.
+      *     **
+      *     **Note** Before you delete a scaling group, we recommend that you enable the Deletion Protection feature for ECS instances that you want to retain. This action guarantees that the ECS instances are not forcibly released after you delete the scaling group. For more information, see [SetInstancesProtection](~~459342~~).
       *
      */
     @Override
@@ -1064,6 +1071,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you disable an event-triggered task, make sure that the task is in the `Normal`, `Alert`, or `Insufficient Data` state.
+      *
+     */
     @Override
     public CompletableFuture<DisableAlarmResponse> disableAlarm(DisableAlarmRequest request) {
         try {
@@ -1550,11 +1561,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Description
-      * Before you call this operation, take note of the following items:
-      * *   After you put an ECS instance into the Protected state, the ECS instance remains in the Protected state until you manually move the ECS instance out of the Protected state.
-      * *   After you put an ECS instance into the Protected state, Auto Scaling does not remove the ECS instance even if a scale-in activity caused by changes in instance quantity or event-triggered tasks occurs. In this case, you must manually move the ECS instance out of the Protected state and then release the ECS instance. For more information, see the "RemoveInstances" topic.
-      * *   After you put an ECS instance into the Protected state, Auto Scaling does not update the health status of the instance when the instance is stopped or restarted.
+      * Once ECS instances enter the Protected state, they become subject to the following restrictions:
+      * *   ECS instances will persist in the Protected state, unless you deliberately remove them from this state.
+      * *   Even in scenarios where automatic scale-in actions are initiated due to fluctuations in the number of ECS instances or the execution of event-triggered tasks, Auto Scaling does not remove ECS instances that are in the Protected state from their respective scaling groups. Only after being manually removed from their respective scaling groups can ECS instances that are in the Protected state be released. For more information, see [Remove an ECS instance](~~25955~~).
+      * *   ECS instances in the Protected state maintain their existing health status even when they undergo stopping or restarting processes.
       *
      */
     @Override

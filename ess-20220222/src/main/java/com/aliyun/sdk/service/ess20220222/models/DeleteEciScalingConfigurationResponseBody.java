@@ -37,7 +37,10 @@ public class DeleteEciScalingConfigurationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request. This request ID is returned regardless of whether the request is successful.
+         * The request ID.
+         * <p>
+         * 
+         * The request ID is consistently returned in the response, irrespective of whether the request is executed successfully or encounters an error.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -140,11 +140,11 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to remove all tags from the Auto Scaling resource. This parameter takes effect only if you do not specify the `TagKeys` parameter. Valid values:
+         * Specifies whether to remove all tags from the resource. This parameter takes effect only when you do not specify `TagKeys` in the request parameters. Valid values:
          * <p>
          * 
-         * *   true: removes all tags from the Auto Scaling resource.
-         * *   false: does not remove tags from the Auto Scaling resource.
+         * *   true
+         * *   false
          * 
          * Default value: false.
          */
@@ -164,7 +164,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID of the Auto Scaling resource. You can call the DescribeRegions operation to query the most recent region list.
+         * The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -173,7 +173,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The IDs of the Auto Scaling resources. You can specify 1 to 50 resource IDs.
+         * The resource IDs.
          */
         public Builder resourceIds(java.util.List < String > resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -191,7 +191,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Only scaling groups are supported. Set the value to scalinggroup.
+         * The resource type. Set the value to scalinggroup.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -200,7 +200,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The keys of the tags that you want to remove from the Auto Scaling resource. You can specify 1 to 20 tag keys.
+         * The tag keys.
          */
         public Builder tagKeys(java.util.List < String > tagKeys) {
             this.putQueryParameter("TagKeys", tagKeys);

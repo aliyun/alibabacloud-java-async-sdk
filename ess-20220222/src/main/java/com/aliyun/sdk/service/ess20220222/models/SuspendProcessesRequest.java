@@ -125,10 +125,7 @@ public class SuspendProcessesRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests.
-         * <p>
-         * 
-         * The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25965~~).
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](~~25965~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -149,13 +146,13 @@ public class SuspendProcessesRequest extends Request {
          * The types of the processes that you want to suspend. Valid values:
          * <p>
          * 
-         * *   scalein
-         * *   scaleout
-         * *   healthcheck
-         * *   alarmnotification
-         * *   scheduledaction
+         * *   scalein: the scale-in process.
+         * *   scaleout: the scale-out process.
+         * *   healthcheck: the health check process.
+         * *   alarmnotification: the process of executing an event-triggered task.
+         * *   scheduledaction: the process of executing a scheduled task.
          * 
-         * You can suspend five processes of the preceding types at the same time. If you try to suspend more than five processes at the same time, Auto Scaling automatically removes duplicate processes.
+         * Presently, Auto Scaling supports suspending the five mentioned process types. In cases where more than five types are specified, Auto Scaling will automatically disregard duplicates and proceed with suspending the unique process types.
          */
         public Builder processes(java.util.List < String > processes) {
             this.putQueryParameter("Processes", processes);

@@ -95,14 +95,14 @@ public class DescribeRegionsRequest extends Request {
         } 
 
         /**
-         * The language that is used as a filter condition to filter returned results. For more information, see [RFC 7231](https://tools.ietf.org/html/rfc7231). Valid values:
+         * The language for the response. For more information, see [RFC7231](https://tools.ietf.org/html/rfc7231). Valid values:
          * <p>
          * 
          * *   zh-CN: Chinese
          * *   en-US: English
          * *   ja: Japanese
          * 
-         * Default value: en-US
+         * Default value: zh-CN.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
