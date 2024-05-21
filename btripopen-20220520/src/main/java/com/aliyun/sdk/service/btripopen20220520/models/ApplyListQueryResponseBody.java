@@ -601,6 +601,12 @@ public class ApplyListQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("project_title")
         private String projectTitle;
 
+        @com.aliyun.core.annotation.NameInMap("thirdpart_cost_center_id")
+        private String thirdpartCostCenterId;
+
+        @com.aliyun.core.annotation.NameInMap("thirdpart_invoice_id")
+        private String thirdpartInvoiceId;
+
         @com.aliyun.core.annotation.NameInMap("thirdpart_itinerary_id")
         private String thirdpartItineraryId;
 
@@ -620,6 +626,8 @@ public class ApplyListQueryResponseBody extends TeaModel {
             this.itineraryId = builder.itineraryId;
             this.projectCode = builder.projectCode;
             this.projectTitle = builder.projectTitle;
+            this.thirdpartCostCenterId = builder.thirdpartCostCenterId;
+            this.thirdpartInvoiceId = builder.thirdpartInvoiceId;
             this.thirdpartItineraryId = builder.thirdpartItineraryId;
             this.trafficType = builder.trafficType;
             this.tripWay = builder.tripWay;
@@ -697,6 +705,20 @@ public class ApplyListQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return thirdpartCostCenterId
+         */
+        public String getThirdpartCostCenterId() {
+            return this.thirdpartCostCenterId;
+        }
+
+        /**
+         * @return thirdpartInvoiceId
+         */
+        public String getThirdpartInvoiceId() {
+            return this.thirdpartInvoiceId;
+        }
+
+        /**
          * @return thirdpartItineraryId
          */
         public String getThirdpartItineraryId() {
@@ -727,6 +749,8 @@ public class ApplyListQueryResponseBody extends TeaModel {
             private String itineraryId; 
             private String projectCode; 
             private String projectTitle; 
+            private String thirdpartCostCenterId; 
+            private String thirdpartInvoiceId; 
             private String thirdpartItineraryId; 
             private Integer trafficType; 
             private Integer tripWay; 
@@ -804,6 +828,22 @@ public class ApplyListQueryResponseBody extends TeaModel {
             }
 
             /**
+             * thirdpart_cost_center_id.
+             */
+            public Builder thirdpartCostCenterId(String thirdpartCostCenterId) {
+                this.thirdpartCostCenterId = thirdpartCostCenterId;
+                return this;
+            }
+
+            /**
+             * thirdpart_invoice_id.
+             */
+            public Builder thirdpartInvoiceId(String thirdpartInvoiceId) {
+                this.thirdpartInvoiceId = thirdpartInvoiceId;
+                return this;
+            }
+
+            /**
              * thirdpart_itinerary_id.
              */
             public Builder thirdpartItineraryId(String thirdpartItineraryId) {
@@ -862,6 +902,12 @@ public class ApplyListQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("project_title")
         private String projectTitle;
 
+        @com.aliyun.core.annotation.NameInMap("thirdpart_cost_center_id")
+        private String thirdpartCostCenterId;
+
+        @com.aliyun.core.annotation.NameInMap("thirdpart_invoice_id")
+        private String thirdpartInvoiceId;
+
         @com.aliyun.core.annotation.NameInMap("thirdpart_itinerary_id")
         private String thirdpartItineraryId;
 
@@ -878,6 +924,8 @@ public class ApplyListQueryResponseBody extends TeaModel {
             this.itineraryId = builder.itineraryId;
             this.projectCode = builder.projectCode;
             this.projectTitle = builder.projectTitle;
+            this.thirdpartCostCenterId = builder.thirdpartCostCenterId;
+            this.thirdpartInvoiceId = builder.thirdpartInvoiceId;
             this.thirdpartItineraryId = builder.thirdpartItineraryId;
             this.trafficType = builder.trafficType;
         }
@@ -954,6 +1002,20 @@ public class ApplyListQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return thirdpartCostCenterId
+         */
+        public String getThirdpartCostCenterId() {
+            return this.thirdpartCostCenterId;
+        }
+
+        /**
+         * @return thirdpartInvoiceId
+         */
+        public String getThirdpartInvoiceId() {
+            return this.thirdpartInvoiceId;
+        }
+
+        /**
          * @return thirdpartItineraryId
          */
         public String getThirdpartItineraryId() {
@@ -977,6 +1039,8 @@ public class ApplyListQueryResponseBody extends TeaModel {
             private String itineraryId; 
             private String projectCode; 
             private String projectTitle; 
+            private String thirdpartCostCenterId; 
+            private String thirdpartInvoiceId; 
             private String thirdpartItineraryId; 
             private Integer trafficType; 
 
@@ -1049,6 +1113,22 @@ public class ApplyListQueryResponseBody extends TeaModel {
              */
             public Builder projectTitle(String projectTitle) {
                 this.projectTitle = projectTitle;
+                return this;
+            }
+
+            /**
+             * thirdpart_cost_center_id.
+             */
+            public Builder thirdpartCostCenterId(String thirdpartCostCenterId) {
+                this.thirdpartCostCenterId = thirdpartCostCenterId;
+                return this;
+            }
+
+            /**
+             * thirdpart_invoice_id.
+             */
+            public Builder thirdpartInvoiceId(String thirdpartInvoiceId) {
+                this.thirdpartInvoiceId = thirdpartInvoiceId;
                 return this;
             }
 

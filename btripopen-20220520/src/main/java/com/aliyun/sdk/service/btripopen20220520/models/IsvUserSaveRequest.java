@@ -256,6 +256,9 @@ public class IsvUserSaveRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("real_name_en")
         private String realNameEn;
 
+        @com.aliyun.core.annotation.NameInMap("role_id_list")
+        private java.util.List < String > roleIdList;
+
         @com.aliyun.core.annotation.NameInMap("third_depart_id")
         private String thirdDepartId;
 
@@ -288,6 +291,7 @@ public class IsvUserSaveRequest extends Request {
             this.position = builder.position;
             this.positionLevel = builder.positionLevel;
             this.realNameEn = builder.realNameEn;
+            this.roleIdList = builder.roleIdList;
             this.thirdDepartId = builder.thirdDepartId;
             this.thirdDepartIdList = builder.thirdDepartIdList;
             this.userId = builder.userId;
@@ -402,6 +406,13 @@ public class IsvUserSaveRequest extends Request {
         }
 
         /**
+         * @return roleIdList
+         */
+        public java.util.List < String > getRoleIdList() {
+            return this.roleIdList;
+        }
+
+        /**
          * @return thirdDepartId
          */
         public String getThirdDepartId() {
@@ -451,6 +462,7 @@ public class IsvUserSaveRequest extends Request {
             private String position; 
             private String positionLevel; 
             private String realNameEn; 
+            private java.util.List < String > roleIdList; 
             private String thirdDepartId; 
             private java.util.List < String > thirdDepartIdList; 
             private String userId; 
@@ -566,6 +578,14 @@ public class IsvUserSaveRequest extends Request {
              */
             public Builder realNameEn(String realNameEn) {
                 this.realNameEn = realNameEn;
+                return this;
+            }
+
+            /**
+             * role_id_list.
+             */
+            public Builder roleIdList(java.util.List < String > roleIdList) {
+                this.roleIdList = roleIdList;
                 return this;
             }
 

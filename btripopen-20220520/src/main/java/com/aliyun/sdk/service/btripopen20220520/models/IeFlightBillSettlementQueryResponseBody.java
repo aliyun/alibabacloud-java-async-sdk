@@ -366,6 +366,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("project_name")
         private String projectName;
 
+        @com.aliyun.core.annotation.NameInMap("refund_change_cost")
+        private Double refundChangeCost;
+
         @com.aliyun.core.annotation.NameInMap("refund_fee")
         private Double refundFee;
 
@@ -498,6 +501,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             this.primaryId = builder.primaryId;
             this.projectCode = builder.projectCode;
             this.projectName = builder.projectName;
+            this.refundChangeCost = builder.refundChangeCost;
             this.refundFee = builder.refundFee;
             this.refundResult = builder.refundResult;
             this.remark = builder.remark;
@@ -986,6 +990,13 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return refundChangeCost
+         */
+        public Double getRefundChangeCost() {
+            return this.refundChangeCost;
+        }
+
+        /**
          * @return refundFee
          */
         public Double getRefundFee() {
@@ -1205,6 +1216,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             private Long primaryId; 
             private String projectCode; 
             private String projectName; 
+            private Double refundChangeCost; 
             private Double refundFee; 
             private String refundResult; 
             private String remark; 
@@ -1745,6 +1757,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
+                return this;
+            }
+
+            /**
+             * refund_change_cost.
+             */
+            public Builder refundChangeCost(Double refundChangeCost) {
+                this.refundChangeCost = refundChangeCost;
                 return this;
             }
 

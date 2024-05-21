@@ -21,6 +21,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AccessTokenResponse> accessToken(AccessTokenRequest request);
 
+    CompletableFuture<AddEmployeesToCustomRoleResponse> addEmployeesToCustomRole(AddEmployeesToCustomRoleRequest request);
+
     CompletableFuture<AddInvoiceEntityResponse> addInvoiceEntity(AddInvoiceEntityRequest request);
 
     CompletableFuture<AddressGetResponse> addressGet(AddressGetRequest request);
@@ -83,7 +85,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CostCenterSaveResponse> costCenterSave(CostCenterSaveRequest request);
 
+    CompletableFuture<CreateCustomRoleResponse> createCustomRole(CreateCustomRoleRequest request);
+
     CompletableFuture<CreateSubCorpResponse> createSubCorp(CreateSubCorpRequest request);
+
+    CompletableFuture<DeleteCustomRoleResponse> deleteCustomRole(DeleteCustomRoleRequest request);
+
+    CompletableFuture<DeleteEmployeesFromCustomRoleResponse> deleteEmployeesFromCustomRole(DeleteEmployeesFromCustomRoleRequest request);
 
     CompletableFuture<DeleteInvoiceEntityResponse> deleteInvoiceEntity(DeleteInvoiceEntityRequest request);
 
@@ -277,6 +285,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ProjectModifyResponse> projectModify(ProjectModifyRequest request);
 
+    CompletableFuture<QueryGroupCorpListResponse> queryGroupCorpList(QueryGroupCorpListRequest request);
+
     CompletableFuture<QueryReimbursementOrderResponse> queryReimbursementOrder(QueryReimbursementOrderRequest request);
 
     CompletableFuture<SyncSingleUserResponse> syncSingleUser(SyncSingleUserRequest request);
@@ -340,6 +350,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TravelStandardListQueryResponse> travelStandardListQuery(TravelStandardListQueryRequest request);
 
     CompletableFuture<TravelStandardQueryResponse> travelStandardQuery(TravelStandardQueryRequest request);
+
+    CompletableFuture<UpdateCustomRoleResponse> updateCustomRole(UpdateCustomRoleRequest request);
 
     CompletableFuture<UserQueryResponse> userQuery(UserQueryRequest request);
 
