@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.umeng_apm20220214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTodayStatTrendResponseBody</p>
  */
 public class GetTodayStatTrendResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private Long code;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private java.util.List < Data> data;
 
-    @NameInMap("msg")
+    @com.aliyun.core.annotation.NameInMap("msg")
     private String msg;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private GetTodayStatTrendResponseBody(Builder builder) {
@@ -112,19 +111,19 @@ public class GetTodayStatTrendResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("affectedUserCount")
+        @com.aliyun.core.annotation.NameInMap("affectedUserCount")
         private Long affectedUserCount;
 
-        @NameInMap("affectedUserRate")
-        private Long affectedUserRate;
+        @com.aliyun.core.annotation.NameInMap("affectedUserRate")
+        private Double affectedUserRate;
 
-        @NameInMap("errorCount")
+        @com.aliyun.core.annotation.NameInMap("errorCount")
         private Long errorCount;
 
-        @NameInMap("errorRate")
-        private Long errorRate;
+        @com.aliyun.core.annotation.NameInMap("errorRate")
+        private Double errorRate;
 
-        @NameInMap("timePoint")
+        @com.aliyun.core.annotation.NameInMap("timePoint")
         private String timePoint;
 
         private Data(Builder builder) {
@@ -153,7 +152,7 @@ public class GetTodayStatTrendResponseBody extends TeaModel {
         /**
          * @return affectedUserRate
          */
-        public Long getAffectedUserRate() {
+        public Double getAffectedUserRate() {
             return this.affectedUserRate;
         }
 
@@ -167,7 +166,7 @@ public class GetTodayStatTrendResponseBody extends TeaModel {
         /**
          * @return errorRate
          */
-        public Long getErrorRate() {
+        public Double getErrorRate() {
             return this.errorRate;
         }
 
@@ -180,9 +179,9 @@ public class GetTodayStatTrendResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long affectedUserCount; 
-            private Long affectedUserRate; 
+            private Double affectedUserRate; 
             private Long errorCount; 
-            private Long errorRate; 
+            private Double errorRate; 
             private String timePoint; 
 
             /**
@@ -196,7 +195,7 @@ public class GetTodayStatTrendResponseBody extends TeaModel {
             /**
              * affectedUserRate.
              */
-            public Builder affectedUserRate(Long affectedUserRate) {
+            public Builder affectedUserRate(Double affectedUserRate) {
                 this.affectedUserRate = affectedUserRate;
                 return this;
             }
@@ -212,7 +211,7 @@ public class GetTodayStatTrendResponseBody extends TeaModel {
             /**
              * errorRate.
              */
-            public Builder errorRate(Long errorRate) {
+            public Builder errorRate(Double errorRate) {
                 this.errorRate = errorRate;
                 return this;
             }

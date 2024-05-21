@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.umeng_apm20220214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSymUploadParamResponseBody</p>
  */
 public class GetSymUploadParamResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private Long code;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("msg")
+    @com.aliyun.core.annotation.NameInMap("msg")
     private String msg;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("traceId")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private GetSymUploadParamResponseBody(Builder builder) {
@@ -132,22 +131,22 @@ public class GetSymUploadParamResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("accessKeyId")
+        @com.aliyun.core.annotation.NameInMap("accessKeyId")
         private String accessKeyId;
 
-        @NameInMap("callback")
+        @com.aliyun.core.annotation.NameInMap("callback")
         private String callback;
 
-        @NameInMap("key")
+        @com.aliyun.core.annotation.NameInMap("key")
         private String key;
 
-        @NameInMap("policy")
+        @com.aliyun.core.annotation.NameInMap("policy")
         private String policy;
 
-        @NameInMap("signature")
+        @com.aliyun.core.annotation.NameInMap("signature")
         private String signature;
 
-        @NameInMap("uploadAddress")
+        @com.aliyun.core.annotation.NameInMap("uploadAddress")
         private String uploadAddress;
 
         private Data(Builder builder) {

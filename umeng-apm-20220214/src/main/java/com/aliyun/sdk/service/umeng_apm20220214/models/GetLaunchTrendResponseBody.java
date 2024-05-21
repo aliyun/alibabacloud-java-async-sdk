@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.umeng_apm20220214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetLaunchTrendResponseBody</p>
  */
 public class GetLaunchTrendResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private Long code;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private java.util.List < Data> data;
 
-    @NameInMap("msg")
+    @com.aliyun.core.annotation.NameInMap("msg")
     private String msg;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private GetLaunchTrendResponseBody(Builder builder) {
@@ -112,25 +111,25 @@ public class GetLaunchTrendResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("coldLaunchCount")
+        @com.aliyun.core.annotation.NameInMap("coldLaunchCount")
         private Long coldLaunchCount;
 
-        @NameInMap("coldLaunchDuration")
+        @com.aliyun.core.annotation.NameInMap("coldLaunchDuration")
         private Double coldLaunchDuration;
 
-        @NameInMap("firstLaunchCount")
+        @com.aliyun.core.annotation.NameInMap("firstLaunchCount")
         private Long firstLaunchCount;
 
-        @NameInMap("firstLaunchDuration")
+        @com.aliyun.core.annotation.NameInMap("firstLaunchDuration")
         private Double firstLaunchDuration;
 
-        @NameInMap("hotLaunchCount")
+        @com.aliyun.core.annotation.NameInMap("hotLaunchCount")
         private Long hotLaunchCount;
 
-        @NameInMap("hotLaunchDuration")
+        @com.aliyun.core.annotation.NameInMap("hotLaunchDuration")
         private Double hotLaunchDuration;
 
-        @NameInMap("timePoint")
+        @com.aliyun.core.annotation.NameInMap("timePoint")
         private String timePoint;
 
         private Data(Builder builder) {

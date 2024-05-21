@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.umeng_apm20220214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSymUploadParamRequest</p>
  */
 public class GetSymUploadParamRequest extends Request {
-    @Query
-    @NameInMap("appVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appVersion;
 
-    @Query
-    @NameInMap("dataSourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dataSourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dataSourceId;
 
-    @Query
-    @NameInMap("fileName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("fileName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileName;
 
-    @Query
-    @NameInMap("fileType")
-    @Validation(required = true, maximum = 4, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("fileType")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 4, minimum = 1)
     private Integer fileType;
 
-    @Query
-    @NameInMap("flutterName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("flutterName")
     private String flutterName;
 
     private GetSymUploadParamRequest(Builder builder) {

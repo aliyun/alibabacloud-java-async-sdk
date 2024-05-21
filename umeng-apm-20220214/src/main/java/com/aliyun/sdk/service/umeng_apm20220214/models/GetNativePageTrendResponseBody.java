@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.umeng_apm20220214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetNativePageTrendResponseBody</p>
  */
 public class GetNativePageTrendResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private Long code;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private java.util.List < Data> data;
 
-    @NameInMap("msg")
+    @com.aliyun.core.annotation.NameInMap("msg")
     private String msg;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private GetNativePageTrendResponseBody(Builder builder) {
@@ -112,19 +111,19 @@ public class GetNativePageTrendResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("avgLoadDuration")
+        @com.aliyun.core.annotation.NameInMap("avgLoadDuration")
         private Double avgLoadDuration;
 
-        @NameInMap("crashRate")
+        @com.aliyun.core.annotation.NameInMap("crashRate")
         private Double crashRate;
 
-        @NameInMap("loadCnt")
+        @com.aliyun.core.annotation.NameInMap("loadCnt")
         private Long loadCnt;
 
-        @NameInMap("slowLoadRate")
+        @com.aliyun.core.annotation.NameInMap("slowLoadRate")
         private Double slowLoadRate;
 
-        @NameInMap("timePoint")
+        @com.aliyun.core.annotation.NameInMap("timePoint")
         private String timePoint;
 
         private Data(Builder builder) {

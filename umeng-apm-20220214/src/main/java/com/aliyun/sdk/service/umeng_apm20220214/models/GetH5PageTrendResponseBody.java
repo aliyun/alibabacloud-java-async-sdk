@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.umeng_apm20220214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetH5PageTrendResponseBody</p>
  */
 public class GetH5PageTrendResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private Long code;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private java.util.List < Data> data;
 
-    @NameInMap("msg")
+    @com.aliyun.core.annotation.NameInMap("msg")
     private String msg;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private GetH5PageTrendResponseBody(Builder builder) {
@@ -112,70 +111,70 @@ public class GetH5PageTrendResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("analyzeDOM")
+        @com.aliyun.core.annotation.NameInMap("analyzeDOM")
         private Double analyzeDOM;
 
-        @NameInMap("appCache")
+        @com.aliyun.core.annotation.NameInMap("appCache")
         private Double appCache;
 
-        @NameInMap("contentTrans")
+        @com.aliyun.core.annotation.NameInMap("contentTrans")
         private Double contentTrans;
 
-        @NameInMap("dns")
+        @com.aliyun.core.annotation.NameInMap("dns")
         private Double dns;
 
-        @NameInMap("domReady")
+        @com.aliyun.core.annotation.NameInMap("domReady")
         private Double domReady;
 
-        @NameInMap("fcp")
+        @com.aliyun.core.annotation.NameInMap("fcp")
         private Double fcp;
 
-        @NameInMap("firstByte")
+        @com.aliyun.core.annotation.NameInMap("firstByte")
         private Double firstByte;
 
-        @NameInMap("fiveSecondRate")
+        @com.aliyun.core.annotation.NameInMap("fiveSecondRate")
         private Double fiveSecondRate;
 
-        @NameInMap("fp")
+        @com.aliyun.core.annotation.NameInMap("fp")
         private Double fp;
 
-        @NameInMap("loadEvent")
+        @com.aliyun.core.annotation.NameInMap("loadEvent")
         private Double loadEvent;
 
-        @NameInMap("loadFinish")
+        @com.aliyun.core.annotation.NameInMap("loadFinish")
         private Double loadFinish;
 
-        @NameInMap("loadResource")
+        @com.aliyun.core.annotation.NameInMap("loadResource")
         private Double loadResource;
 
-        @NameInMap("logCnt")
+        @com.aliyun.core.annotation.NameInMap("logCnt")
         private Long logCnt;
 
-        @NameInMap("oneSecondRate")
+        @com.aliyun.core.annotation.NameInMap("oneSecondRate")
         private Double oneSecondRate;
 
-        @NameInMap("redirect")
+        @com.aliyun.core.annotation.NameInMap("redirect")
         private Double redirect;
 
-        @NameInMap("ssl")
+        @com.aliyun.core.annotation.NameInMap("ssl")
         private Double ssl;
 
-        @NameInMap("tcp")
+        @com.aliyun.core.annotation.NameInMap("tcp")
         private Double tcp;
 
-        @NameInMap("timePoint")
+        @com.aliyun.core.annotation.NameInMap("timePoint")
         private String timePoint;
 
-        @NameInMap("ttfb")
+        @com.aliyun.core.annotation.NameInMap("ttfb")
         private Double ttfb;
 
-        @NameInMap("tti")
+        @com.aliyun.core.annotation.NameInMap("tti")
         private Double tti;
 
-        @NameInMap("twoSecondRate")
+        @com.aliyun.core.annotation.NameInMap("twoSecondRate")
         private Double twoSecondRate;
 
-        @NameInMap("unload")
+        @com.aliyun.core.annotation.NameInMap("unload")
         private Double unload;
 
         private Data(Builder builder) {

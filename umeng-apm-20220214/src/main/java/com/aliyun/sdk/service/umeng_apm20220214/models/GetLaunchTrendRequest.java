@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.umeng_apm20220214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetLaunchTrendRequest</p>
  */
 public class GetLaunchTrendRequest extends Request {
-    @Query
-    @NameInMap("appVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appVersion")
     private String appVersion;
 
-    @Query
-    @NameInMap("dataSourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dataSourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dataSourceId;
 
-    @Query
-    @NameInMap("endDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("endDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endDate;
 
-    @Query
-    @NameInMap("startDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("startDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startDate;
 
-    @Query
-    @NameInMap("timeUnit")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("timeUnit")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String timeUnit;
 
     private GetLaunchTrendRequest(Builder builder) {

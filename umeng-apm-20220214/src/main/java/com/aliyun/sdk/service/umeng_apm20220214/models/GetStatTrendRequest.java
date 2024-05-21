@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.umeng_apm20220214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,26 +11,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetStatTrendRequest</p>
  */
 public class GetStatTrendRequest extends Request {
-    @Query
-    @NameInMap("appVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("appVersion")
     private String appVersion;
 
-    @Query
-    @NameInMap("dataSourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dataSourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dataSourceId;
 
-    @Query
-    @NameInMap("endDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("endDate")
     private String endDate;
 
-    @Query
-    @NameInMap("startDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("startDate")
     private String startDate;
 
-    @Query
-    @NameInMap("type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer type;
 
     private GetStatTrendRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.umeng_apm20220214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetNetworkTrendResponseBody</p>
  */
 public class GetNetworkTrendResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private Long code;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private java.util.List < Data> data;
 
-    @NameInMap("msg")
+    @com.aliyun.core.annotation.NameInMap("msg")
     private String msg;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private GetNetworkTrendResponseBody(Builder builder) {
@@ -112,19 +111,19 @@ public class GetNetworkTrendResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("avgCost")
+        @com.aliyun.core.annotation.NameInMap("avgCost")
         private Double avgCost;
 
-        @NameInMap("avgResponseTime")
+        @com.aliyun.core.annotation.NameInMap("avgResponseTime")
         private Double avgResponseTime;
 
-        @NameInMap("avgTransformBytes")
+        @com.aliyun.core.annotation.NameInMap("avgTransformBytes")
         private Double avgTransformBytes;
 
-        @NameInMap("requestPerMinute")
+        @com.aliyun.core.annotation.NameInMap("requestPerMinute")
         private Double requestPerMinute;
 
-        @NameInMap("timePoint")
+        @com.aliyun.core.annotation.NameInMap("timePoint")
         private String timePoint;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.umeng_apm20220214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateAlertPlanRequest</p>
  */
 public class UpdateAlertPlanRequest extends Request {
-    @Query
-    @NameInMap("dataSourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dataSourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dataSourceId;
 
-    @Query
-    @NameInMap("planId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("planId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long planId;
 
-    @Query
-    @NameInMap("versions")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("versions")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String versions;
 
     private UpdateAlertPlanRequest(Builder builder) {
