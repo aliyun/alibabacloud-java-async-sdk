@@ -805,6 +805,9 @@ public class CreateTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("DiarizationEnabled")
         private Boolean diarizationEnabled;
 
+        @com.aliyun.core.annotation.NameInMap("Model")
+        private String model;
+
         @com.aliyun.core.annotation.NameInMap("OutputLevel")
         private Integer outputLevel;
 
@@ -816,6 +819,7 @@ public class CreateTaskRequest extends Request {
             this.audioEventDetectionEnabled = builder.audioEventDetectionEnabled;
             this.diarization = builder.diarization;
             this.diarizationEnabled = builder.diarizationEnabled;
+            this.model = builder.model;
             this.outputLevel = builder.outputLevel;
             this.phraseId = builder.phraseId;
         }
@@ -857,6 +861,13 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
+         * @return model
+         */
+        public String getModel() {
+            return this.model;
+        }
+
+        /**
          * @return outputLevel
          */
         public Integer getOutputLevel() {
@@ -875,6 +886,7 @@ public class CreateTaskRequest extends Request {
             private Boolean audioEventDetectionEnabled; 
             private Diarization diarization; 
             private Boolean diarizationEnabled; 
+            private String model; 
             private Integer outputLevel; 
             private String phraseId; 
 
@@ -907,6 +919,14 @@ public class CreateTaskRequest extends Request {
              */
             public Builder diarizationEnabled(Boolean diarizationEnabled) {
                 this.diarizationEnabled = diarizationEnabled;
+                return this;
+            }
+
+            /**
+             * Model.
+             */
+            public Builder model(String model) {
+                this.model = model;
                 return this;
             }
 
