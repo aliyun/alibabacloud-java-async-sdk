@@ -27,6 +27,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListReleaseVersionsResponse> listReleaseVersions(ListReleaseVersionsRequest request);
 
+    CompletableFuture<ListSessionClustersResponse> listSessionClusters(ListSessionClustersRequest request);
+
     CompletableFuture<ListWorkspaceQueuesResponse> listWorkspaceQueues(ListWorkspaceQueuesRequest request);
 
     CompletableFuture<ListWorkspacesResponse> listWorkspaces(ListWorkspacesRequest request);
