@@ -85,7 +85,10 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The full status information of the instances.
+         * The queried instances.
+         * <p>
+         * 
+         * >  If no instances exist, this parameter is empty.
          */
         public Builder instanceFullStatusSet(InstanceFullStatusSet instanceFullStatusSet) {
             this.instanceFullStatusSet = instanceFullStatusSet;
@@ -388,7 +391,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             private String releaseTime; 
 
             /**
-             * The time when the cloud disk or local disk was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * The time when the disk was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -396,17 +399,17 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the cloud disk or local disk. Valid values:
+             * The category of the disk. Valid values:
              * <p>
              * 
-             * *   cloud: basic disk.
-             * *   cloud_efficiency: ultra disk.
-             * *   cloud_ssd: standard SSD.
-             * *   cloud_essd: enhanced SSD (ESSD).
-             * *   local_ssd_pro: I/O-intensive local disk.
-             * *   local_hdd_pro: throughput-intensive local disk.
-             * *   ephemeral: retired local disk.
-             * *   ephemeral_ssd: retired local SSD.
+             * *   cloud: basic disk
+             * *   cloud_efficiency: ultra disk
+             * *   cloud_ssd: standard SSD
+             * *   cloud_essd: Enterprise SSD (ESSD)
+             * *   local_ssd_pro: I/O-intensive local disk
+             * *   local_hdd_pro: throughput-intensive local disk
+             * *   ephemeral: retired local disk
+             * *   ephemeral_ssd: retired local SSD
              */
             public Builder deviceCategory(String deviceCategory) {
                 this.deviceCategory = deviceCategory;
@@ -414,7 +417,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the cloud disk or local disk. Unit: GiB.
+             * The size of the disk. Unit: GiB.
              */
             public Builder deviceSize(String deviceSize) {
                 this.deviceSize = deviceSize;
@@ -422,11 +425,11 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the cloud disk or local disk. Valid values:
+             * The type of the disk. Valid values:
              * <p>
              * 
-             * *   system: system disk.
-             * *   data: data disk.
+             * *   system
+             * *   data
              */
             public Builder deviceType(String deviceType) {
                 this.deviceType = deviceType;
@@ -434,7 +437,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cloud disk or local disk was released. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * The time when the disk was released. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder releaseTime(String releaseTime) {
                 this.releaseTime = releaseTime;
@@ -556,7 +559,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The inactive cloud disks or local disks that have been released and must be cleared.
+             * The inactive disks that have been released and must be cleared.
              */
             public Builder inactiveDisks(InactiveDisks inactiveDisks) {
                 this.inactiveDisks = inactiveDisks;
@@ -689,7 +692,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the system event.
+             * The system event ID.
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -714,6 +717,21 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
 
             /**
              * The extended attributes of system events generated for instances that have local disks attached.
+             * <p>
+             * 
+             * The return values vary based on the system event type.
+             * 
+             * If the system event type is not one of the following types, this parameter is empty:
+             * 
+             * *   SystemMaintenance.StopAndRepair
+             * *   SystemMaintenance.CleanInactiveDisks
+             * *   SecurityPunish.Locked
+             * *   SecurityPunish.WebsiteBanned
+             * *   SystemUpgrade.Migrate
+             * *   SystemMaintenance.RebootAndIsolateErrorDisk
+             * *   SystemMaintenance.RebootAndReInitErrorDisk
+             * *   SystemMaintenance.ReInitErrorDisk
+             * *   SystemMaintenance.IsolateErrorDisk
              */
             public Builder extendedAttribute(ExtendedAttribute extendedAttribute) {
                 this.extendedAttribute = extendedAttribute;
@@ -722,6 +740,9 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
 
             /**
              * The impact level of the system event.
+             * <p>
+             * 
+             * >  If the user is not in a whitelist, this parameter is empty.
              */
             public Builder impactLevel(String impactLevel) {
                 this.impactLevel = impactLevel;
@@ -729,7 +750,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The scheduled O\&M time of the system event. The time is displayed in UTC.
+             * The scheduled time at which to execute the O\&M task related to the system event. The time is displayed in UTC.
              */
             public Builder notBefore(String notBefore) {
                 this.notBefore = notBefore;
@@ -738,6 +759,9 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
 
             /**
              * The reason why the system event was scheduled.
+             * <p>
+             * 
+             * >  If the exception cause is not detected, this parameter is empty.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -924,7 +948,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -932,7 +956,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the scheduled system events.
+             * The system events that are in the Scheduled or Inquiring state.
              */
             public Builder scheduledSystemEventSet(ScheduledSystemEventSet scheduledSystemEventSet) {
                 this.scheduledSystemEventSet = scheduledSystemEventSet;

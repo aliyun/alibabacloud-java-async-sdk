@@ -176,7 +176,7 @@ public class UnassignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * IPv4 prefix N. Valid values of N: 1 to 10.
+         * The IPv4 prefixes to unassign.
          */
         public Builder ipv4Prefix(java.util.List < String > ipv4Prefix) {
             this.putQueryParameter("Ipv4Prefix", ipv4Prefix);
@@ -212,7 +212,7 @@ public class UnassignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * Secondary private IP address N to unassign. Valid values of N: 1 to 32.
+         * The secondary private IP addresses to unassign.
          */
         public Builder privateIpAddress(java.util.List < String > privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);

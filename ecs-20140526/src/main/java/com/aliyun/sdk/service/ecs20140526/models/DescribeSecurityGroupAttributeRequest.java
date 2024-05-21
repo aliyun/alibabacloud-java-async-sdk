@@ -20,6 +20,15 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
     private String direction;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 10)
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NicType")
     private String nicType;
 
@@ -53,6 +62,8 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
         this.direction = builder.direction;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.nicType = builder.nicType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -87,6 +98,20 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
      */
     public String getDirection() {
         return this.direction;
+    }
+
+    /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -141,6 +166,8 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeSecurityGroupAttributeRequest, Builder> {
         private String sourceRegionId; 
         private String direction; 
+        private Integer maxResults; 
+        private String nextToken; 
         private String nicType; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -157,6 +184,8 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
             this.direction = request.direction;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
             this.nicType = request.nicType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -188,6 +217,24 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
             this.direction = direction;
+            return this;
+        }
+
+        /**
+         * MaxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 

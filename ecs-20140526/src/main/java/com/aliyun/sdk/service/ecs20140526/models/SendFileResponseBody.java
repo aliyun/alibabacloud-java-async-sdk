@@ -49,7 +49,7 @@ public class SendFileResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The file sending task ID.
+         * The ID of the command task.
          */
         public Builder invokeId(String invokeId) {
             this.invokeId = invokeId;

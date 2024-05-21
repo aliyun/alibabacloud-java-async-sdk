@@ -93,7 +93,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +101,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +109,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -283,7 +283,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             private Integer totalDisk; 
 
             /**
-             * The available capacity of the local disk. Unit: GiB.
+             * The available capacity of the local disk. Unit: GiB
              */
             public Builder availableDisk(Integer availableDisk) {
                 this.availableDisk = availableDisk;
@@ -291,14 +291,14 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the data disk. Valid values:
+             * The category of data disks. Valid values:
              * <p>
              * 
-             * - cloud: basic disk
-             * - cloud_efficiency: ultra disk
-             * - cloud_ssd: standard SSD
-             * - ephemeral_ssd: local SSD
-             * - cloud_essd: enhanced SSD (ESSD)
+             * *   cloud: basic disk
+             * *   cloud_efficiency: ultra disk
+             * *   cloud_ssd: standard SSD
+             * *   ephemeral_ssd: local SSD
+             * *   cloud_essd: Enterprise SSD (ESSD)
              */
             public Builder dataDiskCategory(String dataDiskCategory) {
                 this.dataDiskCategory = dataDiskCategory;
@@ -306,7 +306,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The total capacity of the local disk. Unit: GiB.
+             * The total capacity of the local disk. Unit: GiB
              */
             public Builder totalDisk(Integer totalDisk) {
                 this.totalDisk = totalDisk;
@@ -456,7 +456,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The size of available memory. Unit: GiB.
+             * The size of available memory. Unit: GiB
              */
             public Builder availableMemory(Integer availableMemory) {
                 this.availableMemory = availableMemory;
@@ -480,7 +480,7 @@ public class DescribeDedicatedHostClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The total memory size. Unit: GiB.
+             * The total memory size. Unit: GiB
              */
             public Builder totalMemory(Integer totalMemory) {
                 this.totalMemory = totalMemory;

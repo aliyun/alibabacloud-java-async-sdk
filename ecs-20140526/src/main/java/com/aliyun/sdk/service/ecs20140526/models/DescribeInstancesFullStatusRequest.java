@@ -318,17 +318,16 @@ public class DescribeInstancesFullStatusRequest extends Request {
         }
 
         /**
-         * The health state of the instance. Valid values:
+         * The health status of the instance. Valid values:
          * <p>
          * 
-         * *   Impaired: The instance is impaired.
-         * *   Warning: The performance of the instance is degraded.
-         * *   Maintaining: The instance is being maintained.
-         * *   Initializing: The instance is being initialized.
-         * *   InsufficientData: The state cannot be determined due to insufficient data.
-         * *   NotApplicable: The state is not applicable.
+         * *   OK
+         * *   Impaired
+         * *   Initializing
+         * *   InsufficientData
+         * *   NotApplicable
          * 
-         * All these values are case-sensitive.
+         * All the values are case-sensitive.
          */
         public Builder healthStatus(String healthStatus) {
             this.putQueryParameter("HealthStatus", healthStatus);
@@ -424,12 +423,12 @@ public class DescribeInstancesFullStatusRequest extends Request {
         }
 
         /**
-         * The lifecycle state of the instance. Valid values:
+         * The lifecycle status of the instance. Valid values:
          * <p>
          * 
-         * *   Starting: The instance is being started.
-         * *   Running: The instance is running.
-         * *   Stopped: The instance is stopped.
+         * *   Starting
+         * *   Running
+         * *   Stopped
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

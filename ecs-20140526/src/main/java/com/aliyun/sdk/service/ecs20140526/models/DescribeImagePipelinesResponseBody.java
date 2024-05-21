@@ -85,7 +85,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details of the image templates.
+         * Details about the image templates.
          */
         public Builder imagePipeline(ImagePipeline imagePipeline) {
             this.imagePipeline = imagePipeline;
@@ -93,7 +93,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +101,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * The query token returned in this call. For information about how to use this return value, see the "Description" section in this topic.
+         * A pagination token. It can be used in the next request to retrieve a new page of results. For information about how to use the return value, see the "Usage notes" section of this topic.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +109,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -210,7 +210,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key of the image template.
+             * The key of the tag.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -218,7 +218,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the image template.
+             * The value of the tag.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -533,7 +533,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             private String vSwitchId; 
 
             /**
-             * The IDs of Alibaba Cloud accounts to which to share the created image.
+             * The IDs of Alibaba Cloud accounts to which to share the image that will be created based on the image template.
              */
             public Builder addAccounts(AddAccounts addAccounts) {
                 this.addAccounts = addAccounts;
@@ -597,7 +597,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * The name prefix of the created image.
+             * The name prefix of the image to be created based on the image template.
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -613,7 +613,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the intermediate instance.
+             * The instance type.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -645,7 +645,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * The system disk size of the intermediate instance. Unit: GiB.
+             * The system disk size of the intermediate instance. Unit: GiB
              */
             public Builder systemDiskSize(Integer systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;
@@ -661,7 +661,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of regions to which to distribute the created image.
+             * The IDs of regions to which to distribute the image that will be created based on the image template.
              */
             public Builder toRegionIds(ToRegionIds toRegionIds) {
                 this.toRegionIds = toRegionIds;
@@ -669,7 +669,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * The ID of the vSwitch in the virtual private cloud (VPC).
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;

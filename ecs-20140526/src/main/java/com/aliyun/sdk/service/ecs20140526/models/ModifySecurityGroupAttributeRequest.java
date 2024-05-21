@@ -179,7 +179,7 @@ public class ModifySecurityGroupAttributeRequest extends Request {
          * The new description of the security group. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
          * <p>
          * 
-         * This parameter is empty by default.
+         * By default, this parameter is left empty.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -197,7 +197,7 @@ public class ModifySecurityGroupAttributeRequest extends Request {
         }
 
         /**
-         * OwnerId.
+         * RAM用户的虚拟账号ID。
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -215,7 +215,7 @@ public class ModifySecurityGroupAttributeRequest extends Request {
         }
 
         /**
-         * ResourceOwnerAccount.
+         * 资源主账号的账号名称。
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
             this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
@@ -224,7 +224,7 @@ public class ModifySecurityGroupAttributeRequest extends Request {
         }
 
         /**
-         * ResourceOwnerId.
+         * 资源主账号的ID，亦即UID。
          */
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
@@ -233,7 +233,7 @@ public class ModifySecurityGroupAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the security group.
+         * The security group ID.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -242,10 +242,10 @@ public class ModifySecurityGroupAttributeRequest extends Request {
         }
 
         /**
-         * The new name of the security group. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * The new name of the security group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
          * <p>
          * 
-         * This parameter is empty by default.
+         * By default, this parameter is left empty.
          */
         public Builder securityGroupName(String securityGroupName) {
             this.putQueryParameter("SecurityGroupName", securityGroupName);

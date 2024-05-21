@@ -218,7 +218,7 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * The ID of image template N. Valid values of N: 1 to 20.
+         * The IDs of image templates. Valid values of N: 1 to 20.
          */
         public Builder imagePipelineId(java.util.List < String > imagePipelineId) {
             this.putQueryParameter("ImagePipelineId", imagePipelineId);
@@ -227,7 +227,7 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return on each page. Valid values: 1 to 500.
+         * The number of entries per page. Valid values: 1 to 500.
          * <p>
          * 
          * Default value: 50.
@@ -248,7 +248,7 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * The query token. Set the value to the `NextToken` value returned in the last call to the DescribeImagePipelines operation. Leave this parameter empty the first time you call this operation.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -314,7 +314,7 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * The key of tag N of the image template. Valid values of N: 1 to 20.
+         * The tags of the image template.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -368,7 +368,7 @@ public class DescribeImagePipelinesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the image template. Valid values of N: 1 to 20.
+             * The key of tag N. Valid values of N: 1 to 20.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -376,7 +376,7 @@ public class DescribeImagePipelinesRequest extends Request {
             }
 
             /**
-             * The value of tag N of the image template. Valid values of N: 1 to 20.
+             * The value of tag N. Valid values of N: 1 to 20.
              */
             public Builder value(String value) {
                 this.value = value;

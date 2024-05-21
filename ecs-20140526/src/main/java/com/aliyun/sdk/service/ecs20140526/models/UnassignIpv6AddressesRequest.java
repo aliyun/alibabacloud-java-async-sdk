@@ -176,7 +176,7 @@ public class UnassignIpv6AddressesRequest extends Request {
         }
 
         /**
-         * The IPv6 addresses to unassign. Valid values of N: 1 to 10.
+         * IPv6 address N to unassign. Valid values of N: 1 to 10.
          */
         public Builder ipv6Address(java.util.List < String > ipv6Address) {
             this.putQueryParameter("Ipv6Address", ipv6Address);
@@ -185,7 +185,7 @@ public class UnassignIpv6AddressesRequest extends Request {
         }
 
         /**
-         * The IPv6 prefixes to unassign. Valid values of N: 1 to 10.
+         * IPv6 prefix N to unassign. Valid values of N: 1 to 10.
          */
         public Builder ipv6Prefix(java.util.List < String > ipv6Prefix) {
             this.putQueryParameter("Ipv6Prefix", ipv6Prefix);

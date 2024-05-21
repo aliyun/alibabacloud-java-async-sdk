@@ -261,10 +261,7 @@ public class DescribeResourcesModificationRequest extends Request {
         }
 
         /**
-         * The condition. If you specify this parameter, the system queries the resource types that the resource can be changed to after the resource meets the specified condition.
-         * <p>
-         * 
-         * Set the value to DiskCategory, which indicates a disk category change. When you set this parameter to DiskCategory, the system queries the instance types that the instance can be changed to after a disk category change.
+         * The conditions.
          */
         public Builder conditions(java.util.List < String > conditions) {
             this.putQueryParameter("Conditions", conditions);
@@ -273,7 +270,7 @@ public class DescribeResourcesModificationRequest extends Request {
         }
 
         /**
-         * The number of vCPU cores of the instance type. For information about the values, see [Overview of instance families](~~25378~~). This parameter takes effect only when DestinationResource is set to InstanceType.
+         * The number of vCPUs of the instance type. For information about the values, see [Overview of instance families](~~25378~~). This parameter takes effect only when DestinationResource is set to InstanceType.
          */
         public Builder cores(Integer cores) {
             this.putQueryParameter("Cores", cores);
@@ -282,7 +279,7 @@ public class DescribeResourcesModificationRequest extends Request {
         }
 
         /**
-         * The target resource type. Valid values:
+         * The type of the resource. Valid values:
          * <p>
          * 
          * *   InstanceType
@@ -295,7 +292,7 @@ public class DescribeResourcesModificationRequest extends Request {
         }
 
         /**
-         * The instance type. For more information, see [Overview of instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the most recent instance type list. This parameter is required when DestinationResource is set to SystemDisk.
+         * The instance type. For more information, see [Overview of instance families](~~25378~~). You can also call the [DescribeInstanceTypes](~~25620~~) operation to query the most recent instance type list. This parameter must be specified when DestinationResource is set to SystemDisk.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -321,14 +318,14 @@ public class DescribeResourcesModificationRequest extends Request {
          * 
          * Default value: false.
          * 
-         * When MigrateAcrossZone is set to true and you upgrade the instance type of an Elastic Compute Service (ECS) instance based on the returned information, take note of the following items:
+         * When MigrateAcrossZone is set to true and you upgrade the instance type of an instance based on the returned information, take note of the following items:
          * 
-         * *   Instances that reside in the classic network:
+         * *   Instance that resides in the classic network:
          * 
-         *     *   For [retired instance types](~~55263~~), when a non-I/O-optimized instance is upgraded to an I/O-optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For Linux instances, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.
+         *     *   For [retired instance types](~~55263~~), when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.
          *     *   For [instance families available for purchase](~~25378~~), when the instance type of an instance is changed, the private IP address of the instance changes.
          * 
-         * *   Instances that reside in virtual private clouds (VPCs): For [retired instance types](~~55263~~), when a non-I/O-optimized instance is upgraded to an I/O-optimized instance, the disk device names and software authorization codes of the instance change. For Linux instances, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.
+         * *   Instance that resides in a virtual private cloud (VPC): For [retired instance types](~~55263~~), when a non-I/O optimized instance is upgraded to an I/O optimized instance, the disk device names and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.
          */
         public Builder migrateAcrossZone(Boolean migrateAcrossZone) {
             this.putQueryParameter("MigrateAcrossZone", migrateAcrossZone);
@@ -342,12 +339,12 @@ public class DescribeResourcesModificationRequest extends Request {
          * 
          * *   Valid values for subscription resources:
          * 
-         *     *   Upgrade
-         *     *   Downgrade
-         *     *   RenewDowngrade
-         *     *   RenewModify
+         *     *   Upgrade: upgrades resources.
+         *     *   Downgrade: downgrades resources.
+         *     *   RenewDowngrade: renews and downgrades resources.
+         *     *   RenewModify: renews an expired instance and changes its configurations.
          * 
-         * *   Valid values for pay-as-you-go resources: Upgrade
+         * *   Set the value to Upgrade for pay-as-you-go resources.
          * 
          * Default value: Upgrade.
          */
@@ -376,7 +373,7 @@ public class DescribeResourcesModificationRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -412,7 +409,7 @@ public class DescribeResourcesModificationRequest extends Request {
         }
 
         /**
-         * The ID of the zone.
+         * The zone ID.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

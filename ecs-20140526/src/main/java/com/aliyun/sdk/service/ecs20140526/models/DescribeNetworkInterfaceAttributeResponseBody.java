@@ -697,7 +697,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The tag value of the ENI.
+         * The tags of the ENI.
          */
         public Builder tags(Tags tags) {
             this.tags = tags;
@@ -1941,7 +1941,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key.
+             * The tag key of the ENI.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -1949,7 +1949,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * The tag value of the ENI.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

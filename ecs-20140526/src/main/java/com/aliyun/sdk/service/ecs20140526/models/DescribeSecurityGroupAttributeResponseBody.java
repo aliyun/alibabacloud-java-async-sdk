@@ -17,6 +17,9 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InnerAccessPolicy")
     private String innerAccessPolicy;
 
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
     @com.aliyun.core.annotation.NameInMap("Permissions")
     private Permissions permissions;
 
@@ -38,6 +41,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
     private DescribeSecurityGroupAttributeResponseBody(Builder builder) {
         this.description = builder.description;
         this.innerAccessPolicy = builder.innerAccessPolicy;
+        this.nextToken = builder.nextToken;
         this.permissions = builder.permissions;
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
@@ -66,6 +70,13 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
      */
     public String getInnerAccessPolicy() {
         return this.innerAccessPolicy;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -113,6 +124,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
     public static final class Builder {
         private String description; 
         private String innerAccessPolicy; 
+        private String nextToken; 
         private Permissions permissions; 
         private String regionId; 
         private String requestId; 
@@ -137,6 +149,14 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
          */
         public Builder innerAccessPolicy(String innerAccessPolicy) {
             this.innerAccessPolicy = innerAccessPolicy;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
             return this;
         }
 

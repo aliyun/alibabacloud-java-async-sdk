@@ -451,8 +451,8 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
          * The performance mode of the burstable instance. Valid values:
          * <p>
          * 
-         * *   Standard: standard mode. For more information, see the "Standard mode" section in [Overview](~~59977#section-svb-w9d-dju~~).
-         * *   Unlimited: unlimited mode. For more information, see the "Unlimited mode" section in [Overview](~~59977#section-svb-w9d-dju~~).
+         * *   Standard: the standard mode. For more information, see the [Performance modes](~~59977#section-svb-w9d-dju~~) section of the "Overview of burstable instances" topic.
+         * *   Unlimited: the unlimited mode. For more information, see the [Performance modes](~~59977#section-svb-w9d-dju~~) section of the "Overview of burstable instances" topic.
          */
         public Builder creditSpecification(String creditSpecification) {
             this.creditSpecification = creditSpecification;
@@ -476,7 +476,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the elastic IP address (EIP) associated with the instance.
+         * The elastic IP address (EIP) associated with the instance.
          */
         public Builder eipAddress(EipAddress eipAddress) {
             this.eipAddress = eipAddress;
@@ -484,14 +484,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ECS实例是否开启了Jumbo frame特性。 可能值：
+         * Indicates whether the Jumbo Frame feature is enabled for the instance. Valid values:
          * <p>
          * 
-         * - true：开启。
+         * *   true
+         * *   false
          * 
-         * - false：不开启。
-         * 
-         * 更多信息，请参见[ECS实例MTU](~~200512~~)。
+         * For more information, see [MTUs](~~200512~~).
          */
         public Builder enableJumboFrame(Boolean enableJumboFrame) {
             this.enableJumboFrame = enableJumboFrame;
@@ -579,13 +578,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The metering method for network usage. Valid values:
+         * The billing method for network usage. Valid values:
          * <p>
          * 
          * *   PayByBandwidth
          * *   PayByTraffic
          * 
-         * > When the **pay-by-traffic** method is used, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios where demand outstrips resource supplies, these maximum bandwidth values may not be reached. If you want guaranteed bandwidths for your instance, use the **pay-by-bandwidth** metering method for network usage.
+         * >  When the **pay-by-traffic** billing method is used for network usage, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios in which demands exceed resource supplies, the maximum bandwidths may not be reached. If you want guaranteed bandwidths for your instance, use the **pay-by-bandwidth** billing method for network usage.
          */
         public Builder internetChargeType(String internetChargeType) {
             this.internetChargeType = internetChargeType;
@@ -880,13 +879,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The metering method for network usage. Valid values:
+             * The billing method for network usage. Valid values:
              * <p>
              * 
              * *   PayByBandwidth
              * *   PayByTraffic
              * 
-             * > When the **pay-by-traffic** method is used, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios where demand outstrips resource supplies, these maximum bandwidth values may not be reached. If you want guaranteed bandwidths for your instance, use the **pay-by-bandwidth** metering method for network usage.
+             * >  When the **pay-by-traffic** billing method is used for network usage, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios in which demands exceed resource supplies, the maximum bandwidths may not be reached. If you want guaranteed bandwidths for your instance, use the **pay-by-bandwidth** billing method for network usage.
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -979,11 +978,11 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
              * The reason why the instance was locked. Valid values:
              * <p>
              * 
-             * *   financial: The dedicated host was locked due to overdue payments.
+             * *   financial: The instance was locked due to overdue payments.
              * *   security: The instance was locked due to security reasons.
              * *   recycling: The preemptible instance was locked and pending release.
              * *   dedicatedhostfinancial: The instance was locked due to overdue payments for the dedicated host.
-             * *   refunded: The instance was locked because a refund was made for the instance.
+             * *   refunded: The instance was locked because a refund is made for the instance.
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -1027,11 +1026,11 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
              * The reason why the instance was locked. Valid values:
              * <p>
              * 
-             * *   financial: The dedicated host was locked due to overdue payments.
+             * *   financial: The instance was locked due to overdue payments.
              * *   security: The instance was locked due to security reasons.
              * *   recycling: The preemptible instance was locked and pending release.
              * *   dedicatedhostfinancial: The instance was locked due to overdue payments for the dedicated host.
-             * *   refunded: The instance was locked because a refund was made for the instance.
+             * *   refunded: The instance was locked because a refund is made for the instance.
              */
             public Builder lockReason(java.util.List < LockReason> lockReason) {
                 this.lockReason = lockReason;

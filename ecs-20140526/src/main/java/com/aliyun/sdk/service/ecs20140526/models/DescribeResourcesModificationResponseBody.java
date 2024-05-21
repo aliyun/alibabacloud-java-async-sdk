@@ -262,7 +262,10 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum resource specification value. This parameter is not returned if it has no value.
+             * The maximum disk capacity.
+             * <p>
+             * 
+             * This parameter takes effect only when the DestinationResource request parameter is set to SystemDisk.
              */
             public Builder max(Integer max) {
                 this.max = max;
@@ -270,7 +273,10 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum resource specification value. This parameter is not returned if it has no value.
+             * The minimum disk capacity.
+             * <p>
+             * 
+             * This parameter takes effect only when the DestinationResource request parameter is set to SystemDisk.
              */
             public Builder min(Integer min) {
                 this.min = min;
@@ -278,11 +284,11 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * The stock status of the resource. Valid values:
+             * The stock state of the resource. Valid values:
              * <p>
              * 
-             * - Available
-             * - SoldOut
+             * *   Available
+             * *   SoldOut
              */
             public Builder status(String status) {
                 this.status = status;
@@ -290,12 +296,12 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * The category of resource based on stock status. Valid values:
+             * The category of the resource based on stock status. Valid values:
              * <p>
              * 
-             * - WithStock: resources that are in sufficient stock
-             * - ClosedWithStock: resources that are in insufficient stock
-             * - WithoutStock: resources that are out of stock
+             * *   WithStock: resources that are in sufficient stock
+             * *   ClosedWithStock: resources that are in insufficient stock
+             * *   WithoutStock: resources that are out of stock
              */
             public Builder statusCategory(String statusCategory) {
                 this.statusCategory = statusCategory;
@@ -303,7 +309,10 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * The resource specification unit. This parameter is not returned if it has no value.
+             * The unit of the disk capacity.
+             * <p>
+             * 
+             * This parameter takes effect only when the DestinationResource request parameter is set to SystemDisk.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -453,7 +462,10 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The maximum resource specification value. This parameter is not returned if it has no value.
+             * The maximum disk capacity.
+             * <p>
+             * 
+             * This parameter takes effect only when the DestinationResource request parameter is set to SystemDisk.
              */
             public Builder max(Integer max) {
                 this.max = max;
@@ -461,7 +473,10 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum resource specification value. This parameter is not returned if it has no value.
+             * The minimum disk capacity.
+             * <p>
+             * 
+             * This parameter takes effect only when the DestinationResource request parameter is set to SystemDisk.
              */
             public Builder min(Integer min) {
                 this.min = min;
@@ -469,7 +484,7 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the resource. Valid values:
+             * The state of the resource. Valid values:
              * <p>
              * 
              * *   Available
@@ -481,7 +496,7 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * The category of resource based on stock status. Valid values:
+             * The category of the resource based on stock status. Valid values:
              * <p>
              * 
              * *   WithStock: resources that are in sufficient stock
@@ -494,7 +509,7 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * The resource specification unit. This parameter is not returned if it has no value.
+             * The unit of the disk capacity. This parameter takes effect only when the DestinationResource request parameter is set to SystemDisk.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -608,7 +623,7 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The resource types that resources can be changed to after the resources meet specified conditions.
+             * The resource types that resources can be changed to after the resources meet specified conditions. If the conditions are met, you can change the current resource to a resource in the list.
              */
             public Builder conditionSupportedResources(ConditionSupportedResources conditionSupportedResources) {
                 this.conditionSupportedResources = conditionSupportedResources;
@@ -624,7 +639,7 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * The type of resource. Valid values:
+             * The type of the resources. Valid values:
              * <p>
              * 
              * *   Zone
@@ -770,7 +785,7 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -778,7 +793,7 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the resource. Valid values:
+             * The state of the resource. Valid values:
              * <p>
              * 
              * *   Available
@@ -790,7 +805,7 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * The category of resource based on stock status. Valid values:
+             * The category of the resource based on stock status. Valid values:
              * <p>
              * 
              * *   WithStock: resources that are in sufficient stock
@@ -803,7 +818,7 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone.
+             * The zone ID.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
