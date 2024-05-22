@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePubUserListBySubUserResponseBody</p>
  */
 public class DescribePubUserListBySubUserResponseBody extends TeaModel {
-    @NameInMap("CallStatus")
+    @com.aliyun.core.annotation.NameInMap("CallStatus")
     private String callStatus;
 
-    @NameInMap("PubUserDetailList")
+    @com.aliyun.core.annotation.NameInMap("PubUserDetailList")
     private java.util.List < PubUserDetailList> pubUserDetailList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubUserDetail")
+    @com.aliyun.core.annotation.NameInMap("SubUserDetail")
     private SubUserDetail subUserDetail;
 
     private DescribePubUserListBySubUserResponseBody(Builder builder) {
@@ -112,10 +111,10 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
     } 
 
     public static class OnlinePeriods extends TeaModel {
-        @NameInMap("JoinTs")
+        @com.aliyun.core.annotation.NameInMap("JoinTs")
         private Long joinTs;
 
-        @NameInMap("LeaveTs")
+        @com.aliyun.core.annotation.NameInMap("LeaveTs")
         private Long leaveTs;
 
         private OnlinePeriods(Builder builder) {
@@ -173,55 +172,55 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
 
     }
     public static class PubUserDetailList extends TeaModel {
-        @NameInMap("CallIdList")
+        @com.aliyun.core.annotation.NameInMap("CallIdList")
         private java.util.List < String > callIdList;
 
-        @NameInMap("ClientType")
+        @com.aliyun.core.annotation.NameInMap("ClientType")
         private String clientType;
 
-        @NameInMap("CreatedTs")
+        @com.aliyun.core.annotation.NameInMap("CreatedTs")
         private Long createdTs;
 
-        @NameInMap("DestroyedTs")
+        @com.aliyun.core.annotation.NameInMap("DestroyedTs")
         private Long destroyedTs;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("Network")
+        @com.aliyun.core.annotation.NameInMap("Network")
         private String network;
 
-        @NameInMap("NetworkList")
+        @com.aliyun.core.annotation.NameInMap("NetworkList")
         private java.util.List < String > networkList;
 
-        @NameInMap("OnlineDuration")
+        @com.aliyun.core.annotation.NameInMap("OnlineDuration")
         private Long onlineDuration;
 
-        @NameInMap("OnlinePeriods")
+        @com.aliyun.core.annotation.NameInMap("OnlinePeriods")
         private java.util.List < OnlinePeriods> onlinePeriods;
 
-        @NameInMap("Os")
+        @com.aliyun.core.annotation.NameInMap("Os")
         private String os;
 
-        @NameInMap("OsList")
+        @com.aliyun.core.annotation.NameInMap("OsList")
         private java.util.List < String > osList;
 
-        @NameInMap("Roles")
+        @com.aliyun.core.annotation.NameInMap("Roles")
         private java.util.List < String > roles;
 
-        @NameInMap("SdkVersion")
+        @com.aliyun.core.annotation.NameInMap("SdkVersion")
         private String sdkVersion;
 
-        @NameInMap("SdkVersionList")
+        @com.aliyun.core.annotation.NameInMap("SdkVersionList")
         private java.util.List < String > sdkVersionList;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserIdAlias")
+        @com.aliyun.core.annotation.NameInMap("UserIdAlias")
         private String userIdAlias;
 
         private PubUserDetailList(Builder builder) {
@@ -534,10 +533,10 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
 
     }
     public static class SubUserDetailOnlinePeriods extends TeaModel {
-        @NameInMap("JoinTs")
+        @com.aliyun.core.annotation.NameInMap("JoinTs")
         private Long joinTs;
 
-        @NameInMap("LeaveTs")
+        @com.aliyun.core.annotation.NameInMap("LeaveTs")
         private Long leaveTs;
 
         private SubUserDetailOnlinePeriods(Builder builder) {
@@ -595,52 +594,52 @@ public class DescribePubUserListBySubUserResponseBody extends TeaModel {
 
     }
     public static class SubUserDetail extends TeaModel {
-        @NameInMap("ClientType")
+        @com.aliyun.core.annotation.NameInMap("ClientType")
         private String clientType;
 
-        @NameInMap("CreatedTs")
+        @com.aliyun.core.annotation.NameInMap("CreatedTs")
         private Long createdTs;
 
-        @NameInMap("DestroyedTs")
+        @com.aliyun.core.annotation.NameInMap("DestroyedTs")
         private Long destroyedTs;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("Network")
+        @com.aliyun.core.annotation.NameInMap("Network")
         private String network;
 
-        @NameInMap("NetworkList")
+        @com.aliyun.core.annotation.NameInMap("NetworkList")
         private java.util.List < String > networkList;
 
-        @NameInMap("OnlineDuration")
+        @com.aliyun.core.annotation.NameInMap("OnlineDuration")
         private Long onlineDuration;
 
-        @NameInMap("OnlinePeriods")
+        @com.aliyun.core.annotation.NameInMap("OnlinePeriods")
         private java.util.List < SubUserDetailOnlinePeriods> onlinePeriods;
 
-        @NameInMap("Os")
+        @com.aliyun.core.annotation.NameInMap("Os")
         private String os;
 
-        @NameInMap("OsList")
+        @com.aliyun.core.annotation.NameInMap("OsList")
         private java.util.List < String > osList;
 
-        @NameInMap("Roles")
+        @com.aliyun.core.annotation.NameInMap("Roles")
         private java.util.List < String > roles;
 
-        @NameInMap("SdkVersion")
+        @com.aliyun.core.annotation.NameInMap("SdkVersion")
         private String sdkVersion;
 
-        @NameInMap("SdkVersionList")
+        @com.aliyun.core.annotation.NameInMap("SdkVersionList")
         private java.util.List < String > sdkVersionList;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserIdAlias")
+        @com.aliyun.core.annotation.NameInMap("UserIdAlias")
         private String userIdAlias;
 
         private SubUserDetail(Builder builder) {

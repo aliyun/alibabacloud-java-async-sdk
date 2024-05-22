@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeQualityOverallDataResponseBody</p>
  */
 public class DescribeQualityOverallDataResponseBody extends TeaModel {
-    @NameInMap("QualityOverallData")
+    @com.aliyun.core.annotation.NameInMap("QualityOverallData")
     private java.util.List < QualityOverallData> qualityOverallData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeQualityOverallDataResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeQualityOverallDataResponseBody extends TeaModel {
     } 
 
     public static class Nodes extends TeaModel {
-        @NameInMap("X")
+        @com.aliyun.core.annotation.NameInMap("X")
         private String x;
 
-        @NameInMap("Y")
+        @com.aliyun.core.annotation.NameInMap("Y")
         private String y;
 
         private Nodes(Builder builder) {
@@ -133,13 +132,13 @@ public class DescribeQualityOverallDataResponseBody extends TeaModel {
 
     }
     public static class QualityOverallData extends TeaModel {
-        @NameInMap("Average")
+        @com.aliyun.core.annotation.NameInMap("Average")
         private String average;
 
-        @NameInMap("Nodes")
+        @com.aliyun.core.annotation.NameInMap("Nodes")
         private java.util.List < Nodes> nodes;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private QualityOverallData(Builder builder) {

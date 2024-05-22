@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUsageOsSdkVersionDistributionStatDataResponseBody</p>
  */
 public class DescribeUsageOsSdkVersionDistributionStatDataResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UsageOsSdkVersionStatList")
+    @com.aliyun.core.annotation.NameInMap("UsageOsSdkVersionStatList")
     private java.util.List < UsageOsSdkVersionStatList> usageOsSdkVersionStatList;
 
     private DescribeUsageOsSdkVersionDistributionStatDataResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class DescribeUsageOsSdkVersionDistributionStatDataResponseBody extends T
     } 
 
     public static class UsageOsSdkVersionStatList extends TeaModel {
-        @NameInMap("AudioCallDuration")
+        @com.aliyun.core.annotation.NameInMap("AudioCallDuration")
         private Long audioCallDuration;
 
-        @NameInMap("CallDurationRatio")
+        @com.aliyun.core.annotation.NameInMap("CallDurationRatio")
         private String callDurationRatio;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Os")
+        @com.aliyun.core.annotation.NameInMap("Os")
         private String os;
 
-        @NameInMap("TotalCallDuration")
+        @com.aliyun.core.annotation.NameInMap("TotalCallDuration")
         private Long totalCallDuration;
 
-        @NameInMap("VideoCallDuration")
+        @com.aliyun.core.annotation.NameInMap("VideoCallDuration")
         private Long videoCallDuration;
 
         private UsageOsSdkVersionStatList(Builder builder) {

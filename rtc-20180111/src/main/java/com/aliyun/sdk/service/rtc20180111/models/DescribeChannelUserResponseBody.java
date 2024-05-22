@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeChannelUserResponseBody</p>
  */
 public class DescribeChannelUserResponseBody extends TeaModel {
-    @NameInMap("ChannelExist")
+    @com.aliyun.core.annotation.NameInMap("ChannelExist")
     private Boolean channelExist;
 
-    @NameInMap("InChannel")
+    @com.aliyun.core.annotation.NameInMap("InChannel")
     private Boolean inChannel;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Sessions")
+    @com.aliyun.core.annotation.NameInMap("Sessions")
     private java.util.List < Sessions> sessions;
 
     private DescribeChannelUserResponseBody(Builder builder) {
@@ -112,13 +111,13 @@ public class DescribeChannelUserResponseBody extends TeaModel {
     } 
 
     public static class Sessions extends TeaModel {
-        @NameInMap("Joined")
+        @com.aliyun.core.annotation.NameInMap("Joined")
         private Long joined;
 
-        @NameInMap("SessionId")
+        @com.aliyun.core.annotation.NameInMap("SessionId")
         private String sessionId;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private Sessions(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAutoLiveStreamRuleResponseBody</p>
  */
 public class DescribeAutoLiveStreamRuleResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Rules")
+    @com.aliyun.core.annotation.NameInMap("Rules")
     private java.util.List < Rules> rules;
 
     private DescribeAutoLiveStreamRuleResponseBody(Builder builder) {
@@ -72,31 +71,31 @@ public class DescribeAutoLiveStreamRuleResponseBody extends TeaModel {
     } 
 
     public static class Rules extends TeaModel {
-        @NameInMap("CallBack")
+        @com.aliyun.core.annotation.NameInMap("CallBack")
         private String callBack;
 
-        @NameInMap("ChannelIdPrefixes")
+        @com.aliyun.core.annotation.NameInMap("ChannelIdPrefixes")
         private java.util.List < String > channelIdPrefixes;
 
-        @NameInMap("ChannelIds")
+        @com.aliyun.core.annotation.NameInMap("ChannelIds")
         private java.util.List < String > channelIds;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("MediaEncode")
+        @com.aliyun.core.annotation.NameInMap("MediaEncode")
         private Integer mediaEncode;
 
-        @NameInMap("PlayDomain")
+        @com.aliyun.core.annotation.NameInMap("PlayDomain")
         private String playDomain;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Rules(Builder builder) {

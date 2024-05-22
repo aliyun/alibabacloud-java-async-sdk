@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeQualityAreaDistributionStatDataResponseBody</p>
  */
 public class DescribeQualityAreaDistributionStatDataResponseBody extends TeaModel {
-    @NameInMap("QualityStatDataList")
+    @com.aliyun.core.annotation.NameInMap("QualityStatDataList")
     private java.util.List < QualityStatDataList> qualityStatDataList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeQualityAreaDistributionStatDataResponseBody(Builder builder) {
@@ -72,37 +71,37 @@ public class DescribeQualityAreaDistributionStatDataResponseBody extends TeaMode
     } 
 
     public static class QualityStatDataList extends TeaModel {
-        @NameInMap("AudioDelay")
+        @com.aliyun.core.annotation.NameInMap("AudioDelay")
         private Long audioDelay;
 
-        @NameInMap("AudioHighQualityTransmissionRate")
+        @com.aliyun.core.annotation.NameInMap("AudioHighQualityTransmissionRate")
         private String audioHighQualityTransmissionRate;
 
-        @NameInMap("AudioStuckRate")
+        @com.aliyun.core.annotation.NameInMap("AudioStuckRate")
         private String audioStuckRate;
 
-        @NameInMap("CallDurationRatio")
+        @com.aliyun.core.annotation.NameInMap("CallDurationRatio")
         private String callDurationRatio;
 
-        @NameInMap("JoinChannelSucFiveSecRate")
+        @com.aliyun.core.annotation.NameInMap("JoinChannelSucFiveSecRate")
         private String joinChannelSucFiveSecRate;
 
-        @NameInMap("JoinChannelSucRate")
+        @com.aliyun.core.annotation.NameInMap("JoinChannelSucRate")
         private String joinChannelSucRate;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("VideoDelay")
+        @com.aliyun.core.annotation.NameInMap("VideoDelay")
         private Long videoDelay;
 
-        @NameInMap("VideoFirstPicDuration")
+        @com.aliyun.core.annotation.NameInMap("VideoFirstPicDuration")
         private Long videoFirstPicDuration;
 
-        @NameInMap("VideoHighQualityTransmissionRate")
+        @com.aliyun.core.annotation.NameInMap("VideoHighQualityTransmissionRate")
         private String videoHighQualityTransmissionRate;
 
-        @NameInMap("VideoStuckRate")
+        @com.aliyun.core.annotation.NameInMap("VideoStuckRate")
         private String videoStuckRate;
 
         private QualityStatDataList(Builder builder) {

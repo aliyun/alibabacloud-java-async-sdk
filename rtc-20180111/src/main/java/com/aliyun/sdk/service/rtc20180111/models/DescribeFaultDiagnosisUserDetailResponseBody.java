@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeFaultDiagnosisUserDetailResponseBody</p>
  */
 public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
-    @NameInMap("CallInfo")
+    @com.aliyun.core.annotation.NameInMap("CallInfo")
     private CallInfo callInfo;
 
-    @NameInMap("FactorList")
+    @com.aliyun.core.annotation.NameInMap("FactorList")
     private java.util.List < FactorList> factorList;
 
-    @NameInMap("FaultMetricData")
+    @com.aliyun.core.annotation.NameInMap("FaultMetricData")
     private FaultMetricData faultMetricData;
 
-    @NameInMap("NetworkOperators")
+    @com.aliyun.core.annotation.NameInMap("NetworkOperators")
     private java.util.List < String > networkOperators;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UserDetail")
+    @com.aliyun.core.annotation.NameInMap("UserDetail")
     private UserDetail userDetail;
 
     private DescribeFaultDiagnosisUserDetailResponseBody(Builder builder) {
@@ -152,22 +151,22 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
     } 
 
     public static class CallInfo extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("CallStatus")
+        @com.aliyun.core.annotation.NameInMap("CallStatus")
         private String callStatus;
 
-        @NameInMap("ChannelId")
+        @com.aliyun.core.annotation.NameInMap("ChannelId")
         private String channelId;
 
-        @NameInMap("CreatedTs")
+        @com.aliyun.core.annotation.NameInMap("CreatedTs")
         private Long createdTs;
 
-        @NameInMap("DestroyedTs")
+        @com.aliyun.core.annotation.NameInMap("DestroyedTs")
         private Long destroyedTs;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
 
         private CallInfo(Builder builder) {
@@ -293,13 +292,13 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
 
     }
     public static class EventList extends TeaModel {
-        @NameInMap("EventName")
+        @com.aliyun.core.annotation.NameInMap("EventName")
         private String eventName;
 
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
 
-        @NameInMap("Ts")
+        @com.aliyun.core.annotation.NameInMap("Ts")
         private Long ts;
 
         private EventList(Builder builder) {
@@ -374,10 +373,10 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
 
     }
     public static class EventDataItems extends TeaModel {
-        @NameInMap("EventList")
+        @com.aliyun.core.annotation.NameInMap("EventList")
         private java.util.List < EventList> eventList;
 
-        @NameInMap("Ts")
+        @com.aliyun.core.annotation.NameInMap("Ts")
         private Long ts;
 
         private EventDataItems(Builder builder) {
@@ -435,13 +434,13 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
 
     }
     public static class RelatedEventDatas extends TeaModel {
-        @NameInMap("EventDataItems")
+        @com.aliyun.core.annotation.NameInMap("EventDataItems")
         private java.util.List < EventDataItems> eventDataItems;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private RelatedEventDatas(Builder builder) {
@@ -516,13 +515,13 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
 
     }
     public static class Nodes extends TeaModel {
-        @NameInMap("Ext")
+        @com.aliyun.core.annotation.NameInMap("Ext")
         private java.util.Map < String, ? > ext;
 
-        @NameInMap("X")
+        @com.aliyun.core.annotation.NameInMap("X")
         private String x;
 
-        @NameInMap("Y")
+        @com.aliyun.core.annotation.NameInMap("Y")
         private String y;
 
         private Nodes(Builder builder) {
@@ -597,16 +596,16 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
 
     }
     public static class RelatedMetricDatas extends TeaModel {
-        @NameInMap("Nodes")
+        @com.aliyun.core.annotation.NameInMap("Nodes")
         private java.util.List < Nodes> nodes;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private RelatedMetricDatas(Builder builder) {
@@ -698,16 +697,16 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
 
     }
     public static class FactorList extends TeaModel {
-        @NameInMap("FactorId")
+        @com.aliyun.core.annotation.NameInMap("FactorId")
         private String factorId;
 
-        @NameInMap("FaultSource")
+        @com.aliyun.core.annotation.NameInMap("FaultSource")
         private String faultSource;
 
-        @NameInMap("RelatedEventDatas")
+        @com.aliyun.core.annotation.NameInMap("RelatedEventDatas")
         private java.util.List < RelatedEventDatas> relatedEventDatas;
 
-        @NameInMap("RelatedMetricDatas")
+        @com.aliyun.core.annotation.NameInMap("RelatedMetricDatas")
         private java.util.List < RelatedMetricDatas> relatedMetricDatas;
 
         private FactorList(Builder builder) {
@@ -799,10 +798,10 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
 
     }
     public static class FaultMetricDataNodes extends TeaModel {
-        @NameInMap("X")
+        @com.aliyun.core.annotation.NameInMap("X")
         private String x;
 
-        @NameInMap("Y")
+        @com.aliyun.core.annotation.NameInMap("Y")
         private String y;
 
         private FaultMetricDataNodes(Builder builder) {
@@ -860,7 +859,7 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
 
     }
     public static class FaultMetricData extends TeaModel {
-        @NameInMap("Nodes")
+        @com.aliyun.core.annotation.NameInMap("Nodes")
         private java.util.List < FaultMetricDataNodes> nodes;
 
         private FaultMetricData(Builder builder) {
@@ -901,10 +900,10 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
 
     }
     public static class OnlinePeriods extends TeaModel {
-        @NameInMap("JoinTs")
+        @com.aliyun.core.annotation.NameInMap("JoinTs")
         private Long joinTs;
 
-        @NameInMap("LeaveTs")
+        @com.aliyun.core.annotation.NameInMap("LeaveTs")
         private Long leaveTs;
 
         private OnlinePeriods(Builder builder) {
@@ -962,34 +961,34 @@ public class DescribeFaultDiagnosisUserDetailResponseBody extends TeaModel {
 
     }
     public static class UserDetail extends TeaModel {
-        @NameInMap("CreatedTs")
+        @com.aliyun.core.annotation.NameInMap("CreatedTs")
         private Long createdTs;
 
-        @NameInMap("DestroyedTs")
+        @com.aliyun.core.annotation.NameInMap("DestroyedTs")
         private Long destroyedTs;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("Network")
+        @com.aliyun.core.annotation.NameInMap("Network")
         private String network;
 
-        @NameInMap("OnlineDuration")
+        @com.aliyun.core.annotation.NameInMap("OnlineDuration")
         private Long onlineDuration;
 
-        @NameInMap("OnlinePeriods")
+        @com.aliyun.core.annotation.NameInMap("OnlinePeriods")
         private java.util.List < OnlinePeriods> onlinePeriods;
 
-        @NameInMap("Os")
+        @com.aliyun.core.annotation.NameInMap("Os")
         private String os;
 
-        @NameInMap("SdkVersion")
+        @com.aliyun.core.annotation.NameInMap("SdkVersion")
         private String sdkVersion;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private UserDetail(Builder builder) {

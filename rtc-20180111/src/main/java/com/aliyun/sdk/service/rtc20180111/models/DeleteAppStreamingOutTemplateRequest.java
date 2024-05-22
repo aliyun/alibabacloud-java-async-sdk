@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteAppStreamingOutTemplateRequest</p>
  */
 public class DeleteAppStreamingOutTemplateRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("StreamingOutTemplate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StreamingOutTemplate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private StreamingOutTemplate streamingOutTemplate;
 
     private DeleteAppStreamingOutTemplateRequest(Builder builder) {
@@ -96,8 +95,8 @@ public class DeleteAppStreamingOutTemplateRequest extends Request {
     } 
 
     public static class StreamingOutTemplate extends TeaModel {
-        @NameInMap("TemplateId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String templateId;
 
         private StreamingOutTemplate(Builder builder) {

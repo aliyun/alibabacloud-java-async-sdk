@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeChannelParticipantsResponseBody</p>
  */
 public class DescribeChannelParticipantsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Timestamp")
+    @com.aliyun.core.annotation.NameInMap("Timestamp")
     private Integer timestamp;
 
-    @NameInMap("TotalNum")
+    @com.aliyun.core.annotation.NameInMap("TotalNum")
     private Integer totalNum;
 
-    @NameInMap("TotalPage")
+    @com.aliyun.core.annotation.NameInMap("TotalPage")
     private Integer totalPage;
 
-    @NameInMap("UserList")
+    @com.aliyun.core.annotation.NameInMap("UserList")
     private UserList userList;
 
     private DescribeChannelParticipantsResponseBody(Builder builder) {
@@ -132,7 +131,7 @@ public class DescribeChannelParticipantsResponseBody extends TeaModel {
     } 
 
     public static class UserList extends TeaModel {
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private java.util.List < String > user;
 
         private UserList(Builder builder) {

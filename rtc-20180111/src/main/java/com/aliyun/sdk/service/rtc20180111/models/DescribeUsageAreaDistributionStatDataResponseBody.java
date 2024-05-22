@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUsageAreaDistributionStatDataResponseBody</p>
  */
 public class DescribeUsageAreaDistributionStatDataResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UsageAreaStatList")
+    @com.aliyun.core.annotation.NameInMap("UsageAreaStatList")
     private java.util.List < UsageAreaStatList> usageAreaStatList;
 
     private DescribeUsageAreaDistributionStatDataResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribeUsageAreaDistributionStatDataResponseBody extends TeaModel 
     } 
 
     public static class UsageAreaStatList extends TeaModel {
-        @NameInMap("AudioCallDuration")
+        @com.aliyun.core.annotation.NameInMap("AudioCallDuration")
         private Integer audioCallDuration;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("TotalCallDuration")
+        @com.aliyun.core.annotation.NameInMap("TotalCallDuration")
         private Integer totalCallDuration;
 
-        @NameInMap("VideoCallDuration")
+        @com.aliyun.core.annotation.NameInMap("VideoCallDuration")
         private Integer videoCallDuration;
 
         private UsageAreaStatList(Builder builder) {

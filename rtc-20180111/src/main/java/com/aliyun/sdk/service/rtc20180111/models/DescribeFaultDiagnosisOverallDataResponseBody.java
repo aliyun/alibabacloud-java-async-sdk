@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeFaultDiagnosisOverallDataResponseBody</p>
  */
 public class DescribeFaultDiagnosisOverallDataResponseBody extends TeaModel {
-    @NameInMap("MetricData")
+    @com.aliyun.core.annotation.NameInMap("MetricData")
     private MetricData metricData;
 
-    @NameInMap("OverallData")
+    @com.aliyun.core.annotation.NameInMap("OverallData")
     private OverallData overallData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeFaultDiagnosisOverallDataResponseBody(Builder builder) {
@@ -92,13 +91,13 @@ public class DescribeFaultDiagnosisOverallDataResponseBody extends TeaModel {
     } 
 
     public static class Nodes extends TeaModel {
-        @NameInMap("Ext")
+        @com.aliyun.core.annotation.NameInMap("Ext")
         private java.util.Map < String, ? > ext;
 
-        @NameInMap("X")
+        @com.aliyun.core.annotation.NameInMap("X")
         private String x;
 
-        @NameInMap("Y")
+        @com.aliyun.core.annotation.NameInMap("Y")
         private String y;
 
         private Nodes(Builder builder) {
@@ -173,7 +172,7 @@ public class DescribeFaultDiagnosisOverallDataResponseBody extends TeaModel {
 
     }
     public static class MetricData extends TeaModel {
-        @NameInMap("Nodes")
+        @com.aliyun.core.annotation.NameInMap("Nodes")
         private java.util.List < Nodes> nodes;
 
         private MetricData(Builder builder) {
@@ -214,13 +213,13 @@ public class DescribeFaultDiagnosisOverallDataResponseBody extends TeaModel {
 
     }
     public static class OverallData extends TeaModel {
-        @NameInMap("FaultUserCount")
+        @com.aliyun.core.annotation.NameInMap("FaultUserCount")
         private Integer faultUserCount;
 
-        @NameInMap("FaultUserRatio")
+        @com.aliyun.core.annotation.NameInMap("FaultUserRatio")
         private Float faultUserRatio;
 
-        @NameInMap("TotalUserCount")
+        @com.aliyun.core.annotation.NameInMap("TotalUserCount")
         private Integer totalUserCount;
 
         private OverallData(Builder builder) {

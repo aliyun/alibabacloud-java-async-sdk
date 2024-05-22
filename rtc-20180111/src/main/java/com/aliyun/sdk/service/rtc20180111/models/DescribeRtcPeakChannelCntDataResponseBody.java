@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRtcPeakChannelCntDataResponseBody</p>
  */
 public class DescribeRtcPeakChannelCntDataResponseBody extends TeaModel {
-    @NameInMap("PeakChannelCntDataPerInterval")
+    @com.aliyun.core.annotation.NameInMap("PeakChannelCntDataPerInterval")
     private PeakChannelCntDataPerInterval peakChannelCntDataPerInterval;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeRtcPeakChannelCntDataResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeRtcPeakChannelCntDataResponseBody extends TeaModel {
     } 
 
     public static class PeakChannelCntModule extends TeaModel {
-        @NameInMap("ActiveChannelPeak")
+        @com.aliyun.core.annotation.NameInMap("ActiveChannelPeak")
         private Long activeChannelPeak;
 
-        @NameInMap("ActiveChannelPeakTime")
+        @com.aliyun.core.annotation.NameInMap("ActiveChannelPeakTime")
         private String activeChannelPeakTime;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private PeakChannelCntModule(Builder builder) {
@@ -153,7 +152,7 @@ public class DescribeRtcPeakChannelCntDataResponseBody extends TeaModel {
 
     }
     public static class PeakChannelCntDataPerInterval extends TeaModel {
-        @NameInMap("PeakChannelCntModule")
+        @com.aliyun.core.annotation.NameInMap("PeakChannelCntModule")
         private java.util.List < PeakChannelCntModule> peakChannelCntModule;
 
         private PeakChannelCntDataPerInterval(Builder builder) {

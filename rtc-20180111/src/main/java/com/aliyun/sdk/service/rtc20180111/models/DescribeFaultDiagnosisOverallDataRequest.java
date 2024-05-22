@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeFaultDiagnosisOverallDataRequest</p>
  */
 public class DescribeFaultDiagnosisOverallDataRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("EndTs")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTs")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTs;
 
-    @Query
-    @NameInMap("StartTs")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTs")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTs;
 
-    @Query
-    @NameInMap("StatDim")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StatDim")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String statDim;
 
     private DescribeFaultDiagnosisOverallDataRequest(Builder builder) {

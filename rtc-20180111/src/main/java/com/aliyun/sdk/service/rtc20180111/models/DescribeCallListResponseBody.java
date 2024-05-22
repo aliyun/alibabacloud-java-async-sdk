@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCallListResponseBody</p>
  */
 public class DescribeCallListResponseBody extends TeaModel {
-    @NameInMap("CallList")
+    @com.aliyun.core.annotation.NameInMap("CallList")
     private java.util.List < CallList> callList;
 
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCnt")
+    @com.aliyun.core.annotation.NameInMap("TotalCnt")
     private Integer totalCnt;
 
     private DescribeCallListResponseBody(Builder builder) {
@@ -132,28 +131,28 @@ public class DescribeCallListResponseBody extends TeaModel {
     } 
 
     public static class CallList extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("BadExpUserCnt")
+        @com.aliyun.core.annotation.NameInMap("BadExpUserCnt")
         private Integer badExpUserCnt;
 
-        @NameInMap("CallStatus")
+        @com.aliyun.core.annotation.NameInMap("CallStatus")
         private String callStatus;
 
-        @NameInMap("ChannelId")
+        @com.aliyun.core.annotation.NameInMap("ChannelId")
         private String channelId;
 
-        @NameInMap("CreatedTs")
+        @com.aliyun.core.annotation.NameInMap("CreatedTs")
         private Long createdTs;
 
-        @NameInMap("DestroyedTs")
+        @com.aliyun.core.annotation.NameInMap("DestroyedTs")
         private Long destroyedTs;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
 
-        @NameInMap("UserCnt")
+        @com.aliyun.core.annotation.NameInMap("UserCnt")
         private Integer userCnt;
 
         private CallList(Builder builder) {

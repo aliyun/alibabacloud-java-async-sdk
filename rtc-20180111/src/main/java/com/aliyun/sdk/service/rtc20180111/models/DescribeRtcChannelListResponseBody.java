@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRtcChannelListResponseBody</p>
  */
 public class DescribeRtcChannelListResponseBody extends TeaModel {
-    @NameInMap("ChannelList")
+    @com.aliyun.core.annotation.NameInMap("ChannelList")
     private ChannelList channelList;
 
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Long pageNo;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCnt")
+    @com.aliyun.core.annotation.NameInMap("TotalCnt")
     private Long totalCnt;
 
     private DescribeRtcChannelListResponseBody(Builder builder) {
@@ -132,7 +131,7 @@ public class DescribeRtcChannelListResponseBody extends TeaModel {
     } 
 
     public static class CallArea extends TeaModel {
-        @NameInMap("CallArea")
+        @com.aliyun.core.annotation.NameInMap("CallArea")
         private java.util.List < String > callArea;
 
         private CallArea(Builder builder) {
@@ -173,19 +172,19 @@ public class DescribeRtcChannelListResponseBody extends TeaModel {
 
     }
     public static class ChannelListChannelList extends TeaModel {
-        @NameInMap("CallArea")
+        @com.aliyun.core.annotation.NameInMap("CallArea")
         private CallArea callArea;
 
-        @NameInMap("ChannelId")
+        @com.aliyun.core.annotation.NameInMap("ChannelId")
         private String channelId;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("TotalUserCnt")
+        @com.aliyun.core.annotation.NameInMap("TotalUserCnt")
         private Long totalUserCnt;
 
         private ChannelListChannelList(Builder builder) {
@@ -294,7 +293,7 @@ public class DescribeRtcChannelListResponseBody extends TeaModel {
 
     }
     public static class ChannelList extends TeaModel {
-        @NameInMap("ChannelList")
+        @com.aliyun.core.annotation.NameInMap("ChannelList")
         private java.util.List < ChannelListChannelList> channelList;
 
         private ChannelList(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeChannelTopPubUserListResponseBody</p>
  */
 public class DescribeChannelTopPubUserListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TopPubUserDetailList")
+    @com.aliyun.core.annotation.NameInMap("TopPubUserDetailList")
     private java.util.List < TopPubUserDetailList> topPubUserDetailList;
 
     private DescribeChannelTopPubUserListResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeChannelTopPubUserListResponseBody extends TeaModel {
     } 
 
     public static class OnlinePeriods extends TeaModel {
-        @NameInMap("JoinTs")
+        @com.aliyun.core.annotation.NameInMap("JoinTs")
         private Long joinTs;
 
-        @NameInMap("LeaveTs")
+        @com.aliyun.core.annotation.NameInMap("LeaveTs")
         private Long leaveTs;
 
         private OnlinePeriods(Builder builder) {
@@ -133,25 +132,25 @@ public class DescribeChannelTopPubUserListResponseBody extends TeaModel {
 
     }
     public static class TopPubUserDetailList extends TeaModel {
-        @NameInMap("CreatedTs")
+        @com.aliyun.core.annotation.NameInMap("CreatedTs")
         private Long createdTs;
 
-        @NameInMap("DestroyedTs")
+        @com.aliyun.core.annotation.NameInMap("DestroyedTs")
         private Long destroyedTs;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("OnlineDuration")
+        @com.aliyun.core.annotation.NameInMap("OnlineDuration")
         private Long onlineDuration;
 
-        @NameInMap("OnlinePeriods")
+        @com.aliyun.core.annotation.NameInMap("OnlinePeriods")
         private java.util.List < OnlinePeriods> onlinePeriods;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private TopPubUserDetailList(Builder builder) {

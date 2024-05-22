@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAppStreamingOutTemplatesResponseBody</p>
  */
 public class DescribeAppStreamingOutTemplatesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Templates")
+    @com.aliyun.core.annotation.NameInMap("Templates")
     private java.util.List < Templates> templates;
 
-    @NameInMap("TotalNum")
+    @com.aliyun.core.annotation.NameInMap("TotalNum")
     private Long totalNum;
 
-    @NameInMap("TotalPage")
+    @com.aliyun.core.annotation.NameInMap("TotalPage")
     private Long totalPage;
 
     private DescribeAppStreamingOutTemplatesResponseBody(Builder builder) {
@@ -112,19 +111,19 @@ public class DescribeAppStreamingOutTemplatesResponseBody extends TeaModel {
     } 
 
     public static class Templates extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("LayoutIds")
+        @com.aliyun.core.annotation.NameInMap("LayoutIds")
         private java.util.List < String > layoutIds;
 
-        @NameInMap("MediaEncode")
+        @com.aliyun.core.annotation.NameInMap("MediaEncode")
         private Integer mediaEncode;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
         private Templates(Builder builder) {

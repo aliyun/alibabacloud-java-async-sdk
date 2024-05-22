@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRecordTemplatesResponseBody</p>
  */
 public class DescribeRecordTemplatesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Templates")
+    @com.aliyun.core.annotation.NameInMap("Templates")
     private java.util.List < Templates> templates;
 
-    @NameInMap("TotalNum")
+    @com.aliyun.core.annotation.NameInMap("TotalNum")
     private Long totalNum;
 
-    @NameInMap("TotalPage")
+    @com.aliyun.core.annotation.NameInMap("TotalPage")
     private Long totalPage;
 
     private DescribeRecordTemplatesResponseBody(Builder builder) {
@@ -112,25 +111,25 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
     } 
 
     public static class Backgrounds extends TeaModel {
-        @NameInMap("Display")
+        @com.aliyun.core.annotation.NameInMap("Display")
         private Integer display;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Float height;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private Float width;
 
-        @NameInMap("X")
+        @com.aliyun.core.annotation.NameInMap("X")
         private Float x;
 
-        @NameInMap("Y")
+        @com.aliyun.core.annotation.NameInMap("Y")
         private Float y;
 
-        @NameInMap("ZOrder")
+        @com.aliyun.core.annotation.NameInMap("ZOrder")
         private Integer zOrder;
 
         private Backgrounds(Builder builder) {
@@ -273,22 +272,22 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
 
     }
     public static class ClockWidgets extends TeaModel {
-        @NameInMap("FontColor")
+        @com.aliyun.core.annotation.NameInMap("FontColor")
         private Integer fontColor;
 
-        @NameInMap("FontSize")
+        @com.aliyun.core.annotation.NameInMap("FontSize")
         private Integer fontSize;
 
-        @NameInMap("FontType")
+        @com.aliyun.core.annotation.NameInMap("FontType")
         private Integer fontType;
 
-        @NameInMap("X")
+        @com.aliyun.core.annotation.NameInMap("X")
         private Float x;
 
-        @NameInMap("Y")
+        @com.aliyun.core.annotation.NameInMap("Y")
         private Float y;
 
-        @NameInMap("ZOrder")
+        @com.aliyun.core.annotation.NameInMap("ZOrder")
         private Integer zOrder;
 
         private ClockWidgets(Builder builder) {
@@ -414,28 +413,28 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
 
     }
     public static class Watermarks extends TeaModel {
-        @NameInMap("Alpha")
+        @com.aliyun.core.annotation.NameInMap("Alpha")
         private Float alpha;
 
-        @NameInMap("Display")
+        @com.aliyun.core.annotation.NameInMap("Display")
         private Integer display;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Float height;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private Float width;
 
-        @NameInMap("X")
+        @com.aliyun.core.annotation.NameInMap("X")
         private Float x;
 
-        @NameInMap("Y")
+        @com.aliyun.core.annotation.NameInMap("Y")
         private Float y;
 
-        @NameInMap("ZOrder")
+        @com.aliyun.core.annotation.NameInMap("ZOrder")
         private Integer zOrder;
 
         private Watermarks(Builder builder) {
@@ -595,58 +594,58 @@ public class DescribeRecordTemplatesResponseBody extends TeaModel {
 
     }
     public static class Templates extends TeaModel {
-        @NameInMap("BackgroundColor")
+        @com.aliyun.core.annotation.NameInMap("BackgroundColor")
         private Integer backgroundColor;
 
-        @NameInMap("Backgrounds")
+        @com.aliyun.core.annotation.NameInMap("Backgrounds")
         private java.util.List < Backgrounds> backgrounds;
 
-        @NameInMap("ClockWidgets")
+        @com.aliyun.core.annotation.NameInMap("ClockWidgets")
         private java.util.List < ClockWidgets> clockWidgets;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DelayStopTime")
+        @com.aliyun.core.annotation.NameInMap("DelayStopTime")
         private Integer delayStopTime;
 
-        @NameInMap("EnableM3u8DateTime")
+        @com.aliyun.core.annotation.NameInMap("EnableM3u8DateTime")
         private Boolean enableM3u8DateTime;
 
-        @NameInMap("FileSplitInterval")
+        @com.aliyun.core.annotation.NameInMap("FileSplitInterval")
         private Integer fileSplitInterval;
 
-        @NameInMap("Formats")
+        @com.aliyun.core.annotation.NameInMap("Formats")
         private java.util.List < String > formats;
 
-        @NameInMap("HttpCallbackUrl")
+        @com.aliyun.core.annotation.NameInMap("HttpCallbackUrl")
         private String httpCallbackUrl;
 
-        @NameInMap("LayoutIds")
+        @com.aliyun.core.annotation.NameInMap("LayoutIds")
         private java.util.List < Long > layoutIds;
 
-        @NameInMap("MediaEncode")
+        @com.aliyun.core.annotation.NameInMap("MediaEncode")
         private Integer mediaEncode;
 
-        @NameInMap("MnsQueue")
+        @com.aliyun.core.annotation.NameInMap("MnsQueue")
         private String mnsQueue;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OssBucket")
+        @com.aliyun.core.annotation.NameInMap("OssBucket")
         private String ossBucket;
 
-        @NameInMap("OssFilePrefix")
+        @com.aliyun.core.annotation.NameInMap("OssFilePrefix")
         private String ossFilePrefix;
 
-        @NameInMap("TaskProfile")
+        @com.aliyun.core.annotation.NameInMap("TaskProfile")
         private String taskProfile;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("Watermarks")
+        @com.aliyun.core.annotation.NameInMap("Watermarks")
         private java.util.List < Watermarks> watermarks;
 
         private Templates(Builder builder) {

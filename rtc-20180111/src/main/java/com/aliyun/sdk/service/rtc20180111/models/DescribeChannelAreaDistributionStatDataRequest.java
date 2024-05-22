@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeChannelAreaDistributionStatDataRequest</p>
  */
 public class DescribeChannelAreaDistributionStatDataRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("ChannelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChannelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String channelId;
 
-    @Query
-    @NameInMap("CreatedTs")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreatedTs")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long createdTs;
 
-    @Query
-    @NameInMap("DestroyedTs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestroyedTs")
     private Long destroyedTs;
 
-    @Query
-    @NameInMap("ParentArea")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentArea")
     private String parentArea;
 
     private DescribeChannelAreaDistributionStatDataRequest(Builder builder) {

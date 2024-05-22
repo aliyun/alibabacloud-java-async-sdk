@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeChannelOverallDataResponseBody</p>
  */
 public class DescribeChannelOverallDataResponseBody extends TeaModel {
-    @NameInMap("CallInfo")
+    @com.aliyun.core.annotation.NameInMap("CallInfo")
     private CallInfo callInfo;
 
-    @NameInMap("MetricDatas")
+    @com.aliyun.core.annotation.NameInMap("MetricDatas")
     private java.util.List < MetricDatas> metricDatas;
 
-    @NameInMap("OverallData")
+    @com.aliyun.core.annotation.NameInMap("OverallData")
     private OverallData overallData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeChannelOverallDataResponseBody(Builder builder) {
@@ -112,22 +111,22 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
     } 
 
     public static class CallInfo extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("CallStatus")
+        @com.aliyun.core.annotation.NameInMap("CallStatus")
         private String callStatus;
 
-        @NameInMap("ChannelId")
+        @com.aliyun.core.annotation.NameInMap("ChannelId")
         private String channelId;
 
-        @NameInMap("CreatedTs")
+        @com.aliyun.core.annotation.NameInMap("CreatedTs")
         private Long createdTs;
 
-        @NameInMap("DestroyedTs")
+        @com.aliyun.core.annotation.NameInMap("DestroyedTs")
         private Long destroyedTs;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
 
         private CallInfo(Builder builder) {
@@ -253,13 +252,13 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
 
     }
     public static class Nodes extends TeaModel {
-        @NameInMap("Ext")
+        @com.aliyun.core.annotation.NameInMap("Ext")
         private java.util.Map < String, ? > ext;
 
-        @NameInMap("X")
+        @com.aliyun.core.annotation.NameInMap("X")
         private String x;
 
-        @NameInMap("Y")
+        @com.aliyun.core.annotation.NameInMap("Y")
         private String y;
 
         private Nodes(Builder builder) {
@@ -334,10 +333,10 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
 
     }
     public static class MetricDatas extends TeaModel {
-        @NameInMap("Nodes")
+        @com.aliyun.core.annotation.NameInMap("Nodes")
         private java.util.List < Nodes> nodes;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private MetricDatas(Builder builder) {
@@ -395,19 +394,19 @@ public class DescribeChannelOverallDataResponseBody extends TeaModel {
 
     }
     public static class OverallData extends TeaModel {
-        @NameInMap("ConnAvgTime")
+        @com.aliyun.core.annotation.NameInMap("ConnAvgTime")
         private Float connAvgTime;
 
-        @NameInMap("FiveSecJoinRate")
+        @com.aliyun.core.annotation.NameInMap("FiveSecJoinRate")
         private Float fiveSecJoinRate;
 
-        @NameInMap("TotalAudioStuckRate")
+        @com.aliyun.core.annotation.NameInMap("TotalAudioStuckRate")
         private Float totalAudioStuckRate;
 
-        @NameInMap("TotalVideoStuckRate")
+        @com.aliyun.core.annotation.NameInMap("TotalVideoStuckRate")
         private Float totalVideoStuckRate;
 
-        @NameInMap("TotalVideoVagueRate")
+        @com.aliyun.core.annotation.NameInMap("TotalVideoVagueRate")
         private Float totalVideoVagueRate;
 
         private OverallData(Builder builder) {

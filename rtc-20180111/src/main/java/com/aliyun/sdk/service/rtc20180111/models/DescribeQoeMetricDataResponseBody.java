@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeQoeMetricDataResponseBody</p>
  */
 public class DescribeQoeMetricDataResponseBody extends TeaModel {
-    @NameInMap("AudioData")
+    @com.aliyun.core.annotation.NameInMap("AudioData")
     private java.util.List < AudioData> audioData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VideoData")
+    @com.aliyun.core.annotation.NameInMap("VideoData")
     private java.util.List < VideoData> videoData;
 
     private DescribeQoeMetricDataResponseBody(Builder builder) {
@@ -92,10 +91,10 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
     } 
 
     public static class Nodes extends TeaModel {
-        @NameInMap("X")
+        @com.aliyun.core.annotation.NameInMap("X")
         private String x;
 
-        @NameInMap("Y")
+        @com.aliyun.core.annotation.NameInMap("Y")
         private String y;
 
         private Nodes(Builder builder) {
@@ -153,13 +152,13 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
 
     }
     public static class AudioData extends TeaModel {
-        @NameInMap("Nodes")
+        @com.aliyun.core.annotation.NameInMap("Nodes")
         private java.util.List < Nodes> nodes;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private AudioData(Builder builder) {
@@ -234,10 +233,10 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
 
     }
     public static class VideoDataNodes extends TeaModel {
-        @NameInMap("X")
+        @com.aliyun.core.annotation.NameInMap("X")
         private String x;
 
-        @NameInMap("Y")
+        @com.aliyun.core.annotation.NameInMap("Y")
         private String y;
 
         private VideoDataNodes(Builder builder) {
@@ -295,13 +294,13 @@ public class DescribeQoeMetricDataResponseBody extends TeaModel {
 
     }
     public static class VideoData extends TeaModel {
-        @NameInMap("Nodes")
+        @com.aliyun.core.annotation.NameInMap("Nodes")
         private java.util.List < VideoDataNodes> nodes;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private VideoData(Builder builder) {

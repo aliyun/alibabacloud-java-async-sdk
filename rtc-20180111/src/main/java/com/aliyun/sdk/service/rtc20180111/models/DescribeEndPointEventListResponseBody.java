@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEndPointEventListResponseBody</p>
  */
 public class DescribeEndPointEventListResponseBody extends TeaModel {
-    @NameInMap("Nodes")
+    @com.aliyun.core.annotation.NameInMap("Nodes")
     private java.util.List < Nodes> nodes;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeEndPointEventListResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
     } 
 
     public static class EventList extends TeaModel {
-        @NameInMap("EventName")
+        @com.aliyun.core.annotation.NameInMap("EventName")
         private String eventName;
 
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
 
-        @NameInMap("Ts")
+        @com.aliyun.core.annotation.NameInMap("Ts")
         private Long ts;
 
-        @NameInMap("TsInMs")
+        @com.aliyun.core.annotation.NameInMap("TsInMs")
         private String tsInMs;
 
         private EventList(Builder builder) {
@@ -173,10 +172,10 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
 
     }
     public static class EventDataItems extends TeaModel {
-        @NameInMap("EventList")
+        @com.aliyun.core.annotation.NameInMap("EventList")
         private java.util.List < EventList> eventList;
 
-        @NameInMap("Ts")
+        @com.aliyun.core.annotation.NameInMap("Ts")
         private Long ts;
 
         private EventDataItems(Builder builder) {
@@ -234,10 +233,10 @@ public class DescribeEndPointEventListResponseBody extends TeaModel {
 
     }
     public static class Nodes extends TeaModel {
-        @NameInMap("EventDataItems")
+        @com.aliyun.core.annotation.NameInMap("EventDataItems")
         private java.util.List < EventDataItems> eventDataItems;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private Nodes(Builder builder) {

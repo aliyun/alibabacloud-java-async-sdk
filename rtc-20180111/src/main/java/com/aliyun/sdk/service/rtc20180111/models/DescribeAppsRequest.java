@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,38 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAppsRequest</p>
  */
 public class DescribeAppsRequest extends Request {
-    @Query
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
-    @Query
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppVersion")
+    private String appVersion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeAppsRequest(Builder builder) {
         super(builder);
         this.appId = builder.appId;
+        this.appVersion = builder.appVersion;
         this.order = builder.order;
         this.ownerId = builder.ownerId;
         this.pageNum = builder.pageNum;
@@ -64,6 +68,13 @@ public class DescribeAppsRequest extends Request {
      */
     public String getAppId() {
         return this.appId;
+    }
+
+    /**
+     * @return appVersion
+     */
+    public String getAppVersion() {
+        return this.appVersion;
     }
 
     /**
@@ -103,6 +114,7 @@ public class DescribeAppsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeAppsRequest, Builder> {
         private String appId; 
+        private String appVersion; 
         private String order; 
         private Long ownerId; 
         private Integer pageNum; 
@@ -116,6 +128,7 @@ public class DescribeAppsRequest extends Request {
         private Builder(DescribeAppsRequest request) {
             super(request);
             this.appId = request.appId;
+            this.appVersion = request.appVersion;
             this.order = request.order;
             this.ownerId = request.ownerId;
             this.pageNum = request.pageNum;
@@ -129,6 +142,15 @@ public class DescribeAppsRequest extends Request {
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
             this.appId = appId;
+            return this;
+        }
+
+        /**
+         * AppVersion.
+         */
+        public Builder appVersion(String appVersion) {
+            this.putQueryParameter("AppVersion", appVersion);
+            this.appVersion = appVersion;
             return this;
         }
 

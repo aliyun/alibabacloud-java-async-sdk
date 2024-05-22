@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeFaultDiagnosisUserListResponseBody</p>
  */
 public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCnt")
+    @com.aliyun.core.annotation.NameInMap("TotalCnt")
     private Integer totalCnt;
 
-    @NameInMap("UserList")
+    @com.aliyun.core.annotation.NameInMap("UserList")
     private java.util.List < UserList> userList;
 
     private DescribeFaultDiagnosisUserListResponseBody(Builder builder) {
@@ -132,7 +131,7 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
     } 
 
     public static class FaultList extends TeaModel {
-        @NameInMap("FaultType")
+        @com.aliyun.core.annotation.NameInMap("FaultType")
         private String faultType;
 
         private FaultList(Builder builder) {
@@ -173,22 +172,22 @@ public class DescribeFaultDiagnosisUserListResponseBody extends TeaModel {
 
     }
     public static class UserList extends TeaModel {
-        @NameInMap("ChannelCreatedTs")
+        @com.aliyun.core.annotation.NameInMap("ChannelCreatedTs")
         private Long channelCreatedTs;
 
-        @NameInMap("ChannelId")
+        @com.aliyun.core.annotation.NameInMap("ChannelId")
         private String channelId;
 
-        @NameInMap("CreatedTs")
+        @com.aliyun.core.annotation.NameInMap("CreatedTs")
         private Long createdTs;
 
-        @NameInMap("DestroyedTs")
+        @com.aliyun.core.annotation.NameInMap("DestroyedTs")
         private Long destroyedTs;
 
-        @NameInMap("FaultList")
+        @com.aliyun.core.annotation.NameInMap("FaultList")
         private java.util.List < FaultList> faultList;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private UserList(Builder builder) {

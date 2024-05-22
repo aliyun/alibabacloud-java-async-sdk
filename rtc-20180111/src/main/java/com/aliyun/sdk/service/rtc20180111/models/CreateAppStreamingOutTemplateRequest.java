@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAppStreamingOutTemplateRequest</p>
  */
 public class CreateAppStreamingOutTemplateRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("StreamingOutTemplate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StreamingOutTemplate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private StreamingOutTemplate streamingOutTemplate;
 
     private CreateAppStreamingOutTemplateRequest(Builder builder) {
@@ -96,16 +95,16 @@ public class CreateAppStreamingOutTemplateRequest extends Request {
     } 
 
     public static class StreamingOutTemplate extends TeaModel {
-        @NameInMap("LayoutIds")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("LayoutIds")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List < String > layoutIds;
 
-        @NameInMap("MediaEncode")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("MediaEncode")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer mediaEncode;
 
-        @NameInMap("Name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
         private StreamingOutTemplate(Builder builder) {

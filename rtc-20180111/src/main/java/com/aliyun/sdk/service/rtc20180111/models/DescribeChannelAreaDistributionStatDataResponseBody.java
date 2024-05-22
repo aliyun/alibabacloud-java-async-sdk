@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeChannelAreaDistributionStatDataResponseBody</p>
  */
 public class DescribeChannelAreaDistributionStatDataResponseBody extends TeaModel {
-    @NameInMap("AreaStatList")
+    @com.aliyun.core.annotation.NameInMap("AreaStatList")
     private java.util.List < AreaStatList> areaStatList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeChannelAreaDistributionStatDataResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribeChannelAreaDistributionStatDataResponseBody extends TeaMode
     } 
 
     public static class AreaStatList extends TeaModel {
-        @NameInMap("AreaName")
+        @com.aliyun.core.annotation.NameInMap("AreaName")
         private String areaName;
 
-        @NameInMap("CallUserCount")
+        @com.aliyun.core.annotation.NameInMap("CallUserCount")
         private Integer callUserCount;
 
-        @NameInMap("HighQualityTransmissionRate")
+        @com.aliyun.core.annotation.NameInMap("HighQualityTransmissionRate")
         private String highQualityTransmissionRate;
 
-        @NameInMap("PubUserCount")
+        @com.aliyun.core.annotation.NameInMap("PubUserCount")
         private Integer pubUserCount;
 
-        @NameInMap("SubUserCount")
+        @com.aliyun.core.annotation.NameInMap("SubUserCount")
         private Integer subUserCount;
 
         private AreaStatList(Builder builder) {

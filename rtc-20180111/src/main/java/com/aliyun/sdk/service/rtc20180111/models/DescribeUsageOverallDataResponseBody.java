@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUsageOverallDataResponseBody</p>
  */
 public class DescribeUsageOverallDataResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UsageOverallData")
+    @com.aliyun.core.annotation.NameInMap("UsageOverallData")
     private java.util.List < UsageOverallData> usageOverallData;
 
     private DescribeUsageOverallDataResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeUsageOverallDataResponseBody extends TeaModel {
     } 
 
     public static class Nodes extends TeaModel {
-        @NameInMap("X")
+        @com.aliyun.core.annotation.NameInMap("X")
         private String x;
 
-        @NameInMap("Y")
+        @com.aliyun.core.annotation.NameInMap("Y")
         private String y;
 
         private Nodes(Builder builder) {
@@ -133,10 +132,10 @@ public class DescribeUsageOverallDataResponseBody extends TeaModel {
 
     }
     public static class UsageOverallData extends TeaModel {
-        @NameInMap("Nodes")
+        @com.aliyun.core.annotation.NameInMap("Nodes")
         private java.util.List < Nodes> nodes;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private UsageOverallData(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateMPULayoutRequest</p>
  */
 public class CreateMPULayoutRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("AudioMixCount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AudioMixCount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer audioMixCount;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Panes")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Panes")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Panes> panes;
 
     private CreateMPULayoutRequest(Builder builder) {
@@ -165,25 +164,25 @@ public class CreateMPULayoutRequest extends Request {
     } 
 
     public static class Panes extends TeaModel {
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Float height;
 
-        @NameInMap("MajorPane")
+        @com.aliyun.core.annotation.NameInMap("MajorPane")
         private Integer majorPane;
 
-        @NameInMap("PaneId")
+        @com.aliyun.core.annotation.NameInMap("PaneId")
         private Integer paneId;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private Float width;
 
-        @NameInMap("X")
+        @com.aliyun.core.annotation.NameInMap("X")
         private Float x;
 
-        @NameInMap("Y")
+        @com.aliyun.core.annotation.NameInMap("Y")
         private Float y;
 
-        @NameInMap("ZOrder")
+        @com.aliyun.core.annotation.NameInMap("ZOrder")
         private Integer zOrder;
 
         private Panes(Builder builder) {

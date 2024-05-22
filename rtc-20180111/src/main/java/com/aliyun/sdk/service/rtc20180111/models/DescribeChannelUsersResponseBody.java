@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeChannelUsersResponseBody</p>
  */
 public class DescribeChannelUsersResponseBody extends TeaModel {
-    @NameInMap("ChannelProfile")
+    @com.aliyun.core.annotation.NameInMap("ChannelProfile")
     private Integer channelProfile;
 
-    @NameInMap("CommTotalNum")
+    @com.aliyun.core.annotation.NameInMap("CommTotalNum")
     private Integer commTotalNum;
 
-    @NameInMap("InteractiveUserList")
+    @com.aliyun.core.annotation.NameInMap("InteractiveUserList")
     private java.util.List < String > interactiveUserList;
 
-    @NameInMap("InteractiveUserNum")
+    @com.aliyun.core.annotation.NameInMap("InteractiveUserNum")
     private Integer interactiveUserNum;
 
-    @NameInMap("IsChannelExist")
+    @com.aliyun.core.annotation.NameInMap("IsChannelExist")
     private Boolean isChannelExist;
 
-    @NameInMap("LiveUserList")
+    @com.aliyun.core.annotation.NameInMap("LiveUserList")
     private java.util.List < String > liveUserList;
 
-    @NameInMap("LiveUserNum")
+    @com.aliyun.core.annotation.NameInMap("LiveUserNum")
     private Integer liveUserNum;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Timestamp")
+    @com.aliyun.core.annotation.NameInMap("Timestamp")
     private Integer timestamp;
 
-    @NameInMap("UserList")
+    @com.aliyun.core.annotation.NameInMap("UserList")
     private java.util.List < String > userList;
 
     private DescribeChannelUsersResponseBody(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StartCloudRecordRequest</p>
  */
 public class StartCloudRecordRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("ChannelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChannelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String channelId;
 
-    @Query
-    @NameInMap("Panes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Panes")
     private java.util.List < Panes> panes;
 
-    @Query
-    @NameInMap("StorageConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private StorageConfig storageConfig;
 
-    @Query
-    @NameInMap("TaskId")
-    @Validation(maxLength = 55, minLength = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    @com.aliyun.core.annotation.Validation(maxLength = 55, minLength = 1)
     private String taskId;
 
-    @Query
-    @NameInMap("TemplateId")
-    @Validation(required = true, maxLength = 128, minLength = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128, minLength = 1)
     private String templateId;
 
     private StartCloudRecordRequest(Builder builder) {
@@ -190,11 +189,11 @@ public class StartCloudRecordRequest extends Request {
     } 
 
     public static class Panes extends TeaModel {
-        @NameInMap("PaneId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("PaneId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer paneId;
 
-        @NameInMap("SourceType")
+        @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
 
         private Panes(Builder builder) {
@@ -252,24 +251,24 @@ public class StartCloudRecordRequest extends Request {
 
     }
     public static class StorageConfig extends TeaModel {
-        @NameInMap("AccessKey")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("AccessKey")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String accessKey;
 
-        @NameInMap("Bucket")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Bucket")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String bucket;
 
-        @NameInMap("Region")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Region")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer region;
 
-        @NameInMap("SecretKey")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("SecretKey")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String secretKey;
 
-        @NameInMap("Vendor")
-        @Validation(required = true, minimum = 1)
+        @com.aliyun.core.annotation.NameInMap("Vendor")
+        @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
         private Integer vendor;
 
         private StorageConfig(Builder builder) {

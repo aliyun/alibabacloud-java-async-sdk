@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCallResponseBody</p>
  */
 public class DescribeCallResponseBody extends TeaModel {
-    @NameInMap("CallInfo")
+    @com.aliyun.core.annotation.NameInMap("CallInfo")
     private CallInfo callInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UserDetailList")
+    @com.aliyun.core.annotation.NameInMap("UserDetailList")
     private java.util.List < UserDetailList> userDetailList;
 
     private DescribeCallResponseBody(Builder builder) {
@@ -92,22 +91,22 @@ public class DescribeCallResponseBody extends TeaModel {
     } 
 
     public static class CallInfo extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("CallStatus")
+        @com.aliyun.core.annotation.NameInMap("CallStatus")
         private String callStatus;
 
-        @NameInMap("ChannelId")
+        @com.aliyun.core.annotation.NameInMap("ChannelId")
         private String channelId;
 
-        @NameInMap("CreatedTs")
+        @com.aliyun.core.annotation.NameInMap("CreatedTs")
         private Long createdTs;
 
-        @NameInMap("DestroyedTs")
+        @com.aliyun.core.annotation.NameInMap("DestroyedTs")
         private Long destroyedTs;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
 
         private CallInfo(Builder builder) {
@@ -233,34 +232,34 @@ public class DescribeCallResponseBody extends TeaModel {
 
     }
     public static class DurMetricStatData extends TeaModel {
-        @NameInMap("PubAudio")
+        @com.aliyun.core.annotation.NameInMap("PubAudio")
         private Long pubAudio;
 
-        @NameInMap("PubVideo1080")
+        @com.aliyun.core.annotation.NameInMap("PubVideo1080")
         private Long pubVideo1080;
 
-        @NameInMap("PubVideo360")
+        @com.aliyun.core.annotation.NameInMap("PubVideo360")
         private Long pubVideo360;
 
-        @NameInMap("PubVideo720")
+        @com.aliyun.core.annotation.NameInMap("PubVideo720")
         private Long pubVideo720;
 
-        @NameInMap("PubVideoScreenShare")
+        @com.aliyun.core.annotation.NameInMap("PubVideoScreenShare")
         private Long pubVideoScreenShare;
 
-        @NameInMap("SubAudio")
+        @com.aliyun.core.annotation.NameInMap("SubAudio")
         private Long subAudio;
 
-        @NameInMap("SubVideo1080")
+        @com.aliyun.core.annotation.NameInMap("SubVideo1080")
         private Long subVideo1080;
 
-        @NameInMap("SubVideo360")
+        @com.aliyun.core.annotation.NameInMap("SubVideo360")
         private Long subVideo360;
 
-        @NameInMap("SubVideo720")
+        @com.aliyun.core.annotation.NameInMap("SubVideo720")
         private Long subVideo720;
 
-        @NameInMap("SubVideoScreenShare")
+        @com.aliyun.core.annotation.NameInMap("SubVideoScreenShare")
         private Long subVideoScreenShare;
 
         private DurMetricStatData(Builder builder) {
@@ -454,10 +453,10 @@ public class DescribeCallResponseBody extends TeaModel {
 
     }
     public static class OnlinePeriods extends TeaModel {
-        @NameInMap("JoinTs")
+        @com.aliyun.core.annotation.NameInMap("JoinTs")
         private Long joinTs;
 
-        @NameInMap("LeaveTs")
+        @com.aliyun.core.annotation.NameInMap("LeaveTs")
         private Long leaveTs;
 
         private OnlinePeriods(Builder builder) {
@@ -515,52 +514,52 @@ public class DescribeCallResponseBody extends TeaModel {
 
     }
     public static class UserDetailList extends TeaModel {
-        @NameInMap("CallExp")
+        @com.aliyun.core.annotation.NameInMap("CallExp")
         private String callExp;
 
-        @NameInMap("CreatedTs")
+        @com.aliyun.core.annotation.NameInMap("CreatedTs")
         private Long createdTs;
 
-        @NameInMap("DestroyedTs")
+        @com.aliyun.core.annotation.NameInMap("DestroyedTs")
         private Long destroyedTs;
 
-        @NameInMap("DurMetricStatData")
+        @com.aliyun.core.annotation.NameInMap("DurMetricStatData")
         private DurMetricStatData durMetricStatData;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("Network")
+        @com.aliyun.core.annotation.NameInMap("Network")
         private String network;
 
-        @NameInMap("NetworkList")
+        @com.aliyun.core.annotation.NameInMap("NetworkList")
         private java.util.List < String > networkList;
 
-        @NameInMap("OnlineDuration")
+        @com.aliyun.core.annotation.NameInMap("OnlineDuration")
         private Long onlineDuration;
 
-        @NameInMap("OnlinePeriods")
+        @com.aliyun.core.annotation.NameInMap("OnlinePeriods")
         private java.util.List < OnlinePeriods> onlinePeriods;
 
-        @NameInMap("Os")
+        @com.aliyun.core.annotation.NameInMap("Os")
         private String os;
 
-        @NameInMap("OsList")
+        @com.aliyun.core.annotation.NameInMap("OsList")
         private java.util.List < String > osList;
 
-        @NameInMap("Roles")
+        @com.aliyun.core.annotation.NameInMap("Roles")
         private java.util.List < String > roles;
 
-        @NameInMap("SdkVersion")
+        @com.aliyun.core.annotation.NameInMap("SdkVersion")
         private String sdkVersion;
 
-        @NameInMap("SdkVersionList")
+        @com.aliyun.core.annotation.NameInMap("SdkVersionList")
         private java.util.List < String > sdkVersionList;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private UserDetailList(Builder builder) {

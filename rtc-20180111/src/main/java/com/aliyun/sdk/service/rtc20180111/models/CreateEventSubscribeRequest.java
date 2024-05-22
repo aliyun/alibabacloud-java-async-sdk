@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,44 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateEventSubscribeRequest</p>
  */
 public class CreateEventSubscribeRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("CallbackUrl")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallbackUrl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String callbackUrl;
 
-    @Query
-    @NameInMap("ChannelId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChannelId")
     private String channelId;
 
-    @Query
-    @NameInMap("ClientToken")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientToken;
 
-    @Query
-    @NameInMap("Events")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Events")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > events;
 
-    @Query
-    @NameInMap("NeedCallbackAuth")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NeedCallbackAuth")
     private Boolean needCallbackAuth;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Role")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Role")
     private Long role;
 
-    @Query
-    @NameInMap("Users")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Users")
     private java.util.List < String > users;
 
     private CreateEventSubscribeRequest(Builder builder) {

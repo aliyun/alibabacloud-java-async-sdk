@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRtcChannelMetricResponseBody</p>
  */
 public class DescribeRtcChannelMetricResponseBody extends TeaModel {
-    @NameInMap("ChannelMetricInfo")
+    @com.aliyun.core.annotation.NameInMap("ChannelMetricInfo")
     private ChannelMetricInfo channelMetricInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeRtcChannelMetricResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
     } 
 
     public static class ChannelMetric extends TeaModel {
-        @NameInMap("ChannelId")
+        @com.aliyun.core.annotation.NameInMap("ChannelId")
         private String channelId;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("PubUserCount")
+        @com.aliyun.core.annotation.NameInMap("PubUserCount")
         private Integer pubUserCount;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("SubUserCount")
+        @com.aliyun.core.annotation.NameInMap("SubUserCount")
         private Integer subUserCount;
 
-        @NameInMap("UserCount")
+        @com.aliyun.core.annotation.NameInMap("UserCount")
         private Integer userCount;
 
         private ChannelMetric(Builder builder) {
@@ -213,19 +212,19 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
 
     }
     public static class PubDuration extends TeaModel {
-        @NameInMap("Audio")
+        @com.aliyun.core.annotation.NameInMap("Audio")
         private Integer audio;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private Integer content;
 
-        @NameInMap("Video1080")
+        @com.aliyun.core.annotation.NameInMap("Video1080")
         private Integer video1080;
 
-        @NameInMap("Video360")
+        @com.aliyun.core.annotation.NameInMap("Video360")
         private Integer video360;
 
-        @NameInMap("Video720")
+        @com.aliyun.core.annotation.NameInMap("Video720")
         private Integer video720;
 
         private PubDuration(Builder builder) {
@@ -334,19 +333,19 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
 
     }
     public static class SubDuration extends TeaModel {
-        @NameInMap("Audio")
+        @com.aliyun.core.annotation.NameInMap("Audio")
         private Integer audio;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private Integer content;
 
-        @NameInMap("Video1080")
+        @com.aliyun.core.annotation.NameInMap("Video1080")
         private Integer video1080;
 
-        @NameInMap("Video360")
+        @com.aliyun.core.annotation.NameInMap("Video360")
         private Integer video360;
 
-        @NameInMap("Video720")
+        @com.aliyun.core.annotation.NameInMap("Video720")
         private Integer video720;
 
         private SubDuration(Builder builder) {
@@ -455,10 +454,10 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
 
     }
     public static class Duration extends TeaModel {
-        @NameInMap("PubDuration")
+        @com.aliyun.core.annotation.NameInMap("PubDuration")
         private PubDuration pubDuration;
 
-        @NameInMap("SubDuration")
+        @com.aliyun.core.annotation.NameInMap("SubDuration")
         private SubDuration subDuration;
 
         private Duration(Builder builder) {
@@ -516,10 +515,10 @@ public class DescribeRtcChannelMetricResponseBody extends TeaModel {
 
     }
     public static class ChannelMetricInfo extends TeaModel {
-        @NameInMap("ChannelMetric")
+        @com.aliyun.core.annotation.NameInMap("ChannelMetric")
         private ChannelMetric channelMetric;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Duration duration;
 
         private ChannelMetricInfo(Builder builder) {

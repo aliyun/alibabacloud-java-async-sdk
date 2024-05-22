@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeChannelUserMetricsResponseBody</p>
  */
 public class DescribeChannelUserMetricsResponseBody extends TeaModel {
-    @NameInMap("MetricDatas")
+    @com.aliyun.core.annotation.NameInMap("MetricDatas")
     private java.util.List < MetricDatas> metricDatas;
 
-    @NameInMap("OverallData")
+    @com.aliyun.core.annotation.NameInMap("OverallData")
     private OverallData overallData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeChannelUserMetricsResponseBody(Builder builder) {
@@ -92,13 +91,13 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
     } 
 
     public static class Nodes extends TeaModel {
-        @NameInMap("Ext")
+        @com.aliyun.core.annotation.NameInMap("Ext")
         private java.util.Map < String, ? > ext;
 
-        @NameInMap("X")
+        @com.aliyun.core.annotation.NameInMap("X")
         private String x;
 
-        @NameInMap("Y")
+        @com.aliyun.core.annotation.NameInMap("Y")
         private String y;
 
         private Nodes(Builder builder) {
@@ -173,10 +172,10 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
 
     }
     public static class MetricDatas extends TeaModel {
-        @NameInMap("Nodes")
+        @com.aliyun.core.annotation.NameInMap("Nodes")
         private java.util.List < Nodes> nodes;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private MetricDatas(Builder builder) {
@@ -234,19 +233,19 @@ public class DescribeChannelUserMetricsResponseBody extends TeaModel {
 
     }
     public static class OverallData extends TeaModel {
-        @NameInMap("TotalBadExpNum")
+        @com.aliyun.core.annotation.NameInMap("TotalBadExpNum")
         private Long totalBadExpNum;
 
-        @NameInMap("TotalJoinFailNum")
+        @com.aliyun.core.annotation.NameInMap("TotalJoinFailNum")
         private Long totalJoinFailNum;
 
-        @NameInMap("TotalPubUserNum")
+        @com.aliyun.core.annotation.NameInMap("TotalPubUserNum")
         private Long totalPubUserNum;
 
-        @NameInMap("TotalSubUserNum")
+        @com.aliyun.core.annotation.NameInMap("TotalSubUserNum")
         private Long totalSubUserNum;
 
-        @NameInMap("TotalUserNum")
+        @com.aliyun.core.annotation.NameInMap("TotalUserNum")
         private Long totalUserNum;
 
         private OverallData(Builder builder) {

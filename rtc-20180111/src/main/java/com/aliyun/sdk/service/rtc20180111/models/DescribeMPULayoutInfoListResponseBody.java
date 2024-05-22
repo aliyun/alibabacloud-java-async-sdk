@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMPULayoutInfoListResponseBody</p>
  */
 public class DescribeMPULayoutInfoListResponseBody extends TeaModel {
-    @NameInMap("Layouts")
+    @com.aliyun.core.annotation.NameInMap("Layouts")
     private Layouts layouts;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalNum")
+    @com.aliyun.core.annotation.NameInMap("TotalNum")
     private Long totalNum;
 
-    @NameInMap("TotalPage")
+    @com.aliyun.core.annotation.NameInMap("TotalPage")
     private Long totalPage;
 
     private DescribeMPULayoutInfoListResponseBody(Builder builder) {
@@ -112,25 +111,25 @@ public class DescribeMPULayoutInfoListResponseBody extends TeaModel {
     } 
 
     public static class Panes extends TeaModel {
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Float height;
 
-        @NameInMap("MajorPane")
+        @com.aliyun.core.annotation.NameInMap("MajorPane")
         private Integer majorPane;
 
-        @NameInMap("PaneId")
+        @com.aliyun.core.annotation.NameInMap("PaneId")
         private Integer paneId;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private Float width;
 
-        @NameInMap("X")
+        @com.aliyun.core.annotation.NameInMap("X")
         private Float x;
 
-        @NameInMap("Y")
+        @com.aliyun.core.annotation.NameInMap("Y")
         private Float y;
 
-        @NameInMap("ZOrder")
+        @com.aliyun.core.annotation.NameInMap("ZOrder")
         private Integer zOrder;
 
         private Panes(Builder builder) {
@@ -273,7 +272,7 @@ public class DescribeMPULayoutInfoListResponseBody extends TeaModel {
 
     }
     public static class LayoutPanes extends TeaModel {
-        @NameInMap("Panes")
+        @com.aliyun.core.annotation.NameInMap("Panes")
         private java.util.List < Panes> panes;
 
         private LayoutPanes(Builder builder) {
@@ -314,16 +313,16 @@ public class DescribeMPULayoutInfoListResponseBody extends TeaModel {
 
     }
     public static class Layout extends TeaModel {
-        @NameInMap("AudioMixCount")
+        @com.aliyun.core.annotation.NameInMap("AudioMixCount")
         private Integer audioMixCount;
 
-        @NameInMap("LayoutId")
+        @com.aliyun.core.annotation.NameInMap("LayoutId")
         private Long layoutId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Panes")
+        @com.aliyun.core.annotation.NameInMap("Panes")
         private LayoutPanes panes;
 
         private Layout(Builder builder) {
@@ -415,7 +414,7 @@ public class DescribeMPULayoutInfoListResponseBody extends TeaModel {
 
     }
     public static class Layouts extends TeaModel {
-        @NameInMap("Layout")
+        @com.aliyun.core.annotation.NameInMap("Layout")
         private java.util.List < Layout> layout;
 
         private Layouts(Builder builder) {

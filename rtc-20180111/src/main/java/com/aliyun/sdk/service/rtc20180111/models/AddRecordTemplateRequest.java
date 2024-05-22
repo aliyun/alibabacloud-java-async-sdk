@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,90 +11,90 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddRecordTemplateRequest</p>
  */
 public class AddRecordTemplateRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("BackgroundColor")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackgroundColor")
     private Integer backgroundColor;
 
-    @Query
-    @NameInMap("Backgrounds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Backgrounds")
     private java.util.List < Backgrounds> backgrounds;
 
-    @Query
-    @NameInMap("ClockWidgets")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClockWidgets")
     private java.util.List < ClockWidgets> clockWidgets;
 
-    @Query
-    @NameInMap("DelayStopTime")
-    @Validation(maximum = 86400, minimum = 5)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DelayStopTime")
+    @com.aliyun.core.annotation.Validation(maximum = 86400, minimum = 5)
     private Integer delayStopTime;
 
-    @Query
-    @NameInMap("EnableM3u8DateTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableM3u8DateTime")
     private Boolean enableM3u8DateTime;
 
-    @Query
-    @NameInMap("FileSplitInterval")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSplitInterval")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer fileSplitInterval;
 
-    @Query
-    @NameInMap("Formats")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Formats")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > formats;
 
-    @Query
-    @NameInMap("HttpCallbackUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpCallbackUrl")
     private String httpCallbackUrl;
 
-    @Query
-    @NameInMap("LayoutIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LayoutIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Long > layoutIds;
 
-    @Query
-    @NameInMap("MediaEncode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaEncode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer mediaEncode;
 
-    @Query
-    @NameInMap("MnsQueue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MnsQueue")
     private String mnsQueue;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("OssBucket")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssBucket")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ossBucket;
 
-    @Query
-    @NameInMap("OssEndpoint")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssEndpoint")
     private String ossEndpoint;
 
-    @Query
-    @NameInMap("OssFilePrefix")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssFilePrefix")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ossFilePrefix;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("TaskProfile")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskProfile")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskProfile;
 
-    @Query
-    @NameInMap("Watermarks")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Watermarks")
     private java.util.List < Watermarks> watermarks;
 
     private AddRecordTemplateRequest(Builder builder) {
@@ -494,25 +493,25 @@ public class AddRecordTemplateRequest extends Request {
     } 
 
     public static class Backgrounds extends TeaModel {
-        @NameInMap("Display")
+        @com.aliyun.core.annotation.NameInMap("Display")
         private Integer display;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Float height;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private Float width;
 
-        @NameInMap("X")
+        @com.aliyun.core.annotation.NameInMap("X")
         private Float x;
 
-        @NameInMap("Y")
+        @com.aliyun.core.annotation.NameInMap("Y")
         private Float y;
 
-        @NameInMap("ZOrder")
+        @com.aliyun.core.annotation.NameInMap("ZOrder")
         private Integer zOrder;
 
         private Backgrounds(Builder builder) {
@@ -655,22 +654,22 @@ public class AddRecordTemplateRequest extends Request {
 
     }
     public static class ClockWidgets extends TeaModel {
-        @NameInMap("FontColor")
+        @com.aliyun.core.annotation.NameInMap("FontColor")
         private Integer fontColor;
 
-        @NameInMap("FontSize")
+        @com.aliyun.core.annotation.NameInMap("FontSize")
         private Integer fontSize;
 
-        @NameInMap("FontType")
+        @com.aliyun.core.annotation.NameInMap("FontType")
         private Integer fontType;
 
-        @NameInMap("X")
+        @com.aliyun.core.annotation.NameInMap("X")
         private Float x;
 
-        @NameInMap("Y")
+        @com.aliyun.core.annotation.NameInMap("Y")
         private Float y;
 
-        @NameInMap("ZOrder")
+        @com.aliyun.core.annotation.NameInMap("ZOrder")
         private Integer zOrder;
 
         private ClockWidgets(Builder builder) {
@@ -796,28 +795,28 @@ public class AddRecordTemplateRequest extends Request {
 
     }
     public static class Watermarks extends TeaModel {
-        @NameInMap("Alpha")
+        @com.aliyun.core.annotation.NameInMap("Alpha")
         private Float alpha;
 
-        @NameInMap("Display")
+        @com.aliyun.core.annotation.NameInMap("Display")
         private Integer display;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Float height;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private Float width;
 
-        @NameInMap("X")
+        @com.aliyun.core.annotation.NameInMap("X")
         private Float x;
 
-        @NameInMap("Y")
+        @com.aliyun.core.annotation.NameInMap("Y")
         private Float y;
 
-        @NameInMap("ZOrder")
+        @com.aliyun.core.annotation.NameInMap("ZOrder")
         private Integer zOrder;
 
         private Watermarks(Builder builder) {

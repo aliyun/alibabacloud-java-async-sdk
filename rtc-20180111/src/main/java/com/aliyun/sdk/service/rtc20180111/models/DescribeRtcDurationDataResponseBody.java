@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRtcDurationDataResponseBody</p>
  */
 public class DescribeRtcDurationDataResponseBody extends TeaModel {
-    @NameInMap("DurationDataPerInterval")
+    @com.aliyun.core.annotation.NameInMap("DurationDataPerInterval")
     private DurationDataPerInterval durationDataPerInterval;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeRtcDurationDataResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class DescribeRtcDurationDataResponseBody extends TeaModel {
     } 
 
     public static class DurationModule extends TeaModel {
-        @NameInMap("AudioDuration")
+        @com.aliyun.core.annotation.NameInMap("AudioDuration")
         private Long audioDuration;
 
-        @NameInMap("ContentDuration")
+        @com.aliyun.core.annotation.NameInMap("ContentDuration")
         private Long contentDuration;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("TotalDuration")
+        @com.aliyun.core.annotation.NameInMap("TotalDuration")
         private Long totalDuration;
 
-        @NameInMap("V1080Duration")
+        @com.aliyun.core.annotation.NameInMap("V1080Duration")
         private Long v1080Duration;
 
-        @NameInMap("V360Duration")
+        @com.aliyun.core.annotation.NameInMap("V360Duration")
         private Long v360Duration;
 
-        @NameInMap("V720Duration")
+        @com.aliyun.core.annotation.NameInMap("V720Duration")
         private Long v720Duration;
 
         private DurationModule(Builder builder) {
@@ -233,7 +232,7 @@ public class DescribeRtcDurationDataResponseBody extends TeaModel {
 
     }
     public static class DurationDataPerInterval extends TeaModel {
-        @NameInMap("DurationModule")
+        @com.aliyun.core.annotation.NameInMap("DurationModule")
         private java.util.List < DurationModule> durationModule;
 
         private DurationDataPerInterval(Builder builder) {

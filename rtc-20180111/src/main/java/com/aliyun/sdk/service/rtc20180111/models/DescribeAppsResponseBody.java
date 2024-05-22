@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAppsResponseBody</p>
  */
 public class DescribeAppsResponseBody extends TeaModel {
-    @NameInMap("AppList")
+    @com.aliyun.core.annotation.NameInMap("AppList")
     private AppList appList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalNum")
+    @com.aliyun.core.annotation.NameInMap("TotalNum")
     private Integer totalNum;
 
-    @NameInMap("TotalPage")
+    @com.aliyun.core.annotation.NameInMap("TotalPage")
     private Integer totalPage;
 
     private DescribeAppsResponseBody(Builder builder) {
@@ -112,7 +111,7 @@ public class DescribeAppsResponseBody extends TeaModel {
     } 
 
     public static class ServiceAreas extends TeaModel {
-        @NameInMap("ServiceArea")
+        @com.aliyun.core.annotation.NameInMap("ServiceArea")
         private java.util.List < String > serviceArea;
 
         private ServiceAreas(Builder builder) {
@@ -153,28 +152,28 @@ public class DescribeAppsResponseBody extends TeaModel {
 
     }
     public static class App extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("AppType")
+        @com.aliyun.core.annotation.NameInMap("AppType")
         private String appType;
 
-        @NameInMap("BillType")
+        @com.aliyun.core.annotation.NameInMap("BillType")
         private String billType;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ServiceAreas")
+        @com.aliyun.core.annotation.NameInMap("ServiceAreas")
         private ServiceAreas serviceAreas;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private App(Builder builder) {
@@ -334,7 +333,7 @@ public class DescribeAppsResponseBody extends TeaModel {
 
     }
     public static class AppList extends TeaModel {
-        @NameInMap("App")
+        @com.aliyun.core.annotation.NameInMap("App")
         private java.util.List < App> app;
 
         private AppList(Builder builder) {

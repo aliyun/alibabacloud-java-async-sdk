@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,88 +11,88 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StartRecordTaskRequest</p>
  */
 public class StartRecordTaskRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("ChannelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChannelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String channelId;
 
-    @Query
-    @NameInMap("CropMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CropMode")
     private Long cropMode;
 
-    @Query
-    @NameInMap("LayoutIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LayoutIds")
     private java.util.List < Long > layoutIds;
 
-    @Query
-    @NameInMap("MediaEncode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaEncode")
     private Integer mediaEncode;
 
-    @Query
-    @NameInMap("MixMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MixMode")
     private Integer mixMode;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("SourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceType")
     private String sourceType;
 
-    @Query
-    @NameInMap("StreamType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StreamType")
     private Integer streamType;
 
-    @Query
-    @NameInMap("SubSpecAudioUsers")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubSpecAudioUsers")
     private java.util.List < String > subSpecAudioUsers;
 
-    @Query
-    @NameInMap("SubSpecCameraUsers")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubSpecCameraUsers")
     private java.util.List < String > subSpecCameraUsers;
 
-    @Query
-    @NameInMap("SubSpecShareScreenUsers")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubSpecShareScreenUsers")
     private java.util.List < String > subSpecShareScreenUsers;
 
-    @Query
-    @NameInMap("SubSpecUsers")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubSpecUsers")
     private java.util.List < String > subSpecUsers;
 
-    @Query
-    @NameInMap("TaskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskId;
 
-    @Query
-    @NameInMap("TaskProfile")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskProfile")
     private String taskProfile;
 
-    @Query
-    @NameInMap("TemplateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateId;
 
-    @Query
-    @NameInMap("UnsubSpecAudioUsers")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UnsubSpecAudioUsers")
     private java.util.List < String > unsubSpecAudioUsers;
 
-    @Query
-    @NameInMap("UnsubSpecCameraUsers")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UnsubSpecCameraUsers")
     private java.util.List < String > unsubSpecCameraUsers;
 
-    @Query
-    @NameInMap("UnsubSpecShareScreenUsers")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UnsubSpecShareScreenUsers")
     private java.util.List < String > unsubSpecShareScreenUsers;
 
-    @Query
-    @NameInMap("UserPanes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserPanes")
     private java.util.List < UserPanes> userPanes;
 
     private StartRecordTaskRequest(Builder builder) {
@@ -511,25 +510,25 @@ public class StartRecordTaskRequest extends Request {
     } 
 
     public static class Images extends TeaModel {
-        @NameInMap("Display")
+        @com.aliyun.core.annotation.NameInMap("Display")
         private Integer display;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Float height;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private Float width;
 
-        @NameInMap("X")
+        @com.aliyun.core.annotation.NameInMap("X")
         private Float x;
 
-        @NameInMap("Y")
+        @com.aliyun.core.annotation.NameInMap("Y")
         private Float y;
 
-        @NameInMap("ZOrder")
+        @com.aliyun.core.annotation.NameInMap("ZOrder")
         private Integer zOrder;
 
         private Images(Builder builder) {
@@ -672,25 +671,25 @@ public class StartRecordTaskRequest extends Request {
 
     }
     public static class Texts extends TeaModel {
-        @NameInMap("FontColor")
+        @com.aliyun.core.annotation.NameInMap("FontColor")
         private Integer fontColor;
 
-        @NameInMap("FontSize")
+        @com.aliyun.core.annotation.NameInMap("FontSize")
         private Integer fontSize;
 
-        @NameInMap("FontType")
+        @com.aliyun.core.annotation.NameInMap("FontType")
         private Integer fontType;
 
-        @NameInMap("Text")
+        @com.aliyun.core.annotation.NameInMap("Text")
         private String text;
 
-        @NameInMap("X")
+        @com.aliyun.core.annotation.NameInMap("X")
         private Float x;
 
-        @NameInMap("Y")
+        @com.aliyun.core.annotation.NameInMap("Y")
         private Float y;
 
-        @NameInMap("ZOrder")
+        @com.aliyun.core.annotation.NameInMap("ZOrder")
         private Integer zOrder;
 
         private Texts(Builder builder) {
@@ -833,19 +832,19 @@ public class StartRecordTaskRequest extends Request {
 
     }
     public static class UserPanes extends TeaModel {
-        @NameInMap("Images")
+        @com.aliyun.core.annotation.NameInMap("Images")
         private java.util.List < Images> images;
 
-        @NameInMap("PaneId")
+        @com.aliyun.core.annotation.NameInMap("PaneId")
         private Integer paneId;
 
-        @NameInMap("SourceType")
+        @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
 
-        @NameInMap("Texts")
+        @com.aliyun.core.annotation.NameInMap("Texts")
         private java.util.List < Texts> texts;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private UserPanes(Builder builder) {

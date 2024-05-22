@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeChannelAllUsersResponseBody</p>
  */
 public class DescribeChannelAllUsersResponseBody extends TeaModel {
-    @NameInMap("ChannelExist")
+    @com.aliyun.core.annotation.NameInMap("ChannelExist")
     private Boolean channelExist;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Users")
+    @com.aliyun.core.annotation.NameInMap("Users")
     private java.util.List < Users> users;
 
     private DescribeChannelAllUsersResponseBody(Builder builder) {
@@ -92,7 +91,7 @@ public class DescribeChannelAllUsersResponseBody extends TeaModel {
     } 
 
     public static class Users extends TeaModel {
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private Users(Builder builder) {

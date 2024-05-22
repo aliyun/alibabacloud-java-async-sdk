@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StartStreamingOutRequest</p>
  */
 public class StartStreamingOutRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("ChannelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChannelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String channelId;
 
-    @Query
-    @NameInMap("Panes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Panes")
     private java.util.List < Panes> panes;
 
-    @Query
-    @NameInMap("TaskId")
-    @Validation(maxLength = 55, minLength = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    @com.aliyun.core.annotation.Validation(maxLength = 55, minLength = 1)
     private String taskId;
 
-    @Query
-    @NameInMap("TemplateId")
-    @Validation(required = true, maxLength = 128, minLength = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128, minLength = 1)
     private String templateId;
 
-    @Query
-    @NameInMap("Url")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Url")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String url;
 
     private StartStreamingOutRequest(Builder builder) {
@@ -190,11 +189,11 @@ public class StartStreamingOutRequest extends Request {
     } 
 
     public static class Panes extends TeaModel {
-        @NameInMap("PaneId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("PaneId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String paneId;
 
-        @NameInMap("SourceType")
+        @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
 
         private Panes(Builder builder) {

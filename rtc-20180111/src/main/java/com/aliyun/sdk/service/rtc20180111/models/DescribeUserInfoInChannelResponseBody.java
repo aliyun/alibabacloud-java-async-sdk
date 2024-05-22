@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rtc20180111.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUserInfoInChannelResponseBody</p>
  */
 public class DescribeUserInfoInChannelResponseBody extends TeaModel {
-    @NameInMap("IsChannelExist")
+    @com.aliyun.core.annotation.NameInMap("IsChannelExist")
     private Boolean isChannelExist;
 
-    @NameInMap("IsInChannel")
+    @com.aliyun.core.annotation.NameInMap("IsInChannel")
     private Boolean isInChannel;
 
-    @NameInMap("Property")
+    @com.aliyun.core.annotation.NameInMap("Property")
     private java.util.List < Property> property;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Timestamp")
+    @com.aliyun.core.annotation.NameInMap("Timestamp")
     private Integer timestamp;
 
     private DescribeUserInfoInChannelResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class DescribeUserInfoInChannelResponseBody extends TeaModel {
     } 
 
     public static class Property extends TeaModel {
-        @NameInMap("Join")
+        @com.aliyun.core.annotation.NameInMap("Join")
         private Integer join;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private Integer role;
 
-        @NameInMap("Session")
+        @com.aliyun.core.annotation.NameInMap("Session")
         private String session;
 
         private Property(Builder builder) {
