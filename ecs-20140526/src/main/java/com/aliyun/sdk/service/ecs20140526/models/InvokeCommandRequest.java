@@ -590,7 +590,11 @@ public class InvokeCommandRequest extends Request {
         }
 
         /**
-         * TerminationMode.
+         * Specifies how to stop the command task when a command execution is manually stopped or times out. Valid values:
+         * <p>
+         * 
+         * *   Process: stops the process of the command.
+         * *   ProcessTree: stops the process tree of the command. In this case, the process of the command and all subprocesses of the process are stopped.
          */
         public Builder terminationMode(String terminationMode) {
             this.putQueryParameter("TerminationMode", terminationMode);

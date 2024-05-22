@@ -239,7 +239,7 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
         }
 
         /**
-         * The network interface card (NIC) type of the security group rule.
+         * The network interface controller (NIC) type of the security group rule.
          * <p>
          * 
          * *   Valid values for rules of security groups in the classic network:
@@ -249,13 +249,13 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
          * 
          *     **
          * 
-         *     **Note**You can query security group rules of only one NIC type in a single call. To query security group rules of both NIC types, call the operation twice.
+         *     **Note** You can query security group rules of only one NIC type in a single call. To query security group rules of both NIC types, call the operation twice.
          * 
-         * *   If the security group is in a virtual private cloud (VPC), set the value to intranet. This is also the default value.
+         * *   When the security group is in a virtual private cloud (VPC), set the value to intranet, which is the default value for rules of security groups in VPCs.
          * 
          *     **
          * 
-         *     **Note**If you set this parameter to internet or leave this parameter empty, the value of intranet is automatically used.
+         *     **Note** If you set this parameter to internet or leave this parameter empty, a value of intranet is automatically used.
          */
         public Builder nicType(String nicType) {
             this.putQueryParameter("NicType", nicType);

@@ -301,6 +301,9 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SnapshotId")
         private String snapshotId;
 
+        @com.aliyun.core.annotation.NameInMap("SnapshotLinkId")
+        private String snapshotLinkId;
+
         @com.aliyun.core.annotation.NameInMap("SnapshotName")
         private String snapshotName;
 
@@ -354,6 +357,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             this.resourceGroupId = builder.resourceGroupId;
             this.retentionDays = builder.retentionDays;
             this.snapshotId = builder.snapshotId;
+            this.snapshotLinkId = builder.snapshotLinkId;
             this.snapshotName = builder.snapshotName;
             this.snapshotSN = builder.snapshotSN;
             this.snapshotType = builder.snapshotType;
@@ -489,6 +493,13 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
+         * @return snapshotLinkId
+         */
+        public String getSnapshotLinkId() {
+            return this.snapshotLinkId;
+        }
+
+        /**
          * @return snapshotName
          */
         public String getSnapshotName() {
@@ -589,6 +600,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             private String resourceGroupId; 
             private Integer retentionDays; 
             private String snapshotId; 
+            private String snapshotLinkId; 
             private String snapshotName; 
             private String snapshotSN; 
             private String snapshotType; 
@@ -603,7 +615,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             private String usage; 
 
             /**
-             * Indicates whether the snapshot can be used to create or roll back disks. Valid values:
+             * Indicates whether the snapshot can be used to create or roll back a disk. Valid values:
              * <p>
              * 
              * *   true
@@ -618,7 +630,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
              * The category of the snapshot.
              * <p>
              * 
-             * >  This parameter will be removed in the future. We recommend that you use `InstantAccess` to ensure future compatibility.
+             * >  This parameter will be removed in the future. To ensure future compatibility, we recommend that you use `InstantAccess`.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -653,7 +665,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
              * Indicates whether the instant access feature is enabled. Valid values:
              * <p>
              * 
-             * *   true: The instant access feature is enabled. The instant access feature can be enabled only for enhanced SSDs (ESSDs).
+             * *   true: The instant access feature is enabled. By default, the instant access feature is enabled for Enterprise SSDs (ESSDs).
              * *   false: The instant access feature is disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.
              */
             public Builder instantAccess(Boolean instantAccess) {
@@ -666,6 +678,8 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
              * <p>
              * 
              * By default, the value of this parameter is the same as the value of `RetentionDays`.
+             * 
+             * >  This parameter is deprecated. The normal snapshots of ESSDs are upgraded to support the instant access feature by default. No additional configurations are required to enable the feature and you are not charged for the feature. For more information, see [Use the instant access feature](~~193667~~).
              */
             public Builder instantAccessRetentionDays(Integer instantAccessRetentionDays) {
                 this.instantAccessRetentionDays = instantAccessRetentionDays;
@@ -673,7 +687,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Key Management Service (KMS) key used for the data disk.
+             * The ID of the KMS key used for the data disk.
              */
             public Builder KMSKeyId(String KMSKeyId) {
                 this.KMSKeyId = KMSKeyId;
@@ -705,7 +719,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region to which the snapshot belongs.
+             * The region ID of the snapshot.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -721,7 +735,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource group ID to which the snapshot belongs.
+             * The ID of the resource group to which the snapshot belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -745,6 +759,14 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
+             * SnapshotLinkId.
+             */
+            public Builder snapshotLinkId(String snapshotLinkId) {
+                this.snapshotLinkId = snapshotLinkId;
+                return this;
+            }
+
+            /**
              * The name of the snapshot. This parameter is returned only if a snapshot name was specified when the snapshot was created.
              */
             public Builder snapshotName(String snapshotName) {
@@ -761,7 +783,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of snapshot. Valid values:
+             * The type of the snapshot. Valid values:
              * <p>
              * 
              * *   auto or timer: automatic snapshot
@@ -821,7 +843,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
              * The category of the source disk.
              * <p>
              * 
-             * >  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
+             * >  This parameter will be removed in the future. To ensure future compatibility, we recommend that you use other parameters.
              */
             public Builder sourceStorageType(String sourceStorageType) {
                 this.sourceStorageType = sourceStorageType;

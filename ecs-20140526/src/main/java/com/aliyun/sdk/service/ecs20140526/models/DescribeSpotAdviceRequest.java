@@ -275,9 +275,8 @@ public class DescribeSpotAdviceRequest extends Request {
          * *   NVIDIA T4
          * *   NVIDIA P100
          * *   NVIDIA V100
-         * *   NVIDIA A100
          * 
-         * This parameter is left empty by default, which indicates that all GPU types are queried. For more information, see [GPU-accelerated compute optimized instance types](~~108496~~).
+         * This parameter is left empty by default, which indicates that all GPU types are queried. For more information, see [GPU-accelerated compute-optimized and vGPU-accelerated instance families](~~108496~~).
          */
         public Builder gpuSpec(String gpuSpec) {
             this.putQueryParameter("GpuSpec", gpuSpec);

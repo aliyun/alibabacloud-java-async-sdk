@@ -532,7 +532,7 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The page number. Page starts from page 1.
+         * The page number. Pages start from page 1.
          * <p>
          * 
          * Default value: 1.
